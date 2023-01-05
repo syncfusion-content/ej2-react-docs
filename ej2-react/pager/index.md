@@ -3,7 +3,7 @@ layout: post
 title: Index in React Pager component | Syncfusion
 description: Learn here all about Index in Syncfusion React Pager component of Syncfusion Essential JS 2 and more.
 control: Index 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

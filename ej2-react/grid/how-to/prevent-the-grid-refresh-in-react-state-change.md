@@ -3,7 +3,7 @@ layout: post
 title: Prevent the grid refresh in react state change in React Grid component | Syncfusion
 description: Learn here all about Prevent the grid refresh in react state change in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Prevent the grid refresh in react state change 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

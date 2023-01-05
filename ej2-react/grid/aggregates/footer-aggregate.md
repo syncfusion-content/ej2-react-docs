@@ -3,7 +3,7 @@ layout: post
 title: Footer aggregate in React Grid component | Syncfusion
 description: Learn here all about Footer aggregate in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Footer aggregate 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -13,11 +13,17 @@ domainurl: ##DomainURL##
 Footer aggregate value is calculated for all the rows, and it is displayed in the footer cells. Use the [`footerTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in footer cells.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/aggregate-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/aggregate-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/aggregate-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/aggregate-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/aggregate-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -30,11 +36,17 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 You can format the aggregate value result by using the [`format`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#format) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/aggregate-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/aggregate-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/aggregate-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/aggregate-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/aggregate-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,11 +59,17 @@ By default, the aggregated values are placed at the bottom of the footer section
 In the following sample, the footer element is appended to the header element using the `getHeaderContent` and `getFooterContent` methods in the `dataBound` event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/aggregate-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/aggregate-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/aggregate-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/aggregate-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/aggregate-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

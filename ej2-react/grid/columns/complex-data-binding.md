@@ -3,7 +3,7 @@ layout: post
 title: Complex data binding in React Grid component | Syncfusion
 description: Learn here all about Complex data binding in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Complex data binding 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -13,11 +13,17 @@ domainurl: ##DomainURL##
 You can achieve complex data binding in the grid by using the dot(.) operator in the [`column.field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/complex-binding-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/complex-binding-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/complex-binding-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/complex-binding-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/complex-binding-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/complex-binding-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

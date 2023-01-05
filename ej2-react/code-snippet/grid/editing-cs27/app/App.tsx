@@ -26,7 +26,7 @@ function App() {
     }
   }
   const recordDoubleClick = (e): void => {
-    let clickedColumnIndex = e.cell.getAttribute("aria-colindex");
+    let clickedColumnIndex = e.cell.getAttribute("data-colindex");
     fieldName = grid.columnModel[parseInt(clickedColumnIndex)].field;
   }
   return <GridComponent dataSource={data} editSettings={editOptions} height={220} allowPaging={true} actionComplete={actionComplete} recordDoubleClick={recordDoubleClick} ref={g => grid = g}>

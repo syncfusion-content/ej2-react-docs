@@ -3,7 +3,7 @@ layout: post
 title: Row drag and drop in React Grid component | Syncfusion
 description: Learn here all about Row drag and drop in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Row drag and drop 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -18,11 +18,11 @@ The target component on which the Grid rows to be dropped can be set by using
 To use Row Drag and Drop, you need to inject **RowDD** module in Grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/row-drag-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/row-drag-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/row-drag-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/row-drag-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,15 +35,21 @@ You can hide the drag and drop icon when performing a drag and drop operation wi
 By setting the [targetID](https://ej2.syncfusion.com/angular/documentation/api/grid/rowDropSettings/#targetid), the Grid will render without a helper icon (for row drag). Now you can customize the drag and drop action. To control the drop action, you can bind the [rowDrop](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdrop) event of the Grid. In the [rowDrop](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdrop) event, you can prevent the default action(args.cancel as true) and reorder the rows using [reorderRows](https://ej2.syncfusion.com/angular/documentation/api/grid/#reorderrows) method of the Grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/customizedialog-cs16/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customizedialog-cs17/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/customizedialog-cs16/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs17/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customizedialog-cs17/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/customizedialog-cs17/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs16" % }
+{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs17" % }
 
 > * **Selection** feature must be enabled for row drag and drop.
 > * Multiple rows can be selected by clicking and dragging inside the Grid.

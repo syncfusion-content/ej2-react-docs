@@ -3,7 +3,7 @@ layout: post
 title: Tool bar in React Grid component | Syncfusion
 description: Learn here all about Tool bar in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Tool bar 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -22,11 +22,17 @@ To use Toolbar, inject **Toolbar** module in Grid.
 You can enable/disable toolbar items by using the **enableItems** method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/toolbar-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/toolbar-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/toolbar-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/toolbar-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/toolbar-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/toolbar-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,11 +43,17 @@ You can enable/disable toolbar items by using the **enableItems** method.
 You can add the Grid toolbar component at the bottom of Grid using the ['created'](https://ej2.syncfusion.com/angular/documentation/api/grid/#created) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/toolbar-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/toolbar-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/toolbar-cs6/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/toolbar-cs6/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/toolbar-cs6/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/toolbar-cs6/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

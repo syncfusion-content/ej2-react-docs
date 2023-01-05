@@ -3,7 +3,7 @@ layout: post
 title: Searching in React Grid component | Syncfusion
 description: Learn here all about Searching in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Searching 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -11,19 +11,24 @@ domainurl: ##DomainURL##
 # Searching in React Grid component
 
 You can search records in a Grid, by using the [`search`](https://ej2.syncfusion.com/angular/documentation/api/grid/#search) method with search key as a parameter.
-This also provides an option to integrate search text box in Grid's toolbar by adding **Search** item to the
-[`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar).
+This also provides an option to integrate search text box in Grid's toolbar by adding **Search** item to the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar).
 
 To search records, inject the **Search** module in the grid.
 
 > The clear icon is shown in the Data Grid search text box when it is focused on search text or after typing the single character in the search text box. A single click of the clear icon clears the text in the search box as well as the search results in the Data Grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/searching-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/searching-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/searching-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/searching-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/searching-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/searching-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,11 +39,17 @@ To search records, inject the **Search** module in the grid.
 To apply search at initial rendering, set the [`fields`](https://ej2.syncfusion.com/angular/documentation/api/grid/searchSettings/#fields), [`operator`](https://ej2.syncfusion.com/angular/documentation/api/grid/searchSettings/#operator), [`key`](https://ej2.syncfusion.com/angular/documentation/api/grid/searchSettings/#key), and [`ignoreCase`](https://ej2.syncfusion.com/angular/documentation/api/grid/searchSettings/#ignorecase) in the [`searchSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#searchsettings).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/searching-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/searching-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/searching-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/searching-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/searching-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/searching-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,11 +77,17 @@ notequal |Checks whether a value not equal to specified value.
 To search grid records from an external button, invoke the [`search`](https://ej2.syncfusion.com/angular/documentation/api/grid/#search) method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/searching-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/searching-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/searching-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/searching-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/searching-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/searching-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,11 +98,17 @@ To search grid records from an external button, invoke the [`search`](https://ej
 By default, grid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`searchSettings.fields`](https://ej2.syncfusion.com/angular/documentation/api/grid/searchSettings/#fields) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/searching-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/searching-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/searching-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/searching-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/searching-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/searching-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,11 +119,17 @@ By default, grid searches all visible columns. You can search specific columns b
 To clear the searched grid records from the external button, set [`searchSettings.key`](https://ej2.syncfusion.com/angular/documentation/api/grid/searchSettings/#key) property as **empty** string.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/searching-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/searching-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/searching-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/searching-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/searching-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/searching-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,11 +140,17 @@ To clear the searched grid records from the external button, set [`searchSetting
 You can search the Grid data on each key stroke by binding the `keyup` event for the search input element inside the [`created`](https://ej2.syncfusion.com/angular/documentation/api/grid/#created) event. Inside the `keyup` handler you can search the Grid by invoking the [`search`](https://ej2.syncfusion.com/angular/documentation/api/grid/#search) method of the Grid component.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/searching-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/searching-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/searching-cs6/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/searching-cs6/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/searching-cs6/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/searching-cs6/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -127,11 +162,17 @@ You can perform a searching operation in the Grid using multiple keywords. This 
 In the following sample, we have performed the searching with multiple keywords by using the query property of grid when the requestType is searching in the [actionBegin](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionbegin) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/searching-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/searching-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/searching-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/searching-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/searching-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/searching-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

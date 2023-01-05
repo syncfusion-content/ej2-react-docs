@@ -3,7 +3,7 @@ layout: post
 title: Pdf export options in React Grid component | Syncfusion
 description: Learn here all about Pdf export options in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Pdf export options 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ domainurl: ##DomainURL##
 PDF export provides an option to export the current page into PDF. To export current page, define the [`PdfExportProperties.exportType`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#exporttype) to **CurrentPage**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs9/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs9/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs9/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs9/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs9/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs9/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -32,11 +38,17 @@ You can export the selected records data by passing it to [`PdfExportProperties.
 In the below exporting demo, we can get the selected records using [`getSelectedRecords`](https://ej2.syncfusion.com/angular/documentation/api/grid/#getselectedrecords) method and pass the selected data to [`pdfExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfexport) or [`excelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelExport) methods using respective export properties..
 
  {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/export-filtered-data-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,11 +61,17 @@ You can export the filtered data by defining the resulted data in [`PdfExportPro
 In the below Pdf exporting demo, We have gotten the filtered data by applying filter query to the grid data and then defines the resulted data in [`PdfExportProperties.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#datasource) and pass it to [`pdfExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfexport) method.
 
  {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/export-filtered-data-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/export-filtered-data-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,11 +82,17 @@ In the below Pdf exporting demo, We have gotten the filtered data by applying fi
 PDF export provides an option to export hidden columns of Grid by defining the [`PdfExportProperties.includeHiddenColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#includehiddencolumn) as **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs10/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs10/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs10/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs10/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs10/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs10/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,11 +109,17 @@ In the pdfExportComplete event, We have reversed the state back to the previous 
 In the below example, we have **CustomerID** as a hidden column in the grid. While exporting, we have changed **CustomerID** to visible column and **ShipCity** as hidden column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs11/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs11/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs11/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs11/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs11/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs11/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,11 +130,17 @@ In the below example, we have **CustomerID** as a hidden column in the grid. Whi
 Page orientation can be changed Landscape(Default Portrait) for the exported document using the [`PdfExportProperties.pageOrientation`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#pageorientation).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs12/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs12/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs12/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs12/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs12/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs12/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,11 +179,17 @@ Supported page sizes are:
 * Ledger
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs13/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs13/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs13/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs13/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs13/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs13/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,11 +200,17 @@ Supported page sizes are:
 You can assign the file name for the exported document by defining [`fileName`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#filename) property in [`PdfExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs14/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs14/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs14/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs14/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs14/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs14/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -205,11 +253,11 @@ You can change the default font of Grid header, content and caption cells in the
 In the following example, we have used Algeria font to export the grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs15/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs15/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs15/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs15/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

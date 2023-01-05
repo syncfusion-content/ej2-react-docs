@@ -3,7 +3,7 @@ layout: post
 title: Style and appearance in React Pager component | Syncfusion
 description: Learn here all about Style and appearance in Syncfusion React Pager component of Syncfusion Essential JS 2 and more.
 control: Style and appearance 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

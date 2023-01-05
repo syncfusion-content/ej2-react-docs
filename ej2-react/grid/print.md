@@ -3,7 +3,7 @@ layout: post
 title: Print in React Grid component | Syncfusion
 description: Learn here all about Print in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Print 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -14,11 +14,17 @@ To print the Grid, use the [`print`](https://ej2.syncfusion.com/angular/document
 The print option can be displayed on the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) by adding the **Print** toolbar item.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/print-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/print-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/print-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/print-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/print-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,11 +44,17 @@ Some of the print options cannot be configured through JavaScript code. So, you 
 To print the grid from an external button, invoke the [`print`](https://ej2.syncfusion.com/angular/documentation/api/grid/print/#print) method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/print-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/print-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/print-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/print-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/print-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,11 +65,17 @@ To print the grid from an external button, invoke the [`print`](https://ej2.sync
 By default, the grid prints all the pages. To print the current page alone, set the [`printMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/#printmode) to **CurrentPage**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/print-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/print-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/print-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/print-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/print-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,11 +92,17 @@ By default, the grid will be print the master and expanded child grids alone. yo
 | None     | Prints the master grid alone. |
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/print-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/print-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/print-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/print-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/print-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,11 +127,17 @@ In the printComplete event, We have reversed the state back to the previous stat
 In the below example, we have **CustomerID** as a hidden column in the grid. While printing, we have changed **CustomerID** to visible column and **ShipCity** as hidden column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/print-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/print-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/print-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/print-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/print-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

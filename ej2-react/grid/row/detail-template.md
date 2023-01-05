@@ -3,7 +3,7 @@ layout: post
 title: Detail template in React Grid component | Syncfusion
 description: Learn here all about Detail template in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Detail template 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -13,11 +13,17 @@ domainurl: ##DomainURL##
 The detail template provides additional information about a particular row by expanding or collapsing detail content. The [detailTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#detailtemplate) property accepts the template for the detail row.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/row-template-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/row-template-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/row-template-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/row-template-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/row-template-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -25,16 +31,23 @@ The detail template provides additional information about a particular row by ex
 
 ## Rendering custom component
 
-To render the custom component inside the detail row, define the template in the [detailTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#detailtemplate) and render the component in the [detailDataBound](https://ej2.syncfusion.com/angular/documentation/api/grid/#detaildatabound-emittypedetaildataboundeventargs) event.
+To render the custom component inside the detail row, define the template in the [detailTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#detailtemplate) and render the
+component in the [detailDataBound](https://ej2.syncfusion.com/angular/documentation/api/grid/#detaildatabound-emittypedetaildataboundeventargs) event.
 
 For example, to render grid inside the detail row, place an HTML div element as the [detailTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#detailtemplate) and render the DIV element as grid component in the [detailDataBound](https://ej2.syncfusion.com/angular/documentation/api/grid/#detaildatabound-emittypedetaildataboundeventargs) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/row-template-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/row-template-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/row-template-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/row-template-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/row-template-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,11 +58,17 @@ For example, to render grid inside the detail row, place an HTML div element as 
 By default, detail rows render in collapsed state. You can expand a detail row by invoking the [expand](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/#expand) method using the external button.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/detail-template-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/detail-template-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/detail-template-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/detail-template-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/detail-template-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/detail-template-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

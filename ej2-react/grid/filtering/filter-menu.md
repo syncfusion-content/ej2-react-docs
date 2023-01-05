@@ -3,7 +3,7 @@ layout: post
 title: Filter menu in React Grid component | Syncfusion
 description: Learn here all about Filter menu in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Filter menu 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ The filter menu UI will be rendered based on its column type, which allows you t
 You can filter the records with different operators.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/filter-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/filter-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/filter-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/filter-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,11 +47,17 @@ To implement custom filter ui, define the following functions:
 In the following sample, dropdown is used  as custom component in the OrderID column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/filter-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/filter-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/filter-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/filter-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,14 +68,21 @@ In the following sample, dropdown is used  as custom component in the OrderID co
 You can use both **Menu** and **CheckBox** filter in a same Grid. To do so, set the
 [`column.filter.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filter) as **Menu** or **CheckBox**.
 
-In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the [`column.filter.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filter).
+In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the
+[`column.filter.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filter).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/filter-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/filter-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/filter-cs6/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs6/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/filter-cs6/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs6/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,12 +95,26 @@ By default, the filtering action is performed based on the single keyword filter
 In the following sample, filtering action with multiple keywords can be done by rendering the `MultiSelect` component as custom component in the OrderID column filter menu dialog.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/filter-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/filter-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/filter-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/filter-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 { % previewsample "page.domainurl/code-snippet/grid/filter-cs7" % }
+
+## Add current selection to filter checkbox
+
+By default, the CheckBox filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the `Add current selection to filter` checkbox. This checkbox is displayed when data is searched in the search bar of the CheckBox filter.
+
+The following image describes the above mentioned behavior.
+
+![Checkbox filter](../images/checkboxfilter.png)

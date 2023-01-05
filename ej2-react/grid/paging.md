@@ -3,7 +3,7 @@ layout: post
 title: Paging in React Grid component | Syncfusion
 description: Learn here all about Paging in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Paging 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -20,11 +20,17 @@ In the below sample, [`pageSize`](https://ej2.syncfusion.com/angular/documentati
 To use Paging, inject **Page** module in Grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pager-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pager-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pager-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pager-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pager-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pager-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,11 +43,17 @@ To use Paging, inject **Page** module in Grid.
 You can use custom elements inside the pager instead of default elements. The custom elements can be defined by using the [`template`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#template) property. Inside this template, you can access the [`currentPage`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#currentpage), [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagesize), [`pageCount`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagecount), totalPage and totalRecordsCount values.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pager-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pager-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pager-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pager-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pager-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pager-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,11 +64,17 @@ You can use custom elements inside the pager instead of default elements. The cu
 The pager Dropdown allows you to change the number of records in the Grid dynamically. It can be enabled by defining the [`pageSettings.pageSizes`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagesizes) property as **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pager-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pager-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pager-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pager-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pager-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pager-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,11 +85,17 @@ The pager Dropdown allows you to change the number of records in the Grid dynami
 By default, Pager will be rendered at the bottom of the Grid. You can also render the Pager at the top of the Grid by using the [`dataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#databound) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pager-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pager-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pager-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pager-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pager-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pager-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

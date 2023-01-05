@@ -3,7 +3,7 @@ layout: post
 title: Column spanning in React Grid component | Syncfusion
 description: Learn here all about Column spanning in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Column spanning 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ Grid has option to span the adjacent cells. You need to define [`colSpan`](https
 In the following demo, Employee **Davolio** doing analysis from 9.00 AM to 10.00 AM, so that cells have spanned.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/spanning-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/spanning-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/spanning-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/spanning-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/spanning-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/spanning-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

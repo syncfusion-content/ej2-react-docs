@@ -3,7 +3,7 @@ layout: post
 title: Selection in React Grid component | Syncfusion
 description: Learn here all about Selection in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Selection 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -23,11 +23,17 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 To select range of rows or cells or columns, press and hold the SHIFT key and click the rows or cells or columns.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/selection-cs13/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/selection-cs13/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/selection-cs13/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs13/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/selection-cs13/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/selection-cs13/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,11 +49,17 @@ the [`selectionSettings.mode`](https://ej2.syncfusion.com/angular/documentation/
 * **Both** - Allows you to select rows and cells at the same time.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/selection-cs14/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/selection-cs14/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/selection-cs14/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs14/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/selection-cs14/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/selection-cs14/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

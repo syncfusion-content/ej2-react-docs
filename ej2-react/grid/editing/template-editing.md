@@ -3,7 +3,7 @@ layout: post
 title: Template editing in React Grid component | Syncfusion
 description: Learn here all about Template editing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Template editing 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,11 +19,11 @@ In some cases, you need to add the new field editors in the dialog which are not
 In the following sample, grid enabled with dialog template editing.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/editing-cs28/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/editing-cs28/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/editing-cs28/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/editing-cs28/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,11 +105,11 @@ You can use [`tab`](../../../tab) component inside dialog edit UI using dialog t
 The following example demonstrate the usage of tab control inside the dialog template.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/tabediting-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/tabediting-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,59 +1,33 @@
 
 
-import { render } from 'react-dom';
+import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Edit, Grid, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import {GridComponent, RowDragEventArgs, ColumnsDirective, SelectionSettingsModel, RowDropSettingsModel, ColumnDirective, Selection, RowDD, Inject, Grid} from '@syncfusion/ej2-react-grids';
 import { data } from './datasource';
 
 function App() {
-  let grid: Grid | null;
-  const selectOptions: SelectionSettingsModel = { type: 'Multiple' };
-  const rowDropOptions: RowDropSettingsModel = { targetID: 'Grid' };
-  const rowDrop = (args: RowDragEventArgs): void => {
-    args.cancel = true;
-    let value = [];
-    for (let r = 0; r < args.rows.length; r++) {
-      value.push(args.fromIndex + r);
+  const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+  const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete'];
+
+  const load = (): void => {
+    let gridElement = document.getElementById('grid').ej2_instances[0];
+    if (gridElement) {
+      gridElement.element.addEventListener('keydown', function (e) {
+        if (gridElement && e.keyCode === 13) {
+          gridElement.addRecord();
+        }
+      });
     }
-    grid.reorderRows(value, args.dropIndex);
   }
-  return <GridComponent id="Grid" ref={g => grid = g} allowRowDragAndDrop={true} dataSource={data} rowDrop={rowDrop} selectionSettings={selectOptions} rowDropSettings={rowDropOptions} height={400}>
+  return <GridComponent id="grid" dataSource={data} load={load}
+    editSettings={editOptions} toolbar={toolbarOptions} height={265}>
     <ColumnsDirective>
-      <ColumnDirective
-        field="OrderID"
-        isPrimaryKey={true}
-        headerText="Order ID"
-        width="120"
-        textAlign="Center" />
-      <ColumnDirective
-        field="CustomerID"
-        headerText="Customer Name"
-        width="150"
-        textAlign="Center" />
-      <ColumnDirective
-        field="OrderDate"
-        headerText="Order Date"
-        width="100"
-        format="yMd"
-        textAlign="Center" />
-      <ColumnDirective
-        field="Freight"
-        headerText="Freight"
-        width="120"
-        format="C2"
-        textAlign="Center" />
-      <ColumnDirective
-        field="ShipCity"
-        headerText="Ship City"
-        width="150"
-        textAlign="Center" />
-      <ColumnDirective
-        field="ShipCountry"
-        headerText="Ship Country"
-        width="150"
-        textAlign="Center" />
+      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+      <ColumnDirective field='Freight' headerText='Freight' width='80' textAlign="Right" format='C2' editType='numericedit' />
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
     </ColumnsDirective>
-    <Inject services={[RowDD, Selection]} />
+    <Inject services={[Edit, Toolbar]} />
   </GridComponent>
 };
 export default App;

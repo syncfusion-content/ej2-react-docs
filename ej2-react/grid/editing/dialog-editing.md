@@ -3,7 +3,7 @@ layout: post
 title: Dialog editing in React Grid component | Syncfusion
 description: Learn here all about Dialog editing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Dialog editing 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ You can change the cell values and save edited data to the data source.
 To enable Dialog edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as **Dialog**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/editing-cs8/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/editing-cs8/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/editing-cs8/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs8/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/editing-cs8/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs8/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,11 +42,17 @@ Also the locale text for the **Save** and **Cancel** buttons has been changed by
 You can refer the Grid [`Default text`](../global-local/) list for more localization.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/customizedialog-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customizedialog-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/customizedialog-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customizedialog-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/customizedialog-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,11 +69,17 @@ In the `actionBegin` event, when the `requestType` is `beginEdit` or add, the co
 In the following example, the CustomerID column is rendered as a hidden column, and the ShipCountry column is rendered as a visible column. In the edit mode, the CustomerID column will be changed to a visible state and the ShipCountry column will be changed to a hidden state.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/customizedialog-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customizedialog-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/customizedialog-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customizedialog-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/customizedialog-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,12 +92,35 @@ Wizard helps you create intuitive step-by-step forms to fill. You can achieve th
 The following example demonstrate the wizard like editing in the grid with the obtrusive Validation.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/wizardediting-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/wizardediting-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/wizardediting-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/wizardediting-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 { % previewsample "page.domainurl/code-snippet/grid/wizardediting-cs1" % }
+
+## Customize Add/Edit Dialog footer
+
+In dialog edit mode, a dialog will show up when editing the currently selected row or adding a new row. By default, you can save or cancel the edited changes by clicking the Save or Cancel button in the dialog's footer. Along with these buttons, it is possible to add a custom button in the footer section using the [actionComplete](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event of the Grid.
+
+In the following sample, using the `dialog` argument of the `actionComplete` event, the action for the custom button can be customized.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customizedialog-cs3/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customizedialog-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/customizedialog-cs3/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs3" % }

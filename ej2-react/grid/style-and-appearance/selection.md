@@ -3,7 +3,7 @@ layout: post
 title: Selection in React Grid component | Syncfusion
 description: Learn here all about Selection in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Selection 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -1,33 +1,52 @@
 
 
-import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import { Edit, Grid, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { DataManager, Query } from '@syncfusion/ej2-data';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { DetailRow, Grid, GridModel } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-  const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete'];
-
-  const load = (): void => {
-    let gridElement = document.getElementById('grid').ej2_instances[0];
-    if (gridElement) {
-      gridElement.element.addEventListener('keydown', function (e) {
-        if (gridElement && e.keyCode === 13) {
-          gridElement.addRecord();
-        }
-      });
+  let grid: Grid | null;
+  const dataManger: object = [{ Order: 100, ShipName: 'Berlin', EmployeeID: 2 },
+  { Order: 101, ShipName: 'Capte', EmployeeID: 3 },
+  { Order: 102, ShipName: 'Marlon', EmployeeID: 4 },
+  { Order: 103, ShipName: 'Black pearl', EmployeeID: 5 },
+  { Order: 104, ShipName: 'Pearl', EmployeeID: 6 },
+  { Order: 105, ShipName: 'Noth bay', EmployeeID: 7 },
+  { Order: 106, ShipName: 'baratna', EmployeeID: 8 },
+  { Order: 107, ShipName: 'Charge', EmployeeID: 9 }];
+  let childGrid: GridModel = {
+    columns: [
+      { field: 'Order', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+      { field: 'EmployeeID', headerText: 'EmployeeID', width: 150 },
+      { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+    ],
+    dataSource: dataManger,
+    queryString: 'EmployeeID'
+  };
+  const rowDataBound = (args: any): void => {
+    if (grid) {
+      const filter: string = args.data.EmployeeID;
+      const childrecord: object[] = new DataManager(grid.childGrid.dataSource as object[])
+        .executeLocal(new Query().where("EmployeeID", "equal", parseInt(filter, 0), true));
+      if (childrecord.length === 0) {
+        // here hide which parent row has no child records
+        args.row.querySelector('td').innerHTML = " ";
+        args.row.querySelector('td').className = "e-customizedExpandcell";
+      }
     }
   }
-  return <GridComponent id="grid" dataSource={data} load={load}
-    editSettings={editOptions} toolbar={toolbarOptions} height={265}>
+  return <GridComponent dataSource={data} childGrid={childGrid}
+    rowDataBound={rowDataBound} ref={(scope) => { grid = scope; }}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
-      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-      <ColumnDirective field='Freight' headerText='Freight' width='80' textAlign="Right" format='C2' editType='numericedit' />
-      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+      <ColumnDirective field='OrderID' width='100' textAlign="Right" />
+      <ColumnDirective field='CustomerID' width='100' />
+      <ColumnDirective field='EmployeeID' width='100' textAlign="Right" />
+      <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right" />
+      <ColumnDirective field='ShipCountry' width='100' />
     </ColumnsDirective>
-    <Inject services={[Edit, Toolbar]} />
+    <Inject services={[DetailRow]} />
   </GridComponent>
 };
 export default App;

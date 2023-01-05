@@ -3,7 +3,7 @@ layout: post
 title: Perform grid actions by keyboard short cut keys in React Grid component | Syncfusion
 description: Learn here all about Perform grid actions by keyboard short cut keys in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Perform grid actions by keyboard short cut keys 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,12 +17,18 @@ In addition, You can also perform grid actions with custom keyboard shortcuts. T
 The following example demonstrates on *Adding* a new row when **Enter** key is pressed in the grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/customizedialog-cs15/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customizedialog-cs16/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/customizedialog-cs15/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs16/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customizedialog-cs16/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/customizedialog-cs16/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs15" % }
+{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs16" % }

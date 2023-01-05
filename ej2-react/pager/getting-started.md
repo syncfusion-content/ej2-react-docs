@@ -3,7 +3,7 @@ layout: post
 title: Getting started with React Pager component | Syncfusion
 description:  Checkout and learn about Getting started with React Pager component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -87,15 +87,15 @@ ReactDOM.render(<App />, document.getElementById('pager'));
 `pageSize` value defines the number of records to be displayed per page. The default value for the `pageSize` is 12.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pager/pager-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pager/pager-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/pager/pager-cs1" % }
+{ % previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs5" % }
 
 ## Page Count
 
@@ -104,15 +104,15 @@ The default value for `pageCount` is 10 and value will be updated based on [`tot
 and [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/pager/pagerModel/#pagesize) values.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pager/pager-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pager/pager-cs2/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/pager/pager-cs2" % }
+{ % previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs5" % }
 
 ## Run the application
 
@@ -126,12 +126,12 @@ npm start
 Output will be appears as follows.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pager/pager-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pager/pager-cs3/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/pager/pager-cs3" % }
+{ % previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs5" % }

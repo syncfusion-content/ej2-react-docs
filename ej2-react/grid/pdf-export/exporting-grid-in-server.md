@@ -3,7 +3,7 @@ layout: post
 title: Exporting grid in server in React Grid component | Syncfusion
 description: Learn here all about Exporting grid in server in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Exporting grid in server 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

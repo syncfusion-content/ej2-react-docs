@@ -3,7 +3,7 @@ layout: post
 title: Column menu in React Grid component | Syncfusion
 description: Learn here all about Column menu in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Column menu 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -30,11 +30,17 @@ The default items are displayed in following table.
 | **Filter** | Show the filter option as given in **filterSettings.type** |
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,11 +58,17 @@ During the resizing action, the grid component triggers the below two events.
 2. The [`columnMenuClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuclick) event triggers when the user clicks the column menu of the grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs8/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs8/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs8/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs8/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs8/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs8/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,11 +80,17 @@ Custom column menu items can be added by defining the [`columnMenuItems`](https:
 Actions for this customized items can be defined in the [`columnMenuClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuclick) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs9/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs9/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs9/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs9/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs9/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs9/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,18 +98,22 @@ Actions for this customized items can be defined in the [`columnMenuClick`](http
 
 ## Customize menu items for particular columns
 
-Sometimes, if you need to hide an item from column menu for particular columns, define the
-[`items.hide`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnMenuItemModel/#items) as **true** of the argument interface [`columnMenuOpenEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnMenuOpenEventArgs) in the
-[`columnMenuOpen`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuopen) event.
+Sometimes, if you need to hide an item from column menu for particular columns, define the [`items.hide`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnMenuItemModel/#items) as **true** of the argument interface [`columnMenuOpenEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnMenuOpenEventArgs) in the [`columnMenuOpen`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuopen) event.
 
 The following sample, **Filter** item was hidden in column menu when opens for the **OrderID** column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs10/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs10/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs10/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs10/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs10/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs10/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,11 +132,11 @@ You can customize the column menu icon by overriding the default grid class **.e
 In the below sample, grid is rendered with a customized column menu icon.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/custom-column-menu-icon-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/custom-column-menu-icon-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

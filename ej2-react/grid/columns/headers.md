@@ -3,7 +3,7 @@ layout: post
 title: Headers in React Grid component | Syncfusion
 description: Learn here all about Headers in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Headers 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -16,11 +16,17 @@ By default, column header title is displayed from column [`field`](https://ej2.s
 To override the default header title by defining [`headerText`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#headertext) value.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs29/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs29/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs29/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs29/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs29/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs29/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -33,11 +39,17 @@ To override the default header title by defining [`headerText`](https://ej2.sync
 You can customize the header element by using the [`headerTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#headertemplate) property. In this demo, the custom element is rendered for both CustomerID and OrderDate column headers.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/header-template-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/header-template-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/header-template-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/header-template-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/header-template-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/header-template-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,11 +85,17 @@ To reflect the changes in the grid header, invoke the [`refreshHeader`](https://
 ```
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/change-headertext-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/change-headertext-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/change-headertext-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/change-headertext-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/change-headertext-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/change-headertext-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -127,11 +145,11 @@ Resize the header cell height by using the following code.
 ```
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/header-orientation-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/header-orientation-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/header-orientation-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/header-orientation-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

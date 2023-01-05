@@ -3,7 +3,7 @@ layout: post
 title: Accessibility in React Grid component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

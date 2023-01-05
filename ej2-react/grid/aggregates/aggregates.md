@@ -3,15 +3,14 @@ layout: post
 title: Aggregates in React Grid component | Syncfusion
 description: Learn here all about Aggregates in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Aggregates 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Aggregates in React Grid component
 
-Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through [`aggregates`](https://ej2.syncfusion.com/angular/documentation/api/grid/#aggregates) property. [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#field) and [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#type)
-are the minimum properties required to represent an aggregate column.
+Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through [`aggregates`](https://ej2.syncfusion.com/angular/documentation/api/grid/#aggregates) property. [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#field) and [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#type) are the minimum properties required to represent an aggregate column.
 
 To use the aggregate feature, you have to inject the **Aggregate** module.
 

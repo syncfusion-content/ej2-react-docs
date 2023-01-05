@@ -3,7 +3,7 @@ layout: post
 title: Adding header and footer in React Grid component | Syncfusion
 description: Learn here all about Adding header and footer in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Adding header and footer 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -126,11 +126,11 @@ Image (Base64 string) can be added in the exported document in header/footer usi
 The below code illustrates the pdf export customization.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs3/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs3/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,11 +143,17 @@ By default, column header will be placed on the first page of the pdf document b
 In the below sample, we have enabled **repeatHeader** property in [`pdfHeaderQueryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfheaderquerycellinfo) event to show the header on every page.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

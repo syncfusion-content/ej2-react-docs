@@ -3,7 +3,7 @@ layout: post
 title: Row spanning in React Grid component | Syncfusion
 description: Learn here all about Row spanning in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Row spanning 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,11 +17,17 @@ In the following demo, **Davolio** cell is spanned to two rows in the **Employee
 Also Grid supports the spanning of rows and columns for same cells. **Lunch Break** cell is spanned to all the rows and three columns in the **1:00** column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/spanning-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/spanning-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/spanning-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/spanning-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/spanning-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/spanning-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

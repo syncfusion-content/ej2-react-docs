@@ -3,7 +3,7 @@ layout: post
 title: Row template in React Grid component | Syncfusion
 description: Learn here all about Row template in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Row template 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ The [rowTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#row
 In the following example, Employee Information with Employee Photo is presented in the first column and employee details like Name, Address, etc., are presented in the second column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/row-template-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/row-template-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/row-template-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/row-template-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/row-template-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -30,11 +36,17 @@ In the following example, Employee Information with Employee Photo is presented 
 If the [rowTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowtemplate) is used, the value cannot be formatted inside the template using the [columns.format](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/row-template-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/row-template-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/row-template-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/row-template-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/row-template-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

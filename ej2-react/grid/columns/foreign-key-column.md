@@ -3,15 +3,14 @@ layout: post
 title: Foreign key column in React Grid component | Syncfusion
 description: Learn here all about Foreign key column in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Foreign key column 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Foreign key column in React Grid component
 
-Foreign key column can be enabled by using [`column.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#datasource), [`column.foreignKeyField`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyfield) and
-[`column.foreignKeyValue`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyvalue) properties.
+Foreign key column can be enabled by using [`column.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#datasource), [`column.foreignKeyField`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyfield) and [`column.foreignKeyValue`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyvalue) properties.
 
 * [`column.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#datasource) - Defines the foreign data.
 * [`column.foreignKeyField`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyfield) - Defines the mapping column name to the foreign data.
@@ -20,11 +19,17 @@ Foreign key column can be enabled by using [`column.dataSource`](https://ej2.syn
 In the following example, **Employee Name** is a foreign column which shows **FirstName** column from foreign data.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs28/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs28/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs28/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs28/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs28/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs28/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,11 +48,17 @@ In the following example, The *Employee Name* is a foreign key column and while 
 AutoComplete component is rendered instead of DropDownList.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/foreign-key-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/foreign-key-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/foreign-key-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/foreign-key-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,11 +72,17 @@ The following example demonstrates the way to create a custom filtering UI in th
 In the following example, The **Employee Name** is a foreign key column. DropDownList is rendered using Filter UI.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/foreign-key-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/foreign-key-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/foreign-key-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/foreign-key-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,18 +90,25 @@ In the following example, The **Employee Name** is a foreign key column. DropDow
 
 ## Use filter bar template in foreignkey column
 
-You can use the filter bar template in foreign key column by defining the [`column.filterBarTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/column//#filterbartemplate) property.
+You can use the filter bar template in foreign key column by defining the
+[`column.filterBarTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/column//#filterbartemplate) property.
 The following example demonstrates the way to use filter bar template in foreign column.
 
 In the following example, The **Employee Name** is a foreign key column.
 This column header shows the custom filter bar template and you can select filter value by using the *DropDown* options.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/foreign-key-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/foreign-key-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/foreign-key-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/foreign-key-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,11 +123,17 @@ The following example demonstrates the way to achieve aggregation in foreign key
 In the following example, The *Employee Name* is a foreign key column and the aggregation for the foreign column was calculated in customAggregateFn.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/foreign-key-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/foreign-key-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/foreign-key-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/foreign-key-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,11 +146,17 @@ Multiple foreign key columns with editing options are enabled for the React Grid
 In the following example, **Customer Name** and **Ship City** are foreign key columns that display the **ContactName** and **City** columns from foreign data.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/foreign-key-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/foreign-key-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/foreign-key-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/foreign-key-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -3,7 +3,7 @@ layout: post
 title: Remote data in React Grid component | Syncfusion
 description: Learn here all about Remote data in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Remote data 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -13,11 +13,11 @@ domainurl: ##DomainURL##
 To bind remote data to grid component, assign service data as an instance of **DataManager** to the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property. To interact with remote data source, provide the endpoint **url**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/data-binding-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/data-binding-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/data-binding-cs4/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/data-binding-cs4/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,11 +31,11 @@ To bind remote data to grid component, assign service data as an instance of **D
 You can retrieve data from OData service using DataManager. You can refer to the following code example of remote Data binding using OData service.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/data-binding-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/data-binding-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/data-binding-cs5/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/data-binding-cs5/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,11 +48,11 @@ For more details on OData v4 services, refer to the [odata documentation](http:/
 To bind OData v4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odatav4-adaptor).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/data-binding-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/data-binding-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/data-binding-cs6/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/data-binding-cs6/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,14 +156,14 @@ The following code example describes the CRUD operations handled at server-side.
 
 ## Custom adaptor
 
-You can create your own adaptor by extending the built-in adaptors. For the sake of demonstrating custom adaptor approach, we are going to see how to add serial number for the records by overriding the built-in response processing using **processResponse** method of the [`ODataAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor).
+You can create your own adaptor by extending the built-in adaptors. For the sake of demonstrating custom adaptor approach,we are going to see how to add serial number for the records by overriding the built-in response processing using **processResponse** method of the [`ODataAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/data-binding-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/data-binding-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/data-binding-cs7/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/data-binding-cs7/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -176,11 +176,11 @@ To avoid post back for every action, set the grid to load all data on initializa
 To enable this behavior, use the **offline** property of **DataManager**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/data-binding-cs8/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/data-binding-cs8/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/data-binding-cs8/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/data-binding-cs8/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

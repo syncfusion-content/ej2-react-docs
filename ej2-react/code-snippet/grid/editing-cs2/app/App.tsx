@@ -11,7 +11,7 @@ function App() {
       return <GridComponent dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={265}>
       <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
-          <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' allowEditing='false'/>
           <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" editType= 'numericedit' textAlign="Right"/>
           <ColumnDirective field='ShipCountry' headerText='Ship Country' editType= 'dropdownedit' width='150'/>
       </ColumnsDirective>

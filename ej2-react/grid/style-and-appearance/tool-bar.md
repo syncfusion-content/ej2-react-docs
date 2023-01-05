@@ -3,7 +3,7 @@ layout: post
 title: Tool bar in React Grid component | Syncfusion
 description: Learn here all about Tool bar in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Tool bar 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

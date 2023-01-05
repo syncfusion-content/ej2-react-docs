@@ -3,7 +3,7 @@ layout: post
 title: Excel like filter in React Grid component | Syncfusion
 description: Learn here all about Excel like filter in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Excel like filter 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ You can use the [`columns.filterTemplate`](https://ej2.syncfusion.com/angular/do
 The following example demonstrates the way to use filter template for a column when using excel filter. In the following example, the **DropdownList** component is used to filter **CustomerID** column using filter template.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/filter-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/filter-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/filter-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/filter-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

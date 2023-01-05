@@ -3,7 +3,7 @@ layout: post
 title: Data binding in React Grid component | Syncfusion
 description: Learn here all about Data binding in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Data binding 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -26,11 +26,11 @@ To add a custom parameter to the data request, use the [`addParams`](https://ej2
 Assign the [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#query) object with additional parameters to the grid [`query`](https://ej2.syncfusion.com/angular/documentation/api/grid/#query) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/data-binding-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/data-binding-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/data-binding-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/data-binding-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,17 +45,18 @@ During server interaction from the grid, some server-side exceptions may occur, 
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) Grid event contains the error details returned from server.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/data-binding-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/data-binding-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/data-binding-cs2/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/data-binding-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 { % previewsample "page.domainurl/code-snippet/grid/data-binding-cs2" % }
 
-> The [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the Grid actions.
+> The [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but
+also when there is an exception while processing the Grid actions.
 
 ## Binding with ajax
 

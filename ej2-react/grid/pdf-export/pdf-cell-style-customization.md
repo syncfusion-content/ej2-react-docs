@@ -3,7 +3,7 @@ layout: post
 title: Pdf cell style customization in React Grid component | Syncfusion
 description: Learn here all about Pdf cell style customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Pdf cell style customization 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,11 +17,17 @@ Grid cells in the exported PDF can be customized or formatted using [`pdfQueryCe
 In the below sample, we have set the background color for **Freight** column in the exported document by **args.cell** and **backgroundColor** property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,11 +40,17 @@ PDF export provides an option to include theme for exported PDF document.
 To apply theme in exported PDF, define the [`theme`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#theme) in [`exportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/) .
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs8/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs8/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs8/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs8/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs8/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs8/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

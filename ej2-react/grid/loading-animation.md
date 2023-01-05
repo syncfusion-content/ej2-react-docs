@@ -3,7 +3,7 @@ layout: post
 title: Loading animation in React Grid component | Syncfusion
 description: Learn here all about Loading animation in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Loading animation 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,11 @@ The grid has an option to show a loading indicator in-between the time of fetchi
 In the following sample, the Shimmer indicator is displayed while the grid is loading and refreshing when using the remote data.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/data-binding-cs9/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/data-binding-cs9/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/data-binding-cs9/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/data-binding-cs9/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

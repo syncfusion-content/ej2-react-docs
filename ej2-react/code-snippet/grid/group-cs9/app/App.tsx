@@ -1,21 +1,30 @@
 
 
-import { ColumnDirective, ColumnsDirective, GridComponent, RowSelectEventArgs } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Grid, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  const rowSelected = (args: RowSelectEventArgs): void => {
-    alert("row index: " + (args.row as HTMLTableRowElement).getAttribute('aria-rowindex'));
-    alert("column index: " + (args.target as HTMLElement).getAttribute('aria-colindex'));
+  let initial = true;
+  const groupOptions: GroupSettingsModel = { columns: ['ShipCity'] };
+  let gridObj: Grid | null;
+
+  const dataBound = (): void => {
+    if (gridObj && initial === true) {
+      gridObj.groupModule.collapseAll();
+      initial = false;
+    }
   }
-  return <GridComponent dataSource={data} rowSelected={rowSelected} height={267}>
+  return <GridComponent dataSource={data} ref={grid => gridObj = grid} dataBound={dataBound}
+    allowGrouping={true} groupSettings={groupOptions} height={267}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
       <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
       <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
     </ColumnsDirective>
+    <Inject services={[Group]} />
   </GridComponent >
 };
 export default App;

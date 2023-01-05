@@ -3,7 +3,7 @@ layout: post
 title: Getting started with React Grid component | Syncfusion
 description:  Checkout and learn about Getting started with React Grid component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -117,11 +117,17 @@ If the **Page** service is not injected, the pager will not be rendered in the g
 Pager can be customized using [`pageSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pagesettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/getting-started-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/getting-started-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/getting-started-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/getting-started-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/getting-started-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -136,11 +142,17 @@ If the **Sort** module is not injected, you cannot sort when a header is clicked
 Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#sortsettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/getting-started-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/getting-started-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/getting-started-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/getting-started-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/getting-started-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -154,11 +166,17 @@ If [`Filter`](https://ej2.syncfusion.com/angular/documentation/api/grid/#filterm
 Filtering feature can be customized using [`filterSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#filtersettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/getting-started-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/getting-started-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/getting-started-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/getting-started-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/getting-started-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -173,11 +191,17 @@ If [`Group`](https://ej2.syncfusion.com/angular/documentation/api/grid/#groupmod
 Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#groupsettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/getting-started-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/getting-started-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/getting-started-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/getting-started-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/getting-started-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -197,11 +221,17 @@ npm start
 Output will be appears as follows.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/getting-started-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/getting-started-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/getting-started-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/getting-started-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/getting-started-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

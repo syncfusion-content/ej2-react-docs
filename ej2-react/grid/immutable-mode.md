@@ -3,7 +3,7 @@ layout: post
 title: Immutable mode in React Grid component | Syncfusion
 description: Learn here all about Immutable mode in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Immutable mode 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,11 +17,17 @@ To enable this feature, you have to set the [`enableImmutableMode`](https://ej2.
 >* This feature uses the primary key value for data comparison. So, you need to provide the [`isPrimaryKey`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#isprimarykey) column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/immutable-mode-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/immutable-mode-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/immutable-mode-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/immutable-mode-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/immutable-mode-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/immutable-mode-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -3,7 +3,7 @@ layout: post
 title: Style and appearance in React Grid component | Syncfusion
 description: Learn here all about Style and appearance in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Style and appearance 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -29,11 +29,17 @@ You can modify the grid styling appearance by overriding the default CSS style o
 In the following sample, the font family of grid content is changed to **cursive**, and the background color of rows, selected rows, alternate rows, and row hovering color is modified using the below CSS styles.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/style-appearance-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/style-appearance-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/style-appearance-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/style-appearance-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/style-appearance-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/style-appearance-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

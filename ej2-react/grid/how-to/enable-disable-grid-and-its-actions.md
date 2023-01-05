@@ -3,7 +3,7 @@ layout: post
 title: Enable disable grid and its actions in React Grid component | Syncfusion
 description: Learn here all about Enable disable grid and its actions in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Enable disable grid and its actions 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -51,11 +51,11 @@ Add/Remove the CSS class to the Grid in the click event handler of Button.
 In the below demo, the button click will enable/disable the Grid and its actions.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/enable-disable-actions-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/enable-disable-actions-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/enable-disable-actions-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/enable-disable-actions-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

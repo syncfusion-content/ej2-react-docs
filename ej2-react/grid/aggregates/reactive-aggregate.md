@@ -3,7 +3,7 @@ layout: post
 title: Reactive aggregate in React Grid component | Syncfusion
 description: Learn here all about Reactive aggregate in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Reactive aggregate 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,11 +17,17 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 > Adding a new record to the grouped grid will not refresh the aggregate values.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/aggregate-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/aggregate-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/aggregate-cs6/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs6/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/aggregate-cs6/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/aggregate-cs6/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,11 +40,17 @@ By default, reactive aggregate update is not supported by inline and dialog edit
 In the following code, the input event for the Freight column editor has been registered and the aggregate value has been refreshed manually.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/aggregate-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/aggregate-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/aggregate-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/aggregate-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/aggregate-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -3,7 +3,7 @@ layout: post
 title: Hierarchy grid in React Grid component | Syncfusion
 description: Learn here all about Hierarchy grid in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Hierarchy grid 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,11 +19,17 @@ describes the relation between parent and child grids.
 To use hierarchical binding, inject the [`DetailRow`](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/) module in the grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,11 +45,17 @@ You can expand all child grid rows by invoking the [`expandAll`](https://ej2.syn
 the [`collapseAll`](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/#collapseall) through an external button.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,11 +66,17 @@ the [`collapseAll`](https://ej2.syncfusion.com/angular/documentation/api/grid/de
 You can expand a particular Child Grid at initial rendering by invoking the [`expand`](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/#expand) method in [`dataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#databound) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,11 +87,17 @@ You can expand a particular Child Grid at initial rendering by invoking the [`ex
 You can Dynamically load child Grid dataSource by using [`load`](https://ej2.syncfusion.com/angular/documentation/api/grid/#load) event. This [`load`](https://ej2.syncfusion.com/angular/documentation/api/grid/#load) event triggers while expand the child Grid at first time.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,11 +110,17 @@ By default, Parent and child grid relation will be maintained by **queryString**
 In the below sample, we have bound the child and parent grid with different fields. Parent grid field name as **EmployeeID** and the child grid field name as **ID**. We need to define the mapping value of **parentKeyFieldValue** from the parent row data in the child grid **load** event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -104,11 +134,17 @@ To maintain this relation in newly added record, You need to set value for [`que
 In the below demo, **EmployeeID** field relates the parent and child grids. To add a new record in child grid, We have to set the **EmployeeID** field with parent record's [`queryString`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querystring) field value in the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionbegin) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs6/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs6/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs6/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs6/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -121,11 +157,17 @@ By default, the [childGrid.queryString](https://ej2.syncfusion.com/angular/docum
 While expanding the child Grid, the `detailDataBound` event will be triggered. In this event, based on the EmployeeID column value of parent row data, filter the equally matched data from the `childGrid` datasource using the `DataManager` plugin and bind the filtered data as a datasource to the `childGrid`. This can be demonstrated by the following sample.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

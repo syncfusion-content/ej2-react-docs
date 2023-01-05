@@ -1,47 +1,28 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import { GridComponent, Inject, DetailRow, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
+import { GridComponent, Inject, ColumnsDirective, ColumnDirective, Edit, Toolbar } from '@syncfusion/ej2-react-grids';
 import { data } from './datasource';
-class App extends React.Component {
-    Grid;
-    dataManger = [{ Order: 100, ShipName: 'Berlin', EmployeeID: 2 },
-        { Order: 101, ShipName: 'Capte', EmployeeID: 3 },
-        { Order: 102, ShipName: 'Marlon', EmployeeID: 4 },
-        { Order: 103, ShipName: 'Black pearl', EmployeeID: 5 },
-        { Order: 104, ShipName: 'Pearl', EmployeeID: 6 },
-        { Order: 105, ShipName: 'Noth bay', EmployeeID: 7 },
-        { Order: 106, ShipName: 'baratna', EmployeeID: 8 },
-        { Order: 107, ShipName: 'Charge', EmployeeID: 9 }];
-    childGrid = {
-        dataSource: this.dataManger,
-        queryString: 'EmployeeID',
-        columns: [
-            { field: 'Order', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-            { field: 'EmployeeID', headerText: 'EmployeeID', width: 150 },
-            { field: 'ShipName', headerText: 'Ship Name', width: 150 }
-        ],
-    };
-    rowDataBound(args) {
-        let filter = args.data.EmployeeID;
-        let childrecord = new DataManager(this.Grid.childGrid.dataSource).executeLocal(new Query().where("EmployeeID", "equal", parseInt(filter), true));
-        if (childrecord.length == 0) {
-            //here hide which parent row has no child records
-            args.row.querySelector('td').innerHTML = " ";
-            args.row.querySelector('td').className = "e-customizedExpandcell";
-        }
+document.getElementById("grid").addEventListener("click", (e) => {
+    if (event.target.classList.contains("e-rowcell")) {
+        let gridObj = document.getElementsByClassName("e-grid")[0].ej2_instances[0];
+        let index = parseInt(event.target.getAttribute("Index"));
+        let colindex = parseInt(event.target.getAttribute("aria-colindex"));
+        let field = gridObj.getColumns()[colindex].field;
+        gridObj.editModule.editCell(index, field);
     }
+});
+class App extends React.Component {
+    editOptions = { allowAdding: true, allowDeleting: true, allowEditing: true, mode: 'Batch' };
+    toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
     render() {
-        return <GridComponent dataSource={data} childGrid={this.childGrid} rowDataBound={this.rowDataBound.bind(this)} ref={(scope) => { this.Grid = scope; }}>
-                <ColumnsDirective>
-                    <ColumnDirective field='OrderID' width='100' textAlign="Right"></ColumnDirective>
-                    <ColumnDirective field='CustomerID' width='100'></ColumnDirective>
-                    <ColumnDirective field='EmployeeID' width='100' textAlign="Right"></ColumnDirective>
-                    <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"></ColumnDirective>
-                    <ColumnDirective field='ShipCountry' width='100'></ColumnDirective>
-                </ColumnsDirective>
-                <Inject services={[DetailRow]}/>
-            </GridComponent>;
+        return <GridComponent id="Grid" dataSource={data} ref={grid => this.gridInstance = grid} editSettings={this.editOptions} toolbar={this.toolbarOptions} height={265}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}></ColumnDirective>
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'></ColumnDirective>
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'></ColumnDirective>
+            </ColumnsDirective>
+            <Inject services={[Edit, Toolbar]}/>
+        </GridComponent>;
     }
 }
 ;

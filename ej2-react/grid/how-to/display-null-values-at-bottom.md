@@ -3,7 +3,7 @@ layout: post
 title: Display null values at bottom in React Grid component | Syncfusion
 description: Learn here all about Display null values at bottom in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Display null values at bottom 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ By default the null values are displayed at bottom of the Grid row while perform
 In the below demo we have displayed the null date values at bottom of the Grid row while sorting the **OrderDate** column in both ways.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/null-date-value-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/null-date-value-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/null-date-value-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/null-date-value-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/null-date-value-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/null-date-value-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

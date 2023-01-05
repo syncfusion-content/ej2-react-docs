@@ -3,7 +3,7 @@ layout: post
 title: Export multiple grids in React Grid component | Syncfusion
 description: Learn here all about Export multiple grids in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Export multiple grids 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,11 +19,17 @@ To export in same sheet, define [`multipleExport.type`](https://ej2.syncfusion.c
 It have an option to provide blank rows between grids. These blank rows count can be defined by using the [`multipleExport.blankRows`](https://ej2.syncfusion.com/angular/documentation/api/grid/multipleExport/#blankrows).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/excel-export-cs12/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/excel-export-cs12/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/excel-export-cs12/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs12/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/excel-export-cs12/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/excel-export-cs12/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,11 +43,17 @@ Excel exporting provides support to export multiple grids in new sheet.
 To export in new sheet, define  [`multipleExport.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/multipleExport/#type) as **NewSheet** in [`ExcelExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/excel-export-cs13/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/excel-export-cs13/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/excel-export-cs13/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs13/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/excel-export-cs13/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/excel-export-cs13/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

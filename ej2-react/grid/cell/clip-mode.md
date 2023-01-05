@@ -3,7 +3,7 @@ layout: post
 title: Clip mode in React Grid component | Syncfusion
 description: Learn here all about Clip mode in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Clip mode 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -20,11 +20,17 @@ There are three types of [`clipMode`](https://ej2.syncfusion.com/angular/documen
  also it will display the tooltip while hover on ellipsis is applied.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/autowrap-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/autowrap-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/autowrap-cs3/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/autowrap-cs3/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/autowrap-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/autowrap-cs3/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

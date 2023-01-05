@@ -3,7 +3,7 @@ layout: post
 title: Edit in React Grid component | Syncfusion
 description: Learn here all about Edit in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Edit 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -21,11 +21,17 @@ Deletion of the record is possible by selecting the required row and click on **
 To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/angular/documentation/api/grid/edit/) module in grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/editing-cs16/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/editing-cs16/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/editing-cs16/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs16/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/editing-cs16/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs16/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,11 +47,17 @@ The grid toolbar has the [built-in items](../tool-bar#built-in-toolbar-items) to
 You can define this by using the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/editing-cs17/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/editing-cs17/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/editing-cs17/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs17/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/editing-cs17/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs17/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,11 +70,17 @@ You can disable editing for particular columns by using the [`columns.allowEditi
 In the following demo, editing is disabled for the **CustomerID** column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/editing-cs18/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/editing-cs18/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/editing-cs18/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs18/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/editing-cs18/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs18/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,28 +93,34 @@ You can disable the editing for a particular row by using the [`actionBegin`](ht
 In the below demo, the rows which are having the value for *ShipCountry* column as *France* is prevented from editing.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/customizedialog-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customizedialog-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/customizedialog-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs5/datasource.jsx %}
 {% endhighlight %}
-{% endtabs %}
-
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs4" % }
-
-For batch mode of editing, you can use [`cellEdit`](https://ej2.syncfusion.com/angular/documentation/api/grid/#celledit) event of Grid. In the below demo, the cells which are having the value as *France* is prevented from editing.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/customizedialog-cs5/app/index.jsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customizedialog-cs5/app/app.tsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/customizedialog-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/customizedialog-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 { % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs5" % }
+
+For batch mode of editing, you can use [`cellEdit`](https://ej2.syncfusion.com/angular/documentation/api/grid/#celledit) event of Grid. In the below demo, the cells which are having the value as *France* is prevented from editing.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customizedialog-cs6/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customizedialog-cs6/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs6" % }
 
 ## Troubleshoot editing works only for first row
 
@@ -110,11 +134,17 @@ Make the Grid column always editable using the column template feature of the Gr
 In the following example, the textbox is rendered in the Freight column using a column template. The keyup event for the Grid is bound using the [created](https://ej2.syncfusion.com/angular/documentation/api/grid#created) event of the Grid, and the edited changes are saved in the data source using the [updateRow](https://ej2.syncfusion.com/angular/documentation/api/grid#updaterow) method of the Grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/editing-cs19/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/editing-cs19/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/editing-cs19/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs19/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/editing-cs19/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs19/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

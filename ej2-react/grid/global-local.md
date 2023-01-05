@@ -3,7 +3,7 @@ layout: post
 title: Global local in React Grid component | Syncfusion
 description: Learn here all about Global local in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Global local 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -13,9 +13,7 @@ domainurl: ##DomainURL##
 ## Localization
 
 The [`Localization`](../../base/localization.html) library allows you to localize default text content of the Grid.
-The grid component has static text on some features (like group drop area text, pager information text, etc.)
-that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
-[`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
+The grid component has static text on some features (like group drop area text, pager information text, etc.)that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
 
 The following list of properties and its values are used in the grid.
 
@@ -124,11 +122,17 @@ To load translation object in an application use [`load`](https://ej2.syncfusion
 The below example demonstrates the Grid in **Deutsch** culture.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/locale-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/locale-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/locale-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/locale-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/locale-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/locale-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,11 +143,17 @@ The below example demonstrates the Grid in **Deutsch** culture.
 The [`Internationalization`](../../base/internationalization.html) library is used to globalize number, date, and time values in grid component using format strings in the [`columns.format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/internationalization-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/internationalization-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/internationalization-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/internationalization-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/internationalization-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/internationalization-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,11 +169,17 @@ It improves the user experiences and accessibility for users who use right-to-le
 To enable RTL in the Grid, set the [`enableRtl`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablertl) to **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/locale-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/locale-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/locale-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/locale-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/locale-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/locale-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

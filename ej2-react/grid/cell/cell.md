@@ -3,7 +3,7 @@ layout: post
 title: Cell in React Grid component | Syncfusion
 description: Learn here all about Cell in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Cell 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,11 +17,17 @@ The [`queryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/
 In that event handler, you can get [`QueryCellInfoEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/queryCellInfoEventArgs/) that contains the details of the cell.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/rows-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/rows-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/rows-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/rows-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/rows-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,11 +52,11 @@ You can customize the grid cells by adding a CSS class to the [`customAttribute`
 In the below example, we have customized the cells of **OrderID** and **ShipCity** columns.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/customize-cell-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customize-cell-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/customize-cell-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customize-cell-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,7 +64,8 @@ In the below example, we have customized the cells of **OrderID** and **ShipCity
 
 ## Grid lines
 
-The [`gridLines`](https://ej2.syncfusion.com/angular/documentation/api/grid/#gridlines) have option to display cell border and it can be defined by the [`gridLines`](https://ej2.syncfusion.com/angular/documentation/api/grid/#gridlines) property.
+The [`gridLines`](https://ej2.syncfusion.com/angular/documentation/api/grid/#gridlines) have option to display cell border and it can be defined by the
+[`gridLines`](https://ej2.syncfusion.com/angular/documentation/api/grid/#gridlines) property.
 
 The available modes of grid lines are:
 
@@ -71,11 +78,17 @@ The available modes of grid lines are:
 | Default | Displays grid lines based on the theme.|
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/autowrap-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/autowrap-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/autowrap-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/autowrap-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/autowrap-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/autowrap-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -3,7 +3,7 @@ layout: post
 title: Hide the expand collapse icon in parent row in React Grid component | Syncfusion
 description: Learn here all about Hide the expand collapse icon in parent row in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Hide the expand collapse icon in parent row 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -54,12 +54,18 @@ Add the CSS class to the Grid in the [`rowDataBound`](https://ej2.syncfusion.com
 In the below demo, the expand/collapse icon in the row with *EmployeeID* as *1* is hidden as it does not have record in child Grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/customizedialog-cs14/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/customizedialog-cs15/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/customizedialog-cs14/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs15/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/customizedialog-cs15/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/customizedialog-cs15/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs14" % }
+{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs15" % }

@@ -3,7 +3,7 @@ layout: post
 title: Cascading drop down list with grid editing in React Grid component | Syncfusion
 description: Learn here all about Cascading drop down list with grid editing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Cascading drop down list with grid editing 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ You can achieve the Cascading DropDownList with grid Editing by using the Cell E
 In the below demo, Cascading DropDownList rendered for **ShipCountry** and **ShipState** column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/cascade-drop-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/cascade-drop-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/cascade-drop-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/cascade-drop-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/cascade-drop-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/cascade-drop-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -3,7 +3,7 @@ layout: post
 title: Scrolling in React Grid component | Syncfusion
 description: Learn here all about Scrolling in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Scrolling 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -22,15 +22,20 @@ domainurl: ##DomainURL##
 
 ## Set width and height
 
-To specify the [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/#width) and [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid/#height)
-of scroller in pixel, set the pixel value as number.
+To specify the [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/#width) and [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid/#height) of scroller in pixel, set the pixel value as number.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/scrolling-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/scrolling-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/scrolling-cs4/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs4/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/scrolling-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/scrolling-cs4/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,11 +47,17 @@ Specify the [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/
 Setting the [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid/#height) to **100%** requires the grid parent element to have explicit height.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/scrolling-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/scrolling-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/scrolling-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/scrolling-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/scrolling-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,11 +70,17 @@ You can make the Grid column headers remain fixed while scrolling by using the [
 In the below demo, the Grid headers will be sticky while scrolling the Grid's parent div element.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/scrolling-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/scrolling-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/scrolling-cs6/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs6/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/scrolling-cs6/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/scrolling-cs6/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,11 +91,17 @@ In the below demo, the Grid headers will be sticky while scrolling the Grid's pa
 You can scroll the grid content to the selected row position by using the [`rowSelected`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowselected) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/scrolling-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/scrolling-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/scrolling-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/scrolling-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/scrolling-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,11 +114,17 @@ You can hide the scrollbar of Grid content by using the [`hideScroll`](https://e
 In the following sample, we have invoked the [`hideScroll`](https://ej2.syncfusion.com/angular/documentation/api/grid/#hidescroll) method inside the [`dataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#databound) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/scrolling-cs8/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/scrolling-cs8/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/scrolling-cs8/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs8/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/scrolling-cs8/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/scrolling-cs8/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

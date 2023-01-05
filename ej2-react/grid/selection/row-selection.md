@@ -3,7 +3,7 @@ layout: post
 title: Row selection in React Grid component | Syncfusion
 description: Learn here all about Row selection in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Row selection 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ domainurl: ##DomainURL##
 To select a row at initial rendering, set the [`selectedRowIndex`](https://ej2.syncfusion.com/angular/documentation/api/grid/#selectedrowindex) value.
 
  {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/selection-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/selection-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/selection-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/selection-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/selection-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -30,11 +36,17 @@ To select a row at initial rendering, set the [`selectedRowIndex`](https://ej2.s
 You can get the selected row indexes by using the [`getSelectedRowIndexes`](https://ej2.syncfusion.com/angular/documentation/api/grid/#getselectedrowindexes) method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/selection-cs8/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/selection-cs8/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/selection-cs8/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs8/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/selection-cs8/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/selection-cs8/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,11 +57,17 @@ You can get the selected row indexes by using the [`getSelectedRowIndexes`](http
 You can select multiple rows by clicking on rows one by one. This will not deselect the previously selected rows. To deselect the previously selected row, you can click on the  selected row. You can enable this behavior by using [`selectionSettings.enableSimpleMultiRowSelection`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#enablesimplemultirowselection) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/selection-cs9/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/selection-cs9/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/selection-cs9/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs9/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/selection-cs9/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/selection-cs9/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,11 +78,17 @@ You can select multiple rows by clicking on rows one by one. This will not desel
 The Toggle selection allows to perform selection and unselection of the particular row or cell or column. To enable toggle selection, set [`enableToggle`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#enabletoggle) property of the **selectionSettings** as **true**. If you click on the selected row or cell or column then it will be unselected and vice versa.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/selection-cs10/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/selection-cs10/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/selection-cs10/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs10/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/selection-cs10/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/selection-cs10/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -79,11 +103,17 @@ You can clear the Grid selection programmatically by using the [clearSelection](
 In the demo below, we initially selected the third row using [selectedRowIndex](https://ej2.syncfusion.com/angular/documentation/api-grid.html#selectedrowindex-number). You can clear this selection by calling the [clearSelection](https://ej2.syncfusion.com/angular/documentation/api-grid.html#clearSelection) method in the button click event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/selection-cs11/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/selection-cs11/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/selection-cs11/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs11/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/selection-cs11/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/selection-cs11/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -98,11 +128,17 @@ So the selection will be maintained on every page even after navigating to anoth
 You can get the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/angular/documentation/api-grid.html#getSelectedRecords) method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/selection-cs12/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/selection-cs12/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/selection-cs12/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs12/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/selection-cs12/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/selection-cs12/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

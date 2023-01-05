@@ -3,7 +3,7 @@ layout: post
 title: Auto generated columns in React Grid component | Syncfusion
 description: Learn here all about Auto generated columns in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Auto generated columns 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -14,11 +14,11 @@ The [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column
 All the columns in the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) are bound as grid columns.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs2/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,11 +31,11 @@ Primary key can be defined in the declaration of column object of the grid. When
 If Primary key "column index" is known then refer the following code example
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs3/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs3/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,11 +57,11 @@ You can set column options such as [`format`](https://ej2.syncfusion.com/angular
 In the below example, [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#width) is set for **OrderID** column, [`date`](../../common/internationalization/#date-formatting) type is set for **OrderDate** column and **numeric** type is set for **Freight** column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs4/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs4/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs4/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs4/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

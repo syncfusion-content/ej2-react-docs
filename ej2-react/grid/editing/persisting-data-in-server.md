@@ -3,7 +3,7 @@ layout: post
 title: Persisting data in server in React Grid component | Syncfusion
 description: Learn here all about Persisting data in server in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Persisting data in server 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

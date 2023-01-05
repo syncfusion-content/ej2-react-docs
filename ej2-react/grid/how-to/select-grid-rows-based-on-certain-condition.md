@@ -3,7 +3,7 @@ layout: post
 title: Select grid rows based on certain condition in React Grid component | Syncfusion
 description: Learn here all about Select grid rows based on certain condition in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Select grid rows based on certain condition 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,11 +15,17 @@ You can select the specific row in the grid based on a certain condition by usin
 In the below demo, we have selected the grid rows only when *EmployeeID* column value greater than *3*.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/change-headertext-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/change-headertext-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/change-headertext-cs6/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/change-headertext-cs6/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/change-headertext-cs6/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/change-headertext-cs6/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

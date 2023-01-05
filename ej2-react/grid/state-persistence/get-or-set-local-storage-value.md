@@ -3,7 +3,7 @@ layout: post
 title: Get or set local storage value in React Grid component | Syncfusion
 description: Learn here all about Get or set local storage value in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Get or set local storage value 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---

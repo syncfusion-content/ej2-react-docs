@@ -3,7 +3,7 @@ layout: post
 title: Column resizing in React Grid component | Syncfusion
 description: Learn here all about Column resizing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Column resizing 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -19,11 +19,17 @@ To enable the column resize, set the [`allowResizing`](https://ej2.syncfusion.co
 To use the column resize, inject **Resize** module in the grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs15/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs15/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs15/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs15/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs15/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs15/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,17 +40,22 @@ To use the column resize, inject **Resize** module in the grid.
 
 ## Min and max width
 
-Columns can be restricted to resize in between minimum and maximum width by defining the
-[`columns->minWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#minwidth) and [`columns->maxWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#maxwidth).
+Columns can be restricted to resize in between minimum and maximum width by defining the [`columns->minWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#minwidth) and [`columns->maxWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#maxwidth).
 
 In the below sample, **OrderID**, **Ship Name** and **Ship Country** columns are defined with minimum and maximum width.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs16/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs16/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs16/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs16/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs16/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs16/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,11 +70,17 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
 In this example, we have disabled resize for **Ship City** column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs17/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs17/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs17/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs17/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs17/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs17/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,11 +104,17 @@ During the resizing action, the grid component triggers the below three events.
 3. The [`resizeStop`](https://ej2.syncfusion.com/angular/documentation/api/grid/#resizeStop) event triggers when column resize ends.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/column-cs18/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/column-cs18/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/column-cs18/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs18/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/column-cs18/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs18/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

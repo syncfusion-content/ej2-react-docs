@@ -3,7 +3,7 @@ layout: post
 title: Infinite scroll in React Grid component | Syncfusion
 description: Learn here all about Infinite scroll in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Infinite scroll 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -17,11 +17,11 @@ To enable Infinite scrolling, set `enableInfiniteScrolling` property as true.
 > * In this feature, Grid will not make a new data request when you visit the same page again.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs1/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,11 +34,11 @@ You can define the initial loading pages count by using `infiniteScrollSettings.
 In the below demo, we have changed this property value to load five page records instead of three.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs2/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,11 +51,11 @@ Cache is used to store the loaded rows object in the Grid instance which can be 
 To enable the cache mode in Infinite scrolling, set `infiniteScrollSettings.enableCache` property as true.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs3/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs3/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs3/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs3/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

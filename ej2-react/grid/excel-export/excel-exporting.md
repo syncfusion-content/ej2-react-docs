@@ -3,23 +3,30 @@ layout: post
 title: Excel exporting in React Grid component | Syncfusion
 description: Learn here all about Excel exporting in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Excel exporting 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Excel exporting in React Grid component
 
-The excel export allows exporting Grid data to Excel document. You need to use the [`excelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelexport) method for exporting. To enable Excel export in the grid, set the [`allowExcelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowexcelexport) as **true**.
+The excel export allows exporting Grid data to Excel document. You need to use the [`excelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelexport) method for exporting. To enable Excel export in the grid,
+ set the [`allowExcelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowexcelexport) as **true**.
 
 To use excel export, You need to inject the **ExcelExport** module in grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/excel-export-cs10/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/excel-export-cs10/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/excel-export-cs10/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs10/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/excel-export-cs10/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/excel-export-cs10/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,11 +43,17 @@ In the [`pdfExportComplete`](https://ej2.syncfusion.com/angular/documentation/ap
 In the below demo, we have rendered the default spinner component when exporting the grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs1/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs1/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs1/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs1/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,11 +65,17 @@ The excel export provides an option to define datasource dynamically before expo
 To export data dynamically, define the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/#datasource) in [`ExcelExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/excel-export-cs11/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/excel-export-cs11/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/excel-export-cs11/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs11/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/excel-export-cs11/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/excel-export-cs11/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,11 +88,17 @@ You can pass the additional parameter in the [`query`](https://ej2.syncfusion.co
 In the below example, we have passed *recordcount* as *12* using [`addParams`](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/pdf-export-cs2/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/pdf-export-cs2/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/pdf-export-cs2/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs2/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/pdf-export-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs2/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

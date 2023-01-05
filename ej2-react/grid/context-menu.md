@@ -3,7 +3,7 @@ layout: post
 title: Context menu in React Grid component | Syncfusion
 description: Learn here all about Context menu in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Context menu 
-publishingplatform: React
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -39,11 +39,17 @@ Items| Description
 `NextPage` | Go to the next page.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/clipboard-cs5/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/clipboard-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/clipboard-cs5/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs5/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/clipboard-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/clipboard-cs5/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,11 +61,17 @@ The custom context menu items can be added by defining the [`contextMenuItems`](
 Actions for this customized items can be defined in the [`contextMenuClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#contextmenuclick) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/clipboard-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/clipboard-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/clipboard-cs6/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs6/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/clipboard-cs6/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/clipboard-cs6/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,11 +86,17 @@ Using the `onclick` eventlistener of Grid , you can get the clicked position val
 This is demonstrated in the following sample.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/clipboard-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/clipboard-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/clipboard-cs7/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs7/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/clipboard-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/clipboard-cs7/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,11 +112,17 @@ It is possible to enable or disable the default and custom context menu items in
 In the following sample, the Copy item is enabled or disabled based on some condition (as per the needs of the application) in the [rowSelected](https://ej2.syncfusion.com/angular/documentation/api/grid#rowselected) event of the Grid.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/clipboard-cs8/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/grid/clipboard-cs8/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/clipboard-cs8/app/index.tsx %}
+{% highlight ts tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs8/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/grid/clipboard-cs8/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/clipboard-cs8/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
