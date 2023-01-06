@@ -22,16 +22,16 @@ in between cells of rows within the range.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/selection-cs1/app/app.jsx %}
+{% include code-snippet/grid/selection-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/selection-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs1/app/app.tsx %}
+{% include code-snippet/grid/selection-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/selection-cs1/datasource.tsx %}
+{% include code-snippet/grid/selection-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,16 +46,16 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/selection-cs2/app/app.jsx %}
+{% include code-snippet/grid/selection-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/selection-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs2/app/app.tsx %}
+{% include code-snippet/grid/selection-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/selection-cs2/datasource.tsx %}
+{% include code-snippet/grid/selection-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

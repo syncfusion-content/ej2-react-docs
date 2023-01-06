@@ -27,10 +27,10 @@ Assign the [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#qu
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs1/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs1/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,16 +40,17 @@ Assign the [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#qu
 
 ## Handling HTTP error
 
-During server interaction from the grid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event.
+During server interaction from the grid, some server-side exceptions may occur, and you can acquire those error messages or exception details
+in client-side using the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event.
 
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) Grid event contains the error details returned from server.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs2/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs2/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

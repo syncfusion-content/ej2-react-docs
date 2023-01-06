@@ -18,16 +18,16 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/aggregate-cs6/app/app.jsx %}
+{% include code-snippet/grid/aggregate-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/aggregate-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/aggregate-cs6/app/app.tsx %}
+{% include code-snippet/grid/aggregate-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/aggregate-cs6/datasource.tsx %}
+{% include code-snippet/grid/aggregate-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,16 +41,16 @@ In the following code, the input event for the Freight column editor has been re
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/aggregate-cs7/app/app.jsx %}
+{% include code-snippet/grid/aggregate-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/aggregate-cs7/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/aggregate-cs7/app/app.tsx %}
+{% include code-snippet/grid/aggregate-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/aggregate-cs7/datasource.tsx %}
+{% include code-snippet/grid/aggregate-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

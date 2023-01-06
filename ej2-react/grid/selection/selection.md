@@ -24,16 +24,16 @@ To select range of rows or cells or columns, press and hold the SHIFT key and cl
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/selection-cs13/app/app.jsx %}
+{% include code-snippet/grid/selection-cs13/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/selection-cs13/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs13/app/app.tsx %}
+{% include code-snippet/grid/selection-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/selection-cs13/datasource.tsx %}
+{% include code-snippet/grid/selection-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,16 +50,16 @@ the [`selectionSettings.mode`](https://ej2.syncfusion.com/angular/documentation/
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/selection-cs14/app/app.jsx %}
+{% include code-snippet/grid/selection-cs14/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/selection-cs14/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs14/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs14/app/app.tsx %}
+{% include code-snippet/grid/selection-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/selection-cs14/datasource.tsx %}
+{% include code-snippet/grid/selection-cs14/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

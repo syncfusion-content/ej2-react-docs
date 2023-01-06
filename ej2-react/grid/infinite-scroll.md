@@ -18,10 +18,10 @@ To enable Infinite scrolling, set `enableInfiniteScrolling` property as true.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs1/app/app.jsx %}
+{% include code-snippet/grid/virtual-scroll-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs1/app/app.tsx %}
+{% include code-snippet/grid/virtual-scroll-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,10 +35,10 @@ In the below demo, we have changed this property value to load five page records
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs2/app/app.jsx %}
+{% include code-snippet/grid/virtual-scroll-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs2/app/app.tsx %}
+{% include code-snippet/grid/virtual-scroll-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ To enable the cache mode in Infinite scrolling, set `infiniteScrollSettings.enab
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs3/app/app.jsx %}
+{% include code-snippet/grid/virtual-scroll-cs3/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs3/app/app.tsx %}
+{% include code-snippet/grid/virtual-scroll-cs3/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

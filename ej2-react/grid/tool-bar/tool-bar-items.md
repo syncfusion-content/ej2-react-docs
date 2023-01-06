@@ -33,10 +33,10 @@ The following table shows Built-in toolbar items and its action.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/toolbar-cs1/app/app.jsx %}
+{% include code-snippet/grid/toolbar-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/toolbar-cs1/app/app.tsx %}
+{% include code-snippet/grid/toolbar-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,10 +58,10 @@ This is demonstrated in the following sample:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/toolbaricon-cs1/app/app.jsx %}
+{% include code-snippet/grid/toolbaricon-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/toolbaricon-cs1/app/app.tsx %}
+{% include code-snippet/grid/toolbaricon-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,16 +76,16 @@ By default, Custom toolbar items are in position **Left**. You can change the po
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/toolbar-cs2/app/app.jsx %}
+{% include code-snippet/grid/toolbar-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/toolbar-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/toolbar-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/toolbar-cs2/app/app.tsx %}
+{% include code-snippet/grid/toolbar-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/toolbar-cs2/datasource.tsx %}
+{% include code-snippet/grid/toolbar-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,16 +102,16 @@ In the below example, **Add**, **Edit**, **Delete**, **Update**, **Cancel** are 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/toolbar-cs3/app/app.jsx %}
+{% include code-snippet/grid/toolbar-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/toolbar-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/toolbar-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/toolbar-cs3/app/app.tsx %}
+{% include code-snippet/grid/toolbar-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/toolbar-cs3/datasource.tsx %}
+{% include code-snippet/grid/toolbar-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,16 +123,16 @@ By default, Custom toolbar items are in the Left position. You can change the po
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/toolbar-cs4/app/app.jsx %}
+{% include code-snippet/grid/toolbar-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/toolbar-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/toolbar-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/toolbar-cs4/app/app.tsx %}
+{% include code-snippet/grid/toolbar-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/toolbar-cs4/datasource.tsx %}
+{% include code-snippet/grid/toolbar-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

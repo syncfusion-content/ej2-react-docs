@@ -21,16 +21,16 @@ Interaction keys |Description
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/clipboard-cs1/app/app.jsx %}
+{% include code-snippet/grid/clipboard-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/clipboard-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/clipboard-cs1/app/app.tsx %}
+{% include code-snippet/grid/clipboard-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/clipboard-cs1/datasource.tsx %}
+{% include code-snippet/grid/clipboard-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,16 +43,16 @@ method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/clipboard-cs2/app/app.jsx %}
+{% include code-snippet/grid/clipboard-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/clipboard-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/clipboard-cs2/app/app.tsx %}
+{% include code-snippet/grid/clipboard-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/clipboard-cs2/datasource.tsx %}
+{% include code-snippet/grid/clipboard-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,16 +64,16 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/clipboard-cs3/app/app.jsx %}
+{% include code-snippet/grid/clipboard-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/clipboard-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/clipboard-cs3/app/app.tsx %}
+{% include code-snippet/grid/clipboard-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/clipboard-cs3/datasource.tsx %}
+{% include code-snippet/grid/clipboard-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,16 +93,16 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/clipboard-cs4/app/app.jsx %}
+{% include code-snippet/grid/clipboard-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/clipboard-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/clipboard-cs4/app/app.tsx %}
+{% include code-snippet/grid/clipboard-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/clipboard-cs4/datasource.tsx %}
+{% include code-snippet/grid/clipboard-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

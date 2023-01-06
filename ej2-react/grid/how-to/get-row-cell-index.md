@@ -14,16 +14,16 @@ You can get the specific row and cell index of the grid by using [`rowSelected`]
 
  {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/group-cs10/app/app.jsx %}
+{% include code-snippet/grid/group-cs10/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/group-cs10/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/group-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/group-cs10/app/app.tsx %}
+{% include code-snippet/grid/group-cs10/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/group-cs10/datasource.tsx %}
+{% include code-snippet/grid/group-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

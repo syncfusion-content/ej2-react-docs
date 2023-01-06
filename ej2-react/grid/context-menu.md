@@ -40,16 +40,16 @@ Items| Description
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/clipboard-cs5/app/app.jsx %}
+{% include code-snippet/grid/clipboard-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/clipboard-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/clipboard-cs5/app/app.tsx %}
+{% include code-snippet/grid/clipboard-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/clipboard-cs5/datasource.tsx %}
+{% include code-snippet/grid/clipboard-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,16 +62,16 @@ Actions for this customized items can be defined in the [`contextMenuClick`](htt
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/clipboard-cs6/app/app.jsx %}
+{% include code-snippet/grid/clipboard-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/clipboard-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/clipboard-cs6/app/app.tsx %}
+{% include code-snippet/grid/clipboard-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/clipboard-cs6/datasource.tsx %}
+{% include code-snippet/grid/clipboard-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,16 +87,16 @@ This is demonstrated in the following sample.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/clipboard-cs7/app/app.jsx %}
+{% include code-snippet/grid/clipboard-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/clipboard-cs7/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/clipboard-cs7/app/app.tsx %}
+{% include code-snippet/grid/clipboard-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/clipboard-cs7/datasource.tsx %}
+{% include code-snippet/grid/clipboard-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,16 +113,16 @@ In the following sample, the Copy item is enabled or disabled based on some cond
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/clipboard-cs8/app/app.jsx %}
+{% include code-snippet/grid/clipboard-cs8/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/clipboard-cs8/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/clipboard-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/clipboard-cs8/app/app.tsx %}
+{% include code-snippet/grid/clipboard-cs8/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/clipboard-cs8/datasource.tsx %}
+{% include code-snippet/grid/clipboard-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

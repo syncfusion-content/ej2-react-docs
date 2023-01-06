@@ -16,10 +16,10 @@ In the following sample, the Shimmer indicator is displayed while the grid is lo
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs9/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs9/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs9/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs9/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

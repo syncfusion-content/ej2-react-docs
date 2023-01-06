@@ -10,7 +10,8 @@ domainurl: ##DomainURL##
 
 # Filtering in React Grid component
 
-Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to true.
+Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid,
+set the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to true.
 Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/filterSettings/).
 
 To use filter, inject the **Filter** module in the grid.
@@ -27,16 +28,16 @@ The Grid supports two types of filter, they are
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/filter-cs8/app/app.jsx %}
+{% include code-snippet/grid/filter-cs8/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filter-cs8/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/filter-cs8/app/app.tsx %}
+{% include code-snippet/grid/filter-cs8/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filter-cs8/datasource.tsx %}
+{% include code-snippet/grid/filter-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,16 +53,16 @@ To apply the filter at initial rendering, set the filter [`predicate`](https://e
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/filter-cs9/app/app.jsx %}
+{% include code-snippet/grid/filter-cs9/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filter-cs9/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/filter-cs9/app/app.tsx %}
+{% include code-snippet/grid/filter-cs9/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filter-cs9/datasource.tsx %}
+{% include code-snippet/grid/filter-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,16 +96,16 @@ In the following sample, type **aero** in **Name** column to filter diacritic ch
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/filter-diacritics-cs1/app/app.jsx %}
+{% include code-snippet/grid/filter-diacritics-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filter-diacritics-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-diacritics-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/filter-diacritics-cs1/app/app.tsx %}
+{% include code-snippet/grid/filter-diacritics-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filter-diacritics-cs1/datasource.tsx %}
+{% include code-snippet/grid/filter-diacritics-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,16 +119,16 @@ The following example demonstrates the way to use filter template for a column w
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/filter-cs10/app/app.jsx %}
+{% include code-snippet/grid/filter-cs10/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filter-cs10/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/filter-cs10/app/app.tsx %}
+{% include code-snippet/grid/filter-cs10/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filter-cs10/datasource.tsx %}
+{% include code-snippet/grid/filter-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

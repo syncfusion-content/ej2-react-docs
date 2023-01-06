@@ -15,16 +15,16 @@ In the below sample, OrderID and Freight Columns are numeric columns, while open
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs31/app/app.jsx %}
+{% include code-snippet/grid/column-cs31/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs31/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs31/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs31/app/app.tsx %}
+{% include code-snippet/grid/column-cs31/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs31/datasource.tsx %}
+{% include code-snippet/grid/column-cs31/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

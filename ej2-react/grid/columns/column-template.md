@@ -16,16 +16,16 @@ The column [`template`](https://ej2.syncfusion.com/angular/documentation/api/gri
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-template-cs1/app/app.jsx %}
+{% include code-snippet/grid/column-template-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-template-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-template-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-template-cs1/app/app.tsx %}
+{% include code-snippet/grid/column-template-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-template-cs1/datasource.tsx %}
+{% include code-snippet/grid/column-template-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,16 +38,16 @@ In the following sample, the DropDownList is rendered in the **ShipCountry** col
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/dropdown-component-cs1/app/app.jsx %}
+{% include code-snippet/grid/dropdown-component-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/dropdown-component-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/dropdown-component-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/dropdown-component-cs1/app/app.tsx %}
+{% include code-snippet/grid/dropdown-component-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/dropdown-component-cs1/datasource.tsx %}
+{% include code-snippet/grid/dropdown-component-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,16 +75,16 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-template-cs2/app/app.jsx %}
+{% include code-snippet/grid/column-template-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-template-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-template-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-template-cs2/app/app.tsx %}
+{% include code-snippet/grid/column-template-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-template-cs2/datasource.tsx %}
+{% include code-snippet/grid/column-template-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -98,16 +98,16 @@ In the following sample, the button element is rendered in the Employee Data col
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-template-cs3/app/app.jsx %}
+{% include code-snippet/grid/column-template-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-template-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-template-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-template-cs3/app/app.tsx %}
+{% include code-snippet/grid/column-template-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-template-cs3/datasource.tsx %}
+{% include code-snippet/grid/column-template-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

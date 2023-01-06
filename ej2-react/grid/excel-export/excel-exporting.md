@@ -17,16 +17,16 @@ To use excel export, You need to inject the **ExcelExport** module in grid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs10/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs10/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs10/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs10/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs10/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs10/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,16 +44,16 @@ In the below demo, we have rendered the default spinner component when exporting
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs1/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs1/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs1/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,16 +66,16 @@ To export data dynamically, define the [`dataSource`](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs11/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs11/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs11/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs11/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs11/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs11/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,16 +89,16 @@ In the below example, we have passed *recordcount* as *12* using [`addParams`](h
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs2/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs2/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs2/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

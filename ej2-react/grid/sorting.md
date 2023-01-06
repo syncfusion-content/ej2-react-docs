@@ -20,16 +20,16 @@ To use Sorting, inject **Sort** module in Grid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/sort-cs1/app/app.jsx %}
+{% include code-snippet/grid/sort-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/sort-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/sort-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/sort-cs1/app/app.tsx %}
+{% include code-snippet/grid/sort-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/sort-cs1/datasource.tsx %}
+{% include code-snippet/grid/sort-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,16 +47,16 @@ To apply sort at initial rendering, set the [`field`](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/sort-cs2/app/app.jsx %}
+{% include code-snippet/grid/sort-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/sort-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/sort-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/sort-cs2/app/app.tsx %}
+{% include code-snippet/grid/sort-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/sort-cs2/datasource.tsx %}
+{% include code-snippet/grid/sort-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,16 +73,16 @@ To clear sorting for a particular column, press the **Shift + mouse left click**
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/sort-cs3/app/app.jsx %}
+{% include code-snippet/grid/sort-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/sort-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/sort-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/sort-cs3/app/app.tsx %}
+{% include code-snippet/grid/sort-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/sort-cs3/datasource.tsx %}
+{% include code-snippet/grid/sort-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,16 +180,16 @@ During the sort action, the Grid component triggers two events. [`actionBegin`](
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/sort-cs4/app/app.jsx %}
+{% include code-snippet/grid/sort-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/sort-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/sort-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/sort-cs4/app/app.tsx %}
+{% include code-snippet/grid/sort-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/sort-cs4/datasource.tsx %}
+{% include code-snippet/grid/sort-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -208,16 +208,16 @@ In the following example, custom sort comparer function was defined in the **Cus
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/sort-cs5/app/app.jsx %}
+{% include code-snippet/grid/sort-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/sort-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/sort-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/sort-cs5/app/app.tsx %}
+{% include code-snippet/grid/sort-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/sort-cs5/datasource.tsx %}
+{% include code-snippet/grid/sort-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

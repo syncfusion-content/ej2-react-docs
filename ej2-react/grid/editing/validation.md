@@ -18,16 +18,16 @@ You can set validation rules by defining the [`columns.validationRules`](https:/
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs29/app/app.jsx %}
+{% include code-snippet/grid/editing-cs29/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs29/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs29/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs29/app/app.tsx %}
+{% include code-snippet/grid/editing-cs29/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs29/datasource.tsx %}
+{% include code-snippet/grid/editing-cs29/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,16 +41,16 @@ In the below demo, custom validation applied for **CustomerID** column.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs30/app/app.jsx %}
+{% include code-snippet/grid/editing-cs30/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs30/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs30/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs30/app/app.tsx %}
+{% include code-snippet/grid/editing-cs30/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs30/datasource.tsx %}
+{% include code-snippet/grid/editing-cs30/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,16 +64,16 @@ In the following sample, dropdownlist edit type is used for the **Role** and **S
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs31/app/app.jsx %}
+{% include code-snippet/grid/editing-cs31/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs31/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs31/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs31/app/app.tsx %}
+{% include code-snippet/grid/editing-cs31/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs31/datasource.tsx %}
+{% include code-snippet/grid/editing-cs31/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -16,16 +16,16 @@ To use the column chooser, inject the **ColumnChooser** module in the grid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs5/app/app.jsx %}
+{% include code-snippet/grid/column-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs5/app/app.tsx %}
+{% include code-snippet/grid/column-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs5/datasource.tsx %}
+{% include code-snippet/grid/column-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,16 +41,16 @@ the [`openColumnChooser`](https://ej2.syncfusion.com/angular/documentation/api/g
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs6/app/app.jsx %}
+{% include code-snippet/grid/column-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs6/app/app.tsx %}
+{% include code-snippet/grid/column-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs6/datasource.tsx %}
+{% include code-snippet/grid/column-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

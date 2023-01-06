@@ -14,16 +14,16 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/aggregate-cs2/app/app.jsx %}
+{% include code-snippet/grid/aggregate-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/aggregate-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/aggregate-cs2/app/app.tsx %}
+{% include code-snippet/grid/aggregate-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/aggregate-cs2/datasource.tsx %}
+{% include code-snippet/grid/aggregate-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,16 +37,16 @@ You can format the aggregate value result by using the [`format`](https://ej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/aggregate-cs3/app/app.jsx %}
+{% include code-snippet/grid/aggregate-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/aggregate-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/aggregate-cs3/app/app.tsx %}
+{% include code-snippet/grid/aggregate-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/aggregate-cs3/datasource.tsx %}
+{% include code-snippet/grid/aggregate-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,16 +60,16 @@ In the following sample, the footer element is appended to the header element us
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/aggregate-cs4/app/app.jsx %}
+{% include code-snippet/grid/aggregate-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/aggregate-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/aggregate-cs4/app/app.tsx %}
+{% include code-snippet/grid/aggregate-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/aggregate-cs4/datasource.tsx %}
+{% include code-snippet/grid/aggregate-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

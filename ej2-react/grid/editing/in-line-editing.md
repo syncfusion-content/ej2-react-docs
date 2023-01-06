@@ -16,16 +16,16 @@ To enable Normal edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs20/app/app.jsx %}
+{% include code-snippet/grid/editing-cs20/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs20/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs20/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs20/app/app.tsx %}
+{% include code-snippet/grid/editing-cs20/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs20/datasource.tsx %}
+{% include code-snippet/grid/editing-cs20/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,16 +41,16 @@ In the below demo, we have update the `TotalCost` column value based on the `Uni
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs21/app/app.jsx %}
+{% include code-snippet/grid/editing-cs21/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs21/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs21/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs21/app/app.tsx %}
+{% include code-snippet/grid/editing-cs21/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs21/datasource.tsx %}
+{% include code-snippet/grid/editing-cs21/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,16 +64,16 @@ In the below demo, we prevent the CRUD operation based on the `Role` column valu
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs22/app/app.jsx %}
+{% include code-snippet/grid/editing-cs22/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs22/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs22/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs22/app/app.tsx %}
+{% include code-snippet/grid/editing-cs22/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs22/datasource.tsx %}
+{% include code-snippet/grid/editing-cs22/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,16 +97,16 @@ Grid methods can be used to perform CRUD operations programmatically. The [addRe
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs23/app/app.jsx %}
+{% include code-snippet/grid/editing-cs23/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs23/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs23/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs23/app/app.tsx %}
+{% include code-snippet/grid/editing-cs23/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs23/datasource.tsx %}
+{% include code-snippet/grid/editing-cs23/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -119,16 +119,16 @@ The delete confirm dialog can be shown when deleting a record by defining the
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs24/app/app.jsx %}
+{% include code-snippet/grid/editing-cs24/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs24/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs24/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs24/app/app.tsx %}
+{% include code-snippet/grid/editing-cs24/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs24/datasource.tsx %}
+{% include code-snippet/grid/editing-cs24/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,16 +143,16 @@ To set a default value for the particular column by defining the [`columns.defau
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs25/app/app.jsx %}
+{% include code-snippet/grid/editing-cs25/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs25/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs25/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs25/app/app.tsx %}
+{% include code-snippet/grid/editing-cs25/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs25/datasource.tsx %}
+{% include code-snippet/grid/editing-cs25/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -164,16 +164,16 @@ By default, a new row will be added at the top of the grid. You can change it by
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs26/app/app.jsx %}
+{% include code-snippet/grid/editing-cs26/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs26/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs26/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs26/app/app.tsx %}
+{% include code-snippet/grid/editing-cs26/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs26/datasource.tsx %}
+{% include code-snippet/grid/editing-cs26/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -187,16 +187,16 @@ The [recordDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/gri
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs27/app/app.jsx %}
+{% include code-snippet/grid/editing-cs27/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs27/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs27/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs27/app/app.tsx %}
+{% include code-snippet/grid/editing-cs27/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs27/datasource.tsx %}
+{% include code-snippet/grid/editing-cs27/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

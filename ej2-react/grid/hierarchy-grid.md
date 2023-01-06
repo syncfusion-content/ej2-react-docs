@@ -20,16 +20,16 @@ To use hierarchical binding, inject the [`DetailRow`](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs1/app/app.jsx %}
+{% include code-snippet/grid/hierarchy-grid-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs1/app/app.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs1/datasource.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,16 +46,16 @@ the [`collapseAll`](https://ej2.syncfusion.com/angular/documentation/api/grid/de
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs2/app/app.jsx %}
+{% include code-snippet/grid/hierarchy-grid-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs2/app/app.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs2/datasource.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,16 +67,16 @@ You can expand a particular Child Grid at initial rendering by invoking the [`ex
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs3/app/app.jsx %}
+{% include code-snippet/grid/hierarchy-grid-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs3/app/app.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs3/datasource.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,16 +88,16 @@ You can Dynamically load child Grid dataSource by using [`load`](https://ej2.syn
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs4/app/app.jsx %}
+{% include code-snippet/grid/hierarchy-grid-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs4/app/app.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs4/datasource.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,16 +111,16 @@ In the below sample, we have bound the child and parent grid with different fiel
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs5/app/app.jsx %}
+{% include code-snippet/grid/hierarchy-grid-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs5/app/app.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs5/datasource.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -135,16 +135,16 @@ In the below demo, **EmployeeID** field relates the parent and child grids. To a
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs6/app/app.jsx %}
+{% include code-snippet/grid/hierarchy-grid-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs6/app/app.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs6/datasource.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,16 +158,16 @@ While expanding the child Grid, the `detailDataBound` event will be triggered. I
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs7/app/app.jsx %}
+{% include code-snippet/grid/hierarchy-grid-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs7/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/hierarchy-grid-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs7/app/app.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs7/datasource.tsx %}
+{% include code-snippet/grid/hierarchy-grid-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

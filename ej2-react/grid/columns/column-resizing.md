@@ -20,16 +20,16 @@ To use the column resize, inject **Resize** module in the grid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs15/app/app.jsx %}
+{% include code-snippet/grid/column-cs15/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs15/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs15/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs15/app/app.tsx %}
+{% include code-snippet/grid/column-cs15/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs15/datasource.tsx %}
+{% include code-snippet/grid/column-cs15/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,22 +40,23 @@ To use the column resize, inject **Resize** module in the grid.
 
 ## Min and max width
 
-Columns can be restricted to resize in between minimum and maximum width by defining the [`columns->minWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#minwidth) and [`columns->maxWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#maxwidth).
+Columns can be restricted to resize in between minimum and maximum width by defining the
+[`columns->minWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#minwidth) and [`columns->maxWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#maxwidth).
 
 In the below sample, **OrderID**, **Ship Name** and **Ship Country** columns are defined with minimum and maximum width.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs16/app/app.jsx %}
+{% include code-snippet/grid/column-cs16/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs16/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs16/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs16/app/app.tsx %}
+{% include code-snippet/grid/column-cs16/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs16/datasource.tsx %}
+{% include code-snippet/grid/column-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,16 +72,16 @@ In this example, we have disabled resize for **Ship City** column.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs17/app/app.jsx %}
+{% include code-snippet/grid/column-cs17/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs17/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs17/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs17/app/app.tsx %}
+{% include code-snippet/grid/column-cs17/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs17/datasource.tsx %}
+{% include code-snippet/grid/column-cs17/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,16 +106,16 @@ During the resizing action, the grid component triggers the below three events.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs18/app/app.jsx %}
+{% include code-snippet/grid/column-cs18/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs18/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs18/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs18/app/app.tsx %}
+{% include code-snippet/grid/column-cs18/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs18/datasource.tsx %}
+{% include code-snippet/grid/column-cs18/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

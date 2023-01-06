@@ -17,16 +17,16 @@ To override the default header title by defining [`headerText`](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs29/app/app.jsx %}
+{% include code-snippet/grid/column-cs29/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs29/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs29/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs29/app/app.tsx %}
+{% include code-snippet/grid/column-cs29/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs29/datasource.tsx %}
+{% include code-snippet/grid/column-cs29/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,16 +40,16 @@ You can customize the header element by using the [`headerTemplate`](https://ej2
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/header-template-cs1/app/app.jsx %}
+{% include code-snippet/grid/header-template-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/header-template-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/header-template-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/header-template-cs1/app/app.tsx %}
+{% include code-snippet/grid/header-template-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/header-template-cs1/datasource.tsx %}
+{% include code-snippet/grid/header-template-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,16 +86,16 @@ To reflect the changes in the grid header, invoke the [`refreshHeader`](https://
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/change-headertext-cs1/app/app.jsx %}
+{% include code-snippet/grid/change-headertext-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/change-headertext-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/change-headertext-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/change-headertext-cs1/app/app.tsx %}
+{% include code-snippet/grid/change-headertext-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/change-headertext-cs1/datasource.tsx %}
+{% include code-snippet/grid/change-headertext-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,10 +146,10 @@ Resize the header cell height by using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/header-orientation-cs1/app/app.jsx %}
+{% include code-snippet/grid/header-orientation-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/header-orientation-cs1/app/app.tsx %}
+{% include code-snippet/grid/header-orientation-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

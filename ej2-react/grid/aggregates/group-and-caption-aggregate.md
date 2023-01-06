@@ -11,20 +11,21 @@ domainurl: ##DomainURL##
 # Group and caption aggregate in React Grid component
 
 Group and caption aggregate values are calculated from the current group items.
-If [`groupFooterTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#groupfootertemplate) is provided, the aggregate values are displayed in the group footer cells; and if [`groupCaptionTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#groupcaptiontemplate) is provided, aggregate values are displayed in the group caption cells.
+If [`groupFooterTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#groupfootertemplate) is provided, the aggregate values are displayed in the group footer cells; and if [`groupCaptionTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#groupcaptiontemplate)
+ is provided, aggregate values are displayed in the group caption cells.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/aggregate-cs5/app/app.jsx %}
+{% include code-snippet/grid/aggregate-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/aggregate-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/aggregate-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/aggregate-cs5/app/app.tsx %}
+{% include code-snippet/grid/aggregate-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/aggregate-cs5/datasource.tsx %}
+{% include code-snippet/grid/aggregate-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

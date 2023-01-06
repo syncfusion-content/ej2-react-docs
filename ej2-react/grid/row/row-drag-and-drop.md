@@ -19,10 +19,10 @@ To use Row Drag and Drop, you need to inject **RowDD** module in Grid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/row-drag-cs1/app/app.jsx %}
+{% include code-snippet/grid/row-drag-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/row-drag-cs1/app/app.tsx %}
+{% include code-snippet/grid/row-drag-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,16 +36,16 @@ By setting the [targetID](https://ej2.syncfusion.com/angular/documentation/api/g
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs17/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs17/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs17/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs17/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs17/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs17/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs17/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs17/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

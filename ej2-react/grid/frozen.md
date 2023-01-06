@@ -19,16 +19,16 @@ is set as **'3'**. Hence, the left two columns and top three rows are frozen.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/scrolling-cs1/app/app.jsx %}
+{% include code-snippet/grid/scrolling-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/scrolling-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/scrolling-cs1/app/app.tsx %}
+{% include code-snippet/grid/scrolling-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/scrolling-cs1/datasource.tsx %}
+{% include code-snippet/grid/scrolling-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,16 +59,16 @@ In this demo, the **ShipCountry** column is frozen at the left and the **Custome
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/scrolling-cs2/app/app.jsx %}
+{% include code-snippet/grid/scrolling-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/scrolling-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/scrolling-cs2/app/app.tsx %}
+{% include code-snippet/grid/scrolling-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/scrolling-cs2/datasource.tsx %}
+{% include code-snippet/grid/scrolling-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,16 +100,16 @@ In a frozen column enabled Grid, Grid content will be separated into frozen and 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/scrolling-cs3/app/app.jsx %}
+{% include code-snippet/grid/scrolling-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/scrolling-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/scrolling-cs3/app/app.tsx %}
+{% include code-snippet/grid/scrolling-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/scrolling-cs3/datasource.tsx %}
+{% include code-snippet/grid/scrolling-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

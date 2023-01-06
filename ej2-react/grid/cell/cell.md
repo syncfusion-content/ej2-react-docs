@@ -16,18 +16,19 @@ The appearance of cells can be customized by using the [`queryCellInfo`](https:/
 The [`queryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querycellinfo) event triggers for every cell.
 In that event handler, you can get [`QueryCellInfoEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/queryCellInfoEventArgs/) that contains the details of the cell.
 
+
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/rows-cs1/app/app.jsx %}
+{% include code-snippet/grid/rows-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/rows-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/rows-cs1/app/app.tsx %}
+{% include code-snippet/grid/rows-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/rows-cs1/datasource.tsx %}
+{% include code-snippet/grid/rows-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,10 +54,10 @@ In the below example, we have customized the cells of **OrderID** and **ShipCity
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customize-cell-cs1/app/app.jsx %}
+{% include code-snippet/grid/customize-cell-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customize-cell-cs1/app/app.tsx %}
+{% include code-snippet/grid/customize-cell-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -79,16 +80,16 @@ The available modes of grid lines are:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/autowrap-cs2/app/app.jsx %}
+{% include code-snippet/grid/autowrap-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/autowrap-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/autowrap-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/autowrap-cs2/app/app.tsx %}
+{% include code-snippet/grid/autowrap-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/autowrap-cs2/datasource.tsx %}
+{% include code-snippet/grid/autowrap-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

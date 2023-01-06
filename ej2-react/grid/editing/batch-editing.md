@@ -16,16 +16,16 @@ To enable Batch edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/a
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs2/app/app.jsx %}
+{% include code-snippet/grid/editing-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs2/app/app.tsx %}
+{% include code-snippet/grid/editing-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs2/datasource.tsx %}
+{% include code-snippet/grid/editing-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,16 +41,16 @@ In the below demo, we have update the `TotalCost` column value based on the `Uni
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs3/app/app.jsx %}
+{% include code-snippet/grid/editing-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs3/app/app.tsx %}
+{% include code-snippet/grid/editing-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs3/datasource.tsx %}
+{% include code-snippet/grid/editing-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,16 +64,16 @@ In the below demo, we prevent the CRUD operation based on the `Role` column valu
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs4/app/app.jsx %}
+{% include code-snippet/grid/editing-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs4/app/app.tsx %}
+{% include code-snippet/grid/editing-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs4/datasource.tsx %}
+{% include code-snippet/grid/editing-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,16 +85,16 @@ By default, grid will show the confirm dialog when saving or cancelling or perfo
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs5/app/app.jsx %}
+{% include code-snippet/grid/editing-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs5/app/app.tsx %}
+{% include code-snippet/grid/editing-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs5/datasource.tsx %}
+{% include code-snippet/grid/editing-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -17,16 +17,16 @@ In the following example, the **rowHeight** is set as '60px'.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/rows-cs2/app/app.jsx %}
+{% include code-snippet/grid/rows-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/rows-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/rows-cs2/app/app.tsx %}
+{% include code-snippet/grid/rows-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/rows-cs2/datasource.tsx %}
+{% include code-snippet/grid/rows-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,16 +41,16 @@ In the following example, the row height for the row with OrderID '10249' is set
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/rows-cs3/app/app.jsx %}
+{% include code-snippet/grid/rows-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/rows-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/rows-cs3/app/app.tsx %}
+{% include code-snippet/grid/rows-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/rows-cs3/datasource.tsx %}
+{% include code-snippet/grid/rows-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

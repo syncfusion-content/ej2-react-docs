@@ -14,16 +14,16 @@ The detail template provides additional information about a particular row by ex
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/row-template-cs1/app/app.jsx %}
+{% include code-snippet/grid/row-template-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/row-template-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/row-template-cs1/app/app.tsx %}
+{% include code-snippet/grid/row-template-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/row-template-cs1/datasource.tsx %}
+{% include code-snippet/grid/row-template-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,16 +38,16 @@ For example, to render grid inside the detail row, place an HTML div element as 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/row-template-cs2/app/app.jsx %}
+{% include code-snippet/grid/row-template-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/row-template-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/row-template-cs2/app/app.tsx %}
+{% include code-snippet/grid/row-template-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/row-template-cs2/datasource.tsx %}
+{% include code-snippet/grid/row-template-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,16 +59,16 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/detail-template-cs1/app/app.jsx %}
+{% include code-snippet/grid/detail-template-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/detail-template-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/detail-template-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/detail-template-cs1/app/app.tsx %}
+{% include code-snippet/grid/detail-template-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/detail-template-cs1/datasource.tsx %}
+{% include code-snippet/grid/detail-template-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

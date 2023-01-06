@@ -127,10 +127,10 @@ The below code illustrates the pdf export customization.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs3/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs3/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs3/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs3/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -144,16 +144,16 @@ In the below sample, we have enabled **repeatHeader** property in [`pdfHeaderQue
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs4/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs4/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs4/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

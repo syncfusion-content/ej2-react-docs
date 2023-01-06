@@ -18,16 +18,16 @@ Bind the **mouseup** event for Grid and in the event handler call the [`startEdi
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs34/app/app.jsx %}
+{% include code-snippet/grid/editing-cs34/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs34/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs34/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs34/app/app.tsx %}
+{% include code-snippet/grid/editing-cs34/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs34/datasource.tsx %}
+{% include code-snippet/grid/editing-cs34/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,16 +39,16 @@ You can open the default dropdown edit popup with single click edit by focusing 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs35/app/app.jsx %}
+{% include code-snippet/grid/editing-cs35/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs35/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs35/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs35/app/app.tsx %}
+{% include code-snippet/grid/editing-cs35/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs35/datasource.tsx %}
+{% include code-snippet/grid/editing-cs35/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,16 +62,16 @@ Bind the **mouseup** event for Grid and in the event handler call the [`editCell
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs36/app/app.jsx %}
+{% include code-snippet/grid/editing-cs36/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs36/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs36/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs36/app/app.tsx %}
+{% include code-snippet/grid/editing-cs36/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs36/datasource.tsx %}
+{% include code-snippet/grid/editing-cs36/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

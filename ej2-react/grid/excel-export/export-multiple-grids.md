@@ -20,16 +20,16 @@ It have an option to provide blank rows between grids. These blank rows count ca
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs12/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs12/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs12/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs12/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs12/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,16 +44,16 @@ To export in new sheet, define  [`multipleExport.type`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs13/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs13/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs13/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs13/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs13/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

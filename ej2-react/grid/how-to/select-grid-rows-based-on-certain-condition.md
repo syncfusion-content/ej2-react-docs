@@ -16,16 +16,16 @@ In the below demo, we have selected the grid rows only when *EmployeeID* column 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/change-headertext-cs6/app/app.jsx %}
+{% include code-snippet/grid/change-headertext-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/change-headertext-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/change-headertext-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/change-headertext-cs6/app/app.tsx %}
+{% include code-snippet/grid/change-headertext-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/change-headertext-cs6/datasource.tsx %}
+{% include code-snippet/grid/change-headertext-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

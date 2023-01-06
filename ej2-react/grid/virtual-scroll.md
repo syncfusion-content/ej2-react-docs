@@ -19,17 +19,18 @@ To use virtualization, you need to inject **VirtualScroll** module in grid.
 Row virtualization allows you to load and render rows only in content viewport.
 It is an alternative way of paging in which the data will load while scrolling vertically.
 To setup the row virtualization, you need to define
-[`enableVirtualization`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablevirtualization) as **true** and content height by [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid/#height) property.
+[`enableVirtualization`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablevirtualization) as **true** and
+content height by [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid/#height) property.
 
 The number of records displayed in the Grid is determined implicitly by height of content area. Also you have an option to define visible number of records by [`pageSettings.pageSize`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettingsModel/#pagesize)property.
 The loaded data will be cached and reused when it is needed for next time.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs4/app/app.jsx %}
+{% include code-snippet/grid/virtual-scroll-cs4/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs4/app/app.tsx %}
+{% include code-snippet/grid/virtual-scroll-cs4/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,10 +45,10 @@ To setup the column virtualization, set the [`enableVirtualization`](https://ej2
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs5/app/app.jsx %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs5/app/app.tsx %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -41,16 +41,16 @@ Component |Example
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs9/app/app.jsx %}
+{% include code-snippet/grid/editing-cs9/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs9/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs9/app/app.tsx %}
+{% include code-snippet/grid/editing-cs9/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs9/datasource.tsx %}
+{% include code-snippet/grid/editing-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,16 +66,16 @@ In the below demo, while editing the row we have restricted to type the decimal 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs4/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs4/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs4/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,16 +105,16 @@ In the below demo, DropDownList is rendered with custom [`dataSource`](https://e
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/cascade-drop-cs1/app/app.jsx %}
+{% include code-snippet/grid/cascade-drop-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/cascade-drop-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/cascade-drop-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/cascade-drop-cs1/app/app.tsx %}
+{% include code-snippet/grid/cascade-drop-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/cascade-drop-cs1/datasource.tsx %}
+{% include code-snippet/grid/cascade-drop-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,16 +138,16 @@ Use the cell edit template feature of the Grid to render the TimePicker componen
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs10/app/app.jsx %}
+{% include code-snippet/grid/editing-cs10/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs10/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs10/app/app.tsx %}
+{% include code-snippet/grid/editing-cs10/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs10/datasource.tsx %}
+{% include code-snippet/grid/editing-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,16 +159,16 @@ Use the cell edit template feature of the Grid to render the AutoComplete compon
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs11/app/app.jsx %}
+{% include code-snippet/grid/editing-cs11/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs11/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs11/app/app.tsx %}
+{% include code-snippet/grid/editing-cs11/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs11/datasource.tsx %}
+{% include code-snippet/grid/editing-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,16 +180,16 @@ Use the cell edit template feature of the Grid to render the MultiSelect DropDow
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs12/app/app.jsx %}
+{% include code-snippet/grid/editing-cs12/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs12/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs12/app/app.tsx %}
+{% include code-snippet/grid/editing-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs12/datasource.tsx %}
+{% include code-snippet/grid/editing-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -201,16 +201,16 @@ Use the cell edit template feature of the Grid to render the MaskedTextBox compo
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs13/app/app.jsx %}
+{% include code-snippet/grid/editing-cs13/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs13/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs13/app/app.tsx %}
+{% include code-snippet/grid/editing-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs13/datasource.tsx %}
+{% include code-snippet/grid/editing-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -222,16 +222,16 @@ Use the cell edit template feature of the Grid to render the RichTextEditor comp
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs14/app/app.jsx %}
+{% include code-snippet/grid/editing-cs14/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs14/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs14/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs14/app/app.tsx %}
+{% include code-snippet/grid/editing-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs14/datasource.tsx %}
+{% include code-snippet/grid/editing-cs14/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -247,16 +247,16 @@ This is demonstrated in the following sample.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/multicolumn-dropdown-cs1/app/app.jsx %}
+{% include code-snippet/grid/multicolumn-dropdown-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/multicolumn-dropdown-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/multicolumn-dropdown-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/multicolumn-dropdown-cs1/app/app.tsx %}
+{% include code-snippet/grid/multicolumn-dropdown-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/multicolumn-dropdown-cs1/datasource.tsx %}
+{% include code-snippet/grid/multicolumn-dropdown-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -268,16 +268,16 @@ The cell editor for a particular column can be specified using a React Component
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs15/app/app.jsx %}
+{% include code-snippet/grid/editing-cs15/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs15/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs15/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs15/app/app.tsx %}
+{% include code-snippet/grid/editing-cs15/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs15/datasource.tsx %}
+{% include code-snippet/grid/editing-cs15/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -10,14 +10,15 @@ domainurl: ##DomainURL##
 
 # Remote data in React Grid component
 
-To bind remote data to grid component, assign service data as an instance of **DataManager** to the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property. To interact with remote data source, provide the endpoint **url**.
+To bind remote data to grid component, assign service data as an instance of **DataManager** to the
+[`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property. To interact with remote data source, provide the endpoint **url**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs4/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs4/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs4/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs4/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -32,10 +33,10 @@ You can retrieve data from OData service using DataManager. You can refer to the
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs5/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs5/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs5/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,15 +45,16 @@ You can retrieve data from OData service using DataManager. You can refer to the
 ## OData v4 adaptor - Binding OData v4 service
 
 The ODataV4 is an improved version of OData protocols, and the **DataManager** can also retrieve and consume OData v4 services.
-For more details on OData v4 services, refer to the [odata documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197).
+ For more details on OData v4 services, refer to the
+ [odata documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197).
 To bind OData v4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odatav4-adaptor).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs6/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs6/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs6/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs6/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,14 +158,16 @@ The following code example describes the CRUD operations handled at server-side.
 
 ## Custom adaptor
 
-You can create your own adaptor by extending the built-in adaptors. For the sake of demonstrating custom adaptor approach,we are going to see how to add serial number for the records by overriding the built-in response processing using **processResponse** method of the [`ODataAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor).
+You can create your own adaptor by extending the built-in adaptors. For the sake of demonstrating custom adaptor approach,
+we are going to see how to add serial number for the records
+by overriding the built-in response processing using **processResponse** method of the [`ODataAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs7/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs7/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs7/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs7/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -172,15 +176,15 @@ You can create your own adaptor by extending the built-in adaptors. For the sake
 ## Offline mode
 
 On remote data binding, all grid actions such as paging, sorting, editing, grouping, filtering, etc, will be processed on server-side.
-To avoid post back for every action, set the grid to load all data on initialization and make the actions process in client-side.
-To enable this behavior, use the **offline** property of **DataManager**.
+ To avoid post back for every action, set the grid to load all data on initialization and make the actions process in client-side.
+ To enable this behavior, use the **offline** property of **DataManager**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs8/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs8/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs8/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs8/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

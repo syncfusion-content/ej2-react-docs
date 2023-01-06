@@ -22,16 +22,16 @@ To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/angular/documentatio
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs16/app/app.jsx %}
+{% include code-snippet/grid/editing-cs16/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs16/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs16/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs16/app/app.tsx %}
+{% include code-snippet/grid/editing-cs16/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs16/datasource.tsx %}
+{% include code-snippet/grid/editing-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,16 +48,16 @@ You can define this by using the [`toolbar`](https://ej2.syncfusion.com/angular/
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs17/app/app.jsx %}
+{% include code-snippet/grid/editing-cs17/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs17/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs17/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs17/app/app.tsx %}
+{% include code-snippet/grid/editing-cs17/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs17/datasource.tsx %}
+{% include code-snippet/grid/editing-cs17/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,16 +71,16 @@ In the following demo, editing is disabled for the **CustomerID** column.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs18/app/app.jsx %}
+{% include code-snippet/grid/editing-cs18/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs18/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs18/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs18/app/app.tsx %}
+{% include code-snippet/grid/editing-cs18/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs18/datasource.tsx %}
+{% include code-snippet/grid/editing-cs18/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,16 +94,16 @@ In the below demo, the rows which are having the value for *ShipCountry* column 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs5/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs5/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs5/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,10 +113,10 @@ For batch mode of editing, you can use [`cellEdit`](https://ej2.syncfusion.com/a
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs6/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs6/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs6/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs6/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -135,16 +135,16 @@ In the following example, the textbox is rendered in the Freight column using a 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs19/app/app.jsx %}
+{% include code-snippet/grid/editing-cs19/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs19/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs19/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs19/app/app.tsx %}
+{% include code-snippet/grid/editing-cs19/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs19/datasource.tsx %}
+{% include code-snippet/grid/editing-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

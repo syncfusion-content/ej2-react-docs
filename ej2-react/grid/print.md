@@ -15,16 +15,16 @@ The print option can be displayed on the [`toolbar`](https://ej2.syncfusion.com/
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/print-cs1/app/app.jsx %}
+{% include code-snippet/grid/print-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/print-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/print-cs1/app/app.tsx %}
+{% include code-snippet/grid/print-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/print-cs1/datasource.tsx %}
+{% include code-snippet/grid/print-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,16 +45,16 @@ To print the grid from an external button, invoke the [`print`](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/print-cs2/app/app.jsx %}
+{% include code-snippet/grid/print-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/print-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/print-cs2/app/app.tsx %}
+{% include code-snippet/grid/print-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/print-cs2/datasource.tsx %}
+{% include code-snippet/grid/print-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,16 +66,16 @@ By default, the grid prints all the pages. To print the current page alone, set 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/print-cs3/app/app.jsx %}
+{% include code-snippet/grid/print-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/print-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/print-cs3/app/app.tsx %}
+{% include code-snippet/grid/print-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/print-cs3/datasource.tsx %}
+{% include code-snippet/grid/print-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,16 +93,16 @@ By default, the grid will be print the master and expanded child grids alone. yo
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/print-cs4/app/app.jsx %}
+{% include code-snippet/grid/print-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/print-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/print-cs4/app/app.tsx %}
+{% include code-snippet/grid/print-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/print-cs4/datasource.tsx %}
+{% include code-snippet/grid/print-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,16 +128,16 @@ In the below example, we have **CustomerID** as a hidden column in the grid. Whi
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/print-cs5/app/app.jsx %}
+{% include code-snippet/grid/print-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/print-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/print-cs5/app/app.tsx %}
+{% include code-snippet/grid/print-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/print-cs5/datasource.tsx %}
+{% include code-snippet/grid/print-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

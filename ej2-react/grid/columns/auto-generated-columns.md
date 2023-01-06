@@ -10,15 +10,16 @@ domainurl: ##DomainURL##
 
 # Auto generated columns in React Grid component
 
-The [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/) are automatically generated when [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/) declaration is empty or undefined while initializing the grid.
+The [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/) are automatically generated when
+[`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/) declaration is empty or undefined while initializing the grid.
 All the columns in the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) are bound as grid columns.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs2/app/app.jsx %}
+{% include code-snippet/grid/column-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs2/app/app.tsx %}
+{% include code-snippet/grid/column-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -32,10 +33,10 @@ If Primary key "column index" is known then refer the following code example
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs3/app/app.jsx %}
+{% include code-snippet/grid/column-cs3/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs3/app/app.tsx %}
+{% include code-snippet/grid/column-cs3/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,10 +59,10 @@ In the below example, [`width`](https://ej2.syncfusion.com/angular/documentation
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs4/app/app.jsx %}
+{% include code-snippet/grid/column-cs4/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs4/app/app.tsx %}
+{% include code-snippet/grid/column-cs4/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

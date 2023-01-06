@@ -11,21 +11,22 @@ domainurl: ##DomainURL##
 # Check box selection in React Grid component
 
 Checkbox selection provides an option to select multiple grid records with help of checkbox in each row.
+
 To render the checkbox in each grid row, you need to use checkbox column with type as
 **checkbox** using the  column [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/selection-cs3/app/app.jsx %}
+{% include code-snippet/grid/selection-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/selection-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs3/app/app.tsx %}
+{% include code-snippet/grid/selection-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/selection-cs3/datasource.tsx %}
+{% include code-snippet/grid/selection-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,16 +50,16 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/selection-cs4/app/app.jsx %}
+{% include code-snippet/grid/selection-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/selection-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs4/app/app.tsx %}
+{% include code-snippet/grid/selection-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/selection-cs4/datasource.tsx %}
+{% include code-snippet/grid/selection-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -72,16 +73,16 @@ In the following sample, the selection of specific rows has been prevented based
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/selection-cs5/app/app.jsx %}
+{% include code-snippet/grid/selection-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/selection-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/selection-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs5/app/app.tsx %}
+{% include code-snippet/grid/selection-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/selection-cs5/datasource.tsx %}
+{% include code-snippet/grid/selection-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

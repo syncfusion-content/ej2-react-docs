@@ -21,16 +21,16 @@ To use Paging, inject **Page** module in Grid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pager-cs2/app/app.jsx %}
+{% include code-snippet/grid/pager-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pager-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pager-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pager-cs2/app/app.tsx %}
+{% include code-snippet/grid/pager-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pager-cs2/datasource.tsx %}
+{% include code-snippet/grid/pager-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,16 +44,16 @@ You can use custom elements inside the pager instead of default elements. The cu
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pager-cs3/app/app.jsx %}
+{% include code-snippet/grid/pager-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pager-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pager-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pager-cs3/app/app.tsx %}
+{% include code-snippet/grid/pager-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pager-cs3/datasource.tsx %}
+{% include code-snippet/grid/pager-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,16 +65,16 @@ The pager Dropdown allows you to change the number of records in the Grid dynami
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pager-cs4/app/app.jsx %}
+{% include code-snippet/grid/pager-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pager-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pager-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pager-cs4/app/app.tsx %}
+{% include code-snippet/grid/pager-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pager-cs4/datasource.tsx %}
+{% include code-snippet/grid/pager-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,16 +86,16 @@ By default, Pager will be rendered at the bottom of the Grid. You can also rende
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pager-cs5/app/app.jsx %}
+{% include code-snippet/grid/pager-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pager-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pager-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pager-cs5/app/app.tsx %}
+{% include code-snippet/grid/pager-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pager-cs5/datasource.tsx %}
+{% include code-snippet/grid/pager-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

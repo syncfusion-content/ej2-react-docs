@@ -10,7 +10,8 @@ domainurl: ##DomainURL##
 
 # Command column editing in React Grid component
 
-The command column provides an option to add CRUD action buttons in a column. This can be defined by the [`column.commands`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#commands) property.
+The command column provides an option to add CRUD action buttons in a column. This can be defined by the
+ [`column.commands`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#commands) property.
 
 The available built-in command buttons are:
 
@@ -23,16 +24,16 @@ The available built-in command buttons are:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs6/app/app.jsx %}
+{% include code-snippet/grid/editing-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs6/app/app.tsx %}
+{% include code-snippet/grid/editing-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs6/datasource.tsx %}
+{% include code-snippet/grid/editing-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,20 +41,21 @@ The available built-in command buttons are:
 
 ## Custom command column
 
-The custom command buttons can be added in a column by using the [`column.commands`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#commands) property and the action for the custom buttons can be defined using [`commandClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#commandClick) event.
+ The custom command buttons can be added in a column by using the [`column.commands`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#commands) property and
+the action for the custom buttons can be defined using [`commandClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#commandClick) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs7/app/app.jsx %}
+{% include code-snippet/grid/editing-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs7/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs7/app/app.tsx %}
+{% include code-snippet/grid/editing-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs7/datasource.tsx %}
+{% include code-snippet/grid/editing-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

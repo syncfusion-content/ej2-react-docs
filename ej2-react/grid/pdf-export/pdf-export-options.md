@@ -16,16 +16,16 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs9/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs9/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs9/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs9/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs9/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs9/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,16 +39,16 @@ In the below exporting demo, we can get the selected records using [`getSelected
 
  {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/app/app.jsx %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/app/app.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/datasource.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,16 +62,16 @@ In the below Pdf exporting demo, We have gotten the filtered data by applying fi
 
  {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/app/app.jsx %}
+{% include code-snippet/grid/export-filtered-data-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/app/app.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/datasource.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -83,16 +83,16 @@ PDF export provides an option to export hidden columns of Grid by defining the [
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs10/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs10/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs10/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs10/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs10/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs10/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs10/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,16 +110,16 @@ In the below example, we have **CustomerID** as a hidden column in the grid. Whi
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs11/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs11/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs11/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs11/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs11/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs11/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,16 +131,16 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs12/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs12/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs12/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs12/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs12/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,16 +180,16 @@ Supported page sizes are:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs13/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs13/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs13/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs13/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs13/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -201,16 +201,16 @@ You can assign the file name for the exported document by defining [`fileName`](
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs14/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs14/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs14/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs14/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs14/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs14/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs14/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -254,10 +254,10 @@ In the following example, we have used Algeria font to export the grid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs15/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs15/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs15/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs15/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

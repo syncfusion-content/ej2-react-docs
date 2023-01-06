@@ -23,16 +23,16 @@ You can enable/disable toolbar items by using the **enableItems** method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/toolbar-cs5/app/app.jsx %}
+{% include code-snippet/grid/toolbar-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/toolbar-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/toolbar-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/toolbar-cs5/app/app.tsx %}
+{% include code-snippet/grid/toolbar-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/toolbar-cs5/datasource.tsx %}
+{% include code-snippet/grid/toolbar-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,16 +44,16 @@ You can add the Grid toolbar component at the bottom of Grid using the ['created
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/toolbar-cs6/app/app.jsx %}
+{% include code-snippet/grid/toolbar-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/toolbar-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/toolbar-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/toolbar-cs6/app/app.tsx %}
+{% include code-snippet/grid/toolbar-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/toolbar-cs6/datasource.tsx %}
+{% include code-snippet/grid/toolbar-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

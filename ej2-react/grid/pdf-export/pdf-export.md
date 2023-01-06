@@ -16,16 +16,16 @@ To use PDF export, inject the **PdfExport** module in grid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs16/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs16/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs16/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs16/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs16/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs16/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs16/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,16 +43,16 @@ In the below demo, we have rendered the default spinner component when exporting
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs17/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs17/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs17/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs17/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs17/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs17/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs17/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs17/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,16 +64,16 @@ PDF export provides an option to define datasource dynamically before exporting.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs18/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs18/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs18/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs18/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs18/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs18/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs18/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs18/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,16 +87,16 @@ In the below example, we have passed *recordcount* as *12* using [`addParams`](h
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs19/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs19/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs19/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs19/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs19/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs19/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs19/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -52,10 +52,10 @@ In the below demo, the button click will enable/disable the Grid and its actions
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/enable-disable-actions-cs1/app/app.jsx %}
+{% include code-snippet/grid/enable-disable-actions-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/enable-disable-actions-cs1/app/app.tsx %}
+{% include code-snippet/grid/enable-disable-actions-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

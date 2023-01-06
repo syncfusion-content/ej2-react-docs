@@ -42,7 +42,7 @@ Refresh the grid after the datasource change by using the [`refresh`](https://ej
 {% include code-snippet/grid/change-headertext-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/change-headertext-cs2/app/index.tsx %}
+{% includecode-snippet/grid/change-headertext-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,7 +94,7 @@ In the below demo, the button click will enable/disable the Grid and its actions
 {% include code-snippet/grid/change-headertext-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/change-headertext-cs2/app/index.tsx %}
+{% includecode-snippet/grid/change-headertext-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -133,7 +133,7 @@ this.grid.refreshHeader();
 {% include code-snippet/grid/change-headertext-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/change-headertext-cs3/app/index.tsx %}
+{% includecode-snippet/grid/change-headertext-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -181,7 +181,7 @@ Add the custom css class to particular column by using [`customAttributes`](http
 {% include code-snippet/grid/custom-column-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -209,7 +209,7 @@ public tooltip(args){
 {% include code-snippet/grid/custom-tooltip-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-tooltip-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-tooltip-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -261,7 +261,7 @@ public setHeaderHeight(args) {
 {% include code-snippet/grid/header-orientation-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/header-orientation-cs3/app/index.tsx %}
+{% includecode-snippet/grid/header-orientation-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -277,7 +277,7 @@ In the following sample, the DropDownList is rendered in the `ShipCountry` colum
 {% include code-snippet/grid/dropdown-component-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/dropdown-component-cs2/app/index.tsx %}
+{% includecode-snippet/grid/dropdown-component-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -300,7 +300,7 @@ In the below sample, grid is rendered with a customized column menu icon.
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -319,7 +319,7 @@ In the below example, we have changed the dialog's header text for editing and a
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -340,7 +340,7 @@ In the below example, we have rendered the grid columns `CustomerID` as hidden c
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -357,7 +357,7 @@ In the below demo, Cascading DropDownList rendered for `ShipCountry` and `ShipSt
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -390,7 +390,7 @@ In the below demo, DropDownList is rendered with custom Datasource for the `Ship
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -407,7 +407,7 @@ The following example demonstrate the wizard like editing in the grid with the o
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -424,7 +424,7 @@ The following example demonstrate the usage of tab control inside the dialog tem
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -441,7 +441,7 @@ In the below demo, the rows which are having the value for `ShipCountry` column 
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -454,7 +454,7 @@ For batch mode of editing, you can use [`cellEdit`](https://ej2.syncfusion.com/a
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -473,7 +473,7 @@ The following example demonstrates on `Adding` a new row when `Enter` key is pre
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -490,7 +490,7 @@ Bind the click event for the Grid and in the click event handler call the [`edit
 {% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
+{% includecode-snippet/grid/custom-column-menu-icon-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -526,7 +526,7 @@ In the below demo, click on the corresponding button to perform single-column or
 {% include code-snippet/grid/change-headertext-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/change-headertext-cs4/app/index.tsx %}
+{% includecode-snippet/grid/change-headertext-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -565,7 +565,7 @@ In the below demo, click on the corresponding button to clear sort for particula
 {% include code-snippet/grid/change-headertext-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/change-headertext-cs5/app/index.tsx %}
+{% includecode-snippet/grid/change-headertext-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -587,7 +587,7 @@ AutoComplete component is rendered instead of DropDownList.
 {% include code-snippet/grid/change-headertext-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/change-headertext-cs5/app/index.tsx %}
+{% includecode-snippet/grid/change-headertext-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -605,7 +605,7 @@ In the following example, The `Employee Name` is a foreign key column. DropDownL
 {% include code-snippet/grid/foreign-key-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs7/app/index.tsx %}
+{% includecode-snippet/grid/foreign-key-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -625,7 +625,7 @@ This column header shows the custom filter bar template and you can select filte
 {% include code-snippet/grid/foreign-key-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs8/app/index.tsx %}
+{% includecode-snippet/grid/foreign-key-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -644,7 +644,7 @@ In the following example, The `Employee Name` is a foreign key column and the ag
 {% include code-snippet/grid/foreign-key-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs9/app/index.tsx %}
+{% includecode-snippet/grid/foreign-key-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -659,7 +659,7 @@ When editing, you can bind foreign key datasource to a dropdown list by using [`
 {% include code-snippet/grid/foreign-key-cs10/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/foreign-key-cs10/app/index.tsx %}
+{% includecode-snippet/grid/foreign-key-cs10/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -680,7 +680,7 @@ In the below Pdf exporting demo, We have gotten the filtered data by applying fi
 {% include code-snippet/grid/export-filtered-data-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs2/app/index.tsx %}
+{% includecode-snippet/grid/export-filtered-data-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -697,7 +697,7 @@ To customize default values of pager dropdown, you need to define `pageSizes` as
 {% include code-snippet/grid/export-filtered-data-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs2/app/index.tsx %}
+{% includecode-snippet/grid/export-filtered-data-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -750,7 +750,7 @@ In the below demo, the expand/collapse icon in the row with `EmployeeID` as `1` 
 {% include code-snippet/grid/export-filtered-data-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs2/app/index.tsx %}
+{% includecode-snippet/grid/export-filtered-data-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
         

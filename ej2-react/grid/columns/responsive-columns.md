@@ -14,10 +14,10 @@ You can toggle column visibility based on media queries which are defined at the
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/header-orientation-cs1/app/app.jsx %}
+{% include code-snippet/grid/header-orientation-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/header-orientation-cs1/app/app.tsx %}
+{% include code-snippet/grid/header-orientation-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

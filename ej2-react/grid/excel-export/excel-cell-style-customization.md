@@ -18,16 +18,16 @@ In the below sample, we have set the background color for **Freight** column in 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs2/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs2/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs2/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,16 +41,16 @@ To apply theme in exported Excel, define the [`theme`](https://ej2.syncfusion.co
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs3/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs3/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs3/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,10 +68,10 @@ In the following demo, using the `rotation` property of the style argument in th
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/header-orientation-cs2/app/app.jsx %}
+{% include code-snippet/grid/header-orientation-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/header-orientation-cs2/app/app.tsx %}
+{% include code-snippet/grid/header-orientation-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -18,16 +18,16 @@ The following example demonstrates on *Adding* a new row when **Enter** key is p
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs16/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs16/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs16/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs16/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs16/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs16/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs16/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

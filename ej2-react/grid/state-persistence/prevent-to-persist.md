@@ -20,16 +20,16 @@ The following example demonstrates how to prevent Grid columns from persisting. 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs33/app/app.jsx %}
+{% include code-snippet/grid/column-cs33/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs33/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs33/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs33/app/app.tsx %}
+{% include code-snippet/grid/column-cs33/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs33/datasource.tsx %}
+{% include code-snippet/grid/column-cs33/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

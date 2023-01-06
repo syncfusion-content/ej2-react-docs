@@ -55,16 +55,16 @@ In the below demo, the expand/collapse icon in the row with *EmployeeID* as *1* 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs15/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs15/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs15/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs15/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs15/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs15/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs15/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs15/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -21,16 +21,16 @@ You can achieve this by destroying the grid after disabling the [`enablePersiste
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs34/app/app.jsx %}
+{% include code-snippet/grid/column-cs34/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs34/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs34/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs34/app/app.tsx %}
+{% include code-snippet/grid/column-cs34/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs34/datasource.tsx %}
+{% include code-snippet/grid/column-cs34/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,16 +43,16 @@ This is because the grid refreshes its query params for every page load. You can
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs35/app/app.jsx %}
+{% include code-snippet/grid/column-cs35/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs35/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs35/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs35/app/app.tsx %}
+{% include code-snippet/grid/column-cs35/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs35/datasource.tsx %}
+{% include code-snippet/grid/column-cs35/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,16 +64,16 @@ The Grid columns can be persisted when the [enablePersistence](https://ej2.syncf
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs36/app/app.jsx %}
+{% include code-snippet/grid/column-cs36/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs36/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs36/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs36/app/app.tsx %}
+{% include code-snippet/grid/column-cs36/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs36/datasource.tsx %}
+{% include code-snippet/grid/column-cs36/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

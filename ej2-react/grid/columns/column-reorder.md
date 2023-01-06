@@ -17,16 +17,16 @@ To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/angular/doc
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs11/app/app.jsx %}
+{% include code-snippet/grid/column-cs11/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs11/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs11/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs11/app/app.tsx %}
+{% include code-snippet/grid/column-cs11/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs11/datasource.tsx %}
+{% include code-snippet/grid/column-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,16 +40,16 @@ Grid have option to reorder Columns either by Interaction or by using the [`reor
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs12/app/app.jsx %}
+{% include code-snippet/grid/column-cs12/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs12/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs12/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs12/app/app.tsx %}
+{% include code-snippet/grid/column-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs12/datasource.tsx %}
+{% include code-snippet/grid/column-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,16 +63,16 @@ In the below sample, **Ship City** and **Ship Region** column is reordered to la
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs13/app/app.jsx %}
+{% include code-snippet/grid/column-cs13/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs13/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs13/app/app.tsx %}
+{% include code-snippet/grid/column-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs13/datasource.tsx %}
+{% include code-snippet/grid/column-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,16 +88,16 @@ During the reorder action, the grid component triggers the below three events.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs14/app/app.jsx %}
+{% include code-snippet/grid/column-cs14/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs14/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs14/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs14/app/app.tsx %}
+{% include code-snippet/grid/column-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs14/datasource.tsx %}
+{% include code-snippet/grid/column-cs14/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

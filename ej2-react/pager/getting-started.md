@@ -88,10 +88,10 @@ ReactDOM.render(<App />, document.getElementById('pager'));
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs5/app/app.jsx %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs5/app/app.tsx %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,10 +105,10 @@ and [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/pager/page
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs5/app/app.jsx %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs5/app/app.tsx %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -127,10 +127,10 @@ Output will be appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/virtual-scroll-cs5/app/app.jsx %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/virtual-scroll-cs5/app/app.tsx %}
+{% include code-snippet/grid/virtual-scroll-cs5/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

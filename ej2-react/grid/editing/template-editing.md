@@ -20,10 +20,10 @@ In the following sample, grid enabled with dialog template editing.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs28/app/app.jsx %}
+{% include code-snippet/grid/editing-cs28/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs28/app/app.tsx %}
+{% include code-snippet/grid/editing-cs28/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,10 +106,10 @@ The following example demonstrate the usage of tab control inside the dialog tem
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/tabediting-cs1/app/app.jsx %}
+{% include code-snippet/grid/tabediting-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/tabediting-cs1/app/app.tsx %}
+{% include code-snippet/grid/tabediting-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

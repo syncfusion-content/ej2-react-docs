@@ -10,7 +10,8 @@ domainurl: ##DomainURL##
 
 # Clip mode in React Grid component
 
-The clip mode provides options to display its overflow cell content and it can be defined by the [`columns.clipMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#clipmode) property.
+The clip mode provides options to display its overflow cell content and it can be defined by the
+ [`columns.clipMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#clipmode) property.
 
 There are three types of [`clipMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#clipmode). They are:
 
@@ -21,16 +22,16 @@ There are three types of [`clipMode`](https://ej2.syncfusion.com/angular/documen
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/autowrap-cs3/app/app.jsx %}
+{% include code-snippet/grid/autowrap-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/autowrap-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/autowrap-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/autowrap-cs3/app/app.tsx %}
+{% include code-snippet/grid/autowrap-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/autowrap-cs3/datasource.tsx %}
+{% include code-snippet/grid/autowrap-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

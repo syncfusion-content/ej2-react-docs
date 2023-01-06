@@ -22,16 +22,16 @@ you can get [`RowDataBoundEventArgs`](https://ej2.syncfusion.com/angular/documen
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/rows-cs4/app/app.jsx %}
+{% include code-snippet/grid/rows-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/rows-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/rows-cs4/app/app.tsx %}
+{% include code-snippet/grid/rows-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/rows-cs4/datasource.tsx %}
+{% include code-snippet/grid/rows-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,16 +51,16 @@ Please refer the following example.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/rows-alt-cs1/app/app.jsx %}
+{% include code-snippet/grid/rows-alt-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/rows-alt-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-alt-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/rows-alt-cs1/app/app.tsx %}
+{% include code-snippet/grid/rows-alt-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/rows-alt-cs1/datasource.tsx %}
+{% include code-snippet/grid/rows-alt-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,16 +80,16 @@ This is demonstrated in the following sample:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/rows-alt-cs2/app/app.jsx %}
+{% include code-snippet/grid/rows-alt-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/rows-alt-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-alt-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/rows-alt-cs2/app/app.tsx %}
+{% include code-snippet/grid/rows-alt-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/rows-alt-cs2/datasource.tsx %}
+{% include code-snippet/grid/rows-alt-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,16 +103,16 @@ This is demonstrated in the following sample:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/rows-cs5/app/app.jsx %}
+{% include code-snippet/grid/rows-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/rows-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/rows-cs5/app/app.tsx %}
+{% include code-snippet/grid/rows-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/rows-cs5/datasource.tsx %}
+{% include code-snippet/grid/rows-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,16 +128,16 @@ In the following sample, the `mouseover` event is bound to a grid row in the `ro
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/rows-alt-cs3/app/app.jsx %}
+{% include code-snippet/grid/rows-alt-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/rows-alt-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rows-alt-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/rows-alt-cs3/app/app.tsx %}
+{% include code-snippet/grid/rows-alt-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/rows-alt-cs3/datasource.tsx %}
+{% include code-snippet/grid/rows-alt-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

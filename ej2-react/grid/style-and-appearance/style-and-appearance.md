@@ -30,16 +30,16 @@ In the following sample, the font family of grid content is changed to **cursive
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/style-appearance-cs1/app/app.jsx %}
+{% include code-snippet/grid/style-appearance-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/style-appearance-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/style-appearance-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/style-appearance-cs1/app/app.tsx %}
+{% include code-snippet/grid/style-appearance-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/style-appearance-cs1/datasource.tsx %}
+{% include code-snippet/grid/style-appearance-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

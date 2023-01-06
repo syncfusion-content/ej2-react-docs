@@ -14,16 +14,16 @@ The following example shows how to set Complex field for datasource having Array
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/complex-binding-cs2/app/app.jsx %}
+{% include code-snippet/grid/complex-binding-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/complex-binding-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/complex-binding-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/complex-binding-cs2/app/app.tsx %}
+{% include code-snippet/grid/complex-binding-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/complex-binding-cs2/datasource.tsx %}
+{% include code-snippet/grid/complex-binding-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

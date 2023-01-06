@@ -15,16 +15,16 @@ In this exported document, each grid will be exported to new page of document in
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/pdf-export-cs5/app/app.jsx %}
+{% include code-snippet/grid/pdf-export-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/pdf-export-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs5/app/app.tsx %}
+{% include code-snippet/grid/pdf-export-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/pdf-export-cs5/datasource.tsx %}
+{% include code-snippet/grid/pdf-export-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

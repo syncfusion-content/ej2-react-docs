@@ -16,16 +16,16 @@ You can filter the records with different operators.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/filter-cs4/app/app.jsx %}
+{% include code-snippet/grid/filter-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filter-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/filter-cs4/app/app.tsx %}
+{% include code-snippet/grid/filter-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filter-cs4/datasource.tsx %}
+{% include code-snippet/grid/filter-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,16 +48,16 @@ In the following sample, dropdown is used  as custom component in the OrderID co
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/filter-cs5/app/app.jsx %}
+{% include code-snippet/grid/filter-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filter-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/filter-cs5/app/app.tsx %}
+{% include code-snippet/grid/filter-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filter-cs5/datasource.tsx %}
+{% include code-snippet/grid/filter-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,16 +73,16 @@ In the following sample menu filter is enabled by default and checkbox filter is
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/filter-cs6/app/app.jsx %}
+{% include code-snippet/grid/filter-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filter-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/filter-cs6/app/app.tsx %}
+{% include code-snippet/grid/filter-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filter-cs6/datasource.tsx %}
+{% include code-snippet/grid/filter-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,16 +96,16 @@ In the following sample, filtering action with multiple keywords can be done by 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/filter-cs7/app/app.jsx %}
+{% include code-snippet/grid/filter-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filter-cs7/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/filter-cs7/app/app.tsx %}
+{% include code-snippet/grid/filter-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filter-cs7/datasource.tsx %}
+{% include code-snippet/grid/filter-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -13,7 +13,9 @@ domainurl: ##DomainURL##
 ## Localization
 
 The [`Localization`](../../base/localization.html) library allows you to localize default text content of the Grid.
-The grid component has static text on some features (like group drop area text, pager information text, etc.)that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
+The grid component has static text on some features (like group drop area text, pager information text, etc.)
+that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+[`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
 
 The following list of properties and its values are used in the grid.
 
@@ -123,16 +125,16 @@ The below example demonstrates the Grid in **Deutsch** culture.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/locale-cs1/app/app.jsx %}
+{% include code-snippet/grid/locale-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/locale-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/locale-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/locale-cs1/app/app.tsx %}
+{% include code-snippet/grid/locale-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/locale-cs1/datasource.tsx %}
+{% include code-snippet/grid/locale-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -144,16 +146,16 @@ The [`Internationalization`](../../base/internationalization.html) library is us
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/internationalization-cs1/app/app.jsx %}
+{% include code-snippet/grid/internationalization-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/internationalization-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/internationalization-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/internationalization-cs1/app/app.tsx %}
+{% include code-snippet/grid/internationalization-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/internationalization-cs1/datasource.tsx %}
+{% include code-snippet/grid/internationalization-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -170,16 +172,16 @@ To enable RTL in the Grid, set the [`enableRtl`](https://ej2.syncfusion.com/angu
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/locale-cs2/app/app.jsx %}
+{% include code-snippet/grid/locale-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/locale-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/locale-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/locale-cs2/app/app.tsx %}
+{% include code-snippet/grid/locale-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/locale-cs2/datasource.tsx %}
+{% include code-snippet/grid/locale-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

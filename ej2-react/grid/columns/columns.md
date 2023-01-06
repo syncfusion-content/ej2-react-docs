@@ -13,14 +13,16 @@ domainurl: ##DomainURL##
 The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) schema in the Grid.
 This plays a vital role in rendering column values in the required format.
 The grid operations such as sorting, filtering and grouping etc. are performed based on column definitions.
-The [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) property of the [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column) is necessary to map the data source values in Grid columns.
+ The [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) property of the [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column)
+is necessary to map the data source values in Grid columns.
 
 > 1. If the column with [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) is not in the dataSource, then the column values will be displayed as empty.
 > 2. If the [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) name contains **“dot”** operator then it is considered as complex binding.
 
 ## Column types
 
-Column type can be specified using the [`columns.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) property. It specifies the type of the data the column bounded.
+Column type can be specified using the [`columns.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type)
+property. It specifies the type of the data the column bounded.
 
 If the [`format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format)  is defined for a column, the column uses [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting) or [date](../../common/internationalization/#date-formatting)).
 
@@ -42,16 +44,16 @@ You can achieve custom value formatting by using [`valueAccessor`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs19/app/app.jsx %}
+{% include code-snippet/grid/column-cs19/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs19/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs19/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs19/app/app.tsx %}
+{% include code-snippet/grid/column-cs19/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs19/datasource.tsx %}
+{% include code-snippet/grid/column-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,16 +66,16 @@ In this example, the **Name** field has an **array** of two objects **FirstName*
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/array-of-string-cs1/app/app.jsx %}
+{% include code-snippet/grid/array-of-string-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/array-of-string-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/array-of-string-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/array-of-string-cs1/app/app.tsx %}
+{% include code-snippet/grid/array-of-string-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/array-of-string-cs1/datasource.tsx %}
+{% include code-snippet/grid/array-of-string-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,16 +87,16 @@ You can achieve the expression column by using [`valueAccessor`](https://ej2.syn
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/expression-cs1/app/app.jsx %}
+{% include code-snippet/grid/expression-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/expression-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/expression-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/expression-cs1/app/app.tsx %}
+{% include code-snippet/grid/expression-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/expression-cs1/datasource.tsx %}
+{% include code-snippet/grid/expression-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -104,22 +106,22 @@ You can achieve the expression column by using [`valueAccessor`](https://ej2.syn
 
 To format cell values based on specific culture, use the
 [`columns.format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format) property.
-The grid uses [Internalization](../../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and
+ The grid uses [Internalization](../../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and
   [`date`](../../common/internationalization/#date-formatting)
 values.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs20/app/app.jsx %}
+{% include code-snippet/grid/column-cs20/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs20/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs20/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs20/app/app.tsx %}
+{% include code-snippet/grid/column-cs20/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs20/datasource.tsx %}
+{% include code-snippet/grid/column-cs20/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,16 +160,16 @@ Format | Formatted value
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs21/app/app.jsx %}
+{% include code-snippet/grid/column-cs21/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs21/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs21/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs21/app/app.tsx %}
+{% include code-snippet/grid/column-cs21/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs21/datasource.tsx %}
+{% include code-snippet/grid/column-cs21/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -179,16 +181,16 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs22/app/app.jsx %}
+{% include code-snippet/grid/column-cs22/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs22/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs22/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs22/app/app.tsx %}
+{% include code-snippet/grid/column-cs22/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs22/datasource.tsx %}
+{% include code-snippet/grid/column-cs22/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -200,16 +202,16 @@ You can hide any particular column in Grid before rendering by defining [`visibl
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs23/app/app.jsx %}
+{% include code-snippet/grid/column-cs23/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs23/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs23/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs23/app/app.tsx %}
+{% include code-snippet/grid/column-cs23/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs23/datasource.tsx %}
+{% include code-snippet/grid/column-cs23/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -223,16 +225,16 @@ In the below example, **Ship City** column is locked and its reordering function
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs24/app/app.jsx %}
+{% include code-snippet/grid/column-cs24/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs24/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs24/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs24/app/app.tsx %}
+{% include code-snippet/grid/column-cs24/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs24/datasource.tsx %}
+{% include code-snippet/grid/column-cs24/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -244,16 +246,16 @@ You can enable or disable Grid any actions for a particular column by setting th
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs24/app/app.jsx %}
+{% include code-snippet/grid/column-cs24/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs24/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs24/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs24/app/app.tsx %}
+{% include code-snippet/grid/column-cs24/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs24/datasource.tsx %}
+{% include code-snippet/grid/column-cs24/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -266,16 +268,16 @@ methods.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs26/app/app.jsx %}
+{% include code-snippet/grid/column-cs26/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs26/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs26/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs26/app/app.tsx %}
+{% include code-snippet/grid/column-cs26/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs26/datasource.tsx %}
+{% include code-snippet/grid/column-cs26/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -283,7 +285,8 @@ methods.
 
 ## Customize column styles
 
-You can customise the appearance of header and content of the particular column using the [`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
+You can customise the appearance of header and content of the particular column using the
+[`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
 
 To customize the grid column, follow the given steps:
 
@@ -319,16 +322,16 @@ Add the custom css class to particular column by using [`customAttributes`](http
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/custom-column-cs1/app/app.jsx %}
+{% include code-snippet/grid/custom-column-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/custom-column-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/custom-column-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/custom-column-cs1/app/app.tsx %}
+{% include code-snippet/grid/custom-column-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/custom-column-cs1/datasource.tsx %}
+{% include code-snippet/grid/custom-column-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -351,16 +354,16 @@ const beforeRender = (args) => {
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/custom-tooltip-cs1/app/app.jsx %}
+{% include code-snippet/grid/custom-tooltip-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/custom-tooltip-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/custom-tooltip-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/custom-tooltip-cs1/app/app.tsx %}
+{% include code-snippet/grid/custom-tooltip-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/custom-tooltip-cs1/datasource.tsx %}
+{% include code-snippet/grid/custom-tooltip-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -378,16 +381,16 @@ Grid column supports the following alignments:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs27/app/app.jsx %}
+{% include code-snippet/grid/column-cs27/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs27/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs27/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs27/app/app.tsx %}
+{% include code-snippet/grid/column-cs27/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs27/datasource.tsx %}
+{% include code-snippet/grid/column-cs27/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -401,16 +404,16 @@ In the following sample, the `rowDataBound` event of the Grid is used to set the
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs27/app/app.jsx %}
+{% include code-snippet/grid/column-cs27/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs27/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs27/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs27/app/app.tsx %}
+{% include code-snippet/grid/column-cs27/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs27/datasource.tsx %}
+{% include code-snippet/grid/column-cs27/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -16,16 +16,16 @@ To enable Dialog edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs8/app/app.jsx %}
+{% include code-snippet/grid/editing-cs8/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs8/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs8/app/app.tsx %}
+{% include code-snippet/grid/editing-cs8/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs8/datasource.tsx %}
+{% include code-snippet/grid/editing-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,16 +43,16 @@ You can refer the Grid [`Default text`](../global-local/) list for more localiza
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs1/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs1/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs1/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -70,16 +70,16 @@ In the following example, the CustomerID column is rendered as a hidden column, 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs2/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs2/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs2/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,10 +93,10 @@ The following example demonstrate the wizard like editing in the grid with the o
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/wizardediting-cs1/app/app.jsx %}
+{% include code-snippet/grid/wizardediting-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/wizardediting-cs1/app/app.tsx %}
+{% include code-snippet/grid/wizardediting-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,16 +110,16 @@ In the following sample, using the `dialog` argument of the `actionComplete` eve
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs3/app/app.jsx %}
+{% include code-snippet/grid/customizedialog-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs3/app/app.tsx %}
+{% include code-snippet/grid/customizedialog-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs3/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

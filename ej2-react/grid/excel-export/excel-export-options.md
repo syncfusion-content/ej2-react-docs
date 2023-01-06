@@ -18,16 +18,16 @@ The excel export provides an option to export the current page into excel. To ex
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs4/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs4/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs4/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,16 +41,16 @@ In the below exporting demo, we can get the selected records using [`getSelected
 
  {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs1/app/app.jsx %}
+{% include code-snippet/grid/export-filtered-data-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs1/app/app.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs1/datasource.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,16 +62,16 @@ The excel export provides an option to export hidden columns of grid by defining
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs5/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs5/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs5/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,16 +89,16 @@ In the below example, we have **CustomerID** as a hidden column in the grid. Whi
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs6/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs6/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs6/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,20 +106,21 @@ In the below example, we have **CustomerID** as a hidden column in the grid. Whi
 
 ## Export with filter options
 
-The excel export provides an option to export with filter option in excel by defining `enableFilter` as **true** . It requires the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to be true.
+The excel export provides an option to export with filter option in excel by defining `enableFilter` as **true** . It requires the
+[`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to be true.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs7/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs7/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs7/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs7/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,16 +133,16 @@ In grid, we have provided the outline option for the exported document when the 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs8/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs8/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs8/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs8/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs8/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs8/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -153,16 +154,16 @@ You can assign the file name for the exported document by defining `fileName` pr
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs9/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs9/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs9/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs9/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs9/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs9/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

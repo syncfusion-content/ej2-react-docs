@@ -11,21 +11,21 @@ domainurl: ##DomainURL##
 # Local data in React Grid component
 
 To bind local data to the grid, you can assign a JavaScript object array to the
-[`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property.
-The local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started/).
+ [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property.
+ The local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started/).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/data-binding-cs3/app/app.jsx %}
+{% include code-snippet/grid/data-binding-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/data-binding-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/data-binding-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/data-binding-cs3/app/app.tsx %}
+{% include code-snippet/grid/data-binding-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/data-binding-cs3/datasource.tsx %}
+{% include code-snippet/grid/data-binding-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,7 +35,8 @@ The local data source can also be provided as an instance of the [`DataManager`]
 
 ## Refresh the data source
 
-You can add/delete the datasource records through an external button. To reflect the datasource changes in grid, you need to invoke the [`refresh`](https://ej2.syncfusion.com/angular/documentation/api/grid/#refresh) method.
+You can add/delete the datasource records through an external button. To reflect the datasource changes in grid,
+you need to invoke the [`refresh`](https://ej2.syncfusion.com/angular/documentation/api/grid/#refresh) method.
 
 Please follow the below steps to refresh the grid after datasource change.
 
@@ -65,16 +66,16 @@ Refresh the grid after the datasource change by using the [`refresh`](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/editing-cs1/app/app.jsx %}
+{% include code-snippet/grid/editing-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs1/app/app.tsx %}
+{% include code-snippet/grid/editing-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs1/datasource.tsx %}
+{% include code-snippet/grid/editing-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

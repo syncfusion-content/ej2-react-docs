@@ -118,16 +118,16 @@ Pager can be customized using [`pageSettings`](https://ej2.syncfusion.com/angula
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/getting-started-cs1/app/app.jsx %}
+{% include code-snippet/grid/getting-started-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/getting-started-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/getting-started-cs1/app/app.tsx %}
+{% include code-snippet/grid/getting-started-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/getting-started-cs1/datasource.tsx %}
+{% include code-snippet/grid/getting-started-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,16 +143,16 @@ Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/getting-started-cs2/app/app.jsx %}
+{% include code-snippet/grid/getting-started-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/getting-started-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/getting-started-cs2/app/app.tsx %}
+{% include code-snippet/grid/getting-started-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/getting-started-cs2/datasource.tsx %}
+{% include code-snippet/grid/getting-started-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -167,16 +167,16 @@ Filtering feature can be customized using [`filterSettings`](https://ej2.syncfus
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/getting-started-cs3/app/app.jsx %}
+{% include code-snippet/grid/getting-started-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/getting-started-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/getting-started-cs3/app/app.tsx %}
+{% include code-snippet/grid/getting-started-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/getting-started-cs3/datasource.tsx %}
+{% include code-snippet/grid/getting-started-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -192,16 +192,16 @@ Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusio
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/getting-started-cs4/app/app.jsx %}
+{% include code-snippet/grid/getting-started-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/getting-started-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/getting-started-cs4/app/app.tsx %}
+{% include code-snippet/grid/getting-started-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/getting-started-cs4/datasource.tsx %}
+{% include code-snippet/grid/getting-started-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -222,16 +222,16 @@ Output will be appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/getting-started-cs5/app/app.jsx %}
+{% include code-snippet/grid/getting-started-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/getting-started-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/getting-started-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/getting-started-cs5/app/app.tsx %}
+{% include code-snippet/grid/getting-started-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/getting-started-cs5/datasource.tsx %}
+{% include code-snippet/grid/getting-started-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

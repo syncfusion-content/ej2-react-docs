@@ -16,16 +16,16 @@ In the following example, Employee Information with Employee Photo is presented 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/row-template-cs3/app/app.jsx %}
+{% include code-snippet/grid/row-template-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/row-template-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/row-template-cs3/app/app.tsx %}
+{% include code-snippet/grid/row-template-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/row-template-cs3/datasource.tsx %}
+{% include code-snippet/grid/row-template-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,16 +37,16 @@ If the [rowTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/row-template-cs4/app/app.jsx %}
+{% include code-snippet/grid/row-template-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/row-template-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/row-template-cs4/app/app.tsx %}
+{% include code-snippet/grid/row-template-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/row-template-cs4/datasource.tsx %}
+{% include code-snippet/grid/row-template-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

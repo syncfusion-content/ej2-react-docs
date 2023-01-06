@@ -16,10 +16,10 @@ In the below sample, we have overridden the default *generateQuery* to display t
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/group-cs11/app/app.jsx %}
+{% include code-snippet/grid/group-cs11/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/group-cs11/app/app.tsx %}
+{% include code-snippet/grid/group-cs11/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

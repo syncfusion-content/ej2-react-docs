@@ -22,20 +22,21 @@ domainurl: ##DomainURL##
 
 ## Set width and height
 
-To specify the [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/#width) and [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid/#height) of scroller in pixel, set the pixel value as number.
+To specify the [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/#width) and [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid/#height)
+of scroller in pixel, set the pixel value as number.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/scrolling-cs4/app/app.jsx %}
+{% include code-snippet/grid/scrolling-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/scrolling-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/scrolling-cs4/app/app.tsx %}
+{% include code-snippet/grid/scrolling-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/scrolling-cs4/datasource.tsx %}
+{% include code-snippet/grid/scrolling-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,16 +49,16 @@ Setting the [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/scrolling-cs5/app/app.jsx %}
+{% include code-snippet/grid/scrolling-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/scrolling-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/scrolling-cs5/app/app.tsx %}
+{% include code-snippet/grid/scrolling-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/scrolling-cs5/datasource.tsx %}
+{% include code-snippet/grid/scrolling-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,16 +72,16 @@ In the below demo, the Grid headers will be sticky while scrolling the Grid's pa
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/scrolling-cs6/app/app.jsx %}
+{% include code-snippet/grid/scrolling-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/scrolling-cs6/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/scrolling-cs6/app/app.tsx %}
+{% include code-snippet/grid/scrolling-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/scrolling-cs6/datasource.tsx %}
+{% include code-snippet/grid/scrolling-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,16 +93,16 @@ You can scroll the grid content to the selected row position by using the [`rowS
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/scrolling-cs7/app/app.jsx %}
+{% include code-snippet/grid/scrolling-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/scrolling-cs7/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/scrolling-cs7/app/app.tsx %}
+{% include code-snippet/grid/scrolling-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/scrolling-cs7/datasource.tsx %}
+{% include code-snippet/grid/scrolling-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,16 +116,16 @@ In the following sample, we have invoked the [`hideScroll`](https://ej2.syncfusi
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/scrolling-cs8/app/app.jsx %}
+{% include code-snippet/grid/scrolling-cs8/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/scrolling-cs8/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/scrolling-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/scrolling-cs8/app/app.tsx %}
+{% include code-snippet/grid/scrolling-cs8/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/scrolling-cs8/datasource.tsx %}
+{% include code-snippet/grid/scrolling-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

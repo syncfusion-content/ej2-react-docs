@@ -26,16 +26,16 @@ In the below example, the [`textWrapSettings.wrapMode`](https://ej2.syncfusion.c
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/autowrap-cs1/app/app.jsx %}
+{% include code-snippet/grid/autowrap-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/autowrap-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/autowrap-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/autowrap-cs1/app/app.tsx %}
+{% include code-snippet/grid/autowrap-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/autowrap-cs1/datasource.tsx %}
+{% include code-snippet/grid/autowrap-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

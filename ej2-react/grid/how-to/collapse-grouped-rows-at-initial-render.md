@@ -16,16 +16,16 @@ In the below demo, all the grouped rows are collapsed at initial rendering.
 
  {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/group-cs9/app/app.jsx %}
+{% include code-snippet/grid/group-cs9/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/group-cs9/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/group-cs9/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/group-cs9/app/app.tsx %}
+{% include code-snippet/grid/group-cs9/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/group-cs9/datasource.tsx %}
+{% include code-snippet/grid/group-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

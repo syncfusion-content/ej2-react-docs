@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Foreign key column in React Grid component
 
-Foreign key column can be enabled by using [`column.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#datasource), [`column.foreignKeyField`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyfield) and [`column.foreignKeyValue`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyvalue) properties.
+Foreign key column can be enabled by using [`column.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#datasource),
+[`column.foreignKeyField`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyfield) and
+[`column.foreignKeyValue`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyvalue) properties.
 
 * [`column.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#datasource) - Defines the foreign data.
 * [`column.foreignKeyField`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyfield) - Defines the mapping column name to the foreign data.
@@ -20,16 +22,16 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs28/app/app.jsx %}
+{% include code-snippet/grid/column-cs28/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs28/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs28/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs28/app/app.tsx %}
+{% include code-snippet/grid/column-cs28/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs28/datasource.tsx %}
+{% include code-snippet/grid/column-cs28/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,16 +51,16 @@ AutoComplete component is rendered instead of DropDownList.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/foreign-key-cs1/app/app.jsx %}
+{% include code-snippet/grid/foreign-key-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/foreign-key-cs1/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/foreign-key-cs1/app/app.tsx %}
+{% include code-snippet/grid/foreign-key-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/foreign-key-cs1/datasource.tsx %}
+{% include code-snippet/grid/foreign-key-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,16 +75,16 @@ In the following example, The **Employee Name** is a foreign key column. DropDow
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/foreign-key-cs2/app/app.jsx %}
+{% include code-snippet/grid/foreign-key-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/foreign-key-cs2/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/foreign-key-cs2/app/app.tsx %}
+{% include code-snippet/grid/foreign-key-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/foreign-key-cs2/datasource.tsx %}
+{% include code-snippet/grid/foreign-key-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,16 +101,16 @@ This column header shows the custom filter bar template and you can select filte
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/foreign-key-cs3/app/app.jsx %}
+{% include code-snippet/grid/foreign-key-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/foreign-key-cs3/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/foreign-key-cs3/app/app.tsx %}
+{% include code-snippet/grid/foreign-key-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/foreign-key-cs3/datasource.tsx %}
+{% include code-snippet/grid/foreign-key-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,16 +126,16 @@ In the following example, The *Employee Name* is a foreign key column and the ag
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/foreign-key-cs4/app/app.jsx %}
+{% include code-snippet/grid/foreign-key-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/foreign-key-cs4/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/foreign-key-cs4/app/app.tsx %}
+{% include code-snippet/grid/foreign-key-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/foreign-key-cs4/datasource.tsx %}
+{% include code-snippet/grid/foreign-key-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -147,16 +149,16 @@ In the following example, **Customer Name** and **Ship City** are foreign key co
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/foreign-key-cs5/app/app.jsx %}
+{% include code-snippet/grid/foreign-key-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/foreign-key-cs5/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreign-key-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/foreign-key-cs5/app/app.tsx %}
+{% include code-snippet/grid/foreign-key-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/foreign-key-cs5/datasource.tsx %}
+{% include code-snippet/grid/foreign-key-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

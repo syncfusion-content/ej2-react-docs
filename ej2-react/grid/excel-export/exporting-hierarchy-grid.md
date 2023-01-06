@@ -20,16 +20,16 @@ The grid have an option to export the hierarchy grid to excel document. By defau
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/excel-export-cs14/app/app.jsx %}
+{% include code-snippet/grid/excel-export-cs14/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-cs14/datasource.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs14/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/excel-export-cs14/app/app.tsx %}
+{% include code-snippet/grid/excel-export-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-cs14/datasource.tsx %}
+{% include code-snippet/grid/excel-export-cs14/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
