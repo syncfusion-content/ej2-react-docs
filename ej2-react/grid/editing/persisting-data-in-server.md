@@ -31,7 +31,7 @@ You can map The CRUD operation in grid can be mapped to server-side Controller a
 
 The following code example describes the above behavior.
 
-```typescript
+```ts
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Edit, EditSettingsModel, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -65,7 +65,7 @@ Also, when using the **UrlAdaptor**, you need to return the data as JSON from th
 
 The following code example describes the above behavior.
 
-```typescript
+```ts
 public ActionResult DataSource(DataManagerRequest dm)
 {
     let DataSource = OrderRepository.GetAllRecords();
@@ -89,7 +89,7 @@ Using the **insertUrl** property, you can specify the controller action mapping 
 
 The following code example describes the above behavior.
 
-```typescript
+```ts
 public ActionResult Insert(EditableOrder value)
 {
     //Insert record in database
@@ -107,7 +107,7 @@ Using the **updateUrl** property, the controller action mapping URL can be speci
 
 The following code example describes the previous behavior.
 
-```typescript
+```ts
 public ActionResult Update(EditableOrder value)
 {
     //Update record in database
@@ -125,7 +125,7 @@ Using the **removeUrl** property, the controller action mapping URL can be speci
 
 The following code example describes the previous behavior.
 
-```typescript
+```ts
 public ActionResult Delete(int key)
 {
     //Delete record in database
@@ -146,7 +146,7 @@ The action parameter of **crudUrl** is used to get the corresponding CRUD action
 
 The following code example describes the above behavior.
 
-```typescript
+```ts
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Edit, EditSettingsModel, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -174,7 +174,7 @@ function App() {
 export default App;
 ```
 
-```typescript
+```ts
 public ActionResult CrudUpdate(EditableOrder value, string action)
 {
     if(action == "update"){
@@ -205,7 +205,7 @@ You can specify the controller action mapping URL to perform batch operation on 
 
 The following code example describes the above behavior.
 
-```typescript
+```ts
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Edit, EditSettingsModel, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -233,7 +233,7 @@ function App() {
 export default App;
 ```
 
-```typescript
+```ts
 public ActionResult BatchUpdate(string action, List<EditableOrder> added, List<EditableOrder> changed, List<EditableOrder> deleted, int? key)
 {
 //Save the batch changes in database

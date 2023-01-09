@@ -16,7 +16,7 @@ You can customize text, page number, line, page size and changing orientation in
 
 You can add text either in Header or Footer of exported PDF document using [`pdfExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfexportproperties).
 
-```typescript
+```ts
 
     const exportProperties: PdfExportProperties = {
       header: {
@@ -46,7 +46,7 @@ Supported line styles:
 * dashdotdot
 * solid
 
-```typescript
+```ts
 
     const exportProperties: PdfExportProperties = {
       header: {
@@ -75,7 +75,7 @@ Supported page number types:
 * UpperRoman - I, II, III,
 * Number - 1,2,3.
 
-```typescript
+```ts
 
 const exportProperties: PdfExportProperties = {
       header: {
@@ -104,7 +104,7 @@ const exportProperties: PdfExportProperties = {
 
 Image (Base64 string) can be added in the exported document in header/footer using the [`PdfExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/).
 
-```typescript
+```ts
 
     let exportProperties: PdfExportProperties = {
       header: {

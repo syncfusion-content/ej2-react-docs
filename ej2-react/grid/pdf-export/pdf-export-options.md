@@ -230,7 +230,7 @@ By default, grid uses **Helvetica** font in the exported document. You can chang
 
 The code example for changing default font,
 
-```typescript
+```ts
 
     import { PdfFontFamily, PdfFontStyle, PdfStandardFont } from '@syncfusion/ej2-pdf-export';
 

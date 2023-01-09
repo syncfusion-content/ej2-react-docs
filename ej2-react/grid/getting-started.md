@@ -73,7 +73,7 @@ using following code.
 
 Place the following grid code in the **src/App.tsx**.
 
-```typescript
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';

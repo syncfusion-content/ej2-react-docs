@@ -26,7 +26,7 @@ The following code snippet shows server configuration using ASP.NET Core Control
 To Export the Grid in server side, You need to call the
  [`serverExcelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#serverexcelexport) method for passing the Grid properties to server exporting action.
 
-```typescript
+```ts
 
         public ActionResult ExcelExport([FromForm] string gridModel)
         {
@@ -54,7 +54,7 @@ To Export the Grid in server side, You need to call the
 
 ```
 
-```typescript
+```ts
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -100,7 +100,7 @@ You can export the Grid to CSV format by using the [`serverCsvExport`](https://e
 
 In the below demo, we have invoked the above method inside the [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbarclick) event. In server side, we have deserialized the Grid properties and passed to the `CsvExport` method which will export the properties to CSV format.
 
-```typescript
+```ts
 
         public ActionResult CsvGridExport([FromForm] string gridModel)
         {
@@ -127,7 +127,7 @@ In the below demo, we have invoked the above method inside the [`toolbarClick`](
 
 ```
 
-```typescript
+```ts
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -173,7 +173,7 @@ The `ServerExcelHeaderQueryCellInfo` will be triggered when creating a column he
 
 In the following demo, using the `HeaderCellRotate` method of the `GridExcelExport` class in the `ServerExcelHeaderQueryCellInfo` event, you can rotate the header text of the column header in the excel exported document.
 
-```typescript
+```ts
 public ActionResult ExcelExport(string gridModel)
 {
     GridExcelExport exp = new GridExcelExport();

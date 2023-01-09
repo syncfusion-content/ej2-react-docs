@@ -315,7 +315,7 @@ Create a css class with custom style to override the default style for rowcell a
 
 Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
 
-```typescript
+```ts
 <ColumnDirective field='CustomerID' width='130' customAttributes={customAttributes}></ColumnDirective>
 
 ```
@@ -343,7 +343,7 @@ To display a custom ToolTip ([`EJ2 Tooltip`](../../../tooltip/getting-started)),
 
 Change the tooltip content for the grid cells by using the following code in the [`beforeRender`](https://ej2.syncfusion.com/angular/documentation/api/tooltip/#beforerender) event.
 
-```typescript
+```ts
 
 const beforeRender = (args) => {
   // event triggered before render the tooltip on target element.

@@ -31,7 +31,7 @@ You can achieve complex data binding in the grid by using the dot(.) operator in
 
 For OData and ODataV4 adaptors, you need to add [`expand`](https://ej2.syncfusion.com/documentation/api/data/query/#expand) query to the [`query`](https://ej2.syncfusion.com/angular/documentation/api/grid/#query) property (of Grid), to eager load the complex data.
 
-```typescript
+```ts
 import { DataManager, ODataAdaptor, Query } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';

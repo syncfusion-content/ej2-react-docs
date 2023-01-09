@@ -21,7 +21,7 @@ Please follow the below steps to refresh the grid after datasource change.
 
 Add/delete the datasource record by using the following code.
 
-```typescript
+```ts
     this.grid.dataSource.unshift(data); // Add a new record.
 
     this.grid.dataSource.splice(selectedRow, 1); // Delete a record.
@@ -32,7 +32,7 @@ Add/delete the datasource record by using the following code.
 
 Refresh the grid after the datasource change by using the [`refresh`](https://ej2.syncfusion.com/angular/documentation/api/grid/#refresh) method.
 
-```typescript
+```ts
     this.grid.refresh(); // Refresh the Grid.
 
 ```
@@ -73,7 +73,7 @@ Create CSS class with custom style to override the default style of Grid.
 
 Add/Remove the CSS class to the Grid in the click event handler of Button.
 
-```typescript
+```ts
     btnClick(): void {
         if (this.Grid.element.classList.contains('disablegrid')) {
             this.Grid.element.classList.remove('disablegrid');
@@ -113,7 +113,7 @@ Follow the given steps to change the header text dynamically:
 Get the column object corresponding to the field name by using the [`getColumnByField`](https://ej2.syncfusion.com/angular/documentation/api/grid/#getcolumnbyfield) method.
 Then change the header Text value.
 
-```typescript
+```ts
 let column = this.grid.getColumnByField("ShipCity"); // Get column object.
 column.headerText = 'Changed Text';
 
@@ -123,7 +123,7 @@ column.headerText = 'Changed Text';
 
 To reflect the changes in the grid header, invoke the [`refreshHeader`](https://ej2.syncfusion.com/angular/documentation/api/grid/#refreshheader) method.
 
-```typescript
+```ts
 this.grid.refreshHeader();
 
 ```
@@ -171,7 +171,7 @@ Create a css class with custom style to override the default style for rowcell a
 
 Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
 
-```typescript
+```ts
 <ColumnDirective field='CustomerID' width='130' customAttributes={this.customAttributes}></ColumnDirective>
 
 ```
@@ -195,7 +195,7 @@ You can achieve the custom tooltip([`EJ2 Tooltip`](../../../tooltip/getting-star
 Render the ToolTip component for the grid cells by using the following code in the
 [`queryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querycellinfo) event.
 
-```typescript
+```ts
 public tooltip(args){
     let tooltip: Tooltip = new Tooltip({
         content: args.data[args.column.field].toString()
@@ -236,7 +236,7 @@ Create a css class with orientation style for grid header cell.
 
 Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
 
-```typescript
+```ts
     <ColumnDirective field='Freight' headerText='Freight' customAttributes={this.customAttributes} width='80' format="C2" textAlign="Center"></ColumnDirective>
 
 ```
@@ -245,7 +245,7 @@ Add the custom css class to particular column by using [`customAttributes`](http
 
 Resize the header cell height by using the following code.
 
-```typescript
+```ts
 public setHeaderHeight(args) {
     let textWidth: number = document.querySelector(".orientationcss > div").scrollWidth;//Obtain the width of the headerText content.
     let headerCell: NodeList = document.querySelectorAll(".e-headercell");
@@ -369,7 +369,7 @@ You can provide data source to the DropDownList by using the `columns.edit.param
 
 While setting new data source using edit params, you must specify a new `query` property too for the DropDownList as follows,
 
-```typescript
+```ts
 public countryParams : IEditCell = {
         params:   {
             allowFiltering: true,
@@ -504,7 +504,7 @@ You can perform single-column or multi-column sorting dynamically through an ext
 
 To perform single-column sorting, use the [`sortColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/sort/#sortcolumn) method of Grid.
 
-```typescript
+```ts
     public SingleSort():void {
       this.grid.sortColumn("OrderID","Descending")
     }
@@ -512,7 +512,7 @@ To perform single-column sorting, use the [`sortColumn`](https://ej2.syncfusion.
 
 To perform multi-column sorting, you need to push the columns to be sorted into the [`sortSettings.columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortSettingsModel/).
 
-```typescript
+```ts
     public MultiSort():void {
         this.grid.sortSettings.columns.push({ field: 'CustomerID',  direction: 'Ascending' },{ field: 'ShipName', direction: 'Descending' });
         this.grid.refresh();
@@ -538,7 +538,7 @@ You can clear the sorting for a particular column or the entire sorted columns i
 
 To clear sort for a particular column, you need to splice the particular column from the [`sortSettings.columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortSettings/#columns).
 
-```typescript
+```ts
     public SingleClearSort():void {
         let column: any = this.grid.sortSettings.columns;
         for(let i=0;i < column.length;i++) {
@@ -552,7 +552,7 @@ To clear sort for a particular column, you need to splice the particular column 
 
 To clear sorting for all the sorted columns, use the [`clearSorting`](..(/api/grid/sort/#clearsorting) method of Grid.
 
-```typescript
+```ts
     public MultiClearSort():void {
         this.grid.clearSorting();
     }
@@ -730,7 +730,7 @@ Create CSS class with custom style to override the default style of Grid.
 
 Add the CSS class to the Grid in the [`rowDataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdatabound) event handler of Grid.
 
-```typescript
+```ts
     public rowDataBound(args:any){
         let filter:string = args.data.EmployeeID;
         let childrecord: any = new DataManager(this.Grid.childGrid.dataSource).executeLocal(new Query().where("EmployeeID", "equal", parseInt(filter), true));

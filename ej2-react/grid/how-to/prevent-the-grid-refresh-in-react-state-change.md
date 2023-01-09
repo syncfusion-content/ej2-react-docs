@@ -14,7 +14,7 @@ By default, React components are automatically re-rendered based on the state va
 
 In the below code, we have prevented the Grid re-rendering, when we change the state value in [`rowSelected`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowselected) event.
 
-```typescript
+```ts
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GridComponent, ColumnsDirective, ColumnDirective, Page, Inject } from '@syncfusion/ej2-react-grids';

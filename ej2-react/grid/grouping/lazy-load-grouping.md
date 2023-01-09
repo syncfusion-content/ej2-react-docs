@@ -50,7 +50,7 @@ Property Name |Description
 
 The following code example describes the lazy load grouping handled at the server-side with other the grid actions.
 
-```typescript
+```ts
 public IActionResult UrlDatasource([FromBody] DataManagerRequest dm)
 {
     IEnumerable groupedData = null;

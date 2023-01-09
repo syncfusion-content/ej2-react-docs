@@ -26,7 +26,7 @@ The following properties will be available at the time of template execution.
 
 In the below code example, we have enabled the DropDownList which is used as filter UI for **CustomerID** column based on the [columns.allowFiltering](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowfiltering) property.
 
-```typescript
+```ts
 function App() {
   let grid: Grid | null;
   const dropdata: string[] = DataUtil.distinct(data, 'CustomerID') as string[];

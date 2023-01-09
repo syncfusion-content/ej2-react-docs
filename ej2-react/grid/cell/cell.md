@@ -44,7 +44,7 @@ You can customize the grid cells by adding a CSS class to the [`customAttribute`
 }
 ```
 
-```typescript
+```ts
 <ColumnDirective
     field="ShipCity" headerText="Ship City" :customAttributes={{class: 'e-attr'}} width="80">
 </ColumnDirective>

@@ -87,7 +87,7 @@ You can provide data source to the DropDownList by using the **params** of [`col
 
 While setting new data source using edit params, you must specify a new **query** property for the DropDownList as follows,
 
-```typescript
+```ts
   const countryParams : IEditCell = {
     params:   {
       actionComplete: () => false,

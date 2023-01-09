@@ -63,7 +63,7 @@ also when there is an exception while processing the Grid actions.
 
 You can use Grid [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property to bind the datasource to Grid from external ajax request. In the below code we have fetched the datasource from the server with the help of ajax request and provided that to [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property by using **onSuccess** event of the ajax.
 
-```typescript
+```ts
 import { Ajax } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -104,7 +104,7 @@ It is possible to handle data processing externally and bind the result to the G
 
 > In this context, we are going to use [`Ajax`](https://ej2.syncfusion.com/documentation/api/base/ajax/) from our **@syncfusion/ej2-base** library for handling remote interaction, you can choose any HTTP client as per your choice.
 
-```typescript
+```ts
 import { Ajax, getValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, DataStateChangeEventArgs, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
@@ -179,7 +179,7 @@ export class OrderService {
 
 For grid actions such as **paging**, **grouping**, **sorting** etc, the [`dataStateChange`](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event will be invoked. You have to query and resolve data using [`Ajax`](https://ej2.syncfusion.com/documentation/api/base/ajax/) in this event based on the state arguments.
 
-```typescript
+```ts
 import { Ajax, getValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, DataStateChangeEventArgs, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Group, Inject, Page, PageSettingsModel, Sort } from '@syncfusion/ej2-react-grids';
@@ -266,7 +266,7 @@ export class OrderService {
 
 The [`dataSourceChanged`](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event will be triggered for updating the grid data. You can perform the save operation based on the event arguments and call the [`endEdit`](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) method to indicate the completion of save operation.
 
-```typescript
+```ts
 import { Ajax, getValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, DataStateChangeEventArgs, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
 import { DataResult, DataSourceChangedEventArgs, Edit, Inject, Page, PageSettingsModel, Toolbar } from '@syncfusion/ej2-react-grids';
@@ -399,7 +399,7 @@ The footer aggregate values  should be calculated and send along with the **data
 
 The [`dataStateChange`](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event will be triggered with appropriate arguments when the excel filter requests the filter choice data source. You need to resolve the excel filter data source using the **dataSource** resolver function from the state argument as follows.
 
-```typescript
+```ts
 import { ColumnDirective, ColumnsDirective, DataStateChangeEventArgs, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Filter, FilterSettingsModel, Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';

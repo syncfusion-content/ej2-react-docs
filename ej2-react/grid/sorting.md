@@ -100,7 +100,7 @@ For local data in Grid, sorting will be performed based on the [`foreignKeyValue
 
 For remote data in Grid, sorting will be performed based on the [`foreignKeyField`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyfield), we need to handle the sorting operation at the server side.
 
-```typescript
+```ts
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, ForeignKey, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';

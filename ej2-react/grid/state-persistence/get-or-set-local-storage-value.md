@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 If the [`enablePersistence`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablepersistence) property is set to **true**, the grid property value is saved in the **window.localStorage** for reference.
 You can get/set the localStorage value by using the **getItem/setItem** method in the **window.localStorage**.
 
-```typescript
+```ts
     /** get the Grid model
      * "gridGrid" is component name + component id
      */
@@ -21,7 +21,7 @@ You can get/set the localStorage value by using the **getItem/setItem** method i
     const model: object = JSON.parse(value);
 ```
 
-```typescript
+```ts
   /** set the Grid model
    * "gridGrid" is component name + component id
    */

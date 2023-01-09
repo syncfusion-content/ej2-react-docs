@@ -72,7 +72,7 @@ If the first input element is in disabled or hidden state, focus the valid input
 [`actionComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete)
 event based on `requestType` as `beginEdit`.
 
-```typescript
+```ts
 
 const actionComplete = (args: DialogEditEventArgs) => {
         // Set initail Focus
@@ -87,7 +87,7 @@ const actionComplete = (args: DialogEditEventArgs) => {
 
 If you have used additional fields that are not present in the column model, then add the validation rules to the [`actionComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event.
 
-```typescript
+```ts
 
   const actionComplete = (args: DialogEditEventArgs) => {
     if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {

@@ -116,7 +116,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
 
 1. Create a custom adaptor by extending UrlAdaptor and binding it to the grid dataSource property. In the processQuery method of the custom adaptor, we handled the Skip query based on the current page set to perform the data operation with whole records on the server.
 
-    ```typescript
+    ```ts
     export class CustomUrlAdaptor extends UrlAdaptor {
         processQuery(args) {
             if (arguments[1].queries) {
@@ -145,7 +145,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
 
 2. Render the grid by define the following features.
 
-    ```typescript
+    ```ts
         <GridComponent id='grid' ref={g => this.grid = g} dataSource={this.dataManager} enableVirtualization={true} pageSettings={this.pageSettings} height={360} beforeDataBound={this.beforeDataBound}>
             <ColumnsDirective>
                 …………..
@@ -156,7 +156,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
 
 3. In the beforeDataBound event, we set the args.count as 0.5 million to perform scrolling with 0.5 million records and all the data operations are performed with whole records which is handled using the custom adaptor. And also particular segment records count is less than 0.5 million means it will directly assigned the original segmented count instead of 0.5 million.
 
-    ```typescript
+    ```ts
         beforeDataBound(args) {
             // storing the total records count which means 2 million records count
             totalRecords = args.count;
@@ -168,7 +168,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
 
 4. Render “Load Next Set” button and “Load Previous Set” button at bottom and top of the grid component.
 
-    ```typescript
+    ```ts
         <div className="pagearea1">
             <ButtonComponent cssClass='e-info prevbtn' onClick={this.prevBtnClick} style={{ width: '100%' }}>Load Previous Set...</ButtonComponent>
         </div>
@@ -186,7 +186,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
 
 5. While click on the `Load Next Set` / `Load Previous Set` button corresponding page data set is loaded to view remaining records of total 2 millions records after doing some simple calculation.
 
-    ```typescript
+    ```ts
         // Triggered when clicking the Previous/ Next button.
         prevNxtBtnClick(args) {
             if (this.grid.element.querySelector('.e-content') && this.grid.element.querySelector('.e-content').getAttribute('aria-busy') === 'false') {

@@ -33,7 +33,7 @@ Create CSS class with custom style to override the default style of Grid.
 
 Add/Remove the CSS class to the Grid in the click event handler of Button.
 
-```typescript
+```ts
 
   const btnClick = (): void => {
     if (grid && grid.element.classList.contains('disablegrid')) {

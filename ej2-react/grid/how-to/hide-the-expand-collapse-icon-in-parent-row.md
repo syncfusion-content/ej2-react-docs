@@ -35,7 +35,7 @@ Create CSS class with custom style to override the default style of Grid.
 
 Add the CSS class to the Grid in the [`rowDataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdatabound) event handler of Grid.
 
-```typescript
+```ts
    const rowDataBound = (args:any): void => {
     if (grid) {
       const filter:string = args.data.EmployeeID;

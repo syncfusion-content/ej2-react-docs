@@ -88,7 +88,7 @@ This feature has the below limitations, along with the above mentioned Frozen Gr
 
 In a frozen column enabled Grid, Grid content will be separated into frozen and movable parts. The following code can be used to dynamically add validation to input fields that are placed in the movable part. In the [actionComplete](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event args, you can find the movableform instance as an argument. Here, you can add validation rules dynamically.
 
-```typescript
+```ts
   actionComplete: (args: DialogEditEventArgs) => {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
             // Add Validation Rules

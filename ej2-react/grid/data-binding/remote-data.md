@@ -64,7 +64,7 @@ To bind OData v4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/
 
 You can use [`WebApiAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#web-api-adaptor) to bind grid with Web API created using OData endpoint.
 
-```typescript
+```ts
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -106,7 +106,7 @@ Datasource must be set to **json** property and set **RemoteSaveAdaptor** to the
 
 You can use the following code example to use **RemoteSaveAdaptor** in Grid.
 
-```typescript
+```ts
 import { DataManager, RemoteSaveAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, Edit,  EditSettingsModel } from '@syncfusion/ej2-react-grids';
 import { GridComponent, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';

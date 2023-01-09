@@ -26,7 +26,7 @@ The following code snippet shows server configuration using ASP.NET Core Control
 To Export the Grid in server side, You need to call the
  [`serverPdfExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#serverpdfexport) method for passing the Grid properties to server exporting action.
 
-```typescript
+```ts
 
         public ActionResult PdfExport([FromForm] string gridModel)
         {
@@ -58,7 +58,7 @@ To Export the Grid in server side, You need to call the
 
 ```
 
-```typescript
+```ts
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
@@ -107,7 +107,7 @@ In the following demo, the `DrawString` method from the `Graphics` is used to ro
 
 > A PDF exporting is not supported to rotate the column header on the client side.
 
-```typescript
+```ts
 const ActionResult PdfExport(string gridModel)
 {
     GridPdfExport exp = new GridPdfExport();

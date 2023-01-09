@@ -68,7 +68,7 @@ using following code.
 Now place the below Pager code in the `src/App.tsx`.
 Here the Pager is rendered with `totalRecordsCount` which is used to render numeric container.
 
-```typescript
+```ts
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { PagerComponent } from '@syncfusion/ej2-react-grids';

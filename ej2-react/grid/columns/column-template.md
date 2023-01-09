@@ -59,7 +59,7 @@ You can render the template elements based on condition.
 
 In the following code, checkbox is rendered based on **Discontinued** field value.
 
-```typescript
+```ts
   const gridTemplate = (props: any): any => {
     if(props.Discontinued){
    return (<div className="template_checkbox">
@@ -119,7 +119,7 @@ By default, you can access the column template elements via grid events such as 
 
 Grid has an option to improve the rendering performance by setting the `requireTemplateRef` argument to false in the [load](https://ej2.syncfusion.com/angular/documentation/api/grid/#load) event of the Grid. When requireTemplateRef is set to false, the template element is not accessible via queryCellInfo, headerCellInfo, and so on. So if you need to do any customization for those template elements, use the conditional rendering template concept instead of accessing them via grid events.
 
-```typescript
+```ts
 public load(args: LoadEventArgs) {
     args.requireTemplateRef = false;
 }

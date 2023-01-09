@@ -66,7 +66,7 @@ Follow the given steps to change the header text dynamically:
 Get the column object corresponding to the field name by using the [`getColumnByField`](https://ej2.syncfusion.com/angular/documentation/api/grid/#getcolumnbyfield) method.
 Then change the header Text value.
 
-```typescript
+```ts
       /** get the JSON object of the column corresponding to the field name */
       const column = grid.getColumnByField("ShipCity");
       /** assign a new header text to the column */
@@ -78,7 +78,7 @@ Then change the header Text value.
 
 To reflect the changes in the grid header, invoke the [`refreshHeader`](https://ej2.syncfusion.com/angular/documentation/api/grid/#refreshheader) method.
 
-```typescript
+```ts
 
       grid.refreshHeader();
 
@@ -122,7 +122,7 @@ Create a css class with orientation style for grid header cell.
 
 Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
 
-```typescript
+```ts
     <ColumnDirective field='Freight' headerText='Freight' customAttributes={customAttributes} width='80' format="C2" textAlign="Center"/>
 
 ```
@@ -131,7 +131,7 @@ Add the custom css class to particular column by using [`customAttributes`](http
 
 Resize the header cell height by using the following code.
 
-```typescript
+```ts
   const setHeaderHeight = () => {
     /** Obtain the width of the headerText content */
     const textWidth: number = (document.querySelector(".orientationcss > div") as HTMLElement).scrollWidth;

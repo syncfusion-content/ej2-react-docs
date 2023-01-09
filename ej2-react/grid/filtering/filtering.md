@@ -142,7 +142,7 @@ The following example demonstrates the way to use filter template for a column w
 
 
 
-```typescript
+```ts
 import { DataUtil } from '@syncfusion/ej2-data';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { ColumnDirective, ColumnsDirective, FilterSettingsModel } from '@syncfusion/ej2-react-grids';

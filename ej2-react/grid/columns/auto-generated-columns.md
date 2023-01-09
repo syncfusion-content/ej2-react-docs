@@ -44,7 +44,7 @@ If Primary key "column index" is known then refer the following code example
 
 If Primary key **column** and its **field** is known then primary key for the respective [`column`](https://ej2.syncfusion.com/documentation/api/grid/column/) can be defined as follows.
 
-```typescript
+```ts
 
   const column: ColumnModel = grid.getColumnByField('OrderID');
   column.isPrimaryKey = true;

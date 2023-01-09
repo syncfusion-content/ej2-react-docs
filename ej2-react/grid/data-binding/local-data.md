@@ -44,7 +44,7 @@ Please follow the below steps to refresh the grid after datasource change.
 
 Add/delete the datasource record by using the following code.
 
-```typescript
+```ts
     /** Add a new record */
     grid.dataSource.unshift(data);
 
@@ -57,7 +57,7 @@ Add/delete the datasource record by using the following code.
 
 Refresh the grid after the datasource change by using the [`refresh`](https://ej2.syncfusion.com/angular/documentation/api/grid/#refresh) method.
 
-```typescript
+```ts
 
     /** Refresh the Grid */
     grid.refresh();
