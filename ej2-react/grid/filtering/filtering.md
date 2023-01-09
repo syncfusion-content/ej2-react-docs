@@ -140,7 +140,7 @@ You can customize default filter menu component of a column by custom component 
 
 The following example demonstrates the way to use filter template for a column when using filter menu. In the following example, the **DropdownList** component is used to filter **ShipName** column using filter template.
 
-<!--{% tab template="grid/filter", sourceFiles="app/App.tsx" %}-->
+
 
 ```typescript
 import { DataUtil } from '@syncfusion/ej2-data';
@@ -173,8 +173,6 @@ function App() {
 };
 export default App;
 ```
-
-<!--{% endtab %}-->
 
 ## See Also
 
