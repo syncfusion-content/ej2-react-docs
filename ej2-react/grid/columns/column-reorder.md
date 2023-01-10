@@ -16,21 +16,21 @@ To enable reordering, set the [`allowReordering`](https://ej2.syncfusion.com/ang
 To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/angular/documentation/api/grid/reorder/) module in the grid.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs11/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs11/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs11/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs11/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs11" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs11" %}
 
 > You can disable reordering a particular column by setting the [`columns.allowReordering`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowreordering) to false.
 
@@ -39,21 +39,21 @@ To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/angular/doc
 Grid have option to reorder Columns either by Interaction or by using the [`reorderColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/reorder/#reordercolumns) method. In the below sample, **ShipCity** column is reordered to last column position by using the method.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs12/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs12/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs12" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs12" %}
 
 ## Reorder multiple columns
 
@@ -62,21 +62,21 @@ User can reorder a single column at a time by Interaction. Sometimes we need to 
 In the below sample, **Ship City** and **Ship Region** column is reordered to last column position.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs13/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs13/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs13" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs13" %}
 
 ## Reorder events
 
@@ -87,18 +87,18 @@ During the reorder action, the grid component triggers the below three events.
 3. The [`columnDrop`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnDrop) event triggers when a column header element is dropped on the target column.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs14/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs14/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs14/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs14" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs14" %}

@@ -15,21 +15,21 @@ PDF export allows exporting Grid data to PDF document. You need to use the [`pdf
 To use PDF export, inject the **PdfExport** module in grid.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs16/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs16/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs16/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs16/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs16" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs16" %}
 
 ## Show spinner while exporting
 
@@ -42,42 +42,42 @@ In the [`pdfExportComplete`](https://ej2.syncfusion.com/angular/documentation/ap
 In the below demo, we have rendered the default spinner component when exporting the grid.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs17/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs17/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs17/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs17/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs17/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs17" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs17" %}
 
 ## Custom data source
 
 PDF export provides an option to define datasource dynamically before exporting. To export data dynamically, define the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#datasource) in [`PdfExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/)
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs18/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs18/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs18/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs18/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs18/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs18" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs18" %}
 
 ## Passing additional parameters to the server when exporting
 
@@ -86,21 +86,21 @@ You can pass the additional parameter in the [`query`](https://ej2.syncfusion.co
 In the below example, we have passed *recordcount* as *12* using [`addParams`](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs19/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs19/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs19/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs19/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs19" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs19" %}
 
 ## See Also
 

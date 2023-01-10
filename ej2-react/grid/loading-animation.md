@@ -15,12 +15,12 @@ The grid has an option to show a loading indicator in-between the time of fetchi
 In the following sample, the Shimmer indicator is displayed while the grid is loading and refreshing when using the remote data.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/data-binding-cs9/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/data-binding-cs9/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/data-binding-cs9" % }
+ {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs9" %}

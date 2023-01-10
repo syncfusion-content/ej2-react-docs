@@ -16,21 +16,21 @@ To render the checkbox in each grid row, you need to use checkbox column with ty
 **checkbox** using the  column [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/selection-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/selection-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs3/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/selection-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/selection-cs3" % }
+ {% previewsample "page.domainurl/code-snippet/grid/selection-cs3" %}
 
 > By default, selection is allowed by clicking a grid row or checkbox in that row. To allow selection only through checkbox,
 you can set the
@@ -49,21 +49,21 @@ In checkbox selection, selection can also be done by clicking on rows. This sele
 and hold CTRL key and click the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/selection-cs4/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/selection-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs4/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/selection-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/selection-cs4" % }
+ {% previewsample "page.domainurl/code-snippet/grid/selection-cs4" %}
 
 ## Prevent specific rows from being selected in checkbox selection
 
@@ -72,18 +72,18 @@ You can prevent specific rows from being selected in the checkbox selection mode
 In the following sample, the selection of specific rows has been prevented based on the `isSelectable` argument in the `rowDataBound` event.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/selection-cs5/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/selection-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs5/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/selection-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/selection-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/selection-cs5" % }
+ {% previewsample "page.domainurl/code-snippet/grid/selection-cs5" %}

@@ -26,15 +26,21 @@ The number of records displayed in the Grid is determined implicitly by height o
 The loaded data will be cached and reused when it is needed for next time.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/virtual-scroll-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/virtual-scroll-cs4/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="largeData.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs4/app/largeData.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="largeData.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs4/app/largeData.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs4" % }
+ {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs4" %}
 
 ## Column Virtualization
 
@@ -44,15 +50,15 @@ You can scroll horizontally to view more columns.
 To setup the column virtualization, set the [`enableVirtualization`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablevirtualization) and [`enableColumnVirtualization`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablecolumnvirtualization) properties as **true**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/virtual-scroll-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/virtual-scroll-cs5/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs5" % }
+ {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs5" %}
 
 > Column's [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#width) is required for column virtualization.
 If column's width is not defined then Grid will consider its value as **200px**.

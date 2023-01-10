@@ -13,18 +13,18 @@ domainurl: ##DomainURL##
 You can customize the group caption by using the [`groupSettings.captionTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/#captionTemplate) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/group-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/group-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/group-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/group-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/group-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/group-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/group-cs1" %}

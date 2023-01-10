@@ -26,15 +26,15 @@ To add a custom parameter to the data request, use the [`addParams`](https://ej2
 Assign the [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#query) object with additional parameters to the grid [`query`](https://ej2.syncfusion.com/angular/documentation/api/grid/#query) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/data-binding-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/data-binding-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/data-binding-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs1" %}
 
 > The parameters added using the [`query`](https://ej2.syncfusion.com/angular/documentation/api/grid/#query) property will be sent along with the data request for every grid action.
 
@@ -46,15 +46,15 @@ in client-side using the [`actionFailure`](https://ej2.syncfusion.com/angular/do
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) Grid event contains the error details returned from server.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/data-binding-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/data-binding-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/data-binding-cs2" % }
+ {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs2" %}
 
 > The [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but
 also when there is an exception while processing the Grid actions.

@@ -19,20 +19,20 @@ The grid have an option to export the hierarchy grid to pdf document. By default
 | None     | Exports the master grid alone. |
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs6/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs6/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs6" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs6" %}
 
 > By default, the hierarchy grid exports the expanded child grids from the visible page only. Refer [Export the expanded state of hierarchy grid from other pages](../how-to/#export-the-expanded-state-of-hierarchy-grid-from-other-pages).

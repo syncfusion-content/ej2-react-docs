@@ -19,15 +19,33 @@ In some cases, you need to add the new field editors in the dialog which are not
 In the following sample, grid enabled with dialog template editing.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/editing-cs28/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/editing-cs28/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs28/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs28/app/datasource.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="orderModel.jsx" %}
+{% include code-snippet/grid/editing-cs28/app/orderModel.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="orderModel.tsx" %}
+{% include code-snippet/grid/editing-cs28/app/orderModel.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="template.jsx" %}
+{% include code-snippet/grid/editing-cs28/app/template.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="template.tsx" %}
+{% include code-snippet/grid/editing-cs28/app/template.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/editing-cs28" % }
+ {% previewsample "page.domainurl/code-snippet/grid/editing-cs28" %}
 
 > The Dialog/Inline template form editors should have **name** attribute.
 
@@ -105,12 +123,36 @@ You can use [`tab`](../../../tab) component inside dialog edit UI using dialog t
 The following example demonstrate the usage of tab control inside the dialog template.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/tabediting-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/tabediting-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="tabOne.jsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/tabOne.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="tabOne.tsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/tabOne.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="tabTwo.jsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/tabTwo.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="tabTwo.tsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/tabTwo.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="wizardTab.jsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/wizardTab.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="wizardTab.tsx" %}
+{% include code-snippet/grid/tabediting-cs1/app/wizardTab.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/tabediting-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/tabediting-cs1" %}

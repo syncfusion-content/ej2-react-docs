@@ -17,18 +17,18 @@ In addition, You can also perform grid actions with custom keyboard shortcuts. T
 The following example demonstrates on *Adding* a new row when **Enter** key is pressed in the grid.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs16/app/App.jsx %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/customizedialog-cs8/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/customizedialog-cs8/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs16/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs16/app/App.tsx %}
+{% include code-snippet/grid/customizedialog-cs8/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs16/app/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs16" % }
+ {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs8" %}

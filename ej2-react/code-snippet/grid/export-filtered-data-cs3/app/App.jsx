@@ -1,40 +1,43 @@
+import { DataManager } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
 import { Filter, Page, PdfExport, Toolbar } from '@syncfusion/ej2-react-grids';
-import { ExcelExport } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 function App() {
     let grid;
     const pageOptions = { pageSize: 5, pageCount: 5 };
-    const selectionOptions = { type: 'Multiple' };
-    const toolbar = ['PdfExport', 'ExcelExport'];
+    const toolbar = ['PdfExport'];
     const toolbarClick = (args) => {
-        if (grid) {
-            if (args.item.id === 'grid_pdfexport') {
-                const selectedRecords = grid.getSelectedRecords();
-                const exportProperties = {
-                    dataSource: selectedRecords
-                };
-                grid.pdfExport(exportProperties);
+        if (grid && args.item.id === 'grid_pdfexport') {
+            let pdfdata = [];
+            const query = grid.renderModule.data.generateQuery(); // get grid corresponding query
+            for (let i = 0; i < query.queries.length; i++) {
+                if (query.queries[i].fn === 'onPage') {
+                    query.queries.splice(i, 1); // remove page query to get all records
+                    break;
+                }
             }
-            else if (args.item.id === 'grid_excelexport') {
-                const selectedRecords = grid.getSelectedRecords();
+            new DataManager({ json: data }).executeQuery(query)
+                .then((e) => {
+                pdfdata = e.result; // get all filtered records
                 const exportProperties = {
-                    dataSource: selectedRecords
+                    dataSource: pdfdata,
                 };
-                grid.excelExport(exportProperties);
-            }
+                if (grid) {
+                    grid.pdfExport(exportProperties);
+                }
+            }).catch((e) => true);
         }
     };
-    return (<GridComponent id='grid' dataSource={data} allowPaging={true} allowFiltering={true} allowPdfExport={true} allowExcelExport={true} toolbar={toolbar} pageSettings={pageOptions} selectionSettings={selectionOptions} toolbarClick={toolbarClick} ref={g => grid = g}>
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
-        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" textAlign="Right"/>
-        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
-      </ColumnsDirective>
-      <Inject services={[Page, Filter, Toolbar, PdfExport, ExcelExport]}/>
-  </GridComponent>);
+    return (<GridComponent id='grid' dataSource={data} allowPaging={true} allowFiltering={true} allowPdfExport={true} toolbar={toolbar} pageSettings={pageOptions} toolbarClick={toolbarClick} ref={g => grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
+          <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" textAlign="Right"/>
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+        </ColumnsDirective>
+        <Inject services={[Page, Filter, Toolbar, PdfExport]}/>
+    </GridComponent>);
 }
 ;
 export default App;

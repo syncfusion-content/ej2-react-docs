@@ -17,15 +17,21 @@ To enable Infinite scrolling, set `enableInfiniteScrolling` property as true.
 > * In this feature, Grid will not make a new data request when you visit the same page again.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/virtual-scroll-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/virtual-scroll-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="largeData.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs1/app/largeData.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="largeData.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs1/app/largeData.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs1" %}
 
 ## InitialBlocks
 
@@ -34,15 +40,21 @@ You can define the initial loading pages count by using `infiniteScrollSettings.
 In the below demo, we have changed this property value to load five page records instead of three.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/virtual-scroll-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/virtual-scroll-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="largeData.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs2/app/largeData.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="largeData.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs2/app/largeData.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs2" % }
+ {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs2" %}
 
 ## Cache Mode
 
@@ -51,15 +63,21 @@ Cache is used to store the loaded rows object in the Grid instance which can be 
 To enable the cache mode in Infinite scrolling, set `infiniteScrollSettings.enableCache` property as true.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/virtual-scroll-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/virtual-scroll-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="largeData.jsx" %}
+{% include code-snippet/grid/virtual-scroll-cs3/app/largeData.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="largeData.tsx" %}
+{% include code-snippet/grid/virtual-scroll-cs3/app/largeData.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs3" % }
+ {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs3" %}
 
 ## Limitations for Infinite Scrolling
 

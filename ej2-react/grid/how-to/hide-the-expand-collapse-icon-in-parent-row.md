@@ -54,18 +54,18 @@ Add the CSS class to the Grid in the [`rowDataBound`](https://ej2.syncfusion.com
 In the below demo, the expand/collapse icon in the row with *EmployeeID* as *1* is hidden as it does not have record in child Grid.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/customizedialog-cs15/app/App.jsx %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/customizedialog-cs7/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/customizedialog-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/customizedialog-cs15/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs15/app/App.tsx %}
+{% include code-snippet/grid/customizedialog-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/customizedialog-cs15/app/datasource.tsx %}
+{% include code-snippet/grid/customizedialog-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs15" % }
+ {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs7" %}

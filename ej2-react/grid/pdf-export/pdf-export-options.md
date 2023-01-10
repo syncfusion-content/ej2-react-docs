@@ -15,21 +15,21 @@ domainurl: ##DomainURL##
 PDF export provides an option to export the current page into PDF. To export current page, define the [`PdfExportProperties.exportType`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#exporttype) to **CurrentPage**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs9/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs9/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs9/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs9/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs9" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs9" %}
 
 ## Export the selected records only
 
@@ -38,21 +38,21 @@ You can export the selected records data by passing it to [`PdfExportProperties.
 In the below exporting demo, we can get the selected records using [`getSelectedRecords`](https://ej2.syncfusion.com/angular/documentation/api/grid/#getselectedrecords) method and pass the selected data to [`pdfExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfexport) or [`excelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelExport) methods using respective export properties..
 
  {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/app/App.jsx %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/export-filtered-data-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/app/App.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs3/app/datasource.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/export-filtered-data-cs3" % }
+ {% previewsample "page.domainurl/code-snippet/grid/export-filtered-data-cs2" %}
 
 ## Export filtered data only
 
@@ -61,42 +61,42 @@ You can export the filtered data by defining the resulted data in [`PdfExportPro
 In the below Pdf exporting demo, We have gotten the filtered data by applying filter query to the grid data and then defines the resulted data in [`PdfExportProperties.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#datasource) and pass it to [`pdfExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfexport) method.
 
  {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/app/App.jsx %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/app/App.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/export-filtered-data-cs4/app/datasource.tsx %}
+{% include code-snippet/grid/export-filtered-data-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/export-filtered-data-cs4" % }
+ {% previewsample "page.domainurl/code-snippet/grid/export-filtered-data-cs3" %}
 
 ## Export hidden columns
 
 PDF export provides an option to export hidden columns of Grid by defining the [`PdfExportProperties.includeHiddenColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#includehiddencolumn) as **true**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs10/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs10/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs10/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs10/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs10" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs10" %}
 
 ## Show or hide columns
 
@@ -109,42 +109,42 @@ In the pdfExportComplete event, We have reversed the state back to the previous 
 In the below example, we have **CustomerID** as a hidden column in the grid. While exporting, we have changed **CustomerID** to visible column and **ShipCity** as hidden column.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs11/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs11/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs11/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs11/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs11" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs11" %}
 
 ## Change page orientation
 
 Page orientation can be changed Landscape(Default Portrait) for the exported document using the [`PdfExportProperties.pageOrientation`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#pageorientation).
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs12/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs12/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs12/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs12" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs12" %}
 
 ## Change page size
 
@@ -179,42 +179,42 @@ Supported page sizes are:
 * Ledger
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs13/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs13/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs13/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs13" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs13" %}
 
 ## Define file name
 
 You can assign the file name for the exported document by defining [`fileName`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#filename) property in [`PdfExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/).
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs14/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs14/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs14/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs14/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs14" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs14" %}
 
 ## Font customization
 
@@ -253,14 +253,26 @@ You can change the default font of Grid header, content and caption cells in the
 In the following example, we have used Algeria font to export the grid.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs15/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/pdf-export-cs15/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs15/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs15/app/datasource.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="font.jsx" %}
+{% include code-snippet/grid/pdf-export-cs15/app/font.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="font.tsx" %}
+{% include code-snippet/grid/pdf-export-cs15/app/font.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs15" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs15" %}
 
 > **PdfTrueTypeFont** accepts base 64 format of the Custom Font.

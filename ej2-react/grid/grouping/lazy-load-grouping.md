@@ -19,21 +19,21 @@ The caption row expand/collapse state will be persisted on paging and Grid pages
 To enable this feature, you have to set the [`groupSettings.enableLazyLoading`](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/#enableLazyLoading) property as **true**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/lazy-load-grouping-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/lazy-load-grouping-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/lazy-load-grouping-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/lazy-load-grouping-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/lazy-load-grouping-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/lazy-load-grouping-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/lazy-load-grouping-cs1" %}
 
 ## Handling the lazy load grouping at server-side
 
@@ -104,21 +104,21 @@ Infinite scrolling loads a huge amount of data without degrading the Grid's perf
 This is demonstrated in the following sample:
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/lazy-load-grouping-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/lazy-load-grouping-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/lazy-load-grouping-cs2/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/lazy-load-grouping-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/lazy-load-grouping-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/lazy-load-grouping-cs2" % }
+ {% previewsample "page.domainurl/code-snippet/grid/lazy-load-grouping-cs2" %}
 
 > The Grid also supports the lazy load grouping with [virtualization](https://ej2.syncfusion.com/react/documentation/grid/virtual-scroll/)(virtual scrolling).
 

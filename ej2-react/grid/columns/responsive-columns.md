@@ -13,12 +13,12 @@ domainurl: ##DomainURL##
 You can toggle column visibility based on media queries which are defined at the [`hideAtMedia`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#hideatmedia). The [`hideAtMedia`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#hideatmedia) accepts valid [`Media Queries`]( http://cssmediaqueries.com/what-are-css-media-queries.html ). In the below sample, for **OrderID** column, [`hideAtMedia`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#hideatmedia) property value is set as **(min-width: 700px)** so that **OrderID** column will gets hidden when the browser screen width is **lessthan 700px**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/header-orientation-cs1/app/App.jsx %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/column-cs30/app/datasource.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/header-orientation-cs1/app/App.tsx %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/column-cs30/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/header-orientation-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs30" %}

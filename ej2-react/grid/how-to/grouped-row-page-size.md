@@ -15,12 +15,24 @@ By default, we have displayed the no of records based on the [`pageSize`](https:
 In the below sample, we have overridden the default *generateQuery* to display the grouped rows instead of grid rows based on the  [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagesize).
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/group-cs11/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/group-cs11/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/group-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/group-cs11/app/datasource.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="extendData.jsx" %}
+{% include code-snippet/grid/group-cs11/app/extendData.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="extendData.tsx" %}
+{% include code-snippet/grid/group-cs11/app/extendData.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/group-cs11" % }
+ {% previewsample "page.domainurl/code-snippet/grid/group-cs11" %}

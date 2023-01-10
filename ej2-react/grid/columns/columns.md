@@ -43,21 +43,21 @@ The [`valueAccessor`](https://ej2.syncfusion.com/angular/documentation/api/grid/
 You can achieve custom value formatting by using [`valueAccessor`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#valueaccessor).
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs19/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs19/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs19/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs19/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs19" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs19" %}
 
 ### Display array type columns
 
@@ -65,42 +65,42 @@ You can bind an Array of Objects in a column by using [`valueAccessor`](https://
 In this example, the **Name** field has an **array** of two objects **FirstName** and **LastName**. These two objects are joined and bind to a column using [`valueAccessor`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#valueaccessor).
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/array-of-string-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/array-of-string-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/array-of-string-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/array-of-string-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/array-of-string-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/array-of-string-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/array-of-string-cs1" %}
 
 ### Expression column
 
 You can achieve the expression column by using [`valueAccessor`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#valueaccessor) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/expression-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/expression-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/expression-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/expression-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/expression-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/expression-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/expression-cs1" %}
 
 ## Format
 
@@ -111,21 +111,21 @@ To format cell values based on specific culture, use the
 values.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs20/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs20/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs20/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs20/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs20/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs20" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs20" %}
 
 > By default, the [`number`](../../common/internationalization/#number-formatting)
 and [`date`](../../common/internationalization/#date-formatting) values are formatted in **en-US** locale. You can localize the **currency** and [`date`](../../common/internationalization/#date-formatting) in different locale as explained [`here`](../global-local).
@@ -159,63 +159,63 @@ Format | Formatted value
 { type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss a' } | 07/04/1996 12:00:00 AM
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs21/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs21/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs21/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs21/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs21/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs21" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs21" %}
 
 ## Render boolean value as checkbox
 
 To render boolean values as checkbox in columns, you need to set [`displayAsCheckBox`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#displayascheckbox) property as **true**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs22/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs22/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs22/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs22/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs22/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs22" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs22" %}
 
 ## Visibility
 
 You can hide any particular column in Grid before rendering by defining [`visible`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#visible) property as false. In the below sample **ShipCity** column is defined [`visible`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#visible) as **false**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs23/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs23/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs23/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs23/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs23/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs23" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs23" %}
 
 ## Lock columns
 
@@ -224,42 +224,36 @@ You can lock columns by using [`column.lockColumn`](https://ej2.syncfusion.com/a
 In the below example, **Ship City** column is locked and its reordering functionality is disabled.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs24/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs24/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs24/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs24/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs24/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs24" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs24" %}
 
 ## Controlling Grid actions
 
 You can enable or disable Grid any actions for a particular column by setting the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#allowfiltering), [`allowGrouping`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#allowgrouping), [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#allowsorting), [`allowEditing`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#allowediting) and [`allowReordering`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#allowreordering) properties.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs24/app/App.jsx %}
-{% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs24/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs24/app/App.tsx %}
+{% include code-snippet/grid/column-cs25/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs24/app/datasource.tsx %}
+{% include code-snippet/grid/column-cs25/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs24" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs25" %}
 
 ## Show or hide columns by external button
 
@@ -267,21 +261,21 @@ You can show or hide the grid columns dynamically through external buttons by in
 methods.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs26/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs26/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs26/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs26/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs26/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs26" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs26" %}
 
 ## Customize column styles
 
@@ -321,21 +315,21 @@ Add the custom css class to particular column by using [`customAttributes`](http
 ```
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/custom-column-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/custom-column-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/custom-column-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/custom-column-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/custom-column-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/custom-column-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/custom-column-cs1" %}
 
 ## Display custom tooltip for columns
 
@@ -353,21 +347,21 @@ const beforeRender = (args) => {
 ```
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/custom-tooltip-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/custom-tooltip-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/custom-tooltip-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/custom-tooltip-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/custom-tooltip-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/custom-tooltip-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/custom-tooltip-cs1" %}
 
 ## Align the text of Grid content and header
 
@@ -380,21 +374,21 @@ Grid column supports the following alignments:
 * Justify
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs27/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/column-cs27/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs27/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs27/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/column-cs27/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs27" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs27" %}
 
 ## How to prevent checkbox in the blank row
 
@@ -403,21 +397,15 @@ By default, cells in the grid will be blank if the corresponding column values i
 In the following sample, the `rowDataBound` event of the Grid is used to set the innerHTML of the checkbox element to empty.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/column-cs27/app/App.jsx %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/grid/blank-row-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-cs27/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/column-cs27/app/App.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-cs27/app/datasource.tsx %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/grid/blank-row-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs27" % }
+ {% previewsample "page.domainurl/code-snippet/grid/blank-row-cs1" %}
 
 ## See Also
 

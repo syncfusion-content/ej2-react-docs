@@ -126,15 +126,27 @@ Image (Base64 string) can be added in the exported document in header/footer usi
 The below code illustrates the pdf export customization.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/pdf-export-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs3/app/datasource.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="image.jsx" %}
+{% include code-snippet/grid/pdf-export-cs3/app/image.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="image.tsx" %}
+{% include code-snippet/grid/pdf-export-cs3/app/image.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs3" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs3" %}
 
 ## Repeat column header on every page
 
@@ -143,18 +155,18 @@ By default, column header will be placed on the first page of the pdf document b
 In the below sample, we have enabled **repeatHeader** property in [`pdfHeaderQueryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfheaderquerycellinfo) event to show the header on every page.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/pdf-export-cs4/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs4/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/pdf-export-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/pdf-export-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/pdf-export-cs4" % }
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs4" %}

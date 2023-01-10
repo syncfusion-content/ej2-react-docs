@@ -15,18 +15,18 @@ You can select the specific row in the grid based on a certain condition by usin
 In the below demo, we have selected the grid rows only when *EmployeeID* column value greater than *3*.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/change-headertext-cs6/app/App.jsx %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/change-headertext-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/change-headertext-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/change-headertext-cs6/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/change-headertext-cs6/app/App.tsx %}
+{% include code-snippet/grid/change-headertext-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/change-headertext-cs6/app/datasource.tsx %}
+{% include code-snippet/grid/change-headertext-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/change-headertext-cs6" % }
+ {% previewsample "page.domainurl/code-snippet/grid/change-headertext-cs2" %}

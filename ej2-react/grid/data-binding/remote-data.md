@@ -14,15 +14,15 @@ To bind remote data to grid component, assign service data as an instance of **D
 [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property. To interact with remote data source, provide the endpoint **url**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/data-binding-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/data-binding-cs4/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/data-binding-cs4" % }
+ {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs4" %}
 
 > By default **DataManager** uses [`ODataAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
 
@@ -32,15 +32,15 @@ To bind remote data to grid component, assign service data as an instance of **D
 You can retrieve data from OData service using DataManager. You can refer to the following code example of remote Data binding using OData service.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/data-binding-cs5/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/data-binding-cs5/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/data-binding-cs5" % }
+ {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs5" %}
 
 ## OData v4 adaptor - Binding OData v4 service
 
@@ -50,15 +50,15 @@ The ODataV4 is an improved version of OData protocols, and the **DataManager** c
 To bind OData v4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odatav4-adaptor).
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/data-binding-cs6/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/data-binding-cs6/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/data-binding-cs6" % }
+ {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs6" %}
 
 ## Web API adaptor
 
@@ -163,15 +163,21 @@ we are going to see how to add serial number for the records
 by overriding the built-in response processing using **processResponse** method of the [`ODataAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor).
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/data-binding-cs7/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/data-binding-cs7/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="SerialNoAdaptor.jsx" %}
+{% include code-snippet/grid/data-binding-cs7/app/SerialNoAdaptor.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="SerialNoAdaptor.tsx" %}
+{% include code-snippet/grid/data-binding-cs7/app/SerialNoAdaptor.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/data-binding-cs7" % }
+ {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs7" %}
 
 ## Offline mode
 
@@ -180,12 +186,12 @@ On remote data binding, all grid actions such as paging, sorting, editing, group
  To enable this behavior, use the **offline** property of **DataManager**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/data-binding-cs8/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/data-binding-cs8/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/data-binding-cs8" % }
+ {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs8" %}

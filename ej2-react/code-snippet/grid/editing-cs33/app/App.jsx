@@ -1,35 +1,44 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { GridComponent, Inject, ColumnsDirective, ColumnDirective, Edit, Toolbar } from '@syncfusion/ej2-react-grids';
-import { Query } from '@syncfusion/ej2-data';
-import { cascadeData } from './datasource';
-class App extends React.Component {
-    editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
-    toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-    countryParams = {
-        params: {
-            allowFiltering: true,
-            dataSource: this.country,
-            fields: { text: "countryName", value: "countryName" },
-            query: new Query(),
-            actionComplete: () => false
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Page, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+    const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+    let isDropdown = false;
+    const load = () => {
+        let gridInstance = document.getElementById('Grid').ej2_instances[0];
+        if (gridInstance) {
+            gridInstance.element.addEventListener('mouseup', function (e) {
+                if (e.target.classList.contains("e-rowcell")) {
+                    if (gridInstance.isEdit)
+                        gridInstance.endEdit();
+                    let rowInfo = gridInstance.getRowInfo(e.target);
+                    if (rowInfo.column.field === "ShipCountry")
+                        isDropdown = true;
+                    gridInstance.selectRow(rowInfo.rowIndex);
+                    gridInstance.startEdit();
+                }
+                ;
+            });
         }
     };
-    country = [
-        { countryName: 'United States', countryId: '1' },
-        { countryName: 'Australia', countryId: '2' },
-        { countryName: 'India', countryId: '3' }
-    ];
-    render() {
-        return <GridComponent dataSource={cascadeData} editSettings={this.editOptions} toolbar={this.toolbarOptions} height={273}>
-            <ColumnsDirective>
-                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}></ColumnDirective>
-                <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'></ColumnDirective>
-                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit' edit={this.countryParams} textAlign="Right"></ColumnDirective>
-            </ColumnsDirective>
-            <Inject services={[Edit, Toolbar]}/>
-        </GridComponent>;
-    }
+    const onActionComplete = (args) => {
+        if (args.requestType == "beginEdit" && isDropdown) {
+            isDropdown = false;
+            let dropdownObj = args.form.querySelector('.e-dropdownlist').ej2_instances[0];
+            dropdownObj.element.focus();
+            dropdownObj.showPopup();
+        }
+    };
+    return <GridComponent dataSource={data} id="Grid" toolbar={toolbarOptions} allowPaging={true} editSettings={editSettings} load={load} actionComplete={onActionComplete}>
+    <ColumnsDirective>
+      <ColumnDirective field='OrderID' headerText='Order ID' textAlign='Right' width='100' isPrimaryKey={true}></ColumnDirective>
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'></ColumnDirective>
+      <ColumnDirective field='Freight' headerText='Freight' textAlign='Right' width='120' format='C2'></ColumnDirective>
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='150'></ColumnDirective>
+    </ColumnsDirective>
+    <Inject services={[Page, Toolbar, Edit]}/>
+  </GridComponent>;
 }
 ;
-ReactDOM.render(<App />, document.getElementById('grid'));
+export default App;

@@ -51,12 +51,18 @@ Add/Remove the CSS class to the Grid in the click event handler of Button.
 In the below demo, the button click will enable/disable the Grid and its actions.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/enable-disable-actions-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/enable-disable-actions-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/enable-disable-actions-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/enable-disable-actions-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/enable-disable-actions-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/enable-disable-actions-cs1" %}

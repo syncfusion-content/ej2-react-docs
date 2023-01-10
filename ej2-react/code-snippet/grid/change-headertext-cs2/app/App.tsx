@@ -1,44 +1,40 @@
 
 
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
-import { data } from '../datasource.ts';
+import { getValue } from '@syncfusion/ej2-base';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import { Grid, RowDataBoundEventArgs, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
 
-class App extends React.Component<{}, {}>{
-    public data: Object[] = data;
-    private grid: GridComponent;
-    public add() {
-        let data: Object = { OrderID: 10247, CustomerID: "ASDFG", ShipCity: 'Vins et alcools Chevalier' , ShipName: 'Reims' };
-        this.grid.dataSource.unshift(data); // Add record.
-        this.grid.refresh(); // Refresh the Grid.
+function App() {
+  let selIndex: number[] = [];
+  let grid: Grid | null;
+  const settings: SelectionSettingsModel = { type: 'Multiple' };
+  const rowDataBound = (args: RowDataBoundEventArgs): void => {
+    if (getValue('EmployeeID', args.data as object) > 3) {
+      selIndex.push(parseInt((args.row as HTMLTableRowElement)
+        .getAttribute('aria-rowindex') as string, 0));
     }
-    public delete() {
-        let selectedRow: number = this.grid.getSelectedRowIndexes()[0];
-        if (this.grid.getSelectedRowIndexes().length){
-            this.grid.dataSource.splice(selectedRow, 1); //Delete record.
-        }
-        else {
-            alert("No records selected for delete operation");
-        }
-        this.grid.refresh(); // Refresh the Grid.
+  }
+  const dataBound = (): void => {
+    if (grid && selIndex.length) {
+      grid.selectRows(selIndex);
+      selIndex = [];
     }
-    render() {
-        return (<div>
-            <ButtonComponent cssClass= 'e-flat' onClick= { this.add.bind(this)}>Add</ButtonComponent>
-            <ButtonComponent cssClass= 'e-flat' onClick= { this.delete.bind(this)}>Delete</ButtonComponent>
-            <GridComponent dataSource={this.data} height={280} ref={g => this.grid = g}>
-                <ColumnsDirective>
-                    <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"></ColumnDirective>
-                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-                    <ColumnDirective field='ShipCity' headerText='Ship City' width='150'></ColumnDirective>
-                    <ColumnDirective field='ShipName' headerText='Ship Name' width='150'></ColumnDirective>
-                </ColumnsDirective>
-            </GridComponent>
-        </div>)
-    }
-}
-ReactDOM.render(<App />, document.getElementById('grid'));
+  }
+  return (<div>
+    <GridComponent dataSource={data} allowPaging={true} rowDataBound={rowDataBound} dataBound={dataBound} selectionSettings={settings} height={280} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='150' textAlign='Right' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent>
+  </div>)
+};
+export default App;
 
 

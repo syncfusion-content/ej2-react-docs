@@ -15,21 +15,21 @@ You can change the cell values and save edited data to the data source.
 To enable Dialog edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as **Dialog**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/editing-cs8/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/editing-cs8/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/editing-cs8/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/editing-cs8/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/editing-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/editing-cs8" % }
+ {% previewsample "page.domainurl/code-snippet/grid/editing-cs8" %}
 
 ## Customize edit dialog
 
@@ -42,21 +42,21 @@ Also the locale text for the **Save** and **Cancel** buttons has been changed by
 You can refer the Grid [`Default text`](../global-local/) list for more localization.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/customizedialog-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/customizedialog-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/customizedialog-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/customizedialog-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs1" %}
 
 > The Grid add or edit dialog element has the max-height property, which is calculated based on the available window height. So, in the normal window (1920 x 1080), it is possible to set the dialog's height up to 658px.
 
@@ -69,21 +69,21 @@ In the `actionBegin` event, when the `requestType` is `beginEdit` or add, the co
 In the following example, the CustomerID column is rendered as a hidden column, and the ShipCountry column is rendered as a visible column. In the edit mode, the CustomerID column will be changed to a visible state and the ShipCountry column will be changed to a hidden state.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/customizedialog-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/customizedialog-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/customizedialog-cs2/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/customizedialog-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs2" % }
+ {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs2" %}
 
 ## Use wizard like dialog editing
 
@@ -92,15 +92,33 @@ Wizard helps you create intuitive step-by-step forms to fill. You can achieve th
 The following example demonstrate the wizard like editing in the grid with the obtrusive Validation.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/wizardediting-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/wizardediting-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/wizardediting-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/wizardediting-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="orderModel.jsx" %}
+{% include code-snippet/grid/wizardediting-cs1/app/orderModel.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="orderModel.tsx" %}
+{% include code-snippet/grid/wizardediting-cs1/app/orderModel.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="wizardTemplate.jsx" %}
+{% include code-snippet/grid/wizardediting-cs1/app/wizardTemplate.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="wizardTemplate.tsx" %}
+{% include code-snippet/grid/wizardediting-cs1/app/wizardTemplate.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/wizardediting-cs1" % }
+ {% previewsample "page.domainurl/code-snippet/grid/wizardediting-cs1" %}
 
 ## Customize Add/Edit Dialog footer
 
@@ -109,18 +127,18 @@ In dialog edit mode, a dialog will show up when editing the currently selected r
 In the following sample, using the `dialog` argument of the `actionComplete` event, the action for the custom button can be customized.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/customizedialog-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/customizedialog-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/customizedialog-cs3/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/customizedialog-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/customizedialog-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/customizedialog-cs3" % }
+ {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs3" %}

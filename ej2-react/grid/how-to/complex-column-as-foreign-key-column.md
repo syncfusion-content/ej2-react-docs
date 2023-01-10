@@ -15,18 +15,18 @@ The following example shows how to set the complex column as foreign key column.
 In the following example, *Employee.EmployeeID* is a complex column and also declared as a foreign column which shows *FirstName* column from foreign data.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/grid/foreign-key-cs11/app/App.jsx %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/foreign-key-cs6/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/foreign-key-cs6/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/foreign-key-cs11/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/grid/foreign-key-cs11/app/App.tsx %}
+{% include code-snippet/grid/foreign-key-cs6/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/foreign-key-cs11/app/datasource.tsx %}
+{% include code-snippet/grid/foreign-key-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/foreign-key-cs11" % }
+ {% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs6" %}

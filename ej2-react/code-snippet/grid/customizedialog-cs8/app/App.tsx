@@ -1,35 +1,35 @@
 
 
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { GridComponent, Inject, ColumnsDirective, ColumnDirective, Edit, Toolbar,
-EditSettingsModel, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Edit, Grid, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
 import { data } from './datasource';
-import { DialogFormTemplate, IOrderModel} from './template';
-class App extends React.Component<{}, {}>{
-    public editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' };
-    public toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete'];
 
-    actionComplete(args: DialogEditEventArgs): void {
-        if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
-            let dialog: Dialog = args.dialog;
-            dialog.height = 400;
-            // change the header of the dialog
-            dialog.header = args.requestType === 'beginEdit' ? 'Record of ' + args.rowData['CustomerID'] : 'New Customer';
+function App() {
+  const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+  const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete'];
+
+  const load = (): void => {
+    let gridElement = document.getElementById('grid').ej2_instances[0];
+    if (gridElement) {
+      gridElement.element.addEventListener('keydown', function (e) {
+        if (gridElement && e.keyCode === 13) {
+          gridElement.addRecord();
         }
+      });
     }
-
-    render() {
-        return <GridComponent dataSource={data} actionComplete={this.actionComplete.bind(this)} editSettings={this.editOptions} toolbar={this.toolbarOptions} height={265}>
-            <ColumnsDirective>
-                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}></ColumnDirective>
-                <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'></ColumnDirective>
-                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'></ColumnDirective>
-            </ColumnsDirective>
-            <Inject services={[Edit, Toolbar]} />
-        </GridComponent>
-    }
+  }
+  return <GridComponent id="grid" dataSource={data} load={load}
+    editSettings={editOptions} toolbar={toolbarOptions} height={265}>
+    <ColumnsDirective>
+      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+      <ColumnDirective field='Freight' headerText='Freight' width='80' textAlign="Right" format='C2' editType='numericedit' />
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+    </ColumnsDirective>
+    <Inject services={[Edit, Toolbar]} />
+  </GridComponent>
 };
-ReactDOM.render(<App />, document.getElementById('grid'));
+export default App;
 
 

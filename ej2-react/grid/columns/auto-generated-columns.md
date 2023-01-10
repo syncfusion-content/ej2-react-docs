@@ -15,15 +15,15 @@ The [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column
 All the columns in the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) are bound as grid columns.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs2/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/column-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs2" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs2" %}
 
 ## Set Primary key column for auto generated columns when editing is enabled
 
@@ -32,15 +32,15 @@ Primary key can be defined in the declaration of column object of the grid. When
 If Primary key "column index" is known then refer the following code example
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs3/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/column-cs3/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs3" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs3" %}
 
 If Primary key **column** and its **field** is known then primary key for the respective [`column`](https://ej2.syncfusion.com/documentation/api/grid/column/) can be defined as follows.
 
@@ -58,12 +58,12 @@ You can set column options such as [`format`](https://ej2.syncfusion.com/angular
 In the below example, [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#width) is set for **OrderID** column, [`date`](../../common/internationalization/#date-formatting) type is set for **OrderDate** column and **numeric** type is set for **Freight** column.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/column-cs4/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/column-cs4/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{ % previewsample "page.domainurl/code-snippet/grid/column-cs4" % }
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs4" %}
