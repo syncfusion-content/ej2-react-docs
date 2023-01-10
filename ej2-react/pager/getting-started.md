@@ -133,6 +133,5 @@ Output will be appears as follows.
 {% include code-snippet/pager/pager-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-{% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pager/pager-cs3" %}
