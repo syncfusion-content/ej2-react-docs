@@ -1,3 +1,4 @@
+{% raw %}
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
@@ -17,3 +18,4 @@ export class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.getElementById('sparkline'));
+{% endraw %}
