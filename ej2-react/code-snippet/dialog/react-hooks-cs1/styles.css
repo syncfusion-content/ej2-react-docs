@@ -1,0 +1,25 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+html,
+body,    
+#container,
+#dialog-target {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.e-popup.e-popup-open.e-dialog {
+    max-height: 400px !important;
+}
+.e-input-group:not(.e-success):not(.e-warning):not(.e-error),
+.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
