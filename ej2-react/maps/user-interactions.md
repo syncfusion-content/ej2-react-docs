@@ -170,6 +170,8 @@ document.getElementById("maps") as HTMLElement
 
 To enable or disable selection zooming, use the [`enableSelectionZooming`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#enableselectionzooming) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/). The [`enablePanning`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#enablepanning) property must be set to **false** to enable the selection zooming in Maps.
 
+{% raw %}
+
 ```ts
 
 import { world_map } from 'world-map.ts';
@@ -190,10 +192,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ### Setting minimum and maximum values for zoom factor
 
 The zooming range can be adjusted using the [`minZoom`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#minzoom) and [`maxZoom`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#maxzoom) properties in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/). The minZoom value is set to 1 by default, and the maxZoom value is set to 10.
+
+{% raw %}
 
 ```ts
 
@@ -215,6 +220,7 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ### Zooming with animation
 

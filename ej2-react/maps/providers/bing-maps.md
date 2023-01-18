@@ -111,6 +111,8 @@ document.getElementById("maps") as HTMLElement
 
 Markers can be added to the layers of Bing Maps by setting the corresponding location's coordinates of latitude and longitude using [MarkerDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#markersettings) tag. Navigation lines can be added on top of an Bing Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [NavigationLineDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#navigationlinesettings) tag.
 
+{% raw %}
+
 ```ts
 
 import * as React from "react";
@@ -168,10 +170,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ## Adding sublayer
 
 Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer for highlighting a particular continent or country in Bing Maps by adding another layer and specifying the [type](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#type) property of Maps layer to **SubLayer**.
+
+{% raw %}
 
 ```ts
 
@@ -202,10 +207,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ## Enabling legend
 
 The legend can be added to the tile Maps by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [legendSettings](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) to **true**.
+
+{% raw %}
 
 ```ts
 
@@ -257,3 +265,4 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}

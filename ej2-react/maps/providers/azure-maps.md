@@ -139,6 +139,8 @@ document.getElementById("maps") as HTMLElement
 
 The legend can be added to the Azure Maps by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [legendSettings](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) to **true**.
 
+{% raw %}
+
 ```ts
 
 import { markerDataSource } from 'markerdata.ts';
@@ -182,3 +184,4 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
