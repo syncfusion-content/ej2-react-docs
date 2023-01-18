@@ -1,12 +1,8 @@
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DialogUtility } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    buttonClick() {
+function App() {
+    function buttonClick() {
         DialogUtility.alert({
             title: 'Low Battery',
             width: '250px',
@@ -14,10 +10,8 @@ class App extends React.Component {
             animationSettings: { effect: 'Zoom' }
         });
     }
-    render() {
-        return (<div className="App" id='dialog-target'>
-       <ButtonComponent id="alertBtn" cssClass="e-danger" onClick={this.buttonClick.bind(this)}>Alert</ButtonComponent>
-  </div>);
-    }
+    return (<div className="App" id='dialog-target'>
+        <ButtonComponent id="alertBtn" cssClass="e-danger" onClick={buttonClick.bind(this)}>Alert</ButtonComponent>
+    </div>);
 }
 export default App;

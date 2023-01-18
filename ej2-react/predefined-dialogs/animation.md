@@ -29,6 +29,19 @@ In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `Zo
 
  {% previewsample "page.domainurl/code-snippet/predefined-dialogs/alert-animation-cs1" %}
 
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/predefined-dialogs/alert-animation-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/predefined-dialogs/alert-animation-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/predefined-dialogs/alert-animation-cs2" %}
+
 ## Confirm animation
 
 `[Class-component]`
