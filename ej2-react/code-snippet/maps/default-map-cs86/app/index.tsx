@@ -1,6 +1,6 @@
 
 
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, NavigationLineDirective, LayerDirective, Zoom, MarkersDirective, NavigationLine, NavigationLinesDirective, MarkerDirective, Marker, Inject, Maps } from '@syncfusion/ej2-react-maps';
@@ -43,4 +43,4 @@ ReactDOM.render(
 document.getElementById("maps") as HTMLElement
 );
 
-
+{% endraw %}

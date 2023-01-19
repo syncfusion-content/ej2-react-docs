@@ -1,6 +1,6 @@
 
 
-
+{% raw %}
 import { africa_continent } from 'africa-continent.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -21,5 +21,5 @@ ReactDOM.render(
 document.getElementById("maps") as HTMLElement
 );
 
-
+{% endraw %}
 

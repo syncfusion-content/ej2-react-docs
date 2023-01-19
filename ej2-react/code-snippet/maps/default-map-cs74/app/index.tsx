@@ -1,5 +1,5 @@
 
-
+{% raw %}
 import { usa_map } from 'usa.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -29,5 +29,5 @@ ReactDOM.render(
                 </MapsComponent>,
             document.getElementById("maps") as HTMLElement
 );
-
+{% endraw %}
 

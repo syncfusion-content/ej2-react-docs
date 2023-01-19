@@ -1,5 +1,5 @@
 
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
@@ -26,4 +26,4 @@ render() {
 };
 ReactDOM.render(<App />, document.getElementById('maps'));
 
-
+{% endraw %}

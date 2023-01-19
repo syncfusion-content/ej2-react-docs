@@ -1,5 +1,5 @@
 
-
+{% raw %}
 import { world_map } from 'world-map.ts';
 import { africa_continent } from 'africa-continent.ts';
 import { dafaultData } from 'data.ts';
@@ -53,3 +53,4 @@ class App extends React.Component {
 ReactDOM.render(<App />, document.getElementById('maps'));
 
 
+{% endraw %}
