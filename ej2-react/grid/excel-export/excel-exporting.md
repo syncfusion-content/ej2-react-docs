@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Excel exporting in React Grid component
 
-The excel export allows exporting Grid data to Excel document. You need to use the [`excelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelexport) method for exporting. To enable Excel export in the grid,
- set the [`allowExcelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowexcelexport) as **true**.
+The excel export allows exporting Grid data to Excel document. You need to use the [`excelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelexport) method for exporting. To enable Excel export in the grid, set the [`allowExcelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowexcelexport) as **true**.
 
 To use excel export, You need to inject the **ExcelExport** module in grid.
 

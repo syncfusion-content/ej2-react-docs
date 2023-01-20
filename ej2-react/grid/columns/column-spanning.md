@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Column spanning in React Grid component
 
-Grid has option to span the adjacent cells. You need to define
-[`colSpan`](https://ej2.syncfusion.com/angular/documentation/api/grid/queryCellInfoEventArgs/#colspan) attribute to span the cells
-in [`queryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/queryCellInfoEventArgs/) event.
+Grid has option to span the adjacent cells. You need to define [`colSpan`](https://ej2.syncfusion.com/angular/documentation/api/grid/queryCellInfoEventArgs/#colspan) attribute to span the cells in [`queryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/queryCellInfoEventArgs/) event.
 
 In the following demo, Employee **Davolio** doing analysis from 9.00 AM to 10.00 AM, so that cells have spanned.
 

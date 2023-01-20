@@ -68,8 +68,7 @@ The following CSS files are available in **../node_modules/@syncfusion** package
 
 ## Adding Grid component
 
-Now, you can start adding React Grid component in the application. For getting started, add the Grid component in **src/App.tsx** file
-using following code.
+Now, you can start adding React Grid component in the application. For getting started, add the Grid component in **src/App.tsx** file using following code.
 
 Place the following grid code in the **src/App.tsx**.
 
@@ -209,8 +208,7 @@ Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusio
 
 ## Run the application
 
-The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and
-run the application in browser. Use the following command to run the application.
+The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
 ```sh
 

@@ -11,8 +11,7 @@ domainurl: ##DomainURL##
 # Index in React Grid component
 
 The Grid component is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated.
-It will pull data from a data source, such as array of JavaScript objects,
-`OData web services`, or `DataManager` and binding data fields to columns.
+It will pull data from a data source, such as array of JavaScript objects, `OData web services`, or `DataManager` and binding data fields to columns.
 Also displaying a column header to identify the field with support for grouped records.
 
 The most important features available in the grid components are paging, sorting, filtering, searching and grouping.

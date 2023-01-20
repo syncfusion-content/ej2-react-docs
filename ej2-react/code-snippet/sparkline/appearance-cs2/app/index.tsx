@@ -1,3 +1,4 @@
+{% raw %}
 
 
 import * as React from 'react';
@@ -25,3 +26,4 @@ render() {
 ReactDOM.render(<App />, document.getElementById('sparkline'));
 
 
+{% endraw %}

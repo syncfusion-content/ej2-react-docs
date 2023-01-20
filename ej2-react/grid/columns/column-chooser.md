@@ -31,13 +31,11 @@ To use the column chooser, inject the **ColumnChooser** module in the grid.
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs5" %}
 
-> You can hide the column names in column chooser by defining the
-[`columns.showInColumnChooser`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#showincolumnchooser) as **false**.
+> You can hide the column names in column chooser by defining the [`columns.showInColumnChooser`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#showincolumnchooser) as **false**.
 
 ## Open column chooser by external button
 
-The Column chooser can be displayed on a page through external button by invoking
-the [`openColumnChooser`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnChooser/#opencolumnchooser) method with **X** and **Y** axis positions.
+The Column chooser can be displayed on a page through external button by invoking the [`openColumnChooser`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnChooser/#opencolumnchooser) method with **X** and **Y** axis positions.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

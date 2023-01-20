@@ -36,14 +36,12 @@ To use Sorting, inject **Sort** module in Grid.
  {% previewsample "page.domainurl/code-snippet/grid/sort-cs1" %}
 
 > * Grid column sorted in **Ascending** order. If you click on already sorted column, Grid toggles the sort direction.
-> * You can apply and clear sorting by invoking [`sortColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/#sortcolumn) and
-[`clearSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#clearsorting) methods.
+> * You can apply and clear sorting by invoking [`sortColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/#sortcolumn) and [`clearSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#clearsorting) methods.
 > * To disable Sorting for a particular column, by specifying [`columns.allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowsorting) to **false**.
 
 ## Initial Sort
 
-To apply sort at initial rendering, set the [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortDescriptorModel/#field) and
-[`direction`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortDescriptorModel/#direction) in [`sortSettings.columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortSettingsModel/#columns).
+To apply sort at initial rendering, set the [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortDescriptorModel/#field) and [`direction`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortDescriptorModel/#direction) in [`sortSettings.columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortSettingsModel/#columns).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -201,8 +199,7 @@ For example in sorting, the [`args.requestType`](https://ej2.syncfusion.com/angu
 ## Custom sort comparer
 
 You can customize the default sort action for a column by defining the [`column.sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#sortcomparer) property.
-The sort comparer function has the same functionality like
-[`Array.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) sort comparer.
+The sort comparer function has the same functionality like [`Array.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) sort comparer.
 
 In the following example, custom sort comparer function was defined in the **Customer ID** column.
 
@@ -230,7 +227,7 @@ In the following example, custom sort comparer function was defined in the **Cus
 When you tap the grid header on touchscreen devices, the selected column header is sorted. A popup ![Sorting](images/sorting.jpg) is displayed for multi-column sorting.
 To sort multiple columns, tap the popup![Multi Sorting](images/msorting.jpg), and then tap the desired grid headers.
 
- The [`allowMultiSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowmultisorting) and [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowsorting) should be **true** then only the popup will be shown.
+The [`allowMultiSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowmultisorting) and [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowsorting) should be **true** then only the popup will be shown.
 
 The following screenshot shows grid touch sorting.
 

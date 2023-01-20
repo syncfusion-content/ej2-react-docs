@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in React Grid component
 
-Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid,
-set the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to true.
-Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/filterSettings/).
+Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/filterSettings/).
 
 To use filter, inject the **Filter** module in the grid.
 
@@ -44,8 +42,7 @@ The Grid supports two types of filter, they are
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs8" %}
 
 > * You can apply and clear filtering, by using [`filterByColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#filterbycolumn) and [`clearFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#clearfiltering) methods.
-> * To disable Filtering for a particular column, by specifying
-[`columns.allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowfiltering) to **false**.
+> * To disable Filtering for a particular column, by specifying [`columns.allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowfiltering) to **false**.
 
 ## Initial filter
 
@@ -89,8 +86,7 @@ between|Filter the values based on the range between the start and end specified
 
 ## Diacritics filter
 
-By default, grid ignores diacritic characters while filtering. To include diacritic characters, set the
-[`filterSettings.ignoreAccent`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#ignoreaccent) as **true**.
+By default, grid ignores diacritic characters while filtering. To include diacritic characters, set the [`filterSettings.ignoreAccent`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#ignoreaccent) as **true**.
 
 In the following sample, type **aero** in **Name** column to filter diacritic characters.
 

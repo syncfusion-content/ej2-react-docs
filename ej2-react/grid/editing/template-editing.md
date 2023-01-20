@@ -86,9 +86,7 @@ In the following code example, the **Freight** value has been formatted and upda
 ## Set focus to editor
 
 By default, the first input element in the dialog will be focused while opening the dialog.
-If the first input element is in disabled or hidden state, focus the valid input element in the
-[`actionComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete)
-event based on `requestType` as `beginEdit`.
+If the first input element is in disabled or hidden state, focus the valid input element in the [`actionComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event based on `requestType` as `beginEdit`.
 
 ```ts
 

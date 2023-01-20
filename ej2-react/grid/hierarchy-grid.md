@@ -11,10 +11,7 @@ domainurl: ##DomainURL##
 # Hierarchy grid in React Grid component
 
 The Grid allows display of table data in a hierarchical structure to visualize relations between parent and child records.
-This feature is enabled by defining the [`childGrid`](https://ej2.syncfusion.com/angular/documentation/api/grid/#childgrid) and
-[`childGrid.queryString`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querystring). The [`childGrid`](https://ej2.syncfusion.com/angular/documentation/api/grid/#childgrid)
-describes the options of grid and the [`childGrid.queryString`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querystring)
-describes the relation between parent and child grids.
+This feature is enabled by defining the [`childGrid`](https://ej2.syncfusion.com/angular/documentation/api/grid/#childgrid) and [`childGrid.queryString`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querystring). The [`childGrid`](https://ej2.syncfusion.com/angular/documentation/api/grid/#childgrid) describes the options of grid and the [`childGrid.queryString`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querystring) describes the relation between parent and child grids.
 
 To use hierarchical binding, inject the [`DetailRow`](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/) module in the grid.
 
@@ -40,9 +37,7 @@ To use hierarchical binding, inject the [`DetailRow`](https://ej2.syncfusion.com
 
 ## ExpandAll by external Button
 
-By default, grid renders in collapsed state.
-You can expand all child grid rows by invoking the [`expandAll`](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/#expandall) method and collapse all grid rows by invoking
-the [`collapseAll`](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/#collapseall) through an external button.
+By default, grid renders in collapsed state. You can expand all child grid rows by invoking the [`expandAll`](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/#expandall) method and collapse all grid rows by invoking the [`collapseAll`](https://ej2.syncfusion.com/angular/documentation/api/grid/detailRow/#collapseall) through an external button.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

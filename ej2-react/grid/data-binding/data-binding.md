@@ -40,8 +40,7 @@ Assign the [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#qu
 
 ## Handling HTTP error
 
-During server interaction from the grid, some server-side exceptions may occur, and you can acquire those error messages or exception details
-in client-side using the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event.
+During server interaction from the grid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event.
 
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) Grid event contains the error details returned from server.
 
@@ -56,8 +55,7 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/angular/
 
  {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs2" %}
 
-> The [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but
-also when there is an exception while processing the Grid actions.
+> The [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the Grid actions.
 
 ## Binding with ajax
 

@@ -13,9 +13,7 @@ domainurl: ##DomainURL##
 ## Localization
 
 The [`Localization`](../../base/localization.html) library allows you to localize default text content of the Grid.
-The grid component has static text on some features (like group drop area text, pager information text, etc.)
-that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
-[`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
+The grid component has static text on some features (like group drop area text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
 
 The following list of properties and its values are used in the grid.
 

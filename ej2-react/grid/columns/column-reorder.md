@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Column reorder in React Grid component
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the Grid.
-To enable reordering, set the [`allowReordering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowreordering) to true.
+Reordering can be done by drag and drop of a particular column header from one index to another index within the Grid. To enable reordering, set the [`allowReordering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowreordering) to true.
 
 To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/angular/documentation/api/grid/reorder/) module in the grid.
 

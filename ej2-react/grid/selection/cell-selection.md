@@ -12,13 +12,10 @@ domainurl: ##DomainURL##
 
 Cell Selection can be done through simple Mouse down or Arrow keys(up, down, left and right).
 
-The grid supports two types of cell selection mode that can be set by using
-the [`selectionSettings.cellSelectionMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#cellselectionmode). They are:
+The grid supports two types of cell selection mode that can be set by using the [`selectionSettings.cellSelectionMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#cellselectionmode). They are:
 
-* **Flow** - The **Flow** value is set by default.
-Select range of cells between the start index and end index which includes in between cells of rows.
-* **Box** - Select range of cells within the start and end column indexes which includes
-in between cells of rows within the range.
+* **Flow** - The **Flow** value is set by default. Select range of cells between the start index and end index which includes in between cells of rows.
+* **Box** - Select range of cells within the start and end column indexes which includes in between cells of rows within the range.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -37,8 +34,7 @@ in between cells of rows within the range.
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-cs1" %}
 
-> Cell Selection requires the [`selectionSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#mode) to be **Cell** or  **Both** and
-[`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#type) should be **Multiple**.
+> Cell Selection requires the [`selectionSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#mode) to be **Cell** or  **Both** and [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#type) should be **Multiple**.
 
 ## Toggle selection
 

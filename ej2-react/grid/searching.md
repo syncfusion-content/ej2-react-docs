@@ -11,8 +11,7 @@ domainurl: ##DomainURL##
 # Searching in React Grid component
 
 You can search records in a Grid, by using the [`search`](https://ej2.syncfusion.com/angular/documentation/api/grid/#search) method with search key as a parameter.
-This also provides an option to integrate search text box in Grid's toolbar by adding **Search** item to the
-[`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar).
+This also provides an option to integrate search text box in Grid's toolbar by adding **Search** item to the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar).
 
 To search records, inject the **Search** module in the grid.
 
@@ -56,8 +55,7 @@ To apply search at initial rendering, set the [`fields`](https://ej2.syncfusion.
 
  {% previewsample "page.domainurl/code-snippet/grid/searching-cs2" %}
 
-> By default, Grid searches all the bound column values. To customize this behavior define the
-[`searchSettings.fields`](https://ej2.syncfusion.com/angular/documentation/api/grid/searchSettings/#fields) property.
+> By default, Grid searches all the bound column values. To customize this behavior define the [`searchSettings.fields`](https://ej2.syncfusion.com/angular/documentation/api/grid/searchSettings/#fields) property.
 
 ## Search operators
 

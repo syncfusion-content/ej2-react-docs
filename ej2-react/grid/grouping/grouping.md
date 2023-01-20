@@ -61,8 +61,7 @@ To apply group at initial rendering, set the column field name in the [`groupSet
 
 ## Hide drop area
 
-To avoid ungrouping or further grouping of a column after initial column
-grouping, define the [`groupSettings.showDropArea`](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/#showdroparea) as **false**.
+To avoid ungrouping or further grouping of a column after initial column grouping, define the [`groupSettings.showDropArea`](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/#showdroparea) as **false**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -85,17 +84,13 @@ grouping, define the [`groupSettings.showDropArea`](https://ej2.syncfusion.com/a
 
 On grouping columns with paging feature, the aggregated information and total items are displayed based on the current page.
 The grid does not consider aggregated information and total items from other pages.
-To get additional details (aggregated information and total items) from other pages, set the
-[`groupSettings.disablePageWiseAggregates`](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/#disablepagewiseaggregates) to false.
+To get additional details (aggregated information and total items) from other pages, set the [`groupSettings.disablePageWiseAggregates`](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/#disablepagewiseaggregates) to false.
 
 > If remote data is bound to grid dataSource, two requests will be sent when performing grouping action; one for getting the grouped data and another for getting aggregate details and total items count.
 
 ## Group by format
 
-By default, columns will be grouped by the data or value present for the particular row. To group numeric
-or datetime column based on the mentioned format, you have to enable the
-[`enableGroupByFormat`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#enablegroupbyformat) property of the corresponding
-grid columns.
+By default, columns will be grouped by the data or value present for the particular row. To group numeric or datetime column based on the mentioned format, you have to enable the [`enableGroupByFormat`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#enablegroupbyformat) property of the corresponding grid columns.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -135,8 +130,7 @@ During the group action, the grid component triggers two events. The [`actionBeg
 
  {% previewsample "page.domainurl/code-snippet/grid/group-cs6" %}
 
-> [`args.requestType`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortEventArgs/#requesttype) retrieves current action name.
-For example in grouping, the [`args.requestType`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortEventArgs/#requesttype) value is **grouping**.
+> [`args.requestType`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortEventArgs/#requesttype) retrieves current action name. For example in grouping, the [`args.requestType`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortEventArgs/#requesttype) value is **grouping**.
 
 ## Collapse by external button
 

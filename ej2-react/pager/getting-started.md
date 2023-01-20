@@ -62,8 +62,7 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Adding Pager component
 
-Now, you can start adding Pager component in the application. For getting started, add the Pager component in `src/App.tsx` file
-using following code.
+Now, you can start adding Pager component in the application. For getting started, add the Pager component in `src/App.tsx` file using following code.
 
 Now place the below Pager code in the `src/App.tsx`.
 Here the Pager is rendered with `totalRecordsCount` which is used to render numeric container.
@@ -100,8 +99,7 @@ ReactDOM.render(<App />, document.getElementById('pager'));
 ## Page Count
 
 `pageCount` value defines the number of pages to be displayed in the pager component for navigation.
-The default value for `pageCount` is 10 and value will be updated based on [`totalRecordsCount`](https://ej2.syncfusion.com/angular/documentation/api/pager/pagerModel/#totalrecordscount)
-and [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/pager/pagerModel/#pagesize) values.
+The default value for `pageCount` is 10 and value will be updated based on [`totalRecordsCount`](https://ej2.syncfusion.com/angular/documentation/api/pager/pagerModel/#totalrecordscount) and [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/pager/pagerModel/#pagesize) values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -116,8 +114,7 @@ and [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/pager/page
 
 ## Run the application
 
-The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and
-run the application in browser. Use the following command to run the application.
+The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
 ```sh
 npm start

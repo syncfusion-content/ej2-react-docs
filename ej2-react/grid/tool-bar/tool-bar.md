@@ -10,10 +10,7 @@ domainurl: ##DomainURL##
 
 # Tool bar in React Grid component
 
-The Grid provides ToolBar support to handle grid actions. The [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar)
-property accepts either the collection of built-in toolbar items and
-[`itemModel`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/itemModel) objects for custom toolbar items or
-HTML element ID for toolbar template.
+The Grid provides ToolBar support to handle grid actions. The [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) property accepts either the collection of built-in toolbar items and [`itemModel`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/itemModel) objects for custom toolbar items or HTML element ID for toolbar template.
 
 To use Toolbar, inject **Toolbar** module in Grid.
 

@@ -11,8 +11,7 @@ domainurl: ##DomainURL##
 # Index in React Pager component
 
 The **Pager** component allows you to navigate between records which are sectioned into pages.
-The navigation between pages which is key functionality of Pager is done using built-in numeric and navigation buttons
-and provides easy user interaction.
+The navigation between pages which is key functionality of Pager is done using built-in numeric and navigation buttons and provides easy user interaction.
 
 ## Key Features
 

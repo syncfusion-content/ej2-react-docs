@@ -114,8 +114,7 @@ Grid methods can be used to perform CRUD operations programmatically. The [addRe
 
 ## Confirmation dialog
 
-The delete confirm dialog can be shown when deleting a record by defining the
-[`showDeleteConfirmDialog`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#showdeleteconfirmdialog) as **true**
+The delete confirm dialog can be shown when deleting a record by defining the [`showDeleteConfirmDialog`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#showdeleteconfirmdialog) as **true**
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

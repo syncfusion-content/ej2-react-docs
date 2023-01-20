@@ -31,8 +31,7 @@ The detail template provides additional information about a particular row by ex
 
 ## Rendering custom component
 
-To render the custom component inside the detail row, define the template in the [detailTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#detailtemplate) and render the
-component in the [detailDataBound](https://ej2.syncfusion.com/angular/documentation/api/grid/#detaildatabound-emittypedetaildataboundeventargs) event.
+To render the custom component inside the detail row, define the template in the [detailTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#detailtemplate) and render the component in the [detailDataBound](https://ej2.syncfusion.com/angular/documentation/api/grid/#detaildatabound-emittypedetaildataboundeventargs) event.
 
 For example, to render grid inside the detail row, place an HTML div element as the [detailTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#detailtemplate) and render the DIV element as grid component in the [detailDataBound](https://ej2.syncfusion.com/angular/documentation/api/grid/#detaildatabound-emittypedetaildataboundeventargs) event.
 

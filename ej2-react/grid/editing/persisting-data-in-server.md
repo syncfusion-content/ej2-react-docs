@@ -139,8 +139,7 @@ The deleted record primary key value is bound to the **key** parameter. Please r
 
 ### CRUD URL
 
-Using the **crudUrl** property, the controller action mapping URL can be specified to perform all the CRUD operation at server-side using a
-single method instead of specifying separate controller action method for CRUD (insert, update and delete) operations.
+Using the **crudUrl** property, the controller action mapping URL can be specified to perform all the CRUD operation at server-side using a single method instead of specifying separate controller action method for CRUD (insert, update and delete) operations.
 
 The action parameter of **crudUrl** is used to get the corresponding CRUD action.
 

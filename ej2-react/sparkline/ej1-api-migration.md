@@ -14,6 +14,8 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Sparkline Types
 
+{% raw %}
+
 | **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
 | --- | --- | --- |
 |Type| **Property:** *type*<br/><br/>  `<EJ.Sparkline id="sparkline" type="line"> </EJ.Sparkline>, document.getElementById('sparkline')`| **Property:** *type*<br/><br/> `<SparklineComponent  id='sparkline' type='Line'></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');` |
@@ -165,3 +167,5 @@ This article describes the API migration process of Accordion component from Ess
 |markerRendering| Not applicable | **Event:** *markerRendering*<br/><br/> `<SparklineComponent id='sparkline'  markerRendering={this.markerRendering.bind(this)}></SparklineComponent>,`<br/>`document.getElementById('sparkline');`<br/>` public  markerRendering(args: IMarkerRenderingEventArgs): void {}` |
 |pointRendering| Not applicable | **Event:** *pointRendering*<br/><br/> `<SparklineComponent id='sparkline'  pointRendering={this.pointRendering.bind(this)}></SparklineComponent>,`<br/>`document.getElementById('sparkline');`<br/>` public  pointRendering(args: IPointRenderingEventArgs): void {}` |
 |resize| Not applicable | **Event:** *resize*<br/><br/> `<SparklineComponent id='sparkline'  resize={this.resize.bind(this)}></SparklineComponent>,`<br/>`document.getElementById('sparkline');`<br/>` public  resize(args: IResizeEventArgs): void {}` |
+
+{% endraw %}

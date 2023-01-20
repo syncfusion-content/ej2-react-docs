@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Command column editing in React Grid component
 
-The command column provides an option to add CRUD action buttons in a column. This can be defined by the
- [`column.commands`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#commands) property.
+The command column provides an option to add CRUD action buttons in a column. This can be defined by the [`column.commands`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#commands) property.
 
 The available built-in command buttons are:
 
@@ -41,8 +40,7 @@ The available built-in command buttons are:
 
 ## Custom command column
 
- The custom command buttons can be added in a column by using the [`column.commands`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#commands) property and
-the action for the custom buttons can be defined using [`commandClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#commandClick) event.
+ The custom command buttons can be added in a column by using the [`column.commands`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#commands) property and the action for the custom buttons can be defined using [`commandClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#commandClick) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

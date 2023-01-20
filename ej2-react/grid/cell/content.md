@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Content in React Grid component
 
-The HTML tags can be displayed in the Grid header and content by enabling the
- [`disableHtmlEncode`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#disablehtmlencode) property.
+The HTML tags can be displayed in the Grid header and content by enabling the [`disableHtmlEncode`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#disablehtmlencode) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

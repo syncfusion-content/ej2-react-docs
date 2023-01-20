@@ -38,8 +38,7 @@ To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/angular/documentatio
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs16" %}
 
 > * If [`columns.isIdentity`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#isidentity) is enabled, then it will be considered as read-only column when editing and adding a record.
-> * You can disable editing for a particular column, by specifying
-[`columns.allowEditing`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowediting) to **false**.
+> * You can disable editing for a particular column, by specifying [`columns.allowEditing`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowediting) to **false**.
 
 ## Toolbar with edit option
 

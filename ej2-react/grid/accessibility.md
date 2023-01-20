@@ -15,8 +15,7 @@ User can effectively access the Grid features through assistive technologies suc
 
 ## WAI-ARIA
 
-WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility
-of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies.
+WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies.
 ARIA provides additional semantics to describe the role, state, and functionality of web components.
 
 The following list of ARIA attributes is used in Grid.

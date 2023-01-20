@@ -17,8 +17,7 @@ It represents the record details that are fetched from the [`dataSource`](https:
 ### Using event
 
 You can customize the appearance of the Row by using the [`rowDataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdatabound) event.
-The [`rowDataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdatabound) event triggers for every row. In that event handler,
-you can get [`RowDataBoundEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/rowDataBoundEventArgs/) which contain details of the row.
+The [`rowDataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdatabound) event triggers for every row. In that event handler, you can get [`RowDataBoundEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/rowDataBoundEventArgs/) which contain details of the row.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

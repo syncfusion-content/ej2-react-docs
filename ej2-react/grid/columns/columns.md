@@ -13,16 +13,14 @@ domainurl: ##DomainURL##
 The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) schema in the Grid.
 This plays a vital role in rendering column values in the required format.
 The grid operations such as sorting, filtering and grouping etc. are performed based on column definitions.
- The [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) property of the [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column)
-is necessary to map the data source values in Grid columns.
+The [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) property of the [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column) is necessary to map the data source values in Grid columns.
 
 > 1. If the column with [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) is not in the dataSource, then the column values will be displayed as empty.
 > 2. If the [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) name contains **“dot”** operator then it is considered as complex binding.
 
 ## Column types
 
-Column type can be specified using the [`columns.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type)
-property. It specifies the type of the data the column bounded.
+Column type can be specified using the [`columns.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) property. It specifies the type of the data the column bounded.
 
 If the [`format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format)  is defined for a column, the column uses [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting) or [date](../../common/internationalization/#date-formatting)).
 
@@ -39,8 +37,7 @@ Grid column supports the following types:
 
 ## ValueAccessor
 
-The [`valueAccessor`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#valueaccessor) is used to access/manipulate the value of display data.
-You can achieve custom value formatting by using [`valueAccessor`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#valueaccessor).
+The [`valueAccessor`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#valueaccessor) is used to access/manipulate the value of display data. You can achieve custom value formatting by using [`valueAccessor`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#valueaccessor).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -104,11 +101,8 @@ You can achieve the expression column by using [`valueAccessor`](https://ej2.syn
 
 ## Format
 
-To format cell values based on specific culture, use the
-[`columns.format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format) property.
- The grid uses [Internalization](../../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and
-  [`date`](../../common/internationalization/#date-formatting)
-values.
+To format cell values based on specific culture, use the [`columns.format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format) property.
+The grid uses [Internalization](../../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#date-formatting) values.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -127,8 +121,7 @@ values.
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs20" %}
 
-> By default, the [`number`](../../common/internationalization/#number-formatting)
-and [`date`](../../common/internationalization/#date-formatting) values are formatted in **en-US** locale. You can localize the **currency** and [`date`](../../common/internationalization/#date-formatting) in different locale as explained [`here`](../global-local).
+> By default, the [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#date-formatting) values are formatted in **en-US** locale. You can localize the **currency** and [`date`](../../common/internationalization/#date-formatting) in different locale as explained [`here`](../global-local).
 
 ### Number formatting
 
@@ -257,8 +250,7 @@ You can enable or disable Grid any actions for a particular column by setting th
 
 ## Show or hide columns by external button
 
-You can show or hide the grid columns dynamically through external buttons by invoking the [`showColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/#showcolumns) and [`hideColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/#hidecolumns)
-methods.
+You can show or hide the grid columns dynamically through external buttons by invoking the [`showColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/#showcolumns) and [`hideColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/#hidecolumns) methods.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -279,8 +271,7 @@ methods.
 
 ## Customize column styles
 
-You can customise the appearance of header and content of the particular column using the
-[`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
+You can customise the appearance of header and content of the particular column using the [`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
 
 To customize the grid column, follow the given steps:
 

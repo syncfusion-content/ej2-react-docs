@@ -32,8 +32,7 @@ You can filter the records with different operators.
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs4" %}
 
 > * [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) must be set as true to enable filter menu.
-> * Setting [`columns.allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowfiltering) as false will prevent
- filter menu rendering for a particular column.
+> * Setting [`columns.allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowfiltering) as false will prevent filter menu rendering for a particular column.
 
 ## Custom component in filter menu
 
@@ -65,11 +64,9 @@ In the following sample, dropdown is used  as custom component in the OrderID co
 
 ## Enable different filter for a column
 
-You can use both **Menu** and **CheckBox** filter in a same Grid. To do so, set the
-[`column.filter.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filter) as **Menu** or **CheckBox**.
+You can use both **Menu** and **CheckBox** filter in a same Grid. To do so, set the [`column.filter.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filter) as **Menu** or **CheckBox**.
 
-In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the
-[`column.filter.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filter).
+In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the [`column.filter.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filter).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

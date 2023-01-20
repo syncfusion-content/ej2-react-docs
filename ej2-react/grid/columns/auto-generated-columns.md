@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Auto generated columns in React Grid component
 
-The [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/) are automatically generated when
-[`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/) declaration is empty or undefined while initializing the grid.
+The [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/) are automatically generated when [`columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/) declaration is empty or undefined while initializing the grid.
 All the columns in the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) are bound as grid columns.
 
 {% tabs %}

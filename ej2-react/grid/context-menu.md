@@ -102,8 +102,7 @@ This is demonstrated in the following sample.
 
  {% previewsample "page.domainurl/code-snippet/grid/clipboard-cs7" %}
 
-> You can hide or show an item in context menu for specific area inside of grid by defining the
-[`target`](https://ej2.syncfusion.com/angular/documentation/api/grid/contextMenuItemModel/#target) property.
+> You can hide or show an item in context menu for specific area inside of grid by defining the [`target`](https://ej2.syncfusion.com/angular/documentation/api/grid/contextMenuItemModel/#target) property.
 
 ## Enable or disable context menu items
 

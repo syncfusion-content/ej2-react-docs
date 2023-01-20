@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Built-in toolbar items
 
-Built-in toolbar items execute standard actions of the grid, and it can be added by defining the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar)
-as a collection of built-in items. It renders the button with icon and text.
+Built-in toolbar items execute standard actions of the grid, and it can be added by defining the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) as a collection of built-in items. It renders the button with icon and text.
 
 The following table shows Built-in toolbar items and its action.
 

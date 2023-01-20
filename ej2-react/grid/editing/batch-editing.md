@@ -100,7 +100,5 @@ By default, grid will show the confirm dialog when saving or cancelling or perfo
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs5" %}
 
-> * [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#showconfirmdialog)
-requires the [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) to be **Batch**.
-> * If [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#showconfirmdialog)
-set to **false**, then confirmation dialog does not display in batch editing.
+> * [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#showconfirmdialog) requires the [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) to be **Batch**.
+> * If [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#showconfirmdialog) set to **false**, then confirmation dialog does not display in batch editing.
