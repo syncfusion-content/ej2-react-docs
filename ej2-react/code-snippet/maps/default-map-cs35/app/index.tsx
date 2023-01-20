@@ -1,5 +1,5 @@
 
-{% raw %}
+
 import { world_map } from 'world-map.ts';
 import { uncountries } from 'data.ts'
 import * as React from "react";
@@ -27,6 +27,6 @@ return(<MapsComponent id="maps">
 }
 const root = ReactDOM.createRoot(document.getElementById('maps'));
 root.render(<App />);
-{% endraw %}
+
 
 

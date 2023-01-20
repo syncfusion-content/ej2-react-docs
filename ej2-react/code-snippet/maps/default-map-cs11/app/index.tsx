@@ -1,3 +1,4 @@
+{% raw %}
 
 
 import { world_map } from 'world-map.ts';
@@ -30,3 +31,4 @@ ReactDOM.render(
 );
 
 
+{% endraw %}

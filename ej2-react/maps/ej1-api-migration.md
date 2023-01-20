@@ -14,6 +14,8 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Size Customization
 
+{% raw %}
+
 | **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
 | --- | --- | --- |
 |Height| Not Applicable |**Property:** *height*<br/>`<MapsComponent id='maps' height="150"></MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -278,3 +280,5 @@ This article describes the API migration process of Maps component from Essentia
 | Bubble Mouse Move | Not Applicable | **Property:** *bubbleMouseMove*<br/><br/> `<MapsComponent id='maps'  bubbleMouseMove={this.bubbleMouseMove.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  bubbleMouseMove(args: IBubbleMouseMoveEventArgs): void {}` |
 | Bubble Mouse Move | Not Applicable | **Property:** *annotationRendering*<br/><br/> `<MapsComponent id='maps'  annotationRendering={this.annotationRendering.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  annotationRendering(args: IAnnotationRenderingEventArgs): void {}` |
 | Animation Complete | Not Applicable | **Property:** *animationComplete*<br/><br/> `<MapsComponent id='maps'  animationComplete={this.animationComplete.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  animationComplete(args: IAnimationCompleteEventArgs): void {}` |
+
+{% endraw %}

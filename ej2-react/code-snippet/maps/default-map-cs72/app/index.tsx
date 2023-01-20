@@ -1,5 +1,6 @@
-
 {% raw %}
+
+
 import { world_map } from 'world-map.ts';
 import { cluster } from 'marker-cluster.ts';
 import * as React from "react";
@@ -35,5 +36,6 @@ ReactDOM.render(
                 </MapsComponent>,
             document.getElementById("maps") as HTMLElement
 );
-{% endraw %}
 
+
+{% endraw %}

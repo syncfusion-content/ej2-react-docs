@@ -34,7 +34,7 @@ Below is the list of minimum dependencies required to use the Maps.
 
 To get started with the React application, [create-react-app](https://github.com/facebookincubator/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
 
-```sh
+```
 npm install -g create-react-app
 ```
 
@@ -42,7 +42,7 @@ To create basic React application, run the following command.
 
 <div class='jsx'>
 
-```sh
+```
 create-react-app quickstart
 ```
 
@@ -50,7 +50,7 @@ create-react-app quickstart
 
 Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-```sh
+```
 cd quickstart
 
 npm install
@@ -64,7 +64,7 @@ To create React application with TypeScript, use the following command.
 
 <div class='jsx'>
 
-```sh
+```
 create-react-app quickstart --template typescript
 ```
 
@@ -72,7 +72,7 @@ create-react-app quickstart --template typescript
 
 Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-```sh
+```
 cd quickstart
 
 npm install
@@ -82,7 +82,7 @@ npm install
 
 All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install Maps package, use the following command.
 
-```sh
+```
 npm install @syncfusion/ej2-react-maps --save
 ```
 

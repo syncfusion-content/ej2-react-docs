@@ -47,6 +47,8 @@ document.getElementById("maps") as HTMLElement
 
 Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move a Maps around to focus the targeted area.
 
+{% raw %}
+
 ```ts
 
 import * as React from "react";
@@ -64,6 +66,7 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ![TomTom Maps with Zooming and Panning](../images/MapProviders/tomtom-maps-zooming.PNG)
 

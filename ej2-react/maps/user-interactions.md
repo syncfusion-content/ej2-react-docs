@@ -74,6 +74,8 @@ The following properties are available in toolbars to customize the zooming tool
 
 To enable or disable the pinch zooming, use the [`pinchZooming`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#pinchzooming) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel).
 
+{% raw %}
+
 ```ts
 
 import { world_map } from 'world-map.ts';
@@ -93,10 +95,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 #### Single-click zooming
 
 To enable or disable the single-click zooming, use the [`zoomOnClick`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomonclick) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel).
+
+{% raw %}
 
 ```ts
 
@@ -117,10 +122,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 #### Double-click zooming
 
 To enable or disable the double-click zooming, use the [`doubleClickZoom`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#doubleclickzoom) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/).
+
+{% raw %}
 
 ```ts
 
@@ -141,10 +149,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 #### Mouse wheel zooming
 
 To enable or disable mouse wheel zooming, use the [`mouseWheelZoom`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#mousewheelzoom) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/).
+
+{% raw %}
 
 ```ts
 
@@ -165,6 +176,7 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 #### Selection zooming
 
@@ -226,6 +238,8 @@ document.getElementById("maps") as HTMLElement
 
 To zoom in or zoom out the Maps with animation, use the [`animationDuration`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#animationduration) property in [`layers`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel).
 
+{% raw %}
+
 ```ts
 
 import { world_map } from 'world-map.ts';
@@ -245,6 +259,7 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ## Selection
 

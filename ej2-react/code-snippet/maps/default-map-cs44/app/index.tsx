@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import { usa_map } from 'usa.ts';
 import { california } from 'california.ts';
@@ -43,5 +43,5 @@ ReactDOM.render(
       </MapsComponent>,
       document.getElementById("maps") as HTMLElement
       );
-{% endraw %}  
+  
 

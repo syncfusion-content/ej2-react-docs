@@ -1,6 +1,6 @@
 
 
-{% raw %}
+
 import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -30,5 +30,5 @@ render(){
         }
 };
 ReactDOM.render(<App />, document.getElementById('maps'));
-{% endraw %}
+
 

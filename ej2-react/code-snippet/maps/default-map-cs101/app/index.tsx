@@ -1,6 +1,7 @@
-
-
 {% raw %}
+
+
+
 import { world_map } from 'world-map.ts';
 import { default_data } from 'data.ts';
 import * as React from "react";
@@ -31,5 +32,6 @@ class App extends React.Component {
 }
 ReactDOM.render(<App/>, document.getElementById('maps'));
 
-{% endraw %}
 
+
+{% endraw %}

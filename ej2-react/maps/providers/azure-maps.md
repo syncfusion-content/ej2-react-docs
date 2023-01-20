@@ -39,6 +39,8 @@ document.getElementById("maps") as HTMLElement
 
 The Azure Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a map for in-depth analysis. Panning helps to move a map around to focus the targeted area.
 
+{% raw %}
+
 ```ts
 
 import * as React from "react";
@@ -56,10 +58,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ## Adding markers and navigation line
 
 Markers can be added to the layers of Azure Maps by setting the corresponding location's coordinates of latitude and longitude using [MarkerDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#markersettings) tag. Navigation lines can be added on top of the Azure Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [NavigationLineDirective](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#navigationlinesettings) tag.
+
+{% raw %}
 
 ```ts
 
@@ -106,10 +111,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ## Adding sublayer
 
 Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer for highlighting a particular continent or country in Azure Maps by adding another layer and specifying the [type](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#type) property of Maps layer to **SubLayer**.
+
+{% raw %}
 
 ```ts
 
@@ -134,6 +142,7 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ## Enabling legend
 

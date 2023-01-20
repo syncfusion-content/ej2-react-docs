@@ -51,6 +51,8 @@ Bing Maps provides different types of Maps and it is supported in the Maps compo
 
 To render the light version of the road Maps, set the **CanvasLight** value is passed via the URL into the [getBingUrlTemplate](https://ej2.syncfusion.com/react/documentation/api/maps/#getbingurltemplate) method demonstrated in the following code sample.
 
+{% raw %}
+
 ```ts
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -77,10 +79,13 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ## Enabling zooming and panning
 
 Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move a Maps around to focus the targeted area.
+
+{% raw %}
 
 ```ts
 import * as React from "react";
@@ -106,6 +111,7 @@ document.getElementById("maps") as HTMLElement
 );
 
 ```
+{% endraw %}
 
 ## Adding markers and navigation line
 
