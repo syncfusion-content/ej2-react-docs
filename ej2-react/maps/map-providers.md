@@ -17,7 +17,7 @@ Maps component support map providers such as OpenStreetMap that can be added to 
 OpenStreetMap(OSM) is a online map provider. The OpenStreetMap allows you to view, edit and use geographical data in a collaborative way from any place on the Earth. One of the most important features in Maps component is the built-in online map provider support. By using this feature, you can render OpenStreetMaps in the maps component. This provides the ability to visualize street map tiles without using any external shape files.
 
 
-``` tsx
+``` ts
 import * as React from 'react';
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 import './App.css';
