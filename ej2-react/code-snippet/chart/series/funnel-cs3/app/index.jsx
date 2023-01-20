@@ -1,0 +1,16 @@
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationLegend, FunnelSeries, AccumulationTooltip, AccumulationDataLabel } from '@syncfusion/ej2-react-charts';
+import { data1 } from 'datasource.ts';
+function App() {
+    return <AccumulationChartComponent id='charts'>
+      <Inject services={[AccumulationLegend, FunnelSeries, AccumulationTooltip, AccumulationDataLabel]}/>
+      <AccumulationSeriesCollectionDirective>
+        <AccumulationSeriesDirective dataSource={data1} xName='x' yName='y' type='Funnel' neckWidth='25%' neckHeight='5%'>
+        </AccumulationSeriesDirective>
+      </AccumulationSeriesCollectionDirective>
+    </AccumulationChartComponent>;
+}
+;
+export default App;
+ReactDOM.render(<App />, document.getElementById("charts"));
