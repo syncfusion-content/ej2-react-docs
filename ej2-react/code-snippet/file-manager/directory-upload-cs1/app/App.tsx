@@ -1,3 +1,4 @@
+{% raw %}
 import * as React from 'react';
 import { FileManagerComponent, Inject, NavigationPane, DetailsView, Toolbar } from '@syncfusion/ej2-react-filemanager';
 import { DropDownButton, ItemModel } from '@syncfusion/ej2-splitbuttons';
@@ -48,3 +49,4 @@ function App() {
   );
 }
 export default App;
+{% endraw %}

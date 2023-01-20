@@ -98,7 +98,7 @@ Permission denied for writing except for particular file or folder.
 
 Permission denied for writing and uploading in root folder.
 
-``` ts
+``` tsx
 // Folder Rule
  new AccessRule { Path = "/", Role = "Document Manager", Read = Permission.Allow, Write = Permission.Deny, Copy = Permission.Deny, WriteContents = Permission.Deny, Upload = Permission.Deny, Download = Permission.Deny, IsFile = false },
 ```

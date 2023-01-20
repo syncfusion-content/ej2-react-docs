@@ -105,7 +105,7 @@ File Manager can be initialized using the `<FileManagerComponent>` tag. Now, you
 
 `[src/App.tsx]`
 
-
+{% raw %}
 
 ```ts
 
@@ -126,6 +126,9 @@ function App() {
 export default App;
 
 ```
+{% endraw %}
+
+{% raw %}
 
 ```ts
 import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
@@ -140,6 +143,7 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 
@@ -174,6 +178,8 @@ The following sample, shows the basic File Manager component.
 
 To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#ajaxsettings) of File Manager component.
 
+{% raw %}
+
 ```ts
 
 import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
@@ -194,10 +200,13 @@ function App() {
 export default App;
 
 ```
+{% endraw %}
 
 ## File Upload support
 
 To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#ajaxsettings) of File Manager Component.
+
+{% raw %}
 
 ```ts
 
@@ -219,6 +228,7 @@ function App() {
 export default App;
 
 ```
+{% endraw %}
 
 ## Image Preview support
 
@@ -340,6 +350,8 @@ The current path of the File Manager can be specified initially or dynamically u
 
 The following code snippet demonstrates specifying the current path in File Manager on rendering.
 
+{% raw %}
+
 ```ts
 
 import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
@@ -359,6 +371,9 @@ function App() {
 export default App;
 
 ```
+{% endraw %}
+
+{% raw %}
 
 ```ts
 import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
@@ -373,5 +388,6 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 N> You can refer to our [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) feature tour page for its groundbreaking feature representations. You can also explore our [React File Manager example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/file-manager/overview) that shows you how to render the File Manager in React.

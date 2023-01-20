@@ -1,3 +1,4 @@
+{% raw %}
 import { DetailsView, FileManagerComponent, NavigationPane, Inject, Toolbar } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 
@@ -17,4 +18,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default App;{% endraw %}

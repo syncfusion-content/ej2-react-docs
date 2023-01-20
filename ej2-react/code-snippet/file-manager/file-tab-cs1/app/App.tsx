@@ -1,3 +1,4 @@
+{% raw %}
 import * as React from 'react';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 import { DetailsView, FileManagerComponent, Inject, NavigationPane, Toolbar } from '@syncfusion/ej2-react-filemanager';
@@ -50,4 +51,4 @@ function App() {
           </TabComponent>
     );
 }
-export default App;
+export default App;{% endraw %}
