@@ -1,3 +1,4 @@
+{% raw %}
 
 
 
@@ -91,3 +92,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 
 
+{% endraw %}

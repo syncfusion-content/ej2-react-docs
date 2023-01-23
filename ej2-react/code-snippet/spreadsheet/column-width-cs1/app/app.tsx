@@ -1,3 +1,4 @@
+{% raw %}
 
 
 
@@ -41,3 +42,4 @@ export default class App extends React.Component<{}, {}> {
 ReactDOM.render(<App />, document.getElementById('root'));
 
 
+{% endraw %}
