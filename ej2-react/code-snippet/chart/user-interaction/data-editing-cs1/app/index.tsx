@@ -1,3 +1,4 @@
+{% raw %}
 
 
 
@@ -39,3 +40,4 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 
 
 
+{% endraw %}

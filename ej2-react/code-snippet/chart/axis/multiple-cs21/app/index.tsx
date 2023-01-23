@@ -1,6 +1,4 @@
-
-
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject, IAxisLabelRenderEventArgs,StackingColumnSeries, ColumnSeries, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries, Selection} from'@syncfusion/ej2-react-charts';
@@ -34,5 +32,4 @@ let count: number = 0;
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-
-
+{% endraw %}

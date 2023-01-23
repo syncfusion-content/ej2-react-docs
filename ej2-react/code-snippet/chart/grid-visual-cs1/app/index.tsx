@@ -1,3 +1,4 @@
+{% raw %}
 
 
 
@@ -179,3 +180,4 @@ export class Drilldown extends React.Component<{}, {}> {
 ReactDOM.render(<Drilldown />, document.getElementById("charts"));
 
 
+{% endraw %}

@@ -1,3 +1,4 @@
+{% raw %}
 
 
 import { BulletChartComponent, Inject} from '@syncfusion/ej2-react-charts';
@@ -35,3 +36,4 @@ export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 
+{% endraw %}

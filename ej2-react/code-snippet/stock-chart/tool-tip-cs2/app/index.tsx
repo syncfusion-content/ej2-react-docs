@@ -1,3 +1,4 @@
+{% raw %}
 
 
 import * as React from "react";
@@ -44,3 +45,4 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 
 
 
+{% endraw %}
