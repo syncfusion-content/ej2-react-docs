@@ -17,11 +17,11 @@ The Image Editor component supports opening the image by using a hosted/online U
 The Image Editor component opens an image by using base64, Image Data, or a hosted/online URL using the [`open`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#open) method. It also opens an image by clicking the open button from the toolbar. The supported file types are PNG, JPEG, SVG, and base64.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs9/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs9/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs9/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs9/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs9/index.html %}
@@ -45,11 +45,11 @@ The [`export`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#
 In the following example, the [`export`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#export) method is used in the button click event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs10/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs10/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs10/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs10/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs10/index.html %}

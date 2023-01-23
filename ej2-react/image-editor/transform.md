@@ -25,11 +25,11 @@ In the toolbar, rotate the image by clicking the Transform dropdown button and p
 In the following example, the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#rotate) method is used to rotate the image.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs19/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs19/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs19/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs19/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs19/index.html %}
@@ -51,11 +51,11 @@ In the toolbar, flip the image by clicking the Transform dropdown button and pic
 In the following example, the [`flip`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#flip) method is used to flip the image.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs20/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs20/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs20/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs20/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs20/index.html %}
@@ -89,11 +89,11 @@ To Perform the panning. Enabled or disables the panning option. In toolbar, you 
 In the following example, you can use the [`pan`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#pan) method in the button click event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs21/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs21/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs21/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs21/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs21/index.html %}

@@ -19,11 +19,11 @@ The following operations are supported in the Image Editor:
 * Rotate : The image can be rotated both clockwise and anticlockwise by 90 degrees.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs7/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs7/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs7/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs7/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs7/index.html %}

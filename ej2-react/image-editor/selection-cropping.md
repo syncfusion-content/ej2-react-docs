@@ -25,11 +25,11 @@ In the toolbar, the custom selection can be done by clicking the crop dropdown b
 In the following example, the [`select`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#select) method is used in the button click to the custom selection.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs11/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs11/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs11/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs11/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs11/index.html %}
@@ -45,11 +45,11 @@ The selection region can be customized as a square. That square can be dragged a
 In the following example, the [`select`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#select) method is used in the button click to the square selection.  
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs12/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs12/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs12/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs12/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs12/index.html %}
@@ -65,11 +65,11 @@ The selection region can be customized as a circle. That circle can be moved and
 In the following example, the [`select`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#select) method is used in the button click to the circle selection.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs13/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs13/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs13/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs13/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs13/index.html %}
@@ -85,11 +85,11 @@ The selection region can be customized according to the predefined ratios includ
 In the following example, the [`select`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#select) method is used in the button click to the ratio selection.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs14/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs14/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs14/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs14/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs14/index.html %}
@@ -107,11 +107,11 @@ In the toolbar, cropping can be made by clicking the OK button which is enabled 
 In the following example, the [`select`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#select) and [`crop`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#crop) method is used in the button click event to perform selection and cropping.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs15/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs15/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs15/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs15/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs15/index.html %}

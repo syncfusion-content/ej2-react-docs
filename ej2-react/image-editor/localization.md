@@ -59,11 +59,11 @@ The following list of properties and its values are used in the Image  Editor.
 | ABC | ABC |
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs8/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs8/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs8/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs8/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs8/index.html %}

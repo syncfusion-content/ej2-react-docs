@@ -36,7 +36,7 @@ The list of dependencies required to use the Image Editor component in your appl
 
 You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-```
+```bash
 npm install -g create-react-app
 ```
 
@@ -44,7 +44,7 @@ Start a new project using create-react-app command as follows,
 
 <div class='tsx'>
 
-```
+```bash
 
 create-react-app quickstart --scripts-version=react-scripts-ts
 
@@ -56,7 +56,7 @@ cd quickstart
 
 <div class='jsx'>
 
-```
+```bash
 
 create-react-app quickstart
 
@@ -72,7 +72,7 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 
 To install Image Editor component, use the following command.
 
-```
+```bash
 npm install @syncfusion/ej2-react-image-editor --save
 ```
 
@@ -142,11 +142,11 @@ npm start
 The following example shows a basic Image Editor component.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/image-editor/default-cs6/app/index.jsx %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs6/app/app.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/image-editor/default-cs6/app/index.tsx %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs6/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/image-editor/default-cs6/index.html %}
