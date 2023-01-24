@@ -5,12 +5,12 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, IMouseEventArgs } from '@syncfusion/ej2-react-lineargauge';
 class App extends React.Component<{}, {}>{
-public gaugeMouseMove(args: IMouseEventArgs){
+public gaugeMouseLeave(args: IMouseEventArgs){
 }
 private linear: LinearGaugeComponent;
 render(){
     return (<div>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} gaugeMouseMove={this.gaugeMouseMove.bind(this)}>
+    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} gaugeMouseLeave={this.gaugeMouseLeave.bind(this)}>
     </LinearGaugeComponent></div>)
     }
 };

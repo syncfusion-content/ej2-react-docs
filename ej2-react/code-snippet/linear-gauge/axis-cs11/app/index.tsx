@@ -8,7 +8,7 @@ import { LinearGaugeComponent, AxesDirective, AxisDirective } from '@syncfusion/
 ReactDOM.render(
     <LinearGaugeComponent id='gauge'>
         <AxesDirective>
-            <AxisDirective opposedPosition={true}>
+            <AxisDirective isInversed={true}>
             </AxisDirective>
         </AxesDirective>
     </LinearGaugeComponent>,document.getElementById('gauge'));

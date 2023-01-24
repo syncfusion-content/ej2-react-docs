@@ -8,9 +8,7 @@ import { LinearGaugeComponent, AxesDirective, AxisDirective } from '@syncfusion/
 ReactDOM.render(
     <LinearGaugeComponent id='gauge'>
         <AxesDirective>
-            <AxisDirective labelStyle={ { format:'{value}°C' } }>
-            </AxisDirective>
-            <AxisDirective opposedPosition={true} labelStyle={ { format:'{value}°F' } }>
+            <AxisDirective opposedPosition={true}>
             </AxisDirective>
         </AxesDirective>
     </LinearGaugeComponent>,document.getElementById('gauge'));

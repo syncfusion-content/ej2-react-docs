@@ -1,17 +1,18 @@
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective } from '@syncfusion/ej2-react-lineargauge';
 class App extends React.Component {
-    valueChange(args) {
+    tooltipRender(args) {
     }
     linear;
     render() {
         return (<div>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} valueChange={this.valueChange.bind(this)}>
+    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} tooltipRender={this.tooltipRender.bind(this)} tooltip={{ enable: true }}>
         <AxesDirective>
             <AxisDirective>
                 <PointersDirective>
-                    <PointerDirective enableDrag={true}>
+                    <PointerDirective>
                     </PointerDirective>
                 </PointersDirective>
             </AxisDirective>
@@ -21,3 +22,4 @@ class App extends React.Component {
 }
 ;
 ReactDOM.render(<App />, document.getElementById('gauge'));
+{% endraw %}

@@ -3,14 +3,17 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, IAnimationCompleteEventArgs } from '@syncfusion/ej2-react-lineargauge';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective } from '@syncfusion/ej2-react-lineargauge';
 class App extends React.Component<{}, {}>{
-public animationComplete(args: IAnimationCompleteEventArgs){
+public clickHandler(){
+  this.linear.refresh();
 }
 private linear: LinearGaugeComponent;
 render(){
     return (<div>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} animationComplete={this.animationComplete.bind(this)}>
+    <ButtonComponent value='btn' onClick= { this.clickHandler.bind(this)}>Click</ButtonComponent>
+    <LinearGaugeComponent id='gauge' ref={g => this.linear = g}>
         <AxesDirective>
             <AxisDirective>
                 <PointersDirective>

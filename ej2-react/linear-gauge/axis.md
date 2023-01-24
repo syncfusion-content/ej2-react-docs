@@ -234,30 +234,6 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 
 By default, the Linear Gauge is rendered vertically. To change its orientation, the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/linearGaugeModel/#orientation) property must be set to **Horizontal**.
 
-% tab template="linear-gauge/axis", compileJsx=true, sourceFiles="app/**/*.tsx" %}
-
-```ts
-
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { LinearGaugeComponent, AxesDirective, AxisDirective } from '@syncfusion/ej2-react-lineargauge';
-
-ReactDOM.render(
-    <LinearGaugeComponent id='gauge' orientation='Horizontal'>
-        <AxesDirective>
-            <AxisDirective minimum={20} maximum={140}>
-            </AxisDirective>
-        </AxesDirective>
-    </LinearGaugeComponent>,document.getElementById('gauge'));
-
-```
-
-{% endtab %}
-
-## Inverted Axis
-
-The axis of the Linear Gauge component can be inversed by setting the [`isInversed`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#isinversed) property to **true** in the [`AxisDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel/).
-
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/linear-gauge/axis-cs10/app/index.jsx %}
@@ -269,9 +245,9 @@ The axis of the Linear Gauge component can be inversed by setting the [`isInvers
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs10" %}
 
-## Opposed Axis
+## Inverted Axis
 
-To place an axis opposite from its original position, [`opposedPosition`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#opposedposition) property in the [`AxisDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel/) must be set as **true**.
+The axis of the Linear Gauge component can be inversed by setting the [`isInversed`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#isinversed) property to **true** in the [`AxisDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -284,9 +260,9 @@ To place an axis opposite from its original position, [`opposedPosition`](https:
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs11" %}
 
-## Multiple Axes
+## Opposed Axis
 
-Multiple axes can be added to the Linear Gauge by adding multiple [`AxisDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel/) in the [`AxesDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/linearGaugeModel/#axes) and customization can be done with the [`AxisDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel/). Each axis can be customized separately as shown in the following example.
+To place an axis opposite from its original position, [`opposedPosition`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#opposedposition) property in the [`AxisDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel/) must be set as **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -298,3 +274,18 @@ Multiple axes can be added to the Linear Gauge by adding multiple [`AxisDirectiv
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs12" %}
+
+## Multiple Axes
+
+Multiple axes can be added to the Linear Gauge by adding multiple [`AxisDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel/) in the [`AxesDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/linearGaugeModel/#axes) and customization can be done with the [`AxisDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel/). Each axis can be customized separately as shown in the following example.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/linear-gauge/axis-cs13/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/linear-gauge/axis-cs13/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs13" %}
