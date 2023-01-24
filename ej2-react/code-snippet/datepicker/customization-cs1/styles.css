@@ -1,0 +1,80 @@
+#element {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+
+/*custom styles*/
+/*Example styles*/
+
+#container {
+    visibility: hidden;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+#loader {
+    color: #008cff;
+    height: 40px;
+    width: 30%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+#element {
+    display: block;
+}
+
+
+.e-calendar .e-content td.e-disabled { /* csslint allow: adjoining-classes */
+    background: blue;
+}
+
+.e-calendar .e-content td.e-disabled span { /* csslint allow: adjoining-classes */
+    color: #fff;
+}
+
+/*customize the input element text color*/
+
+.e-date-wrapper .e-input-group-icon.e-date-icon.e-icons { /* csslint allow: adjoining-classes*/
+    color: blue;
+}
+
+.e-date-wrapper.e-custom-style.e-input-group::before, /* csslint allow: adjoining-classes*/
+.e-date-wrapper.e-custom-style.e-input-group::after { /* csslint allow: adjoining-classes*/
+    background: blue;
+}
+
+.e-date-wrapper.e-custom-style.e-input-group input.e-input::selection { /* csslint allow: adjoining-classes*/
+    background: blue;
+}
+
+.e-date-wrapper.e-custom-style.e-input-group input.e-input::-moz-selection { /* csslint allow: adjoining-classes*/
+    background: blue;
+}
+
+.e-date-wrapper.e-custom-style #element { /* csslint allow: adjoining-classes */
+    color: blue;
+}
+
+/*customize the floating label and popup button text color*/
+.e-date-wrapper.e-custom-style .e-input-group-icon.e-date-icon.e-icons, /* csslint allow: adjoining-classes */
+.e-date-wrapper.e-custom-style .e-input-group-icon.e-date-icon.e-icons.e-active{ /* csslint allow: adjoining-classes */
+    color: blue;
+}
+
+
+
+
+
+
