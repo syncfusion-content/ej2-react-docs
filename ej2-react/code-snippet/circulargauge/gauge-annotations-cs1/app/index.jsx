@@ -1,0 +1,20 @@
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
+export function App() {
+    return (<CircularGaugeComponent id='circulargauge'>
+    <Inject services={[Annotations]}/>
+    <AxesDirective>
+      <AxisDirective>
+        <PointersDirective>
+            <PointerDirective value={50}></PointerDirective>
+        </PointersDirective>
+        <AnnotationsDirective>
+            <AnnotationDirective content='<div><div><span>Pointer Value : 50</span></div></div>' zIndex='1'/>
+        </AnnotationsDirective>
+      </AxisDirective>
+    </AxesDirective>
+  </CircularGaugeComponent>);
+}
+const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+root.render(<App />);
