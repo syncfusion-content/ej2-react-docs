@@ -89,7 +89,7 @@ The response object should contain properties **Items** and **Count** whose valu
 
 The sample response object should look like below.
 
-```json
+```
 {
     Items: [{..}, {..}, {..}, ...],
     Count: 830
@@ -136,7 +136,7 @@ export default App;
 
 The following code example describes the CRUD operations handled at server-side.
 
-```json
+```
     const ActionResult Update = (OrdersDetails value) =>
     {
         ...

@@ -37,7 +37,7 @@ In that event handler, you can get [`QueryCellInfoEventArgs`](https://ej2.syncfu
 
 You can customize the grid cells by adding a CSS class to the [`customAttribute`](https://ej2.syncfusion.com/angular/documentation/api/grid/column#customattributes) property of the column.
 
-```CSS
+```css
 .e-attr {
     background: #d7f0f4;
 }

@@ -26,13 +26,13 @@ Below is the list of minimum dependencies required to use the Pager.
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```sh
+```
 npm install -g create-react-app
 ```
 
 * To setup basic `React` sample use following commands.
 
-```sh
+```
 create-react-app quickstart --scripts-version=react-scripts-ts
 
 cd quickstart
@@ -46,7 +46,7 @@ npm install
 All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 To install Pager component, use the following command
 
-```sh
+```
 npm install @syncfusion/ej2-react-grids --save
 ```
 
@@ -116,7 +116,7 @@ The default value for `pageCount` is 10 and value will be updated based on [`tot
 
 The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
-```sh
+```
 npm start
 ```
 

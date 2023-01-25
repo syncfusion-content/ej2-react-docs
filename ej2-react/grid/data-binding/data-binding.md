@@ -383,7 +383,7 @@ export class OrderService {
 
 The footer aggregate values  should be calculated and send along with the **dataSource** property as follows. The aggregate property of the data source should contain the aggregate value assigned to the property named in the **field – type** format. For example, the **Sum** aggregate value for the **Freight** field should be assigned to the property named as **Freight - sum**.
 
-```json
+```
 {
     result: [{..}, {..}, {..}, ...],
     count: 830,

@@ -21,13 +21,13 @@ To get start quickly with React Grid, you can check on this video:
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install **create-react-app** run the following command.
 
-```sh
+```
 npm install -g create-react-app
 ```
 
 To setup basic **React** sample, use following commands.
 
-```sh
+```
 create-react-app quickstart --scripts-version=react-scripts-ts
 
 cd quickstart
@@ -41,7 +41,7 @@ npm install
 All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 To install Grid component, use the following command
 
-```sh
+```
 npm install @syncfusion/ej2-react-grids --save
 ```
 
@@ -210,7 +210,7 @@ Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusio
 
 The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
-```sh
+```
 
 npm start
 
