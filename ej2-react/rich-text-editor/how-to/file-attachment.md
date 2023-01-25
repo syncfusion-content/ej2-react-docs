@@ -21,7 +21,7 @@ The following sample illustrates how to attach a file in the Rich Text Editor.
 
 `[Class-component]`
 
-``` HTML
+```html
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -86,7 +86,7 @@ export class ImageSample extends SampleBase<{}, {}> {
 
 `[Functional-component]`
 
-``` HTML
+```html
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -196,5 +196,5 @@ string file;
                 Response.StatusDescription = e.Message;
                 Response.End();
             }
-        }
+    }
 ```
