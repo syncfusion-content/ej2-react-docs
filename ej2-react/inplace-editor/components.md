@@ -67,8 +67,6 @@ In the below code, [type](https://ej2.syncfusion.com/react/documentation/api/in
 
 `[Class-component]`
 
-{% tab compileJsx=true %}
-
 ```ts
 
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
@@ -89,13 +87,10 @@ export default App;
 
 ```
 
-{% endtab %}
-
 `[src/app/app.ts]`
 
 `[Functional-component]`
 
-{% tab compileJsx=true %}
 
 ```ts
 
@@ -116,8 +111,6 @@ function App (){
 export default App;
 
 ```
-
-{% endtab %}
 
 ## See Also
 
