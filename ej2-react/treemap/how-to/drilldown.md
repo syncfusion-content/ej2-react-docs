@@ -87,7 +87,7 @@ Show the population of a particular continent in the treemap `loaded` event. In 
 
 
 
-```jsx
+```js
     public loaded(args: ILoadedEventArgs): void {
     let header: Element = document.getElementById('header') as Element;
     let population: number = 0;
