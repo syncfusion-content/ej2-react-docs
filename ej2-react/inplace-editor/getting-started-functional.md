@@ -174,7 +174,7 @@ export default App;
 
 * Run the application in the browser using the following command.
 
-```ell
+```
 npm start
 ```
 

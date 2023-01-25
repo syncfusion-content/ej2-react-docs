@@ -24,7 +24,7 @@ If the [URL](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#
 
 Find the following sample server codes for defining models and controller functions to configure processing data.
 
-```C#
+```csharp
   public class SubmitModel {
       public string Name { get; set; }
       public string PrimaryKey { get; set; }
@@ -32,7 +32,7 @@ Find the following sample server codes for defining models and controller functi
   }
 ```
 
-```C#
+```csharp
 
 public IEnumerable<SubmitModel> UpdateData([FromBody]SubmitModel value) {
   // User can process data
