@@ -12,6 +12,8 @@ domainurl: ##DomainURL##
 
 This article describes the API migration process of Tooltip component from Essential JS 1 to Essential JS 2.
 
+{% raw %}
+
 | Behavior |API in Essential JS 1  | API in Essential JS 2 |
 |--|--|--|
 | Position | **Property:**  _position_ <br/><br/> `public  position  = { target: { horizontal:  "center", vertical:  "top" },` <br/> `stem: { horizontal:  "center", vertical:  "bottom" } };` <br/><br/>  `<EJ.Tooltip id='tooltip' position={this.position}>` <br/> `</EJ.Tooltip>` <br/>  | **Property:**  _position_ <br/><br/> `<TooltipComponent position='TopCenter'>`<br/>`</TooltipComponent>`|
@@ -29,3 +31,5 @@ This article describes the API migration process of Tooltip component from Essen
 | Open | **Event:**  _open_ <br/><br/> `public open (args: Event): void { };` <br/><br/> `<EJ.Tooltip id='tooltip' open={this.open}`  <br/> `content="Tooltip Content">` <br/> `</EJ.Tooltip>` <br/>   | **Event:**  _afterOpen_ <br/><br/> `<TooltipComponent afterOpen={this.afterOpen}>` <br/> `</TooltipComponent>` <br/><br/> `public afterOpen(args: Event): void { }` <br/>  |
 | Before Collision | **Not Applicable** | **Event:**  _beforeCollision_ <br/><br/> `<TooltipComponent beforeCollision={this.beforeCollision}>` <br/> `</TooltipComponent>` <br/><br/> `public beforeCollision(args: Event): void { }` <br/> |
 | Tracking | **Event:**  _tracking_ <br/><br/> `public tracking (args: Event): void { };` <br/><br/> `<EJ.Tooltip id='tooltip' tracking={this.tracking}`  <br/> `content="Tooltip Content" associate="mouse">` <br/> `</EJ.Tooltip>` <br/>    | **Method:**  _open(),close(),refresh()_ <br/><br/> [Sample](https://ej2.syncfusion.com/react/demos/#/material/tooltip/smartposition) |
+
+{% endraw %}

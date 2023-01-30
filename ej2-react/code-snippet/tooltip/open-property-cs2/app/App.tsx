@@ -1,3 +1,4 @@
+{% raw %}
 
 import * as React from 'react';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
@@ -106,3 +107,4 @@ function App() {
   );
 }
 export default App;
+{% endraw %}

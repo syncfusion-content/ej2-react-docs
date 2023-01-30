@@ -25,9 +25,6 @@ Tooltip can be created and shown on multiple targets within a container by defin
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/dynamic-tooltip-cs2/app/index.tsx %}
 {% endhighlight %}
-{% highlight json tabtitle="tooltip.json" %}
-{% include code-snippet/tooltip/dynamic-tooltip-cs2/app/tooltip.json %}
-{% endhighlight %}
 {% highlight js tabtitle="tooltip.jsx" %}
 {% include code-snippet/tooltip/dynamic-tooltip-cs2/app/tooltip.jsx %}
 {% endhighlight %}

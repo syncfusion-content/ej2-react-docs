@@ -1,0 +1,16 @@
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+.e-btn-group {
+  margin: 25px 5px 20px 20px;
+}
+
+button {
+  margin: 25px 5px 25px 20px;
+}

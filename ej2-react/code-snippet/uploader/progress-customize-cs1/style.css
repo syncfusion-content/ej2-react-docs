@@ -1,0 +1,26 @@
+
+#container {
+margin: 0 auto;
+width: 400px;
+}
+  
+#loader {
+color: #008cff;
+font-family: 'Helvetica Neue','calibiri';
+font-size: 14px;
+height: 40px;
+left: 45%;
+position: absolute;
+top: 45%;
+width: 30%;
+}
+
+.custom_progress .e-upload .e-upload-files .e-upload-file-list .e-file-container .e-progress-inner-wrap .e-upload-progress-bar.e-upload-progress {
+  background: yellow;
+  height: 4px;
+}
+
+ .custom_progress .e-upload .e-upload-files .e-upload-file-list .e-file-container .e-progress-inner-wrap {
+  height: 4px;
+  background-color: lightblue;
+}

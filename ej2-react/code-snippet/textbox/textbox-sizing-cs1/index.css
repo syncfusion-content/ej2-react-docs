@@ -1,0 +1,37 @@
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+#input-container {
+  width: 240px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.e-input-group-icon:before {
+  font-family: e-icons;
+}
+
+.e-input-group .e-input-group-icon.e-input-popup-date {
+  font-size:16px;
+}
+
+.e-input-group-icon.e-input-popup-date:before {
+  content: "\e901";
+}
+
+#input-container .e-input-group {
+  margin: 26px 0;
+}
+
+#input-container .e-float-input {
+  margin: 26px 0;
+}
+
+.wrap label {
+font-weight:bold;
+}

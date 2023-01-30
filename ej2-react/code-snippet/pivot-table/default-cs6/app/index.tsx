@@ -1,0 +1,31 @@
+
+
+import { FieldList, GroupingBar, IDataOptions, IDataSet, Inject, PivotViewComponent, PivotActionBeginEventArgs } from '@syncfusion/ej2-react-pivotview';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { pivotData } from './datasource';
+
+function App() {
+
+  let dataSourceSettings: IDataOptions = {
+    dataSource: pivotData as IDataSet[],
+    expandAll: false,
+    columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+    rows: [{ name: 'Country' }, { name: 'Products' }],
+    values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],
+    filters: [],
+  }
+  let pivotObj: PivotViewComponent;
+  function actionBegin(args: PivotActionBeginEventArgs): void {
+    if (args.actionName == 'Aggregate field') {
+        args.cancel = true;
+    }
+  }
+  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} actionBegin={actionBegin.bind(this)} showFieldList={true} showGroupingBar={true}><Inject services={[FieldList, GroupingBar]} /></PivotViewComponent>);
+};
+
+export default App;
+ReactDOM.render(<App />, document.getElementById('sample'));
+
+
+

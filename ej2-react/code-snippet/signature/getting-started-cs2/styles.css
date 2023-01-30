@@ -1,0 +1,21 @@
+#loader {
+    color: #008cff;
+    font-family: 'Helvetica Neue', 'calibiri';
+    font-size: 14px;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#signature {
+    border: 1px solid lightgray;
+    height: 100%;
+    width: 100%;
+}
+
+#signature-control {
+    height: 300px;
+    width: 550px;
+}

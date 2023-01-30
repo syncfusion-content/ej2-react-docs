@@ -1,0 +1,30 @@
+
+#container {
+visibility: hidden;
+margin: 0 auto;
+width: 400px;
+}
+  
+#loader {
+color: #008cff;
+font-family: 'Helvetica Neue','calibiri';
+font-size: 14px;
+height: 40px;
+left: 45%;
+position: absolute;
+top: 45%;
+width: 30%;
+}
+
+.e-control {
+  border : 0;
+}
+
+.e-control ul {
+  border: 1px solid #ddd;
+}
+
+.e-control .e-file-select,
+.e-control .e-file-drop {
+  display: none;
+}

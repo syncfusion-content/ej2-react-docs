@@ -18,7 +18,7 @@ Use the following CSS to customize the spinner stroke color.
 
 ### Material theme
 
-```CSS
+```css
 
 .e-spinner-pane .e-spinner-inner .e-spin-material {
   stroke: green;
@@ -28,7 +28,7 @@ Use the following CSS to customize the spinner stroke color.
 
 ### Fabric theme
 
-```CSS
+```css
 
 .e-spinner-pane .e-spinner-inner .e-spin-fabric {
   stroke: green;
@@ -38,7 +38,7 @@ Use the following CSS to customize the spinner stroke color.
 
 ### Bootstrap theme
 
-```CSS
+```css
 
 .e-spinner-pane .e-spinner-inner .e-spin-bootstrap {
     fill: green;
@@ -49,7 +49,7 @@ Use the following CSS to customize the spinner stroke color.
 
 ### Bootstrap4 theme
 
-```CSS
+```css
 
 .e-spinner-pane .e-spinner-inner .e-spin-bootstrap4 {
     stroke: green;
@@ -59,7 +59,7 @@ Use the following CSS to customize the spinner stroke color.
 
 ### High Contrast theme
 
-```CSS
+```css
 
 .e-spinner-pane .e-spinner-inner .e-spin-high-contrast .e-path-arc {
     stroke: green;

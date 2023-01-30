@@ -1,0 +1,28 @@
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+/* start of onhover customization */
+.e-fab.e-btn.fab-hover {
+  padding: 6px 0px 10px 10px;
+}
+
+.fab-hover .text-container {
+  overflow: hidden;
+  width: 0;
+  margin: 0;
+  transition: width .5s linear 0s, margin .2s linear .5s;
+}
+
+.fab-hover:hover .text-container {
+  width: 35px;
+  margin: 0 5px;
+  transition: width .5s linear .2s, margin .2s linear 0s;
+}
+
+/* end of onhover customization */

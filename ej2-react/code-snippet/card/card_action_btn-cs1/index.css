@@ -1,0 +1,12 @@
+.e-card-header-image {
+    background: url("./code.png");
+}
+
+.e-card .e-card-actions button img {
+    width: 18px;
+    height: 18px;
+}
+
+.e-card::last-child {
+    margin-top: 30px;
+}

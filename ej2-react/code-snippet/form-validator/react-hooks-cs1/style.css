@@ -1,0 +1,32 @@
+#loader {
+  color: #008cff;
+  font-family: 'Helvetica Neue', 'calibiri';
+  font-size: 14px;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.control_wrapper.textbox-form {
+  max-width: 400px;
+  margin: auto;
+  border: 0.5px solid #bebebe;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 36%);
+  padding: 1% 4% 2%;
+  background: #f9f9f9;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.submitBtn {
+  text-align: center;
+  margin: 30px;
+}
+
+.form-group {
+  padding-top: 11px;
+}

@@ -14,6 +14,8 @@ This article describes the API migration process of Dialog component from Essent
 
 ## Accessibility and Localization
 
+{% raw %}
+
 <!-- markdownlint-disable MD033 -->
 | **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
 | ------------ | ------------------------- | ------------------------- |
@@ -167,3 +169,5 @@ This article describes the API migration process of Dialog component from Essent
 | Event triggers after the dialog created successfully | **Event:** create <br/><br/>`<EJ.Dialog create={this.onCreate}></EJ.Dialog>`<br/><br/>`onCreate (event) {}` <br/> | **Event** : created <br/> <br/>`<DialogComponent created= {this.onCreated.bind(this)} />`<br/><br/>`private onCreated() {}` <br/> |
 | Event triggers when the control destroyed successfully | **Event:** destroy <br/><br/>`<EJ.Dialog destroy={this.onDestroy}></EJ.Dialog>`<br/><br/>`onDestroy (event) {}` <br/> | Not Applicable |
 | Event triggers on clicking on modal dialog overlay | **Not Applicable** | **Event** : overlayClick <br/><br/>`<DialogComponent overlayClick= {this.onOverlayClick.bind(this)} />`<br/><br/>`private onOverlayClick() {}`  <br/> |
+
+{% endraw %}
