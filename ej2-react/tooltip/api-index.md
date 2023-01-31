@@ -8,6 +8,8 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
+# Api index in React Tooltip component
+
 * [`API`](tooltip/api.md)
 * [Hide_Animation](tooltip/api-animation.md)
 * [Hide_AnimationModel](tooltip/api-animationModel.md)
