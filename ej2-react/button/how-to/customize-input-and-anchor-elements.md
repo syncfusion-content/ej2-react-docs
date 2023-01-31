@@ -14,7 +14,7 @@ You can customize the appearance of the input and anchor elements using predefin
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/button/custom-cs1/index.hrml %}
+{% include code-snippet/button/custom-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
