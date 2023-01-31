@@ -112,8 +112,6 @@ ReactDOM.render(<App />, document.getElementById('element'));
 
 ```
 
-{% endtab %}
-
 * Run the application in the browser using the following command.
 
 ```
