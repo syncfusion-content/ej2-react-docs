@@ -18,8 +18,6 @@ Create the element with two child to render the outer splitter and create the in
 
 `[Class-component]`
 
-{% tab compileJsx=true %}
-
 ```javascript
 import { Splitter } from '@syncfusion/ej2-layouts';
 import { PaneDirective, PanesDirective, SplitterComponent } from '@syncfusion/ej2-react-layouts';
@@ -97,11 +95,7 @@ export default App;
 
 ```
 
-{% endtab %}
-
 `[Functional-component]`
-
-{% tab compileJsx=true %}
 
 ```javascript
 import { Splitter } from '@syncfusion/ej2-layouts';
@@ -180,8 +174,6 @@ export default App;
 
 ```
 
-{% endtab %}
-
 Once the above configurations has been completed, you will get the output like [this](https://ej2.syncfusion.com/react/demos/#/material/splitter/code-editor-layout)
 
 ## Outlook style layout
@@ -189,8 +181,6 @@ Once the above configurations has been completed, you will get the output like [
 Create the element with three panes and place the elements within the pane to render `treeview`, `listview` and `RTE`.
 
 `[Class-component]`
-
-{% tab compileJsx=true %}
 
 ```javascript
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
@@ -311,11 +301,7 @@ class App extends React.Component <{}, {}, any> {
 export default App;
 ```
 
-{% endtab %}
-
 `[Functional-component]`
-
-{% tab compileJsx=true %}
 
 ```javascript
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
@@ -435,8 +421,6 @@ function App () {
 }
 export default App;
 ```
-
-{% endtab %}
 
 Refer below dependent styles in top of your App.css file.
 

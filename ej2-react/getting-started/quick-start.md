@@ -143,7 +143,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
     export default App;
     ```
 
-  ```ts
+```ts
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import './App.css';
 function App() {
