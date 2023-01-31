@@ -72,7 +72,6 @@ In the chart, the user can switch from single axis to multiple axes with the hel
 
 ![output](images/chart-option.png)
 
-{% endtab %}
 
 <!-- markdownlint-disable MD009 -->
 
