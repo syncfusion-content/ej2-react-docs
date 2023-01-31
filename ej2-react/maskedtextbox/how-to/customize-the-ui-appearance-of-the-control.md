@@ -15,11 +15,11 @@ Refer to the following example to change the appearance of the MaskedTextBox.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/masked-textbox/custom css-cs1/app/index.jsx %}
+{% include code-snippet/masked-textbox/custom-css-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/masked-textbox/custom css-cs1/app/index.tsx %}
+{% include code-snippet/masked-textbox/custom-css-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/masked-textbox/custom css-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/masked-textbox/custom-css-cs1" %}

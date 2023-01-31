@@ -166,7 +166,8 @@ RTL provides an option to switch the text direction and layout of the NumericTex
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/numeric-textbox/rtl-cs2/app/index.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="settings.jsx" %}{% include code-snippet/numeric-textbox/rtl-cs2/app/settings.jsx %}
+{% highlight js tabtitle="settings.jsx" %}
+{% include code-snippet/numeric-textbox/rtl-cs2/app/settings.jsx %}
 {% endhighlight %}
 {% endtabs %}
 
