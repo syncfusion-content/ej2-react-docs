@@ -24,6 +24,7 @@ This article describes the API migration process of pivot table component from E
 | Values |**property:** values<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`values: [ {`<br/> `fieldName: "balance", fieldCaption: "Balance($)"}]`<br/> `};` | **property:** values<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: IDataOptions = {`<br/>`values: [{`<br/> `name: 'balance', caption: 'Balance($)' }]`<br/>`};`|
 |Filters |**property:** filters<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`filters: [{`<br/>`fieldName: "Country",  fieldCaption: "Country" }]`<br/>`};`|**property:** filters<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: IDataOptions = {`<br/>`filters: [{`<br/> `name: 'company', caption: 'Industry'}]`<br/>`};`|
 |Value axis position|Not Applicable|**property:** valueAxis<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: IDataOptions = {`<br/>`valueAxis: 'row'`<br/>`};`|
+{% endraw %}
 
 ## Aggregation
 
@@ -38,6 +39,7 @@ This article describes the API migration process of pivot table component from E
 |Format settings|**property:** format<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`values: [{`<br/> `fieldName: "balance",`<br/>`fieldCaption: "Balance($)",`<br/>`format: "currency" }]`<br/>`};`|**property:** formatSettings<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: IDataOptions = {`<br/>`formatSettings: [{`<br/>`name: 'balance', format: 'C' },`<br/>`{ name: 'date', format: 'dd/MM/yyyy-hh:mm', type: 'date' }]`<br/>`};`|
 
 ## Summary Customization
+{% raw %}
 
 | **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
 | --- | --- | --- |
@@ -48,6 +50,8 @@ This article describes the API migration process of pivot table component from E
 |Show/hide row sub-totals|Not Applicable|**property:** showRowSubTotals<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: IDataOptions = {`<br/>`showRowSubTotals: false`<br/>`};`|
 |Show/hide column sub-totals|Not Applicable|**property:** showColumnSubTotals<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: IDataOptions = {`<br/>`showColumnSubTotals: false`<br/>`};`|
 | Show/hide sub-totals for specific field|**property:** showSubTotal<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`rows: [{ name: 'company', showSubTotal: false }]`<br/>`};` | **property:** showSubTotals<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: IDataOptions = {`<br/>`rows: [{ name: 'company', showSubTotals: false }]`<br/>`};`|
+
+{% endraw %}
 
 ## Drill operation
 
@@ -116,6 +120,8 @@ This article describes the API migration process of pivot table component from E
 
 ## Hyperlink
 
+{% raw %}
+
 | **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
 | --- | --- | --- |
 |Hyperlink settings|**property:** hyperlinkSettings<br/><br/>`<EJ.PivotGrid id="PivotGrid" hyperlinkSettings= {}></EJ.PivotGrid>`|**property:** hyperlinkSettings<br/><br/>`<PivotViewComponent id='PivotView' hyperlinkSettings={}></PivotViewComponent>`|
@@ -131,6 +137,7 @@ This article describes the API migration process of pivot table component from E
 |Event Triggers when value cells clicked in pivot table|**event:** valueCellHyperlinkClick<br/><br/>`<EJ.PivotGrid id="PivotGrid" valueCellHyperlinkClick= "onValueCellHyperlinkClick"></EJ.PivotGrid>`<br/><br/>`function onValueCellHyperlinkClick(){ }`|**event:** hyperlinkCellClick<br/><br/>`<PivotViewComponent id="PivotGrid" hyperlinkCellClick= this.onHyperlinkCellClick.bind(this)></PivotViewComponent>`<br/><br/>`onHyperlinkCellClick(): void { }`|
 |Event Triggers when summary cells clicked in pivot table|**event:** summaryCellHyperlinkClick<br/><br/>`<EJ.PivotGrid id="PivotGrid" summaryCellHyperlinkClick= "onSummaryCellHyperlinkClick"></EJ.PivotGrid>`<br/><br/>`function onSummaryCellHyperlinkClick(){ }`|**event:** hyperlinkCellClick<br/><br/>`<PivotViewComponent id="PivotGrid" hyperlinkCellClick= this.onHyperlinkCellClick.bind(this)></PivotViewComponent>`<br/><br/>`onHyperlinkCellClick(): void { }`|
 
+{% endraw %}
 ## Defer Layout Update
 
 | **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
@@ -179,9 +186,10 @@ This article describes the API migration process of pivot table component from E
 |Excel Export|Not Applicable|**property:** allowExcelExport<br/><br/>`<PivotViewComponent id="PivotGrid" allowExcelExport= {true}></PivotViewComponent>`|
 |Pdf Export|Not Applicable|**property:** allowPdfExport<br/><br/>`<PivotViewComponent id="PivotGrid" allowPdfExport= {true}></PivotViewComponent>`|
 
-{% raw %}
+
 
 ## Grid Customization
+{% raw %}
 
 | **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
 | --- | --- | --- |
@@ -209,6 +217,7 @@ This article describes the API migration process of pivot table component from E
 |Right to left|**property:** enableRTL<br/><br/>`<EJ.PivotGrid id="PivotGrid" enableRTL= {true}></EJ.PivotGrid>`|**property:** enableRtl<br/><br/>`<PivotViewComponent id="PivotGrid" enableRTL= {true}></PivotViewComponent>`|
 
 ## Common
+{% raw %}
 
 | **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
 | --- | --- | --- |
