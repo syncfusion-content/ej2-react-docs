@@ -1,0 +1,26 @@
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+#container {
+  visibility: hidden;
+}
+
+.e-custom ul {
+  height: 150px;
+  overflow: auto;
+}
+#target {
+	border: 1px dashed;
+	height: 150px;
+	padding: 10px;
+	position: relative;
+	text-align: justify;
+	color: gray;
+	user-select: none;
+}

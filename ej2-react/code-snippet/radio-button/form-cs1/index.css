@@ -1,0 +1,21 @@
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+.e-radio-wrap {
+  margin-top: 18px;
+}
+
+button {
+  margin: 0 0 0 5px;
+}
+
+li {
+  list-style: none;
+  margin: 25px auto;
+}

@@ -1,0 +1,8 @@
+.content-wrapper {
+  display: flex;
+}
+
+.control-section {
+  padding-bottom: 10px;
+  width:70%;
+}

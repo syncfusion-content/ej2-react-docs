@@ -1,0 +1,46 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#first,
+#second,
+#third {
+    display: inline-flex;
+}
+
+#textbox {
+    display: inline-block;
+    top: -3px;
+}
+
+.blocks {
+    margin: 0 10px 0 10px;
+    text-transform: none;
+    width: 168px;
+}
+
+#showTooltip {
+    display: table;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+#focus {
+    border: 1px solid #ff4081;
+    text-align: center;
+    height: 31px;
+    width: 168px;
+}
+
+/* csslint ignore:start */
+
+::placeholder {
+    color: #ff4081;
+}
+
+/* csslint ignore:end */

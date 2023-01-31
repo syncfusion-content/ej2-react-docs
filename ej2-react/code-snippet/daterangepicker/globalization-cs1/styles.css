@@ -1,0 +1,18 @@
+#loader {
+/* csslint ignore:start */
+    max-width: 250px;
+    margin: 0 auto;
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+    margin: 8px;
+/* csslint ignore:end */
+}
+
+#element {
+    max-width: 550px;
+    margin: 50px;
+}

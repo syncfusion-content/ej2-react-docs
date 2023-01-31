@@ -1,0 +1,25 @@
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+.e-radio-wrap {
+  margin-top: 18px;
+}
+
+li {
+  list-style: none;
+  margin: 25px auto;
+}
+
+#text {
+  font-size: 16px;
+}
+
+.e-radio-wrapper{
+	margin-right: 2rem;
+}

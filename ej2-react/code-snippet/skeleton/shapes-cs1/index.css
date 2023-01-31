@@ -1,0 +1,33 @@
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+#skeletonCard {
+	padding: 10px;
+	line-height: inherit;
+	height: 330px;
+}
+
+#skeletonCard .cardProfile {
+	float: left;
+	margin-right: 15px;
+}
+
+#skeletonCard .cardinfo {
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+#skeletonCard .cardContent {
+	margin: 20px 0px 20px;
+}
+
+#skeletonCard .cardoptions {
+	display: flex;
+	justify-content: space-between;
+}

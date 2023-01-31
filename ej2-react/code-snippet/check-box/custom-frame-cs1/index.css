@@ -1,0 +1,44 @@
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+li {
+  list-style: none;
+  margin: 25px auto;
+}
+
+.e-custom .e-frame {
+  border-radius: 100%;
+}
+
+.e-checkicon.e-checkbox-wrapper .e-frame.e-check::before {
+    content: '\e703';
+}
+
+.e-checkicon.e-checkbox-wrapper .e-check {
+    font-size: 8px;
+}
+
+.e-checkicon.e-checkbox-wrapper .e-frame.e-check {
+    background-color: white;
+    border-color: grey;
+    color: grey;
+}
+
+.e-checkicon.e-checkbox-wrapper:hover .e-frame.e-check {
+    background-color: white;
+    border-color: grey;
+    color: grey;
+}
+
+.e-checkicon.e-checkbox-wrapper .e-checkbox:focus + .e-frame.e-check {
+    background-color: white;
+    border-color: grey;
+    box-shadow: none;
+    color: grey;
+}

@@ -1,0 +1,208 @@
+.dropArea {
+    min-height: 50px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.drop {
+    border: 1px dashed #c3c3cc;
+    display: inherit;
+    padding: 3% 30% 3%;
+}
+
+.dropArea {
+    max-width: 400px;
+    margin: auto;
+}
+
+.dropArea .file-name-span {
+    font-size:  14px;
+}
+
+.e-bigger .dropArea .file-name-span {
+    font-size:  15px;
+}
+
+.dropArea .e-file-select-wrap {
+    display: none;
+}
+
+.dropArea .e-upload {
+    border: none;
+    float: none;
+}
+
+.dropArea .ul-element {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+}
+
+.dropArea .file-name {
+    display: inline-block;
+    font-size: 13px;
+    padding: 8px 6px 8px 0;
+    position: relative;
+    top: 4px;
+    width: 46%;
+}
+
+.uploader-panel {
+    left: 15%;
+    position: relative;
+}
+.e-bigger .uploader-panel {
+    left: 6%;
+}
+.dropArea .file-size {
+    display: inline-block;
+    font-size: 13px;
+    padding: 4px;
+    position: relative;
+    width: 18%;
+}
+
+.dropArea .file-lists {
+    border: 1px solid lightgray;
+    padding: 0 6px 0 14px;
+    margin-top: 15px;
+    position: relative;
+    background: lightgrey;
+}
+
+.dropArea .file-size,.dropArea .file-name {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.dropArea .progress-bar-container {
+    display: block;
+    float: right;
+    height: 20px;
+    position: relative;
+    right: 13%;
+    top: 14px;
+    width: 20%;
+}
+
+.dropArea .progress{
+    height: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+}
+
+.dropArea .close-icon-container
+{
+    cursor: pointer;
+    font-size: 11px;
+    height: 26px;
+    margin: 0 12px 0 22px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 26px;
+}
+
+.dropArea .e-icons::before {
+    content: '\e932';
+    left: 7px;
+    position: inherit;
+    top: 7px;
+}
+
+.dropArea .delete-icon::before {
+    content: '\e94a';
+}
+
+.dropArea .close-icon-container:hover {
+    background-color: lightgrey;
+    border-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 0 transparent;
+}
+
+.highcontrast .close-icon-container:hover {
+    background-color: #ffd939;
+    color: black;
+}
+
+.highcontrast .close-icon-container {
+    color: #ffffff;
+}
+
+.dropArea .upload-success {
+    color: #2bc700;
+}
+
+.dropArea .upload-fails {
+    color: #f44336;
+}
+
+.dropArea progress::-webkit-progress-bar {
+    background-color: #ffffff;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+#dropArea progress {
+    background-color: #ffffff;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+.highcontrast #dropArea progress {
+    background-color: #000000;
+    border: none;
+}
+.highcontrast .dropArea progress::-webkit-progress-bar {
+    background-color: #000000;
+    border: none;
+}
+.material .dropArea progress::-webkit-progress-value {
+    background-color: #ff4081;
+    border-radius: 2px;
+}
+.bootstrap .dropArea progress::-webkit-progress-value {
+    background-color: #1f496e;
+    border-radius: 2px;
+}
+.fabric .dropArea progress::-webkit-progress-value {
+    background-color: #1763ff;
+    border-radius: 2px; 
+    top: -66px;
+}
+.highcontrast .dropArea progress::-webkit-progress-value {
+    background-color: #ffd939;
+    border-radius: 2px; 
+}
+.material .dropArea progress::-moz-progress-bar {
+    background-color: #ff4081;
+    border-radius: 2px;
+}
+.bootstrap .dropArea progress::-moz-progress-bar {
+    background-color: #1f496e;
+    border-radius: 2px;
+}
+.fabric .dropArea progress::-moz-progress-bar {
+    background-color: #1763ff;
+    border-radius: 2px; 
+    top: -66px;
+}
+.highcontrast .dropArea progress::-moz-progress-bar {
+    background-color: #ffd939;
+    border-radius: 2px; 
+}
+.material .dropArea span a {
+    color:#ff4081;
+}
+.fabric .dropArea span a {
+    color: #1763ff;
+}
+.bootstrap .dropArea span a {
+    color: #1f496e;
+}
+.highcontrast .dropArea span a,
+.highcontrast .dropArea span a:hover {
+    color: #ffd939;
+}

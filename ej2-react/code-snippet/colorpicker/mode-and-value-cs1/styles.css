@@ -1,0 +1,27 @@
+#loader {
+    color: #008cff;
+    font-family: 'Helvetica Neue', 'calibiri';
+    font-size: 14px;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+}
+
+#preview {
+  background-color: #ba68c8;
+  height: 50px;
+  width: 100%;
+}
+
+h4 {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 14px;
+}
