@@ -126,7 +126,8 @@ It is also possible to select the rows hierarchically using checkboxes in TreeGr
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs12" %}
 
 > For hierarchy selection between the records, we need to enable the [`autoCheckHierarchy`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autocheckhierarchy) property.
-
+> You can get the checked records details by using the [`getCheckedRecords`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getcheckedrecords) method in tree grid.
+> 
 ## Controlling TreeGrid actions
 
 You can enable or disable treegrid action for a particular column by setting the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowfiltering), and [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowsorting) properties.
