@@ -195,7 +195,6 @@ root.render(<App />);
 
 ```
 
-{% endtab %}
 
 ## Appearance
 
