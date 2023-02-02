@@ -1,0 +1,31 @@
+#mentionElement{
+  min-height: 100px;
+  border: 1px solid #D7D7D7; 
+  border-radius: 4px; 
+  padding: 8px; 
+  font-size: 14px; 
+  width: 600px;
+}
+#comment{
+  font-size: 15px; 
+  font-weight: 600;
+}
+div#mentionElement[placeholder]:empty:before {
+  content: attr(placeholder);
+}
+.city{
+  right: 15px;
+  position: absolute;
+}
+.spinner_loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 6px;
+  left: 85px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
