@@ -1,0 +1,25 @@
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+.shortcut {
+	float: right;
+	font-size: 10px;
+	opacity: 0.5;
+	padding-left: 50px;
+}
+
+#target {
+	border: 1px dashed;
+	height: 150px;
+	padding: 10px;
+	position: relative;
+	text-align: justify;
+	color: gray;
+	user-select: none;
+}

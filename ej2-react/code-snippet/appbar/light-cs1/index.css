@@ -1,0 +1,7 @@
+.control-container .syncfusion-logo {
+	background: url(https://cdn.syncfusion.com/blazor/images/demos/syncfusion-logo.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 150px;
+}
