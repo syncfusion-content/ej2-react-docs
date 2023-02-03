@@ -4,8 +4,8 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SparklineComponent } from '@syncfusion/ej2-react-charts';
 
-export class App extends React.Component {
-render() {
+function App() {
+
   return ( <SparklineComponent id='sparkline'
     height='200px' width='150px'
     lineWidth= { 2 }
@@ -27,8 +27,9 @@ render() {
         }
     ] }>
 </SparklineComponent> );
- }
+
 }
+export default App;
 ReactDOM.render(<App />, document.getElementById('sparkline'));
 
 
