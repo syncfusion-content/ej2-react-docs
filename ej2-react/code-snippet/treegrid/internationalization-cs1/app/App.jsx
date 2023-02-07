@@ -2,7 +2,6 @@ import { L10n } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, Page, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Filter, Inject, Toolbar } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 L10n.load({
     'de-DE': {

@@ -4,7 +4,6 @@ import { getObject } from '@syncfusion/ej2-grids';
 import { Aggregate, AggregatesDirective, ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { AggregateColumnDirective, AggregateColumnsDirective, AggregateDirective, Inject } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { summaryRowData } from './datasource';
 
 function App() {

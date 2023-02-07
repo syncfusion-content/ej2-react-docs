@@ -3,7 +3,7 @@
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Filter, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 import { sampleData } from './datasource';
 
 function App() {

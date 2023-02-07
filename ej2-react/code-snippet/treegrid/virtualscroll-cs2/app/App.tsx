@@ -2,7 +2,7 @@
 
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, VirtualScroll } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 import { dataSource, virtualData } from './datasource';
 
 function App() {

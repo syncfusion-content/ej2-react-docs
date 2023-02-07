@@ -4,7 +4,6 @@ import { IFilter } from '@syncfusion/ej2-grids';
 import { ColumnDirective, ColumnsDirective, Filter, FilterSettingsModel } from '@syncfusion/ej2-react-treegrid';
 import { Inject, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 
 function App() {

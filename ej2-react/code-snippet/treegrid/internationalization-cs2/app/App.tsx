@@ -4,7 +4,6 @@ import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-bas
 import { ColumnDirective, ColumnsDirective, Page, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Filter, FilterSettingsModel, Inject, PageSettingsModel, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import * as cagregorian from './ca-gregorian.json';
 import * as currencies from './currencies.json';
 import { formatData } from './datasource';

@@ -3,7 +3,6 @@
 import { ColumnDirective, ColumnsDirective, Inject, TreeGridComponent, Edit, Toolbar } from '@syncfusion/ej2-react-treegrid';
 import { Page, SelectionSettingsModel, PageSettingsModel, EditSettingsModel, ToolbarItems } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 
 function App() {

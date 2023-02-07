@@ -1,7 +1,7 @@
 import { ColumnDirective, ColumnsDirective, Inject, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Page } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 import { sampleData } from './datasource';
 function App() {
     const settings = { checkboxMode: 'ResetOnRowClick' };

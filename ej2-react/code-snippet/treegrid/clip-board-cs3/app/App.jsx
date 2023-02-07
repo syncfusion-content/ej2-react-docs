@@ -2,7 +2,6 @@ import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-treegrid';
 import { TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 function App() {
     let treegrid;

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { projectData } from './datasource';
-import './App.css';
 import { ColumnsDirective, ColumnDirective, TreeGridComponent, Inject, Sort } from '@syncfusion/ej2-react-treegrid';
 /* tslint:disable */
 function App() {

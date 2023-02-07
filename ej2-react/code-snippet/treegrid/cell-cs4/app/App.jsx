@@ -1,6 +1,5 @@
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { complexData } from './datasource';
 function App() {
     return <TreeGridComponent dataSource={complexData} treeColumnIndex={1} childMapping='subtasks' height='300' gridLines='Both'>

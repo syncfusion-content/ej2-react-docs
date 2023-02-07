@@ -1,7 +1,6 @@
 {% raw %}
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { textdata } from './datasource';
 export default class App extends React.Component {
     treegridTemplate(props) {

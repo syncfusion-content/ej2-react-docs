@@ -1,7 +1,6 @@
 import { ColumnDirective, ColumnsDirective, Page, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Inject, PdfExport, Toolbar } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 import { image } from './image';
 function App() {

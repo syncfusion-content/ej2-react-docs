@@ -4,8 +4,6 @@ import { Ajax } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, TreeGrid, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
-
 function App() {
     const pageOptions: PageSettingsModel = { pageSize: 7 };
     let treegridInstance: TreeGridComponent | null;

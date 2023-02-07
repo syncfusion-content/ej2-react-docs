@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.css';
 import { projectData } from './datasource';
 import { ColumnsDirective, ColumnDirective, TreeGridComponent, Inject } from '@syncfusion/ej2-react-treegrid';
 import { Edit, Page, Toolbar } from '@syncfusion/ej2-react-treegrid';
