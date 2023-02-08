@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with React Rating component | Syncfusion
 description:  Checkout and learn about Getting started with React Rating component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -34,8 +34,6 @@ npm install -g create-react-app
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
-
 ```bash
 
 create-react-app quickstart --scripts-version=react-scripts-ts
@@ -44,10 +42,6 @@ cd quickstart
 
 ```
 
-</div>
-
-<div class='jsx'>
-
 ```bash
 
 create-react-app quickstart
@@ -55,8 +49,6 @@ create-react-app quickstart
 cd quickstart
 
 ```
-
-</div>
 
 > 'react-scripts-ts' is used for creating React app with typescript.
 
@@ -75,8 +67,6 @@ npm install @syncfusion/ej2-react-inputs --save
 To include the Rating component in your application import the `RatingComponent` from `ej2-react-inputs` package in `App.tsx`.
 
 Add the Rating component in application as shown in below code example.
-
-
 
 ```ts
 
@@ -137,11 +127,11 @@ The following example shows a basic Rating component.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rating/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rating/getting-started-cs1" %}
 
 ## Value
 
-You can set the rating value by using the `value` property.
+You can set the rating value by using the [`value`](https://ej2.syncfusion.com/react/documentation/api/rating#value) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -152,19 +142,4 @@ You can set the rating value by using the `value` property.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rating/value-cs1" %}
-
-## Items Count
-
-You can specify the number of rating items using the `itemsCount` property.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/rating/items-count-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/rating/items-count-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rating/items-count-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rating/value-cs1" %}
