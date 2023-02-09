@@ -1,5 +1,3 @@
-
-
 let data: Object[] = [
   {
       TaskID: 1,
@@ -29,8 +27,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const  taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -39,23 +37,20 @@ class App extends React.Component<{}, {}>{
     dependency: 'Predecessor',
     child: 'subtasks'
   };
-  public tooltipTemplate(props:any) {
+  function tooltipTemplate(props:any) {
     return (<div>Offset : {props.offsetString}</div>)
   };
-  public template: any = this.tooltipTemplate;
-  public tooltipSettings: any = {
-    connectorLine: this.template.bind(this)
+  const template: any = tooltipTemplate;
+  const tooltipSettings: any = {
+    connectorLine: template
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-           tooltipSettings={this.tooltipSettings} height = '450px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields}
+           tooltipSettings={tooltipSettings} height = '450px'>
             <ColumnsDirective>
                 <ColumnDirective field='TaskID' width='100' ></ColumnDirective>
                 <ColumnDirective field='Predecessor'></ColumnDirective>
             </ColumnsDirective>
         </GanttComponent>
-    }
+
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

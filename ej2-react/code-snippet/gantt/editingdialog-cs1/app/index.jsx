@@ -11,8 +11,9 @@ let ProjectResources = [
     { resourceId: 10, resourceName: 'Vinet Fuller' },
     { resourceId: 11, resourceName: 'Bergs Anton' },
     { resourceId: 12, resourceName: 'Construction Supervisor' }
-];
-let data = [
+  ];
+  
+  let data = [
     {
         TaskID: 1,
         TaskName: 'Project Initiation',
@@ -43,48 +44,48 @@ let data = [
             { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: "6SS", Progress: 50, resources: [12, 5], isParent: false, info: '' }
         ]
     },
-];
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Toolbar, Edit, AddDialogFieldsDirective, EditDialogFieldsDirective, EditDialogFieldDirective, AddDialogFieldDirective } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        child: 'subtasks',
-        notes: 'info',
-        resourceInfo: 'resources'
+  ];
+  
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
+  import { GanttComponent, Inject,Toolbar, ToolbarItem, Edit,AddDialogFieldsDirective, EditSettingsModel, EditDialogFieldsDirective, EditDialogFieldDirective, AddDialogFieldDirective } from '@syncfusion/ej2-react-gantt';
+  
+  function App(){
+      const taskFields = {
+          id: 'TaskID',
+          name: 'TaskName',
+          startDate: 'StartDate',
+          endDate: 'EndDate',
+          duration: 'Duration',
+          progress: 'Progress',
+          dependency: 'Predecessor',
+          child: 'subtasks',
+          notes: 'info',
+          resourceInfo: 'resources'
     };
-    resourceFields = {
-        id: 'resourceId',
-        name: 'resourceName',
+     const resourceFields = {
+          id: 'resourceId',
+          name: 'resourceName',
+      };
+    const toolbarOptions = ['Add'];
+    const editOptions = {
+          allowEditing: true,
+          allowAdding:true,
+          mode: 'Dialog'
     };
-    toolbarOptions = ['Add'];
-    editOptions = {
-        allowEditing: true,
-        allowAdding: true,
-        mode: 'Dialog'
-    };
-    render() {
-        return <GanttComponent dataSource={data} toolbar={this.toolbarOptions} taskFields={this.taskFields} editSettings={this.editOptions} height='450px' resourceFields={this.resourceFields} resources={ProjectResources}>
-        <AddDialogFieldsDirective>
-            <AddDialogFieldDirective type='General' headerText='General'></AddDialogFieldDirective>
-            <AddDialogFieldDirective type='Dependency'></AddDialogFieldDirective>
-        </AddDialogFieldsDirective>
-           <EditDialogFieldsDirective>
-              <EditDialogFieldDirective type='General' headerText='General'></EditDialogFieldDirective>
-              <EditDialogFieldDirective type='Dependency'></EditDialogFieldDirective>
-              <EditDialogFieldDirective type='Resources'></EditDialogFieldDirective>
-              <EditDialogFieldDirective type='Notes'></EditDialogFieldDirective>
-            </EditDialogFieldsDirective>
-            <Inject services={[Edit, Toolbar]}/>
-        </GanttComponent>;
-    }
-}
-;
-ReactDOM.render(<App />, document.getElementById('root'));
+          return <GanttComponent dataSource={data} toolbar={toolbarOptions} taskFields={taskFields} editSettings={editOptions} height='450px' resourceFields={resourceFields}
+          resources={ProjectResources}>
+          <AddDialogFieldsDirective>
+              <AddDialogFieldDirective type='General' headerText='General'></AddDialogFieldDirective>
+              <AddDialogFieldDirective type='Dependency'></AddDialogFieldDirective>
+          </AddDialogFieldsDirective>
+             <EditDialogFieldsDirective>
+                <EditDialogFieldDirective type='General' headerText='General'></EditDialogFieldDirective>
+                <EditDialogFieldDirective type='Dependency'></EditDialogFieldDirective>
+                <EditDialogFieldDirective type='Resources'></EditDialogFieldDirective>
+                <EditDialogFieldDirective type='Notes'></EditDialogFieldDirective>
+              </EditDialogFieldsDirective>
+              <Inject services={[Edit, Toolbar]} />
+          </GanttComponent>
+  };
+  ReactDOM.render(<App />, document.getElementById('root'));

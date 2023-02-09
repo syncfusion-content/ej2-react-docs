@@ -3,27 +3,24 @@ import * as ReactDOM from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component {
-    ganttInstance;
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        child: 'subtasks'
-    };
-    clickHandler() {
-        this.ganttInstance.scrollToDate('05/10/2019');
-    }
-    ;
-    render() {
+function App(){
+    let ganttInstance;
+    const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Predecessor',
+    child: 'subtasks'
+  };
+  function clickHandler(){
+    ganttInstance.scrollToDate('05/10/2019');
+};
         return (<div>
-        <ButtonComponent onClick={this.clickHandler.bind(this)}>ScrollToDate</ButtonComponent>
-        <GanttComponent dataSource={data} taskFields={this.taskFields} height='450px' ref={gantt => this.ganttInstance = gantt}>
-        </GanttComponent></div>);
-    }
-}
-;
+        <ButtonComponent onClick= {clickHandler}>ScrollToDate</ButtonComponent>
+        <GanttComponent dataSource={data} taskFields={taskFields}
+        height = '450px' ref={gantt => ganttInstance = gantt}>
+        </GanttComponent></div>)
+};
 ReactDOM.render(<App />, document.getElementById('root'));

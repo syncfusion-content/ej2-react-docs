@@ -1,11 +1,9 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function  App(){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -13,19 +11,15 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public tooltipTemplate(props:any) {
+ function tooltipTemplate(props:any) {
     return (<div>TaskID : {props.TaskID}</div>)
   };
-  public template: any = this.tooltipTemplate;
-  public tooltipSettings: any = {
-    taskbar: this.template.bind(this)
+  const template: any = tooltipTemplate;
+  const tooltipSettings: any = {
+    taskbar:template
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-           tooltipSettings={this.tooltipSettings} height = '450px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields}
+           tooltipSettings={tooltipSettings} height = '450px'>
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

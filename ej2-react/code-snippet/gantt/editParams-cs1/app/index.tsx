@@ -1,39 +1,36 @@
 
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, ColumnsDirective, ColumnDirective, Edit } from '@syncfusion/ej2-react-gantt';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { data } from './datasource';
 import { IEditCell } from '@syncfusion/ej2-grids';
-class App extends React.Component {
-    public elem : HTMLElement;
-    public dropdownlistObj: DropDownListComponent;
-    public dropdownlist: IEditCell = {
-        create: () => {
-            this.elem = document.createElement('input');
-            return this.elem;
+function App () {
+    let  elem : HTMLElement;
+    let ganttInstance:any;
+    let dropdownlistObj: DropDownListComponent;
+    let dropdownlist: IEditCell = {
+       create: () => {
+            elem = document.createElement('input');
+            return elem;
         },
-        read: () => {
-           return this.dropdownlistObj.value;
+      read: () => {
+           return dropdownlistObj.value;
         },
-        destroy: () => {
-            this.dropdownlistObj.destroy();
+      destroy: () => {
+            dropdownlistObj.destroy();
         },
         write: (args: Object) => {
-            this.dropdownlistObj = new DropDownListComponent({
-                dataSource: this.ganttInstance.treeGrid.grid.dataSource,
+            dropdownlistObj = new DropDownListComponent({
+                dataSource: ganttInstance.treeGrid.grid.dataSource,
                 fields: { value: 'TaskName' },
                 value: args.rowData[args.column.field],
                 floatLabelType: 'Auto',
             });
-            this.dropdownlistObj.appendTo(this.elem);
+            dropdownlistObj.appendTo(elem);
         }
     };
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+   const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -41,12 +38,10 @@ class App extends React.Component {
             progress: 'Progress',
             child: 'subtasks'
         };
-        this.editOptions = {
+       const editOptions = {
            allowEditing: true
         };
-    }
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} editSettings={this.editOptions} height='450px' ref={gantt => this.ganttInstance = gantt}>
+        return <GanttComponent dataSource={data} taskFields={taskFields} editSettings={editOptions} height='450px' ref={gantt => ganttInstance = gantt}>
          <ColumnsDirective>
                 <ColumnDirective field='TaskID'></ColumnDirective>
                 <ColumnDirective field='TaskName' edit={this.dropdownlist}></ColumnDirective>
@@ -55,11 +50,7 @@ class App extends React.Component {
                 <ColumnDirective field='Progress'></ColumnDirective>
           </ColumnsDirective>
           <Inject services={[Edit]}/>
-      </GanttComponent>;
-    }
-}
-;
+      </GanttComponent>
+
+};
 ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

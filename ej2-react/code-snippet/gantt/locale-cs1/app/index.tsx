@@ -1,5 +1,3 @@
-
-
 import { L10n, setCulture } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -19,8 +17,8 @@ L10n.load({
   }
 });
 
-class App extends React.Component<{}, {}> {
-    public taskFields: any = {
+function App () {
+    const taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -28,11 +26,7 @@ class App extends React.Component<{}, {}> {
         progress: 'Progress',
         child: 'subtasks'
     };
-    render() {
-        return <GanttComponent dataSource={data} locale='de-DE' allowSelection={true} taskFields={this.taskFields}  height = '450px'>
+        return <GanttComponent dataSource={data} locale='de-DE' allowSelection={true} taskFields={taskFields}  height = '450px'>
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

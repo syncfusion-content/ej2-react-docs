@@ -1,5 +1,3 @@
-
-
 let GanttData: Object[] = [
     {
         TaskID: 1,
@@ -30,8 +28,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App (){
+   const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -41,16 +39,14 @@ class App extends React.Component<{}, {}>{
     baselineEndDate: 'BaselineEndDate',
     child: 'subtasks'
   };
-  render() {
+  
         return <GanttComponent dataSource={GanttData} renderBaseline={true} baselineColor='red'
-        taskFields={this.taskFields} height = '400px'>
+        taskFields={taskFields} height = '400px'>
             <ColumnsDirective>
               <ColumnDirective field='BaselineStartDate' headerText='Planned start time' ></ColumnDirective>
               <ColumnDirective field='BaselineEndDate' headerText='Planned end time' ></ColumnDirective>
             </ColumnsDirective>
         </GanttComponent>
-    }
+    
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

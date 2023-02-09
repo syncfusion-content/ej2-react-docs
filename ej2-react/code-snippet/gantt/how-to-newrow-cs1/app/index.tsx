@@ -5,8 +5,8 @@ import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, EditSettingsModel, Selection, Toolbar, ToolbarItem } from '@syncfusion/ej2-react-gantt';
 import { ContextMenuComponent } from '@syncfusion/ej2-react-navigations';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function  App (){
+    const  taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -14,16 +14,18 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public editOptions: EditSettingsModel = {
+  const editOptions: EditSettingsModel = {
       allowAdding: true
   };
-  public toolbarOptions: ToolbarItem[] = ['Add'];
-  toolbarClick(args) {
+  let ganttInstance;
+  const toolbarOptions: ToolbarItem[] = ['Add'];
+ let cMenu
+ function  toolbarClick(args) {
         if (args.item.id === 'GanttExport_add') {
-            this.cMenu.open(40, 20);
+            cMenu.open(40, 20);
         }
     }
-  this.menuItems = [
+  const menuItems = [
             {
                 text: 'Bottom'
             },
@@ -40,44 +42,43 @@ class App extends React.Component<{}, {}>{
                 text: 'Top'
             }
         ];
-        select(args) {
+      function  select(args) {
             if (args.item.text === "Bottom") {
-            this.ganttInstance.editSettings.newRowPosition = "Bottom";
-            this.ganttInstance.openAddDialog();
+            ganttInstance.editSettings.newRowPosition = "Bottom";
+            ganttInstance.openAddDialog();
         } else if (args.item.text === "Above") {
-            if (this.ganttInstance.selectedRowIndex == -1) {
+            if (ganttInstance.selectedRowIndex == -1) {
                 alert("Please select any row");
             } else {
-                this.ganttInstance.editSettings.newRowPosition = "Above";
-                this.ganttInstance.openAddDialog();
+                ganttInstance.editSettings.newRowPosition = "Above";
+                ganttInstance.openAddDialog();
             }
         } else if (args.item.text === "Below") {
-            if (this.ganttInstance.selectedRowIndex == -1) {
+            if (ganttInstance.selectedRowIndex == -1) {
                 alert("Please select any row");
             } else {
-                this.ganttInstance.editSettings.newRowPosition = "Child";
-                this.ganttInstance.openAddDialog();
+                ganttInstance.editSettings.newRowPosition = "Child";
+                ganttInstance.openAddDialog();
             }
         } else if (args.item.text === "Child") {
-            if (this.ganttInstance.selectedRowIndex == -1) {
+            if (ganttInstance.selectedRowIndex == -1) {
                 alert("Please select any row");
             } else {
-                this.ganttInstance.editSettings.newRowPosition = "Child";
-                this.ganttInstance.openAddDialog();
+                ganttInstance.editSettings.newRowPosition = "Child";
+                ganttInstance.openAddDialog();
             }
         } else if (args.item.text === "Top") {
-            this.ganttInstance.editSettings.newRowPosition = "Top";
-            this.ganttInstance.openAddDialog();
+            ganttInstance.editSettings.newRowPosition = "Top";
+            ganttInstance.openAddDialog();
         }
         }
-    render() {
-        return
-        <ContextMenuComponent id='contextmenu' ref={(scope) => this.cMenu = scope} items={this.menuItems} select={this.select.bind(this)}/>
-        <GanttComponent dataSource={data} taskFields={this.taskFields} allowSelection={true}
-        editSettings={this.editOptions} toolbar={this.toolbarOptions} toolbarClick={this.toolbarClick.bind(this)} height = '450px' ref={gantt => this.ganttInstance = gantt}>
+
+        return<>
+        <ContextMenuComponent id='contextmenu' ref={(scope) => cMenu = scope} items={menuItems} select={select}/>
+        <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
+        editSettings={editOptions} toolbar={toolbarOptions} toolbarClick={toolbarClick} height = '450px' ref={gantt => ganttInstance = gantt}>
             <Inject services={[Edit, Selection, Toolbar]} />
-        </GanttComponent>
-    }
+        </GanttComponent></>
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 

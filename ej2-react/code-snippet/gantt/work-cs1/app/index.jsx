@@ -59,10 +59,8 @@ let data = [
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Edit, Selection, Toolbar } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App() {
+        const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -72,33 +70,29 @@ class App extends React.Component {
             work: 'Work',
             child: 'subtasks'
         };
-        this.resourceFields = {
+        const resourceFields = {
             id: 'resourceId',
             name: 'resourceName',
             unit: 'Unit'
         };
-        this.editSettings = {
+        const editSettings = {
             allowAdding: true,
             allowEditing: true,
             allowDeleting: true,
             allowTaskbarEditing: true,
             showDeleteConfirmDialog: true
         };
-        this.workUnit = 'Hour';
-        this.toolbar = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
-    }
-    render() {
-        return <GanttComponent id='root' dataSource={data} treeColumnIndex={1} allowSelection={true} allowResizing={true} highlightWeekends={true} toolbar={this.toolbar} editSettings={this.editSettings} resourceFields={this.resourceFields} taskFields={this.taskFields} height='410px' resources={ProjectResources}>
+        const workUnit = 'Hour';
+      const toolbar = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
+        return <GanttComponent id='root' dataSource = { data } treeColumnIndex = { 1} allowSelection = { true} allowResizing = { true} highlightWeekends = { true} toolbar = {toolbar } editSettings = {editSettings } resourceFields = {resourceFields } taskFields = {taskFields } height = '410px' resources = { ProjectResources } >
             <ColumnsDirective>
-            <ColumnDirective field='TaskID' visible={false}> </ColumnDirective>
-            <ColumnDirective field='TaskName' headerText='Task Name' width='180'> </ColumnDirective>
-            <ColumnDirective field='resources' headerText='Resources' width='160'> </ColumnDirective>
-            <ColumnDirective field='Work' width='110'> </ColumnDirective>
-            <ColumnDirective field='Duration' width='100'> </ColumnDirective>
+            <ColumnDirective field= 'TaskID' visible= {false} > </ColumnDirective>
+            <ColumnDirective field= 'TaskName'  headerText= 'Task Name'  width= '180' > </ColumnDirective>
+            <ColumnDirective field= 'resources'  headerText= 'Resources'  width= '160' > </ColumnDirective>
+            <ColumnDirective field= 'Work'  width= '110' > </ColumnDirective>
+            <ColumnDirective field= 'Duration' width= '100' > </ColumnDirective>
             </ColumnsDirective>
-            <Inject services={[Toolbar, Edit, Selection]}/>
-        </GanttComponent>;
-    }
-}
-;
+            <Inject services={[ Toolbar, Edit, Selection ]}/>
+            </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));

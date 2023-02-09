@@ -1,12 +1,10 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Resize, Sort, Filter, Edit, Reorder } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 
-    class App extends React.Component<{}, {}>{
-        public taskFields: any = {
+    function App(){
+        const taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -14,16 +12,16 @@ import { data } from './datasource';
         progress: 'Progress',
         child: 'subtasks'
     };
-    public splitterSettings: any = {
+    const splitterSettings: any = {
         position : '90%'
     };
-    public editSettings: any = {
+    let ganttInstance:any;
+    const editSettings: any = {
         allowEditing : true
     };
-    render() {
         return (<div>
-        <GanttComponent dataSource={data} taskFields={this.taskFields} splitterSettings={this.splitterSettings} height='450px' allowSorting={true} allowFiltering={true} allowReordering={true} editSettings={this.editSettings}
-        ref={gantt => this.ganttInstance = gantt}>
+        <GanttComponent dataSource={data} taskFields={taskFields} splitterSettings={splitterSettings} height='450px' allowSorting={true} allowFiltering={true} allowReordering={true} editSettings={editSettings}
+        ref={gantt => ganttInstance = gantt}>
          <ColumnsDirective>
             <ColumnDirective field='TaskID' width='100' ></ColumnDirective>
             <ColumnDirective field='TaskName' headerText='Task Name' allowSorting= {false}></ColumnDirective>
@@ -32,10 +30,6 @@ import { data } from './datasource';
             <ColumnDirective field='Progress' allowReordering= {false}></ColumnDirective>
         </ColumnsDirective>
         <Inject services={[Sort, Filter, Reorder, Edit]}/>
-        </GanttComponent></div>);
-    }
-}
-;
+        </GanttComponent></div>)
+};
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

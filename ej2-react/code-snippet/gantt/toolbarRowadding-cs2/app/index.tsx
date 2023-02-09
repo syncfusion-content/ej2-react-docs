@@ -1,11 +1,9 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, EditSettingsModel, Selection, Toolbar, ToolbarItem } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -13,7 +11,7 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-   public onActionBegin(args) {
+   function onActionBegin(args) {
     if (args.requestType == 'beforeOpenAddDialog') {
         args.rowData.TaskName = 'Gantt';
         args.rowData.Progress = 70;
@@ -21,17 +19,13 @@ class App extends React.Component<{}, {}>{
         args.rowData.ganttProperties.progress = 70;
     }
     };
-  public editOptions: EditSettingsModel = {
+  const  editOptions: EditSettingsModel = {
       allowAdding: true
   };
-  public toolbarOptions: ToolbarItem[] = ['Add'];
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} allowSelection={true}
-        editSettings={this.editOptions} toolbar={this.toolbarOptions} height = '450px' actionBegin={this.onActionBegin.bind(this)}>
+  const  toolbarOptions: ToolbarItem[] = ['Add'];
+        return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
+        editSettings={editOptions} toolbar={toolbarOptions} height = '450px' actionBegin={onActionBegin}>
             <Inject services={[Edit, Selection, Toolbar]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

@@ -6,7 +6,7 @@ let HierarchyData = [
         EndDate: new Date('04/21/2019'),
         subtasks: [
             { TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
-            { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
+            { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
             { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
         ]
     },
@@ -22,22 +22,21 @@ let HierarchyData = [
         ]
     }
 ];
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        child: 'subtasks'
-    };
-    render() {
-        return <GanttComponent dataSource={HierarchyData} taskFields={this.taskFields} height='400px'>
-        </GanttComponent>;
-    }
-}
-;
+
+function App (){
+const taskFields = {
+id: 'TaskID',
+name: 'TaskName',
+startDate: 'StartDate',
+duration: 'Duration',
+progress: 'Progress',
+child: 'subtasks'
+};
+return <GanttComponent dataSource={HierarchyData} taskFields={taskFields} height = '400px'>
+    </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));

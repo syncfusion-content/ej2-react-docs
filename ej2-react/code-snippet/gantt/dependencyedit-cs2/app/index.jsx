@@ -23,29 +23,30 @@ let data = [
             { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: "6SS", Progress: 50 }
         ]
     },
-];
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Edit } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        child: 'subtasks'
+  ];
+  
+  
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
+  import { GanttComponent, Inject, Edit } from '@syncfusion/ej2-react-gantt';
+  
+  function App(){
+      const taskFields = {
+      id: 'TaskID',
+      name: 'TaskName',
+      startDate: 'StartDate',
+      duration: 'Duration',
+      progress: 'Progress',
+      dependency: 'Predecessor',
+      child: 'subtasks'
+     };
+    const  editOptions = {
+      allowEditing: true,
+      allowTaskbarEditing: true
     };
-    editOptions = {
-        allowEditing: true,
-        allowTaskbarEditing: true
-    };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} editSettings={this.editOptions} height='450px'>
-             <Inject services={[Edit]}/>
-        </GanttComponent>;
-    }
-}
-;
-ReactDOM.render(<App />, document.getElementById('root'));
+          return <GanttComponent dataSource={data} taskFields={taskFields}
+          editSettings={editOptions} height = '450px'>
+               <Inject services={[Edit]} />
+          </GanttComponent>
+  };
+  ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,5 +1,3 @@
-
-
 const projectResources: object[] = [
     { resourceId: 1, resourceName: 'Project Manager' },
     { resourceId: 2, resourceName: 'Software Analyst' },
@@ -34,8 +32,8 @@ import { GanttComponent, Inject, Edit, Filter, Sort } from '@syncfusion/ej2-reac
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-class App extends React.Component<{}, {}> {
-    public taskFields: any = {
+function App() {
+    const taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -45,25 +43,21 @@ class App extends React.Component<{}, {}> {
         dependency: 'Predecessor',
         resourceInfo: 'resources'
     };
-    public labelSettings: any = {
+    const labelSettings: any = {
         rightLabel: 'resources'
     };
-    public editSettings: any = {
+    const editSettings: any = {
         allowEditing: true,
         editMode: 'Auto',
         allowTaskbarEditing: true
     };
-    public resourceFields: any = {
+    const resourceFields: any = {
         id: 'resourceId',
         name: 'resourceName',
     };
-  public render() {
-        return <GanttComponent dataSource={data} allowFiltering={true} allowSorting={true} taskFields={this.taskFields} editSettings={this.editSettings} labelSettings={this.labelSettings}
-            resourceFields={this.resourceFields} resources={projectResources} height='400px'>
+        return <GanttComponent dataSource={data} allowFiltering={true} allowSorting={true} taskFields={taskFields} editSettings={editSettings} labelSettings={labelSettings}
+            resourceFields={resourceFields} resources={projectResources} height='400px'>
             <Inject services={[Edit, Filter, Sort]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

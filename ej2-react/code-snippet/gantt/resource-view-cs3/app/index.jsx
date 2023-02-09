@@ -1,6 +1,6 @@
 let resourceCollection = [
-    { resourceId: 1, resourceName: 'Martin Tamer', resourceGroup: 'Planning Team', isExpand: false },
-    { resourceId: 2, resourceName: 'Rose Fuller', resourceGroup: 'Testing Team', isExpand: true },
+    { resourceId: 1, resourceName: 'Martin Tamer', resourceGroup: 'Planning Team', isExpand: false},
+    { resourceId: 2, resourceName: 'Rose Fuller', resourceGroup: 'Testing Team', isExpand: true},
     { resourceId: 3, resourceName: 'Margaret Buchanan', resourceGroup: 'Approval Team', isExpand: false }
 ];
 let data = [
@@ -66,10 +66,9 @@ let data = [
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Edit, Selection, Toolbar } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App () {
+  
+        const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -80,41 +79,41 @@ class App extends React.Component {
             expandState: 'isExpand',
             child: 'subtasks'
         };
-        this.resourceFields = {
+        const resourceFields = {
             id: 'resourceId',
             name: 'resourceName',
             unit: 'Unit',
             group: 'resourceGroup'
         };
-        this.editSettings = {
+        const editSettings = {
             allowAdding: true,
             allowEditing: true,
             allowDeleting: true,
             allowTaskbarEditing: true,
             showDeleteConfirmDialog: true
         };
-        this.toolbarOptions = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
-        this.labelSettings = {
+        const toolbarOptions = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
+        const labelSettings = {
             rightLabel: 'resources',
             taskLabel: 'TaskName'
         };
-        this.projectStartDate = new Date('03/28/2019');
-        this.projectEndDate = new Date('05/18/2019');
-    }
-    render() {
-        return <GanttComponent id='root' dataSource={data} treeColumnIndex={1} viewType='ResourceView' allowSelection={true} allowResizing={true} highlightWeekends={true} toolbar={this.toolbarOptions} editSettings={this.editSettings} projectStartDate={this.projectStartDate} projectEndDate={this.projectEndDate} resourceFields={this.resourceFields} taskFields={this.taskFields} labelSettings={this.labelSettings} resources={resourceCollection} showOverAllocation={true} enableMultiTaskbar={true} collapseAllTasks={true}>
+        const projectStartDate = new Date('03/28/2019');
+        const projectEndDate = new Date('05/18/2019');
+        return <GanttComponent id='root' dataSource = { data } treeColumnIndex = {1} viewType = 'ResourceView' allowSelection = { true}
+        allowResizing = { true} highlightWeekends = { true} toolbar = { toolbarOptions }
+        editSettings = { editSettings } projectStartDate = { projectStartDate } projectEndDate = { projectEndDate }
+        resourceFields = { resourceFields } taskFields = {taskFields } labelSettings = { labelSettings }
+        resources = { resourceCollection } showOverAllocation = {true} enableMultiTaskbar = {true} collapseAllTasks = {true}>
             <ColumnsDirective>
-            <ColumnDirective field='TaskID'> </ColumnDirective>
-            <ColumnDirective field='TaskName' headerText='Task Name' width='180'> </ColumnDirective>
-            <ColumnDirective field='work' headerText='Work'> </ColumnDirective>
-            <ColumnDirective field='Progress'> </ColumnDirective>
-            <ColumnDirective field='resourceGroup' headerText='Group'> </ColumnDirective>
-            <ColumnDirective field='StartDate'> </ColumnDirective>
-            <ColumnDirective field='Duration'> </ColumnDirective>
+            <ColumnDirective field= 'TaskID' > </ColumnDirective>
+            <ColumnDirective field= 'TaskName'  headerText= 'Task Name'  width= '180' > </ColumnDirective>
+            <ColumnDirective field= 'work'  headerText= 'Work' > </ColumnDirective>
+            <ColumnDirective field= 'Progress' > </ColumnDirective>
+            <ColumnDirective field= 'resourceGroup'  headerText= 'Group' > </ColumnDirective>
+            <ColumnDirective field= 'StartDate' > </ColumnDirective>
+            <ColumnDirective field= 'Duration' > </ColumnDirective>
             </ColumnsDirective>
-            <Inject services={[Toolbar, Edit, Selection]}/>
-            </GanttComponent>;
-    }
-}
-;
+            <Inject services={[ Toolbar, Edit, Selection ]}/>
+            </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));

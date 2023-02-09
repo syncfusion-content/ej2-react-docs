@@ -1,7 +1,6 @@
-{% raw %}
 let tempData = [
     {
-        TaskID: 1, TaskName: 'Product concept', StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'),
+        TaskID: 1, TaskName: 'Product concept',StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'),
         parentID: 0
     },
     {
@@ -161,6 +160,7 @@ let tempData = [
         Progress: 30, parentID: 38
     }
 ];
+
 let virtualData = [];
 let projId = 1;
 for (let i = 0; i < 50; i++) {
@@ -171,7 +171,7 @@ for (let i = 0; i < 50; i++) {
     parent['TaskName'] = 'Project ' + (i + 1);
     virtualData.push(parent);
     for (let j = 0; j < tempData.length; j++) {
-        let subtasks = {};
+        let subtasks= {};
         /* tslint:disable:no-string-literal */
         subtasks['TaskID'] = tempData[j].TaskID + x;
         subtasks['TaskName'] = tempData[j].TaskName;
@@ -184,25 +184,27 @@ for (let i = 0; i < 50; i++) {
 }
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Sort, Filter } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        parentID: 'parentID'
-    };
-    splitterSettings = {
-        columnIndex: 2
-    };
-    labelSettings = {
-        taskLabel: 'Progress'
-    };
-    render() {
-        return (<GanttComponent dataSource={virtualData} treeColumnIndex={1} labelSettings={this.labelSettings} allowSelection={true} highlightWeekends={true} enableVirtualization={true} loadingIndicator={{ indicatorType: 'Shimmer' }} allowSorting={true} allowFiltering={true} taskFields={this.taskFields} splitterSettings={this.splitterSettings} height='450px'>
+import {GanttComponent,ColumnsDirective,ColumnDirective,Inject,Selection, VirtualScroll} from '@syncfusion/ej2-react-gantt';
+
+function App (){
+   const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    parentID: 'parentID'
+  };
+  const splitterSettings = {
+    columnIndex: 2
+  };
+  const labelSettings = {
+    taskLabel: 'Progress'
+  };
+    return (
+          <GanttComponent dataSource={virtualData} treeColumnIndex={1} labelSettings={labelSettings}
+            allowSelection={true} highlightWeekends={true} enableVirtualization={true} loadingIndicator= {{ indicatorType: 'Shimmer' }} allowSorting={true} allowFiltering={true} taskFields={taskFields} splitterSettings={splitterSettings} height='450px'>
             <ColumnsDirective>
                     <ColumnDirective field='TaskID'/>
                     <ColumnDirective field='TaskName' headerText='Task Name'/>
@@ -210,10 +212,7 @@ class App extends React.Component {
                     <ColumnDirective field='Duration'/>
                     <ColumnDirective field='Progress'/>
                 </ColumnsDirective>
-            <Inject services={[Selection, VirtualScroll, Sort, Filter]}/>
-          </GanttComponent>);
-    }
-}
-;
+            <Inject services={[Selection, VirtualScroll, Sort, Filter]} />
+          </GanttComponent>)
+};
 ReactDOM.render(<App />, document.getElementById('root'));
-{% endraw %}

@@ -1,3 +1,6 @@
+
+
+
 import { GanttComponent, Inject, Edit, Selection, ColumnsDirective, ColumnDirective, AddDialogFieldsDirective, EditDialogFieldsDirective, EditDialogFieldDirective, AddDialogFieldDirective, Toolbar } from '@syncfusion/ej2-react-gantt';
 import { CheckBox } from "@syncfusion/ej2-buttons";
 import { TextBox, NumericTextBox, MaskedTextBox } from "@syncfusion/ej2-inputs";
@@ -6,10 +9,9 @@ import { DropDownList } from "@syncfusion/ej2-dropdowns";
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { data } from './datasource';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App () {
+    
+       const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -17,61 +19,61 @@ class App extends React.Component {
             progress: 'Progress',
             child: 'subtasks'
         };
-        this.editOptions = {
-            allowAdding: true,
-            allowEditing: true,
-            allowDeleting: true,
-            mode: "Dialog"
+        const editOptions = {
+        allowAdding: true,
+        allowEditing: true,
+        allowDeleting: true,
+        mode: "Dialog"
         };
-        this.toolbarOptions = ['Add', 'Edit', 'Delete', 'Cancel', 'Update', 'ExpandAll', 'CollapseAll', 'Search'];
-    }
-    ;
-    divElement;
-    inputs = {
-        booleanedit: CheckBox,
-        dropdownedit: DropDownList,
-        datepickeredit: DatePicker,
-        datetimepickeredit: DateTimePicker,
-        maskededit: MaskedTextBox,
-        numericedit: NumericTextBox,
-        stringedit: TextBox
+        const toolbarOptions = ['Add', 'Edit', 'Delete', 'Cancel', 'Update', 'ExpandAll', 'CollapseAll', 'Search'];
+    
+    let  divElement;
+    let ganttInstance;
+    const inputs = {
+       booleanedit: CheckBox,
+       dropdownedit: DropDownList,
+       datepickeredit: DatePicker,
+       datetimepickeredit: DateTimePicker,
+       maskededit: MaskedTextBox,
+       numericedit: NumericTextBox,
+       stringedit: TextBox
+     };
+    function actionBegin(args) {
+        if (args.requestType === "beforeOpenEditDialog" || args.requestType === "beforeOpenAddDialog" ) {
+          var column = ganttInstance.columnByField["CustomField"];
+          divElement = ganttInstance.createElement("div", {
+            className: "e-edit-form-column"
+          });
+          var inputElement;
+          inputElement = ganttInstance.createElement("input", {
+            attrs: {
+              type: "text",
+              id: ganttInstance.controlId + "" + column.field,
+              name: column.field,
+              title: column.field
+            }
+          });
+          divElement.appendChild(inputElement);
+          var input = {
+            enabled: true,
+            floatLabelType: "Auto",
+            placeholder: "CustomField",
+            value: args.rowData.CustomField
+          };
+          var inputObj = new inputs[column.editType](input);
+          inputObj.appendTo(inputElement);
+        }
     };
-    actionBegin(args) {
-        if (args.requestType === "beforeOpenEditDialog" || args.requestType === "beforeOpenAddDialog") {
-            var column = this.ganttInstance.columnByField["CustomField"];
-            this.divElement = this.ganttInstance.createElement("div", {
-                className: "e-edit-form-column"
-            });
-            var inputElement;
-            inputElement = this.ganttInstance.createElement("input", {
-                attrs: {
-                    type: "text",
-                    id: this.ganttInstance.controlId + "" + column.field,
-                    name: column.field,
-                    title: column.field
-                }
-            });
-            this.divElement.appendChild(inputElement);
-            var input = {
-                enabled: true,
-                floatLabelType: "Auto",
-                placeholder: "CustomField",
-                value: args.rowData.CustomField
-            };
-            var inputObj = new this.inputs[column.editType](input);
-            inputObj.appendTo(inputElement);
-        }
-    }
-    ;
-    actionComplete(args) {
+   function  actionComplete(args) {
         if (args.requestType === "openEditDialog" || args.requestType === "openAddDialog") {
-            var generalTab = document.getElementById(this.ganttInstance.controlId + "GeneralTabContainer");
-            generalTab.appendChild(this.divElement);
+          var generalTab = document.getElementById(
+           ganttInstance.controlId + "GeneralTabContainer"
+          );
+          generalTab.appendChild(divElement);
         }
-    }
-    ;
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} allowSelection={true} editSettings={this.editOptions} toolbar={this.toolbarOptions} actionBegin={this.actionBegin.bind(this)} actionComplete={this.actionComplete.bind(this)} ref={gantt => this.ganttInstance = gantt} height='400px'>
+      };
+        return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true} editSettings={editOptions}
+        toolbar={toolbarOptions} actionBegin={actionBegin} actionComplete={actionComplete} ref={gantt => ganttInstance = gantt} height='400px'>
          <ColumnsDirective>
                 <ColumnDirective field='TaskID' width='150'></ColumnDirective>
                 <ColumnDirective field='TaskName' width='250'></ColumnDirective>
@@ -95,7 +97,8 @@ class App extends React.Component {
             </EditDialogFieldsDirective>
          <Inject services={[Edit, Selection, Toolbar]}/>
         </GanttComponent>;
-    }
-}
-;
+};
 ReactDOM.render(<App />, document.getElementById('root'));
+
+
+

@@ -3,9 +3,9 @@ import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnMenu, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-gantt';
 import { Inject, Sort } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component {
-    ganttInstance;
-    taskFields = {
+function App(){
+    let ganttInstance;
+    const taskFields = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -13,29 +13,29 @@ class App extends React.Component {
         progress: 'Progress',
         child: 'subtasks'
     };
-    columnMenuItems = [{ text: 'Clear Sorting', id: 'ganttclearsorting' }];
-    sortSettings = { columns: [{ direction: "Ascending", field: "TaskName" }] };
-    columnMenuClick(args) {
-        if (args.item.id === 'ganttclearsorting') {
-            this.clearSorting();
+    const columnMenuItems =  [{text:'Clear Sorting', id:'ganttclearsorting'}];
+    const sortSettings = { columns:[{direction: "Ascending", field: "TaskName"}] };
+    function columnMenuClick(args){
+        if(args.item.id === 'ganttclearsorting'){
+            ganttInstance.clearSorting();
         }
     }
-    splitterSettings = {
-        columnIndex: 5
+
+   const splitterSettings = {
+        columnIndex : 5
     };
-    render() {
         return (<div>
-        <GanttComponent dataSource={data} taskFields={this.taskFields} showColumnMenu={true} columnMenuItems={this.columnMenuItems} columnMenuClick={this.columnMenuClick} sortSettings={this.sortSettings} allowSorting={true} splitterSettings={this.splitterSettings} height='450px' ref={gantt => this.ganttInstance = gantt}>
+        <GanttComponent dataSource={data} taskFields={taskFields} showColumnMenu={true}
+        columnMenuItems={columnMenuItems} columnMenuClick={columnMenuClick} sortSettings={sortSettings} allowSorting={true}
+        splitterSettings={splitterSettings} height = '450px' ref={gantt =>ganttInstance = gantt}>
         <ColumnsDirective>
-            <ColumnDirective field='TaskID' width='100'></ColumnDirective>
+            <ColumnDirective field='TaskID' width='100' ></ColumnDirective>
             <ColumnDirective field='TaskName' headerText='Task Name'></ColumnDirective>
             <ColumnDirective field='StartDate'></ColumnDirective>
             <ColumnDirective field='Duration'></ColumnDirective>
             <ColumnDirective field='Progress'></ColumnDirective>
         </ColumnsDirective>
-        <Inject services={[ColumnMenu, Sort]}/>
-        </GanttComponent></div>);
-    }
-}
-;
+        <Inject services={[ColumnMenu, Sort]} />
+        </GanttComponent></div>)
+};
 ReactDOM.render(<App />, document.getElementById('root'));

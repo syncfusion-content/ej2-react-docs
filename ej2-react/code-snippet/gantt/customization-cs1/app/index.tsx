@@ -1,12 +1,9 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { GanttComponent } from "@syncfusion/ej2-react-gantt";
 import { data } from "./datasource";
-class App extends React.Component<{}, {}> {
-  public taskFields: any = {
+function App() {
+  const taskFields: any = {
     id: "TaskID",
     name: "TaskName",
     startDate: "StartDate",
@@ -15,7 +12,7 @@ class App extends React.Component<{}, {}> {
     child: "subtasks"
   };
 
-  public TaskbarTemplate(props: any) {
+  function TaskbarTemplate(props: any) {
     return (
       <div
         className="e-gantt-child-taskbar-inner-div e-gantt-child-taskbar"
@@ -46,7 +43,7 @@ class App extends React.Component<{}, {}> {
       </div>
     );
   }
-  public ParentTaskbarTemplate(props: any) {
+  function ParentTaskbarTemplate(props: any) {
     return (
       <div
         className="e-gantt-parent-taskbar-inner-div e-gantt-parent-taskbar"
@@ -74,7 +71,7 @@ class App extends React.Component<{}, {}> {
       </div>
     );
   }
-  public MilestoneTemplate(props: any) {
+  function MilestoneTemplate(props: any) {
     return (
       <div className="e-gantt-milestone" style={{ position: "absolute" }}>
         <div
@@ -97,21 +94,16 @@ class App extends React.Component<{}, {}> {
       </div>
     );
   }
-  render() {
     return (
       <GanttComponent
         dataSource={data}
         rowHeight={60}
-        taskFields={this.taskFields}
-        taskbarTemplate={this.TaskbarTemplate.bind(this)}
-        parentTaskbarTemplate={this.ParentTaskbarTemplate.bind(this)}
-        milestoneTemplate={this.MilestoneTemplate.bind(this)}
+        taskFields={taskFields}
+        taskbarTemplate={TaskbarTemplate}
+        parentTaskbarTemplate={ParentTaskbarTemplate}
+        milestoneTemplate={MilestoneTemplate}
         height="450px"
       />
     );
-  }
 }
 ReactDOM.render(<App />, document.getElementById("root"));
-
-
-{% endraw %}

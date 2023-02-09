@@ -1,11 +1,9 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -13,8 +11,7 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
+        return <GanttComponent dataSource={data} taskFields={taskFields}
         height = '450px'>
             <ColumnsDirective>
                 <ColumnDirective field='TaskID' width='100' hideAtMedia = '(min-width:700px)'></ColumnDirective>
@@ -28,8 +25,5 @@ class App extends React.Component<{}, {}>{
                 <ColumnDirective field='Progress'></ColumnDirective>
             </ColumnsDirective>
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

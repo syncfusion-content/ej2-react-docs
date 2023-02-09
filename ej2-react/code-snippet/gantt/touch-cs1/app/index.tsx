@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, Selection } from '@syncfusion/ej2-react-gantt';
@@ -28,8 +26,8 @@ const data: object[] = [
                 ]
             },
         ];
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function  App(){
+    const  taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -38,20 +36,16 @@ class App extends React.Component<{}, {}>{
         dependency: 'Predecessor',
         child: 'subtasks'
     };
-    public editSettings: any = {
+   const  editSettings: any = {
         allowTaskbarEditing: true
     };
-    private ganttInstance:any;
-    public load() {
-        this.ganttInstance.isAdaptive = true;  // Forcing desktop layout to change as mobile layout
+   let ganttInstance:any;
+    function load() {
+        ganttInstance.isAdaptive = true;  // Forcing desktop layout to change as mobile layout
     }
-    render() {
-        return <GanttComponent dataSource={data} ref={gantt => this.ganttInstance = gantt} taskFields={this.taskFields}
-        editSettings={this.editSettings} height = '400px' load={this.load.bind(this)}>
+        return <GanttComponent dataSource={data} ref={gantt => ganttInstance = gantt} taskFields={taskFields}
+        editSettings={editSettings} height = '400px' load={load}>
             <Inject services={[Edit, Selection]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

@@ -4,8 +4,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, EditSettingsModel, Selection } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function  App(){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -13,23 +13,24 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public ganttInstance:any;
-  public editOptions: EditSettingsModel = {
+  let ganttInstance:any;
+ const  editOptions: EditSettingsModel = {
       allowEditing: true,
       allowAdding:true
   };
-  collapsing(args) {
-    if (this.gantt.ganttChartModule.isExpandCollapseFromChart) {
+  let gantt;
+ function collapsing(args:any) {
+    if (gantt.ganttChartModule.isExpandCollapseFromChart) {
         args.cancel = true;
     }
   };
-    render() {
+    
         return (<div>
-        <GanttComponent dataSource={data} ref={gantt => this.ganttInstance = gantt} taskFields={this.taskFields} collapsing={this.collapsing.bind(this)} allowSelection={true}
-        editSettings={this.editOptions} height = '450px'>
+        <GanttComponent dataSource={data} ref={gantt => ganttInstance = gantt} taskFields={taskFields} collapsing={collapsing} allowSelection={true}
+        editSettings={editOptions} height = '450px'>
             <Inject services={[Edit, Selection]} />
         </GanttComponent></div>)
-    }
+    
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 

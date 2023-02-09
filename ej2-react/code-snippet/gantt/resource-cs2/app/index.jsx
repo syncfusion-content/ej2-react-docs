@@ -59,10 +59,8 @@ let data = [
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App(){
+        const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -71,25 +69,21 @@ class App extends React.Component {
             resourceInfo: 'resources',
             child: 'subtasks'
         };
-        this.resourceFields = {
+        const resourceFields = {
             id: 'resourceId',
             name: 'resourceName',
             unit: 'Unit'
         };
-        this.labelSettings = {
+        const labelSettings = {
             rightLabel: 'resources'
         };
-    }
-    render() {
-        return <GanttComponent id='root' dataSource={data} taskFields={this.taskFields} resourceFields={this.resourceFields} labelSettings={this.labelSettings} resources={ProjectResources} height='450px'>
+        return <GanttComponent id='root' dataSource={ data } taskFields = { taskFields } resourceFields={resourceFields} labelSettings = {labelSettings } resources = { ProjectResources } height = '450px' >
             <ColumnsDirective>
-            <ColumnDirective field='TaskID' visible='false'> </ColumnDirective>
-            <ColumnDirective field='TaskName' headerText='Task Name' width='180'> </ColumnDirective>
-            <ColumnDirective field='resources' headerText='Resources' width='160'> </ColumnDirective>
-            <ColumnDirective field='Duration' width='100'> </ColumnDirective>
+            <ColumnDirective field= 'TaskID' visible= 'false' > </ColumnDirective>
+            < ColumnDirective field= 'TaskName'  headerText= 'Task Name'  width= '180' > </ColumnDirective>
+            < ColumnDirective field= 'resources'  headerText= 'Resources'  width= '160' > </ColumnDirective>
+            < ColumnDirective field= 'Duration'  width= '100' > </ColumnDirective>
             </ColumnsDirective>
         </GanttComponent>;
-    }
-}
-;
+};
 ReactDOM.render(<App />, document.getElementById('root'));

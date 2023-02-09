@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Toolbar, ToolbarItem , ZoomTimelineSettings}from '@syncfusion/ej2-react-gantt';
@@ -40,8 +38,8 @@ let customZoomingLevels: ZoomTimelineSettings[] =  [{
                 timelineViewMode: 'Day', weekStartDay: 0, updateTimescaleView: true, weekendBackground: null, showTooltip: true
             },
 ];
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+   const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -50,20 +48,16 @@ class App extends React.Component<{}, {}>{
     dependency: 'Predecessor',
     child: 'subtasks'
   };
-   private ganttInstance:any;
-   public dataBound() {
-       this.ganttInstance.zoomingLevels = customZoomingLevels;
+   let ganttInstance:any;
+ function dataBound() {
+       ganttInstance.zoomingLevels = customZoomingLevels;
   };
-  public toolbarOptions: ToolbarItem[] = ['ZoomIn','ZoomOut','ZoomToFit'];
-    render() {
+ const toolbarOptions: ToolbarItem[] = ['ZoomIn','ZoomOut','ZoomToFit'];
         return <GanttComponent dataSource={data}
-        ref={gantt => this.ganttInstance = gantt} taskFields={this.taskFields}  
-        dataBound = {this.dataBound.bind(this)} toolbar={this.toolbarOptions}
+        ref={gantt => ganttInstance = gantt} taskFields={taskFields}  
+        dataBound = {dataBound} toolbar={toolbarOptions}
         height = '450px'>
            <Inject services={[Toolbar]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

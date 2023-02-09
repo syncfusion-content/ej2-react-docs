@@ -21,34 +21,32 @@ let data = [
             { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 70 }
         ]
     },
-];
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        child: 'subtasks'
+  ];
+  
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
+  import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+  
+  function App(){
+      const taskFields = {
+      id: 'TaskID',
+      name: 'TaskName',
+      startDate: 'StartDate',
+      duration: 'Duration',
+      progress: 'Progress',
+      child: 'subtasks'
     };
-    queryTaskbarInfo(args) {
-        if (args.data.Progress == 50) {
-            args.progressBarBgColor = "red";
-        }
-        else if (args.data.Progress == 70) {
-            args.progressBarBgColor = "yellow";
-        }
-        else if (args.data.Progress == 80) {
-            args.progressBarBgColor = "lightgreen";
-        }
-    }
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} queryTaskbarInfo={this.queryTaskbarInfo.bind(this)} height='450px'>
-        </GanttComponent>;
-    }
-}
-;
-ReactDOM.render(<App />, document.getElementById('root'));
+    function queryTaskbarInfo(args) {
+              if (args.data.Progress == 50) {
+                      args.progressBarBgColor = "red";
+                  } else if (args.data.Progress == 70) {
+                      args.progressBarBgColor = "yellow";
+                  } else if (args.data.Progress == 80) {
+                      args.progressBarBgColor = "lightgreen";
+                  }
+              }
+          return <GanttComponent dataSource={data} taskFields={taskFields}
+          queryTaskbarInfo={queryTaskbarInfo} height = '450px'>
+          </GanttComponent>
+  };
+  ReactDOM.render(<App />, document.getElementById('root'));

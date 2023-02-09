@@ -22,28 +22,31 @@ let GanttData = [
         ]
     },
 ];
+
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        progress: 'Progress',
-        duration: 'Duration',
-        baselineStartDate: 'BaselineStartDate',
-        baselineEndDate: 'BaselineEndDate',
-        child: 'subtasks'
-    };
-    render() {
-        return <GanttComponent dataSource={GanttData} renderBaseline={true} baselineColor='red' taskFields={this.taskFields} height='400px'>
+
+function App (){
+   const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    progress:'Progress',
+    duration:'Duration',
+    baselineStartDate: 'BaselineStartDate',
+    baselineEndDate: 'BaselineEndDate',
+    child: 'subtasks'
+  };
+  
+        return <GanttComponent dataSource={GanttData} renderBaseline={true} baselineColor='red'
+        taskFields={taskFields} height = '400px'>
             <ColumnsDirective>
-              <ColumnDirective field='BaselineStartDate' headerText='Planned start time'></ColumnDirective>
-              <ColumnDirective field='BaselineEndDate' headerText='Planned end time'></ColumnDirective>
+              <ColumnDirective field='BaselineStartDate' headerText='Planned start time' ></ColumnDirective>
+              <ColumnDirective field='BaselineEndDate' headerText='Planned end time' ></ColumnDirective>
             </ColumnsDirective>
-        </GanttComponent>;
-    }
-}
-;
+        </GanttComponent>
+    
+};
 ReactDOM.render(<App />, document.getElementById('root'));

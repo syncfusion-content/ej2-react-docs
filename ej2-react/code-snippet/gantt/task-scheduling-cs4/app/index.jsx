@@ -25,10 +25,8 @@ let GanttData = [
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function  App() {
+        const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -37,16 +35,13 @@ class App extends React.Component {
             progress: 'Progress',
             child: 'subtasks'
         };
-        this.editSettings = {
+const editSettings = {
             allowEditing: true,
             allowTaskbarEditing: true,
         };
-    }
-    render() {
-        return <GanttComponent dataSource={GanttData} taskFields={this.taskFields} editSettings={this.editSettings} allowUnscheduledTasks={true} height='400px'>
-        <Inject services={[Edit]}/>
+    
+        return < GanttComponent dataSource={GanttData} taskFields={taskFields} editSettings={editSettings} allowUnscheduledTasks={true} height='400px'>
+<Inject services={[Edit]}/>
         </GanttComponent>;
-    }
-}
-;
+};
 ReactDOM.render(<App />, document.getElementById('root'));

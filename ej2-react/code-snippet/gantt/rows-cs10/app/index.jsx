@@ -25,10 +25,8 @@ let data = [
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App (){
+       const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -36,21 +34,17 @@ class App extends React.Component {
             progress: 'Progress',
             child: 'subtasks'
         };
+  function  queryTaskbarInfo(args) {
+         if (args.data['TaskID'] == 4) {
+         args.rowElement.style.background = 'cyan';
+  }
     }
-    queryTaskbarInfo(args) {
+   function rowDataBound(args) {
         if (args.data['TaskID'] == 4) {
-            args.rowElement.style.background = 'cyan';
-        }
+        args.row.style.background = 'cyan';
+  }
     }
-    rowDataBound(args) {
-        if (args.data['TaskID'] == 4) {
-            args.row.style.background = 'cyan';
-        }
-    }
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} queryTaskbarInfo={this.queryTaskbarInfo.bind(this)} rowDataBound={this.rowDataBound.bind(this)} height='450px'>
-        </GanttComponent>;
-    }
-}
-;
+        return <GanttComponent dataSource={data} taskFields={taskFields} queryTaskbarInfo={queryTaskbarInfo} rowDataBound={rowDataBound} height='450px'>
+        </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));

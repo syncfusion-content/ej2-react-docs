@@ -1,6 +1,3 @@
-
-
-
 let DropData: any[] =  [
   { text: 'Parent', value: 'Parent' },
   { text: 'Child', value: 'Child' },
@@ -12,9 +9,9 @@ import * as ReactDOM from 'react-dom';
 import { DropDownListComponent, ChangeEventArgs } from "@syncfusion/ej2-react-dropdowns";
 import { GanttComponent, Inject, Filter } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    private ganttInstance: any;
-    public taskFields: any = {
+function App(){
+    let ganttInstance: any;
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -22,21 +19,17 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public onChange(sel: ChangeEventArgs): void {
+  function onChange(sel: ChangeEventArgs): void {
         let mode:any = sel.value.toString();
-        this.ganttInstance.filterSettings.hierarchyMode = mode;
-        this.ganttInstance.clearFiltering();
+        ganttInstance.filterSettings.hierarchyMode = mode;
+        ganttInstance.clearFiltering();
     }
-    render() {
-        return(<div>
+    return(<div>
         <DropDownListComponent dataSource={DropData}
-        change={this.onChange.bind(this) as any} width= {150} value="Parent"></DropDownListComponent>
-        <GanttComponent dataSource={data} taskFields={this.taskFields}
-         allowFiltering={true} height = '450px' ref={gantt => this.ganttInstance = gantt}>
+        change={onChange} width= {150} value="Parent"></DropDownListComponent>
+        <GanttComponent dataSource={data} taskFields={taskFields}
+         allowFiltering={true} height = '450px' ref={gantt => ganttInstance = gantt}>
           <Inject services={[Filter]} />
         </GanttComponent></div>)
-    }
-};
+    };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

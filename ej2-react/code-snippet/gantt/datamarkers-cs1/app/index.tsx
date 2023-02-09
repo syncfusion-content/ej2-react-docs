@@ -1,5 +1,3 @@
-
-
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -54,8 +52,8 @@ const data: object[] = [
             ]
         },
     ];
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -66,11 +64,7 @@ class App extends React.Component<{}, {}>{
         child: 'subtasks',
         indicators: 'Indicators'
     };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} height = '400px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields} height = '400px'>
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

@@ -3,36 +3,34 @@ import * as ReactDOM from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { GanttComponent, Inject, Edit, Selection } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        child: 'subtasks'
+function App(){
+    const  taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    child: 'subtasks'
+  };
+  const  editOptions = {
+      allowEditing: true
+  };
+  let ganttInstance;
+ function clickHandler(){
+    let data = {
+        TaskID: 3,
+        TaskName: 'Updated by index value',
+        StartDate: new Date('04/02/2019'),
+        Duration: 4,
+        Progress: 50
     };
-    editOptions = {
-        allowEditing: true
-    };
-    ganttInstance;
-    clickHandler() {
-        let data = {
-            TaskID: 3,
-            TaskName: 'Updated by index value',
-            StartDate: new Date('04/02/2019'),
-            Duration: 4,
-            Progress: 50
-        };
-        this.ganttInstance.updateRecordByID(data);
-    }
-    render() {
-        return (<div>
-        <ButtonComponent onClick={this.clickHandler.bind(this)}>Update Record</ButtonComponent>
-        <GanttComponent dataSource={data} ref={gantt => this.ganttInstance = gantt} taskFields={this.taskFields} allowSelection={true} editSettings={this.editOptions} height='450px'>
-            <Inject services={[Edit, Selection]}/>
-        </GanttComponent></div>);
-    }
+    ganttInstance.updateRecordByID(data);
 }
-;
+        return (<div>
+        <ButtonComponent onClick= { clickHandler}>Update Record</ButtonComponent>
+        <GanttComponent dataSource={data}  ref={gantt => ganttInstance = gantt} taskFields={taskFields} allowSelection={true}
+        editSettings={editOptions} height = '450px'>
+            <Inject services={[Edit, Selection]} />
+        </GanttComponent></div>)
+};
 ReactDOM.render(<App />, document.getElementById('root'));

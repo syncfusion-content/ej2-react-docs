@@ -2,24 +2,22 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, DayMarkers, EventMarkersDirective, EventMarkerDirective } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        child: 'subtasks'
-    };
-    eventMarkerDay = new Date('4/10/2019');
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} height='450px'>
+
+function App (){
+    const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    child: 'subtasks'
+  };
+  const eventMarkerDay = new Date('4/10/2019');
+        return <GanttComponent dataSource={data} taskFields={taskFields} height = '450px'>
         <EventMarkersDirective>
-              <EventMarkerDirective day={this.eventMarkerDay} cssClass='e-custom-event-marker' label='Project approval and kick-off'></EventMarkerDirective>
+              <EventMarkerDirective day={eventMarkerDay} cssClass='e-custom-event-marker'  label='Project approval and kick-off' ></EventMarkerDirective>
         </EventMarkersDirective>
-            <Inject services={[DayMarkers]}/>
-        </GanttComponent>;
-    }
-}
-;
+            <Inject services={[DayMarkers]} />
+        </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));

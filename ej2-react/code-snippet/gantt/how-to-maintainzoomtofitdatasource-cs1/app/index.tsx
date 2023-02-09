@@ -5,9 +5,9 @@ import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Toolbar, ToolbarItem }from '@syncfusion/ej2-react-gantt';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { data, changeData } from './datasource';
-class App extends React.Component<{}, {}>{
-    private ganttInstance: any;
-    public taskFields: any = {
+function  App(){
+    let ganttInstance: any;
+    const  taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -16,21 +16,19 @@ class App extends React.Component<{}, {}>{
     dependency: 'Predecessor',
     child: 'subtasks'
   };
-  public toolbarOptions: ToolbarItem[] = ['ZoomToFit'];
-  public clickHandler() {
-    this.ganttInstance.dataSource = changeData;
+  const  toolbarOptions: ToolbarItem[] = ['ZoomToFit'];
+ function  clickHandler() {
+    ganttInstance.dataSource = changeData;
   };
-  dataBound(args) {
-    this.ganttInstance.fitToProject();
+ function dataBound(args) {
+    ganttInstance.fitToProject();
   };
-    render() {
         return (<div>
-        <ButtonComponent onClick= { this.clickHandler.bind(this)}>Change Data</ButtonComponent>
-        <GanttComponent dataSource={data} taskFields={this.taskFields} dataBound={this.dataBound.bind(this)}
-        toolbar={this.toolbarOptions} height = '450px' ref={gantt => this.ganttInstance = gantt}>
+        <ButtonComponent onClick= { clickHandler}>Change Data</ButtonComponent>
+        <GanttComponent dataSource={data} taskFields={taskFields} dataBound={dataBound}
+        toolbar={toolbarOptions} height = '450px' ref={gantt => ganttInstance = gantt}>
            <Inject services={[Toolbar]} />
         </GanttComponent></div>)
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 

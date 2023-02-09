@@ -1,13 +1,11 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 import { QueryCellInfoEventArgs } from '@syncfusion/ej2-react-gantt';
 
-class App extends React.Component<{}, {}>{
-    public queryCellInfoEvent = (args: QueryCellInfoEventArgs) => {
+function App(){
+    const queryCellInfoEvent = (args: QueryCellInfoEventArgs) => {
         switch(args.data.TaskID) {
             case 1:
             if ((args.column.field == 'work1') && (args.data.taskData.work1 == 'support')) {
@@ -41,7 +39,7 @@ class App extends React.Component<{}, {}>{
             break;
         }
     }
-    public taskFields: any = {
+    const  taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -51,12 +49,11 @@ class App extends React.Component<{}, {}>{
         work1: 'work1',
         work2: 'work2',
     };
-    public splitterSettings: any = {
+    const splitterSettings: any = {
         position : '75%'
     };
-    render() {
         return (<div>
-        <GanttComponent dataSource={data} taskFields={this.taskFields} queryCellInfo={this.queryCellInfoEvent} splitterSettings={this.splitterSettings} gridLines='Both' height='450px' ref={gantt => this.ganttInstance = gantt}>
+        <GanttComponent dataSource={data} taskFields={taskFields} queryCellInfo={queryCellInfoEvent} splitterSettings={splitterSettings} gridLines='Both' height='450px' ref={gantt => ganttInstance = gantt}>
          <ColumnsDirective>
             <ColumnDirective field='TaskID' width='100' ></ColumnDirective>
             <ColumnDirective field='TaskName' headerText='Task Name'></ColumnDirective>
@@ -66,10 +63,6 @@ class App extends React.Component<{}, {}>{
             <ColumnDirective field='Duration'></ColumnDirective>
             <ColumnDirective field='Progress'></ColumnDirective>
         </ColumnsDirective>
-        </GanttComponent></div>);
-    }
-}
-;
+        </GanttComponent></div>)
+};
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

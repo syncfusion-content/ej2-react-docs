@@ -21,34 +21,33 @@ let data = [
             { TaskID: 8, TaskName: 'Estimation approval', BaselineStartDate: new Date('04/02/2019'), BaselineEndDate: new Date('04/02/2019'), StartDate: new Date('04/04/2019'), Duration: 0, Progress: 50 }
         ]
     },
-];
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    ganttInstance;
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        baselineStartDate: 'BaselineStartDate',
-        baselineEndDate: 'BaselineEndDate',
-        child: 'subtasks'
+  ];
+  
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
+  import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
+  
+  function App(){
+      let ganttInstance;
+      const  taskFields = {
+      id: 'TaskID',
+      name: 'TaskName',
+      startDate: 'StartDate',
+      duration: 'Duration',
+      progress: 'Progress',
+      baselineStartDate: 'BaselineStartDate',
+      baselineEndDate: 'BaselineEndDate',
+      child: 'subtasks'
     };
-    tooltipTemplate(props) {
-        return (<div>Baseline StartDate : {this.ganttInstance.getFormatedDate(props.BaselineStartDate)}</div>);
-    }
-    ;
-    template = this.tooltipTemplate;
-    tooltipSettings = {
-        baseline: this.template.bind(this)
+    function tooltipTemplate(props) {
+      return (<div>Baseline StartDate : {ganttInstance.getFormatedDate(props.BaselineStartDate)}</div>)
     };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} tooltipSettings={this.tooltipSettings} renderBaseline={true} baselineColor="red" height='450px' ref={gantt => this.ganttInstance = gantt}>
-          </GanttComponent>;
-    }
-}
-;
-ReactDOM.render(<App />, document.getElementById('root'));
+    const template = tooltipTemplate;
+    const tooltipSettings = {
+      baseline: template
+    };
+          return <GanttComponent dataSource={data} taskFields={taskFields}
+             tooltipSettings={tooltipSettings} renderBaseline={true} baselineColor="red" height = '450px' ref={gantt => ganttInstance = gantt}>
+            </GanttComponent>
+  };
+  ReactDOM.render(<App />, document.getElementById('root'));

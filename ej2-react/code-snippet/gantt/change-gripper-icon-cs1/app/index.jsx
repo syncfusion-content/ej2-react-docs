@@ -31,8 +31,9 @@ const data = [
 import { GanttComponent, Inject, Edit, Filter, Sort } from '@syncfusion/ej2-react-gantt';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-class App extends React.Component {
-    taskFields = {
+
+function App() {
+    const taskFields = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -42,23 +43,21 @@ class App extends React.Component {
         dependency: 'Predecessor',
         resourceInfo: 'resources'
     };
-    labelSettings = {
+    const labelSettings = {
         rightLabel: 'resources'
     };
-    editSettings = {
+    const editSettings = {
         allowEditing: true,
         editMode: 'Auto',
         allowTaskbarEditing: true
     };
-    resourceFields = {
+    const resourceFields = {
         id: 'resourceId',
         name: 'resourceName',
     };
-    render() {
-        return <GanttComponent dataSource={data} allowFiltering={true} allowSorting={true} taskFields={this.taskFields} editSettings={this.editSettings} labelSettings={this.labelSettings} resourceFields={this.resourceFields} resources={projectResources} height='400px'>
-            <Inject services={[Edit, Filter, Sort]}/>
-        </GanttComponent>;
-    }
-}
-;
+        return <GanttComponent dataSource={data} allowFiltering={true} allowSorting={true} taskFields={taskFields} editSettings={editSettings} labelSettings={labelSettings}
+            resourceFields={resourceFields} resources={projectResources} height='400px'>
+            <Inject services={[Edit, Filter, Sort]} />
+        </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));

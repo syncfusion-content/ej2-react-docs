@@ -1,12 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Toolbar, PdfExport, Selection, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Toolbar, PdfExport, Selection, ColumnDirective, ColumnsDirective, PdfQueryCellInfoEventArgs } from '@syncfusion/ej2-react-gantt';
+import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import { PdfColor } from '@syncfusion/ej2-pdf-export';
 import { data } from './datasource';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App () {
+        const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -14,22 +13,20 @@ class App extends React.Component {
             progress: 'Progress',
             child: 'subtasks'
         };
-        this.toolbarOptions = ['PdfExport'];
-    }
-    toolbarClick(args) {
+       const toolbarOptions = ['PdfExport'];
+    let ganttChart;
+   function toolbarClick(args) {
         if (args.item.text === 'Pdf export') {
-            this.ganttChart.pdfExport();
+            ganttChart.pdfExport();
         }
-    }
-    ;
-    pdfQueryTaskbarInfo(args) {
-        if (args.data.Progress < 50 && !args.data.hasChildRecords) {
+    };
+    function pdfQueryTaskbarInfo(args) {
+        if(args.data.Progress < 50 && !args.data.hasChildRecords) {
             args.taskbar.progressColor = new PdfColor(205, 92, 92);
-            args.taskbar.taskColor = args.taskbar.taskBorderColor = new PdfColor(240, 128, 128);
+            args.taskbar.taskColor =  args.taskbar.taskBorderColor = new PdfColor(240, 128, 128);
         }
-    }
-    render() {
-        return <GanttComponent id='root' dataSource={data} taskFields={this.taskFields} toolbar={this.toolbarOptions} toolbarClick={this.toolbarClick.bind(this)} pdfQueryTaskbarInfo={this.pdfQueryTaskbarInfo} allowPdfExport={true} height='400px' ref={gantt => this.ganttChart = gantt}>
+      }
+        return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} pdfQueryTaskbarInfo = {pdfQueryTaskbarInfo} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
         <ColumnsDirective>
             <ColumnDirective field='TaskID' width='50'/>
             <ColumnDirective field='TaskName' headerText='Task Name' visible={false}/>
@@ -38,8 +35,6 @@ class App extends React.Component {
             <ColumnDirective field='Progress'/>
         </ColumnsDirective>
             <Inject services={[Toolbar, PdfExport, Selection]}/>
-        </GanttComponent>;
-    }
-}
-;
+        </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));

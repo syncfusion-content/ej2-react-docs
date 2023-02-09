@@ -1,11 +1,9 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject,Edit, Selection } from '@syncfusion/ej2-react-gantt';
 
-class App extends React.Component<{}, {}>{
-   public timezoneData: any = [
+function App(){
+  const timezoneData: any = [
     { taskID: 1, taskName: 'Project Schedule', startDate: new Date('02/04/2019 08:00'), endDate: new Date('03/10/2019')},
     { taskID: 2, taskName: 'Planning', startDate: new Date('02/04/2019 08:00'), endDate: new Date('02/10/2019'), parentID: 1},
     { taskID: 3, taskName: 'Plan timeline', startDate: new Date('02/04/2019 08:00'), endDate: new Date('02/10/2019'), duration: 6, progress: '60', parentID: 2 },
@@ -18,7 +16,7 @@ class App extends React.Component<{}, {}>{
     { taskID: 10, taskName: 'Get approval from customer', startDate: new Date('02/16/2019 08:00'), endDate: new Date('02/17/2019 08:00'), duration: 2, progress: '100', predecessor: '9FS', parentID: 7 },
     { taskID: 11, taskName: 'Design complete', startDate: new Date('02/17/2019 08:00'), endDate: new Date('02/17/2019 08:00'), duration: 0, predecessor: '10FS', parentID: 7 }
   ];
-  public taskFields: any = {
+  const taskFields: any = {
     id: 'taskID',
     name: 'taskName',
     startDate: 'startDate',
@@ -27,7 +25,7 @@ class App extends React.Component<{}, {}>{
     dependency: 'predecessor',
     parentID: 'parentID'
   };
-  public timelineSettings: any = {
+ const timelineSettings: any = {
     timelineUnitSize: 65,
     topTier: {
         unit: 'Day',
@@ -38,16 +36,12 @@ class App extends React.Component<{}, {}>{
         format: 'hh:mm a'
     }
   };
-  private dayWorkingTime: any = [{ from: 0, to: 24 }];
-  render() {
-    return <GanttComponent dataSource={this.timezoneData} taskFields={this.taskFields}
-                timelineSettings={this.timelineSettings} allowSelection={true}
+  let  dayWorkingTime: any = [{ from: 0, to: 24 }];
+    return <GanttComponent dataSource={timezoneData} taskFields={taskFields}
+                timelineSettings={timelineSettings} allowSelection={true}
           timezone='UTC' height='450px' dateFormat='hh:mm a'
-          dayWorkingTime={this.dayWorkingTime} durationUnit='Hour' includeWeekend={true}>
+          dayWorkingTime={dayWorkingTime} durationUnit='Hour' includeWeekend={true}>
                   <Inject services={[Edit, Selection]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

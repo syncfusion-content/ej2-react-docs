@@ -1,11 +1,9 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+   const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -13,16 +11,12 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public timelineSettings: any = {
+ const timelineSettings: any = {
     timelineViewMode:'Week',
     weekStartDay: 3
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-        timelineSettings={this.timelineSettings} height = '450px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields}
+        timelineSettings={timelineSettings} height = '450px'>
       </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

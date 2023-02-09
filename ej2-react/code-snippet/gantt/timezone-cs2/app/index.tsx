@@ -1,11 +1,9 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Selection, Edit } from '@syncfusion/ej2-react-gantt';
 
-class App extends React.Component<{}, {}>{
-   public timezoneData: any = [
+function App(){
+   const timezoneData: any = [
      {
        taskID: 1,
        taskName: 'Project Schedule',
@@ -101,7 +99,7 @@ class App extends React.Component<{}, {}>{
       predecessor: '10FS',
       parentID: 7
     }];
-  public taskFields: any = {
+  const taskFields: any = {
     id: 'taskID',
     name: 'taskName',
     startDate: 'startDate',
@@ -110,14 +108,14 @@ class App extends React.Component<{}, {}>{
     dependency: 'predecessor',
     parentID: 'parentID'
     };
-  public editSettings: any = {
+  const editSettings: any = {
     allowAdding: true,
     allowEditing: true,
     allowDeleting: true,
     allowTaskbarEditing: true,
     showDeleteConfirmDialog: true
     };
-  public timelineSettings: any = {
+  const timelineSettings: any = {
     timelineUnitSize: 65,
     topTier: {
       unit: 'Day',
@@ -128,18 +126,14 @@ class App extends React.Component<{}, {}>{
       format: 'hh:mm a'
     }
   };
-  public actionComplete(args: any) {
+  function actionComplete(args: any) {
     if(args.action == "TaskbarEditing") {
       console.log(args.data.ganttProperties.endDate);
     }
   }
-  private dayWorkingTime: any = [{ from: 0, to: 24 }];
-    render() {
-        return <GanttComponent dataSource={this.timezoneData} taskFields={this.taskFields} editSettings={this.editSettings} allowSelection={true} durationUnit='Hour' actionComplete={this.actionComplete.bind(this)} editSettings={this.editSettings} height = '450px' includeWeekend={true} dayWorkingTime={this.dayWorkingTime} timelineSettings={this.timelineSettings} >
+  let dayWorkingTime: any = [{ from: 0, to: 24 }];
+        return <GanttComponent dataSource={timezoneData} taskFields={taskFields} editSettings={editSettings} allowSelection={true} durationUnit='Hour' actionComplete={actionComplete}  height = '450px' includeWeekend={true} dayWorkingTime={dayWorkingTime} timelineSettings={timelineSettings} >
             <Inject services={[Edit, Selection]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

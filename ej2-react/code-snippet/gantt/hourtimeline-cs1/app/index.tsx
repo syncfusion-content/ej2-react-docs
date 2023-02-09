@@ -1,5 +1,3 @@
-
-
 let data: Object[]  = [
     {
         TaskID: 1,
@@ -29,8 +27,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+   const  taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -38,15 +36,11 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public timelineSettings: any = {
+  const timelineSettings: any = {
     timelineViewMode:'Hour'
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} dateFormat="M/d/yyyy hh:mm:ss tt" durationUnit="Minute"
-        timelineSettings={this.timelineSettings} height = '450px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields} dateFormat="M/d/yyyy hh:mm:ss tt" durationUnit="Minute"
+        timelineSettings={timelineSettings} height = '450px'>
       </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

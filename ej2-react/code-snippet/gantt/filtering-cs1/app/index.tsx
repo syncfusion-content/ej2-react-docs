@@ -1,12 +1,12 @@
-{% raw %}
+
 
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Filter } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -14,14 +14,11 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
+    return <GanttComponent dataSource={data} taskFields={taskFields}
          allowFiltering={true} height = '450px' filterSettings={{ type: 'Excel'}}>
             <Inject services={[Filter]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 
 
-{% endraw %}

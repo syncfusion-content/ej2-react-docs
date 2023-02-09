@@ -1,6 +1,3 @@
-
-
-
 let resourceCollection: object[] = [
     { resourceId: 1, resourceName: 'Martin Tamer', resourceGroup: 'Planning Team'},
     { resourceId: 2, resourceName: 'Rose Fuller', resourceGroup: 'Testing Team' },
@@ -69,10 +66,8 @@ let data = [
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Edit, Selection, Toolbar } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App() {
+   const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -82,40 +77,37 @@ class App extends React.Component {
             resourceInfo: 'resources',
             child: 'subtasks'
         };
-        this.resourceFields = {
+        const resourceFields = {
             id: 'resourceId',
             name: 'resourceName',
             unit: 'Unit',
             group: 'resourceGroup'
         };
-        this.editSettings = {
+        const editSettings = {
             allowAdding: true,
             allowEditing: true,
             allowDeleting: true,
             allowTaskbarEditing: true,
             showDeleteConfirmDialog: true
         };
-         this.toolbarOptions = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll',
+         const toolbarOptions = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll',
             { text: 'Show/Hide Overallocation', tooltipText: 'Show/Hide Overallocation', id: 'showhidebar' }];
-        this.labelSettings = {
+        const labelSettings = {
             rightLabel: 'resources',
             taskLabel: 'Progress'
         };
-        this.projectStartDate = new Date('03/28/2019');
-        this.projectEndDate = new Date('05/18/2019');
-    }
-    toolbarClick(args) {
+        const projectStartDate = new Date('03/28/2019');
+       const projectEndDate = new Date('05/18/2019');
+    let ganttInstance:any;
+   function  toolbarClick(args) {
         if (args.item.id === 'showhidebar') {
-            this.ganttInstance.showOverAllocation = this.ganttInstance.showOverAllocation ? false : true;
-        }
-    }
-    ;
-    render() {
+            ganttInstance.showOverAllocation = ganttInstance.showOverAllocation ? false : true;
+        }}
         return <GanttComponent id='root' dataSource = { data } treeColumnIndex = { 1} viewType = 'ResourceView' allowSelection = { true}
-        allowResizing = { true} highlightWeekends = { true} toolbar = { this.toolbarOptions } toolbarClick={this.toolbarClick.bind(this)}
-        editSettings = { this.editSettings } projectStartDate = { this.projectStartDate } projectEndDate = { this.projectEndDate }
-        resourceFields = { this.resourceFields } taskFields = { this.taskFields } labelSettings = { this.labelSettings }
-        resources = { resourceCollection } showOverAllocation = {true} ref={gantt => this.ganttInstance = gantt} >
+        allowResizing = { true} highlightWeekends = { true} toolbar = {toolbarOptions } toolbarClick={toolbarClick}
+        editSettings = {editSettings } projectStartDate = { projectStartDate } projectEndDate = { projectEndDate }
+        resourceFields = { resourceFields } taskFields = {taskFields } labelSettings = {labelSettings }
+        resources = { resourceCollection } showOverAllocation = {true} ref={gantt => ganttInstance = gantt} >
             <ColumnsDirective>
             <ColumnDirective field= 'TaskID' visible= {false} > </ColumnDirective>
             <ColumnDirective field= 'TaskName'  headerText= 'Task Name'  width= '180' > </ColumnDirective>
@@ -126,10 +118,6 @@ class App extends React.Component {
             <ColumnDirective field= 'Duration' > </ColumnDirective>
             </ColumnsDirective>
             <Inject services={[ Toolbar, Edit, Selection ]}/>
-            </GanttComponent>;
-    }
+            </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

@@ -2,24 +2,21 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, RowDD, Edit, Selection } from '@syncfusion/ej2-react-gantt';
 import { projectNewData } from './datasource';
-class App extends React.Component {
-    taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        child: 'subtasks'
-    };
-    selectionSettings = {
-        type: 'Multiple'
-    };
-    render() {
-        return <GanttComponent dataSource={projectNewData} taskFields={this.taskFields} allowRowDragAndDrop={true} selectionSettings={this.selectionSettings} height='450px'>
-        <Inject services={[RowDD, Edit, Selection]}/>
-        </GanttComponent>;
-    }
-}
-;
+function App(){
+    const taskFields = {
+      id: 'TaskID',
+      name: 'TaskName',
+      startDate: 'StartDate',
+      duration: 'Duration',
+      progress: 'Progress',
+      dependency: 'Predecessor',
+      child: 'subtasks'
+  };
+  const  selectionSettings = {
+    type: 'Multiple'
+  };
+        return <GanttComponent dataSource={projectNewData} taskFields={taskFields} allowRowDragAndDrop={true} selectionSettings={selectionSettings} height='450px'>
+        <Inject services={[RowDD, Edit, Selection]} />
+        </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));

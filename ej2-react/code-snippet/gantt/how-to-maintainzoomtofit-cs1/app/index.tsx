@@ -4,9 +4,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Toolbar, Edit, Selection, ToolbarItem }from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    private ganttInstance: any;
-    public taskFields: any = {
+function App (){
+    let  ganttInstance: any;
+   const  taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -15,29 +15,27 @@ class App extends React.Component<{}, {}>{
     dependency: 'Predecessor',
     child: 'subtasks'
   };
-  public editSettings: any = {
+  const  editSettings: any = {
     allowEditing: true,
     allowTaskbarEditing: true
   };
-  public toolbarOptions: ToolbarItem[] = ['Edit','ZoomToFit'];
-  actionComplete(args) {
+  const  toolbarOptions: ToolbarItem[] = ['Edit','ZoomToFit'];
+  function actionComplete(args) {
     if ((args.action === "CellEditing" || args.action === "DialogEditing") && args.requestType === "save") {
-        this.ganttInstance.dataSource = data;
-        this.ganttInstance.fitToProject();
+        ganttInstance.dataSource = data;
+        ganttInstance.fitToProject();
       }
   };
-  taskbarEdited(args) {
+  function taskbarEdited(args) {
       if (args) {
-        this.ganttInstance.dataSource = data;
-        this.ganttInstance.fitToProject();
+        ganttInstance.dataSource = data;
+        ganttInstance.fitToProject();
       }
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-        toolbar={this.toolbarOptions} editSettings={this.editSettings} actionComplete={this.actionComplete.bind(this)} taskbarEdited={this.taskbarEdited.bind(this)} height = '450px' ref={gantt => this.ganttInstance = gantt}>
+        return <GanttComponent dataSource={data} taskFields={taskFields}
+        toolbar={toolbarOptions} editSettings={editSettings} actionComplete={actionComplete} taskbarEdited={taskbarEdited} height = '450px' ref={gantt => ganttInstance = gantt}>
            <Inject services={[Toolbar, Edit, Selection]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -1,11 +1,9 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, EditSettingsModel } from '@syncfusion/ej2-react-gantt';
 import { data} from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
@@ -13,25 +11,21 @@ class App extends React.Component<{}, {}>{
         progress: 'Progress',
         child: 'subtasks'
     };
-    public editOptions: EditSettingsModel = {
+   const editOptions: EditSettingsModel = {
         allowTaskbarEditing: true
     };
-    public taskbarEditing(args: any){
+    function taskbarEditing(args: any){
         if (args.data.TaskID == 4) // We can't edit Task Id 4
             args.cancel = true;
     };
-    public queryTaskbarInfo(args: any) {
+    function queryTaskbarInfo(args: any) {
         if (args.data.TaskID == 6) {
             args.taskbarElement.className += ' e-preventEdit' // Taskbar editing indicators are disabled
         }
     };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-        editSettings={this.editOptions} taskbarEditing={this.taskbarEditing.bind(this)} height = '450px' queryTaskbarInfo={this.queryTaskbarInfo.bind(this)}>
+        return <GanttComponent dataSource={data} taskFields={taskFields}
+        editSettings={editOptions} taskbarEditing={taskbarEditing} height = '450px' queryTaskbarInfo={queryTaskbarInfo}>
         <Inject services={[Edit]} />
         </GanttComponent>
-    }
-};
+   };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

@@ -1,6 +1,3 @@
-
-
-
 let tempData: any[] = [
     {
         TaskID: 1, TaskName: 'Product concept',StartDate: new Date('04/02/2019'), EndDate: new Date('04/21/2019'),
@@ -187,10 +184,10 @@ for (let i: number = 0; i < 50; i++) {
 }
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent,ColumnsDirective,ColumnDirective,Inject,Selection, VirtualScroll } from '@syncfusion/ej2-react-gantt';
 
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App (){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -199,17 +196,16 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     parentID: 'parentID'
   };
-  public splitterSettings: any = {
+  const splitterSettings: any = {
     columnIndex: 2
   };
-  public labelSettings: any = {
+const labelSettings: any = {
     taskLabel: 'Progress'
   };
-  render() {
-    return (
-          <GanttComponent dataSource={virtualData} treeColumnIndex={1} labelSettings={this.labelSettings}
+  return (
+          <GanttComponent dataSource={virtualData} treeColumnIndex={1} labelSettings={labelSettings}
             allowSelection={true} highlightWeekends={true} enableVirtualization={true}
-            taskFields={this.taskFields} splitterSettings={this.splitterSettings} height='450px'>
+            taskFields={taskFields} splitterSettings={splitterSettings} height='450px'>
             <ColumnsDirective>
                     <ColumnDirective field='TaskID'/>
                     <ColumnDirective field='TaskName' headerText='Task Name'/>
@@ -219,9 +215,6 @@ class App extends React.Component<{}, {}>{
                 </ColumnsDirective>
             <Inject services={[Selection, VirtualScroll]} />
           </GanttComponent>
-    }
+    )
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

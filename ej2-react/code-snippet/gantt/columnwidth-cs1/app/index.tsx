@@ -1,11 +1,9 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Resize, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -13,12 +11,11 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public splitterSettings: any = {
+  const splitterSettings: any = {
       columnIndex: 6
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-        splitterSettings={this.splitterSettings} allowResizing={true} height = '450px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields}
+        splitterSettings={splitterSettings} allowResizing={true} height = '450px'>
             <ColumnsDirective>
                 <ColumnDirective field='TaskID' width='100' ></ColumnDirective>
                 <ColumnDirective field='TaskName' headerText='Task Name' minWidth='200' width='250' maxWidth='300'></ColumnDirective>
@@ -29,8 +26,5 @@ class App extends React.Component<{}, {}>{
             </ColumnsDirective>
             <Inject services={[Resize]} />
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

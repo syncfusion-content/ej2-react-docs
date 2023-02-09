@@ -1,6 +1,3 @@
-
-
-
 let resourceCollection: object[] = [
     { resourceId: 1, resourceName: 'Martin Tamer', resourceGroup: 'Planning Team'},
     { resourceId: 2, resourceName: 'Rose Fuller', resourceGroup: 'Testing Team' },
@@ -56,10 +53,8 @@ let data = [
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Edit, Selection, Toolbar } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App (){
+    const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -69,31 +64,29 @@ class App extends React.Component {
             resourceInfo: 'resources',
             child: 'subtasks'
         };
-        this.resourceFields = {
+        const resourceFields = {
             id: 'resourceId',
             name: 'resourceName',
             unit: 'Unit',
             group: 'resourceGroup'
         };
-        this.editSettings = {
+        const editSettings = {
             allowAdding: true,
             allowEditing: true,
             allowDeleting: true,
             allowTaskbarEditing: true,
             showDeleteConfirmDialog: true
         };
-        this.toolbar = ['Add', 'Edit', 'Delete', 'Cancel', 'Update', 'PrevTimeSpan', 'NextTimeSpan', 'ExpandAll', 'CollapseAll', 'Search'];
-        this.labelSettings = {
+        const toolbar = ['Add', 'Edit', 'Delete', 'Cancel', 'Update', 'PrevTimeSpan', 'NextTimeSpan', 'ExpandAll', 'CollapseAll', 'Search'];
+        const labelSettings = {
             rightLabel: 'resources'
         };
-        this.splitterSettings = {
+        const splitterSettings = {
             columnIndex: 3
         };
-        this.projectStartDate = new Date('03/28/2019');
-        this.projectEndDate = new Date('05/18/2019');
-    }
-    render() {
-        return <GanttComponent id='root' dataSource = { data } treeColumnIndex = { 1} viewType = 'ResourceView' allowSelection = { true}  allowResizing = { true} highlightWeekends = { true} toolbar = { this.toolbar } editSettings = { this.editSettings } projectStartDate = { this.projectStartDate } projectEndDate = { this.projectEndDate } resourceFields = { this.resourceFields } taskFields = { this.taskFields } labelSettings = { this.labelSettings } splitterSettings = { this.splitterSettings } height = '410px' resources = { resourceCollection } >
+        const projectStartDate = new Date('03/28/2019');
+       const projectEndDate = new Date('05/18/2019');
+        return <GanttComponent id='root' dataSource = { data } treeColumnIndex = { 1} viewType = 'ResourceView' allowSelection = { true}  allowResizing = { true} highlightWeekends = { true} toolbar = { toolbar } editSettings = { editSettings } projectStartDate = { projectStartDate } projectEndDate = { projectEndDate } resourceFields = {resourceFields } taskFields = { taskFields } labelSettings = { labelSettings } splitterSettings = { splitterSettings } height = '410px' resources = { resourceCollection } >
             <ColumnsDirective>
             <ColumnDirective field= 'TaskID' visible= {false} > </ColumnDirective>
             <ColumnDirective field= 'TaskName'  headerText= 'Task Name'  width= '180' > </ColumnDirective>
@@ -105,9 +98,5 @@ class App extends React.Component {
             </ColumnsDirective>
             <Inject services={[ Toolbar, Edit, Selection ]}/>
             </GanttComponent>;
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

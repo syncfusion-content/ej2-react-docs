@@ -5,10 +5,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, Selection, ContextMenu } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App () {
+        const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -17,55 +15,53 @@ class App extends React.Component {
             dependency: 'Predecessor',
             child: 'subtasks'
         };
-        this.editSettings = {
+        const editSettings = {
             allowAdding: true,
             allowEditing: true,
             allowDeleting: true
         };
-        this.contextMenuItems = [{ text: 'Copy', target: '.e-content', id: 'copy' },
+        const contextMenuItems = [{ text: 'Copy', target: '.e-content', id: 'copy' },
             { text: 'Paste', target: '.e-content', id: 'paste' }
         ];
-    };
-    public copiedRecord: any;
-    contextMenuClick(args) {
+    
+   let  copiedRecord: any;
+   let gantt:any;
+  function  contextMenuClick(args:any) {
         if (args.item.id === 'copy') {
-            this.copiedRecord = args.rowData;
-            this.copiedRecord.taskData.TaskID = this.gantt.currentViewData.length + 1;
+            copiedRecord = args.rowData;
+            copiedRecord.taskData.TaskID = gantt.currentViewData.length + 1;
         }
         if (args.item.id === 'paste') {
-            this.gantt.addRecord(this.copiedRecord.taskData,'Below',args.rowData.index);
-            if(this.copiedRecord.hasChildRecords) {
-                this.addChildRecords(this.copiedRecord, args.rowData.index + 1);
+            gantt.addRecord(copiedRecord.taskData,'Below',args.rowData.index);
+            if(copiedRecord.hasChildRecords) {
+                addChildRecords(copiedRecord, args.rowData.index + 1);
             }
-            this.copiedRecord = undefined;
+            copiedRecord = undefined;
         }
     };
-    contextMenuOpen(args) {
+    function contextMenuOpen(args:any ) {
         if (args.type !== 'Header') {
-            if (this.copiedRecord) {
+            if (copiedRecord) {
                 args.hideItems.push('Copy');
             } else {
                 args.hideItems.push('Paste');
              }
         }
     };
-    addChildRecords(record: any, index: any) {
+   function  addChildRecords(record: any, index: any) {
         for(var i=0; i<record.childRecords.length; i++) {
               var childRecord = record.childRecords[i];
-              childRecord.taskData.TaskID = this.gantt.currentViewData.length + 1;
-              this.gantt.addRecord(childRecord.taskData,'Below',index);
+              childRecord.taskData.TaskID = gantt.currentViewData.length + 1;
+              gantt.addRecord(childRecord.taskData,'Below',index);
               if(childRecord.hasChildRecords) {
-                  this.addChildRecords(childRecord, index + (i+1));
+                 addChildRecords(childRecord, index + (i+1));
               }
         }
       };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} editSettings={this.editSettings} enableContextMenu={true} enableContextMenu={true} contextMenuItems={this.contextMenuItems} contextMenuClick={this.contextMenuClick.bind(this)} contextMenuOpen={this.contextMenuOpen.bind(this)} ref={gantt => this.gantt = gantt} height='450px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields} editSettings={editSettings} enableContextMenu={true} enableContextMenu={true} contextMenuItems={contextMenuItems} contextMenuClick={contextMenuClick} contextMenuOpen={contextMenuOpen} ref={gantt => gantt = gantt} height='450px'>
             <Inject services={[Edit, ContextMenu, Selection]}/>
         </GanttComponent>;
-    }
-}
-;
+};
 ReactDOM.render(<App />, document.getElementById('root'));
 
 

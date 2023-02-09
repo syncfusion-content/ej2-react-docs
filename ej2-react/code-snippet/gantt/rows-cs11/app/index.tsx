@@ -1,6 +1,3 @@
-
-
-
 let data = [
     {
         TaskID: 1,
@@ -28,10 +25,8 @@ let data = [
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-class App extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.taskFields = {
+function App() {
+        const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
@@ -39,19 +34,11 @@ class App extends React.Component {
             progress: 'Progress',
             child: 'subtasks'
         };
-    }
-    queryCellInfo(args) {
+    function queryCellInfo(args) {
          if (args.data['TaskID'] == 4 && args.column.field === 'TaskName') {
         args.rowSpan = 2;
-    }
-    }
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields} queryCellInfo={this.queryCellInfo.bind(this)} height='450px'>
-        </GanttComponent>;
-    }
-}
-;
+    }}
+        return <GanttComponent dataSource={data} taskFields={taskFields} queryCellInfo={queryCellInfo} height='450px'>
+        </GanttComponent>
+};
 ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

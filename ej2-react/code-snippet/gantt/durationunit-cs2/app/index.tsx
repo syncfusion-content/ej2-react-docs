@@ -1,5 +1,3 @@
-
-
 let data: Object[]  = [
     {
         TaskID: 1,
@@ -31,8 +29,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -40,15 +38,11 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public splitterSettings: any = {
+  const splitterSettings: any = {
     columnIndex: 4
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-          splitterSettings={this.splitterSettings} height = '450px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields}
+          splitterSettings={splitterSettings} height = '450px'>
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

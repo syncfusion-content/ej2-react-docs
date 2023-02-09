@@ -1,12 +1,10 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 
-class App extends React.Component<{}, {}>{
-    public taskFields: any = {
+function App(){
+    const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
@@ -14,17 +12,13 @@ class App extends React.Component<{}, {}>{
     progress: 'Progress',
     child: 'subtasks'
   };
-  public labelSettings: any = {
+  const labelSettings: any = {
     leftLabel: 'TaskID',
     rightLabel: 'Task Name: ${taskData.TaskName}',
     taskLabel: '${Progress}%'
   };
-    render() {
-        return <GanttComponent dataSource={data} taskFields={this.taskFields}
-        labelSettings={this.labelSettings} height = '450px'>
+        return <GanttComponent dataSource={data} taskFields={taskFields}
+        labelSettings={labelSettings} height = '450px'>
         </GanttComponent>
-    }
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-
