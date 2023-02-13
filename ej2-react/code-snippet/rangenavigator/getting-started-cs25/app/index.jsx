@@ -2,10 +2,10 @@ import { AreaSeries, DateTime, Inject, RangeNavigatorComponent, RangenavigatorSe
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { bitCoinData } from 'default_data.ts';
-function App() {
-    const data = bitCoinData;
-    const tooltip = { enable: true };
-    const periodselector = {
+class App extends React.Component {
+    data = bitCoinData;
+    tooltip = { enable: true };
+    periodselector = {
         position: 'Bottom',
         periods: [
             { text: '1M', interval: 1, intervalType: 'Months' },
@@ -15,13 +15,14 @@ function App() {
             { text: '2Y', interval: 2, intervalType: 'Years', selected: true }, { text: 'All' }
         ]
     };
-    return <RangeNavigatorComponent id='charts' valueType='DateTime' labelFormat='MMM-yy' value={[new Date('2017-09-01'), new Date('2018-02-01')]} tooltip={tooltip} periodSelectorSettings={periodselector}>
+    render() {
+        return <RangeNavigatorComponent id='charts' valueType='DateTime' labelFormat='MMM-yy' value={[new Date('2017-09-01'), new Date('2018-02-01')]} tooltip={this.tooltip} periodSelectorSettings={this.periodselector}>
       <Inject services={[AreaSeries, DateTime, RangeTooltip, PeriodSelector]}/>
       <RangenavigatorSeriesCollectionDirective>
-        <RangenavigatorSeriesDirective dataSource={data} xName='x' yName='y' type='Area' width={2}/>
+        <RangenavigatorSeriesDirective dataSource={this.data} xName='x' yName='y' type='Area' width={2}/>
       </RangenavigatorSeriesCollectionDirective>
     </RangeNavigatorComponent>;
+    }
 }
 ;
-export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
