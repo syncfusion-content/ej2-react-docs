@@ -91,7 +91,7 @@ When you tap the treegrid header on touchscreen devices, the selected column hea
 The following screenshot shows treegrid touch sorting.
 
 <!-- markdownlint-disable MD033 -->
-<img src="../images/touch-sorting.jpg" alt="Touch Sorting" style="width:320px;height: 620px">
+<img src="images/touch-sorting.jpg" alt="Touch Sorting" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->
 
 > You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

@@ -1,0 +1,28 @@
+.head,
+.item {
+    display: table;
+    width: 100%;
+    margin: auto;
+}
+
+.head {
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.name,
+.city {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.head .name {
+    text-indent: 16px;
+ }
+ 
+ .head .city {
+    text-indent: 10px;
+ }
+ 

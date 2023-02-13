@@ -1,7 +1,6 @@
 import { DataManager } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 function App() {
     let treegrid;
     const data = new DataManager({

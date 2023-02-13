@@ -4,7 +4,6 @@ import { getObject } from '@syncfusion/ej2-grids';
 import { ISparklineLoadedEventArgs, SparklineComponent, SparklineTheme } from '@syncfusion/ej2-react-charts';
 import { ColumnDirective, ColumnsDirective, Inject, Page, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { getSparkData, textdata } from './datasource';
 
 function App() {

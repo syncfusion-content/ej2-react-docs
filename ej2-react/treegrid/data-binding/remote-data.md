@@ -57,7 +57,7 @@ The following code example describes the behavior of the loadChildOnDemand featu
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, Inject, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 
 function App() {
 
@@ -207,8 +207,7 @@ To add a custom parameter to the data request, use the [`addParams`](https://ej2
 
 ## Handling HTTP error
 
-During server interaction from the treegrid, some server-side exceptions may occur, and you can acquire those error messages or exception details
-in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event.
+During server interaction from the treegrid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event.
 
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event contains the error details returned from the server.
 
@@ -238,7 +237,7 @@ When using virtualization with remote data binding, it helps you to improve the 
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, Inject, TreeGridComponent, VirtualScroll, Sort, Filter, Edit, EditSettingsModel, Toolbar, ToolbarItems, PageSettingsModel } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 
 function App() {
 
@@ -578,7 +577,7 @@ When using virtualization with `loadChildOnDemand` , it helps you to improve the
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, Inject, TreeGridComponent, VirtualScroll, Sort, Filter, Edit, EditSettingsModel, Toolbar, ToolbarItems, PageSettingsModel } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 
 function App() {
 

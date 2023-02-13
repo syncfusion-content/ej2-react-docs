@@ -5,7 +5,6 @@ import { DataManager } from '@syncfusion/ej2-data';
 import { FailureEventArgs } from '@syncfusion/ej2-grids';
 import { ColumnDirective, ColumnsDirective, TreeGrid, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 
 function App() {
     let treegrid: TreeGridComponent | null;

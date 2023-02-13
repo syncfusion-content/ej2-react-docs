@@ -2,7 +2,6 @@
 
 import { ColumnDirective, ColumnsDirective, Inject, Reorder, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import './custom.css';
 import { sampleData } from './datasource';
 

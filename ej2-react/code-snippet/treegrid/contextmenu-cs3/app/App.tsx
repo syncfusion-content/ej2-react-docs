@@ -3,7 +3,6 @@
 import { ContextMenuItemModel } from '@syncfusion/ej2-grids';
 import { ColumnDirective, ColumnsDirective, EditSettingsModel, Page, TreeGridComponent,ContextMenu, Edit, Inject, PageSettingsModel, TreeGrid} from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 
 function App() {

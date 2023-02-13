@@ -47,7 +47,7 @@ The `expandStateMapping` property maps the field name in data source, that denot
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, Inject, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 
 function App() {
 
@@ -140,7 +140,7 @@ It is possible to handle data processing externally and bind the result to the T
 ```ts
 
 import React, { Component } from 'react';
-import './App.css';
+
 import { Ajax, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
@@ -230,7 +230,7 @@ Using the custom binding feature you can bind the child data for a parent record
 ```ts
 
 import React, { Component } from 'react';
-import './App.css';
+
 import { Ajax, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
@@ -341,7 +341,7 @@ For TreeGrid actions such as paging, sorting, etc dataStateChange event will be 
 ```ts
 
 import React, { Component } from 'react';
-import './App.css';
+
 import { Ajax, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
@@ -432,7 +432,7 @@ The [`dataSourceChanged`](https://ej2.syncfusion.com/react/documentation/api/tre
 ```ts
 
 import * as React from 'react';
-import './App.css';
+
 import { Ajax, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
@@ -595,7 +595,7 @@ The [`dataStateChange`](https://ej2.syncfusion.com/react/documentation/api/treeg
 ```ts
 
 import React, { Component } from 'react';
-import './App.css';
+
 import { Ajax, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, FilterSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';

@@ -5,7 +5,6 @@ import { ColumnDirective, ColumnsDirective, Page, Resize, TreeGridComponent } fr
 import { ContextMenu, ContextMenuItem, Edit, ExcelExport, Inject, PdfExport, Sort, RowDD } from '@syncfusion/ej2-react-treegrid';
 import { EditSettingsModel, PageSettingsModel } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 
 function App() {

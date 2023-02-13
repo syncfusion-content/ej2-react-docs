@@ -34,8 +34,6 @@ npm install -g create-react-app
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
-
 ```bash
 
 create-react-app quickstart --scripts-version=react-scripts-ts
@@ -44,10 +42,6 @@ cd quickstart
 
 ```
 
-</div>
-
-<div class='jsx'>
-
 ```bash
 
 create-react-app quickstart
@@ -55,8 +49,6 @@ create-react-app quickstart
 cd quickstart
 
 ```
-
-</div>
 
 > 'react-scripts-ts' is used for creating React app with typescript.
 

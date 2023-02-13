@@ -4,7 +4,6 @@ import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusio
 import { Inject, RowDD } from '@syncfusion/ej2-react-treegrid';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 
 function App() {

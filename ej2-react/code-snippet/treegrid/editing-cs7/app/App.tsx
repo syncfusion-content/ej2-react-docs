@@ -7,7 +7,6 @@ import { IEditCell } from '@syncfusion/ej2-grids';
 import { ColumnDirective, ColumnsDirective, Inject, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Column, Edit, EditSettingsModel, Toolbar, ToolbarItems, TreeGrid } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 
 function App() {

@@ -72,7 +72,7 @@ Place the following treegrid code in the **src/App.tsx**.
 ```ts
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 import { sortData } from './datasource';
 function App() {
     return <TreeGridComponent dataSource={sortData} treeColumnIndex={1} childMapping= 'subtasks'>
@@ -103,8 +103,7 @@ These modules should be injected into the treegrid using the **Inject** directiv
 
 ## Enable Paging
 
-The paging feature enables users to view the TreeGrid record in a paged view. It can be enabled by setting [`allowPaging`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowpaging) property to true. Inject the **Page** module in **Inject.services** as follows. If the **Page** service is not injected, the pager will not be rendered in the treegrid.
-Pager can be customized using [`pageSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/pageSettings) property.
+The paging feature enables users to view the TreeGrid record in a paged view. It can be enabled by setting [`allowPaging`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowpaging) property to true. Inject the **Page** module in **Inject.services** as follows. If the **Page** service is not injected, the pager will not be rendered in the treegrid. Pager can be customized using [`pageSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/pageSettings) property.
 
 We also have Root level paging mode in which paging is based on the root level rows only i.e., it ignores the child rows count and it can be enabled by using the [`pageSettings.pageSizeMode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/pageSettings/#pagesizemode) property.
 
@@ -127,8 +126,7 @@ We also have Root level paging mode in which paging is based on the root level r
 
 ## Enable Sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowsorting) property as *true*.
-Inject the **Sort** module in the **Inject.services** as follows. If the **Sort** module is not injected, you cannot sort when a header is clicked. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#sortsettings) property.
+The sorting feature enables you to order the records. It can be enabled by setting the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowsorting) property as *true*. Inject the **Sort** module in the **Inject.services** as follows. If the **Sort** module is not injected, you cannot sort when a header is clicked. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#sortsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

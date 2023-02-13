@@ -79,14 +79,14 @@ The autoscroll border is used to specify the maximum distance between the object
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs1/app/index.jsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs1/app/index.tsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/undo redo/es5Connect-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/undoredo/es5Connect-cs1" %}
 
 ## Scroll limit
 
@@ -102,14 +102,14 @@ The following code example illustrates how to specify the scroll limit.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs2/app/index.jsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs2/app/index.tsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/undo redo/es5Connect-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/undoredo/es5Connect-cs2" %}
 
 ## Scroll Padding
 
@@ -118,14 +118,14 @@ The following code example illustrates how to set scroll padding to diagram regi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs3/app/index.jsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs3/app/index.tsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/undo redo/es5Connect-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/undoredo/es5Connect-cs3" %}
 
 ## Scrollable Area
 
@@ -133,14 +133,14 @@ Scrolling beyond any particular rectangular area can be restricted by using the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs4/app/index.jsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs4/app/index.tsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/undo redo/es5Connect-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/undoredo/es5Connect-cs4" %}
 
 ## UpdateViewport
 
