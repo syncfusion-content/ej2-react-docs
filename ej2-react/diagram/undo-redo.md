@@ -60,14 +60,14 @@ The client-side method [`startGroupAction`](https://ej2.syncfusion.com/react/doc
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/undo redo/groupAction-cs1/app/index.jsx %}
+{% include code-snippet/diagram/undoredo/groupAction-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/undo redo/groupAction-cs1/app/index.tsx %}
+{% include code-snippet/diagram/undoredo/groupAction-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/undo redo/groupAction-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/undoredo/groupAction-cs1" %}
 
 ### Track custom changes
 
@@ -109,14 +109,14 @@ canLog in the history list, which takes a history entry as argument and returns 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs5/app/index.jsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs5/app/index.tsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/undo redo/es5Connect-cs5" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/undoredo/es5Connect-cs5" %}
 
 ### Track undo/redo actions
 
@@ -181,14 +181,14 @@ The [`stackLimit`](https://ej2.syncfusion.com/react/documentation/api/diagram) p
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs6/app/index.jsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/undo redo/es5Connect-cs6/app/index.tsx %}
+{% include code-snippet/diagram/undoredo/es5Connect-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/undo redo/es5Connect-cs6" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/undoredo/es5Connect-cs6" %}
 
 ## Retain Selection
 

@@ -1,7 +1,6 @@
 import { getObject } from '@syncfusion/ej2-grids';
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 export default class App extends React.Component {
     rowDataBound(args) {

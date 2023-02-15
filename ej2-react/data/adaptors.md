@@ -69,7 +69,7 @@ const SERVICE_URI: string = 'http://controller.com/actions';
 
 The sample response object should be as follows,
 
-```json
+```
 {
     "result": [{..}, {..}, {..}, ...],
     "count": 67
@@ -155,7 +155,7 @@ import { DataManager, Query, ReturnOption, WebApiAdaptor } from '@syncfusion/ej2
 
 The sample response object should look like below.
 
-```json
+```
 {
     Items: [{..}, {..}, {..}, ...],
     Count: 830
@@ -187,7 +187,7 @@ import { DataManager, Query, ReturnOption, WebMethodAdaptor } from '@syncfusion/
 
 The sample response object should look like below.
 
-```json
+```
 {
     result: [{..}, {..}, {..}, ...],
     count: 830

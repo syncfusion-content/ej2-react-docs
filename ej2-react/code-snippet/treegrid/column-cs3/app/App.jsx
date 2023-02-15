@@ -1,6 +1,6 @@
 import { ColumnDirective, ColumnsDirective, Inject, Reorder, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 import { sampleData } from './datasource';
 function App() {
     return <TreeGridComponent dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' allowReordering={true} height='315'>

@@ -2,7 +2,6 @@
 
 import { ColumnDirective, ColumnModel, ColumnsDirective,  Inject, Resize, TreeGridComponent  } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { orderData } from './datasource';
 
 function App() {

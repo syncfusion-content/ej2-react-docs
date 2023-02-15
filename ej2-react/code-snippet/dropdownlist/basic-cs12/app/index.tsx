@@ -1,0 +1,31 @@
+{% raw %}
+
+
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+function App() {
+
+    // define the JSON of data
+    const countriesData: { [key: string]: Object }[] = [
+        { Country: { Name: 'Australia' }, Code: { Id: 'AU' }},
+        { Country: { Name: 'Bermuda' },Code: { Id: 'BM' }},
+        { Country:{ Name: 'Canada'}, Code:{ Id: 'CA'} },
+        { Country:{Name: 'Cameroon'}, Code:{ Id: 'CM'} },
+        { Country:{Name: 'Denmark'}, Code:{ Id: 'DK' }},
+        { Country:{Name: 'France'}, Code: { Id:'FR'} }
+    ];
+
+    // maps the appropriate column to fields property
+    const fields: object = { text: 'Country.Name', value: 'Code.Id' };
+
+    return (
+    // specifies the tag for render the DropDownList component
+        <DropDownListComponent id="ddlelement" dataSource={countriesData} fields={fields} placeholder="Select a country" />
+    );
+}
+ReactDOM.render(<App />, document.getElementById('sample'));
+
+
+{% endraw %}

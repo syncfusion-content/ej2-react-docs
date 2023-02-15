@@ -1,7 +1,6 @@
 import { ColumnDirective, ColumnsDirective, Inject, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { CommandColumn, Edit } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 function App() {
     const commands = [

@@ -1,0 +1,49 @@
+#loader {
+    color: #008cff;
+    font-family: 'Helvetica Neue', 'calibiri';
+    font-size: 14px;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.wrap {
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* To change the size between items */
+.e-rating-container .e-rating-item-container {
+  padding: 0px;
+}
+
+/* To set the gradient color */
+.e-rating-svg-icon #grad0 .start {
+  stop-color: #FF0000;
+}
+
+.e-rating-svg-icon #grad0 .end,
+.e-rating-svg-icon #grad1 .start {
+  stop-color: #ff5101;
+}
+
+.e-rating-svg-icon #grad1 .end,
+.e-rating-svg-icon #grad2 .start {
+  stop-color: #ffc801;
+}
+
+.e-rating-svg-icon #grad2 .end,
+.e-rating-svg-icon #grad3 .start {
+  stop-color: #dbe300;
+}
+
+.e-rating-svg-icon #grad3 .end,
+.e-rating-svg-icon #grad4 .start {
+  stop-color: #8bc301;
+}
+
+.e-rating-svg-icon #grad4 .end {
+  stop-color: #4eaa01;
+}

@@ -3,7 +3,6 @@
 import { getValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, Inject, Page, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { orderData } from './datasource';
 
 function App() {

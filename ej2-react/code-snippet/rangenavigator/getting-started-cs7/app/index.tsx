@@ -9,24 +9,25 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { double } from 'default_data.ts';
 
-function App() {
+class App extends React.Component<{}, {}> {
 
-  const data: object[] = double;
-  const tooltip: RangeTooltipSettingsModel = { enable: true };
+  public data: object[] = double;
+  public tooltip: RangeTooltipSettingsModel = { enable: true };
 
-  return <RangeNavigatorComponent id='charts'
+  render() {
+    return <RangeNavigatorComponent id='charts'
       labelPosition='Outside'
-      tooltip={tooltip}
+      tooltip={this.tooltip}
       value={[12, 30]}>
       <Inject services={[RangeTooltip, StepLineSeries]} />
       <RangenavigatorSeriesCollectionDirective>
-        <RangenavigatorSeriesDirective dataSource={data} xName='x' yName='y'>
+        <RangenavigatorSeriesDirective dataSource={this.data} xName='x' yName='y'>
         </RangenavigatorSeriesDirective>
       </RangenavigatorSeriesCollectionDirective>
     </RangeNavigatorComponent>
+  }
 
 };
-export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 

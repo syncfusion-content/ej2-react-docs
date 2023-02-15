@@ -6,7 +6,6 @@ import { BeforeOpenCloseMenuEventArgs, MenuEventArgs } from '@syncfusion/ej2-nav
 import { ColumnDirective, ColumnsDirective, Page, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { ContextMenu,  Inject, PageSettingsModel, TreeGrid } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { sampleData } from './datasource';
 
 function App() {

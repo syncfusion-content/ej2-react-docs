@@ -3,7 +3,6 @@
 import { ColumnDirective, ColumnsDirective, Filter, FilterSettingsModel } from '@syncfusion/ej2-react-treegrid';
 import { Inject, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { diacritics } from './datasource';
 
 function App() {

@@ -2,7 +2,6 @@
 
 import { ColumnDirective, ColumnsDirective, Inject, Page, PageSettingsModel, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
 import { projectData } from './datasource';
 
 function App() {

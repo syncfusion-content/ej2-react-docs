@@ -10,27 +10,28 @@ import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { bitCoinData } from 'default_data.ts';
 
-function App() {
+class App extends React.Component<{}, {}>{
 
-  const data: object[] = bitCoinData;
-  const tooltip: RangeTooltipSettingsModel = { enable: true };
-  function clickHandler() {
-    range.print();
+  public data: object[] = bitCoinData;
+  public tooltip: RangeTooltipSettingsModel = { enable: true };
+  public clickHandler() {
+    this.range.print();
   }
-  let range: RangeNavigator;
+  private range: RangeNavigator;
 
-  return (<div> <ButtonComponent value='print' onClick={clickHandler.bind(this)}>Print</ButtonComponent>
-      <RangeNavigatorComponent id='charts' ref={g => range = g}
+  render() {
+    return (<div> <ButtonComponent value='print' onClick={this.clickHandler.bind(this)}>Print</ButtonComponent>
+      <RangeNavigatorComponent id='charts' ref={g => this.range = g}
         valueType='DateTime' labelFormat='MMM-yy' value={[new Date('2017-09-01'), new Date('2018-02-01')]}
-        tooltip={tooltip}>
+        tooltip={this.tooltip}>
         <Inject services={[AreaSeries, DateTime, RangeTooltip]} />
         <RangenavigatorSeriesCollectionDirective>
-          <RangenavigatorSeriesDirective dataSource={data} xName='x' yName='y' type='Area' width={2} />
+          <RangenavigatorSeriesDirective dataSource={this.data} xName='x' yName='y' type='Area' width={2} />
         </RangenavigatorSeriesCollectionDirective>
       </RangeNavigatorComponent></div>)
+  }
 
 };
-export default App;
 ReactDOM.render(<App />, document.getElementById('charts'));
 
 

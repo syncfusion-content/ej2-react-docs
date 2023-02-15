@@ -4,8 +4,8 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
 
-export class App extends React.Component {
-render() {
+function App() {
+
   return ( <SparklineComponent id='sparkline'
     height='200px' width='350px'
     containerArea= { {
@@ -25,8 +25,7 @@ render() {
     dataSource= { [30000, 60000, 40000, 10000, 30000, 20000, 50000] }>
     <Inject services={[SparklineTooltip]} />
 </SparklineComponent> );
- }
+
 }
+export default App;
 ReactDOM.render(<App />, document.getElementById('sparkline'));
-
-

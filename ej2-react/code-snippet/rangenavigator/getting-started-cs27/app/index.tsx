@@ -9,11 +9,11 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { bitCoinData } from 'default_data.ts';
 
-function App() {
+class App extends React.Component<{}, {}> {
 
-  const data: object[] = bitCoinData;
-  const tooltip: RangeTooltipSettingsModel = { enable: true };
-  const periodselector: PeriodSelectorSettingsModel = {
+  public data: object[] = bitCoinData;
+  public tooltip: RangeTooltipSettingsModel = { enable: true };
+  public periodselector: PeriodSelectorSettingsModel = {
     position: 'Top',
     periods: [
       { text: '1M', interval: 1, intervalType: 'Months' },
@@ -24,17 +24,18 @@ function App() {
     ]
   };
 
-  return <RangeNavigatorComponent id='charts'
+  render() {
+    return <RangeNavigatorComponent id='charts'
       valueType='DateTime' labelFormat='MMM-yy' value={[new Date('2017-09-01'), new Date('2018-02-01')]}
-      dataSource={data} xName='x' yName='y'
+      dataSource={this.data} xName='x' yName='y'
       disableRangeSelector={true}
-      tooltip={tooltip}
-      periodSelectorSettings={periodselector}>
+      tooltip={this.tooltip}
+      periodSelectorSettings={this.periodselector}>
       <Inject services={[AreaSeries, DateTime, RangeTooltip, PeriodSelector]} />
     </RangeNavigatorComponent>
+  }
 
 };
-export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 

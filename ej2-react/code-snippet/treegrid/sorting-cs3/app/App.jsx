@@ -1,6 +1,6 @@
 import { ColumnDirective, ColumnsDirective, Inject, Sort, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
-import './App.css';
+
 import { sortData } from './datasource';
 function App() {
     const actionHandler = (args) => {
