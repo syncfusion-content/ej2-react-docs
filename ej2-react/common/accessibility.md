@@ -21,19 +21,19 @@ Syncfusion React components meet the following guidelines and standards that are
 
 * [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) - Provides guidelines developed by the World Wide Web Consortium (W3C). WAI-ARIA provides a set of roles, states, and properties that can be added to HTML elements to provide additional context and information about the purpose and behavior of those elements. This can help assistive technologies better understand and interpret web content and interact with web applications.
 
-* [Section 508](https://www.section508.gov/) - Syncfusion React components compliance with the standard of `Section 508` accessibility. The `Section 508` standards are a set of guidelines for making electronic and information technology (EIT) accessible to people with disabilities. These standards apply to federal agencies in the United States, and they are based on the Web Content Accessibility Guidelines (WCAG).
+* [Section 508](https://www.section508.gov/) - Syncfusion React components compliance with the standard of `Section 508` accessibility. It is a set of guidelines for making electronic and information technology (EIT) accessible to people with disabilities. These standards apply to federal agencies in the United States, and they are based on the Web Content Accessibility Guidelines (WCAG).
 
 ## Screen reader
 
-A screen reader allows people who are blind or visually impaired to use a computer by reading aloud the text that is displayed on the screen. Syncfusion React components meet the standards defined by the most common screen readers, such as [JAW](https://www.freedomscientific.com/Downloads/JAWS), Narrator, Lighthouse, and Acessibility Insights.
+A screen reader allows people who are blind or visually impaired to use a computer by reading aloud the text that is displayed on the screen. Syncfusion React components meet the standards defined by the [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) screen reader.
 
 ## Accessibility testing
 
-The goal of accessibility testing is to identify and address any barriers that might prevent individuals with disabilities from using the product or service effectively. There are several different types of accessibility testing that can be performed on Syncfusion React components, such as:
+The goal of accessibility testing is to identify and address any barriers that might prevent individuals with disabilities from using the product or service effectively. There are several different types of accessibility testing that can be performed on the React components, such as:
 
-* `Automated testing`: Syncfusion React component accessibility levels are ensured through an accessibility checker software tool that supports a subset of [IBM requirements](https://www.ibm.com/able/requirements/requirements/).
+* **Automated testing**: The React component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) software tool.
 
-* `Manual testing`: This type of testing involves manually evaluating the Syncfusion React components. During manual accessibility testing, testers will ensure accessibility using screen readers.
+* **Manual testing**: This type of testing involves manually evaluating the React components. During manual accessibility testing, testers will ensure accessibility using the [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) screen reader.
 
 ## Keyboard navigation
 

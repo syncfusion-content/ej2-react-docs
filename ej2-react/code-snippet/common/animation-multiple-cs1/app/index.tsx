@@ -5,7 +5,7 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { useEffect, useRef } from 'react';
-import {useRef } from 'react';
+import { useRef } from 'react';
 import { Animation } from '@syncfusion/ej2-base';
 
 function App() {

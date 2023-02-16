@@ -61,6 +61,7 @@ npm install babel-loader @babel/preset-react @babel/preset-env @babel/core --sav
 * Open the `src/App.js` file and add the Grid component as follows.
 
 
+
     ```javascript
     import React from "react";
     import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
@@ -161,7 +162,7 @@ module.exports = {
 
 * Open the `webpack.config.js` file and add the Syncfusion react packages in the externals option as follows.
 
-```js
+``` js
 module.exports = {
     ---
     externals: {
