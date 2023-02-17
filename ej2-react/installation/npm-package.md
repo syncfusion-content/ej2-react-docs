@@ -46,6 +46,7 @@ The Syncfusion Essential JS Barcode widget enables rendering of one dimension an
 The Syncfusion React buttons package contains UI components such as Button, Checkbox, RadioButton, Switch, and Chip component.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
 | [ej2-react-buttons](https://www.npmjs.com/package/@syncfusion/ej2-react-buttons)    | npm install @syncfusion/ej2-react-buttons | <li>Button</li> <li>CheckBox</li> <li>Chip</li> <li>RadioButton</li> <li>Switch</li> |
@@ -64,6 +65,7 @@ The Syncfusion React Calendars package contains date and time components such as
 The Syncfusion React Chart control is used to visualize the data with user interactivity and provides customizing options to configure the data visually. It can bind data from datasource such as array of JSON objects , `OData web services` or [DataManager](https://ej2.syncfusion.com/react/documentation/data/?utm_source=npm&utm_campaign=chart). All chart elements are rendered using Scalable Vector Graphics (SVG).
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components
 |--------|--------|-------|
 | [ej2-react-charts](https://www.npmjs.com/package/@syncfusion/ej2-react-charts)    | npm install @syncfusion/ej2-react-charts | <li>Accumulation Chart</li> <li>Bullet Chart</li> <li>Chart</li> <li>Range Navigator</li> <li>Smith Chart</li> <li>Sparkline</li> <li>Stock Chart</li> |
@@ -97,6 +99,7 @@ The Syncfusion React Diagram component visually represents information. It is al
 The Syncfusion React Dropdowns package contains a collection of Dropdown components such as Dropdown List, Combo Box, AutoComplete, Multiselect Dropdown, and List Box. Dropdown components contain specific features such as data binding, grouping, sorting, filtering, and templates.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
 | [ej2-react-dropdowns](https://www.npmjs.com/package/@syncfusion/ej2-react-dropdowns)    |npm i @syncfusion/ej2-react-dropdowns | <li>AutoComplete</li> <li>ComboBox</li> <li>Dropdown List</li> <li>Dropdown Tree</li> <li>ListBox</li> <li>Multiselect Dropdown</li> |
@@ -146,6 +149,7 @@ The Syncfusion React InPlace Editor component is most useful for editing a value
 The Syncfusion React Input components comes with a collection of form components which is useful to get different input values from the users such as text, numbers, patterns, color and file inputs.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
 | [ej2-react-inputs](https://www.npmjs.com/package/@syncfusion/ej2-react-inputs)    |npm install @syncfusion/ej2-react-inputs | <li>ColorPicker</li> <li>MaskedTextBox</li> <li>NumericTextBox</li> <li>Slider</li> <li>Signature</li> <li>Textbox</li> <li>Uploader</li> |
@@ -171,6 +175,7 @@ The Syncfusion Layout package contains Cards, Avatars, Splitter and Dashboard La
 * The `Dashboard Layout` is a grid structured layout component that helps to create a dashboard with panels. Panels hold the UI components and allow resize, reorder, drag-n-drop, remove and add options. This allows users to easily place the components at the desired position within the grid layout.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
 | [ej2-react-layouts](https://www.npmjs.com/package/@syncfusion/ej2-react-layouts)    |npm install @syncfusion/ej2-react-layouts | <li>Avatar</li> <li>Card</li> <li>Dashboard Layout</li> <li>Splitter</li> |
@@ -204,6 +209,7 @@ The Syncfusion React Maps is used to visualize the geographical data and represe
 A package of React navigation components such as Accordion, Breadcrumb, ContextMenu, MenuBar, Tabs, Toolbar, TreeView, and Sidebar.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
 | [ej2-react-navigations](https://www.npmjs.com/package/@syncfusion/ej2-react-navigations)    |npm install @syncfusion/ej2-react-navigations | <li>Accordion</li> <li>Breadcrumb</li> <li>ContextMenu</li> <li>MenuBar</li> <li>Tabs</li> <li>Toolbar</li> <li>TreeView</li> <li>Sidebar</li> |
@@ -213,6 +219,7 @@ A package of React navigation components such as Accordion, Breadcrumb, ContextM
 The Syncfusion React Notification component is used to notify status or summary information to the end-users.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
 | [ej2-react-notifications](https://www.npmjs.com/package/@syncfusion/ej2-react-notifications)    |npm install @syncfusion/ej2-react-notifications | <li>Badge</li> <li>Spinner</li> <li>Toast</li> |
@@ -238,6 +245,7 @@ The Syncfusion React Pivot Table is a powerful control used to organize and summ
 A package of Popup components Dialog and Tooltip are used to display information or to get input from the users in a popup.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
 | [ej2-react-popups](https://www.npmjs.com/package/@syncfusion/ej2-react-popups)    |npm install @syncfusion/ej2-react-popups | <li>Dialog</li> <li>Tooltip</li> |
@@ -279,6 +287,7 @@ The Syncfusion React Scheduler component is an event calendar that facilitates u
 The Syncfusion React SplitButtons package contains UI components such as DropDownButton, SplitButton, ProgressButton, and ButtonGroup components. DropDownButton and SplitButton component display a list of items when a button is clicked and the ButtonGroup can be used for easy navigation.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
 | [ej2-react-splitbuttons](https://www.npmjs.com/package/@syncfusion/ej2-react-splitbuttons)    |npm install @syncfusion/ej2-react-splitbuttons | <li>ButtonGroup</li> <li>DropDownButton</li> <li>ProgressButton</li> <li>SplitButton</li> |

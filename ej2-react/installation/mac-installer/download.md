@@ -15,14 +15,14 @@ The Syncfusion JavaScript - EJ2 Mac installer can be downloaded from the Syncfus
 * Trial Installer
 * Licensed Installer
 
-## Download the Trial Version
+## Download the trial version
 
 Our 30-day trial can be downloaded in two ways.
 
 * Download Free Trial Setup
 * Start Trials if using components through [npm](https://www.npmjs.com/~syncfusionorg)
 
-### Download Free Trial Setup
+### Download free trial setup
 
 1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the JavaScript platform.
 
@@ -40,7 +40,7 @@ Our 30-day trial can be downloaded in two ways.
 
    ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.PNG)
 
-### Start Trials if using components through [npm](https://www.npmjs.com/~syncfusionorg)
+### Start trials if using components through [npm](https://www.npmjs.com/~syncfusionorg)
 
 You should initiate an evaluation if you have already obtained our components through [npm](https://www.npmjs.com/~syncfusionorg)
 
@@ -59,7 +59,7 @@ You should initiate an evaluation if you have already obtained our components th
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-## Download the License Version
+## Download the license version
 
 1. Syncfusion licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion account.
 2. You can view all the licenses (both active and expired) associated with your account.

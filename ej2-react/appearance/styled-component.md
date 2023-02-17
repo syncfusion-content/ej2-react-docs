@@ -26,7 +26,9 @@ Import styled-components in the `src/App.tsx` file. To style our Syncfusion Reac
 `;
 ```
 
+
 Refer to the below code to create a styled button.
+
 
 ```ts
 
@@ -67,7 +69,6 @@ const StyledButton = styled(ButtonComponent)`
   }
 `;
 ```
-
 
 The below example code shows the dynamically styling the components using props.
 
