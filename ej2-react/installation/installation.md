@@ -8,7 +8,6 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-<!-- markdownlint-disable MD024 -->
 
 # Installation 
 

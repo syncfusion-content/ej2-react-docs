@@ -8,28 +8,24 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation in React Installation md component
+# Installation in React
 
 ## Installing Package
 
-Syncfusion React packages are published on
-[npm](https://www.npmjs.com/search?q=ej2-react&page=1&ranking=optimal).
-You can install the necessary packages from npm’s install command.
-For example, grid package can be installed using the following command.
+Syncfusion React packages are published on [npm](https://www.npmjs.com/search?q=ej2-react&page=1&ranking=optimal).
+You can install the necessary packages from npm’s install command. For example, grid package can be installed using the following command.
 
 ```
 npm install @syncfusion/ej2-react-grids --save
 ```
 
-These packages offer JavaScript files in ES6, UMD module systems. Which can be used in the different
-dependency management and bundling libraries.
+These packages offer JavaScript files in ES6, UMD module systems. Which can be used in the different dependency management and bundling libraries.
 
 * System JS
 
 ## Using SystemJS
 
-The Syncfusion npm package provides the UMD bundle file for loading scripts via script loaders such as
-Require JS, System JS, etc. To find UMD files in package read topic [Anatomy of Package](deployment#anatomy-of-npm-packages).
+The Syncfusion npm package provides the UMD bundle file for loading scripts via script loaders such as Require JS, System JS, etc. To find UMD files in package read topic [Anatomy of Package](deployment#anatomy-of-npm-packages).
 
 ### Configuration Steps
 
@@ -40,7 +36,7 @@ Require JS, System JS, etc. To find UMD files in package read topic [Anatomy of 
 **Step 3:** Map the Syncfusion React packages in the `system.config.js` configuration
 file as follows.
 
-```javascript
+```js
 
 System.config({
     transpiler: "ts",

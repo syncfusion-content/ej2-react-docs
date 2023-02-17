@@ -28,7 +28,13 @@ The Syncfusion React UI components are supported only in modern browsers. Refer 
 
 ## React supported versions
 
-Check out the [version compatibility](https://ej2.syncfusion.com/react/documentation/upgrade/version-compatibility/) section to learn more about the supported React versions in different Syncfusion React component releases.
+The following table represents the supported React versions by different Syncfusion React UI components releases.
+
+| Version | Syncfusion React components version |
+| ------------- | ------------- |
+| [React v18.0](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |
+| [React v17.0](https://reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
+| [React v16.0](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above |
 
 ## See also
 
