@@ -20,18 +20,18 @@ function ReactApp() {
   function firstTabdragStart(args: DragEventArgs) {
     firstTabitem = [firstTabObj.items[args.index]];
     args.draggedItem.style.visibility = 'hidden';
-    dragItemContainer = args.draggedItem.closest('.e-tab');
+    dragItemContainer = args.draggedItem.closest('.e-tab') as Element;
   }
 
   function firstTabDragStop(args: DragEventArgs) {
-    if (!isNullOrUndefined(args.target.closest('.e-tab')) && !dragItemContainer.isSameNode(args.target.closest('.e-tab'))) {
+    if (!isNullOrUndefined(args.target.closest('.e-tab') as HTMLElement) && !dragItemContainer.isSameNode(args.target.closest('.e-tab'))) {
       args.cancel = true;
-      let TabElement: Element = args.target.closest('.e-tab');
-      let dropItem: Element = args.target.closest('.e-toolbar-item');
+      let TabElement: Element = args.target.closest('.e-tab') as Element;
+      let dropItem: Element = args.target.closest('.e-toolbar-item') as Element;
       if (TabElement != null && dropItem != null) {
         dragItemIndex = Array.prototype.indexOf.call(firstTabObj.element.querySelectorAll('.e-toolbar-item'), args.draggedItem);
-        let dropItemContainer: Element = args.target.closest('.e-toolbar-items');
-        let dropItemIndex: number = (dropItemContainer != null) ? (Array.prototype.slice.call(dropItemContainer.querySelectorAll('.e-toolbar-item'))).indexOf(dropItem) : '';
+        let dropItemContainer: Element = args.target.closest('.e-toolbar-items') as Element;
+        let dropItemIndex: number = (dropItemContainer != null) ? (Array.prototype.slice.call(dropItemContainer.querySelectorAll('.e-toolbar-item'))).indexOf(dropItem) : -1;
         secondTabObj.addTab(firstTabitem, dropItemIndex);
         firstTabObj.removeTab(dragItemIndex);
       }
@@ -41,18 +41,18 @@ function ReactApp() {
   function secondTabDragStart(args: DragEventArgs) {
     secondTabitem = [secondTabObj.items[args.index]];
     args.draggedItem.style.visibility = 'hidden';
-    dragItemContainer = args.draggedItem.closest('.e-tab');
+    dragItemContainer = args.draggedItem.closest('.e-tab') as Element;
   }
 
   function secondTabDragStop(args: DragEventArgs) {
-    if (!isNullOrUndefined(args.target.closest('.e-tab')) && !dragItemContainer.isSameNode(args.target.closest('.e-tab'))) {
+    if (!isNullOrUndefined(args.target.closest('.e-tab') as HTMLElement) && !dragItemContainer.isSameNode(args.target.closest('.e-tab'))) {
       args.cancel = true;
-      let TabElement: Element = args.target.closest('.e-tab');
-      let dropItem: Element = args.target.closest('.e-toolbar-item');
+      let TabElement: Element = args.target.closest('.e-tab') as Element;
+      let dropItem: Element = args.target.closest('.e-toolbar-item') as Element;
       if (TabElement != null && dropItem != null) {
         dragItemIndex = Array.prototype.indexOf.call(secondTabObj.element.querySelectorAll('.e-toolbar-item'), args.draggedItem);
-        let dropItemContainer: Element = args.target.closest('.e-toolbar-items');
-        let dropItemIndex: number = (dropItemContainer != null) ? (Array.prototype.slice.call(dropItemContainer.querySelectorAll('.e-toolbar-item'))).indexOf(dropItem) : '';
+        let dropItemContainer: Element = args.target.closest('.e-toolbar-items') as Element;
+        let dropItemIndex: number = (dropItemContainer != null) ? (Array.prototype.slice.call(dropItemContainer.querySelectorAll('.e-toolbar-item'))).indexOf(dropItem) : -1;
         firstTabObj.addTab(secondTabitem, dropItemIndex);
         secondTabObj.removeTab(dragItemIndex);
       }
@@ -102,7 +102,7 @@ function ReactApp() {
 
   return (
     <div>
-      <TabComponent ref={(tab) => { firstTabObj = tab }} id='firstTab' heightAdjustMode='Auto' allowDragAndDrop={allowDragAndDrop} dragArea="#container" onDragStart={firstTabdragStart} dragged={firstTabDragStop}>
+      <TabComponent ref={(tab) => { firstTabObj = tab as TabComponent }} id='firstTab' heightAdjustMode='Auto' allowDragAndDrop={allowDragAndDrop} dragArea="#container" onDragStart={firstTabdragStart} dragged={firstTabDragStop}>
         <TabItemsDirective>
           <TabItemDirective header={headerText[0]} content={content0} />
           <TabItemDirective header={headerText[1]} content={content1} />
@@ -111,7 +111,7 @@ function ReactApp() {
         </TabItemsDirective>
       </TabComponent>
       <br></br>
-      <TabComponent ref={(tab) => { secondTabObj = tab }} id='secondTab' heightAdjustMode='Auto' allowDragAndDrop={allowDragAndDrop} dragArea="#container" onDragStart={secondTabDragStart} dragged={secondTabDragStop}>
+      <TabComponent ref={(tab) => { secondTabObj = tab as TabComponent}} id='secondTab' heightAdjustMode='Auto' allowDragAndDrop={allowDragAndDrop} dragArea="#container" onDragStart={secondTabDragStart} dragged={secondTabDragStop}>
         <TabItemsDirective>
           <TabItemDirective header={headerText[4]} content={content4} />
           <TabItemDirective header={headerText[5]} content={content5} />
