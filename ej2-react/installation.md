@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation in React
+# Installation
 
 ## Installing Package
 

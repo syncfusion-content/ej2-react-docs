@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create project 
+# Visual Studio Integration 
 
 ## Create project
 

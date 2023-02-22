@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert project in React Visual studio integration component
+# Convert Project
 
 Syncfusion React conversion is a Visual Studio add-in that converts an existing React application into a Syncfusion React Web application.
 

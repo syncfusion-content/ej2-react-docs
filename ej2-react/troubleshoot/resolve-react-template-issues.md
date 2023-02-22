@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resolve react template issues in React Troubleshoot component
+# Resolve Syncfusion React UI Components' Template issues
 
 The React property of `delayUpdate` is used to solve the react template related issues.
 

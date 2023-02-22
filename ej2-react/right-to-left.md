@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to left in React Right to left md component
+# Right-To-Left
 
 Right To Left (RTL) can be enabled to the Syncfusion React UI components by adding a `enableRtl` property as `true`. This will render all Syncfusion React components in right to left direction.
 

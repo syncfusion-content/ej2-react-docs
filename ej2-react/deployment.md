@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deployment in React Deployment md component
+# Deployment
 
 ## CDN
 
