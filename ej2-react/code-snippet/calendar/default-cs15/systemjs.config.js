@@ -30,8 +30,8 @@ System.config({
         "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
-"react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
+        "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
 
     },
     packages: {

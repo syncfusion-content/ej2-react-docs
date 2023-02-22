@@ -6,13 +6,13 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 function App() {
-    customerData: DataManager = new DataManager({
+    const customerData = new DataManager({
         adaptor: new ODataV4Adaptor,
         crossDomain: true,
         url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers'
     });
-    fields: object = { text: 'ContactName', value: 'CustomerID' };
-    query: Query = new Query().select(['ContactName', 'CustomerID']).take(0);
+    const fields= { text: 'ContactName', value: 'CustomerID' };
+    const query= new Query().select(['ContactName', 'CustomerID']).take(0);
     // set locale culture to DropDownList
     React.useEffect(() => {
         L10n.load({
