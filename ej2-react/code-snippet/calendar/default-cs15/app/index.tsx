@@ -14,7 +14,7 @@ export default class App extends React.Component<{}, {}> {
     private maxDate: Date = new Date("05/15/2017");
 
     public render() {
-        return <CalendarComponent id="calendar" value={dateValue} min={minDate} max={maxDate} />
+        return <CalendarComponent id="calendar" value={this.dateValue} min={this.minDate} max={this.maxDate} />
     }
 };
 ReactDOM.render(<App />, document.getElementById('element'));

@@ -10,17 +10,17 @@ import * as ReactDOM from 'react-dom';
 
 function App() {
   // bind remotedata to showcase actionFailureTemplate in offline.
-  private customerData: DataManager = new DataManager({
+  const customerData: DataManager = new DataManager({
     adaptor: new ODataV4Adaptor,
     crossDomain: true,
     url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers'
   });
 
   // maps the appropriate column to fields property
-  private fields: object = { text: 'ContactName', value: 'CustomerID' };
+  const fields: object = { text: 'ContactName', value: 'CustomerID' };
 
   // take 0 item to showcase noRecordsTemplate property.
-  private query: Query = new Query().select(['ContactName', 'CustomerID']).take(0);
+  const query: Query = new Query().select(['ContactName', 'CustomerID']).take(0);
 
   // set locale culture to DropDownList
   React.useEffect(() => {

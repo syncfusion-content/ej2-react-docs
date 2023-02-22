@@ -6,7 +6,7 @@ function App() {
     const dateValue = new Date("05/11/2017");
     const minDate = new Date("05/09/2017");
     const maxDate = new Date("05/15/2017");
-    return <CalendarComponent id="calendar" value={this.dateValue} min={this.minDate} max={this.maxDate}/>;
+    return <CalendarComponent id="calendar" value={dateValue} min={minDate} max={maxDate}/>;
 }
 ;
 ReactDOM.render(<App />, document.getElementById('element'));
