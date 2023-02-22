@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Licensing troubleshoot 
+# Licensing FAQ
 
 ## Is an internet connection required for license validation
 
