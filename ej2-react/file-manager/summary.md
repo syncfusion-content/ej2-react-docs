@@ -17,6 +17,7 @@ domainurl: ##DomainURL##
 * [Drag and Drop Support](file-manager/drag-and-drop.md)
 * [File System Provider](file-manager/file-system-provider.md)
 * [Localization](file-manager/localization.md)
+* [Virtualization](file-manager/virtualization.md)
 * [Accessibility](file-manager/accessibility.md)
 * [Access Control](file-manager/access-control.md)
 * [Adding Custom Item To Context Menu](file-manager/how-to/adding-custom-item-to-context-menu.md)
