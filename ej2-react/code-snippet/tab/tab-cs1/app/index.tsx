@@ -32,7 +32,7 @@ function ReactApp() {
     </TabComponent>
   );
 }
-Rconst root = ReactDOM.createRoot(document.getElementById('element'));
+const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<ReactApp />);
 
 

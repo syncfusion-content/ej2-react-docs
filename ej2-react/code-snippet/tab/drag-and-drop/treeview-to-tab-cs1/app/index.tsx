@@ -27,10 +27,10 @@ function ReactApp() {
   let field: Object = { dataSource: data, id: 'id', text: 'text' };
 
   function onNodeDragStop(args: DragAndDropEventArgs) {
-    let dropElement: Element = args.target.closest('#draggableTab .e-toolbar-item');
+    let dropElement: Element = args.target.closest('#draggableTab .e-toolbar-item') as Element;
     if (dropElement != null) {
-      let tabElement: HTMLElement = document.querySelector('#draggableTab');
-      let dropItemIndex: number = [].slice.call(tabElement.querySelectorAll('.e-toolbar-item')).indexOf(dropElement);
+      let tabElement: HTMLElement = document.querySelector('#draggableTab') as HTMLElement;
+      let dropItemIndex: number = [].slice.call(tabElement.querySelectorAll('.e-toolbar-item')).indexOf(dropElement as never);
       let newTabItem: TabItemModel[] = [{
         header: { 'text': args.draggedNodeData.text.toString() },
         content: args.draggedNodeData.text.toString() + ' Content'
@@ -39,7 +39,7 @@ function ReactApp() {
       treeObj.removeNodes([args.draggedNode]);
       args.cancel = true;
     } else {
-      let dropNode: Element = args.target.closest('#draggableTreeview .e-list-item ');
+      let dropNode: Element = args.target.closest('#draggableTreeview .e-list-item ') as Element;
       if (!isNullOrUndefined(dropNode) && args.dropIndicator === 'e-drop-in') {
         args.cancel = true;
       }
@@ -47,9 +47,9 @@ function ReactApp() {
   }
 
   function onNodeDrag(args: DragAndDropEventArgs) {
-    if (!isNullOrUndefined(args.target.closest('.tab-content'))) {
+    if (!isNullOrUndefined(args.target.closest('.tab-content') as HTMLElement)) {
       args.dropIndicator = 'e-no-drop';
-    } else if (!isNullOrUndefined(args.target.closest('#draggableTab .e-tab-header'))) {
+    } else if (!isNullOrUndefined(args.target.closest('#draggableTab .e-tab-header') as HTMLElement)) {
       args.dropIndicator = 'e-drop-in';
     }
   }
@@ -77,7 +77,7 @@ function ReactApp() {
 
   return (
     <div>
-      <TabComponent ref={(tab) => { tabObj = tab }} id='draggableTab' heightAdjustMode='Auto' dragArea="#container">
+      <TabComponent ref={(tab) => { tabObj = tab as TabComponent }} id='draggableTab' heightAdjustMode='Auto' dragArea="#container">
         <TabItemsDirective>
           <TabItemDirective header={headerText[0]} content={content0} />
           <TabItemDirective header={headerText[1]} content={content1} />
@@ -86,7 +86,7 @@ function ReactApp() {
         </TabItemsDirective>
       </TabComponent>
       <br></br>
-      <TreeViewComponent id="draggableTreeview" ref={(treeview) => { treeObj = treeview }} dragArea="#container" cssClass="treeview-external-drop-tab" fields={field} nodeDragStop={onNodeDragStop} nodeDragging={onNodeDrag} allowDragAndDrop={allowDragAndDrop} />
+      <TreeViewComponent id="draggableTreeview" ref={(treeview) => { treeObj = treeview as TreeViewComponent}} dragArea="#container" cssClass="treeview-external-drop-tab" fields={field} nodeDragStop={onNodeDragStop} nodeDragging={onNodeDrag} allowDragAndDrop={allowDragAndDrop} />
     </div>
   );
 }
