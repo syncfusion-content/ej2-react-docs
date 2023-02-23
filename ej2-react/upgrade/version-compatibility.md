@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Version compatibility in React Upgrade component | Syncfusion
-description: Learn here all about Version compatibility in Syncfusion React Upgrade component of Syncfusion Essential JS 2 and more.
+title: Syncfusion React supported versions | Syncfusion
+description: Learn here all about the React supported versions of Syncfusion Essential JS 2 and more.
 control: Version compatibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Version compatibility in React Upgrade component
+# Syncfusion React supported versions
 
 ## React version compatibility
 

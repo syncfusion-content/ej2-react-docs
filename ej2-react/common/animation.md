@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation
+# Animation in React
 
 The **Animation** is used to perform animation effects on HTML elements by running a sequence of frames. It can be used to enhance the user experience.
 
