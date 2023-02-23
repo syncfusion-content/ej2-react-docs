@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility
+# Accessibility in Syncfusion React Components
 
 Accessibility in components refers to the practice of designing and building user interface elements in a way that makes them accessible to users with disabilities. This can include a variety of things, such as making sure that text is high contrast and easy to read, providing alternative text for images, and designing controls and interactions that can be used with a keyboard or assistive technology.
 
