@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Version compatibility in React Upgrade component
+# Syncfusion React supported versions
 
 ## React version compatibility
 
