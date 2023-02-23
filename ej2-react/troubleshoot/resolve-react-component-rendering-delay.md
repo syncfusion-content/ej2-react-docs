@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resolve react component rendering delay in React Troubleshoot component
+# Resolve delay rendering of Syncfusion React UI Components
 
 The React property of `immediateRender` is used to solve the rendering delay of Syncfusion React UI Components.
 

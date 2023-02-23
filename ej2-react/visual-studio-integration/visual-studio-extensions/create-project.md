@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create project in React Visual studio integration component
+# Visual Studio Integration
 
 ## Create Project
 
