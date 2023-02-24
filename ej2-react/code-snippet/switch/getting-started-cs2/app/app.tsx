@@ -12,7 +12,7 @@ enableRipple(true);
 function App() {
   let switchRef: SwitchComponent;
   function created(): void {
-    switch.toggle();
+    switchRef.toggle();
   }
   return (
     <SwitchComponent id="switch" ref={(scope) => { switchRef = scope as SwitchComponent; }} enableRtl={true} checked={true} created={created}/>

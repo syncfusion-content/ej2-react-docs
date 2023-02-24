@@ -8,11 +8,10 @@ enableRipple(true);
 function App() {
     let switchRef;
     function created() {
-        switch (.toggle()) {
-        }
-        return (<SwitchComponent id="switch" ref={(scope) => { switchRef = scope; }} enableRtl={true} checked={true} created={created}/>);
+        switchRef.toggle();
     }
-    export default App;
-    ReactDom.render(<App />, document.getElementById('switch'));
+    return (<SwitchComponent id="switch" ref={(scope) => { switchRef = scope; }} enableRtl={true} checked={true} created={created}/>);
 }
+export default App;
+ReactDom.render(<App />, document.getElementById('switch'));
 {% endraw %}
