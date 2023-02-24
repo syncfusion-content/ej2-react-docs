@@ -14,7 +14,7 @@ This article describes the API migration process of Toolbar component from Essen
 
 ## Accessibility and Localization
 
-{% raw %}
+
 
 <!-- markdownlint-disable MD033 -->
 | **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
@@ -111,4 +111,3 @@ This article describes the API migration process of Toolbar component from Essen
 | overflowOpen |  **Event:** overflowOpen<br/> `<EJ.Toolbar id="toolbar" (overflowOpen)={this.onoverflowOpen}></EJ.Toolbar>`<br/> <br/> onoverflowOpen(event) {  } |<b>Not Applicable</b> |
 | overflowClose | **Event:** overflowClose<br/> `<EJ.Toolbar id="toolbar" (overflowClose)={this.onoverflowClose}></EJ.Toolbar>`<br/> <br/> onoverflowClose(event) {  } | <b>Not Applicable</b> |
 
-{% endraw %}

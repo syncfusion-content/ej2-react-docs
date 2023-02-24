@@ -37,29 +37,22 @@ npm install -g create-react-app
 
 * To setup basic `React` sample use following commands.
 
-<div class='tsx'>
 
 ```
-
 create-react-app quickstart --scripts-version=react-scripts-ts
-
 cd quickstart
-
 ```
 
-</div>
 
-<div class='jsx'>
+
+
 
 ```
-
 create-react-app quickstart
-
 cd quickstart
-
 ```
 
-</div>
+
 
 ## Adding Syncfusion packages
 
@@ -135,20 +128,6 @@ root.render(<ReactApp />);
 ```
 npm start
 ```
-
-Output will be as follows:
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/accordion/accordion-cs4/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/accordion/accordion-cs4/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/accordion/accordion-cs4/index.html %}
-{% endhighlight %}
-{% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/accordion/accordion-cs4" %}
 

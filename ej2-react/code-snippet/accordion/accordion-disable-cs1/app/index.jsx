@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
@@ -258,4 +257,3 @@ function ReactApp() {
 }
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<ReactApp />);
-{% endraw %}

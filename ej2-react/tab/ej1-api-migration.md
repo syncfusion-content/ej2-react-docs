@@ -14,7 +14,7 @@ This article describes the API migration process of Tab component from Essential
 
 ## Accessibility and Localization
 
-{% raw %}
+
 
 <!-- markdownlint-disable MD033 -->
 | **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
@@ -119,4 +119,3 @@ This article describes the API migration process of Tab component from Essential
 | Created | **Event:** create<br/> `<EJ.Tab id="tab" create={this.oncreate}></EJ.Tab>`<br/> <br/> oncreate(event) {  } | **Event:** created<br/> `<TabComponent  id="tab" created={oncreated.bind(this)}></TabComponent >`<br/> <br/> oncreated(event) {  } |
 | Destroyed | **Event:** destroy<br/> `<EJ.Tab id="tab" destroy={this.ondestroy}></EJ.Tab>`<br/> <br/> ondestroy(event) {  } | **Event:** destroyed<br/> `<TabComponent  id="tab" destroyed={ondestroyed.bind(this)} ></TabComponent >`<br/> <br/> ondestroyed(event) {  } |
 
-{% endraw %}

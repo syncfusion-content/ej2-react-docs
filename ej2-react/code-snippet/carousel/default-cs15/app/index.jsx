@@ -1,4 +1,3 @@
-{% raw %}
 import { CarouselComponent } from "@syncfusion/ej2-react-navigations";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -19,4 +18,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
-{% endraw %}
