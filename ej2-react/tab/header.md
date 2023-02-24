@@ -23,12 +23,6 @@ You can customize header styles by adding predefined classes in the Tab root ele
 > If the above custom style classes are not included in the root element, the default style is applied to the Tab items.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tab/tab-style-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tab/tab-style-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tab/tab-style-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -49,23 +43,17 @@ You can customize the position of the Tab header icons using the [`iconPosition`
 * **Bottom**: Icon is placed on the bottom of the Tab header item.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tab/icon-position-cs1/app/App.jsx %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/tab/icon-position-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tab/icon-position-cs1/app/App.tsx %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/tab/icon-position-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="data-source.jsx" %}
 {% include code-snippet/tab/icon-position-cs1/app/data-source.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="data-source.tsx" %}
 {% include code-snippet/tab/icon-position-cs1/app/data-source.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/tab/icon-position-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/tab/icon-position-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

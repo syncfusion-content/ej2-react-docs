@@ -78,6 +78,6 @@ function App() {
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<ReactApp />);
+root.render(<App />);
 
 

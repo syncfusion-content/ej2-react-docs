@@ -30,29 +30,20 @@ Below is the list of minimum dependencies required to use the Toolbar component.
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-<div class='tsx'>
 
 ```
-
 create-react-app quickstart --scripts-version=react-scripts-ts
 
 cd quickstart
 
 ```
 
-</div>
-
-<div class='jsx'>
-
 ```
-
 create-react-app quickstart
 
 cd quickstart
 
 ```
-
-</div>
 
 ## Adding Syncfusion packages
 
@@ -117,20 +108,6 @@ root.render(<ReactApp />);
 ```bash
 npm start
 ```
-
-The output will be as follows:
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/toolbar/toolbar-cs2/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/toolbar/toolbar-cs2/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/toolbar/toolbar-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/toolbar/toolbar-cs2" %}
 

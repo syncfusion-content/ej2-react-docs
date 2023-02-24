@@ -14,7 +14,6 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Accessibility and Localization
 
-{% raw %}
 
 <!-- markdownlint-disable MD033 -->
 | **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
@@ -113,4 +112,3 @@ This article describes the API migration process of Accordion component from Ess
 | Created | **Event:** create<br/> `<EJ.Accordion id="Accordion" #Accordion create={this.oncreate}></EJ.Accordion>`<br/> <br/> oncreate(event) {} | **Event:** created<br/> `<AccordionComponent id="Accordion" ref = {(scope) => {this.AccordionObj = scope}} created={this.oncreated.bind(this)}></AccordionComponent>`<br/> <br/> oncreated(event) {} |
 | Destroyed | **Event:** destroy<br/> `<EJ.Accordion id="Accordion" #Accordion destroy={this.ondestroy}></EJ.Accordion>`<br/> <br/> ondestroy(event) {} | **Event:** destroyed<br/> `<AccordionComponent id="Accordion" ref = {(scope) => {this.AccordionObj = scope}} (destroyed)={this.ondestroyed.bind(this)}'></AccordionComponent>`<br/> <br/> ondestroyed(event) {} |
 
-{% endraw %}

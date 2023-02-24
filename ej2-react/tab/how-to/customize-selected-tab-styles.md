@@ -15,12 +15,6 @@ You can customize the Tab style by overriding its header and active tab CSS clas
 > You can add the custom class into Tab component using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#cssclass) property which is used to customize the Tab component.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tab/custom-styles-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tab/custom-styles-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tab/custom-styles-cs1/app/index.jsx %}
 {% endhighlight %}

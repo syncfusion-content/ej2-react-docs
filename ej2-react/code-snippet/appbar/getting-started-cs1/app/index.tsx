@@ -1,4 +1,3 @@
-{% raw %}
 
 
 import { AppBarComponent } from "@syncfusion/ej2-react-navigations";
@@ -10,10 +9,10 @@ function App() {
   return (
     <div className='control-container'>
       <AppBarComponent colorMode="Primary">
-        <ButtonComponent cssClass='e-inherit' iconCss='e-icons e-menu'></ButtonComponent>
-        <span className="regular" style={{ margin: '0 5px' }}>React AppBar</span>
+        <ButtonComponent cssClass="e-inherit" iconCss="e-icons e-menu"></ButtonComponent>
+        <span className="regular">React AppBar</span>
         <div className="e-appbar-spacer"></div>
-        <ButtonComponent cssClass='e-inherit'>FREE TRIAL</ButtonComponent>
+        <ButtonComponent cssClass="e-inherit">FREE TRIAL</ButtonComponent>
       </AppBarComponent>
     </div>
   );
@@ -23,4 +22,3 @@ const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
 
 
-{% endraw %}

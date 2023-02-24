@@ -13,12 +13,6 @@ domainurl: ##DomainURL##
 You can prevent the React JSX component reload issue on state changes by rendering the React JSX component as children of Tab component. In the below example, we have prevented the re-rending of textbox component on state changes in Tab component.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tab/react-hooks-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tab/react-hooks-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tab/react-hooks-cs1/app/index.jsx %}
 {% endhighlight %}
