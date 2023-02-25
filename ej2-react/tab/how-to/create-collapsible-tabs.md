@@ -16,12 +16,6 @@ You can achieve collapse and expand functionality in Tab by adding/removing a cu
 * In the event handler, add and remove 'collapse' class to hide and show the corresponding Tab content.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tab/collapse-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tab/collapse-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tab/collapse-cs1/app/index.jsx %}
 {% endhighlight %}

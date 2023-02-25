@@ -1,16 +1,25 @@
-{% raw %}
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
-import { Dropdown } from './Dropdown';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
 function App() {
   let tabObj: TabComponent;
-
+  function Dropdown(props) {
+    let target = document.querySelector('.e-toolbar-item.e-active .e-tab-text')
+      .innerHTML;
+    return (
+      <div>
+        <h1>{target} Content</h1>
+        <br />
+        <DropDownListComponent
+          dataSource={props.data}
+          placeholder="Select a game"
+        />
+      </div>
+    );
+  }
   const addButtonClicked = (e: any): void => {
     const newTabItem = [
       {
@@ -123,5 +132,3 @@ const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
 
 
-
-{% endraw %}

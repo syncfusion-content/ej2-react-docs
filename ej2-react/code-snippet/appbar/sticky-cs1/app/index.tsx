@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import { AppBarComponent } from "@syncfusion/ej2-react-navigations";
@@ -36,4 +36,3 @@ const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
 
 
-{% endraw %}

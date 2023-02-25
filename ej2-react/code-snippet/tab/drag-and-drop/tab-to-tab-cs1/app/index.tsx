@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective, DragEventArgs } from '@syncfusion/ej2-react-navigations';
@@ -126,5 +123,3 @@ const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<ReactApp />);
 
 
-
-{% endraw %}

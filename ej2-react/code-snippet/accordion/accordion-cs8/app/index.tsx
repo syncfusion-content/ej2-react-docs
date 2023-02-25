@@ -5,10 +5,10 @@ import * as ReactDOM from "react-dom";
 import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';
 import { ExpandEventArgs, AccordionClickArgs } from '@syncfusion/ej2-navigations';
 
-let clickEle: HTMLElement;
+
 function ReactApp(props) {
   let acrdnInstance: AccordionComponent;
-  let clickEle;
+  let clickEle: HTMLElement;
   clickEle = props.data;
   return (
     // eslint-disable-next-line @typescript-eslint/no-use-before-define

@@ -36,29 +36,20 @@ npm install -g create-react-app
 
 * To setup basic `React` sample use following commands.
 
-<div class='tsx'>
+
 
 ```
-
 create-react-app quickstart --scripts-version=react-scripts-ts
-
 cd quickstart
-
 ```
 
-</div>
 
-<div class='jsx'>
+
 
 ```
-
 create-react-app quickstart
-
 cd quickstart
-
 ```
-
-</div>
 
 ## Adding Syncfusion packages
 
@@ -98,7 +89,6 @@ The Tab can be rendered by defining a JSON array. The item is rendered with [`he
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/tab/tab-cs1" %}
 
 * Run the application in the browser using the following command.
 
@@ -106,18 +96,7 @@ The Tab can be rendered by defining a JSON array. The item is rendered with [`he
 npm start
 ```
 
-Output will be as follows:
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/tab/tab-cs2/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/tab/tab-cs2/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/tab/tab-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/tab/tab-cs1" %}
 
 > In the above sample code, `element` is the `id` of the HTML element in a page to which the Tab is initialized.
 

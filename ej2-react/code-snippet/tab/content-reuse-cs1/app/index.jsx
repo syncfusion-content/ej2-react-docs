@@ -1,11 +1,20 @@
-{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
-import { Dropdown } from './Dropdown';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 function App() {
     let tabObj;
+    function Dropdown(props) {
+        let target = document.querySelector('.e-toolbar-item.e-active .e-tab-text')
+            .innerHTML;
+        return (<div>
+            <h1>{target} Content</h1>
+            <br />
+            <DropDownListComponent dataSource={props.data} placeholder="Select a game" />
+        </div>);
+    }
     const addButtonClicked = (e) => {
         const newTabItem = [
             {
@@ -27,7 +36,7 @@ function App() {
             'Hockey',
             'Rugby'
         ];
-        return <Dropdown data={sportsData}/>;
+        return <Dropdown data={sportsData} />;
     }
     function secondDropdownTemplate() {
         let sportsData = [
@@ -38,7 +47,7 @@ function App() {
             'Badminton',
             'Basketball'
         ];
-        return <Dropdown data={sportsData}/>;
+        return <Dropdown data={sportsData} />;
     }
     function thirdDropdownTemplate() {
         let sportsData = [
@@ -49,16 +58,16 @@ function App() {
             'Golf',
             'Hockey'
         ];
-        return <Dropdown data={sportsData}/>;
+        return <Dropdown data={sportsData} />;
     }
     function datePickerTemplate() {
         let target = document.querySelector('.e-toolbar-item.e-active .e-tab-text')
             .innerHTML;
         return (<div>
-        <h1>{target} Content</h1>
-        <br />
-        <DatePickerComponent />
-      </div>);
+            <h1>{target} Content</h1>
+            <br />
+            <DatePickerComponent />
+        </div>);
     }
     let tabItemsHeaderText = [
         { text: 'DatePicker' },
@@ -66,23 +75,22 @@ function App() {
         { text: 'Reused Dropdown' }
     ];
     return (<div id='container'>
-      <button id="add" className="e-btn" onClick={addButtonClicked}>
-        Click to add
-      </button>
-      <button id="remove" className="e-btn" onClick={removeButtonClicked}>
-        Click to remove
-      </button>
-      <TabComponent id="tabElement" ref={tab => {
+        <button id="add" className="e-btn" onClick={addButtonClicked}>
+            Click to add
+        </button>
+        <button id="remove" className="e-btn" onClick={removeButtonClicked}>
+            Click to remove
+        </button>
+        <TabComponent id="tabElement" ref={tab => {
             tabObj = tab;
         }}>
-        <TabItemsDirective>
-          <TabItemDirective header={tabItemsHeaderText[0]} content={datePickerTemplate}/>
-          <TabItemDirective header={tabItemsHeaderText[1]} content={firstDropdownTemplate}/>
-          <TabItemDirective header={tabItemsHeaderText[2]} content={secondDropdownTemplate}/>
-        </TabItemsDirective>
-      </TabComponent>
+            <TabItemsDirective>
+                <TabItemDirective header={tabItemsHeaderText[0]} content={datePickerTemplate} />
+                <TabItemDirective header={tabItemsHeaderText[1]} content={firstDropdownTemplate} />
+                <TabItemDirective header={tabItemsHeaderText[2]} content={secondDropdownTemplate} />
+            </TabItemsDirective>
+        </TabComponent>
     </div>);
 }
 const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<ReactApp />);
-{% endraw %}
+root.render(<App />);
