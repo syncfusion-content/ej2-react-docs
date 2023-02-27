@@ -11,22 +11,22 @@ function App() {
     title: 'Year', minimum: 1900, maximum: 2000, interval: 10,
     edgeLabelPlacement: 'Shift'
   };
-  public primaryyAxis: AxisModel = { minimum: 2, maximum: 5, interval: 0.5, title: 'Sales Amount in Millions' };
-  public border = { width: 2 };
-  render() {
+  const primaryyAxis: AxisModel = { minimum: 2, maximum: 5, interval: 0.5, title: 'Sales Amount in Millions' };
+  const border = { width: 2 };
+  
     return <ChartComponent id='charts'
-      primaryXAxis={this.primaryxAxis}
-      primaryYAxis={this.primaryyAxis}
+      primaryXAxis={primaryxAxis}
+      primaryYAxis={primaryyAxis}
       title='Average Sales Comparison'>
       <Inject services={[AreaSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={areaData} xName='x' yName='y' name='Product A'
-           width={2}  border={this.border}
+           width={2}  border={border}
           opacity={0.5} type='Area'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
-  }
+
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));

@@ -7,14 +7,13 @@ import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, 
 from'@syncfusion/ej2-react-charts';
 import { data } from 'datasource.ts';
 
-class App extends React.Component<{}, {}> {
+function App() {
 
-  public primaryxAxis: AxisModel = { valueType: 'DateTime' };
-  public marker = { visible: true, height: 10, width: 10, isFilled: true };
+  const primaryxAxis: AxisModel = { valueType: 'DateTime' };
+  const marker = { visible: true, height: 10, width: 10, isFilled: true };
 
-  render() {
-    return <ChartComponent id='charts' pointRender={this.pointRender}
-      primaryXAxis={this.primaryxAxis}>
+    return <ChartComponent id='charts'
+      primaryXAxis={primaryxAxis}>
       <Inject services={[LineSeries, Legend, Tooltip, DataLabel, DateTime]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={data} xName='x' yName='y' width={2} name='Warmest'
@@ -22,7 +21,6 @@ class App extends React.Component<{}, {}> {
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
-  }
 
 };
 export default App;
