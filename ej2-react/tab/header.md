@@ -49,12 +49,6 @@ You can customize the position of the Tab header icons using the [`iconPosition`
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tab/icon-position-cs1/app/index.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="data-source.jsx" %}
-{% include code-snippet/tab/icon-position-cs1/app/data-source.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="data-source.tsx" %}
-{% include code-snippet/tab/icon-position-cs1/app/data-source.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tab/icon-position-cs1" %}

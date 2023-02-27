@@ -8,9 +8,6 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    componentDidMount();
-  })
-  function componentDidMount(prevProps) {
     //createSpinner() method is used to create spinner
     createSpinner({
       // Specify the target for the spinner to show
@@ -18,7 +15,7 @@ function App() {
     });
     // showSpinner() will make the spinner visible
     showSpinner(document.getElementById('container'));
-  }
+  })
     return (
       <div className="control-pane">
         <div id="container"
@@ -27,6 +24,6 @@ function App() {
       </div>
     );
   }
-
+  export default App;
 
 

@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import * as React from 'react';
@@ -51,4 +51,3 @@ root.render(<App />);
 
 
 
-{% endraw %}

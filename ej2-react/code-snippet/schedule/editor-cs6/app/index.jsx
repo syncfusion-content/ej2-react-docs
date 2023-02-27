@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ScheduleComponent, RecurrenceEditorComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Inject } from '@syncfusion/ej2-react-schedule';
@@ -53,4 +53,3 @@ function App() {
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-{% endraw %}

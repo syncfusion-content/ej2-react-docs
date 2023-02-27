@@ -16,12 +16,12 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 ## Properties
 
-{% raw %}
+
 
 | Behavior | API in Essential JS 1 | API in Essential JS 2 |
 | --- | --- | --- |
 | To change the display of days count in agenda view | **Property:** *daysInAgenda* <br/> <br/> `<EJ.Schedule id="Schedule" currentView={ej.Schedule.CurrentView.Agenda} agendaViewSettings-daysInAgenda={5}>`<br>`</EJ.Schedule>`| **Property:** *agendaDaysCount* <br/><br/> `<ScheduleComponent currentView='Agenda' agendaDaysCount={7}>`<br>`</ScheduleComponent>`|
-| Preventing deletion of appointment | **Property:** *allowDelete* <br/> <br/>`<EJ.Schedule id="Schedule" allowDelete= {false}>`<br>`</EJ.Schedule>` | Not applicable | Not applicable
+| Preventing deletion of appointment | **Property:** *allowDelete* <br/> <br/>`<EJ.Schedule id="Schedule" allowDelete= {false}>`<br>`</EJ.Schedule>` | Not applicable |
 | Allows dragging and dropping of appointments | **Property:** *allowDragAndDrop* <br/> <br/> `<EJ.Schedule id="Schedule" allowDragAndDrop={true}>` <br> `</EJ.Schedule>` | **Property:**  *allowDragAndDrop* <br/><br/> `<ScheduleComponent allowDragAndDrop={true}>`<br>`</ScheduleComponent>`|
 | Enabling inline editing of appointments | **Property:** *allowInline* <br/> <br/> `<EJ.Schedule id="Schedule" allowInline={true}>` <br> `</EJ.Schedule>`| Not applicable |
 | Allow keyboard interactions | **Property:** *allowKeyboardNavigation* <br/> <br/> `<EJ.Schedule id="Schedule" allowKeyboardNavigation={true}>` <br> `</EJ.Schedule>` | **Property:** *allowKeyboardInteraction* <br/><br/> `<ScheduleComponent allowKeyboardInteraction={true}>`<br>`</ScheduleComponent>`|
@@ -37,7 +37,7 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 | Date format | **Property:** *dateFormat* <br/> <br/> `<EJ.Schedule id="Schedule"  dateFormat="yyyy/MM/dd">`<br>`</EJ.Schedule>` | **Property:** *dateFormat* <br/><br/> `<ScheduleComponent  dateFormat= "yyyy/MM/dd">`<br>`</ScheduleComponent>`|
 | Date header template | **Property:** *dateHeaderTemplateId* <br/> <br/> `<EJ.Schedule id="Schedule" dateHeaderTemplateId="#dateTemplate">`<br>`</EJ.Schedule>` |**Property:** *dateHeaderTemplate* <br/><br/> `<ScheduleComponent dateHeaderTemplate={this.dateHeaderTemplate.bind(this)}>`<br>`</ScheduleComponent>`|
 | Editor template | Not Applicable | **Property:** *editorTemplate* <br/><br/> `<ScheduleComponent editorTemplate={this.editorTemplate.bind(this)}>`<br>`</ScheduleComponent>`|
-| Enable load on demand | **Property:** *enableLoadOnDemand* <br/> <br/> `<EJ.Schedule id="Schedule" enableLoadOnDemand= {true}>`<br>`</EJ.Schedule>` | Not applicable | Not applicable |
+| Enable load on demand | **Property:** *enableLoadOnDemand* <br/> <br/> `<EJ.Schedule id="Schedule" enableLoadOnDemand= {true}>`<br>`</EJ.Schedule>` | Not applicable |
 | Enable persistence | **Property:** *enablePersistence* <br/> <br/> `<EJ.Schedule id="Schedule" enablePersistence= {true}>`<br>`</EJ.Schedule>` | **Property:** *enablePersistence* <br/><br/> `<ScheduleComponent enablePersistence= {true}>`<br>`</ScheduleComponent>`|
 | Enable RTL | **Property:** *enableRTL* <br/> <br/>  `<EJ.Schedule id="Schedule" enableRTL= {true}>`<br>`</EJ.Schedule>` | **Property:** *enablePersistence* <br/><br/> `<ScheduleComponent  enableRTL= {true}>`<br>`</ScheduleComponent>`|
 | Setting end hour of the scheduler | **Property:** *endHour* <br/> <br/>`<EJ.Schedule id="Schedule" endHour={18}>`<br>`</EJ.Schedule>` | **Property:** *endHour* <br/><br/>  `<ScheduleComponent endHour= '20:00'>`<br>`</ScheduleComponent>` |
@@ -195,4 +195,3 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 > You can refer to our [React Scheduler](https://www.syncfusion.com/react-ui-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
 
-{% endraw %}
