@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { extend, isNullOrUndefined } from "@syncfusion/ej2-base";
@@ -115,4 +115,3 @@ function App() {
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-{% endraw %}

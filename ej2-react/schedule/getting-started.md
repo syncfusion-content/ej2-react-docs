@@ -50,23 +50,19 @@ npm install -g create-react-app
 
 To setup basic React sample use following commands.
 
-<div class='tsx'>
 
 ```
 create-react-app quickstart --scripts-version=react-scripts-ts
 cd quickstart
 ```
 
-</div>
 
-<div class='jsx'>
 
 ```
 create-react-app quickstart
 cd quickstart
 ```
 
-</div>
 
 ### Adding Syncfusion packages
 
@@ -162,25 +158,31 @@ Add the HTML div tag defined with an `id` attribute in your `index.html` file, w
 
 Import the Scheduler component to your `app.tsx` file as shown below, and initialize it to the element defined with an id `schedule` in the `index.html` file.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/schedule/local-data-cs11/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/schedule/local-data-cs11/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/schedule/local-data-cs11/index.html %}
-{% endhighlight %}
-{% endtabs %}
+
+```ts
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
+
+function App() {
+  return (
+    <ScheduleComponent>
+      <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+    </ScheduleComponent>
+  );
+};
+const root = ReactDOM.createRoot(document.getElementById('schedule'));
+root.render(<App />)
+```
         
-{% previewsample "page.domainurl/code-snippet/schedule/local-data-cs11" %}
 
 Now, run the application in the browser using the following command.
 
 ```
 npm start
 ```
+
+{% previewsample "page.domainurl/code-snippet/schedule/local-data-cs11" %}
 
 > Above demo will display the empty scheduler.
 
@@ -192,7 +194,7 @@ Here, the local JSON data is assigned to Scheduler's dataSource.
 
 `[src/app/app.tsx]`
 
-{% raw %}
+
 
 ```ts
 import * as React from 'react';
@@ -220,7 +222,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
 ```
-{% endraw %}
+
 
 You can also provide different names to these default fields, for which the custom names of those fields must be mapped appropriately within fields property as shown below.
 

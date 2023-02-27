@@ -83,7 +83,7 @@ You can bind the event data through external ajax request and assign it to the `
 
 `[src/app/app.tsx]`
 
-{% raw %}
+
 
 ```ts
 
@@ -108,7 +108,7 @@ const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
 
 ```
-{% endraw %}
+
 
 `[src/app/app.ts]`
 

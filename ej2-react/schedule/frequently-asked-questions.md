@@ -24,7 +24,7 @@ The above error occurs when using scheduler views that were not imported into th
 
 In the below code, `Day` option is used without injecting, So, it throws the above error. You can resolve this problem by simply injecting the day module in below code.
 
-{% raw %}
+
 
 ```ts
 
@@ -61,7 +61,7 @@ export class TimelineView extends SampleBase {
 render(<TimelineView />, document.getElementById('sample'));
 
 ```
-{% endraw %}
+
 
 ## Grouping with empty resources
 
