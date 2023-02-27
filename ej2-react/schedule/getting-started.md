@@ -42,34 +42,36 @@ The following list of dependencies are required to use the Scheduler component i
 
 ### Setup for local development
 
-You can use create-react-app to setup the applications. To install create-react-app run the following command.
+To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
 
-```
-npm install -g create-react-app
-```
-
-To setup basic React sample use following commands.
-
-
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-cd quickstart
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
 ```
 
+or
 
-
+```bash
+yarn create react-app my-app
+cd my-app
+yarn start
 ```
-create-react-app quickstart
-cd quickstart
+
+To set-up a React application in `TypeScript` environment, run the following command.
+
+```bash
+npx create-react-app my-app --template typescript
+cd my-app
+npm start
 ```
 
+Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
 
-### Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in `npmjs.com` public registry. To install Scheduler component, use the following command.
-
-```
-npm install @syncfusion/ej2-react-schedule --save
+```bash
+npm init react-app my-app
+cd my-app
+npm start
 ```
 
 ### Adding CSS reference
@@ -120,60 +122,16 @@ These modules should be injected into the schedule using the `Inject` method wit
 
 ## Initialize the schedule
 
-Add the HTML div tag defined with an `id` attribute in your `index.html` file, where the scheduler element is initialized.
+Import the Scheduler component to your `app.tsx` file using following code.
 
-`[src/index.html]`
-
-```
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Syncfusion React Schedule</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Essential JS 2 for React Components" />
-    <meta name="author" content="Syncfusion" />
-    <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-    <script src="systemjs.config.js"></script>
-     <style>
-        #loader {
-            color: #008cff;
-            height: 40px;
-            left: 45%;
-            position: absolute;
-            top: 45%;
-            width: 30%;
-        }
-    </style>
-</head>
-<body>
-    <!--Element where the scheduler will be rendered-->
-    <div id="schedule"></div>
-</body>
-</html>
-```
-
-Import the Scheduler component to your `app.tsx` file as shown below, and initialize it to the element defined with an id `schedule` in the `index.html` file.
-
-
-```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
-
-function App() {
-  return (
-    <ScheduleComponent>
-      <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-    </ScheduleComponent>
-  );
-};
-const root = ReactDOM.createRoot(document.getElementById('schedule'));
-root.render(<App />)
-```
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/schedule/local-data-cs11/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/schedule/local-data-cs11/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
         
 
 Now, run the application in the browser using the following command.
