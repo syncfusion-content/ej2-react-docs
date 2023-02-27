@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import * as React from 'react';
@@ -27,4 +27,3 @@ const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
 
 
-{% endraw %}

@@ -2,7 +2,6 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 // @ts-ignore
-import { accordion } from '../datasource.tsx';
 let dbFlag = 0;
 let dynamciAcrdnCount = 2;
 function ReactApp() {

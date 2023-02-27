@@ -49,7 +49,7 @@ The data for resources can bind with Scheduler either as a local JSON collection
 
 The following code example depicts how to bind the local JSON data to the `dataSource` of `resources` collection.
 
-{% raw %}
+
 
 ```ts
 import * as React from 'react';
@@ -80,42 +80,12 @@ const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
 
 ```
-{% endraw %}
-
-{% raw %}
-
-```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Day, Week, WorkWeek, Month, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
-import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-    const [data] = React.useState(extend([], resourceData, null, true));
-    const [ownerData] = React.useState([
-        { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
-        { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
-        { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
-    ]);
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={{ dataSource: data }}>
-      <ResourcesDirective>
-        <ResourceDirective field='OwnerId' title='Owner' name='Owners' allowMultiple={true} dataSource={ownerData} textField='OwnerText' idField='Id' colorField='OwnerColor'>
-        </ResourceDirective>
-      </ResourcesDirective>
-      <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
-    </ScheduleComponent>);
-}
-;
-const root = ReactDOM.createRoot(document.getElementById('schedule'));
-root.render(<App />);
-```
-{% endraw %}
 
 ### Using remote service URL
 
 The following code example depicts how to bind the remote data for resources `dataSource`.
 
-{% raw %}
+
 
 ```ts
 
@@ -144,36 +114,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
 ```
-{% endraw %}
 
-{% raw %}
-
-```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Week, Month, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
-import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-function App() {
-    const [data] = React.useState(extend([], resourceData, null, true));
-    const [ownerData] = React.useState(new DataManager({
-        url: 'Home/GetResourceData',
-        adaptor: new UrlAdaptor(),
-        crossDomain: true
-    }));
-    return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={{ dataSource: data }}>
-    <ResourcesDirective>
-      <ResourceDirective field='OwnerId' title='Owner' name='Owners' allowMultiple={true} dataSource={ownerData} textField='OwnerText' idField='Id' colorField='OwnerColor'>
-      </ResourceDirective>
-    </ResourcesDirective>
-    <Inject services={[Week, Month, Agenda]}/>
-  </ScheduleComponent>;
-}
-const root = ReactDOM.createRoot(document.getElementById('schedule'));
-root.render(<App />);
-```
-{% endraw %}
 
 ## Scheduler with multiple resources
 
