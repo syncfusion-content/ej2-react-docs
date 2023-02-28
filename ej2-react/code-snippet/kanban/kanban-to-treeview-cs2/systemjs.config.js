@@ -34,8 +34,8 @@ System.config({
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-kanban": "syncfusion:ej2-react-kanban/dist/ej2-react-kanban.umd.min.js",
         "@syncfusion/ej2-react-navigations": "syncfusion:ej2-react-navigations/dist/ej2-react-navigations.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
-"react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
+        "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },
