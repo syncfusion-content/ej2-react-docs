@@ -4,11 +4,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Ajax } from '@syncfusion/ej2-base';
+import { useEffect } from "react";
 import { KanbanComponent, ColumnsDirective, ColumnDirective, Kanban } from "@syncfusion/ej2-react-kanban";
 
 function App(){
    let kanban: Kanban | null;
-   function componentDidMount(){
+   useEffect(() => {
     const ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
       ajax.send();
       ajax.onSuccess = (data: any) => {
@@ -16,7 +17,7 @@ function App(){
           kanban.dataSource = JSON.parse(data);
         }
       }
-    }
+    });
     return(
       <KanbanComponent ref={kanban => kanban = kanban} id="kanban" keyField="ShipCountry" dataSource={data} cardSettings={{ contentField: "ShippedDate", headerField: "OrderID" }}>
         <ColumnsDirective>

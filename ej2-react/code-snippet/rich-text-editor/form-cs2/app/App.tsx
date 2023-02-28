@@ -11,7 +11,7 @@ import * as React from 'react';
 
 function App() {
   let formObject: FormValidatorModel;
-  function componentDidMount(): void {
+  function componentCreated(): void {
     const option: FormValidatorModel = {
       rules: {
         defaultRTE: {
@@ -35,7 +35,7 @@ function App() {
     return (
       <form id="myForm" className="form-vertical">
         <div className="form-group">
-          <RichTextEditorComponent id="defaultRTE" name="defaultRTE" className="form-control" height={200} showCharCount={true} maxLength={100} placeholder={'Type something'} value={''}>
+          <RichTextEditorComponent id="defaultRTE" created={componentCreated} name="defaultRTE" className="form-control" height={200} showCharCount={true} maxLength={100} placeholder={'Type something'} value={''}>
             <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Count]} />
           </RichTextEditorComponent>
         </div>

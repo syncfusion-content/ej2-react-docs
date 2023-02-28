@@ -11,7 +11,7 @@ class App extends React.Component<{}, {}> {
   public dateValue = new Date('11/23/2018');
   public dateTimeValue = new Date('11/23/2018 12:30 PM');
   public dropdownModel = { dataSource: this.frameWorkList, placeholder: 'Select frameworks' };
-  public multiSelectModel = { dataSource: frameWorkList, placeholder: 'Select frameworks' };
+  public multiSelectModel = { dataSource: this.frameWorkList, placeholder: 'Select frameworks' };
   public maskModel = { mask: '000-000-000' };
   public numericModel = { placeholder: 'Enter number' };
   public textboxModel = { placeholder: 'Enter some text' };
