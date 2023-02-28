@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { L10n } from '@syncfusion/ej2-base';
 import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { EditableType, InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
@@ -24,7 +20,6 @@ function App() {
         });
     });
   let inplaceEditorObj: InPlaceEditorComponent;
-  let dropdownObj: DropDownListComponent;
   let editableOnData = ['Click', 'DblClick', 'EditIconClick'];
   let model = { placeholder: 'Enter some text' };
 
@@ -41,7 +36,7 @@ function App() {
                 <tr>
                     <td> EditableOn: </td>
                     <td>
-                        <DropDownListComponent id='dropDown' dataSource= {editableOnData} width='auto' value='Click' change={ onChange=onChange.bind(this) } placeholder='Select edit type' />
+                        <DropDownListComponent id='dropDown' dataSource= {editableOnData} width='auto' value='Click' change={onChange.bind(this) } placeholder='Select edit type' />
                     </td>
                 </tr>
                 <tr>
@@ -58,6 +53,3 @@ function App() {
 }
 
 export default App;
-
-
-{% endraw %}
