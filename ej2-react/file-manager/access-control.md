@@ -19,7 +19,7 @@ The [React FileManager](https://www.syncfusion.com/react-ui-components/react-fil
 
 The FileAccessController allows you to define security permissions for folders and files using a set of folder or file access rules.
 
-To set up access rules for folders (including their files and sub-folders) and individual files, use the SetRules() method. The following table represents the AccessRule properties available for file and folder:
+To set up access rules for folders (including their files and sub-folders) and individual files, use the SetRules() method in the controller. The following table represents the AccessRule properties available for file and folder:
 
 | **Properties** | **Applicable for file** | **Applicable for folder** | **Description** |
 | --- | --- | --- | --- |
@@ -82,8 +82,6 @@ Permission denied for administrator to write a file or folder.
 ```
 
 The following syntax represent how to allow or deny permission based on file or folder access rule.
-
-"Examples"
 
 Permission denied for writing except for particular file or folder.
 
