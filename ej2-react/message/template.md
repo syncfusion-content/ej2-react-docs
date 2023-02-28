@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React Message component
 
-The message supports templates that allows the user to customize the content with a custom structure. The content can be a string, paragraph, or any other HTML element. The template can be rendered through the `content` property or added directly to the HTML element.
+The message supports templates that allows the user to customize the content with a custom structure. The content can be a string, paragraph, or any other HTML element. The template can be rendered through the [content](https://ej2.syncfusion.com/react/documentation/api/message/#content) property or added directly to the HTML element.
 
 In the following sample, the Message component content is customized with HTML elements and React Button components, which are directly added to the HTML element.
 
