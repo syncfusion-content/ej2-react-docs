@@ -29,8 +29,7 @@ function App() {
             }
         }}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
-  </ScheduleComponent>;
-}
-;
+  </ScheduleComponent>
+};
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
