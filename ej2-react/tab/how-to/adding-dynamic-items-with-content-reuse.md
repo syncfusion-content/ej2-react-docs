@@ -20,12 +20,6 @@ Content reuse can be achieved by using the following steps:
 Refer to the following sample.
 
 {% tabs %}
-{% highlight js tabtitle="dropdown.jsx" %}
-{% include code-snippet/tab/content-reuse-cs1/app/Dropdown.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="dropdown.tsx" %}
-{% include code-snippet/tab/content-reuse-cs1/app/Dropdown.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tab/content-reuse-cs1/app/index.jsx %}
 {% endhighlight %}
