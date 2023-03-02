@@ -5,13 +5,13 @@ import { sampleData } from './datasource';
 function App() {
     const toolbarOptions = ['ExcelExport'];
     const pageSettings = { pageSize: 7 };
-    const treegrid = React.useRef(null);
+    let treegrid;
     const toolbarClick = (args) => {
         if (treegrid && args.item.text === 'Excel Export') {
             const excelExportProperties = {
                 includeHiddenColumn: true
             };
-            treegrid.current.excelExport(excelExportProperties);
+            treegrid.excelExport(excelExportProperties);
         }
     };
     return <TreeGridComponent dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' allowPaging={true} pageSettings={pageSettings} allowExcelExport={true} height='220' toolbarClick={toolbarClick} ref={g => treegrid = g} toolbar={toolbarOptions}>

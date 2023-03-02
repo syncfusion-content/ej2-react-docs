@@ -10,7 +10,7 @@ class App extends React.Component<{}, {}>{
     public selectionSettings: SelectionSettingsModel = { type: 'Multiple' };
 
     render() {
-        return <TreeGridComponent dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' height='270' selectionSettings={this.selectionSettings} >
+        return <TreeGridComponent dataSource={sampleData} allowRowDragAndDrop={true} treeColumnIndex={1} childMapping='subtasks' height='270' selectionSettings={this.selectionSettings} >
             <ColumnsDirective>
               <ColumnDirective field='taskID' headerText='Task ID' width='90' textAlign='Right'></ColumnDirective>
               <ColumnDirective field='taskName' headerText='Task Name' width='180'></ColumnDirective>

@@ -14,7 +14,14 @@ function App() {
   const toolbarOptions: ToolbarItems[] = ['Add', 'Delete', 'Update', 'Cancel'];
   let treegrid: TreeGridComponent | null;
   const btnClick = (): void => {
-      alert('dwgfgfg');
+    if (treegrid && treegrid.element.classList.contains('disabletreegrid')) {
+      treegrid.element.classList.remove('disabletreegrid');
+      (document.getElementById("TreeGridParent") as HTMLElement).classList.remove('wrapper');
+    }
+    else if (treegrid) {
+      treegrid.element.classList.add('disabletreegrid');
+      (document.getElementById("TreeGridParent") as HTMLElement).classList.add('wrapper');
+    }
   }
     return (<div>
       <ButtonComponent cssClass='e-flat e-primary' iconCss='e-icons e-play-icon'

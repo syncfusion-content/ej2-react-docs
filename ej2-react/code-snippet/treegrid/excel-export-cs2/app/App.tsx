@@ -11,11 +11,10 @@ import { sampleData } from './datasource';
 function App() {
     const toolbarOptions: ToolbarItems[] = ['ExcelExport'];
     const pageSettings: PageSettingsModel = { pageSize: 7 };
-    const treegrid = React.useRef(null);
-
+    let treegrid: TreeGridComponent;
     const toolbarClick = (args: ClickEventArgs): void => {
         if (treegrid && args.item.text === 'Excel Export') {
-            (treegrid.current as any).excelExport();
+            (treegrid as any).excelExport();
         }
     }
     const excelQueryCellInfo = (args: ExcelQueryCellInfoEventArgs): void => {

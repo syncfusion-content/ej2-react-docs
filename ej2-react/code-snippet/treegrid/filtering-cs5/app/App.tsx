@@ -21,7 +21,8 @@ function App() {
     </ColumnsDirective>
     <Inject services={[Filter]}/>
     </TreeGridComponent>
-}
+};
+export default App;
 
 
 

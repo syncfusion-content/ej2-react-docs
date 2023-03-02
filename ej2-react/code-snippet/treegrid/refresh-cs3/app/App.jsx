@@ -4,26 +4,34 @@ import { ColumnsDirective, ColumnDirective, TreeGridComponent, Inject } from '@s
 import { Edit, Page, Toolbar } from '@syncfusion/ej2-react-treegrid';
 /* tslint:disable */
 function App() {
-    const treegrid = React.useRef(null);
+    let treegridObj;
     const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Cell' };
     const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
     const load = () => {
-        let instance = treegrid.current;
+      treegridObj = document.getElementById('treegridObj').ej2_instances[0];
+
+        let instance = treegridObj;
         if (instance != null) {
-            instance.element.addEventListener('mousedown', function (e) {
-                if (e.target.classList.contains("e-rowcell")) {
-                    if (instance.grid.isEdit) {
-                        instance.endEdit();
-                    }
-                    let index = parseInt(e.target.getAttribute('Index'));
-                    instance.selectRow(index);
-                    instance.startEdit();
-                }
-                ;
-            });
+          instance.element.addEventListener('mousedown', function (e) {
+            if (e.target.closest('td') !== null && e.target.closest('td').classList.contains("e-rowcell")
+            && !e.target.classList.contains('e-treegridexpand') && !e.target.classList.contains('e-treegridcollapse') && e.target.closest('td').getAttribute("aria-colIndex") !== null) {
+              let target = e.target.closest('td');
+              if (instance.grid.isEdit && !target.classList.contains("e-editedbatchcell") && !document.getElementsByClassName('e-addedrow').length) {
+                instance.grid.saveCell(); // calling saveCell method
+              }
+              if(!instance.grid.isEdit) {
+                let index = parseInt(target.getAttribute("Index"));
+                let colindex = parseInt(target.getAttribute("aria-colindex"));
+                let field = instance.getColumns()[colindex - 1].field;
+                setTimeout(function(){
+                  instance.editCell(index, field); // calling editCell method
+                });
+              }
+            };
+          });
         }
     };
-    return (<TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' height={210} allowPaging={true} toolbar={toolbarOptions} editSettings={editSettings} load={load} ref={treegrid}>
+    return (<TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' height={210} allowPaging={true} toolbar={toolbarOptions} editSettings={editSettings} load={load} id="treegridObj">
         <ColumnsDirective>
           <ColumnDirective field='TaskID' headerText='Task ID' width='70' textAlign='Right' isPrimaryKey={true}></ColumnDirective>
           <ColumnDirective field='TaskName' headerText='Task Name' width='120'></ColumnDirective>

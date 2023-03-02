@@ -11,12 +11,10 @@ function App() {
         dataSource.unshift({ TaskID: 99, TaskName: "New Data", StartDate: new Date('02/03/2017'), Duration: 10 });
         treegridObj.dataSource = dataSource;
     };
-    const ;
-    delete ;
-    () => {
+    const deleteAction = () => {
         const selectedRow = treegridObj.getSelectedRowIndexes()[0];
         const dataSource = extendArray(treegridObj.dataSource);
-        if (selectedRow.length > 0) {
+        if (treegridObj.getSelectedRecords().length > 0) {
             dataSource.splice(selectedRow, 1); // Delete record.
         }
         else {
@@ -26,7 +24,7 @@ function App() {
     };
     return (<div>
       <ButtonComponent cssClass='e-flat' isToggle onClick={add}>Add</ButtonComponent>
-      <ButtonComponent cssClass='e-flat' isToggle onClick={delete }>Delete</ButtonComponent>
+      <ButtonComponent cssClass='e-flat' isToggle onClick={deleteAction }>Delete</ButtonComponent>
       <TreeGridComponent dataSource={treegridData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' height={280} ref={g => treegridObj = g}>
         <ColumnsDirective>
             <ColumnDirective field='TaskID' headerText='Task ID' width='70' textAlign='Right'></ColumnDirective>

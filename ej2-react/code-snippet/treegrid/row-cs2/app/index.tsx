@@ -13,7 +13,7 @@ class Source extends React.Component<{}, {}>{
     render() {
         return <TreeGridComponent id='TreeGrid' dataSource={sampleData} treeColumnIndex={1} allowRowDragAndDrop={true}
         rowDropSettings={this.rowDropSettings} selectionSettings={this.selectionSettings}
-         childMapping='subtasks' height='275'}>
+         childMapping='subtasks' height='275'>
             <ColumnsDirective>
               <ColumnDirective field='taskID' headerText='Task ID' width='90' textAlign='Right'></ColumnDirective>
               <ColumnDirective field='taskName' headerText='Task Name' width='180'></ColumnDirective>
@@ -32,7 +32,7 @@ class Target extends React.Component<{}, {}>{
     render() {
         return <TreeGridComponent treeColumnIndex={1} id='DestGrid' allowRowDragAndDrop={true}
         rowDropSettings={this.rowDropSettings} selectionSettings={this.selectionSettings}
-         childMapping='subtasks' height='275'}>
+         childMapping='subtasks' height='275'>
             <ColumnsDirective>
               <ColumnDirective field='taskID' headerText='Task ID' width='90' textAlign='Right'></ColumnDirective>
               <ColumnDirective field='taskName' headerText='Task Name' width='180'></ColumnDirective>

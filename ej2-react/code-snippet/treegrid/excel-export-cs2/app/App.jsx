@@ -6,10 +6,10 @@ import { sampleData } from './datasource';
 function App() {
     const toolbarOptions = ['ExcelExport'];
     const pageSettings = { pageSize: 7 };
-    const treegrid = React.useRef(null);
+    let treegrid;
     const toolbarClick = (args) => {
         if (treegrid && args.item.text === 'Excel Export') {
-            treegrid.current.excelExport();
+            treegrid.excelExport();
         }
     };
     const excelQueryCellInfo = (args) => {
