@@ -37,8 +37,8 @@ System.config({
         "@syncfusion/ej2-react-notifications": "syncfusion:ej2-react-notifications/dist/ej2-react-notifications.umd.min.js",
         "@syncfusion/ej2-react-navigations": "syncfusion:ej2-react-navigations/dist/ej2-react-navigations.umd.min.js",
 
-        "react-dom":"https://unpkg.com/react-dom@16.8.0/umd/react-dom.development.js",
-        "react":"https://unpkg.com/react@16.8.0/umd/react.development.js",
+        "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
         
     },
     packages: {
