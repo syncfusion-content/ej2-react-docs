@@ -21,20 +21,7 @@ function App() {
     Destination: 'Asia/Yekaterinburg'
   }];
 
-  return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{
-    dataSource: data,
-    fields: {
-      id: 'TravelId',
-      subject: { name: 'TravelSummary' },
-      isAllDay: { name: 'FullDay' },
-      location: { name: 'Source' },
-      description: { name: 'Comments' },
-      startTime: { name: 'DepartureTime' },
-      endTime: { name: 'ArrivalTime' },
-      startTimezone: { name: 'Origin' },
-      endTimezone: { name: 'Destination' }
-    }
-  }}>
+  return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{dataSource: data, fields: {id: 'TravelId', subject: { name: 'TravelSummary' }, isAllDay: { name: 'FullDay' }, location: { name: 'Source' }, description: { name: 'Comments' }, startTime: { name: 'DepartureTime' }, endTime: { name: 'ArrivalTime' }, startTimezone: { name: 'Origin' }, endTimezone: { name: 'Destination' }}}}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>
 
