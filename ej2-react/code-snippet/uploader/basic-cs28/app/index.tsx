@@ -13,7 +13,7 @@ function App() {
   }
   function onFileSelected(args : SelectedEventArgs) : void {
     args.filesData.splice(5);
-    const filesData : FileInfo[] = this.uploadObj.getFilesData();
+    const filesData : FileInfo[] = uploadObj.getFilesData();
     const allFiles : FileInfo[] = filesData.concat(args.filesData);
     if (allFiles.length > 5) {
         for (const i of allFiles) {
@@ -27,7 +27,7 @@ function App() {
     args.isModified = true;
 }
     return (
-        <UploaderComponent asyncSettings = {path} selected={this.onFileSelected = onFileSelected.bind(this)} ref = {upload => {this.uploadObj = upload !}} />);
+        <UploaderComponent asyncSettings = {path} selected={onFileSelected = onFileSelected.bind(this)} ref = {upload => {uploadObj = upload !}} />);
 }
 ReactDOM.render(<App />, document.getElementById('fileupload'));
 
