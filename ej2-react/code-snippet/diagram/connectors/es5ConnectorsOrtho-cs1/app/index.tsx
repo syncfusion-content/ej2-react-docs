@@ -1,5 +1,4 @@
-
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
@@ -7,7 +6,7 @@ import {
     DiagramComponent,
     ConnectorModel,
     OrthogonalSegmentModel,
-    ConnectorConstraints
+    ConnectorConstraints,
     ConnectorEditing
 } from "@syncfusion/ej2-react-diagrams";
 Diagram.Inject(ConnectorEditing);
@@ -34,7 +33,7 @@ let connectors: ConnectorModel[] = [{
     },
     type: 'Orthogonal',
     maxSegmentThumb: 3,
-    constraints: ConnectorConstraints.Default & ~ConnectorConstraints.DragSegmentThumb
+    constraints: ConnectorConstraints.Default & ~ConnectorConstraints.DragSegmentThumb,
     segments: [{ type: 'Orthogonal', direction: 'Bottom', length: 50 }],
 
 }];
@@ -51,5 +50,5 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-
+{% endraw %}
 

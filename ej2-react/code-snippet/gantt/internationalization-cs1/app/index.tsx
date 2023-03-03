@@ -3,8 +3,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-import * as cagregorian from './ca-gregorian.json';
-import * as numbers from './numbers.json';
+import * as cagregorian from './ca-gregorian.jsx';
+import * as numbers from './numbers.jsx';
 loadCldr(cagregorian, numbers);
 setCulture('de-DE');
 

@@ -20,8 +20,6 @@ function App() {
         node.style.strokeColor = 'white';
         return node;
       }}
-      nodes={node}
-      connectors={connector}
       // Defines the pageSettings for the diagram
       pageSettings = {
         {

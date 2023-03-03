@@ -1,9 +1,8 @@
 {% raw %}
 
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Diagram, ConnectorModel } from "@syncfusion/ej2-react-diagrams";
+import { Diagram, ConnectorModel,ConnectorEditing ,ConnectorConstraints,DiagramComponent} from "@syncfusion/ej2-react-diagrams";
 Diagram.Inject(ConnectorEditing);
 let connector2: ConnectorModel = {};
     connector2.id = 'connector2';
@@ -38,7 +37,5 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
 
 {% endraw %}

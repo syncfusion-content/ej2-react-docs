@@ -26,8 +26,7 @@ function App (){
         ganttInstance.refresh();
     };
     }
-    return
-    <div>
+    return <div>
         <ButtonComponent onClick={clickHandler}>Bind Data</ButtonComponent>
         <GanttComponent taskFields={taskFields} projectStartDate='02/24/2019' projectEndDate='07/20/2019'  height = '450px' ref={gantt => ganttInstance = gantt}>
         </GanttComponent>

@@ -184,7 +184,7 @@ for (let i = 0; i < 50; i++) {
 }
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {GanttComponent,ColumnsDirective,ColumnDirective,Inject,Selection, VirtualScroll} from '@syncfusion/ej2-react-gantt';
+import {GanttComponent,ColumnsDirective,ColumnDirective,Inject,Selection, VirtualScroll, Sort, Filter} from '@syncfusion/ej2-react-gantt';
 
 function App (){
    const taskFields = {

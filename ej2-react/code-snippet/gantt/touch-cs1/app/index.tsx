@@ -41,10 +41,10 @@ function  App(){
     };
    let ganttInstance:any;
     function load() {
-        ganttInstance.isAdaptive = true;  // Forcing desktop layout to change as mobile layout
+        this.isAdaptive = true;  // Forcing desktop layout to change as mobile layout
     }
-        return <GanttComponent dataSource={data} ref={gantt => ganttInstance = gantt} taskFields={taskFields}
-        editSettings={editSettings} height = '400px' load={load}>
+        return <GanttComponent dataSource={data} ref={gantt => ganttInstance = gantt}  taskFields={taskFields}
+         editSettings={editSettings} height = '400px' load={load}>
             <Inject services={[Edit, Selection]} />
         </GanttComponent>
 };
