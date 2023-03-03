@@ -30,15 +30,18 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps">
+
+export function App() {
+return(
+            <MapsComponent>
                 <LayersDirective>
                     <LayerDirective urlTemplate= "http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
-
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```
 
 ![TomTom Maps](../images/MapProviders/tomtom-maps.PNG)
@@ -55,15 +58,18 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Maps, Inject } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings = { { enable: true, toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']} }>
+export function App() {
+return(
+            <MapsComponent zoomSettings = { { enable: true, toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']} }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective urlTemplate= "http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -82,8 +88,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, MarkersDirective, NavigationLine, NavigationLinesDirective, NavigationLineDirective, MarkerDirective, Marker, Maps, Inject } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings= {{ zoomFactor: 4}}
+export function App() {
+return(
+            <MapsComponent zoomSettings= {{ zoomFactor: 4}}
                                      centerPosition = {{
                                          latitude: 29.394708,
                                          longitude: -94.954653
@@ -120,9 +127,11 @@ ReactDOM.render(
                         </NavigationLinesDirective>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -142,8 +151,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps">
+export function App() {
+return(
+            <MapsComponent>
                 <LayersDirective>
                     <LayerDirective urlTemplate= "http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" />
                     <LayerDirective shapeData= {africa_continent}
@@ -153,10 +163,11 @@ ReactDOM.render(
                                     }}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
-
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```
 {% endraw %}
 
@@ -175,9 +186,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, MarkersDirective, MarkerDirective, Marker, Legend, Inject } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
+export function App() {
+return(
             <MapsComponent
-              id="maps"
               legendSettings={{
                 visible: true,
                 type: 'Markers',
@@ -206,9 +217,11 @@ ReactDOM.render(
                   </MarkersDirective>
                 </LayerDirective>
               </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}

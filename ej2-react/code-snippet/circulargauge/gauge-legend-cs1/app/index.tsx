@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent, Legend, AxesDirective, AxisDirective, RangesDirective, RangeDirective, Inject } from '@syncfusion/ej2-react-circulargauge';
 export function App() {
   return(
-  <CircularGaugeComponent id='circulargauge' 
+  <CircularGaugeComponent  
           legendSettings={{
             visible: true,
             shapeWidth:30,
@@ -30,9 +30,8 @@ export function App() {
     </AxesDirective>
   </CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
 
 
 {% endraw %}

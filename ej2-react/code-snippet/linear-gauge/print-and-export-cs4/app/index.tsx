@@ -5,22 +5,21 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { LinearGaugeComponent, ImageExport, Inject } from '@syncfusion/ej2-react-lineargauge';
-class App extends React.Component<{}, {}>{
-public clickHandler(){
-    this.linear.export('PNG', 'Gauge', null, false).then((data: string)=>{
-        document.writeln(data);
-    })
+export function App() {
+    function clickHandler(){
+        gaugeInstance.export('PNG', 'Gauge', null, false).then((data)=>{
+            document.writeln(data);
+        })
+    }
+    let gaugeInstance;
+    return (<div>
+    <ButtonComponent onClick= { clickHandler}>Export</ButtonComponent>
+    <LinearGaugeComponent allowImageExport={true} ref={g => gaugeInstance = g}>
+        <Inject services={[ImageExport]} />
+    </LinearGaugeComponent></div>);
 }
-private linear: LinearGaugeComponent;
-render(){
-        return (<div>
-        <ButtonComponent value='export' onClick= { this.clickHandler.bind(this)}>Export</ButtonComponent>
-        <LinearGaugeComponent id='gauge' allowImageExport={true} ref={g => this.linear = g}>
-            <Inject services={[ImageExport]} />
-        </LinearGaugeComponent></div>)
-        }
-};
-ReactDOM.render(<App />, document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

@@ -5,9 +5,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Tooltip, Adaptor, ITooltipEventArgs } from '@syncfusion/ej2-react-heatmap';
-
-class App extends React.Component {
-     private heatmapData: any[] = [
+export function App() {
+  let heatmapData = [
     [9.5, 2.2, 4.2, 8.2, -0.5, 3.2, 5.4, 7.4, 6.2, 1.4],
     [4.3, 8.9, 10.8, 6.5, 5.1, 6.2, 7.6, 7.5, 6.1, 7.6],
     [3.9, 2.7, 2.5, 3.7, 2.6, 5.1, 5.8, 2.9, 4.5, 5.1],
@@ -21,11 +20,11 @@ class App extends React.Component {
     [1.2, 10.9, 4.0, -1.4, 2.2, 1.6, -2.6, 2.3, 1.7, 2.4],
     [5.1, -2.4, 8.2, -1.1, 3.5, 6.0, -1.3, 7.2, 9.0, 4.2]
   ];
-
-  render() {
-    return (
+  function tooltipTemplate(args: ITooltipEventArgs): void {
+    args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' %'];
+  }
+  return (
       <HeatMapComponent
-        id="heatmap"
         titleSettings={{
           text: 'GDP Growth Rate for Major Economies (in Percentage)',
           textStyle: {
@@ -80,18 +79,15 @@ class App extends React.Component {
         legendSettings={{
           visible: false
         }}
-        tooltipRender={this.tooltipTemplate as any}
-        dataSource={this.heatmapData}
+        tooltipRender={tooltipTemplate as any}
+        dataSource={heatmapData}
       >
         <Inject services={[Legend, Tooltip, Adaptor]} />
       </HeatMapComponent>
     );
-  }
-  private tooltipTemplate(args: ITooltipEventArgs): void {
-    args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' %'];
-  }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

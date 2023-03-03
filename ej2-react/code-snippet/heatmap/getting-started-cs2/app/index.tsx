@@ -19,12 +19,12 @@ export function App() {
     [25, 25, 10, 12, 78, 14],
     [25, 56, 55, 58, 12, 82],
     [74, 33, 88, 23, 86, 59]];
-    return ( <HeatMapComponent id='heatmap' dataSource={heatmapData}>
+    return ( <HeatMapComponent  dataSource={heatmapData}>
             <Inject services={[Legend, Tooltip]} />
             </HeatMapComponent> );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

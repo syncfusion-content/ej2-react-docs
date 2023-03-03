@@ -5,9 +5,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip, ITooltipEventArgs } from '@syncfusion/ej2-react-heatmap';
-
-class App extends React.Component {
-      private heatmapData: any[] = [
+export function App() {
+   let heatmapData = [
     { Region: 'USA', '2000': 93, '2004': 101, '2008': 112, '2012': 103, '2016': 121 },
     { Region: 'GBR', '2000': 28, '2004': 30, '2008': 49, '2012': 65, '2016': 67 },
     { Region: 'China', '2000': 58, '2004': 63, '2008': 100, '2012': 91, '2016': 70 },
@@ -18,10 +17,11 @@ class App extends React.Component {
     { Region: 'KOR', '2000': 28, '2004': 30, '2008': 32, '2012': 30, '2016': 21 },
     { Region: 'Italy', '2000': 34, '2004': 32, '2008': 27, '2012': 28, '2016': 28 }
   ];
-  render() {
+  function tooltipTemplate(args: ITooltipEventArgs): void {
+    args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' medals'];
+  }
     return (
       <HeatMapComponent
-        id="heatmap"
         titleSettings={{
           text: 'Olympic Medal Achievements of most Successful Countries',
           textStyle: {
@@ -50,7 +50,7 @@ class App extends React.Component {
           title: { text: 'Olympic Year' },
           labels: ['2000', '2004', '2008', '2012', '2016']
         }}
-        dataSource={this.heatmapData}
+        dataSource={heatmapData}
         dataSourceSettings={{
           isJsonData: true,
           adaptorType: 'Table',
@@ -69,17 +69,14 @@ class App extends React.Component {
         legendSettings={{
           visible: false
         }}
-        tooltipRender={this.tooltipTemplate as any}
+        tooltipRender={tooltipTemplate as any}
       >
         <Inject services={[Adaptor, Tooltip, Legend]} />
       </HeatMapComponent>
     );
-  }
-  private tooltipTemplate(args: ITooltipEventArgs): void {
-    args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' medals'];
-  }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

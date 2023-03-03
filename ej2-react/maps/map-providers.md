@@ -19,20 +19,20 @@ OpenStreetMap(OSM) is a online map provider. The OpenStreetMap allows you to vie
 
 ``` ts
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
-import './App.css';
-class App extends React.Component {
-    render() {
-        return (
-            <MapsComponent id="element">
-                <LayersDirective>
-                    <LayerDirective urlTemplate="http://a.tile.openstreetmap.org/level/tileX/tileY.png">
-                    </LayerDirective>
-                </LayersDirective>
-            </MapsComponent>);
-    }
+
+export function App() {
+    return (
+    <MapsComponent id="element">
+        <LayersDirective>
+            <LayerDirective urlTemplate="http://a.tile.openstreetmap.org/level/tileX/tileY.png">
+            </LayerDirective>
+        </LayersDirective>
+    </MapsComponent>);
 }
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```
 
 
@@ -43,23 +43,22 @@ Bing Maps is a online map provider for accessing the external geospatial imagery
 
 ```ts
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
-import './App.css';
-class App extends React.Component {
-    load(args) {
-        args.maps.getBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabel?output=json&uriScheme=https&key=?").then(function(url) {
+export function App() {
+    function load(args) {
+        args.maps.getBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial?output=json&uriScheme=https&key=?").then(function(url) {
             args.maps.layers[0].urlTemplate= url;
         });
     }
-    render() {
-        return (
-            <MapsComponent id="element" load={this.load.bind(this)}>
-                <LayersDirective>
-                    <LayerDirective>
-                    </LayerDirective>
-                </LayersDirective>
-            </MapsComponent>);
-    }
+    return (
+        <MapsComponent id="element" load={load}>
+            <LayersDirective>
+                <LayerDirective>
+                </LayerDirective>
+            </LayersDirective>
+        </MapsComponent>);
 }
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```

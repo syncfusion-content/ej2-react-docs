@@ -4,13 +4,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, IPointerDragEventArgs } from '@syncfusion/ej2-react-lineargauge';
-class App extends React.Component<{}, {}>{
-public dragEnd(args: IPointerDragEventArgs){
-}
-private linear: LinearGaugeComponent;
-render(){
+export function App(){
+    function dragEnd(args: IPointerDragEventArgs){
+    }
     return (<div>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} dragEnd={this.dragEnd.bind(this)}>
+    <LinearGaugeComponent dragEnd={dragEnd}>
         <AxesDirective>
             <AxisDirective>
                 <PointersDirective>
@@ -19,10 +17,10 @@ render(){
                 </PointersDirective>
             </AxisDirective>
         </AxesDirective>
-    </LinearGaugeComponent></div>)
-    }
-};
-ReactDOM.render(<App />, document.getElementById('gauge'));
+    </LinearGaugeComponent></div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

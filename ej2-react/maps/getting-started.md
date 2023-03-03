@@ -132,8 +132,6 @@ For this application we are going to use tooltip, data label and legend features
 Now import the MapsTooltip, DataLabel and Legend modules from maps package and inject it into the
 Maps component using `Inject` tag with required services.
 
-
-
 ```ts
 
 import { Maps, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-maps';
@@ -151,24 +149,9 @@ root.render(<App />);
 
 ```
 
-```ts
-import { Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-maps';
-import * as React from 'react';
-import { MapsComponent } from '@syncfusion/ej2-react-maps';
-export function App() {
-    return (<MapsComponent id="maps">
-        <Inject services={[DataLabel, Legend, MapsTooltip]}/>
-    </MapsComponent>);
-}
-const root = ReactDOM.createRoot(document.getElementById('maps'));
-root.render(<App />);
-```
-
 ## Render shapes from GeoJSON data
 
 This section explains how to bind GeoJSON data to the map.
-
-
 
 ```ts
 
@@ -183,18 +166,6 @@ let usMap: Object =
     //https://ej2.syncfusion.com/react/documentation
 };
 
-```
-
-```ts
-let usMap = {
-    "type": "FeatureCollection",
-    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-    "features": [
-        { "type": "Feature", "properties": { "iso_3166_2": "MA", "name": "Massachusetts", "admin": "United States of America" }, "geometry": { "type": "MultiPolygon", "coordinates": [[[[-70.801756294617277, 41.248076234530558]]]] }
-        }
-    ]
-    //https://ej2.syncfusion.com/react/documentation
-};
 ```
 
 Elements in the maps will get rendered in the layers. So add a layer collection to the maps by using [`layers`](../api/maps/#layers) property.

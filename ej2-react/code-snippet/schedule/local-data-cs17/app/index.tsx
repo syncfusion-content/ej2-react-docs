@@ -1,7 +1,3 @@
-
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
@@ -12,16 +8,14 @@ import { scheduleData } from './datasource';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{
-    dataSource: data,
-    fields: {
-      subject: { title: 'Event Name', name: 'Subject', default: 'Add Name' },
-      location: { title: 'Event Location', name: 'Location', default: 'USA' },
-      description: { title: 'Summary', name: 'Description' },
-      startTime: { title: 'From', name: 'StartTime' },
-      endTime: { title: 'To', name: 'EndTime' }
-    }
-  }}>
+  const fieldsData = {
+    subject: { title: 'Event Name', name: 'Subject', default: 'Add Name' },
+    location: { title: 'Event Location', name: 'Location', default: 'USA' },
+    description: { title: 'Summary', name: 'Description' },
+    startTime: { title: 'From', name: 'StartTime' },
+    endTime: { title: 'To', name: 'EndTime' }
+  }
+  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>)
 };

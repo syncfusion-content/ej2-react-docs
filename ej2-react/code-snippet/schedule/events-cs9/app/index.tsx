@@ -1,7 +1,3 @@
-
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
@@ -17,19 +13,17 @@ function App() {
     Source: 'London',
     Comments: 'Summer vacation planned for outstation.'
   }];
-  return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{
-    dataSource: data,
-    fields: {
-      id: 'TravelId',
-      subject: { name: 'TravelSummary', title: 'Summary', default: 'Add Summary' },
-      location: { name: 'Source', default: 'USA' },
-      description: { name: 'Comments' },
-      startTime: { name: 'DepartureTime' },
-      endTime: { name: 'ArrivalTime' }
-    }
-  }}>
+  const fieldsData = {
+    id: 'TravelId',
+    subject: { name: 'TravelSummary', title: 'Summary', default: 'Add Summary' },
+    location: { name: 'Source', default: 'USA' },
+    description: { name: 'Comments' },
+    startTime: { name: 'DepartureTime' },
+    endTime: { name: 'ArrivalTime' }
+  }
+  return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-  </ScheduleComponent>
+  </ScheduleComponent>);
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);

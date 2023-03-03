@@ -18,8 +18,9 @@ L10n.load({
         },
     }
 });
-ReactDOM.render(
-            <MapsComponent id="maps" locale="ar-AR" zoomSettings={ { enable: true } }>
+export function App() {
+   return(
+            <MapsComponent  locale="ar-AR" zoomSettings={ { enable: true } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}
@@ -28,8 +29,10 @@ ReactDOM.render(
                                     dataSource={uncountries}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 

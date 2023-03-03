@@ -5,9 +5,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-react-lineargauge';
 
-export function App(){
+export function App() {
     return(
-       <LinearGaugeComponent id='gauge'>
+       <LinearGaugeComponent>
         <AxesDirective>
             <AxisDirective minimum={0} maximum={200} labelStyle={ { format:'{value}°C' } }>
                 <PointersDirective>
@@ -29,7 +29,7 @@ export function App(){
     </LinearGaugeComponent>
     );
 }
-const root = ReactDOM.createRoot(document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

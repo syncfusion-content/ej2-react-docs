@@ -25,13 +25,12 @@ const SAMPLE_CSS = `
         -webkit-box-shadow: 0px 2px 5px #666;
         box-shadow: 0px 2px 5px #666;
     }`;
-class App extends React.Component {
-  render() {
+export function App() {
     return (
       <div className="control-pane">
         <style>{SAMPLE_CSS}</style>
         <div className="control-section row">
-          <MapsComponent id="element"
+          <MapsComponent
             annotations={[
               {
                 content: '#maps-annotation',
@@ -74,9 +73,9 @@ class App extends React.Component {
         </div>
       </div>
     );
-  }
 }
-ReactDOM.render(<App />, document.getElementById('maps'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

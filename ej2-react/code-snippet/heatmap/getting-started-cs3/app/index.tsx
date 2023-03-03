@@ -19,7 +19,7 @@ export function App() {
     [25, 25, 10, 12, 78, 14],
     [25, 56, 55, 58, 12, 82],
     [74, 33, 88, 23, 86, 59]];
-    return (<HeatMapComponent id='heatmap'
+    return (<HeatMapComponent
             xAxis = { {
                 labels : ['Nancy', 'Andrew', 'Janet', 'Margaret', 'Steven', 'Michael', 'Robert',
                 'Laura', 'Anne', 'Paul', 'Karin', 'Mario'],
@@ -32,7 +32,7 @@ export function App() {
             </HeatMapComponent> );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

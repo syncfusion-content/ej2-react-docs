@@ -16,7 +16,6 @@ A leaf item defines a visualized data element and does not contain child nodes b
 
 Label is represented by item name or value. Label will be appeared by specifying the [`labelPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#labelpath) property and customize the label style using the [`labelStyle`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel/#labelstyle) property.
 
-<<<<<
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/treemap/leafitem-cs1/app/index.jsx %}
@@ -57,73 +56,35 @@ Specifies the template of leaf item label and position of the template to be cus
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent } from '@syncfusion/ej2-react-treemap';
-
-class App extends React.Component {
-render() {
-  return ( <TreeMapComponent id='treemap'
+export function App() {
+  return ( <TreeMapComponent 
         dataSource={[
-            { Sport: "Swimming", Gold: 16, GameImage: 'Swimming.svg', ItemHeight: "180px", ItemWidth: "180px" },
-            { Sport: "Athletics", Gold: 13, GameImage: 'Athletics.svg', ItemHeight: "70px", ItemWidth: "70px" },
-            { Sport: "Gymnastics", Gold: 4, GameImage: 'Gymnastics.svg', ItemHeight: "80px", ItemWidth: "80px" },
-            { Sport: "Cycling", Gold: 2, GameImage: 'Cycling.svg', ItemHeight: "50px", ItemWidth: "50px" },
-            { Sport: "Wrestling", Gold: 2, GameImage: 'Wrestling.svg', ItemHeight: "60px", ItemWidth: "50px" },
-            { Sport: "Basketball", Gold: 2, GameImage: 'Basketball.svg', ItemHeight: "50px", ItemWidth: "50px" },
-            { Sport: "Boxing", Gold: 1, GameImage: 'Boxing.svg', ItemHeight: "40px", ItemWidth: "30px" },
-            { Sport: "Tennis", Gold: 1, GameImage: 'Tennis.svg', ItemHeight: "40px", ItemWidth: "40px" },
-            { Sport: "Judo", Gold: 1, GameImage: 'Judo.svg', ItemHeight: "40px", ItemWidth: "40px" },
-            { Sport: "Rowing", Gold: 1, GameImage: 'Rowing.svg', ItemHeight: "40px", ItemWidth: "40px" },
-            { Sport: "Shooting", Gold: 1, GameImage: 'Shooting.svg', ItemHeight: "40px", ItemWidth: "40px" },
-            { Sport: "Triathlon", Gold: 1, GameImage: 'Triathlon.svg', ItemHeight: "40px", ItemWidth: "40px" },
-            { Sport: "Water polo", Gold: 1, GameImage: 'Water polo.svg', ItemHeight: "40px", ItemWidth: "40px" }
+            { Sport: "Swimming", Gold: 16, GameImage: 'swimming.svg', ItemHeight: "180px", ItemWidth: "180px" },
+            { Sport: "Athletics", Gold: 13, GameImage: 'athletics.svg', ItemHeight: "70px", ItemWidth: "70px" },
+            { Sport: "Gymnastics", Gold: 4, GameImage: 'gymnastics.svg', ItemHeight: "80px", ItemWidth: "80px" },
+            { Sport: "Cycling", Gold: 2, GameImage: 'cycling.svg', ItemHeight: "50px", ItemWidth: "50px" },
+            { Sport: "Wrestling", Gold: 2, GameImage: 'wrestling.svg', ItemHeight: "60px", ItemWidth: "50px" },
+            { Sport: "Basketball", Gold: 2, GameImage: 'basketball.svg', ItemHeight: "50px", ItemWidth: "50px" },
+            { Sport: "Boxing", Gold: 1, GameImage: 'boxing.svg', ItemHeight: "40px", ItemWidth: "30px" },
+            { Sport: "Tennis", Gold: 1, GameImage: 'tennis.svg', ItemHeight: "40px", ItemWidth: "40px" },
+            { Sport: "Judo", Gold: 1, GameImage: 'judo.svg', ItemHeight: "40px", ItemWidth: "40px" },
+            { Sport: "Rowing", Gold: 1, GameImage: 'rowing.svg', ItemHeight: "40px", ItemWidth: "40px" },
+            { Sport: "Shooting", Gold: 1, GameImage: 'shooting.svg', ItemHeight: "40px", ItemWidth: "40px" },
+            { Sport: "Triathlon", Gold: 1, GameImage: 'triathlon.svg', ItemHeight: "40px", ItemWidth: "40px" },
+            { Sport: "Water polo", Gold: 1, GameImage: 'water-polo.svg', ItemHeight: "40px", ItemWidth: "40px" }
         ]}
         weightValuePath= 'Gold'
         leafItemSettings=  {{
             labelPath: 'Sport',
             fill: '#993399',
             templatePosition: 'Center',
-            labelTemplate: '<div style="pointer-events: none;"><img src="src/treemap/image/{{:GameImage}}"' +
+            labelTemplate: '<div style="pointer-events: none;"><img src="https://ej2.syncfusion.com/react/demos/src/treemap/image/{{:GameImage}}"' +
             ' style="height:{{:ItemHeight}};width:{{:ItemWidth}};"></img></div>'
         }}>
     </TreeMapComponent> );
- }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
-```
-{% endraw %}
-
-{% raw %}
-
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { TreeMapComponent } from '@syncfusion/ej2-react-treemap';
-class App extends React.Component {
-    render() {
-        return (<TreeMapComponent id='treemap' dataSource={[
-                { Sport: "Swimming", Gold: 16, GameImage: 'Swimming.svg', ItemHeight: "180px", ItemWidth: "180px" },
-                { Sport: "Athletics", Gold: 13, GameImage: 'Athletics.svg', ItemHeight: "70px", ItemWidth: "70px" },
-                { Sport: "Gymnastics", Gold: 4, GameImage: 'Gymnastics.svg', ItemHeight: "80px", ItemWidth: "80px" },
-                { Sport: "Cycling", Gold: 2, GameImage: 'Cycling.svg', ItemHeight: "50px", ItemWidth: "50px" },
-                { Sport: "Wrestling", Gold: 2, GameImage: 'Wrestling.svg', ItemHeight: "60px", ItemWidth: "50px" },
-                { Sport: "Basketball", Gold: 2, GameImage: 'Basketball.svg', ItemHeight: "50px", ItemWidth: "50px" },
-                { Sport: "Boxing", Gold: 1, GameImage: 'Boxing.svg', ItemHeight: "40px", ItemWidth: "30px" },
-                { Sport: "Tennis", Gold: 1, GameImage: 'Tennis.svg', ItemHeight: "40px", ItemWidth: "40px" },
-                { Sport: "Judo", Gold: 1, GameImage: 'Judo.svg', ItemHeight: "40px", ItemWidth: "40px" },
-                { Sport: "Rowing", Gold: 1, GameImage: 'Rowing.svg', ItemHeight: "40px", ItemWidth: "40px" },
-                { Sport: "Shooting", Gold: 1, GameImage: 'Shooting.svg', ItemHeight: "40px", ItemWidth: "40px" },
-                { Sport: "Triathlon", Gold: 1, GameImage: 'Triathlon.svg', ItemHeight: "40px", ItemWidth: "40px" },
-                { Sport: "Water polo", Gold: 1, GameImage: 'Water polo.svg', ItemHeight: "40px", ItemWidth: "40px" }
-            ]} weightValuePath='Gold' leafItemSettings={{
-                labelPath: 'Sport',
-                fill: '#993399',
-                templatePosition: 'Center',
-                labelTemplate: '<div style="pointer-events: none;"><img src="src/treemap/image/{{:GameImage}}"' +
-                    ' style="height:{{:ItemHeight}};width:{{:ItemWidth}};"></img></div>'
-            }}>
-    </TreeMapComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```
 {% endraw %}
 

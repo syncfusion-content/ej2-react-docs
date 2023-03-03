@@ -5,9 +5,9 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, MarkersDirective, MarkerDirective, Marker, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-                <MapsComponent id="maps">
+export function App() {
+    return(
+                <MapsComponent >
                 <Inject services={[Marker]} />
                     <LayersDirective>
                         <LayerDirective shapeData={world_map}>
@@ -33,9 +33,11 @@ ReactDOM.render(
                         </MarkersDirective>
                         </LayerDirective>
                     </LayersDirective>
-                </MapsComponent>,
-            document.getElementById("maps") as HTMLElement
-);
+                </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

@@ -28,14 +28,8 @@ GeoJSON data contains geometry objects with properties such as geometry types an
 
 The shape data collection describes geographical shape information that is available in GeoJSON format. The Map shapes are rendered with this data. The custom shapes such as seat selection in bus, seat selection in a cricket stadium and more useful information can be also added as [`shapeData`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#shapedata) in the layer of the Maps.
 
-
-
 ```ts
 export let usMap = // Paste all the content copied from the JSON file.
-```
-
-```ts
-export let usMap = ; // Paste all the content copied from the JSON file.
 ```
 
 ## Data source
@@ -48,53 +42,6 @@ The data source is populated with JSON data relative to shape data and stored as
 
 ```ts
 export let populationData: object[] = [
-    {
-        'code': 'AF',
-        'value': 53,
-        'name': 'Afghanistan',
-        'population': 29863010,
-        'density': 119
-    },
-    {
-        'code': 'AL',
-        'value': 117,
-        'name': 'Albania',
-        'population': 3195000,
-        'density': 111
-    },
-    {
-        'code': 'DZ',
-        'value': 15,
-        'name': 'Algeria',
-        'population': 34895000,
-        'density': 15
-    },
-    {
-        'code': 'AO',
-        'value': 15,
-        'name': 'Angola',
-        'population': 18498000,
-        'density': 15
-    },
-    {
-        'code': 'AR',
-        'value': 15,
-        'name': 'Argentina',
-        'population': 40091359,
-        'density': 14
-    },
-    {
-        'code': 'AM',
-        'value': 109,
-        'name': 'Armenia',
-        'population': 3230100,
-        'density': 108
-    }
-];
-```
-
-```ts
-export let populationData = [
     {
         'code': 'AF',
         'value': 53,

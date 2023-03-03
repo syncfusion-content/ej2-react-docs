@@ -82,17 +82,19 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings={ { enable: true, pinchZooming: true } }>
+export function App() {
+   return(
+            <MapsComponent  zoomSettings={ { enable: true, pinchZooming: true } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -109,17 +111,19 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings={ { enable: true, zoomOnClick: true } }>
+export function App() {
+  return(
+            <MapsComponent  zoomSettings={ { enable: true, zoomOnClick: true } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -136,17 +140,19 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings={ { enable: true, doubleClickZoom: true } }>
+export function App() {
+   return(
+            <MapsComponent  zoomSettings={ { enable: true, doubleClickZoom: true } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -163,17 +169,19 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings={ { enable: true, mouseWheelZoom: true } }>
+export function App() {
+   return(
+            <MapsComponent  zoomSettings={ { enable: true, mouseWheelZoom: true } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -190,18 +198,20 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings={ { enable: true, enableSelectionZooming: true,
+export function App() {
+   return(
+            <MapsComponent  zoomSettings={ { enable: true, enableSelectionZooming: true,
                                                       enablePanning: false } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -218,18 +228,20 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings={ { enable: true, minZoom: 2,
+export function App() {
+   return(
+            <MapsComponent  zoomSettings={ { enable: true, minZoom: 2,
                                                       maxZoom: 12 } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -246,17 +258,19 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings={ { enable: true } }>
+export function App() {
+    return(
+            <MapsComponent  zoomSettings={ { enable: true } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map} animationDuration={500}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}

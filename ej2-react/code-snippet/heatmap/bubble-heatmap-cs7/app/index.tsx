@@ -5,9 +5,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip, BubbleTooltipData } from '@syncfusion/ej2-react-heatmap';
-
-class App extends React.Component {
-     private heatmapData: any[] = [
+export function App() {
+  let heatmapData: any[] = [
     { Year: '2017', Months: 'Jan-Feb', Accidents: 4, Fatalities: 39 },
     { Year: '2017', Months: 'Mar-Apr', Accidents: 3, Fatalities: 8 },
     { Year: '2017', Months: 'May-Jun', Accidents: 1, Fatalities: 3 },
@@ -27,10 +26,27 @@ class App extends React.Component {
     { Year: '2015', Months: 'Sep-Oct', Accidents: 5, Fatalities: 243 },
     { Year: '2015', Months: 'Nov-Dec', Accidents: 2, Fatalities: 45 }
   ];
-  render() {
+  function tooltipTemplate(args: ITooltipEventArgs): void {
+    args.content = [
+      'Year ' +
+        ' : ' +
+        args.xLabel +
+        '<br/>' +
+        'Months ' +
+        ' : ' +
+        args.yLabel +
+        '<br/>' +
+        'Accidents ' +
+        ' : ' +
+        (args.value as BubbleTooltipData[])[0].bubbleData +
+        '<br/>' +
+        'Fatalities ' +
+        ' : ' +
+        (args.value as BubbleTooltipData[])[1].bubbleData
+    ];
+  }
     return (
       <HeatMapComponent
-        id="heatmap"
         titleSettings={{
           text: 'Commercial Aviation Accidents and Fatalities by year 2012 - 2017',
           textStyle: {
@@ -60,8 +76,8 @@ class App extends React.Component {
           tileType: 'Bubble',
           bubbleType: 'SizeAndColor'
         }}
-        tooltipRender={this.tooltipTemplate as any}
-        dataSource={this.heatmapData}
+        tooltipRender={tooltipTemplate as any}
+        dataSource={heatmapData}
         dataSourceSettings={{
           isJsonData: true,
           adaptorType: 'Cell',
@@ -73,28 +89,9 @@ class App extends React.Component {
         <Inject services={[Legend, Adaptor, Tooltip]} />
       </HeatMapComponent>
     );
-  }
-  private tooltipTemplate(args: ITooltipEventArgs): void {
-    args.content = [
-      'Year ' +
-        ' : ' +
-        args.xLabel +
-        '<br/>' +
-        'Months ' +
-        ' : ' +
-        args.yLabel +
-        '<br/>' +
-        'Accidents ' +
-        ' : ' +
-        (args.value as BubbleTooltipData[])[0].bubbleData +
-        '<br/>' +
-        'Fatalities ' +
-        ' : ' +
-        (args.value as BubbleTooltipData[])[1].bubbleData
-    ];
-  }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

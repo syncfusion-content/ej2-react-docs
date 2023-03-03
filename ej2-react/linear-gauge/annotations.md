@@ -21,13 +21,13 @@ To render the custom HTML elements in the Linear Gauge component, use the [`cont
 <!-- markdownlint-disable MD036 -->
 
  ```
-
-<script id='fruits' type="text/x-template">
-    <div id='apple'>
-        <img src='src/lineargauge/images/apple.png'>
-    </div>
-</script>
-
+<head>
+    <script id='fruits' type="text/x-template">
+        <div id='apple'>
+           <img src='src/lineargauge/images/apple.png'>
+        </div>
+    </script>
+</head>
 ```
 
 ```ts
@@ -35,15 +35,18 @@ To render the custom HTML elements in the Linear Gauge component, use the [`cont
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AnnotationsDirective, AnnotationDirective, Annotations, Inject } from '@syncfusion/ej2-react-lineargauge';
-
-ReactDOM.render(
+export function App() {
+   return(
     <LinearGaugeComponent>
         <Inject services={[Annotations]}/>
         <AnnotationsDirective>
-            <AnnotationDirective content='#fruits' x={100} zIndex='1' y={100}>
+            <AnnotationDirective content="#fruits" x={100} zIndex='1' y={100}>
             </AnnotationDirective>
         </AnnotationsDirective>
-    </LinearGaugeComponent>,document.getElementById('gauge'));
+    </LinearGaugeComponent>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 

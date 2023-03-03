@@ -41,51 +41,83 @@ The following code shows, how to bind a hierarchical collection as data source t
 
 
 ```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { TreeMapComponent, LevelDirective, LevelsDirective } from '@syncfusion/ej2-react-treemap';
-
-class App extends React.Component {
-render() {
-  return ( <TreeMapComponent id='treemap'
-       dataSource={[
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import {
+  TreeMapComponent,
+  LevelDirective,
+  LevelsDirective,
+} from '@syncfusion/ej2-react-treemap';
+export function App() {
+  return (
+    <TreeMapComponent
+      id="treemap"
+      dataSource={[
+        {
+          Name: 'United States',
+          Sales: 28092,
+          Expense: 26000,
+          States: [
+            { Name: 'New York', Sales: 2353, Expense: 2000 },
+            { Name: 'Los Angeles', Sales: 3453, Expense: 3000 },
+            { Name: 'San Francisco', Sales: 8456, Expense: 8000 },
+            { Name: 'Chicago', Sales: 6785, Expense: 7000 },
+            { Name: 'Miami', Sales: 7045, Expense: 6000 },
+          ],
+        },
+        {
+          Name: 'Canada',
+          Sales: 19240,
+          Expense: 18500,
+          States: [
+            { Name: 'Toronto', Sales: 7045, Expense: 7000 },
+            { Name: 'Vancouver', Sales: 4352, Expense: 4000 },
+            { Name: 'Winnipeg', Sales: 7843, Expense: 7500 },
+          ],
+        },
+        {
+          Name: 'Mexico',
+          Sales: 16980,
+          Expense: 14500,
+          States: [
             {
-                    { Name: "United States", Sales: 28092, Expense: 26000, States: [
-                    { Name: "New York", Sales: 2353, Expense: 2000 },
-                    { Name: "Los Angeles", Sales: 3453, Expense: 3000 },
-                    { Name: "San Francisco", Sales: 8456, Expense: 8000 },
-                    { Name: "Chicago", Sales: 6785, Expense: 7000 },
-                    { Name: "Miami", Sales: 7045, Expense: 6000 },
-                ]
+              Name: 'Mexico City',
+              Sales: 7843,
+              Expense: 6500,
+              States1: [
+                { Name: 'Cancun1', Sales: 6683, Expense: 6000 },
+                { Name: 'Acapulco1', Sales: 2454, Expense: 2000 },
+              ],
             },
-            {
-                Name: "Canada", Sales: 19240, Expense: 18500, States: [
-                    { Name: "Toronto", Sales: 7045, Expense: 7000 },
-                    { Name: "Vancouver", Sales: 4352, Expense: 4000 },
-                    { Name: "Winnipeg", Sales: 7843, Expense: 7500 }
-                ]
-            },
-            {
-                Name: "Mexico",Sales: 16980, Expense: 14500, States: [
-                    { Name: "Mexico City", Sales: 7843, Expense: 6500, States1: [
-                        { Name: "Cancun1", Sales: 6683, Expense: 6000 },
-                        { Name: "Acapulco1", Sales: 2454, Expense: 2000 }
-                    ]
-                    },
-                    { Name: "Cancun", Sales: 6683, Expense: 6000 },
-                    { Name: "Acapulco", Sales: 2454, Expense: 2000 }
-                ]
-            },
-        ]}
-        weightValuePath='Sales'
-        leafItemSettings={{
-            labelPath: 'Name'
-        }}>
-        <LevelsDirective>
-            <LevelDirective groupPath='States' groupGap={3} showHeader={true} headerHeight={25} showLabels={true} headerTemplate='headertemplate' labelTemplate: 'labeltemplate' />
-        </LevelsDirective>
-    </TreeMapComponent> );
- }
+            { Name: 'Cancun', Sales: 6683, Expense: 6000 },
+            { Name: 'Acapulco', Sales: 2454, Expense: 2000 },
+          ],
+        },
+      ]}
+      weightValuePath="Sales"
+      leafItemSettings={{
+        labelPath: 'Name',
+      }}
+    >
+      <LevelsDirective>
+        <LevelDirective
+          groupPath="States"
+          groupGap={3}
+          showHeader={true}
+          headerHeight={25}
+          showLabels={true}
+        />
+        <LevelDirective
+          groupPath="States1"
+          groupGap={3}
+          showHeader={true}
+          headerHeight={25}
+          showLabels={true}
+        />
+      </LevelsDirective>
+    </TreeMapComponent>
+  );
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```

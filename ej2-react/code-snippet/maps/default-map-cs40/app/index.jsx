@@ -29,7 +29,7 @@ class App extends React.Component {
         <div className="control-section row">
           <MapsComponent id="element" annotations={[
                 {
-                    content: '#maps-annotation',
+                    content: '#container-annotation',
                     x: '0%',
                     y: '70%'
                 }

@@ -4,9 +4,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip } from '@syncfusion/ej2-react-heatmap';
-
-class App extends React.Component {
-    private heatmapData: any [] = [
+export function App() {
+  let heatmapData = [
         { 'rowid': 'France', 'columnid': '2010', 'value': '77.6' },
         { 'rowid': 'France', 'columnid': '2011', 'value': '79.4' },
         { 'rowid': 'France', 'columnid': '2012', 'value': '80.8' },
@@ -78,8 +77,7 @@ class App extends React.Component {
         { 'rowid': 'Austria', 'columnid': '2015', 'value': '26.7' },
         { 'rowid': 'Austria', 'columnid': '2016', 'value': '28.1' },
     ];
-    render() {
-    return ( <HeatMapComponent id='heatmap'
+    return ( <HeatMapComponent
             titleSettings = { {
                 text: 'Most Visited Destinations by International Tourist Arrivals',
                 textStyle: {
@@ -95,7 +93,7 @@ class App extends React.Component {
             yAxis = { {
                 labels:  ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
             } }
-            dataSource={this.heatmapData}
+            dataSource={heatmapData}
             dataSourceSettings={ {
                 isJsonData: true,
                 adaptorType: 'Cell',
@@ -121,9 +119,9 @@ class App extends React.Component {
             } }>
             <Inject services={[Legend, Tooltip, Adaptor]} />
             </HeatMapComponent> );
-    }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

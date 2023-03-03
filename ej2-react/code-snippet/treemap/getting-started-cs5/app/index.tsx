@@ -5,9 +5,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, Inject, TreeMapLegend, TreeMapTooltip } from '@syncfusion/ej2-react-treemap';
 
-class App extends React.Component {
-render() {
-  return ( <TreeMapComponent id='treemap'
+export function App(){
+  return ( <TreeMapComponent 
         tooltipSettings={ {
             visible: true
         }}
@@ -73,10 +72,11 @@ render() {
                 },
             ]}}>
             <Inject services={[TreeMapTooltip, TreeMapLegend]} />
-    </TreeMapComponent> );
- }
+        </TreeMapComponent> );
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

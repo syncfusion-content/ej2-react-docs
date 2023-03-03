@@ -95,22 +95,12 @@ import React from 'react';
 import { LinearGaugeComponent } from '@syncfusion/ej2-react-lineargauge';
 
 export function App() {
-   return (<LinearGaugeComponent id='gauge'></LinearGaugeComponent>);
+   return (<LinearGaugeComponent></LinearGaugeComponent>);
 }
 
-const root = ReactDOM.createRoot(document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-```
-
-```ts
-import React from 'react';
-import { LinearGaugeComponent } from '@syncfusion/ej2-react-lineargauge';
-export function App() {
-    return (<LinearGaugeComponent id='gauge'></LinearGaugeComponent>);
-}
-const root = ReactDOM.createRoot(document.getElementById('gauge'));
-root.render(<App />);
 ```
 
 ### Run the application
@@ -139,27 +129,14 @@ import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, Annotations, GaugeTooltip} from '@syncfusion/ej2-react-lineargauge';
 
 export function App(){
-    return(<LinearGaugeComponent id='gauge'>
+    return(<LinearGaugeComponent>
                 <Inject services={[Annotations, GaugeTooltip]}/>
             </LinearGaugeComponent>
     );
 }
-const root = ReactDOM.createRoot(document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-```
-
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { LinearGaugeComponent, Annotations, GaugeTooltip } from '@syncfusion/ej2-react-lineargauge';
-export function App() {
-    return (<LinearGaugeComponent id='gauge'>
-                <Inject services={[Annotations, GaugeTooltip]}/>
-            </LinearGaugeComponent>);
-}
-const root = ReactDOM.createRoot(document.getElementById('gauge'));
-root.render(<App />);
 ```
 
 ## Adding the Linear Gauge Title

@@ -22,17 +22,20 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" enablePersistence={true} zoomSettings={ { enable: true } }>
+export function App() {
+    return(
+            <MapsComponent  enablePersistence={true} zoomSettings={ { enable: true } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
+
 
 ```
 {% endraw %}

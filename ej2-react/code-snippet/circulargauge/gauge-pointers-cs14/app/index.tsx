@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Gradient } from '@syncfusion/ej2-react-circulargauge';
 export function App() {
   return(
-  <CircularGaugeComponent id='circulargauge'>
+  <CircularGaugeComponent >
    <Inject services={[ Gradient ]}/>
     <AxesDirective>
       <AxisDirective radius='90%' startAngle={270} endAngle={90} minimum={0} maximum={100} lineStyle={{ width: 3, color: '#E63B86'}} labelStyle={{ font: { size: '0px'}}} majorTicks={{ height: 0 }} minorTicks={{ height: 0}}>
@@ -66,9 +66,8 @@ export function App() {
     </AxesDirective>
   </CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
 
 
 {% endraw %}

@@ -1,6 +1,3 @@
-
-
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
@@ -21,6 +18,12 @@ function App() {
 
   const fields: Object = { dataSource: waitingList, id: 'Id', text: 'Name' };
   const data: Object[] = extend([], eventData, null, true) as Object[];
+  const fieldsData = {
+    subject: { title: 'Patient Name', name: 'Name' },
+    startTime: { title: "From", name: "StartTime" },
+    endTime: { title: "To", name: "EndTime" },
+    description: { title: 'Reason', name: 'Description' }
+  }
 
   function treeTemplate(props: any): JSX.Element {
     return (<div id="waiting"><div id="waitdetails"><div id="waitlist">{props.Name}</div>
@@ -105,12 +108,7 @@ function App() {
               currentView='TimelineDay'
               eventSettings={{
                 dataSource: data,
-                fields: {
-                  subject: { title: 'Patient Name', name: 'Name' },
-                  startTime: { title: "From", name: "StartTime" },
-                  endTime: { title: "To", name: "EndTime" },
-                  description: { title: 'Reason', name: 'Description' }
-                }
+                fields: fieldsData
               }}
               actionBegin={onActionBegin} drag={onItemDrag} >
               <ViewsDirective>

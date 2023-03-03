@@ -5,9 +5,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Tooltip } from '@syncfusion/ej2-react-heatmap';
-
-class App extends React.Component {
-     heatmapData: any[] = [
+export function App() {
+  let heatmapData = [
     [0.72, 0.71, 0.71, 0.67, 0.72, 0.53, 0.53, 0.56, 0.58, 0.56],
     [2.28, 2.29, 2.09, 1.84, 1.64, 1.49, 1.49, 1.39, 1.32, 1.23],
     [2.02, 2.17, 2.3, 2.39, 2.36, 2.52, 2.62, 2.57, 2.57, 2.74],
@@ -17,10 +16,19 @@ class App extends React.Component {
     [5.8, 5.74, 5.64, 5.44, 5.18, 5.08, 5.07, 5.0, 5.35, 5.47],
     [6.91, 7.4, 8.13, 8.8, 9.04, 9.24, 9.43, 9.35, 9.49, 9.69]
   ];
-  render() {
-    return (
+  function tooltipTemplate(args: ITooltipEventArgs): void {
+    args.content = [
+      'In ' +
+        args.yLabel +
+        ', the ' +
+        args.xLabel +
+        ' produced ' +
+        args.value +
+        ' million barrels per day'
+    ];
+  }
+  return (
       <HeatMapComponent
-        id="heatmap"
         titleSettings={{
           text: 'Crude Oil Production of Non-OPEC Countries (in Million barrels per day)',
           textStyle: {
@@ -66,27 +74,15 @@ class App extends React.Component {
           }
         }}
         showTooltip={true}
-        tooltipRender={this.tooltipTemplate as any}
-        dataSource={this.heatmapData}
+        tooltipRender={tooltipTemplate as any}
+        dataSource={heatmapData}
       >
         <Inject services={[Legend, Tooltip]} />
       </HeatMapComponent>
     );
-  }
-
-  tooltipTemplate(args: ITooltipEventArgs): void {
-    args.content = [
-      'In ' +
-        args.yLabel +
-        ', the ' +
-        args.xLabel +
-        ' produced ' +
-        args.value +
-        ' million barrels per day'
-    ];
-  }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 
