@@ -8,13 +8,12 @@ import * as ReactDOM from 'react-dom';
 function App() {
     let datepickerInstance: DatePicker;
     React.useEffect(() => {
-    const proxy = this;
-    this.datepickerInstance.placeholder = 'Enter Date';
-    this.datepickerInstance.dataBind();
+    datepickerInstance.placeholder = 'Enter Date';
+    datepickerInstance.dataBind();
     document.onkeyup = (e) => {
       if (e.altKey && e.keyCode === 84 /* t */) {
         // press alt+t to focus the control.
-        proxy.datepickerInstance.focusIn();
+        datepickerInstance.focusIn();
       }
     };
     }, []);
