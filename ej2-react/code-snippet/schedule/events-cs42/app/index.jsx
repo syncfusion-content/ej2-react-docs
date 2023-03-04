@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, TimelineViews, TimelineMonth, Month, Agenda, Resize, ViewsDirective, ViewDirective, Inject } from '@syncfusion/ej2-react-schedule';

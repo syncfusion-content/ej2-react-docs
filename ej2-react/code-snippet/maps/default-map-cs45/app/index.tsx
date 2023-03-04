@@ -8,9 +8,9 @@ import {
   MapsComponent, LayersDirective, LayerDirective,
   Inject, Zoom
 } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-      <MapsComponent id="maps" zoomSettings={{
+export function App() {
+return(
+      <MapsComponent  zoomSettings={{
         enable: false,
         zoomFactor: 13
       }} centerPosition={{
@@ -22,9 +22,10 @@ ReactDOM.render(
           <LayerDirective shapeData={world_map}>
           </LayerDirective>
         </LayersDirective>
-      </MapsComponent>,
-       document.getElementById("maps") as HTMLElement
+      </MapsComponent>
       );
-
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 {% endraw %}

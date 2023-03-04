@@ -3,11 +3,9 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { TreeMapComponent, LevelDirective, LevelsDirective } from '@syncfusion/ej2-react-treemap';
-
-class App extends React.Component {
-render() {
-  return ( <TreeMapComponent id='treemap'
+import { TreeMapComponent, LevelDirective, LevelsDirective, TreeMapSelection, Inject } from '@syncfusion/ej2-react-treemap';
+export function App() {
+  return ( <TreeMapComponent 
         dataSource={[
             { dataType: "Import", type: "Animal products",   product: "2010", sales: 20839332874 },
             { dataType: "Import", type: "Animal products",   product: "2011", sales: 23098635589 },
@@ -38,14 +36,15 @@ render() {
             border: { width: 0.3, color: 'black' },
             opacity: '1'
         }}>
+        <Inject services={[TreeMapSelection]} />
         <LevelsDirective>
             <LevelDirective groupPath='dataType' fill='#c5e2f7' headerStyle={{ size: '16px' }} headerAlignment='Center' groupGap={5} />
             <LevelDirective groupPath='product' fill='#a4d1f2' headerAlignment='Center' groupGap={2} />
         </LevelsDirective>
     </TreeMapComponent> );
- }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

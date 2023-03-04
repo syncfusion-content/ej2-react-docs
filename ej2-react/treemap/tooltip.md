@@ -16,7 +16,6 @@ Tooltip is used to display details about the items in the TreeMap. When space co
 
 The tooltip is not visible by default, to make it visible, set the [`visible`](https://ej2.syncfusion.com/react/documentation/api/treemap/tooltipSettingsModel/#visible) property in the [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap/#tooltipsettings) to **true** and injecting the `TreeMapTooltip` module.
 
-<<<<<<
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/treemap/tooltip-cs1/app/index.jsx %}

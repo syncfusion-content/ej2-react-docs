@@ -6,18 +6,16 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Selection, Inject } from '@syncfusion/ej2-react-maps';
 
-class App extends React.Component<{}, {}>{
-
-  public mapsInstance: MapsComponent;
-  public selectclickHandler() {
-    this.mapsInstance.shapeSelection(0, "continent", "Asia", true);
-  }
-  public unselectclickHandler() {
-    this.mapsInstance.shapeSelection(0, "continent", "Asia", false);
-  }
-  render() {
+export function App() {
+    let mapsInstance;
+    function selectclickHandler() {
+    mapsInstance.shapeSelection(0, "continent", "Asia", true);
+    }
+    function unselectclickHandler() {
+       mapsInstance.shapeSelection(0, "continent", "Asia", false);
+    }
     return (<div>
-      <MapsComponent id="maps" ref={maps => this.mapsInstance = maps}>
+      <MapsComponent  ref={maps => mapsInstance = maps}>
             <Inject services={[Selection]} />
                 <LayersDirective>
                     <LayerDirective shapeData={world_map} selectionSettings={ {
@@ -28,11 +26,11 @@ class App extends React.Component<{}, {}>{
                     </LayerDirective>
                 </LayersDirective>
             </MapsComponent>
-            <button value='select' onClick={this.selectclickHandler.bind(this)}>select</button>
-            <button value='unselect' onClick={this.unselectclickHandler.bind(this)}>unselect</button></div>)
-  }
-};
-ReactDOM.render(<App />, document.getElementById('maps'));
+            <button value='select' onClick={selectclickHandler}>select</button>
+            <button value='unselect' onClick={unselectclickHandler}>unselect</button></div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

@@ -1,7 +1,3 @@
-
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
@@ -12,17 +8,15 @@ import { scheduleData } from './datasource';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{
-    dataSource: data,
-    fields: {
-      id: 'Id',
-      subject: { name: 'Subject', title: 'Event Name' },
-      location: { name: 'Location', title: 'Event Location' },
-      description: { name: 'Description', title: 'Event Description' },
-      startTime: { name: 'StartTime', title: 'Start Duration' },
-      endTime: { name: 'EndTime', title: 'End Duration' }
-    }
-  }}>
+  const fieldsData = {
+    id: 'Id',
+    subject: { name: 'Subject', title: 'Event Name' },
+    location: { name: 'Location', title: 'Event Location' },
+    description: { name: 'Description', title: 'Event Description' },
+    startTime: { name: 'StartTime', title: 'Start Duration' },
+    endTime: { name: 'EndTime', title: 'End Duration' }
+  }
+  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
     <ViewsDirective>
       <ViewDirective option='TimelineDay' />
       <ViewDirective option='Day' />

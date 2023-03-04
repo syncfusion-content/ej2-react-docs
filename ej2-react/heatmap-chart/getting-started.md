@@ -75,25 +75,16 @@ Now, you can start adding HeatMap component in the application. For getting star
 ```ts
 
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
 
 export function App() {
   return ( <HeatMapComponent id='heatmap'></HeatMapComponent> );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-```
-
-```ts
-import * as React from 'react';
-import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
-export function App() {
-    return (<HeatMapComponent id='heatmap'></HeatMapComponent>);
-}
-const root = ReactDOM.createRoot(document.getElementById('heatmap'));
-root.render(<App />);
 ```
 
 Use the `npm start` command to run the application in the browser.

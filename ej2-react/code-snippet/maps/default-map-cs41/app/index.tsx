@@ -7,21 +7,20 @@ import { dafaultData } from 'data.ts';
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { MapsComponent, LayersDirective, LayerDirective, Inject, Highlight, Marker, MarkerDirective,MarkersDirective } from '@syncfusion/ej2-react-maps';
-
-class App extends React.Component {
-  shapeSelected(args) {
+export function App() {
+  let mapInstance;
+  function shapeSelected(args) {
     let shape = args.shapeData.continent;
-    if (this.mapInstance.baseLayerIndex === 0) {
+    if (mapInstance.baseLayerIndex === 0) {
       if (shape === 'Africa') {
-        this.mapInstance.baseLayerIndex = 1;
-        this.mapInstance.refresh();
+        mapInstance.baseLayerIndex = 1;
+        mapInstance.refresh();
       }
     }
   }
-  render() {
-    return (
-      <MapsComponent id="element" height="400" ref={m => (this.mapInstance = m)}
-                     shapeSelected={this.shapeSelected.bind(this)}>
+  return (
+      <MapsComponent  height="400" ref={m => (mapInstance = m)}
+                     shapeSelected={shapeSelected}>
         <Inject services={[Highlight, Marker]} />
         <LayersDirective>
           <LayerDirective shapeData={world_map} layerType="Geometry" shapeDataPath="continent" shapePropertyPath="continent" dataSource={dafaultData}
@@ -49,9 +48,9 @@ class App extends React.Component {
         </LayersDirective>
       </MapsComponent>
     );
-  }
 }
-ReactDOM.render(<App />, document.getElementById('maps'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

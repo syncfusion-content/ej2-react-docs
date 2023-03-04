@@ -8,8 +8,9 @@ import {
   MarkerDirective, Inject, Marker
 } from '@syncfusion/ej2-react-maps';
 //tslint disable
-ReactDOM.render(
-      <MapsComponent id="maps">
+export function App() {
+return(
+      <MapsComponent >
         <Inject services={[Marker]} />
         <LayersDirective>
           <LayerDirective shapeData={usa_map}>
@@ -57,8 +58,10 @@ ReactDOM.render(
             </MarkersDirective>
           </LayerDirective>
         </LayersDirective>
-      </MapsComponent>,
-      document.getElementById("maps") as HTMLElement
+      </MapsComponent>
       );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 

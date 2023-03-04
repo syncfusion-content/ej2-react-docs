@@ -6,15 +6,13 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, PdfExport, Inject } from '@syncfusion/ej2-react-treemap';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-
-export class App extends React.Component {
-public click(){
-  this.treemap.export('PDF', 'export', 0);
-}
-public treemap: TreeMapComponent;
-render() {
-  return ( <div>
-    <ButtonComponent value='Export' onClick= { this.click.bind(this)}>Export</ButtonComponent> <TreeMapComponent id='treemap' allowPdfExport={true} ref={g => this.treemap = g}
+export function App() {
+    function click(){
+       treemapInstance.export('PDF', 'export', 0);
+    }
+   let treemapInstance;
+   return ( <div>
+    <ButtonComponent value='Export' onClick= { click}>Export</ButtonComponent> <TreeMapComponent  allowPdfExport={true} ref={g => treemapInstance = g}
         dataSource={[
             {State:"United States", GDP:17946, percentage:11.08, Rank:1},
             {State:"China", GDP:10866, percentage: 28.42, Rank:2},
@@ -41,9 +39,9 @@ render() {
         }}>
         <Inject services={[PdfExport]} />
     </TreeMapComponent> </div> );
- }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

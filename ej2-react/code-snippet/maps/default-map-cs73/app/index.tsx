@@ -5,9 +5,9 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, MarkersDirective, MarkerDirective, Marker, Inject, Zoom } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-                <MapsComponent id="maps" zoomSettings= {{enable: true, mouseWheelZoom : true }}>
+export function App() {
+    return(
+                <MapsComponent  zoomSettings= {{enable: true, mouseWheelZoom : true }}>
                     <Inject services={[Marker, Zoom]} />
                     <LayersDirective>
                         <LayerDirective shapeData={world_map} markerClusterSettings={{ allowClustering: true,  allowClusterExpand: true,shape: 'Circle', height: 40, width: 40, labelStyle: { color: 'white' }, }}>
@@ -27,9 +27,11 @@ ReactDOM.render(
                             </MarkersDirective>
                         </LayerDirective>
                     </LayersDirective>
-                </MapsComponent>,
-            document.getElementById("maps") as HTMLElement
-);
+                </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

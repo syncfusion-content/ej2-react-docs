@@ -5,9 +5,9 @@ import { uncountries } from 'data.ts'
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Inject, Legend } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps" legendSettings={ { visible: true } } >
+export function App() {
+return(
+            <MapsComponent  legendSettings={ { visible: true } } >
             <Inject services={[Legend]} />
                 <LayersDirective>
                     <LayerDirective shapeData={world_map} shapeDataPath='Country' shapePropertyPath='name' dataSource={uncountries}
@@ -20,8 +20,10 @@ ReactDOM.render(
                         } }>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 

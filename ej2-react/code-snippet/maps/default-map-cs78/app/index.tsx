@@ -9,9 +9,9 @@ import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Inject, MapsTooltip } from '@syncfusion/ej2-react-maps';
 import { BubblesDirective, BubbleDirective, Bubble } from '@syncfusion/ej2-react-maps';
 import { MarkersDirective, MarkerDirective, Marker } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps">
+export function App() {
+    return(
+            <MapsComponent >
 			<Inject services={[Marker, Bubble, MapsTooltip]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map} shapeDataPath='data.continent' shapePropertyPath='continent' dataSource={complexData}
@@ -61,9 +61,11 @@ ReactDOM.render(
 					</MarkersDirective>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

@@ -4,9 +4,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Tooltip, Adaptor } from '@syncfusion/ej2-react-heatmap';
-
-class App extends React.Component {
-    private heatmapData: any [] = [
+export function App() {
+    let heatmapData = [
             [36371, 25675, 28292, 33399, 35980, 38585, 39351, 39964, 36543, 30529, 33298, 36985],
             [34702, 27618, 31063, 34525, 36772, 35410, 38750, 39467, 35390, 34196, 35302, 35703],
             [34522, 31324, 32128, 34231, 36817, 34381, 37180, 38255, 32776, 32645, 31539, 32981],
@@ -19,8 +18,7 @@ class App extends React.Component {
             [34378, 29576, 30547, 35664, 36622, 38145, 40347, 41868, 38252, 36505, 29576, 36450],
             [35219, 31670, 32589, 34927, 36998, 39825, 41126, 42002, 37021, 36583, 32408, 37108]
     ];
-    render() {
-    return ( <HeatMapComponent id='heatmap'
+    return ( <HeatMapComponent
             titleSettings = { {
                 text: 'Monthly Flight Traffic at JFK Airport',
                 textStyle: {
@@ -54,12 +52,12 @@ class App extends React.Component {
             legendSettings = { {
                 visible:false,
             } }
-            dataSource={this.heatmapData}>
+            dataSource={heatmapData}>
             <Inject services={[Adaptor, Tooltip]} />
             </HeatMapComponent> );
-    }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

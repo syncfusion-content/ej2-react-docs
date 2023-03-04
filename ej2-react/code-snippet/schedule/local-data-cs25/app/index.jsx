@@ -1,4 +1,3 @@
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { TimelineViews, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject, Resize, DragAndDrop } from '@syncfusion/ej2-react-schedule';
@@ -18,17 +17,15 @@ function App() {
         { text: 'Room I', id: 9, color: '#98AFC7' },
         { text: 'Room J', id: 10, color: '#778899' }
     ];
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 7, 1)} rowAutoHeight={true} eventSettings={{
-            dataSource: data,
-            fields: {
-                id: 'Id',
-                subject: { title: 'Summary', name: 'Subject' },
-                location: { title: 'Location', name: 'Location' },
-                description: { title: 'Comments', name: 'Description' },
-                startTime: { title: 'From', name: 'StartTime' },
-                endTime: { title: 'To', name: 'EndTime' }
-            }
-        }} group={{ enableCompactView: false, resources: ['MeetingRoom'] }}>
+    const fieldsData = {
+      id: 'Id',
+      subject: { title: 'Summary', name: 'Subject' },
+      location: { title: 'Location', name: 'Location' },
+      description: { title: 'Comments', name: 'Description' },
+      startTime: { title: 'From', name: 'StartTime' },
+      endTime: { title: 'To', name: 'EndTime' }
+  }
+    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 7, 1)} rowAutoHeight={true} eventSettings={{ dataSource: data, fields: fieldsData }} group={{ enableCompactView: false, resources: ['MeetingRoom'] }}>
     <ResourcesDirective>
       <ResourceDirective field='RoomId' title='Room Type' name='MeetingRoom' allowMultiple={true} dataSource={ownerData} textField='text' idField='id' colorField='color'>
       </ResourceDirective></ResourcesDirective>

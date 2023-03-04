@@ -7,7 +7,7 @@ import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, 
 
 export function App() {
    return(
-    <LinearGaugeComponent id='gauge'>
+    <LinearGaugeComponent>
         <AxesDirective>
             <AxisDirective minimum={0} maximum={200}>
                 <PointersDirective>
@@ -19,7 +19,7 @@ export function App() {
     </LinearGaugeComponent>
     );
 }
-const root = ReactDOM.createRoot(document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

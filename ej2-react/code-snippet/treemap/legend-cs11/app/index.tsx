@@ -4,10 +4,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, Inject, TreeMapLegend } from '@syncfusion/ej2-react-treemap';
-
-class App extends React.Component {
-render() {
-  return ( <TreeMapComponent id='treemap'
+export function App() {
+  return ( <TreeMapComponent 
         dataSource={[
                        { fruit:'Apple', count:5000, visibility: true , color: '#71B081' },
                        { fruit:'Grape', count:3000, visibility: false, color: '#5A9A77' },
@@ -29,9 +27,9 @@ render() {
         }}>
         <Inject services={[TreeMapLegend]} />
     </TreeMapComponent> );
- }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

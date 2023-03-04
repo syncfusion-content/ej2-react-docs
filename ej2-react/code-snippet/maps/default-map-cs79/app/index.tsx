@@ -6,15 +6,14 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { MapsComponent, LayersDirective, LayerDirective, Inject, Print, DataLabel } from '@syncfusion/ej2-react-maps';
-class App extends React.Component<{}, {}>{
-    private maps: MapsComponent;
-    public clickHandler(){
-        this.maps.print();
+export function App() {
+    let mapsInstance;
+    function clickHandler(){
+        mapsInstance.print();
     }
-render(){
-        return (<div>
-        <ButtonComponent value='export' onClick= { this.clickHandler.bind(this)}>print</ButtonComponent>
-            <MapsComponent id="maps" allowPrint={true} ref={g => this.maps = g}>
+    return (<div>
+        <ButtonComponent onClick= { clickHandler}>print</ButtonComponent>
+            <MapsComponent  allowPrint={true} ref={g => mapsInstance = g}>
                 <Inject services={[DataLabel, Print]} />
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}
@@ -25,10 +24,10 @@ render(){
                         } }>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent></div>)
-        }
-};
-ReactDOM.render(<App />, document.getElementById('maps'));
+            </MapsComponent></div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

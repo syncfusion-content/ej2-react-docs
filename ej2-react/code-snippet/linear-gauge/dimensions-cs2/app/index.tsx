@@ -1,13 +1,10 @@
-
-
-
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { LinearGaugeComponent } from '@syncfusion/ej2-react-lineargauge';
-
-ReactDOM.render(
-    <LinearGaugeComponent id='gauge' width='100%' height='50%'>
-    </LinearGaugeComponent>,document.getElementById('gauge'));
-
-
-
+export function App() {
+  return (
+    <LinearGaugeComponent width="100%" height="50%"></LinearGaugeComponent>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);

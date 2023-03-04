@@ -1,7 +1,3 @@
-
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
@@ -15,21 +11,19 @@ function App() {
   const minValidation: (args: { [key: string]: string }) => boolean = (args: { [key: string]: string }) => {
     return args['value'].length >= 5;
   };
-  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{
-    dataSource: data,
-    fields: {
-      id: 'Id',
-      subject: { name: 'Subject', validation: { required: true } },
-      location: { name: 'Location', validation: { required: true } },
-      description: {
+  const fieldsData = {
+    id: 'Id',
+    subject: { name: 'Subject', validation: { required: true } },
+    location: { name: 'Location', validation: { required: true } },
+    description: {
         name: 'Description', validation: {
-          required: true, minLength: [minValidation, 'Need atleast 5 letters to be entered']
+            required: true, minLength: [minValidation, 'Need atleast 5 letters to be entered']
         }
-      },
-      startTime: { name: 'StartTime', validation: { required: true } },
-      endTime: { name: 'EndTime', validation: { required: true } }
-    }
-  }}>
+    },
+    startTime: { name: 'StartTime', validation: { required: true } },
+    endTime: { name: 'EndTime', validation: { required: true } }
+}
+  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>)
 };

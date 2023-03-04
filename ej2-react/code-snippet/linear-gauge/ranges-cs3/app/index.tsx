@@ -5,9 +5,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AxesDirective, AxisDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-react-lineargauge';
-
-ReactDOM.render(
-    <LinearGaugeComponent id='gauge'>
+export function App() {
+   return(
+    <LinearGaugeComponent >
         <AxesDirective>
             <AxisDirective labelStyle={{ useRangeColor: true}}>
                 <RangesDirective>
@@ -16,7 +16,10 @@ ReactDOM.render(
                 </RangesDirective>
             </AxisDirective>
         </AxesDirective>
-    </LinearGaugeComponent>,document.getElementById('gauge'));
+    </LinearGaugeComponent>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

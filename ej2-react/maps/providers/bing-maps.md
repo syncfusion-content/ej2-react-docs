@@ -21,20 +21,22 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
-load(args) {
+function load(args) {
     args.maps.getBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial?output=json&uriScheme=https&key=?").then(function(url) {
         args.maps.layers[0].urlTemplate= url;
     });
 }
-ReactDOM.render(
-            <MapsComponent id="maps" load={this.load.bind(this)}>
+export function App() {
+    return(
+            <MapsComponent load={load}>
                 <LayersDirective>
                     <LayerDirective />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
-
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 
@@ -58,25 +60,28 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
 
-load(args) {
+function load(args) {
     args.maps.getBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/CanvasLight?output=json&uriScheme=https&key=?").then(function(url) {
         args.maps.layers[0].urlTemplate= url;
     });
 }
 
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings= {{ zoomFactor: 4 }}
+export function App() {
+    return(
+            <MapsComponent zoomSettings= {{ zoomFactor: 4 }}
                                     centerPosition = {{
                                         latitude : 38.8951,
                                         longitude : -77.0364
-                                    }} load={this.load.bind(this)}>
+                                    }} load={load}>
                 <Inject services={[Zoom]} />
                 <LayersDirective>
                     <LayerDirective />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -92,23 +97,27 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
 
-load(args) {
+function load(args) {
     args.maps.getBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial?output=json&uriScheme=https&key=?").then(function(url) {
         args.maps.layers[0].urlTemplate= url;
     });
 }
 
-ReactDOM.render(
-            <MapsComponent id="maps" load={this.load.bind(this)} zoomSettings= {{
+export function App() {
+    return(
+            <MapsComponent load={load} zoomSettings= {{
                                         enable : true,
                                         toolbars:[ "Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" ]}}>
                 <Inject services={[Zoom]} />
                 <LayersDirective>
                     <LayerDirective />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -125,14 +134,15 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, MarkersDirective, NavigationLineDirective, NavigationLinesDirective, MarkerDirective, LayersDirective, LayerDirective, Inject, Zoom, Marker, NavigationLine } from '@syncfusion/ej2-react-maps';
 
-load(args) {
+function load(args) {
     args.maps.getBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial?output=json&uriScheme=https&key=?").then(function(url) {
         args.maps.layers[0].urlTemplate= url;
     });
 }
 
-ReactDOM.render(
-            <MapsComponent id="maps" load={this.load.bind(this)} zoomSettings= {{
+export function App() {
+return (
+            <MapsComponent load={load} zoomSettings= {{
                                         zoomFactor : 4
                                         }}
                                         centerPosition = {{
@@ -171,9 +181,12 @@ ReactDOM.render(
                         </NavigationLinesDirective>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -191,14 +204,15 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
-load(args) {
+function load(args) {
     args.maps.getBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial?output=json&uriScheme=https&key=?").then(function(url) {
         args.maps.layers[0].urlTemplate= url;
     });
 }
 
-ReactDOM.render(
-            <MapsComponent load={this.load.bind(this)} id="maps">
+export function App() {
+return(
+            <MapsComponent load={load}>
                 <LayersDirective>
                     <LayerDirective/>
                     <LayerDirective shapeData= {africa_continent}
@@ -208,9 +222,11 @@ ReactDOM.render(
                                     }}
                     />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -228,16 +244,16 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Marker, MarkersDirective, MarkerDirective, Legend, Inject } from '@syncfusion/ej2-react-maps';
 
-load(args) {
+function load(args) {
     args.maps.getBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial?output=json&uriScheme=https&key=?").then(function(url) {
         args.maps.layers[0].urlTemplate= url;
     });
 }
 
-ReactDOM.render(
+export function App() {
+return(
             <MapsComponent
-              id="maps"
-              load={this.load.bind(this)}
+              load={load}
               legendSettings={{
                 visible: true,
                 type: 'Markers',
@@ -266,9 +282,12 @@ ReactDOM.render(
                   </MarkersDirective>
                 </LayerDirective>
               </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}

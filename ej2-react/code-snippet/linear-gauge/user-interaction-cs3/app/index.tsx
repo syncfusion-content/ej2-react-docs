@@ -4,9 +4,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, GaugeTooltip, Inject } from '@syncfusion/ej2-react-lineargauge';
-
-ReactDOM.render(
-    <LinearGaugeComponent id='gauge' tooltip={ { enable: true, template: '<div>Pointer: 80 </div>' } }>
+export function App() {
+  return(
+    <LinearGaugeComponent tooltip={ { enable: true, template: '<div>Pointer: 80 </div>' } }>
     <Inject services={[GaugeTooltip]}/>
         <AxesDirective>
             <AxisDirective>
@@ -16,7 +16,10 @@ ReactDOM.render(
                 </PointersDirective>
             </AxisDirective>
         </AxesDirective>
-    </LinearGaugeComponent>,document.getElementById('gauge'));
+    </LinearGaugeComponent>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

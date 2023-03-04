@@ -4,10 +4,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, LevelDirective, LevelsDirective } from '@syncfusion/ej2-react-treemap';
-
-class App extends React.Component {
-render() {
-  return ( <TreeMapComponent id='treemap'
+export function App() {
+  return ( <TreeMapComponent 
         palette= {["#f44336", "#29b6f6", "#ab47bc", "#ffc107", "#5c6bc0", "#009688"]}
         dataSource={[
             { Category: 'Employees', Country: 'USA', JobDescription: 'Sales', JobGroup: 'Executive', EmployeesCount: 20 },
@@ -32,8 +30,7 @@ render() {
         weightValuePath= 'EmployeesCount'
         enableDrillDown= {true}
         leafItemSettings={{
-            labelPath: 'Car',
-            labelFormat:'${Car}-${Brand}',
+            labelFormat: '${JobDescription}-${EmployeesCount}',
             interSectAction:'WrapByWord'
         }}>
         <LevelsDirective>
@@ -42,9 +39,9 @@ render() {
             <LevelDirective groupPath='JobGroup' border={{ color: 'black', width: 0.5 }} />
         </LevelsDirective>
     </TreeMapComponent> );
- }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

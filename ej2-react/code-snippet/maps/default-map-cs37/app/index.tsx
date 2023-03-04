@@ -7,7 +7,7 @@ import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Inject, Legend } from '@syncfusion/ej2-react-maps';
 
 export function App() {
-    return(<MapsComponent id="maps" legendSettings={ { visible: true } } >
+    return(<MapsComponent  legendSettings={ { visible: true } } >
             <Inject services={[Legend]} />
                 <LayersDirective>
                     <LayerDirective shapeData={world_map} shapeDataPath='Country' shapePropertyPath='name' dataSource={uncountries}
@@ -26,7 +26,7 @@ export function App() {
             </MapsComponent>
 );
 }
-const root = ReactDOM.createRoot(document.getElementById('maps'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

@@ -22,9 +22,7 @@ import {
   Inject, Selection
 } from '@syncfusion/ej2-react-maps';
 import * as ReactDOM from 'react-dom';
-
-class App extends React.Component {
-    render() {
+  export function App() {
         return (
           <div className='control-section row'>
             <div className='col-md-8'>
@@ -32,7 +30,7 @@ class App extends React.Component {
                 <div id="sampletitle">Bus seat selection</div>
               </div>
               <div style={{ border: '3px solid darkgray', width: 200, display: 'block', margin: 'auto' }}>
-                <MapsComponent id="element" height='400'>
+                <MapsComponent  height='400'>
                   <Inject services={[Selection]} />
                   <LayersDirective>
                     <LayerDirective shapeData={seat} geometryType='Normal'>
@@ -40,9 +38,9 @@ class App extends React.Component {
                   </LayersDirective>
                 </MapsComponent>
               </div></div></div>);
-      }
 }
-ReactDOM.render(<App/>, document.getElementById('maps'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```
 
 {% endraw %}

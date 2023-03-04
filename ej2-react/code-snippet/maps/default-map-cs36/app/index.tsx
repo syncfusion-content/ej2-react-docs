@@ -7,7 +7,7 @@ import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
 export function App() {
-  return(<MapsComponent id="maps"  titleSettings={ { text: 'World map with membership' } }>
+  return(<MapsComponent   titleSettings={ { text: 'World map with membership' } }>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map} shapeDataPath='Country' shapePropertyPath='name' dataSource={uncountries}
                         shapeSettings={ {
@@ -25,7 +25,7 @@ export function App() {
             </MapsComponent>
 );
 }
-const root = ReactDOM.createRoot(document.getElementById('maps'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

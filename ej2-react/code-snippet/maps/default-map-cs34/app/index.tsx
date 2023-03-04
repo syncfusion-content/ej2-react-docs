@@ -9,7 +9,7 @@ import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-
 
 export function App() {
    return(
-            <MapsComponent id="maps">
+            <MapsComponent >
                 <LayersDirective>
                     <LayerDirective shapeData={world_map} shapeDataPath='Country' shapePropertyPath='name' dataSource={uncountries}>
                     </LayerDirective>
@@ -18,7 +18,7 @@ export function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('maps'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

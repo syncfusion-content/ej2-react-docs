@@ -6,16 +6,14 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, Print, Inject } from '@syncfusion/ej2-react-treemap';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-
-export class App extends React.Component {
-public click(){
-  this.treemap.print();
-}
-private treemap: TreeMapComponent;
-render() {
-  return ( <div>
-    <ButtonComponent value='Print' onClick= { this.click.bind(this)}>Print</ButtonComponent>
-    <TreeMapComponent id='treemap' allowPrint={true} ref={g => this.treemap = g}
+export function App() {
+    function click(){
+      treemapInstance.print();
+   }
+   let treemapInstance;
+   return ( <div>
+    <ButtonComponent value='Print' onClick= { click}>Print</ButtonComponent>
+    <TreeMapComponent  allowPrint={true} ref={g => treemapInstance = g}
         dataSource={[
             {State:"United States", GDP:17946, percentage:11.08, Rank:1},
             {State:"China", GDP:10866, percentage: 28.42, Rank:2},
@@ -42,9 +40,9 @@ render() {
         }}>
         <Inject services={[Print]} />
     </TreeMapComponent></div> );
- }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

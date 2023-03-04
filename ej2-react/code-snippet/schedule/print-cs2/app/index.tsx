@@ -1,6 +1,3 @@
-
-
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Print, Inject, ScheduleModel, ActionEventArgs, ToolbarActionArgs } from '@syncfusion/ej2-react-schedule';

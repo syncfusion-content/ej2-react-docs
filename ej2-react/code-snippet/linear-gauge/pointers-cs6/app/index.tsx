@@ -4,8 +4,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective } from '@syncfusion/ej2-react-lineargauge';
-
-ReactDOM.render(
+export function App() {
+  return(
     <LinearGaugeComponent id='gauge'>
         <AxesDirective>
             <AxisDirective>
@@ -19,7 +19,10 @@ ReactDOM.render(
                 </PointersDirective>
             </AxisDirective>
         </AxesDirective>
-    </LinearGaugeComponent>,document.getElementById('gauge'));
+    </LinearGaugeComponent>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

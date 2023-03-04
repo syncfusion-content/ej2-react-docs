@@ -94,13 +94,15 @@ or **src/App.tsx** as per the application. Please use the below code to include 
 ```ts
 
 import * as React from 'react';
+import * as ReactDOM from "react-dom";
 import { TreeMapComponent } from '@syncfusion/ej2-react-treemap';
 
-function App() {
-  return ( <TreeMapComponent></TreeMapComponent> );
+export function App() {
+  return ( <TreeMapComponent ></TreeMapComponent> );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 

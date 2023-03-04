@@ -5,18 +5,16 @@ import { TreeMapComponent, LevelDirective, LevelsDirective, ILoadedEventArgs, ID
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { CarSales } from './datasource';
-
-class App extends React.Component {
-  public drillStart(args: IDrillStartEventArgs): void {
-    let labelElementGroup: HTMLElement = document.getElementById('container_Label_Template_Group') as HTMLElement;
-    labelElementGroup.remove();
-  }
-  render() {
+export function App() {
+    function drillStart(args: IDrillStartEventArgs): void {
+      let labelElementGroup: HTMLElement = document.getElementById('container_Label_Template_Group') as HTMLElement;
+      labelElementGroup.remove();
+    }
     return (
-     <TreeMapComponent drillStart={this.drillStart.bind(this)} id='container' weightValuePath='Sales' palette={['white']} enableDrillDown={true} dataSource={CarSales}
+     <TreeMapComponent drillStart={drillStart}  weightValuePath='Sales' palette={['white']} enableDrillDown={true} dataSource={CarSales}
           leafItemSettings={ {
             showLabels: false,
-            labelTemplate: '#template',
+            labelTemplate: '<div style="background-color: red">{{:Company}}</div>',
             templatePosition: 'Center'
           } }>
           <LevelsDirective>
@@ -25,11 +23,8 @@ class App extends React.Component {
           </LevelsDirective>
         </TreeMapComponent>
     );
-  }
 }
-ReactDOM.render(
-  <App />,
-  document.getElementById('treemap') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 

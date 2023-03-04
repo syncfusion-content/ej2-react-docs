@@ -4,9 +4,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-react-circulargauge';
-function export App() {
+export function App() {
   return(
-  <CircularGaugeComponent id='circulargauge' background= 'skyblue' border= {{
+  <CircularGaugeComponent background= 'skyblue' border= {{
       color: "#FF0000", width: 2
     }}>
     <AxesDirective>
@@ -28,7 +28,7 @@ function export App() {
     </AxesDirective>
   </CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

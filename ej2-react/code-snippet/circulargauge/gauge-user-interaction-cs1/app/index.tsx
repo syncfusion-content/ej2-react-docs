@@ -3,9 +3,9 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { CircularGaugeComponent, RangesDirective, AnnotationsDirective, AnnotationDirective, RangeDirective, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, GaugeTooltip } from '@syncfusion/ej2-react-circulargauge';
+import { CircularGaugeComponent, RangesDirective, Annotations, AnnotationsDirective, AnnotationDirective, RangeDirective, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, GaugeTooltip } from '@syncfusion/ej2-react-circulargauge';
 export function App() {
-    return ( <CircularGaugeComponent id='circulargauge' tooltip={{
+    return ( <CircularGaugeComponent  tooltip={{
                            type:['Pointer', 'Range', 'Annotation'],
                            enable: true,
                             enableAnimation: false,
@@ -45,7 +45,7 @@ export function App() {
                 </AxesDirective>
               </CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

@@ -18,21 +18,6 @@ When the pointer animation is completed, the [`animationComplete`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs13/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs13/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs13" %}
-
-## annotationRender
-
-Before the annotation is rendered in the Linear Gauge, the [`annotationRender`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#annotationrender) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iAnnotationRenderEventArgs/).
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/linear-gauge/axis-cs14/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
@@ -42,9 +27,9 @@ Before the annotation is rendered in the Linear Gauge, the [`annotationRender`](
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs14" %}
 
-## axisLabelRender
+## annotationRender
 
-Before each axis label is rendered in the Linear Gauge, the [`axisLabelRender`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#axislabelrender) event is fired. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iAxisLabelRenderEventArgs/).
+Before the annotation is rendered in the Linear Gauge, the [`annotationRender`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#annotationrender) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iAnnotationRenderEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,9 +42,9 @@ Before each axis label is rendered in the Linear Gauge, the [`axisLabelRender`](
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs15" %}
 
-## beforePrint
+## axisLabelRender
 
-The [`beforePrint`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/#beforeprint) event is fired before the print begins. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iPrintEventArgs/).
+Before each axis label is rendered in the Linear Gauge, the [`axisLabelRender`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#axislabelrender) event is fired. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iAxisLabelRenderEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,9 +57,9 @@ The [`beforePrint`](https://ej2.syncfusion.com/react/documentation/api/linear-ga
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs16" %}
 
-## dragEnd
+## beforePrint
 
-The [`dragEnd`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#dragend) event will be fired before the pointer drag is completed. To know more about the argument of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iPointerDragEventArgs/).
+The [`beforePrint`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/#beforeprint) event is fired before the print begins. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iPrintEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -87,9 +72,9 @@ The [`dragEnd`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs17" %}
 
-## dragMove
+## dragEnd
 
-The [`dragMove`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#dragmove) event will be fired when the pointer is dragged. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iPointerDragEventArgs/).
+The [`dragEnd`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#dragend) event will be fired before the pointer drag is completed. To know more about the argument of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iPointerDragEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -102,9 +87,9 @@ The [`dragMove`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs18" %}
 
-## dragStart
+## dragMove
 
-When the pointer drag begins, the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#dragstart) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iPointerDragEventArgs/).
+The [`dragMove`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#dragmove) event will be fired when the pointer is dragged. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iPointerDragEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -117,9 +102,9 @@ When the pointer drag begins, the [`dragStart`](https://ej2.syncfusion.com/react
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs19" %}
 
-## gaugeMouseDown
+## dragStart
 
-When mouse is pressed down on the gauge, the [`gaugeMouseDown`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#gaugemousedown) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iMouseEventArgs/).
+When the pointer drag begins, the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#dragstart) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iPointerDragEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -132,9 +117,9 @@ When mouse is pressed down on the gauge, the [`gaugeMouseDown`](https://ej2.sync
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs20" %}
 
-## gaugeMouseLeave
+## gaugeMouseDown
 
-When mouse pointer moves over the gauge, the [`gaugemouseleave`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#gaugemouseleave) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iMouseEventArgs/).
+When mouse is pressed down on the gauge, the [`gaugeMouseDown`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#gaugemousedown) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iMouseEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -147,9 +132,9 @@ When mouse pointer moves over the gauge, the [`gaugemouseleave`](https://ej2.syn
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs21" %}
 
-## gaugeMouseMove
+## gaugeMouseLeave
 
-When mouse pointer leaves the gauge, the [`gaugeMouseMove`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#gaugemousemove) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iMouseEventArgs/).
+When mouse pointer moves over the gauge, the [`gaugemouseleave`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#gaugemouseleave) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iMouseEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -162,9 +147,9 @@ When mouse pointer leaves the gauge, the [`gaugeMouseMove`](https://ej2.syncfusi
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs22" %}
 
-## gaugeMouseUp
+## gaugeMouseMove
 
-When the mouse pointer is released over the Linear Gauge, the [`gaugeMouseUp`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#gaugemouseup) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iMouseEventArgs/).
+When mouse pointer leaves the gauge, the [`gaugeMouseMove`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#gaugemousemove) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iMouseEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -177,9 +162,9 @@ When the mouse pointer is released over the Linear Gauge, the [`gaugeMouseUp`](h
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs23" %}
 
-## load
+## gaugeMouseUp
 
-Before the Linear Gauge is loaded, the [`load`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#load) event is fired. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iLoadEventArgs/).
+When the mouse pointer is released over the Linear Gauge, the [`gaugeMouseUp`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#gaugemouseup) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iMouseEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -192,9 +177,9 @@ Before the Linear Gauge is loaded, the [`load`](https://ej2.syncfusion.com/react
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs24" %}
 
-## loaded
+## load
 
-After the Linear Gauge has been loaded, the [`loaded`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#loaded) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iLoadedEventArgs/).
+Before the Linear Gauge is loaded, the [`load`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#load) event is fired. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iLoadEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -207,9 +192,9 @@ After the Linear Gauge has been loaded, the [`loaded`](https://ej2.syncfusion.co
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs25" %}
 
-## resized
+## loaded
 
-After the window resizing, the [`resized`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#resized) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iResizeEventArgs/).
+After the Linear Gauge has been loaded, the [`loaded`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#loaded) event will be triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iLoadedEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -222,9 +207,9 @@ After the window resizing, the [`resized`](https://ej2.syncfusion.com/react/docu
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs26" %}
 
-## tooltipRender
+## resized
 
-The [`tooltipRender`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#tooltiprender) event is fired before the tooltip is rendered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iTooltipRenderEventArgs/).
+After the window resizing, the [`resized`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#resized) event is triggered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iResizeEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -237,9 +222,9 @@ The [`tooltipRender`](https://ej2.syncfusion.com/react/documentation/api/linear-
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs27" %}
 
-## valueChange
+## tooltipRender
 
-The [`valueChange`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#valuechange) event is triggered when the pointer is dragged from one value to another. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iValueChangeEventArgs/).
+The [`tooltipRender`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#tooltiprender) event is fired before the tooltip is rendered. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iTooltipRenderEventArgs/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -251,3 +236,18 @@ The [`valueChange`](https://ej2.syncfusion.com/react/documentation/api/linear-ga
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs28" %}
+
+## valueChange
+
+The [`valueChange`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#valuechange) event is triggered when the pointer is dragged from one value to another. To know more about the arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/iValueChangeEventArgs/).
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/linear-gauge/axis-cs29/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/linear-gauge/axis-cs29/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs29" %}
