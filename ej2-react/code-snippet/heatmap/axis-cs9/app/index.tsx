@@ -6,9 +6,8 @@ import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Tooltip } from '@syncfusion/ej2-react-heatmap';
 import { Internationalization } from '@syncfusion/ej2-base';
-
-class App extends React.Component {
-      heatmapData: any[] = [
+export function App() {
+    let heatmapData: any[] = [
     [null, null, null, null, 16, 48, 0],
     [0, 15, 0, 24, 0, 39, 0],
     [0, 18, 37, 0, 0, 50, 0],
@@ -65,7 +64,7 @@ class App extends React.Component {
     [0, 10, 2, 0, 44, 5, null]
   ];
 
-  tooltipTemplate(args: ITooltipEventArgs): void {
+  function tooltipTemplate(args: ITooltipEventArgs): void {
     let intl: Internationalization = new Internationalization();
     let format: Function = intl.getDateFormat({ format: 'EEE MMM dd, yyyy' });
     let newDate: Date = new Date(args.xValue as Date);
@@ -78,11 +77,8 @@ class App extends React.Component {
       (args.value === 0 ? 'No' : args.value) + ' ' + 'contributions' + '<br>' + value
     ];
   }
-
-  render() {
-    return (
+return (
       <HeatMapComponent
-        id="heatmap"
         titleSettings={{
           text: 'Annual Summary of User Activities in GitLab',
           textStyle: {
@@ -107,12 +103,12 @@ class App extends React.Component {
           labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
           isInversed: true
         }}
-        dataSource={this.heatmapData}
+        dataSource={heatmapData}
         cellSettings={{
           showLabel: false,
           border: { color: 'white' }
         }}
-        tooltipRender={this.tooltipTemplate as any}
+        tooltipRender={tooltipTemplate as any}
         paletteSettings={{
           palette: [
             { value: 0, color: 'rgb(238,238,238)', label: 'no contributions' },
@@ -136,9 +132,9 @@ class App extends React.Component {
         <Inject services={[Legend, Tooltip]} />
       </HeatMapComponent>
     );
-  }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

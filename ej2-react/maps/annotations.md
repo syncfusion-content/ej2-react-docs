@@ -23,7 +23,7 @@ By using the [`content`](https://ej2.syncfusion.com/react/documentation/api/maps
  ```
 <script id='annotation' type="text/x-template">
     <div id='template'>
-        <img src='src/maps/images/flight.png'>
+        <img style="width:50px;height:50px" src='https://ej2.syncfusion.com/react/demos/src/maps/images/weather-clear.png'>
     </div>
 </script>
 
@@ -36,20 +36,22 @@ import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Inject } from '@syncfusion/ej2-react-maps';
 import { AnnotationsDirective, AnnotationDirective, Annotations} from '@syncfusion/ej2-react-maps';
 
-
-ReactDOM.render(
-            <MapsComponent id="maps">
-            <Inject services={[Annotations]}/>
-                <AnnotationsDirective>
-                    <AnnotationDirective content="#annotation" x="0%" y="50%"/>
-                </AnnotationsDirective>
-                <LayersDirective>
-                    <LayerDirective shapeData={world_map}>
-                    </LayerDirective>
-                </LayersDirective>
-            </MapsComponent>,
-            document.getElementById("maps") as HTMLElement
-);
+export function App() {
+    return(
+        <MapsComponent >
+        <Inject services={[Annotations]}/>
+            <AnnotationsDirective>
+                <AnnotationDirective content="#annotation" x="0%" y="50%"/>
+            </AnnotationsDirective>
+            <LayersDirective>
+                <LayerDirective shapeData={world_map}>
+                </LayerDirective>
+            </LayersDirective>
+        </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```
 
 ## Annotation customization

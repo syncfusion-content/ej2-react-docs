@@ -8,8 +8,9 @@ import {
   MapsComponent, LayersDirective, LayerDirective, MarkersDirective,
   MarkerDirective, Inject, Marker
 } from '@syncfusion/ej2-react-maps';
-ReactDOM.render(
-      <MapsComponent id="element">
+export function App() {
+return(
+      <MapsComponent >
         <Inject services={[Marker]} />
         <LayersDirective>
           <LayerDirective shapeData={usa_map}>
@@ -23,9 +24,10 @@ ReactDOM.render(
             </MarkersDirective>
           </LayerDirective>
         </LayersDirective>
-      </MapsComponent>,
-       document.getElementById("maps") as HTMLElement
-      );
-
+      </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 {% endraw %}

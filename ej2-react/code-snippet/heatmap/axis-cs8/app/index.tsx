@@ -4,9 +4,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend } from '@syncfusion/ej2-react-heatmap';
-
-class App extends React.Component {
-    private heatmapData: any [] = [
+export function App() {
+    let heatmapData = [
         [73, 39, 26, 39, 94, 0],
         [93, 58, 53, 38, 26, 68],
         [99, 28, 22, 4, 66, 90],
@@ -20,8 +19,7 @@ class App extends React.Component {
         [25, 56, 55, 58, 12, 82],
         [74, 33, 88, 23, 86, 59]
     ];
-    render() {
-    return ( <HeatMapComponent id='heatmap'
+    return ( <HeatMapComponent
             xAxis = { {
                 valueType:"Numeric",
                 minimum: 0,
@@ -32,12 +30,12 @@ class App extends React.Component {
                 minimum: 0,
                 increment:3
             } }
-            dataSource={this.heatmapData}>
+            dataSource={heatmapData}>
             <Inject services={[Legend]} />
             </HeatMapComponent> );
-    }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

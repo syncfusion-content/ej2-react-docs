@@ -6,8 +6,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Inject, Legend } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps" legendSettings={ {
+export function App() {
+return(
+            <MapsComponent  legendSettings={ {
                                         visible: true,
                                         position: 'Top',
                                         alignment: 'Near'
@@ -24,8 +25,10 @@ ReactDOM.render(
                         } }>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 

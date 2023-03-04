@@ -4,8 +4,8 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Inject, NavigationLine, NavigationLinesDirective, NavigationLineDirective } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
+export function App() {
+    return(
             <MapsComponent id="element">
                 <Inject services={[NavigationLine]} />
                 <LayersDirective>
@@ -21,8 +21,10 @@ ReactDOM.render(
                         </NavigationLinesDirective>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 

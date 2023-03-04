@@ -24,11 +24,10 @@ function App() {
     // maps the appropriate column to fields property
     const fields: object = { text: 'game', value: 'id' };
     React.useEffect(() => {
-        const proxy = this;
         document.onkeyup = (e) => {
             if (e.altKey && e.keyCode === 84 /* t */) {
                 // press alt+t to focus the control.
-                (proxy.multiSelectObj as any).inputElement.focus()
+                (multiSelectObj as any).inputElement.focus()
             }
         };
     }, []);

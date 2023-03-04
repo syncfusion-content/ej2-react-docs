@@ -5,9 +5,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, Inject, TreeMapLegend } from '@syncfusion/ej2-react-treemap';
 
-class App extends React.Component {
-render() {
-  return ( <TreeMapComponent id='treemap'
+export function App(){
+  return ( <TreeMapComponent 
         dataSource={[
             { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
             { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 1 },
@@ -31,7 +30,7 @@ render() {
                 position: 'Top',
                 shape: 'Rectangle'
         }}
-        leafItemSettings={ {
+        leafItemSettings={{
             labelPath: 'State',
             colorMapping: [
                 {
@@ -66,12 +65,13 @@ render() {
                 value: 1,
                 color: '#95659A'
             },
-        ]}}>
+        ]}}> 
         <Inject services={[TreeMapLegend]} />
     </TreeMapComponent> );
- }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

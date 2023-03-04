@@ -1,6 +1,3 @@
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { CheckBoxComponent, ChangeEventArgs } from '@syncfusion/ej2-react-buttons';

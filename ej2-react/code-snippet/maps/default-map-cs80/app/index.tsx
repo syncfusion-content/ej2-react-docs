@@ -6,16 +6,14 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { MapsComponent, LayersDirective, LayerDirective, DataLabel, Inject, ImageExport } from '@syncfusion/ej2-react-maps';
-
-class App extends React.Component<{}, {}>{
-    private maps: MapsComponent;
-    public clickHandler(){
-        this.maps.export('PNG', 'Maps');
+export function App() {
+    let mapsInstance;
+    function clickHandler(){
+        mapsInstance.export('PNG', 'Maps');
     }
-render(){
-        return (<div>
-        <ButtonComponent value='export' onClick= { this.clickHandler.bind(this)}>Export</ButtonComponent>
-            <MapsComponent id="maps" allowImageExport={true} ref={g => this.maps = g}>
+    return (<div>
+        <ButtonComponent onClick= { clickHandler}>Export</ButtonComponent>
+            <MapsComponent  allowImageExport={true} ref={g => mapsInstance = g}>
                 <Inject services={[DataLabel, ImageExport]} />
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}
@@ -26,9 +24,9 @@ render(){
                         } }>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent></div>)
-        }
-};
-ReactDOM.render(<App />, document.getElementById('maps'));
+            </MapsComponent></div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 

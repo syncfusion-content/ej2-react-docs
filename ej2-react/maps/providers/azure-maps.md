@@ -24,14 +24,17 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps">
+export function App() {
+    return(
+            <MapsComponent>
                 <LayersDirective>
                     <LayerDirective urlTemplate='https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY' />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 
@@ -47,15 +50,18 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Maps, Inject } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings = { { enable: true, toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']} }>
-            <Inject services={[Zoom]} />
+export function App() {
+  return(
+          <MapsComponent zoomSettings = { { enable: true, toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']} }>
+          <Inject services={[Zoom]} />
                 <LayersDirective>
                     <LayerDirective urlTemplate='https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY' />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+          </MapsComponent>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -72,9 +78,10 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, NavigationLineDirective, LayerDirective, Zoom, MarkersDirective, NavigationLine, NavigationLinesDirective, MarkerDirective, Marker, Inject, Maps } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps" zoomSettings = { { zoomFactor: 4 } } centerPosition = {{ latitude: 29.394708, longitude: -94.954653}}>
-            <Inject services={[Marker, NavigationLine, Zoom]} />
+export function App() {
+  return(
+          <MapsComponent zoomSettings = { { zoomFactor: 4 } } centerPosition = {{ latitude: 29.394708, longitude: -94.954653}}>
+          <Inject services={[Marker, NavigationLine, Zoom]} />
                 <LayersDirective>
                     <LayerDirective urlTemplate='https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY'>
                         <MarkersDirective>
@@ -106,9 +113,11 @@ ReactDOM.render(
                         </NavigationLinesDirective>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -126,8 +135,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
-            <MapsComponent id="maps">
+export function App() {
+    return(
+            <MapsComponent>
                 <LayersDirective>
                     <LayerDirective urlTemplate='https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY' />
                     <LayerDirective shapeData= {africa_continent}
@@ -137,9 +147,11 @@ ReactDOM.render(
                                     }}
                     />
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
+            </MapsComponent>
 );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -157,9 +169,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, MarkersDirective, MarkerDirective, Marker, Legend, Inject } from '@syncfusion/ej2-react-maps';
 
-ReactDOM.render(
+export function App() {
+    return(
             <MapsComponent
-              id="maps"
               legendSettings={{
                 visible: true,
                 type: 'Markers',
@@ -188,9 +200,11 @@ ReactDOM.render(
                   </MarkersDirective>
                 </LayerDirective>
               </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
+            </MapsComponent>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 ```
 {% endraw %}

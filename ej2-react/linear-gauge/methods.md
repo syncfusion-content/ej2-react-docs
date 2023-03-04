@@ -23,14 +23,14 @@ To change the pointer value dynamically, use the [`setPointerValue`](https://ej2
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs29/app/index.jsx %}
+{% include code-snippet/linear-gauge/axis-cs30/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs29/app/index.tsx %}
+{% include code-snippet/linear-gauge/axis-cs30/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs29" %}
+ {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs30" %}
 
 ## setAnnotationValue
 
@@ -44,21 +44,6 @@ To change the annotation content dynamically, use the [`setAnnotationValue`](htt
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/linear-gauge/axis-cs30/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/linear-gauge/axis-cs30/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs30" %}
-
-## refresh
-
-The [`refresh`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#refresh) method can be used to change the state of the component and render it again.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/linear-gauge/axis-cs31/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
@@ -67,3 +52,18 @@ The [`refresh`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs31" %}
+
+## refresh
+
+The [`refresh`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#refresh) method can be used to change the state of the component and render it again.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/linear-gauge/axis-cs32/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/linear-gauge/axis-cs32/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/linear-gauge/axis-cs32" %}

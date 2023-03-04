@@ -4,14 +4,15 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, ITooltipRenderEventArgs } from '@syncfusion/ej2-react-lineargauge';
-class App extends React.Component<{}, {}>{
-public tooltipRender(args: ITooltipRenderEventArgs){
-}
-private linear: LinearGaugeComponent;
-render(){
+import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, 
+    ITooltipRenderEventArgs, GaugeTooltip, Inject 
+} from '@syncfusion/ej2-react-lineargauge';
+export function App() {
+    function tooltipRender(args: ITooltipRenderEventArgs){
+    }
     return (<div>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} tooltipRender={this.tooltipRender.bind(this)} tooltip={{ enable: true }}>
+    <LinearGaugeComponent tooltipRender={tooltipRender} tooltip={{ enable: true }}>
+    <Inject services={[GaugeTooltip]} />
         <AxesDirective>
             <AxisDirective>
                 <PointersDirective>
@@ -20,10 +21,10 @@ render(){
                 </PointersDirective>
             </AxisDirective>
         </AxesDirective>
-    </LinearGaugeComponent></div>)
-    }
-};
-ReactDOM.render(<App />, document.getElementById('gauge'));
+    </LinearGaugeComponent></div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

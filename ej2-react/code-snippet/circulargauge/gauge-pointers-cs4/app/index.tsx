@@ -7,7 +7,7 @@ import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective
 Annotations, AnnotationsDirective, AnnotationDirective, Inject } from '@syncfusion/ej2-react-circulargauge';
 export function App() {
   return(
-  <CircularGaugeComponent id='circulargauge'>
+  <CircularGaugeComponent >
    <Inject services={[ Annotations ]}/>
     <AxesDirective>
       <AxisDirective startAngle={270} radius='90%' minimum={0}
@@ -47,9 +47,8 @@ export function App() {
     </AxesDirective>
   </CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
 
 
 {% endraw %}

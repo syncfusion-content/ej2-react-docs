@@ -5,8 +5,8 @@ import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, ILegendRenderEventArgs } from '@syncfusion/ej2-react-heatmap';
 
-class App extends React.Component {
-    private heatmapData: any [] = [
+export function App() {
+    let heatmapData = [
         [73000, 39000, 26000, 39000, 94000, 0],
         [93000, 58000, 53000, 38000, 26000, 68000],
         [99000, 28000, 22000, 4000, 66000, 9000],
@@ -20,7 +20,7 @@ class App extends React.Component {
         [25000, 56000, 55000, 58000, 12000, 82000],
         [74000, 33000, 88000, 23000, 86000, 59000]];
 
-    public legendRender: EmitType<ILegendRenderEventArgs> = (args: ILegendRenderEventArgs): void => {
+    function legendRender(args){
         if(args.text=='25,000' || args.text=='50,000'|| args.text=='99,000'){
             args.text = args.text.replace(/,/, "");
             args.text = `${parseInt(args.text/1000)}` + "k "+"$";
@@ -29,8 +29,8 @@ class App extends React.Component {
         }
     };
 
-    render() {
-    return ( <HeatMapComponent id='heatmap'
+
+    return ( <HeatMapComponent
         titleSettings = { {
         text: 'Sales Revenue per Employee (in 1000 US$)',
             textStyle: {
@@ -61,13 +61,13 @@ class App extends React.Component {
             type: 'Gradient'
         } }
 
-        legendRender={this.legendRender}
-        dataSource={this.heatmapData}>
+        legendRender={legendRender}
+        dataSource={heatmapData}>
         <Inject services={[Legend]} />
             </HeatMapComponent> );
     }
-}
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

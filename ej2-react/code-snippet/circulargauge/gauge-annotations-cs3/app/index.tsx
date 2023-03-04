@@ -24,14 +24,14 @@ export function App() {
                 end: 3,
                 startWidth: 5,
                 endWidth: 5,
-                color: 'rgba(29,29,29,0.7)',
+                color: 'rgba(29,29,29,0.7)'
               },
               {
                 start: 3,
                 end: 12,
                 startWidth: 5,
                 endWidth: 5,
-                color: 'rgba(168,145,102,0.1)',
+                color: 'rgba(168,145,102,0.1)'
               },
             ],
             labelStyle: { hiddenLabel: 'First', offset: -5 },
@@ -44,20 +44,20 @@ export function App() {
                 cap: {
                   color: 'rgb(29,29,29)',
                   radius: 2,
-                  border: { width: 0.2, color: 'red' },
+                  border: { width: 0.2, color: 'red' }
                 },
                 needleTail: { length: '0%' },
-                animation: { enable: false },
-              },
-            ],
-          },
-        ],
+                animation: { enable: false }
+              }
+            ]
+          }
+        ]
       },
       '#subGauge'
     );
    }
    return(
-   <CircularGaugeComponent id='circulargauge' loaded= {loadRender}>
+   <CircularGaugeComponent loaded= {loadRender}>
     <Inject services={[ Annotations ]}/>
     <AxesDirective>
       <AxisDirective  minimum= {0} maximum= {12} startAngle= {0} endAngle= {360} lineStyle= {{ width: 0 }} labelStyle = {{
@@ -119,7 +119,7 @@ export function App() {
     </AxesDirective>
   </CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

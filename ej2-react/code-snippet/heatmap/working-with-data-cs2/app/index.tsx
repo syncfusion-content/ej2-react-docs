@@ -5,9 +5,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip, ITooltipEventArgs } from '@syncfusion/ej2-react-heatmap';
-
-class App extends React.Component {
-      private heatmapData: any[] = [
+export function App() {
+  let heatmapData = [
     [0, 0, 10.75],
     [0, 1, 14.5],
     [0, 2, 25.5],
@@ -86,10 +85,11 @@ class App extends React.Component {
     [10, 5, 75.5],
     [10, 6, 90.58]
   ];
-  render() {
+  function tooltipTemplate(args: ITooltipEventArgs): void {
+    args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' %'];
+  }
     return (
       <HeatMapComponent
-        id="heatmap"
         titleSettings={{
           text: 'Percentage of Individuals Using Internet by Country',
           textStyle: {
@@ -117,7 +117,7 @@ class App extends React.Component {
         yAxis={{
           labels: ['2000', '2005', '2010', '2011', '2012', '2013', '2014']
         }}
-        dataSource={this.heatmapData}
+        dataSource={heatmapData}
         dataSourceSettings={{
           isJsonData: false,
           adaptorType: 'Cell'
@@ -137,17 +137,14 @@ class App extends React.Component {
         legendSettings={{
           visible: false
         }}
-        tooltipRender={this.tooltipTemplate as any}
+        tooltipRender={tooltipTemplate as any}
       >
         <Inject services={[Legend, Tooltip, Adaptor]} />
       </HeatMapComponent>
     );
-  }
-  private tooltipTemplate(args: ITooltipEventArgs): void {
-    args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' %'];
-  }
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

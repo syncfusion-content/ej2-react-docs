@@ -5,9 +5,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, Gradient, Inject, RangeDirective } from '@syncfusion/ej2-react-lineargauge';
-
-ReactDOM.render(
-    <LinearGaugeComponent id='gauge' container={{width: 30, offset: 30}} orientation="Horizontal">
+export function App() {
+   return(
+    <LinearGaugeComponent  container={{width: 30, offset: 30}} orientation="Horizontal">
     <Inject services={[Gradient]}/>
         <AxesDirective>
             <AxisDirective minimum={0} maximum={100} line={{width: 0}} majorTicks={{width: 0, interval: 25}}
@@ -30,7 +30,10 @@ ReactDOM.render(
                 </RangesDirective>
             </AxisDirective>
         </AxesDirective>
-    </LinearGaugeComponent>,document.getElementById('gauge'));
+    </LinearGaugeComponent>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 

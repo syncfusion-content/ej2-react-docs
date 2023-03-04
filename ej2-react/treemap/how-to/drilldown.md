@@ -28,11 +28,9 @@ import { TreeMapComponent, LevelDirective, LevelsDirective, ILoadedEventArgs, ID
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { DrillDown } from './datasource';
-class App extends React.Component {
-
-  render() {
+export function App() {
     return (
-      <TreeMapComponent id='container' palette={ ['#9999ff', '#CCFF99', '#FFFF99', '#FF9999', '#FF99FF', '#FFCC66'] } enableDrillDown={true} format={"n"} useGroupingSeparator={true} dataSource={DrillDown} weightValuePath='Population' leafItemSettings={ {
+      <TreeMapComponent  palette={ ['#9999ff', '#CCFF99', '#FFFF99', '#FF9999', '#FF99FF', '#FFCC66'] } enableDrillDown={true} format={"n"} useGroupingSeparator={true} dataSource={DrillDown} weightValuePath='Population' leafItemSettings={ {
             labelPath: 'Name',
             showLabels: false,
             labelStyle: { size: '0px' },
@@ -45,39 +43,9 @@ class App extends React.Component {
             </LevelsDirective>
           </TreeMapComponent>
     );
-  }
 }
-ReactDOM.render(
-  <App />,
-  document.getElementById('treemap') as HTMLElement
-);
-```
-{% endraw %}
-
-{% raw %}
-
-```ts
-import { TreeMapComponent, LevelDirective, LevelsDirective } from '@syncfusion/ej2-react-treemap';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-import { DrillDown } from './datasource';
-class App extends React.Component {
-    render() {
-        return (<TreeMapComponent id='container' palette={['#9999ff', '#CCFF99', '#FFFF99', '#FF9999', '#FF99FF', '#FFCC66']} enableDrillDown={true} format={"n"} useGroupingSeparator={true} dataSource={DrillDown} weightValuePath='Population' leafItemSettings={{
-                labelPath: 'Name',
-                showLabels: false,
-                labelStyle: { size: '0px' },
-                border: { color: 'black', width: 0.5 }
-            }}>
-            <LevelsDirective>
-              <LevelDirective groupPath='Continent' fill='#336699' border={{ color: 'black', width: 0.5 }}/>
-              <LevelDirective groupPath='States' fill='#336699' border={{ color: 'black', width: 0.5 }}/>
-              <LevelDirective groupPath='Region' showHeader={false} fill='#336699' border={{ color: 'black', width: 0.5 }}/>
-            </LevelsDirective>
-          </TreeMapComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```
 {% endraw %}
 
@@ -88,7 +56,7 @@ Show the population of a particular continent in the treemap `loaded` event. In 
 
 
 ```js
-    public loaded(args: ILoadedEventArgs): void {
+   function loaded(args: ILoadedEventArgs): void {
     let header: Element = document.getElementById('header') as Element;
     let population: number = 0;
     for (let i: number = 0; i < args.treemap.layout.renderItems[0]['parent'].Continent.length; i++) {
@@ -96,19 +64,6 @@ Show the population of a particular continent in the treemap `loaded` event. In 
     }
     header.innerHTML = 'Continent - Population : ' + population
   }
-```
-
-```ts
-loaded(args, ILoadedEventArgs);
-void {
-    let, header: Element = document.getElementById('header'),
-    let, population: number = 0,
-    : .treemap.layout.renderItems[0]['parent'].Continent.length, i
-}++;
-{
-    population += +(args.treemap.layout.renderItems[0]['parent'].Continent[i]['data'].Population);
-}
-header.innerHTML = 'Continent - Population : ' + population;
 ```
 
 **Step 3**:

@@ -4,10 +4,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent } from '@syncfusion/ej2-react-treemap';
-
-class App extends React.Component {
-render() {
-  return ( <TreeMapComponent id='treemap'
+export function App() {
+  return ( <TreeMapComponent 
         dataSource={[
             {State:"United States", GDP:17946, percentage:11.08, Rank:1},
             {State:"China", GDP:10866, percentage: 28.42, Rank:2},
@@ -32,9 +30,9 @@ render() {
             }
         }}>
     </TreeMapComponent> );
- }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

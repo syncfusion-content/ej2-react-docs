@@ -25,14 +25,12 @@ import { TreeMapComponent, LevelDirective, LevelsDirective, ILoadedEventArgs, ID
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { CarSales } from './datasource';
-
-class App extends React.Component {
-  render() {
+export function App() {
     return (
-      <TreeMapComponent id='container' weightValuePath='Sales' palette={['white']} enableDrillDown={true} dataSource={CarSales}
+      <TreeMapComponent  weightValuePath='Sales' palette={['white']} enableDrillDown={true} dataSource={CarSales}
           leafItemSettings={ {
             showLabels: false,
-            labelTemplate: '#template',
+            labelTemplate: '<div style="background-color: red">{{:Company}}</div>',
             templatePosition: 'Center'
           } }>
           <LevelsDirective>
@@ -41,37 +39,9 @@ class App extends React.Component {
           </LevelsDirective>
         </TreeMapComponent>
     );
-  }
 }
-ReactDOM.render(
-  <App />,
-  document.getElementById('treemap') as HTMLElement
-);
-```
-{% endraw %}
-
-{% raw %}
-
-```ts
-import { TreeMapComponent, LevelDirective, LevelsDirective } from '@syncfusion/ej2-react-treemap';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-import { CarSales } from './datasource';
-class App extends React.Component {
-    render() {
-        return (<TreeMapComponent id='container' weightValuePath='Sales' palette={['white']} enableDrillDown={true} dataSource={CarSales} leafItemSettings={{
-                showLabels: false,
-                labelTemplate: '#template',
-                templatePosition: 'Center'
-            }}>
-          <LevelsDirective>
-            <LevelDirective groupPath='Continent' fill='#336699' border={{ color: 'black', width: 0.5 }}/>
-            <LevelDirective groupPath='Company' fill='#336699' border={{ color: 'black', width: 0.5 }}/>
-          </LevelsDirective>
-        </TreeMapComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 ```
 {% endraw %}
 

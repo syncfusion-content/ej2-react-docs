@@ -6,9 +6,9 @@ import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, GaugeTooltip } from '@syncfusion/ej2-react-circulargauge';
 export function App() {
   return(
-  <CircularGaugeComponent id='circulargauge' tooltip= {{
+  <CircularGaugeComponent  tooltip= {{
         enable: true,
-        template: '<div id="templateWrap"><div style="float: right; padding-left:10px; line-height:30px;"><span>Pointer &nbsp;&nbsp;:&nbsp; ${Math.round(pointers[0].value)}</span></div></div>'
+        template: '<div id="templateWrap"><div style="float: right; padding-left:10px; line-height:30px;"><span>Pointer &nbsp;&nbsp;:&nbsp; ${value}</span></div></div>'
     }}>
     <Inject services={[ GaugeTooltip ]}/>
     <AxesDirective>
@@ -20,7 +20,7 @@ export function App() {
     </AxesDirective>
   </CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 

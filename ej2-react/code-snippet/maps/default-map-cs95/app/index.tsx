@@ -6,9 +6,9 @@ import { world_map } from 'world-map.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, InitialShapeSelectionsDirective, InitialShapeSelectionDirective, LayerDirective, Selection, Inject } from '@syncfusion/ej2-react-maps';
-
-ReactDOM.render(
-            <MapsComponent id="maps">
+export function App() {
+    return(
+            <MapsComponent >
             <Inject services={[Selection]} />
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}  selectionSettings={{
@@ -24,10 +24,11 @@ ReactDOM.render(
         </InitialShapeSelectionsDirective>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>,
-document.getElementById("maps") as HTMLElement
-);
-
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 
 
 {% endraw %}

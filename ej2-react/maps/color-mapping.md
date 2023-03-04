@@ -54,34 +54,6 @@ export let population_density = [
     ];
 ```
 
-```ts
-export let population_density = [
-    https,
-    {
-        'code': 'AE',
-        'value': 90,
-        'name': 'United Arab Emirates',
-        'population': 8264070,
-        'density': 99
-    },
-    {
-        'code': 'GB',
-        'value': 257,
-        'name': 'United Kingdom',
-        'population': 62041708,
-        'density': 255
-    },
-    {
-        'code': 'US',
-        'value': 34,
-        'name': 'United States',
-        'population': 325020000,
-        'density': 33
-    },
-    ...
-];
-```
-
 Bind the **population_density** data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#datasource) property of [`layerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/) and set the [`colorValuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property of [`shapeSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel/) as **density**. The range values can be set using the [`from`](https://ej2.syncfusion.com/react/documentation/api/maps/colorMappingSettingsModel/#from) and [`to`](https://ej2.syncfusion.com/react/documentation/api/maps/colorMappingSettingsModel/#to) properties of [`colorMapping`](https://ej2.syncfusion.com/react/documentation/api/maps/colorMappingSettingsModel/).
 
 {% tabs %}
@@ -118,26 +90,6 @@ export let unCountries: object[] = [
 { Country: 'Peru', Membership: 'Non-Permanent' },
 { Country: 'Poland', Membership: 'Non-Permanent' },
 { Country: 'Sweden', Membership: 'Non-Permanent' },
-];
-```
-
-```ts
-export let unCountries = [
-    { Country: 'China', Membership: 'Permanent' },
-    { Country: 'France', Membership: 'Permanent' },
-    { Country: 'Russia', Membership: 'Permanent' },
-    { Country: 'United Kingdom', Membership: 'Permanent' },
-    { Country: 'United States', Membership: 'Permanent' },
-    { Country: 'Bolivia', Membership: 'Non-Permanent' },
-    { Country: 'Eq. Guinea', Membership: 'Non-Permanent' },
-    { Country: 'Ethiopia', Membership: 'Non-Permanent' },
-    { Country: "Côte d'Ivoire", Membership: 'Permanent' },
-    { Country: 'Kazakhstan', Membership: 'Non-Permanent' },
-    { Country: 'Kuwait', Membership: 'Non-Permanent' },
-    { Country: 'Netherlands', Membership: 'Non-Permanent' },
-    { Country: 'Peru', Membership: 'Non-Permanent' },
-    { Country: 'Poland', Membership: 'Non-Permanent' },
-    { Country: 'Sweden', Membership: 'Non-Permanent' },
 ];
 ```
 

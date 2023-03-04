@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
@@ -15,9 +14,9 @@ function App() {
             }
         }
     };
-    return <ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fields }}>
+    return (<ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fields }}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
-  </ScheduleComponent>;
+  </ScheduleComponent>);
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

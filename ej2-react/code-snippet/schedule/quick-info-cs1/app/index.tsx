@@ -1,7 +1,3 @@
-
-
-
-
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { extend, isNullOrUndefined } from "@syncfusion/ej2-base";

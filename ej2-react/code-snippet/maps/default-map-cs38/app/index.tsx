@@ -7,7 +7,7 @@ import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Inject, DataLabel } from '@syncfusion/ej2-react-maps';
 
 export function App(){
-  return(<MapsComponent id="maps">
+  return(<MapsComponent >
             <Inject services={[DataLabel]} />
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}
@@ -21,7 +21,7 @@ export function App(){
         </MapsComponent>
 );
 }
-const root = ReactDOM.createRoot(document.getElementById('maps'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 
