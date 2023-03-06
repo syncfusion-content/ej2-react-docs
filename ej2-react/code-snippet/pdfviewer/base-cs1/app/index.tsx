@@ -1,4 +1,6 @@
-import * as ReactDOM from 'react-dom/client';
+{% raw %}
+
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -20,3 +22,5 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
+{% endraw %}
