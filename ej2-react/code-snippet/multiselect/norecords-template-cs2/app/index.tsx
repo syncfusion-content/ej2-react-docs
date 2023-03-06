@@ -19,6 +19,7 @@ function App() {
         <MultiSelectComponent id="mtselement" noRecordsTemplate={noRecordsTemplate} dataSource={data} placeholder="Select an item" />
     );
 }
+
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 
