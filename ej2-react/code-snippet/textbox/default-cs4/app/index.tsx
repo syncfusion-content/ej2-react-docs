@@ -5,6 +5,10 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     let textboxInstance: any;
+    React.useEffect(() => {
+        /* Update the label position based on initial input value */
+    updateLabelState(textboxInstance.value, textboxInstance.parentElement.querySelector('.e-float-text'));
+    });
     function onFocusOut(args: React.FocusEvent) {
         /* Update the label position based on Input value */
         updateLabelState((args.target as HTMLInputElement).value, ((args.target as HTMLElement).parentElement as HTMLElement).querySelector('.e-float-text') as HTMLElement);
@@ -35,21 +39,16 @@ function App() {
         }
     }
 
-        return (
-            <div className="inner-container">
-                <h4> Floating label without required attribute </h4>
-                <div className="e-float-input">
-                  <input id='inpt1' type="text" onInput= {onInputEvt}  onFocus={onFocusIn} onBlur={onFocusOut } ref = {e => e.textboxInstance = e!} />
-                  <span className="e-float-line"/>
-                  <label className="e-float-text">First Name</label>
-                </div>
+    return (
+        <div className="inner-container">
+            <h4> Floating label without required attribute </h4>
+            <div className="e-float-input">
+                <input id='inpt1' type="text" onInput= {onInputEvt}  onFocus={onFocusIn} onBlur={onFocusOut } ref = {e => e.textboxInstance = e!} />
+                <span className="e-float-line"/>
+                <label className="e-float-text">First Name</label>
             </div>
-        )
-
-    React.useEffect(() => {
-             /* Update the label position based on initial input value */
-        updateLabelState(textboxInstance.value, textboxInstance.parentElement.querySelector('.e-float-text'));
-    , []);
+        </div>
+    )
 };
 ReactDOM.render(<App />, document.getElementById('input-container'));
 
