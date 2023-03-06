@@ -5,6 +5,10 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     let textboxInstance: any;
+    React.useEffect(() => {
+        /* Update the label position based on initial input value */
+   updateLabelState(textboxInstance.value, textboxInstance.parentElement.querySelector('.e-float-text'));
+    });
     function onFocusOut(args: React.FocusEvent) {
         /* Update the label position based on Input value */
         updateLabelState((args.target as HTMLInputElement).value, ((args.target as HTMLElement).parentElement as HTMLElement).querySelector('.e-float-text') as HTMLElement);
@@ -45,11 +49,6 @@ function App() {
                 </div>
             </div>
         )
-
-    React.useEffect(() => {
-             /* Update the label position based on initial input value */
-        updateLabelState(textboxInstance.value, textboxInstance.parentElement.querySelector('.e-float-text'));
-    , []);
 };
 ReactDOM.render(<App />, document.getElementById('input-container'));
 

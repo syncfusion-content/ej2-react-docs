@@ -9,16 +9,15 @@ function App() {
     const data: string[] = [];
 
     // set the value to noRecords template
-     function noRecordsTemplate(data: any): JSX.Element {
+     function noRecordsTemplate(data: any): any {
       return (
       <span className='norecord'> NO DATA AVAILABLE</span>
         );
     }
     return (
     // specifies the tag for render the MultiSelect component
-        <MultiSelectComponent id="mtselement" noRecordsTemplate={noRecordsTemplate = noRecordsTemplate.bind(this)} dataSource={data} placeholder="Select an item" />
+        <MultiSelectComponent id="mtselement" noRecordsTemplate={noRecordsTemplate} dataSource={data} placeholder="Select an item" />
     );
-    }
 }
 ReactDOM.render(<App />, document.getElementById('sample'));
 

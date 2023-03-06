@@ -24,12 +24,12 @@ function App() {
   // set the value to MultiSelect
   const colorValues: string[] = ['#75523C', '#4CD242', '#FF745C'];
   // bind the tagging event
-  function onTagging = (e: TaggingEventArgs) => {
+  const onTagging = (e: TaggingEventArgs) => {
     // set the current selected item text as class to chip element.
     e.setClass((e.itemData as any)[fields.text].toLowerCase());
   }
   return (
-      <MultiSelectComponent id="chip-customization" value={colorValues} dataSource={colorsData} fields={fields} mode="Box" placeholder="Favorite Colors" tagging={onTagging = onTagging.bind(this)} />
+      <MultiSelectComponent id="chip-customization" value={colorValues} dataSource={colorsData} fields={fields} mode="Box" placeholder="Favorite Colors" tagging={onTagging} />
     );
 }
 ReactDOM.render(<App />, document.getElementById('sample'));
