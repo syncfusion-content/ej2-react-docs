@@ -4,14 +4,19 @@ import * as React from 'react';
 function App() {
     let fileObj;
     let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    function onBeforeSend(args) {
+        args.ajaxSettings.beforeSend = function (args) {
+            args.httpRequest.setRequestHeader('Authorization', 'Access control');
+        };
+    }
     return (<div>
       <div className="control-section">
           <FileManagerComponent ref={s => (fileObj = s)} id="file" ajaxSettings={{
-            downloadUrl: hostUrl + 'api/FileAccess/Download',
-            getImageUrl: hostUrl + 'api/FileAccess/GetImage',
-            uploadUrl: hostUrl + 'api/FileAccess/Upload',
-            url: hostUrl + 'api/FileAccess/FileOperations'
-        }}>
+            downloadUrl: hostUrl + 'api/FileManager/Download',
+            getImageUrl: hostUrl + 'api/FileManager/GetImage',
+            uploadUrl: hostUrl + 'api/FileManager/Upload',
+            url: hostUrl + 'api/FileManager/FileOperations'
+        }} view={"Details"} beforeSend={onBeforeSend.bind(this)} >
               <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
           </FileManagerComponent>
       </div>

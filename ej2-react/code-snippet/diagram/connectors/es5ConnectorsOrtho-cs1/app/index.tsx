@@ -7,7 +7,7 @@ import {
     DiagramComponent,
     ConnectorModel,
     OrthogonalSegmentModel,
-    ConnectorConstraints
+    ConnectorConstraints,
     ConnectorEditing
 } from "@syncfusion/ej2-react-diagrams";
 Diagram.Inject(ConnectorEditing);
@@ -34,7 +34,7 @@ let connectors: ConnectorModel[] = [{
     },
     type: 'Orthogonal',
     maxSegmentThumb: 3,
-    constraints: ConnectorConstraints.Default & ~ConnectorConstraints.DragSegmentThumb
+    constraints: ConnectorConstraints.Default & ~ConnectorConstraints.DragSegmentThumb,
     segments: [{ type: 'Orthogonal', direction: 'Bottom', length: 50 }],
 
 }];
