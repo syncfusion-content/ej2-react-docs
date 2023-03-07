@@ -11,7 +11,7 @@ export default class App extends React.Component<{}, {}> {
     }
      render() {
         return  (<SpreadsheetComponent allowSave= {true}
-                        saveUrl='https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save' beforeSave={this.beforeSave.bind(this)}>
+                        saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' beforeSave={this.beforeSave.bind(this)}>
                         <SheetsDirective>
                             <SheetDirective>
                                 <RangesDirective>

@@ -6,7 +6,7 @@ export default class App extends React.Component {
         // your code snippets here
     }
     render() {
-        return (<SpreadsheetComponent allowOpen={true} openUrl='https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open' beforeOpen={this.beforeOpen.bind(this)}/>);
+        return (<SpreadsheetComponent allowOpen={true} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' beforeOpen={this.beforeOpen.bind(this)}/>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('root'));

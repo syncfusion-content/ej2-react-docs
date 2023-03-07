@@ -15,7 +15,7 @@ export default class App extends React.Component {
                 formData.append('JSONData', JSON.stringify(response.jsonObject.Workbook));
                 formData.append('fileName', 'Sample');
                 formData.append('saveType', 'Xlsx');
-                fetch('https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save', {
+                fetch('https://services.syncfusion.com/react/production/api/spreadsheet/save', {
                     method: 'POST',
                     headers: { Authorization: 'YOUR TEXT' },
                     body: formData,
@@ -38,7 +38,7 @@ export default class App extends React.Component {
     render() {
         return (<SpreadsheetComponent ref={(ssObj) => {
                 this.spreadsheet = ssObj;
-            }} allowSave={true} saveUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save" fileMenuItemSelect={this.fileMenuItemSelect.bind(this)}>
+            }} allowSave={true} saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save" fileMenuItemSelect={this.fileMenuItemSelect.bind(this)}>
         <SheetsDirective>
           <SheetDirective>
             <RangesDirective>

@@ -30,7 +30,7 @@ export default class App extends React.Component<{}, {}> {
         formData.append('fileName', 'Sample');
         formData.append('saveType', 'Xlsx');
         fetch(
-          'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
+          'https://services.syncfusion.com/react/production/api/spreadsheet/save',
           {
             method: 'POST',
             headers: { Authorization: 'YOUR TEXT' },
@@ -59,7 +59,7 @@ export default class App extends React.Component<{}, {}> {
           this.spreadsheet = ssObj;
         }}
         allowSave={true}
-        saveUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save"
+        saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save"
         fileMenuItemSelect={this.fileMenuItemSelect.bind(this)}
       >
         <SheetsDirective>

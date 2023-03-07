@@ -69,7 +69,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div>
-        <SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj; }} created={this.created.bind(this)} fileMenuBeforeOpen={this.fileMenuBeforeOpen.bind(this)} fileMenuItemSelect={this.fileMenuItemSelect.bind(this)} showFormulaBar={false} showSheetTabs={false} allowInsert={false} allowDelete={false} allowMerge={false} openUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open" saveUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save">
+        <SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj; }} created={this.created.bind(this)} fileMenuBeforeOpen={this.fileMenuBeforeOpen.bind(this)} fileMenuItemSelect={this.fileMenuItemSelect.bind(this)} showFormulaBar={false} showSheetTabs={false} allowInsert={false} allowDelete={false} allowMerge={false} openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open" saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save">
                         <SheetsDirective>
                             <SheetDirective>
                                 <RangesDirective>
