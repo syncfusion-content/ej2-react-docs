@@ -23,3 +23,7 @@ body,
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.e-popup.e-popup-open.e-dialog {
+    max-height: 75% !important;
+}

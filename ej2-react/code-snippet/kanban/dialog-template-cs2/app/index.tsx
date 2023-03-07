@@ -6,11 +6,11 @@ import * as ReactDOM from 'react-dom';
 import { extend } from '@syncfusion/ej2-base';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
 import { kanbanData } from './datasource';
-
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 function App() {
-    let data = extend([], kanbanData, null, true);
+  let data = extend([], kanbanData, null, true);
   let kanbanObj: KanbanComponent;
-  function dialogTemplate(props: KanbanDataModel): JSX.Element {
+  function dialogTemplate(props: KanbanDataModel) {
       return (<KanbanDialogFormTemplate {...props} />);
   }
 

@@ -7,7 +7,6 @@
  */
 import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-base';
 import { Image, Inject, Link, MarkdownEditor, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as Marked from 'marked';
 import * as React from 'react';
 
 function App() {
@@ -44,7 +43,7 @@ function App() {
       if (mdsource.classList.contains('e-active')) {
           const id: string = rteObj.getID() + 'html-view';
           const htmlPreview: HTMLElement = rteObj.element.querySelector('#' + id) as any;
-          htmlPreview.innerHTML = Marked(((rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
+          htmlPreview.innerHTML = marked(((rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
       }
   }
   function fullPreview(): void {
@@ -64,7 +63,7 @@ function App() {
           }
           textArea.style.display = 'none';
           htmlPreview.style.display = 'block';
-          htmlPreview.innerHTML = Marked(((rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
+          htmlPreview.innerHTML = marked(((rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
           mdsource.parentElement.title = 'Code View';
       }
   }

@@ -41,6 +41,7 @@ let data: object[] = [
 let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
 
 function App() {
+  return (
   <DiagramComponent
     id="container"
     width={"100%"}
@@ -96,7 +97,8 @@ function App() {
     }}
   >
     <Inject services={[DataBinding, HierarchicalTree]} />
-  </DiagramComponent>;
+  </DiagramComponent>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("diagram"));

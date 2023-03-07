@@ -13,7 +13,8 @@ import {
     HierarchicalTree,
     TreeInfo,
     DiagramTools,
-    Inject
+    Inject,
+    ConnectorModel
 } from "@syncfusion/ej2-react-diagrams";
 import {
     DataManager,
