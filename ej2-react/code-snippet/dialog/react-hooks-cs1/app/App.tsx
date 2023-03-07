@@ -28,6 +28,7 @@ function App() {
         </button>
         <DialogComponent
           id="defaultdialog"
+          width={"25%"}
           showCloseIcon={true}
           visible={visibility}
           close={dialogClose}

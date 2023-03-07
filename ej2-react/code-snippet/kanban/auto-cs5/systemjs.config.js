@@ -32,6 +32,7 @@ System.config({
         "@syncfusion/ej2-kanban": "syncfusion:ej2-kanban/dist/ej2-kanban.umd.min.js",
 
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
+        "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
         "@syncfusion/ej2-react-kanban": "syncfusion:ej2-react-kanban/dist/ej2-react-kanban.umd.min.js",
 "react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
 "react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
