@@ -2,7 +2,7 @@
 
 
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
-import { L10n } from '@syncfusion/ej2-base';
+import { L10n, Browser} from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
@@ -48,25 +48,23 @@ L10n.load({
     }
 });
 
-export default class App extends React.Component<{}, {}> {
+function App() {
 
-private imgObj: ImageEditorComponent;
-    public imageEditorCreated(): void {
+    let imgObj: ImageEditorComponent;
+    function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
         } else {
-            this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
         }
     }
-    render() {
-        return (
-            <div className='e-img-editor-sample'>
-            <ImageEditorComponent  locale='de-DE' ref={(img) => { this.imgObj = img }} created={this.imageEditorCreated.bind(this)}/>
-                </div>
-        );
-    }
+    return (
+        <div className='e-img-editor-sample'>
+        <ImageEditorComponent  locale='de-DE' ref={(img) => { imgObj = img }} created={imageEditorCreated}/>
+            </div>
+    );
 }
-
+export default App;
 ReactDOM.render(<App />, document.getElementById('image-editor'));
 
 

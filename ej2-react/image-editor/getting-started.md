@@ -91,29 +91,16 @@ import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 
-export default class App extends React.Component<{}, {}> {
+function App() {
 
-  public render() {
-    return (
-        <div id="wrapperDiv">
-            <ImageEditorComponent/>
-        </div>
-    );
-  }
+  return (
+      <div id="wrapperDiv">
+          <ImageEditorComponent/>
+      </div>
+  );
 }
+export default App;
 
-```
-
-```ts
-import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
-import * as React from 'react';
-export default class App extends React.Component {
-    render() {
-        return (<div id="wrapperDiv">
-            <ImageEditorComponent />
-        </div>);
-    }
-}
 ```
 
 ## Adding CSS Reference
