@@ -13,12 +13,6 @@ domainurl: ##DomainURL##
 The legend is used to provide the information about the heat map cell. You can enable the legend by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#visible) property to **true** and injecting the `Legend` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -39,12 +33,6 @@ Heat map supports two legend types: Gradient and list type.
 You can change the legend type by using the [type](https://ej2.syncfusion.com/react/documentation/api/heatmap/paletteSettings/#type) property in the `paletteSettings` property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs2/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs2/app/index.jsx %}
 {% endhighlight %}
@@ -60,12 +48,6 @@ You can change the legend type by using the [type](https://ej2.syncfusion.com/re
 You can place the legend at left, right, top, or bottom to the heat map layout by using the [position](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#position) property. The legend is positioned at the right to the heat map by default.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs3/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs3/app/index.jsx %}
 {% endhighlight %}
@@ -81,12 +63,6 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 You can align the legend as center, far, or near to the heat map using the [alignment](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#alignment) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs4/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs4/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs4/app/index.jsx %}
 {% endhighlight %}
@@ -102,12 +78,6 @@ You can align the legend as center, far, or near to the heat map using the [alig
 You can change the legend dimensions with values in pixels or percentage by using the[width](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#width) and [height](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#height) properties.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs5/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs5/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs5/app/index.jsx %}
 {% endhighlight %}
@@ -123,12 +93,6 @@ You can change the legend dimensions with values in pixels or percentage by usin
 Paging is available only for the list type legend in the heat map, and it can be enabled by default,when the legend items exceed the legend bounds. You can view each legend items by navigating between the pages using navigation buttons.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs6/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs6/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs6/app/index.jsx %}
 {% endhighlight %}
@@ -151,12 +115,6 @@ The following are the legend label display types:
 * None: None of the labels are displayed. The tooltip will appear for this type of label display when hovering over the legend item.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs7/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs7/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs7/app/index.jsx %}
 {% endhighlight %}
@@ -172,12 +130,6 @@ The following are the legend label display types:
 In the HeatMap, the legend selection is used to toggle the visibility of cell for viewing the specific range value. You can enable the legend selection using the [toggleVisibility](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#togglevisibility) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs8/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs8/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs8/app/index.jsx %}
 {% endhighlight %}
@@ -193,12 +145,6 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
 The legend title displays a specific information about the legend. You can enable the legend title by setting the [title](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#title) property by providing the text and customizing the legend title text style using the [textStyle](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/titleModel/#textStyle) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/legend-cs9/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/legend-cs9/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/legend-cs9/app/index.jsx %}
 {% endhighlight %}
