@@ -15,7 +15,7 @@ Globalization is the combination of internationalization and localization. You c
 By default, TimePicker time format and meridian names are specific to the `American English` culture. It utilizes the
 [`Essential JavaScript 2 Internationalization`](../common/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load culture specific CLDR JSON data. To go with the different culture other than `English`, follow the steps below.
 
-* Install the `CLDR-Data` package by using the following command (it installs all the CLDR JSON data). To known more about CLDR-Data refer the [`CLDR-Data`](http://cldr.unicode.org/index/cldr-spec/json) link.
+* Install the `CLDR-Data` package by using the following command (it installs all the CLDR JSON data). To known more about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
 ```
 npm install cldr-data --save
