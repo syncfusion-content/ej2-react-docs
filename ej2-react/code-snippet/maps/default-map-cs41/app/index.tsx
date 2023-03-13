@@ -6,10 +6,10 @@ import { africa_continent } from 'africa-continent.ts';
 import { dafaultData } from 'data.ts';
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { MapsComponent, LayersDirective, LayerDirective, Inject, Highlight, Marker, MarkerDirective,MarkersDirective } from '@syncfusion/ej2-react-maps';
+import { MapsComponent, LayersDirective, LayerDirective, Inject, Highlight, Marker, MarkerDirective,MarkersDirective, IShapeSelectedEventArgs } from '@syncfusion/ej2-react-maps';
 export function App() {
-  let mapInstance;
-  function shapeSelected(args) {
+  let mapInstance : MapsComponent;
+  function shapeSelected(args: IShapeSelectedEventArgs) {
     let shape = args.shapeData.continent;
     if (mapInstance.baseLayerIndex === 0) {
       if (shape === 'Africa') {

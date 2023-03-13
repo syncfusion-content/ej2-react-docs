@@ -1,6 +1,6 @@
 
 
-
+{% raw %}
 import { world_map } from 'world-map.ts';
 import { usa_map } from 'usa.ts';
 import * as React from "react";
@@ -20,3 +20,4 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 
+{% endraw %}
