@@ -24,7 +24,7 @@ function ReactApp() {
   let field: Object = { dataSource: data, id: 'id', text: 'text' };
   let i: number = 0;
 
-  const onTabCreate = (): void => {
+  function onTabCreate() { 
     let tabElement: HTMLElement = document.getElementById('draggableTab') as HTMLElement;
     if (!isNullOrUndefined(tabElement)) {
       (tabElement.querySelector('.e-tab-header') as HTMLElement).classList.add('e-droppable');
