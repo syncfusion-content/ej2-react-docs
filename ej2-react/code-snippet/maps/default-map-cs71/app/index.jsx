@@ -4,8 +4,10 @@ import { cluster } from 'marker-cluster.ts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, MarkersDirective, MarkerDirective, Marker, Inject, MapsTooltip, Zoom } from '@syncfusion/ej2-react-maps';
-ReactDOM.render(<MapsComponent id="maps" useGroupingSeparator={true} format='n' zoomSettings={{ enable: true }} titleSettings={{ text: 'Top 13 largest cities in the World', textStyle: { size: '16px' } }}>
-                    <Inject services={[Marker, MapsTooltip, Zoom]}/>
+export function App() {
+    return(
+                <MapsComponent  useGroupingSeparator={true} format='n' zoomSettings={{ enable: true  }} titleSettings={{ text: 'Top 13 largest cities in the World', textStyle: { size: '16px' } }}>
+                    <Inject services={[Marker, MapsTooltip, Zoom]} />
                     <LayersDirective>
                         <LayerDirective shapeData={world_map} shapeSettings={{ fill: '#C1DFF5' }} markerClusterSettings={{ allowClustering: true, shape: 'Circle', height: 30, width: 30, labelStyle: { color: 'white' }, }}>
                             <MarkersDirective>
@@ -14,5 +16,9 @@ ReactDOM.render(<MapsComponent id="maps" useGroupingSeparator={true} format='n' 
                             </MarkersDirective>
                         </LayerDirective>
                     </LayersDirective>
-                </MapsComponent>, document.getElementById("maps"));
+                </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 {% endraw %}

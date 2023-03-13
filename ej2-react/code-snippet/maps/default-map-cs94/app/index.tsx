@@ -1,5 +1,5 @@
 
-
+{% raw %}
 
 import { world_map } from 'world-map.ts';
 import * as React from "react";
@@ -7,7 +7,7 @@ import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Selection, Inject } from '@syncfusion/ej2-react-maps';
 
 export function App() {
-    let mapsInstance;
+    let mapsInstance: MapsComponent;
     function selectclickHandler() {
     mapsInstance.shapeSelection(0, "continent", "Asia", true);
     }
@@ -33,4 +33,5 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 
+{% endraw %}
 
