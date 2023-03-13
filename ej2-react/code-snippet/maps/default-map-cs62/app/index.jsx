@@ -1,10 +1,11 @@
 {% raw %}
 import { world_map } from 'world-map.ts';
-import { uncountries } from 'data.ts';
+import { uncountries } from 'data.ts'
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, Zoom, Inject } from '@syncfusion/ej2-react-maps';
-import { L10n } from '@syncfusion/ej2-base';
+import { L10n } from '@syncfusion/ej2-base';
+
 L10n.load({
     'ar-AR': {
         'maps': {
@@ -16,11 +17,20 @@ L10n.load({
         },
     }
 });
-ReactDOM.render(<MapsComponent id="maps" locale="ar-AR" zoomSettings={{ enable: true }}>
+export function App() {
+   return(
+            <MapsComponent  locale="ar-AR" zoomSettings={ { enable: true } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
-                    <LayerDirective shapeData={world_map} shapeDataPath='Country' shapePropertyPath='name' dataSource={uncountries}>
+                    <LayerDirective shapeData={world_map}
+                                    shapeDataPath='Country'
+                                    shapePropertyPath='name'
+                                    dataSource={uncountries}>
                     </LayerDirective>
                 </LayersDirective>
-            </MapsComponent>, document.getElementById("maps"));
+            </MapsComponent>
+    );
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 {% endraw %}

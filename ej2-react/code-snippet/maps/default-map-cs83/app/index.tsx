@@ -1,11 +1,11 @@
-
+{% raw %}
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { MapsComponent, LayersDirective, LayerDirective, Inject, ImageExport } from '@syncfusion/ej2-react-maps';
 export function App() {
-    let mapsInstance;
+    let mapsInstance : MapsComponent;
     function clickHandler(){
         mapsInstance.export('PNG', 'Maps');
     }
@@ -24,4 +24,4 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-
+{% endraw %}
