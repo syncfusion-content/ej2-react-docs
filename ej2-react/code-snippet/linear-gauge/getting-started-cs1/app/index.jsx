@@ -1,8 +1,12 @@
-import * as React from "react";
+{% raw %}
+import React from 'react';
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent } from '@syncfusion/ej2-react-lineargauge';
+
 export function App() {
-    return (<LinearGaugeComponent id='gauge' title='Linear Gauge'></LinearGaugeComponent>);
+   return (<LinearGaugeComponent title='Linear Gauge'></LinearGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('gauge'));
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
+{% endraw %}

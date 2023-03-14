@@ -1,5 +1,5 @@
 
-
+{% raw %}
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -12,7 +12,7 @@ export function App() {
         <AxesDirective>
             <AxisDirective>
                 <PointersDirective>
-                    <PointerDirective value={50} animationDuration="1000">
+                    <PointerDirective value={50} animationDuration={1000}>
                     </PointerDirective>
                 </PointersDirective>
             </AxisDirective>
@@ -23,4 +23,4 @@ const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 
-
+{% endraw %}

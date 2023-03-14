@@ -1,15 +1,14 @@
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent } from '@syncfusion/ej2-react-lineargauge';
-class App extends React.Component {
-    resized(args) {
+export function App() {
+    function resized(args){
     }
-    linear;
-    render() {
-        return (<div>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} loaded={this.resized.bind(this)}>
+    return (<div>
+    <LinearGaugeComponent resized={resized}>
     </LinearGaugeComponent></div>);
-    }
 }
-;
-ReactDOM.render(<App />, document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
+{% endraw %}

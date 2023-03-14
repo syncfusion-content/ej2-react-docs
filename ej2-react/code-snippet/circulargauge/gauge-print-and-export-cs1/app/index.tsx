@@ -1,15 +1,15 @@
 
 
-
+{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { CircularGaugeComponent, Print, Inject } from '@syncfusion/ej2-react-circulargauge';
 
 export function App() {
-  let gaugeInstance;
+  let gaugeInstance : CircularGaugeComponent | null;
   function clickHandler() {
-    gaugeInstance.print();
+    gaugeInstance?.print();
   }
   return (<div>
       <ButtonComponent onClick={clickHandler}>
@@ -28,4 +28,4 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-
+{% endraw %}
