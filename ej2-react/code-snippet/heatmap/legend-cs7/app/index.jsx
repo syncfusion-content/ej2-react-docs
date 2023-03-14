@@ -2,8 +2,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend } from '@syncfusion/ej2-react-heatmap';
-class App extends React.Component {
-    heatmapData = [
+export function App() {
+    var heatmapData = [
         [73, 39, 26, 39, 94, 0],
         [93, 58, 53, 38, 26, 68],
         [99, 28, 22, 4, 66, 90],
@@ -17,45 +17,51 @@ class App extends React.Component {
         [25, 56, 55, 58, 12, 82],
         [74, 33, 88, 23, 86, 59]
     ];
-    render() {
-        return (<HeatMapComponent id='heatmap' titleSettings={{
-                text: 'Sales Revenue per Employee (in 1000 US$)',
-                textStyle: {
-                    size: '15px',
-                    fontWeight: '500',
-                    fontStyle: 'Normal',
-                    fontFamily: 'Segoe UI'
-                }
-            }} xAxis={{
-                labels: ['Nancy', 'Andrew', 'Janet', 'Margaret', 'Steven',
-                    'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin', 'Mario'],
-            }} yAxis={{
-                labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
-            }} cellSettings={{
-                showLabel: false
-            }} paletteSettings={{
-                palette: [
-                    { value: 0, color: '#C2E7EC' },
-                    { value: 10, color: '#AEDFE6' },
-                    { value: 20, color: '#9AD7E0' },
-                    { value: 30, color: '#72C7D4' },
-                    { value: 40, color: '#5EBFCE' },
-                    { value: 50, color: '#4AB7C8' },
-                    { value: 60, color: '#309DAE' },
-                    { value: 70, color: '#2B8C9B' },
-                    { value: 80, color: '#206974' },
-                    { value: 90, color: '#15464D' },
-                    { value: 100, color: '#000000' },
-                ],
-                type: 'Fixed'
-            }} legendSettings={{
-                position: 'Bottom',
-                width: '75%',
-                enableSmartLegend: true
-            }} dataSource={this.heatmapData}>
-        <Inject services={[Legend]}/>
-            </HeatMapComponent>);
-    }
+    return ( <HeatMapComponent
+        titleSettings = { {
+        text: 'Sales Revenue per Employee (in 1000 US$)',
+            textStyle: {
+                size: '15px',
+                fontWeight: '500',
+                fontStyle: 'Normal',
+                fontFamily: 'Segoe UI'
+            }
+        } }
+        xAxis = { {
+            labels: ['Nancy', 'Andrew', 'Janet', 'Margaret', 'Steven',
+                'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin',   'Mario'],
+        } }
+        yAxis = { {
+            labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
+        } }
+        cellSettings = { {
+            showLabel: false
+        } }
+        paletteSettings = { {
+            palette: [
+            { value: 0, color: '#C2E7EC' },
+            { value: 10, color: '#AEDFE6' },
+            { value: 20, color: '#9AD7E0' },
+            { value: 30, color: '#72C7D4' },
+            { value: 40, color: '#5EBFCE' },
+            { value: 50, color: '#4AB7C8' },
+            { value: 60, color: '#309DAE' },
+            { value: 70, color: '#2B8C9B' },
+            { value: 80, color: '#206974' },
+            { value: 90, color: '#15464D' },
+            { value: 100, color: '#000000' },
+        ],
+            type: 'Fixed'
+        } }
+        legendSettings = { {
+            position: 'Bottom',
+            width: '75%',
+            enableSmartLegend: true
+        } }
+        dataSource={heatmapData}>
+        <Inject services={[Legend]} />
+            </HeatMapComponent> );
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 {% endraw %}

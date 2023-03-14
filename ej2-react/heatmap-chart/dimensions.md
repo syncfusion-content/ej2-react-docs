@@ -29,12 +29,6 @@ You can  set the size of heat map directly by using the [width](https://ej2.sync
 You can set the size for heat map in a pixel.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/dimensions-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/dimensions-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/dimensions-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -50,12 +44,6 @@ You can set the size for heat map in a pixel.
 By setting value in percentage, heat map gets its dimension with respect to its container. For example, when the height is ‘50%’, heat map rendered to half of the container height.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/dimensions-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/dimensions-cs2/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/dimensions-cs2/app/index.jsx %}
 {% endhighlight %}

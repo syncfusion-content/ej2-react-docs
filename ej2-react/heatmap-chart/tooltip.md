@@ -17,12 +17,6 @@ Tooltip is used to provide the details of the heatmap cell, and this can be disp
 You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/heatmap/#showtooltip)  property to **true** and injecting the `Tooltip` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/tooltip-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/tooltip-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/tooltip-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -38,12 +32,6 @@ You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.c
 In heatmap, you can customize the tooltip using the [tooltipRender](https://ej2.syncfusion.com/react/documentation/api/heatmap/#tooltiprender) client side event.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/tooltip-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/tooltip-cs2/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/tooltip-cs2/app/index.jsx %}
 {% endhighlight %}
@@ -59,12 +47,6 @@ In heatmap, you can customize the tooltip using the [tooltipRender](https://ej2.
 The  [fill](https://ej2.syncfusion.com/react/documentation/api/heatmap/tooltipSettings/#fill) and [border](https://ej2.syncfusion.com/react/documentation/api/heatmap/tooltipSettings/#border) properties are used to customize the background color and border of the Tooltip respectively. The [textStyle](https://ej2.syncfusion.com/react/documentation/api/heatmap/tooltipSettings/#textStyle) property in the Tooltip is used to customize the font of the tooltip text.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/tooltip-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/tooltip-cs3/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/tooltip-cs3/app/index.jsx %}
 {% endhighlight %}

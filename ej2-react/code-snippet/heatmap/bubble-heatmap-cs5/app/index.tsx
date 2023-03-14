@@ -1,11 +1,11 @@
 
 
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
-import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip, BubbleTooltipData } from '@syncfusion/ej2-react-heatmap';
+import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip, BubbleTooltipData, ITooltipEventArgs } from '@syncfusion/ej2-react-heatmap';
 export function App() {
-    let heatmapData = [
+    let heatmapData : any[] = [
     [0,0,[4,39]], [0,1,[3,8]], [0,2,[1,3]], [0,3,[1,10]], [0,4,[4,4]], [0,5,[2,15]],
     [1,0,[4,28]], [1,1,[5,92]], [1,2,[5,73]], [1,3,[3,1]], [1,4,[3,4]], [1,5,[4,126]],
     [2,0,[4,45]], [2,1,[5,152]], [2,2,[0,44]], [2,3,[4,54]], [2,4,[5,243]], [2,5,[2,45]]
@@ -59,6 +59,6 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
+{% endraw %}
 
 

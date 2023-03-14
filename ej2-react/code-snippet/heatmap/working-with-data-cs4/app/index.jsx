@@ -2,8 +2,8 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip } from '@syncfusion/ej2-react-heatmap';
-class App extends React.Component {
-    heatmapData = [
+export function App() {
+  var heatmapData = [
         { 'rowid': 'France', 'columnid': '2010', 'value': '77.6' },
         { 'rowid': 'France', 'columnid': '2011', 'value': '79.4' },
         { 'rowid': 'France', 'columnid': '2012', 'value': '80.8' },
@@ -75,8 +75,8 @@ class App extends React.Component {
         { 'rowid': 'Austria', 'columnid': '2015', 'value': '26.7' },
         { 'rowid': 'Austria', 'columnid': '2016', 'value': '28.1' },
     ];
-    render() {
-        return (<HeatMapComponent id='heatmap' titleSettings={{
+    return ( <HeatMapComponent
+            titleSettings = { {
                 text: 'Most Visited Destinations by International Tourist Arrivals',
                 textStyle: {
                     size: '15px',
@@ -84,23 +84,29 @@ class App extends React.Component {
                     fontStyle: 'Normal',
                     fontFamily: 'Segoe UI'
                 }
-            }} xAxis={{
+            } }
+            xAxis = { {
                 labels: ['Austria', 'China', 'France', 'Germany', 'Italy', 'Mexico', 'Spain', 'Thailand', 'UK', 'USA'],
-            }} yAxis={{
-                labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
-            }} dataSource={this.heatmapData} dataSourceSettings={{
+            } }
+            yAxis = { {
+                labels:  ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
+            } }
+            dataSource={heatmapData}
+            dataSourceSettings={ {
                 isJsonData: true,
                 adaptorType: 'Cell',
                 xDataMapping: 'rowid',
                 yDataMapping: 'columnid',
                 valueMapping: 'value'
-            }} paletteSettings={{
+            } }
+            paletteSettings = { {
                 palette: [{ color: '#DCD57E' },
                     { color: '#A6DC7E' },
                     { color: '#7EDCA2' },
                     { color: '#6EB5D0' }
                 ],
-            }} cellSettings={{
+            } }
+            cellSettings = { {
                 border: {
                     radius: 4,
                     width: 1,
@@ -108,10 +114,10 @@ class App extends React.Component {
                 },
                 showLabel: true,
                 format: '{value} M',
-            }}>
-            <Inject services={[Legend, Tooltip, Adaptor]}/>
-            </HeatMapComponent>);
-    }
+            } }>
+            <Inject services={[Legend, Tooltip, Adaptor]} />
+            </HeatMapComponent> );
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 {% endraw %}

@@ -6,7 +6,7 @@ import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip, ITooltipEventArgs } from '@syncfusion/ej2-react-heatmap';
 export function App() {
-  let heatmapData = [
+  let heatmapData : any[] = [
     [0, 0, 10.75],
     [0, 1, 14.5],
     [0, 2, 25.5],
