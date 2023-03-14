@@ -1,16 +1,16 @@
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective } from '@syncfusion/ej2-react-lineargauge';
-class App extends React.Component {
-    clickHandler() {
-        this.linear.setPointerValue(0, 0, 30);
+export function App() {
+    function clickHandler(){
+       gaugeInstance.setPointerValue(0, 0, 30);
     }
-    linear;
-    render() {
-        return (<div>
-    <ButtonComponent value='btn' onClick={this.clickHandler.bind(this)}>Click</ButtonComponent>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g}>
+    var gaugeInstance;
+    return (<div>
+    <ButtonComponent onClick= { clickHandler }>Click</ButtonComponent>
+    <LinearGaugeComponent ref={g => gaugeInstance = g}>
         <AxesDirective>
             <AxisDirective>
                 <PointersDirective>
@@ -20,7 +20,7 @@ class App extends React.Component {
             </AxisDirective>
         </AxesDirective>
     </LinearGaugeComponent></div>);
-    }
 }
-;
-ReactDOM.render(<App />, document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
+{% endraw %}

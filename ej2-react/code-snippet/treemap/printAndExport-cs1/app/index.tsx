@@ -10,7 +10,7 @@ export function App() {
     function click(){
       treemapInstance.print();
    }
-   let treemapInstance;
+   let treemapInstance : TreeMapComponent;
    return ( <div>
     <ButtonComponent value='Print' onClick= { click}>Print</ButtonComponent>
     <TreeMapComponent  allowPrint={true} ref={g => treemapInstance = g}

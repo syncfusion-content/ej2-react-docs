@@ -6,8 +6,8 @@ import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective, RangesDirective, RangeDirective, ILoadedEventArgs } from '@syncfusion/ej2-react-circulargauge';
 import { CircularGauge } from '@syncfusion/ej2-circulargauge';
 export function App() {
-   function loadRender(args) {
-    let gauge = new CircularGauge(
+   function loadRender(args: ILoadedEventArgs) {
+    new CircularGauge(
       {
         background: 'transparent',
         axes: [

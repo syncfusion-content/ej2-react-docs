@@ -1,6 +1,6 @@
 
 
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Annotations, AnnotationsDirective, AnnotationDirective, LinearGaugeComponent,Inject, IAnnotationRenderEventArgs } from '@syncfusion/ej2-react-lineargauge';
@@ -21,3 +21,4 @@ root.render(<App />);
 
 
 
+{% endraw %}

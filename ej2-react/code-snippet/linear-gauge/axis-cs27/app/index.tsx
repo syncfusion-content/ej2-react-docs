@@ -1,5 +1,5 @@
 
-
+{% raw %}
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -8,7 +8,7 @@ export function App() {
     function resized(args: IResizeEventArgs){
     }
     return (<div>
-    <LinearGaugeComponent loaded={resized}>
+    <LinearGaugeComponent resized={resized}>
     </LinearGaugeComponent></div>);
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
@@ -16,3 +16,4 @@ root.render(<App />);
 
 
 
+{% endraw %}

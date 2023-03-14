@@ -10,7 +10,7 @@ export function App() {
     function click(){
        treemapInstance.export('PDF', 'export', 0);
     }
-   let treemapInstance;
+   let treemapInstance : TreeMapComponent;
    return ( <div>
     <ButtonComponent value='Export' onClick= { click}>Export</ButtonComponent> <TreeMapComponent  allowPdfExport={true} ref={g => treemapInstance = g}
         dataSource={[

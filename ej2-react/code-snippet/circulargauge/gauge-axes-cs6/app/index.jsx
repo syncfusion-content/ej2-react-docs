@@ -2,17 +2,18 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CircularGaugeComponent, AxesDirective, AxisDirective } from '@syncfusion/ej2-react-circulargauge';
-export function App() {
-    return (<CircularGaugeComponent id='circulargauge'>
+export function App () {
+  return(
+  <CircularGaugeComponent >
     <AxesDirective>
-      <AxisDirective majorTicks={{
+      <AxisDirective majorTicks = {{
             interval: 10,
-            color: 'red',
+            color:'red',
             height: 10,
             width: 3
-        }} minorTicks={{
+        }} minorTicks = {{
             interval: 5,
-            color: 'green',
+            color:'green',
             height: 5,
             width: 2
         }}>
@@ -20,6 +21,7 @@ export function App() {
     </AxesDirective>
   </CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('circulargauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
+
 {% endraw %}

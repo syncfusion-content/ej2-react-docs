@@ -1,6 +1,5 @@
 {% raw %}
 
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent, Inject, TreeMapLegend } from '@syncfusion/ej2-react-treemap';
@@ -26,14 +25,19 @@ export function App() {
             {
                from:500,
                to:2500,
-               color:'orange',
-               showLegend: true
+               minOpacity:0.2,
+               maxOpacity:0.5,
+               color:'orange'
             },
             {
                from:3000,
                to:4000,
-               color:'green',
-               showLegend: false
+               minOpacity:0.5,
+               maxOpacity:0.8,
+               color:'green'
+            },
+            {
+               color:'red'
             }]
         }}>
         <Inject services={[TreeMapLegend]} />
@@ -41,6 +45,5 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
 
 {% endraw %}
