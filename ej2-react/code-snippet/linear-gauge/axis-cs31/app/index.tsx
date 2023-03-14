@@ -1,6 +1,6 @@
 
 
-
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
@@ -8,11 +8,11 @@ import { Annotations, AnnotationsDirective, AnnotationDirective, LinearGaugeComp
 
 export function App(){
     function clickHandler(){
-       gaugeInstance.setAnnotationValue(0, '50', 50);
+       gaugeInstance?.setAnnotationValue(0, '50', 50);
     }
-    let gaugeInstance;
+    let gaugeInstance : LinearGaugeComponent | null;
     return (<div>
-    <ButtonComponent value='btn' onClick= { clickHandler}>Click</ButtonComponent>
+    <ButtonComponent onClick= { clickHandler }>Click</ButtonComponent>
     <LinearGaugeComponent ref={g => gaugeInstance = g}>
         <Inject services={[Annotations]}/>
         <AnnotationsDirective>
@@ -31,6 +31,6 @@ export function App(){
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
+{% endraw %}
 
 

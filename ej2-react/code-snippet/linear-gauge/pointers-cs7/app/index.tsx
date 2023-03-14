@@ -13,7 +13,7 @@ export function App() {
             <AxisDirective minimum={0} maximum={100} line={{width: 0}} majorTicks={{width: 0, interval:25}}
                 minorTicks={{width:  0}} labelStyle={{font: {color: '#424242'}, offset: 70}}>
                 <PointersDirective>
-                    <PointerDirective value={80} height={25} width={35} placement="Near" offset={-44}markerType="Triangle"
+                    <PointerDirective value={80} height={25} width={35} placement="Near" offset={-44} markerType="Triangle"
                     linearGradient={{
                         startValue: '0%',
                         endValue: '100%',

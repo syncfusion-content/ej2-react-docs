@@ -11,7 +11,7 @@ export function App() {
         <AxesDirective>
             <AxisDirective labelStyle={{ useRangeColor: true}}>
                 <RangesDirective>
-                    <RangeDirective start={50} end={80} statWidth={10} endWidth={10} color='red'>
+                    <RangeDirective start={50} end={80} startWidth={10} endWidth={10} color='red'>
                     </RangeDirective>
                 </RangesDirective>
             </AxisDirective>

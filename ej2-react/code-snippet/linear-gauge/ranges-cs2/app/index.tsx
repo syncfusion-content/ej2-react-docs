@@ -1,4 +1,4 @@
-
+{% raw %}
 
 
 import * as React from "react";
@@ -10,7 +10,7 @@ export function App() {
         <AxesDirective>
             <AxisDirective>
                 <RangesDirective>
-                    <RangeDirective start={50} end={80} statWidth={10} endWidth={20} color='red'>
+                    <RangeDirective start={50} end={80} startWidth={10} endWidth={20} color='red'>
                     </RangeDirective>
                 </RangesDirective>
             </AxisDirective>
@@ -20,5 +20,5 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-
+{% endraw %}
 

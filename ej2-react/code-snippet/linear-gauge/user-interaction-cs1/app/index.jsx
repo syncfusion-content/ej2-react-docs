@@ -1,8 +1,11 @@
 {% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, GaugeTooltip, Inject } from '@syncfusion/ej2-react-lineargauge';
-ReactDOM.render(<LinearGaugeComponent id='gauge' tooltip={{ enable: true }}>
+import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective,GaugeTooltip, Inject } from '@syncfusion/ej2-react-lineargauge';
+export function App() {
+   return(
+    <LinearGaugeComponent tooltip={ { enable: true } }>
         <Inject services={[GaugeTooltip]}/>
         <AxesDirective>
             <AxisDirective>
@@ -12,5 +15,9 @@ ReactDOM.render(<LinearGaugeComponent id='gauge' tooltip={{ enable: true }}>
                 </PointersDirective>
             </AxisDirective>
         </AxesDirective>
-    </LinearGaugeComponent>, document.getElementById('gauge'));
+    </LinearGaugeComponent>);
+}
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
+
 {% endraw %}

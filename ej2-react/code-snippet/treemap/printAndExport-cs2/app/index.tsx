@@ -10,7 +10,7 @@ export function App() {
     function click(){
         treemapInstance.export('PNG', 'TreeMap');
     }
-    let treemapInstance;
+    let treemapInstance : TreeMapComponent;
     return ( <div>
     <ButtonComponent value='Export' onClick= { click}>Export</ButtonComponent> <TreeMapComponent  allowImageExport={true} ref={g => treemapInstance = g}
         dataSource={[

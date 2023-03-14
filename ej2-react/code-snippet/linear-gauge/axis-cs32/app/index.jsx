@@ -1,26 +1,37 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+{% raw %}
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective } from '@syncfusion/ej2-react-lineargauge';
-class App extends React.Component {
-    clickHandler() {
-        this.linear.refresh();
-    }
-    linear;
-    render() {
-        return (<div>
-    <ButtonComponent value='btn' onClick={this.clickHandler.bind(this)}>Click</ButtonComponent>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g}>
+import {
+  LinearGaugeComponent,
+  AxesDirective,
+  AxisDirective,
+  PointersDirective,
+  PointerDirective,
+} from '@syncfusion/ej2-react-lineargauge';
+export function App() {
+  function clickHandler() {
+    gaugeInstance.axes[0].pointers[0].value = 50;
+    gaugeInstance.refresh();
+  }
+  var gaugeInstance;
+  return (
+    <div>
+      <ButtonComponent onClick={clickHandler}>
+        Click
+      </ButtonComponent>
+      <LinearGaugeComponent ref={(g) => (gaugeInstance = g)}>
         <AxesDirective>
-            <AxisDirective>
-                <PointersDirective>
-                    <PointerDirective value={10}>
-                    </PointerDirective>
-                </PointersDirective>
-            </AxisDirective>
+          <AxisDirective>
+            <PointersDirective>
+              <PointerDirective value={10}></PointerDirective>
+            </PointersDirective>
+          </AxisDirective>
         </AxesDirective>
-    </LinearGaugeComponent></div>);
-    }
+      </LinearGaugeComponent>
+    </div>
+  );
 }
-;
-ReactDOM.render(<App />, document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
+{% endraw %}

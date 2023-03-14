@@ -1,13 +1,12 @@
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective } from '@syncfusion/ej2-react-lineargauge';
-class App extends React.Component {
-    dragEnd(args) {
+export function App(){
+    function dragEnd(args){
     }
-    linear;
-    render() {
-        return (<div>
-    <LinearGaugeComponent id='gauge' ref={g => this.linear = g} dragEnd={this.dragEnd.bind(this)}>
+    return (<div>
+    <LinearGaugeComponent dragEnd={dragEnd}>
         <AxesDirective>
             <AxisDirective>
                 <PointersDirective>
@@ -17,7 +16,7 @@ class App extends React.Component {
             </AxisDirective>
         </AxesDirective>
     </LinearGaugeComponent></div>);
-    }
 }
-;
-ReactDOM.render(<App />, document.getElementById('gauge'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
+{% endraw %}
