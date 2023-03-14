@@ -6,7 +6,7 @@ import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip } from '@syncfusion/ej2-react-heatmap';
 export function App() {
-     let heatmapData = [
+     let heatmapData : any[] = [
         { 'Labels':{'Xlabel': 'France','Ylabel': '2010' },'data':{'value': '77.6' }},
         { 'Labels':{'Xlabel': 'France','Ylabel': '2011'},'data':{'value': '79.4'}},
         { 'Labels':{'Xlabel': 'France','Ylabel': '2012'},'data':{'value': '80.8'}},

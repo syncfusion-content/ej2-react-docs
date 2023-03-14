@@ -1,12 +1,12 @@
 
-
+{% raw %}
 
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, ILegendRenderEventArgs } from '@syncfusion/ej2-react-heatmap';
 
 export function App() {
-    let heatmapData = [
+    let heatmapData : any[] = [
         [73000, 39000, 26000, 39000, 94000, 0],
         [93000, 58000, 53000, 38000, 26000, 68000],
         [99000, 28000, 22000, 4000, 66000, 9000],
@@ -71,3 +71,4 @@ root.render(<App />);
 
 
 
+{% endraw %}

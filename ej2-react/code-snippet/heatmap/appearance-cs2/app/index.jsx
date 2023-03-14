@@ -1,9 +1,9 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
-import { HeatMapComponent, Inject, Tooltip } from '@syncfusion/ej2-react-heatmap';
-class App extends React.Component {
-    heatmapData = [
+import { HeatMapComponent, Inject, Legend, Tooltip, Adaptor } from '@syncfusion/ej2-react-heatmap';
+export function App() {
+    var heatmapData = [
         [73, 39, 26, 39, 94, 0],
         [93, 58, 53, 38, 26, 68],
         [99, 28, 22, 4, 66, 90],
@@ -17,8 +17,8 @@ class App extends React.Component {
         [25, 56, 55, 58, 12, 82],
         [74, 33, 88, 23, 86, 59]
     ];
-    render() {
-        return (<HeatMapComponent id='heatmap' titleSettings={{
+    return ( <HeatMapComponent
+            titleSettings = { {
                 text: 'Sales Revenue per Employee (in 1000 US$)',
                 textStyle: {
                     size: '15px',
@@ -26,17 +26,21 @@ class App extends React.Component {
                     fontStyle: 'Normal',
                     fontFamily: 'Segoe UI'
                 }
-            }} xAxis={{
+            } }
+            xAxis = { {
                 labels: ['Nancy', 'Andrew', 'Janet', 'Margaret', 'Steven',
-                    'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin', 'Mario'],
-            }} yAxis={{
+            'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin',   'Mario'],
+            } }
+            yAxis = { {
                 labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
-            }} cellSettings={{
-                enableCellHighlighting: true
-            }} dataSource={this.heatmapData}>
-            <Inject services={[Tooltip]}/>
-            </HeatMapComponent>);
-    }
+            } }
+            cellSettings = { {
+               enableCellHighlighting: true
+            } }
+            dataSource={heatmapData}>
+            <Inject services={[Tooltip]} />
+            </HeatMapComponent> );
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 {% endraw %}

@@ -32,12 +32,6 @@ By default, the bubble with small size denotes the data value with small magnitu
 To render a bubble heat map with size series, set the [bubbleType](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#bubbletype) property to **Size**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/bubble-heatmap-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -55,12 +49,6 @@ In heat map, defined with this tile type, the data points will be represented wi
 To represent the data points with variations in bubble colors, set the [bubbleType](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#bubbletype) property to **Color**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs2/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/bubble-heatmap-cs2/app/index.jsx %}
 {% endhighlight %}
@@ -78,12 +66,6 @@ In this bubble heat map type, the sector of the bubble decides the magnitude of 
 To render the data points with bubble sector, set the [bubbleType](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#bubbletype) property to **Sector**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs3/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/bubble-heatmap-cs3/app/index.jsx %}
 {% endhighlight %}
@@ -105,12 +87,6 @@ To render a bubble heat map with size and color series, set the [bubbleType](htt
 ##### Array binding - Table
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs4/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs4/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/bubble-heatmap-cs4/app/index.jsx %}
 {% endhighlight %}
@@ -124,12 +100,6 @@ To render a bubble heat map with size and color series, set the [bubbleType](htt
 ##### Array binding - Cell
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs5/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs5/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/bubble-heatmap-cs5/app/index.jsx %}
 {% endhighlight %}
@@ -143,12 +113,6 @@ To render a bubble heat map with size and color series, set the [bubbleType](htt
 ##### JSON binding - Table
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs6/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs6/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/bubble-heatmap-cs6/app/index.jsx %}
 {% endhighlight %}
@@ -162,12 +126,6 @@ To render a bubble heat map with size and color series, set the [bubbleType](htt
 ##### JSON binding - Cell
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs7/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/bubble-heatmap-cs7/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/bubble-heatmap-cs7/app/index.jsx %}
 {% endhighlight %}

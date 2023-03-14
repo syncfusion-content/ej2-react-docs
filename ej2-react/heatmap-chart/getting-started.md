@@ -96,12 +96,6 @@ npm start
 The below example shows a basic HeatMap.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -143,12 +137,6 @@ root.render(<App />);
 This section explains how to populate the following two-dimensional array data to the heat map.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs2/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
@@ -164,12 +152,6 @@ This section explains how to populate the following two-dimensional array data t
 You can add axis labels to the heat map and format those labels using the [xAxis](https://ej2.syncfusion.com/react/documentation/api/heatmap/#xaxis) and [yAxis](https://ej2.syncfusion.com/react/documentation/api/heatmap/#yaxis) properties. Axis labels provide additional information about the data points populated in the heat map.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs3/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
@@ -185,12 +167,6 @@ You can add axis labels to the heat map and format those labels using the [xAxis
 Add a title using the [titleSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#titlesettings) property to the heat map to provide quick information to the user about the data populated in the heat map.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs4/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs4/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
@@ -206,12 +182,6 @@ Add a title using the [titleSettings](https://ej2.syncfusion.com/react/documenta
 Use a legend for the heat map in the [legendSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#legendsettings) object by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#visible) property to **true** and injecting the `Legend` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs5/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs5/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
@@ -227,12 +197,6 @@ Use a legend for the heat map in the [legendSettings](https://ej2.syncfusion.com
 Add data labels to improve the readability of the heat map. This can be achieved by setting the [showLabel](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#showlabel) property to **true** in the [cellSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#cellsettings) object.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs6/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs6/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
@@ -248,12 +212,6 @@ Add data labels to improve the readability of the heat map. This can be achieved
 The default palette settings of the heat map cells can be customized by using the [paletteSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#palettesettings) property. Using the [palette](https://ej2.syncfusion.com/react/documentation/api/heatmap/paletteSettings/#palette) property in `paletteSettings` object, you can change the color set for the cells. You can change the color mode of the cells to fixed or gradient mode using the [type](https://ej2.syncfusion.com/react/documentation/api/heatmap/paletteSettings/#type) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs7/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs7/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs7/app/index.jsx %}
 {% endhighlight %}
@@ -269,12 +227,6 @@ The default palette settings of the heat map cells can be customized by using th
 The tooltip is used when you cannot display information by using the data labels due to space constraints. You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/heatmap/#showtooltip) property to **true** and injecting the `Tooltip` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/getting-started-cs8/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/getting-started-cs8/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs8/app/index.jsx %}
 {% endhighlight %}

@@ -1,9 +1,8 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
-import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
-class App extends React.Component {
-    heatmapData = [
+import { HeatMapComponent, Inject, Legend, Tooltip, Adaptor } from '@syncfusion/ej2-react-heatmap';
+var heatmapData = [
         [73, 39, 26, 39, 94, 0],
         [93, 58, 53, 38, 26, 68],
         [99, 28, 22, 4, 66, 90],
@@ -16,26 +15,33 @@ class App extends React.Component {
         [25, 25, 10, 12, 78, 14],
         [25, 56, 55, 58, 12, 82],
         [74, 33, 88, 23, 86, 59]
-    ];
-    render() {
-        return (<HeatMapComponent id='heatmap' width={'80%'} height={'90%'} titleSettings={{
-                text: 'Sales Revenue per Employee (in 1000 US$)',
-                textStyle: {
-                    size: '15px',
-                    fontWeight: '500',
-                    fontStyle: 'Normal',
-                    fontFamily: 'Segoe UI'
-                }
-            }} xAxis={{
-                labels: ['Nancy', 'Andrew', 'Janet', 'Margaret', 'Steven',
-                    'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin', 'Mario'],
-            }} yAxis={{
-                labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
-            }} cellSettings={{
-                showLabel: true,
-            }} dataSource={this.heatmapData}>
-            </HeatMapComponent>);
-    }
+];
+export function App() {
+return ( <HeatMapComponent
+        width = {'80%'}
+        height = {'90%'}
+        titleSettings = { {
+            text: 'Sales Revenue per Employee (in 1000 US$)',
+            textStyle: {
+                size: '15px',
+                fontWeight: '500',
+                fontStyle: 'Normal',
+                fontFamily: 'Segoe UI'
+            }
+        } }
+        xAxis = { {
+            labels: ['Nancy', 'Andrew', 'Janet', 'Margaret', 'Steven',
+        'Michael', 'Robert', 'Laura', 'Anne', 'Paul', 'Karin',   'Mario'],
+        } }
+        yAxis = { {
+            labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
+        } }
+        cellSettings = { {
+            showLabel: true,
+        } }
+        dataSource={heatmapData}>
+        </HeatMapComponent> );
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 {% endraw %}

@@ -19,12 +19,6 @@ You can customize the cell by using the [cellSettings](https://ej2.syncfusion.co
 Change the width, color, and radius of the heat map cells by using the [border](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#border) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -42,12 +36,6 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
 >Note: The cell highlighting only works in a SVG rendering mode.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs2/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs2/app/index.jsx %}
 {% endhighlight %}
@@ -69,12 +57,6 @@ The [colorGradientMode](https://ej2.syncfusion.com/react/documentation/api/heatm
 >Note: The default value of `colorGradientMode` is **Table**.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs3/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs3/app/index.jsx %}
 {% endhighlight %}
@@ -90,12 +72,6 @@ The [colorGradientMode](https://ej2.syncfusion.com/react/documentation/api/heatm
 The background color of the HeatMap can be customized using the [backgroundColor](https://ej2.syncfusion.com/react/documentation/api/heatmap/#backgroundcolor) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs4/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs4/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs4/app/index.jsx %}
 {% endhighlight %}
@@ -111,12 +87,6 @@ The background color of the HeatMap can be customized using the [backgroundColor
 Set the margin for the heatmap from its container by using the [margin](https://ej2.syncfusion.com/react/documentation/api/heatmap/#margin) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs5/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs5/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs5/app/index.jsx %}
 {% endhighlight %}
@@ -132,12 +102,6 @@ Set the margin for the heatmap from its container by using the [margin](https://
 The title is used to provide a quick information about the data plotted in heatmap. The [text](https://ej2.syncfusion.com/react/documentation/api/heatmap/title/#text) property is used to set the title for the heatmap. The text style of the title can be customized by using the [textStyle](https://ej2.syncfusion.com/react/documentation/api/heatmap/title/#textstyle) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs6/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs6/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs6/app/index.jsx %}
 {% endhighlight %}
@@ -153,12 +117,6 @@ The title is used to provide a quick information about the data plotted in heatm
 The visibility of data labels can be toggled using the [showLabel](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#showlabel) property. By default, the data labels will be visible.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs7/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs7/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs7/app/index.jsx %}
 {% endhighlight %}
@@ -174,12 +132,6 @@ The visibility of data labels can be toggled using the [showLabel](https://ej2.s
 The label displayed in the HeatMap cell can be changed using the [cellRender](https://ej2.syncfusion.com/react/documentation/api/heatmap/#cellrender) event.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs8/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs8/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs8/app/index.jsx %}
 {% endhighlight %}
@@ -195,12 +147,6 @@ The label displayed in the HeatMap cell can be changed using the [cellRender](ht
 The text attributes of the data label such as font-family, font-size, and color can be customized using the [textStyle](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#textstyle) in the [cellSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#cellsettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs9/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs9/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs9/app/index.jsx %}
 {% endhighlight %}
@@ -216,12 +162,6 @@ The text attributes of the data label such as font-family, font-size, and color 
 The format of the data label, such as currency, decimal, percent etc. can be changed using [format](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#format) property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/appearance-cs10/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/appearance-cs10/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/appearance-cs10/app/index.jsx %}
 {% endhighlight %}

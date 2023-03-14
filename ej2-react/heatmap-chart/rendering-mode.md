@@ -15,12 +15,6 @@ Heat map can be displayed using **Canvas** or **Scalable Vector Graphics (SVG)**
 > If the **Auto** mode is enabled in the heat map and there are more than 10,000 data points, then the heat map will be rendered in a **Canvas** mode; Otherwise, the heat map will be rendered in a **SVG** mode.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/heatmap/rendering-mode-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/heatmap/rendering-mode-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/heatmap/rendering-mode-cs1/app/index.jsx %}
 {% endhighlight %}

@@ -4,9 +4,9 @@
 
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
-import { HeatMapComponent, Inject, Legend, Tooltip } from '@syncfusion/ej2-react-heatmap';
+import { HeatMapComponent, Inject, Legend, Tooltip, ITooltipEventArgs } from '@syncfusion/ej2-react-heatmap';
 export function App() {
-let heatmapData = [
+let heatmapData : any[]= [
     [0.72, 0.71, 0.71, 0.67, 0.72, 0.53, 0.53, 0.56, 0.58, 0.56],
     [2.28, 2.29, 2.09, 1.84, 1.64, 1.49, 1.49, 1.39, 1.32, 1.23],
     [2.02, 2.17, 2.3, 2.39, 2.36, 2.52, 2.62, 2.57, 2.57, 2.74],

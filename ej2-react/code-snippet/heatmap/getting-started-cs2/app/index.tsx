@@ -1,12 +1,12 @@
 
-
+{% raw %}
 
 import { HeatMapComponent, Inject, Legend, Tooltip } from '@syncfusion/ej2-react-heatmap';
 import * as ReactDOM from "react-dom";
 import * as React from "react";
 
 export function App() {
-    let heatmapData = [
+    let heatmapData : any[] = [
     [73, 39, 26, 39, 94, 0],
     [93, 58, 53, 38, 26, 68],
     [99, 28, 22, 4, 66, 90],
@@ -27,5 +27,5 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
-
+{% endraw %}
 

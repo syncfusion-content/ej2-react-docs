@@ -1,11 +1,11 @@
 
-
+{% raw %}
 
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip } from '@syncfusion/ej2-react-heatmap';
 export function App() {
-  let heatmapData = [
+  let heatmapData : any[] = [
         { 'rowid': 'France', 'columnid': '2010', 'value': '77.6' },
         { 'rowid': 'France', 'columnid': '2011', 'value': '79.4' },
         { 'rowid': 'France', 'columnid': '2012', 'value': '80.8' },
@@ -125,3 +125,4 @@ root.render(<App />);
 
 
 
+{% endraw %}
