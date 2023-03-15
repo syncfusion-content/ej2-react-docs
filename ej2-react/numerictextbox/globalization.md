@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-[`Localization`](../common/localization/) library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#locale) property.
+[`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#locale) property.
 In NumericTextBox, spin buttons title for the tooltip will be localized based on the culture.
 
 | Locale key | en-US (default)  |

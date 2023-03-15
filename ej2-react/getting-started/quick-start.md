@@ -66,7 +66,7 @@ or
 yarn add @syncfusion/ej2-react-grids
 ```
 
-You can also checkout the [installation section](https://ej2.syncfusion.com/react/documentation/installation-and-upgrade/installation/) to know the different ways of installing the packages.
+You can also checkout the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package) to know the different ways of installing the packages.
 
 ## Import the Syncfusion CSS styles
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Globalization in React Daterangepicker component
 
-Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [`Internationalization`](../common/internationalization/) and also add culture specific customization and translation to the text [`localization`](../common/localization/).
+Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) and also add culture specific customization and translation to the text [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization).
 
 By default, DateRangePicker date format and meridian names are specific to the `American English` culture. It utilizes the [`Essential JavaScript 2 Internationalization`](http://ej2.syncfusion.com/documentation/common/internationalization/) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load the culture specific CLDR JSON data. To go with the different culture other than `English`, follow the below steps.
 

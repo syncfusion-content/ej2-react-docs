@@ -327,4 +327,4 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 ## See Also
 
-* [Toolbar Component](../../toolbar/getting-started/)
+* [Toolbar Component](https://ej2.syncfusion.com/react/documentation/toolbar/getting-started)

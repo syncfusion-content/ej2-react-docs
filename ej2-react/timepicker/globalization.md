@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # Globalization in React Timepicker component
 
-Globalization is the combination of internationalization and localization. You can adapt the component to various languages by means of parsing and formatting the date or number [`internationalization`](../common/internationalization/) , and also add culture specific customization and translation to the text [`localization`](../common/localization/).
+Globalization is the combination of internationalization and localization. You can adapt the component to various languages by means of parsing and formatting the date or number [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) , and also add culture specific customization and translation to the text [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization).
 
 By default, TimePicker time format and meridian names are specific to the `American English` culture. It utilizes the
-[`Essential JavaScript 2 Internationalization`](../common/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load culture specific CLDR JSON data. To go with the different culture other than `English`, follow the steps below.
+[`Essential JavaScript 2 Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load culture specific CLDR JSON data. To go with the different culture other than `English`, follow the steps below.
 
 * Install the `CLDR-Data` package by using the following command (it installs all the CLDR JSON data). To known more about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
@@ -25,7 +25,7 @@ npm install cldr-data --save
 
 * Import the installed CLDR JSON data into the `app.ts` file.
 
-* Use the [`loadCldr`](../common/internationalization#cldr-data-dependencies) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
+* Use the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#loading-culture-data) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
 * TimePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the TimePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
 

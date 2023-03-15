@@ -276,7 +276,7 @@ End user can clear the applied label filter by simply click the "Clear" option a
 
 The value filtering helps to perform filter operation based only on value fields and its resultant aggregated values over other fields defined in row and column axes.
 
-The value filtering dialog can be enabled by setting the [`AllowValueFilter`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.DataSourceSettingsModel%601~AllowValueFilter.html) property in [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/cref_files/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewDataSourceSettings%601.html) class to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Value" tab to perform value filtering operations.
+The value filtering dialog can be enabled by setting the [`AllowValueFilter`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.DataSourceSettingsModel%601~AllowValueFilter.html) property in [`PivotViewDataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings) class to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Value" tab to perform value filtering operations.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
