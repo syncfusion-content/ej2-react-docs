@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in React Dialog component
 
-[Localization](/base/localization.html) library allows to localize the default text content of Dialog. In Dialog, The close button's tooltip text alone will be localize based on culture.
+[Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows to localize the default text content of Dialog. In Dialog, The close button's tooltip text alone will be localize based on culture.
 
 | Locale key | en-US (default)  |
 |------|------|

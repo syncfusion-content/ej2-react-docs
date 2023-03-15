@@ -18,13 +18,13 @@ The ComboBox component allows the user to type a value or choose an option from 
 
 * **[Custom values](getting-started/#custom-values)** - Allows setting user-defined values that is not in the popup list.
 
-* **[Grouping](grouping/)** - Supports grouping of logically related items under a single or specific category.
+* **[Grouping](../combo-box/grouping)** - Supports grouping of logically related items under a single or specific category.
 
 * **[Sorting](https://ej2.syncfusion.com/react/documentation/api/combo-box/#sortorder)** - Supports sorting of list items in an alphabetical order (either ascending or descending).
 
-* **[Filtering](filtering/)** - Allows filtering of list items based on a character typed in the component.
+* **[Filtering](../combo-box/filtering)** - Allows filtering of list items based on a character typed in the component.
 
-* **[Templates](templates/)** - Allows customizing the list items, selected value, header, footer, category group header, and no records content.
+* **[Templates](../combo-box/templates)** - Allows customizing the list items, selected value, header, footer, category group header, and no records content.
 
-* **[Accessibility](accessibility/)** - Provided with built-in accessibility support that helps to access all
+* **[Accessibility](../combo-box/accessibility)** - Provided with built-in accessibility support that helps to access all
 the ComboBox component features through the keyboard, screen readers, or other assistive technology devices.

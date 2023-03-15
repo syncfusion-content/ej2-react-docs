@@ -16,7 +16,7 @@ domainurl: ##DomainURL##
 
 The TimePicker provides the following features.
 
-* **[Time Range](/timepicker/time-range/)**
-* **[Time Format](/timepicker/getting-started/#setting-the-time-format)**
-* **[Strict Mode](/timepicker/strict-mode/)**
-* **[Accessibility](/timepicker/accessibility/)**
+* **[Time Range](../timepicker/time-range)**
+* **[Time Format](../timepicker/getting-started#setting-the-time-format)**
+* **[Strict Mode](../timepicker/strict-mode)**
+* **[Accessibility](../timepicker/accessibility)**

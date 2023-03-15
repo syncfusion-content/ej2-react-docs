@@ -60,7 +60,7 @@ The steps below help you to create **Syncfusion Web Applications** through the *
 
 ## Add Syncfusion component to the application
 
-We have showcased the Chart, Grid and Schedule component in Syncfusion web application. If you want to create your application with other Syncfusion components, you need to install the required component package and then you can add it in your application. To know about npm package installation, refer to the [installation](https://ej2.syncfusion.com/react/documentation/installation-and-upgrade/installation/) section.
+We have showcased the Chart, Grid and Schedule component in Syncfusion web application. If you want to create your application with other Syncfusion components, you need to install the required component package and then you can add it in your application. To know about npm package installation, refer to the [installation](https://ej2.syncfusion.com/react/documentation/installation/npm-package) section.
 
 ## Upgrading the npm packages
 

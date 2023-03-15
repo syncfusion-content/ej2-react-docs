@@ -43,8 +43,8 @@ In the following sample, the vegetables are grouped according on its category us
 
 ## Customization
 
-The grouping header is also provided with customization option. This allows custom designing using the `groupTemplate` property for both inline and fixed headers as referred here: [Group Template support to ComboBox](/combo-box/templates/#group-template).
+The grouping header is also provided with customization option. This allows custom designing using the `groupTemplate` property for both inline and fixed headers as referred here: [Group Template support to ComboBox](https://ej2.syncfusion.com/react/documentation/combo-box/templates#group-template).
 
 ## See Also
 
-* [Group Template support to ComboBox](./templates#group-template).
+* [Group Template support to ComboBox](https://ej2.syncfusion.com/react/documentation/combo-box/templates#group-template).

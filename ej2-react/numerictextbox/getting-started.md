@@ -95,7 +95,7 @@ Import the NumericTextBox component's required CSS references as follows in `src
 @import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
 ```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://ej2crg.azurewebsites.net/) (Custom Resource Generator) in your application.
+>Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Run the application
 

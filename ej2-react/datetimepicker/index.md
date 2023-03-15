@@ -14,9 +14,9 @@ The **DateTimePicker** is a graphical user interface component that allows to se
 
 ## Key Features
 
-* **[Getting Started](/datetimepicker/getting-started/)**
-* **[Globalization](/datetimepicker/globalization/)**
-* **[Strict Mode](/datetimepicker/strict-mode/)**
-* **[DateTime Range](/datetimepicker/date-time-range/)**
-* **[Customization](/datetimepicker/customization/)**
-* **[Accessibility](/datetimepicker/accessibility/)**
+* **[Getting Started](../datetimepicker/getting-started)**
+* **[Globalization](../datetimepicker/globalization)**
+* **[Strict Mode](../datetimepicker/strict-mode)**
+* **[DateTime Range](../datetimepicker/date-time-range)**
+* **[Customization](../datetimepicker/customization)**
+* **[Accessibility](../datetimepicker/accessibility)**
