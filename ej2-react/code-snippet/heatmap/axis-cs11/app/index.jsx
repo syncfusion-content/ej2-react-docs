@@ -2,22 +2,22 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { HeatMapComponent, Inject, Tooltip } from '@syncfusion/ej2-react-heatmap';
-class App extends React.Component {
-    heatmapData = [
-        [52, 65, 67, 45, 37, 52, 32, 76, 60, 64, 82, 91],
-        [68, 52, 63, 51, 30, 51, 51, 81, 70, 60, 88, 80],
-        [60, 50, 42, 53, 66, 70, 41, 69, 76, 74, 86, 97],
-        [66, 64, 46, 40, 47, 41, 45, 76, 83, 69, 92, 84],
-        [65, 42, 58, 32, 36, 44, 49, 79, 83, 69, 83, 93],
-        [54, 46, 61, 46, 40, 39, 41, 69, 61, 84, 84, 87],
-        [48, 46, 61, 47, 49, 41, 41, 67, 78, 83, 98, 87],
-        [69, 52, 41, 44, 41, 52, 46, 71, 63, 84, 83, 91],
-        [50, 59, 44, 43, 27, 42, 26, 64, 76, 65, 81, 86],
-        [47, 49, 66, 53, 50, 34, 31, 79, 78, 79, 89, 95],
-        [61, 40, 62, 26, 34, 54, 56, 74, 83, 78, 95, 98]
+export function App() {
+    var heatmapData = [
+        [52, 65, 67, 45, 37, 52,32, 76, 60, 64, 82, 91],
+        [68, 52, 63, 51, 30, 51,51, 81, 70, 60, 88, 80],
+        [60, 50, 42, 53, 66, 70,41, 69, 76, 74, 86, 97],
+        [66, 64, 46, 40, 47, 41, 45, 76, 83, 69, 92,84],
+        [65, 42, 58, 32, 36, 44,49, 79, 83, 69, 83, 93],
+        [54, 46, 61, 46, 40, 39,41, 69, 61, 84, 84, 87],
+        [48, 46, 61, 47, 49, 41,41, 67, 78, 83, 98, 87],
+        [69, 52, 41, 44, 41, 52,46, 71, 63, 84, 83, 91],
+        [50, 59, 44, 43, 27, 42,26, 64, 76, 65, 81, 86],
+        [47, 49, 66, 53, 50, 34,31, 79, 78, 79, 89, 95],
+        [61, 40, 62, 26, 34, 54,56, 74, 83, 78, 95, 98]
     ];
-    render() {
-        return (<HeatMapComponent id='heatmap' titleSettings={{
+    return ( <HeatMapComponent
+            titleSettings = { {
                 text: 'Product wise Monthly sales revenue for a e-commerce website',
                 textStyle: {
                     size: '15px',
@@ -25,21 +25,23 @@ class App extends React.Component {
                     fontStyle: 'Normal',
                     fontFamily: 'Segoe UI'
                 }
-            }} xAxis={{
+            } }
+            xAxis = { {
                 labels: ['Laptop', 'Mobile', 'Gaming', 'Cosmetics', 'Fragnance', 'Watches', 'Handbags', 'Apparels',
-                    'Kitchenware', 'Furniture', 'Home Decor'],
+                'Kitchenware', 'Furniture', 'Home Decor'],
                 multiLevelLabels: [
                     {
                         overflow: 'Trim',
                         categories: [
                             { start: 0, end: 2, text: 'Electronics', },
-                            { start: 3, end: 4, text: 'Beauty and personal care', maximumTextWidth: 50 },
+                            { start: 3, end: 4, text: 'Beauty and personal care', maximumTextWidth: 50},
                             { start: 5, end: 7, text: 'Fashion', },
                             { start: 8, end: 10, text: 'Household' },
                         ]
                     },
                 ]
-            }} yAxis={{
+            } }
+            yAxis = { {
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 multiLevelLabels: [
                     {
@@ -51,15 +53,17 @@ class App extends React.Component {
                         ]
                     },
                 ]
-            }} paletteSettings={{
-                palette: [
+            } }
+            paletteSettings = { {
+               palette: [
                     { color: '#F0C27B' },
                     { color: '#4B1248' }
                 ],
-            }} dataSource={this.heatmapData}>
-            <Inject services={[Tooltip]}/>
-            </HeatMapComponent>);
-    }
+            } }
+            dataSource={heatmapData}>
+            <Inject services={[Tooltip]} />
+            </HeatMapComponent> );
 }
-ReactDOM.render(<App />, document.getElementById('heatmap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
 {% endraw %}

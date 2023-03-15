@@ -4,7 +4,7 @@
 
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
-import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip, BubbleTooltipData } from '@syncfusion/ej2-react-heatmap';
+import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip, BubbleTooltipData, ITooltipEventArgs } from '@syncfusion/ej2-react-heatmap';
   export function App() {
     let heatmapData: any[] = [
     [[4, 39], [3, 8], [1, 3], [1, 10], [4, 4], [2, 15]],
