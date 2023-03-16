@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 The MultiSelect has built-in support to filter data items when `allowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
 
 To display filtered items in the popup, filter the required data and return it to the MultiSelect
-via [updateData](/drop-down-list/api-filteringEventArgs.html#updatedata) method by using the [filtering](https://ej2.syncfusion.com/react/documentation/api/multi-select/#filtering) event.
+via [updateData](https://ej2.syncfusion.com/angular/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method by using the [filtering](https://ej2.syncfusion.com/react/documentation/api/multi-select/#filtering) event.
 
 The following sample illustrates how to query the data source and pass the data to the MultiSelect through the `updateData` method in `filtering` event.
 

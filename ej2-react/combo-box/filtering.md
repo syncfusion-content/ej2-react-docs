@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The ComboBox has built-in support to filter data items when `allowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the component.
 
-To display filtered items in the popup, filter the required data and return it to the ComboBox via [updateData](/api/drop-down-list/filteringEventArgs/#updatedata) method by using the [filtering](https://ej2.syncfusion.com/react/documentation/api/combo-box/#filtering--emittypefilteringeventargs) event.
+To display filtered items in the popup, filter the required data and return it to the ComboBox via [updateData](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method by using the [filtering](https://ej2.syncfusion.com/react/documentation/api/combo-box/#filtering--emittypefilteringeventargs) event.
 
 The following sample illustrates how to query the data source and pass the data to the ComboBox through the `updateData` method in `filtering` event.
 

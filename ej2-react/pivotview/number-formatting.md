@@ -135,5 +135,5 @@ In the below sample, the customization done in number formatting dialog for the 
 ## See Also
 
 * [Customize number, date, and time values](./how-to/customize-number-date-and-time-values)
-* [NumberFormatOptions](https://ej2.syncfusion.com/react/documentation/common/internationalization/#number-formatting)
+* [NumberFormatOptions](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting)
 * [Toolbar](./tool-bar)

@@ -17,6 +17,6 @@ The Base (`ej2-base`) is the most common package which has common class definiti
 * [Animation](./animation)
 * [Right-To-Left](./right-to-left)
 * [State Persistence](./state-persistence)
-* [Localization](./localization)
-* [Internationalization](./internationalization)
+* [Localization](../common/globalization/localization)
+* [Internationalization](../common/globalization/internationalization)
 * [Drag and Drop](./drag-and-drop)

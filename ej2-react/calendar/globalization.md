@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Globalization in React Calendar component
 
-Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number ([Internationalization](../common/internationalization/)), and also add culture specific customization and translation to the text ([localization](../common/localization/)).
+Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number ([Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization)), and also add culture specific customization and translation to the text ([localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization)).
 
 By default, Calendar date format, week and month names are specific to American English culture. It utilizes the [`Essential JavaScript 2 Internationalization`](http://ej2.syncfusion.com/documentation/base/internationalization/)
 package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data and also it provides the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/intl.html#cldr-data-dependencies) method to load the culture specific CLDR JSON data.

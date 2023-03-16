@@ -123,7 +123,7 @@ root.render(<App />);
 
 ## Run the application
 
-Use the following command to run the application in browser with the port number [`localhost:8080`](http://localhost:8080/).
+Use the following command to run the application in browser with the port number `localhost:8080`.
 
 ```
 npm start
@@ -163,7 +163,7 @@ Output will be appears as follows.
    dotnet run
    ```
 
-5. You can see that the PDF Viewer server instance runs in the local host with the port number [`localhost:5001`](https://localhost:5001/) and navigate to the PDF Viewer Web control [`localhost:5001/pdfviewer`](https://localhost:5001/pdfviewer) which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
+5. You can see that the PDF Viewer server instance runs in the local host with the port number `localhost:5001` and navigate to the PDF Viewer Web control `localhost:5001/pdfviewer` which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
 
 ```js
 <PdfViewerComponent id="container" documentPath="PDF_Succinctly.pdf" serviceUrl="https://localhost:5001/pdfviewer" style={{ 'height': '640px' }}>
