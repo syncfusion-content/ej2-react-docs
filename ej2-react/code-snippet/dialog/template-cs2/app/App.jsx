@@ -39,7 +39,7 @@ function App() {
         }
         enteredVal.value = '';
     }
-    function componentDidMount() {
+    function componentCreated() {
         setTimeout(() => {
             document.getElementById('sendButton').onkeydown = (e) => {
                 if (e.keyCode === 13) {
@@ -58,7 +58,7 @@ function App() {
     }
     return (<div className="App" id='dialog-target'>
             <button className='e-control e-btn' id='targetButton1' ref={buttonElement => buttonInstance = buttonElement} role='button' onClick={handleClick}>Open</button>
-            <DialogComponent width='350px' target='#dialog-target' header={header} footerTemplate={footerTemplate} showCloseIcon={true} open={dialogOpen} close={dialogClose} ref={dialog => dialogInstance = dialog}>
+            <DialogComponent created = {componentCreated} width='350px' target='#dialog-target' header={header} footerTemplate={footerTemplate} showCloseIcon={true} open={dialogOpen} close={dialogClose} ref={dialog => dialogInstance = dialog}>
                 <div className="dialogContent">
                         <span className="dialogText">Greetings Nancy! When will you share me the source files of the project?</span>
                 </div>
