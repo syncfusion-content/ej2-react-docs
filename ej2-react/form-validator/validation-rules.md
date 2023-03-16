@@ -22,7 +22,7 @@ The `FormValidator` has following default validation rules, which are used to va
 | `date` | The form input element must have valid `date` format values | 05/15/2017 |
 | `dateIso` | The form input element must have valid `dateISO` format values | 2017-05-15 |
 | `number` | The form input element must have valid `number` format values | 1.0 or 1 |
-| `digit` | The form input element must have valid `digit` values | 1 |
+| `digits` | The form input element must have valid `digits` values | 1 |
 | `maxLength` | Input value must have less than or equal to `maxLength` character length | if `maxLength: 5`, **check** is valid and **checking** is invalid |
 | `minLength` | Input value must have greater than or equal to `minLength` character length | if `minLength: 5`, **testing** is valid and **test** is invalid |
 | `rangeLength` | Input value must have value between `rangeLength` character length | if `rangeLength: [4,5]`, **test** is valid and **key** is invalid |
