@@ -29,49 +29,42 @@ The following list of dependencies is required to use the Dashboard Layout compo
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```
-npm install -g create-react-app
-```
+     ```
+     npm install -g create-react-app
+     ```
 
 * To setup basic `React` sample use following commands.
 
-<div class='tsx'>
+     <div class='tsx'>
 
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
+     ```
+      create-react-app quickstart --scripts-version=react-scripts-ts
+      cd quickstart
+     ```
 
-cd quickstart
+     </div>
+     <div class='jsx'>
 
-```
-
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+     ```
+      create-react-app quickstart
+      cd quickstart
+     ```
+     </div>
 
 * Install Syncfusion Dashboard Layout package using below command.
 
-```
-npm install @syncfusion/ej2-react-layouts --save
-```
+    ```
+    npm install @syncfusion/ej2-react-layouts --save
+    ```
 
 ## Adding Style sheet to the Application
 
 To render the Dashboard Layout component, need to import Dashboard Layout and its dependent component's styles as given below in `App.css`.
 
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
-```
+   ```css
+   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
+   ```
 
 >Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
@@ -226,9 +219,9 @@ export default App;
 
 Now, use the `npm start` command to run the application in the browser.
 
-```
-npm start
-```
+   ```
+   npm start
+   ```
 
 The following example shows a basic Dashboard Layout by adding the panels property directly into the HTML element.
 

@@ -54,7 +54,7 @@ function App() {
 
   }
 
-  function componentDidMount() {
+  function componentCreated() {
       setTimeout(() => {
           (document as any).getElementById('sendButton').onkeydown = (e: any) => {
               if (e.keyCode === 13) {updateTextValue(); }
@@ -73,7 +73,7 @@ function App() {
     return (
         <div className="App" id='dialog-target'>
             <button className='e-control e-btn' id='targetButton1' ref={buttonElement => buttonInstance = buttonElement!} role='button' onClick={handleClick}>Open</button>
-            <DialogComponent width='350px' target='#dialog-target' header={header} footerTemplate={footerTemplate } showCloseIcon={true}
+            <DialogComponent created = {componentCreated} width='350px' target='#dialog-target' header={header} footerTemplate={footerTemplate } showCloseIcon={true}
             open= {dialogOpen} close= {dialogClose}
             ref={dialog => dialogInstance = dialog!}>
                 <div className="dialogContent">

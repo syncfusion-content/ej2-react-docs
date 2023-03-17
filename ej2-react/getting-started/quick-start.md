@@ -94,13 +94,13 @@ You can checkout the [Themes topic](../appearance/theme) to know more about buil
 
 Start adding the required components to the application. Let's add the Grid component in the `src/App.js` file using the following code.
 
-1. Before adding the Grid component to your markup, import the Grid component in the `src/App.js` file.
+1.Before adding the Grid component to your markup, import the Grid component in the `src/App.js` file.
 
-```bash
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-```
+   ```bash
+    import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+   ```
 
-2. Then, to display the Grid with records, add the Grid component and bind the `dataSource` to it. Here, we have mapped the simple data as the `dataSource`.
+2.Then, to display the Grid with records, add the Grid component and bind the `dataSource` to it. Here, we have mapped the simple data as the `dataSource`.
 
 
 

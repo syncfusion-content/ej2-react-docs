@@ -14,17 +14,15 @@ Template property can be given as the `HTML element` that is either a `string`  
 
 The HTML element tag can be given as a string for the template property.
 
-```ts
-template: "<div>Toast Content</div>"
-
-```
+   ```ts
+     template: "<div>Toast Content</div>"
+    ```
 
 The template property also allows getting template content through query `selector`. Here, element 'ID' attribute is specified in the template.
 
-```ts
-template: "#Template"
-
-```
+    ``` 
+    template: "#Template"
+    ```
 
 `[Class-component]`
 

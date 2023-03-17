@@ -82,22 +82,22 @@ You can create cards with a header in a specific structure. For adding header yo
 
 * You can include heading inside the card header by adding an `div` element with `e-card-header-caption` class, and also content will be added by adding element with `e-card-content`. For detailed information, refer to the [Header and Content](./header-content/).
 
-```
-    <div class = "e-card">                    --> Root Element
-        <div class="e-card-header">           --> Root Header Element
-            <div class="e-card-header-caption">    --> Root Heading Element
+     ```
+       <div class = "e-card">                    --> Root Element
+          <div class="e-card-header">           --> Root Header Element
+             <div class="e-card-header-caption">    --> Root Heading Element
                 <div class="e-card-header-title"></div>   --> Heading Title Element
             </div>
             <div class="e-card-content"></div>         --> Card content Element
+         </div>
         </div>
-    </div>
-```
+     ```
 
 * Now, run the application in the browser using the following command.
 
-```
-npm start
-```
+    ```
+    npm start
+    ```
 
 Output will be as follows:
 

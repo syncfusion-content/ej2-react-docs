@@ -12,10 +12,9 @@ domainurl: ##DomainURL##
 
 Other than drag and drop, it is possible to move the panels in Dashboard Layout programmatically. This can be achieved using [movePanel](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#movepanel) method. The method is invoked as follows,
 
-```js
-movePanel(id, row, col)
-
-```
+      ```js
+       movePanel(id, row, col)
+      ```
 
 Where,
 * id - ID of the panel which needs to be moved.

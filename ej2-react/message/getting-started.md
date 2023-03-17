@@ -102,9 +102,9 @@ Start adding the required components to the application. Add the Message compone
 
 * Before adding the Message component to the markup, import the Message component in the `src/App.tsx` file.
 
-```bash
-import { MessageComponent } from '@syncfusion/ej2-react-notifications';
-```
+     ```bash
+        import { MessageComponent } from '@syncfusion/ej2-react-notifications';
+     ```
 
 * Then, add the `Message` component in the application using the following code sample.
 
