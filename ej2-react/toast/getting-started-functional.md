@@ -30,40 +30,31 @@ The following list of dependencies are required to use the Toast component in yo
 
 You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+     ```bash
+       npm install -g create-react-app
+     ```
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
+     <div class='tsx'>
 
-```bash
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+     ```
+      create-react-app quickstart --scripts-version=react-scripts-ts
+      cd quickstart
+     ```
+    </div>
+    <div class='jsx'>
+    ```
+      create-react-app quickstart
+      cd quickstart
+    ```
+    </div>
 
 Install the below required dependency package in order to use the `Toast` component in your application.
 
-```bash
-npm install @syncfusion/ej2-react-notifications –save
-```
+     ```bash
+        npm install @syncfusion/ej2-react-notifications –save
+     ```
 
 The above package installs [Toast dependencies](#dependencies) which are required
  to render the Toast component in React environment.
@@ -84,39 +75,39 @@ The Toast message can be rendered by defining an `title` or `content`.
 
 * Import the Toast component to your `src/App.tsx` file using following code.
 
-```ts
-import { ToastComponent  } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
-import { useRef } from 'react';
+     ```ts
+     import { ToastComponent  } from '@syncfusion/ej2-react-notifications';
+     import * as React from "react";
+     import { useRef } from 'react';
 
-function App() {
-  const toastInstance = useRef<ToastComponent>(null);
+    function App() {
+       const toastInstance = useRef<ToastComponent>(null);
 
-  function toastCreated() {
-    toastInstance.current.show();
-  }
+       function toastCreated() {
+        toastInstance.current.show();
+      }
 
-  return (
-    <ToastComponent
-      ref={toastInstance}
-      title="Sample Toast Title"
-      content="Sample Toast Content"
-      created={toastCreated}
-    />
-  );
-};
+   return (
+      <ToastComponent
+         ref={toastInstance}
+         title="Sample Toast Title"
+        content="Sample Toast Content"
+        created={toastCreated}
+      />
+    );
+   };
 
-export default App;
+  export default App;
 
-ReactDOM.render(<App />, document.getElementById('element'));
+   ReactDOM.render(<App />, document.getElementById('element'));
 
-```
+  ```
 
 * Run the application in the browser using the following command.
 
-```
-npm start
-```
+    ```
+      npm start
+    ```
 
 Output will be as follows:
 

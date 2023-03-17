@@ -22,19 +22,19 @@ This article provides a step-by-step introduction to creating a simple react app
 
 * Open the command prompt in your desired location. To create the application folder, use the following commands.
 
-```bash
-mkdir Syncfusion-react-demo
+    ```bash
+    mkdir Syncfusion-react-demo
 
-cd Syncfusion-react-demo
-```
+    cd Syncfusion-react-demo
+    ```
 
 * Use the following commands to create a `package.json` file. Then install the [react](https://www.npmjs.com/package/react) and [react-dom](https://www.npmjs.com/package/react-dom) packages in the application.
 
-```bash
-npm init
+     ```bash
+     npm init
 
-npm install react react-dom
-```
+     npm install react react-dom
+     ```
 
 ## Add Syncfusion React packages
 
@@ -117,9 +117,9 @@ root.render(
 
 * Install the webpack packages by using the following command.
 
-```bash
-npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
-```
+    ```bash
+     npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
+    ```
 
 * Create a `webpack.config.js` file in the application root repository using the following code sample.
 
@@ -162,21 +162,21 @@ module.exports = {
 
 * Open the `webpack.config.js` file and add the Syncfusion react packages in the externals option as follows.
 
-``` js
-module.exports = {
+   ``` js
+    module.exports = {
     ---
     externals: {
         "react": "React",
         "react-dom": "ReactDOM",
         "@syncfusion/ej2-react-grids": "SyncfusionReactGrids"
-    },
-    ---
-}
-```
+     },
+     ---
+    }
+  ```
 
 * Find the Syncfusion external CDN script `[package-name].min.js` file inside `dist` folder of the packages.
 
-![Syncfusion External CDN](images/external-cdn.png)
+    ![Syncfusion External CDN](images/external-cdn.png)
 
 * Add the [React](https://reactjs.org/docs/cdn-links.html) and Syncfusion react Grid CDN references in the `src/index.html` file. The order of individual Syncfusion control package loading should be in line with its dependency graph. The CDN of the Dependency Packages should be included manually before the intended individual Syncfusion control package CDN.
 

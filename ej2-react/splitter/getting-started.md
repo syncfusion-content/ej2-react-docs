@@ -29,40 +29,32 @@ The following list of dependencies required to use the Splitter component in you
 You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+     ```bash
+     npm install -g create-react-app
+     ```
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
+      <div class='tsx'>
+      ```
+       create-react-app quickstart --scripts-version=react-scripts-ts
+       cd quickstart
+      ```
 
-```bash
-create-react-app quickstart --scripts-version=react-scripts-ts
+      </div>
+      <div class='jsx'>
 
-cd quickstart
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+      ```
+      create-react-app quickstart
+      cd quickstart
+      ```
+     </div>
 
 Install the below required dependency package in order to use the `Splitter` component in your application.
 
-```bash
-npm install @syncfusion/ej2-react-layouts --save
-```
+    ```
+     npm install @syncfusion/ej2-react-layouts --save
+    ```
 
 * The Splitter CSS files are available in the `ej2-layouts` package folder.
 This can be referred in your application using the following code.
@@ -110,9 +102,9 @@ export default App;
 
 After completing the configurations to render the Splitter, use the following command to display the output in your default browser.
 
-```
-npm start
-```
+       ```
+       npm start
+       ```
 
 Output will be as follows:
 

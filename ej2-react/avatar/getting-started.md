@@ -21,41 +21,31 @@ The Avatar Component is pure CSS component so no specific dependencies to render
 You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+          ```bash
+           npm install -g create-react-app
+          ```
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
+    <div class='tsx'>
 
-```bash
+     ```
+     create-react-app quickstart --scripts-version=react-scripts-ts
+     cd quickstart
+    ```
 
-create-react-app quickstart --scripts-version=react-scripts-ts
+    <div class='jsx'>
 
-cd quickstart
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```bash
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+    ```
+    create-react-app quickstart
+    cd quickstart
+    ```
 
 Install the below required dependency package in order to use the `Avatar` component in your application.
 
-```bash
-npm install @syncfusion/ej2-layouts --save
-```
+      ```bash
+      npm install @syncfusion/ej2-layouts --save
+      ```
 
 * The Avatar CSS files are available in the `ej2-layouts` package folder. This can be referenced in your application using the following code.
 
