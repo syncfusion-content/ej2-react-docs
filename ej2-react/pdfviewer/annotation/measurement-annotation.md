@@ -31,7 +31,7 @@ The measurement annotations can be added to the PDF document using the annotatio
 
 In the pan mode, if the measurement annotation mode is entered, the PDF Viewer control will switch to text select mode.
 
-![CalibrateTool](../../pdfviewer/images/calibrate_tool.png)
+  ![CalibrateTool](../../pdfviewer/images/calibrate_tool.png)
 
 Refer to the following code snippet to switch to distance annotation mode.
 
@@ -144,7 +144,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 The scale ratio and unit of measurement can be modified using the scale ratio option provided in the context menu of the PDF Viewer control.
 
-![CalibrateScaleRatio](../../pdfviewer/images/calibrate_scaleratio.png)
+  ![CalibrateScaleRatio](../../pdfviewer/images/calibrate_scaleratio.png)
 
 The Units of measurements support for the measurement annotations in the PDF Viewer are
 

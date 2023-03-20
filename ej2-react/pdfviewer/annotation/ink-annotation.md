@@ -22,7 +22,7 @@ The ink annotations can be added to the PDF document using the annotation toolba
 * Select the **Draw Ink** button in the annotation toolbar. It enables the ink annotation mode.
 * You can draw anything over the pages of the PDF document.
 
-![InkTool](../../pdfviewer/images/ink_tool.png)
+  ![InkTool](../../pdfviewer/images/ink_tool.png)
 
 Refer to the following code sample to switch to the ink annotation mode.
 

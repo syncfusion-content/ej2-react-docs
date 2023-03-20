@@ -38,18 +38,16 @@ The below list of dependencies are required to use the `DatePicker` component in
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```
-npm install -g create-react-app
-```
+    ```
+      npm install -g create-react-app
+    ```
 
 * To setup basic `React` sample use following commands.
 
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
+     ```
+      create-react-app quickstart --scripts-version=react-scripts-ts
+      cd quickstart
+     ```
 
 ## Adding Syncfusion packages
 

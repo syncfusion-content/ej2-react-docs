@@ -34,27 +34,25 @@ Below is the list of minimum dependencies required to use the Maps.
 
 To get started with the React application, [create-react-app](https://github.com/facebookincubator/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
 
-```
-npm install -g create-react-app
-```
+   ```
+     npm install -g create-react-app
+   ```
 
 To create basic React application, run the following command.
 
-<div class='jsx'>
+    <div class='jsx'>
 
-```
-create-react-app quickstart
-```
-
-</div>
+     ```
+       create-react-app quickstart
+    ```
+    </div>
 
 Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-```
-cd quickstart
-
-npm install
-```
+     ``` 
+      cd quickstart
+      npm install
+     ```
 
 > In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
 
@@ -62,21 +60,20 @@ npm install
 
 To create React application with TypeScript, use the following command.
 
-<div class='jsx'>
+   <div class='jsx'>
 
-```
-create-react-app quickstart --template typescript
-```
+   ```
+    create-react-app quickstart --template typescript
+   ```
 
-</div>
+   </div>
 
 Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-```
-cd quickstart
-
-npm install
-```
+   ```
+    cd quickstart
+    npm install
+   ```
 
 ### Adding Syncfusion packages
 
@@ -90,17 +87,16 @@ npm install @syncfusion/ej2-react-maps --save
 
 Now, the Maps component can be added in the application. To initialize the Maps component in the React application, import the Maps component in the **src/App.js** or **src/App.tsx** as per the application. Please use the below code to include the Maps component in the application.
 
-```ts
-import React from 'react';
-import { MapsComponent } from '@syncfusion/ej2-react-maps';
+   ```ts
+     import React from 'react';
+     import { MapsComponent } from '@syncfusion/ej2-react-maps';
+    export function App() {
+      return (<MapsComponent id="maps" />); 
+    }
 
-export function App() {
-   return (<MapsComponent id="maps" />);
-}
-
-const root = ReactDOM.createRoot(document.getElementById('maps'));
-root.render(<App />);
-```
+    const root = ReactDOM.createRoot(document.getElementById('maps'));
+    root.render(<App />);
+  ```
 
 As we didn't specify shapeData to the maps, no shape will be rendered and only an empty SVG element is appended to the maps container.
 
@@ -153,20 +149,20 @@ root.render(<App />);
 
 This section explains how to bind GeoJSON data to the map.
 
-```ts
+   ```ts
 
-let usMap: Object =
-{
-    "type": "FeatureCollection",
-    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-    "features": [
-        { "type": "Feature", "properties": { "iso_3166_2": "MA", "name": "Massachusetts", "admin": "United States of America" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -70.801756294617277, 41.248076234530558 ]] ] ] }
-        }
-    ]
-    //https://ej2.syncfusion.com/react/documentation
-};
+      let usMap: Object =
+      {
+        "type": "FeatureCollection",
+         "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+      "features": [
+           { "type": "Feature", "properties": { "iso_3166_2": "MA", "name": "Massachusetts", "admin": "United States of America" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -70.801756294617277, 41.248076234530558 ]] ] ] }
+         }
+     ]
+      //https://ej2.syncfusion.com/react/documentation
+   };
 
-```
+   ```
 
 Elements in the maps will get rendered in the layers. So add a layer collection to the maps by using [`layers`](../api/maps/#layers) property.
 Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#shapedata) property.
@@ -186,9 +182,9 @@ Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/
 
 The following properties in layers are used for binding data source to map.
 
-* [`dataSource`]
-* [`shapeDataPath`]
-* [`shapePropertyPath`]
+   *[`dataSource`]
+   *[`shapeDataPath`]
+   *[`shapePropertyPath`]
 
 The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#datasource) property takes collection value as input. For example, the list of objects can be provided as input. This data is further used in tooltip, data label, bubble, legend and in color mapping.
 

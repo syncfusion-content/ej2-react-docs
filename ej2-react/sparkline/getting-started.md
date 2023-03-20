@@ -33,30 +33,30 @@ The following list of minimum dependencies are required to use the sparkline:
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```
-npm install -g create-react-app
-```
+    ```
+    npm install -g create-react-app
+    ```
 
 * To setup basic `React` sample use following commands.
 
-<div class='tsx'>
+    <div class='tsx'>
 
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
+    ```
+    create-react-app quickstart --scripts-version=react-scripts-ts
 
-cd quickstart
+    cd quickstart
 
-npm install
+    npm install
 
-```
+    ```
 
-</div>
+    </div>
 
 * Install Syncfusion packages using below command.
 
-```
-npm install @syncfusion/ej2-react-charts --save
-```
+    ```
+    npm install @syncfusion/ej2-react-charts --save
+    ```
 
 ## Add Sparkline to the Project
 

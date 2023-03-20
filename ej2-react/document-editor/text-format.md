@@ -17,121 +17,121 @@ Document Editor supports several formatting options for text like bold, italic, 
 The bold formatting for selected text can be get or set by using the following sample code.
 
 
-```ts
-//Gets the value for bold formatting of selected text.
-let bold : boolean = documenteditor.selection.characterFormat.bold;
-//Sets bold formatting for selected text.
-documenteditor.selection.characterFormat.bold = true;
-```
+  ```ts
+   //Gets the value for bold formatting of selected text.
+   let bold : boolean = documenteditor.selection.characterFormat.bold;
+   //Sets bold formatting for selected text.
+   documenteditor.selection.characterFormat.bold = true;
+  ```
 
 
 You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
 
-```ts
-documenteditor.editor.toggleBold();
-```
+   ```ts
+   documenteditor.editor.toggleBold();
+   ```
 
 ## Italic
 
 The Italic formatting for selected text can be get or set by using the following sample code.
 
-```ts
-//Gets the value for italic formatting of selected text.
-let italic : boolean = documenteditor.selection.characterFormat.italic;
-//Sets italic formatting for selected text.
-documenteditor.selection.characterFormat.italic= true|false;
-```
+    ```ts
+    //Gets the value for italic formatting of selected text.
+    let italic : boolean = documenteditor.selection.characterFormat.italic;
+   //Sets italic formatting for selected text.
+    documenteditor.selection.characterFormat.italic= true|false;
+   ```
 
 You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
 
-```ts
-documenteditor.editor.toggleItalic();
-```
+  ```ts
+   documenteditor.editor.toggleItalic();
+  ```
 
 ## Underline property
 
 The underline style for selected text can be get or set by using the following sample code.
 
-```ts
-//Gets the value for underline formatting of selected text.
-let underline : Underline = documenteditor.selection.characterFormat.underline;
-//Sets underline formatting for selected text.
-documenteditor.selection.characterFormat.underline='Single' | 'None';
-```
+   ```ts
+   //Gets the value for underline formatting of selected text.
+   let underline : Underline = documenteditor.selection.characterFormat.underline;
+   //Sets underline formatting for selected text.
+   documenteditor.selection.characterFormat.underline='Single' | 'None';
+   ```
 
 You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
-```ts
-documenteditor.editor.toggleUnderline('Single');
-```
+   ```ts
+    documenteditor.editor.toggleUnderline('Single');
+   ```
 
 ## Strikethrough property
 
 The strikethrough style for selected text can be get or set by using the following sample code.
 
-```ts
-//Gets the value for strikethrough formatting of selected text.
-let strikethrough : Strikethrough = documenteditor.selection.characterFormat.strikethrough;
-//Sets strikethrough formatting for selected text.
-documenteditor.selection.characterFormat.strikethrough='Single' | 'Normal';
-```
+   ```ts
+    //Gets the value for strikethrough formatting of selected text.
+    let strikethrough : Strikethrough = documenteditor.selection.characterFormat.strikethrough;
+    //Sets strikethrough formatting for selected text.
+    documenteditor.selection.characterFormat.strikethrough='Single' | 'Normal';
+   ```
 
 You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
-```ts
-documenteditor.editor.toggleStrikethrough();
-```
+    ```ts
+     documenteditor.editor.toggleStrikethrough();
+    ```
 
 ## Superscript property
 
 The selected text can be made superscript by using the following sample code.
 
-```ts
-//Gets the value for baselineAlignment formatting of selected text.
-let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
-//Sets baselineAlignment formatting for selected text.
-documenteditor.selection.characterFormat.baselineAlignment='Superscript';
-```
+    ```ts
+    //Gets the value for baselineAlignment formatting of selected text.
+     let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
+    //Sets baselineAlignment formatting for selected text.
+     documenteditor.selection.characterFormat.baselineAlignment='Superscript';
+   ```
 
 Toggle the selected text as superscript or normal using the following sample code.
 
-```ts
-documenteditor.editor.toggleSuperscript();
-```
+    ```ts
+      documenteditor.editor.toggleSuperscript();
+    ```
 
 ## Subscript property
 
 The selected text can be made subscript by using the following sample code.
 
-```ts
-//Gets the value for baselineAlignment formatting of selected text.
-let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
-//Sets baselineAlignment formatting for selected text.
-documenteditor.selection.characterFormat.baselineAlignment='Subscript';
-```
+    ```ts
+     //Gets the value for baselineAlignment formatting of selected text.
+     let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
+    //Sets baselineAlignment formatting for selected text.
+     documenteditor.selection.characterFormat.baselineAlignment='Subscript'; 
+   ```
 
 Toggle the selected text as subscript or normal using the following sample code.
 
-```ts
-documenteditor.editor.toggleSubscript();
-```
+   ```ts
+    documenteditor.editor.toggleSubscript();
+  ```
 
 You can make a subscript or superscript text as normal using the following code.
 
-```ts
-documenteditor.selection.characterFormat.baselineAlignment='Normal';
-```
+   ```ts
+     documenteditor.selection.characterFormat.baselineAlignment='Normal';
+   ```
 
 ## Size
 
 The size of selected text can be get or set using the following code.
 
-```ts
-//Gets the value for fontSize formatting of selected text.
-let fontSize : number = documenteditor.selection.characterFormat.fontSize;
-//Sets fontSize formatting for selected text.
-documenteditor.selection.characterFormat.fontSize= 32;
-```
+   ```ts
+   //Gets the value for fontSize formatting of selected text.
+   let fontSize : number = documenteditor.selection.characterFormat.fontSize;
+   //Sets fontSize formatting for selected text.
+   documenteditor.selection.characterFormat.fontSize= 32;
+   ```
 
 ## Color
 

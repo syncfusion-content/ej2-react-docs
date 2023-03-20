@@ -17,11 +17,11 @@ By default, TimePicker time format and meridian names are specific to the `Ameri
 
 * Install the `CLDR-Data` package by using the following command (it installs all the CLDR JSON data). To known more about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
-```
-npm install cldr-data --save
-```
+    ```
+     npm install cldr-data --save
+    ```
 
- Once the package is installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+    Once the package is installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
 
 * Import the installed CLDR JSON data into the `app.ts` file.
 
@@ -29,45 +29,45 @@ npm install cldr-data --save
 
 * TimePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the TimePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
 
-```ts
+    ```ts
 
-import { loadCldr } from '@syncfusion/ej2-base';
+     import { loadCldr } from '@syncfusion/ej2-base';
 
-import { loadCldr } from "@syncfusion/ej2-base";
+     import { loadCldr } from "@syncfusion/ej2-base";
 
-import * as gregorian from 'cldr-data/main/de/ca-gregorian.json';
-import * as numbers from 'cldr-data/main/de/numbers.json';
-import * as numberingSystems from 'cldr-data/supplemental/numberingSystems.json';
+     import * as gregorian from 'cldr-data/main/de/ca-gregorian.json';
+     import * as numbers from 'cldr-data/main/de/numbers.json';
+     import * as numberingSystems from 'cldr-data/supplemental/numberingSystems.json';
 
-loadCldr(numberingSystems, gregorian, numbers);
-```
+      loadCldr(numberingSystems, gregorian, numbers);
+    ```
 
 > if you are facing the error `/node_modules/cldr-data/main/de/*.json (1,1): unused expression, expected an assignment or function call` when you are adding the json files to render the culture sample, then add the below configuration in your `tslint.json` file
 
-```ts
+    ```ts
 
-"linterOptions": {
-    "exclude": [
-      "*.json",
-      "**/*.json"
-    ]
-  }
-```
+    "linterOptions": {
+       "exclude": [
+        "*.json",
+        "**/*.json"
+       ]
+     }
+   ```
 
 * Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
 
-```ts
+    ```ts
 
-//Load the L10n, loadCldr from ej2-base
-import { loadCldr, L10n } from '@syncfusion/ej2-base';
+     //Load the L10n, loadCldr from ej2-base
+     import { loadCldr, L10n } from '@syncfusion/ej2-base';
 
-//load the locale object to set the localized placeholder value
-L10n.load({
-    'de': {
-        'timepicker': { placeholder: 'Wählen Sie Zeit'}
-    }
-});
-```
+     //load the locale object to set the localized placeholder value
+     L10n.load({
+       'de': {
+          'timepicker': { placeholder: 'Wählen Sie Zeit'}
+        }
+     });
+   ```
 
 * Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/timepicker#locale) property. In the following code example, the DateTimePicker is initialized in `German` culture with corresponding localized text.
 

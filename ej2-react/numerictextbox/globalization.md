@@ -45,37 +45,37 @@ By default, all the Essential JS 2  component are specific to English culture ('
 
 * Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). For more information about CLDR-Data, refer to this `link`.
 
-```
-npm install cldr-data --save
-```
+    ```
+      npm install cldr-data --save
+    ```
 
-Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+    Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
 
 * Now import the installed CLDR JSON data into the `app.tsx` file.
 
 * Now import the required culture from the installed location to `app.tsx` file as like the below code snippets.
 
-```ts
-import * as currencies from 'cldr-data/main/de/currencies.json';
-import * as numbers from 'cldr-data/main/de/numbers.json';
-import * as currencyData from 'cldr-data/supplemental/currencyData.json';
-import * as numberingSystems from 'cldr-data/supplemental/numberingSystems.json';
+    ```ts
+     import * as currencies from 'cldr-data/main/de/currencies.json';
+     import * as numbers from 'cldr-data/main/de/numbers.json';
+     import * as currencyData from 'cldr-data/supplemental/currencyData.json';
+     import * as numberingSystems from 'cldr-data/supplemental/numberingSystems.json';
 
-loadCldr(numberingSystems, currencies, numbers, currencyData);
-```
+     loadCldr(numberingSystems, currencies, numbers, currencyData);
+   ```
 
 > if you are facing the error `/node_modules/cldr-data/main/de/*.json (1,1): unused expression, expected an assignment or function call` when you are adding the json files to render the culture sample, then add the below configuration in your `tslint.json` file
 
-```ts
+    ```ts
 
-"linterOptions": {
-    "exclude": [
-      "*.json",
-      "**/*.json"
-    ]
-  }
+   "linterOptions": {
+     "exclude": [
+       "*.json",
+       "**/*.json"
+     ]
+   }
 
-```
+  ```
 
 * Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#locale) property.
 

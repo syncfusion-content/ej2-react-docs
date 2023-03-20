@@ -28,19 +28,16 @@ The following list of dependencies are required to use the MaskedTextBox compone
 You can use [Create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+   ```bash 
+     npm install -g create-react-app
+   ```
 
 Start a new project using create-react-app command as follows
 
-```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
+    ```bash
+     create-react-app quickstart --scripts-version=react-scripts-ts
+     cd quickstart
+    ```
 
 ## Adding Syncfusion packages
 
@@ -49,9 +46,9 @@ You can choose the component that you want to install. For this application, we 
 
 To install MaskedTextBox component, use the following command
 
-```bash
-npm install @syncfusion/ej2-react-inputs –save
-```
+   ```bash
+     npm install @syncfusion/ej2-react-inputs –save
+   ```
 
 ## Adding MaskedTextBox to the application
 

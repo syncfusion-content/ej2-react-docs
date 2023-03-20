@@ -76,7 +76,7 @@ The `DataManager` that acts as an interface between the service endpoint and the
 
 * `DataManager->adaptor`: Defines the adaptor option. By default, ODataAdaptor is used for remote binding.
 
-Adaptor is responsible for processing response and request from/to the service endpoint. The `@syncfusion/ej2-data` package provides some pre-defined adaptors designed to interact with service endpoints. They are,
+     Adaptor is responsible for processing response and request from/to the service endpoint. The `@syncfusion/ej2-data` package provides some pre-defined adaptors designed to interact with service endpoints. They are,
 
 * `UrlAdaptor`: Used to interact with remote services. This is the base adaptor for all remote based adaptors.
 

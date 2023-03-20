@@ -16,15 +16,15 @@ The PDF Viewer library allows you to add signature in the signature field of the
 
 **Step 2:** Add the following code snippet to add signature in signature field.
 
-```javascript
+   ```javascript
 
-formFieldClick = { this.fieldClick }
+    formFieldClick = { this.fieldClick }
 
-fieldClick(args) {
-  var viewer = document.getElementById('container').ej2_instances[0];
-  if (viewer) {
-    args.cancel = true;
-    if (args.field.type === 'SignatureField') {
+     fieldClick(args) {
+    var viewer = document.getElementById('container').ej2_instances[0];
+     if (viewer) {
+     args.cancel = true;
+      if (args.field.type === 'SignatureField') {
       var forms = viewer.formFieldCollections;
       forms.map(r => {
         if (r.id === args.field.id) {
@@ -52,10 +52,10 @@ fieldClick(args) {
           }
         }
       });
-    }
+     }
+   }
   }
-}
 
-```
+ ```
 
 Find the Sample [how to add signature in signature field](https://stackblitz.com/edit/react-2tqnd9-q4dbj9?file=index.js)

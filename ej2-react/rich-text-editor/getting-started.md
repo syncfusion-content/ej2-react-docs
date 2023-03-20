@@ -35,33 +35,27 @@ The following minimum dependencies are required to use the Rich Text Editor.
 
 Before starting, need to install [`Create-react-app`](https://github.com/facebookincubator/create-react-app) command line interface into your machine globally by using following command.
 
-```bash
-npm install -g create-react-app
-```
+  ```bash
+    npm install -g create-react-app
+  ```
 
 Create a new project using create-react-app command as follows
 
-<div class='tsx'>
+   <div class='tsx'>
 
-```bash
-create-react-app quickstart --scripts-version=react-scripts-ts
+    ```
+    create-react-app quickstart --scripts-version=react-scripts-ts
+    cd quickstart
+    ```
 
-cd quickstart
-```
+    </div>
+   <div class='jsx'>
 
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+   ```
+    create-react-app quickstart
+    cd quickstart
+   ```
+  </div>
 
 ## Adding CSS reference
 
@@ -432,21 +426,21 @@ Configure the toolbar with the tools using items field of the toolbarSettings pr
 
 To retrieve the editor contents, use the `value` property of Rich Text Editor.
 
-```ts
-  let rteValue: string = this.rteObj.value;
-```
+   ```ts
+     let rteValue: string = this.rteObj.value;
+   ```
 
 Or you can use the public method `getContent` to retrieve the RTE content.
 
-```ts
-  let rteValue: string = this.rteObj.getContent();
-```
+   ```ts
+     let rteValue: string = this.rteObj.getContent();
+   ```
 
 To fetch the RichTextEditor's text content, use the `textContent` property of RTE `EditPanel`.
 
-```ts
-  let rteValue: string = this.rteObj.contentModule.getEditPanel().textContent;
-```
+   ```ts
+     let rteValue: string = this.rteObj.contentModule.getEditPanel().textContent;
+   ```
 
 ## Retrieve the number of characters in Rich Text Editor
 
@@ -494,10 +488,9 @@ Specifies the items to be rendered in the quick toolbar based on the target elem
 
 The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
-```bash
-npm start
-
-```
+   ```bash
+    npm start
+   ```
 
 Output will be displayed as follows
 

@@ -40,43 +40,34 @@ Below is the list of minimum dependencies required to use the accumulation chart
 
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
-
-```
-npm install -g create-react-app
-```
+  
+    ```
+     npm install -g create-react-app
+    ```
 
 * To setup basic `React` sample use following commands.
 
-<div class='tsx'>
+    <div class='tsx'>
 
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
+    ```
+     create-react-app quickstart --scripts-version=react-scripts-ts
+     cd quickstart
+     npm install
+   ```
+   </div>
+   <div class='jsx'>
 
-cd quickstart
-
-npm install
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+   ```
+    create-react-app quickstart
+    cd quickstart
+   ```
+   </div>
 
 * Install Syncfusion packages using below command.
 
-```
-npm install @syncfusion/ej2-react-charts --save
-```
+   ```
+    npm install @syncfusion/ej2-react-charts --save
+   ```
 
 ## Add Accumulation Chart to the Project
 

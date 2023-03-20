@@ -33,58 +33,58 @@ The following is the list of dependencies required to use the In-place Editor co
 
 Before starting, need to install [`Create-react-app`](https://github.com/facebookincubator/create-react-app) command line interface into your machine globally by using following command.
 
-```bash
-npm install -g create-react-app
-```
+    ```bash
+    npm install -g create-react-app
+    ```
 
 Create a new project using create-react-app command as follows
 
-<div class='tsx'>
+    <div class='tsx'>
 
-```bash
-create-react-app quickstart --scripts-version=react-scripts-ts
+    ```bash
+    create-react-app quickstart --scripts-version=react-scripts-ts
 
-cd quickstart
+    cd quickstart
 
-```
+    ```
 
-</div>
+    </div>
 
-<div class='jsx'>
+    <div class='jsx'>
 
-```
+    ```
 
-create-react-app quickstart
+    create-react-app quickstart
 
-cd quickstart
+    cd quickstart
 
-```
+    ```
 
-</div>
+    </div>
 
 Install the below required dependency package in order to use the `In-place Editor` component in your application.
 
-```bash
-npm install @syncfusion/ej2-react-inplace-editor –save
-```
+    ```bash
+    npm install @syncfusion/ej2-react-inplace-editor –save
+    ```
 
 The above package installs [In-place Editor dependencies](#dependencies) which are required to render the In-place Editor component in React environment.
 
 * In-place Editor CSS files are available in the `ej2-react-inplace-editor` package folder. Import the In-place Editor component's required CSS references as follows in `src/App.css`.
 
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-inplace-editor/styles/material.css';
-```
+    ```css
+    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-react-inplace-editor/styles/material.css';
+    ```
 
 ## Add the In-place Editor with Textbox
 
@@ -92,52 +92,52 @@ By default, Essential JS2 React TextBox component is rendered in In-place Editor
 
 * Import the In-place Editor component to your `src/App.tsx` file using following code.
 
-`[Class-component]`
+    `[Class-component]`
 
 
 
-```ts
+    ```ts
 
-import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
-import * as React from 'react';
-import './App.css';
+    import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
+    import * as React from 'react';
+    import './App.css';
 
-class App extends React.Component {
-  public model = { placeholder: 'Enter employee name' };
-  public render() {
-    return (
-     <InPlaceEditorComponent id='element' model={this.model} type='Text' value='Andrew'/>
-    );
-  }
-}
+    class App extends React.Component {
+      public model = { placeholder: 'Enter employee name' };
+      public render() {
+        return (
+        <InPlaceEditorComponent id='element' model={this.model} type='Text' value='Andrew'/>
+        );
+      }
+    }
 
-export default App;
+    export default App;
 
-```
-
-
-
-`[Functional-component]`
+    ```
 
 
 
-```ts
+    `[Functional-component]`
 
-import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
-import * as React from 'react';
-import './App.css';
 
-function App () {
-  const model = { placeholder: 'Enter employee name' };
 
-    return (
-     <InPlaceEditorComponent id='element' model={model} type='Text' value='Andrew'/>
-    );
-}
+    ```ts
 
-export default App;
+    import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
+    import * as React from 'react';
+    import './App.css';
 
-```
+    function App () {
+      const model = { placeholder: 'Enter employee name' };
+
+        return (
+        <InPlaceEditorComponent id='element' model={model} type='Text' value='Andrew'/>
+        );
+    }
+
+    export default App;
+
+    ```
 
 
 
@@ -259,9 +259,9 @@ export default App;
 
 * Run the application in the browser using the following command.
 
-```
-npm start
-```
+    ```
+    npm start
+    ```
 
 Output will be as follows:
 

@@ -34,43 +34,43 @@ Following is the list of minimum dependencies required to use the Gantt.
 You can use [create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install create-react-app run the following command.
 
-```
-npm install -g create-react-app
-```
+    ```
+    npm install -g create-react-app
+    ```
 
 * To setup basic React sample use following commands.
 
-<div class='tsx'>
+    <div class='tsx'>
 
-```
+    ```
 
-create-react-app quickstart --scripts-version=react-scripts-ts
+    create-react-app quickstart --scripts-version=react-scripts-ts
 
-cd quickstart
+    cd quickstart
 
-```
+    ```
 
-</div>
+    </div>
 
-<div class='jsx'>
+    <div class='jsx'>
 
-```
+    ```
 
-create-react-app quickstart
+    create-react-app quickstart
 
-cd quickstart
+    cd quickstart
 
-```
+    ```
 
-</div>
+    </div>
 
 ## Adding Syncfusion packages
 
 All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.To install Gantt component, use the following command
 
-```
-npm install @syncfusion/ej2-react-gantt --save
-```
+    ```
+    npm install @syncfusion/ej2-react-gantt --save
+    ```
 
 ## Adding CSS reference
 
@@ -696,11 +696,11 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 The [create-react-app](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
-```
+    ```
 
-npm start
+    npm start
 
-```
+    ```
 
 Output will be appears as follows.
 

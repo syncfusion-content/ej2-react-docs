@@ -22,9 +22,9 @@ Sticky note annotations can be added to the PDF document using the annotation to
 * Click the position where you want to add sticky note annotation in the PDF document.
 * Sticky note annotation will be added in the clicked positions.
 
-![StickyNotesTool](../../pdfviewer/images/stickynotes_tool.png)
+  ![StickyNotesTool](../../pdfviewer/images/stickynotes_tool.png)
 
-Annotation comments can be added to the PDF document using the comment panel.
+  Annotation comments can be added to the PDF document using the comment panel.
 
 * Select a Sticky note annotation in the PDF document and right-click it.
 * Select the Comment option in the context menu that appears.
@@ -47,11 +47,11 @@ The comment, comment reply, and comment status of the annotation can be edited u
 
 * Open the comment panel using the Comment Panel button showing in the annotation toolbar.
 
-![StickyNotesComment](../../pdfviewer/images/commentPanel.png)
+  ![StickyNotesComment](../../pdfviewer/images/commentPanel.png)
 
 You can modify or delete the comments or comments replay and it’s status using the menu option provided in the comment panel.
 
-![StickyNotesEdit](../../pdfviewer/images/sticky_editbtn.png)
+  ![StickyNotesEdit](../../pdfviewer/images/sticky_editbtn.png)
 
 ## Setting default properties during the control initialization
 

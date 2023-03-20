@@ -58,38 +58,27 @@ To know about server-side dependencies, please refer this [page](../document-edi
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app/) to setup the applications.
 To install `create-react-app` run the following command.
 
-```
-npm install -g create-react-app
-```
+   ``` 
+    npm install -g create-react-app
+   ```
 
 * To setup basic `React` sample use following commands.
 
-<div class='tsx'>
+    <div class='tsx'>
 
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-npm install
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```bash
-
-create-react-app quickstart
-
-cd quickstart
-
-npm install
-
-```
-
-</div>
+     ```
+     create-react-app quickstart --scripts-version=react-scripts-ts
+     cd quickstart
+     npm install
+    ```
+   </div>
+  <div class='jsx'>
+  ```
+   create-react-app quickstart
+   cd quickstart
+   npm install
+   ```
+   </div>
 
 >Note: Creating react app without mentioning typescript, will create `src/app.js` instead of `src/app.tsx` file. You can also add the below code snippet in `src/app.js` file.<br><br>To create react app using typescript, you can use this **create-react-app quickstart --template typescript** command. This will create `app.tsx` file under `src` folder of project location.
 

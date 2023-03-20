@@ -18,16 +18,16 @@ The following steps are used to open the thumbnail.
 
 **Step 2:** Use the following code snippet to open thumbnail.
 
-```
-<button onclick="openThumbnail()">Open Thumbnail Pane</button>
+   ```
+    <button onclick="openThumbnail()">Open Thumbnail Pane</button>
 
-<script>
-function openThumbnail() {
+    <script>
+   function openThumbnail() {
     var viewer = document.getElementById('container').ej2_instances[0];
     // Open Thumbnail pane
     viewer.thumbnailViewModule.openThumbnailPane();
-}
-</script>
-```
+   }
+   </script>
+   ```
 
 Find the sample, [how to open the thumbnail pane programmatically](https://stackblitz.com/edit/react-wcs3zf?file=index.html)

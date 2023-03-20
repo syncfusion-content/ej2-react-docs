@@ -18,16 +18,16 @@ The following steps are used to unload the PDF document programmatically.
 
 **Step 2:** Add the following code snippet to perform the unload operation.
 
-```
-<button onclick="unload()">Unload Document</button>
+   ```
+     <button onclick="unload()">Unload Document</button>
 
-<script>
-function unload(){
+   <script>
+   function unload(){
     var viewer = document.getElementById('container').ej2_instances[0];
     // Unload the PDF document.
     viewer.unload();
-}
-</script>
-```
+  }
+   </script>
+  ```
 
 Find the Sample, [how to unload the PDF document programmatically](https://stackblitz.com/edit/react-bcf5pm?devtoolsheight=33&file=index.html)

@@ -49,7 +49,7 @@ When a paragraph style is based on another paragraph style, the inheritance of t
 * Paragraph properties are inherited from the base paragraph style.
 * Span properties are inherited from the base paragraph style.
 
-When a paragraph style is based on a linked style, the inheritance of the properties is as follows:
+   When a paragraph style is based on a linked style, the inheritance of the properties is as follows:
 * Paragraph properties are inherited from the paragraph style part in its base linked style.
 * Span properties are inherited from the span style part in its base linked style.
 
@@ -63,7 +63,7 @@ When a linked style is based on a paragraph style, the hierarchy of the properti
 * Paragraph properties are inherited from the ‘basedOn’ paragraph style.
 * Character properties are inherited from the ‘basedOn’ paragraph style.
 
-When a linked style is based on another linked style, the hierarchy of the properties is as follows:
+   When a linked style is based on another linked style, the hierarchy of the properties is as follows:
 
 * Paragraph properties are inherited from the paragraph style part in its base linked style.
 * Span properties are inherited from the span style part in its base linked style.

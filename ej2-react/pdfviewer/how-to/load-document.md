@@ -18,30 +18,30 @@ The following steps are used to load the PDF document dynamically.
 
 **Step 2:** Use the following code snippet to load the PDF document using a base64 string.
 
-```
-<button id='load1'>LoadDocumentFromBase64</button>
+   ```
+    <button id='load1'>LoadDocumentFromBase64</button>
 
-<script>
-// Load PDF document from Base64 string
-function load_1(){
+    <script>
+    // Load PDF document from Base64 string
+    function load_1(){
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.load('data:application/pdf;base64,'+ AddBase64String, null);
-}
-</script>
-```
+   }
+    </script>
+   ```
 
 **Step 3:** Use the following code snippet to the load PDF document the using document name.
 
-```
-<button id='load2'>LoadDocument</button>
+  ```
+   <button id='load2'>LoadDocument</button>
 
-<script>
-// Load PDF document using file name
-function load_2(){
+    <script>
+    // Load PDF document using file name
+   function load_2(){
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.load('PDF_Succinctly.pdf', null);
-}
-</script>
-```
+   }
+   </script>
+ ```
 
 Find the sample, [how to load PDF documents dynamically](https://stackblitz.com/edit/react-4w9zpt?file=index.html)

@@ -18,16 +18,16 @@ The following steps are used to delete a specific annotation from PDF Document.
 
 **Step 2:** Use the following code snippet to delete a specific annotation using `deleteAnnotationById()` method.
 
-```
-<button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
+  ```
+   <button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
 
-<script>
-  // Delete Annotation by id.
-  function deleteAnnotationbyId() {
+   <script>
+    // Delete Annotation by id.
+   function deleteAnnotationbyId() {
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
-  }
-</script>
-```
+   }
+   </script>
+ ```
 
 Find the sample, [how to delete a specific annotation using deleteAnnotationById](https://stackblitz.com/edit/react-6bwfsn-ckeqja?file=index.html)
