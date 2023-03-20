@@ -46,8 +46,6 @@ Add a custom icon for HTML source editor in the toolbar of Rich Text Editor usin
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/code-mirror-cs3" %}
-
 `[Functional-component]`
 
 {% tabs %}
@@ -58,8 +56,6 @@ Add a custom icon for HTML source editor in the toolbar of Rich Text Editor usin
 {% include code-snippet/rich-text-editor/code-mirror-cs4/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/code-mirror-cs4" %}
 
 ## At.js Integration
 
