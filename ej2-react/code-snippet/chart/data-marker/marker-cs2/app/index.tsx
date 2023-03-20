@@ -16,8 +16,8 @@ function App() {
     { x: "Sep", y: 78 }, { x: "Oct", y: 60 },
     { x: "Nov", y: 58 }, { x: "Dec", y: 56 }
   ];
-  const primaryxAxis: AxisModel = { title: 'Month', valueType: 'Category' };
-  const primaryyAxis: AxisModel = {
+  const prim  const primaryyAxis: AxisModel = {aryxAxis: AxisModel = { title: 'Month', valueType: 'Category' };
+
     title: 'Temperature (°C)', rangePadding: 'None', labelFormat: '{value}°C',
     minimum: 0, maximum: 100
   };
