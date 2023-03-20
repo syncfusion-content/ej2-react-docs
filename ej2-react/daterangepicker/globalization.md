@@ -16,17 +16,17 @@ By default, DateRangePicker date format and meridian names are specific to the `
 
 * Install the `CLDR-Data` package by using the below command (it installs all the CLDR JSON data). To known about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
-```
-npm install cldr-data --save
-```
+    ```
+      npm install cldr-data --save
+    ```
 
 Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
 
 * Now, import the installed CLDR JSON data into the `app.ts` file. To import JSON data we need to install the JSON plugin loader. Here we have used the systemJS JSON plugin loader.
 
-```
-npm install systemjs-plugin-json --save-dev
-```
+     ```
+       npm install systemjs-plugin-json --save-dev
+     ```
 
 * Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
 
@@ -78,27 +78,27 @@ customRange | Text present in the custom range button in presets container.
 
 * Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
 
-```ts
-//Load the L10n from ej2-base
-import { L10n } from "@syncfusion/ej2-base";
+     ```ts
+       //Load the L10n from ej2-base
+       import { L10n } from "@syncfusion/ej2-base";
 
-//load the locale object to set the localized placeholder value
-L10n.load({
-    'de': {
-        'daterangepicker': {
-          placeholder: 'Wählen Sie einen Bereich aus',
-          startLabel: 'Wählen Sie Startdatum',
-          endLabel: 'Wählen Sie Enddatum',
-          applyText: 'Sich bewerben',
-          cancelText: 'Stornieren',
-          selectedDays: 'Ausgewählte Tage',
-          days: 'Tage',
-          customRange: 'benutzerdefinierten Bereich'
+       //load the locale object to set the localized placeholder value
+     L10n.load({
+        'de': {
+           'daterangepicker': {
+            placeholder: 'Wählen Sie einen Bereich aus',
+            startLabel: 'Wählen Sie Startdatum',
+            endLabel: 'Wählen Sie Enddatum',
+            applyText: 'Sich bewerben',
+            cancelText: 'Stornieren',
+            selectedDays: 'Ausgewählte Tage',
+            days: 'Tage',
+            customRange: 'benutzerdefinierten Bereich'
+           }
         }
-    }
-});
+    });
 
-```
+   ```
 
 * Set the culture by using the `locale` property.
 

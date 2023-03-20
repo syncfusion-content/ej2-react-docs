@@ -28,32 +28,32 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
 
 **Step 1:** Pull the word-processor-server image from Docker Hub.
 
-```
-docker pull syncfusion/word-processor-server
-```
+   ```
+    docker pull syncfusion/word-processor-server
+   ```
 
 **Step 2:** Create the docker-compose.yml file with the following code in your file system.
 
-```
-version: '3.4'
+     ```
+     version: '3.4'
 
-services:
- word-processor-server:
+     services:
+     word-processor-server:
     image: syncfusion/word-processor-server:latest
     environment:
       #Provide your license key for activation
       SYNCFUSION_LICENSE_KEY: YOUR_LICENSE_KEY
     ports:
     - "6002:80"
-```
+  ```
 
 **Step 3:** In a terminal tab, navigate to the directory where you’ve placed the docker-compose.yml file and execute the following.
 
-```
-docker-compose up
-```
+   ```
+   docker-compose up
+   ```
 
-Now the Word Processor server Docker instance runs in the localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Word Processor Web API control `http://localhost:6002/api/documenteditor`. It returns the default get method response.
+   Now the Word Processor server Docker instance runs in the localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Word Processor Web API control `http://localhost:6002/api/documenteditor`. It returns the default get method response.
 
 **Step 4:** Append the Docker instance running the URL `(http://localhost:6002/api/documenteditor)` to the service URL in the client-side Word Processor control. For more information about how to get started with the Word Processor control, refer to this [`getting started page.`](https://ej2.syncfusion.com/angular/documentation/document-editor/getting-started)
 
@@ -61,9 +61,9 @@ Now the Word Processor server Docker instance runs in the localhost with the pro
 
 **Step 1:** In the Docker compose file, mount the local directory as a container volume using the following code.
 
-```
-version: '3.4'
-services:
+   ```
+  version: '3.4'
+   services:
  word-processor-server:
     image: syncfusion/word-processor-server:latest
     environment:
@@ -73,14 +73,14 @@ services:
       -  ./data:/app/data
     ports:
     - "6002:80"
-```
+  ```
 
-This YAML definition binds the data folder that is available in the Docker compose file directory.  
+  This YAML definition binds the data folder that is available in the Docker compose file directory.  
 
 **Step 2:** In the data folder, include the dictionary files (.dic, .aff) and JSON file. The JSON file should contain the language based dictionary file configuration in the following format.
 
-```
-  [
+   ```
+   [
       {
         "LanguadeID": 1036,
         "DictionaryPath": "fr_FR.dic",
@@ -93,13 +93,13 @@ This YAML definition binds the data folder that is available in the Docker compo
         "AffixPath": "en_US.aff",
         "PersonalDictPath": "customDict.dic"
       }
-  ]
-```
+    ]
+  ```
 
 >Note: By default, the json file name should be "spellcheck.json". You can also use different file name by mounting the file name to 'SPELLCHECK_JSON_FILENAME' attribute in Docker compose file as below,
 
-```
-version: '3.4'
+   ```
+  version: '3.4'
 
 services:
  word-processor-server:
@@ -113,15 +113,15 @@ services:
       -  ./data:/app/data  
     ports:
     - "6002:80"
-```
+  ```
 
 **Step 3:** For handling the personal dictionary, place an empty .dic file (e.g.,. customDict.dic file) in the data folder.
 
 **Step 4:** Provide the configured volume path to the environment variable like in the following in the Docker compose file.
 
-```
-version: '3.4'
-services:
+   ```
+  version: '3.4'
+  services:
  word-processor-server:
     image: syncfusion/word-processo -server:latest
     environment:
@@ -132,7 +132,7 @@ services:
       -  ./data:/app/data
     ports:
     - "6002:80"
-```
+  ```
 
 ## How to copy template Word documents to Docker image
 

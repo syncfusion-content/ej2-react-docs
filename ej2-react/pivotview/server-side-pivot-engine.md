@@ -36,68 +36,68 @@ This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www
 
 **2.** Then in the Pivot Table sample, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#mode) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/) as **Server** and map the URL of the hosted Server-side application in [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) property of `dataSourceSettings`.
 
-```javascript
+  ```javascript
 
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
 
-function App() {
+  function App() {
 
-  let dataSourceSettings: IDataOptions = {
-    url: 'http://localhost:61379/api/pivot/post',
-    mode: 'Server',
-  }
-  let pivotObj: PivotViewComponent;
-  
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
-};
+    let dataSourceSettings: IDataOptions = {
+      url: 'http://localhost:61379/api/pivot/post',
+      mode: 'Server',
+    }
+    let pivotObj: PivotViewComponent;
+    
+    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+  };
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+  ```
 
 **3.** Frame and set the report based on the data source available in the **PivotController** application.
 
-```javascript
+  ```javascript
 
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
 
-function App() {
+  function App() {
 
-  let dataSourceSettings: IDataOptions = {
-    url: 'http://localhost:61379/api/pivot/post',
-    mode: 'Server',
-    rows: [{
-      name: 'ProductID', caption: 'Product ID'
-    }],
-    formatSettings: [{
-      name: 'Price', format: 'C'
-    }],
-    columns: [{
-      name: 'Year', caption: 'Production Year'
-    }],
-    values: [
-      { name: 'Sold', caption: 'Units Sold' },
-      { name: 'Price', caption: 'Sold Amount' }
-    ],
-  }
-  let pivotObj: PivotViewComponent;
+    let dataSourceSettings: IDataOptions = {
+      url: 'http://localhost:61379/api/pivot/post',
+      mode: 'Server',
+      rows: [{
+        name: 'ProductID', caption: 'Product ID'
+      }],
+      formatSettings: [{
+        name: 'Price', format: 'C'
+      }],
+      columns: [{
+        name: 'Year', caption: 'Production Year'
+      }],
+      values: [
+        { name: 'Sold', caption: 'Units Sold' },
+        { name: 'Price', caption: 'Sold Amount' }
+      ],
+    }
+    let pivotObj: PivotViewComponent;
 
-  return <PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>
-};
+    return <PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>
+  };
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+  ```
 
 **4.** Run the sample to get the following result.
 
-![Pivot Table demo using server-side pivot engine](./images/server-side-demo.png)
+   ![Pivot Table demo using server-side pivot engine](./images/server-side-demo.png)
 
 ## Available configurations in Server-side application
 
@@ -116,102 +116,102 @@ The collection data sources such as List, IEnumerable, and so on are supported. 
 
 In the server-side application **(PivotController)**, a collection type data source is framed in the **DataSource.cs** file as shown in the following.
 
-```csharp
-public class PivotViewData
-{
-    public string ProductID { get; set; }
-    public string Country { get; set; }
-    public string Product { get; set; }
-    public double Sold { get; set; }
-    public double Price { get; set; }
-    public string Year { get; set; }
+  ```csharp
+  public class PivotViewData
+  {
+      public string ProductID { get; set; }
+      public string Country { get; set; }
+      public string Product { get; set; }
+      public double Sold { get; set; }
+      public double Price { get; set; }
+      public string Year { get; set; }
 
-    public List<PivotViewData> GetVirtualData()
-    {
-        List<PivotViewData> VirtualData = new List<PivotViewData>();
+      public List<PivotViewData> GetVirtualData()
+      {
+          List<PivotViewData> VirtualData = new List<PivotViewData>();
 
-        for (int i = 1; i <= 10000; i++)
-        {
-            PivotViewData p = new PivotViewData
-            {
-                ProductID = "PRO-" + ((100 + i)%20),
-                Year = (new string[] { "FY 2015", "FY 2016", "FY 2017", "FY 2018", "FY 2019" })[new Random().Next(5)],
-                Country = (new string[] { "Canada", "France", "Australia", "Germany", "France" })[new Random().Next(5)],
-                Product = (new string[] { "Car", "Van", "Bike", "Flight", "Bus" })[new Random().Next(5)],
-                Price = (3.4 * i) + 500,
-                Sold = (i * 15) + 10
-            };
-            VirtualData.Add(p);
-        }
-        return VirtualData;
-    }
-}
+          for (int i = 1; i <= 10000; i++)
+          {
+              PivotViewData p = new PivotViewData
+              {
+                  ProductID = "PRO-" + ((100 + i)%20),
+                  Year = (new string[] { "FY 2015", "FY 2016", "FY 2017", "FY 2018", "FY 2019" })[new Random().Next(5)],
+                  Country = (new string[] { "Canada", "France", "Australia", "Germany", "France" })[new Random().Next(5)],
+                  Product = (new string[] { "Car", "Van", "Bike", "Flight", "Bus" })[new Random().Next(5)],
+                  Price = (3.4 * i) + 500,
+                  Sold = (i * 15) + 10
+              };
+              VirtualData.Add(p);
+          }
+          return VirtualData;
+      }
+  }
 
-```
+  ```
 
 To bind the data source, set its model type **PivotViewData** to **TValue** of the **PivotEngine** class.
 
-```csharp
-private PivotEngine<DataSource.PivotViewData> PivotEngine = new PivotEngine<DataSource.PivotViewData>();
+  ```csharp
+  private PivotEngine<DataSource.PivotViewData> PivotEngine = new PivotEngine<DataSource.PivotViewData>();
 
-```
+  ```
 
-Then call the data source in **GetData** method of **PivotController.cs** file.
+  Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```csharp
-public async Task<object> GetData(FetchData param)
-{
-    return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
-        async (cacheEntry) =>
-        {
-            cacheEntry.SetSize(1);
-            cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+  ```csharp
+  public async Task<object> GetData(FetchData param)
+  {
+      return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
+          async (cacheEntry) =>
+          {
+              cacheEntry.SetSize(1);
+              cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
 
-            // Here bind the collection type data source.
-            return new DataSource.PivotViewData().GetVirtualData();
+              // Here bind the collection type data source.
+              return new DataSource.PivotViewData().GetVirtualData();
 
-        });
-}
+          });
+  }
 
-```
+  ```
 
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
-```javascript
+  ```javascript
 
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
 
-function App() {
+  function App() {
 
-  let dataSourceSettings: IDataOptions = {
-    url: 'http://localhost:61379/api/pivot/post',
-    mode: 'Server',
-    rows: [{
-      name: 'ProductID', caption: 'Product ID'
-    }],
-    formatSettings: [{
-      name: 'Price', format: 'C'
-    }],
-    columns: [{
-      name: 'Year', caption: 'Production Year'
-    }],
-    values: [
-      { name: 'Sold', caption: 'Units Sold' },
-      { name: 'Price', caption: 'Sold Amount' }
-    ],
-  }
-  let pivotObj: PivotViewComponent;
-  return <PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>
-};
+    let dataSourceSettings: IDataOptions = {
+      url: 'http://localhost:61379/api/pivot/post',
+      mode: 'Server',
+      rows: [{
+        name: 'ProductID', caption: 'Product ID'
+      }],
+      formatSettings: [{
+        name: 'Price', format: 'C'
+      }],
+      columns: [{
+        name: 'Year', caption: 'Production Year'
+      }],
+      values: [
+        { name: 'Sold', caption: 'Units Sold' },
+        { name: 'Price', caption: 'Sold Amount' }
+      ],
+    }
+    let pivotObj: PivotViewComponent;
+    return <PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>
+  };
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+  ```
 
-![Server-Side Pivot Engine using collection](./images/server-side-with-collection-data.png)
+  ![Server-Side Pivot Engine using collection](./images/server-side-with-collection-data.png)
 
 #### JSON
 
@@ -219,110 +219,110 @@ The JSON data from a local *.json file type can be connected to the Pivot Table.
 
 In the Server-side application, **sales-analysis.json** file is available under **DataSource** folder and its model type is defined in **DataSource.cs** file.
 
-```csharp
-public class PivotJSONData
-{
-    public string Date { get; set; }
-    public string Sector { get; set; }
-    public string EnerType { get; set; }
-    public string EneSource { get; set; }
-    public int PowUnits { get; set; }
-    public int ProCost { get; set; }
+  ```csharp
+  public class PivotJSONData
+  {
+      public string Date { get; set; }
+      public string Sector { get; set; }
+      public string EnerType { get; set; }
+      public string EneSource { get; set; }
+      public int PowUnits { get; set; }
+      public int ProCost { get; set; }
 
-    public List<PivotJSONData> ReadJSONData(string url)
-    {
-        WebClient myWebClient = new WebClient();
-        Stream myStream = myWebClient.OpenRead(url);
-        StreamReader stream = new StreamReader(myStream);
-        string result = stream.ReadToEnd();
-        stream.Close();
-        return Newtonsoft.Json.JsonConvert.DeserializeObject<List<PivotJSONData>>(result);
-    }
-}
+      public List<PivotJSONData> ReadJSONData(string url)
+      {
+          WebClient myWebClient = new WebClient();
+          Stream myStream = myWebClient.OpenRead(url);
+          StreamReader stream = new StreamReader(myStream);
+          string result = stream.ReadToEnd();
+          stream.Close();
+          return Newtonsoft.Json.JsonConvert.DeserializeObject<List<PivotJSONData>>(result);
+      }
+  }
 
-```
+  ```
 
 To bind the data source, set its model type **PivotJSONData** to **TValue** of the **PivotEngine** class.
 
-```csharp
-private PivotEngine<DataSource.PivotJSONData> PivotEngine = new PivotEngine<DataSource. PivotJSONData>();
-```
+  ```csharp
+  private PivotEngine<DataSource.PivotJSONData> PivotEngine = new PivotEngine<DataSource. PivotJSONData>();
+  ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```csharp
-public async Task<object> GetData(FetchData param)
-{
-    return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
-        async (cacheEntry) =>
-        {
-            cacheEntry.SetSize(1);
-            cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+  ```csharp
+  public async Task<object> GetData(FetchData param)
+  {
+      return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
+          async (cacheEntry) =>
+          {
+              cacheEntry.SetSize(1);
+              cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
 
-            // Here bind JSON type data source from the sales-analysis.json file.
-            return new DataSource.PivotJSONData().ReadJSONData(_hostingEnvironment.ContentRootPath + "//DataSource//sales-analysis.json");
-        });
-}
+              // Here bind JSON type data source from the sales-analysis.json file.
+              return new DataSource.PivotJSONData().ReadJSONData(_hostingEnvironment.ContentRootPath + "//DataSource//sales-analysis.json");
+          });
+  }
 
-```
+  ```
 
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
-```javascript
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+  ```javascript
+  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
 
-function App() {
+  function App() {
 
-  let dataSourceSettings: IDataOptions = {
-    url: 'http://localhost:61379/api/pivot/post',
-    mode: 'Server',
-    type: 'JSON',
-    rows: [{
-      name: 'EneSource', caption: 'Energy Source'
-    }],
-    formatSettings: [{
-      name: 'ProCost', format: 'C'
-    }],
-    columns: [{
-      name: 'EnerType', caption: 'Energy Type'
-    }],
-    values: [
-      { name: 'PowUnits', caption: 'Units Sold' },
-      { name: 'ProCost', caption: 'Sold Amount' }
-    ],
-  }
-  let pivotObj: PivotViewComponent;
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
-};
+    let dataSourceSettings: IDataOptions = {
+      url: 'http://localhost:61379/api/pivot/post',
+      mode: 'Server',
+      type: 'JSON',
+      rows: [{
+        name: 'EneSource', caption: 'Energy Source'
+      }],
+      formatSettings: [{
+        name: 'ProCost', format: 'C'
+      }],
+      columns: [{
+        name: 'EnerType', caption: 'Energy Type'
+      }],
+      values: [
+        { name: 'PowUnits', caption: 'Units Sold' },
+        { name: 'ProCost', caption: 'Sold Amount' }
+      ],
+    }
+    let pivotObj: PivotViewComponent;
+    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+  };
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+  ```
 
-![Server-Side Pivot Engine with JSON data](./images/server-side-with-json-data.png)
+  ![Server-Side Pivot Engine with JSON data](./images/server-side-with-json-data.png)
 
 JSON data from any remote server, like a local JSON file, can also be supported. It accepts both directly downloadable files (*.json) and web service URLs. To bind this, the URL of the *.json file of a remote server has to be mapped under the **GetData** method. The rest of the configurations are the same as described above.
 
 In the server-side application, the CDN link is used to connect the same **sales-analysis.json** file which is already hosted in the Syncfusion server.
 
-```csharp
-public async Task<object> GetData(FetchData param)
-{
-    return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
-    async (cacheEntry) =>
-    {
-        cacheEntry.SetSize(1);
-        cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+  ```csharp
+  public async Task<object> GetData(FetchData param)
+  {
+      return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
+      async (cacheEntry) =>
+      {
+          cacheEntry.SetSize(1);
+          cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
 
-        // Here bind JSON type data source from remote server.
-        return new DataSource.PivotJSONData().ReadJSONData("http://cdn.syncfusion.com/data/sales-analysis.json");
-    });
-}
+          // Here bind JSON type data source from remote server.
+          return new DataSource.PivotJSONData().ReadJSONData("http://cdn.syncfusion.com/data/sales-analysis.json");
+      });
+  }
 
-```
+  ```
 
 #### CSV
 
@@ -330,221 +330,221 @@ The CSV data from a local *.csv file type can be connected to the Pivot Table. H
 
 In the server application, the **sales.csv** file is available under the **DataSource** folder, and its model type is defined in the **DataSource.cs** file.
 
-```csharp
-public class PivotCSVData
-{
-    public string Region { get; set; }
-    public string Country { get; set; }
-    public string ItemType { get; set; }
-    public string SalesChannel { get; set; }
-    public string OrderPriority { get; set; }
-    public string OrderDate { get; set; }
-    public int OrderID { get; set; }
-    public string ShipDate { get; set; }
-    public int UnitsSold { get; set; }
-    public double UnitPrice { get; set; }
-    public double UnitCost { get; set; }
-    public double TotalRevenue { get; set; }
-    public double TotalCost { get; set; }
-    public double TotalProfit { get; set; }
+  ```csharp
+  public class PivotCSVData
+  {
+      public string Region { get; set; }
+      public string Country { get; set; }
+      public string ItemType { get; set; }
+      public string SalesChannel { get; set; }
+      public string OrderPriority { get; set; }
+      public string OrderDate { get; set; }
+      public int OrderID { get; set; }
+      public string ShipDate { get; set; }
+      public int UnitsSold { get; set; }
+      public double UnitPrice { get; set; }
+      public double UnitCost { get; set; }
+      public double TotalRevenue { get; set; }
+      public double TotalCost { get; set; }
+      public double TotalProfit { get; set; }
 
 
-    public List<string[]> ReadCSVData(string url)
-    {
-        List<string[]> data = new List<string[]>();
-        using (StreamReader reader = new StreamReader(new WebClient().OpenRead(url)))
-        {
-            string line;
-            while ((line = reader.ReadLine()) != null)
-            {
-                line = line.Trim();
+      public List<string[]> ReadCSVData(string url)
+      {
+          List<string[]> data = new List<string[]>();
+          using (StreamReader reader = new StreamReader(new WebClient().OpenRead(url)))
+          {
+              string line;
+              while ((line = reader.ReadLine()) != null)
+              {
+                  line = line.Trim();
 
-                if (!string.IsNullOrWhiteSpace(line))
-                {
-                    data.Add(line.Split(','));
-                }
-            }
-            return data;
-        }
-    }
-}
+                  if (!string.IsNullOrWhiteSpace(line))
+                  {
+                      data.Add(line.Split(','));
+                  }
+              }
+              return data;
+          }
+      }
+  }
 
-```
+  ```
 
 To bind the data source, set its model type **PivotCSVData** to **TValue** of the **PivotEngine** class.
 
-```csharp
-private PivotEngine<DataSource.PivotCSVData> PivotEngine = new PivotEngine<DataSource. PivotCSVData>();
-```
+  ```csharp
+  private PivotEngine<DataSource.PivotCSVData> PivotEngine = new PivotEngine<DataSource. PivotCSVData>();
+  ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```csharp
-public async Task<object> GetData(FetchData param)
-{
-    return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
-        async (cacheEntry) =>
-        {
-            cacheEntry.SetSize(1);
-            cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+  ```csharp
+  public async Task<object> GetData(FetchData param)
+  {
+      return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
+          async (cacheEntry) =>
+          {
+              cacheEntry.SetSize(1);
+              cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
 
-            // Here bind CSV type data source from sales.csv file.
-            return new DataSource.PivotCSVData().ReadCSVData(_hostingEnvironment.ContentRootPath + "//DataSource//sales.csv");
-        });
-}
+              // Here bind CSV type data source from sales.csv file.
+              return new DataSource.PivotCSVData().ReadCSVData(_hostingEnvironment.ContentRootPath + "//DataSource//sales.csv");
+          });
+  }
 
-```
+  ```
 
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
-```javascript
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+  ```javascript
+  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
 
-function App() {
+  function App() {
 
-  let dataSourceSettings: IDataOptions = {
-    url: 'http://localhost:61379/api/pivot/post',
-    mode: 'Server',
-    type: 'CSV',
-    rows: [{
-      name: 'ItemType', caption: 'Item Type'
-    }],
-    formatSettings: [{
-      name: 'UnitPrice', format: 'C'
-    }],
-    columns: [{
-      name: 'Region'
-    }],
-    values: [
-      { name: 'UnitsSold', caption: 'Units Sold' },
-      { name: 'UnitPrice', caption: 'Sold Amount' }
-    ],
-  }
-  let pivotObj: PivotViewComponent;
-    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
-};
+    let dataSourceSettings: IDataOptions = {
+      url: 'http://localhost:61379/api/pivot/post',
+      mode: 'Server',
+      type: 'CSV',
+      rows: [{
+        name: 'ItemType', caption: 'Item Type'
+      }],
+      formatSettings: [{
+        name: 'UnitPrice', format: 'C'
+      }],
+      columns: [{
+        name: 'Region'
+      }],
+      values: [
+        { name: 'UnitsSold', caption: 'Units Sold' },
+        { name: 'UnitPrice', caption: 'Sold Amount' }
+      ],
+    }
+    let pivotObj: PivotViewComponent;
+      return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+  };
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+  ```
 
-![Server-Side Pivot Engine using CSV data](./images/server-side-with-csv-data.png)
+  ![Server-Side Pivot Engine using CSV data](./images/server-side-with-csv-data.png)
 
 CSV data from any remote server, like a local CSV file, can also be supported. It accepts both directly downloadable files (*.csv) and web service URLs. To bind this, the URL of the *.csv file of a remote server has to be mapped under **GetData** method. The rest of the configurations are the same as described above.
 
 In the server application, the CDN link is used to connect the same **sales.csv** file which is already hosted in the Syncfusion server.
 
-```csharp
-public async Task<object> GetData(FetchData param)
-{
-    return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
-        async (cacheEntry) =>
-        {
-            cacheEntry.SetSize(1);
-            cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+  ```csharp
+  public async Task<object> GetData(FetchData param)
+  {
+      return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
+          async (cacheEntry) =>
+          {
+              cacheEntry.SetSize(1);
+              cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
 
-            // Here bind CSV type data source from remote server.
-            return new DataSource.PivotCSVData().ReadCSVData("http://cdn.syncfusion.com/data/sales-analysis.csv");
-        });
-}
+              // Here bind CSV type data source from remote server.
+              return new DataSource.PivotCSVData().ReadCSVData("http://cdn.syncfusion.com/data/sales-analysis.csv");
+          });
+  }
 
-```
+  ```
 
 #### DataTable
 
 In the server-side application, there is a manually created DataTable **BusinessObjectsDataView** by mapping the model type **PivotViewData** in **DataSource.cs** file.
 
-```csharp
-public class BusinessObjectsDataView
-{
-    public DataTable GetDataTable()
-    {
-        DataTable dt = new DataTable("BusinessObjectsDataTable");
-        PropertyDescriptorCollection pdc = TypeDescriptor.GetProperties(typeof(PivotViewData));
-        foreach (PropertyDescriptor pd in pdc)
-        {
-            dt.Columns.Add(new DataColumn(pd.Name, pd.PropertyType));
-        }
-        List<PivotViewData> list = new PivotViewData().GetVirtualData();
-        foreach (PivotViewData bo in list)
-        {
-            DataRow dr = dt.NewRow();
-            foreach (PropertyDescriptor pd in pdc)
-            {
-                dr[pd.Name] = pd.GetValue(bo);
-            }
-            dt.Rows.Add(dr);
-        }
-        return dt;
-    }
-}
+  ```csharp
+  public class BusinessObjectsDataView
+  {
+      public DataTable GetDataTable()
+      {
+          DataTable dt = new DataTable("BusinessObjectsDataTable");
+          PropertyDescriptorCollection pdc = TypeDescriptor.GetProperties(typeof(PivotViewData));
+          foreach (PropertyDescriptor pd in pdc)
+          {
+              dt.Columns.Add(new DataColumn(pd.Name, pd.PropertyType));
+          }
+          List<PivotViewData> list = new PivotViewData().GetVirtualData();
+          foreach (PivotViewData bo in list)
+          {
+              DataRow dr = dt.NewRow();
+              foreach (PropertyDescriptor pd in pdc)
+              {
+                  dr[pd.Name] = pd.GetValue(bo);
+              }
+              dt.Rows.Add(dr);
+          }
+          return dt;
+      }
+  }
 
-```
+  ```
 
 To bind the data source, set its model type **PivotViewData** to **TValue** of the **PivotEngine** class.
 
-```csharp
-private PivotEngine<DataSource.PivotViewData> PivotEngine = new PivotEngine<DataSource.PivotViewData>();
+  ```csharp
+  private PivotEngine<DataSource.PivotViewData> PivotEngine = new PivotEngine<DataSource.PivotViewData>();
 
-```
+  ```
 
-Then call the data source in **GetData** method of **PivotController.cs** file.
+  Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```csharp
-public async Task<object> GetData(FetchData param)
-{
-    return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
-        async (cacheEntry) =>
-        {
-            cacheEntry.SetSize(1);
-            cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+  ```csharp
+  public async Task<object> GetData(FetchData param)
+  {
+      return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
+          async (cacheEntry) =>
+          {
+              cacheEntry.SetSize(1);
+              cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
 
-            // Here bind the DataTable.
-            return new DataSource.BusinessObjectsDataView().GetDataTable();
-        });
-}
+              // Here bind the DataTable.
+              return new DataSource.BusinessObjectsDataView().GetDataTable();
+          });
+  }
 
-```
+  ```
 
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
-```javascript
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+  ```javascript
+  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
 
-function App() {
+  function App() {
 
-  let dataSourceSettings: IDataOptions = {
-    url: 'http://localhost:61379/api/pivot/post',
-    mode: 'Server',
-    rows: [{
-      name: 'ProductID', caption: 'Product ID'
-    }],
-    formatSettings: [{
-      name: 'Price', format: 'C'
-    }],
-    columns: [{
-      name: 'Year', caption: 'Production Year'
-    }],
-    values: [
-      { name: 'Sold', caption: 'Units Sold' },
-      { name: 'Price', caption: 'Sold Amount' }
-    ],
-  }
-  let pivotObj: PivotViewComponent;
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
-};
+    let dataSourceSettings: IDataOptions = {
+      url: 'http://localhost:61379/api/pivot/post',
+      mode: 'Server',
+      rows: [{
+        name: 'ProductID', caption: 'Product ID'
+      }],
+      formatSettings: [{
+        name: 'Price', format: 'C'
+      }],
+      columns: [{
+        name: 'Year', caption: 'Production Year'
+      }],
+      values: [
+        { name: 'Sold', caption: 'Units Sold' },
+        { name: 'Price', caption: 'Sold Amount' }
+      ],
+    }
+    let pivotObj: PivotViewComponent;
+    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+  };
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+  ```
 
-![Server-Side Pivot Engine using DataTable](./images/server-side-with-data-table.png)
+  ![Server-Side Pivot Engine using DataTable](./images/server-side-with-data-table.png)
 
 #### Dynamic
 
@@ -554,192 +554,192 @@ The model type has to be defined in the aforementioned data sources. However, th
 
 In the server-side application, an **ExpandoObject** type data source is available under the class **PivotExpandoData** in **DataSource.cs** file.
 
-```csharp
-public class PivotExpandoData
-{
-    public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
-    public List<ExpandoObject> GetExpandoData()
-    {
-        Orders = Enumerable.Range(1, 75).Select((x) =>
-        {
-            dynamic d = new ExpandoObject();
-            d.OrderID = 1000 + (x % 100);
-            d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
-            d.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
-            d.Verified = (new bool[] { true, false })[new Random().Next(2)];
+  ```csharp
+  public class PivotExpandoData
+  {
+      public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
+      public List<ExpandoObject> GetExpandoData()
+      {
+          Orders = Enumerable.Range(1, 75).Select((x) =>
+          {
+              dynamic d = new ExpandoObject();
+              d.OrderID = 1000 + (x % 100);
+              d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+              d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+              d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
+              d.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
+              d.Verified = (new bool[] { true, false })[new Random().Next(2)];
 
-            return d;
-        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
-        return Orders;
-    }
-}
+              return d;
+          }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+          return Orders;
+      }
+  }
 
-```
+  ```
 
 To bind the data source, set its class **PivotExpandoData** to **TValue** of the **PivotEngine** class.
 
-```csharp
-private PivotEngine<DataSource.PivotExpandoData> PivotEngine = new PivotEngine<DataSource.PivotExpandoData>();
+  ```csharp
+  private PivotEngine<DataSource.PivotExpandoData> PivotEngine = new PivotEngine<DataSource.PivotExpandoData>();
 
-```
+  ```
 
-Then call the data source in **GetData** method of **PivotController.cs** file.
+  Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```csharp
-public async Task<object> GetData(FetchData param)
-{
-    return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
-        async (cacheEntry) =>
-        {
-            cacheEntry.SetSize(1);
-            cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+  ```csharp
+  public async Task<object> GetData(FetchData param)
+  {
+      return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
+          async (cacheEntry) =>
+          {
+              cacheEntry.SetSize(1);
+              cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
 
-            // Here returns ExpandoObject type data source.
-            return new DataSource.PivotExpandoData().GetExpandoData();
-        });
-}
+              // Here returns ExpandoObject type data source.
+              return new DataSource.PivotExpandoData().GetExpandoData();
+          });
+  }
 
-```
+  ```
 
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
-```javascript
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+  ```javascript
+  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
 
-function App() {
+  function App() {
 
-  let dataSourceSettings: IDataOptions = {
-    url: 'http://localhost:61379/api/pivot/post',
-    mode: 'Server',
-    rows: [{
-      name: 'CustomerID', caption: 'Customer ID'
-    }],
-    columns: [{
-      name: 'ShipCountry', caption: 'Ship Country'
-    }],
-    values: [
-      { name: 'Freight', caption: 'Units Sold' }
-    ],
-  }
-  let pivotObj: PivotViewComponent;
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
-};
+    let dataSourceSettings: IDataOptions = {
+      url: 'http://localhost:61379/api/pivot/post',
+      mode: 'Server',
+      rows: [{
+        name: 'CustomerID', caption: 'Customer ID'
+      }],
+      columns: [{
+        name: 'ShipCountry', caption: 'Ship Country'
+      }],
+      values: [
+        { name: 'Freight', caption: 'Units Sold' }
+      ],
+    }
+    let pivotObj: PivotViewComponent;
+    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+  };
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+  ```
 
-![Server-Side Pivot Engine using ExpandoObject](./images/server-side-with-expandoobject.png)
+  ![Server-Side Pivot Engine using ExpandoObject](./images/server-side-with-expandoobject.png)
 
 ##### Dynamic Objects
 
 In the server-side application, a data source is framed by dynamic objects which is available under the class **PivotDynamicData** in the **DataSource.cs** file.
 
-```csharp
-public class PivotDynamicData
-{
-    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
-    public List<DynamicDictionary> GetDynamicData()
-    {
-        Orders = Enumerable.Range(1, 100).Select((x) =>
-        {
-            dynamic d = new DynamicDictionary();
-            d.OrderID = 100 + x;
-            d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
-            d.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
-            d.Verified = (new bool[] { true, false })[new Random().Next(2)];
-            return d;
-        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
-        return Orders;
-    }
+  ```csharp
+  public class PivotDynamicData
+  {
+      public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
+      public List<DynamicDictionary> GetDynamicData()
+      {
+          Orders = Enumerable.Range(1, 100).Select((x) =>
+          {
+              dynamic d = new DynamicDictionary();
+              d.OrderID = 100 + x;
+              d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+              d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+              d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
+              d.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
+              d.Verified = (new bool[] { true, false })[new Random().Next(2)];
+              return d;
+          }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+          return Orders;
+      }
 
-    public class DynamicDictionary : System.Dynamic.DynamicObject
-    {
-        Dictionary<string, object> dictionary = new Dictionary<string, object>();
-        public override bool TryGetMember(GetMemberBinder binder, out object result)
-        {
-            string name = binder.Name;
-            return dictionary.TryGetValue(name, out result);
-        }
-        public override bool TrySetMember(SetMemberBinder binder, object value)
-        {
-            dictionary[binder.Name] = value;
-            return true;
-        }
-        //The "GetDynamicMemberNames" method of the "DynamicDictionary" class must be overridden and return the property names to perform data operation and editing while using dynamic objects.
-        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
-        {
-            return this.dictionary?.Keys;
-        }
-    }
-}
+      public class DynamicDictionary : System.Dynamic.DynamicObject
+      {
+          Dictionary<string, object> dictionary = new Dictionary<string, object>();
+          public override bool TryGetMember(GetMemberBinder binder, out object result)
+          {
+              string name = binder.Name;
+              return dictionary.TryGetValue(name, out result);
+          }
+          public override bool TrySetMember(SetMemberBinder binder, object value)
+          {
+              dictionary[binder.Name] = value;
+              return true;
+          }
+          //The "GetDynamicMemberNames" method of the "DynamicDictionary" class must be overridden and return the property names to perform data operation and editing while using dynamic objects.
+          public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+          {
+              return this.dictionary?.Keys;
+          }
+      }
+  }
 
-```
+  ```
 
 To bind the data source, set its class **PivotDynamicData** to **TValue** of the **PivotEngine** class.
 
-```csharp
-private PivotEngine<DataSource.PivotDynamicData> PivotEngine = new PivotEngine<DataSource.PivotDynamicData>();
+  ```csharp
+  private PivotEngine<DataSource.PivotDynamicData> PivotEngine = new PivotEngine<DataSource.PivotDynamicData>();
 
-```
+  ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```csharp
-public async Task<object> GetData(FetchData param)
-{
-    return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
-        async (cacheEntry) =>
-        {
-            cacheEntry.SetSize(1);
-            cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+  ```csharp
+  public async Task<object> GetData(FetchData param)
+  {
+      return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
+          async (cacheEntry) =>
+          {
+              cacheEntry.SetSize(1);
+              cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
 
-            // Here bind data source with dynamic objects.
-            return new DataSource.PivotDynamicData().GetDynamicData();
-        });
-}
+              // Here bind data source with dynamic objects.
+              return new DataSource.PivotDynamicData().GetDynamicData();
+          });
+  }
 
-```
+  ```
 
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
-```javascript
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+  ```javascript
+  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
 
-function App() {
+  function App() {
 
-  let dataSourceSettings: IDataOptions = {
-    url: 'http://localhost:61379/api/pivot/post',
-    mode: 'Server',
-    rows: [{
-      name: 'CustomerID', caption: 'Customer ID'
-    }],
-    columns: [{
-      name: 'ShipCountry', caption: 'Ship Country'
-    }],
-    values: [
-      { name: 'Freight', caption: 'Units Sold' }
-    ],
-  }
-  let pivotObj: PivotViewComponent;
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
-};
+    let dataSourceSettings: IDataOptions = {
+      url: 'http://localhost:61379/api/pivot/post',
+      mode: 'Server',
+      rows: [{
+        name: 'CustomerID', caption: 'Customer ID'
+      }],
+      columns: [{
+        name: 'ShipCountry', caption: 'Ship Country'
+      }],
+      values: [
+        { name: 'Freight', caption: 'Units Sold' }
+      ],
+    }
+    let pivotObj: PivotViewComponent;
+    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+  };
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+  ```
 
-![Server-Side Pivot Engine using Dynamic Objects](./images/server-side-with-dynamic-object.png)
+  ![Server-Side Pivot Engine using Dynamic Objects](./images/server-side-with-dynamic-object.png)
 
 ### Controller Configuration
 
@@ -747,24 +747,24 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 In the server-side application, the [`Memory Cache`](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.caching.memorycache?view=dotnet-plat-ext-5.0) option is used to store the data source and engine properties in RAM, which will be used for UI operations. To improve performance, this limits the execution of all initial rendering code to regenerate the aggregated values during each UI operation. The codes below show how we use the memory cache option in the **GetEngine** method to store engine properties.
 
-```csharp
-public async Task<EngineProperties> GetEngine(FetchData param)
-{
-    isRendered = false;
-    // Engine properties are stored in memory cache with GUID "parem.Hash".
-    return await _cache.GetOrCreateAsync("engine" + param.Hash,
-        async (cacheEntry) =>
-        {
-            isRendered = true;
-            cacheEntry.SetSize(1);
-            // Memory cache expiration time can be set here.
-            cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
-            PivotEngine.Data = await GetData(param);
-            return await PivotEngine.GetEngine(param);
-        });
-}
+  ```csharp
+  public async Task<EngineProperties> GetEngine(FetchData param)
+  {
+      isRendered = false;
+      // Engine properties are stored in memory cache with GUID "parem.Hash".
+      return await _cache.GetOrCreateAsync("engine" + param.Hash,
+          async (cacheEntry) =>
+          {
+              isRendered = true;
+              cacheEntry.SetSize(1);
+              // Memory cache expiration time can be set here.
+              cacheEntry.AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(60);
+              PivotEngine.Data = await GetData(param);
+              return await PivotEngine.GetEngine(param);
+          });
+  }
 
-```
+  ```
 
 The engine properties are stored in RAM as a cache with a unique ID (GUID) that is transferred from the client-side source code. The GUID is generated at random and will be changed if the page containing the Pivot Table is refreshed or opened in a new tab/window. As a result, each GUID's memory cache contains unique information, and the component operates independently.
 

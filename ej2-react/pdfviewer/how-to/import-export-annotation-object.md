@@ -18,27 +18,27 @@ The following steps are used to import and export annotation as object.
 
 **Step 2:** Use the following code snippet to perform import and export annotation.
 
-```
-<button onclick="exportAnnotation()">Export Annotation</button>
-<button onclick="importAnnotation()">Import Annotation</button>
+   ```
+    <button onclick="exportAnnotation()">Export Annotation</button>
+    <button onclick="importAnnotation()">Import Annotation</button>
 
-<script>
-var exportObject;
-// Export annotation as object.
-function exportAnnotation(){
+    <script>
+    var exportObject;
+    // Export annotation as object.
+  function exportAnnotation(){
   var viewer = document.getElementById('container').ej2_instances[0];
   viewer.exportAnnotationsAsObject().then(function(value) {
   exportObject = value;
-  });
-}
+   });
+  }
 
-// Import annotation that are exported as object.
-function importAnnotation() {
-  var viewer = document.getElementById('container').ej2_instances[0];
-  viewer.importAnnotation(JSON.parse(exportObject));
-}
-</script>
-```
+  // Import annotation that are exported as object.
+  function importAnnotation() {
+   var viewer = document.getElementById('container').ej2_instances[0];
+   viewer.importAnnotation(JSON.parse(exportObject));
+  }
+  </script>
+ ```
 
 Find the Sample, [how to import and export annotation as object](https://stackblitz.com/edit/react-dtuvxn?devtoolsheight=33&file=index.html)
 
@@ -48,26 +48,26 @@ The PDF Viewer library allows you to import annotations via code behind by using
 
 The following steps are used to import and export annotation programmatically.
 
-{% raw %}
+   {% raw %}
 
-```javascript
-{/* Render the PDF Viewer */}
-<PdfViewerComponent
-  id="container"
-  documentPath="PDF_Succinctly.pdf"
-  documentLoad={this.documentLoad}
-  serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-  style={{ height: '640px' }}>
-</PdfViewerComponent>
+    ```javascript
+     {/* Render the PDF Viewer */}
+     <PdfViewerComponent
+     id="container"
+     documentPath="PDF_Succinctly.pdf"
+     documentLoad={this.documentLoad}
+     serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+    style={{ height: '640px' }}>
+    </PdfViewerComponent>
 
-//Event triggers while loading document into PdfViewer.
- documentLoad(event) {
-  var viewer = document.getElementById('container').ej2_instances[0];
-  //API to add annotation programmatically for initial loading.
-  viewer.importAnnotation({
-    pdfAnnotation: {
-      0: {
-        shapeAnnotation: [
+   //Event triggers while loading document into PdfViewer.
+   documentLoad(event) {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    //API to add annotation programmatically for initial loading.
+    viewer.importAnnotation({
+      pdfAnnotation: {
+       0: {
+         shapeAnnotation: [
           {
             ShapeAnnotationType: 'Square',
             Author: 'Guest',
@@ -149,26 +149,26 @@ The following steps are used to import and export annotation programmatically.
             IsPrint: true,
             ExistingCustomData: null,
           },
-        ],
+         ],
+       },
       },
-    },
-  });
-}
-```
-{% endraw %}
+    });
+   }
+ ```
+  {% endraw %}
 
 The following code example represents how to export annotation in a button click.
 
-```
-<button onclick="exportAnnotation()">ExportAnnotation</button>
-<script>
+  ```
+   <button onclick="exportAnnotation()">ExportAnnotation</button>
+   <script>
     //Event triggers when you click the ExportAnnotation button.
     function exportAnnotation() {
       var viewer = document.getElementById('container').ej2_instances[0];
       //API to export annotation.
       viewer.exportAnnotation();
     }
-</script>
-```
+   </script>
+  ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Annotations/Import%20and%20export%20annotations).

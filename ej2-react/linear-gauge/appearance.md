@@ -61,7 +61,7 @@ The area used to render the ranges and pointers at the center position of the ga
 * Rounded Rectangle
 * Thermometer
 
-The type of the container can be modified by using the [`type`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/containerModel/#type) property in [`container`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/containerModel/). The container can be customized by using the following properties in [`container`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/containerModel/).
+   The type of the container can be modified by using the [`type`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/containerModel/#type) property in [`container`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/containerModel/). The container can be customized by using the following properties in [`container`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/containerModel/).
 
 * [`offset`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/containerModel/#offset) - To place the container with the specified distance from the axis of the Linear Gauge.
 * [`width`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/containerModel/#width) - To set the thickness of the container.

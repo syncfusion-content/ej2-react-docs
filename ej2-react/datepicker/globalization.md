@@ -16,11 +16,11 @@ By default, DatePicker date format, week, and month names are specific to the `A
 
 * Install the `CLDR-Data` package by using the following command (installs all the CLDR JSON data). To know more about CLDR-Data refer to the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings)link.
 
-```
-npm install cldr-data --save
-```
+    ```
+     npm install cldr-data --save
+    ```
 
-Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+    Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
 
 * Now import the installed CLDR JSON data into the `app.ts` file.
 
@@ -62,20 +62,20 @@ placeholder | Hint to describe expected value in input element.
 
 * Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
 
-```ts
-//Load the L10n from ej2-base
-import { L10n } from "@syncfusion/ej2-base";
+    ```ts
+      //Load the L10n from ej2-base
+     import { L10n } from "@syncfusion/ej2-base";
 
-//load the locale object to set the localized placeholder value
-L10n.load({
-  de: {
-      datepicker: {
-            placeholder: "Wählen Sie ein Datum",
-            today:"heute"
+     //load the locale object to set the localized placeholder value
+     L10n.load({
+       de: {
+          datepicker: {
+             placeholder: "Wählen Sie ein Datum",
+             today:"heute"
+           }
         }
-    }
-});
-```
+     });
+   ```
 
 * Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datepicker#locale) property. The below code example, initialize the DatePicker component in `German` culture with corresponding localized text.
 

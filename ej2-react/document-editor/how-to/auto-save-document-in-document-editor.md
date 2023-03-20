@@ -16,16 +16,16 @@ The following example illustrates how to auto save the document in AWS S3.
 
 * In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#saveasblob) method.
 
-```ts
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import {
-  DocumentEditorContainerComponent,
-  Toolbar,
-} from '@syncfusion/ej2-react-documenteditor';
+   ```
+       import * as ReactDOM from 'react-dom';
+       import * as React from 'react';
+       import {
+      DocumentEditorContainerComponent,
+     Toolbar,
+    }  from '@syncfusion/ej2-react-documenteditor';
 
-DocumentEditorContainerComponent.Inject(Toolbar);
-function App() {
+  DocumentEditorContainerComponent.Inject(Toolbar);
+  function App() {
   let container: DocumentEditorContainerComponent;
   let contentChanged: boolean = false;
   React.useEffect(() => {
@@ -78,49 +78,49 @@ function App() {
       serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
       enableToolbar={true} created={onCreate} contentChange={onContentChange}
     />
-  );
-}
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
-```
+   );
+  }
+  export default App;
+  ReactDOM.render(<App />, document.getElementById('sample'));
+ ```
 
 * In server-side, configure the access key and secret key in `web.config` file and register profile in `startup.cs`.
 
-In `web.config`, add key like below format:
+   In `web.config`, add key like below format:
 
-```c#
- <appSettings>
+   ```c#
+   <appSettings>
     <add key="AWSProfileName" value="sync_development" />
     <add key="AWSAccessKey" value="" />
     <add key="AWSSecretKey" value="" />
-  </appSettings>
-```
+   </appSettings>
+  ```
 
 In `startup.cs`, register profile in below format:
 
-```c#
-Amazon.Util.ProfileManager.RegisterProfile("sync_development","", "");
-```
+  ```c#
+   Amazon.Util.ProfileManager.RegisterProfile("sync_development","", "");
+  ```
 
 * In server-side, Receives the stream content from client-side and process it to save the document in aws s3. Add Web API in controller file like below to save the document in aws s3.
 
-```c#
-[AcceptVerbs("Post")]
-[HttpPost]
-[EnableCors("AllowAllOrigins")]
-[Route("SaveToS3")]
-public string SaveToS3()
-{
+  ```
+  [AcceptVerbs("Post")]
+  [HttpPost]
+  [EnableCors("AllowAllOrigins")]
+  [Route("SaveToS3")]
+   public string SaveToS3()
+  {
     IFormFile file = HttpContext.Request.Form.Files[0];
     Stream stream = new MemoryStream();
     file.CopyTo(stream);
     UploadFileStreamToS3(stream, "documenteditor", "", "GettingStarted.docx");
     stream.Close();
     return "Sucess";
-}
+  }
 
-public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketName, string subDirectoryInBucket, string fileNameInS3)
-{
+  public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketName, string subDirectoryInBucket, string fileNameInS3)
+  {
     AWSCredentials credentials = new StoredProfileAWSCredentials("sync_development");
     IAmazonS3 client = new AmazonS3Client(credentials, Amazon.RegionEndpoint.USEast1);
     TransferUtility utility = new TransferUtility(client);
@@ -139,7 +139,7 @@ public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketNa
     utility.Upload(request); //commensing the transfer  
 
     return true; //indicate that the file was sent  
-}
-```
+  } 
+ ```
 
 Get the complete working sample in this [`link`](https://github.com/SyncfusionExamples/Auto-Save-documents-in-Word-Processor).

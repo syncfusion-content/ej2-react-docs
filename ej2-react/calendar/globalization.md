@@ -19,11 +19,11 @@ To go with the different culture other than `English`, follow the below steps.
 
 * Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). To know more about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
-```
-npm install cldr-data --save
-```
+    ```
+      npm install cldr-data --save
+    ```
 
-Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+    Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
 
 * Now import the installed CLDR JSON data into the `app.ts` file.
 
@@ -65,17 +65,17 @@ today | Name of the button to choose Today date.
 
 * Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
 
-```ts
-//Load the L10n, loadCldr from ej2-base
-import { L10n } from "@syncfusion/ej2-base";
+     ```ts
+      //Load the L10n, loadCldr from ej2-base
+     import { L10n } from "@syncfusion/ej2-base";
 
-//load the locale object to set the localized placeholder value
-L10n.load({
-    'de': {
-        'calendar': { today:'heute' }
-    }
-});
-```
+     //load the locale object to set the localized placeholder value
+     L10n.load({
+        'de': {
+           'calendar': { today:'heute' }
+         }
+       });
+     ```
 
 * Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/calendar#locale) property.
 

@@ -140,29 +140,29 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
 * `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Sort field`](./sorting/#member-sorting)| Sort field |
-| [`Value sort icon`](./sorting/#value-sorting)| Sort value|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Sort field`](./sorting/#member-sorting)| Sort field |
+    | [`Value sort icon`](./sorting/#value-sorting)| Sort value|
 
-* `fieldInfo`: It holds the selected field information.
+    * `fieldInfo`: It holds the selected field information.
 
 >Note: This option is applicable only when the field based UI actions are performed such as filtering, sorting, removing field from grouping bar, editing and aggregation type change.
 
 * `cancel`: It allows user to restrict the current action.
 
-In the below sample, sort action can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
+    In the below sample, sort action can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs283/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs283/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs283/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs283/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs283" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs283" %}
 
 ### ActionComplete
 
@@ -172,10 +172,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 * `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Sort field`](./sorting/#member-sorting)| Field sorted|
-| [`Value sort icon`](./sorting/#value-sorting)| Value sorted|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Sort field`](./sorting/#member-sorting)| Field sorted|
+    | [`Value sort icon`](./sorting/#value-sorting)| Value sorted|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -183,16 +183,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 * `actionInfo`: It holds the unique information about the current UI action. For example, if sorting is completed, the event argument contains information such as sort order and the field name.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs284/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs284/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs284/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs284/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs284" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs284" %}
 
 ### ActionFailure
 
@@ -200,20 +200,20 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 * `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Sort field`](./sorting/#member-sorting)| Sort field |
-| [`Value sort icon`](./sorting/#value-sorting)| Sort value|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Sort field`](./sorting/#member-sorting)| Sort field |
+    | [`Value sort icon`](./sorting/#value-sorting)| Sort value|
 
 * `errorInfo`: It holds the error information of the current UI action.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs285/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs285/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs285/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs285/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs285" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs285" %}

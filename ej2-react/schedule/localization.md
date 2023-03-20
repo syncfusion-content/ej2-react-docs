@@ -22,26 +22,26 @@ By default, Scheduler is set to follow the English culture ('en-US'). If you wan
 
 * Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). For more information about CLDR-Data, refer to this [link](http://cldr.unicode.org/index/cldr-spec/json).
 
-```
-npm install cldr-data --save
-```
+   ```
+   npm install cldr-data --save
+   ```
 
-Once the package is installed, you can find the culture specific JSON data under the location `/node_modules/cldr-data`.
+   Once the package is installed, you can find the culture specific JSON data under the location `/node_modules/cldr-data`.
 
 * Now import the installed CLDR JSON data into the `app.ts` file. To import JSON data, you need to install the JSON plugin loader. Here, we have used the SystemJS JSON plugin loader.
 
-```
-npm install systemjs-plugin-json --save-dev
-```
+   ```
+   npm install systemjs-plugin-json --save-dev
+   ```
 
 * Once installed, configure the `system.config.js` configuration settings as shown in the following code to map the `systemjs-plugin-json` loader.
 
-```ts
-System.config({
-    paths: {
-        'syncfusion:': 'npm:@syncfusion/'
-    },
-    map: {
+  ```ts
+   System.config({
+     paths: {
+         'syncfusion:': 'npm:@syncfusion/'
+     } ,
+     map: {
         app: 'app',
 
         //Syncfusion packages mapping
@@ -58,33 +58,33 @@ System.config({
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         "cldr-data": 'npm:cldr-data',
         "plugin-json": "npm:systemjs-plugin-json/json.js"
-    },
-    meta: {
+     },
+      meta: {
         '*.json': { loader: 'plugin-json' }
-    },
-    packages: {
+    } ,
+     packages: {
         'app': { main: 'app', defaultExtension: 'js' },
         'cldr-data': { main: 'index.js', defaultExtension: 'js' }
-    }
-});
+     }
+  });
 
-System.import('app');
+  System.import('app');
 
-```
+  ```
 
 * Now import the required cultures from the installed location to `app.ts` file as given in the following code example.
 
-```ts
-//import the loadCldr from ej2-base
-import { loadCldr} from '@syncfusion/ej2-base';
+   ```ts
+    //import the loadCldr from ej2-base
+    import { loadCldr} from '@syncfusion/ej2-base';
 
-loadCldr(
+   loadCldr(
     require('cldr-data/supplemental/numberingSystems.json'),
     require('cldr-data/main/fr-CH/ca-gregorian.json'),
     require('cldr-data/main/fr-CH/numbers.json'),
     require('cldr-data/main/fr-CH/timeZoneNames.json')
-    );
-```
+     );
+  ```
 
 * Set the culture to Scheduler by using the `locale` property.
 

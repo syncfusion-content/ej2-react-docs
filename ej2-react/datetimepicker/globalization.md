@@ -16,11 +16,11 @@ By default, DateTimePicker date format, week, month, time format and meridian na
 
 * Install the `CLDR-Data` package by using the following command (installs all the CLDR JSON data). To know more about CLDR-Data refer to the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
-```
-npm install cldr-data --save
-```
+    ```
+     npm install cldr-data --save
+    ```
 
-Once the package is installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+    Once the package is installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
 
 * Import the installed CLDR JSON data into the `app.ts` file.
 
@@ -64,21 +64,21 @@ placeholder | Hint to describe expected value in input element.
 
 * Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
 
-```ts
+    ```ts
 
-//Load the L10n from ej2-base
-import { L10n } from '@syncfusion/ej2-base';
+     //Load the L10n from ej2-base
+      import { L10n } from '@syncfusion/ej2-base';
 
-//load the locale object to set the localized placeholder value
-L10n.load({
-    'de': {
-        'datetimepicker': {
-            placeholder: 'Wählen Sie ein Datum und eine Uhrzeit aus',
-            today:'heute'
+      //load the locale object to set the localized placeholder value
+       L10n.load({
+         'de': {
+           'datetimepicker': {
+             placeholder: 'Wählen Sie ein Datum und eine Uhrzeit aus',
+             today:'heute'
+           }
         }
-    }
-});
-```
+    });
+   ```
 
 * Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#locale) property. In the following code example, the DateTimePicker is initialized in `German` culture with corresponding localized text.
 
