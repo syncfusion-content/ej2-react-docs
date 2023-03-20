@@ -392,13 +392,13 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
 * `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Sort icon| Sort field|
-| Filter icon| Filter field|
-| Aggregation (Value type drop down and menu)| Aggregate field|
-| Remove icon| Remove field|
-| Edit icon| Edit calculated field|
+        | Action | Action Name|
+        |------|-------------|
+        | Sort icon| Sort field|
+        | Filter icon| Filter field|
+        | Aggregation (Value type drop down and menu)| Aggregate field|
+        | Remove icon| Remove field|
+        | Edit icon| Edit calculated field|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -406,18 +406,18 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
 * `cancel`: It allows user to restrict the current action.
 
-In the below sample, grouping bar UI actions such as sorting and filtering can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
+    In the below sample, grouping bar UI actions such as sorting and filtering can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs143/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs143/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs143/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs143/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs143" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs143" %}
 
 ### ActionComplete
 
@@ -427,13 +427,13 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 * `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Sort icon| Field sorted|
-| Filter icon| Field filtered|
-| Aggregation (Value type drop down and menu)| Field aggregated|
-| Remove icon| Field removed|
-| Edit icon| Calculated field edited|
+    | Action | Action Name|
+    |------|-------------|
+    | Sort icon| Field sorted|
+    | Filter icon| Field filtered|
+    | Aggregation (Value type drop down and menu)| Field aggregated|
+    | Remove icon| Field removed|
+    | Edit icon| Calculated field edited|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -441,16 +441,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 * `actionInfo`: It holds the unique information about the current UI action. For example, if sorting is completed, the event argument contains information such as sort order and the field name.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs144/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs144/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs144/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs144/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs144" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs144" %}
 
 ### ActionFailure
 
@@ -458,26 +458,26 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 * `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Sort icon| Sort field|
-| Filter icon| Filter field|
-| Aggregation (Value type drop down and menu)| Aggregate field|
-| Remove icon| Remove field|
-| Edit icon| Edit calculated field|
+    | Action | Action Name|
+    |------|-------------|
+    | Sort icon| Sort field|
+    | Filter icon| Filter field|
+    | Aggregation (Value type drop down and menu)| Aggregate field|
+    | Remove icon| Remove field|
+    | Edit icon| Edit calculated field|
 
 * `errorInfo`: It holds the error information of the current UI action.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs145/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs145/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs145/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs145/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs145" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs145" %}
 
 ## See Also
 

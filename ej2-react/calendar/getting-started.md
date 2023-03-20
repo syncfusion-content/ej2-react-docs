@@ -37,18 +37,16 @@ The below list of dependencies are required to use the `Calendar` component in y
 
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-```
-npm install -g create-react-app
-```
+     ```
+       npm install -g create-react-app
+     ```
 
 * To setup basic `React` sample use following commands.
 
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
+      ```
+        create-react-app quickstart --scripts-version=react-scripts-ts
+        cd quickstart
+      ```
 
 ## Adding Syncfusion packages
 
@@ -111,9 +109,9 @@ ReactDOM.render(<App />, document.getElementById('element'));
 
 Now run the `npm start` command in the console, it will run your application and open the browser window.
 
-```
-npm start
-```
+   ```
+    npm start
+   ```
 
 The below examples shows the basic calendar component.
 

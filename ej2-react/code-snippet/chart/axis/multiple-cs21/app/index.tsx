@@ -2,7 +2,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject, IAxisLabelRenderEventArgs,StackingColumnSeries, ColumnSeries, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries, Selection} from'@syncfusion/ej2-react-charts';
-import { smartAxisData } from 'datasource.ts';
 
 function App() {
 

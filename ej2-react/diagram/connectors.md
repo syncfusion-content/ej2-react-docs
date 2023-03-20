@@ -86,16 +86,16 @@ The following code example illustrates how to update a connector's source point,
 
 * The following code example illustrates how to connect two nodes.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/connectors/es5ConnectNode-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/connectors/es5ConnectNode-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+      {% tabs %}
+      {% highlight js tabtitle="index.jsx" %}
+      {% include code-snippet/diagram/connectors/es5ConnectNode-cs1/app/index.jsx %}
+      {% endhighlight %}
+      {% highlight ts tabtitle="index.tsx" %}
+      {% include code-snippet/diagram/connectors/es5ConnectNode-cs1/app/index.tsx %}
+      {% endhighlight %}
+      {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectNode-cs1" %}
+     {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectNode-cs1" %}
 
 * When you remove NodeConstraints [`InConnect`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove NodeConstraints [`OutConnect`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) from Default, the node accepts only an incoming connection to dock in it.
 
@@ -712,42 +712,39 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
 
 * Dependency LineRouting module should be injected to the application as the following code snippet.
 
-```ts
+    ```ts
 
-import { Diagram,  LineRouting } from "@syncfusion/ej2-react-diagrams";
-/**
- * Injecting the automatic line routing module.
- */
-Diagram.Inject(LineRouting);
-
-```
+     import { Diagram,  LineRouting } from "@syncfusion/ej2-react-diagrams";
+     /**
+     * Injecting the automatic line routing module.
+      */
+     Diagram.Inject(LineRouting);
+   ```
 
 * Now, the line routing constraints must be included to the default diagram constraints to enable automatic line routing support like below.
 
-```ts
-
-/**
- *  Initialize the Diagram
- */
-  <DiagramComponent constraints={DiagramConstraints.Default | DiagramConstraints.LineRouting} />
-
-```
+    ```ts
+     /**
+     *  Initialize the Diagram
+     */
+       <DiagramComponent constraints={DiagramConstraints.Default | DiagramConstraints.LineRouting} />
+    ```
 
 * The following code block shows how to create the diagram with specifying nodes, connectors, constraints, and necessary modules for line routing.
 
- {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/connectors/es5ConnectorsLineRouting-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/connectors/es5ConnectorsLineRouting-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors/es5ConnectorsLineRouting-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
+     {% tabs %}
+     {% highlight js tabtitle="index.jsx" %}
+     {% include code-snippet/diagram/connectors/es5ConnectorsLineRouting-cs1/app/index.jsx %}
+     {% endhighlight %}
+     {% highlight ts tabtitle="index.tsx" %}
+     {% include code-snippet/diagram/connectors/es5ConnectorsLineRouting-cs1/app/index.tsx %}
+     {% endhighlight %}
+     {% highlight html tabtitle="index.html" %}
+     {% include code-snippet/diagram/connectors/es5ConnectorsLineRouting-cs1/index.html %}
+     {% endhighlight %}
+     {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorsLineRouting-cs1" %}
+    {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorsLineRouting-cs1" %}
 
 * In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#constraints-ConnectorConstraints) property of the connector like the following code snippet.
 

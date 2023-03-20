@@ -28,27 +28,20 @@ The list of dependencies required to use the Floating Action Button component in
 You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup
 the applications. To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+       ```bash
+         npm install -g create-react-app
+       ```
 
 Start a new project using create-react-app command as follows
 
-```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
-
-```bash
-
-create-react-app quickstart
-
-cd quickstart
-
-```
+        ```
+          create-react-app quickstart --scripts-version=react-scripts-ts
+          cd quickstart
+        ```
+        ```
+         create-react-app quickstart
+         cd quickstart
+        ```
 
 > 'react-scripts-ts' is used for creating React app with typescript.
 
@@ -58,9 +51,9 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 
 To install Floating Action Button component, use the following command
 
-```bash
-npm install @syncfusion/ej2-react-buttons --save
-```
+   ```bash
+      npm install @syncfusion/ej2-react-buttons --save
+  ```
 
 ## Adding Floating Action Button Component to the Application
 
@@ -112,9 +105,9 @@ Import the Floating Action Button component's required CSS references as follows
 
 Run the application in the browser using the following command:
 
-```
-npm start
-```
+    ```
+     npm start
+    ```
 
 The following example shows a basic Floating Action Button component.
 

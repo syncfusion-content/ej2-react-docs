@@ -24,44 +24,44 @@ Create a resource group using the [`az group create`](https://docs.microsoft.com
 
 The following example creates a resource group named documenteditorresourcegroup in the eastus location.
 
-```
-az group create --name documenteditorresourcegroup --location "East US"
-```
+   ```
+   az group create --name documenteditorresourcegroup --location "East US"
+  ```
 
 **Step 2:** Create AKS cluster.
 
 Use the [`az aks create`](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-create) command to create an AKS cluster. The following example creates a cluster named documenteditorcluster with one node.
 
-```
-az aks create --resource-group documenteditorresourcegroup --name documenteditorcluster --node-count 1
-```
+   ```
+    az aks create --resource-group documenteditorresourcegroup --name documenteditorcluster --node-count 1
+  ```
 
 **Step 3:** Connect to the cluster.
 
 Install the [`kubectl`](https://kubernetes.io/docs/reference/kubectl/kubectl/) into the workspace using the following command.
 
-```
-az aks install-cli
-```
+   ```
+    az aks install-cli
+   ```
 
 To configure kubectl to connect to your Kubernetes cluster, use the [`az aks get-credentials`](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This command downloads credentials and configures the Kubernetes CLI to use them.
 
-```
-az aks get-credentials --resource-group documenteditorresourcegroup --name documenteditorcluster
-```
+   ```
+   az aks get-credentials --resource-group documenteditorresourcegroup --name documenteditorcluster
+  ```
 
 **Step 4:** Create Kubernetes Services and Deployments
 
 [`Kubernetes Services`](https://kubernetes.io/docs/concepts/services-networking/service/) and [`Deployments`](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) can be configured in a file. To run the Document Editor server, you must define a Service and a Deployment documenteditorserver. To do this, create the documenteditor-server.yml file in the current directory using the following code.
 
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
+    ```
+   apiVersion: apps/v1
+   kind: Deployment
+    metadata:
+   labels:
     app: documenteditorserver
   name: documenteditorserver
-spec:
+  spec:
   replicas: 1
   selector:
     matchLabels:
@@ -80,33 +80,33 @@ spec:
         env:
         - name: SYNCFUSION_LICENSE_KEY
           value: "YOUR_LICENSE_KEY"
----
-apiVersion: v1
-kind: Service
-metadata:
+
+  apiVersion: v1
+ kind: Service
+ metadata:
   labels:
     app: documenteditorserver
   name: documenteditorserver
-spec:
+  spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
     app: documenteditorserver
   type: LoadBalancer
-```
+  ```
 
 **Step 5:** To create all Services and Deployments needed to run the Document Editor server, execute the following.
 
-```
-kubectl create -f ./documenteditor-server.yml
-```
+  ```
+   kubectl create -f ./documenteditor-server.yml
+  ```
 
 Run the following command to get the Kubernetes cluster deployed service details and copy the external IP address of the Document Editor service.
 
-```
-kubectl get all
-```
+  ```
+   kubectl get all
+  ```
 
 Browse the copied external IP address and navigate to the Document Editor Web API control `http://<external-ip>/api/documenteditor`. It returns the default get method response.
 

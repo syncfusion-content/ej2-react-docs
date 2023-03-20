@@ -48,51 +48,51 @@ The following list of dependencies are required to use the pivot table component
 
 You can use [create-react-app](https://github.com/facebookincubator/create-react-app) to setup the application. To install **create-react-app** run the following command.
 
-```
-npm install -g create-react-app
-```
+    ```
+    npm install -g create-react-app
+    ```
 
 To create basic **React** application use following commands.
 
-<div class='tsx'>
+    <div class='tsx'>
 
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-```
+    ```
+    create-react-app quickstart --scripts-version=react-scripts-ts
+    ```
 
 Now, the application is created in the **quickstart** demo folder. Run the following command one-by-one to navigate to the **quickstart** demo folder, and install the required **npm** dependent packages.
 
-```
-cd quickstart
+    ```
+    cd quickstart
 
-npm install
-```
+    npm install
+    ```
 
-</div>
+    </div>
 
-<div class='jsx'>
+    <div class='jsx'>
 
-```
-create-react-app quickstart
-```
+    ```
+    create-react-app quickstart
+    ```
 
 Now, the application is cloned in the **quickstart** demo folder. Run the following command one-by-one to navigate to the **quickstart** demo folder, and install the required **npm** dependent packages.
 
-```
-cd quickstart
+    ```
+    cd quickstart
 
-npm install
-```
+    npm install
+    ```
 
-</div>
+    </div>
 
 ## Adding Syncfusion packages
 
 All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install pivot table component, use the following command.
 
-```
-npm install @syncfusion/ej2-react-pivotview --save
-```
+    ```
+    npm install @syncfusion/ej2-react-pivotview --save
+    ```
 
 > The **--save** will instruct NPM to include the pivot table package inside the `dependencies` section of the `package.json`.
 
@@ -100,19 +100,19 @@ npm install @syncfusion/ej2-react-pivotview --save
 
 Add pivot table and its [dependent](#dependencies) components styles as given below in **src/App.css** file. In this illustration, we have referred **material** theme.
 
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-pivotview/styles/material.css';
-```
+    ```css
+    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+    @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-react-pivotview/styles/material.css';
+    ```
 
 > You can also refer other themes like bootstrap, fabric, high-contrast etc. To know about individual component CSS, please refer [here](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio).
 
@@ -133,83 +133,83 @@ You can initialize pivot table component in the application using following step
 * Import the **PivotViewComponent** (aka, PivotTable) component from the **@syncfusion/ej2-react-pivotview** package in **app.ts** file.
 * Then you can initialize pivot table component (`<PivotViewComponent/>`) using following code.
 
-```ts
-import { IDataOptions, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import './App.css';
+    ```ts
+    import { IDataOptions, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+    import * as React from 'react';
+    import './App.css';
 
-function App() {
-    return (<PivotViewComponent/>)
-};
+    function App() {
+        return (<PivotViewComponent/>)
+    };
 
-export default App;
+    export default App;
 
-```
+    ```
 
 After initialization, add the the following code in **src/App.tsx** file to populate pivot table with a sample relational data source. Refer [here](./data-binding) to know the more details about relational data binding.
 
 
 
-```ts
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
+    ```ts
+    import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+    import * as React from 'react';
+    import * as ReactDOM from "react-dom";
 
-let pivotData = [
-  { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
-  { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
-  { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
-  { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
-  { 'Sold': 27, 'Amount': 46008, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' }];
-
-function App() {
-
-  const dataSourceSettings: IDataOptions = {
-    columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-    dataSource: pivotData as IDataSet[],
-    expandAll: false,
-    filters: [],
-    formatSettings: [{ name: 'Amount', format: 'C0' }],
-    rows: [{ name: 'Country' }, { name: 'Products' }],
-    values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
-  }
-  let pivotObj: PivotViewComponent;
-  return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
-};
-
-export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
-
-```
-
-```ts
-import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-let pivotData = [
+    let pivotData = [
     { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
     { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
     { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
     { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
-    { 'Sold': 27, 'Amount': 46008, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' }
-];
-function App() {
-    const dataSourceSettings = {
+    { 'Sold': 27, 'Amount': 46008, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' }];
+
+    function App() {
+
+    const dataSourceSettings: IDataOptions = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-        dataSource: pivotData,
+        dataSource: pivotData as IDataSet[],
         expandAll: false,
         filters: [],
         formatSettings: [{ name: 'Amount', format: 'C0' }],
         rows: [{ name: 'Country' }, { name: 'Products' }],
         values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
-    };
-    let pivotObj;
+    }
+    let pivotObj: PivotViewComponent;
     return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
-}
-;
-export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
-```
+    };
+
+    export default App;
+    ReactDOM.render(<App />, document.getElementById("sample"));
+
+    ```
+
+    ```ts
+    import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+    import * as React from 'react';
+    import * as ReactDOM from "react-dom";
+    let pivotData = [
+        { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+        { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+        { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+        { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+        { 'Sold': 27, 'Amount': 46008, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' }
+    ];
+    function App() {
+        const dataSourceSettings = {
+            columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+            dataSource: pivotData,
+            expandAll: false,
+            filters: [],
+            formatSettings: [{ name: 'Amount', format: 'C0' }],
+            rows: [{ name: 'Country' }, { name: 'Products' }],
+            values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
+        };
+        let pivotObj;
+        return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+    }
+    ;
+    export default App;
+    ReactDOM.render(<App />, document.getElementById("sample"));
+    ```
 
 ## Adding fields to row, column, value and filter axes
 
@@ -345,9 +345,9 @@ The calculated field feature allows user to insert or add a new calculated field
 
 The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application.
 
-```
-npm start
-```
+    ```
+    npm start
+    ```
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

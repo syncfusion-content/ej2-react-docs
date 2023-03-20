@@ -74,9 +74,9 @@ documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
 
 Document Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in Document Editor, it must be matched with [`languageID`](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellChecker#languageid) you pass in the Document Editor.
 
-```ts
-documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
-```
+     ```ts
+      documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
+     ```
 
 * Refer to the [Spell checker](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) link for configuring spell checker in server-side.
 

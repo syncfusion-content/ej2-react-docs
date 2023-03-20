@@ -30,31 +30,31 @@ The following list of minimum dependencies are required to use the TreeMap contr
 
 To get started with the React application, [create-react-app](https://github.com/facebookincubator/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
 
-<div class='jsx'>
+    <div class='jsx'>
 
-```
-npm install -g create-react-app
-```
+    ```
+    npm install -g create-react-app
+    ```
 
-</div>
+    </div>
 
 To create basic React application, run the following command.
 
-<div class='jsx'>
+    <div class='jsx'>
 
-```
-create-react-app quickstart
-```
+    ```
+    create-react-app quickstart
+    ```
 
-</div>
+    </div>
 
 Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm**  packages.
 
-```
-cd quickstart
+    ```
+    cd quickstart
 
-npm install
-```
+    npm install
+    ```
 
 > In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
 
@@ -62,29 +62,29 @@ npm install
 
 To create React application with TypeScript, use the following command.
 
-<div class='jsx'>
+    <div class='jsx'>
 
-```
-create-react-app quickstart --template typescript
-```
+    ```
+    create-react-app quickstart --template typescript
+    ```
 
-</div>
+    </div>
 
 Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-```
-cd quickstart
+    ```
+    cd quickstart
 
-npm install
-```
+    npm install
+    ```
 
 ### Adding Syncfusion packages
 
 All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install TreeMap package, use the following command.
 
-```
-npm install @syncfusion/ej2-react-treemap --save
-```
+    ```
+    npm install @syncfusion/ej2-react-treemap --save
+    ```
 
 ### Add TreeMap to project
 

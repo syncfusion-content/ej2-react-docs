@@ -28,35 +28,24 @@ The list of dependencies required to use the Chip component in your application 
 You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup
 the applications. To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+   ```bash
+     npm install -g create-react-app
+   ```
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
-
-```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```bash
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+   <div class='tsx'>
+    ```bash
+      create-react-app quickstart --scripts-version=react-scripts-ts
+      cd quickstart
+    ```
+   </div>
+   <div class='jsx'>
+   ```bash
+     create-react-app quickstart
+     cd quickstart
+    ```
+  </div>
 
 ## Adding Syncfusion packages
 
@@ -117,9 +106,9 @@ Import the Chip component's required CSS references as follows in `src/App.css`.
 
 Run the application in the browser using the following command:
 
-```
-npm start
-```
+    ```
+    npm start
+    ```
 
 The following example shows a basic Chip component.
 

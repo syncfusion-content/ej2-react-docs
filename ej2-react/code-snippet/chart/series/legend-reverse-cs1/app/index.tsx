@@ -15,7 +15,7 @@ import {
 
 function App() {
 
-  const data: any = [
+  const data1: any = [
     { x: 'Argentina', y: 505370, r: '50%' },
     { x: 'Belgium', y: 551500, r: '70%' },
     { x: 'Cuba', y: 312685, r: '84%' },

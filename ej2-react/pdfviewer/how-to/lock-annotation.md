@@ -16,20 +16,20 @@ The PDF Viewer library allows you to lock the rectangle or square annotations us
 
 **Step 2:** Add the following code snippet to lock the rectangle or square annotations.
 
-{% raw %}
+   {% raw %}
 
-```javascript
+    ```javascript
 
-<PdfViewerComponent
-   id="container"
-   documentPath="PDF_Succinctly.pdf"
-   serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-   // lock annotation
-   rectangleSettings={{ isLock: true }}
-   style={{ height: '640px' }}>
-</PdfViewerComponent>
+     <PdfViewerComponent
+      id="container"
+       documentPath="PDF_Succinctly.pdf"
+       serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+      // lock annotation
+      rectangleSettings={{ isLock: true }}
+      style={{ height: '640px' }}>
+      </PdfViewerComponent>
 
-```
-{% endraw %}
+    ```
+   {% endraw %}
 
 Find the Sample [how to lock square or rectangle annotations](https://stackblitz.com/edit/react-mngaa3?file=index.js)

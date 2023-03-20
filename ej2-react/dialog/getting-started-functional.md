@@ -30,33 +30,26 @@ The following list of dependencies are required to use the Dialog component in y
 
 You can use [Create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+    ```bash
+       npm install -g create-react-app
+    ```
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
+    <div class='tsx'>
 
-```bash
+    ```
+      create-react-app quickstart --scripts-version=react-scripts-ts
+      cd quickstart
+   ```
+   </div>
 
-create-react-app quickstart --scripts-version=react-scripts-ts
+  <div class='jsx'>
 
-cd quickstart
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
+   ```
+    create-react-app quickstart
+    cd quickstart
+   ```
 
 </div>
 
@@ -141,9 +134,9 @@ Import the Dialog component's required CSS references as follows in `src/App.css
 
 Now use the `npm run start` command to run the application in the browser.
 
-```
-npm run start
-```
+  ```
+   npm run start
+  ```
 
 The below example shows the Dialog.
 

@@ -29,42 +29,32 @@ For using heat map, the following minimum requirements are needed.
 
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-```
-npm install -g create-react-app
-```
+   ``` 
+    npm install -g create-react-app
+   ```
 
 * To setup basic `React` sample use following commands.
 
-<div class='tsx'>
+   <div class='tsx'>
 
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-npm install
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+    ```
+    create-react-app quickstart --scripts-version=react-scripts-ts
+    cd quickstart
+    npm install
+    ```
+    </div>
+    <div class='jsx'>
+   ```
+  create-react-app quickstart
+  cd quickstart
+  ```
+  </div>
 
 * Install Syncfusion packages using below command.
 
-```
-npm install @syncfusion/ej2-react-heatmap --save
-```
+  ```
+   npm install @syncfusion/ej2-react-heatmap --save
+  ```
 
 ## Adding heat map to the project
 
@@ -72,26 +62,26 @@ Now, you can start adding HeatMap component in the application. For getting star
 
 
 
-```ts
+  ```ts
 
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
+  import * as React from 'react';
+  import * as ReactDOM from 'react-dom';
+  import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
 
-export function App() {
-  return ( <HeatMapComponent id='heatmap'></HeatMapComponent> );
-}
+   export function App() {
+    return ( <HeatMapComponent id='heatmap'></HeatMapComponent> );
+  }
 
-const root = ReactDOM.createRoot(document.getElementById('container'));
-root.render(<App />);
+  const root = ReactDOM.createRoot(document.getElementById('container'));
+  root.render(<App />);
 
-```
+ ```
 
 Use the `npm start` command to run the application in the browser.
 
-```
-npm start
-```
+  ``` 
+  npm start
+  ```
 
 The below example shows a basic HeatMap.
 
@@ -110,8 +100,8 @@ The below example shows a basic HeatMap.
 
 The heat map components are segregated into individual feature-wise modules. To use its feature, you need to inject its feature service in the AppModule. In the current application,the basic heat map is modified to visualize sales revenue data for week, and  the tooltip and legend features of the heat map are used. Find the relevant feature modules and descriptions as follows.
 
-* Legend - Provides the legend feature by injecting it.
-* Tooltip - Provides the tooltip feature by injecting it.
+  * Legend - Provides the legend feature by injecting it.
+  * Tooltip - Provides the tooltip feature by injecting it.
 
 Now, import the above-mentioned modules from the heat map package and inject them into `services`.
 

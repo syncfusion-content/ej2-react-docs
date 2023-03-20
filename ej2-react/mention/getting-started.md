@@ -37,33 +37,24 @@ You can use [`Create-react-app`](https://github.com/facebookincubator/create-rea
 
 To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+   ```bash
+    npm install -g create-react-app
+   ```
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
+   <div class='tsx'>
 
-```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```bash
-
-create-react-app quickstart
-
-cd quickstart
-
-```
+   ```
+    create-react-app quickstart --scripts-version=react-scripts-ts
+    cd quickstart
+   ```
+   </div>
+   <div class='jsx'>
+   ```
+  create-react-app quickstart
+  cd quickstart
+  ```
 
 </div>
 
@@ -75,11 +66,9 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 
 To install Mention component, use the following command
 
-```bash
-
-npm install @syncfusion/ej2-react-dropdowns --save
-
-```
+   ```bash
+    npm install @syncfusion/ej2-react-dropdowns --save
+   ```
 
 The above command installs [Mention dependencies](./getting-started#dependencies) which are required to render the component in the `React` environment.
 

@@ -34,47 +34,44 @@ The following list of dependencies are required to use the Tooltip component in 
 * You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+    ```bash
+      npm install -g create-react-app
+    ```
 
 Start a new project using `create-react-app` command as follows
 <div class='tsx'>
 
-```bash
-create-react-app quickstart --scripts-version=react-scripts-ts
-cd quickstart
-```
+    ```bash
+      create-react-app quickstart --scripts-version=react-scripts-ts
+      cd quickstart
+    ```
 
-</div>
+  </div>
 
-<div class='jsx'>
+  <div class='jsx'>
 
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
+  ```
+   create-react-app quickstart
+   cd quickstart
+  ```
 
 </div>
 
 * Install the below required dependency package in order to use the `Tooltip` component in your application.
 
-```bash
-npm install @syncfusion/ej2-react-popups --save
-```
+   ```bash
+    npm install @syncfusion/ej2-react-popups --save
+   ```
 
 The above package installs [tooltip dependencies](#dependencies) which are required to render the Tooltip component in React environment.
 
 * Tooltip CSS files are available in the `ej2-react-popups` package folder.
 Import the Tooltip component's required CSS references as follows in `src/App.css`.
 
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
-```
+   ```css
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
+   ```
 
 > We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
 
@@ -120,9 +117,9 @@ function App() {
 
 * Now, run the application in the browser using the following command.
 
-```bash
-npm start
-```
+   ```bash
+    npm start
+   ```
 
 The output will be as follows:
 

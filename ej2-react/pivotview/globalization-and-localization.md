@@ -18,34 +18,34 @@ Globalization is the combination of Internationalization and localization. You c
 
 * Run the following command in command prompt.
 
-```
-cd /d 'Folder path of your react application'
+    ```
+    cd /d 'Folder path of your react application'
 
-For example: cd /d  E:\react\WebApplication
-```
+    For example: cd /d  E:\react\WebApplication
+    ```
 
 * Make sure that you have installed `Node and NPM` in your machine before installing the `CLDR-Data`.
 
 * To check if you have `Node`, run this command in command prompt.
 
-```
-node -v
-```
+    ```
+    node -v
+    ```
 
 * If `Node` is not installed, then you can download and install the `Node` from this [location](https://nodejs.org/en/).
 
 * To confirm if you have `NPM`, run this command in command prompt.
 
-```
-npm -v
-```
+    ```
+    npm -v
+    ```
 
 * Now, install the `CLDR-Data` package by using the following command (it installs the CLDR JSON data). To
 learn more about CLDR-Data, refer to [CLDR-Data](http://cldr.unicode.org/index/cldr-spec/json).
 
-```
-npm install cldr-data --save
-```
+    ```
+    npm install cldr-data --save
+    ```
 
 * After installing the package, you can find the culture specific JSON data under the location `/node_modules/cldr-data`. Then, copy the `cldr-data` folder into your react application.
 
@@ -63,16 +63,16 @@ The Internationalization library is used to globalize number, date, and time val
 
 * Set the culture by using the `locale` property.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs110/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs110/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs110/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs110/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs110" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs110" %}
 
 > * In the above sample, `Amount` field is formatted by [`NumberFormatOptions`](https://ej2.syncfusion.com/react/documentation/base/internationalization.html#number-formatter-and-parser). For date formats, the value strings are formatted by [`DateFormatOptions`](https://ej2.syncfusion.com/react/documentation/base/internationalization.html#date-formatter-and-parser).
 > * By default, `locale` value is `en-US`. If you want to change the `en-US` culture to a different culture, you have to change  the `locale` accordingly.

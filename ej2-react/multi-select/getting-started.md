@@ -37,19 +37,16 @@ The following list of dependencies are required to use the `MultiSelect` compone
 
 You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+    ```bash
+      npm install -g create-react-app
+    ```
 
 Start a new project using create-react-app command as follows
 
-```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
+    ```
+    create-react-app quickstart --scripts-version=react-scripts-ts
+    cd quickstart
+  ```
 
 ## Adding syncfusion packages
 

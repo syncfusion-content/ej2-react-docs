@@ -18,9 +18,9 @@ You can create and insert a table at cursor position by specifying the required 
 
 Refer to the following sample code.
 
-```ts
- documenteditor.editor.insertTable(3,3);
-```
+  ```ts
+    documenteditor.editor.insertTable(3,3);
+  ```
 
 The maximum size of row and column is limited to 32767 and 63 respectively.
 
@@ -35,14 +35,14 @@ count(optional) | number | This is optional and if omitted, it takes the value a
 
 Refer to the following sample code.
 
-```ts
-//Inserts a row below the row at cursor position
-documentedior.editor.insertRow();
-//Inserts a row above the row at cursor position
-documentedior.editor.insertRow(false);
-//Inserts three rows below the row at cursor position
-documentedior.editor.insertRow(true, 3)
-```
+   ```ts
+   //Inserts a row below the row at cursor position
+   documentedior.editor.insertRow();
+   //Inserts a row above the row at cursor position
+   documentedior.editor.insertRow(false);
+   //Inserts three rows below the row at cursor position
+   documentedior.editor.insertRow(true, 3)
+   ```
 
 ## Insert columns
 
@@ -55,14 +55,14 @@ count(optional) | number |  This is optional and if omitted, it takes the value 
 
 Refer to the following sample code.
 
-```ts
-//Insert a column to the right of the column at cursor position.
-documentedior.editor.insertColumn();
-//Insert a column to the left of the column at cursor position.
-documentedior.editor.insertColumn(false);
-//Insert two columns to the left of the column at cursor position.
-documentedior.editor.insertColumn(false, 2);
-```
+   ```ts
+    //Insert a column to the right of the column at cursor position.
+    documentedior.editor.insertColumn();
+    //Insert a column to the left of the column at cursor position.
+    documentedior.editor.insertColumn(false);
+    //Insert two columns to the left of the column at cursor position.
+     documentedior.editor.insertColumn(false, 2);
+   ```
 
 ### Select an entire table
 
@@ -76,9 +76,9 @@ documenteditor.selection.selectTable();
 
 You can select the entire row at cursor position by using the following sample code.
 
-```ts
-documenteditor.selection.selectRow();
-```
+  ```ts
+   documenteditor.selection.selectRow();
+  ```
 
 If current selection spans across cells of different rows, all these rows will be selected.
 
@@ -86,9 +86,9 @@ If current selection spans across cells of different rows, all these rows will b
 
 You can select the entire column at cursor position by using the following sample code.
 
-```ts
-documenteditor.selection.selectColumn();
-```
+   ```ts
+    documenteditor.selection.selectColumn();
+   ```
 
 If current selection spans across cells of different columns, all these columns will be selected.
 
@@ -96,17 +96,17 @@ If current selection spans across cells of different columns, all these columns 
 
 You can select the cell at cursor position by using the following sample code.
 
-```ts
-documenteditor.selection.selectCell();
-```
+   ```ts
+    documenteditor.selection.selectCell();
+   ```
 
 ## Delete table
 
 Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](../api/document-editor/editor/#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
 
-```ts
-documenteditor.editor.deleteTable();
-```
+   ```ts
+    documenteditor.editor.deleteTable();
+   ```
 
 ## Delete row
 

@@ -220,37 +220,37 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
 * `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
 
-| Action | Action Name | 
-|------|-------------|
-| New report | Add new report |
-| Save report | Save current report |
-| Save as report | Save as current report |
-| Rename report | Rename current report |
-| Remove report | Remove current report |
-| Report change | Report change |
-| Conditional Formatting | Open conditional formatting dialog |
-| Number Formatting | Open number formatting dialog |
-| Export menu | PDF export, Excel export, CSV export |
-| Show Fieldlist | Open field list |
-| Show Table | Show table view |
-| Chart menu | Show chart view |
-| Sub-totals menu | Hide sub-totals, Show row sub-totals, Show column sub-totals, Show sub-totals |
-| Grand totals menu | Hide grand totals, Show row grand totals, Show column grand totals, Show grand totals |
+    | Action | Action Name | 
+    |------|-------------|
+    | New report | Add new report |
+    | Save report | Save current report |
+    | Save as report | Save as current report |
+    | Rename report | Rename current report |
+    | Remove report | Remove current report |
+    | Report change | Report change |
+    | Conditional Formatting | Open conditional formatting dialog |
+    | Number Formatting | Open number formatting dialog |
+    | Export menu | PDF export, Excel export, CSV export |
+    | Show Fieldlist | Open field list |
+    | Show Table | Show table view |
+    | Chart menu | Show chart view |
+    | Sub-totals menu | Hide sub-totals, Show row sub-totals, Show column sub-totals, Show sub-totals |
+    | Grand totals menu | Hide grand totals, Show row grand totals, Show column grand totals, Show grand totals |
 
 * `cancel`: It allows user to restrict the current action.
 
-In the below sample, toolbar UI actions such as add new report and save current report can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
+    In the below sample, toolbar UI actions such as add new report and save current report can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs302/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs302/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs302/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs302/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs302" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs302" %}
 
 ### ActionComplete
 
@@ -260,34 +260,34 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 * `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
 
-| Action | Action Name | 
-|------|-------------|
-| New report | New report added |
-| Save report | Report saved |
-| Save as report | Report re-saved |
-| Rename report | Report renamed |
-| Remove report | Report removed |
-| Report change | Report changed |
-| Conditional Formatting | Conditionally formatted |
-| Number Formatting | Number formatted |
-| Export menu | PDF exported, Excel exported, CSV exported  |
-| Show Fieldlist | Field list closed |
-| Show Table | Table view shown |
-| Sub-totals menu | Sub-totals hidden, Row sub-totals shown, Column sub-totals shown, Sub-totals shown |
-| Grand totals menu | Grant totals hidden, Row grand totals shown, Column grand totals shown, Grand totals shown |
+    | Action | Action Name | 
+    |------|-------------|
+    | New report | New report added |
+    | Save report | Report saved |
+    | Save as report | Report re-saved |
+    | Rename report | Report renamed |
+    | Remove report | Report removed |
+    | Report change | Report changed |
+    | Conditional Formatting | Conditionally formatted |
+    | Number Formatting | Number formatted |
+    | Export menu | PDF exported, Excel exported, CSV exported  |
+    | Show Fieldlist | Field list closed |
+    | Show Table | Table view shown |
+    | Sub-totals menu | Sub-totals hidden, Row sub-totals shown, Column sub-totals shown, Sub-totals shown |
+    | Grand totals menu | Grant totals hidden, Row grand totals shown, Column grand totals shown, Grand totals shown |
 
 * `actionInfo`: It holds the unique information about the current UI action. For example, while adding new report, the event argument contains information such as report name and the action name.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs303/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs303/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs303/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs303/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs303" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs303" %}
 
 ### ActionFailure
 
@@ -295,35 +295,35 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 * `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name | 
-|------|-------------|
-| New report | Add new report |
-| Save report | Save current report |
-| Save as report | Save as current report |
-| Rename report | Rename current report |
-| Remove report | Remove current report |
-| Report change | Report change |
-| Conditional Formatting | Open conditional formatting dialog |
-| Number Formatting | Open number formatting dialog |
-| Export menu | PDF export, Excel export, CSV export |
-| Show Fieldlist | Open field list |
-| Show Table | Show table view |
-| Chart menu | Show chart view |
-| Sub-totals menu | Hide sub-totals, Show row sub-totals, Show column sub-totals, Show sub-totals |
-| Grand totals menu | Hide grand totals, Show row grand totals, Show column grand totals, Show grand totals |
+    | Action | Action Name | 
+    |------|-------------|
+    | New report | Add new report |
+    | Save report | Save current report |
+    | Save as report | Save as current report |
+    | Rename report | Rename current report |
+    | Remove report | Remove current report |
+    | Report change | Report change |
+    | Conditional Formatting | Open conditional formatting dialog |
+    | Number Formatting | Open number formatting dialog |
+    | Export menu | PDF export, Excel export, CSV export |
+    | Show Fieldlist | Open field list |
+    | Show Table | Show table view |
+    | Chart menu | Show chart view |
+    | Sub-totals menu | Hide sub-totals, Show row sub-totals, Show column sub-totals, Show sub-totals |
+    | Grand totals menu | Hide grand totals, Show row grand totals, Show column grand totals, Show grand totals |
 
 * `errorInfo`: It holds the error information of the current UI action.
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs304/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs304/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight js tabtitle="index.jsx" %}
+    {% include code-snippet/pivot-table/default-cs304/app/index.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="index.tsx" %}
+    {% include code-snippet/pivot-table/default-cs304/app/index.tsx %}
+    {% endhighlight %}
+    {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs304" %}
+    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs304" %}
 
 ## See Also
 
