@@ -40,7 +40,7 @@ When the iframeSettings option is enabled, the Rich Text Editor creates the ifra
 
 ## IFrame attributes
 
-The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using attributes fields of the [iframeSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor#iframesettings) property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
+The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using attributes fields of the [iframeSettings](/rich-text-editor/api-iFrameSettings.html) property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
 
 `[Class-component]`
 
@@ -70,9 +70,9 @@ The editor allows you to pass an additional attribute to body tag of a `<iframe>
 
 ## Adding external CSS/Script file
 
-The editor offers you to add external CSS file to style the `<iframe>` element. Easily change the appearance of editor’s content using an external CSS file using [styles](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) field in the iframeSettings property.
+The editor offers you to add external CSS file to style the `<iframe>` element. Easily change the appearance of editor’s content using an external CSS file using [styles](/rich-text-editor/api-resources.html#styles) field in the iframeSettings property.
 
-Likewise, add the external script file to the `<iframe>` element using the [scripts](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) field of iframeSettings to provide the additional functionalities to the Rich Text Editor.
+Likewise, add the external script file to the `<iframe>` element using the [scripts](/rich-text-editor/api-resources.html#scripts) field of iframeSettings to provide the additional functionalities to the Rich Text Editor.
 
 `[Class-component]`
 

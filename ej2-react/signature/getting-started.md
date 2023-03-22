@@ -30,29 +30,29 @@ You can use [`Create-react-app`](https://github.com/facebookincubator/create-rea
 
 To install `create-react-app` run the following command.
 
-   ```bash
-    npm install -g create-react-app
-   ```
+```bash
+npm install -g create-react-app
+```
 
 Start a new project using create-react-app command as follows
 
-    <div class='tsx'>
+<div class='tsx'>
 
-    ```
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
+```bash
+create-react-app quickstart --scripts-version=react-scripts-ts
+cd quickstart
+```
 
-   </div>
+</div>
 
-   <div class='jsx'>
+<div class='jsx'>
 
-    ```
-    create-react-app quickstart
-    cd quickstart
-   ```
+```bash
+create-react-app quickstart
+cd quickstart
+```
 
-   </div>
+</div>
 
 > 'react-scripts-ts' is used for creating React app with typescript.
 
@@ -63,9 +63,9 @@ You can choose the component that you want to install. For this application, we 
 
 To install Signature component, use the following command
 
-   ```bash
-     npm install @syncfusion/ej2-react-inputs –save
-   ```
+```bash
+npm install @syncfusion/ej2-react-inputs –save
+```
 
 The above command installs [Signature dependencies](./getting-started#dependencies) which are required to render the component in the `React` environment.
 
@@ -106,9 +106,9 @@ export default App;
 
 Use the `npm run start` command to run the application in the browser.
 
-   ```
-   npm run start
-   ```
+```
+npm run start
+```
 
 The following example shows the default Signature.
 

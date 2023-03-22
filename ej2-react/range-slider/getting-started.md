@@ -34,16 +34,19 @@ applications.
 
 To install `create-react-app` run the following command.
 
-    ```bash
-     npm install -g create-react-app
-    ```
+```bash
+npm install -g create-react-app
+```
 
 Start a new project using `create-react-app` command as follows
 
-   ```bash
-    create-react-app quickstart --typescript
-    cd quickstart
-   ```
+```bash
+
+create-react-app quickstart --typescript
+
+cd quickstart
+
+```
 
 ## Adding Syncfusion packages
 
@@ -51,9 +54,9 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 
 To install `Slider` component, use the following command.
 
-   ```bash
-     npm install @syncfusion/ej2-react-inputs --save
-   ```
+```bash
+npm install @syncfusion/ej2-react-inputs --save
+```
 
 The above command installs [Slider dependencies](#dependencies) which are required to render the component in the `React` environment.
 
@@ -84,12 +87,14 @@ export default App;
 
 Import `Slider` component required theme references at the top of `src/App.css`.
 
-   ```css
-   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-   @import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
-  ```
+```css
+
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
+
+```
 
 > We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
 
@@ -97,9 +102,11 @@ Import `Slider` component required theme references at the top of `src/App.css`.
 
 The Essential JS 2 quickstart application project is configured to compile and run the application in browser. Use the following command to run the application.
 
-    ```
-    npm start
-    ```
+```ts
+
+npm start
+
+```
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

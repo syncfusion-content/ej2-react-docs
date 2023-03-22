@@ -20,18 +20,18 @@ Import necessary CSS and JS files of CodeMirror to the HTML page.
 
 Required JS files of code mirror.
 
-  ``` javascript
+``` javascript
     <script src="scripts/CodeMirror/codemirror.js" type="text/javascript"></script>
     <script src="scripts/CodeMirror/javascript.js" type="text/javascript"></script>
     <script src="scripts/CodeMirror/css.js" type="text/javascript"></script>
     <script src="scripts/CodeMirror/htmlmixed.js" type="text/javascript"></script>
-  ```
+```
 
 Required CSS file of code mirror.
- 
-   ``` javascript
+
+``` javascript
     <link href="scripts/CodeMirror/codemirror.min.css" rel="stylesheet" />
-   ```
+```
 
 Add a custom icon for HTML source editor in the toolbar of Rich Text Editor using the template option of ToolbarSettings, define the code mirror plugins, and then pass the Rich Text Editor content as argument in the [actionComplete](/api/rich-text-editor/#actioncomplete) event.
 
@@ -46,6 +46,8 @@ Add a custom icon for HTML source editor in the toolbar of Rich Text Editor usin
 {% endhighlight %}
 {% endtabs %}
 
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/code-mirror-cs3" %}
+
 `[Functional-component]`
 
 {% tabs %}
@@ -57,32 +59,34 @@ Add a custom icon for HTML source editor in the toolbar of Rich Text Editor usin
 {% endhighlight %}
 {% endtabs %}
 
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/code-mirror-cs4" %}
+
 ## At.js Integration
 
 Rich Text Editor can easily be integrated with At.js library. To display the autocomplete list, type `@`.
 
 Include At.JS style.
 
-   ``` javascript
+``` javascript
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/at.js/1.4.0/css/jquery.atwho.min.css">
-  ```
+```
 
 Include At.JS javascript.
 
-   ``` javascript
+``` javascript
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/at.js/1.4.0/js/jquery.atwho.min.js"></script>
-   ```
+```
 
 Define the At.js configuration.
 
-   ```ts
+```ts
     var config = {
         at: "@",
         data: [email id of employees list],
         displayTpl: '<li>${name} <small>${email}</small></li>',
         limit: 200
-      }
-  ```
+    }
+```
 
 Populate the employee’s email id from local or remote data and set the result to the data of At.js configuration.
 
@@ -90,8 +94,8 @@ Populate the employee’s email id from local or remote data and set the result 
 
 Rich Text Editor easily integrate with embed.ly which is probably the best service when it comes to embed the rich content such as Twitter, Facebook, Instagram, and lots of other publishing platform embeds.
 
-   ``` javascript
-     <script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-   ```
+``` javascript
+    <script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+```
 
 In the following sample, the Embed.ly class `embedly-card` has been added to `a` tag in the [actionComplete](/rich-text-editor/api-richTextEditor.html#actioncomplete) event.

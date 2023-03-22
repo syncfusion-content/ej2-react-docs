@@ -36,31 +36,42 @@ Below is the list of minimum dependencies required to use the Bullet Chart compo
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-   ```
-    npm install -g create-react-app
-   ```
+```
+npm install -g create-react-app
+```
 
 To setup basic `React` sample use following commands.
 
-   <div class='tsx'>
-    ```
-    create-react-app quickstart --scripts-version=react-scripts-ts
-    cd quickstart
-    npm install
-  ```
-  </div>
-  <div class='jsx'>
-  ```
-  create-react-app quickstart
-  cd quickstart
-  ```
-  </div>
+<div class='tsx'>
+
+```
+create-react-app quickstart --scripts-version=react-scripts-ts
+
+cd quickstart
+
+npm install
+
+```
+
+</div>
+
+<div class='jsx'>
+
+```
+
+create-react-app quickstart
+
+cd quickstart
+
+```
+
+</div>
 
 Install Syncfusion packages using below command.
 
-  ```
-   npm install @syncfusion/ej2-react-charts --save
-  ```
+```
+npm install @syncfusion/ej2-react-charts --save
+```
 
 ## Add Bullet Chart to the Project
 
@@ -90,9 +101,9 @@ export default App;
 
 Now run the `npm start` command in the console, it will run your application and open the browser window.
 
-   ``` 
-    npm start
-   ```
+```
+npm start
+```
 
 The below example shows a basic Bullet Chart.
 

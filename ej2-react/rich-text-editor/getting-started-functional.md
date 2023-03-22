@@ -35,25 +35,33 @@ The following minimum dependencies are required to use the Rich Text Editor.
 
 Before starting, need to install [`Create-react-app`](https://github.com/facebookincubator/create-react-app) command line interface into your machine globally by using following command.
 
-   ```bash
-     npm install -g create-react-app
-   ```
+```bash
+npm install -g create-react-app
+```
 
 Create a new project using create-react-app command as follows
 
-    <div class='tsx'>
+<div class='tsx'>
 
-    ```bash
-     create-react-app quickstart --scripts-version=react-scripts-ts
-     cd quickstart
-   ```
-    </div>
-    <div class='jsx'>
-   ```
-  create-react-app quickstart
-  cd quickstart
-  ```
-  </div>
+```bash
+create-react-app quickstart --scripts-version=react-scripts-ts
+
+cd quickstart
+```
+
+</div>
+
+<div class='jsx'>
+
+```
+
+create-react-app quickstart
+
+cd quickstart
+
+```
+
+</div>
 
 ## Adding CSS reference
 
@@ -218,7 +226,7 @@ To create Rich Text Editor with additional features, inject the required modules
 * `Count` - Inject this module to use character count in Rich Text Editor.
 * `HtmlEditor` - Inject this module to use Rich Text Editor as html editor.
 * `MarkdownEditor`-Inject this module to use Rich Text Editor as markdown editor.
-* `QuickToolbar` - Inject this module to use quick toolbar feature for the target  element.
+* `QuickToolbar` - Inject this module to use quick toolbar feature for the target element.
 * `Resize` - Inject this module to use resize feature in Rich Text Editor.
 * `FileManager` - Inject this module to use file browser feature in Rich Text Editor.
 * `PasteCleanup` - Inject this module to use paste cleanup feature in Rich Text Editor.
@@ -246,21 +254,21 @@ Configure the toolbar with the tools using items field of the toolbarSettings pr
 
 To retrieve the editor contents, use the `value` property of Rich Text Editor.
 
-  ```ts
-    const rteValue: string = this.rteObj.value;
-   ```
+```ts
+  const rteValue: string = this.rteObj.value;
+```
 
 Or you can use the public method `getContent` to retrieve the RTE content.
 
-  ```ts
-    const rteValue: string = this.rteObj.getContent();
-  ```
+```ts
+  const rteValue: string = this.rteObj.getContent();
+```
 
 To fetch the RichTextEditor's text content, use the `textContent` property of RTE `EditPanel`.
 
-   ```ts
-     const rteValue: string = this.rteObj.contentModule.getEditPanel().textContent;
-   ```
+```ts
+  const rteValue: string = this.rteObj.contentModule.getEditPanel().textContent;
+```
 
 ## Insert images and links
 
@@ -285,10 +293,10 @@ Specifies the items to be rendered in the quick toolbar based on the target elem
 
 The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
-  ```bash
-    npm start
+```bash
+npm start
 
-   ```
+```
 
 Output will be displayed as follows
 

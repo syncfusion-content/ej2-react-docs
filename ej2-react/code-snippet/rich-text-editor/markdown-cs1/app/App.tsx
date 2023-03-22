@@ -1,10 +1,13 @@
 {% raw %}
 
+
+
 /**
  * Rich Text Editor - MarkdownEditor Sample
  */
 import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-base';
 import { Image, Inject, Link, MarkdownEditor, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import * as Marked from 'marked';
 import * as React from 'react';
 
 class App extends React.Component<{},{}> {
@@ -42,7 +45,7 @@ class App extends React.Component<{},{}> {
         if (this.mdsource.classList.contains('e-active')) {
             const id: string = this.rteObj.getID() + 'html-view';
             const htmlPreview: HTMLElement = this.rteObj.element.querySelector('#' + id) as any;
-            htmlPreview.innerHTML = marked(((this.rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
+            htmlPreview.innerHTML = Marked(((this.rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
         }
     }
     public fullPreview(): void {
@@ -62,7 +65,7 @@ class App extends React.Component<{},{}> {
             }
             this.textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = marked(((this.rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
+            htmlPreview.innerHTML = Marked(((this.rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
             this.mdsource.parentElement.title = 'Code View';
         }
     }

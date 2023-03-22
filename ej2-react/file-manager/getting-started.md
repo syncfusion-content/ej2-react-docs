@@ -34,25 +34,34 @@ The following list of dependencies are required to use the File Manager componen
 You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-   ```
-    npm install -g create-react-app
-   ```
+```
+npm install -g create-react-app
+```
 
 * To setup basic `React` sample use following commands.
 
-    <div class='tsx'>
+<div class='tsx'>
 
-     ```
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
-    </div>
-   <div class='jsx'>
-    ```
-    create-react-app quickstart
-    cd quickstart
-   ```
-   </div>
+```
+create-react-app quickstart --scripts-version=react-scripts-ts
+
+cd quickstart
+
+```
+
+</div>
+
+<div class='jsx'>
+
+```
+
+create-react-app quickstart
+
+cd quickstart
+
+```
+
+</div>
 
 ## Adding Syncfusion packages
 

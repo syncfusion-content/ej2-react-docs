@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-[`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#locale) property.
+[`Localization`](../common/localization/) library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#locale) property.
 In NumericTextBox, spin buttons title for the tooltip will be localized based on the culture.
 
 | Locale key | en-US (default)  |
@@ -39,43 +39,43 @@ The below example demonstrates the NumericTextBox in `German` culture with the s
 
 ## Internationalization
 
-Internationalization library provides support for formatting and parsing the number by using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data and also provides the `loadCldr` method to load the culture specific CLDR JSON data. The NumericTextBox comes with built-in internationalization support to adapt based on culture. For more information about internationalization, refer to this `link`.
+Internationalization library provides support for formatting and parsing the number by using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data and also provides the `loadCldr` method to load the culture specific CLDR JSON data. The NumericTextBox comes with built-in internationalization support to adapt based on culture. For more information about internationalization, refer to this [link](../common/internationalization/).
 
 By default, all the Essential JS 2  component are specific to English culture ('en-US'). If you want to go with the different culture other than `English`, follow the below steps.
 
-* Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). For more information about CLDR-Data, refer to this `link`.
+* Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). For more information about CLDR-Data, refer to this [link](http://cldr.unicode.org/index/cldr-spec/json).
 
-    ```
-      npm install cldr-data --save
-    ```
+```
+npm install cldr-data --save
+```
 
-    Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
 
 * Now import the installed CLDR JSON data into the `app.tsx` file.
 
 * Now import the required culture from the installed location to `app.tsx` file as like the below code snippets.
 
-    ```ts
-     import * as currencies from 'cldr-data/main/de/currencies.json';
-     import * as numbers from 'cldr-data/main/de/numbers.json';
-     import * as currencyData from 'cldr-data/supplemental/currencyData.json';
-     import * as numberingSystems from 'cldr-data/supplemental/numberingSystems.json';
+```ts
+import * as currencies from 'cldr-data/main/de/currencies.json';
+import * as numbers from 'cldr-data/main/de/numbers.json';
+import * as currencyData from 'cldr-data/supplemental/currencyData.json';
+import * as numberingSystems from 'cldr-data/supplemental/numberingSystems.json';
 
-     loadCldr(numberingSystems, currencies, numbers, currencyData);
-   ```
+loadCldr(numberingSystems, currencies, numbers, currencyData);
+```
 
 > if you are facing the error `/node_modules/cldr-data/main/de/*.json (1,1): unused expression, expected an assignment or function call` when you are adding the json files to render the culture sample, then add the below configuration in your `tslint.json` file
 
-    ```ts
+```ts
 
-   "linterOptions": {
-     "exclude": [
-       "*.json",
-       "**/*.json"
-     ]
-   }
+"linterOptions": {
+    "exclude": [
+      "*.json",
+      "**/*.json"
+    ]
+  }
 
-  ```
+```
 
 * Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#locale) property.
 

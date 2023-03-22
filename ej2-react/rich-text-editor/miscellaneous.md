@@ -103,6 +103,8 @@ Rich Text Editor includes the ability for users to directly edit HTML code via `
 {% endhighlight %}
 {% endtabs %}
 
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/code-mirror-cs1" %}
+
 `[Functional-component]`
 
 {% tabs %}
@@ -114,6 +116,7 @@ Rich Text Editor includes the ability for users to directly edit HTML code via `
 {% endhighlight %}
 {% endtabs %}
 
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/code-mirror-cs2" %}
 
 ## Undo/Redo manager
 

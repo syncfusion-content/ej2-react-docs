@@ -28,22 +28,23 @@ The following list of dependencies are required to use the TextBox component in 
 * You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-   ```bash
-     npm install -g create-react-app
-   ```
+```bash
+npm install -g create-react-app
+```
 
 * Start a new project using create-react-app command as follows.
 
-    ```bash
-       create-react-app quickstart --scripts-version=react-scripts-ts
-       cd quickstart
-    ```
+```bash
+create-react-app quickstart --scripts-version=react-scripts-ts
+cd quickstart
+
+```
 
 * To install TextBox component, use the following command.
 
-    ```bash
-      npm install @syncfusion/ej2-react-inputs –save
-    ```
+```bash
+npm install @syncfusion/ej2-react-inputs –save
+```
 
 * The above package installs [Input dependencies](./getting-started/#dependencies) which are required to render the TextBox component in React environment.
 
@@ -190,9 +191,9 @@ ReactDOM.render(<Default />, document.getElementById('input-container'));
 
 * Run the application in the browser using the following command.
 
-   ```
-    npm start
-   ```
+```
+npm start
+```
 
 Output will be as follows:
 
