@@ -8,33 +8,24 @@ import * as ReactDom from 'react-dom';
 
 enableRipple(true);
 
-class App extends React.Component<{}, {}> {
-    public sidebarObj: SidebarComponent;
-    public accordionObj: AccordionComponent;
-    public nestedAccordionObj: AccordionComponent;
+function App() {
+    let sidebarObj: SidebarComponent;
+    let accordionObj: AccordionComponent;
+    let nestedAccordionObj: AccordionComponent;
 
-    public width: string = '200px';
-    public type: SidebarType = 'Over';
+    let width: string = '200px';
+    let type: SidebarType = 'Over';
 
-    constructor(props: any) {
-        super(props);
-        this.close = this.close.bind(this);
-        this.expand = this.expand.bind(this);
-        this.nestedExpand = this.nestedExpand.bind(this);
-        this.clicked = this.clicked.bind(this);
-        this.hamburgerClick = this.hamburgerClick.bind(this);
-    }
-
-    public clicked(e: AccordionClickArgs): void {
+    function clicked(e: AccordionClickArgs): void {
         const target = (e.originalEvent as Event).target as HTMLElement;
         if (!e.item && !(target.closest('.e-acrdn-item') as HTMLElement).getElementsByClassName('e-tgl-collapse-icon').length) {
-            this.sidebarObj.hide();
+            sidebarObj.hide();
         }
     }
 
-    public appliancesAccordion(): void {
+    function appliancesAccordion(): void {
         return ReactDom.render(
-            <AccordionComponent ref={scope => this.nestedAccordionObj = scope as AccordionComponent} expanding={this.nestedExpand} clicked={this.clicked}>
+            <AccordionComponent ref={scope => nestedAccordionObj = scope as AccordionComponent} expanding={nestedExpand} clicked={clicked}>
                 <AccordionItemsDirective>
                     <AccordionItemDirective header='Kitchen' content='<div id="Appliances_Kitchen_Items"></div>' />
                     <AccordionItemDirective header='Washing Machine' content='<div id="Appliances_Washing_Items"></div>' />
@@ -44,9 +35,9 @@ class App extends React.Component<{}, {}> {
             document.getElementById("Appliances_Items"));
     }
 
-    public kitchenAccordion(): void {
+    function kitchenAccordion(): void {
         return ReactDom.render(
-            <AccordionComponent clicked={this.clicked}>
+            <AccordionComponent clicked={clicked}>
                 <AccordionItemsDirective>
                     <AccordionItemDirective header='Electric Cookers' />
                     <AccordionItemDirective header='Coffee Makers' />
@@ -56,9 +47,9 @@ class App extends React.Component<{}, {}> {
             document.getElementById("Appliances_Kitchen_Items"));
     }
 
-    public acAccordion(): void {
+    function acAccordion(): void {
         return ReactDom.render(
-            <AccordionComponent clicked={this.clicked}>
+            <AccordionComponent clicked={clicked}>
                 <AccordionItemsDirective>
                     <AccordionItemDirective header='Inverter ACs' />
                     <AccordionItemDirective header='Split ACs' />
@@ -68,9 +59,9 @@ class App extends React.Component<{}, {}> {
             document.getElementById("Appliances_Conditioners_Items"));
     }
 
-    public washingAccordian(): void {
+    function washingAccordian(): void {
         return ReactDom.render(
-            <AccordionComponent clicked={this.clicked}>
+            <AccordionComponent clicked={clicked}>
                 <AccordionItemsDirective>
                     <AccordionItemDirective header='Fully Automatic' />
                     <AccordionItemDirective header='Semi Automatic' />
@@ -79,9 +70,9 @@ class App extends React.Component<{}, {}> {
             document.getElementById("Appliances_Washing_Items"));
     }
 
-     public accessoriesAccordion(): void {
+    function accessoriesAccordion(): void {
         return ReactDom.render(
-            <AccordionComponent clicked={this.clicked}>
+            <AccordionComponent clicked={clicked}>
                 <AccordionItemsDirective>
                     <AccordionItemDirective header='Mobile' />
                     <AccordionItemDirective header='Computer' />
@@ -90,9 +81,9 @@ class App extends React.Component<{}, {}> {
             document.getElementById("Accessories_Items"));
     }
 
-    public homeAccordion(): void {
+    function homeAccordion(): void {
         return ReactDom.render(
-            <AccordionComponent clicked={this.clicked}>
+            <AccordionComponent clicked={clicked}>
                 <AccordionItemsDirective>
                     <AccordionItemDirective header='Furniture' />
                     <AccordionItemDirective header='Decor' />
@@ -101,9 +92,9 @@ class App extends React.Component<{}, {}> {
             document.getElementById("Home_Living_Items"));
     }
 
-    public fashionAccordion(): void {
+    function fashionAccordion(): void {
         return ReactDom.render(
-            <AccordionComponent clicked={this.clicked}>
+            <AccordionComponent clicked={clicked}>
                 <AccordionItemsDirective>
                     <AccordionItemDirective header='Men' />
                     <AccordionItemDirective header='Women' />
@@ -112,9 +103,9 @@ class App extends React.Component<{}, {}> {
             document.getElementById("Fashion_Items"));
     }
 
-    public entertainmentAccordion(): void {
+    function entertainmentAccordion(): void {
         return ReactDom.render(
-            <AccordionComponent clicked={this.clicked}>
+            <AccordionComponent clicked={clicked}>
                 <AccordionItemsDirective>
                     <AccordionItemDirective header='Televisions' />
                     <AccordionItemDirective header='Home Theatres' />
@@ -125,94 +116,92 @@ class App extends React.Component<{}, {}> {
     }
 
     // Expanding Event function for main Accordion component.
-    public expand(e: ExpandEventArgs): void {
-        if (e.isExpanded && [].indexOf.call(this.accordionObj.items, e.item) === 0) {
+    function expand(e: ExpandEventArgs): void {
+        if (e.isExpanded && [].indexOf.call(accordionObj.items, e.item) === 0) {
             if ((e.element as Element).querySelectorAll('.e-accordion').length > 0) {
                 return;
             }
-            this.appliancesAccordion();
-        } else if (e.isExpanded && [].indexOf.call(this.accordionObj.items, e.item) === 1) {
+            appliancesAccordion();
+        } else if (e.isExpanded && [].indexOf.call(accordionObj.items, e.item) === 1) {
             if ((e.element as Element).querySelectorAll('.e-accordion').length > 0) {
                 return;
             }
-            this.accessoriesAccordion();
-        } else if (e.isExpanded && [].indexOf.call(this.accordionObj.items, e.item) === 2) {
+            accessoriesAccordion();
+        } else if (e.isExpanded && [].indexOf.call(accordionObj.items, e.item) === 2) {
             if ((e.element as Element).querySelectorAll('.e-accordion').length > 0) {
                 return;
             }
-            this.fashionAccordion();
-        } else if (e.isExpanded && [].indexOf.call(this.accordionObj.items, e.item) === 3) {
+            fashionAccordion();
+        } else if (e.isExpanded && [].indexOf.call(accordionObj.items, e.item) === 3) {
             if ((e.element as Element).querySelectorAll('.e-accordion').length > 0) {
                 return;
             }
-            this.homeAccordion();
-        } else if (e.isExpanded && [].indexOf.call(this.accordionObj.items, e.item) === 4) {
+            homeAccordion();
+        } else if (e.isExpanded && [].indexOf.call(accordionObj.items, e.item) === 4) {
             if ((e.element as Element).querySelectorAll('.e-accordion').length > 0) {
                 return;
             }
-            this.entertainmentAccordion();
+            entertainmentAccordion();
         }
     }
 
     // Expanding Event function for nested Accordion component.
-    public nestedExpand(e: ExpandEventArgs): void {
-        if (e.isExpanded && [].indexOf.call(this.nestedAccordionObj.items, e.item) === 0) {
+    function nestedExpand(e: ExpandEventArgs): void {
+        if (e.isExpanded && [].indexOf.call(nestedAccordionObj.items, e.item) === 0) {
             if ((e.element as Element).querySelectorAll('.e-accordion').length > 0) {
                 return;
             }
-            this.kitchenAccordion();
-        } else if (e.isExpanded && [].indexOf.call(this.nestedAccordionObj.items, e.item) === 1) {
+            kitchenAccordion();
+        } else if (e.isExpanded && [].indexOf.call(nestedAccordionObj.items, e.item) === 1) {
             if ((e.element as Element).querySelectorAll('.e-accordion').length > 0) {
                 return;
             }
-            this.washingAccordian();
-        } else if (e.isExpanded && [].indexOf.call(this.nestedAccordionObj.items, e.item) === 2) {
+            washingAccordian();
+        } else if (e.isExpanded && [].indexOf.call(nestedAccordionObj.items, e.item) === 2) {
             if ((e.element as Element).querySelectorAll('.e-accordion').length > 0) {
                 return;
             }
-            this.acAccordion();
+            acAccordion();
         }
     }
 
-    public hamburgerClick(): void {
-        this.sidebarObj.show();
-        this.accordionObj.refresh();
+    function hamburgerClick(): void {
+        sidebarObj.show();
+        accordionObj.refresh();
     }
 
-    public close(): void {
-        this.sidebarObj.hide();
+    function close(): void {
+        sidebarObj.hide();
     }
 
-    public render() {
-        return (
-            <div>
-                <div className="header">
-                    <span id="hamburger" className="e-icons menu default" onClick={this.hamburgerClick}/>
-                    <div className="content">Header content</div>
-                </div>
-                <SidebarComponent id='default-sidebar' width={this.width} type={this.type} ref={scope => this.sidebarObj = scope as SidebarComponent}>
-                    <div className="title-header">
-                        <div style={{display:'inline-block'}}>Menu</div>
-                        <span  id="close" className="e-icons" onClick={this.close}/>
-                    </div>
-                    <div className="content-area">
-                        <AccordionComponent ref={scope => this.accordionObj = scope as AccordionComponent} expanding={this.expand} clicked={this.clicked}>
-                            <AccordionItemsDirective>
-                                <AccordionItemDirective header='Appliances' content='<div id="Appliances_Items"></div>' />
-                                <AccordionItemDirective header='Accessories' content='<div id="Accessories_Items"></div>' />
-                                <AccordionItemDirective header='Fashion' content='<div id="Fashion_Items"></div>' />
-                                <AccordionItemDirective header='Home & Living' content='<div id="Home_Living_Items"></div>' />
-                                <AccordionItemDirective header='Entertainment' content='<div id="Entertainment_Items"></div>' />
-                            </AccordionItemsDirective>
-                        </AccordionComponent>
-                    </div>
-                </SidebarComponent>
-                <div>
-                    <div className="main-content">Main content</div>
-                </div>
+    return (
+        <div>
+            <div className="header">
+                <span id="hamburger" className="e-icons menu default" onClick={hamburgerClick}/>
+                <div className="content">Header content</div>
             </div>
-        );
-    }
+            <SidebarComponent id='default-sidebar' width={width} type={type} ref={scope => sidebarObj = scope as SidebarComponent}>
+                <div className="title-header">
+                    <div style={{display:'inline-block'}}>Menu</div>
+                    <span  id="close" className="e-icons" onClick={close}/>
+                </div>
+                <div className="content-area">
+                    <AccordionComponent ref={scope => accordionObj = scope as AccordionComponent} expanding={expand} clicked={clicked}>
+                        <AccordionItemsDirective>
+                            <AccordionItemDirective header='Appliances' content='<div id="Appliances_Items"></div>' />
+                            <AccordionItemDirective header='Accessories' content='<div id="Accessories_Items"></div>' />
+                            <AccordionItemDirective header='Fashion' content='<div id="Fashion_Items"></div>' />
+                            <AccordionItemDirective header='Home & Living' content='<div id="Home_Living_Items"></div>' />
+                            <AccordionItemDirective header='Entertainment' content='<div id="Entertainment_Items"></div>' />
+                        </AccordionItemsDirective>
+                    </AccordionComponent>
+                </div>
+            </SidebarComponent>
+            <div>
+                <div className="main-content">Main content</div>
+            </div>
+        </div>
+    );
 }
 
 ReactDom.render(<App />,document.getElementById('element'));

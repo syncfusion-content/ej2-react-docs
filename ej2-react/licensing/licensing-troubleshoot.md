@@ -71,3 +71,37 @@ Refer to the [KB](https://www.syncfusion.com/kb/11532/definition-of-terms-for-sy
 ## If I registered the license key in both the application and the license text file
 
 The application registered license key is set priority and used for license validation.
+
+## Potential causes of licensing errors in applications.
+
+ Below are the possible reasons that could lead to a license error within the application:
+
+ * The application may have a license issue due to duplicate Syncfusion packages. 
+
+ * An invalid license issue may occur because of Syncfusion packages being referred with multiple versions. 
+
+ * Registering the license key of a different version than the referred Syncfusion package version in the application can also cause licensing errors.
+
+### License issue due to duplicate Syncfusion packages in the application
+
+One of the possible cases on experiencing license issues in your application is due to duplicate packages exists after upgrading packages to next or latest version. To remove the duplicate packages follow the below steps.
+
+* Delete the `@Syncfusion` folder from `node_modules` and [`package-lock.json`](https://docs.npmjs.com/cli/v6/commands/npm-dedupe) file from app `root folder`.
+
+* Clear the npm `.cache` by running the command `npm cache clean –force` or you can directly delete the file present in the application.
+
+* It is recommended to update all Syncfusion components in the package.json file to the `same major version`. This ensures consistency and compatibility across the project. For instance, if the updated version being utilized is `v20.4.XX`, it is advised to upgrade all components to the `same version`.
+
+* Run `npm install` Command.
+
+### Invalid license issue because of Syncfusion packages referred with multiple version
+
+It is essential to ensure that all the components used in a project are compatible and work seamlessly together. One common issue that arises in such scenarios is `version mismatch`. Version mismatch occurs when `different components` have `different major versions`, leading to compatibility issues and difficulties in license registration.
+
+For example, consider a situation where one component in the project has a version of `v20.1.XX`, while another component has a version of `v20.2.XX`. When such components are used together, a `version mismatch` occurs, leading to license errors. To avoid version mismatch and ensure smooth functioning of the project, it is crucial to use the `same major version` for all the Syncfusion components. This will ensure compatibility and prevent any licensing issues that may arise due to version incompatibility.
+
+### Registering the license key of a different version than the referred Syncfusion package version in the application
+
+When developing an application with Syncfusion packages, it is important to register the appropriate license key that matches the version of the package installed. Failure to do so may result in license errors within the application. 
+
+For instance, if you are using a component version labeled as `(v20.4.XX)`, it is essential to register the license key generated `specifically` for that version. By doing so, it ensures the smooth functioning of the controls and provides access to all features and functionality without encountering any license validation errors.

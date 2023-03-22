@@ -19,8 +19,8 @@ export default class App extends React.Component<{}, {}> {
     }
      render() {
         return  (<SpreadsheetComponent showFormulaBar={false} ref={(ssObj) => { this.spreadsheet = ssObj }} created={this.created.bind(this)}
-        openUrl={"https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open"}
-        saveUrl={"https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save"}>
+        openUrl={"https://services.syncfusion.com/react/production/api/spreadsheet/open"}
+        saveUrl={"https://services.syncfusion.com/react/production/api/spreadsheet/save"}>
                         <SheetsDirective>
                         <SheetDirective name='Visible Sheet' state={'Visible'}>
                                 <RangesDirective>

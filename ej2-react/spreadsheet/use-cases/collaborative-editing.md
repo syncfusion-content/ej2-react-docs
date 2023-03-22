@@ -197,6 +197,6 @@ export default class App extends React.Component<{}, {}> {
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
-* [Filtering](./filter)
-* [Sorting](./sort)
-* [Hyperlink](./link)
+* [Filtering](../filter)
+* [Sorting](../sort)
+* [Hyperlink](../link)

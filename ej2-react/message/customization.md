@@ -34,7 +34,7 @@ The following example demonstrates the message with different content alignments
 
 ## Rounded and Square
 
-To customize the Message component's appearance, add the custom class to the message through the `cssClass` property. This custom class will be added to the root element. Based on this custom class, the user can override the message styles at the application level.
+To customize the Message component's appearance, add the custom class to the message through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/message/#cssclass) property. This custom class will be added to the root element. Based on this custom class, the user can override the message styles at the application level.
 
 The following example shows the rounded and squared appearance of the message, which can be achieved by adding the `cssClass` property.
 

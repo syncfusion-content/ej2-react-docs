@@ -9,7 +9,7 @@ class App extends React.Component {
         }
         render();
         {
-            return <TreeGridComponent ref={(treegrid) => (this.treegridInstance = treegrid)} dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' height='270' rowDrop={this.rowDrop.bind(this)}>
+            return <TreeGridComponent ref={(treegrid) => (this.treegridInstance = treegrid)} allowRowDragAndDrop={true} dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' height='270' rowDrop={this.rowDrop.bind(this)}>
             <ColumnsDirective>
               <ColumnDirective field='taskID' headerText='Task ID' width='90' textAlign='Right'></ColumnDirective>
               <ColumnDirective field='taskName' headerText='Task Name' width='180'></ColumnDirective>
@@ -20,7 +20,5 @@ class App extends React.Component {
         </TreeGridComponent>;
         }
     }
-    ReactDOM;
-    render(, App) { }
 }
-/>, document.getElementById('treegrid'));;
+ReactDOM.render(<App />, document.getElementById('treegrid'));

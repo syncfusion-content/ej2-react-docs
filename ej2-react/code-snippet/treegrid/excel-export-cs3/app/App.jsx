@@ -5,7 +5,7 @@ import { sampleData } from './datasource';
 function App() {
     const toolbarOptions = ['ExcelExport'];
     const pageSettings = { pageSize: 7 };
-    const treegrid = React.useRef(null);
+    let treegrid;
     const toolbarClick = (args) => {
         if (treegrid && args.item.text === 'Excel Export') {
             const exportProperties = {
@@ -15,10 +15,10 @@ function App() {
                     record: { fontName: 'Segoe UI', fontColor: '#666666' }
                 }
             };
-            treegrid.current.excelExport(exportProperties);
+            treegrid.excelExport(exportProperties);
         }
     };
-    return <TreeGridComponent dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' allowPaging={true} pageSettings={pageSettings} allowExcelExport={true} height='220' toolbarClick={toolbarClick} ref={treegrid} toolbar={toolbarOptions}>
+    return <TreeGridComponent dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' allowPaging={true} pageSettings={pageSettings} allowExcelExport={true} height='220' toolbarClick={toolbarClick} ref={g => treegrid = g} toolbar={toolbarOptions}>
         <ColumnsDirective>
             <ColumnDirective field='taskID' headerText='Task ID' width='90' textAlign='Right'/>
             <ColumnDirective field='taskName' headerText='Task Name' width='180'/>

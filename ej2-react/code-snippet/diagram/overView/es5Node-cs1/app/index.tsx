@@ -84,7 +84,7 @@ let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
 // Initializes the Diagram control
 function App() {
   return (
-    <>
+    <div>
       <div style={{ width: '75%', float: 'left' }}>
         <DiagramComponent
           id="container"
@@ -182,7 +182,7 @@ function App() {
         width={'24%'}
         height={'130px'}
       />
-    </>
+    </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));

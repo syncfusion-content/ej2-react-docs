@@ -8,7 +8,7 @@ export default class App extends React.Component {
         // your code snippets here
     }
     render() {
-        return (<SpreadsheetComponent allowSave={true} saveUrl='https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save' beforeSave={this.beforeSave.bind(this)}>
+        return (<SpreadsheetComponent allowSave={true} saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' beforeSave={this.beforeSave.bind(this)}>
                         <SheetsDirective>
                             <SheetDirective>
                                 <RangesDirective>

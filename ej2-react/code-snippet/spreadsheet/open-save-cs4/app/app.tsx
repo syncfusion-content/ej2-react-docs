@@ -40,7 +40,7 @@ export default class App extends React.Component<{}, {}> {
         ref={(ssObj) => {
           this.spreadsheet = ssObj;
         }}
-        openUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open"
+        openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open"
         openComplete={this.openComplete.bind(this)}
       ></SpreadsheetComponent>
     );

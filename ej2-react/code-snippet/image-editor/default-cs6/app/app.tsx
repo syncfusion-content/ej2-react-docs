@@ -4,16 +4,15 @@ import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
-export default class App extends React.Component<{}, {}> {
+function App() {
 
-  public render() {
-    return (
-        <div id="wrapperDiv">
-            <ImageEditorComponent/>
-        </div>
-    );
-  }
+  return (
+      <div id="wrapperDiv">
+          <ImageEditorComponent/>
+      </div>
+  );
 }
+export default App;
 
 ReactDOM.render(<App />, document.getElementById('image-editor'));
 

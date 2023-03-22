@@ -340,7 +340,7 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 * `errorInfo`: It holds the error information of the current UI action.
 
-        {% tabs %
+        {% tabs %}
         {% highlight js tabtitle="index.jsx" %}
         {% include code-snippet/pivot-table/default-cs15/app/index.jsx %}
         {% endhighlight %}

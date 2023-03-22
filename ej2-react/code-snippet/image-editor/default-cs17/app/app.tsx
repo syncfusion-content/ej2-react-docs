@@ -7,31 +7,29 @@ import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
-export default class App extends React.Component<{}, {}> {
-    private imgObj: ImageEditorComponent;
-    public imageEditorCreated(): void {
+function App() {
+    let imgObj: ImageEditorComponent;
+    function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
         } else {
-            this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
         }
     }
-      buttonTemplate(data) {
-        return (<ButtonComponent cssClass='e-primary' content='Click'  onClick = {this.btnClick.bind(this)}/>);
+    function buttonTemplate(data) {
+        return (<ButtonComponent cssClass='e-primary' content='Click'  onClick = {btnClick}/>);
     }
 
-    public btnClick(): void {
-        this.imgObj.freeHandDraw(true);
+    function btnClick(): void {
+        imgObj.freeHandDraw(true);
     }
-    render() {
-        return (
-            <div className='e-img-editor-sample'>
-            <ImageEditorComponent toolbarTemplate={this.buttonTemplate} ref={(img) => { this.imgObj = img }} created={this.imageEditorCreated.bind(this)}/>
-            </div>
-        );
-    }
+    return (
+        <div className='e-img-editor-sample'>
+        <ImageEditorComponent toolbarTemplate={buttonTemplate} ref={(img) => { imgObj = img }} created={imageEditorCreated}/>
+        </div>
+    );
 }
-
+export default App;
 ReactDOM.render(<App />, document.getElementById('image-editor'));
 
 

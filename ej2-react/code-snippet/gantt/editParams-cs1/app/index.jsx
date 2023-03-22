@@ -44,7 +44,7 @@ function App () {
         return <GanttComponent dataSource={data} taskFields={taskFields} editSettings={editOptions} height='450px' ref={gantt => ganttInstance = gantt}>
          <ColumnsDirective>
                 <ColumnDirective field='TaskID'></ColumnDirective>
-                <ColumnDirective field='TaskName' edit={this.dropdownlist}></ColumnDirective>
+                <ColumnDirective field='TaskName' edit={dropdownlist}></ColumnDirective>
                 <ColumnDirective field='StartDate'></ColumnDirective>
                 <ColumnDirective field='Duration'></ColumnDirective>
                 <ColumnDirective field='Progress'></ColumnDirective>

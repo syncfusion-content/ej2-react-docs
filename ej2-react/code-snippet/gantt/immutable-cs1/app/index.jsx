@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Toolbar, ToolbarItem, Edit, EditSettingsModel } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject,Selection,Toolbar, ToolbarItem, Edit, EditSettingsModel } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function App(){
     const taskFields = {

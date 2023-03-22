@@ -27,13 +27,13 @@ export default class App extends React.Component {
     itemSelect(args) {
         let spreadsheet = getComponent(document.getElementById("spreadsheet"), "spreadsheet");
         if (args.item.text === 'Save As xlsx')
-            spreadsheet.save({ url: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save', fileName: "Sample", saveType: "Xlsx" });
+            spreadsheet.save({ url: 'https://services.syncfusion.com/react/production/api/spreadsheet/save', fileName: "Sample", saveType: "Xlsx" });
         if (args.item.text === 'Save As xls')
-            spreadsheet.save({ url: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save', fileName: "Sample", saveType: "Xls" });
+            spreadsheet.save({ url: 'https://services.syncfusion.com/react/production/api/spreadsheet/save', fileName: "Sample", saveType: "Xls" });
         if (args.item.text === 'Save As csv')
-            spreadsheet.save({ url: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save', fileName: "Sample", saveType: "Csv" });
+            spreadsheet.save({ url: 'https://services.syncfusion.com/react/production/api/spreadsheet/save', fileName: "Sample", saveType: "Csv" });
         if (args.item.text === 'Save As pdf')
-            spreadsheet.save({ url: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save', fileName: "Sample", saveType: "Pdf" });
+            spreadsheet.save({ url: 'https://services.syncfusion.com/react/production/api/spreadsheet/save', fileName: "Sample", saveType: "Pdf" });
     }
     render() {
         return (<div> <DropDownButtonComponent id="element" items={this.items} select={this.itemSelect}> Save </DropDownButtonComponent>

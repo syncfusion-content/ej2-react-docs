@@ -6,13 +6,14 @@ import * as React from 'react';
 import { sampleData } from './datasource';
 
 function App() {
-  let treegridobj: TreeGridComponent | null;
   const toolbarOptions: any = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-  const renderingMode: any = 'Vertical';
   const editSettings: any = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' };
   const filterOptions: any = { type: 'Excel' };
+  let treegrid: TreeGridComponent;
   const load = (): void => {
-    treegridobj.grid.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0] as HTMLElement;
+    const ID: string = !Browser.isDevice ? 'adaptivebrowser' : 'adaptivedevice';
+    treegrid = document.getElementById(ID).ej2_instances[0];
+    treegrid.grid.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0] as HTMLElement;
   }
     return (
       <div className='control-pane'>
@@ -21,7 +22,7 @@ function App() {
             {!Browser.isDevice ? (
               <div className="e-mobile-layout">
                 <div className="e-mobile-content">
-                    <TreeGridComponent id="adaptivebrowser" dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' height='100%' ref={treegrid => treegridobj = treegrid} enableAdaptiveUI={true} allowFiltering={true} allowSorting={true} allowPaging={true} filterSettings={filterOptions} toolbar={toolbarOptions} editSettings={editSettings} load={load}>
+                    <TreeGridComponent id="adaptivebrowser" dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' height='100%'  enableAdaptiveUI={true} allowFiltering={true} allowSorting={true} allowPaging={true} filterSettings={filterOptions} toolbar={toolbarOptions} editSettings={editSettings} load={load}>
                       <ColumnsDirective>
                         <ColumnDirective field='taskID' headerText='Task ID' isPrimaryKey={true} width='135' textAlign='Right'></ColumnDirective>
                         <ColumnDirective field='taskName' headerText='Task Name' width='280'></ColumnDirective>
@@ -33,7 +34,7 @@ function App() {
                 </div>
               </div>
             ) : (
-                <TreeGridComponent id="adaptivedevice" dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' height='100%' ref={treegrid => treegridobj = treegrid} enableAdaptiveUI={true} allowFiltering={true} allowSorting={true} allowPaging={true} filterSettings={filterOptions} toolbar={toolbarOptions} editSettings={editSettings} load={load}>
+                <TreeGridComponent id="adaptivedevice"  dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' height='100%'  enableAdaptiveUI={true} allowFiltering={true} allowSorting={true} allowPaging={true} filterSettings={filterOptions} toolbar={toolbarOptions} editSettings={editSettings} load={load}>
                 <ColumnsDirective>
                   <ColumnDirective field='taskID' headerText='Task ID' isPrimaryKey={true} width='135' textAlign='Right'></ColumnDirective>
                   <ColumnDirective field='taskName' headerText='Task Name' width='280'></ColumnDirective>

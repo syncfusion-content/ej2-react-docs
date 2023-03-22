@@ -10,29 +10,41 @@ import { Edit, Page, Toolbar, ToolbarItems, EditSettingsModel } from '@syncfusio
 
 function App() {
 
-  const treegrid = React.useRef(null);
+  let treegridObj: TreeGridComponent | null;
   const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Row' };
   const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
   const load = (): void => {
-    let instance:any = treegrid.current;
+    treegridObj = document.getElementById('treegridObj').ej2_instances[0];
+    let instance:any = treegridObj;
     if(instance != null)
     {
-        instance.element.addEventListener('mousedown', function (e:any) {
-            if ((e.target as HTMLElement).classList.contains("e-rowcell")) {
-                if (instance.grid.isEdit) {
-                  instance.endEdit();
-                }
-                let index: number = parseInt((e.target as HTMLElement).getAttribute('Index') as string);
-                instance.selectRow(index);
-                instance.startEdit();
-            };
-        });
+      instance.element.addEventListener('mousedown', function (e) {
+        if ((e.target).closest('td') != null &&
+        (e.target).closest('td').classList.contains("e-rowcell") &&
+        !(e.target).classList.contains("e-treegridexpand") &&
+        !(e.target).classList.contains("e-treegridcollapse")) {
+          if (instance.grid.isEdit &&
+          !(e.target).closest('.e-row').classList.contains('e-editedrow') &&
+          !(e.target).closest('.e-row').classList.contains('e-addedrow')) {
+            instance.endEdit(); // calling endEdit method
+            }
+          if(!instance.grid.isEdit) {
+            let index = parseInt((e.target).closest('td').getAttribute('Index'));
+            instance.selectRow(index);
+            instance.startEdit(); // calling startEdit method
+            let colIndex = parseInt((e.target).closest('td').getAttribute("aria-colIndex"));
+            setTimeout(function(){ 
+              (document.getElementsByClassName('e-input')[colIndex] as any).focus();
+            });
+            }
+        };
+      });
     }
   }
     return (
       <TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping= 'TaskID' parentIdMapping='parentID' height={210}
       allowPaging={true} toolbar={toolbarOptions} editSettings={editSettings} load={load}
-      ref={treegrid}>
+      id="treegridObj">
         <ColumnsDirective>
           <ColumnDirective field='TaskID' headerText='Task ID' width='70' textAlign='Right' isPrimaryKey={true}></ColumnDirective>
           <ColumnDirective field='TaskName' headerText='Task Name' width='120'></ColumnDirective>

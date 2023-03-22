@@ -29,27 +29,26 @@ Following is the list of minimum dependencies required to use the Circular Gauge
 
 To get started with the React application, [create-react-app](https://github.com/facebookincubator/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
 
-```
-npm install -g create-react-app
-```
+     ```
+       npm install -g create-react-app
+     ```
 
 To create basic React application, run the following command.
 
-<div class='jsx'>
+     <div class='jsx'>
 
-```
-create-react-app quickstart
-```
+     ```
+      create-react-app quickstart
+     ```
 
-</div>
+    </div>
 
-Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
+   Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-```
-cd quickstart
-
-npm install
-```
+     ```
+      cd quickstart
+      npm install
+   ```
 
 > In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
 
@@ -57,21 +56,19 @@ npm install
 
 To create React application with TypeScript, use the following command.
 
-<div class='jsx'>
+    <div class='jsx'>
 
-```
-create-react-app quickstart --template typescript
-```
+     ```
+      create-react-app quickstart --template typescript
+     ```
+     </div>
 
-</div>
+    Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-```
-cd quickstart
-
-npm install
-```
+    ```
+     cd quickstart
+     npm install
+    ```
 
 ### Adding Syncfusion packages
 

@@ -33,6 +33,6 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
 ## See Also
 
-* [Filtering](./filter)
-* [Sorting](./sort)
-* [Hyperlink](./link)
+* [Filtering](../filter)
+* [Sorting](../sort)
+* [Hyperlink](../link)

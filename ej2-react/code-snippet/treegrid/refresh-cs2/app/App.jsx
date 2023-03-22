@@ -4,26 +4,38 @@ import { ColumnsDirective, ColumnDirective, TreeGridComponent, Inject } from '@s
 import { Edit, Page, Toolbar } from '@syncfusion/ej2-react-treegrid';
 /* tslint:disable */
 function App() {
-    const treegrid = React.useRef(null);
+    let treegridObj;
     const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Row' };
     const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
     const load = () => {
-        let instance = treegrid.current;
+      treegridObj = document.getElementById('treegridObj').ej2_instances[0];
+
+        let instance = treegridObj;
         if (instance != null) {
             instance.element.addEventListener('mousedown', function (e) {
-                if (e.target.classList.contains("e-rowcell")) {
-                    if (instance.grid.isEdit) {
-                        instance.endEdit();
+                if ((e.target).closest('td') != null &&
+                (e.target).closest('td').classList.contains("e-rowcell") &&
+                !(e.target).classList.contains("e-treegridexpand") &&
+                !(e.target).classList.contains("e-treegridcollapse")) {
+                  if (instance.grid.isEdit &&
+                  !(e.target).closest('.e-row').classList.contains('e-editedrow') &&
+                  !(e.target).closest('.e-row').classList.contains('e-addedrow')) {
+                    instance.endEdit(); // calling endEdit method
                     }
-                    let index = parseInt(e.target.getAttribute('Index'));
+                  if(!instance.grid.isEdit) {
+                    let index = parseInt((e.target).closest('td').getAttribute('Index'));
                     instance.selectRow(index);
-                    instance.startEdit();
-                }
-                ;
-            });
+                    instance.startEdit(); // calling startEdit method
+                    let colIndex = parseInt((e.target).closest('td').getAttribute("aria-colIndex"));
+                    setTimeout(function(){ 
+                      document.getElementsByClassName('e-input')[colIndex].focus();
+                    });
+                    }
+                };
+              });
         }
     };
-    return (<TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' height={210} allowPaging={true} toolbar={toolbarOptions} editSettings={editSettings} load={load} ref={treegrid}>
+    return (<TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' height={210} allowPaging={true} toolbar={toolbarOptions} editSettings={editSettings} load={load} id="treegridObj">
         <ColumnsDirective>
           <ColumnDirective field='TaskID' headerText='Task ID' width='70' textAlign='Right' isPrimaryKey={true}></ColumnDirective>
           <ColumnDirective field='TaskName' headerText='Task Name' width='120'></ColumnDirective>

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Variants in React Message component
 
-The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the `variant` property.
+The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the [variant](https://ej2.syncfusion.com/react/documentation/api/message/#variant) property.
 
 The available variants are **Text**, **Outlined** and **Filled**. The default variant type for messages is **Text**.
 * **Text** - The severity is differentiated using a text color and a light background color.

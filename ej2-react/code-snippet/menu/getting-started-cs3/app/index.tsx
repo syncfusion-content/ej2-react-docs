@@ -11,44 +11,43 @@ const SERVICE_URI: string = 'https://js.syncfusion.com/demos/ejServices/Wcf/Nort
 
 enableRipple(true);
 
-class App extends React.Component<{}, {menuItems: Array<{ [key: string]: any }> }> {
+function App() {
+    let menuObj: MenuComponent;
+    const [state, setState] = useState({
+        menuItems: []
+    });
     // Menu fields definition.
-    public menuFields: FieldSettingsModel = {
+    let menuFields: FieldSettingsModel = {
         children: ['Orders'],
         text: ['FirstName', 'ShipName']
     };
-    constructor(props: any) {
-        super(props);
-        this.state = { menuItems: [] };
-    }
-    public componentDidMount(): void {
-        // Getting remote data using DataManager.
-        const proxy = this;
+
+    useEffect(() => {
         new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor, crossDomain: true })
             .executeQuery(
                 new Query().from('Employees').take(5).hierarchy(
                     new Query()
                         .foreignKey('EmployeeID')
                         .from('Orders').take(13),
-                        this.select
+                        select
             ))
             .then((e: ReturnOption) => {
-                proxy.setState({menuItems: e.result as Array<{ [key: string]: any }>});
+                setState({ menuItems: e.result as Array<{ [key: string]: any }>} );
         });
-    }
-    public select(): number [] {
+    }, []);
+
+    function select(): number [] {
         return [1,2,3,4,5];
     }
-    public render() {
-        return (
-            <div>
-                {
-                    this.state.menuItems.length  ?
-                    <MenuComponent items={this.state.menuItems} fields={this.menuFields}/> : ''
-                }
-            </div>
-        );
-    }
+
+    return (
+        <div>
+            {
+                state.menuItems.length  ?
+                <MenuComponent ref={scope => menuObj = scope} items={state.menuItems} fields={menuFields}/> : ''
+            }
+        </div>
+    );
 }
 
 ReactDom.render(<App />,document.getElementById('element'));

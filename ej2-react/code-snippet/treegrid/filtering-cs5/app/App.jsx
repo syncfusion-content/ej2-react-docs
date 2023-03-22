@@ -17,3 +17,5 @@ function App() {
     <Inject services={[Filter]}/>
     </TreeGridComponent>;
 }
+;
+export default App;
