@@ -59,11 +59,11 @@ If column's width is not defined then tree grid will consider its value as `200p
 * The page size provided must be two times larger than the number of visible rows in the TreeGrid. If the page size is failed to meet this condition then the size will be determined by TreeGrid.
 * The virtual height of the treegrid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the row height as below to ensure all the table rows are in same height.
 
-```css
-.e-treegrid .e-row {
-    height: 2em;
-}
-```
+    ```css
+    .e-treegrid .e-row {
+        height: 2em;
+    }
+    ```
 
 * Programmatic selection using the **selectRows** method is not supported in virtual scrolling.
 * Virtual scrolling is not compatible with Batch editing, clipboard functionality and detail template.

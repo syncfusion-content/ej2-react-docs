@@ -16,15 +16,15 @@ You can show/hide Spinner by using `showSpinner` and `hideSpinner` methods accor
 
 The following steps explains you on how to create and how to show/hide your Spinner.
 
-* Import the `createSpinner` method from `ej2-popups` library into your file as shown in below.
+*Import the `createSpinner` method from `ej2-popups` library into your file as shown in below.
 
-    ```ts
+    ```
       import { createSpinner } from '@syncfusion/ej2-popups';
      ```
 
-* Show and hide this spinner by using `showSpinner` and `hideSpinner` methods for loading in your page and import them in your file as shown in below.
+*Show and hide this spinner by using `showSpinner` and `hideSpinner` methods for loading in your page and import them in your file as shown in below.
 
-    ```ts
+    ```
      import { showSpinner, hideSpinner } from '@syncfusion/ej2-popups';
     ```
 
