@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 * Create a TypeScript file and import the `Input` modules from `ej2-inputs` library as shown below.
 
-```ts
-import {Input} from '@syncfusion/ej2-inputs';
-```
+   ```ts
+    import {Input} from '@syncfusion/ej2-inputs';
+   ```
 
 * Pass the `HTML Input` element as parameter to the `createInput` method.
 

@@ -111,8 +111,8 @@ The UML class diagram shapes are explained as follows.
 
 Association is basically a set of links that connects elements of an UML model. The type of association are as follows.
 
-    1. Directional
-    2. BiDirectional
+     1.Directional
+     2.BiDirectional
 
 The association property allows you to define the type of association. The default value of association is “Directional”. The following code example illustrates how to create an association.
 
@@ -201,10 +201,10 @@ The following code example illustrates how to create an inheritance.
 
 Multiplicity is a definition of an inclusive interval of non-negative integers to specify the allowable number of instances of described element. The type of multiplicity are as follows.
 
-    1. OneToOne
-    2. ManyToOne
-    3. OneToMany
-    4. ManyToMany
+     1.OneToOne
+     2.ManyToOne
+     3.OneToMany
+     4.ManyToMany
 
 * By default the multiplicity will be considered as “OneToOne”.
 
@@ -235,11 +235,11 @@ Activity diagram is basically a flowchart to represent the flow from one activit
 
 The purpose of an activity diagram can be described as follows.
 
-    1. Draw the activity flow of a system.
+      1.Draw the activity flow of a system.
 
-    2. Describe the sequence from one activity to another.
+      2.Describe the sequence from one activity to another.
 
-    3. Describe the parallel, branched, and concurrent flow of the system.
+      3.Describe the parallel, branched, and concurrent flow of the system.
 
 To create a UmlActivity, define type as "UmlActivity" and the list of built-in shapes as demonstrated as follows and it should be set in the "shape" property.
 

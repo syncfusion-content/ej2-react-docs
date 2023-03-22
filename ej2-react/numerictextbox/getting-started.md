@@ -28,19 +28,16 @@ The following list of dependencies are required to use the NumericTextBox compon
 You can use [Create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+    ```bash
+       npm install -g create-react-app
+    ```
 
 Start a new project using create-react-app command as follows
 
-```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
+    ```bash
+      create-react-app quickstart --scripts-version=react-scripts-ts
+      cd quickstart
+   ```
 
 ## Adding Syncfusion packages
 
@@ -95,7 +92,7 @@ Import the NumericTextBox component's required CSS references as follows in `src
 @import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
 ```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://ej2crg.azurewebsites.net/) (Custom Resource Generator) in your application.
+>Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Run the application
 

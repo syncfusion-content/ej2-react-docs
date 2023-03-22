@@ -29,19 +29,16 @@ The following are the dependencies required to use the uploader component in you
 
 You can use [Create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+    ```bash
+     npm install -g create-react-app
+    ```
 
 Start a new project using create-react-app command as follows
 
-```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-```
+    ```
+     create-react-app quickstart --scripts-version=react-scripts-ts
+     cd quickstart
+   ```
 
 ## Adding Syncfusion Packages
 
@@ -107,9 +104,9 @@ ReactDOM.render(<App />, document.getElementById('fileupload'));
 
 After completing the configuration to render the basic uploader, run the following command to display the output in your default browser.
 
-```
-npm run start
-```
+   ```
+    npm run start
+   ```
 
 > From v16.2.41 version, the `Essential JS2 AJAX` library has been integrated for uploader server requests. Hence, use the third party `promise` library like blue-bird to use the uploader in Internet Explorer.
 

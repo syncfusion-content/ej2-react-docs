@@ -22,15 +22,15 @@ Type     | Description
 
 * Create a TypeScript file and import the `Input` modules from `ej2-inputs` library as shown below.
 
-```ts
-import {Input} from '@syncfusion/ej2-inputs';
-```
+   ```ts
+    import {Input} from '@syncfusion/ej2-inputs';
+   ```
 
 * Pass the `HTML Input` element and `floatLabelType` property as `Auto` to the `createInput` method.
 
 * Set the `placeholder` value to the input element via `element attribute` or pass the parameter to the `createInput` method.
 
-The `watermark label` will be updated based on the specified `placeholder` value of the `Floating Label TextBox`.
+    The `watermark label` will be updated based on the specified `placeholder` value of the `Floating Label TextBox`.
 
 * You can add the `icons` on the input by passing `buttons` property value with the class name `e-input-group-icon` as parameter to the `createInput` method.
 
