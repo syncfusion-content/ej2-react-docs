@@ -14,13 +14,13 @@ You can use custom templates on the Spinner instead of the default Spinner by sp
 
 The following steps explains you on how to define template for Spinner.
 
-* Import the `setSpinner` method from `ej2-react-popups` library into your `index.tsx` as shown in below.
+*Import the `setSpinner` method from `ej2-react-popups` library into your `index.tsx` as shown in below.
 
-    ```ts
+    ```
      import { setSpinner } from '@syncfusion/ej2-react-popups';
     ```
 
-* Pass your custom template to the `setSpinner` method like as below.
+*Pass your custom template to the `setSpinner` method like as below.
 
      ```ts
      // Specify the template content to be displayed in the Spinner
