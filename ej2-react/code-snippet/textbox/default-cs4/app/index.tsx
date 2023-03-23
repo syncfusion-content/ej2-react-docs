@@ -39,16 +39,16 @@ function App() {
         }
     }
 
-        return (
-            <div className="inner-container">
-                <h4> Floating label without required attribute </h4>
-                <div className="e-float-input">
-                  <input id='inpt1' type="text" onInput= {onInputEvt}  onFocus={onFocusIn} onBlur={onFocusOut } ref = {e => e.textboxInstance = e!} />
-                  <span className="e-float-line"/>
-                  <label className="e-float-text">First Name</label>
-                </div>
+    return (
+        <div className="inner-container">
+            <h4> Floating label without required attribute </h4>
+            <div className="e-float-input">
+                <input id='inpt1' type="text" onInput= {onInputEvt}  onFocus={onFocusIn} onBlur={onFocusOut } ref = {e => e.textboxInstance = e!} />
+                <span className="e-float-line"/>
+                <label className="e-float-text">First Name</label>
             </div>
-        )
+        </div>
+    )
 };
 ReactDOM.render(<App />, document.getElementById('input-container'));
 
