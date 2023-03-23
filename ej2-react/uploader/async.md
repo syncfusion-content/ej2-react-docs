@@ -12,8 +12,8 @@ domainurl: ##DomainURL##
 
 The uploader component allows you to upload the files asynchronously. The upload process requires save and remove action URL to manage the upload process in the server.
 
-    *   The save action is necessary to handle the upload operation.
-    *   The remove action is optional, one which handle the removed files from server.
+       * The save action is necessary to handle the upload operation.
+       * The remove action is optional, one which handle the removed files from server.
 
 The File can be upload automatically or manually. For more information, you can refer to the **Auto Upload** section from the documentation.
 
@@ -178,8 +178,8 @@ public void Save()
 
 The remove action is optional. Specify the URL to handle remove process from server. The remove handler receives the posted files and handle the remove operation in server.
 
-    *   When the files are removed successfully from server, the success event triggers to denote the process has completed.
-    *   When remove action fails, the event “failure” triggers with information, which cause failure in remove process.
+    * When the files are removed successfully from server, the success event triggers to denote the process has completed.
+    * When remove action fails, the event “failure” triggers with information, which cause failure in remove process.
 
 > You can differentiate the file operation whether the success event triggers from save or remove action in its arguments **eventArgs.operation** .
 

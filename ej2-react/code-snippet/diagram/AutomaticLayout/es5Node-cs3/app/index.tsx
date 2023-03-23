@@ -41,7 +41,7 @@ let data: object[] = [
 let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
 
 function App() {
-  return(
+  return (
   <DiagramComponent
     id="container"
     width={"100%"}
