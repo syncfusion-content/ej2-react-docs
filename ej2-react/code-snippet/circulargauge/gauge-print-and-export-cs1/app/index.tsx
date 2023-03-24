@@ -7,9 +7,9 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { CircularGaugeComponent, Print, Inject } from '@syncfusion/ej2-react-circulargauge';
 
 export function App() {
-  let gaugeInstance : CircularGaugeComponent | null;
+  let gaugeInstance : CircularGaugeComponent;
   function clickHandler() {
-    gaugeInstance?.print();
+    gaugeInstance.print();
   }
   return (<div>
       <ButtonComponent onClick={clickHandler}>

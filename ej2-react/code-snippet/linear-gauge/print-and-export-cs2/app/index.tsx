@@ -7,9 +7,9 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { LinearGaugeComponent, ImageExport, Inject } from '@syncfusion/ej2-react-lineargauge';
 export function App() {
   function clickHandler(){
-      gaugeInstance?.export('PNG','Gauge');
+      gaugeInstance.export('PNG','Gauge');
   }
-  let gaugeInstance : LinearGaugeComponent | null;
+  let gaugeInstance : LinearGaugeComponent;
   return (<div>
   <ButtonComponent onClick= { clickHandler}>Export</ButtonComponent>
   <LinearGaugeComponent allowImageExport={true} ref={g => gaugeInstance = g}>
