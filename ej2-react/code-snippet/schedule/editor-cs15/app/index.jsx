@@ -1,4 +1,3 @@
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { Day, Week, WorkWeek, Month, ScheduleComponent, ViewsDirective, ViewDirective, Inject } from '@syncfusion/ej2-react-schedule';
@@ -7,24 +6,23 @@ function App() {
     let scheduleObj;
     function ClickButton() {
         scheduleObj.closeEditor();
-    }
-    return (<div>
+  }
+  const data = [{
+    Id: 1,
+    Subject: 'Review Meeting',
+    StartTime: new Date(2023, 2, 5, 9, 0, 0),
+    EndTime: new Date(2023, 2, 5, 10, 0, 0)
+  }];
+  return (<div>
     <ButtonComponent onClick={ClickButton}>Close Editor Window </ButtonComponent>
-    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2023, 2, 5)} ref={schedule => scheduleObj = schedule} currentView='Month' eventSettings={{
-            dataSource: [{
-                    Id: 1,
-                    Subject: 'Review Meeting',
-                    StartTime: new Date(2023, 2, 5, 9, 0, 0),
-                    EndTime: new Date(2023, 2, 5, 10, 0, 0)
-                }]
-        }}>
+    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2023, 2, 5)} ref={schedule => scheduleObj = schedule} currentView='Month' eventSettings={{ dataSource: data }}>
       <ViewsDirective>
         <ViewDirective option='Day'/>
         <ViewDirective option='Week'/>
         <ViewDirective option='WorkWeek'/>
         <ViewDirective option='Month'/>
       </ViewsDirective>
-      <Inject services={[Day, Week, WorkWeek, Month]}/>
+      <Inject services={[Day, Week, WorkWeek, Month]} />
     </ScheduleComponent>
   </div>);
 }

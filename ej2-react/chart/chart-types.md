@@ -231,6 +231,21 @@ To render a stacked step area series, use series `type` as `StackingStepArea` an
 
  {% previewsample "page.domainurl/code-snippet/chart/series/line-cs18" %}
 
+**Range Step Area**
+
+To render the range step area series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#type) as a `RangeStepArea` and inject the `RangeStepAreaSeries` module using the `Chart.Inject(RangeStepAreaSeries)` method.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs36/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs36/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/chart/series/line-cs36" %}
+
 **Multicolored area**
 
 To render a multicolored area series, use the series type as `MultiColoredArea`, and inject the `MultiColoredAreaSeries` module into the `services`. The required `segments` of the series can be customized using the `value`, `color`, and `dashArray`.

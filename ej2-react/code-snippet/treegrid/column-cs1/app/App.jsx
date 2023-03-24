@@ -5,7 +5,7 @@ function App() {
     let treegrid;
     const dataBound = () => {
         if (treegrid) {
-            treegrid.current.autoFitColumns(['taskName']);
+            treegrid.autoFitColumns(['taskName']);
         }
     };
     return <TreeGridComponent dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' height='315' allowResizing={true} dataBound={dataBound} ref={g => treegrid = g}>
