@@ -102,7 +102,7 @@ function App() {
   return (<ScheduleComponent height='550px' selectedDate={new Date(2017, 5, 11)}
     eventSettings={{ dataSource: dataManager }}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-  </ScheduleComponent>)
+  </ScheduleComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);

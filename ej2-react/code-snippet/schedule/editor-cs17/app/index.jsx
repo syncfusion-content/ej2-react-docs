@@ -8,16 +8,15 @@ function App() {
     function ClickButton() {
         scheduleObj.closeQuickInfoPopup();
     }
+    const data = [{
+      Id: 1,
+      Subject: 'Review Meeting',
+      StartTime: new Date(2023, 2, 5, 9, 0, 0),
+      EndTime: new Date(2023, 2, 5, 10, 0, 0)
+    }];
     return (<div>
     <ButtonComponent onClick={ClickButton.bind(this)}>Close QuickInfo Popup</ButtonComponent>
-    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2023, 2, 5)} ref={schedule => scheduleObj = schedule} currentView='Month' eventSettings={{
-            dataSource: [{
-                    Id: 1,
-                    Subject: 'Review Meeting',
-                    StartTime: new Date(2023, 2, 5, 9, 0, 0),
-                    EndTime: new Date(2023, 2, 5, 10, 0, 0)
-                }]
-        }}>
+    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2023, 2, 5)} ref={schedule => scheduleObj = schedule} currentView='Month' eventSettings={{ dataSource: data }}>
       <ViewsDirective>
         <ViewDirective option='Day'/>
         <ViewDirective option='Week'/>
