@@ -163,6 +163,6 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-com
 ## See Also
 
 * [Sort a range by custom list](./how-to/sort-a-range-by-custom-list.md)
-* [Hyperlink](./link)
-* [Filtering](./filter)
-* [Undo Redo](./undo-redo)
+* [Hyperlink](../spreadsheet/link)
+* [Filtering](../spreadsheet/filter)
+* [Undo Redo](../spreadsheet/undo-redo)
