@@ -13,6 +13,7 @@ function App() {
                         width='90%'
                         trackThickness={24}
                         progressThickness={24}
+                        secondaryProgressColor='green'
                         value={50}
                         enableRtl={false}
                         showProgressValue={true}

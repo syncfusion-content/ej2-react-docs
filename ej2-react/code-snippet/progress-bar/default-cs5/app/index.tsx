@@ -12,6 +12,7 @@ function App() {
                         width='90%'
                         trackThickness={24}
                         progressThickness={24}
+                        secondaryProgressThickness={20}
                         value={100}
                         animation={{
                             enable: true,

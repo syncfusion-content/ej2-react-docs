@@ -27,7 +27,7 @@ We can divide a progress bar into multiple segments using a `segmentCount` to vi
 
 ## Thickness
 
-You can customize the thickness of the track  using `trackThickness` and progress using `progressThickness` to render the ProgressBar with different appearances.
+ Customize the thickness of the track using [`trackThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#trackthickness), progress using [`progressThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#progressthickness) and secondary progress using [`secondaryProgressThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#secondaryprogressthickness) to render the progress bar with different appearances.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +72,8 @@ The inner radius of the progress bar can be customized using `innerRadius` prope
 
 ## Progress color and track color
 
-We can customize the color of progress and track by using  **progressColor** and **trackColor** property.
+Customize the color of progress, secondary progress, and track by using the [`progressColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#progresscolor), [`secondaryProgressColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#secondaryprogresscolor), and [`trackColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#trackcolor) properties.
+
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
