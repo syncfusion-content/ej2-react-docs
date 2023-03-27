@@ -54,7 +54,7 @@ The column header text can be defined using the [`headerText`](https://ej2.syncf
 
 ## Format
 
-To format the cell values based on a specific culture, use the [`columns.format`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#format) property. The Gantt component uses the [`Internationalization`](../../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#manipulating-datetime) values.
+To format the cell values based on a specific culture, use the [`columns.format`](https://ej2.syncfusion.com/react/documentation/api/gantt/column/#format) property. The Gantt component uses the [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library to format [`number`](https://ej2.syncfusion.com/react/documentation/gantt/columns/columns#number-formatting) and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime) values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
