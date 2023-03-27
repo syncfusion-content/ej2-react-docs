@@ -15,7 +15,7 @@ RangeNavigator is a data visualization control. It allows you to scroll and navi
 ## Key Features
 
 * **Data sources** - Supports local binding and remote data source.
-* [**Tooltip**](https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_campaign=chart#/material/rangenavigator/default) - Supports interactive features such as tooltip and animation.
-* [**Lightweight**](https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_campaign=chart#/material/rangenavigator/light-weight) - Supports light-weight Range navigator to load in mobile device.
-* [**Period Selector**](https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_campaign=chart#/material/rangenavigator/period-selector-candle) - Provides options to select the data over the custom period.
+* [**Tooltip**](https://ej2.syncfusion.com/react/demos/#/bootstrap5/range-navigator/default) - Supports interactive features such as tooltip and animation.
+* [**Lightweight**](https://ej2.syncfusion.com/react/demos/#/bootstrap5/range-navigator/light-weight) - Supports light-weight Range navigator to load in mobile device.
+* [**Period Selector**](https://ej2.syncfusion.com/react/demos/#/bootstrap5/range-navigator/period-selector) - Provides options to select the data over the custom period.
 * **Axis Types** - Supports multiple axis and series types to plot the data.
