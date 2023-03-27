@@ -19,7 +19,7 @@ The Gantt component supports two types of selection that can be set by using the
 * `Single`: Sets a single value by default and allows only selection of a single row or a cell.
 * `Multiple`: Allows you to select multiple rows or cells. To perform the multi-selection, press and hold the CTRL key and click the desired rows or cells.
 
-To get start quickly with Selection and to know its type and behaviours, you can check on this video
+To get start quickly with Selection and to know its type and behaviors, you can check on this video
 
 {% youtube "https://www.youtube.com/watch?v=a-5EU7KxzhQ" %}
 
@@ -122,4 +122,4 @@ In the following code, the rows which contains `TaskId` value as 3 and 4 are sel
 
 ## See Also
 
-* [Touch interaction](./touch-interaction/#selection)
+* [Touch interaction](../touch-interaction)
