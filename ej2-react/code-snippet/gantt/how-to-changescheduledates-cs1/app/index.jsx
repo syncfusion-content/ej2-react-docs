@@ -1,0 +1,31 @@
+
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { GanttComponent } from '@syncfusion/ej2-react-gantt';
+import { data } from './datasource';
+function App (){
+    let ganttInstance;
+    const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    child: 'subtasks'
+  };
+ function clickHandler(){
+    ganttInstance.updateProjectDates(new Date('01/10/2019'),new Date('06/20/2019'),true);
+}
+    
+        return (<div>
+        <ButtonComponent onClick= { clickHandler}>Update ScheduleDates</ButtonComponent>
+        <GanttComponent dataSource={data} taskFields={taskFields}
+        height = '450px' ref={gantt => ganttInstance = gantt}>
+        </GanttComponent></div>)
+    
+};
+ReactDOM.render(<App />, document.getElementById('root'));
+
+

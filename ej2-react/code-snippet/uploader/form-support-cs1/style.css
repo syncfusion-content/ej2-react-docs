@@ -1,0 +1,43 @@
+.form-group {
+ padding-top: 11px; 
+ }
+ 
+ /* csslint ignore:start */
+ .form-group .e-upload.e-control.e-keyboard{
+	display: none;
+ }
+/* csslint ignore:end */
+#control_wrapper {
+    max-width: 400px;
+    margin: auto;
+    border: 0.5px solid grey;
+    padding: 1% 4% 2%;
+    background: #f9f9f9;
+}
+
+/* csslint ignore:start */
+.e-float-input.upload-area {
+  width: 73%;
+}
+
+
+.e-float-input.upload-area #browse {
+	margin-right: -38%;
+    float: right;
+    margin-top: -28px;
+}
+/* csslint ignore:end */
+
+.form-title {
+    text-align: center;
+}
+
+.submitBtn {
+    position: relative;
+    left: 40%;
+}
+
+.e-upload.e-lib.e-keyboard {
+    display: none;
+}
+

@@ -1,0 +1,31 @@
+.templatewrap {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .templatewrap img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* csslint ignore:start */
+  .schedule-cell-dimension.e-schedule .e-vertical-view .e-date-header-wrap table col,
+  .schedule-cell-dimension.e-schedule .e-vertical-view .e-content-wrap table col {
+      width: 200px;
+  }
+  
+  .schedule-cell-dimension.e-schedule .e-vertical-view .e-time-cells-wrap table td,
+  .schedule-cell-dimension.e-schedule .e-vertical-view .e-work-cells {
+      height: 100px;
+  }
+  
+  .schedule-cell-dimension.e-schedule .e-month-view .e-work-cells,
+  .schedule-cell-dimension.e-schedule .e-month-view .e-date-header-wrap table col {
+      width: 200px;
+  }
+  
+  .schedule-cell-dimension.e-schedule .e-month-view .e-work-cells {
+      height: 200px;
+  }
+  /* csslint ignore:end */
+  

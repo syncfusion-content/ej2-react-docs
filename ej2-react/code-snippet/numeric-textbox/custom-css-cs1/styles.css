@@ -1,0 +1,45 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  font-family: 'Helvetica Neue','calibiri';
+  font-size: 14px;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.wrap {
+  margin: 35px auto;
+  width: 240px;
+  padding-top: 100px;
+}
+
+.e-numeric.e-style .e-control.e-numerictextbox  {
+  color: royalblue ;
+  font-size: xx-large ;
+  border: 0px ;
+}
+.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), .e-float-input.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left) {
+  border-color: royalblue;
+}
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-spin-down  {
+  color:royalblue;
+}
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-float-line::before {
+  background: royalblue ;
+}
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-float-line::after {
+  background: royalblue ;
+ }
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-spin-up {
+  color:royalblue ;
+}
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-float-text.e-label-top {
+  color: royalblue ;
+  font-size: medium ;
+}
