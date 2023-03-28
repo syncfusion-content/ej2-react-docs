@@ -16,60 +16,60 @@ You can customize the ListView using the [template](https://ej2.syncfusion.com/r
 
 
 
-```ts
+  ```ts
 
-let dataSource = [
-  {
-    text: "Jenifer", contact: "(206) 555-985774", id: "1", avatar: "", pic: "pic01"
-  },
-  {
-    text: "Amenda", contact: "(206) 555-3412", id: "2", avatar: "A", pic: ""
-  }
-];
-
-```
-
-```ts
-let dataSource = [
+   let dataSource = [
     {
-        text: "Jenifer", contact: "(206) 555-985774", id: "1", avatar: "", pic: "pic01"
+      text: "Jenifer", contact: "(206) 555-985774", id: "1", avatar: "", pic: "pic01"
     },
     {
-        text: "Amenda", contact: "(206) 555-3412", id: "2", avatar: "A", pic: ""
-    }
-];
-```
+      text: "Amenda", contact: "(206) 555-3412", id: "2", avatar: "A", pic: ""
+   }
+  ];
+
+  ```
+
+  ```ts
+   let dataSource = [
+     {
+         text: "Jenifer", contact: "(206) 555-985774", id: "1", avatar: "", pic: "pic01"
+     },
+     {
+         text: "Amenda", contact: "(206) 555-3412", id: "2", avatar: "A", pic: ""
+     }
+   ];
+  ```
 
 * Set `avatar` classes in ListView template to customize contact icon. In the following codes, medium size avatar has been set using the class name `e-avatar e-avatar-circle` from data source.
 
 
 
-```ts
+  ```ts
 
- function listTemplate(data): JSX.Element {
+   function listTemplate(data): JSX.Element {
     let letterAvatar = <span className='e-avatar e-avatar-circle'>{data.avatar}</span>
     let imageAvatar = <span className={`${data.pic} e-avatar e-avatar-circle`}></span>
-
-    return (
+ 
+     return (
         <div className='e-list-wrapper e-list-multi-line e-list-avatar'>
             {data.avatar !== "" ? (letterAvatar) : (imageAvatar)}
             <span className="e-list-content">{data.contact}</span>
         </div>
     );
-}
+  }
 
-```
+  ```
 
-```ts
-function listTemplate(data) {
-    let letterAvatar = <span className='e-avatar e-avatar-circle'>{data.avatar}</span>;
-    let imageAvatar = <span className={`${data.pic} e-avatar e-avatar-circle`}></span>;
-    return (<div className='e-list-wrapper e-list-multi-line e-list-avatar'>
+  ```ts
+   function listTemplate(data) {
+     let letterAvatar = <span className='e-avatar e-avatar-circle'>{data.avatar}</span>;
+     let imageAvatar = <span className={`${data.pic} e-avatar e-avatar-circle`}></span>;
+     return (<div className='e-list-wrapper e-list-multi-line e-list-avatar'>
             {data.avatar !== "" ? (letterAvatar) : (imageAvatar)}
             <span className="e-list-content">{data.contact}</span>
         </div>);
-}
-```
+    }
+  ```
 
 > Avatars can be set in different sizes in avatar classes. To know more about avatar classes, refer to [Avatar](https://ej2.syncfusion.com/react/demos/#/material/avatar/default).
 
