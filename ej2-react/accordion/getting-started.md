@@ -52,7 +52,7 @@ cd my-app
 npm start
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+Besides using the [npm](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
 
 ```bash
 npm init react-app my-app
@@ -83,13 +83,13 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ```
 
-> To refer `App.css` in the application then import it in the `src/App.tsx` file.
+> To refer `App.css` in the application then import it in the `src/App.ts` file.
 
 ## Initialize the Accordion using Items
 
 The React Accordion can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/accordion#items).
 
-* Import the Accordion component to your `src/App.tsx` file using following code.
+* Import the Accordion component to your `src/App.ts` file using following code.
 
 
 

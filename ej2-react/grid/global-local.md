@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The [`Localization`](../../base/localization.html) library allows you to localize default text content of the Grid.
-The grid component has static text on some features (like group drop area text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
+The [`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows you to localize default text content of the Grid.The grid component has static text on some features (like group drop area text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
 
 The following list of properties and its values are used in the grid.
 
@@ -140,7 +139,7 @@ The below example demonstrates the Grid in **Deutsch** culture.
 
 ## Internationalization
 
-The [`Internationalization`](../../base/internationalization.html) library is used to globalize number, date, and time values in grid component using format strings in the [`columns.format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format).
+The [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library is used to globalize number, date, and time values in grid component using format strings in the [`columns.format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -187,6 +186,6 @@ To enable RTL in the Grid, set the [`enableRtl`](https://ej2.syncfusion.com/angu
 
 ## See Also
 
-* [Internationalization](../../base/internationalization.html)
-* [Localization](../../base/localization.html)
+* [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization)
+* [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization)
 * [How to change left and right arrow traversing in React Grid](https://www.syncfusion.com/forums/162295/how-to-change-left-and-right-arrow-traversing-in-react-grid)
