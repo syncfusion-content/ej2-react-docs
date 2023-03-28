@@ -30,35 +30,25 @@ You can use [`create-react-app`](https://github.com/facebookincubator/create-rea
 
 To install `create-react-app` run the following command.
 
-```bash
-npm install -g create-react-app
-```
+  ```bash
+   npm install -g create-react-app
+  ```
 
 Start a new project using `create-react-app` command as follows
 
-<div class='tsx'>
+   <div class='tsx'>
 
-```bash
-
-create-react-app quickstart --typescript
-
-cd quickstart
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+   ```
+    create-react-app quickstart --typescript
+    cd quickstart
+   ```
+   </div>
+   <div class='jsx'>
+   ```
+   create-react-app quickstart
+   cd quickstart
+   ```
+  </div>
 
 ## Adding Syncfusion packages
 
@@ -67,9 +57,9 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 
 To install `ListView` component, use the following command.
 
-```bash
-npm install @syncfusion/ej2-react-lists --save
-```
+  ```bash
+    npm install @syncfusion/ej2-react-lists --save
+  ```
 
 The above command installs [ListView dependencies](#dependencies) which are required to render the component in the `React` environment.
 
@@ -110,20 +100,20 @@ export default App;
 
 Import `ListView` component required theme references at the top of `src/App.css`.
 
-```css
+   ```css
 
-/* import the ListView dependency styles */
+   /* import the ListView dependency styles */
 
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-lists/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-react-lists/styles/material.css";
 
-```
+   ```
 
 * If you are using `CheckList` behavior in ListView, we need to add `Button` component's styles as given below in `src/App.css` file
 
-```css
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-```
+  ```css
+   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  ```
 
 ## Bind dataSource
 
