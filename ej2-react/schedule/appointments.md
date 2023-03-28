@@ -26,7 +26,7 @@ Represents an appointment that is created for any specific time interval within 
 
 ### Creating a normal event
 
-The following example depicts how to define a normal event on the Scheduler, with event data being loaded from simple JSON data.
+The following example depicts how to define a event on the Scheduler, with event data being loaded from simple data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
