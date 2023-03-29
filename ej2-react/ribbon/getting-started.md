@@ -190,6 +190,7 @@ root.render(<App />);
 
 You can use the `RibbonCollectionDirective` to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `RibbonItemDirective` and the `type` property to specify the type of control to be rendered, like a button, a drop-down button, a combo box, and more.
 
+{% raw %}
 ```ts
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonItemSize } from "@syncfusion/ej2-react-ribbon";
 import * as React from "react";
@@ -231,6 +232,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
+{% endraw %}
 
 ## Run the application
 
