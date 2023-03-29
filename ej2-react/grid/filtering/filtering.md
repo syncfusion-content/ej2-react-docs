@@ -76,13 +76,60 @@ Operator |Description |Supported Types
 startswith |Checks whether a value begins with the specified value. |String
 endswith |Checks whether a value ends with specified value. |String
 contains |Checks whether a value contains with specified value. |String
+doesnotstartwith |Checks whether the value does not begin with the specified value. |String
+doesnotendwith |Checks whether the value does not end with the specified value. |String
+doesnotcontain |Checks whether the value does not contain the specified value. |String
 equal |Checks whether a value equal to specified value. |String &#124; Number &#124; Boolean &#124; Date
 notequal |Checks whether a value not equal to specified value. |String &#124; Number &#124; Boolean &#124; Date
 greaterthan |Checks whether a value is greater than with specified value. |Number &#124; Date
 greaterthanorequal|Checks whether a value is greater than or equal to specified value. |Number &#124; Date
 lessthan |Checks whether a value is less than with specified value. |Number &#124; Date
 lessthanorequal |Checks whether a value is less than or equal to specified value. |Number &#124; Date
+isnull |Returns the values that are null. |String &#124; Number &#124; Date
+isnotnull |Returns the values that are not null. |String &#124; Number &#124; Date
+isempty |Returns the values that are empty. |String
+isnotempty |Returns the values that are not empty. |String
 between|Filter the values based on the range between the start and end specified values. |Number &#124; Date
+
+## Wildcard and LIKE operator filter
+
+**Wildcard** and **LIKE** filter operators filters the value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
+
+### Wildcard filtering
+
+The **Wildcard** filter can process one or more search patterns using the "*" symbol, retrieving values matching the specified patterns.
+
+* The **Wildcard** filter option is supported for the DataGrid that has all search options.
+
+**For example:**
+
+Operator |Description
+-----|-----
+a*b |Everything that starts with "a" and ends with "b".
+a* |Everything that starts with "a".
+*b |Everything that ends with "b".
+*a* |Everything that has an "a" in it.
+*a*b* |Everything that has an "a" in it, followed by anything, followed by a "b", followed by anything.
+
+![WildcardFilter](../images/wildcard_search.gif)
+
+### LIKE filtering
+
+The **LIKE** filter can process single search patterns using the "%" symbol, retrieving values matching the specified patterns. The following Grid features support LIKE filtering on string-type columns:
+
+* Filter Menu
+* Filter Bar with the [`filterSettings.showFilterBarOperator`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#showFilterBarOperator) property enabled on the Grid [`filterSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/filterSettings/).
+* Custom Filter of Excel filter type.
+
+**For example:**
+
+Operator |Description
+-----|-----
+%ab% |Returns all the value that are contains "ab" character.
+ab% |Returns all the value that are ends with "ab" character.
+%ab |Returns all the value that are starts with "ab" character.
+
+![LIKEFilter](../images/like_filter.gif)
 
 ## Diacritics filter
 

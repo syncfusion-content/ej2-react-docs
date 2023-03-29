@@ -73,3 +73,7 @@ In the following sample dropdown is used  as custom component in **EmployeeID** 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs3" %}
+
+ ## See also
+
+* [How to perform filter by using Wildcard and LIKE operator filter](./filtering/#wildcard-and-like-operator-filter)
