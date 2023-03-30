@@ -30,8 +30,10 @@ this.container.documentEditor.editor.insertBookmark("Bookmark1");
 You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
 
 ```csharp
-this.container.documentEditor.selection.selectBookmark("Bookmark1");
+this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
 ```
+
+>Note: Second parameter is optional parameter and it denotes is exclude bookmark start and end from selection. If true, excludes bookmark start and end from selection.
 
 ## Delete Bookmark
 
@@ -41,15 +43,49 @@ You can delete bookmark in the document using [`deleteBookmark`](https://ej2.syn
 this.container.documentEditor.editor.deleteBookmark("Bookmark1");
 ```
 
-## Get Bookmark
+## Get Bookmark from document
 
-You can get all the bookmarks in the document using [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#getbookmarks) method as shown in the following code snippet.
+You can get all the bookmarks in the document using [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#getbookmarks) method as shown in the following code snippet.
+
+```csharp
+this.container.documentEditor.getBookmarks(false);
+```
+
+>Note: Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+
+## Get Bookmark from selection
+
+You can get bookmarks in current selection in the document using [`getBookmarks`](../api/document-editor/selection/#getbookmarks) method as shown in the following code snippet.
 
 ```csharp
 this.container.documentEditor.selection.getBookmarks(false);
 ```
 
->Note: Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+## Replace bookmark content
+
+You can replace bookmark content without removing the bookmark start and end for backtracking the bookmark content.
+
+```csharp
+this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
+this.container.documentEditor.editor.insertText('Hello World')
+```
+
+You can replace content by removing the bookmark start and end, thus the bookmark content can't be tracked in future.
+
+```csharp
+this.container.documentEditor.selection.selectBookmark("Bookmark1");
+this.container.documentEditor.editor.insertText('Hello World')
+```
+
+## Show or Hide bookmark
+
+You can show or hide the show square brackets around bookmarked items in Document editor component.
+
+The following example code illustrates how to show or hide square brackets around bookmarked items.
+
+```typescript
+this.container.documentEditorSettings.showBookmarks = true;
+```
 
 ## Bookmark Dialog
 
