@@ -11,11 +11,10 @@ export function App() {
    return(
             <MapsComponent  zoomSettings={ {
                                         enable: true,
-                                        color: 'green',
-                                        highlightColor: 'blue',
-                                        selectionColor: 'orange',
-                                        horizontalAlignment: 'Center',
-                                        toolbars: ['ZoomIn', 'ZoomOut', 'Pan', 'Reset']} }>
+                                        buttonSettings: {
+                                            toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+                                        }
+                                        } }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective shapeData={world_map}>
