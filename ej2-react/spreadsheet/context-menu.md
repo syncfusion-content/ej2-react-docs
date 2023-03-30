@@ -76,12 +76,6 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/context-menu-cs1/app/app.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/context-menu-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/context-menu-cs1/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/context-menu-cs1" %}
@@ -99,12 +93,6 @@ In this demo, Insert Column item has been removed from the row/column header con
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/context-menu-cs2/app/app.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/context-menu-cs2/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/context-menu-cs2/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/context-menu-cs2" %}
@@ -121,12 +109,6 @@ In this demo, Rename item is disabled in the pager context menu.
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/context-menu-cs3/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/context-menu-cs3/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/context-menu-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

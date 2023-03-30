@@ -1,32 +1,36 @@
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
+{% raw %}
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, BeforeSaveEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { defaultData } from './datasource';
-export default class App extends React.Component<{}, {}> {
-    public beforeSave(args): void {
-       args.customParams = { customParams: 'you can pass custom params in server side'}; // you can pass the custom params
-    }
-     render() {
-        return  (<SpreadsheetComponent allowSave= {true}
-                        saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' beforeSave={this.beforeSave.bind(this)}>
-                        <SheetsDirective>
-                            <SheetDirective>
-                                <RangesDirective>
-                                    <RangeDirective dataSource={defaultData}></RangeDirective>
-                                </RangesDirective>
-                                <ColumnsDirective>
-                                    <ColumnDirective width={180}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                </ColumnsDirective>
-                            </SheetDirective>
-                        </SheetsDirective>
-                    </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
 
+function App() {
+    const [customParams, setCustomParams] = useState({});
+    const beforeSave = (args: BeforeSaveEventArgs): void => {
+        setCustomParams({ customParams: 'you can pass custom params in server side' });
+        args.customParams = customParams; // you can pass the custom params
+    };
 
+    return (
+        <SpreadsheetComponent allowSave={true} saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' beforeSave={beforeSave}>
+            <SheetsDirective>
+                <SheetDirective>
+                    <RangesDirective>
+                        <RangeDirective dataSource={defaultData}></RangeDirective>
+                    </RangesDirective>
+                    <ColumnsDirective>
+                        <ColumnDirective width={180}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                    </ColumnsDirective>
+                </SheetDirective>
+            </SheetsDirective>
+        </SpreadsheetComponent>
+    );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
+{% endraw %}

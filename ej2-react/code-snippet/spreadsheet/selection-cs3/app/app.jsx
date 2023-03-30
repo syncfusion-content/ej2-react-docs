@@ -1,34 +1,43 @@
 {% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React, { useRef, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { budgetData } from './datasource';
-export default class App extends React.Component {
-    spreadsheet;
-    onCreated() {
-        this.spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:D1');
-    }
-    onEdit(args) {
+
+function App() {
+    const spreadsheetRef = useRef(null);
+    useEffect(() => {
+        let spreadsheet = spreadsheetRef.current;
+        if (spreadsheet) {
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:D1');
+        }
+    }, []);
+    const onEdit = (args) => {
         args.cancel = true;
-    }
-    render() {
-        return (<div>
-             <SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj; }} created={this.onCreated.bind(this)} cellEdit={this.onEdit.bind(this)} selectionSettings={{ mode: 'None' }}>
-                        <SheetsDirective>
-                            <SheetDirective>
-                                <RangesDirective>
-                                    <RangeDirective dataSource={budgetData}></RangeDirective>
-                                </RangesDirective>
-                                <ColumnsDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                    <ColumnDirective width={92}></ColumnDirective>
-                                    <ColumnDirective width={96}></ColumnDirective>
-                                </ColumnsDirective>
-                            </SheetDirective>
-                        </SheetsDirective>
-                    </SpreadsheetComponent> </div>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+    };
+
+    return (
+        <div>
+            <SpreadsheetComponent ref={spreadsheetRef} cellEdit={onEdit} selectionSettings={{ mode: 'None' }}>
+                <SheetsDirective>
+                    <SheetDirective>
+                        <RangesDirective>
+                            <RangeDirective dataSource={budgetData}></RangeDirective>
+                        </RangesDirective>
+                        <ColumnsDirective>
+                            <ColumnDirective width={130}></ColumnDirective>
+                            <ColumnDirective width={92}></ColumnDirective>
+                            <ColumnDirective width={96}></ColumnDirective>
+                        </ColumnsDirective>
+                    </SheetDirective>
+                </SheetsDirective>
+            </SpreadsheetComponent>
+        </div>
+    );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
 {% endraw %}

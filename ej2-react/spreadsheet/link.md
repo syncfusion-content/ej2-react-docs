@@ -59,12 +59,6 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/link-cs1/app/app.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/link-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/link-cs1/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/link-cs1" %}

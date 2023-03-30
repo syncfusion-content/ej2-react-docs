@@ -1,27 +1,32 @@
+{% raw %}
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { defaultData } from './datasource';
-export default class App extends React.Component {
-    beforeSave(args) {
-        // your code snippets here
-    }
-    render() {
-        return (<SpreadsheetComponent allowSave={true} saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' beforeSave={this.beforeSave.bind(this)}>
-                        <SheetsDirective>
-                            <SheetDirective>
-                                <RangesDirective>
-                                    <RangeDirective dataSource={defaultData}></RangeDirective>
-                                </RangesDirective>
-                                <ColumnsDirective>
-                                    <ColumnDirective width={180}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                </ColumnsDirective>
-                            </SheetDirective>
-                        </SheetsDirective>
-                    </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+
+function App() {
+    const beforeSave = () => {};
+
+    return (
+        <SpreadsheetComponent allowSave={true} saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' beforeSave={beforeSave}>
+            <SheetsDirective>
+                <SheetDirective>
+                    <RangesDirective>
+                        <RangeDirective dataSource={defaultData}></RangeDirective>
+                    </RangesDirective>
+                    <ColumnsDirective>
+                        <ColumnDirective width={180}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                    </ColumnsDirective>
+                </SheetDirective>
+            </SheetsDirective>
+        </SpreadsheetComponent>
+    );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
+{% endraw %}

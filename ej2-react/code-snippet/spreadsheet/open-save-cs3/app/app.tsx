@@ -1,32 +1,19 @@
 {% raw %}
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BeforeOpenEventArgs, SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
+function App() {
+  const beforeOpen = (args: BeforeOpenEventArgs): void => {
+    args.requestData = { Authorization: 'YOUR TEXT' };
+  };
 
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+  return (
+    <SpreadsheetComponent openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open" beforeOpen={beforeOpen} />
+  );
+};
+export default App;
 
-export default class App extends React.Component<{}, {}> {
-  spreadsheet: SpreadsheetComponent;
-
-  public beforeOpen(args) {
-    args.requestData['headers'] = {
-      Authorization: 'YOUR TEXT',
-    };
-  }
-
-  render() {
-    return (
-      <SpreadsheetComponent
-        ref={(ssObj) => {
-          this.spreadsheet = ssObj;
-        }}
-        openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open"
-        beforeOpen={this.beforeOpen.bind(this)}
-      ></SpreadsheetComponent>
-    );
-  }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 {% endraw %}

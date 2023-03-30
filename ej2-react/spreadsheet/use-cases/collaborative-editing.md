@@ -33,52 +33,57 @@ To broadcast the data for every action in the spreadsheet, you need to transfer 
 The following code example shows `Collaborative Editing` support in the Spreadsheet control.
 
 ```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
+import React, { useRef, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, CollaborativeEditArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { defaultData } from './datasource';
 import * as signalR from '@aspnet/signalr';
+import { defaultData } from './datasource';
 
-export default class App extends React.Component<{}, {}> {
-    spreadsheet: SpreadsheetComponent;
-    // For signalR Hub connection
-    public connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', { // localhost from AspNetCore service
-        skipNegotiation: true,
-        transport: signalR.HttpTransportType.WebSockets
-    }).build();
+function App() {
+  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+  // For signalR Hub connection
+  const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', { // localhost from AspNetCore service
+    skipNegotiation: true,
+    transport: signalR.HttpTransportType.WebSockets
+  }).build();
+  const onActionComplete = (args: any) => {
+    connection.send('BroadcastData', JSON.stringify(args)); // send the action data to the server
+  }
+  useEffect(() => {
+    let spreadsheet = spreadsheetRef.current;
+    connection.on('dataReceived', (data: string) => {
+      let model: CollaborativeEditArgs = JSON.parse(data) as CollaborativeEditArgs;
+      if (spreadsheet) {
+        spreadsheet.updateAction(model); // update the action to the connected clients
+      }
+    });
+    connection.start().then(() => { // to start the server
+      console.log('server connected!!!');
+    }).catch(err => console.log(err));
+  }, [connection]); // passing an empty array as second argument triggers the callback in useEffect only after the initial render thus replicating `componentDidMount` lifecycle behaviour
 
-    public onActionComplete(args): void {
-        this.connection.send('BroadcastData', JSON.stringify(args)); // send the action data to the server
-    }
-    componentDidMount = () => {
-        this.connection.on('dataReceived', (data: string) => {
-            let model: CollaborativeEditArgs = JSON.parse(data) as CollaborativeEditArgs;
-            this.spreadsheet.updateAction(model); // update the action to the connected clients
-        });
-        this.connection.start().then(() => { // to start the server
-            console.log('server connected!!!');
-        }).catch(err => console.log(err));
-    }
-    render() {
-        return (<SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj }} actionComplete={this.onActionComplete.bind(this)}>
-            <SheetsDirective>
-                <SheetDirective>
-                    <RangesDirective>
-                        <RangeDirective dataSource={defaultData}></RangeDirective>
-                    </RangesDirective>
-                    <ColumnsDirective>
-                        <ColumnDirective width={180}></ColumnDirective>
-                        <ColumnDirective width={130}></ColumnDirective>
-                        <ColumnDirective width={130}></ColumnDirective>
-                    </ColumnsDirective>
-                </SheetDirective>
-            </SheetsDirective>
-        </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+  return (
+    <SpreadsheetComponent ref={spreadsheetRef} actionComplete={onActionComplete}>
+      <SheetsDirective>
+        <SheetDirective>
+          <RangesDirective>
+            <RangeDirective dataSource={defaultData}></RangeDirective>
+          </RangesDirective>
+          <ColumnsDirective>
+            <ColumnDirective width={180}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+          </ColumnsDirective>
+        </SheetDirective>
+      </SheetsDirective>
+    </SpreadsheetComponent>
+  );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 ```
 
 ## Server configuration
@@ -87,9 +92,8 @@ To make the communication between the server to the connected clients and from c
 
 ```ts
 import * as signalR from '@aspnet/signalr';
-
 // For signalR Hub connection
-    public connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', { // localhost from AspNetCore service
+    const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', { // localhost from AspNetCore service
         skipNegotiation: true,
         transport: signalR.HttpTransportType.WebSockets
     }).build();
@@ -147,54 +151,59 @@ Using the `action` argument from the `actionComplete` event, you can prevent the
 The following code example shows how to prevent collaborative client from updating the `format` action.
 
 ```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
+import React, { useRef, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, CollaborativeEditArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { defaultData } from './datasource';
 import * as signalR from '@aspnet/signalr';
+import { defaultData } from './datasource';
 
-export default class App extends React.Component<{}, {}> {
-    spreadsheet: SpreadsheetComponent;
-    // For signalR Hub connection
-    public connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', {// localhost from AspNetCore service
-        skipNegotiation: true,
-        transport: signalR.HttpTransportType.WebSockets
-    }).build();
+function App() {
+  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+  // For signalR Hub connection
+  const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', {// localhost from AspNetCore service
+    skipNegotiation: true,
+    transport: signalR.HttpTransportType.WebSockets
+  }).build();
+  const onActionComplete = (args: any) => {
+    if (args.action !== 'format') {  // prevent the format action
+      connection.send('BroadcastData', JSON.stringify(args)); // send the action data to the server
+    }
+  }
+  useEffect(() => {
+    let spreadsheet = spreadsheetRef.current;
+    connection.on('dataReceived', (data: string) => {
+      if (spreadsheet) {
+        let model: CollaborativeEditArgs = JSON.parse(data) as CollaborativeEditArgs;
+        spreadsheet.updateAction(model); // update the action to the connected clients
+      }
+    });
+    connection.start().then(() => { // to start the server
+      console.log('server connected!!!');
+    }).catch(err => console.log(err));
+  }, [connection]); // passing an empty array as second argument triggers the callback in useEffect only after the initial render thus replicating `componentDidMount` lifecycle behaviour
 
-    public onActionComplete(args): void {
-        if (args.action != 'format') {  // prevent the format action
-            this.connection.send('BroadcastData', JSON.stringify(args)); // send the action data to the server
-        }
-    }
-    componentDidMount = () => {
-        this.connection.on('dataReceived', (data: string) => {
-            let model: CollaborativeEditArgs = JSON.parse(data) as CollaborativeEditArgs;
-            this.spreadsheet.updateAction(model); // update the action to the connected clients
-        });
-        this.connection.start().then(() => { // to start the server
-            console.log('server connected!!!');
-        }).catch(err => console.log(err));
-    }
-    render() {
-        return (<SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj }} actionComplete={this.onActionComplete.bind(this)}>
-            <SheetsDirective>
-                <SheetDirective>
-                    <RangesDirective>
-                        <RangeDirective dataSource={defaultData}></RangeDirective>
-                    </RangesDirective>
-                    <ColumnsDirective>
-                        <ColumnDirective width={180}></ColumnDirective>
-                        <ColumnDirective width={130}></ColumnDirective>
-                        <ColumnDirective width={130}></ColumnDirective>
-                    </ColumnsDirective>
-                </SheetDirective>
-            </SheetsDirective>
-        </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+  return (
+    <SpreadsheetComponent ref={spreadsheetRef} actionComplete={onActionComplete}>
+      <SheetsDirective>
+        <SheetDirective>
+          <RangesDirective>
+            <RangeDirective dataSource={defaultData}></RangeDirective>
+          </RangesDirective>
+          <ColumnsDirective>
+            <ColumnDirective width={180}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+          </ColumnsDirective>
+        </SheetDirective>
+      </SheetsDirective>
+    </SpreadsheetComponent>
+  );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 ```
 
 * [Filtering](../filter)

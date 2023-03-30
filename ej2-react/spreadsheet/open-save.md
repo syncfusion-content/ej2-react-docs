@@ -33,12 +33,6 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/open-save-cs1/app/app.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/open-save-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/open-save-cs1/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs1" %}
@@ -65,12 +59,6 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/open-save-cs2/app/app.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/open-save-cs2/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/open-save-cs2/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs2" %}
@@ -86,12 +74,6 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/open-save-cs3/app/app.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/open-save-cs3/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/open-save-cs3/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs3" %}
@@ -106,12 +88,6 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/open-save-cs4/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/open-save-cs4/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/open-save-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

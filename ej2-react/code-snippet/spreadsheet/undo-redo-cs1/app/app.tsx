@@ -1,63 +1,64 @@
 {% raw %}
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective} from '@syncfusion/ej2-react-spreadsheet';
-import { CellStyleModel, getRangeIndexes } from '@syncfusion/ej2-react-spreadsheet';
-import { defaultData } from './datasource';
+import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { getRangeIndexes } from '@syncfusion/ej2-react-spreadsheet';
 import { addClass, removeClass } from '@syncfusion/ej2-base';
+import { defaultData } from './datasource';
 
-export default class App extends React.Component<{}, {}> {
-    public spreadsheet: SpreadsheetComponent;
-    public boldRight: CellStyleModel = { fontWeight: 'bold', textAlign: 'right' };
-    public bold: CellStyleModel = { fontWeight: 'bold' };
-     public updateCollection(): void {
-        let cell = this.spreadsheet.getActiveSheet().activeCell;
-        let cellIdx = getRangeIndexes(cell);
-        let Element= this.spreadsheet.getCell(cellIdx[0], cellIdx[1]);
-        if (!Element.classList.contains("customClass")) {
-            Element.classList.add('customClass'); // To add the custom class in active cell element
-            this.spreadsheet.updateUndoRedoCollection({ eventArgs: { class: 'customClass', rowIdx: cellIdx[0], colIdx: cellIdx[1], action: 'customCSS' } }); // To update the undo redo collection
-        }
-    }
-
-    public onActionComplete(args): void{
-         let actionEvents = args;
-        if (actionEvents.eventArgs.action == "customCSS") {
-            let Element = this.spreadsheet.getCell(actionEvents.eventArgs.rowIdx,actionEvents.eventArgs.colIdx);
-            if (actionEvents.eventArgs.requestType == "undo") {
-                removeClass([Element],'customClass'); // To remove the custom class in undo action
-            }
-            else {
-                addClass([Element],'customClass');// To add the custom class in redo action
+function App() {
+    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const updateCollection = (): void => {
+        let spreadsheet = spreadsheetRef.current;
+        if (spreadsheet) {
+            let cell: string = spreadsheet.getActiveSheet().activeCell as string;
+            let cellIdx: number[] = getRangeIndexes(cell);
+            let Element: HTMLElement = spreadsheet.getCell(cellIdx[0], cellIdx[1]);
+            if (!Element.classList.contains("customClass")) {
+                Element.classList.add('customClass'); // To add the custom class in active cell element
+                spreadsheet.updateUndoRedoCollection({ eventArgs: { class: 'customClass', rowIdx: cellIdx[0], colIdx: cellIdx[1], action: 'customCSS' } }); // To update the undo redo collection
             }
         }
-    }
-     render() {
-        return  ( <div> <button className='e-btn' onClick={ this.updateCollection.bind(this) }>add/remove Class</button>
-             <SpreadsheetComponent
-                        ref={(ssObj) => { this.spreadsheet = ssObj }} actionComplete={this.onActionComplete.bind(this)} >
-                        <SheetsDirective>
-                            <SheetDirective>
-                                <RangesDirective>
-                                    <RangeDirective dataSource={defaultData}></RangeDirective>
-                                </RangesDirective>
-                                <ColumnsDirective>
-                                    <ColumnDirective width={180}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                </ColumnsDirective>
-                            </SheetDirective>
-                        </SheetsDirective>
-                    </SpreadsheetComponent> </div>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+    };
+    const onActionComplete = (args: any) => {
+        let spreadsheet = spreadsheetRef.current;
+        if (spreadsheet) {
+            let actionEvents = args;
+            if (actionEvents.eventArgs.action === "customCSS") {
+                let Element: HTMLElement = spreadsheet.getCell(actionEvents.eventArgs.rowIdx, actionEvents.eventArgs.colIdx);
+                if (actionEvents.eventArgs.requestType === "undo") {
+                    removeClass([Element], 'customClass'); // To remove the custom class in undo action
+                } else {
+                    addClass([Element], 'customClass');// To add the custom class in redo action
+                }
+            }
+        }
+    };
 
+    return (
+        <div>
+            <button onClick={updateCollection}>add/remove Class</button>
+            <SpreadsheetComponent
+                ref={spreadsheetRef} actionComplete={onActionComplete} >
+                <SheetsDirective>
+                    <SheetDirective>
+                        <RangesDirective>
+                            <RangeDirective dataSource={defaultData}></RangeDirective>
+                        </RangesDirective>
+                        <ColumnsDirective>
+                            <ColumnDirective width={180}></ColumnDirective>
+                            <ColumnDirective width={130}></ColumnDirective>
+                            <ColumnDirective width={130}></ColumnDirective>
+                        </ColumnsDirective>
+                    </SheetDirective>
+                </SheetsDirective>
+            </SpreadsheetComponent>
+        </div>
+    );
+};
+export default App;
 
-
-
-
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 {% endraw %}
