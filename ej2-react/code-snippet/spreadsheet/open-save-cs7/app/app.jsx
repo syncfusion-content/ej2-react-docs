@@ -1,58 +1,66 @@
 {% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective, } from '@syncfusion/ej2-react-spreadsheet';
-import { defaultData } from './datasource';
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { createElement } from '@syncfusion/ej2-base';
-export default class App extends React.Component {
-    spreadsheet;
-    fileMenuItemSelect(args) {
-        if (args.item.text === 'Microsoft Excel') {
-            args.cancel = true;
-            this.spreadsheet.saveAsJson().then((response) => {
-                var formData = new FormData();
-                formData.append('JSONData', JSON.stringify(response.jsonObject.Workbook));
-                formData.append('fileName', 'Sample');
-                formData.append('saveType', 'Xlsx');
-                fetch('https://services.syncfusion.com/react/production/api/spreadsheet/save', {
-                    method: 'POST',
-                    headers: { Authorization: 'YOUR TEXT' },
-                    body: formData,
-                }).then((response) => {
-                    response.blob().then((data) => {
-                        var anchor = createElement('a', {
-                            attrs: { download: 'Sample.xlsx' },
-                        });
-                        var url = URL.createObjectURL(data);
-                        anchor.href = url;
-                        document.body.appendChild(anchor);
-                        anchor.click();
-                        URL.revokeObjectURL(url);
-                        document.body.removeChild(anchor);
-                    });
-                });
+import { defaultData } from './datasource';
+
+function App() {
+  const spreadsheetRef = useRef(null);
+  const fileMenuItemSelect = (args) => {
+    let spreadsheet = spreadsheetRef.current;
+    if (args.item.text === 'Microsoft Excel' && spreadsheet) {
+      args.cancel = true;
+      spreadsheet.saveAsJson().then((response) => {
+        let formData = new FormData();
+        formData.append('JSONData', JSON.stringify(response.jsonObject.Workbook));
+        formData.append('fileName', 'Sample');
+        formData.append('saveType', 'Xlsx');
+        fetch(
+          'https://services.syncfusion.com/react/production/api/spreadsheet/save',
+          {
+            method: 'POST',
+            headers: { Authorization: 'YOUR TEXT' },
+            body: formData,
+          }
+        ).then((response) => {
+          response.blob().then((data) => {
+            let anchor = createElement('a', {
+              attrs: { download: 'Sample.xlsx' },
             });
-        }
+            const url = URL.createObjectURL(data);
+            anchor.href = url;
+            document.body.appendChild(anchor);
+            anchor.click();
+            URL.revokeObjectURL(url);
+            document.body.removeChild(anchor);
+          });
+        });
+      });
     }
-    render() {
-        return (<SpreadsheetComponent ref={(ssObj) => {
-                this.spreadsheet = ssObj;
-            }} allowSave={true} saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save" fileMenuItemSelect={this.fileMenuItemSelect.bind(this)}>
-        <SheetsDirective>
-          <SheetDirective>
-            <RangesDirective>
-              <RangeDirective dataSource={defaultData}></RangeDirective>
-            </RangesDirective>
-            <ColumnsDirective>
-              <ColumnDirective width={180}></ColumnDirective>
-              <ColumnDirective width={130}></ColumnDirective>
-              <ColumnDirective width={130}></ColumnDirective>
-            </ColumnsDirective>
-          </SheetDirective>
-        </SheetsDirective>
-      </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+  };
+
+  return (
+    <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} fileMenuItemSelect={fileMenuItemSelect}
+      saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save" >
+      <SheetsDirective>
+        <SheetDirective>
+          <RangesDirective>
+            <RangeDirective dataSource={defaultData}></RangeDirective>
+          </RangesDirective>
+          <ColumnsDirective>
+            <ColumnDirective width={180}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+          </ColumnsDirective>
+        </SheetDirective>
+      </SheetsDirective>
+    </SpreadsheetComponent>
+  );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
 {% endraw %}

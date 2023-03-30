@@ -1,34 +1,33 @@
 {% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { getRangeAddress, SpreadsheetComponent, } from '@syncfusion/ej2-react-spreadsheet';
-export default class App extends React.Component {
-    spreadsheet;
-    openComplete() {
-        let sheets = this.spreadsheet.sheets;
-        for (let index = 0; index < sheets.length; index++) {
-            let name = this.spreadsheet.sheets[index].name;
-            let protectSetting = {
-                selectCells: true,
-                formatCells: false,
-            };
-            //To protect the sheet using sheet name
-            this.spreadsheet.protectSheet(name, protectSetting);
-            let address = getRangeAddress([
-                0,
-                0,
-                sheets[index].usedRange.rowIndex,
-                sheets[index].usedRange.colIndex,
-            ]);
-            //To lock the used range cells
-            this.spreadsheet.lockCells(name + '!' + address, true);
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { getRangeAddress, SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+
+function App() {
+    const spreadsheetRef = useRef(null);
+    const openComplete = () => {
+        let spreadsheet = spreadsheetRef.current;
+        if (spreadsheet) {
+            let sheets = spreadsheet.sheets;
+            for (let index = 0; index < sheets.length; index++) {
+                let name = spreadsheet.sheets[index].name;
+                let protectSetting = { selectCells: true, formatCells: false };
+                //To protect the sheet using sheet name
+                spreadsheet.protectSheet(name, protectSetting);
+                let address = getRangeAddress([0, 0, sheets[index].usedRange.rowIndex, sheets[index].usedRange.colIndex,]);
+                //To lock the used range cells
+                spreadsheet.lockCells(name + '!' + address, true);
+            }
         }
-    }
-    render() {
-        return (<SpreadsheetComponent ref={(ssObj) => {
-                this.spreadsheet = ssObj;
-            }} openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open" openComplete={this.openComplete.bind(this)}></SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+    };
+
+    return (
+        <SpreadsheetComponent ref={spreadsheetRef} openComplete={openComplete}
+            openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open" />
+    );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
 {% endraw %}

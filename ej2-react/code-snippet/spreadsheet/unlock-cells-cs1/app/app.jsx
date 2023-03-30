@@ -1,59 +1,70 @@
 {% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { budgetData, salaryData } from './datasource';
+import React, { useRef, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, ColumnsDirective, ColumnDirective, RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
-export default class App extends React.Component {
-    spreadsheet;
-    dialogObj;
-    protectSettings = { selectCells: true };
-    btn = [{ click: this.lockCells.bind(this),
-            buttonModel: { content: 'Ok', isPrimary: true } }];
-    dataBound() {
-        this.spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:D1');
-        this.spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A11:D11');
-    }
-    ;
-    lockCells() {
-        this.spreadsheet.lockCells('A1:F3', false);
-        this.dialogObj.hide();
-    }
-    showDlg() {
-        this.dialogObj.show();
-    }
-    render() {
-        return (<div> <button className='e-btn' onClick={this.showDlg.bind(this)}>Unlock cells</button>
-        <SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj; }} dataBound={this.dataBound.bind(this)}>
-                        <SheetsDirective>
-                            <SheetDirective name={"Budget"} isProtected={true} protectSettings={this.protectSettings}>
-                                <RangesDirective>
-                                    <RangeDirective dataSource={budgetData}></RangeDirective>
-                                </RangesDirective>
-                                <ColumnsDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                </ColumnsDirective>
-                            </SheetDirective>
-                            <SheetDirective name={"Salary"}>
-                                <RangesDirective>
-                                    <RangeDirective dataSource={salaryData}></RangeDirective>
-                                </RangesDirective>
-                                <ColumnsDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                </ColumnsDirective>
-                            </SheetDirective>
-                        </SheetsDirective>
-                    </SpreadsheetComponent>
-                    <DialogComponent ref={(dlgObj) => { this.dialogObj = dlgObj; }} header={'Spreadsheet'} target={document.getElementById('spreadsheet')} content={'"A1:F3" range of cells has been unlocked.'} showCloseIcon={true} isModal={true} visible={false} width={'500px'} buttons={this.btn}>
-                        </DialogComponent> </div>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+import { budgetData, salaryData } from './datasource';
+
+function App() {
+    const spreadsheetRef = useRef(null);
+    const dialogRef = useRef(null);
+    useEffect(() => {
+        let spreadsheet = spreadsheetRef.current;
+        if (spreadsheet) {
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:D1');
+            spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A11:D11');
+        }
+    }, []);
+    const lockCells = () => {
+        let spreadsheet = spreadsheetRef.current;
+        let dialog = dialogRef.current;
+        spreadsheet?.lockCells('A1:F3', false);
+        dialog?.hide();
+    };
+    const showDlg = () => {
+        let dialog = dialogRef.current;
+        dialog?.show();
+    };
+    const protectSettings = { selectCells: true };
+    const btn = [{ click: lockCells, buttonModel: { content: 'Ok', isPrimary: true } }];
+
+    return (
+        <div>
+            <button onClick={showDlg}>Unlock cells</button>
+            <SpreadsheetComponent ref={spreadsheetRef}>
+                <SheetsDirective>
+                    <SheetDirective name={"Budget"} isProtected={true} protectSettings={protectSettings}>
+                        <RangesDirective>
+                            <RangeDirective dataSource={budgetData}></RangeDirective>
+                        </RangesDirective>
+                        <ColumnsDirective>
+                            <ColumnDirective width={100}></ColumnDirective>
+                            <ColumnDirective width={100}></ColumnDirective>
+                            <ColumnDirective width={100}></ColumnDirective>
+                            <ColumnDirective width={100}></ColumnDirective>
+                        </ColumnsDirective>
+                    </SheetDirective>
+                    <SheetDirective name={"Salary"}>
+                        <RangesDirective>
+                            <RangeDirective dataSource={salaryData}></RangeDirective>
+                        </RangesDirective>
+                        <ColumnsDirective>
+                            <ColumnDirective width={100}></ColumnDirective>
+                            <ColumnDirective width={100}></ColumnDirective>
+                            <ColumnDirective width={100}></ColumnDirective>
+                            <ColumnDirective width={100}></ColumnDirective>
+                        </ColumnsDirective>
+                    </SheetDirective>
+                </SheetsDirective>
+            </SpreadsheetComponent>
+            <DialogComponent ref={dialogRef} header={'Spreadsheet'} target={document.getElementById('spreadsheet')} content={'"A1:F3" range of cells has been unlocked.'}
+                showCloseIcon={true} isModal={true} visible={false} width={'500px'} buttons={btn}>
+            </DialogComponent>
+        </div>
+    );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
 {% endraw %}

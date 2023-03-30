@@ -1,31 +1,22 @@
 {% raw %}
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+import { BeforeOpenCloseMenuEventArgs } from '@syncfusion/ej2-react-splitbuttons';
 
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellsDirective, CellDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective} from '@syncfusion/ej2-react-spreadsheet';
-import { CellStyleModel, getRangeIndexes } from '@syncfusion/ej2-react-spreadsheet';
-import { ContextMenu } from './datasource';
-import { addClass, removeClass } from '@syncfusion/ej2-base';
-
-export default class App extends React.Component<{}, {}> {
-    public spreadsheet: SpreadsheetComponent;
-    public oncreated(args): void {
-        if (args.element.id === this.spreadsheet.element.id + '_contextmenu') {
-            this.spreadsheet.addContextMenuItems([{ text: 'Custom Item' }], 'Paste Special', false); //To pass the items, Item before / after that the element to be inserted, Set false if the items need to be inserted before the text.
+function App() {
+    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const onContextMenuBeforeOpen = (args: BeforeOpenCloseMenuEventArgs) => {
+        let spreadsheet = spreadsheetRef.current;
+        if (spreadsheet && args.element.id === spreadsheet.element.id + '_contextmenu') {
+            spreadsheet.addContextMenuItems([{ text: 'Custom Item' }], 'Paste Special', false);  //To pass the items, Item before / after that the element to be inserted, Set false if the items need to be inserted before the text.
         }
-    }
-     render() {
-        return  ( <div>
-             <SpreadsheetComponent
-                        ref={(ssObj) => { this.spreadsheet = ssObj }} contextMenuBeforeOpen={this.oncreated.bind(this)}>
-                    </SpreadsheetComponent> </div>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+    };
 
+    return (<SpreadsheetComponent ref={spreadsheetRef} contextMenuBeforeOpen={onContextMenuBeforeOpen} />);
+};
+export default App;
 
-
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 {% endraw %}

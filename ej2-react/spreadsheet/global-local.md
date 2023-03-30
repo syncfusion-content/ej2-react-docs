@@ -406,93 +406,94 @@ The Internationalization library is used to globalize number, date, and time val
 The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
 
 ```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React, { useRef, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { data } from './datasource';
-import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import * as cagregorian from './ca-gregorian.json';
 import * as currencies from './currencies.json';
 import * as numberingSystems from './numberingSystems.json';
 import * as numbers from './numbers.json';
 import * as timeZoneNames from './timeZoneNames.json';
-
+import { data } from './datasource';
 loadCldr(currencies, cagregorian, numbers, timeZoneNames, numberingSystems);
-
 setCulture('fr-CH');
 setCurrencyCode('EUR');
-
 L10n.load({
-    'fr-CH': {
-        'spreadsheet': {
-           'File': 'Fichier',
-            'Home': 'Accueil',
-            'Insert': 'Insérer',
-            'Formulas': 'Formules',
-            'Data': 'Les données',
-            'View': 'Vue',
-            'Cut': 'Coupe',
-            'Copy': 'Copie',
-            'Paste': 'Pâte',
-            'PasteSpecial': 'Pâte spéciale',
-            'All': 'Tous les',
-            'Values': 'Valeurs',
-            'Formats': 'Les formats',
-            'Font': 'fonte',
-            'FontSize': 'Taille de police',
-            'Bold': 'Audacieux',
-            'Italic': 'Italique',
-            'Underline': 'Souligner',
-            'Strikethrough': 'Barré',
-            'TextColor': 'Couleur du texte',
-            'FillColor': 'La couleur de remplissage',
-            'HorizontalAlignment': 'Alignement horizontal',
-            'AlignLeft': 'Alignez à gauche',
-            'AlignCenter': 'centre',
-            'AlignRight': 'Aligner à droite',
-            'VerticalAlignment': 'Alignement vertical',
-            'AlignTop': 'Aligner en haut',
-            'AlignMiddle': 'Aligner le milieu',
-            'AlignBottom': 'Aligner le bas',
-            'InsertFunction': 'Insérer une fonction',
-            'Delete': 'Effacer',
-            'Rename': 'Rebaptiser',
-            'Hide': 'Cacher',
-            'Unhide': 'Démasquer',
-            'NumberFormat': 'Nombre Format',
-        }
+  'fr-CH': {
+    'spreadsheet': {
+      'File': 'Fichier',
+      'Home': 'Accueil',
+      'Insert': 'Insérer',
+      'Formulas': 'Formules',
+      'Data': 'Les données',
+      'View': 'Vue',
+      'Cut': 'Coupe',
+      'Copy': 'Copie',
+      'Paste': 'Pâte',
+      'PasteSpecial': 'Pâte spéciale',
+      'All': 'Tous les',
+      'Values': 'Valeurs',
+      'Formats': 'Les formats',
+      'Font': 'fonte',
+      'FontSize': 'Taille de police',
+      'Bold': 'Audacieux',
+      'Italic': 'Italique',
+      'Underline': 'Souligner',
+      'Strikethrough': 'Barré',
+      'TextColor': 'Couleur du texte',
+      'FillColor': 'La couleur de remplissage',
+      'HorizontalAlignment': 'Alignement horizontal',
+      'AlignLeft': 'Alignez à gauche',
+      'AlignCenter': 'centre',
+      'AlignRight': 'Aligner à droite',
+      'VerticalAlignment': 'Alignement vertical',
+      'AlignTop': 'Aligner en haut',
+      'AlignMiddle': 'Aligner le milieu',
+      'AlignBottom': 'Aligner le bas',
+      'InsertFunction': 'Insérer une fonction',
+      'Delete': 'Effacer',
+      'Rename': 'Rebaptiser',
+      'Hide': 'Cacher',
+      'Unhide': 'Démasquer',
+      'NumberFormat': 'Nombre Format',
     }
+  }
 });
 
-export default class App extends React.Component<{}, {}> {
-    spreadsheet: SpreadsheetComponent;
-    public created(): void {
-        //Applies cell and number formatting to specified range of the active sheet
-            this.spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
-            this.spreadsheet.numberFormat('$#,##0.00', 'F2:F11');
-    }
-     render() {
-        return  (<SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj }} locale='fr-CH' created={this.created.bind(this)}>
-                        <SheetsDirective>
-                            <SheetDirective>
-                                <RangesDirective>
-                                    <RangeDirective dataSource={data}></RangeDirective>
-                                </RangesDirective>
-                                <ColumnsDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={110}></ColumnDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={180}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                </ColumnsDirective>
-                            </SheetDirective>
-                        </SheetsDirective>
-                    </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+function App() {
+  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+  useEffect(() => {
+    let spreadsheet = spreadsheetRef.current;
+    //Applies cell and number formatting to specified range of the active sheet
+    spreadsheet?.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+    spreadsheet?.numberFormat('$#,##0.00', 'F2:F11');
+  }, []);
+
+  return (
+    <SpreadsheetComponent ref={spreadsheetRef} locale='fr-CH' >
+      <SheetsDirective>
+        <SheetDirective>
+          <RangesDirective>
+            <RangeDirective dataSource={data}></RangeDirective>
+          </RangesDirective>
+          <ColumnsDirective>
+            <ColumnDirective width={100}></ColumnDirective>
+            <ColumnDirective width={110}></ColumnDirective>
+            <ColumnDirective width={100}></ColumnDirective>
+            <ColumnDirective width={180}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+          </ColumnsDirective>
+        </SheetDirective>
+      </SheetsDirective>
+    </SpreadsheetComponent>
+  );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 ```
 
 Internationalization [`sample link`](https://stackblitz.com/edit/react-5rhnwd-ujh6z5?file=index.js)

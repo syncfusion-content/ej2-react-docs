@@ -1,18 +1,20 @@
 {% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-export default class App extends React.Component {
-    spreadsheet;
-    oncreated() {
+
+function App() {
+    const spreadsheetRef = useRef(null);
+    const onContextMenuBeforeOpen = () => {
+        let spreadsheet = spreadsheetRef.current;
         // To remove existing context menu items.
-        this.spreadsheet.removeContextMenuItems(["Insert Column"], false);
-    }
-    render() {
-        return (<div>
-             <SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj; }} contextMenuBeforeOpen={this.oncreated.bind(this)}>
-                    </SpreadsheetComponent> </div>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+        spreadsheet?.removeContextMenuItems(['Insert Column'], false);
+    };
+
+    return (<SpreadsheetComponent ref={spreadsheetRef} contextMenuBeforeOpen={onContextMenuBeforeOpen} />);
+};
+export default App;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
 {% endraw %}

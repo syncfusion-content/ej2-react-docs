@@ -1,18 +1,16 @@
 {% raw %}
-
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, CellDirective, RowDirective } from '@syncfusion/ej2-react-spreadsheet';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, CellDirective, RowDirective, BeforeHyperlinkArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { ColumnsDirective, ColumnDirective, CellsDirective, RowsDirective } from '@syncfusion/ej2-react-spreadsheet';
-export default class App extends React.Component<{}, {}> {
-    spreadsheet: SpreadsheetComponent;
-public onbeforeHyperlinkClick(args): void {
-     args.target = '_self'; //change target attribute
-}
-    render() {
-        return (<SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj }} beforeHyperlinkClick={this.onbeforeHyperlinkClick.bind(this)}>
+
+function App() {
+    const onBeforeHyperlinkClick = (args: BeforeHyperlinkArgs): void => {
+        args.target = '_self'; //change target attribute
+    };
+
+    return (
+        <SpreadsheetComponent beforeHyperlinkClick={onBeforeHyperlinkClick}>
             <SheetsDirective>
                 <SheetDirective selectedRange='D13' name='PriceDetails'>
                     <RowsDirective>
@@ -131,11 +129,11 @@ public onbeforeHyperlinkClick(args): void {
                     </ColumnsDirective>
                 </SheetDirective>
             </SheetsDirective>
-        </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+        </SpreadsheetComponent>
+    );
+};
+export default App;
 
-
-
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 {% endraw %}

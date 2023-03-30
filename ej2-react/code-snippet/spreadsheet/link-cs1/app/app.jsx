@@ -1,75 +1,76 @@
 {% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, CellDirective, RowDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { ColumnsDirective, ColumnDirective, CellsDirective, RowsDirective } from '@syncfusion/ej2-react-spreadsheet';
-export default class App extends React.Component {
-    spreadsheet;
-    onbeforeHyperlinkClick(args) {
+
+function App() {
+    const onBeforeHyperlinkClick = (args) => {
         args.target = '_self'; //change target attribute
-    }
-    render() {
-        return (<SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj; }} beforeHyperlinkClick={this.onbeforeHyperlinkClick.bind(this)}>
+    };
+
+    return (
+        <SpreadsheetComponent beforeHyperlinkClick={onBeforeHyperlinkClick}>
             <SheetsDirective>
                 <SheetDirective selectedRange='D13' name='PriceDetails'>
                     <RowsDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Item Name'></CellDirective>
-                                <CellDirective value='Quantity'></CellDirective>
-                                <CellDirective value='Price'></CellDirective>
-                                <CellDirective value='Amount'></CellDirective>
-                                <CellDirective value='Stock Detail'></CellDirective>
-                                <CellDirective value='Website'></CellDirective>
+                                <CellDirective value='Item Name' ></CellDirective>
+                                <CellDirective value='Quantity' ></CellDirective>
+                                <CellDirective value='Price' ></CellDirective>
+                                <CellDirective value='Amount' ></CellDirective>
+                                <CellDirective value='Stock Detail' ></CellDirective>
+                                <CellDirective value='Website' ></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Casual Shoes'></CellDirective>
-                                <CellDirective value='10'></CellDirective>
-                                <CellDirective value='20'></CellDirective>
-                                <CellDirective value='200'></CellDirective>
-                                <CellDirective value='OUT OF STOCK'></CellDirective>
+                                <CellDirective value='Casual Shoes' ></CellDirective>
+                                <CellDirective value='10' ></CellDirective>
+                                <CellDirective value='20' ></CellDirective>
+                                <CellDirective value='200' ></CellDirective>
+                                <CellDirective value='OUT OF STOCK' ></CellDirective>
                                 <CellDirective value='Amazon' hyperlink='https://www.amazon.com/'></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Sports Shoes'></CellDirective>
-                                <CellDirective value='20'></CellDirective>
-                                <CellDirective value='30'></CellDirective>
+                                <CellDirective value='Sports Shoes' ></CellDirective>
+                                <CellDirective value='20' ></CellDirective>
+                                <CellDirective value='30' ></CellDirective>
                                 <CellDirective value='600'></CellDirective>
-                                <CellDirective value='IN STOCK' hyperlink='Stock!A2:B2'></CellDirective>
+                                <CellDirective value='IN STOCK' hyperlink='Stock!A2:B2' ></CellDirective>
                                 <CellDirective value='Overstack' hyperlink='https://www.overstock.com/'></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Formal Shoes'></CellDirective>
-                                <CellDirective value='20'></CellDirective>
-                                <CellDirective value='15'></CellDirective>
+                                <CellDirective value='Formal Shoes' ></CellDirective>
+                                <CellDirective value='20' ></CellDirective>
+                                <CellDirective value='15' ></CellDirective>
                                 <CellDirective value='300'></CellDirective>
-                                <CellDirective value='IN STOCK' hyperlink='Stock!A3:B3'></CellDirective>
+                                <CellDirective value='IN STOCK' hyperlink='Stock!A3:B3' ></CellDirective>
                                 <CellDirective value='AliExpress' hyperlink='https://www.aliexpress.com/'></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Sandals & Floaters'></CellDirective>
-                                <CellDirective value='15'></CellDirective>
-                                <CellDirective value='20'></CellDirective>
-                                <CellDirective value='300'></CellDirective>
-                                <CellDirective value='OUT OF STOCK'></CellDirective>
+                                <CellDirective value='Sandals & Floaters' ></CellDirective>
+                                <CellDirective value='15' ></CellDirective>
+                                <CellDirective value='20' ></CellDirective>
+                                <CellDirective value='300' ></CellDirective>
+                                <CellDirective value='OUT OF STOCK' ></CellDirective>
                                 <CellDirective value='AliBaba' hyperlink='https://www.alibaba.com/'></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Flip-Flops & Slippers'></CellDirective>
-                                <CellDirective value='30'></CellDirective>
-                                <CellDirective value='10'></CellDirective>
+                                <CellDirective value='Flip-Flops & Slippers' ></CellDirective>
+                                <CellDirective value='30' ></CellDirective>
+                                <CellDirective value='10' ></CellDirective>
                                 <CellDirective value='300'></CellDirective>
-                                <CellDirective value='IN STOCK' hyperlink='Stock!A4:B4'></CellDirective>
+                                <CellDirective value='IN STOCK' hyperlink='Stock!A4:B4' ></CellDirective>
                                 <CellDirective value='Taobao' hyperlink='https://taobao.com/'></CellDirective>
                             </CellsDirective>
                         </RowDirective>
@@ -87,38 +88,38 @@ export default class App extends React.Component {
                     <RowsDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Item Name'></CellDirective>
-                                <CellDirective value='Available Count'></CellDirective>
+                                <CellDirective value='Item Name' ></CellDirective>
+                                <CellDirective value='Available Count' ></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Casual Shoes'></CellDirective>
-                                <CellDirective value='10'></CellDirective>
+                                <CellDirective value='Casual Shoes' ></CellDirective>
+                                <CellDirective value='10' ></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Sports Shoes'></CellDirective>
-                                <CellDirective value='20'></CellDirective>
+                                <CellDirective value='Sports Shoes' ></CellDirective>
+                                <CellDirective value='20' ></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Formal Shoes'></CellDirective>
-                                <CellDirective value='20'></CellDirective>
+                                <CellDirective value='Formal Shoes' ></CellDirective>
+                                <CellDirective value='20' ></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Sandals & Floaters'></CellDirective>
-                                <CellDirective value='15'></CellDirective>
+                                <CellDirective value='Sandals & Floaters' ></CellDirective>
+                                <CellDirective value='15' ></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                         <RowDirective>
                             <CellsDirective>
-                                <CellDirective value='Flip-Flops & Slippers'></CellDirective>
-                                <CellDirective value='30'></CellDirective>
+                                <CellDirective value='Flip-Flops & Slippers' ></CellDirective>
+                                <CellDirective value='30' ></CellDirective>
                             </CellsDirective>
                         </RowDirective>
                     </RowsDirective>
@@ -128,8 +129,11 @@ export default class App extends React.Component {
                     </ColumnsDirective>
                 </SheetDirective>
             </SheetsDirective>
-        </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+        </SpreadsheetComponent>
+    );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
 {% endraw %}
