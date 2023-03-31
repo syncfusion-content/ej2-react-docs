@@ -1,16 +1,14 @@
 {% raw %}
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import { L10n } from '@syncfusion/ej2-base';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { data } from './datasource';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { data } from './datasource';
 L10n.load({
     'fr-CH': {
         'spreadsheet': {
-           'File': 'Fichier',
+            'File': 'Fichier',
             'Home': 'Accueil',
             'Insert': 'Insérer',
             'Formulas': 'Formules',
@@ -49,29 +47,29 @@ L10n.load({
     }
 });
 
-export default class App extends React.Component<{}, {}> {
-    spreadsheet: SpreadsheetComponent;
-     render() {
-        return  (<SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj }} locale='fr-CH'>
-                        <SheetsDirective>
-                            <SheetDirective>
-                                <RangesDirective>
-                                    <RangeDirective dataSource={data}></RangeDirective>
-                                </RangesDirective>
-                                <ColumnsDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={110}></ColumnDirective>
-                                    <ColumnDirective width={100}></ColumnDirective>
-                                    <ColumnDirective width={180}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                    <ColumnDirective width={130}></ColumnDirective>
-                                </ColumnsDirective>
-                            </SheetDirective>
-                        </SheetsDirective>
-                    </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+function App() {
+    return (
+        <SpreadsheetComponent locale='fr-CH'>
+            <SheetsDirective>
+                <SheetDirective>
+                    <RangesDirective>
+                        <RangeDirective dataSource={data}></RangeDirective>
+                    </RangesDirective>
+                    <ColumnsDirective>
+                        <ColumnDirective width={100}></ColumnDirective>
+                        <ColumnDirective width={110}></ColumnDirective>
+                        <ColumnDirective width={100}></ColumnDirective>
+                        <ColumnDirective width={180}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                    </ColumnsDirective>
+                </SheetDirective>
+            </SheetsDirective>
+        </SpreadsheetComponent>
+    );
+};
+export default App;
 
-
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 {% endraw %}

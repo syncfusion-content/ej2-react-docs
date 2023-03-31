@@ -23,12 +23,6 @@ Sample link: [`Cell template`](https://ej2.syncfusion.com/react/demos/#/material
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/template-cs1/app/app.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/template-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/template-cs1/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/template-cs1" %} 

@@ -1,32 +1,20 @@
 {% raw %}
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import {
-  SpreadsheetComponent,
-  SheetsDirective,
-  SheetDirective,
-  RangesDirective,
-} from '@syncfusion/ej2-react-spreadsheet';
-import {
-  RangeDirective,
-  ColumnsDirective,
-  ColumnDirective,
-} from '@syncfusion/ej2-react-spreadsheet';
-import { defaultData } from './datasource';
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, MenuSelectEventArgs } from '@syncfusion/ej2-react-spreadsheet';
+import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { createElement } from '@syncfusion/ej2-base';
-export default class App extends React.Component<{}, {}> {
-  spreadsheet: SpreadsheetComponent;
-  public fileMenuItemSelect(args): void {
-    if (args.item.text === 'Microsoft Excel') {
+import { defaultData } from './datasource';
+
+function App() {
+  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+  const fileMenuItemSelect = (args: MenuSelectEventArgs): void => {
+    let spreadsheet = spreadsheetRef.current;
+    if (args.item.text === 'Microsoft Excel' && spreadsheet) {
       args.cancel = true;
-      this.spreadsheet.saveAsJson().then((response) => {
-        var formData = new FormData();
-        formData.append(
-          'JSONData',
-          JSON.stringify(response.jsonObject.Workbook)
-        );
+      spreadsheet.saveAsJson().then((response) => {
+        let formData: FormData = new FormData();
+        formData.append('JSONData', JSON.stringify(response.jsonObject.Workbook));
         formData.append('fileName', 'Sample');
         formData.append('saveType', 'Xlsx');
         fetch(
@@ -38,10 +26,10 @@ export default class App extends React.Component<{}, {}> {
           }
         ).then((response) => {
           response.blob().then((data) => {
-            var anchor = createElement('a', {
+            let anchor: HTMLElement = createElement('a', {
               attrs: { download: 'Sample.xlsx' },
             });
-            var url = URL.createObjectURL(data);
+            const url: string = URL.createObjectURL(data);
             anchor.href = url;
             document.body.appendChild(anchor);
             anchor.click();
@@ -51,34 +39,28 @@ export default class App extends React.Component<{}, {}> {
         });
       });
     }
-  }
-  render() {
-    return (
-      <SpreadsheetComponent
-        ref={(ssObj) => {
-          this.spreadsheet = ssObj;
-        }}
-        allowSave={true}
-        saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save"
-        fileMenuItemSelect={this.fileMenuItemSelect.bind(this)}
-      >
-        <SheetsDirective>
-          <SheetDirective>
-            <RangesDirective>
-              <RangeDirective dataSource={defaultData}></RangeDirective>
-            </RangesDirective>
-            <ColumnsDirective>
-              <ColumnDirective width={180}></ColumnDirective>
-              <ColumnDirective width={130}></ColumnDirective>
-              <ColumnDirective width={130}></ColumnDirective>
-            </ColumnsDirective>
-          </SheetDirective>
-        </SheetsDirective>
-      </SpreadsheetComponent>
-    );
-  }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+  };
 
+  return (
+    <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} fileMenuItemSelect={fileMenuItemSelect}
+      saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save" >
+      <SheetsDirective>
+        <SheetDirective>
+          <RangesDirective>
+            <RangeDirective dataSource={defaultData}></RangeDirective>
+          </RangesDirective>
+          <ColumnsDirective>
+            <ColumnDirective width={180}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+            <ColumnDirective width={130}></ColumnDirective>
+          </ColumnsDirective>
+        </SheetDirective>
+      </SheetsDirective>
+    </SpreadsheetComponent>
+  );
+};
+export default App;
 
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 {% endraw %}

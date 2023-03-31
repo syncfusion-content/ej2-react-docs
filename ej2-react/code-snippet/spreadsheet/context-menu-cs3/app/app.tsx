@@ -1,27 +1,20 @@
 {% raw %}
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellsDirective, CellDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective} from '@syncfusion/ej2-react-spreadsheet';
-import { ContextMenu } from './datasource';
-
-export default class App extends React.Component<{}, {}> {
-    public spreadsheet: SpreadsheetComponent;
-    public oncreated(): void{
+function App() {
+    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const onContextMenuBeforeOpen = (): void => {
+        let spreadsheet = spreadsheetRef.current;
         //To enable / disable context menu items.
-          this.spreadsheet.enableContextMenuItems(['Rename'], false, false); // Contextmenu Items that needs to be enabled / disabled, Set true / false to enable / disable the menu items, Set true if the given text is a unique id.
-    }
-     render() {
-        return  ( <div>
-             <SpreadsheetComponent
-                        ref={(ssObj) => { this.spreadsheet = ssObj }} contextMenuBeforeOpen={this.oncreated.bind(this)}>
-                    </SpreadsheetComponent> </div>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+        spreadsheet?.enableContextMenuItems(['Rename'], false, false); // Contextmenu Items that needs to be enabled / disabled, Set true / false to enable / disable the menu items, Set true if the given text is a unique id.
+    };
 
+    return (<SpreadsheetComponent ref={spreadsheetRef} contextMenuBeforeOpen={onContextMenuBeforeOpen} />);
+};
+export default App;
 
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 {% endraw %}

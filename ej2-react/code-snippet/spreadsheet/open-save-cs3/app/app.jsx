@@ -1,19 +1,19 @@
 {% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-export default class App extends React.Component {
-    spreadsheet;
-    beforeOpen(args) {
-        args.requestData['headers'] = {
-            Authorization: 'YOUR TEXT',
-        };
-    }
-    render() {
-        return (<SpreadsheetComponent ref={(ssObj) => {
-                this.spreadsheet = ssObj;
-            }} openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open" beforeOpen={this.beforeOpen.bind(this)}></SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+
+function App() {
+    const beforeOpen = (args) => {
+        args.requestData = { Authorization: 'YOUR TEXT' };
+    };
+
+    return (
+        <SpreadsheetComponent openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open" beforeOpen={beforeOpen} />
+    );
+};
+export default App;
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
 {% endraw %}

@@ -1,28 +1,27 @@
 {% raw %}
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React, { useRef, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
-export default class App extends React.Component<{}, {}> {
-    spreadsheet: SpreadsheetComponent;
-    public created(args): void {
-        fetch("https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx") // fetch the remote url
-                .then((response) => {
-                    response.blob().then((fileBlob) => { // convert the excel file to blob
-                    var file = new File([fileBlob], "Sample.xlsx"); //convert the blob into file
-                    this.spreadsheet.open({ file: file }); // open the file into Spreadsheet
-                    })
-                })
-    }
-     render() {
-        return  (<SpreadsheetComponent ref={(ssObj) => { this.spreadsheet = ssObj }}
-                        openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' created={this.created.bind(this)}>
-                    </SpreadsheetComponent>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
+function App() {
+    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    useEffect(() => {
+        const fetchData = async (): Promise<void> => {
+            const response: Response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx'); // fetch the remote url
+            const fileBlob: Blob = await response.blob(); // convert the excel file to blob
+            const file: File = new File([fileBlob], 'Sample.xlsx'); //convert the blob into file
+            let spreadsheet = spreadsheetRef.current;
+            spreadsheet?.open({ file }); // open the file into Spreadsheet
+        };
+        fetchData();
+    }, []);
 
+    return (
+        <SpreadsheetComponent ref={spreadsheetRef} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' />
+    );
+};
+export default App;
 
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
 {% endraw %}

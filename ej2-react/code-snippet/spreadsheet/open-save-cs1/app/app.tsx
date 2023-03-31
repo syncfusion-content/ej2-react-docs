@@ -1,16 +1,14 @@
-
-
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-export default class App extends React.Component<{}, {}> {
-    public beforeOpen(args): void {
-        // your code snippets here
-    }
-     render() {
-        return  (<SpreadsheetComponent allowOpen= {true} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' beforeOpen={this.beforeOpen.bind(this)}/>);
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'));
 
+function App() {
+    const beforeOpen = ():void => {};
+    return (
+        <SpreadsheetComponent allowOpen={true} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' beforeOpen={beforeOpen} />
+    );
+};
+export default App;
 
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
