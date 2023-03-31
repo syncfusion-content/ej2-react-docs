@@ -5,7 +5,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import {
-  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject
+  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
@@ -13,6 +13,8 @@ import { extend } from '@syncfusion/ej2-base';
 function App() {
   let scheduleObj: ScheduleComponent;
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
+
   function onDataBound(): void {
     let event: Object[] = scheduleObj.getEvents();
     appendElement('Events present on scheduler <b>' + event.length + '<b><hr>');
@@ -31,7 +33,7 @@ function App() {
     <div className='content-wrapper'>
       <div className='col-lg-9 control-section'>
         <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate=
-          {new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} dataBound={onDataBound}>
+          {new Date(2018, 1, 15)} eventSettings={eventSettings} dataBound={onDataBound}>
           <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
         </ScheduleComponent>
       </div>

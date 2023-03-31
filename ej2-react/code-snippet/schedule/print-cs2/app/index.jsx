@@ -6,6 +6,8 @@ import { extend } from '@syncfusion/ej2-base';
 function App() {
     let scheduleObj;
     const data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data };
+
     function onActionBegin(args) {
         if (args.requestType === 'toolbarItemRendering') {
             let exportItem = {
@@ -48,9 +50,9 @@ function App() {
         scheduleObj.print(printModel);
     }
     return (<div>
-      <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='520px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} actionBegin={onActionBegin}>
-        <Inject services={[Day, Week, WorkWeek, Month, Agenda, Print]}/>
-      </ScheduleComponent></div>);
+        <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='520px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} actionBegin={onActionBegin}>
+            <Inject services={[Day, Week, WorkWeek, Month, Agenda, Print]} />
+        </ScheduleComponent></div>);
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

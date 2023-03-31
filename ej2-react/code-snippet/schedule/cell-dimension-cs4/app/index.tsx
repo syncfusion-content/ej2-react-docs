@@ -12,9 +12,11 @@ import { scheduleData } from './datasource';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings = { dataSource: data };
+
   return <ScheduleComponent width='100%' height='550px' currentView='Month'
     selectedDate={new Date(2018, 1, 17)} minDate={new Date(2017, 4, 17)}
-    maxDate={new Date(2018, 5, 17)} eventSettings={{ dataSource: data }}>
+    maxDate={new Date(2018, 5, 17)} eventSettings={eventSettings}>
     <ViewsDirective>
       <ViewDirective option='Day' />
       <ViewDirective option='Week' />

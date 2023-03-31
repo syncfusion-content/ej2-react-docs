@@ -25,6 +25,8 @@ function App() {
     IsAllDay: false,
     RecurrenceRule: 'FREQ=DAILY;INTERVAL=1;COUNT=3'
   }];
+  const eventSettings = { dataSource: scheduleData }
+
   function onEditClick(): void {
     let data: Object = new DataManager(scheduleObj.getCurrentViewEvents()).executeLocal(new Query().where('RecurrenceID', 'equal', 3));
     data[0].Subject = 'Edited';
@@ -36,7 +38,7 @@ function App() {
     <div>
       <ButtonComponent id='edit' ref={t => buttonObj = t} title='Edit' onClick={onEditClick.bind(this)}>Edit</ButtonComponent>
       <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate=
-        {new Date(2018, 1, 15)} eventSettings={{ dataSource: scheduleData }}>
+        {new Date(2018, 1, 15)} eventSettings={eventSettings}>
         <ViewsDirective>
           <ViewDirective option='Day' />
           <ViewDirective option='Week' />

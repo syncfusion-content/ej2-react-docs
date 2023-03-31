@@ -4,19 +4,21 @@ import { ScheduleComponent, HeaderRowDirective, HeaderRowsDirective, TimelineVie
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], scheduleData, null, true);
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 11, 31)} eventSettings={{ dataSource: data }} startHour='09:00' endHour='13:00'>
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data }
+
+  return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 11, 31)} eventSettings={eventSettings} startHour='09:00' endHour='13:00'>
     <HeaderRowsDirective>
-      <HeaderRowDirective option='Year'/>
-      <HeaderRowDirective option='Month'/>
-      <HeaderRowDirective option='Week'/>
-      <HeaderRowDirective option='Date'/>
-      <HeaderRowDirective option='Hour'/>
+      <HeaderRowDirective option='Year' />
+      <HeaderRowDirective option='Month' />
+      <HeaderRowDirective option='Week' />
+      <HeaderRowDirective option='Date' />
+      <HeaderRowDirective option='Hour' />
     </HeaderRowsDirective>
     <ViewsDirective>
-      <ViewDirective option='TimelineWeek'/>
+      <ViewDirective option='TimelineWeek' />
     </ViewsDirective>
-    <Inject services={[TimelineViews]}/>
+    <Inject services={[TimelineViews]} />
   </ScheduleComponent>);
 }
 ;

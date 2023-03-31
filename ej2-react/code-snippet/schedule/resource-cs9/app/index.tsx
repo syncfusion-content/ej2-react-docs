@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-  Week, Month, TimelineViews, TimelineMonth, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, ViewsDirective, ViewDirective, Inject
+  Week, Month, TimelineViews, TimelineMonth, EventSettingsModel, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, ViewsDirective, ViewDirective, Inject
 } from '@syncfusion/ej2-react-schedule';
 
 function App() {
@@ -42,9 +42,11 @@ function App() {
       EndTime: new Date(2018, 5, 3, 12, 0),
       ConferenceId: [1, 2, 3]
     }];
+  const eventSettings: EventSettingsModel = { dataSource: data }
+  const group = { allowGroupEdit: true, resources: ['Conferences'] }
   return (
-    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 5, 5)} currentView='WorkWeek' eventSettings={{ dataSource: data }}
-      group={{ allowGroupEdit: true, resources: ['Conferences'] }} >
+    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 5, 5)} currentView='WorkWeek' eventSettings={eventSettings}
+      group={group} >
       <ViewsDirective>
         <ViewDirective option='Week' />
         <ViewDirective option='Month' />

@@ -12,6 +12,7 @@ import { extend } from '@syncfusion/ej2-base';
 function App() {
   let scheduleObj: ScheduleComponent;
   const data: Object[] = extend([], resourceData, null, true) as Object[];
+  
   const roomData: Object[] = [
     { RoomText: 'ROOM 1', Id: 1, RoomColor: '#cb6bb2' },
     { RoomText: 'ROOM 2', Id: 2, RoomColor: '#56ca85' }

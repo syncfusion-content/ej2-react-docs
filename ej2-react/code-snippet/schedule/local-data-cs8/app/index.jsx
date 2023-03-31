@@ -4,25 +4,27 @@ import { ScheduleComponent, Day, Week, TimelineViews, Month, ViewsDirective, Vie
 import { extend, L10n } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
 L10n.load({
-    'en-US': {
-        'schedule': {
-            'saveButton': 'Add',
-            'cancelButton': 'Close',
-            'deleteButton': 'Remove',
-            'newEvent': 'Add Event',
-        },
-    }
+  'en-US': {
+    'schedule': {
+      'saveButton': 'Add',
+      'cancelButton': 'Close',
+      'deleteButton': 'Remove',
+      'newEvent': 'Add Event',
+    },
+  }
 });
 function App() {
-    const data = extend([], scheduleData, null, true);
-    return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data };
+
+  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <ViewsDirective>
-      <ViewDirective option='Day'/>
-      <ViewDirective option='Week'/>
-      <ViewDirective option='TimelineWeek'/>
-      <ViewDirective option='Month'/>
+      <ViewDirective option='Day' />
+      <ViewDirective option='Week' />
+      <ViewDirective option='TimelineWeek' />
+      <ViewDirective option='Month' />
     </ViewsDirective>
-    <Inject services={[Day, Week, TimelineViews, Month]}/>
+    <Inject services={[Day, Week, TimelineViews, Month]} />
   </ScheduleComponent>);
 }
 ;

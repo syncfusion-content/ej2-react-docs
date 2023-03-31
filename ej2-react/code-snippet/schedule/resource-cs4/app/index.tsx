@@ -2,13 +2,15 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   TimelineViews, TimelineMonth, ScheduleComponent, ViewsDirective, ViewDirective,
-  ResourcesDirective, ResourceDirective, Inject
+  ResourcesDirective, ResourceDirective, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], resourceData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data }
+  const group = { resources: ['Rooms', 'Owners'] }
   const roomData: Object[] = [
     { RoomText: 'ROOM 1', Id: 1, RoomColor: '#cb6bb2' },
     { RoomText: 'ROOM 2', Id: 2, RoomColor: '#56ca85' }
@@ -18,7 +20,7 @@ function App() {
     { OwnerText: 'Steven', Id: 2, GroupId: 2, OwnerColor: '#f8a398' },
     { OwnerText: 'Michael', Id: 3, GroupId: 1, OwnerColor: '#7499e1' }
   ];
-  return (<ScheduleComponent width='100%' height='550px' currentView='TimelineWeek' selectedDate={new Date(2018, 3, 1)} eventSettings={{ dataSource: data }} group={{ resources: ['Rooms', 'Owners'] }}>
+  return (<ScheduleComponent width='100%' height='550px' currentView='TimelineWeek' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings} group={group}>
     <ViewsDirective>
       <ViewDirective option='TimelineDay' />
       <ViewDirective option='TimelineWeek' />

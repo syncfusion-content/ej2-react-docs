@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-  ScheduleComponent, Day, Week, TimelineViews, Month, ViewsDirective, ViewDirective, Inject
+  ScheduleComponent, Day, Week, TimelineViews, Month, ViewsDirective, ViewDirective, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { extend } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
@@ -16,7 +16,9 @@ function App() {
     startTime: { name: 'StartTime', title: 'Start Duration' },
     endTime: { name: 'EndTime', title: 'End Duration' }
   }
-  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
+  const eventSettings: EventSettingsModel = { dataSource: data, fields: fieldsData };
+
+  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <ViewsDirective>
       <ViewDirective option='TimelineDay' />
       <ViewDirective option='Day' />

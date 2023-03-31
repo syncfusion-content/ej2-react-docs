@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject
+  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 
 function App() {
@@ -21,8 +21,9 @@ function App() {
     startTime: { name: 'StartTime' },
     endTime: { name: 'EndTime' }
   }
+  const eventSettings: EventSettingsModel = { dataSource: data, fields: fieldsData }
 
-  return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
+  return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>);
 

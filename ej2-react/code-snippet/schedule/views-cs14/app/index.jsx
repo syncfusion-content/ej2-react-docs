@@ -4,23 +4,25 @@ import { ScheduleComponent, Agenda, Inject, ViewsDirective, ViewDirective } from
 import { appData } from './datasource';
 import { Internationalization, extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], appData, null, true);
-    const instance = new Internationalization();
-    function getTimeString(value) {
-        return instance.formatDate(value, { skeleton: 'hm' });
-    }
-    function eventTemplate(props) {
-        return (<div className="template-wrap">
+  const data = extend([], appData, null, true);
+  const eventSettings = { dataSource: data };
+
+  const instance = new Internationalization();
+  function getTimeString(value) {
+    return instance.formatDate(value, { skeleton: 'hm' });
+  }
+  function eventTemplate(props) {
+    return (<div className="template-wrap">
       <div className="subject">{props.Subject}</div>
       <div className="time">
         Time: {getTimeString(props.StartTime)} - {getTimeString(props.EndTime)}</div>
     </div>);
-    }
-    return (<ScheduleComponent width='100%' height='550px' agendaDaysCount={3} selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
+  }
+  return (<ScheduleComponent width='100%' height='550px' agendaDaysCount={3} selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <ViewsDirective>
-      <ViewDirective option='Agenda' eventTemplate={eventTemplate.bind(this)} allowVirtualScrolling={false}/>
+      <ViewDirective option='Agenda' eventTemplate={eventTemplate.bind(this)} allowVirtualScrolling={false} />
     </ViewsDirective>
-    <Inject services={[Agenda]}/>
+    <Inject services={[Agenda]} />
   </ScheduleComponent>);
 }
 ;

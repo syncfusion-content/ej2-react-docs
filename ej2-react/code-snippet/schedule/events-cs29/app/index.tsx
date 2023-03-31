@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventRenderedArgs
+  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventRenderedArgs, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
     StartTime: new Date(2018, 1, 15, 10, 0),
     EndTime: new Date(2018, 1, 15, 10, 20)
   }];
+  const eventSettings: EventSettingsModel = { dataSource: data }
 
   function onEventRendered(args: EventRenderedArgs): void {
     let cellHeight: number = (scheduleObj.element.querySelector('.e-work-cells') as HTMLElement).offsetHeight;
@@ -25,7 +26,7 @@ function App() {
   }
 
   return (
-    <ScheduleComponent width='100%' height='550px' ref={schedule => scheduleObj = schedule} selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} eventRendered={onEventRendered}>
+    <ScheduleComponent width='100%' height='550px' ref={schedule => scheduleObj = schedule} selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} eventRendered={onEventRendered}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>
   )

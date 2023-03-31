@@ -4,16 +4,18 @@ import { ScheduleComponent, HeaderRowDirective, HeaderRowsDirective, TimelineMon
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], scheduleData, null, true);
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 11, 31)} eventSettings={{ dataSource: data }}>
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data }
+
+  return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 11, 31)} eventSettings={eventSettings}>
     <HeaderRowsDirective>
-      <HeaderRowDirective option='Year'/>
-      <HeaderRowDirective option='Month'/>
+      <HeaderRowDirective option='Year' />
+      <HeaderRowDirective option='Month' />
     </HeaderRowsDirective>
     <ViewsDirective>
-      <ViewDirective option='TimelineMonth' interval={24}/>
+      <ViewDirective option='TimelineMonth' interval={24} />
     </ViewsDirective>
-    <Inject services={[TimelineMonth]}/>
+    <Inject services={[TimelineMonth]} />
   </ScheduleComponent>);
 }
 ;

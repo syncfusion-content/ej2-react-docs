@@ -4,9 +4,11 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Resize, Inject }
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], scheduleData, null, true);
-    return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} allowResizing={false} eventSettings={{ dataSource: data }}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize]}/>
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data }
+
+  return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} allowResizing={false} eventSettings={eventSettings}>
+    <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize]} />
   </ScheduleComponent>;
 }
 ;

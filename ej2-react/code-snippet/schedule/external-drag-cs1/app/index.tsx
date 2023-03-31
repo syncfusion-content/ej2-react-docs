@@ -2,7 +2,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Inject, TimelineViews,
-  Resize, DragAndDrop, ActionEventArgs, CellClickEventArgs
+  Resize, DragAndDrop, ActionEventArgs, CellClickEventArgs, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { eventData, waitingList } from './datasource';
 import { extend, closest, remove, addClass } from '@syncfusion/ej2-base';
@@ -18,12 +18,14 @@ function App() {
 
   const fields: Object = { dataSource: waitingList, id: 'Id', text: 'Name' };
   const data: Object[] = extend([], eventData, null, true) as Object[];
+
   const fieldsData = {
     subject: { title: 'Patient Name', name: 'Name' },
     startTime: { title: "From", name: "StartTime" },
     endTime: { title: "To", name: "EndTime" },
     description: { title: 'Reason', name: 'Description' }
   }
+  const eventSettings: EventSettingsModel = { dataSource: data, fields: fieldsData };
 
   function treeTemplate(props: any): JSX.Element {
     return (<div id="waiting"><div id="waitdetails"><div id="waitlist">{props.Name}</div>
@@ -106,10 +108,7 @@ function App() {
             </div>
             <ScheduleComponent ref={schedule => scheduleObj = schedule} cssClass='schedule-drag-drop' width='100%' height='650px' selectedDate={new Date(2018, 7, 1)}
               currentView='TimelineDay'
-              eventSettings={{
-                dataSource: data,
-                fields: fieldsData
-              }}
+              eventSettings={eventSettings}
               actionBegin={onActionBegin} drag={onItemDrag} >
               <ViewsDirective>
                 <ViewDirective option='TimelineDay' />

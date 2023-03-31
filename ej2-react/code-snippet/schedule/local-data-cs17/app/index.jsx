@@ -12,7 +12,9 @@ function App() {
         startTime: { title: 'From', name: 'StartTime' },
         endTime: { title: 'To', name: 'EndTime' }
     }
-    return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
+    const eventSettings = { dataSource: data, fields: fieldsData };
+
+    return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
         <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>);
 }
