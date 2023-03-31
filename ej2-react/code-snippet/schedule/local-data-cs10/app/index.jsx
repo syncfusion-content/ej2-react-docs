@@ -20,7 +20,9 @@ function App() {
         startTime: { name: 'StartTime', validation: { required: true } },
         endTime: { name: 'EndTime', validation: { required: true } }
     }
-    return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
+    const eventSettings = { dataSource: data, fields: fieldsData };
+
+    return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
         <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>);
 }

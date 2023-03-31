@@ -17,6 +17,8 @@ function App() {
   let scheduleObj: ScheduleComponent;
   const data: Object[] = extend([], eventData, null, true) as Object[];
   const eventSettings: EventSettingsModel = { dataSource: data };
+  const group = { resources: ['Owners'] };
+
   const ownerData: Object[] = [
     { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
     { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
@@ -44,7 +46,7 @@ function App() {
   }
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} ref={schedule => scheduleObj = schedule}
     eventSettings={eventSettings} editorTemplate={editorTemplate} showQuickInfo={false}
-    group={{ resources: ['Owners'] }}>
+    group={group}>
     <ResourcesDirective>
       <ResourceDirective field='OwnerId' title='Owner' name='Owners' allowMultiple={false} dataSource={ownerData} textField='OwnerText' idField='Id' allowGroupEdit={false}
         colorField='OwnerColor'></ResourceDirective>

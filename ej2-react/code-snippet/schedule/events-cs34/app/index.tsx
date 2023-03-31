@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Inject,
-  ActionEventArgs, EventFieldsMapping
+  ActionEventArgs, EventFieldsMapping, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { extend } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
@@ -10,6 +10,8 @@ import { scheduleData } from './datasource';
 function App() {
   let scheduleObj: ScheduleComponent;
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data }
+
   function onActionBegin(args: ActionEventArgs): void {
     if (args.requestType === 'eventCreate' && (args.data as Object).length > 0) {
       let eventData: { [key: string]: Object } = args.data[0] as { [key: string]: Object };
@@ -21,7 +23,7 @@ function App() {
   }
 
   return (
-    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} actionBegin={onActionBegin}>
+    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} actionBegin={onActionBegin}>
       <Inject services={[Day, Week, WorkWeek]} />
     </ScheduleComponent>
   )

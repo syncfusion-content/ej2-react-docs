@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject
+  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 
 function App() {
@@ -34,16 +34,14 @@ function App() {
     IsAllDay: false,
     RankId: '9'
   }];
+  const eventSettings: EventSettingsModel = { dataSource: data, sortComparer: comparerFun }
 
   function comparerFun(args: Record<string, any>[]) {
     args.sort((event1: Record<string, any>, event2: Record<string, any>) => event1.RankId.localeCompare(event2.RankId, undefined, { numeric: true }));
     return args;
   }
 
-  return <ScheduleComponent height='550px' selectedDate={new Date(2017, 9, 29)} eventSettings={{
-    dataSource: data,
-    sortComparer: comparerFun
-  }}>
+  return <ScheduleComponent height='550px' selectedDate={new Date(2017, 9, 29)} eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>
 

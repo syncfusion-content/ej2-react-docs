@@ -2,7 +2,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective,
-  ResourceDirective, TimelineMonth, TimelineYear, Resize, DragAndDrop, Inject
+  ResourceDirective, TimelineMonth, TimelineYear, Resize, DragAndDrop, Inject, EventSettingsModel, GroupModel
 } from '@syncfusion/ej2-react-schedule';
 
 function App() {
@@ -39,6 +39,9 @@ function App() {
     }
     return data;
   }
+  const eventSettings: EventSettingsModel = { dataSource: generateStaticEvents(new Date(2018, 4, 1), 300, 12) };
+  const group: GroupModel = { resources: ['Resources'] };
+
   function generateResourceData(startId: number, endId: number, text: string): Object[] {
     let data: { [key: string]: Object }[] = [];
     let colors: string[] = [
@@ -59,10 +62,8 @@ function App() {
   return (
     <ScheduleComponent cssClass='virtual-scrolling' ref={schedule => scheduleObj = schedule} width='100%'
       height='550px' selectedDate={new Date(2018, 4, 1)}
-      eventSettings={{
-        dataSource: generateStaticEvents(new Date(2018, 4, 1), 300, 12),
-      }}
-      group={{ resources: ['Resources'] }} >
+      eventSettings={eventSettings}
+      group={group} >
       <ResourcesDirective>
         <ResourceDirective field='ResourceId' title='Resource' name='Resources' allowMultiple={true}
           dataSource={generateResourceData(1, 300, 'Resource')}

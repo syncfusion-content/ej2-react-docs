@@ -4,12 +4,14 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Resize, Inject }
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    function onResizeStart(args) {
-        args.scroll = { enable: true, scrollBy: 15 };
-    }
-    const data = extend([], scheduleData, null, true);
-    return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} resizeStart={onResizeStart}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize]}/>
+  function onResizeStart(args) {
+    args.scroll = { enable: true, scrollBy: 15 };
+  }
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data }
+
+  return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} resizeStart={onResizeStart}>
+    <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize]} />
   </ScheduleComponent>;
 }
 ;

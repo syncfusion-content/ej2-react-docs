@@ -14,13 +14,15 @@ import { scheduleData } from './datasource';
 function App() {
   let scheduleObj: ScheduleComponent;
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings = { dataSource: data };
+
 
   function onClick(): void {
     scheduleObj.exportToICalendar('ScheduleEvents');
   }
   return (<div>
     <ButtonComponent id='ics-export' title='Export' onClick={onClick}>Export</ButtonComponent>
-    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='520px' id='schedule' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
+    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='520px' id='schedule' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, ICalendarExport, ICalendarImport, Resize, DragAndDrop]} />
     </ScheduleComponent></div>
   );

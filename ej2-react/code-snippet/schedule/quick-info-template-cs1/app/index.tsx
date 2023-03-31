@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, ResourcesDirective, ResourceDirective, Day, Week, WorkWeek, Month,
-  Agenda, MonthAgenda, Inject, ResourcesModel, CellClickEventArgs, CurrentAction
+  Agenda, MonthAgenda, Inject, ResourcesModel, CellClickEventArgs, CurrentAction, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { extend, Internationalization } from '@syncfusion/ej2-base';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
@@ -29,6 +29,12 @@ function App() {
     { Name: 'Photogenic', Id: 10, Capacity: 25, Color: '#710193', Type: 'Conference' }
   ];
   const scheduleData: Object[] = extend([], ScheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
+  const quickInfoTemplates = {
+    header: headerTemplate as any,
+    content: contentTemplate as any,
+    footer: footerTemplate as any
+  };
   function getResourceData(data: { [key: string]: Object }): { [key: string]: Object } {
     const resources: ResourcesModel = scheduleObj.getResourceCollections().slice(-1)[0];
     const resourceData: { [key: string]: Object } = (resources.dataSource as Object[]).filter((resource: { [key: string]: Object }) =>
@@ -167,11 +173,7 @@ function App() {
       <div className='col-lg-12 control-section'>
         <div className='control-wrapper'>
           <ScheduleComponent id="schedule" cssClass='quick-info-template' ref={(schedule: ScheduleComponent) => scheduleObj = schedule} height="650px"
-            selectedDate={new Date(2020, 0, 9)} eventSettings={{ dataSource: scheduleData }} quickInfoTemplates={{
-              header: headerTemplate as any,
-              content: contentTemplate as any,
-              footer: footerTemplate as any
-            }}>
+            selectedDate={new Date(2020, 0, 9)} eventSettings={eventSettings} quickInfoTemplates={quickInfoTemplates}>
             <ResourcesDirective>
               <ResourceDirective field='RoomId' title='Room Type' name='MeetingRoom' textField='Name' idField='Id'
                 colorField='Color' dataSource={roomData}></ResourceDirective>

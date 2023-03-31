@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, ViewsDirective, ViewDirective, Inject } from '@syncfusion/ej2-react-schedule';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, ViewsDirective, ViewDirective, Inject, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
 import { DataManager } from '@syncfusion/ej2-data';
 
 function App() {
@@ -8,6 +8,8 @@ function App() {
   let dataManager: DataManager = new DataManager({
     url: 'http://some.com/invalidUrl'
   });
+  const eventSettings: EventSettingsModel = { dataSource: dataManager };
+
   function onActionFailure(): void {
     let span: HTMLElement = document.createElement('span');
     scheduleObj.element.parentNode.insertBefore(span, scheduleObj.element);
@@ -15,7 +17,7 @@ function App() {
     span.innerHTML = 'Server exception: 404 Not found';
   }
 
-  return <ScheduleComponent height='550px' ref={schedule => scheduleObj = schedule} selectedDate={new Date(2017, 5, 11)} actionFailure={onActionFailure} eventSettings={{ dataSource: dataManager }}>
+  return <ScheduleComponent height='550px' ref={schedule => scheduleObj = schedule} selectedDate={new Date(2017, 5, 11)} actionFailure={onActionFailure} eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>
 

@@ -7,6 +7,8 @@ import { webinarData } from './datasource';
 function App() {
     let scheduleObj;
     const data = extend([], webinarData, null, true);
+    const eventSettings = { dataSource: data };
+    const group = { resources: ['Doctors'] }
     const instance = new Internationalization();
     const resourceData = [
         { text: 'Will Smith', id: 1, color: '#ea7a57', workDays: [1, 2, 4, 5], startHour: '08:00', endHour: '15:00' },
@@ -18,12 +20,12 @@ function App() {
     }
     function eventTemplate(props) {
         return (<div className="app-template-wrap" style={{ background: props.SecondaryColor }}>
-      <div className="subject" style={{ background: props.PrimaryColor }}>{props.Subject}</div>
-      <div className="time" style={{ background: props.PrimaryColor }}>
-        Time: {getTimeString(props.StartTime)} - {getTimeString(props.EndTime)}</div>
-      <div className="image"><img src={"https://ej2.syncfusion.com/demos/src/schedule/images/" + props.ImageName + ".svg"} alt={props.ImageName}/></div>
-      <div className="event-description">{props.Description}</div>
-      <div className="footer" style={{ background: props.PrimaryColor }}></div></div>);
+            <div className="subject" style={{ background: props.PrimaryColor }}>{props.Subject}</div>
+            <div className="time" style={{ background: props.PrimaryColor }}>
+                Time: {getTimeString(props.StartTime)} - {getTimeString(props.EndTime)}</div>
+            <div className="image"><img src={"https://ej2.syncfusion.com/demos/src/schedule/images/" + props.ImageName + ".svg"} alt={props.ImageName} /></div>
+            <div className="event-description">{props.Description}</div>
+            <div className="footer" style={{ background: props.PrimaryColor }}></div></div>);
     }
     function getDoctorImage(value) {
         return getDoctorName(value).replace(' ', '-').toLowerCase();
@@ -65,8 +67,8 @@ function App() {
     }
     function resourceHeaderTemplate(props) {
         return (<div className="res-template-wrap"><div className={"resource-image " + getDoctorImage(props)}></div>
-      <div className="resource-detail"><div className="resource-name">{getDoctorName(props)}</div>
-        <div className="resource-designation">{getDoctorLevel(props)}</div></div></div>);
+            <div className="resource-detail"><div className="resource-name">{getDoctorName(props)}</div>
+                <div className="resource-designation">{getDoctorLevel(props)}</div></div></div>);
     }
     function getMonthCellText(date) {
         if (date.getMonth() === 1 && date.getDate() === 23) {
@@ -118,39 +120,39 @@ function App() {
         scheduleObj.refreshTemplates();
     }
     return (<div className='schedule-control-section'>
-      <div className='control-section'>
-        <div className='control-wrapper'>
-          <div style={{ "display": 'flex' }}>
-            <div style={{ paddingRight: '10px' }}>
-              <ButtonComponent cssClass='e-info' onClick={refreshCellTemplate}>Refresh cellTemplate</ButtonComponent>
+        <div className='control-section'>
+            <div className='control-wrapper'>
+                <div style={{ "display": 'flex' }}>
+                    <div style={{ paddingRight: '10px' }}>
+                        <ButtonComponent cssClass='e-info' onClick={refreshCellTemplate}>Refresh cellTemplate</ButtonComponent>
+                    </div>
+                    <div style={{ paddingRight: '10px' }}>
+                        <ButtonComponent cssClass='e-info' onClick={refreshDateHeaderTemplate}>Refresh dateHeaderTemplate</ButtonComponent>
+                    </div>
+                    <div style={{ paddingRight: '10px' }}>
+                        <ButtonComponent cssClass='e-info' onClick={refreshEventTemplate}>Refresh eventTemplate</ButtonComponent>
+                    </div>
+                    <div style={{ paddingRight: '10px' }}>
+                        <ButtonComponent cssClass='e-info' onClick={refreshResHeaderTemplate}>Refresh resourceHeaderTemplate</ButtonComponent>
+                    </div>
+                    <div style={{ paddingRight: '10px' }}>
+                        <ButtonComponent cssClass='e-info' onClick={refreshAllTemplate}>Refresh All Templates</ButtonComponent>
+                    </div>
+                </div>
+                <ScheduleComponent width='100%' height='650px' cssClass='schedule-date-header-template' ref={t => scheduleObj = t} selectedDate={new Date(2021, 1, 15)} readonly={true} eventSettings={eventSettings} dateHeaderTemplate={dateHeaderTemplate} resourceHeaderTemplate={resourceHeaderTemplate} cellTemplate={cellTemplate} group={group}>
+                    <ResourcesDirective>
+                        <ResourceDirective field='DoctorId' title='Doctor Name' name='Doctors' dataSource={resourceData} textField='text' idField='id' groupIDField='groupId' colorField='color' workDaysField='workDays' startHourField='startHour' endHourField='endHour'>
+                        </ResourceDirective>
+                    </ResourcesDirective>
+                    <ViewsDirective>
+                        <ViewDirective option='Week' eventTemplate={eventTemplate} />
+                        <ViewDirective option='Month' />
+                        <ViewDirective option='TimelineMonth' />
+                    </ViewsDirective>
+                    <Inject services={[Day, Week, WorkWeek, Month, TimelineMonth, Resize, DragAndDrop]} />
+                </ScheduleComponent>
             </div>
-            <div style={{ paddingRight: '10px' }}>
-              <ButtonComponent cssClass='e-info' onClick={refreshDateHeaderTemplate}>Refresh dateHeaderTemplate</ButtonComponent>
-            </div>
-            <div style={{ paddingRight: '10px' }}>
-              <ButtonComponent cssClass='e-info' onClick={refreshEventTemplate}>Refresh eventTemplate</ButtonComponent>
-            </div>
-            <div style={{ paddingRight: '10px' }}>
-              <ButtonComponent cssClass='e-info' onClick={refreshResHeaderTemplate}>Refresh resourceHeaderTemplate</ButtonComponent>
-            </div>
-            <div style={{ paddingRight: '10px' }}>
-              <ButtonComponent cssClass='e-info' onClick={refreshAllTemplate}>Refresh All Templates</ButtonComponent>
-            </div>
-          </div>
-          <ScheduleComponent width='100%' height='650px' cssClass='schedule-date-header-template' ref={t => scheduleObj = t} selectedDate={new Date(2021, 1, 15)} readonly={true} eventSettings={{ dataSource: data }} dateHeaderTemplate={dateHeaderTemplate} resourceHeaderTemplate={resourceHeaderTemplate} cellTemplate={cellTemplate} group={{ resources: ['Doctors'] }}>
-            <ResourcesDirective>
-              <ResourceDirective field='DoctorId' title='Doctor Name' name='Doctors' dataSource={resourceData} textField='text' idField='id' groupIDField='groupId' colorField='color' workDaysField='workDays' startHourField='startHour' endHourField='endHour'>
-              </ResourceDirective>
-            </ResourcesDirective>
-            <ViewsDirective>
-              <ViewDirective option='Week' eventTemplate={eventTemplate}/>
-              <ViewDirective option='Month'/>
-              <ViewDirective option='TimelineMonth'/>
-            </ViewsDirective>
-            <Inject services={[Day, Week, WorkWeek, Month, TimelineMonth, Resize, DragAndDrop]}/>
-          </ScheduleComponent>
         </div>
-      </div>
     </div>);
 }
 ;

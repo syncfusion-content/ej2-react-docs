@@ -5,13 +5,16 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  Day, Week, WorkWeek, Month, ScheduleComponent, ViewsDirective, ViewDirective, Inject
+  Day, Week, WorkWeek, Month, ScheduleComponent, ViewsDirective, ViewDirective, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { extend } from '@syncfusion/ej2-base';
 
 function App() {
   let scheduleObj: ScheduleComponent;
+  const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
   function onClickButton1(): void {
     let cellData: Object = {
       startTime: new Date(2018, 1, 15, 10, 0),
@@ -32,7 +35,7 @@ function App() {
     <ButtonComponent id='btn1' title='Click to open Editor' onClick={onClickButton1}>Click to open Editor</ButtonComponent>
     <ButtonComponent id='btn2' title='Click to open Event Editor' onClick={onClickButton2}>Click to open Event Editor</ButtonComponent>
     <ScheduleComponent ref={t => scheduleObj = t} height='550px' selectedDate={new Date(2018, 1, 15)}
-      eventSettings={{ dataSource: scheduleData }} >
+      eventSettings={eventSettings} >
       <ViewsDirective>
         <ViewDirective option='Day' />
         <ViewDirective option='Week' />
@@ -46,6 +49,5 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
 
 

@@ -14,9 +14,11 @@ function App() {
             }
         }
     };
-    return (<ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fields }}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
-  </ScheduleComponent>);
+    const eventSettings = { dataSource: data, fields: fields }
+
+    return (<ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+    </ScheduleComponent>);
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

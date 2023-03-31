@@ -6,6 +6,8 @@ import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
     const data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: scheduleData };
+
     const timeZones = [
         { Value: 'America/New_York', Text: '(UTC-05:00) Eastern Time' },
         { Value: 'UTC', Text: 'UTC' },
@@ -14,8 +16,8 @@ function App() {
     useEffect(() => {
         timezoneData.splice(0, timezoneData.length, timeZones);
     }, []);
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 1)} eventSettings={{ dataSource: data }}>
-      <Inject services={[Day, Week, Month]}/>
+    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 1)} eventSettings={eventSettings}>
+        <Inject services={[Day, Week, Month]} />
     </ScheduleComponent>);
 }
 ;

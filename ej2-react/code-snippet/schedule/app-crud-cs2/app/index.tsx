@@ -22,6 +22,8 @@ function App() {
     EndTime: new Date(2018, 1, 13, 10, 0),
     IsAllDay: false
   }];
+  const eventSettings = { dataSource: scheduleData }
+
   function onEditClick(): void {
     let Data: Object = {
       Id: 3,
@@ -38,7 +40,7 @@ function App() {
     <div>
       <ButtonComponent id='edit' title='Edit' ref={t => buttonObj = t} onClick={onEditClick.bind(this)}>Edit</ButtonComponent>
       <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate=
-        {new Date(2018, 1, 15)} eventSettings={{ dataSource: scheduleData }}>
+        {new Date(2018, 1, 15)} eventSettings={eventSettings}>
         <ViewsDirective>
           <ViewDirective option='Day' />
           <ViewDirective option='Week' />

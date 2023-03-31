@@ -11,6 +11,10 @@ import { extend } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], resourceData, null, true) as Object[];
+  const eventSettings = { dataSource: data };
+  const group = { resources: ['Categories'] };
+
+
   const categoriesData: Object[] = [
     { text: 'Nancy', id: 1, color: '#ffaa00' },
     { text: 'Steven', id: 2, color: '#f8a398' },
@@ -36,10 +40,10 @@ function App() {
     height="495px"
     selectedDate={new Date(2021, 7, 15)}
     ref={schedule => (scheduleObj = schedule)}
-    eventSettings={{ dataSource: data }}
+    eventSettings={eventSettings}
     firstMonthOfYear={6}
     monthsCount={6}
-    group={{ resources: ['Categories'] }}
+    group={group}
     resourceHeaderTemplate={resourceHeaderTemplate}
     monthHeaderTemplate={getMonthHeaderText}
   >

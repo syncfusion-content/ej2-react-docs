@@ -10,6 +10,8 @@ import { extend, Internationalization } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings = { dataSource: data };
+
   const instance: Internationalization = new Internationalization();
   function getDateHeaderText(value: Date): string {
     return instance.formatDate(value, { skeleton: 'Ed' });
@@ -39,7 +41,7 @@ function App() {
   }
 
   return (<ScheduleComponent width='100%' height='550px' cssClass='schedule-date-header-template'
-    selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}
+    selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}
     dateHeaderTemplate={dateHeaderTemplate}>
     <ViewsDirective>
       <ViewDirective option='Day' />

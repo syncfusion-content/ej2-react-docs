@@ -4,13 +4,15 @@ import { ScheduleComponent, TimelineYear, Inject, ViewsDirective, ViewDirective 
 import { extend } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
 function App() {
-    const data = extend([], scheduleData, null, true);
-    return (<ScheduleComponent width='100%' height='550px' currentView='Month' selectedDate={new Date(2018, 1, 17)} rowAutoHeight={true} eventSettings={{ dataSource: data }}>
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data }
+
+  return (<ScheduleComponent width='100%' height='550px' currentView='Month' selectedDate={new Date(2018, 1, 17)} rowAutoHeight={true} eventSettings={eventSettings}>
     <ViewsDirective>
-      <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true}/>
-      <ViewDirective option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical'/>
+      <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true} />
+      <ViewDirective option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical' />
     </ViewsDirective>
-    <Inject services={[TimelineYear]}/>
+    <Inject services={[TimelineYear]} />
   </ScheduleComponent>);
 }
 ;

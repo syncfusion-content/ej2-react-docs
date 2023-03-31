@@ -4,7 +4,7 @@ import { extend } from '@syncfusion/ej2-base';
 import { ItemModel } from '@syncfusion/ej2-react-navigations';
 import {
   ScheduleComponent, ViewDirective, Week, Resize, ExcelExport, ExportOptions, ExportFieldInfo,
-  ActionEventArgs, ToolbarActionArgs, DragAndDrop, Inject, ViewsDirective
+  ActionEventArgs, ToolbarActionArgs, DragAndDrop, Inject, ViewsDirective, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 
@@ -15,6 +15,7 @@ import { scheduleData } from './datasource';
 function App() {
   let scheduleObj: ScheduleComponent;
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
 
   function onActionBegin(args: ActionEventArgs & ToolbarActionArgs): void {
     if (args.requestType === 'toolbarItemRendering') {
@@ -39,7 +40,7 @@ function App() {
   }
   return (
     <ScheduleComponent cssClass='excel-export' width='100%' height='550px' id='schedule' ref={t => scheduleObj = t}
-      selectedDate={new Date(2019, 0, 10)} eventSettings={{ dataSource: data }}
+      selectedDate={new Date(2019, 0, 10)} eventSettings={eventSettings}
       actionBegin={onActionBegin}>
       <ViewsDirective>
         <ViewDirective option='Week' />

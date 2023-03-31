@@ -40,19 +40,21 @@ function App() {
             ConferenceId: [1, 2, 3]
         }
     ];
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 5, 5)} currentView='WorkWeek' eventSettings={{ dataSource: data }} group={{ allowGroupEdit: true, resources: ['Conferences'] }}>
-      <ViewsDirective>
-        <ViewDirective option='Week'/>
-        <ViewDirective option='Month'/>
-        <ViewDirective option='TimelineWeek'/>
-        <ViewDirective option='TimelineMonth'/>
-        <ViewDirective option='Agenda'/>
-      </ViewsDirective>
-      <ResourcesDirective>
-        <ResourceDirective field='ConferenceId' title='Conference' name='Conferences' allowMultiple={true} dataSource={conferenceData} textField='Text' idField='Id' colorField='Color'>
-        </ResourceDirective>
-      </ResourcesDirective>
-      <Inject services={[Week, Month, TimelineViews, TimelineMonth, Agenda]}/>
+    const eventSettings = { dataSource: data }
+    const group = { allowGroupEdit: true, resources: ['Conferences'] }
+    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 5, 5)} currentView='WorkWeek' eventSettings={eventSettings} group={group}>
+        <ViewsDirective>
+            <ViewDirective option='Week' />
+            <ViewDirective option='Month' />
+            <ViewDirective option='TimelineWeek' />
+            <ViewDirective option='TimelineMonth' />
+            <ViewDirective option='Agenda' />
+        </ViewsDirective>
+        <ResourcesDirective>
+            <ResourceDirective field='ConferenceId' title='Conference' name='Conferences' allowMultiple={true} dataSource={conferenceData} textField='Text' idField='Id' colorField='Color'>
+            </ResourceDirective>
+        </ResourcesDirective>
+        <Inject services={[Week, Month, TimelineViews, TimelineMonth, Agenda]} />
     </ScheduleComponent>);
 }
 ;

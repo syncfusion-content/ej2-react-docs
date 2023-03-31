@@ -9,6 +9,8 @@ import { Internationalization, extend } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings = { dataSource: data }
+
   const instance: Internationalization = new Internationalization();
   function getYearDetails(value: CellTemplateArgs) {
     return 'Year: ' + instance.formatDate((value as CellTemplateArgs).date, { skeleton: 'y' });
@@ -29,7 +31,7 @@ function App() {
     return (<span className="week">{getWeekDetails(props)}</span>);
   }
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 0, 1)}
-    eventSettings={{ dataSource: data }}>
+    eventSettings={eventSettings}>
     <HeaderRowsDirective>
       <HeaderRowDirective option='Year' template={yearTemplate} />
       <HeaderRowDirective option='Month' template={monthTemplate} />

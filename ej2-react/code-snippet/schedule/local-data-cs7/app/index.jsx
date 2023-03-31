@@ -11,6 +11,8 @@ function App() {
         adaptor: new WebApiAdaptor(),
         crossDomain: true
     });
+    const eventSettings = { dataSource: dataManger };
+
     function onDataBinding(e) {
         let items = e.result.items;
         let scheduleData = [];
@@ -36,8 +38,8 @@ function App() {
         }
         e.result = scheduleData;
     }
-    return (<ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 10, 14)} readonly={true} eventSettings={{ dataSource: dataManger }} dataBinding={onDataBinding}>
-      <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
+    return (<ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 10, 14)} readonly={true} eventSettings={eventSettings} dataBinding={onDataBinding}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>);
 }
 ;

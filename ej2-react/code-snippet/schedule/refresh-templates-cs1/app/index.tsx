@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, TimelineMonth,
-  RenderCellEventArgs, EventRenderedArgs, Inject, Resize, DragAndDrop, ResourcesDirective, ResourceDirective, ResourceDetails
+  RenderCellEventArgs, EventRenderedArgs, Inject, Resize, DragAndDrop, ResourcesDirective, GroupModel, ResourceDirective, ResourceDetails, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Internationalization, extend } from '@syncfusion/ej2-base';
@@ -11,6 +11,9 @@ import { webinarData } from './datasource';
 function App() {
   let scheduleObj: ScheduleComponent;
   const data: Record<string, any>[] = extend([], webinarData, null, true) as Record<string, any>[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
+  const group: GroupModel = { resources: ['Doctors'] }
+
   const instance: Internationalization = new Internationalization();
 
   const resourceData: Record<string, any>[] = [
@@ -155,8 +158,8 @@ function App() {
           </div>
           <ScheduleComponent width='100%' height='650px' cssClass='schedule-date-header-template' ref={t => scheduleObj = t}
             selectedDate={new Date(2021, 1, 15)} readonly={true}
-            eventSettings={{ dataSource: data }} dateHeaderTemplate={dateHeaderTemplate} resourceHeaderTemplate={resourceHeaderTemplate} cellTemplate={cellTemplate}
-            group={{ resources: ['Doctors'] }}>
+            eventSettings={eventSettings} dateHeaderTemplate={dateHeaderTemplate} resourceHeaderTemplate={resourceHeaderTemplate} cellTemplate={cellTemplate}
+            group={group}>
             <ResourcesDirective>
               <ResourceDirective field='DoctorId' title='Doctor Name' name='Doctors'
                 dataSource={resourceData} textField='text' idField='id' groupIDField='groupId' colorField='color'

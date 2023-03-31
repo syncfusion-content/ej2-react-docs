@@ -5,7 +5,9 @@ import { defaultData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
     const data = extend([], defaultData, null, true);
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
+    const eventSettings = { dataSource: data }
+
+    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
       <ViewsDirective>
         <ViewDirective option='WorkWeek' startHour='10:00' endHour='18:00'/>
         <ViewDirective option='Week' startHour='07:00' endHour='15:00'/>

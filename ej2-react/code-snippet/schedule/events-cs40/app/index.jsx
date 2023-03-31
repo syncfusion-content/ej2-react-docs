@@ -5,6 +5,8 @@ import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
     let data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data }
+
     let scheduleObj;
     function onActionBegin(args) {
         if (args.requestType == 'eventChange') {
@@ -16,8 +18,8 @@ function App() {
             }
         }
     }
-    return (<ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} ref={t => scheduleObj = t} eventSettings={{ dataSource: data }} actionBegin={onActionBegin.bind(this)}>
-      <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
+    return (<ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} ref={t => scheduleObj = t} eventSettings={eventSettings} actionBegin={onActionBegin.bind(this)}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>);
 }
 ;

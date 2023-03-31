@@ -6,6 +6,8 @@ import { extend } from '@syncfusion/ej2-base';
 function App() {
     let scheduleObj;
     let data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data }
+
     function onEventRendered(args) {
         applyCategoryColor(args, scheduleObj.currentView);
     }
@@ -21,8 +23,8 @@ function App() {
             args.element.style.backgroundColor = categoryColor;
         }
     }
-    return (<ScheduleComponent width='100%' height='550px' ref={schedule => scheduleObj = schedule} selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} eventRendered={onEventRendered}>
-      <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
+    return (<ScheduleComponent width='100%' height='550px' ref={schedule => scheduleObj = schedule} selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} eventRendered={onEventRendered}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>);
 }
 ;

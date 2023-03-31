@@ -17,6 +17,8 @@ function App() {
   let menuObj: ContextMenuComponent;
   let eventObj: { [key: string]: Object };
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings = { dataSource: data };
+
   let selectedTarget: Element;
   const menuItems: MenuItemModel[] = [
     {
@@ -138,7 +140,7 @@ function App() {
     <div className='schedule-control-section'>
       <div className='control-section'>
         <div className='control-wrapper'>
-          <ScheduleComponent height='550px' ref={t => scheduleObj = t} selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
+          <ScheduleComponent height='550px' ref={t => scheduleObj = t} selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
             <ViewsDirective>
               <ViewDirective option='Day' />
               <ViewDirective option='Week' />

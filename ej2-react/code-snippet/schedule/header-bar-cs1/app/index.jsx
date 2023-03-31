@@ -6,6 +6,8 @@ import { Popup } from '@syncfusion/ej2-popups';
 import { scheduleData } from './datasource';
 function App() {
     const data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data };
+
     let profilePopup;
     function onActionBegin(args) {
         if (args.requestType === 'toolbarItemRendering') {
@@ -52,12 +54,12 @@ function App() {
         });
         profilePopup.hide();
     }
-    return (<ScheduleComponent cssClass='schedule-header-bar' width='100%' height='550px' id='schedule' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} actionBegin={onActionBegin} actionComplete={onActionComplete}>
-    <ViewsDirective>
-      <ViewDirective option='Month'/>
-    </ViewsDirective>
-    <Inject services={[Month]}/>
-  </ScheduleComponent>);
+    return (<ScheduleComponent cssClass='schedule-header-bar' width='100%' height='550px' id='schedule' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} actionBegin={onActionBegin} actionComplete={onActionComplete}>
+        <ViewsDirective>
+            <ViewDirective option='Month' />
+        </ViewsDirective>
+        <Inject services={[Month]} />
+    </ScheduleComponent>);
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

@@ -6,6 +6,8 @@ import { scheduleData } from './datasource';
 function App() {
     let scheduleObj;
     const data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data }
+
     function onActionBegin(args) {
         if (args.requestType === 'eventCreate' && args.data.length > 0) {
             let eventData = args.data[0];
@@ -15,8 +17,8 @@ function App() {
             args.cancel = !scheduleObj.isSlotAvailable(startDate, endDate);
         }
     }
-    return (<ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} actionBegin={onActionBegin}>
-      <Inject services={[Day, Week, WorkWeek]}/>
+    return (<ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} actionBegin={onActionBegin}>
+        <Inject services={[Day, Week, WorkWeek]} />
     </ScheduleComponent>);
 }
 ;

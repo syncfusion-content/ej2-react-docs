@@ -6,7 +6,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month,
-  EventRenderedArgs, Inject, Resize, DragAndDrop, PopupOpenEventArgs, EJ2Instance
+  EventRenderedArgs, Inject, Resize, DragAndDrop, PopupOpenEventArgs, EJ2Instance, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { extend, isNullOrUndefined } from '@syncfusion/ej2-base';
 import { FormValidator } from '@syncfusion/ej2-inputs';
@@ -17,6 +17,8 @@ import { scheduleData } from './datasource';
 function App() {
   let scheduleObj: ScheduleComponent;
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
+
   function onPopupOpen(args: PopupOpenEventArgs): void {
     if (args.type === 'Editor') {
       let statusElement: HTMLInputElement = args.element.querySelector('#EventType') as HTMLInputElement;
@@ -60,7 +62,7 @@ function App() {
       </td></tr></tbody></table > : <div></div>);
   }
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)}
-    ref={schedule => scheduleObj = schedule} eventSettings={{ dataSource: data }}
+    ref={schedule => scheduleObj = schedule} eventSettings={eventSettings}
     editorTemplate={editorTemplate} popupOpen={onPopupOpen}
     showQuickInfo={false}>
     <ViewsDirective>

@@ -24,6 +24,8 @@ function App() {
     IsAllDay: false,
     RecurrenceRule: 'FREQ=DAILY;INTERVAL=1;COUNT=2'
   }];
+  const eventSettings = { dataSource: scheduleData }
+
   function onDeleteClick(): void {
     let scheduleData: { [key: string]: Object }[] = [{
       Id: 4,
@@ -42,7 +44,7 @@ function App() {
     <div>
       <ButtonComponent id='delete' ref={t => buttonObj = t} title='Delete' onClick={onDeleteClick.bind(this)}>Delete</ButtonComponent>
       <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate=
-        {new Date(2018, 1, 15)} eventSettings={{ dataSource: scheduleData }}>
+        {new Date(2018, 1, 15)} eventSettings={eventSettings}>
         <ViewsDirective>
           <ViewDirective option='Day' />
           <ViewDirective option='Week' />

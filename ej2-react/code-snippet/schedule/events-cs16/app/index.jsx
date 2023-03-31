@@ -4,12 +4,14 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Inj
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    function onDragStart(args) {
-        args.scroll = { enable: false };
-    }
-    const data = extend([], scheduleData, undefined, true);
-    return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} dragStart={(onDragStart)}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop]}/>
+  function onDragStart(args) {
+    args.scroll = { enable: false };
+  }
+  const data = extend([], scheduleData, undefined, true);
+  const eventSettings = { dataSource: data }
+
+  return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} dragStart={(onDragStart)}>
+    <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop]} />
   </ScheduleComponent>;
 }
 ;

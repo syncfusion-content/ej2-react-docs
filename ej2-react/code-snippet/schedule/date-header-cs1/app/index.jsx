@@ -6,6 +6,8 @@ import { scheduleData } from './datasource';
 import { extend, Internationalization } from '@syncfusion/ej2-base';
 function App() {
     const data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data };
+
     const instance = new Internationalization();
     function getDateHeaderText(value) {
         return instance.formatDate(value, { skeleton: 'Ed' });
@@ -33,15 +35,15 @@ function App() {
     function dateHeaderTemplate(props) {
         return (<div><div>{getDateHeaderText(props.date)}</div><div className="date-text" dangerouslySetInnerHTML={{ __html: getWeather(props.date) }}></div></div>);
     }
-    return (<ScheduleComponent width='100%' height='550px' cssClass='schedule-date-header-template' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} dateHeaderTemplate={dateHeaderTemplate}>
-    <ViewsDirective>
-      <ViewDirective option='Day'/>
-      <ViewDirective option='Week'/>
-      <ViewDirective option='WorkWeek'/>
-      <ViewDirective option='TimelineWeek'/>
-    </ViewsDirective>
-    <Inject services={[Day, Week, WorkWeek, TimelineViews]}/>
-  </ScheduleComponent>);
+    return (<ScheduleComponent width='100%' height='550px' cssClass='schedule-date-header-template' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} dateHeaderTemplate={dateHeaderTemplate}>
+        <ViewsDirective>
+            <ViewDirective option='Day' />
+            <ViewDirective option='Week' />
+            <ViewDirective option='WorkWeek' />
+            <ViewDirective option='TimelineWeek' />
+        </ViewsDirective>
+        <Inject services={[Day, Week, WorkWeek, TimelineViews]} />
+    </ScheduleComponent>);
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

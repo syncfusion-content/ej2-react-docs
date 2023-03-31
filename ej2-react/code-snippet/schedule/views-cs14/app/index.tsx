@@ -9,6 +9,8 @@ import { Internationalization, extend } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], appData, null, true) as Object[];
+  const eventSettings = { dataSource: data };
+
   const instance: Internationalization = new Internationalization();
   function getTimeString(value: Date) {
     return instance.formatDate(value, { skeleton: 'hm' });
@@ -22,7 +24,7 @@ function App() {
     );
   }
   return (<ScheduleComponent width='100%' height='550px' agendaDaysCount={3} selectedDate={new Date(2018, 1, 15)}
-    eventSettings={{ dataSource: data }}>
+    eventSettings={eventSettings}>
     <ViewsDirective>
       <ViewDirective option='Agenda' eventTemplate={eventTemplate.bind(this)} allowVirtualScrolling={false} />
     </ViewsDirective>

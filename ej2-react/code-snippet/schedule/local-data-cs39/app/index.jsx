@@ -4,13 +4,15 @@ import { ScheduleComponent, Week, Month, Inject, ViewsDirective, ViewDirective }
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], scheduleData, null, true);
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} firstDayOfWeek={1}>
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data };
+
+  return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} firstDayOfWeek={1}>
     <ViewsDirective>
-      <ViewDirective option='Week'/>
-      <ViewDirective option='Month'/>
+      <ViewDirective option='Week' />
+      <ViewDirective option='Month' />
     </ViewsDirective>
-    <Inject services={[Week, Month]}/>
+    <Inject services={[Week, Month]} />
   </ScheduleComponent>);
 }
 ;

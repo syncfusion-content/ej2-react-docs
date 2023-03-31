@@ -5,7 +5,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, PopupOpenEventArgs, PopupCloseEventArgs, Inject
+  ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, PopupOpenEventArgs, EventSettingsModel PopupCloseEventArgs, Inject
 } from '@syncfusion/ej2-react-schedule';
 import { extend, isNullOrUndefined } from '@syncfusion/ej2-base';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
@@ -17,6 +17,8 @@ function App() {
   let startObj: DateTimePickerComponent;
   let endObj: DateTimePickerComponent;
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
+
   function onPopupOpen(args: PopupOpenEventArgs): void {
     if (args.type === 'Editor') {
       let subjectElement: HTMLInputElement = args.element.querySelector('#Summary') as HTMLInputElement;
@@ -69,7 +71,7 @@ function App() {
   }
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)}
     ref={schedule => scheduleObj = schedule}
-    eventSettings={{ dataSource: data }} editorTemplate={editorTemplate} showQuickInfo={false}
+    eventSettings={eventSettings} editorTemplate={editorTemplate} showQuickInfo={false}
     popupOpen={onPopupOpen} popupClose={onPopupClose} >
     <ViewsDirective>
       <ViewDirective option='Day' />

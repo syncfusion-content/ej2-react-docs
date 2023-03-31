@@ -11,6 +11,8 @@ function App() {
     let menuObj;
     let eventObj;
     const data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data };
+
     let selectedTarget;
     const menuItems = [
         {
@@ -34,12 +36,12 @@ function App() {
             id: 'EditRecurrenceEvent',
             iconCss: 'e-icons edit',
             items: [{
-                    text: 'Edit Occurrence',
-                    id: 'EditOccurrence'
-                }, {
-                    text: 'Edit Series',
-                    id: 'EditSeries'
-                }]
+                text: 'Edit Occurrence',
+                id: 'EditOccurrence'
+            }, {
+                text: 'Edit Series',
+                id: 'EditSeries'
+            }]
         }, {
             text: 'Delete Event',
             iconCss: 'e-icons delete',
@@ -49,12 +51,12 @@ function App() {
             id: 'DeleteRecurrenceEvent',
             iconCss: 'e-icons delete',
             items: [{
-                    text: 'Delete Occurrence',
-                    id: 'DeleteOccurrence'
-                }, {
-                    text: 'Delete Series',
-                    id: 'DeleteSeries'
-                }]
+                text: 'Delete Occurrence',
+                id: 'DeleteOccurrence'
+            }, {
+                text: 'Delete Series',
+                id: 'DeleteSeries'
+            }]
         }
     ];
     function onMenuItemSelect(args) {
@@ -127,21 +129,21 @@ function App() {
         menuObj.showItems(['Add', 'AddRecurrence', 'Today'], true);
     }
     return (<div className='schedule-control-section'>
-      <div className='control-section'>
-        <div className='control-wrapper'>
-          <ScheduleComponent height='550px' ref={t => scheduleObj = t} selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
-            <ViewsDirective>
-              <ViewDirective option='Day'/>
-              <ViewDirective option='Week'/>
-              <ViewDirective option='WorkWeek'/>
-              <ViewDirective option='Month'/>
-              <ViewDirective option='Agenda'/>
-            </ViewsDirective>
-            <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
-          </ScheduleComponent>
+        <div className='control-section'>
+            <div className='control-wrapper'>
+                <ScheduleComponent height='550px' ref={t => scheduleObj = t} selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
+                    <ViewsDirective>
+                        <ViewDirective option='Day' />
+                        <ViewDirective option='Week' />
+                        <ViewDirective option='WorkWeek' />
+                        <ViewDirective option='Month' />
+                        <ViewDirective option='Agenda' />
+                    </ViewsDirective>
+                    <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+                </ScheduleComponent>
+            </div>
         </div>
-      </div>
-      <ContextMenuComponent cssClass='schedule-context-menu' ref={menu => menuObj = menu} target='.e-schedule' items={menuItems} beforeOpen={onContextMenuBeforeOpen} select={onMenuItemSelect}/>
+        <ContextMenuComponent cssClass='schedule-context-menu' ref={menu => menuObj = menu} target='.e-schedule' items={menuItems} beforeOpen={onContextMenuBeforeOpen} select={onMenuItemSelect} />
     </div>);
 }
 ;

@@ -5,7 +5,8 @@ import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
     const data = extend([], scheduleData, undefined, true);
-    return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} allowDragAndDrop={false} eventSettings={{ dataSource: data }}>
+    const eventSettings = { dataSource: data }
+    return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} allowDragAndDrop={false} eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop]}/>
   </ScheduleComponent>;
 }

@@ -4,14 +4,16 @@ import { ScheduleComponent, TimelineViews, TimelineMonth, ViewsDirective, ViewDi
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], scheduleData, null, true);
-    return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, enableMaxHeight: true, enableIndicator: false }}>
-      <ViewsDirective>
-        <ViewDirective option='TimelineWeek'/>
-        <ViewDirective option='TimelineMonth'/>
-      </ViewsDirective>
-      <Inject services={[TimelineViews, TimelineMonth]}/>
-    </ScheduleComponent>);
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data, enableMaxHeight: true, enableIndicator: false }
+
+  return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
+    <ViewsDirective>
+      <ViewDirective option='TimelineWeek' />
+      <ViewDirective option='TimelineMonth' />
+    </ViewsDirective>
+    <Inject services={[TimelineViews, TimelineMonth]} />
+  </ScheduleComponent>);
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

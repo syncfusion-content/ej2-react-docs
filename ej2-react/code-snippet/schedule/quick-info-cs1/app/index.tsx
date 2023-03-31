@@ -1,11 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { extend, isNullOrUndefined } from "@syncfusion/ej2-base";
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, CellClickEventArgs, CurrentAction, Resize, DragAndDrop } from "@syncfusion/ej2-react-schedule";
+import { ScheduleComponent, Day, Week, WorkWeek, Month, EventSettingsModel, Agenda, Inject, CellClickEventArgs, CurrentAction, Resize, DragAndDrop } from "@syncfusion/ej2-react-schedule";
 import { scheduleData } from './datasource';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
+  const quickInfoTemplates = { header: header.bind(this), content: content.bind(this), footer: footer.bind(this) };
+
   let scheduleObj: ScheduleComponent;
 
   function buttonClickActions(e: Event): void {
@@ -158,7 +161,7 @@ function App() {
       </div>
     );
   }
-  return (<ScheduleComponent id="schedule" ref={(schedule: ScheduleComponent) => (scheduleObj = schedule)} width="100%" height="550px" selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} quickInfoTemplates={{ header: header.bind(this), content: content.bind(this), footer: footer.bind(this) }}>
+  return (<ScheduleComponent id="schedule" ref={(schedule: ScheduleComponent) => (scheduleObj = schedule)} width="100%" height="550px" selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} quickInfoTemplates={quickInfoTemplates}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop]} />
   </ScheduleComponent>)
 };
