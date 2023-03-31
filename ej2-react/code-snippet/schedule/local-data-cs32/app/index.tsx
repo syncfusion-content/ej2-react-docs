@@ -2,13 +2,15 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { useEffect } from 'react';
 import {
-  ScheduleComponent, Day, Week, Month, timezoneData, Inject
+  ScheduleComponent, Day, Week, Month, timezoneData, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
+
   const timeZones: { [key: string]: Object }[] = [
     { Value: 'America/New_York', Text: '(UTC-05:00) Eastern Time' },
     { Value: 'UTC', Text: 'UTC' },
@@ -21,7 +23,7 @@ function App() {
 
 
   return (
-    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 1)} eventSettings={{ dataSource: data }} >
+    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 1)} eventSettings={eventSettings} >
       <Inject services={[Day, Week, Month]} />
     </ScheduleComponent>
   )

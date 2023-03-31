@@ -4,12 +4,14 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@
 import { extend } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
 function App() {
-    let data = extend([], scheduleData, null, true);
-    function onPopupOpen(args) {
-        args.duration = 40;
-    }
-    return <ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} popupOpen={onPopupOpen}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
+  let data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data };
+
+  function onPopupOpen(args) {
+    args.duration = 40;
+  }
+  return <ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} popupOpen={onPopupOpen}>
+    <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>;
 }
 ;

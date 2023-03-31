@@ -25,7 +25,8 @@ function App() {
     startTimezone: { name: 'Origin' },
     endTimezone: { name: 'Destination' }
   }
-  return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data, fields: fieldsData }}>
+  const eventSettings = { dataSource: data, fields: fieldsData }
+  return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>);
 };

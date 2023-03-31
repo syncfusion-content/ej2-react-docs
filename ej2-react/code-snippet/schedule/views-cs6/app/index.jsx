@@ -5,6 +5,8 @@ import { scheduleData } from './datasource';
 import { Internationalization, extend } from '@syncfusion/ej2-base';
 function App() {
     const data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data }
+
     const instance = new Internationalization();
     function getYearDetails(value) {
         return 'Year: ' + instance.formatDate(value.date, { skeleton: 'y' });
@@ -25,18 +27,18 @@ function App() {
     function weekTemplate(props) {
         return (<span className="week">{getWeekDetails(props)}</span>);
     }
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 0, 1)} eventSettings={{ dataSource: data }}>
-    <HeaderRowsDirective>
-      <HeaderRowDirective option='Year' template={yearTemplate}/>
-      <HeaderRowDirective option='Month' template={monthTemplate}/>
-      <HeaderRowDirective option='Week' template={weekTemplate}/>
-      <HeaderRowDirective option='Date'/>
-    </HeaderRowsDirective>
-    <ViewsDirective>
-      <ViewDirective option='TimelineMonth'/>
-    </ViewsDirective>
-    <Inject services={[TimelineMonth]}/>
-  </ScheduleComponent>);
+    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 0, 1)} eventSettings={eventSettings}>
+        <HeaderRowsDirective>
+            <HeaderRowDirective option='Year' template={yearTemplate} />
+            <HeaderRowDirective option='Month' template={monthTemplate} />
+            <HeaderRowDirective option='Week' template={weekTemplate} />
+            <HeaderRowDirective option='Date' />
+        </HeaderRowsDirective>
+        <ViewsDirective>
+            <ViewDirective option='TimelineMonth' />
+        </ViewsDirective>
+        <Inject services={[TimelineMonth]} />
+    </ScheduleComponent>);
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

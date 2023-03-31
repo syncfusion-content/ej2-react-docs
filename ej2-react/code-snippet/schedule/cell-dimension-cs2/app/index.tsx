@@ -9,6 +9,8 @@ import { scheduleData } from './datasource';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings = { dataSource: data };
+
   function onRenderCell(args: RenderCellEventArgs): void {
     if (args.elementType == 'workCells' || args.elementType == 'monthCells') {
       let weekEnds: number[] = [0, 6];
@@ -21,7 +23,7 @@ function App() {
       }
     }
   }
-  return <ScheduleComponent height='550px' currentView='Month' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} renderCell={onRenderCell}
+  return <ScheduleComponent height='550px' currentView='Month' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} renderCell={onRenderCell}
     cssClass='schedule-cell-template'>
     <ViewsDirective>
       <ViewDirective option='Week' />

@@ -8,15 +8,17 @@ import { scheduleData } from './datasource';
  *  Schedule header customization sample
  */
 function App() {
-    let scheduleObj;
-    const data = extend([], scheduleData, null, true);
-    function onClick() {
-        scheduleObj.exportToICalendar('ScheduleEvents');
-    }
-    return (<div>
+  let scheduleObj;
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data };
+
+  function onClick() {
+    scheduleObj.exportToICalendar('ScheduleEvents');
+  }
+  return (<div>
     <ButtonComponent id='ics-export' title='Export' onClick={onClick}>Export</ButtonComponent>
-    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='520px' id='schedule' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
-      <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, ICalendarExport, ICalendarImport, Resize, DragAndDrop]}/>
+    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='520px' id='schedule' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
+      <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, ICalendarExport, ICalendarImport, Resize, DragAndDrop]} />
     </ScheduleComponent></div>);
 }
 ;

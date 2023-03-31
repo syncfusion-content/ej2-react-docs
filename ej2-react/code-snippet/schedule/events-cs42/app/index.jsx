@@ -4,18 +4,20 @@ import { ScheduleComponent, Day, Week, TimelineViews, TimelineMonth, Month, Agen
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    let data = extend([], scheduleData, null, true);
-    return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
-      <ViewsDirective>
-        <ViewDirective option='Day'/>
-        <ViewDirective option='TimelineWeek'/>
-        <ViewDirective option='Week'/>
-        <ViewDirective option='TimelineMonth'/>
-        <ViewDirective option='Month'/>
-        <ViewDirective option='Agenda'/>
-      </ViewsDirective>
-      <Inject services={[Day, Week, TimelineViews, TimelineMonth, Month, Agenda, Resize]}/>
-    </ScheduleComponent>);
+  let data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data }
+
+  return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
+    <ViewsDirective>
+      <ViewDirective option='Day' />
+      <ViewDirective option='TimelineWeek' />
+      <ViewDirective option='Week' />
+      <ViewDirective option='TimelineMonth' />
+      <ViewDirective option='Month' />
+      <ViewDirective option='Agenda' />
+    </ViewsDirective>
+    <Inject services={[Day, Week, TimelineViews, TimelineMonth, Month, Agenda, Resize]} />
+  </ScheduleComponent>);
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

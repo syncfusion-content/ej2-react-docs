@@ -6,30 +6,32 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    let scheduleObj;
-    const data = extend([], scheduleData, null, true);
-    function onDataBound() {
-        let event = scheduleObj.getCurrentViewEvents();
-        if (event.length > 0) {
-            appendElement('Events present on current view <b>' + event.length + '<b><hr>');
-        }
-        else {
-            appendElement('No Events available in this view.<hr>');
-        }
+  let scheduleObj;
+  const data = extend([], scheduleData, null, true);
+  const eventSettings = { dataSource: data };
+
+  function onDataBound() {
+    let event = scheduleObj.getCurrentViewEvents();
+    if (event.length > 0) {
+      appendElement('Events present on current view <b>' + event.length + '<b><hr>');
     }
-    function appendElement(html) {
-        let span = document.createElement('span');
-        span.innerHTML = html;
-        let log = document.getElementById('EventLog');
-        log.insertBefore(span, log.firstChild);
+    else {
+      appendElement('No Events available in this view.<hr>');
     }
-    function onClick() {
-        document.getElementById('EventLog').innerHTML = '';
-    }
-    return (<div className='content-wrapper'>
+  }
+  function appendElement(html) {
+    let span = document.createElement('span');
+    span.innerHTML = html;
+    let log = document.getElementById('EventLog');
+    log.insertBefore(span, log.firstChild);
+  }
+  function onClick() {
+    document.getElementById('EventLog').innerHTML = '';
+  }
+  return (<div className='content-wrapper'>
     <div className='col-lg-9 control-section'>
-      <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} dataBound={onDataBound}>
-        <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
+      <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} dataBound={onDataBound}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
       </ScheduleComponent>
     </div>
     <div className='col-lg-3 property-section'>

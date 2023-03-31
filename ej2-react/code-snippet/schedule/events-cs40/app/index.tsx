@@ -1,13 +1,15 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, ActionEventArgs, Inject
+  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, ActionEventArgs, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 
 function App() {
   let data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data }
+
   let scheduleObj: ScheduleComponent;
   function onActionBegin(args: ActionEventArgs): void {
     if (args.requestType == 'eventChange') {
@@ -20,7 +22,7 @@ function App() {
     }
   }
   return (
-    <ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} ref={t => scheduleObj = t} eventSettings={{ dataSource: data }} actionBegin={onActionBegin.bind(this)}>
+    <ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} ref={t => scheduleObj = t} eventSettings={eventSettings} actionBegin={onActionBegin.bind(this)}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>
   )

@@ -9,8 +9,10 @@ import { extend } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], appData, null, true) as Object[];
+  const eventSettings = { dataSource: data };
+
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)}
-    eventSettings={{ dataSource: data }}>
+    eventSettings={eventSettings}>
     <ViewsDirective>
       <ViewDirective option='Day' interval={3} displayName='3 Days' />
       <ViewDirective option='Week' interval={2} displayName='2 Weeks' />

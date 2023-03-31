@@ -36,6 +36,9 @@ function App() {
         }
         return data;
     }
+    const eventSettings = { dataSource: generateStaticEvents(new Date(2018, 4, 1), 300, 12) }
+    const group = { resources: ['Resources'] };
+
     function generateResourceData(startId, endId, text) {
         let data = [];
         let colors = [
@@ -53,18 +56,17 @@ function App() {
         }
         return data;
     }
-    return (<ScheduleComponent cssClass='virtual-scrolling' ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 4, 1)} eventSettings={{
-            dataSource: generateStaticEvents(new Date(2018, 4, 1), 300, 12),
-        }} group={{ resources: ['Resources'] }}>
-      <ResourcesDirective>
-        <ResourceDirective field='ResourceId' title='Resource' name='Resources' allowMultiple={true} dataSource={generateResourceData(1, 300, 'Resource')} textField='Text' idField='Id' colorField='Color'>
-        </ResourceDirective>
-      </ResourcesDirective>
-      <ViewsDirective>
-        <ViewDirective option='TimelineMonth' allowVirtualScrolling={true} isSelected={true}/>
-        <ViewDirective option='TimelineYear' orientation='Vertical' allowVirtualScrolling={true}/>
-      </ViewsDirective>
-      <Inject services={[TimelineMonth, TimelineYear, Resize, DragAndDrop]}/>
+    return (<ScheduleComponent cssClass='virtual-scrolling' ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 4, 1)} eventSettings={
+        eventSettings} group={group}>
+        <ResourcesDirective>
+            <ResourceDirective field='ResourceId' title='Resource' name='Resources' allowMultiple={true} dataSource={generateResourceData(1, 300, 'Resource')} textField='Text' idField='Id' colorField='Color'>
+            </ResourceDirective>
+        </ResourcesDirective>
+        <ViewsDirective>
+            <ViewDirective option='TimelineMonth' allowVirtualScrolling={true} isSelected={true} />
+            <ViewDirective option='TimelineYear' orientation='Vertical' allowVirtualScrolling={true} />
+        </ViewsDirective>
+        <Inject services={[TimelineMonth, TimelineYear, Resize, DragAndDrop]} />
     </ScheduleComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('schedule'));

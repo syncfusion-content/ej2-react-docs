@@ -4,12 +4,16 @@ import { ScheduleComponent, Day, Inject, ViewsDirective, ViewDirective } from '@
 import { appData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], appData, null, true);
-    return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
+  const data = extend([], appData, null, true);
+  const eventSettings = { dataSource: data };
+  const timeScale = { enable: true, slotCount: 5 };
+
+
+  return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <ViewsDirective>
-      <ViewDirective option='Day' startHour='09:30' endHour='18:00' timeScale={{ enable: true, slotCount: 5 }}/>
+      <ViewDirective option='Day' startHour='09:30' endHour='18:00' timeScale={timeScale} />
     </ViewsDirective>
-    <Inject services={[Day]}/>
+    <Inject services={[Day]} />
   </ScheduleComponent>;
 }
 ;

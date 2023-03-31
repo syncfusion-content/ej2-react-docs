@@ -5,14 +5,16 @@ import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
     let data = extend([], scheduleData, null, true);
+    const eventSettings = { dataSource: data }
+
     function onActionBegin(args) {
         let weekEnds = [0, 6];
         if (args.requestType == 'eventCreate' && weekEnds.indexOf((args.data[0].StartTime).getDay()) >= 0) {
             args.cancel = true;
         }
     }
-    return (<ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }} actionBegin={onActionBegin.bind(this)}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
+    return (<ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} actionBegin={onActionBegin.bind(this)}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>);
 }
 ;

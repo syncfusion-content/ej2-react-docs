@@ -9,8 +9,10 @@ import { extend } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings = { dataSource: data }
+
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 11, 31)}
-    eventSettings={{ dataSource: data }} startHour='09:00' endHour='13:00'>
+    eventSettings={eventSettings} startHour='09:00' endHour='13:00'>
     <HeaderRowsDirective>
       <HeaderRowDirective option='Year' />
       <HeaderRowDirective option='Month' />

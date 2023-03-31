@@ -4,22 +4,25 @@ import { ScheduleComponent, TimelineYear, ViewsDirective, ViewDirective, Resourc
 import { resourceData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], resourceData, null, true);
-    const ownerData = [
-        { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
-        { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
-        { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
-    ];
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={{ dataSource: data }}>
+  const data = extend([], resourceData, null, true);
+  const eventSettings = { dataSource: data };
+  const group = { resources: ['Projects', 'Categories'] };
+
+  const ownerData = [
+    { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
+    { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
+    { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
+  ];
+  return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings}>
     <ViewsDirective>
-      <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true}/>
-      <ViewDirective option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical' group={{ resources: ['Owners'] }}/>
+      <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true} />
+      <ViewDirective option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical' group={group} />
     </ViewsDirective>
     <ResourcesDirective>
       <ResourceDirective field='OwnerId' title='Owner' name='Owners' allowMultiple={true} dataSource={ownerData} textField='OwnerText' idField='Id' colorField='OwnerColor'>
       </ResourceDirective>
     </ResourcesDirective>
-    <Inject services={[TimelineYear]}/>
+    <Inject services={[TimelineYear]} />
   </ScheduleComponent>);
 }
 ;

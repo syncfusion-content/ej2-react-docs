@@ -5,8 +5,8 @@ import * as React from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, View, Day, Week, WorkWeek, Month, RenderCellEventArgs, Inject, TimelineViews } from '@syncfusion/ej2-react-schedule';
 import { extend, Internationalization } from '@syncfusion/ej2-base';
 function App() {
-  const data: Object[] = extend([], true) as Object[];
   const instance: Internationalization = new Internationalization();
+
   function getDateRange(startDate: Date, endDate: Date): string {
     return instance.formatDate(startDate, { skeleton: 'yMd' }) + ' - ' + instance.formatDate(endDate, { skeleton: 'yMd' });
   }

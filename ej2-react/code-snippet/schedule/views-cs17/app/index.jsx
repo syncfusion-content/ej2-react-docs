@@ -4,12 +4,14 @@ import { ScheduleComponent, TimelineViews, Inject, ViewsDirective, ViewDirective
 import { appData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 function App() {
-    const data = extend([], appData, null, true);
-    return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
+  const data = extend([], appData, null, true);
+  const eventSettings = { dataSource: data };
+
+  return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <ViewsDirective>
-      <ViewDirective option='TimelineWeek' timeScale={{ enable: false }}/>
+      <ViewDirective option='TimelineWeek' timeScale={{ enable: false }} />
     </ViewsDirective>
-    <Inject services={[TimelineViews]}/>
+    <Inject services={[TimelineViews]} />
   </ScheduleComponent>;
 }
 ;

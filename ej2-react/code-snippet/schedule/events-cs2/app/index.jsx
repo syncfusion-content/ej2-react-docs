@@ -48,15 +48,16 @@ function App() {
             Subject: ' VP Highland Model | 3719 :: Pool',
         }
     ];
+    const eventSettings = { dataSource: data }
     function dataBound() {
         if (initialLoad) {
             element.querySelector('.e-all-day-appointment-section').click();
             initialLoad = false;
         }
     }
-    return (<ScheduleComponent height="550px" dataBound={dataBound} selectedDate={new Date(2022, 3, 26)} eventSettings={{ dataSource: data }}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize]}/>
-  </ScheduleComponent>);
+    return (<ScheduleComponent height="550px" dataBound={dataBound} selectedDate={new Date(2022, 3, 26)} eventSettings={eventSettings}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize]} />
+    </ScheduleComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);

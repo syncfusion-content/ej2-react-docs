@@ -7,20 +7,20 @@ import * as React from 'react';
 
 class App extends React.Component<{},{}> {
   private data: { [key: string]: Object }[] = [
-         { Name: "Selma Rose", Status: "active", EmployeeImage: "2.png", EmailId: "selma@gmail.com" },
-        { Name: "Maria", Status: "active", EmployeeImage: "1.png", EmailId: "maria@gmail.com" },
-        { Name: "Russo Kay", Status: "busy", EmployeeImage: "8.png", EmailId: "russo@gmail.com" },
-        { Name: "Camden Kate", Status: "active", EmployeeImage: "9.png", EmailId: "camden@gmail.com" },
-        { Name: "Robert", Status: "busy", EmployeeImage: "dp.png", EmailId: "robert@gmail.com" },
-        { Name: "Garth", Status: "active", EmployeeImage: "7.png", EmailId: "garth@gmail.com" },
-        { Name: "Andrew James", Status: "away", EmployeeImage: "pic04.png", EmailId: "noah@gmail.com" },
-        { Name: "Olivia", Status: "busy", EmployeeImage: "5.png", EmailId: "olivia@gmail.com" },
-        { Name: "Sophia", Status: "away", EmployeeImage: "6.png", EmailId: "sophia@gmail.com" },
-        { Name: "Margaret", Status: "active", EmployeeImage: "3.png", EmailId: "margaret@gmail.com" },
-        { Name: "Ursula Ann", Status: "active", EmployeeImage: "dp.png", EmailId: "ursula@gmail.com" },
-        { Name: "Laura Grace", Status: "away", EmployeeImage: "4.png", EmailId: "laura@gmail.com" },
-        { Name: "Albert", Status: "active", EmployeeImage: "pic03.png", EmailId: "albert@gmail.com" },
-        { Name: "William", Status: "away", EmployeeImage: "8.png", EmailId: "william@gmail.com" }
+    { Name: "Selma Rose", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/2.png", EmailId: "selma@gmail.com" },
+    { Name: "Maria", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/1.png", EmailId: "maria@gmail.com" },
+    { Name: "Russo Kay", Status: "busy", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/8.png", EmailId: "russo@gmail.com" },
+    { Name: "Camden Kate", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/9.png", EmailId: "camden@gmail.com" },
+    { Name: "Robert", Status: "busy", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/dp.png", EmailId: "robert@gmail.com" },
+    { Name: "Garth", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/7.png", EmailId: "garth@gmail.com" },
+    { Name: "Andrew James", Status: "away", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/pic04.png", EmailId: "andrew@gmail.com" },
+    { Name: "Olivia", Status: "busy", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/5.png", EmailId: "olivia@gmail.com" },
+    { Name: "Sophia", Status: "away", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/6.png", EmailId: "sophia@gmail.com" },
+    { Name: "Margaret", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/3.png", EmailId: "margaret@gmail.com" },
+    { Name: "Ursula Ann", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/dp.png", EmailId: "ursula@gmail.com" },
+    { Name: "Laura Grace", Status: "away", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/4.png", EmailId: "laura@gmail.com" },
+    { Name: "Albert", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/pic03.png", EmailId: "albert@gmail.com" },
+    { Name: "William", Status: "away", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/8.png", EmailId: "william@gmail.com" }
   ];
   private  fieldsData: { [key: string]: string }={ text: 'Name' };
 
@@ -30,7 +30,7 @@ class App extends React.Component<{},{}> {
         <tr>
           <td>
             <div id="mention-TemplateList">
-              <img className="mentionEmpImage" src={"src/rich-text-editor/images/" + data.EmployeeImage} />
+              <img className="mentionEmpImage" src={data.EmployeeImage} />
               <span className={"e-badge e-badge-success e-badge-overlap e-badge-dot e-badge-bottom"+ data.Status}></span>
             </div>
             </td>

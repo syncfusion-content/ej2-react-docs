@@ -170,10 +170,11 @@ function App() {
       IsAllDay: false
     },
   ];
+  const eventSettings = { dataSource: data }
 
   return (
     <ScheduleComponent height='550px' selectedDate= {new Date(2018, 1, 15)}
-      eventSettings={{ dataSource: data }}>
+      eventSettings={eventSettings}>
     </ScheduleComponent>
   );
 }

@@ -1,13 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-  ScheduleComponent, Day, Week, Month, Year, Resize, DragAndDrop, Inject, ResourcesDirective, ResourceDirective, GroupModel, ViewsDirective, ViewDirective
+  ScheduleComponent, Day, Week, Month, Year, Resize, EventSettingsModel, DragAndDrop, Inject, ResourcesDirective, ResourceDirective, GroupModel, ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 import { extend } from '@syncfusion/ej2-base';
 import { resourceData, timelineResourceData } from './datasource';
 
 function App() {
   const data: Object[] = extend([], resourceData.concat(timelineResourceData), null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data }
   const projectData: Object[] = [
     { text: 'PROJECT 1', id: 1, color: '#cb6bb2' },
     { text: 'PROJECT 2', id: 2, color: '#56ca85' },
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <ScheduleComponent width='100%' height='650px' id='schedule'
-      selectedDate={new Date(2018, 3, 4)} group={group} enableAdaptiveUI={true} currentView='Month' eventSettings={{ dataSource: data }}>
+      selectedDate={new Date(2018, 3, 4)} group={group} enableAdaptiveUI={true} currentView='Month' eventSettings={eventSettings}>
       <ViewsDirective>
         <ViewDirective option='Day' />
         <ViewDirective option='Week' />

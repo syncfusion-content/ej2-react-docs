@@ -18,6 +18,8 @@ function App() {
     endTime: { title: "To", name: "EndTime" },
     description: { title: 'Reason', name: 'Description' }
   }
+  const eventSettings = { dataSource: data, fields: fieldsData };
+
   function treeTemplate(props) {
     return (<div id="waiting"><div id="waitdetails"><div id="waitlist">{props.Name}</div>
       <div id="waitcategory">{props.DepartmentName}</div></div></div>);
@@ -88,10 +90,7 @@ function App() {
           <div className="title-container">
             <div className="title-text">Scheduler</div>
           </div>
-          <ScheduleComponent ref={schedule => scheduleObj = schedule} cssClass='schedule-drag-drop' width='100%' height='650px' selectedDate={new Date(2018, 7, 1)} currentView='TimelineDay' eventSettings={{
-            dataSource: data,
-            fields: fieldsData
-          }} actionBegin={onActionBegin} drag={onItemDrag}>
+          <ScheduleComponent ref={schedule => scheduleObj = schedule} cssClass='schedule-drag-drop' width='100%' height='650px' selectedDate={new Date(2018, 7, 1)} currentView='TimelineDay' eventSettings={eventSettings} actionBegin={onActionBegin} drag={onItemDrag}>
             <ViewsDirective>
               <ViewDirective option='TimelineDay' />
             </ViewsDirective>

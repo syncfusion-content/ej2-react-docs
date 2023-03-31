@@ -97,6 +97,8 @@ Add Ribbon component's styles as given below in `App.css`.
 
 Now, you can create `Ribbon` component in the application. Add `Ribbon` component in `src/App.tsx` file using the following code snippet.
 
+{% raw %}
+
 ```ts
 import { RibbonComponent } from "@syncfusion/ej2-react-ribbon";
 import * as React from "react";
@@ -112,11 +114,15 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
+{% endraw %}
+
 ### Injecting required modules
 
 Inject the Ribbon required modules in your `src/App.tsx` file using the following code snippet.
 
-```typescript
+{% raw %}
+
+```ts
 import { RibbonComponent, RibbonFileMenu, Inject, RibbonColorPicker } from "@syncfusion/ej2-react-ribbon";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -133,10 +139,13 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
+{% endraw %}
 
 ## Adding Ribbon Tab
 
 In Ribbon, the options are arranged in tabs for easy access. You can use the `RibbonTabDirective` to define the ribbon tab like below.
+
+{% raw %}
 
 ```ts
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-react-ribbon";
@@ -157,10 +166,13 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
+{% endraw %}
 
 ## Adding Ribbon Group
 
 To define a ribbon group under each tab, you can use the `RibbonGroupDirective` like below. The `orientation` property of ribbon group defines whether the collection of items will be rendered column-wise or row-wise.
+
+{% raw %}
 
 ```ts
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonGroupsDirective, RibbonGroupDirective } from "@syncfusion/ej2-react-ribbon";
@@ -185,12 +197,14 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("element"));
 root.render(<App />);
 ```
+{% endraw %}
 
 ## Adding Ribbon Item
 
 You can use the `RibbonCollectionDirective` to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `RibbonItemDirective` and the `type` property to specify the type of control to be rendered, like a button, a drop-down button, a combo box, and more.
 
 {% raw %}
+
 ```ts
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonItemSize } from "@syncfusion/ej2-react-ribbon";
 import * as React from "react";

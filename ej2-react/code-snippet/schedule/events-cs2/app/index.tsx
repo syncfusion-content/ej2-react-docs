@@ -3,10 +3,9 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, Resize, DragAndDrop, } from '@syncfusion/ej2-react-schedule';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, Resize, DragAndDrop, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
 let initialLoad = true;
 function App() {
-
   const data: object[] = [
     {
       EndTime: new Date(2022, 3, 30, 0, 0),
@@ -51,6 +50,7 @@ function App() {
       Subject: ' VP Highland Model | 3719 :: Pool',
     }
   ];
+  const eventSettings: EventSettingsModel = { dataSource: data }
 
   function dataBound() {
     if (initialLoad) {
@@ -59,7 +59,7 @@ function App() {
     }
   }
 
-  return (<ScheduleComponent height="550px" dataBound={dataBound} selectedDate={new Date(2022, 3, 26)} eventSettings={{ dataSource: data }}>
+  return (<ScheduleComponent height="550px" dataBound={dataBound} selectedDate={new Date(2022, 3, 26)} eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize]} />
   </ScheduleComponent>);
 

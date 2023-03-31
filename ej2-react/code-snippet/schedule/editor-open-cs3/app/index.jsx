@@ -9,6 +9,8 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 function App() {
   let scheduleObj;
   const data = extend([], scheduleData, undefined, true);
+  const eventSettings = { dataSource: data };
+
   function onClick() {
     if (scheduleObj) {
       let dates = [new Date(2018, 1, 15), new Date(2018, 1, 17)];
@@ -21,7 +23,7 @@ function App() {
       <ButtonComponent title='Set work hours' onClick={onClick}>Click to set work hours</ButtonComponent>
       <ScheduleComponent ref={t => scheduleObj = t} height='550px' selectedDate={new Date(2018, 1, 15)}
         workHours={{ highlight: true, start: '09:00', end: '11:00' }}
-        eventSettings={{ dataSource: data }}>
+        eventSettings={eventSettings}>
         <ViewsDirective>
           <ViewDirective option='Day' />
           <ViewDirective option='Week' />

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import {
   TimelineViews, TimelineMonth, ScheduleComponent, ViewsDirective, ViewDirective, RenderCellEventArgs,
-  ResourceDetails, ResourcesDirective, ResourceDirective, Inject
+  ResourceDetails, ResourcesDirective, ResourceDirective, Inject, EventSettingsModel, GroupModel
 } from '@syncfusion/ej2-react-schedule';
 import { roomData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
@@ -18,6 +18,9 @@ function App() {
     return (value as ResourceDetails).resourceData.capacity;
   }
   const data: Object[] = extend([], roomData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
+  const group: GroupModel = { resources: ['MeetingRoom'] };
+
   const ownerData: Object[] = [
     { text: 'Jammy', id: 1, color: '#ea7a57', capacity: 20, type: 'Conference' },
     { text: 'Tweety', id: 2, color: '#7fa900', capacity: 7, type: 'Cabin' },
@@ -45,7 +48,7 @@ function App() {
     }
   }
   return (
-    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 7, 1)} currentView='TimelineWeek' resourceHeaderTemplate={resourceHeaderTemplate} eventSettings={{ dataSource: data }} renderCell={onRenderCell} group={{ resources: ['MeetingRoom'] }}>
+    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 7, 1)} currentView='TimelineWeek' resourceHeaderTemplate={resourceHeaderTemplate} eventSettings={eventSettings} renderCell={onRenderCell} group={group}>
       <ResourcesDirective>
         <ResourceDirective field='RoomId' title='Room Type' name='MeetingRoom' dataSource={ownerData} textField='text' idField='id' colorField='color' >
         </ResourceDirective>

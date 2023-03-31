@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { CheckBoxComponent, ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
 import {
   TimelineMonth, Month, EventFieldsMapping, EventClickArgs, ScheduleComponent,
-  ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject
+  ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject, EventSettingsModel, GroupModel
 } from '@syncfusion/ej2-react-schedule';
 import { extend } from '@syncfusion/ej2-base';
 import { holidayData, birthdayData, companyData, personalData } from './datasource';
@@ -25,6 +25,8 @@ function App() {
     }
     return collections;
   }
+  let eventSettings: EventSettingsModel = { dataSource: generateCalendarData() };
+  const group: GroupModel = { resources: ['Calendars'] };
 
   function onChange(args: ChangeEventArgs): void {
     let value: number = parseInt((args.event.target as Element).getAttribute('value'), 10);
@@ -51,8 +53,8 @@ function App() {
           </td>
         </tr>
       </tbody>
-      <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} group={{ resources: ['Calendars'] }}
-        eventSettings={{ dataSource: generateCalendarData() }} >
+      <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} group={group}
+        eventSettings={eventSettings} >
         <ResourcesDirective>
           <ResourceDirective field='CalendarId' title='Calendar' name='Calendars' allowMultiple={true}
             dataSource={[calendarCollections[0]]} textField='CalendarText' idField='CalendarId' colorField='CalendarColor'>

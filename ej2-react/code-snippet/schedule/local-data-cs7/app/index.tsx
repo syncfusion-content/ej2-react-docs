@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
 import { DataManager, WebApiAdaptor, Query } from '@syncfusion/ej2-data';
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     adaptor: new WebApiAdaptor(),
     crossDomain: true
   });
+  const eventSettings: EventSettingsModel = { dataSource: dataManger };
 
   function onDataBinding(e: { [key: string]: Object }): void {
     let items: { [key: string]: Object }[] = (e.result as { [key: string]: Object }).items as { [key: string]: Object }[];
@@ -42,7 +43,7 @@ function App() {
   return (
     <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%'
       height='550px' selectedDate={new Date(2018, 10, 14)} readonly={true}
-      eventSettings={{ dataSource: dataManger }} dataBinding={onDataBinding}>
+      eventSettings={eventSettings} dataBinding={onDataBinding}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>
   )

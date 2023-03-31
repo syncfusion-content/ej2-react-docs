@@ -5,7 +5,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { TimePickerComponent, ChangeEventArgs } from '@syncfusion/ej2-react-calendars';
 import {
-  ScheduleComponent, Day, Week, TimelineViews, Inject,
+  ScheduleComponent, Day, Week, TimelineViews, Inject, EventSettingsModel,
   ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
@@ -14,6 +14,8 @@ import { extend } from '@syncfusion/ej2-base';
 function App() {
   let scheduleObj: ScheduleComponent;
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
+
   function onChange(args: ChangeEventArgs): void {
     scheduleObj.scrollTo(args.text);
   }
@@ -38,7 +40,7 @@ function App() {
       </div>
       <div className='control-section'>
         <ScheduleComponent width='100%' height='550px' ref={schedule => scheduleObj = schedule}
-          selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}>
+          selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
           <ViewsDirective>
             <ViewDirective option='Day' />
             <ViewDirective option='Week' />

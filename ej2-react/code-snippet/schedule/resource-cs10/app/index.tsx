@@ -2,13 +2,15 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   Week, Month, TimelineViews, TimelineMonth, ScheduleComponent, ViewsDirective, ViewDirective,
-  ResourcesDirective, ResourceDirective, Inject, ResourceDetails
+  ResourcesDirective, ResourceDirective, Inject, ResourceDetails, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 
 function App() {
   const data: Object[] = extend([], resourceData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data }
+  const group = { resources: ['Rooms', 'Owners'], headerTooltipTemplate: headerTooltipTemplate.bind(this) }
   function getRoomName(value: ResourceDetails) {
     return (value as ResourceDetails).resourceData[(value as ResourceDetails).resource.textField];
   }
@@ -28,7 +30,7 @@ function App() {
     );
   }
   return (
-    <ScheduleComponent width='100%' height='550px' currentView='TimelineWeek' selectedDate={new Date(2018, 3, 1)} eventSettings={{ dataSource: data }} group={{ resources: ['Rooms', 'Owners'], headerTooltipTemplate: headerTooltipTemplate.bind(this) }} >
+    <ScheduleComponent width='100%' height='550px' currentView='TimelineWeek' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings} group={group} >
       <ResourcesDirective>
         <ResourceDirective field='RoomId' title='Room' name='Rooms'
           dataSource={roomData} textField='RoomText' idField='Id' colorField='RoomColor'>

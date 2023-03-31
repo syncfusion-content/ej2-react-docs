@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  ScheduleComponent, ViewsDirective, ViewDirective, Month, Inject, ActionEventArgs, ToolbarActionArgs
+  ScheduleComponent, ViewsDirective, ViewDirective, Month, Inject, ActionEventArgs, ToolbarActionArgs, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { createElement, compile, extend } from '@syncfusion/ej2-base';
 import { ItemModel } from '@syncfusion/ej2-react-navigations';
@@ -10,6 +10,8 @@ import { scheduleData } from './datasource';
 
 function App() {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
+  const eventSettings: EventSettingsModel = { dataSource: data };
+
   let profilePopup: Popup;
   function onActionBegin(args: ActionEventArgs & ToolbarActionArgs): void {
     if (args.requestType === 'toolbarItemRendering') {
@@ -57,7 +59,7 @@ function App() {
     profilePopup.hide();
   }
   return (<ScheduleComponent cssClass='schedule-header-bar' width='100%' height='550px' id='schedule'
-    selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: data }}
+    selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}
     actionBegin={onActionBegin} actionComplete={onActionComplete}>
     <ViewsDirective>
       <ViewDirective option='Month' />

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
 
 function App() {
   let data: Object[] = [{
@@ -24,10 +24,11 @@ function App() {
     StartTime: new Date(2018, 1, 14, 13, 0),
     EndTime: new Date(2018, 1, 14, 14, 30)
   }];
+  const eventSettings: EventSettingsModel = { dataSource: data };
 
   return (
     <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)}
-      eventSettings={{ dataSource: data }}>
+      eventSettings={eventSettings}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>
   )

@@ -17,9 +17,11 @@ function App() {
         url: 'https://ej2services.syncfusion.com/production/web-services/api/Schedule',
         adaptor: new CustomAdaptor()
     });
-    return <ScheduleComponent height='550px' selectedDate={new Date(2020, 9, 20)} readonly={true} eventSettings={{ dataSource: dataManager }}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
-  </ScheduleComponent>;
+    const eventSettings = { dataSource: dataManager };
+
+    return <ScheduleComponent height='550px' selectedDate={new Date(2020, 9, 20)} readonly={true} eventSettings={eventSettings}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+    </ScheduleComponent>;
 }
 ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
