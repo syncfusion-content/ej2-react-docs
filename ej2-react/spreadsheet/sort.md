@@ -82,7 +82,7 @@ Case sensitive sorting is applicable only for cells with alphabets. In ascending
 You can also enable or disable this property using `beforeSort` event arguments,
 
 ```ts
-    const beforeSort = (args: BeforeSortEventArgs): void => {
+   const beforeSort = (args: BeforeSortEventArgs): void => {
         args.sortOptions.caseSensitive = true;
         }
 

@@ -8,6 +8,7 @@ import { centerData } from 'datasource.ts';
 function App() {
 
     return <AccumulationChartComponent id='charts' centerLabel={{text : 'Mobile<br>Browsers<br>Statistics',
+    hoverTextFormat: '${point.x} <br> Browser Share <br> ${point.y}%',
     textStyle:{ fontWeight: '900',
                 size: '15px',
                 color: 'grey',

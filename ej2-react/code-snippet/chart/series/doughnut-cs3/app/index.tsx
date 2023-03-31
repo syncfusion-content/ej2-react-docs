@@ -1,4 +1,4 @@
-
+{% raw %}
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -7,7 +7,7 @@ import { centerData } from 'datasource.ts';
 
 function App() {
 
-    return <AccumulationChartComponent id='charts' centerLabel={{text : 'Browsers Statistics'}}>
+    return <AccumulationChartComponent id='charts' centerLabel={{text : 'Browsers Statistics', hoverTextFormat: '${point.x} <br> Browser Share <br> ${point.y}%'}}>
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective dataSource={centerData} xName='x' yName='y' innerRadius='65%'>
         </AccumulationSeriesDirective>
@@ -18,4 +18,4 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
-
+{% endraw %}
