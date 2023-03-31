@@ -10,6 +10,7 @@ export function App() {
   <CircularGaugeComponent >
     <AxesDirective>
       <AxisDirective labelStyle = {{
+            //Label format set as currency.
             format: 'c'
         }}>
       </AxisDirective>

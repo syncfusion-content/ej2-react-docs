@@ -58,18 +58,23 @@ let textfieldInfo: TextFormFieldInfo = documentEditor.getFormFieldInfo('Text1') 
 textfieldInfo.defaultValue = "Hello";
 textfieldInfo.format = "Uppercase";
 textfieldInfo.type = "Text";
+textfieldInfo.name = "Text2";
 documentEditor.setFormFieldInfo('Text1',textfieldInfo);
 
 // Set checkbox form field properties
 let checkboxfieldInfo: CheckBoxFormFieldInfo = documentEditor.getFormFieldInfo('Check1') as CheckBoxFormFieldInfo;
 checkboxfieldInfo.defaultValue = true;
+checkboxfieldInfo.name = "Check2";
 documentEditor.setFormFieldInfo('Check1',checkboxfieldInfo);
 
 // Set checkbox form field properties
 let dropdownfieldInfo: DropDownFormFieldInfo = documentEditor.getFormFieldInfo('Drop1') as DropDownFormFieldInfo;
-dropdownfieldInfo.dropDownItems = ['One','Two', 'Three']
+dropdownfieldInfo.dropDownItems = ['One','Two', 'Three'];
+dropdownfieldInfo.name = "Drop2";
 documentEditor.setFormFieldInfo('Drop1',dropdownfieldInfo);
 ```
+
+>Note:If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
 
 ## Export form field data
 

@@ -44,7 +44,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 <td>Server-side C#</td>
 <td>
 
-```csharp
+```c#
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 ```
@@ -52,7 +52,7 @@ string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 </td>
 <td>
 
-```csharp
+```c#
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 sfdtDocument.OptimizeSfdt = false;
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
@@ -89,7 +89,7 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <td>Client-side</td>
 <td>
 
-```ts
+```typescript
 <DocumentEditorContainerComponent documentEditorSettings={{optimizeSfdt: false}}></DocumentEditorContainerComponent>
 ```
 
@@ -99,7 +99,7 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <td>Server-side C#</td>
 <td>
 
-```csharp
+```c#
 using(Syncfusion.DocIO.DLS.WordDocument docIODocument = WordDocument.Save(optimizedSfdt)) {
 sfdtDocument = WordDocument.Load(docIODocument);
 sfdtDocument.OptimizeSfdt = false;
