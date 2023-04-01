@@ -185,14 +185,14 @@ To customize the error bar color for individual errors, use the [`errorBarColorM
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/errorbar-cs6/app/index.jsx %}
+{% include code-snippet/chart/series/errorbar-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/errorbar-cs6/app/index.tsx %}
+{% include code-snippet/chart/series/errorbar-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs7" %}
 
 ## Vertical chart
 

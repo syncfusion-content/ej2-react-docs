@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Category, SplineRangeAreaSeries} from'@syncfusion/ej2-react-charts';
+import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Category, RangeStepAreaSeries} from'@syncfusion/ej2-react-charts';
 import { splineRangeData } from 'datasource.ts';
 
 function App() {
@@ -23,11 +23,11 @@ function App() {
       primaryXAxis={primaryxAxis}
       primaryYAxis={primaryyAxis}
       title='Monthly Temperature Range'>
-      <Inject services={[SplineRangeAreaSeries, Category]} />
+      <Inject services={[RangeStepAreaSeries, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={splineRangeData} xName='x' high='high' low='low' name='England' opacity={0.4} type='SplineRangeArea'>
+        <SeriesDirective dataSource={splineRangeData} xName='x' high='high' low='low' name='England' opacity={0.4} type='RangeStepArea'>
         </SeriesDirective>
-        <SeriesDirective dataSource={splineRangeData} xName='x' high='high1' low='low1' name='India' opacity={0.4} type='SplineRangeArea'>
+        <SeriesDirective dataSource={splineRangeData} xName='x' high='high1' low='low1' name='India' opacity={0.4} type='RangeStepArea'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

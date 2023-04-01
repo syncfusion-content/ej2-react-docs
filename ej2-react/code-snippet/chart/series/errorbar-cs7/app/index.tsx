@@ -11,7 +11,7 @@ function App() {
 
   const primaryxAxis: AxisModel = { minimum: 2005, maximum: 2012, interval: 1, title: 'Year' };
   const primaryyAxis: AxisModel = { minimum: 3, maximum: 12, interval: 1, title: 'Percentage', labelFormat: '{value}%' };
-  const marker: { visible: true };
+  const marker = { visible: true };
   const errorbar = {
     visible: true, verticalError: 'error', errorBarColorMapping: 'error'
   };
