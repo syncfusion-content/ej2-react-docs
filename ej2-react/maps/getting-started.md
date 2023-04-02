@@ -91,10 +91,10 @@ Now, the Maps component can be added in the application. To initialize the Maps 
      import React from 'react';
      import { MapsComponent } from '@syncfusion/ej2-react-maps';
     export function App() {
-      return (<MapsComponent id="maps" />); 
+      return (<MapsComponent></MapsComponent>); 
     }
 
-    const root = ReactDOM.createRoot(document.getElementById('maps'));
+    const root = ReactDOM.createRoot(document.getElementById('container'));
     root.render(<App />);
   ```
 
@@ -135,12 +135,12 @@ import * as React from 'react';
 import { MapsComponent } from '@syncfusion/ej2-react-maps';
 
 export function App() {
-   return (<MapsComponent id="maps">
+   return (<MapsComponent>
         <Inject services={[DataLabel, Legend, MapsTooltip]} />
     </MapsComponent>);
   }
 
-const root = ReactDOM.createRoot(document.getElementById('maps'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
 
 ```

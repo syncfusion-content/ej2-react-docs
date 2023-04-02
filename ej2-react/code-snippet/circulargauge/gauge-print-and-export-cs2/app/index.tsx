@@ -7,9 +7,9 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { CircularGaugeComponent, ImageExport, Inject } from '@syncfusion/ej2-react-circulargauge';
 
 export function App() {
-  let gaugeInstance : CircularGaugeComponent | null;
+  let gaugeInstance : CircularGaugeComponent;
   function clickHandler() {
-    gaugeInstance?.export('PNG','Gauge');
+    gaugeInstance.export('PNG','Gauge');
   }
     return (<div>
     <ButtonComponent onClick= {clickHandler}>Export</ButtonComponent>

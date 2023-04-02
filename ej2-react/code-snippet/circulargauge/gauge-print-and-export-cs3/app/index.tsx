@@ -4,12 +4,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { PdfPageOrientation } from '@syncfusion/ej2-pdf-export';
 import { CircularGaugeComponent, ImageExport, Inject } from '@syncfusion/ej2-react-circulargauge';
 export function App() {
-let gaugeInstance: CircularGaugeComponent | null;
+let gaugeInstance: CircularGaugeComponent;
 function clickHandler(){
-    gaugeInstance?.export('PNG', 'Gauge', PdfPageOrientation.Landscape, false).then((data)=>{
+    gaugeInstance.export('PNG', 'Gauge', null, false).then((data)=>{
         document.writeln(data);
     })
 }
