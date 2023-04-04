@@ -34,7 +34,7 @@ function App() {
 export default App;
 ```
 
-## onclick
+## Click
 
 Event triggers when the Floating Action Button is clicked.
 

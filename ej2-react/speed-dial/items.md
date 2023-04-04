@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Items in React Speed dial component | Syncfusion
-description: Learn here all about Items in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Items in Syncfusion React SpeedDial component of Syncfusion Essential JS 2 and more.
 control: Items 
 platform: ej2-react
 documentation: ug
@@ -68,38 +68,6 @@ You can show icon along with text in Speed Dial items by setting [`iconCss`](htt
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/items-cs3" %}
-
-### Disabled
-
-You can disable Speed Dial items by setting [`disabled`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#disabled) property as `true`.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/speed-dial/items-cs4/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/speed-dial/items-cs4/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/speed-dial/items-cs4" %}
-
-## Animation
-
-The Speed Dial items can be animated during the opening and closing of the popup action items. You can customize the animation's `effect`, `delay`, and `duration` by setting [`animation`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#animation) property. By default, Speed Dial animates with a `fade` effect and supports all [`speeddialanimation`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialAnimationEffect/) effects.
-
-Below example demonstrates the Speed Dial items with applied Zoom effect.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/speed-dial/items-cs5/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/speed-dial/items-cs5/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/speed-dial/items-cs5" %}
 
 ## Template
 

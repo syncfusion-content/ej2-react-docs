@@ -97,17 +97,6 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('element'));
 ```
 
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
-import * as ReactDOM from 'react-dom';
-function App() {
-    return (<SkeletonComponent height='15px'></SkeletonComponent>);
-}
-export default App;
-ReactDOM.render(<App />, document.getElementById('element'));
-```
-
 ## Run the application
 
 Run the application in the browser using the following command:
@@ -128,3 +117,46 @@ The following example shows a basic Skeleton component.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/skeleton/getting-started-cs1" %}
+
+## Initialize as CSS component
+
+The React Skeleton component can be initialized through CSS by utilizing predefined class names representing the shape, animation effect of the skeleton.
+
+| Class | Description |
+| -------- | -------- |
+| e-skeleton | Base class to add the Skeleton to the element. |
+| e-skeleton-`shapeName` |  Defines the Skeleton shape where `shapeName` defines the name of the shape  |
+| e-shimmer-`animation` |  Defines the type of Skeleton `animation` effect where animation defines the name of the animation effect |
+
+```ts
+import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
+import * as React from "react";
+
+function App() {
+
+  return (
+    <div style={{
+      margin: '9px',
+      width: '200px',
+      height: '20px'
+    }} className="content e-skeleton e-skeleton-text e-shimmer-pulse"></div>
+  );
+}
+export default App;
+```
+
+## Visible
+
+You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/skeleton#visible) property which defines the visible state of Skeleton.
+
+```ts
+import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
+import * as React from "react";
+
+function App() {
+
+  return (
+    <SkeletonComponent shape= 'Circle' width= "60px" visible={false}></SkeletonComponent>);
+}
+export default App;
+```

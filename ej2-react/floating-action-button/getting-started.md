@@ -121,18 +121,3 @@ The following example shows a basic Floating Action Button component.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/floating-action-button/getting-started-cs1" %}
-
-## Click event
-
-The floating action button control triggers the `onclick` event when you click on the floating action button. You can use this event to perform the required action.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/floating-action-button/events-cs2/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/floating-action-button/events-cs2/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/floating-action-button/events-cs2" %}

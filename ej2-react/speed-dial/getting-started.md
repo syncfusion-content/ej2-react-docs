@@ -60,8 +60,6 @@ To include the Speed Dial component in your application import the `SpeedDialCo
 
 Add the Speed Dial component in application as shown in below code example.
 
-
-
 ```ts
 
 {/* Import the Speed Dial.*/}

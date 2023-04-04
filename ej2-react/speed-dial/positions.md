@@ -10,6 +10,39 @@ domainurl: ##DomainURL##
 
 # Positions in React Speed dial component
 
+This section explains the different positions of SpeedDial.
+
+## Target
+
+The [Target](https://helpej2.syncfusion.com/react/documentation/api/speed-dial#target) property defines the selector for the element in which the speed dial will be positioned. If the Target is not defined, then Speed Dial is positioned based on the browser viewport.
+
+```ts
+{/* Import the Speed Dial. */}
+import { SpeedDialComponent, SpeedDialItemModel } from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+
+{/* To render Speed Dial.*/}
+function App() {
+
+   const items: SpeedDialItemModel[] = [
+    { iconCss: 'e-icons e-cut' },
+    { iconCss: 'e-icons e-copy' },
+    { iconCss: 'e-icons e-paste' }
+  ];
+
+  return (
+    {/* Initialize the SpeedDial component. */}
+    <div>
+      <div id="targetElement" style={{ position: 'relative', minHeight: '350px', border: '1px solid' }}></div>
+      <SpeedDialComponent id='speeddial' content='Add' items={items} target="#targetElement"></SpeedDialComponent>
+    </div>
+  );
+}
+export default App;
+```
+
+## Built-in positions
+
 The Speed dial control can be positioned anywhere on the [`target`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#target) using the [`position`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#position) property. If the `target` is not defined, then Speed Dial is positioned based on the browser viewport.
 
 The position values of Speed Dial are as follows:
@@ -34,62 +67,17 @@ The position values of Speed Dial are as follows:
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs1" %}
 
-## Opens items on hover
+## Custom Positioning
 
-You can open the Speed Dial action items on mouse hover by setting the [`opensOnHover`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#opensonhover) property.
-
-```ts
-{/* Import the Speed Dial. */}
-import { SpeedDialComponent, SpeedDialItemModel } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-
-{/* To render Speed Dial.*/}
-function App() {
-
-  const items: SpeedDialItemModel[] = [
-    { iconCss: 'e-icons e-cut' },
-    { iconCss: 'e-icons e-copy' },
-    { iconCss: 'e-icons e-paste' }
-  ];
-
-  return (
-    {/* Initialize the SpeedDial component. */}
-    <SpeedDialComponent id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' items={items} opensOnHover= {true} target="#targetElement"></SpeedDialComponent>
-  );
-}
-export default App;
-```
-
-## Programmatically show/hide Speed Dial items
-
-You can open/close the Speed Dial action items programmatically using [`show`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#show) and [`hide`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#hide) methods.
-
-Below example demonstrates open/close action items on button click.
+You can define the custom position for the SpeedDial by overriding the `top`, `left`, `right`, and `bottom` CSS properties using [CssClass](https://helpej2.syncfusion.com/react/documentation/api/speed-dial#cssclass).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/speed-dial/position-cs2/app/app.jsx %}
+{% include code-snippet/speed-dial/position-cs4/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/speed-dial/position-cs2/app/app.tsx %}
+{% include code-snippet/speed-dial/position-cs4/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs2" %}
-
-## Programmatically refresh the position
-
-You can refresh the position of the Speed Dial using [`refreshPosition`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/#refreshposition) method when the `target`position is changed.
-
-The following sample demonstrates the above functionalities of a Speed Dial to refresh the position of speed dial.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/speed-dial/position-cs3/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/speed-dial/position-cs3/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs4" %}

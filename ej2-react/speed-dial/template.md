@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template in React Speed dial component | Syncfusion
+title: Template in React SpeedDial component | Syncfusion
 description: Learn here all about Template in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
 control: Template 
 platform: ej2-react

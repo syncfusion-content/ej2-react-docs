@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Shimmer effect in React Skeleton component | Syncfusion
+title: Effects in React Skeleton component | Syncfusion
 description: Learn here all about Shimmer effect in Syncfusion React Skeleton component of Syncfusion Essential JS 2 and more.
-control: Shimmer effect 
+control: Effects
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

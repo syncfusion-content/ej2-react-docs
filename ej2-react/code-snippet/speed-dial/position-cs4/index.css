@@ -1,0 +1,21 @@
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+.e-fab.e-btn.custom-position {
+  left: 218px;
+  top: 170px;
+  bottom: unset;
+  right: unset;
+  }
+.e-speeddial-popup.e-speeddial-right.e-speeddial-linear {
+    left: 210px;
+  }
+.e-speeddial-popup.e-speeddial-bottom.e-speeddial-linear {
+    top: 50px;
+  }

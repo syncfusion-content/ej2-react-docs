@@ -26,19 +26,3 @@ You can customize the style of a Skeleton control by using [`cssClass`](https://
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/skeleton/styles-cs1" %}
-
-## Visible
-
-You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/skeleton#visible) property which defines the visible state of Skeleton.
-
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
-
-function App() {
-
-  return (
-    <SkeletonComponent shape= 'Circle' width= "60px" visible={false}></SkeletonComponent>);
-}
-export default App;
-```

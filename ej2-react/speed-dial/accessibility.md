@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in React Speed dial component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+description: Checkout and learn here all about accessibility and keyboard interaction in Syncfusion SpeedDial component and much more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
