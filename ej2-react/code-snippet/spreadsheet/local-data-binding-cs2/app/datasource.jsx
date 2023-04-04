@@ -23,7 +23,7 @@ export let data = [{
         EmployeeID: 4,
         ShipName: 'Hanari Carnes',
         ShipCity: 'Rio de Janeiro',
-        ShipAddress: 'Rua do Paço, 67'
+        ShipAddress: 'Rua do Paço. 67'
     },
     {
         OrderID: 10251,
@@ -31,7 +31,7 @@ export let data = [{
         EmployeeID: 3,
         ShipName: 'Victuailles en stock',
         ShipCity: 'Lyon',
-        ShipAddress: '2, rue du Commerce'
+        ShipAddress: '2. rue du Commerce'
     },
     {
         OrderID: 10252,
@@ -39,5 +39,5 @@ export let data = [{
         EmployeeID: 4,
         ShipName: 'Suprêmes délices',
         ShipCity: 'Charleroi',
-        ShipAddress: 'Boulevard Tirou, 255'
+        ShipAddress: 'Boulevard Tirou. 255'
     }];
