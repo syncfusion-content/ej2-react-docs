@@ -170,6 +170,12 @@ The following table defines each property of the `DefinedName`.
 In the following demo, the JSON structure is passed to the `openFromJson` method to render the spreadsheet in the `created` event.
 
 {% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet\spreadsheet\json-structure-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet\spreadsheet\json-structure-cs1/app/app.tsx %}
+{% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/spreadsheet/json-structure-cs1/app/datasource.jsx %}
 {% endhighlight %}
