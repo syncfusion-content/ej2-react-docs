@@ -15,6 +15,11 @@ function App() {
         dataSource: data,
         queryString: 'EmployeeID'
     };
+
+    const beforeExcelExport = (args) => {
+        args.isChild = true;
+    };
+
     const toolbarClick = (args) => {
         if (grid && args.item.id === 'Grid_excelexport') {
             const exportProperties = {
@@ -23,7 +28,7 @@ function App() {
             grid.excelExport(exportProperties);
         }
     };
-    return <GridComponent ref={g => grid = g} id='Grid' toolbar={['ExcelExport']} toolbarClick={toolbarClick} allowExcelExport={true} dataSource={employeeData} childGrid={childGridOptions}>
+    return <GridComponent ref={g => grid = g} id='Grid' toolbar={['ExcelExport']} toolbarClick={toolbarClick} beforeExcelExport={beforeExcelExport} allowExcelExport={true} dataSource={employeeData} childGrid={childGridOptions}>
     <ColumnsDirective>
       <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>
       <ColumnDirective field='FirstName' headerText='First Name' width='150'/>

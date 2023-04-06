@@ -59,6 +59,30 @@ Any kind of remote data services can be bound to the Scheduler. To do so, create
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs3" %}
 
+### Filter events using the in-built query
+
+To enable server-side filtering operations based on predetermined conditions, the [`includeFiltersInQuery`](https://helpej2.syncfusion.com/react/documentation/api/schedule/eventSettingsModel/#includefiltersinquery) API can be set to true, this allows the filter query to be constructed using the start date, end date, and recurrence rule which in turn enables the request to be filtered accordingly.
+
+This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/schedule/local-data-cs41/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/schedule/local-data-cs41/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/local-data-cs41/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/local-data-cs41" %}
+
+The following image represents how the parameters are passed using ODataV4 filter.
+
+![ODataV4 filter](images/odatav4-filter.jpg)
+
 ### Using custom adaptor
 
 It is possible to create your own custom adaptor by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to add a custom field `EventID` for the appointments by overriding the built-in response processing using the `processResponse` method of the `ODataV4Adaptor`.
