@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Bubble heatmap in React Heatmap chart component
 
-Data points represent the data source values with `gradient` or `fixed` colors in the HeatMap. You can customize the appearance of these data points by changing the `color` and `shape` attributes.
+Data points represent the data source values with **gradient** or **fixed** colors in the HeatMap. You can customize the appearance of these data points by changing the `color` and `size` attributes.
 
 The data points can be represented in color fill or bubble shape by defining the [tileType](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#tiletype) property.
-By default, the data points are color filled with `gradient` or `fixed` and this depiction of data points is defined as `rect` in the [tileType](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#tiletype) property.
+By default, the data points are color filled with gradient or fixed colors and this depiction of data points is defined as `Rect` in the `tileType` property.
 
-The cell customizations and color mapping for `rect` tile type is defined in [appearance](./appearance/) and [palette](./palette/) sections in detail.
+The cell customizations and color mapping for rect tile type is defined in [appearance](./appearance/) and [palette](./palette/) sections in detail.
 
 ## Bubble types
 
