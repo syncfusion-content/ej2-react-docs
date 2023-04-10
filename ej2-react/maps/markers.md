@@ -162,7 +162,7 @@ The markers on the map can be dragged and dropped to change their position. To e
 
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs103" %}
 
-The data of the drag and dropped marker in the marker data source can be customized using the [markerDragStart](https://helpej2.syncfusion.com/react/documentation/api/maps/#markerdragstart) and [markerDragEnd](https://helpej2.syncfusion.com/react/documentation/api/maps/#markerdragend) events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
+The data of the drag and dropped marker in the marker data source can be customized using the [markerDragStart](https://helpej2.syncfusion.com/react/documentation/api/maps/#markerdragstart) and the [markerDragEnd](https://helpej2.syncfusion.com/react/documentation/api/maps/#markerdragend) events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
 
 |   Argument Name      |   Description                               |
 |----------------------| --------------------------------------------|
