@@ -1,7 +1,7 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
-import { HeatMapComponent, Inject, Legend, Adaptor } from '@syncfusion/ej2-react-heatmap';
+import { HeatMapComponent, Inject, Legend, Adaptor, Tooltip } from '@syncfusion/ej2-react-heatmap';
 export function App() {
     var heatmapData = [
         [73, 39, 26, 39, 94, 0],
@@ -55,7 +55,7 @@ export function App() {
             bubbleType: 'Color'
         }}
         dataSource={heatmapData}>
-        <Inject services={[Legend, Adaptor]} />
+        <Inject services={[Legend, Adaptor, Tooltip]} />
     </HeatMapComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
