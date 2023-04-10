@@ -26,6 +26,7 @@ Below is the list of minimum dependencies required to use the DataManager.
 
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install **create-react-app** run the following command.
 
+<<<<<<< HEAD
   ```
    npm install -g create-react-app
   ```
@@ -43,6 +44,25 @@ You can use [`create-react-app`](https://github.com/facebookincubator/create-rea
    ```
     npm install @syncfusion/ej2-data --save
    ```
+=======
+   ```
+    npm install -g create-react-app
+   ```
+
+* To setup basic **React** sample use following commands.
+
+    ```
+      create-react-app quickstart --scripts-version=react-scripts-ts
+      cd quickstart
+      npm install
+    ```
+
+* Install Syncfusion packages using below command.
+
+    ```
+     npm install @syncfusion/ej2-data --save
+    ```
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
 
 ## Connection to a data source
 

@@ -154,7 +154,11 @@ The current pivot report can be saved as a JSON file in the desired path and loa
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs299" %}
 
+<<<<<<< HEAD
  ## Save and load reports to a SQL database
+=======
+## Save and load reports to a SQL database
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
 
 SQL Server is a relational database management system (RDBMS) that can be used to store and manage large amounts of data. In this topic, we will see how to save, save as, rename, load, delete, and add reports between a SQL Server database and a React Pivot Table at runtime.
 
@@ -162,11 +166,19 @@ SQL Server is a relational database management system (RDBMS) that can be used t
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the document [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
+<<<<<<< HEAD
 ![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
 
 **2.** To connect a SQL Server database using the Microsoft SqlClient in our application, we need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Microsoft.Data.SqlClient** and install it.
 
 ![Add the NuGet package Microsoft.Data.SqlClient to the project](../images/ms-data-sqlclient-nuget-package-install.png)
+=======
+![Create ASP.NET Core Web App project](images/azure-asp-core-web-service-create.png)
+
+**2.** To connect a SQL Server database using the Microsoft SqlClient in our application, we need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Microsoft.Data.SqlClient** and install it.
+
+![Add the NuGet package Microsoft.Data.SqlClient to the project](images/ms-data-sqlclient-nuget-package-install.png)
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
 
 **3.** Under the **Controllers** folder, create a Web API controller (aka, PivotController.cs) file that aids in data communication with the Pivot Table.
 
@@ -451,11 +463,19 @@ namespace MyWebApp.Controllers
 
 ```
 
+<<<<<<< HEAD
 ![The current report has been saved in the SQL database](../images/output_save_report.png)
 
 In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [saveReport](#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the Web API service, as mentioned above.
 
 ![Copy of the current report has been saved in the SQL database](../images/output_save_as_report.png)
+=======
+![The current report has been saved in the SQL database](images/output_save_report.png)
+
+In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [saveReport](#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the Web API service, as mentioned above.
+
+![Copy of the current report has been saved in the SQL database](images/output_save_as_report.png)
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
 
 ### Loading a report
 
@@ -574,11 +594,19 @@ namespace MyWebApp.Controllers
 
 ```
 
+<<<<<<< HEAD
 ![Loading a report from SQL database](../images/output_load_report.png)
 
 ### Renaming a report
 
 When you select the **"Rename a current report"** option from the toolbar, the [renameReport](#renameReport) event is triggered. In this event, an AJAX request is made to the **RenameReport** method of the Web API controller, passing the current and new report names, where you can use the current report name to identify the report and resave it with the new report name in the SQL database.
+=======
+![Loading a report from SQL database](images/output_load_report.png)
+
+### Renaming a report
+
+When you select the **"Rename a current report"** option from the toolbar, the [renameReport](#renamereport) event is triggered. In this event, an AJAX request is made to the **RenameReport** method of the Web API controller, passing the current and new report names, where you can use the current report name to identify the report and resave it with the new report name in the SQL database.
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
 
 For example, if we rename the current report from **"Sample Report 1"** to **"Sample Report 2"**, both **"Sample Report 1"** and **"Sample Report 2"** will be passed to the **RenameReport** method, which will rename the current report with the new report name **"Sample Report 2"** in the SQL database.
 
@@ -693,11 +721,19 @@ namespace MyWebApp.Controllers
 
 ```
 
+<<<<<<< HEAD
 ![Renaming a report in the SQL database](../images/output_rename_report.png)
 
 ### Deleting a report
 
 When you select the **"Delete a current report"** option from the toolbar, the [removeReport](#removeReport) event is triggered. In this event, an AJAX request is made to the **RemoveReport** method of the Web API controller, passing the current report name to identify and delete the appropriate report from the SQL database.
+=======
+![Renaming a report in the SQL database](images/output_rename_report.png)
+
+### Deleting a report
+
+When you select the **"Delete a current report"** option from the toolbar, the [removeReport](#removereport) event is triggered. In this event, an AJAX request is made to the **RemoveReport** method of the Web API controller, passing the current report name to identify and delete the appropriate report from the SQL database.
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
 
 N> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the last report from the report list.
 N> * When a report is removed from a pivot table with only one report, the SQL database refreshes; however, the pivot table will continue to show the removed report until a new report is added to the pivot table.
@@ -810,6 +846,7 @@ namespace MyWebApp.Controllers
 
 ```
 
+<<<<<<< HEAD
 ![Deleting a report from the SQL database](../images/output_remove_report.png)
 
 ### Adding a report
@@ -817,6 +854,15 @@ namespace MyWebApp.Controllers
 When you select the **"Create a new report"** option from the toolbar, the [newReport](#newReport) event is triggered, followed by the [saveReport](#savereport) event. To save this new report to the SQL database, use the [saveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
 ![Adding a report in the SQL database](../images/output_new_report.png)
+=======
+![Deleting a report from the SQL database](images/output_remove_report.png)
+
+### Adding a report
+
+When you select the **"Create a new report"** option from the toolbar, the [newReport](#newreport) event is triggered, followed by the [saveReport](#savereport) event. To save this new report to the SQL database, use the [saveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
+
+![Adding a report in the SQL database](images/output_new_report.png)
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
 
 ### Limitations with respect to report manipulation
 

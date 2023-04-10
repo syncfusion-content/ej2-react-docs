@@ -88,7 +88,10 @@ Refer to the following code sample of actionComplete event.
        listviewInstance.element.querySelector('.e-active').appendChild(tag);
     }
   ```
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
 
 * Render the dialog component with empty content and append the created dynamic ListView object to the dialog on [`created`](https://ej2.syncfusion.com/react/documentation/api/dialog#created) event.
 
@@ -139,16 +142,29 @@ Refer to the following code sample of actionComplete event.
             dialogInstance.show();
         }
     }
+<<<<<<< HEAD
   }
+=======
+   }
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
   ```
 
 * Bind the click event with added dynamic tags to remove it. Refer to the following code sample.
 
   ```ts
+<<<<<<< HEAD
    //Method to remove the list item
    function removeTag() {
      parentNode.parentNode.remove();
     }
+=======
+
+   //Method to remove the list item
+   function removeTag() {
+     parentNode.parentNode.remove();
+  }
+
+>>>>>>> 8fa149af7f11d8b79e609ae9f0a356ed2d1e9946
   ```
 
 {% tabs %}
