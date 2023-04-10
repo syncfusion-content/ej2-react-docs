@@ -10,9 +10,12 @@ domainurl: ##DomainURL##
 
 # Internationalization in React Circular Gauge component
 
-Circular Gauge provide supports for internationalization in `Axis Labels` and `Tooltip` elements.
+Circular Gauge provides internationalization support for below elements.
 
-For more information about number formatter you can refer [`internationalization`](http://ej2.syncfusion.com/documentation/base/intl.html).
+* Axis Labels
+* Tooltip
+
+For more information about number formatter, you can refer [internationalization](https://ej2.syncfusion.com/documentation/common/internationalization/).
 
 ## Globalization
 
@@ -22,7 +25,7 @@ Internationalization library is used to globalize number in Circular Gauge compo
 <!-- markdownlint-disable MD036 -->
 **Numeric Format**
 
-In the below example axis labels are `globalized` to **EUR**.
+In the below example, axis labels are globalized to **EUR**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

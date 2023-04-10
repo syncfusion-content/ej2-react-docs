@@ -89,7 +89,6 @@ Refer to the following code sample of actionComplete event.
     }
   ```
 
-
 * Render the dialog component with empty content and append the created dynamic ListView object to the dialog on [`created`](https://ej2.syncfusion.com/react/documentation/api/dialog#created) event.
 
 * Bind the click event for button icon (+) to update the ListView data source with tags, and open the dialog with this dynamic ListView. Refer to the following code sample.
@@ -139,16 +138,18 @@ Refer to the following code sample of actionComplete event.
             dialogInstance.show();
         }
     }
-  }
+   }
   ```
 
 * Bind the click event with added dynamic tags to remove it. Refer to the following code sample.
 
   ```ts
+
    //Method to remove the list item
    function removeTag() {
      parentNode.parentNode.remove();
-    }
+  }
+
   ```
 
 {% tabs %}

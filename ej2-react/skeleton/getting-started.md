@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Skeleton, and configure its available functionalities in React.
 
+To get start quickly with React Skeleton, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=5SvWFJ74uTk" %}
+
 ## Dependencies
 
 The following list of dependencies are required to use the Skeleton component in your application.

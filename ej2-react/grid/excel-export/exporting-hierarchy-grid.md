@@ -14,9 +14,9 @@ The grid have an option to export the hierarchy grid to excel document. By defau
 
 | Mode     | Behavior    |
 |----------|-------------|
-| Expanded | Exports the visible child grids in expanded state. |
+| Expanded | Exports the visible child grids in expanded state and remaining child grid in collapsed state when args.isChild property is set to true in [beforeExcelExport](https://ej2.syncfusion.com/angular/documentation/api/grid/#beforeexcelexport) event. |
 | All      | Exports the all the child grids in expanded state. |
-| None     | Exports the child grids in collapse state. |
+| None     | Exports all child grids in collapsed state when args.isChild property is set to true in [beforeExcelExport](https://ej2.syncfusion.com/angular/documentation/api/grid/#beforeexcelexport) event. |
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

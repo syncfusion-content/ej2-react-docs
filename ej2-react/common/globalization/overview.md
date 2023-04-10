@@ -14,6 +14,6 @@ Globalization is the combination of adapting the control to various languages by
 
 The globalization in Syncfusion React UI is enabled by
 
-* [Localization](../../documentation/common/localization/) - It allows you to localize the text content of the Syncfusion React UI Components.
+* [Localization](../../common/globalization/localization) - It allows you to localize the text content of the Syncfusion React UI Components.
 
-* [Internalization](../../common/internationalization/) - It provides support for formatting and parsing date and number objects.
+* [Internationalization](../../common/globalization/internationalization) - It provides support for formatting and parsing date and number objects.

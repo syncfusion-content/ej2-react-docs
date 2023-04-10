@@ -69,7 +69,7 @@ You can export the defined conditions to structured JSON object through the [`ge
 
 ## Exporting to SQL
 
-You can export the defined conditions to SQL query through the [`getRulesFromSQL`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#getrulesfromsql) method.
+You can export the defined conditions to SQL query through the [`getSqlFromRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#getsqlfromrules) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

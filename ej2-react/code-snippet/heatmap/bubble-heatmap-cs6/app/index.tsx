@@ -38,64 +38,64 @@ export function App() {
   function tooltipTemplate(args: ITooltipEventArgs): void {
     args.content = [
       'Year ' +
-        ' : ' +
-        args.xLabel +
-        '<br/>' +
-        'Months ' +
-        ' : ' +
-        args.yLabel +
-        '<br/>' +
-        'Accidents ' +
-        ' : ' +
-        (args.value as BubbleTooltipData[])[0].bubbleData +
-        '<br/>' +
-        'Fatalities ' +
-        ' : ' +
-        (args.value as BubbleTooltipData[])[1].bubbleData
+      ' : ' +
+      args.xLabel +
+      '<br/>' +
+      'Months ' +
+      ' : ' +
+      args.yLabel +
+      '<br/>' +
+      'Accidents ' +
+      ' : ' +
+      (args.value as BubbleTooltipData[])[0].bubbleData +
+      '<br/>' +
+      'Fatalities ' +
+      ' : ' +
+      (args.value as BubbleTooltipData[])[1].bubbleData
     ];
   }
   return (
-      <HeatMapComponent
-        titleSettings={{
-          text: 'Commercial Aviation Accidents and Fatalities by year 2012 - 2017',
-          textStyle: {
-            size: '15px',
-            fontWeight: '500',
-            fontStyle: 'Normal',
-            fontFamily: 'Segoe UI'
-          }
-        }}
-        xAxis={{
-          labels: ['2017', '2016', '2015']
-        }}
-        yAxis={{
-          labels: ['Jan-Feb', 'Mar-Apr', 'May-Jun', 'Jul-Aug', 'Sep-Oct', 'Nov-Dec']
-        }}
-        paletteSettings={{
-          palette: [{ color: '#C06C84' }, { color: '#6C5B7B' }, { color: '#355C7D' }],
-          type: 'Gradient'
-        }}
-        legendSettings={{
-          visible: true
-        }}
-        cellSettings={{
-          border: {
-            width: 1
-          },
-          tileType: 'Bubble',
-          bubbleType: 'SizeAndColor'
-        }}
-        tooltipRender={tooltipTemplate as any}
-        dataSource={heatmapData}
-        dataSourceSettings={{
-          isJsonData: true,
-          adaptorType: 'Table',
-          xDataMapping: 'Year'
-        }}
-      >
-        <Inject services={[Legend, Adaptor, Tooltip]} />
-      </HeatMapComponent>
-    );
+    <HeatMapComponent
+      titleSettings={{
+        text: 'Commercial Aviation Accidents and Fatalities by year 2012 - 2017',
+        textStyle: {
+          size: '15px',
+          fontWeight: '500',
+          fontStyle: 'Normal',
+          fontFamily: 'Segoe UI'
+        }
+      }}
+      xAxis={{
+        labels: ['2017', '2016', '2015']
+      }}
+      yAxis={{
+        labels: ['Jan-Feb', 'Mar-Apr', 'May-Jun', 'Jul-Aug', 'Sep-Oct', 'Nov-Dec']
+      }}
+      paletteSettings={{
+        palette: [{ color: '#C06C84' }, { color: '#6C5B7B' }, { color: '#355C7D' }],
+        type: 'Gradient'
+      }}
+      legendSettings={{
+        visible: true
+      }}
+      cellSettings={{
+        border: {
+          width: 1
+        },
+        tileType: 'Bubble',
+        bubbleType: 'SizeAndColor'
+      }}
+      tooltipRender={tooltipTemplate as any}
+      dataSource={heatmapData}
+      dataSourceSettings={{
+        isJsonData: true,
+        adaptorType: 'Table',
+        xDataMapping: 'Year'
+      }}
+    >
+      <Inject services={[Legend, Adaptor, Tooltip]} />
+    </HeatMapComponent>
+  );
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
