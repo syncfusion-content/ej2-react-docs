@@ -171,10 +171,10 @@ In the following demo, the JSON structure is passed to the `openFromJson` method
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet\spreadsheet\json-structure-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/json-structure-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet\spreadsheet\json-structure-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/json-structure-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/spreadsheet/json-structure-cs1/app/datasource.jsx %}
