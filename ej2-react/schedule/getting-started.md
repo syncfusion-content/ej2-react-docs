@@ -74,6 +74,16 @@ cd my-app
 npm start
 ```
 
+
+## Adding Syncfusion packages
+
+All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+To install Scheduler component, use the following command
+
+```
+npm install @syncfusion/ej2-react-schedule --save
+```
+
 ### Adding CSS reference
 
 Add scheduler component's styles as given below in `src/App.css`.
