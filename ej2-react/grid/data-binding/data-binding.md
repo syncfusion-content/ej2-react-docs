@@ -407,6 +407,7 @@ function App() {
     const orderService: OrderService = new OrderService();
     let grid: Grid | null;
     let data: any;
+     const pageOptions= {pageCount: 4, pageSize: 10 };
     const filterSettings: FilterSettingsModel = { type: 'Excel' }
     const renderComplete = () => {
         if (grid && (grid.dataSource instanceof Array
@@ -430,7 +431,7 @@ function App() {
     return <div className='control-pane'>
         <div className='control-section'>
             <GridComponent dataSource={data} ref={g => grid = g} allowFiltering={true} allowPaging={true}
-                pageSettings={{ pageCount: 4, pageSize: 10 }} dataStateChange={dataStateChange}
+                pageSettings={pageOptions} dataStateChange={dataStateChange}
                 dataBound={renderComplete} filterSettings={filterSettings}>
                 <ColumnsDirective>
                     <ColumnDirective field='OrderID' headerText='Order ID' width='120' />
