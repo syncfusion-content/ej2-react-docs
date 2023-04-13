@@ -18,7 +18,7 @@ function App() {
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} dataBound={dataBound} >
+            <SpreadsheetComponent ref={spreadsheetRef} dataBound={dataBound} allowAutoFill={false} >
                 <SheetsDirective>
                     <SheetDirective name={"Budget"} isProtected={true} protectSettings={{ selectCells: true }}>
                         <RangesDirective>

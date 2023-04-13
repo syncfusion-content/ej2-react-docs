@@ -27,7 +27,7 @@ function App() {
             let actionEvents = args;
             if (actionEvents.eventArgs.action === "customCSS") {
                 let Element = spreadsheet.getCell(actionEvents.eventArgs.rowIdx, actionEvents.eventArgs.colIdx);
-                if (actionEvents.eventArgs.requestType === "undo") {
+                if (actionEvents.isUndoRedo && actionEvents.isUndo) {
                     removeClass([Element], 'customClass'); // To remove the custom class in undo action
                 } else {
                     addClass([Element], 'customClass');// To add the custom class in redo action

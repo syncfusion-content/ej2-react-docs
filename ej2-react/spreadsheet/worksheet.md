@@ -94,10 +94,8 @@ There are three visibility state as like Microsoft Excel,
 | State | Description |
 |-------|---------|
 | `Visible` | You can see the worksheet once the component is loaded. |
-| `Hidden` | This worksheet is not visible, but you can unhide by selecting the sheet from `List All Sheets`
-dropdown menu. |
-| `VeryHidden` | This worksheet is not visible and cannot be unhidden. Changing the
-state property to `Visible` is the only way to view this sheet. |
+| `Hidden` | This worksheet is not visible, but you can unhide by selecting the sheet from `List All Sheets` dropdown menu. |
+| `VeryHidden` | This worksheet is not visible and cannot be unhidden. Changing the state property to `Visible` is the only way to view this sheet. |
 
 The following code example shows the three types of sheet visibility state.
 

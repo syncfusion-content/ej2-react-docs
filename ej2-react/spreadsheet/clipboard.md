@@ -58,7 +58,7 @@ Paste can be done in one of the following ways.
 * Using `Ctrl + V` | `Command + V` keyboard shortcut.
 * Using the [`paste`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#paste) method.
 
-> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
+> If you use the Keyboard shortcut key for cut (`Ctrl + X`) / copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
