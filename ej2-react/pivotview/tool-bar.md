@@ -188,40 +188,47 @@ namespace MyWebService.Controllers
     {
         [HttpPost]
         [Route("Pivot/SaveReport")]
-        public void SaveReport([FromBody] Dictionary<string, string> args)
+        public void SaveReport([FromBody] Dictionary<string, string> reportArgs)
         {
-            SaveReportToDB(args["ReportName"], args["Report"]);
+            SaveReportToDB(reportArgs["reportName"], reportArgs["report"]);
         }
 
         [HttpPost]
         [Route("Pivot/FetchReport")]
-        public string[] FetchReport(Dictionary<string, string> args)
+        public IActionResult FetchReport()
         {
-            return FetchReportListFromDB().ToArray();
+            return Ok((FetchReportListFromDB()));
         }
 
         [HttpPost]
         [Route("Pivot/LoadReport")]
-        public string LoadReport(Dictionary<string, string> args)
+        public IActionResult LoadReport([FromBody] Dictionary<string, string> reportArgs)
         {
-            return LoadReportFromDB(args["ReportName"]);
+            return Ok((LoadReportFromDB(reportArgs["reportName"])));
         }
 
         [HttpPost]
         [Route("Pivot/RemoveReport")]
-        public void RemoveReport(Dictionary<string, string> args)
+        public void RemoveReport([FromBody] Dictionary<string, string> reportArgs)
         {
-            RemoveReportFromDB(args["ReportName"]);
+            RemoveReportFromDB(reportArgs["reportName"]);
         }
 
         [HttpPost]
         [Route("Pivot/RenameReport")]
-        public void RenameReport(Dictionary<string, string, bool> args)
+        public void RenameReport([FromBody] RenameReportDB reportArgs)
         {
-            RenameReportInDB(args["ReportName"], args["Rename"], args["isReportExists"]);
+            RenameReportInDB(reportArgs.ReportName, reportArgs.RenameReport, reportArgs.isReportExists);
         }
 
-        public void SaveReportToDB(string reportName, string report)
+        public class RenameReportDB
+        {
+            public string ReportName { get; set; }
+            public string RenameReport { get; set; }
+            public bool isReportExists { get; set; }
+        }
+
+        private void SaveReportToDB(string reportName, string report)
         {
             SqlConnection sqlConn = OpenConnection();
             bool isDuplicate = true;
@@ -231,19 +238,20 @@ namespace MyWebService.Controllers
                 if ((row["ReportName"] as string).Equals(reportName))
                 {
                     isDuplicate = false;
-                    cmd1 = new SqlCommand("UPDATE ReportTable set Report=@Report where ReportName like @ReportName", sqlConn);
+                    cmd1 = new SqlCommand("update ReportTable set Report=@Report where ReportName like @ReportName", sqlConn);
                 }
             }
             if (isDuplicate)
             {
-                cmd1 = new SqlCommand("INSERT into ReportTable (ReportName,Report) Values(@ReportName,@Report)", sqlConn);
+                cmd1 = new SqlCommand("insert into ReportTable (ReportName,Report) Values(@ReportName,@Report)", sqlConn);
             }
             cmd1.Parameters.AddWithValue("@ReportName", reportName);
             cmd1.Parameters.AddWithValue("@Report", report.ToString());
             cmd1.ExecuteNonQuery();
             sqlConn.Close();
         }
-        public string LoadReportFromDB(string reportName)
+
+        private string LoadReportFromDB(string reportName)
         {
             SqlConnection sqlConn = OpenConnection();
             string report = string.Empty;
@@ -258,7 +266,8 @@ namespace MyWebService.Controllers
             sqlConn.Close();
             return report;
         }
-        public List<string> FetchReportListFromDB()
+
+        private List<string> FetchReportListFromDB()
         {
             SqlConnection sqlConn = OpenConnection();
             List<string> reportNames = new List<string>();
@@ -272,19 +281,28 @@ namespace MyWebService.Controllers
             sqlConn.Close();
             return reportNames;
         }
-        public void RenameReportInDB(string reportName, string renameReport, bool isReportExists)
+
+        private void RenameReportInDB(string reportName, string renameReport, bool isReportExists)
         {
             SqlConnection sqlConn = OpenConnection();
             SqlCommand cmd1 = null;
             if (isReportExists)
             {
-                RemoveReportFromDB(renameReport);
+                foreach (DataRow row in GetDataTable(sqlConn).Rows)
+                {
+                    if ((row["ReportName"] as string).Equals(reportName))
+                    {
+                        cmd1 = new SqlCommand("delete from ReportTable where ReportName like '%" + reportName + "%'", sqlConn);
+                        break;
+                    }
+                }
+                cmd1.ExecuteNonQuery();
             }
             foreach (DataRow row in GetDataTable(sqlConn).Rows)
             {
                 if ((row["ReportName"] as string).Equals(reportName))
                 {
-                    cmd1 = new SqlCommand("UPDATE ReportTable set ReportName=@RenameReport where ReportName like '%" + reportName + "%'", sqlConn);
+                    cmd1 = new SqlCommand("update ReportTable set ReportName=@RenameReport where ReportName like '%" + reportName + "%'", sqlConn);
                     break;
                 }
             }
@@ -292,7 +310,8 @@ namespace MyWebService.Controllers
             cmd1.ExecuteNonQuery();
             sqlConn.Close();
         }
-        public void RemoveReportFromDB(string reportName)
+
+        private void RemoveReportFromDB(string reportName)
         {
             SqlConnection sqlConn = OpenConnection();
             SqlCommand cmd1 = null;
@@ -300,13 +319,14 @@ namespace MyWebService.Controllers
             {
                 if ((row["ReportName"] as string).Equals(reportName))
                 {
-                    cmd1 = new SqlCommand("DELETE FROM ReportTable WHERE ReportName LIKE '%" + reportName + "%'", sqlConn);
+                    cmd1 = new SqlCommand("delete from ReportTable where ReportName like '%" + reportName + "%'", sqlConn);
                     break;
                 }
             }
             cmd1.ExecuteNonQuery();
             sqlConn.Close();
         }
+
         private SqlConnection OpenConnection()
         {
             // Replace with your own connection string.
@@ -318,7 +338,7 @@ namespace MyWebService.Controllers
 
         private DataTable GetDataTable(SqlConnection sqlConn)
         {
-            string xquery = "SELECT * FROM ReportTable";
+            string xquery = "select * from ReportTable";
             SqlCommand cmd = new SqlCommand(xquery, sqlConn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -401,12 +421,12 @@ namespace MyWebApp.Controllers
     {
         [HttpPost]
         [Route("Pivot/SaveReport")]
-        public void SaveReport(Dictionary<string,string> args)
+        public void SaveReport([FromBody] Dictionary<string, string> reportArgs)
         {
-            SaveReportToDB(args["ReportName"], args["Report"]);
+            SaveReportToDB(reportArgs["reportName"], reportArgs["report"]);
         }
 
-        public void SaveReportToDB(string reportName, string report)
+        private void SaveReportToDB(string reportName, string report)
         {
             SqlConnection sqlConn = OpenConnection();
             bool isDuplicate = true;
@@ -416,18 +436,19 @@ namespace MyWebApp.Controllers
                 if ((row["ReportName"] as string).Equals(reportName))
                 {
                     isDuplicate = false;
-                    cmd1 = new SqlCommand("UPDATE ReportTable set Report=@Report where ReportName like @ReportName", sqlConn);
+                    cmd1 = new SqlCommand("update ReportTable set Report=@Report where ReportName like @ReportName", sqlConn);
                 }
             }
             if (isDuplicate)
             {
-                cmd1 = new SqlCommand("INSERT into ReportTable (ReportName,Report) Values(@ReportName,@Report)", sqlConn);
+                cmd1 = new SqlCommand("insert into ReportTable (ReportName,Report) Values(@ReportName,@Report)", sqlConn);
             }
             cmd1.Parameters.AddWithValue("@ReportName", reportName);
             cmd1.Parameters.AddWithValue("@Report", report.ToString());
             cmd1.ExecuteNonQuery();
             sqlConn.Close();
         }
+
         private SqlConnection OpenConnection()
         {
             // Replace with your own connection string.
@@ -439,7 +460,7 @@ namespace MyWebApp.Controllers
 
         private DataTable GetDataTable(SqlConnection sqlConn)
         {
-            string xquery = "SELECT * FROM ReportTable";
+            string xquery = "select * from ReportTable";
             SqlCommand cmd = new SqlCommand(xquery, sqlConn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -531,12 +552,12 @@ namespace MyWebApp.Controllers
     {
         [HttpPost]
         [Route("Pivot/LoadReport")]
-        public string LoadReport(Dictionary<string, string> args)
+        public IActionResult LoadReport([FromBody] Dictionary<string, string> reportArgs)
         {
-            return LoadReportFromDB(args["ReportName"]);
+            return Ok((LoadReportFromDB(reportArgs["reportName"])));
         }
 
-        public string LoadReportFromDB(string reportName)
+        private string LoadReportFromDB(string reportName)
         {
             SqlConnection sqlConn = OpenConnection();
             string report = string.Empty;
@@ -551,6 +572,7 @@ namespace MyWebApp.Controllers
             sqlConn.Close();
             return report;
         }
+
         private SqlConnection OpenConnection()
         {
             // Replace with your own connection string.
@@ -562,7 +584,7 @@ namespace MyWebApp.Controllers
 
         private DataTable GetDataTable(SqlConnection sqlConn)
         {
-            string xquery = "SELECT * FROM ReportTable";
+            string xquery = "select * from ReportTable";
             SqlCommand cmd = new SqlCommand(xquery, sqlConn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -645,24 +667,39 @@ namespace MyWebApp.Controllers
     {
         [HttpPost]
         [Route("Pivot/RenameReport")]
-        public void RenameReport(Dictionary<string, string, bool> args)
+        public void RenameReport([FromBody] RenameReportDB reportArgs)
         {
-            RenameReportInDB(args["ReportName"], args["Rename"], args["isReportExists"]);
+            RenameReportInDB(reportArgs.ReportName, reportArgs.RenameReport, reportArgs.isReportExists);
         }
 
-        public void RenameReportInDB(string reportName, string renameReport, bool isReportExists)
+        public class RenameReportDB
+        {
+            public string ReportName { get; set; }
+            public string RenameReport { get; set; }
+            public bool isReportExists { get; set; }
+        }
+
+        private void RenameReportInDB(string reportName, string renameReport, bool isReportExists)
         {
             SqlConnection sqlConn = OpenConnection();
             SqlCommand cmd1 = null;
             if (isReportExists)
             {
-                RemoveReportFromDB(renameReport);
+                foreach (DataRow row in GetDataTable(sqlConn).Rows)
+                {
+                    if ((row["ReportName"] as string).Equals(reportName))
+                    {
+                        cmd1 = new SqlCommand("delete from ReportTable where ReportName like '%" + reportName + "%'", sqlConn);
+                        break;
+                    }
+                }
+                cmd1.ExecuteNonQuery();
             }
             foreach (DataRow row in GetDataTable(sqlConn).Rows)
             {
                 if ((row["ReportName"] as string).Equals(reportName))
                 {
-                    cmd1 = new SqlCommand("UPDATE ReportTable set ReportName=@RenameReport where ReportName like '%" + reportName + "%'", sqlConn);
+                    cmd1 = new SqlCommand("update ReportTable set ReportName=@RenameReport where ReportName like '%" + reportName + "%'", sqlConn);
                     break;
                 }
             }
@@ -670,6 +707,7 @@ namespace MyWebApp.Controllers
             cmd1.ExecuteNonQuery();
             sqlConn.Close();
         }
+
         private SqlConnection OpenConnection()
         {
             // Replace with your own connection string.
@@ -681,7 +719,7 @@ namespace MyWebApp.Controllers
 
         private DataTable GetDataTable(SqlConnection sqlConn)
         {
-            string xquery = "SELECT * FROM ReportTable";
+            string xquery = "select * from ReportTable";
             SqlCommand cmd = new SqlCommand(xquery, sqlConn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -767,12 +805,12 @@ namespace MyWebApp.Controllers
     {
         [HttpPost]
         [Route("Pivot/RemoveReport")]
-        public void RemoveReport(Dictionary<string, string> args)
+        public void RemoveReport([FromBody] Dictionary<string, string> reportArgs)
         {
-            RemoveReportFromDB(args["ReportName"]);
+            RemoveReportFromDB(reportArgs["reportName"]);
         }
 
-        public void RemoveReportFromDB(string reportName)
+        private void RemoveReportFromDB(string reportName)
         {
             SqlConnection sqlConn = OpenConnection();
             SqlCommand cmd1 = null;
@@ -780,13 +818,14 @@ namespace MyWebApp.Controllers
             {
                 if ((row["ReportName"] as string).Equals(reportName))
                 {
-                    cmd1 = new SqlCommand("DELETE FROM ReportTable WHERE ReportName LIKE '%" + reportName + "%'", sqlConn);
+                    cmd1 = new SqlCommand("delete from ReportTable where ReportName like '%" + reportName + "%'", sqlConn);
                     break;
                 }
             }
             cmd1.ExecuteNonQuery();
             sqlConn.Close();
         }
+        
         private SqlConnection OpenConnection()
         {
             // Replace with your own connection string.
@@ -798,7 +837,7 @@ namespace MyWebApp.Controllers
 
         private DataTable GetDataTable(SqlConnection sqlConn)
         {
-            string xquery = "SELECT * FROM ReportTable";
+            string xquery = "select * from ReportTable";
             SqlCommand cmd = new SqlCommand(xquery, sqlConn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
