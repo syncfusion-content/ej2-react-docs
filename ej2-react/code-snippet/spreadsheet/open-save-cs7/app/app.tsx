@@ -23,6 +23,7 @@ function App() {
             method: 'POST',
             headers: { Authorization: 'YOUR TEXT' },
             body: formData,
+            mode: 'no-cors'
           }
         ).then((response) => {
           response.blob().then((data) => {

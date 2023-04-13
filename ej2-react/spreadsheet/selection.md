@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Selection in React Spreadsheet component
 
-Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
+Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` / `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 
 > * The default value for `mode` in  `selectionSettings` is `Multiple`.
 
