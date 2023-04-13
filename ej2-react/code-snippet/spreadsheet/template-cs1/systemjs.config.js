@@ -43,8 +43,8 @@ System.config({
         "@syncfusion/ej2-react-inputs": "syncfusion:ej2-react-inputs/dist/ej2-react-inputs.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
         "@syncfusion/ej2-react-spreadsheet": "syncfusion:ej2-react-spreadsheet/dist/ej2-react-spreadsheet.umd.min.js",
-        "react-dom": "https://unpkg.com/react-dom@15.5.4/dist/react-dom.min.js",
-        "react": "https://unpkg.com/react@15.5.4/dist/react.min.js",
+        "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
 
     },
     packages: {
