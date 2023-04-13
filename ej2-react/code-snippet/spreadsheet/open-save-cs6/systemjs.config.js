@@ -41,9 +41,9 @@ System.config({
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-splitbuttons": "syncfusion:ej2-react-splitbuttons/dist/ej2-react-splitbuttons.umd.min.js",
         "@syncfusion/ej2-react-spreadsheet": "syncfusion:ej2-react-spreadsheet/dist/ej2-react-spreadsheet.umd.min.js",
-        "react-dom": "https://unpkg.com/react-dom@15.5.4/dist/react-dom.min.js",
-        "react": "https://unpkg.com/react@15.5.4/dist/react.min.js",
-
+        "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
+        
     },
     packages: {
         'app': { main: 'app', defaultExtension: 'tsx' },
