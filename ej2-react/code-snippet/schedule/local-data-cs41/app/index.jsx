@@ -7,17 +7,17 @@ function App() {
         url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
         adaptor: new ODataV4Adaptor()
     });
-    return (<ScheduleComponent height='550px' currentView='Month' selectedDate={new Date(1996, 6, 9)} readonly={true} eventSettings={{
-        includeFiltersInQuery: true, dataSource: dataManager, fields: {
-            id: 'Id',
-            subject: { name: 'ShipName' },
-            location: { name: 'ShipCountry' },
-            description: { name: 'ShipAddress' },
-            startTime: { name: 'OrderDate' },
-            endTime: { name: 'RequiredDate' },
-            recurrenceRule: { name: 'ShipRegion' }
-        }
-    }}>
+    const fieldsData = {
+        id: 'Id',
+        subject: { name: 'ShipName' },
+        location: { name: 'ShipCountry' },
+        description: { name: 'ShipAddress' },
+        startTime: { name: 'OrderDate' },
+        endTime: { name: 'RequiredDate' },
+        recurrenceRule: { name: 'ShipRegion' }
+    }
+    const eventSettings = { includeFiltersInQuery: true, dataSource: dataManager, fields: fieldsData }
+    return (<ScheduleComponent height='550px' currentView='Month' selectedDate={new Date(1996, 6, 9)} readonly={true} eventSettings={eventSettings}>
         <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>);
 };

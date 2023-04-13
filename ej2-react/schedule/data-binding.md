@@ -123,8 +123,9 @@ function App() {
   ajax.onSuccess = function (value) {
     dataManager = value;
   };
+  const eventSettings: EventSettingsModel = { dataSource: dataManager };
   return (<ScheduleComponent height='550px' selectedDate={new Date(2017, 5, 11)}
-    eventSettings={{ dataSource: dataManager }}>
+    eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>);
 }

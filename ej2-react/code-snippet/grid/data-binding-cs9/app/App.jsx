@@ -5,7 +5,9 @@ function App() {
     const data = new DataManager({
         url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/'
     });
-    return <GridComponent dataSource={data} allowPaging={true} pageSettings={{ pageCount: 3 }} height={315} allowFiltering={true} allowSorting={true} loadingIndicator={{ indicatorType: 'Shimmer' }}>
+    const pageOptions= {pageSize:5, pageCount:5};
+    const loadingIndicator = { indicatorType: 'Shimmer' };
+    return <GridComponent dataSource={data} allowPaging={true} pageSettings={pageOptions} height={315} allowFiltering={true} allowSorting={true} loadingIndicator={loadingIndicator}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
