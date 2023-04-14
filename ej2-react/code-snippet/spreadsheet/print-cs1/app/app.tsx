@@ -5,7 +5,7 @@ import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective,
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { DropDownButtonComponent, ItemModel } from '@syncfusion/ej2-react-splitbuttons';
 import { print } from '@syncfusion/ej2-base';
-import { budgetData, salaryData, printElement, isPrint } from './datasource';
+import { budgetData, salaryData, printElement } from './datasource';
 
 function App() {
     const spreadsheetRef = useRef<SpreadsheetComponent>(null);
@@ -13,6 +13,7 @@ function App() {
         { text: "Print" },
         { text: "Print All" }
     ];
+    let isPrint: boolean = false;
     const dataBound = (): void => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet && isPrint) {

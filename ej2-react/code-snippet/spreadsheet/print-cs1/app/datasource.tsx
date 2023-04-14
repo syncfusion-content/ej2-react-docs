@@ -105,5 +105,3 @@ export let budgetData: Object[] = [
     innerHTML:
         '<div class="e-spreadsheet-print"></div><div class="e-sheet"><div class="e-main-panel style="height:100%" style="overflow: unset"><div class="e-sheet-content" ></div></div></div>'
     }); // creating same hierarchy of element as DOM
-
-    export let isPrint: boolean = false;
