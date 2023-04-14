@@ -41,8 +41,10 @@ export class TimelineView extends SampleBase {
     super(...arguments);
     this.data = extend([], dataSource.scheduleData.concat(dataSource.timelineData), null, true);
   }
+  private eventSettings: EventSettingsModel = { dataSource: this.data };
+  
   render() {
-    return (<ScheduleComponent height="650px" selectedDate={new Date(2021, 0, 10)} eventSettings={{ dataSource: this.data }}>
+    return (<ScheduleComponent height="650px" selectedDate={new Date(2021, 0, 10)} eventSettings={this.eventSettings}>
               <ViewsDirective>
                 <ViewDirective option="Day" />
                 <ViewDirective option="TimelineWeek" />

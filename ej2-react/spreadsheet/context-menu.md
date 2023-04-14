@@ -23,10 +23,10 @@ Please find the table below for default context menu items and their actions.
 | [`Cut`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#cut) | Cut the selected cells data to the clipboard, you can select a cell where you want to move the data. |
 | [`Copy`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#copy) | Copy the selected cells data to the clipboard, so that you can paste it to somewhere else. |
 | [`Paste`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#paste) | Paste the data from clipboard to spreadsheet. |
-| [`Paste Special`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#paste) | `Values` - Paste the data values from clipboard to spreadsheet.  `Formats` - Paste the data formats from clipboard to spreadsheet. |
+| [`Paste Special`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#paste) | `Values` - Paste the data values from clipboard to spreadsheet.  `Formats` - Paste the data formats from  <br/> clipboard to spreadsheet. |
 | [`Filter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#filter) | Perform filtering to the selected cells based on an active cell’s value. |
 | [`Sort`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sort) | Perform sorting to the selected range of cells by ascending or descending. |
-| [`Hyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#hyperlink) | Create a link in the spreadsheet to navigate to web links or cell reference within the sheet or other sheets in the Spreadsheet. |
+| [`Hyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#hyperlink) | Create a link in the spreadsheet to navigate to web links or cell reference within the sheet or other sheets  <br/> in the Spreadsheet. |
 
 ## Context Menu Items in Row Header / Column Header
 
@@ -37,7 +37,7 @@ Please find the table below for default context menu items and their actions.
 | [`Cut`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#cut) | Cut the selected row/column header data to the clipboard, you can select a cell where you want to move the data. |
 | [`Copy`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#copy) | Copy the selected row/column header data to the clipboard, so that you can paste it to somewhere else. |
 | [`Paste`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#paste) | Paste the data from clipboard to spreadsheet. |
-| [`Paste Special`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#paste) | `Values` - Paste the data values from clipboard to spreadsheet. `Formats` - Paste the data formats from clipboard to spreadsheet. |
+| [`Paste Special`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#paste) | `Values` - Paste the data values from clipboard to spreadsheet. `Formats` - Paste the data formats from  <br/> clipboard to spreadsheet. |
 | [`Insert Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertrow) | Insert new rows or columns into the worksheet. |
 | [`Delete Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#deleterow) | Delete existing rows or columns from the worksheet. |
 | [`Hide Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insert) | Hide the rows and columns. |

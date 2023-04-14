@@ -39,7 +39,7 @@ The following properties can be used to customize the `spline range area` series
 {% include code-snippet/chart/series/splinerangearea-cs/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/splinerangearea-cs1/app/index.tsx %}
+{% include code-snippet/chart/series/splinerangearea-cs/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
