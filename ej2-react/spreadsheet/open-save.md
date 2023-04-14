@@ -198,7 +198,7 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs7" %}
 
- ### To change the PDF orientation
+### To change the PDF orientation
 
 By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforesave) event.
 

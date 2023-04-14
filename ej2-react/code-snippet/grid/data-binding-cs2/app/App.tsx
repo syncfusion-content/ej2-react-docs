@@ -1,6 +1,6 @@
 
 
-import { DataManager } from '@syncfusion/ej2-data';
+import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, FailureEventArgs, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 

@@ -404,3 +404,4 @@ In the following sample, the `rowDataBound` event of the Grid is used to set the
 * [How to set complex column as Foreignkey column](../how-to/complex-column-as-foreign-key-column)
 * [Complex Data Binding with list of Array Of Objects](../how-to/list-of-array-of-objects)
 * [How to render the color picker component on React Grid](https://www.syncfusion.com/forums/163831/how-to-render-the-color-picker-component-on-react-grid)
+* [How to change the data source or columns dynamically](../data-binding/how-to-change-the-data-source-or-columns-dynamically)
