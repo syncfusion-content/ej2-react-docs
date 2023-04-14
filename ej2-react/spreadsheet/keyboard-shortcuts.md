@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 The keyboard shortcuts supported in the spreadsheet are,
 
 | Shortcut | Description |
-|-------|---------|
+|----------|-------------|
 | Ctrl + O | Displays dialog to open a file. |
 | Ctrl + S | Saves the workbook. |
 | F2 | Enables edit mode. |
