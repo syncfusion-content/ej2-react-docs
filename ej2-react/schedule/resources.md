@@ -64,9 +64,10 @@ function App() {
     { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
     { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
   ]);
+  const eventSettings: EventSettingsModel = { dataSource: data };
 
   return (
-    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={{ dataSource: data }}>
+    <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings}>
       <ResourcesDirective>
         <ResourceDirective field='OwnerId' title='Owner' name='Owners' allowMultiple={true} dataSource={ownerData} textField='OwnerText' idField='Id' colorField='OwnerColor'>
         </ResourceDirective>
@@ -102,8 +103,9 @@ function App() {
     adaptor: new UrlAdaptor(),
     crossDomain: true
   }));
+  const eventSettings: EventSettingsModel = { dataSource: data };
 
-  return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={{ dataSource: data }}>
+  return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings}>
     <ResourcesDirective>
       <ResourceDirective field='OwnerId' title='Owner' name='Owners' allowMultiple={true} dataSource={ownerData} textField='OwnerText' idField='Id' colorField='OwnerColor'>
       </ResourceDirective>
