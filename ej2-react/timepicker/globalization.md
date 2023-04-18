@@ -139,7 +139,7 @@ The following example demonstrates the TimePicker in `German` culture.
 
 The TimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays the text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/timepicker#enablertl) property to set the RTL direction.
 
-The code example demonstrates the TimePicker component in `Arabic` culture, also explains how to set the localized text to the placeholder using [`L10n.load`](http://ej2.syncfusion.com/documentation/base/api/l10n/) method.
+The code example demonstrates the TimePicker component in `Arabic` culture, also explains how to set the localized text to the placeholder using [`L10n.load`](https://ej2.syncfusion.com/documentation/api/base/l10n/) method.
 
 `[Class-component]`
 
