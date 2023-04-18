@@ -69,14 +69,14 @@ This article describes the API migration process of  DropDownList component from
 | Behavior | API in Essential JS 1 | API in Essential JS 2 |
 | --- | --- | --- |
 | **Default** | **Property**: *cssClass* <br/>`<EJ.DropDownList cssClass="customClass"></EJ.DropDownList>` | **Property**: *cssClass* <br/>`<DropDownListComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} cssClass={this.cssclass} />`|
-| **showRoundedCorner** | **Property**: *showRoundedCorner* <br/>`<EJ.DropDownList showRoundedCorner={true}></EJ.DropDownList>` | **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/drop-down-list/api-dropDownListComponent.html#cssclass) property.**|
+| **showRoundedCorner** | **Property**: *showRoundedCorner* <br/>`<EJ.DropDownList showRoundedCorner={true}></EJ.DropDownList>` | **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#cssclass) property.**|
 
 ## Sorting
 
 <!-- markdownlint-disable MD010 -->
 | Behavior | API in Essential JS 1 | API in Essential JS 2 |
 | --- | --- | --- |
-| **Default** |	**Property**: *enableSorting* <br/>`<EJ.DropDownList enableSorting={true}></EJ.DropDownList>` | **Acheivable through the [sortOrder](https://ej2.syncfusion.com/react/documentation/drop-down-list/api-dropDownListComponent.html#sortorder) property.** |
+| **Default** |	**Property**: *enableSorting* <br/>`<EJ.DropDownList enableSorting={true}></EJ.DropDownList>` | **Acheivable through the [sortOrder](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#sortorder) property.** |
 | **Order of sorting** | **Property**: *sortOrder* <br/>`<EJ.DropDownList sortOrder="ascending"></EJ.DropDownList>` | **Property**: *sortOrder* <br/>`<DropDownListComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} sortOrder={this.sortOrder} />`|
 
 ## Popup

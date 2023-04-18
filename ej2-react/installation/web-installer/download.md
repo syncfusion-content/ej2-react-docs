@@ -76,4 +76,4 @@ You should initiate an evaluation if you have already obtained our components th
 
     ![license download](images/license-download.png)
 
-You can refer to the [Online installer](https://ej2.syncfusion.com/react/documentation/installation-and-upgrade/installation-using-web-installer/) link for step-by-step installation guidelines.
+You can refer to the [Online installer](https://ej2.syncfusion.com/react/documentation/installation/web-installer/installation-using-web-installer) link for step-by-step installation guidelines.
