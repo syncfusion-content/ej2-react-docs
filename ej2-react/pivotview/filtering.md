@@ -95,8 +95,6 @@ The data limit can be set using the [`maxNodeLimitInMemberEditor`](https://ej2.s
 
 Meanwhile, end user can utilize the search option to refine the members from the exceeded limit. For example, consider that there are 5000 members in the name "Node 1", "Node 2", "Node 3", and so on... and user has set the property [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview#maxnodelimitinmembereditor) to **500**. In this case, only the initial 500 members will be displayed by default leaving a message "4500 more items. Search to refine further.". To get the member(s) between 501 to 5000, enter the starting character(s) in search option to bring the desired member(s) from the exceeded limit to the UI. Now, end user can either check or uncheck to continue with the filtering process.
 
-![output](images/maxnodelimit_search.png)
-
 ### Loading members on-demand
 
 > This property is applicable only for OLAP data sources.
