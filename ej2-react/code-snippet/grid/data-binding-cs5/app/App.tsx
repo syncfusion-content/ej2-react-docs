@@ -1,4 +1,6 @@
-
+import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
 
 function App() {
     const data = new DataManager({

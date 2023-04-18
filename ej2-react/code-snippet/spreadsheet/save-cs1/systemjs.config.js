@@ -43,7 +43,7 @@ System.config({
         "@syncfusion/ej2-react-splitbuttons": "syncfusion:ej2-react-splitbuttons/dist/ej2-react-splitbuttons.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
-        
+
     },
     packages: {
         'app': { main: 'app', defaultExtension: 'tsx' },

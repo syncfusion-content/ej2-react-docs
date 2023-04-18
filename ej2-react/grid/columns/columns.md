@@ -22,7 +22,7 @@ The [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#
 
 Column type can be specified using the [`columns.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) property. It specifies the type of the data the column bounded.
 
-If the [`format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format)  is defined for a column, the column uses [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) to select the appropriate format option [number](https://ej2.syncfusion.com/react/documentation/gantt/columns/columns#number-formatting) or [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime).
+If the [`format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format)  is defined for a column, the column uses [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#type) to select the appropriate format option [number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) or [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime).
 
 Grid column supports the following types:
 
@@ -102,7 +102,7 @@ You can achieve the expression column by using [`valueAccessor`](https://ej2.syn
 ## Format
 
 To format cell values based on specific culture, use the [`columns.format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format) property.
-The grid uses [Internalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library to format [`number`](https://ej2.syncfusion.com/react/documentation/gantt/columns/columns#number-formatting) and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#date-formatting) values.
+The grid uses [Internalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library to format [`number`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#date-formatting) values.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -121,7 +121,7 @@ The grid uses [Internalization](https://ej2.syncfusion.com/react/documentation/c
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs20" %}
 
-> By default, the [`number`](https://ej2.syncfusion.com/react/documentation/gantt/columns/columns#number-formatting) and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#date-formatting) values are formatted in **en-US** locale. You can localize the **currency** and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#date-formatting) in different locale as explained [`here`](../global-local).
+> By default, the [`number`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#date-formatting) values are formatted in **en-US** locale. You can localize the **currency** and [`date`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#date-formatting) in different locale as explained [`here`](../global-local).
 
 ### Number formatting
 
@@ -133,7 +133,7 @@ N | Denotes numeric type. | The numeric format is followed by integer value as N
 C | Denotes currency type. | The currency format is followed by integer value as C2, C3. etc which denotes the number of precision to be allowed.
 P | Denotes percentage type | The percentage format expects the input value to be in the range of 0 to 1. For example the cell value **0.2** is formatted as **20%**. The percentage format is followed by integer value as P2, P3. etc which denotes the number of precision to be allowed.
 
-Please refer to the link to know more about [`Number formatting`](https://ej2.syncfusion.com/react/documentation/gantt/columns/columns#number-formatting) format.
+Please refer to the link to know more about [`Number formatting`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) format.
 
 ### Date formatting
 
@@ -404,3 +404,4 @@ In the following sample, the `rowDataBound` event of the Grid is used to set the
 * [How to set complex column as Foreignkey column](../how-to/complex-column-as-foreign-key-column)
 * [Complex Data Binding with list of Array Of Objects](../how-to/list-of-array-of-objects)
 * [How to render the color picker component on React Grid](https://www.syncfusion.com/forums/163831/how-to-render-the-color-picker-component-on-react-grid)
+* [How to change the data source or columns dynamically](../data-binding/how-to-change-the-data-source-or-columns-dynamically)

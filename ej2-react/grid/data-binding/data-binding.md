@@ -407,8 +407,8 @@ function App() {
     const orderService: OrderService = new OrderService();
     let grid: Grid | null;
     let data: any;
-     const pageOptions= {pageCount: 4, pageSize: 10 };
-    const filterSettings: FilterSettingsModel = { type: 'Excel' }
+    const filterSettings: FilterSettingsModel = { type: 'Excel' };
+    const pageOptions: PageSettingsModel = { pageCount: 4, pageSize: 10 };
     const renderComplete = () => {
         if (grid && (grid.dataSource instanceof Array
             && !(grid.dataSource as object[]).length)) {
