@@ -9,19 +9,17 @@ export function App() {
             <MapsComponent zoomSettings= {{
                 enable: true,
                 toolbarSettings:{
-                    tooltipSettings:{
-                        visible:true,
-                        borderWidth:2,
-                        borderColor:'green',
-                        fontColor:'black',
-                        fill:'violet',
-                        fontFamily:'Times New Roman',
-                        fontWeight:200,
-                        fontSize:'22px',
-                        fontOpacity:1
-                    },
                     buttonSettings: {
-                       toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+                        fill:'pink',
+                        padding: 10,
+                        toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset'],
+                        color: 'red',
+                        borderColor:'green',
+                        radius:35,
+                        selectionColor:'#d55e5e',
+                        hightlightColor:'#5ed59a',
+                        opacity:0.6,
+                        borderWidth: 2
                     }
                 }
             }}>
