@@ -16,22 +16,30 @@ File Manager's UI virtualization allows you for the dynamic loading of a large n
 
 In order to use UI Virtualization, you need to inject its virtualization service in the App. This modules should be injected into the FileManager using the Inject directive.
 
+{% raw %}
+
 ```ts
 import { FileManagerComponent, Inject, Virtualization } from '@syncfusion/ej2-react-filemanager';
-....
-....
-return (
-          // specifies the tag to render the ListView component
-          <FileManagerComponent id="filemanager" ajaxSettings={{
-                url: this.hostUrl + "api/FileManager/FileOperations",
-                getImageUrl: this.hostUrl + "api/FileManager/GetImage",
-                uploadUrl: this.hostUrl + 'api/FileManager/Upload',
-                downloadUrl: this.hostUrl + 'api/FileManager/Download'
-            }} enableVirtualization={true}>
-                <Inject services={[Virtualization]}/>
-            </FileManagerComponent>
-      );
+import * as React from 'react';
+
+function App() {
+    let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+    return (
+            // specifies the tag to render the FileManager component
+            <FileManagerComponent id="filemanager" ajaxSettings={{
+                    url: hostUrl + "api/FileManager/FileOperations",
+                    getImageUrl: hostUrl + "api/FileManager/GetImage",
+                    uploadUrl: hostUrl + 'api/FileManager/Upload',
+                    downloadUrl: hostUrl + 'api/FileManager/Download'
+                }} enableVirtualization={true}>
+                    <Inject services={[Virtualization]}/>
+                </FileManagerComponent>
+        );
+}
+export default App;
+
 ```
+{% endraw %}
 
 ## Enable Virtualization
 
@@ -42,14 +50,17 @@ In order to enable `virtualization`, you must set the [enableVirtualization](htt
 In the instance below, a sizable collection of files can be found in the folders **Documents** and **Text Documents**.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/file-manager/virtual-cs1/app/app.component.ts %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/virtual-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.module.ts" %}
-{% include code-snippet/file-manager/virtual-cs1/app/app.module.ts %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/virtual-cs1/app/App.tsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/file-manager/virtual-cs1/app/main.ts %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/virtual-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/virtual-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
