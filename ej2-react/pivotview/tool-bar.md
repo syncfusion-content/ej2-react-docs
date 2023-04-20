@@ -382,6 +382,9 @@ export default class App extends Component {
     };
     toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
         'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'Formatting', 'FieldList'];
+    chartSettings = { title: 'Sales Analysis' };
+    gridSettings = { columnWidth: 140 };
+    displayOption = { view: 'Both' };
     saveReport(args) {
         var report = JSON.parse(args.report);
         report.dataSourceSettings.dataSource = [];
@@ -397,14 +400,9 @@ export default class App extends Component {
             });
     }
     render() {
-        return (<div className='control-pane'>
-            <div className='control-section' id='pivot-table-section' style={{ overflow: 'initial' }}>
-                <PivotViewComponent id='PivotView' ref={(scope) => { this.pivotObj = scope; }} dataSourceSettings={this.dataSourceSettings} width={'68%'} height={'450'} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowNumberFormatting={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={this.toolbarOptions} newReport={this.newReport.bind(this)} renameReport={this.renameReport.bind(this)} removeReport={this.removeReport.bind(this)} loadReport={this.loadReport.bind(this)} fetchReport={this.fetchReport.bind(this)} saveReport={this.saveReport.bind(this)} toolbarRender={this.beforeToolbarRender.bind(this)} chartSettings={{ title: 'Sales Analysis' }}>
+        return (<PivotViewComponent id='PivotView' ref={(scope) => { this.pivotObj = scope; }} dataSourceSettings={this.dataSourceSettings} width={'100%'} height={'450'} showFieldList={true} gridSettings={this.gridSettings} allowExcelExport={true} allowNumberFormatting={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={this.displayOption} toolbar={this.toolbarOptions} newReport={this.newReport.bind(this)} renameReport={this.renameReport.bind(this)} removeReport={this.removeReport.bind(this)} loadReport={this.loadReport.bind(this)} fetchReport={this.fetchReport.bind(this)} saveReport={this.saveReport.bind(this)} toolbarRender={this.beforeToolbarRender.bind(this)} chartSettings={this.chartSettings}>
                     <Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]} />
-                </PivotViewComponent>
-            </div>
-
-        </div>);
+                </PivotViewComponent>);
     }
 }
 
@@ -506,6 +504,9 @@ export default class App extends Component {
     };
     toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
         'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'Formatting', 'FieldList'];
+    chartSettings = { title: 'Sales Analysis' };
+    gridSettings = { columnWidth: 140 };
+    displayOption = { view: 'Both' };
     loadReport(args) {
         fetch('https://localhost:44313/Pivot/LoadReport', {
             method: 'POST',
@@ -524,14 +525,9 @@ export default class App extends Component {
             });
     }
     render() {
-        return (<div className='control-pane'>
-            <div className='control-section' id='pivot-table-section' style={{ overflow: 'initial' }}>
-                <PivotViewComponent id='PivotView' ref={(scope) => { this.pivotObj = scope; }} dataSourceSettings={this.dataSourceSettings} width={'68%'} height={'450'} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowNumberFormatting={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={this.toolbarOptions} newReport={this.newReport.bind(this)} renameReport={this.renameReport.bind(this)} removeReport={this.removeReport.bind(this)} loadReport={this.loadReport.bind(this)} fetchReport={this.fetchReport.bind(this)} saveReport={this.saveReport.bind(this)} toolbarRender={this.beforeToolbarRender.bind(this)} chartSettings={{ title: 'Sales Analysis' }}>
+        return (<PivotViewComponent id='PivotView' ref={(scope) => { this.pivotObj = scope; }} dataSourceSettings={this.dataSourceSettings} width={'100%'} height={'450'} showFieldList={true} gridSettings={this.gridSettings} allowExcelExport={true} allowNumberFormatting={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={this.displayOption} toolbar={this.toolbarOptions} newReport={this.newReport.bind(this)} renameReport={this.renameReport.bind(this)} removeReport={this.removeReport.bind(this)} loadReport={this.loadReport.bind(this)} fetchReport={this.fetchReport.bind(this)} saveReport={this.saveReport.bind(this)} toolbarRender={this.beforeToolbarRender.bind(this)} chartSettings={this.chartSettings}>
                     <Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]} />
-                </PivotViewComponent>
-            </div>
-
-        </div>);
+                </PivotViewComponent>);
     }
 }
 
@@ -626,6 +622,9 @@ export default class App extends Component {
     };
     toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
         'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'Formatting', 'FieldList'];
+    chartSettings = { title: 'Sales Analysis' };
+    gridSettings = { columnWidth: 140 };
+    displayOption = { view: 'Both' };
     renameReport(args) {
         fetch('https://localhost:44313/Pivot/RenameReport', {
             method: 'POST',
@@ -639,14 +638,9 @@ export default class App extends Component {
             });
     }
     render() {
-        return (<div className='control-pane'>
-            <div className='control-section' id='pivot-table-section' style={{ overflow: 'initial' }}>
-                <PivotViewComponent id='PivotView' ref={(scope) => { this.pivotObj = scope; }} dataSourceSettings={this.dataSourceSettings} width={'68%'} height={'450'} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowNumberFormatting={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={this.toolbarOptions} newReport={this.newReport.bind(this)} renameReport={this.renameReport.bind(this)} removeReport={this.removeReport.bind(this)} loadReport={this.loadReport.bind(this)} fetchReport={this.fetchReport.bind(this)} saveReport={this.saveReport.bind(this)} toolbarRender={this.beforeToolbarRender.bind(this)} chartSettings={{ title: 'Sales Analysis' }}>
+        return (<PivotViewComponent id='PivotView' ref={(scope) => { this.pivotObj = scope; }} dataSourceSettings={this.dataSourceSettings} width={'100%'} height={'450'} showFieldList={true} gridSettings={this.gridSettings} allowExcelExport={true} allowNumberFormatting={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={this.displayOption} toolbar={this.toolbarOptions} newReport={this.newReport.bind(this)} renameReport={this.renameReport.bind(this)} removeReport={this.removeReport.bind(this)} loadReport={this.loadReport.bind(this)} fetchReport={this.fetchReport.bind(this)} saveReport={this.saveReport.bind(this)} toolbarRender={this.beforeToolbarRender.bind(this)} chartSettings={this.chartSettings}>
                     <Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]} />
-                </PivotViewComponent>
-            </div>
-
-        </div>);
+                </PivotViewComponent>);
     }
 }
 
@@ -764,6 +758,9 @@ export default class App extends Component {
     };
     toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
         'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'Formatting', 'FieldList'];
+    chartSettings = { title: 'Sales Analysis' };
+    gridSettings = { columnWidth: 140 };
+    displayOption = { view: 'Both' };
     removeReport(args) {
         fetch('https://localhost:44313/Pivot/RemoveReport', {
             method: 'POST',
@@ -777,14 +774,9 @@ export default class App extends Component {
             });
     }
     render() {
-        return (<div className='control-pane'>
-            <div className='control-section' id='pivot-table-section' style={{ overflow: 'initial' }}>
-                <PivotViewComponent id='PivotView' ref={(scope) => { this.pivotObj = scope; }} dataSourceSettings={this.dataSourceSettings} width={'68%'} height={'450'} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowNumberFormatting={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={this.toolbarOptions} newReport={this.newReport.bind(this)} renameReport={this.renameReport.bind(this)} removeReport={this.removeReport.bind(this)} loadReport={this.loadReport.bind(this)} fetchReport={this.fetchReport.bind(this)} saveReport={this.saveReport.bind(this)} toolbarRender={this.beforeToolbarRender.bind(this)} chartSettings={{ title: 'Sales Analysis' }}>
+        return (<PivotViewComponent id='PivotView' ref={(scope) => { this.pivotObj = scope; }} dataSourceSettings={this.dataSourceSettings} width={'100%'} height={'450'} showFieldList={true} gridSettings={this.gridSettings} allowExcelExport={true} allowNumberFormatting={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={this.displayOption} toolbar={this.toolbarOptions} newReport={this.newReport.bind(this)} renameReport={this.renameReport.bind(this)} removeReport={this.removeReport.bind(this)} loadReport={this.loadReport.bind(this)} fetchReport={this.fetchReport.bind(this)} saveReport={this.saveReport.bind(this)} toolbarRender={this.beforeToolbarRender.bind(this)} chartSettings={this.chartSettings}>
                     <Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]} />
-                </PivotViewComponent>
-            </div>
-
-        </div>);
+                </PivotViewComponent>);
     }
 }
 
