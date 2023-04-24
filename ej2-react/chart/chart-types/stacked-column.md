@@ -37,14 +37,14 @@ The following properties can be used to customize the `100% stacked column` seri
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs/app/index.jsx %}
+{% include code-snippet/chart/series/100-stackedcolumn-cs/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/stackedcolumn-cs/app/index.tsx %}
+{% include code-snippet/chart/series/100-stackedcolumn-cs/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs" %}
+ {% previewsample "page.domainurl/code-snippet/chart/series/100-stackedcolumn-cs" %}
 
 ## See Also
 

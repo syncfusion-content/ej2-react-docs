@@ -152,14 +152,14 @@ You can customize the start angle of the polar series using [`startAngle`](https
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/index.jsx %}
+{% include code-snippet/chart/series/polar-cs02/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs1/app/index.tsx %}
+{% include code-snippet/chart/series/polar-cs02/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs02" %}
 
 ### Radius
 
@@ -167,14 +167,14 @@ You can customize the radius of the polar series using [`coefficient`](https://e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/polar-cs2/app/index.jsx %}
+{% include code-snippet/chart/series/polar-cs01/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/polar-cs2/app/index.tsx %}
+{% include code-snippet/chart/series/polar-cs01/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs01" %}
 
 ## See Also
 

@@ -11,11 +11,11 @@ function App() {
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Sales Comparison'>
       <Inject services={[StackingBarSeries, Legend, Tooltip, DataLabel, Category]}/>
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={stackBarData} xName='x' yName='y' name='Apple' type='StackingBar'  border= {{width: 2, color: 'red'}}>
+      <SeriesDirective dataSource={stackBarData} xName='x' yName='y' dashArray='5' type='StackingBar' fill='brown' opacity='0.8' border= {{width: .5, color: 'yellow'}}>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackBarData} xName='x' yName='y1' name='orange' type='StackingBar'  border= {{width: 2, color: 'red'}}>
+        <SeriesDirective dataSource={stackBarData} xName='x' yName='y1' dashArray='5' type='StackingBar' fill='grey' opacity='0.8' border= {{width: .5, color: 'red'}}>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackBarData} xName='x' yName='y2' name='Wastage' type='StackingBar'  border= {{width: 2, color: 'red'}}>
+        <SeriesDirective dataSource={stackBarData} xName='x' yName='y2' dashArray='5' type='StackingBar' fill='yellow' opacity='0.8' border= {{width: .5, color: 'brown'}}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;
