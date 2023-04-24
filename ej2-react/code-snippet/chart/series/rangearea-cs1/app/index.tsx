@@ -9,14 +9,13 @@ import { data } from 'datasource.ts';
 
 function App() {
 
-  const marker = { visible: true, width: 10, height: 10, border: { width: 2, color: '#F8AB1D' } };
-
+  const border = { width: 2, color: 'brown'};
   return <ChartComponent id='charts'>
       <Inject services={[RangeAreaSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='x' yName='y' fill='red' width={3} dashArray='5,5'
-          name='India' type='RangeArea'
-          marker={marker}>
+        <SeriesDirective dataSource={data} xName='x' high='low' low='high' fill='yellow' opacity='0.6' dashArray='5,5'
+          type='RangeArea'
+          border={border}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

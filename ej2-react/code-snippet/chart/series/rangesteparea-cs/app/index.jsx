@@ -14,12 +14,14 @@ function App() {
         minimum: 0, maximum: 40,
         majorTickLines: { width: 0 }
     };
+    const border = { color: 'yellow', width: 2};
+    const border1 = { color: 'brown', width: 2};
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Monthly Temperature Range'>
       <Inject services={[RangeStepAreaSeries, Category]}/>
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={splineRangeData} xName='x' high='high' low='low' name='England' opacity={0.4} type='RangeStepArea' fill='red' dashArray='5.5'>
+      <SeriesDirective dataSource={splineRangeData} xName='x' high='high' low='low' name='England' opacity={0.4} type='RangeStepArea' fill='brown' dashArray='5.5' border={border}>
         </SeriesDirective>
-        <SeriesDirective dataSource={splineRangeData} xName='x' high='high1' low='low1' name='India' opacity={0.4} type='RangeStepArea' fill='green' dashArray='5.5'>
+        <SeriesDirective dataSource={splineRangeData} xName='x' high='high1' low='low1' name='India' opacity={0.4} type='RangeStepArea' fill='yellow' dashArray='5.5' border={border1}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;

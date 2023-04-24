@@ -25,8 +25,13 @@ export let inverseData: any[] = [
     { x: 2014, y: 7.6 }, { x: 2015, y: 1.5 }
 ];
 export let data: any[] = [
-             { x: 2005, y: 28 }, { x: 2006, y: 25 },{ x: 2007, y: 26 }, { x: 2008, y: 27 },
-             { x: 2009, y: 32 }, { x: 2010, y: 35 }, { x: 2011, y: 30 }
+        { x: 2005, y: 28, high: 18, low: 44 },
+        { x: 2006, y: 25, high: 20, low: 40 },
+        { x: 2007, y: 26, high: 22, low: 36 },
+        { x: 2008, y: 27, high: 24, low: 32 },
+        { x: 2009, y: 32, high: 26, low: 28 },
+        { x: 2010, y: 35, high: 28, low: 24 },
+        { x: 2011, y: 30, high: 30, low: 20 },
         ];
 export let steplineData: any[] = [
              { x: 2006, y: 378 }, { x: 2007, y: 416 },
@@ -44,7 +49,7 @@ export let areaData: any[] = [
              { x: 1960, y: 3.4 }, { x: 1980, y: 3.2 }, { x: 2000, y: 3.9 }
         ];
 export let splineRangeData: object[] = [
-              { x: 'Jan', high: 14, low: 7, high1: 29, low1: 22 },
+              { x: 'Jan', high: 14, low: 4, high1: 29, low1: 19 },
               { x: 'Feb', high: 17, low: 7, high1: 32, low1: 22 },
               { x: 'Mar', high: 20, low: 10, high1: 35, low1: 25 },
               { x: 'Apr', high: 22, low: 12, high1: 37, low1: 27 },
@@ -55,7 +60,7 @@ export let splineRangeData: object[] = [
               { x: 'Sep', high: 20, low: 10, high1: 35, low1: 25 },
               { x: 'Oct', high: 22, low: 12, high1: 37, low1: 27 },
               { x: 'Nov', high: 20, low: 10, high1: 35, low1: 25 },
-              { x: 'Dec', high: 20, low: 7, high1: 35, low1: 22 }
+              { x: 'Dec', high: 17, low: 7, high1: 32, low1: 22 }
         ];
 export let stackedData: any[] = [
               { x: new Date(2000, 0, 1), y: 0.61, y1: 0.03, y2: 0.48, y3: 0.23 },

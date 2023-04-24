@@ -8,8 +8,8 @@ function App() {
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Annual Temperature Comparison'>
       <Inject services={[StepAreaSeries, Legend]}/>
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={stepAreaData} xName='x' yName='y' name='England' type='StepArea' fill= 'red'
-          border={{width: 3, color:'yellow'}}>
+        <SeriesDirective dataSource={stepAreaData} xName='x' yName='y' name='England' type='StepArea' fill= 'yellow'
+          border={{width: 1.5, color:'brown'}} opacity='0.7'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;

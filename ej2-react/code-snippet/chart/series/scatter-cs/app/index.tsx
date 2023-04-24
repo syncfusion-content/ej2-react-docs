@@ -17,7 +17,8 @@ function App() {
     title: 'Weight (kg)', minimum: 30, maximum: 100,
     labelFormat: '{value}kg', rangePadding: 'None'
   };
-  const marker = { width: 5, height: 5, shape: 'Triangle' };
+  const marker1 = { width: 10, height: 10, shape: 'Triangle' };
+  const marker = { width: 12, height: 12, shape: 'Rectangle'};
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}
@@ -25,10 +26,10 @@ function App() {
       title='Height Vs Weight'>
       <Inject services={[ScatterSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={scatterData} xName='height' yName='male' name='Male' type='Scatter' fill='red' opacity='0.7'
-          marker={marker}>
+        <SeriesDirective dataSource={scatterData} xName='height' yName='male' type='Scatter' fill='red' opacity='0.7'
+          marker={marker1}>
         </SeriesDirective>
-        <SeriesDirective dataSource={scatterData} xName='height' yName='female' name='Female' type='Scatter' fill='yellow' opacity='0.7'
+        <SeriesDirective dataSource={scatterData} xName='height' yName='female' type='Scatter' fill='yellow' opacity='0.7'
           marker={marker}>
         </SeriesDirective>
       </SeriesCollectionDirective>

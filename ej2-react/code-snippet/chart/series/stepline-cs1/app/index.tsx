@@ -15,7 +15,7 @@ function App() {
       <Inject services={[StepLineSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={data} xName='x' yName='y' fill='green' width={3} dashArray='5,5'
-          name='India' type='StepLine'
+          type='StepLine'
           marker={marker}>
         </SeriesDirective>
       </SeriesCollectionDirective>

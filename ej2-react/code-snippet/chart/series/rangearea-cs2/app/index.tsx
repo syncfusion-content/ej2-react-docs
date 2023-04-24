@@ -14,7 +14,7 @@ function App() {
   return <ChartComponent id='charts'>
       <Inject services={[RangeAreaSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='x' yName='y' width={3}
+        <SeriesDirective dataSource={data} xName='x' high='high' low='low' width={3}
           name='India' type='RangeArea'
           marker={marker}>
         </SeriesDirective>

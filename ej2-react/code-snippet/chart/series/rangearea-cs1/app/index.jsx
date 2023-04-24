@@ -3,11 +3,13 @@ import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, SplineRangeAreaSeries } from '@syncfusion/ej2-react-charts';
 import { data } from 'datasource.ts';
 function App() {
-    const marker = { visible: true, width: 10, height: 10, border: { width: 2, color: '#F8AB1D' } };
+    const border = { width: 2, color: 'brown'};
     return <ChartComponent id='charts'>
       <Inject services={[SplineRangeAreaSeries, Legend, Tooltip, DataLabel, Category]}/>
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='x' yName='y' fill='green' width={3} dashArray='5,5' name='India' type='SplineRangeArea' marker={marker}>
+      <SeriesDirective dataSource={data} xName='x' high='low' low='high' fill='yellow' opacity='0.6' dashArray='5,5'
+          type='RangeArea'
+          border={border}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;
