@@ -1,6 +1,5 @@
 {% raw %}
 
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, SplineAreaSeries,
@@ -16,7 +15,7 @@ function App() {
       primaryXAxis={primaryxAxis}>
       <Inject services={[SplineAreaSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={splineData} xName='x' yName='y' width={2} name='London' type='SplineArea' fill='red' border={{width: 3, color:'yellow'}} marker={{ visible: false, width: 10, height: 10 }}>
+        <SeriesDirective dataSource={splineData} xName='x' yName='y' width={2} name='London' type='SplineArea' fill='yellow' opacity='0.8' border={{width: 2, color:'brown'}} marker={{ visible: false, width: 10, height: 10 }} dashArray='5.5'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
@@ -24,6 +23,5 @@ function App() {
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-
 
 {% endraw %}

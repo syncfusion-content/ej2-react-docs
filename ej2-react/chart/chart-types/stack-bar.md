@@ -50,14 +50,14 @@ The following properties can be used to customize the `stacked bar` series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs30/app/index.jsx %}
+{% include code-snippet/chart/series/stackedbar-cs/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs30/app/index.tsx %}
+{% include code-snippet/chart/series/stackedbar-cs/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs30" %}
+ {% previewsample "page.domainurl/code-snippet/chart/series/stackedbar-cs" %}
 
 ## See Also
 

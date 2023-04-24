@@ -1,19 +1,25 @@
+{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, StackingLineSeries } from '@syncfusion/ej2-react-charts';
-import { data } from 'datasource.ts';
+import { chartData } from 'datasource.ts';
 function App() {
     const marker = { visible: true, width: 10, height: 10, border: { width: 2, color: '#F8AB1D' } };
-    return <ChartComponent id='charts'>
-      <Inject services={[StackingLineSeries, Legend, Tooltip, DataLabel, Category]}/>
-      <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='x' yName='y' fill='green' width={3} dashArray='5,5' name='India' type='StackingLine100' marker={marker}>
-        </SeriesDirective>
-        <SeriesDirective dataSource={data} xName='x' yName='y1' fill='red' width={3} dashArray='5,5' name='India' type='StackingLine100' marker={marker}>
-        </SeriesDirective>
-      </SeriesCollectionDirective>
-    </ChartComponent>;
+    return <ChartComponent id='charts' primaryXAxis={{ interval: 1, valueType: 'Category' }} primaryYAxis={{ title: 'Expense', interval: 20 }} title='Family Expense for Month'>
+          <Inject services={[StackingLineSeries, Legend, Tooltip, DataLabel, Category]}/>
+          <SeriesCollectionDirective>
+              <SeriesDirective dataSource={chartData} xName='x' yName='y' name='John' width='2' type='StackingLine100' marker={{ visible: true }} dashArray='5,1' fill='blue'>
+              </SeriesDirective>
+              <SeriesDirective dataSource={chartData} xName='x' yName='y1' name='Peter' width='2' type='StackingLine100' marker={{ visible: true }} dashArray='5,1' fill='yellow'>
+              </SeriesDirective>
+              <SeriesDirective dataSource={chartData} xName='x' yName='y2' name='Steve' width='2' type='StackingLine100' marker={{ visible: true }} dashArray='5,1' fill='red'>
+              </SeriesDirective>
+              <SeriesDirective dataSource={chartData} xName='x' yName='y3' name='Charle' width='2' type='StackingLine100' marker={{ visible: true }} dashArray='5,1' fill='grey'>
+              </SeriesDirective>
+              </SeriesCollectionDirective>
+         </ChartComponent>;
 }
 ;
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
+{% endraw %}

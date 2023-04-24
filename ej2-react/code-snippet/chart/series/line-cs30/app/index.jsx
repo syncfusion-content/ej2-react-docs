@@ -8,11 +8,11 @@ function App() {
         minimum: 3, maximum: 12, interval: 1, title: 'Percentage',
         labelFormat: '{value}%'
     };
-    const border = { color: 'green', width: 2 };
+    const border = { color: 'brown', width: 2 };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Unemployment rate (%)'>
       <Inject services={[BarSeries, Legend, Tooltip, DataLabel, Category]}/>
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={customData} xName='x' yName='y' name='India' type='Bar' columnWidth={0.5} columnSpacing={0.7} fill='red' border={border}>
+        <SeriesDirective dataSource={customData} xName='x' yName='y' type='Bar' pointColorMapping= 'point' dashArray='2' border={border}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;
