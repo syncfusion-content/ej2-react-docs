@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          RadarSeries, LineSeries, ColumnSeries}
 from'@syncfusion/ej2-react-charts';
-import { columnData } from 'datasource.ts';
+import { data } from 'datasource.ts';
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
       title='Efficiency of oil-fired power production'>
       <Inject services={[RadarSeries, LineSeries, ColumnSeries]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={columnData} xName='x' yName='y' type='Radar' name='Department' drawType='Column'>
+        <SeriesDirective dataSource={data} xName='x' yName='y' type='Radar' drawType='Line'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
