@@ -22,7 +22,7 @@ To get start quickly with React Polar and Radar Charts, you can check on this vi
 
 Polar drawType property is used to change the series plotting type to line, column, area, range column,spline, scatter, stacking area and stacking column. The default value of drawType is `Line`.
 
-## Line
+### Line
 
 To render a line draw type, use series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#drawtype) as `Line` and inject `LineSeries` into services.
 
@@ -54,7 +54,7 @@ To render a spline draw type, use series [`drawType`](https://ej2.syncfusion.com
 
  {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs2" %}
 
-## Area
+### Area
 
 To render a spline draw type in polar axis, use series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#drawtype) as `Area` and inject `AreaSeries` into services.
 
@@ -69,7 +69,7 @@ To render a spline draw type in polar axis, use series [`drawType`](https://ej2.
 
  {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs3" %}
 
-## Stacked Area
+### Stacked Area
 
 To render a stacked area draw type, use series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#drawtype) as `StackingArea` and inject `StackingAreaSeries` into services.
 
