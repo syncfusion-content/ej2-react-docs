@@ -505,7 +505,7 @@ After updating the credentials, just build and run the project. Now, the project
 
 > **Note:** To learn more about file actions that can be performed with Google Drive file system provider, refer to this [link](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider#key-features)
 
-## Firebase file system provider
+## Firebase Realtime Database file system provider
 
 The [Firebase Realtime Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the File Manager file system in a cloud database as JSON representation.
 
@@ -513,42 +513,20 @@ The [Firebase Realtime Database](https://firebase.google.com/) file system provi
 
 Follow the given steps to generate the secret access key:
 
-* Click this [link](https://console.firebase.google.com/) to Firebase console and navigate to the project settings.
+* To access the Firebase console, please click on this [link](https://console.firebase.google.com/). Once you have accessed the console, you can create a new project by filling in the necessary fields and clicking on the relevant buttons.
 
-* And then, navigate to the **Service Accounts** tab in the window.
+![create-project](images/create-project.png)
 
-* In the new dialog window, click the **Other service account** option to navigate to the Google service accounts console to generate the secret key.
+* Within the Firebase console, navigate to the **Build** tab. Under this tab, select the option for **Realtime Database**. From there, you can create a new database by clicking on the **Create Database** button.
 
-  ![authentication](images/firebase.png)
+![database-creation](images/database-creation.png)
 
-* Now, open the Firebase service project from the Google services console, and generate a Secret key.
+* To get started, create a root node and add any desired children to it. Please refer to the following code snippet for guidance on the structure of the JSON:
 
-  ![generate_key](images/generate_key.png)
+```ts
 
-* After generating the secret key, replace secret key JSON in the access_key.json file in the Firebase Realtime Database provider project to enable authentication for performing read and write operations.
-
-To interpolate with the Firebase Realtime Database, create a project under Firebase Realtime Database, and then enable the **read** and **write** permissions to access the Firebase Database by specifying the rules within the authentication tab of the Firebase project as demonstrated in the following code snippet.
-
-> **Note:** By default, rules of a Firebase project will be **false**. To read and write the data, configure the  **Rules** as given in the following code snippet in the *Rules* tab in the Firebase Realtime Database project.
-
-   ```ts
- 
-  {
-  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
-  "rules": {
-    ".read": "auth!=null",
-    ".write": "auth!=null"
-   }
- }
-
- ```
-
-Then, create a root node and add children to the root node. Refer to the following code snippet for the structure of JSON.
-
-  ```ts
-
-  {
-    "Files" : [ {
+{
+  "Files" : [ {
     "caseSensitive" : false,
     "dateCreated" : "8/22/2019 5:17:55 PM",
     "dateModified" : "8/22/2019 5:17:55 PM",
@@ -581,46 +559,79 @@ Then, create a root node and add children to the root node. Refer to the followi
     "showHiddenItems" : false,
     "size" : 0,
     "type" : ""
-   }]
-  }
+  }]
+ }
 
- ```
+```
 
 Here, the `Files` denotes the `rootNode` and the subsequent object refers to the children of the root node. `rootNode` will be taken as the root folder of the file system loaded which will be loaded in File Manager component.
 
-After that, clone the [`firebase-realtime-database-apscore-file-provider`](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) and just open the project in Visual Studio and restore the NuGet package.
+* To import a JSON file into the Firebase Realtime Database, navigate to the **Data** tab and click on the action icon shown in the accompanying image. From there, select the **Import JSON** option and upload the JSON file that was created using the code provided above.
 
-Register the Firebase Realtime Database by assigning the *Firebase Realtime Database REST API link*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of class `FirebaseRealtimeDBFileProvider` in controller part of the ASP.NET Core application.
+![import-json](images/import-json.png)
 
-  ```ts
+* To interact with the Firebase Realtime Database through your application, it is necessary to grant read and write permissions by defining appropriate rules in the Firebase project's **Rules tab**, as shown in the following code snippet. Once you have specified the rules, you can publish them by clicking the **Publish** button to enable the necessary authentication.
 
-  void RegisterFirebaseRealtimeDB(string apiUrl, string rootNode, string serviceAccountKeyPath)
+```ts
 
-  ```
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": "auth!=null",
+    ".write": "auth!=null"
+  }
+}
+
+```
+
+> **Note:** By default, rules of a Firebase project will be **false**. To read and write the data, configure the  **Rules** as given in the following code snippet in the *Rules* tab in the Firebase Realtime Database project.
+
+* Navigate to the project settings as instructed and then click on the **Service Account** tab.
+
+![service](images/service.png)
+
+* To obtain the access key JSON file, simply click on the `Generate new private key` button and then confirm by clicking the `Generate key` button in the pop-up window that appears.
+
+![generate_key](images/generate_key.png)
+
+* Next, you will need to clone the [`firebase-realtime-database-apscore-file-provider`](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) repository. Once cloned, simply open the project in Visual Studio and restore the NuGet package.
+
+* Once you have generated the secret key, you will need to replace the JSON in the `access_key.json` file in the Firebase Realtime Database provider project with the newly generated key. This will enable authentication and allow you to perform read and write operations.
+
+* In the **Data** tab, locate the project API URL and then paste it into the below mentioned section.
+
+![api_url](images/api_url.png)
+
+Register the Firebase Realtime Database by assigning *Firebase Realtime Database REST API link*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of class `FirebaseRealtimeDBFileProvider` in the controller part of the ASP.NET Core application.
+
+```ts
+
+this.operation.RegisterFirebaseRealtimeDB(string apiUrl, string rootNode, string serviceAccountKeyPath)
+
+```
 
 **Example:**
 
-  ```ts
+```ts
 
-  void RegisterFirebaseRealtimeDB("https://filemanager-c0f6d.firebaseio.com/", "Files", "{give the service account key path}");
+this.operation.RegisterFirebaseRealtimeDB("{copy your API URL here}", "Files", hostingEnvironment.ContentRootPath + \\FirebaseRealtimeDBHelper\\access_key.json);
 
-  ```
+```
 
 In the above code,
 
-* `https://filemanager-c0f6d.firebaseio.com/` denotes Firebase Realtime Database REST API link
+* `{copy your API URL here}` denotes Firebase Realtime Database REST API link.
 
-* `Files` denotes newly created root node in Firebase Realtime  Database
+* `Files` denotes newly created root node in Firebase Realtime  Database.
 
-* `{give the service account key path}` denotes service account key path which has authentication key for the Firebase Realtime Database data.
+* `hostingEnvironment.ContentRootPath + \\FirebaseRealtimeDBHelper\\access_key.json` denotes service account key path which has authentication key for the Firebase Realtime Database data.
 
 After configuring the Firebase Realtime Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the files in the Firebase Realtime Database.
 
 {% raw %}
 
 ```ts
-
-// File Manager sample with Firebase service.
+// File Manager sample with IBM COS service.
 <div>
     <div className="control-section">
         <FileManagerComponent  id="file"
