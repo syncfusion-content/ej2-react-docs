@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Skeleton, and configure its available functionalities in React.
 
-To get start quickly with React Skeleton, you can check on this video:
+To get started quickly with the React Skeleton component, you can check out this video.
 
 {% youtube "https://www.youtube.com/watch?v=5SvWFJ74uTk" %}
 
