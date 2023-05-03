@@ -170,7 +170,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
 
     ```ts
         <div className="pagearea1">
-            <ButtonComponent cssClass='e-info prevbtn' onClick={this.prevBtnClick} style={{ width: '100%' }}>Load Previous Set...</ButtonComponent>
+            <ButtonComponent cssClass='e-info prevbtn' onClick={this.prevBtnClick} style={ width: '100%' }>Load Previous Set...</ButtonComponent>
         </div>
 
         <GridComponent id='grid' ref={g => this.grid = g} dataSource={this.dataManager} enableVirtualization={true} pageSettings={this.pageSettings} height={360} beforeDataBound={this.beforeDataBound} >
@@ -180,7 +180,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
             </ColumnsDirective>
         </GridComponent>
        <div className="pagearea2">
-           <ButtonComponent cssClass='e-info nxtbtn' onClick={this.nxtBtnClick} style={{ width: '100%' }}>Load Next Set...</ButtonComponent>
+           <ButtonComponent cssClass='e-info nxtbtn' onClick={this.nxtBtnClick} style={ width: '100%' }>Load Next Set...</ButtonComponent>
        </div>
     ```
 

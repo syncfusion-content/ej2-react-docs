@@ -19,15 +19,16 @@ The following modules should be injected to extend treegrid's functionality.
 | [`FilterService`](../treegrid/filtering/filtering)| Inject this module to use filtering feature.|
 | [`EditService`](../treegrid/editing/edit)| Inject this module to use editing feature.|
 | [`AggregateService`](../treegrid/aggregates/aggregates)| Inject this module to use aggregate feature.|
-| [`ColumnMenuService`](../treegrid/columns/column-menu)| Inject this module to use column menu feature.|
-| [`CommandColumnService`](../treegrid/editing/command-column-editing)| Inject this module to use command column feature.|
-| [`ContextMenuService`](../treegrid/columns/context-menu)| Inject this module to use context menu feature.
-| [`ResizeService`](../treegrid/columns/column-resizing)| Inject this module to use resize feature.|
-| [`ReorderService`](../treegrid/columns/column-reorder)| Inject this module to use reorder feature.|
+| [`ColumnMenuService`](../treegrid/columns/columns#column-menu)| Inject this module to use column menu feature.|
+| [`CommandColumnService`](../../treegrid/edit/#command-column)| Inject this module to use command column feature.|
+| [`ContextMenuService`](../treegrid/context-menu)| Inject this module to use context menu feature.
+| [`ResizeService`](../treegrid/columns/columns#column-resizing)| Inject this module to use resize feature.|
+| [`ReorderService`](../treegrid/columns/columns#reorder)| Inject this module to use reorder feature.|
 | [`PrintService`](../treegrid/print)| Inject this module to use to use print feature and this is a default injected module.|
 | [`ToolbarService`](../treegrid/tool-bar/tool-bar)| Inject this module to use toolbar feature.|
 | [`ExcelExportService`](../treegrid/excel-export/excel-export)| Inject this module to use Excel export feature.|
 | [`PdfExportService`](../treegrid/pdf-export/pdf-export)| Inject this module to use PDF export feature.|
+
 
 These modules should be injected into the treegrid using the `Inject` directive.
 

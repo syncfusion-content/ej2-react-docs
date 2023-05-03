@@ -21,6 +21,7 @@ function App() {
                         radius="100%"
                         progressColor="#E3165B"
                         cornerRadius="Round"
+                        secondaryProgress={70}
                         animation={{
                             enable: true,
                             duration: 2000,

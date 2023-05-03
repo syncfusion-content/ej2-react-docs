@@ -49,7 +49,7 @@ cd my-app
 npm start
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+Besides using the [npm](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
 
 ```bash
 npm init react-app my-app
@@ -83,7 +83,7 @@ Add AppBar component's styles as given below in `App.css`.
 
 ## Add AppBar to the project
 
-Now, you can create `AppBar` component in the application. Add `AppBar` component in `src/App.tsx` file using the following code snippet.
+Now, you can create `AppBar` component in the application. Add `AppBar` component in `src/App.ts` file using the following code snippet.
 
 
 
