@@ -5,14 +5,14 @@ import { data } from 'datasource.ts';
 function App() {
     const border = { width: 2, color: 'brown'};
     return <ChartComponent id='charts'>
-      <Inject services={[SplineRangeAreaSeries, Legend, Tooltip, DataLabel, Category]}/>
+       <Inject services={[RangeAreaSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-      <SeriesDirective dataSource={data} xName='x' high='low' low='high' fill='yellow' opacity='0.6' dashArray='5,5'
+        <SeriesDirective dataSource={data} xName='x' high='low' low='high' fill='yellow' opacity='0.6' dashArray='5,5'
           type='RangeArea'
           border={border}>
         </SeriesDirective>
       </SeriesCollectionDirective>
-    </ChartComponent>;
+    </ChartComponent>
 }
 ;
 export default App;
