@@ -1,3 +1,13 @@
+---
+layout: post
+title: Vue getting started with Next.js | Syncfusion
+description: Check out and learn about how to use Syncfusion Vue UI components in Next.js project.
+control: Next.js
+platform: ej2-react
+documentation: ug
+domainurl: ##DomainURL##
+---
+
 # Getting Started with React UI Components with Next.js
 
 This article provides a step-by-step guide for setting up a [Next.js](https://nextjs.org/) project and integrating the Syncfusion React components.
@@ -154,7 +164,7 @@ yarn run dev
 ```
 
 The output will appear as follows:
-![next-js](../appearance/images/nextjs.png)
+![next-js](images/nextjs.png)
 
 ## See also
 
