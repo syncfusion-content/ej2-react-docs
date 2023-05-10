@@ -23,6 +23,9 @@ You can use the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speed-dial/template-cs1/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/speed-dial/template-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/template-cs1" %}
@@ -37,6 +40,9 @@ You can use the [`popupTemplate`](https://ej2.syncfusion.com/react/documentation
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speed-dial/template-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/speed-dial/template-cs2/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -65,6 +65,9 @@ Below example demonstrates the click event of the Floating Action Button.
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/floating-action-button/events-cs1/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/floating-action-button/events-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/floating-action-button/events-cs1" %}

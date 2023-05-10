@@ -66,6 +66,46 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
  {% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
 
+## setFormFieldMode programmatically
+
+The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer library that allows you to add a form field dynamically by passing the type of the form field. You can pass the form fields as a parameter like below.
+
+{% raw %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function addPasswordField() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.setFormFieldMode("Password");
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <button onClick={addPasswordField}>Add Password Field</button>
+      <PdfViewerComponent 
+        id="container"
+        documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endraw %}
+
 ## Saving the form fields
 
 When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
