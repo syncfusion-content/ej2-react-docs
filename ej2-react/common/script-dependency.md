@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Individual Components Script Dependency
 
-It is important to specify the right script reference order as well as its dependencies when using Syncfusion React components in a project. Syncfusion React components each have their own set of dependencies, which may include other Syncfusion packages.
+When utilizing `Webpack externals`, it is important to specify the right script reference order as well as its dependencies. Syncfusion React components each have their own set of dependencies, which may include other Syncfusion packages.
 
-Refer to the table below to discover the correct script reference sequence and its dependencies for a certain Syncfusion React component.
+There are two ways to refer to scripts: through `CDN` links or `NPM` packages. Refer to the table below to discover the correct CDN script reference sequence and its dependencies for a certain Syncfusion React component. If using `NPM` packages, replace the `CDN` link with the local path of the relevant scripts.
 
 <table>
 <tr>
