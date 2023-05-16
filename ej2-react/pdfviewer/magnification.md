@@ -24,14 +24,11 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-import { RouteComponentProps } from 'react-router';
 
-export class App extends React.Component<{}, {}> {
-  render() {
-    return (
-    <div>
-      <div className='control-section'>
-        {/* Render the PDF Viewer */}
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
         <PdfViewerComponent
           id="container"
           documentPath="PDF_Succinctly.pdf"
@@ -40,12 +37,12 @@ export class App extends React.Component<{}, {}> {
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
                                   ThumbnailView, Print, TextSelection, TextSearch]} />
-          </PdfViewerComponent>
-      </div>
-    </div>);
-  }
+        </PdfViewerComponent>
+    </div>
+  </div>);
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 {% endraw %}

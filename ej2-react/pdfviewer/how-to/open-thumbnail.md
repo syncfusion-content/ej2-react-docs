@@ -30,4 +30,4 @@ The following steps are used to open the thumbnail.
    </script>
    ```
 
-Find the sample, [how to open the thumbnail pane programmatically](https://stackblitz.com/edit/react-wcs3zf?file=index.html)
+Find the sample [how to open the thumbnail pane programmatically](https://stackblitz.com/edit/react-8rp7h2?file=public%2Findex.html)

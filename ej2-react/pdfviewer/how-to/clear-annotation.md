@@ -14,7 +14,7 @@ To clear all the annotations in a PDF document using the Syncfusion PDF Viewer, 
 
 Here is an example of how you can clear all the annotations present in the currently loaded document:
 
-```
+```html
 <button onclick="deleteAnnotations()">Delete Annotations</button>
 
 <script>
@@ -30,7 +30,7 @@ We can also delete specific annotation with the **deleteAnnotationById()** metho
 
 Here is an example of how you can delete specific annotation with the **deleteAnnotationById()** method:
 
-```
+```html
 <button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
 
 <script>
@@ -42,4 +42,4 @@ function deleteAnnotationbyId() {
 </script>
 ```
 
-Find the sample [how to clear annotations using deleteAnnotations](https://stackblitz.com/edit/react-6bwfsn-tp4cnb?file=index.html)
+Find the sample [how to clear annotations using deleteAnnotations](https://stackblitz.com/edit/react-xlvqkm?file=public%2Findex.html)

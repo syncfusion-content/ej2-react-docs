@@ -61,11 +61,10 @@ The following properties can be used to customize the `area` series.
 
 ## Area border
 
-The following properties can be used to customize the `area` series.
+The following properties in the [bordermodel](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/) can be used to customize the border of the Area Chart.
 
-* [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill) – Specifies the color of the area series.
-* [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill).
-* [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes of series.
+* [width](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#width) - Specifies the width for the border of the Area Chart.
+* [color](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#color) - Specifies the Color for the border of the Area Chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

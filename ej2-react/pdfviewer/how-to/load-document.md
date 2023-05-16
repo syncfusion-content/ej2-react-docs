@@ -44,4 +44,37 @@ The following steps are used to load the PDF document dynamically.
    </script>
  ```
 
-Find the sample, [how to load PDF documents dynamically](https://stackblitz.com/edit/react-4w9zpt?file=index.html)
+Find the sample [how to load PDF documents dynamically](https://stackblitz.com/edit/react-qtjtbo?file=public%2Findex.html)
+
+**Step 4:** Use the following code snippet to the load PDF document the using documentPath.
+
+{% tab compileJsx=true%}
+
+```tsx
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+        
+            <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch ]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+```
+
+{% endtab %}
+
+Find the sample [how to load PDF documents using documentPath](https://stackblitz.com/edit/react-nszkto?file=src%2Findex.js)

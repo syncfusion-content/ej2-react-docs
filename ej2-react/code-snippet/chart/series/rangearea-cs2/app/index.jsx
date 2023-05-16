@@ -10,7 +10,7 @@ function App() {
         <SeriesDirective dataSource={data} xName='x' high='high' low='low' width={3} name='India' type='RangeArea' marker={marker}>
         </SeriesDirective>
       </SeriesCollectionDirective>
-    </ChartComponent>;
+    </ChartComponent>
 }
 ;
 export default App;
