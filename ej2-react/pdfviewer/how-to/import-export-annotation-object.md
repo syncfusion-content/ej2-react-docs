@@ -22,14 +22,14 @@ The following steps are used to import and export annotation as object.
     <button onclick="exportAnnotation()">Export Annotation</button>
     <button onclick="importAnnotation()">Import Annotation</button>
 
-    <script>
-    var exportObject;
-    // Export annotation as object.
+  <script>
+  var exportObject;
+  // Export annotation as object.
   function exportAnnotation(){
-  var viewer = document.getElementById('container').ej2_instances[0];
-  viewer.exportAnnotationsAsObject().then(function(value) {
-  exportObject = value;
-   });
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.exportAnnotationsAsObject().then(function(value) {
+    exportObject = value;
+    });
   }
 
   // Import annotation that are exported as object.
@@ -40,7 +40,7 @@ The following steps are used to import and export annotation as object.
   </script>
  ```
 
-Find the Sample, [how to import and export annotation as object](https://stackblitz.com/edit/react-dtuvxn?devtoolsheight=33&file=index.html)
+Find the sample [how to import and export annotation as object](https://stackblitz.com/edit/react-wesg2m?file=public%2Findex.html)
 
 ## Import and export annotations programmatically
 

@@ -30,4 +30,4 @@ The following steps are used to delete a specific annotation from PDF Document.
    </script>
  ```
 
-Find the sample, [how to delete a specific annotation using deleteAnnotationById](https://stackblitz.com/edit/react-6bwfsn-ckeqja?file=index.html)
+Find the sample [how to delete a specific annotation using deleteAnnotationById](https://stackblitz.com/edit/react-svdb9y?file=src%2Findex.js)

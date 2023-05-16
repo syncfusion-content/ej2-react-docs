@@ -100,22 +100,29 @@ To install PDF Viewer component, use the following command
 
     {% raw %}
 
-     ```js
-       import * as ReactDOM from 'react-dom';
-       import * as React from 'react';
-       import './index.css';
-       import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print,TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
-    export function App() {
-      return (<div>
-        <div className='control-section'>
-            <PdfViewerComponent id="container" documentPath="PDF_Succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" style={{ 'height': '640px' }}>
-                <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-                Print, TextSelection, TextSearch, FormFields, FormDesigner]}/>
-            </PdfViewerComponent>
-        </div>
-    </div>);
-  }
+   ```js
+   import * as ReactDOM from 'react-dom';
+   import * as React from 'react';
+   import './index.css';
+   import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+            ThumbnailView, Print,TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+   function App() {
+   return (<div>
+      <div className='control-section'>
+         <PdfViewerComponent 
+               id="container" 
+               documentPath="PDF_Succinctly.pdf"
+               serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" 
+               style={{ 'height': '640px' }}>
+
+                  <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+
+         </PdfViewerComponent>
+      </div>
+   </div>);
+   }
    const root = ReactDOM.createRoot(document.getElementById('sample'));
    root.render(<App />);
   ```
@@ -168,9 +175,14 @@ Output will be appears as follows.
 5.You can see that the PDF Viewer server instance runs in the local host with the port number `localhost:5001` and navigate to the PDF Viewer Web control `localhost:5001/pdfviewer` which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
 
    ```js
-    <PdfViewerComponent id="container" documentPath="PDF_Succinctly.pdf" serviceUrl="https://localhost:5001/pdfviewer" style={{ 'height': '640px' }}>
-    <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]}/>
-    </PdfViewerComponent>
+   <PdfViewerComponent 
+      id="container" 
+      documentPath="PDF_Succinctly.pdf" 
+      serviceUrl="https://localhost:5001/pdfviewer" 
+      style={{ 'height': '640px' }}>
+        <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                            ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+   </PdfViewerComponent>
    ```
 
    [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).

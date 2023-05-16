@@ -66,6 +66,46 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
  {% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
 
+## setFormFieldMode programmatically
+
+The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer library that allows you to add a form field dynamically by passing the type of the form field. You can pass the form fields as a parameter like below.
+
+{% raw %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function addPasswordField() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.setFormFieldMode("Password");
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <button onClick={addPasswordField}>Add Password Field</button>
+      <PdfViewerComponent 
+        id="container"
+        documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endraw %}
+
 ## Saving the form fields
 
 When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
@@ -82,34 +122,31 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
          Print, TextSelection, Annotation, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { RouteComponentProps } from 'react-router';
+let pdfviewer;
 
-export class App extends React.Component<{}, {}> {
-  public viewer: PdfViewerComponent;
-  render() {
-    return (
-    <div>
-      <div className='control-section'>
-        {/* Render the PDF Viewer */}
-        <ButtonComponent id="downloadBtn" onClick={this.downloadClicked.bind(this)}>Download</ButtonComponent>
-        <PdfViewerComponent ref={(scope) => { this.viewer = scope; }}
-          id="container"
-          documentPath="PDF_Succinctly.pdf"
-          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-          style={{ 'height': '640px' }}>
+function App() {
+  function downloadClicked() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.download();
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <button onClick={downloadClicked}>Download</button>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
                                   ThumbnailView, Print, TextSelection, TextSearch]} />
-        </PdfViewerComponent>
-      </div>
-    </div>);
-  }
-  downloadClicked() {
-    this.viewer.download();
-  }
+      </PdfViewerComponent>
+    </div>
+  </div>);
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -128,28 +165,27 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
          Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-import { RouteComponentProps } from 'react-router';
+let pdfviewer;
 
-export class App extends React.Component<{}, {}> {
-  render() {
-    return (
-    <div>
-      <div className='control-section'>
-        {/* Render the PDF Viewer */}
-        <PdfViewerComponent
-          id="container"
-          documentPath="PDF_Succinctly.pdf"
-          enablePrint={true}
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="PDF_Succinctly.pdf"
+        enablePrint={true}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        style={{ 'height': '640px' }}>
 
-          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]} />
-        </PdfViewerComponent>
-      </div>
-    </div>);
-  }
+                                  ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 {% endraw %}
@@ -173,41 +209,38 @@ Add the following code snippet to validate the form fields,
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
-         Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields, TextFieldSettings } from '@syncfusion/ej2-react-pdfviewer';
-import { RouteComponentProps } from 'react-router';
+         Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
 
-export class App extends React.Component<{}, {}> {
-  render() {
-    return (
-    <div>
-      <div className='control-section'>
-        {/* Render the PDF Viewer */}
-        <PdfViewerComponent
-          id="container"
-          ref={(scope) => { this.viewer = scope; }}
-          documentPath="FormDesigner.pdf"
-          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-          documentLoad={this.documentLoaded}
-          enableFormFieldsValidation={true}
-          ValidateFormFields= {this.validateFormFields}
-          style={{ 'height': '640px' }}>
+function App() {
+  function documentLoaded () {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Textbox", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
+  }
+  function validateFormFields(args){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.nonfilledFormFields = args.nonFillableFields
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="FormDesigner.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        documentLoad={documentLoaded}
+        enableFormFieldsValidation={true}
+        ValidateFormFields= {validateFormFields}
+        style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
-        </PdfViewerComponent>
-      </div>
-    </div>);
-  }
-  documentLoaded = () => {
-    this.viewer.formDesignerModule.addFormField("Textbox", { name: "Textbox", bounds: { X: 146, Y: 229, Width: 150, Height: 24 } }
-    as TextFieldSettings);
-  }
-  validateFormFields = (args) =>{
-    var nonfilledFormFields = args.nonFillableFields
-  }
-
+            <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                                ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 {% endraw %}

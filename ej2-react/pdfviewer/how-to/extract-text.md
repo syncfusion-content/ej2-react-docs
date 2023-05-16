@@ -22,11 +22,11 @@ Here is an example of how you can use the isExtractText property and extractText
     documentPath="PDF_Succinctly.pdf"
     serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
     isExtractText={true}
-    extractTextCompleted={this.extractTextCompleted}
+    extractTextCompleted={extractTextCompleted}
     style={{ height: '640px' }}>
 </PdfViewerComponent>
 
-extractTextCompleted = (args) => {
+function extractTextCompleted(args){
     // Extract the Complete text of load document
     console.log(args);
     console.log(args.documentTextCollection[1]);
@@ -40,4 +40,4 @@ extractTextCompleted = (args) => {
 ```
 {% endraw %}
 
-Find the sample [how to Extract Text](https://stackblitz.com/edit/react-6v2huv-l867nc?devtoolsheight=33&file=index.js)
+Find the sample [how to Extract Text](https://stackblitz.com/edit/react-ijmx6c?file=src%2Findex.js)

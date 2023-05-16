@@ -30,4 +30,4 @@ The following steps are used to unload the PDF document programmatically.
    </script>
   ```
 
-Find the Sample, [how to unload the PDF document programmatically](https://stackblitz.com/edit/react-bcf5pm?devtoolsheight=33&file=index.html)
+Find the sample [how to unload the PDF document programmatically](https://stackblitz.com/edit/react-ffbe8v?file=public%2Findex.html)

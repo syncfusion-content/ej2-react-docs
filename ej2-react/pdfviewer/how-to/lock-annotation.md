@@ -32,4 +32,4 @@ The PDF Viewer library allows you to lock the rectangle or square annotations us
     ```
    {% endraw %}
 
-Find the Sample [how to lock square or rectangle annotations](https://stackblitz.com/edit/react-mngaa3?file=index.js)
+Find the Sample [how to lock square or rectangle annotations](https://stackblitz.com/edit/react-yxp8kz?file=src%2Findex.js)

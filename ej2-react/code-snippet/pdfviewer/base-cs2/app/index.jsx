@@ -1,4 +1,3 @@
-{% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -24,4 +23,3 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% endraw %}

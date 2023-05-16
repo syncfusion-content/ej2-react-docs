@@ -18,27 +18,25 @@ Here is an example of how you can use the **AjaxRequestSettings** property to in
 
 ```javascript
 
-<PdfViewerComponent
-  id="container"
-  documentPath="PDF_Succinctly.pdf"
-  serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-  ajaxRequestSettings={this.ajaxRequestSettings}
-  style={{ height: '640px' }}>
-</PdfViewerComponent>
-
-// Include the Authorization token
-ajaxRequestSettings = {
-ajaxHeaders: [
-  {
-    headerName: 'Authorization',
-
-    headerValue: 'Bearer 64565dfgfdsjweiuvbiuyhiueygf'
-  }
-],
-withCredentials: false
-};
+  <PdfViewerComponent
+    id="container"
+    documentPath="PDF_Succinctly.pdf"
+    serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+    style={{ height: '640px' }}
+    ajaxRequestSettings={{
+      ajaxHeaders: [
+        {
+          headerName: 'Authorization',
+          headerValue: 'Bearerabcdefghijklmnopqrstuvwxyz',
+        },
+      ],
+      withCredentials: false,
+      }}>
+         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                             ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />
+  </PdfViewerComponent>
 
 ```
 {% endraw %}
 
-Find the sample [how to include authorization token](https://stackblitz.com/edit/react-4zx649-mjadzl?file=index.js)
+Find the sample [how to include authorization token](https://stackblitz.com/edit/react-njmuk3?file=src%2Findex.js)

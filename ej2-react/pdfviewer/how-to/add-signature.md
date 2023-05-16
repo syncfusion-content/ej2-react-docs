@@ -18,44 +18,52 @@ The PDF Viewer library allows you to add signature in the signature field of the
 
    ```javascript
 
-    formFieldClick = { this.fieldClick }
+  <PdfViewerComponent
+    id="container"
+    documentPath="PDF_Succinctly.pdf"
+    serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+    style={{ height: '640px' }}
+    formFieldClick={fieldClick}
+    <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />
+  </PdfViewerComponent>
 
-     fieldClick(args) {
+  function fieldClick(args) {
     var viewer = document.getElementById('container').ej2_instances[0];
-     if (viewer) {
-     args.cancel = true;
+    if (viewer) {
+      args.cancel = true;
       if (args.field.type === 'SignatureField') {
-      var forms = viewer.formFieldCollections;
-      forms.map(r => {
-        if (r.id === args.field.id) {
-          console.log(args.field.value);
-          var el = document.getElementById(r.id);
-          if (el) {
-            if (el.style.textAlign !== 'center') {
-              el.style.textAlign = 'center';
-            }
-            if (el.style.fontStyle !== 'italic') {
-              el.style.fontStyle = 'italic';
-            }
-            if (el.style.fontWeight !== 'italic') {
-              el.style.fontWeight = 'italic';
-            }
-            if (args.field.value !== '' && args.field.value) {
-              args.field.value = '';
-              viewer.updateFormFieldsValue(args.field);
-            } else {
-              args.field.signatureType = ['Type'];
-              args.field.value = 'DA FIRMARE';
-              args.cancel = true;
-              viewer.updateFormFieldsValue(args.field);
+        var forms = viewer.formFieldCollections;
+        forms.map((r) => {
+          if (r.id === args.field.id) {
+            console.log(args.field.value);
+            var el = document.getElementById(r.id);
+            if (el) {
+              if (el.style.textAlign !== 'center') {
+                el.style.textAlign = 'center';
+              }
+              if (el.style.fontStyle !== 'italic') {
+                el.style.fontStyle = 'italic';
+              }
+              if (el.style.fontWeight !== 'italic') {
+                el.style.fontWeight = 'italic';
+              }
+              if (args.field.value !== '' && args.field.value) {
+                args.field.value = '';
+                viewer.updateFormFieldsValue(args.field);
+              } else {
+                args.field.signatureType = ['Type'];
+                args.field.value = 'DA FIRMARE';
+                args.cancel = true;
+                viewer.updateFormFieldsValue(args.field);
+              }
             }
           }
-        }
-      });
-     }
-   }
+        });
+      }
+    }
   }
 
  ```
 
-Find the Sample [how to add signature in signature field](https://stackblitz.com/edit/react-2tqnd9-q4dbj9?file=index.js)
+Find the Sample [how to add signature in signature field](https://stackblitz.com/edit/react-ce6gat?file=src%2Findex.js)
