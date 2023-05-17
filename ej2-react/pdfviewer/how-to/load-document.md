@@ -48,9 +48,9 @@ Find the sample [how to load PDF documents dynamically](https://stackblitz.com/e
 
 **Step 4:** Use the following code snippet to the load PDF document the using documentPath.
 
-{% tab compileJsx=true%}
+{% raw %}
 
-```tsx
+```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -75,6 +75,6 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 ```
 
-{% endtab %}
+{% endraw %}
 
 Find the sample [how to load PDF documents using documentPath](https://stackblitz.com/edit/react-nszkto?file=src%2Findex.js)
