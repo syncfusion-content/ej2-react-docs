@@ -33,28 +33,31 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView,Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export class App extends React.Component {
-  render() {
-    return (
-      <div>
-      <button onClick={this.inkMode.bind(this)}>Draw Ink</button>
-        <div className='control-section'>
-            <PdfViewerComponent ref={(scope) => { this.viewer = scope; }}
-            id="container" documentPath="PDF_Succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-            style={{ 'height': '640px' }}>
+let pdfviewer;
 
-                <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                    Print,TextSelection, TextSearch]}/>
-          </PdfViewerComponent>
-      </div>
-    </div>);
+function App() {
+  function inkMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Ink');
   }
-  inkMode() {
-    this.viewer.annotation.setAnnotationMode('Ink');
-  }
+  return (<div>
+    <button onClick={inkMode}>Draw Ink</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container" documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
+  
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 ```
 {% endraw %}
 
@@ -93,25 +96,25 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <div className='control-section'>
-          <PdfViewerComponent ref={(scope) => { this.viewer = scope; }}
-            id="container"
-            documentPath="PDF_Succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-            inkAnnotationSettings={{author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6}}
-            style={{ 'height': '640px' }}>
+let pdfviewer;
 
-                <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                    ThumbnailView, Print, TextSelection, TextSearch]}/>
-          </PdfViewerComponent>
-      </div>
-    </div>);
-  }
+function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        inkAnnotationSettings={{author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6}}
+        style={{ 'height': '640px' }}>
+
+            <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                ThumbnailView, Print, TextSelection, TextSearch]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);  
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 ```
 {% endraw %}

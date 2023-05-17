@@ -42,28 +42,29 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export class App extends React.Component {
-  render() {
-    return (
-    <div>
-    <button onClick={this.distanceMode.bind(this)}>Distance</button>
-      <div className='control-section'>
-        <PdfViewerComponent ref={(scope) => { this.viewer = scope; }}
-          id="container" documentPath="PDF_Succinctly.pdf"
-          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-          style={{ 'height': '640px' }}>
+let pdfviewer;
 
-            <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                ThumbnailView,Print, TextSelection, TextSearch]}/>
-        </PdfViewerComponent>
-      </div>
-    </div>);
+function App() {
+  function distanceMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Distance');
   }
-  distanceMode() {
-    this.viewer.annotation.setAnnotationMode('Distance');
-  }
+  return (<div>
+    <button onClick={distanceMode}>Distance</button>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container" documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView,Print, TextSelection, TextSearch ]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 ```
 {% endraw %}
 
@@ -113,30 +114,30 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
          Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export class App extends React.Component {
-  render() {
-    return (
-    <div>
-      <div className='control-section'>
-        <PdfViewerComponent ref={(scope) => { this.viewer = scope; }}
-          id="container"
-          documentPath="PDF_Succinctly.pdf"
-          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-          distanceSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
-          perimeterSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
-          areaSettings={{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'}}
-          radiusSettings={{fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'}}
-          volumeSettings={{fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}}
-          style={{ 'height': '640px' }}>
+let pdfviewer;
+
+export function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        distanceSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
+        perimeterSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
+        areaSettings={{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'}}
+        radiusSettings={{fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'}}
+        volumeSettings={{fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}}
+        style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
                                   ThumbnailView, Print, TextSelection, TextSearch]}/>
-        </PdfViewerComponent>
-      </div>
-    </div>);
-  }
+      </PdfViewerComponent>
+    </div>
+  </div>);
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 ```
 {% endraw %}
 
@@ -168,24 +169,25 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView,Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export class App extends React.Component {
-  render() {
-    return (<div>
-      <div className='control-section'>
-        <PdfViewerComponent ref={(scope) => { this.viewer = scope; }}
-          id="container"
-          documentPath="PDF_Succinctly.pdf"
-          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-          measurementSettings={{scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'}}
-          style={{ 'height': '640px' }}>
+let pdfviewer;
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="PDF_Succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        measurementSettings={{scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'}}
+        style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                                   Print, TextSelection, TextSearch]}/>
-        </PdfViewerComponent>
-      </div>
-    </div>);
-  }
+      </PdfViewerComponent>
+    </div>
+  </div>);
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 ```
 {% endraw %}

@@ -43,17 +43,15 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
        ThumbnailView, Print, TextSelection, Annotation, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
-import { RouteComponentProps } from 'react-router';
+let pdfviewer;
 
-export class App extends React.Component<{}, {}> {
-  public viewer: PdfViewerComponent;
-  render() {
-    return (
-    <div>
-      <div className='control-section'>
-        {/* Render the PDF Viewer */}
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
         <PdfViewerComponent
-          ref={(scope) => { this.viewer = scope; }}
+
+          ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="PDF_Succinctly.pdf"
           serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
@@ -61,12 +59,12 @@ export class App extends React.Component<{}, {}> {
 
                 <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
                                     ThumbnailView, Print,TextSelection, TextSearch]} />
-        </PdfViewerComponent>
-      </div>
-    </div>);
-  }
+      </PdfViewerComponent>
+    </div>
+  </div>);
 }
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 {% endraw %}
