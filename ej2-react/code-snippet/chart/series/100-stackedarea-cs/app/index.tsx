@@ -20,9 +20,9 @@ function App() {
       title='Annual Temperature Comparison'>
       <Inject services={[StackingAreaSeries, Legend, Tooltip, DataLabel, DateTime]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={percentData} xName='x' yName='y' name='USA' type='StackingArea100'fill='red' border={{width: 2.5, color:'white'}} dashArray='5'>
+        <SeriesDirective dataSource={percentData} xName='x' yName='y' name='USA' type='StackingArea100' fill='red' border={{width: 2.5, color:'white'}} dashArray='5'>
         </SeriesDirective>
-        <SeriesDirective dataSource={percentData} xName='x' yName='y1' name='UK' type='StackingArea100'fill='green' border={{width: 2.5, color:'white'}} dashArray='5'>
+        <SeriesDirective dataSource={percentData} xName='x' yName='y1' name='UK' type='StackingArea100' fill='green' border={{width: 2.5, color:'white'}} dashArray='5'>
         </SeriesDirective>
         <SeriesDirective dataSource={percentData} xName='x' yName='y2' name='Canada Alternatives' type='StackingArea100'fill='orange' border={{width: 2.5, color:'white'}} dashArray='5'>
         </SeriesDirective>
