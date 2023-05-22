@@ -1,6 +1,3 @@
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';
@@ -9,7 +6,7 @@ import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 import { DatePickerComponent, CalendarComponent } from '@syncfusion/ej2-react-calendars';
 
 
-function App() {
+const App = () => {
 
   const continents: { [key: string]: Object }[] = [
     {
@@ -63,26 +60,26 @@ function App() {
   ];
   const field: object = { dataSource: continents, id: 'code', text: 'name', child: 'countries' }
 
-  function contentTemplate1(): JSX.Element {
+  const buttonTemplate = (): JSX.Element => {
     return (<ButtonComponent>Click me</ButtonComponent>);
   }
-  function contentTemplate2(): JSX.Element {
+  const datePickerTemplate = (): JSX.Element => {
     return (<DatePickerComponent></DatePickerComponent>);
   }
-  function contentTemplate3(): JSX.Element {
+  const calenderTemplate = (): JSX.Element => {
     return (<CalendarComponent ></CalendarComponent>);
   }
-  function contentTemplate4(): JSX.Element {
+  const treeViewTemplate4 = (): JSX.Element => {
     return (<TreeViewComponent fields={field}></TreeViewComponent>);
   }
   return (
     <div id='container'>
       <AccordionComponent>
         <AccordionItemsDirective>
-          <AccordionItemDirective header='Button' content={contentTemplate1} />
-          <AccordionItemDirective header='DatePicker' content={contentTemplate2} />
-          <AccordionItemDirective header='Calendar' content={contentTemplate3} />
-          <AccordionItemDirective header='Treeview' content={contentTemplate4} />
+          <AccordionItemDirective header='Button' content={buttonTemplate} />
+          <AccordionItemDirective header='DatePicker' content={datePickerTemplate} />
+          <AccordionItemDirective header='Calendar' content={calenderTemplate} />
+          <AccordionItemDirective header='Treeview' content={treeViewTemplate4} />
         </AccordionItemsDirective>
       </AccordionComponent>
     </div>
@@ -90,5 +87,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
-
-

@@ -1,6 +1,3 @@
-
-
-
 import * as ReactDOM from "react-dom"
 import * as React from "react";
 import {
@@ -9,7 +6,7 @@ import {
   TabItemsDirective
 } from "@syncfusion/ej2-react-navigations";
 
-function Default() {
+const Default = () => {
   // Mapping Tab items Header property
   let headertext = [
     { text: "USA" },
@@ -26,7 +23,7 @@ function Default() {
     { text: "BRISBANE" }
   ];
 
-  function content1() {
+  const newYorkContent = () => {
     return (
       <div>
         New York City comprises 5 boroughs sitting where the Hudson River
@@ -38,7 +35,7 @@ function Default() {
       </div>
     );
   }
-  function content2() {
+  const losAngelesContent = () => {
     return (
       <div>
         Los Angeles is a sprawling Southern California city and the center of
@@ -51,7 +48,7 @@ function Default() {
       </div>
     );
   }
-  function content3() {
+  const chicagoContent = () => {
     return (
       <div>
         Chicago, on Lake Michigan in Illinois, is among the largest cities in
@@ -65,7 +62,7 @@ function Default() {
     );
   }
 
-  function content4() {
+  const parisContent = () => {
     return (
       <div>
         Paris, France capital, is a major European city and a global center
@@ -78,7 +75,7 @@ function Default() {
     );
   }
 
-  function content5() {
+  const marseilleContent = () => {
     return (
       <div>
         Marseille, a port city in southern France, has been a crossroads of
@@ -92,7 +89,7 @@ function Default() {
     );
   }
 
-  function content6() {
+  const lyonContent = () => {
     return (
       <div>
         Lyon, the capital city in France’s Auvergne-Rhône-Alpes region, sits
@@ -106,7 +103,7 @@ function Default() {
     );
   }
 
-  function content7() {
+  const sydneyContent = () => {
     return (
       <div>
         Sydney, capital of New South Wales and one of Australia largest
@@ -120,7 +117,7 @@ function Default() {
     );
   }
 
-  function content8() {
+  const melbourneContent = () => {
     return (
       <div>
         Melbourne is the coastal capital of the southeastern Australian state
@@ -133,7 +130,7 @@ function Default() {
     );
   }
 
-  function content9() {
+  const brisBaneContent = () => {
     return (
       <div>
         Brisbane, capital of Queensland, is a large city on the Brisbane
@@ -146,37 +143,37 @@ function Default() {
     );
   }
 
-  function nestedTab1() {
+  const nestedTab1 = () => {
     return (
       <TabComponent heightAdjustMode="Auto" id="nestedTab1">
         <TabItemsDirective>
-          <TabItemDirective header={headertext[3]} content={content1} />
-          <TabItemDirective header={headertext[4]} content={content2} />
-          <TabItemDirective header={headertext[5]} content={content3} />
+          <TabItemDirective header={headertext[3]} content={newYorkContent} />
+          <TabItemDirective header={headertext[4]} content={losAngelesContent} />
+          <TabItemDirective header={headertext[5]} content={chicagoContent} />
         </TabItemsDirective>
       </TabComponent>
     );
   }
 
-  function nestedTab2() {
+  const nestedTab2 = () => {
     return (
       <TabComponent heightAdjustMode="Auto" id="nestedTab2">
         <TabItemsDirective>
-          <TabItemDirective header={headertext[6]} content={content4} />
-          <TabItemDirective header={headertext[7]} content={content5} />
-          <TabItemDirective header={headertext[8]} content={content6} />
+          <TabItemDirective header={headertext[6]} content={parisContent} />
+          <TabItemDirective header={headertext[7]} content={marseilleContent} />
+          <TabItemDirective header={headertext[8]} content={lyonContent} />
         </TabItemsDirective>
       </TabComponent>
     );
   }
 
-  function nestedTab3() {
+  const nestedTab3 = () => {
     return (
       <TabComponent heightAdjustMode="Auto" id="nestedTab3">
         <TabItemsDirective>
-          <TabItemDirective header={headertext[9]} content={content7} />
-          <TabItemDirective header={headertext[10]} content={content8} />
-          <TabItemDirective header={headertext[11]} content={content9} />
+          <TabItemDirective header={headertext[9]} content={sydneyContent} />
+          <TabItemDirective header={headertext[10]} content={melbourneContent} />
+          <TabItemDirective header={headertext[11]} content={brisBaneContent} />
         </TabItemsDirective>
       </TabComponent>
     );
@@ -198,7 +195,7 @@ function Default() {
 
 }
 
-const root = ReactDOM.createRoot(document.getElementById('element') as HTMLElement);
+const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<Default />);
 
 

@@ -1,5 +1,3 @@
-
-
 import {
   CarouselComponent,
   CarouselItemsDirective,
@@ -8,7 +6,7 @@ import {
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
- function App() {
+ const App = () => {
   return (
     <div className='control-container'>
       <CarouselComponent>

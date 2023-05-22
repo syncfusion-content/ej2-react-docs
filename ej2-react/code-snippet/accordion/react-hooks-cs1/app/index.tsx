@@ -5,7 +5,7 @@ import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { AccordionComponent } from '@syncfusion/ej2-react-navigations';
 
 
-function App() {
+const App = () => {
   const [name, setName] = useState('');
   return (
     <div>

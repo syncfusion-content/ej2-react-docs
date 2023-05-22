@@ -1,12 +1,10 @@
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective, ExpandEventArgs, AccordionItemModel } from '@syncfusion/ej2-react-navigations';
+import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective, ExpandEventArgs } from '@syncfusion/ej2-react-navigations';
 // @ts-ignore
-
 let dbFlag: number = 0;
-let dynamciAcrdnCount: number = 2;
-function ReactApp() {
-  let acrdnInstance: AccordionComponent | any;
+let dynamicAcrdnCount: number = 2;
+const ReactApp = () => {
   let accordion: Object[] = [
     {
       header: ' ASP.NET Razor ',
@@ -49,38 +47,55 @@ function ReactApp() {
       content: ' TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language. '
     },
   ];
+  const acrdnInstance = useRef<AccordionComponent>(null);
+  const expanded = (e: ExpandEventArgs): void => {
+    const Elementindex = document.getElementsByClassName("e-expand-state e-selected e-active")[0];
+    if ([...e.element.parentElement.children].indexOf(e.element) === [...e.element.parentElement.children].indexOf(Elementindex)) {
+      const array: object[] = accordion;
+      for (let i = 0; i < dynamicAcrdnCount; i++) {
+        if (dbFlag === array.length) {
+          return;
+        }
+        acrdnInstance.current?.addItem(array[dbFlag], acrdnInstance.current?.items.length);
+        ++dbFlag;
+      }
+    }
+  }
+  const aspNetContent = () => {
+    return (<div>
+      Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.
+    </div>);
+  }
+
+  const aspCoreContent = () => {
+    return (<div>
+      ASP.NET Core is a free and open-source web framework, and the next generation of ASP.NET, developed by Microsoft and the community. It is a modular framework that runs on both the full .NET Framework, on Windows, and the cross-platform .NET Core.
+    </div>);
+  }
+
+  const aspMvcContent = () => {
+    return (<div>
+      The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.
+    </div>);
+  }
+
   return (
     <div className='control-pane'>
       <div className='control-section accordion-control-section'>
         <div className='control Accordion-sample'>
           {/* Render the Accoridon Component */}
-          <AccordionComponent expanded={expanded} ref={acrdn => acrdnInstance = acrdn}>
+          <AccordionComponent expanded={expanded} ref={acrdnInstance}>
             <AccordionItemsDirective>
-              <AccordionItemDirective header='ASP.NET' content='Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' />
-              <AccordionItemDirective header='ASP.NET Core' content='ASP.NET Core is a free and open-source web framework, and the next generation of ASP.NET, developed by Microsoft and the community. It is a modular framework that runs on both the full .NET Framework, on Windows, and the cross-platform .NET Core.' />
-              <AccordionItemDirective header='ASP.NET MVC' content='The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' />
+              <AccordionItemDirective header='ASP.NET' content={aspNetContent} />
+              <AccordionItemDirective header='ASP.NET Core' content={aspCoreContent} />
+              <AccordionItemDirective header='ASP.NET MVC' content={aspMvcContent} />
             </AccordionItemsDirective>
           </AccordionComponent>
-        </div></div>
+        </div>
+      </div>
     </div>
-
   );
-  function expanded(e: ExpandEventArgs) {
-    let Elementindex = document.getElementsByClassName("e-expand-state e-selected e-active")[0];
-    if ([].slice.call((e.element as any).parentElement.children).indexOf(e.element) === [].slice.call((e.element as any).parentElement.children).indexOf(Elementindex)) {
-      let array: AccordionItemModel[] = accordion as AccordionItemModel[];
-      for (let i: number = 0; i < dynamciAcrdnCount; i++) {
-        if (dbFlag === array.length) {
-          return;
-        }
-        acrdnInstance.addItem(array[dbFlag], acrdnInstance.items.length);
-        ++dbFlag;
-      }
-    }
-  }
 }
+
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<ReactApp />);
-
-
-

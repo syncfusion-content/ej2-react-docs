@@ -1,7 +1,7 @@
 import { CarouselComponent, CarouselItemsDirective, CarouselItemDirective } from "@syncfusion/ej2-react-navigations";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-function App() {
+const App = () => {
     const showButtons = "Visible";
     return (<div className='control-container'>
       <CarouselComponent buttonsVisibility={showButtons}>

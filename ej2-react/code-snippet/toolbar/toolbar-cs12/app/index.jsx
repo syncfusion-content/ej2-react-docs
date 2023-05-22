@@ -1,7 +1,7 @@
 import { ToolbarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-function ReactApp() {
+const ReactApp = () => {
     return (<ToolbarComponent width="300" overflowMode="Popup">
       <div>
         <div className="e-overflow-show e-popup-text"><button className="e-btn e-tbar-btn"><span className="e-cut-icon tb-icons e-icons e-btn-icon"/><div className="e-tbar-btn-text">Cut</div></button> </div>

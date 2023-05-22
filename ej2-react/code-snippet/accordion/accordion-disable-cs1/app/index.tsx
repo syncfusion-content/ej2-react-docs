@@ -1,157 +1,160 @@
-import * as React from "react";
+import { useRef } from "react";
 import * as ReactDOM from "react-dom";
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';
-function ReactApp() {
+const ReactApp = () => {
   let success: string = "Your payment successfully processed";
   let email_alert: string = "Enter valid email address";
   let mobile_alert: string = "Mobile number length should be 10";
   let card_alert: string = "Card number length should be 16";
   let cvv_alert: string = "CVV number length should be 3";
   let dlgTarget: HTMLElement = document.body;
-  let accordion: AccordionComponent;
-  let alertDlg: DialogComponent;
-  let cardNo: NumericTextBoxComponent;
-  let mobile: NumericTextBoxComponent;
-  let expiry: DatePickerComponent;
-  let cvv: NumericTextBoxComponent;
+  const accordion = useRef<AccordionComponent>(null);
+  const alertDlg = useRef<DialogComponent>(null);
+  const cardNo = useRef<NumericTextBoxComponent>(null);
+  const mobile = useRef<NumericTextBoxComponent>(null);
+  const expiry = useRef<DatePickerComponent>(null);
+  const cvv = useRef<NumericTextBoxComponent>(null);
+  const email = useRef(null);
+  const password = useRef(null);
+  const name = useRef(null);
+  const address = useRef(null);
+  const cardHolder = useRef(null);
+  const err1 = useRef(null);
+  const err2 = useRef(null);
+  const err3 = useRef(null);
   const dlgButtons: Object[] = [
     {
       buttonModel: { content: "Ok", isPrimary: true },
       click: () => {
-        alertDlg.hide();
+        alertDlg.current.hide();
         if (
-          accordion.expandedIndices[0] === 2 &&
-          alertDlg.content === success
+          accordion.current.expandedIndices[0] === 2 &&
+          alertDlg.current.content === success
         ) {
-          accordion.enableItem(0, true);
-          accordion.enableItem(1, false);
-          accordion.enableItem(2, false);
-          accordion.expandItem(true, 0);
+          accordion.current.enableItem(0, true);
+          accordion.current.enableItem(1, false);
+          accordion.current.enableItem(2, false);
+          accordion.current.expandItem(true, 0);
         }
       }
     }
   ];
   const dlgCreated = (): void => {
-    alertDlg.hide();
+    alertDlg.current.hide();
   }
   const acrdnCreated = (): void => {
-    if (accordion != undefined) {
-      accordion.enableItem(1, false);
-      accordion.enableItem(2, false);
+    if (accordion !== undefined) {
+      accordion.current.enableItem(1, false);
+      accordion.current.enableItem(2, false);
     }
   }
   const btnClick = (e: any): void => {
     switch (e.target.id) {
       case "Continue_Btn":
-        let email: string = document.getElementById("email");
-        let password: string = document.getElementById("password");
-        if (email.value !== "" && password.value !== "") {
-          if (checkMail(email.value)) {
-            email.value = password.value = "";
-            accordion.enableItem(1, true);
-            accordion.enableItem(0, false);
-            accordion.expandItem(true, 1);
+        if (email.current.value !== "" && password.current.value !== "") {
+          if (checkMail(email.current.value)) {
+            email.current.value = password.current.value = "";
+            accordion.current.enableItem(1, true);
+            accordion.current.enableItem(0, false);
+            accordion.current.expandItem(true, 1);
           }
-          document.getElementById("err1").classList.remove("show");
+          err1.current.classList.remove("show");
         } else {
-          document.getElementById("err1").classList.add("show");
+          err1.current.classList.add("show");
         }
         break;
       case "Continue_BtnAdr":
-        let name: string = document.getElementById("name");
-        let address: string = document.getElementById("address");
         if (
-          name.value !== "" &&
-          address.value !== "" &&
-          mobile.value != null
+          name.current.value !== "" &&
+          address.current.value !== "" &&
+          mobile.current.value != null
         ) {
-          if (checkMobile(mobile.value)) {
-            accordion.enableItem(2, true);
-            accordion.enableItem(1, false);
-            accordion.expandItem(true, 2);
+          if (checkMobile(mobile.current.value)) {
+            accordion.current.enableItem(2, true);
+            accordion.current.enableItem(1, false);
+            accordion.current.expandItem(true, 2);
           }
-          document.getElementById("err2").classList.remove("show");
+          err2.current.classList.remove("show");
         } else {
-          document.getElementById("err2").classList.add("show");
+          err2.current.classList.add("show");
         }
         break;
       case "Back_Btn":
-        accordion.enableItem(1, true);
-        accordion.enableItem(2, false);
-        accordion.expandItem(true, 1);
+        accordion.current.enableItem(1, true);
+        accordion.current.enableItem(2, false);
+        accordion.current.expandItem(true, 1);
         break;
       case "Save_Btn":
-        let cardHolder: string = document.getElementById("cardHolder");
         if (
-          cardNo.value != null &&
-          cardHolder.value !== "" &&
-          expiry.value != null &&
-          cvv.value != null
+          cardNo.current.value != null &&
+          cardHolder.current.value !== "" &&
+          expiry.current.value != null &&
+          cvv.current.value != null
         ) {
-          if (checkCardNo(cardNo.value)) {
-            if (checkCVV(cvv.value)) {
-              alertDlg.content = success;
-              alertDlg.show();
+          if (checkCardNo(cardNo.current.value)) {
+            if (checkCVV(cvv.current.value)) {
+              alertDlg.current.content = success;
+              alertDlg.current.show();
             }
           }
-          document.getElementById("err3").classList.remove("show");
+          err3.current.classList.remove("show");
         } else {
-          document.getElementById("err3").classList.add("show");
+          err3.current.classList.add("show");
         }
         break;
     }
   }
-  function checkMail(mail: string) {
+  const checkMail = (mail: string) => {
     if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
       return true;
     } else {
-      alertDlg.content = email_alert;
-      alertDlg.show();
+      alertDlg.current.content = email_alert;
+      alertDlg.current.show();
       return false;
     }
   }
-  function checkMobile(mobile: number) {
+  const checkMobile = (mobile: number) => {
     if (/^\d{10}$/.test(mobile.toString())) {
       return true;
     } else {
-      alertDlg.content = mobile_alert;
-      alertDlg.show();
+      alertDlg.current.content = mobile_alert;
+      alertDlg.current.show();
       return false;
     }
   }
-  function checkCardNo(cardNo: number) {
+  const checkCardNo = (cardNo: number) => {
     if (/^\d{16}$/.test(cardNo.toString())) {
       return true;
     } else {
-      alertDlg.content = card_alert;
-      alertDlg.show();
+      alertDlg.current.content = card_alert;
+      alertDlg.current.show();
       return false;
     }
   }
-  function checkCVV(cvv: number) {
+  const checkCVV = (cvv: number) => {
     if (/^\d{3}$/.test(cvv.toString())) {
       return true;
     } else {
-      alertDlg.content = cvv_alert;
-      alertDlg.show();
+      alertDlg.current.content = cvv_alert;
+      alertDlg.current.show();
       return false;
     }
   }
-  function content0() {
+  const signForm = () => {
     return (
       <div id="Sign_In_Form">
         <form id="formId">
           <div className="form-group">
             <div className="e-float-input">
-              <input type="text" id="email" name="Email" required />
+              <input type="text" ref={email} name="Email" required />
               <span className="e-float-line" />
               <label className="e-float-text">Email</label>
             </div>
             <div className="e-float-input">
-              <input id="password" type="password" name="Password" required />
+              <input ref={password} type="password" name="Password" required />
               <span className="e-float-line" />
               <label className="e-float-text" htmlFor="password">
                 Password
@@ -167,18 +170,18 @@ function ReactApp() {
           >
             Continue
           </button>
-          <div id="err1">* Please fill all fields</div>
+          <div ref={err1}>* Please fill all fields</div>
         </div>
       </div>
     );
   }
-  function content1() {
+  const addressFill = () => {
     return (
       <div id="Address_Fill">
         <form id="formId_Address">
           <div className="form-group">
             <div className="e-float-input">
-              <input type="text" id="name" name="Name" required />
+              <input type="text" ref={name} name="Name" required />
               <span className="e-float-line" />
               <label className="e-float-text" htmlFor="name">
                 Name
@@ -187,7 +190,7 @@ function ReactApp() {
           </div>
           <div className="form-group">
             <div className="e-float-input">
-              <input type="text" id="address" name="Address" required />
+              <input type="text" ref={address} name="Address" required />
               <span className="e-float-line" />
               <label className="e-float-text" htmlFor="address">
                 Address
@@ -196,9 +199,7 @@ function ReactApp() {
           </div>
           <div className="form-group">
             <NumericTextBoxComponent
-              ref={numerictextbox => {
-                mobile = numerictextbox;
-              }}
+              ref={mobile}
               format="0"
               placeholder="Mobile"
               floatLabelType="Auto"
@@ -214,20 +215,18 @@ function ReactApp() {
           >
             Continue
           </button>
-          <div id="err2">* Please fill all fields</div>
+          <div ref={err2}>* Please fill all fields</div>
         </div>
       </div>
     );
   }
-  function content2() {
+  const cardFill = () => {
     return (
       <div id="Card_Fill">
         <div className="col-xs-6 col-sm-6 col-lg-6 col-md-6">
           <div className="form-group">
             <NumericTextBoxComponent
-              ref={numerictextbox => {
-                cardNo = numerictextbox;
-              }}
+              ref={cardNo}
               format="0"
               placeholder="Card No"
               floatLabelType="Auto"
@@ -238,7 +237,7 @@ function ReactApp() {
         <div className="col-xs-6 col-sm-6 col-lg-6 col-md-6">
           <div className="form-group">
             <div className="e-float-input">
-              <input type="text" id="cardHolder" name="cardHolder" required />
+              <input type="text" ref={cardHolder} name="cardHolder" required />
               <span className="e-float-line" />
               <label className="e-float-text" htmlFor="cardHolder">
                 CardHolder Name
@@ -248,7 +247,7 @@ function ReactApp() {
         </div>
         <div className="col-xs-6 col-sm-6 col-lg-6 col-md-6">
           <DatePickerComponent
-            ref={calendar => (expiry = calendar)}
+            ref={expiry}
             width="100%"
             format="MM/yyyy"
             placeholder="Expiry Date"
@@ -258,9 +257,7 @@ function ReactApp() {
         <div className="col-xs-6 col-sm-6 col-lg-6 col-md-6">
           <div className="form-group">
             <NumericTextBoxComponent
-              ref={numerictextbox => {
-                cvv = numerictextbox;
-              }}
+              ref={cvv}
               format="0"
               placeholder="CVV"
               floatLabelType="Auto"
@@ -283,7 +280,7 @@ function ReactApp() {
           >
             Save
           </button>
-          <div id="err3">* Please fill all fields</div>
+          <div ref={err3}>* Please fill all fields</div>
         </div>
       </div>
     );
@@ -292,7 +289,7 @@ function ReactApp() {
     <div>
       <div className="template_title"> Online Shopping Payment Module</div>
       <DialogComponent
-        ref={dialog => (alertDlg = dialog)}
+        ref={alertDlg}
         header="Alert"
         width={200}
         isModal={true}
@@ -302,22 +299,22 @@ function ReactApp() {
         created={dlgCreated}
       />
       <AccordionComponent
-        ref={accordion => (accordion = accordion)}
+        ref={accordion}
         created={acrdnCreated}
       >
         <AccordionItemsDirective>
           <AccordionItemDirective
             expanded={true}
             header="Sign In"
-            content={content0}
+            content={signForm}
           />
           <AccordionItemDirective
             header="Delivery Address"
-            content={content1}
+            content={addressFill}
           />
           <AccordionItemDirective
             header="Card Details"
-            content={content2}
+            content={cardFill}
           />
         </AccordionItemsDirective>
       </AccordionComponent>

@@ -1,34 +1,43 @@
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom"
 import * as React from "react";
-import { TabComponent, TabItemDirective, TabItemsDirective } from "@syncfusion/ej2-react-navigations";
-function Default() {
-    // Mapping Tab items Header property
-    let headertext = [
-        { text: "USA" },
-        { text: "FRANCE" },
-        { text: "AUSTRALIA" },
-        { text: "NEW YORK" },
-        { text: "LOS ANGELES" },
-        { text: "CHICAGO" },
-        { text: "PARIS" },
-        { text: "MARSEILLE" },
-        { text: "LYON" },
-        { text: "SYDNEY" },
-        { text: "MELBORNE" },
-        { text: "BRISBANE" }
-    ];
-    function content1() {
-        return (<div>
+import {
+  TabComponent,
+  TabItemDirective,
+  TabItemsDirective
+} from "@syncfusion/ej2-react-navigations";
+
+const Default = () => {
+  // Mapping Tab items Header property
+  let headertext = [
+    { text: "USA" },
+    { text: "FRANCE" },
+    { text: "AUSTRALIA" },
+    { text: "NEW YORK" },
+    { text: "LOS ANGELES" },
+    { text: "CHICAGO" },
+    { text: "PARIS" },
+    { text: "MARSEILLE" },
+    { text: "LYON" },
+    { text: "SYDNEY" },
+    { text: "MELBORNE" },
+    { text: "BRISBANE" }
+  ];
+
+  const newYorkContent = () => {
+    return (
+      <div>
         New York City comprises 5 boroughs sitting where the Hudson River
         meets the Atlantic Ocean. At its core is Manhattan, a densely
         populated borough that’s among the world’s major commercial, financial
         and cultural centers. Its iconic sites include skyscrapers such as the
         Empire State Building and sprawling Central Park. Broadway theater is
         staged in neon-lit Times Square.
-      </div>);
-    }
-    function content2() {
-        return (<div>
+      </div>
+    );
+  }
+  const losAngelesContent = () => {
+    return (
+      <div>
         Los Angeles is a sprawling Southern California city and the center of
         the nation’s film and television industry. Near its iconic Hollywood
         sign, studios such as Paramount Pictures, Universal and Warner
@@ -36,10 +45,12 @@ function Default() {
         Chinese Theatre displays celebrities’ hand- and footprints, the Walk
         of Fame honors thousands of luminaries and vendors sell maps to stars’
         homes.
-      </div>);
-    }
-    function content3() {
-        return (<div>
+      </div>
+    );
+  }
+  const chicagoContent = () => {
+    return (
+      <div>
         Chicago, on Lake Michigan in Illinois, is among the largest cities in
         the U.S. Famed for its bold architecture, it has a skyline punctuated
         by skyscrapers such as the iconic John Hancock Center, 1,451-ft.
@@ -47,20 +58,26 @@ function Default() {
         Tower. The city is also renowned for its museums, including the Art
         Institute of Chicago with its noted Impressionist and
         Post-Impressionist works.
-      </div>);
-    }
-    function content4() {
-        return (<div>
+      </div>
+    );
+  }
+
+  const parisContent = () => {
+    return (
+      <div>
         Paris, France capital, is a major European city and a global center
         for art, fashion, gastronomy and culture. Its 19th-century cityscape
         is crisscrossed by wide boulevards and the River Seine. Beyond such
         landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame
         cathedral, the city is known for its cafe culture and designer
         boutiques along the Rue du Faubourg Saint-Honoré.
-      </div>);
-    }
-    function content5() {
-        return (<div>
+      </div>
+    );
+  }
+
+  const marseilleContent = () => {
+    return (
+      <div>
         Marseille, a port city in southern France, has been a crossroads of
         immigration and trade since its founding by the Greeks circa 600 B.C.
         At its heart is the Vieux-Port (Old Port), where fishmongers sell
@@ -68,10 +85,13 @@ function Default() {
         Notre-Dame-de-la-Garde is a Romanesque-Byzantine church. Modern
         landmarks include Le Corbusier’s influential Cité Radieuse complex and
         Zaha Hadid’s CMA CGM Tower.
-      </div>);
-    }
-    function content6() {
-        return (<div>
+      </div>
+    );
+  }
+
+  const lyonContent = () => {
+    return (
+      <div>
         Lyon, the capital city in France’s Auvergne-Rhône-Alpes region, sits
         at the junction of the Rhône and Saône rivers. Its center reflects
         2,000 years of history from the Roman Amphithéâtre des Trois Gaules,
@@ -79,10 +99,13 @@ function Default() {
         modern Confluence district on Presquîle peninsula. Traboules, covered
         passageways between buildings, connect Vieux Lyon and La Croix-Rousse
         hill.
-      </div>);
-    }
-    function content7() {
-        return (<div>
+      </div>
+    );
+  }
+
+  const sydneyContent = () => {
+    return (
+      <div>
         Sydney, capital of New South Wales and one of Australia largest
         cities, is best known for its harbourfront Sydney Opera House, with a
         distinctive sail-like design. Massive Darling Harbour and the smaller
@@ -90,66 +113,90 @@ function Default() {
         Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s
         outdoor platform, the Skywalk, offers 360-degree views of the city and
         suburbs.
-      </div>);
-    }
-    function content8() {
-        return (<div>
+      </div>
+    );
+  }
+
+  const melbourneContent = () => {
+    return (
+      <div>
         Melbourne is the coastal capital of the southeastern Australian state
         of Victoria. At the city centre is the modern Federation Square
         development, with plazas, bars, and restaurants by the Yarra River. In
         the Southbank area, the Melbourne Arts Precinct is the site of Arts
         Centre Melbourne – a performing arts complex – and the National
         Gallery of Victoria, with Australian and indigenous art.
-      </div>);
-    }
-    function content9() {
-        return (<div>
+      </div>
+    );
+  }
+
+  const brisBaneContent = () => {
+    return (
+      <div>
         Brisbane, capital of Queensland, is a large city on the Brisbane
         River. Clustered in its South Bank cultural precinct are the
         Queensland Museum and Sciencentre, with noted interactive exhibitions.
         Another South Bank cultural institution is Queensland Gallery of
         Modern Art, among Australia major contemporary art museums. Looming
         over the city is Mt. Coot-tha, site of Brisbane Botanic Gardens.
-      </div>);
-    }
-    function nestedTab1() {
-        return (<TabComponent heightAdjustMode="Auto" id="nestedTab1">
+      </div>
+    );
+  }
+
+  const nestedTab1 = () => {
+    return (
+      <TabComponent heightAdjustMode="Auto" id="nestedTab1">
         <TabItemsDirective>
-          <TabItemDirective header={headertext[3]} content={content1}/>
-          <TabItemDirective header={headertext[4]} content={content2}/>
-          <TabItemDirective header={headertext[5]} content={content3}/>
+          <TabItemDirective header={headertext[3]} content={newYorkContent} />
+          <TabItemDirective header={headertext[4]} content={losAngelesContent} />
+          <TabItemDirective header={headertext[5]} content={chicagoContent} />
         </TabItemsDirective>
-      </TabComponent>);
-    }
-    function nestedTab2() {
-        return (<TabComponent heightAdjustMode="Auto" id="nestedTab2">
+      </TabComponent>
+    );
+  }
+
+  const nestedTab2 = () => {
+    return (
+      <TabComponent heightAdjustMode="Auto" id="nestedTab2">
         <TabItemsDirective>
-          <TabItemDirective header={headertext[6]} content={content4}/>
-          <TabItemDirective header={headertext[7]} content={content5}/>
-          <TabItemDirective header={headertext[8]} content={content6}/>
+          <TabItemDirective header={headertext[6]} content={parisContent} />
+          <TabItemDirective header={headertext[7]} content={marseilleContent} />
+          <TabItemDirective header={headertext[8]} content={lyonContent} />
         </TabItemsDirective>
-      </TabComponent>);
-    }
-    function nestedTab3() {
-        return (<TabComponent heightAdjustMode="Auto" id="nestedTab3">
+      </TabComponent>
+    );
+  }
+
+  const nestedTab3 = () => {
+    return (
+      <TabComponent heightAdjustMode="Auto" id="nestedTab3">
         <TabItemsDirective>
-          <TabItemDirective header={headertext[9]} content={content7}/>
-          <TabItemDirective header={headertext[10]} content={content8}/>
-          <TabItemDirective header={headertext[11]} content={content9}/>
+          <TabItemDirective header={headertext[9]} content={sydneyContent} />
+          <TabItemDirective header={headertext[10]} content={melbourneContent} />
+          <TabItemDirective header={headertext[11]} content={brisBaneContent} />
         </TabItemsDirective>
-      </TabComponent>);
-    }
-    return (<div className="control-pane">
+      </TabComponent>
+    );
+  }
+
+  return (
+    <div className="control-pane">
       <div className="control-section tab-control-section">
         <TabComponent heightAdjustMode="Auto" id="defaultTab">
           <TabItemsDirective>
-            <TabItemDirective header={headertext[0]} content={nestedTab1}/>
-            <TabItemDirective header={headertext[1]} content={nestedTab2}/>
-            <TabItemDirective header={headertext[2]} content={nestedTab3}/>
+            <TabItemDirective header={headertext[0]} content={nestedTab1} />
+            <TabItemDirective header={headertext[1]} content={nestedTab2} />
+            <TabItemDirective header={headertext[2]} content={nestedTab3} />
           </TabItemsDirective>
         </TabComponent>
       </div>
-    </div>);
+    </div>
+  );
+
 }
+
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<Default />);
+
+
+
