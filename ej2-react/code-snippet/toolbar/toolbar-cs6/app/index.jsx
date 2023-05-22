@@ -1,29 +1,50 @@
-import { CheckBox, RadioButton } from '@syncfusion/ej2-buttons';
-import { DropDownList } from '@syncfusion/ej2-dropdowns';
-import { NumericTextBox } from '@syncfusion/ej2-inputs';
+import { CheckBoxComponent, RadioButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { ItemDirective, ItemsDirective, ToolbarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-function ReactApp() {
-    const data = ['Badminton', 'Basketball', 'Cricket', 'Golf', 'Hockey', 'Rugby'];
-    const numericTem = new NumericTextBox({ format: 'c2', value: 1 });
-    const templateDropdown = new DropDownList({ dataSource: data, width: 120, index: 2 });
-    const templateCheckbox = new CheckBox({ label: 'Checkbox', checked: true });
-    const templateRadiobutton = new RadioButton({ label: 'Radio', name: 'default', checked: true });
-    return (<ToolbarComponent>
+
+const ReactApp = () => {
+  const data = ['Badminton', 'Basketball', 'Cricket', 'Golf', 'Hockey', 'Rugby'];
+
+  const dropDownList = () => {
+    return (<div>
+      <DropDownListComponent dataSource={data} width={120} index={2} />
+    </div>)
+  }
+  const numericText = () => {
+    return (<div>
+      <NumericTextBoxComponent format='c2' value={1}></NumericTextBoxComponent>
+    </div>)
+  }
+  const checkBox = () => {
+    return (<div>
+      <CheckBoxComponent label='Checkbox' checked={true}></CheckBoxComponent>
+    </div>)
+  }
+  const radioButton = () => {
+    return (<div>
+      <RadioButtonComponent label='Radio' name='default' checked={true}></RadioButtonComponent>
+    </div>)
+  }
+
+  return (
+    <ToolbarComponent >
       <ItemsDirective>
-        <ItemDirective text="Cut"/>
-        <ItemDirective text="Copy"/>
-        <ItemDirective type="Separator"/>
-        <ItemDirective text="Undo"/>
-        <ItemDirective text="Redo"/>
-        <ItemDirective type="Separator"/>
-        <ItemDirective type="Input" template={numericTem}/>
-        <ItemDirective type="Input" template={templateDropdown}/>
-        <ItemDirective type="Input" template={templateCheckbox}/>
-        <ItemDirective type="Input" template={templateRadiobutton}/>
+        <ItemDirective text="Cut" />
+        <ItemDirective text="Copy" />
+        <ItemDirective type="Separator" />
+        <ItemDirective text="Undo" />
+        <ItemDirective text="Redo" />
+        <ItemDirective type="Separator" />
+        <ItemDirective type="Input" template={numericText} />
+        <ItemDirective type="Input" template={dropDownList} />
+        <ItemDirective type="Input" template={checkBox} />
+        <ItemDirective type="Input" template={radioButton} />
       </ItemsDirective>
-    </ToolbarComponent>);
+    </ToolbarComponent>
+  );
 }
 const root = ReactDOM.createRoot(document.getElementById('toolbar'));
 root.render(<ReactApp />);

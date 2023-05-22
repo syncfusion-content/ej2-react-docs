@@ -2,7 +2,7 @@ import { AppBarComponent, MenuComponent } from "@syncfusion/ej2-react-navigation
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-function App() {
+const App = () => {
     const companyMenuItems = [
         {
             text: 'Company',

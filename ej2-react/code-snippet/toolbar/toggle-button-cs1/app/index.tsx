@@ -1,78 +1,105 @@
-
-
-
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
+import { useRef } from 'react';
 import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
-import { Button } from '@syncfusion/ej2-react-buttons';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
-function ReactApp() {
-  let undoBtn: any;
-  let zoomBtn: any;
-  let mediaBtn: any;
-  let filterBtn: any;
-  let visibleBtn: any;
+const ReactApp = () => {
+  const zoomBtnRef = useRef<ButtonComponent>(null);
+  const mediaBtnRef = useRef<ButtonComponent>(null);
+  const undoBtnRef = useRef<ButtonComponent>(null);
+  const filterBtnRef = useRef<ButtonComponent>(null);
+  const visibleBtnRef = useRef<ButtonComponent>(null);
+  const contentRef = useRef(null);
 
-  const tbCreated = (): void => {
-    zoomBtn = new Button({ cssClass: `e-flat`, iconCss: 'e-icons e-zoomin-icon', isToggle: true });
-    zoomBtn.appendTo('#zoom_btn');
+  //Toggle button click event handlers
+  const zoomBtnClick = () => {
+    if (zoomBtnRef.current) {
+      zoomBtnRef.current.element.onclick = () => {
+        if (zoomBtnRef.current.element.classList.contains('e-active')) {
+          zoomBtnRef.current.iconCss = 'e-icons e-zoomout-icon';
+        } else {
+          zoomBtnRef.current.iconCss = 'e-icons e-zoomin-icon';
+        }
+      };
+    }
+  }
 
-    mediaBtn = new Button({ cssClass: `e-flat`, iconCss: 'e-icons e-play-icon', isToggle: true });
-    mediaBtn.appendTo('#media_btn');
+  const mediaBtnClick = () => {
+    if (mediaBtnRef.current) {
+      mediaBtnRef.current.element.onclick = () => {
+        if (mediaBtnRef.current.element.classList.contains('e-active')) {
+          mediaBtnRef.current.iconCss = 'e-icons e-pause-icon';
+        } else {
+          mediaBtnRef.current.iconCss = 'e-icons e-play-icon';
+        }
+      };
+    }
+  }
 
-    undoBtn = new Button({ cssClass: `e-flat`, iconCss: 'e-icons e-undo-icon', isToggle: true });
-    undoBtn.appendTo('#undo_btn');
+  const undoBtnClick = () => {
+    if (undoBtnRef.current) {
+      undoBtnRef.current.element.onclick = () => {
+        if (undoBtnRef.current.element.classList.contains('e-active')) {
+          undoBtnRef.current.iconCss = 'e-icons e-redo-icon';
+        } else {
+          undoBtnRef.current.iconCss = 'e-icons e-undo-icon';
+        }
+      };
+    }
+  }
 
-    filterBtn = new Button({ cssClass: `e-flat`, iconCss: 'e-icons e-filter-icon', isToggle: true });
-    filterBtn.appendTo('#filter_btn');
+  const filterBtnClick = () => {
+    if (filterBtnRef.current) {
+      filterBtnRef.current.element.onclick = () => {
+        if (filterBtnRef.current.element.classList.contains('e-active')) {
+          filterBtnRef.current.iconCss = 'e-icons e-filternone-icon';
+        } else {
+          filterBtnRef.current.iconCss = 'e-icons e-filter-icon';
+        }
+      };
+    }
+  }
 
-    visibleBtn = new Button({ cssClass: `e-flat`, iconCss: 'e-icons e-hide-icon', isToggle: true, content: 'Hide' });
-    visibleBtn.appendTo('#visible_btn');
+  const visibleBtnClick = () => {
+    if (visibleBtnRef.current) {
+      visibleBtnRef.current.element.onclick = () => {
+        if (visibleBtnRef.current.element.classList.contains('e-active')) {
+          contentRef.current.style.display = 'none';
+          visibleBtnRef.current.content = 'Show';
+          visibleBtnRef.current.iconCss = 'e-icons e-show-icon';
+        } else {
+          contentRef.current.style.display = 'block';
+          visibleBtnRef.current.content = 'Hide';
+          visibleBtnRef.current.iconCss = 'e-icons e-hide-icon';
+        }
+      };
+    }
+  }
 
-    //Toggle button click event handlers
-    zoomBtn.element.onclick = (): void => {
-      if (zoomBtn.element.classList.contains('e-active')) {
-        zoomBtn.iconCss = 'e-icons e-zoomout-icon';
-      } else {
-        zoomBtn.iconCss = 'e-icons e-zoomin-icon';
-      }
-    };
-
-    mediaBtn.element.onclick = (): void => {
-      if (mediaBtn.element.classList.contains('e-active')) {
-        mediaBtn.iconCss = 'e-icons e-pause-icon';
-      } else {
-        mediaBtn.iconCss = 'e-icons e-play-icon';
-      }
-    };
-
-    undoBtn.element.onclick = (): void => {
-      if (undoBtn.element.classList.contains('e-active')) {
-        undoBtn.iconCss = 'e-icons e-redo-icon';
-      } else {
-        undoBtn.iconCss = 'e-icons e-undo-icon';
-      }
-    };
-
-    filterBtn.element.onclick = (): void => {
-      if (filterBtn.element.classList.contains('e-active')) {
-        filterBtn.iconCss = 'e-icons e-filternone-icon';
-      } else {
-        filterBtn.iconCss = 'e-icons e-filter-icon';
-      }
-    };
-
-    visibleBtn.element.onclick = (): void => {
-      if (visibleBtn.element.classList.contains('e-active')) {
-        (document.getElementById('content') as HTMLElement).style.display = 'none';
-        visibleBtn.content = 'Show';
-        visibleBtn.iconCss = 'e-icons e-show-icon';
-      } else {
-        (document.getElementById('content') as HTMLElement).style.display = 'block';
-        visibleBtn.content = 'Hide';
-        visibleBtn.iconCss = 'e-icons e-hide-icon';
-      }
-    };
+  const zoomBtn = () => {
+    return (<div>
+      <ButtonComponent cssClass='e-flat' iconCss='e-icons e-zoomin-icon' isToggle={true} ref={zoomBtnRef}></ButtonComponent>
+    </div>);
+  }
+  const mediaBtn = () => {
+    return (<div>
+      <ButtonComponent cssClass='e-flat' iconCss='e-icons e-play-icon' isToggle={true} ref={mediaBtnRef}></ButtonComponent>
+    </div>);
+  }
+  const undoBtn = () => {
+    return (<div>
+      <ButtonComponent cssClass='e-flat' iconCss='e-icons e-undo-icon' isToggle={true} ref={undoBtnRef}></ButtonComponent>
+    </div>);
+  }
+  const filterBtn = () => {
+    return (<div>
+      <ButtonComponent cssClass='e-flat' iconCss='e-icons e-filter-icon' isToggle={true} ref={filterBtnRef}></ButtonComponent>
+    </div>);
+  }
+  const visibleBtn = () => {
+    return (<div>
+      <ButtonComponent cssClass='e-flat' iconCss='e-icons e-hide-icon' isToggle={true} content='Hide' ref={visibleBtnRef}></ButtonComponent>
+    </div>);
   }
   const divMargin = { margin: '25px 0' };
 
@@ -80,19 +107,24 @@ function ReactApp() {
     <div className='control-pane'>
       <div className='control-section tbar-control-section'>
         <div className='control toolbar-sample tbar-sample' style={divMargin}>
-          <ToolbarComponent id="ej2Toolbar" created={tbCreated}>
+          <ToolbarComponent id="ej2Toolbar">
             <ItemsDirective>
-              <ItemDirective template='<button class="e-btn" id="media_btn"></button>' />
+              <ItemDirective template={mediaBtn} click={mediaBtnClick} />
               <ItemDirective type='Separator' />
-              <ItemDirective template='<button class="e-btn" id="zoom_btn"></button>' />
+              <ItemDirective template={zoomBtn} click={zoomBtnClick} />
               <ItemDirective type='Separator' />
-              <ItemDirective template='<button class="e-btn" id="undo_btn"></button>' />
+              <ItemDirective template={undoBtn} click={undoBtnClick} />
               <ItemDirective type='Separator' />
-              <ItemDirective template='<button class="e-btn" id="filter_btn"></button>' />
+              <ItemDirective template={filterBtn} click={filterBtnClick} />
               <ItemDirective type='Separator' />
-              <ItemDirective template='<button class="e-btn" id="visible_btn"></button>' />
+              <ItemDirective template={visibleBtn} click={visibleBtnClick} />
             </ItemsDirective>
           </ToolbarComponent>
+          <br></br>
+          <div ref={contentRef}>
+            This content will be hidden, when you click on hide button and toggle
+            get an active state as show, otherwise it will be visible.
+          </div>
         </div>
       </div>
     </div>
@@ -100,6 +132,3 @@ function ReactApp() {
 }
 const root = ReactDOM.createRoot(document.getElementById('toolbar'));
 root.render(<ReactApp />);
-
-
-

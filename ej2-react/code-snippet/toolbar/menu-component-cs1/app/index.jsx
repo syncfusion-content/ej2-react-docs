@@ -87,8 +87,8 @@ const data = [
         ],
     },
 ];
-function App() {
-    function contentTemplate() {
+const App = () => {
+    const menuTemplate = () => {
         return (<MenuComponent items={data}></MenuComponent>);
     }
     return (<div id='container'>
@@ -96,7 +96,7 @@ function App() {
         <ItemsDirective>
           <ItemDirective text="Cut"/>
           <ItemDirective text="Copy"/>
-          <ItemDirective template={contentTemplate}/>
+          <ItemDirective template={menuTemplate}/>
           <ItemDirective text="Paste"/>
         </ItemsDirective>
       </ToolbarComponent>

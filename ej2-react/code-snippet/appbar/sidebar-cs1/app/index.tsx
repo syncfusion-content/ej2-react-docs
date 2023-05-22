@@ -1,13 +1,12 @@
-
-
+import { useState, useRef } from "react";
+import * as ReactDOM from "react-dom";
 import { AppBarComponent, TreeViewComponent, SidebarComponent } from "@syncfusion/ej2-react-navigations";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
-import * as React from "react";
-import * as ReactDOM from "react-dom";
 
-function App() {
-  let sidebarobj: SidebarComponent;
+const App = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const sidebarRef = useRef<SidebarComponent>(null);
   const data: { [key: string]: Object }[] = [
     {
       nodeId: '01', nodeText: 'Installation',
@@ -34,21 +33,23 @@ function App() {
   const target: string = '.main-sidebar-content';
   const mediaQuery: string = '(min-width: 600px)';
   const fields: object = { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild' };
-  function toggle() {
-    sidebarobj.toggle();
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   }
+
   return (
     <div className="control-container" id="responsive-wrapper">
       <div id="reswrapper">
         <div>
           <AppBarComponent>
-            <ButtonComponent cssClass="e-inherit" iconCss="e-icons e-menu" onClick={toggle}></ButtonComponent>
+            <ButtonComponent cssClass="e-inherit" iconCss="e-icons e-menu" onClick={toggleSidebar}></ButtonComponent>
             <div className="e-folder">
               <div className="e-folder-name">Navigation Pane</div>
             </div>
           </AppBarComponent>
         </div>
-        <SidebarComponent id="sideTree" className="sidebar-treeview" ref={Sidebar => sidebarobj = Sidebar} width={width} target={target} mediaQuery={mediaQuery} isOpen={true}>
+        <SidebarComponent id="sideTree" className="sidebar-treeview" ref={sidebarRef} width={width} target={target} mediaQuery={mediaQuery} isOpen={isOpen}>
           <div className='res-main-menu'>
             <div className="table-content">
               <TextBoxComponent id="resSearch" placeholder="Search..."></TextBoxComponent>
@@ -79,5 +80,3 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
-
-

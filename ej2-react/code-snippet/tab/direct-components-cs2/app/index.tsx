@@ -1,7 +1,4 @@
-
-
-
-import * as React from "react";
+import { useRef, useState } from "react";
 import * as ReactDOM from "react-dom";
 import { enableRipple } from "@syncfusion/ej2-base";
 import {
@@ -16,47 +13,47 @@ import {
   CalendarComponent
 } from "@syncfusion/ej2-react-calendars";
 enableRipple(true);
-function App() {
-  let cMenu: ContextMenuComponent;
-  const [menuItems] = React.useState([{ text: "Cut" }, { text: "Copy" }, { text: "Paste" }]);
-  function btnClick() {
-    cMenu.open(80, 20);
+const App = () => {
+  const conTextMenuRef = useRef<ContextMenuComponent>(null);
+  const [menuItems] = useState([{ text: "Cut" }, { text: "Copy" }, { text: "Paste" }]);
+  const btnClick = () => {
+    conTextMenuRef.current.open(80, 20);
   }
   let headertext;
-  function contentTemplate() {
+  const conTextTemplate = () => {
     return (
       <div>
         <ContextMenuComponent
           id="contextmenu"
-          ref={scope => (cMenu = scope)}
+          ref={conTextMenuRef}
           items={menuItems}
         />
         <ButtonComponent onClick={btnClick}>Click me</ButtonComponent>
       </div>
     );
   }
-  function contentTemplate1() {
+  const datePickerTemplate = () => {
     return <DatePickerComponent />;
   }
-  function contentTemplate2() {
+  const calenderTemplate = () => {
     return <CalendarComponent />;
   }
-  headertext = [{ text: "Tab1" }, { text: "Tab2" }, { text: "Tab3" }];
+  headertext = [{ text: "ContextMenuComponent" }, { text: "DatePickerComponent" }, { text: "CalendarComponent" }];
   return (
     <div id="container">
       <TabComponent heightAdjustMode="Auto" id="tabelement">
         <TabItemsDirective>
           <TabItemDirective
             header={headertext[0]}
-            content={contentTemplate}
+            content={conTextTemplate}
           />
           <TabItemDirective
             header={headertext[1]}
-            content={contentTemplate1}
+            content={datePickerTemplate}
           />
           <TabItemDirective
             header={headertext[2]}
-            content={contentTemplate2}
+            content={calenderTemplate}
           />
         </TabItemsDirective>
       </TabComponent>
@@ -65,6 +62,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
-
-
-

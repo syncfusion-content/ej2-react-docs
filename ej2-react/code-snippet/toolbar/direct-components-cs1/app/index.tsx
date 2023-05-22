@@ -1,6 +1,3 @@
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
@@ -8,20 +5,19 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 
 
-function App() {
-
-  function contentTemplate1(): JSX.Element {
+const App = () => {
+  const buttonTemplate = (): JSX.Element => {
     return (<ButtonComponent>Click me</ButtonComponent>);
   }
-  function contentTemplate2(): JSX.Element {
+  const datePickerTemplate = (): JSX.Element => {
     return (<DatePickerComponent></DatePickerComponent>);
   }
   return (
     <div id='container'>
       <ToolbarComponent id="toolbar">
         <ItemsDirective>
-          <ItemDirective template={contentTemplate1} />
-          <ItemDirective template={contentTemplate2} />
+          <ItemDirective template={buttonTemplate} />
+          <ItemDirective template={datePickerTemplate} />
           <ItemDirective text="Cut" />
           <ItemDirective text="Copy" />
           <ItemDirective text="Paste" />

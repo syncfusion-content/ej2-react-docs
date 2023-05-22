@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
-function App() {
-    function AnchorTemplate() {
+const App = () => {
+    const AnchorTemplate = () => {
         return (<div>
         <a target="_blank" href="https://ej2.syncfusion.com/react/documentation/toolbar/getting-started/">
           Anchor Toolbar Link

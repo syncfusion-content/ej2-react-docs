@@ -1,13 +1,12 @@
-
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { useRef } from 'react';
+import * as ReactDOM from 'react-dom/client';
 import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 
-function ReactApp() {
-  let tabObj: TabComponent;
+const ReactApp = () => {
+  const tabObj = useRef<TabComponent>(null);
+  const headerPosition = useRef<DropDownListComponent>(null);
+  const orientation = useRef<DropDownListComponent>(null);
 
   let headerText: any = [{ text: "HTML" }, { text: "C Sharp(C#)" }, { text: "Java" }, { text: "VB.Net" },
   { text: "Xamarin" }, { text: "ASP.NET" }, { text: "ASP.NET MVC" }, { text: "JavaScript" }];
@@ -24,18 +23,18 @@ function ReactApp() {
   let orientationVal: string = 'scrollable';
 
   const changeOrientationMode = (e: ChangeEventArgs): void => {
-    let placement: string = (document.getElementById('headerPosition') as HTMLSelectElement).value;
-    tabObj.headerPlacement = placement as any;
-    tabObj.dataBind();
+    let placement: string = (headerPosition.current.value as string).charAt(0).toUpperCase() + (headerPosition.current.value as string).slice(1);
+    tabObj.current.headerPlacement = placement as any;
+    tabObj.current.dataBind();
   }
 
   const changeOverflowMode = (e: ChangeEventArgs): void => {
-    let placement: string = (document.getElementById('orientation') as HTMLSelectElement).value;
-    tabObj.overflowMode = placement as any;
-    tabObj.dataBind();
+    let placement: string = (orientation.current.value as string).charAt(0).toUpperCase() + (orientation.current.value as string).slice(1);
+    tabObj.current.overflowMode = placement as any;
+    tabObj.current.dataBind();
   }
 
-  function content0() {
+  const htmlcontent = () => {
     return <div>
       HyperText Markup Language, commonly referred to as HTML, is the standard markup
       language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone
@@ -46,12 +45,12 @@ function ReactApp() {
       markup language, rather than a programming language.
     </div>;
   }
-  function content1() {
+  const csharpContent = () => {
     return <div>
       C# is intended to be a simple, modern, general-purpose, object-oriented programming language. Its development team is led by Anders Hejlsberg. The most recent version is C# 5.0, which was released on August 15, 2012.
     </div>;
   }
-  function content2() {
+  const javaContent = () => {
     return <div>
       Java is a set of computer software and specifications developed by Sun Microsystems, later acquired by Oracle
       Corporation, that provides a system for developing application software and deploying it in a cross-platform computing
@@ -60,14 +59,14 @@ function ReactApp() {
       provide many features of native applications and can be embedded in HTML pages.
     </div>;
   }
-  function content3() {
+  const vbNetcontent = () => {
     return <div>
       The command-line compiler, VBC.EXE, is installed as part of the freeware .NET
       Framework SDK. Mono also includes a command-line VB.NET compiler. The most recent version
       is VB 2012, which was released on August 15, 2012.
     </div>;
   }
-  function content4() {
+  const xamarinContent = () => {
     return <div>
       Xamarin is a San Francisco, California based software company created in May
       2011[3] by the engineers that created Mono,[4] Mono for Android and MonoTouch that are
@@ -78,7 +77,7 @@ function ReactApp() {
       than 120 countries around the World as of May 2015.
     </div>;
   }
-  function content5() {
+  const aspNetContent = () => {
     return <div>
       ASP.NET is an open-source server-side web application framework designed for web
       development to produce dynamic web pages. It was developed by Microsoft to allow programmers
@@ -89,7 +88,7 @@ function ReactApp() {
       framework allows ASP.NET components to process SOAP messages.
     </div>;
   }
-  function content6() {
+  const mvcContent = () => {
     return <div>
       The ASP.NET MVC is a web application framework developed by Microsoft, which implements
       the model–view–controller (MVC) pattern. It is open-source software, apart from the ASP.NET Web
@@ -98,7 +97,7 @@ function ReactApp() {
       The project is called ASP.NET vNext.
     </div>;
   }
-  function content7() {
+  const javaScriptContent = () => {
     return <div>
       JavaScript (JS) is an interpreted computer programming language. It was originally
       implemented as part of web browsers so that client-side scripts could interact with the
@@ -113,26 +112,26 @@ function ReactApp() {
       <div className='row' id='header'>
         <label> Header Position </label>
         <div>
-          <DropDownListComponent id='headerPosition' dataSource={headerData} fields={fields} value={hdrVal} width={'150'} change={changeOrientationMode} />
+          <DropDownListComponent ref={headerPosition} dataSource={headerData} fields={fields} value={hdrVal} width={'150'} change={changeOrientationMode} />
         </div>
       </div>
       <div className='row' id='mode'>
         <label> Mode </label>
         <div>
-          <DropDownListComponent id='orientation' dataSource={orientationData} fields={fields} value={orientationVal} width={'150'} change={changeOverflowMode} />
+          <DropDownListComponent ref={orientation} dataSource={orientationData} fields={fields} value={orientationVal} width={'150'} change={changeOverflowMode} />
         </div>
       </div>
       <br /><br />
-      <TabComponent id='default' heightAdjustMode='None' height={150} width='700' ref={tab => tabObj = tab!}>
+      <TabComponent id='default' heightAdjustMode='None' height={150} width='700' ref={tabObj}>
         <TabItemsDirective>
-          <TabItemDirective header={headerText[0]} content={content0} />
-          <TabItemDirective header={headerText[1]} content={content1} />
-          <TabItemDirective header={headerText[2]} content={content2} />
-          <TabItemDirective header={headerText[3]} content={content3} />
-          <TabItemDirective header={headerText[4]} content={content4} />
-          <TabItemDirective header={headerText[5]} content={content5} />
-          <TabItemDirective header={headerText[6]} content={content6} />
-          <TabItemDirective header={headerText[7]} content={content7} />
+          <TabItemDirective header={headerText[0]} content={htmlcontent} />
+          <TabItemDirective header={headerText[1]} content={csharpContent} />
+          <TabItemDirective header={headerText[2]} content={javaContent} />
+          <TabItemDirective header={headerText[3]} content={vbNetcontent} />
+          <TabItemDirective header={headerText[4]} content={xamarinContent} />
+          <TabItemDirective header={headerText[5]} content={aspNetContent} />
+          <TabItemDirective header={headerText[6]} content={mvcContent} />
+          <TabItemDirective header={headerText[7]} content={javaScriptContent} />
         </TabItemsDirective>
       </TabComponent>
     </div>
@@ -140,7 +139,3 @@ function ReactApp() {
 }
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<ReactApp />);
-
-
-
-

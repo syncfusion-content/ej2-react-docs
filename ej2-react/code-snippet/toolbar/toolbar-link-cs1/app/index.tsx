@@ -1,14 +1,10 @@
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
 
 
-function App() {
-
-  function AnchorTemplate(): JSX.Element {
+const App = () => {
+  const AnchorTemplate = (): JSX.Element => {
     return (
       <div>
         <a

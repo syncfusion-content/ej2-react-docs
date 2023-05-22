@@ -1,6 +1,3 @@
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ToolbarComponent, MenuComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
@@ -92,9 +89,9 @@ const data = [
   },
 ];
 
-function App() {
+const App = () => {
 
-  function contentTemplate() {
+  const menuComponentTemplate = () => {
     return (<MenuComponent items={data}></MenuComponent>);
   }
   return (
@@ -103,7 +100,7 @@ function App() {
         <ItemsDirective>
           <ItemDirective text="Cut" />
           <ItemDirective text="Copy" />
-          <ItemDirective template={contentTemplate} />
+          <ItemDirective template={menuComponentTemplate} />
           <ItemDirective text="Paste" />
         </ItemsDirective>
       </ToolbarComponent>

@@ -1,16 +1,14 @@
-
-
 import { CarouselComponent, CarouselItemsDirective, CarouselItemDirective } from "@syncfusion/ej2-react-navigations";
 import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
 import * as React from "react";
 import * as ReactDom from "react-dom";
 
- function App() {
-  function previousButtonTemplate(props: any): JSX.Element {
+ const App = () => {
+  const previousButtonTemplate = (props: any): JSX.Element => {
     return (<ButtonComponent className="e-btn" cssClass="e-flat e-round" iconCss="e-icons e-chevron-left-double" />);
   }
 
-  function nextButtonTemplate(props: any): JSX.Element {
+  const nextButtonTemplate = (props: any): JSX.Element => {
     return (<ButtonComponent className="e-btn" cssClass="e-flat e-round" iconCss="e-icons e-chevron-right-double" />);
   }
 

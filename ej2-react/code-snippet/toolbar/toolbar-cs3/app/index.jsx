@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
-function ReactApp() {
+const ReactApp = () => {
     let boldAttribute = {
         'class': 'custom_bold', 'id': 'itemId'
     };

@@ -1,18 +1,14 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
-function App() {
-  let tabObj: TabComponent;
-  function Dropdown(props) {
-    let target = document.querySelector('.e-toolbar-item.e-active .e-tab-text')
-      .innerHTML;
+const App = () => {
+  const tabObj = useRef<TabComponent>(null);
+  const Dropdown = (props: any) => {
     return (
       <div>
-        <h1>{target} Content</h1>
-        <br />
         <DropDownListComponent
           dataSource={props.data}
           placeholder="Select a game"
@@ -27,14 +23,14 @@ function App() {
         content: thirdDropdownTemplate
       }
     ];
-    tabObj.addTab(newTabItem as any, 1);
+    tabObj.current.addTab(newTabItem as any, 1);
   }
 
   const removeButtonClicked = (e: any): void => {
-    tabObj.removeTab(1);
+    tabObj.current.removeTab(1);
   }
 
-  function firstDropdownTemplate() {
+  const firstDropdownTemplate = () => {
     let sportsData = [
       'Badminton',
       'Basketball',
@@ -46,7 +42,7 @@ function App() {
     return <Dropdown data={sportsData} />;
   }
 
-  function secondDropdownTemplate() {
+  const secondDropdownTemplate = () => {
     let sportsData = [
       'Cricket',
       'Golf',
@@ -58,7 +54,7 @@ function App() {
     return <Dropdown data={sportsData} />;
   }
 
-  function thirdDropdownTemplate() {
+  const thirdDropdownTemplate = () => {
     let sportsData = [
       'Rugby',
       'Badminton',
@@ -70,13 +66,9 @@ function App() {
     return <Dropdown data={sportsData} />;
   }
 
-  function datePickerTemplate() {
-    let target: string = document.querySelector('.e-toolbar-item.e-active .e-tab-text')
-      .innerHTML;
+  const datePickerTemplate = () => {
     return (
       <div>
-        <h1>{target} Content</h1>
-        <br />
         <DatePickerComponent />
       </div>
     );
@@ -105,9 +97,7 @@ function App() {
       </button>
       <TabComponent
         id="tabElement"
-        ref={tab => {
-          tabObj = tab;
-        }}
+        ref={tabObj}
       >
         <TabItemsDirective>
           <TabItemDirective
@@ -130,5 +120,3 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
-
-

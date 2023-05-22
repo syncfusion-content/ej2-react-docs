@@ -3,24 +3,24 @@ import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DatePickerComponent, CalendarComponent } from '@syncfusion/ej2-react-calendars';
-function App() {
+const App = () => {
     let headertext;
-    function contentTemplate() {
+    const buttonTemplate =  () => {
         return (<ButtonComponent>Click me</ButtonComponent>);
     }
-    function contentTemplate1() {
+    const datePickerTemplate = () => {
         return (<DatePickerComponent></DatePickerComponent>);
     }
-    function contentTemplate2() {
+    const calendarTemplate = () => {
         return (<CalendarComponent></CalendarComponent>);
     }
-    headertext = [{ text: "Tab1" }, { text: "Tab2" }, { text: "Tab3" }];
+    headertext = [{ text: "ButtonComponent" }, { text: "DatePickerComponent" }, { text: "CalendarComponent" }];
     return (<div id='container'>
       <TabComponent heightAdjustMode='Auto' id='tabelement'>
         <TabItemsDirective>
-          <TabItemDirective header={headertext[0]} content={contentTemplate}/>
-          <TabItemDirective header={headertext[1]} content={contentTemplate1}/>
-          <TabItemDirective header={headertext[2]} content={contentTemplate2}/>
+          <TabItemDirective header={headertext[0]} content={buttonTemplate}/>
+          <TabItemDirective header={headertext[1]} content={datePickerTemplate}/>
+          <TabItemDirective header={headertext[2]} content={calendarTemplate}/>
         </TabItemsDirective>
       </TabComponent>
     </div>);

@@ -1,7 +1,7 @@
 import { ItemDirective, ItemsDirective, ToolbarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-function ReactApp() {
+const ReactApp = () => {
     return (<ToolbarComponent id='toolbar'>
       <ItemsDirective>
         <ItemDirective text="Cut"/>

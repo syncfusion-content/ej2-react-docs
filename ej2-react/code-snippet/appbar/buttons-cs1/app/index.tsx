@@ -6,7 +6,7 @@ import { DropDownButtonComponent, ItemModel } from '@syncfusion/ej2-react-splitb
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-function App() {
+const App = () => {
   const productDropDownButtonItems: ItemModel[] = [
     { text: 'Developer' },
     { text: 'Analytics' },
