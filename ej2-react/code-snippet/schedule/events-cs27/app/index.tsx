@@ -1,20 +1,18 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventRenderedArgs, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  let data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data }
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData }
 
-  function onEventRendered(args: EventRenderedArgs): void {
+  const onEventRendered = (args: EventRenderedArgs): void => {
     applyCategoryColor(args, scheduleObj.currentView);
   }
-  function applyCategoryColor(args: EventRenderedArgs, currentView: string): void {
+  const applyCategoryColor = (args: EventRenderedArgs, currentView: string): void => {
     let categoryColor: string = args.data.CategoryColor as string;
     if (!args.element || !categoryColor) {
       return;
@@ -27,7 +25,7 @@ function App() {
   }
 
   return (
-    <ScheduleComponent width='100%' height='550px' ref={schedule => scheduleObj = schedule} selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} eventRendered={onEventRendered}>
+    <ScheduleComponent width='100%' height='550px' ref={scheduleObj} selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} eventRendered={onEventRendered}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>
   )

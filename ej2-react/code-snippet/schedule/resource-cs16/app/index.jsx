@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, Month, Year, Resize, DragAndDrop, Inject, ResourcesDirective, ResourceDirective, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { extend } from '@syncfusion/ej2-base';
 import { resourceData, timelineResourceData } from './datasource';
-function App() {
+const App = () => {
   const data = extend([], resourceData.concat(timelineResourceData), null, true);
   const eventSettings = { dataSource: data }
 

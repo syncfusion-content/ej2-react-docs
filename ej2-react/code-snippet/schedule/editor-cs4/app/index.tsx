@@ -1,30 +1,25 @@
-
-
-
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, PopupOpenEventArgs, Inject
 } from '@syncfusion/ej2-react-schedule';
-import { extend } from '@syncfusion/ej2-base';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import { scheduleData } from './datasource';
+import { scheduleData } from './data';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data };
+const App = () => {
+  const eventSettings = { dataSource: scheduleData };
 
-  function onPopupOpen(args: PopupOpenEventArgs): void {
+  const onPopupOpen = (args: PopupOpenEventArgs): void => {
     if (args.type === 'Editor') {
       let statusElement: HTMLInputElement = args.element.querySelector('#EventType') as HTMLInputElement;
-      statusElement.setAttribute('name', 'EventType');
+      if (statusElement) {
+        statusElement.setAttribute('name', 'EventType');
+      }
     }
   }
-  function editorTemplate(props: Object): JSX.Element {
-    return (props !== undefined ? <table className="custom-event-editor" style={{ width: '100%', cellpadding: '5' }}><tbody>
+  const editorTemplate = (props: Object): JSX.Element => {
+    return (props !== undefined ? <table className="custom-event-editor" style={{ width: '100%', padding: '5' }}><tbody>
       <tr><td className="e-textlabel">Summary</td><td colSpan={4}>
         <input id="Summary" className="e-field e-input" type="text" name="Subject" style={{ width: '100%' }} />
       </td></tr>
@@ -42,7 +37,6 @@ function App() {
       </td></tr></tbody></table> : <div></div>);
   }
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)}
-    ref={schedule => scheduleObj = schedule}
     eventSettings={eventSettings} editorTemplate={editorTemplate.bind(this)} showQuickInfo={false}
     popupOpen={onPopupOpen.bind(this)} >
     <ViewsDirective>
@@ -57,6 +51,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

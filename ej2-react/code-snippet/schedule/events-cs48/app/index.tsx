@@ -5,9 +5,8 @@ import {
   ResourceDirective, TimelineMonth, TimelineYear, Resize, DragAndDrop, Inject, EventSettingsModel, GroupModel
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  function generateStaticEvents(start: Date, resCount: number, overlapCount: number): Object[] {
+const App = () => {
+  const generateStaticEvents = (start: Date, resCount: number, overlapCount: number): Object[] => {
     let data: Object[] = [];
     let id: number = 1;
     for (let i: number = 0; i < resCount; i++) {
@@ -42,7 +41,7 @@ function App() {
   const eventSettings: EventSettingsModel = { dataSource: generateStaticEvents(new Date(2018, 4, 1), 300, 12) };
   const group: GroupModel = { resources: ['Resources'] };
 
-  function generateResourceData(startId: number, endId: number, text: string): Object[] {
+  const generateResourceData = (startId: number, endId: number, text: string): Object[] => {
     let data: { [key: string]: Object }[] = [];
     let colors: string[] = [
       '#ff8787', '#9775fa', '#748ffc', '#3bc9db', '#69db7c',
@@ -60,7 +59,7 @@ function App() {
     return data;
   }
   return (
-    <ScheduleComponent cssClass='virtual-scrolling' ref={schedule => scheduleObj = schedule} width='100%'
+    <ScheduleComponent cssClass='virtual-scrolling' width='100%'
       height='550px' selectedDate={new Date(2018, 4, 1)}
       eventSettings={eventSettings}
       group={group} >
@@ -81,5 +80,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-

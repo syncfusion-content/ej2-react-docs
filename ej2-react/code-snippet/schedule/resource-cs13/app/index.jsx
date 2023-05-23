@@ -2,10 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { WorkWeek, Month, TimelineViews, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { doctorData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], doctorData, null, true);
-  const eventSettings = { dataSource: data }
+const App = () => {
+  const eventSettings = { dataSource: doctorData }
   const group = { resources: ['Doctors'] }
   const resourceData = [
     { text: 'Will Smith', id: 1, color: '#ea7a57', workDays: [1, 2, 4, 5] },

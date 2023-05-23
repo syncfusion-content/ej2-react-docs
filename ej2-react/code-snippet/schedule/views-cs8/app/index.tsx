@@ -6,7 +6,7 @@ import {
 } from '@syncfusion/ej2-react-schedule';
 import { appData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
-function App() {
+const App = () => {
   const data: Object[] = extend([], appData, null, true) as Object[];
   const eventSettings = { dataSource: data }
 

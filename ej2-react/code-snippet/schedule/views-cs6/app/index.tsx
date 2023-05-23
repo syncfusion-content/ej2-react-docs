@@ -5,29 +5,27 @@ import {
   ViewsDirective, ViewDirective, CellTemplateArgs
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { Internationalization, extend } from '@syncfusion/ej2-base';
+import { Internationalization } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data }
-
+const App = () => {
+  const eventSettings = { dataSource: scheduleData }
   const instance: Internationalization = new Internationalization();
-  function getYearDetails(value: CellTemplateArgs) {
+  const getYearDetails = (value: CellTemplateArgs) => {
     return 'Year: ' + instance.formatDate((value as CellTemplateArgs).date, { skeleton: 'y' });
   }
-  function getMonthDetails(value: CellTemplateArgs) {
+  const getMonthDetails = (value: CellTemplateArgs) => {
     return 'Month: ' + instance.formatDate((value as CellTemplateArgs).date, { skeleton: 'M' });
   }
-  function getWeekDetails(value: CellTemplateArgs) {
+  const getWeekDetails = (value: CellTemplateArgs) => {
     return 'Week ' + getWeekNumber((value as CellTemplateArgs).date);;
   }
-  function yearTemplate(props): JSX.Element {
+  const yearTemplate = (props): JSX.Element => {
     return (<span className="year">{getYearDetails(props)}</span>);
   }
-  function monthTemplate(props): JSX.Element {
+  const monthTemplate = (props): JSX.Element => {
     return (<span className="month">{getMonthDetails(props)}</span>);
   }
-  function weekTemplate(props): JSX.Element {
+  const weekTemplate = (props): JSX.Element => {
     return (<span className="week">{getWeekDetails(props)}</span>);
   }
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 0, 1)}

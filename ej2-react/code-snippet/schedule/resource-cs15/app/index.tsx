@@ -5,7 +5,7 @@ import {
   ResourcesDirective, ResourceDirective, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
   const group = { byDate: true, resources: ['Owners'], hideNonWorkingDays: true }
   const resourceData: Object[] = [
     { text: 'Alice', id: 1, color: '#1aaa55', workDays: [1, 2, 3, 4] },

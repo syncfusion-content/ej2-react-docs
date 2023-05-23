@@ -1,11 +1,21 @@
-
-
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React, { useRef, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, Resize, DragAndDrop, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
-let initialLoad = true;
-function App() {
+
+const App = () => {
+  const initialLoad = useRef<Boolean>(true);
+  const scheduleRef = useRef<ScheduleComponent>(null);
+
+  useEffect(() => {
+    if (initialLoad.current) {
+      const allDayAppointmentSection = scheduleRef.current.element.querySelector('.e-all-day-appointment-section');
+      if (allDayAppointmentSection) {
+        allDayAppointmentSection.click();
+      }
+      initialLoad.current = false;
+    }
+  }, []);
+
   const data: object[] = [
     {
       EndTime: new Date(2022, 3, 30, 0, 0),
@@ -48,23 +58,22 @@ function App() {
       IsAllDay: true,
       StartTime: new Date(2022, 3, 26, 0, 0),
       Subject: ' VP Highland Model | 3719 :: Pool',
-    }
+    },
   ];
-  const eventSettings: EventSettingsModel = { dataSource: data }
+  const eventSettings: EventSettingsModel = { dataSource: data };
 
-  function dataBound() {
-    if (initialLoad) {
-      element.querySelector('.e-all-day-appointment-section').click();
-      initialLoad = false;
-    }
-  }
+  return (
+    <ScheduleComponent
+      height="550px"
+      ref={scheduleRef}
+      selectedDate={new Date(2022, 3, 26)}
+      eventSettings={eventSettings}
+    >
+      <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize]} />
+    </ScheduleComponent>
+  );
+};
 
-  return (<ScheduleComponent height="550px" dataBound={dataBound} selectedDate={new Date(2022, 3, 26)} eventSettings={eventSettings}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize]} />
-  </ScheduleComponent>);
 
-}
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-

@@ -5,11 +5,9 @@ import {
   ResourcesDirective, ResourceDirective, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], resourceData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data }
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: resourceData }
   const group = { byDate: true, resources: ['Owners'] }
   const resourceDatas: Object[] = [
     { text: 'Alice', id: 1, color: '#1aaa55' },

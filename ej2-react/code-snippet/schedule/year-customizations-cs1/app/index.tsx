@@ -1,17 +1,12 @@
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Resize, DragAndDrop, ResourcesDirective, ResourceDirective, Inject, Year as YearView, TimelineYear
 } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], resourceData, null, true) as Object[];
-  const eventSettings = { dataSource: data };
+const App = () => {
+  const eventSettings = { dataSource: resourceData };
   const group = { resources: ['Categories'] };
 
 
@@ -22,11 +17,10 @@ function App() {
     { text: 'Smith', id: 4, color: '#5978ee' },
     { text: 'Micheal', id: 5, color: '#df5286' }
   ];
-  let scheduleObj: ScheduleComponent;
-  function getMonthHeaderText(props): JSX.Element {
+  const getMonthHeaderText = (props): JSX.Element => {
     return (<div>{props.date.toLocaleString('en-us', { month: 'long' }) + ' ' + props.date.getFullYear()}</div>);
   }
-  function resourceHeaderTemplate(props): JSX.Element {
+  const resourceHeaderTemplate = (props): JSX.Element => {
     return (
       <div className="template-wrap">
         <div className="resource-details">
@@ -39,7 +33,6 @@ function App() {
     width="100%"
     height="495px"
     selectedDate={new Date(2021, 7, 15)}
-    ref={schedule => (scheduleObj = schedule)}
     eventSettings={eventSettings}
     firstMonthOfYear={6}
     monthsCount={6}

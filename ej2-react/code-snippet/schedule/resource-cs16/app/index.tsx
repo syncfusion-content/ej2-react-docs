@@ -3,12 +3,10 @@ import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, Month, Year, Resize, EventSettingsModel, DragAndDrop, Inject, ResourcesDirective, ResourceDirective, GroupModel, ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
-import { extend } from '@syncfusion/ej2-base';
 import { resourceData, timelineResourceData } from './datasource';
 
-function App() {
-  const data: Object[] = extend([], resourceData.concat(timelineResourceData), null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data }
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: resourceData.concat(timelineResourceData) }
   const projectData: Object[] = [
     { text: 'PROJECT 1', id: 1, color: '#cb6bb2' },
     { text: 'PROJECT 2', id: 2, color: '#56ca85' },
@@ -46,6 +44,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

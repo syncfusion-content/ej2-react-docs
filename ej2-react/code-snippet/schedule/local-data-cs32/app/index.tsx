@@ -5,10 +5,8 @@ import {
   ScheduleComponent, Day, Week, Month, timezoneData, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
+const App = () => {
   const eventSettings: EventSettingsModel = { dataSource: scheduleData };
 
   const timeZones: { [key: string]: Object }[] = [

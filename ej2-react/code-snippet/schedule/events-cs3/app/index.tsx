@@ -1,14 +1,10 @@
-
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
   const data: object[] = [{
     Id: 1,
     Subject: 'Paris',
@@ -31,6 +27,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

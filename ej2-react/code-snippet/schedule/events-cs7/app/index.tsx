@@ -1,12 +1,10 @@
-
- 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, EventSettingsModel, Inject
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
   const data: object[] = [{
     Id: 1,
     Subject: 'Scrum Meeting',

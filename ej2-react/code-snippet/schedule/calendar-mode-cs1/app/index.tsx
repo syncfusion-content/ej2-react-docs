@@ -19,7 +19,7 @@ import * as islamic from '../ca-islamic.json';
 loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, islamic);
 L10n.load(localeObj);
 
-function App() {
+const App = () => {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
   const eventSettings: EventSettingsModel = { dataSource: data };
 

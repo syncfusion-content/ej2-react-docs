@@ -1,11 +1,11 @@
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
+import { useRef } from 'react';
 import { Day, Week, WorkWeek, Month, ScheduleComponent, ViewsDirective, ViewDirective, EventSettingsModel, Inject } from '@syncfusion/ej2-react-schedule';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-function App() {
-  let scheduleObj: ScheduleComponent;
-  function ClickButton() {
-    scheduleObj.closeEditor();
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const ClickButton = () => {
+    scheduleObj.current.closeEditor();
   }
   const data: object[] = [{
     Id: 1,
@@ -18,7 +18,7 @@ function App() {
   return (<div>
     <ButtonComponent onClick={ClickButton}>Close Editor Window </ButtonComponent>
     <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2023, 2, 5)}
-      ref={schedule => scheduleObj = schedule} currentView='Month'
+      ref={scheduleObj} currentView='Month'
       eventSettings={eventSettings} >
       <ViewsDirective>
         <ViewDirective option='Day' />

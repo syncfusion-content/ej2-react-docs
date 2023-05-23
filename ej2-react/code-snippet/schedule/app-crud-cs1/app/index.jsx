@@ -1,10 +1,14 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
+import {
+  ScheduleComponent, Day, Week, WorkWeek, Month, Inject,
+  ViewsDirective, ViewDirective
+} from '@syncfusion/ej2-react-schedule';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-function App() {
-  let scheduleObj;
-  let buttonObj;
+
+const App = () => {
+  const scheduleObj = useRef(null);
+  const buttonObj = useRef(null);
   let scheduleData = [{
     Id: 3,
     Subject: 'Testing',
@@ -20,8 +24,8 @@ function App() {
   }];
   const eventSettings = { dataSource: scheduleData }
 
-  function onAddClick() {
-    let Data = [{
+  const onAddClick = () => {
+    let Data: Object[] = [{
       Id: 1,
       Subject: 'Conference',
       StartTime: new Date(2018, 1, 12, 9, 0),
@@ -34,12 +38,14 @@ function App() {
       EndTime: new Date(2018, 1, 15, 11, 30),
       IsAllDay: false
     }];
-    scheduleObj.addEvent(Data);
-    buttonObj.element.setAttribute('disabled', 'true');
+    scheduleObj.current.addEvent(Data);
+    buttonObj.current.element.setAttribute('disabled', 'true');
   }
+
   return (<div>
-    <ButtonComponent id='add' title='Add' ref={t => buttonObj = t} onClick={onAddClick}>Add</ButtonComponent>
-    <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
+    <ButtonComponent id='add' title='Add' ref={buttonObj} onClick={onAddClick}>Add</ButtonComponent>
+    <ScheduleComponent ref={scheduleObj} width='100%' height='550px' selectedDate=
+      {new Date(2018, 1, 15)} eventSettings={eventSettings}>
       <ViewsDirective>
         <ViewDirective option='Day' />
         <ViewDirective option='Week' />
@@ -48,8 +54,8 @@ function App() {
       </ViewsDirective>
       <Inject services={[Day, Week, WorkWeek, Month]} />
     </ScheduleComponent>
-  </div>);
-}
-;
+  </div>)
+
+};
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);

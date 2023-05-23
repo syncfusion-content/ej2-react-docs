@@ -12,7 +12,7 @@ import * as timeZoneNames from '../timeZoneNames.json';
 import * as islamic from '../ca-islamic.json';
 loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, islamic);
 L10n.load(localeObj);
-function App() {
+const App = () => {
     const data = extend([], scheduleData, null, true);
     const eventSettings = { dataSource: data };
     return (<ScheduleComponent height='550px' showQuickInfo={false} selectedDate={new Date(2018, 1, 15)} locale='ar' eventSettings={eventSettings}>

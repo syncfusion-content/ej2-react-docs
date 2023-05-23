@@ -2,26 +2,24 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { Week, Month, TimelineViews, TimelineMonth, Agenda, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { doctorData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  function getDoctorName(value) {
+const App = () => {
+  const getDoctorName = (value) => {
     return ((value.resourceData) ?
       value.resourceData[value.resource.textField] :
       value.resourceName);
   }
-  function getDoctorLevel(value) {
+  const getDoctorLevel = (value) => {
     let resourceName = getDoctorName(value);
     return (resourceName === 'Will Smith') ? 'Cardiologist' : (resourceName === 'Alice') ? 'Neurologist' : 'Orthopedic Surgeon';
   }
-  const data = extend([], doctorData, null, true);
-  const eventSettings = { dataSource: data };
+  const eventSettings = { dataSource: doctorData };
   const group = { resources: ['Doctors'] };
   const resourceData = [
     { text: 'Will Smith', id: 1, color: '#ea7a57', designation: 'Cardioligst' },
     { text: 'Alice', id: 2, color: '#7fa900', designation: 'Neurologist' },
     { text: 'Robson', id: 3, color: '#7fa900', designation: 'Orthopedic Surgeon' }
   ];
-  function resourceHeaderTemplate(props) {
+  const resourceHeaderTemplate = (props) => {
     return (<div className="template-wrap">
       <div className="resource-detail"><div className="resource-name">{getDoctorName(props)}</div>
         <div className="resource-designation">{getDoctorLevel(props)}</div></div></div>);

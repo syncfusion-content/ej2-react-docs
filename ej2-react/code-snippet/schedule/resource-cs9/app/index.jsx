@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Week, Month, TimelineViews, TimelineMonth, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, ViewsDirective, ViewDirective, Inject } from '@syncfusion/ej2-react-schedule';
-function App() {
+const App = () => {
     const conferenceData = [
         { Text: 'Margaret', Id: 1, Color: '#1aaa55' },
         { Text: 'Robert', Id: 2, Color: '#357cd2' },

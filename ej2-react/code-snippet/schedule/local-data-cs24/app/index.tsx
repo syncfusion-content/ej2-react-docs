@@ -7,7 +7,7 @@ import {
 import { scheduleData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 
-function App() {
+const App = () => {
   const data: Object[] = extend([], scheduleData, null, true) as Object[];
   const eventSettings: EventSettingsModel = { dataSource: data };
 

@@ -4,11 +4,9 @@ import {
   Week, Month, Agenda, ScheduleComponent, ViewsDirective, ViewDirective,EventSettingsModel, ResourcesDirective, ResourceDirective, Inject
 } from '@syncfusion/ej2-react-schedule';
 import { timelineResourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], timelineResourceData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data }
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: timelineResourceData }
   const group = { byGroupID: false, resources: ['Projects', 'Categories'] }
 
   const projectData: Object[] = [

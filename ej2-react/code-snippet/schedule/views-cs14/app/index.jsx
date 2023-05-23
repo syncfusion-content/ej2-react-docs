@@ -2,16 +2,15 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Agenda, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { appData } from './datasource';
-import { Internationalization, extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], appData, null, true);
-  const eventSettings = { dataSource: data };
+import { Internationalization } from '@syncfusion/ej2-base';
+const App = () => {
+  const eventSettings = { dataSource: appData };
 
   const instance = new Internationalization();
-  function getTimeString(value) {
+  const getTimeString = (value) => {
     return instance.formatDate(value, { skeleton: 'hm' });
   }
-  function eventTemplate(props) {
+  const eventTemplate = (props) => {
     return (<div className="template-wrap">
       <div className="subject">{props.Subject}</div>
       <div className="time">
@@ -20,7 +19,7 @@ function App() {
   }
   return (<ScheduleComponent width='100%' height='550px' agendaDaysCount={3} selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <ViewsDirective>
-      <ViewDirective option='Agenda' eventTemplate={eventTemplate.bind(this)} allowVirtualScrolling={false} />
+      <ViewDirective option='Agenda' eventTemplate={eventTemplate} allowVirtualScrolling={false} />
     </ViewsDirective>
     <Inject services={[Agenda]} />
   </ScheduleComponent>);
