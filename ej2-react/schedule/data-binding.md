@@ -111,24 +111,34 @@ You can bind the event data through external ajax request and assign it to the `
 
 ```ts
 
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
+import { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import { Ajax } from '@syncfusion/ej2-base';
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
+import {
+  ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
+} from '@syncfusion/ej2-react-schedule';
 import { DataManager } from '@syncfusion/ej2-data';
-function App() {
-  let dataManager: DataManager;
-  let ajax = new Ajax('Home/GetData', 'GET', false);
-  ajax.send();
-  ajax.onSuccess = function (value) {
-    dataManager = value;
-  };
+
+const App = () => {
+  const [dataManager, setDataManager] = useState<DataManager | null>(null);
+
+  useEffect(() => {
+    const ajax = new Ajax('Home/GetData', 'GET', false);
+    ajax.send();
+    ajax.onSuccess = function (value: DataManager) {
+      setDataManager(value);
+    };
+  }, []);
+
   const eventSettings: EventSettingsModel = { dataSource: dataManager };
-  return (<ScheduleComponent height='550px' selectedDate={new Date(2017, 5, 11)}
-    eventSettings={eventSettings}>
-    <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-  </ScheduleComponent>);
+
+  return (
+    <ScheduleComponent height='550px' selectedDate={new Date(2017, 5, 11)} eventSettings={eventSettings}>
+      <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+    </ScheduleComponent>
+  );
 }
+
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
 

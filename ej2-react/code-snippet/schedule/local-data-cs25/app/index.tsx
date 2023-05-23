@@ -7,7 +7,7 @@ import {
 import { roomData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
 
-function App() {
+const App = () => {
   const data: Object[] = extend([], roomData, null, true) as Object[];
 
   const ownerData: Object[] = [

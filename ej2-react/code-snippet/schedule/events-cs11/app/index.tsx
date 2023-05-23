@@ -4,7 +4,11 @@ import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
+  const comparerFun = (args: Record<string, any>[]) => {
+    args.sort((event1: Record<string, any>, event2: Record<string, any>) => event1.RankId.localeCompare(event2.RankId, undefined, { numeric: true }));
+    return args;
+  }
   const data: Object[] = [{
     Id: 1,
     Subject: 'Rank 1',
@@ -35,12 +39,6 @@ function App() {
     RankId: '9'
   }];
   const eventSettings: EventSettingsModel = { dataSource: data, sortComparer: comparerFun }
-
-  function comparerFun(args: Record<string, any>[]) {
-    args.sort((event1: Record<string, any>, event2: Record<string, any>) => event1.RankId.localeCompare(event2.RankId, undefined, { numeric: true }));
-    return args;
-  }
-
   return <ScheduleComponent height='550px' selectedDate={new Date(2017, 9, 29)} eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>
@@ -48,6 +46,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

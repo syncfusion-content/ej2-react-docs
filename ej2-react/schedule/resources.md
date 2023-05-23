@@ -52,19 +52,17 @@ The following code example depicts how to bind the local JSON data to the `dataS
 
 
 ```ts
-import * as React from 'react';
+import { useState } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Day, Week, WorkWeek, Month, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const [data] = React.useState(extend([], resourceData, null, true));
-  const [ownerData] = React.useState([
+const App = () => {
+  const [ownerData] = useState([
     { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
     { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
     { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
   ]);
-  const eventSettings: EventSettingsModel = { dataSource: data };
+  const eventSettings: EventSettingsModel = { dataSource: resourceData };
 
   return (
     <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings}>
@@ -90,20 +88,18 @@ The following code example depicts how to bind the remote data for resources `da
 
 ```ts
 
-import * as React from 'react';
+import { useState } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Week, Month, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-function App() {
-  const [data] = React.useState(extend([], resourceData, null, true));
-  const [ownerData] = React.useState(new DataManager({
+const App = () => {
+  const [ownerData] = useState(new DataManager({
     url: 'Home/GetResourceData',
     adaptor: new UrlAdaptor(),
     crossDomain: true
   }));
-  const eventSettings: EventSettingsModel = { dataSource: data };
+  const eventSettings: EventSettingsModel = { dataSource: resourceData };
 
   return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings}>
     <ResourcesDirective>

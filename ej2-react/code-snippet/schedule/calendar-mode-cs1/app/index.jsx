@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, Month, TimelineViews, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 import { L10n, loadCldr } from '@syncfusion/ej2-base';
 import * as localeObj from "../locale.json";
 import * as numberingSystems from '../numberingSystems.json';
@@ -12,9 +11,8 @@ import * as timeZoneNames from '../timeZoneNames.json';
 import * as islamic from '../ca-islamic.json';
 loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, islamic);
 L10n.load(localeObj);
-function App() {
-    const data = extend([], scheduleData, null, true);
-    const eventSettings = { dataSource: data };
+const App = () => {
+    const eventSettings = { dataSource: scheduleData };
     return (<ScheduleComponent height='550px' showQuickInfo={false} selectedDate={new Date(2018, 1, 15)} locale='ar' eventSettings={eventSettings}>
       <ViewsDirective>
         <ViewDirective option='Day'/>

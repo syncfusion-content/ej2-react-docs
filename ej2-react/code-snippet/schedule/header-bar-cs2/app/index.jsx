@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import { extend } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
-function App() {
+const App = () => {
   const data = extend([], scheduleData, null, true);
   const eventSettings = { dataSource: data };
 

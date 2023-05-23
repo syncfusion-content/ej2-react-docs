@@ -79,6 +79,9 @@ Below example demonstrates the above functionalities of a Skeleton component.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/skeleton/shapes-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/skeleton/shapes-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/skeleton/shapes-cs1" %}

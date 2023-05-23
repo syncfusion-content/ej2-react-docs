@@ -1,13 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, Month, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
-import { extend, createElement } from '@syncfusion/ej2-base';
+import { createElement } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
-function App() {
-    const data = extend([], scheduleData, null, true);
-    const eventSettings = { dataSource: data };
-
-    function onRenderCell(args) {
+const App = () => {
+    const eventSettings = { dataSource: scheduleData };
+    const onRenderCell = (args) => {
         if (args.elementType == 'workCells' || args.elementType == 'monthCells') {
             let weekEnds = [0, 6];
             if (weekEnds.indexOf((args.date).getDay()) >= 0) {

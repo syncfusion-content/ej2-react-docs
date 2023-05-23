@@ -5,15 +5,12 @@ import {
   ViewsDirective, ViewDirective, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { fifaEventsData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  let fifaEvents: Object[] = extend([], fifaEventsData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: fifaEvents };
-
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: fifaEventsData };
   let timezone: Timezone = new Timezone();
-  function onCreate(): void {
-    for (let fifaEvent of fifaEvents) {
+  const onCreate = (): void => {
+    for (let fifaEvent of fifaEventsData) {
       let event: { [key: string]: Object } = fifaEvent as { [key: string]: Object };
       event.StartTime = timezone.removeLocalOffset(event.StartTime as Date);
       event.EndTime = timezone.removeLocalOffset(event.EndTime as Date);
@@ -32,5 +29,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-

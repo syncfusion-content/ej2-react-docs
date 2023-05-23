@@ -3,11 +3,9 @@ import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
-import { extend } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
 
-function App() {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
+const App = () => {
   const minValidation: (args: { [key: string]: string }) => boolean = (args: { [key: string]: string }) => {
     return args['value'].length >= 5;
   };
@@ -23,7 +21,7 @@ function App() {
     startTime: { name: 'StartTime', validation: { required: true } },
     endTime: { name: 'EndTime', validation: { required: true } }
   }
-  const eventSettings: EventSettingsModel = { dataSource: data, fields: fieldsData };
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData, fields: fieldsData };
 
   return (<ScheduleComponent width='100%' height='500px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />

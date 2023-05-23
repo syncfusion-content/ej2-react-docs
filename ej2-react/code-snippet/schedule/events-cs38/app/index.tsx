@@ -4,11 +4,8 @@ import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  let data: Object[] = extend([], scheduleData, null, true) as Object[];
-
+const App = () => {
   const fields = {
     subject: { name: 'Subject', validation: { required: true } },
     location: {
@@ -18,7 +15,7 @@ function App() {
       }
     }
   };
-  const eventSettings: EventSettingsModel = { dataSource: data, fields: fields }
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData, fields: fields }
 
 
   return (<ScheduleComponent height='550px' width='100%' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>

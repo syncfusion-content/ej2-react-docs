@@ -2,9 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Month, Inject, ViewsDirective, ViewDirective } from "@syncfusion/ej2-react-schedule";
 import { Internationalization } from '@syncfusion/ej2-base';
-function App() {
+const App = () => {
     const instance = new Internationalization();
-    function getDateHeaderText(props) {
+    const getDateHeaderText = (props) => {
         return (<div>{instance.formatDate(props.date, { skeleton: "Ed" })}</div>);
     }
     return (<ScheduleComponent height='550px' cellHeaderTemplate={getDateHeaderText}>

@@ -1,10 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Week, Month, Agenda, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], resourceData, null, true);
-  const eventSettings = { dataSource: data }
+import { resourceData } from './datasource';
+const App = () => {
+  const eventSettings = { dataSource: resourceData }
   const group = { byDate: true, resources: ['Owners'] }
   const resourceDatas = [
     { text: 'Alice', id: 1, color: '#1aaa55' },

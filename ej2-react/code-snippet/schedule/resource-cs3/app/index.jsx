@@ -2,10 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { Week, Month, Agenda, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { timelineResourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], timelineResourceData, null, true);
-  const eventSettings = { dataSource: data }
+const App = () => {
+  const eventSettings = { dataSource: timelineResourceData }
   const group = { byGroupID: false, resources: ['Projects', 'Categories'] }
 
   const projectData = [

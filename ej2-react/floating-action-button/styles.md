@@ -32,6 +32,9 @@ The React Floating Action Button supports the following predefined styles that c
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/floating-action-button/styles-cs1/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/floating-action-button/styles-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/floating-action-button/styles-cs1" %}
@@ -62,6 +65,9 @@ The content will behave the same , when the `enableHtmlSantiizer` is enabled. Si
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/floating-action-button/styles-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/floating-action-button/styles-cs2/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

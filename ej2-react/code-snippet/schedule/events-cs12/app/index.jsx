@@ -2,10 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, TimelineViews, TimelineMonth, Month, Agenda, DragAndDrop, ViewsDirective, ViewDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], scheduleData, undefined, true);
-  const eventSettings = { dataSource: data }
+const App = () => {
+  const eventSettings = { dataSource: scheduleData }
 
   return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
     <ViewsDirective>

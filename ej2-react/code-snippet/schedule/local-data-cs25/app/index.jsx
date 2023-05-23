@@ -3,7 +3,7 @@ import * as React from 'react';
 import { TimelineViews, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject, Resize, DragAndDrop } from '@syncfusion/ej2-react-schedule';
 import { roomData } from './datasource';
 import { extend } from '@syncfusion/ej2-base';
-function App() {
+const App = () => {
   const data = extend([], roomData, null, true);
   const ownerData = [
     { text: 'Room A', id: 1, color: '#98AFC7' },

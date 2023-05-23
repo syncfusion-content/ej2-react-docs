@@ -1,3 +1,4 @@
+/* Represents the styles for loader */
 #loader {
 	color: #008cff;
 	height: 40px;
@@ -7,12 +8,13 @@
 	width: 30%;
 }
 
+/* Represents the styles for shimmer-wave */
 .e-customize.e-skeleton.e-shimmer-wave::after{
   background-image: linear-gradient(90deg, transparent calc(50% - 100px), 
   rgb(30 128 234 / 50%) 50%, 
   transparent calc(50% + 100px));
 }
-
+/* Represents the background-color for skeleton-circle */
 .e-customize.e-skeleton.e-skeleton-circle{
   background-color: #a8c1f2;
 }

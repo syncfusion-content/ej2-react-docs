@@ -1,27 +1,23 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from "react-dom";
-import { extend, isNullOrUndefined } from "@syncfusion/ej2-base";
+import { isNullOrUndefined } from "@syncfusion/ej2-base";
 import { ScheduleComponent, Day, Week, WorkWeek, Month, EventSettingsModel, Agenda, Inject, CellClickEventArgs, CurrentAction, Resize, DragAndDrop } from "@syncfusion/ej2-react-schedule";
 import { scheduleData } from './datasource';
 
-function App() {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
-  const quickInfoTemplates = { header: header.bind(this), content: content.bind(this), footer: footer.bind(this) };
-
-  let scheduleObj: ScheduleComponent;
-
-  function buttonClickActions(e: Event): void {
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
+  const buttonClickActions = (e: Event): void => {
     let eventData: { [key: string]: Object } = {};
     let actionType: CurrentAction = "Add";
     const action: string = (e.target as HTMLElement).id;
 
     const getSlotData: Function = (): { [key: string]: Object } => {
-      const cellDetails: CellClickEventArgs = scheduleObj.getCellDetails(scheduleObj.getSelectedElements());
-      const eventData: { [key: string]: Object; } = scheduleObj.eventWindow.getObjectFromFormData("e-quick-popup-wrapper");
+      const cellDetails: CellClickEventArgs = scheduleObj.current.getCellDetails(scheduleObj.current.getSelectedElements());
+      const eventData: { [key: string]: Object; } = scheduleObj.current.eventWindow.getObjectFromFormData("e-quick-popup-wrapper");
       const addObj: { [key: string]: Object } = {};
 
-      addObj.Id = scheduleObj.getEventMaxID();
+      addObj.Id = scheduleObj.current.getEventMaxID();
       addObj.Subject = (eventData.Subject as string).length > 0 ? eventData.Subject : "Add title";
       addObj.StartTime = new Date(+cellDetails.startTime);
       addObj.EndTime = new Date(+cellDetails.endTime);
@@ -33,39 +29,39 @@ function App() {
     switch (action) {
       case "add":
         eventData = getSlotData();
-        scheduleObj.addEvent(eventData);
+        scheduleObj.current.addEvent(eventData);
         break;
       case "edit":
       case "edit-series":
-        eventData = scheduleObj.activeEventData.event as { [key: string]: Object; };
+        eventData = scheduleObj.current.activeEventData.event as { [key: string]: Object; };
         actionType = eventData.RecurrenceRule ? action === "edit" ? "EditOccurrence" : "EditSeries" : "Save";
 
         if (actionType === "EditSeries")
-          eventData = scheduleObj.eventBase.getParentEvent(eventData, true);
+          eventData = scheduleObj.current.eventBase.getParentEvent(eventData, true);
 
-        scheduleObj.openEditor(eventData, actionType);
+        scheduleObj.current.openEditor(eventData, actionType);
         break;
       case "delete":
       case "delete-series":
-        eventData = scheduleObj.activeEventData.event as { [key: string]: Object; };
+        eventData = scheduleObj.current.activeEventData.event as { [key: string]: Object; };
         actionType = eventData.RecurrenceRule ? action === "delete" ? "DeleteOccurrence" : "DeleteSeries" : "Delete";
 
         if (actionType === "DeleteSeries")
-          eventData = scheduleObj.eventBase.getParentEvent(eventData, true);
+          eventData = scheduleObj.current.eventBase.getParentEvent(eventData, true);
 
-        scheduleObj.deleteEvent(eventData, actionType);
+        scheduleObj.current.deleteEvent(eventData, actionType);
         break;
       case "more-details":
         eventData = getSlotData();
-        scheduleObj.openEditor(eventData, "Add", true);
+        scheduleObj.current.openEditor(eventData, "Add", true);
         break;
       default:
         break;
     }
-    scheduleObj.closeQuickInfoPopup();
+    scheduleObj.current.closeQuickInfoPopup();
   }
 
-  function header(props: { [key: string]: string }): JSX.Element {
+  const header = (props: { [key: string]: string }): JSX.Element => {
     return (
       <div>
         {props.elementType === "cell" ? (
@@ -85,7 +81,7 @@ function App() {
     );
   }
 
-  function content(props: { [key: string]: string }): JSX.Element {
+  const content = (props: { [key: string]: string }): JSX.Element => {
     return (
       <div>
         {props.elementType === "cell" ? (
@@ -124,7 +120,7 @@ function App() {
     );
   }
 
-  function footer(props: { [key: string]: string }): JSX.Element {
+  const footer = (props: { [key: string]: string }): JSX.Element => {
     return (
       <div>
         {props.elementType === "cell" ? (
@@ -141,7 +137,7 @@ function App() {
             <div className="left-button">
               <button id="edit" className="e-event-edit" title="Edit" onClick={buttonClickActions.bind(this)} > Edit </button>
               {!isNullOrUndefined(props.RecurrenceRule) &&
-                props.RecurrenceRule != "" ? (
+                props.RecurrenceRule !== "" ? (
                 <button id="edit-series" className="e-edit-series" title="Edit Series" onClick={buttonClickActions.bind(this)}> Edit Series </button>
               ) : (
                 ""
@@ -150,7 +146,7 @@ function App() {
             <div className="right-button">
               <button id="delete" className="e-event-delete" title="Delete" onClick={buttonClickActions.bind(this)} > Delete </button>
               {!isNullOrUndefined(props.RecurrenceRule) &&
-                props.RecurrenceRule != "" ? (
+                props.RecurrenceRule !== "" ? (
                 <button id="delete-series" className="e-delete-series" title="Delete Series" onClick={buttonClickActions.bind(this)}> Delete Series </button>
               ) : (
                 ""
@@ -161,12 +157,10 @@ function App() {
       </div>
     );
   }
-  return (<ScheduleComponent id="schedule" ref={(schedule: ScheduleComponent) => (scheduleObj = schedule)} width="100%" height="550px" selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} quickInfoTemplates={quickInfoTemplates}>
+  const quickInfoTemplates = { header: header.bind(this), content: content.bind(this), footer: footer.bind(this) };
+  return (<ScheduleComponent id="schedule" ref={scheduleObj} width="100%" height="550px" selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} quickInfoTemplates={quickInfoTemplates}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop]} />
   </ScheduleComponent>)
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

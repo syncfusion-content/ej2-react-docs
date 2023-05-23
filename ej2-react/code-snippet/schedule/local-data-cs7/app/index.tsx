@@ -3,8 +3,7 @@ import * as ReactDOM from "react-dom";
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
 import { DataManager, WebApiAdaptor, Query } from '@syncfusion/ej2-data';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
+const App = () => {
   let calendarId: string = '5105trob9dasha31vuqek6qgp0@group.calendar.google.com';
   let publicKey: string = 'AIzaSyD76zjMDsL_jkenM5AAnNsORypS1Icuqxg';
   const dataManger: DataManager = new DataManager({
@@ -14,7 +13,7 @@ function App() {
   });
   const eventSettings: EventSettingsModel = { dataSource: dataManger };
 
-  function onDataBinding(e: { [key: string]: Object }): void {
+  const onDataBinding = (e: { [key: string]: Object }): void => {
     let items: { [key: string]: Object }[] = (e.result as { [key: string]: Object }).items as { [key: string]: Object }[];
     let scheduleData: Object[] = [];
     if (items.length > 0) {
@@ -41,7 +40,7 @@ function App() {
   }
 
   return (
-    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%'
+    <ScheduleComponent width='100%'
       height='550px' selectedDate={new Date(2018, 10, 14)} readonly={true}
       eventSettings={eventSettings} dataBinding={onDataBinding}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
@@ -51,6 +50,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

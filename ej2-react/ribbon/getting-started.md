@@ -265,6 +265,9 @@ The following example illustrates how tabs, groups, collections, and items are u
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/ribbon/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/ribbon/getting-started-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/ribbon/getting-started-cs1" %}

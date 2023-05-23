@@ -4,21 +4,19 @@ import {
   Week, Month, TimelineViews, TimelineMonth, Agenda, ScheduleComponent, GroupModel, ViewsDirective, EventSettingsModel, ViewDirective, ResourceDetails, ResourcesDirective, ResourceDirective, Inject, TreeViewArgs
 } from '@syncfusion/ej2-react-schedule';
 import { doctorData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  function getDoctorName(value: ResourceDetails | TreeViewArgs): string {
+const App = () => {
+  const getDoctorName = (value: ResourceDetails | TreeViewArgs): string => {
     return (((value as ResourceDetails).resourceData) ?
       (value as ResourceDetails).resourceData[(value as ResourceDetails).resource.textField] :
       (value as TreeViewArgs).resourceName) as string;
   }
 
-  function getDoctorLevel(value: ResourceDetails | TreeViewArgs): string {
+  const getDoctorLevel = (value: ResourceDetails | TreeViewArgs): string => {
     let resourceName: string = getDoctorName(value);
     return (resourceName === 'Will Smith') ? 'Cardiologist' : (resourceName === 'Alice') ? 'Neurologist' : 'Orthopedic Surgeon';
   }
-  const data: Object[] = extend([], doctorData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+  const eventSettings: EventSettingsModel = { dataSource: doctorData };
   const group: GroupModel = { resources: ['Doctors'] };
 
   const resourceData: Object[] = [
@@ -26,7 +24,7 @@ function App() {
     { text: 'Alice', id: 2, color: '#7fa900', designation: 'Neurologist' },
     { text: 'Robson', id: 3, color: '#7fa900', designation: 'Orthopedic Surgeon' }
   ];
-  function resourceHeaderTemplate(props): JSX.Element {
+  const resourceHeaderTemplate = (props): JSX.Element => {
     return (<div className="template-wrap">
       <div className="resource-detail"><div className="resource-name">{getDoctorName(props)}</div>
         <div className="resource-designation">{getDoctorLevel(props)}</div></div></div>
@@ -49,5 +47,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-

@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
+import { useRef } from 'react';
 import { extend } from '@syncfusion/ej2-base';
 import { ItemModel } from '@syncfusion/ej2-react-navigations';
 import {
@@ -12,12 +12,10 @@ import { scheduleData } from './datasource';
  *  Schedule header customization sample
  */
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
-
-  function onActionBegin(args: ActionEventArgs & ToolbarActionArgs): void {
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
+  const onActionBegin = (args: ActionEventArgs & ToolbarActionArgs): void => {
     if (args.requestType === 'toolbarItemRendering') {
       let exportItem: ItemModel = {
         align: 'Right', showTextOn: 'Both', prefixIcon: 'e-icon-schedule-excel-export',
@@ -27,12 +25,12 @@ function App() {
     }
   }
 
-  function onExportClick(): void {
+  const onExportClick = (): void => {
     let exportValues: ExportOptions = { exportType: "csv" };
-    scheduleObj.exportToExcel(exportValues);
+    scheduleObj.current.exportToExcel(exportValues);
   }
   return (
-    <ScheduleComponent cssClass='excel-export' width='100%' height='550px' id='schedule' ref={t => scheduleObj = t}
+    <ScheduleComponent cssClass='excel-export' width='100%' height='550px' id='schedule' ref={scheduleObj}
       selectedDate={new Date(2019, 0, 10)} eventSettings={eventSettings}
       actionBegin={onActionBegin}>
       <ViewsDirective>
