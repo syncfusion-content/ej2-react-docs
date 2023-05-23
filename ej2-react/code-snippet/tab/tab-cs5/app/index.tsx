@@ -1,20 +1,22 @@
-
-
-
-import * as React from 'react';
+import {useRef} from 'react';
 import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 import { SelectEventArgs } from '@syncfusion/ej2-navigations';
 
-function App() {
+const App = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  let tabInstance: TabComponent;
+  const tabInstance = useRef<TabComponent>(null);
   // define the array of data
   let headertext: any;
   headertext = [{ text: "Twitter" }, { text: "Facebook" }, { text: "WhatsApp" }];
+  const select = (e: SelectEventArgs) => {
+    if (e.isSwiped) {
+      e.cancel = true;
+    }
+  }
 
   return (
-    <TabComponent heightAdjustMode='Auto' id='tabelement' ref={tab => tabInstance = tab} selecting={select}>
+    <TabComponent heightAdjustMode='Auto' id='tabelement' ref={tabInstance} selecting={select}>
       <TabItemsDirective>
         <TabItemDirective header={headertext[0]}
           content={'Twitter is an online social networking service that enables users to send and read short 140-character ' +
@@ -39,15 +41,6 @@ function App() {
       </TabItemsDirective>
     </TabComponent>
   );
-
-  function select(e: SelectEventArgs) {
-    if (e.isSwiped) {
-      e.cancel = true;
-    }
-  }
 }
 const root = ReactDOM.createRoot(document.getElementById('element'));
 root.render(<App />);
-
-
-

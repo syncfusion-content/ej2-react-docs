@@ -3,7 +3,7 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-function App() {
+const App = () => {
     const productDropDownButtonItems = [
         { text: 'Developer' },
         { text: 'Analytics' },

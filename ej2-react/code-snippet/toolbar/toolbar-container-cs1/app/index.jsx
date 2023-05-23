@@ -1,7 +1,7 @@
 import { ToolbarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-function ReactApp() {
+const ReactApp = () => {
     return (<ToolbarComponent>
       <div>
         <div><button className='e-btn e-tbar-btn'>Cut</button> </div>

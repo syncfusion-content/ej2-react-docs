@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
-function ReactApp() {
+const ReactApp = () => {
     const divMargin = { margin: '25px 0' };
     return (<div className='control-pane'>
       <div className='control-section tbar-control-section'>
