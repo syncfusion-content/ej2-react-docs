@@ -25,7 +25,7 @@ const App = () => {
   const eventSettings = { dataSource: scheduleData }
 
   const onAddClick = () => {
-    let Data: Object[] = [{
+    let Data = [{
       Id: 1,
       Subject: 'Conference',
       StartTime: new Date(2018, 1, 12, 9, 0),

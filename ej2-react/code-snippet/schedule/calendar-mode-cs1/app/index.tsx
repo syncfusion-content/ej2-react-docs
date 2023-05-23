@@ -7,7 +7,6 @@ import {
   ViewsDirective, ViewDirective, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 import { L10n, loadCldr } from '@syncfusion/ej2-base';
 import * as localeObj from "../locale.json";
 import * as numberingSystems from '../numberingSystems.json';
@@ -20,8 +19,7 @@ loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, islamic);
 L10n.load(localeObj);
 
 const App = () => {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
 
   return (
     <ScheduleComponent height='550px' showQuickInfo={false} selectedDate={new Date(2018, 1, 15)} locale='ar' eventSettings={eventSettings}>

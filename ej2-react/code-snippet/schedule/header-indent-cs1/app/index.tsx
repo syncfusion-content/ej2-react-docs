@@ -5,11 +5,9 @@ import {
   ResourceDirective, Inject
 } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], resourceData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: resourceData };
   const group: GroupModel = { resources: ['Owners'] };
   const ownerData: object[] = [
     { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
@@ -17,7 +15,7 @@ function App() {
     { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
   ];
 
-  function headerIndentTemplate() {
+  const headerIndentTemplate = () => {
     return (
       <div className='e-resource-text'>
         <div className="text">Resources</div></div>

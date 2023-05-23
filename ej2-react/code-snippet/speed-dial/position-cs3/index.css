@@ -1,4 +1,4 @@
-
+/* Represents the styles for loader */
 #loader {
   color: #008cff;
   height: 40px;
@@ -6,8 +6,4 @@
   position: absolute;
   top: 45%;
   width: 30%;
-}
-
-#hide{
-  float: right;
 }

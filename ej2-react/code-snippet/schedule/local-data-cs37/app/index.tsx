@@ -5,11 +5,9 @@ import {
   ViewsDirective, ViewDirective, EventSettingsModel, WorkHoursModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  let data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
   const workHours: WorkHoursModel = {
     highlight: true, start: '11:00', end: '20:00'
   };

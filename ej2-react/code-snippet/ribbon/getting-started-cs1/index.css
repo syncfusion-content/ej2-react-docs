@@ -1,3 +1,13 @@
+/* Represents the styles for loader */
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
 .ribbonTemplate {
   display: flex;
   align-items: center;
@@ -23,6 +33,7 @@
   display:none;
 }
 
+/* Represents the styles for Ribbon group */
 .font-group .e-ribbon-group-content {
   justify-content: center;
 }

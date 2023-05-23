@@ -30,6 +30,9 @@ The position values of Speed Dial are as follows:
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speed-dial/position-cs1/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/speed-dial/position-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs1" %}
@@ -73,6 +76,9 @@ Below example demonstrates open/close action items on button click.
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speed-dial/position-cs2/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/speed-dial/position-cs2/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs2" %}
@@ -89,6 +95,9 @@ The following sample demonstrates the above functionalities of a Speed Dial to r
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speed-dial/position-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/speed-dial/position-cs3/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

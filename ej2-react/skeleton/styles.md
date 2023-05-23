@@ -23,6 +23,9 @@ You can customize the style of a Skeleton control by using [`cssClass`](https://
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/skeleton/styles-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/skeleton/styles-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/skeleton/styles-cs1" %}

@@ -1,4 +1,4 @@
-
+/* Represents the styles for loader */
 #loader {
   color: #008cff;
   height: 40px;
@@ -8,6 +8,7 @@
   width: 30%;
 }
 
+/* Represents the styles for button */
 #hide{
   float: right;
 }

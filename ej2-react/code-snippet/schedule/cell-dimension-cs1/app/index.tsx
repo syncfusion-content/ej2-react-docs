@@ -5,14 +5,11 @@ import {
   ActionEventArgs, ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data };
+const App = () => {
+  const eventSettings = { dataSource: scheduleData };
 
-  return <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} cssClass='schedule-cell-dimension' eventSettings={eventSettings}>
+  return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} cssClass='schedule-cell-dimension' eventSettings={eventSettings}>
     <ViewsDirective>
       <ViewDirective option='Day' />
       <ViewDirective option='Week' />

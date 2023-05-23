@@ -1,4 +1,4 @@
-
+/* Represents the styles for loader */
 #loader {
   color: #008cff;
   height: 40px;
@@ -8,25 +8,7 @@
   width: 30%;
 }
 
-.itemlist .text {
-  padding: 0 5px;
-}
-
-.e-speeddial-li .itemlist {
-  display: inherit;
-  width: 100%;
-  border: 1px solid transparent;
-  align-items: center;
-  padding: 5px;
-  border-radius: 500px;
-  background-color: rgba(104, 99, 104, 0.1);
-  box-shadow: 0 0 4px grey;
-}
-
-.e-speeddial-li .itemlist:hover {
-  background-color: rgb(224, 224, 224);
-}
-
+/* Represents the styles for speeddial-form */
 .speeddial-form {
   width: 200px;
   height: 80px;

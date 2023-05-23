@@ -1,17 +1,15 @@
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import { extend } from '@syncfusion/ej2-base';
+import { useRef } from 'react';
 import { ScheduleComponent, ViewDirective, Week, Resize, ExcelExport, DragAndDrop, Inject, ViewsDirective } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 /**
  *  Schedule header customization sample
  */
-function App() {
-    let scheduleObj;
-    const data = extend([], scheduleData, null, true);
-    const eventSettings = { dataSource: data };
+const App = () => {
+    const scheduleObj = useRef(null);
+    const eventSettings = { dataSource: scheduleData };
 
-    function onActionBegin(args) {
+    const onActionBegin = (args) => {
         if (args.requestType === 'toolbarItemRendering') {
             let exportItem = {
                 align: 'Right', showTextOn: 'Both', prefixIcon: 'e-icon-schedule-excel-export',
@@ -20,10 +18,10 @@ function App() {
             args.items.push(exportItem);
         }
     }
-    function onExportClick() {
-        scheduleObj.exportToExcel();
+    const onExportClick = () => {
+        scheduleObj.current.exportToExcel();
     }
-    return (<ScheduleComponent cssClass='excel-export' width='100%' height='550px' id='schedule' ref={t => scheduleObj = t} selectedDate={new Date(2019, 0, 10)} eventSettings={eventSettings} actionBegin={onActionBegin}>
+    return (<ScheduleComponent cssClass='excel-export' width='100%' height='550px' id='schedule' ref={scheduleObj} selectedDate={new Date(2019, 0, 10)} eventSettings={eventSettings} actionBegin={onActionBegin}>
         <ViewsDirective>
             <ViewDirective option='Week' />
         </ViewsDirective>
