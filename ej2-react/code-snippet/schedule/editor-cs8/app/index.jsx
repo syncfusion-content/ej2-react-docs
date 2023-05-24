@@ -2,15 +2,14 @@
 import * as ReactDOM from 'react-dom';
 import { useRef } from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
-import { extend, isNullOrUndefined } from '@syncfusion/ej2-base';
+import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { scheduleData } from './datasource';
 const App = () => {
   const startObj = useRef(null);
   const endObj = useRef(null);
-  const data = extend([], scheduleData, null, true);
-  const eventSettings = { dataSource: data };
+  const eventSettings = { dataSource: scheduleData };
 
   const onPopupOpen = (args) => {
     if (args.type === 'Editor') {

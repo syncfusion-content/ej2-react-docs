@@ -4,11 +4,8 @@ import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { readOnlyData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-
-function App() {
-  const data: Object[] = extend([], readOnlyData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data }
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: readOnlyData }
 
   return (
     <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>

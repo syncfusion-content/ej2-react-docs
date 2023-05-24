@@ -1,11 +1,11 @@
 import { useRef } from 'react';
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 const App = () => {
   const scheduleObj = useRef(null);
   const eventSettings = { dataSource: scheduleData }
-  function onActionBegin(args) {
+  const onActionBegin = (args) => {
     if (args.requestType === 'eventChange') {
       let weekEnds = [0, 6];
       let weekDay = weekEnds.indexOf((args.data.StartTime).getDay()) >= 0;

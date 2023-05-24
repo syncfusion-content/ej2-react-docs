@@ -4,7 +4,7 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Inj
 import { scheduleData } from './datasource';
 const App = () => {
   const scheduleObj = useRef(null);
-  function onDragStop(args) {
+  const onDragStop = (args) => {
     args.cancel = true; //cancels the drop action
     scheduleObj.openEditor(args.data, "Save"); //open the event window with updated start and end time
   }

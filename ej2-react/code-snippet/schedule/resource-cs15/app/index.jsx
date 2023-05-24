@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Week, Month, Agenda, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
-import { extend } from '@syncfusion/ej2-base';
 const App = () => {
   const group = { byDate: true, resources: ['Owners'], hideNonWorkingDays: true }
   const resourceData = [

@@ -1,7 +1,4 @@
-
-
-
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { TimePickerComponent, ChangeEventArgs } from '@syncfusion/ej2-react-calendars';
 import {
@@ -9,15 +6,13 @@ import {
   ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
 
-  function onChange(args: ChangeEventArgs): void {
-    scheduleObj.scrollTo(args.text);
+  const onChange = (args: ChangeEventArgs): void => {
+    scheduleObj.current.scrollTo(args.text);
   }
   return (
     <div className='content-wrapper'>
@@ -39,7 +34,7 @@ function App() {
         </table>
       </div>
       <div className='control-section'>
-        <ScheduleComponent width='100%' height='550px' ref={schedule => scheduleObj = schedule}
+        <ScheduleComponent width='100%' height='550px' ref={scheduleObj}
           selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
           <ViewsDirective>
             <ViewDirective option='Day' />
@@ -55,5 +50,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-

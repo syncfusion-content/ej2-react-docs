@@ -6,7 +6,7 @@ import {
 import { scheduleData } from './datasource';
 
 const App = () => {
-  function onDragStart(args: DragEventArgs): void {
+  const onDragStart = (args: DragEventArgs): void => {
     args.excludeSelectors = 'e-header-cells,e-header-day,e-header-date,e-all-day-cells';
   }
   const eventSettings: EventSettingsModel = { dataSource: scheduleData };

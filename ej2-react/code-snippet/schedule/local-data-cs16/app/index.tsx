@@ -4,12 +4,11 @@ import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject,
   RenderCellEventArgs, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
-import { extend, removeClass } from '@syncfusion/ej2-base';
+import { removeClass } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
 
-function App() {
-  let data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
 
   function onRenderCell(args: RenderCellEventArgs): void {
     if (args.elementType === "dateHeader" || args.elementType === "monthCells") {

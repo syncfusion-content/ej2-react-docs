@@ -5,8 +5,8 @@ import {
   ViewsDirective, ViewDirective, CellTemplateArgs
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
-  function getMonthCellContent(date: Date) {
+const App = () => {
+  const getMonthCellContent = (date: Date) => {
     if (date.getMonth() === 10 && date.getDate() === 23) {
       return '<img src= "https://ej2.syncfusion.com/demos/src/schedule/images/birthday.svg" />';
     } else if (date.getMonth() === 11 && date.getDate() === 9) {
@@ -26,14 +26,14 @@ function App() {
     }
     return '';
   }
-  function getWorkCellText(date: Date) {
+  const getWorkCellText = (date: Date) => {
     let weekEnds: number[] = [0, 6];
     if (weekEnds.indexOf(date.getDay()) >= 0) {
       return "<img src='https://ej2.syncfusion.com/demos/src/schedule/images/newyear.svg' />";
     }
     return '';
   };
-  function cellTemplate(props: CellTemplateArgs): JSX.Element {
+  const cellTemplate = (props: CellTemplateArgs): JSX.Element => {
     if (props.type === "workCells") {
       return (<div className="templatewrap" dangerouslySetInnerHTML={{ __html: getWorkCellText(props.date) }}></div>);
     }

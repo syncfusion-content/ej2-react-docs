@@ -5,7 +5,7 @@ import {
   ViewsDirective, ViewDirective, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { Internationalization, extend } from '@syncfusion/ej2-base';
+import { Internationalization} from '@syncfusion/ej2-base';
 
 const App = () => {
   const scheduleObj = useRef<ScheduleComponent>(null);
