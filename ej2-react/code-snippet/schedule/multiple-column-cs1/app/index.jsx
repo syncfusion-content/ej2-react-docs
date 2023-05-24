@@ -2,19 +2,17 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { TimelineViews, TimelineMonth, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { roomData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  function getRoomName(value) {
+const App = () => {
+  const getRoomName = (value) => {
     return value.resourceData[value.resource.textField];
   }
-  function getRoomType(value) {
+  const getRoomType = (value) => {
     return value.resourceData.type;
   }
-  function getRoomCapacity(value) {
+  const getRoomCapacity = (value) => {
     return value.resourceData.capacity;
   }
-  const data = extend([], roomData, null, true);
-  const eventSettings = { dataSource: data };
+  const eventSettings = { dataSource: roomData };
   const group = { resources: ['MeetingRoom'] };
   const ownerData = [
     { text: 'Jammy', id: 1, color: '#ea7a57', capacity: 20, type: 'Conference' },
@@ -28,14 +26,14 @@ function App() {
     { text: 'Swarm', id: 9, color: '#df5286', capacity: 30, type: 'Conference' },
     { text: 'Photogenic', id: 10, color: '#710193', capacity: 25, type: 'Conference' }
   ];
-  function resourceHeaderTemplate(props) {
+  const resourceHeaderTemplate = (props) => {
     return (<div className="template-wrap">
       <div className="room-name">{getRoomName(props)}</div>
       <div className="room-type">{getRoomType(props)}</div>
       <div className="room-capacity">{getRoomCapacity(props)}</div>
     </div>);
   }
-  function onRenderCell(args) {
+  const onRenderCell = (args) => {
     if (args.elementType === 'emptyCells' && args.element.classList.contains('e-resource-left-td')) {
       let target = args.element.querySelector('.e-resource-text');
       target.innerHTML = '<div class="name">Rooms</div><div class="type">Type</div><div class="capacity">Capacity</div>';

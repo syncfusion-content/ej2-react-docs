@@ -5,12 +5,9 @@ import {
   ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data }
-
+const App = () => {
+  const eventSettings = { dataSource: scheduleData };
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 11, 31)}
     eventSettings={eventSettings} startHour='09:00' endHour='13:00'>
     <HeaderRowsDirective>

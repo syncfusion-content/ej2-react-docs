@@ -3,7 +3,7 @@ import * as React from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, PopupOpenEventArgs, Inject
 } from '@syncfusion/ej2-react-schedule';
-import { extend, createElement } from '@syncfusion/ej2-base';
+import { createElement } from '@syncfusion/ej2-base';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { scheduleData } from './datasource';
 

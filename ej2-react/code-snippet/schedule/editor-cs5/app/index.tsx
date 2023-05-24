@@ -4,7 +4,6 @@ import {
   ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, EventSettingsModel,
   ResourcesDirective, ResourceDirective, Inject
 } from '@syncfusion/ej2-react-schedule';
-import { extend } from '@syncfusion/ej2-base';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
 import { eventData } from './datasource';

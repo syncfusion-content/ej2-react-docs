@@ -1,13 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
-import { extend, removeClass } from '@syncfusion/ej2-base';
+import { removeClass } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
-function App() {
-    let data = extend([], scheduleData, null, true);
-    const eventSettings = { dataSource: data };
+const App = () => {
+    const eventSettings = { dataSource: scheduleData };
 
-    function onRenderCell(args) {
+    const onRenderCell = (args) => {
         if (args.elementType === "dateHeader" || args.elementType === "monthCells") {
             removeClass(args.element.childNodes, "e-navigate");
         }

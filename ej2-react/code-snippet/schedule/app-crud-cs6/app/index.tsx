@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Inject,
@@ -6,8 +6,8 @@ import {
 } from '@syncfusion/ej2-react-schedule';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
   const scheduleData: Object[] = [{
     Id: 3,
     Subject: 'Testing',
@@ -23,7 +23,7 @@ function App() {
   }];
   const eventSettings = { dataSource: scheduleData }
 
-  function onClickAdd(): void {
+  const onClickAdd = (): void => {
     let Data: Object[] = [{
       Id: 1,
       Subject: 'Conference',
@@ -37,9 +37,9 @@ function App() {
       EndTime: new Date(2018, 1, 15, 11, 30),
       IsAllDay: false
     }];
-    scheduleObj.addEvent(Data);
+    scheduleObj.current.addEvent(Data);
   }
-  function onClickSave(): void {
+  const onClickSave = (): void => {
     let Data: Object = {
       Id: 3,
       Subject: 'Testing-edited',
@@ -47,17 +47,17 @@ function App() {
       EndTime: new Date(2018, 1, 11, 11, 0),
       IsAllDay: false
     };
-    scheduleObj.saveEvent(Data);
+    scheduleObj.current.saveEvent(Data);
   }
-  function onClickDelete(): void {
-    scheduleObj.deleteEvent(4);
+  const onClickDelete = (): void => {
+    scheduleObj.current.deleteEvent(4);
   }
 
   return (
     <div>
       <ButtonComponent id='add' title='Add' onClick={onClickAdd}>Add</ButtonComponent>
       <ButtonComponent id='edit' title='Edit' onClick={onClickSave}>Edit</ButtonComponent>
-      <ButtonComponent id='delete' title='Delete' onClick={onClickDelete}>Delete</ButtonComponent> <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate=
+      <ButtonComponent id='delete' title='Delete' onClick={onClickDelete}>Delete</ButtonComponent> <ScheduleComponent ref={scheduleObj} width='100%' height='550px' selectedDate=
         {new Date(2018, 1, 15)} eventSettings={eventSettings}>
         <ViewsDirective>
           <ViewDirective option='Day' />

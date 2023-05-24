@@ -1,11 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, Month, Year, Resize, DragAndDrop, Inject, ResourcesDirective, ResourceDirective, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
-import { extend } from '@syncfusion/ej2-base';
 import { resourceData, timelineResourceData } from './datasource';
 const App = () => {
-  const data = extend([], resourceData.concat(timelineResourceData), null, true);
-  const eventSettings = { dataSource: data }
+  const eventSettings = { dataSource: resourceData.concat(timelineResourceData) }
 
   const projectData = [
     { text: 'PROJECT 1', id: 1, color: '#cb6bb2' },

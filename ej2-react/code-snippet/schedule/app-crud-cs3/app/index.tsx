@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Inject,
@@ -7,9 +7,9 @@ import {
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  let buttonObj: ButtonComponent;
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const buttonObj = useRef<ButtonComponent>(null);
   const scheduleData: Object[] = [{
     Id: 3,
     Subject: 'Testing',
@@ -27,17 +27,17 @@ function App() {
   }];
   const eventSettings = { dataSource: scheduleData }
 
-  function onEditClick(): void {
-    let data: Object = new DataManager(scheduleObj.getCurrentViewEvents()).executeLocal(new Query().where('RecurrenceID', 'equal', 3));
+  const onEditClick = (): void => {
+    let data: Object = new DataManager(scheduleObj.current.getCurrentViewEvents()).executeLocal(new Query().where('RecurrenceID', 'equal', 3));
     data[0].Subject = 'Edited';
-    scheduleObj.saveEvent(data[0], 'EditOccurrence');
-    buttonObj.element.setAttribute('disabled', 'true');
+    scheduleObj.current.saveEvent(data[0], 'EditOccurrence');
+    buttonObj.current.element.setAttribute('disabled', 'true');
   }
 
   return (
     <div>
-      <ButtonComponent id='edit' ref={t => buttonObj = t} title='Edit' onClick={onEditClick.bind(this)}>Edit</ButtonComponent>
-      <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate=
+      <ButtonComponent id='edit' ref={buttonObj} title='Edit' onClick={onEditClick.bind(this)}>Edit</ButtonComponent>
+      <ScheduleComponent ref={scheduleObj} width='100%' height='550px' selectedDate=
         {new Date(2018, 1, 15)} eventSettings={eventSettings}>
         <ViewsDirective>
           <ViewDirective option='Day' />

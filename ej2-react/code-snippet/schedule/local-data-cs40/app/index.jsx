@@ -2,11 +2,10 @@ import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, TimelineViews, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { Internationalization, extend } from '@syncfusion/ej2-base';
+import { Internationalization } from '@syncfusion/ej2-base';
 const App = () => {
   const scheduleObj = useRef(null);
-  const data = extend([], scheduleData, null, true);
-  const eventSettings = { dataSource: data };
+  const eventSettings = { dataSource: scheduleData };
   const instance = new Internationalization();
   const onCreated = () => {
     scheduleObj.current.scrollTo(instance.formatDate(new Date(), { skeleton: 'hm' }));

@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Resize, Inject } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-function App() {
-  function onResizeStart(args) {
+const App = () => {
+  const onResizeStart = (args) => {
     args.scroll = { enable: true, scrollBy: 15 };
   }
   const eventSettings = { dataSource: scheduleData }

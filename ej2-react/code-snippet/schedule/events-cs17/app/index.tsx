@@ -6,7 +6,7 @@ import {
 import { scheduleData } from './datasource';
 
 const App = () => {
-  function onDragStart(args: DragEventArgs): void {
+  const onDragStart = (args: DragEventArgs): void => {
     args.scroll = { enable: true, scrollBy: 5, timeDelay: 200 };
   }
   const eventSettings: EventSettingsModel = { dataSource: scheduleData }

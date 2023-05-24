@@ -1,10 +1,11 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-function App() {
-  let scheduleObj;
-  let buttonObj;
+
+const App = () => {
+  const scheduleObj = useRef(null);
+  const buttonObj = useRef(null);
   const scheduleData = [{
     Id: 3,
     Subject: 'Testing',
@@ -20,23 +21,27 @@ function App() {
   }];
   const eventSettings = { dataSource: scheduleData }
 
-  function onDeleteClick() {
-    scheduleObj.deleteEvent(4);
-    buttonObj.element.setAttribute('disabled', 'true');
+  const onDeleteClick = () => {
+    scheduleObj.current.deleteEvent(4);
+    buttonObj.current.element.setAttribute('disabled', 'true');
   }
-  return (<div>
-    <ButtonComponent id='delete' ref={t => buttonObj = t} title='Delete' onClick={onDeleteClick.bind(this)}>Delete</ButtonComponent>
-    <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
-      <ViewsDirective>
-        <ViewDirective option='Day' />
-        <ViewDirective option='Week' />
-        <ViewDirective option='WorkWeek' />
-        <ViewDirective option='Month' />
-      </ViewsDirective>
-      <Inject services={[Day, Week, WorkWeek, Month]} />
-    </ScheduleComponent>
-  </div>);
-}
-;
+
+  return (
+    <div>
+      <ButtonComponent id='delete' ref={buttonObj} title='Delete' onClick={onDeleteClick}>Delete</ButtonComponent>
+      <ScheduleComponent ref={scheduleObj} width='100%' height='550px' selectedDate=
+        {new Date(2018, 1, 15)} eventSettings={eventSettings}>
+        <ViewsDirective>
+          <ViewDirective option='Day' />
+          <ViewDirective option='Week' />
+          <ViewDirective option='WorkWeek' />
+          <ViewDirective option='Month' />
+        </ViewsDirective>
+        <Inject services={[Day, Week, WorkWeek, Month]} />
+      </ScheduleComponent>
+    </div>
+  )
+
+};
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);

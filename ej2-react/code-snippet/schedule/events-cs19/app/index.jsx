@@ -6,7 +6,6 @@ const App = () => {
   const onDragStart = (args) => {
     args.interval = 10;
   }
-  const data = extend([], scheduleData, undefined, true);
   const eventSettings = { dataSource: scheduleData }
 
   return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} dragStart={(onDragStart)}>

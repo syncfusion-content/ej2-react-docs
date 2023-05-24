@@ -6,7 +6,7 @@ import { Internationalization } from '@syncfusion/ej2-base';
 const App = () => {
     const eventSettings = { dataSource: scheduleData };
     const instance = new Internationalization();
-    function getDateHeaderText(value) {
+    const getDateHeaderText = (value) => {
         return instance.formatDate(value, { skeleton: 'Ed' });
     }
     const getWeather = (value) => {

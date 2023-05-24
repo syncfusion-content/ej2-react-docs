@@ -5,20 +5,18 @@ import {
   ResourceDetails, ResourcesDirective, ResourceDirective, Inject, EventSettingsModel, GroupModel
 } from '@syncfusion/ej2-react-schedule';
 import { roomData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  function getRoomName(value: ResourceDetails) {
+const App = () => {
+  const getRoomName = (value: ResourceDetails) => {
     return (value as ResourceDetails).resourceData[(value as ResourceDetails).resource.textField];
   }
-  function getRoomType(value: ResourceDetails) {
+  const getRoomType = (value: ResourceDetails) => {
     return (value as ResourceDetails).resourceData.type;
   }
-  function getRoomCapacity(value: ResourceDetails) {
+  const getRoomCapacity = (value: ResourceDetails) => {
     return (value as ResourceDetails).resourceData.capacity;
   }
-  const data: Object[] = extend([], roomData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+  const eventSettings: EventSettingsModel = { dataSource: roomData };
   const group: GroupModel = { resources: ['MeetingRoom'] };
 
   const ownerData: Object[] = [
@@ -33,7 +31,7 @@ function App() {
     { text: 'Swarm', id: 9, color: '#df5286', capacity: 30, type: 'Conference' },
     { text: 'Photogenic', id: 10, color: '#710193', capacity: 25, type: 'Conference' }
   ];
-  function resourceHeaderTemplate(props): JSX.Element {
+  const resourceHeaderTemplate = (props): JSX.Element => {
     return (<div className="template-wrap">
       <div className="room-name">{getRoomName(props)}</div>
       <div className="room-type">{getRoomType(props)}</div>
@@ -41,7 +39,7 @@ function App() {
     </div>
     );
   }
-  function onRenderCell(args: RenderCellEventArgs): void {
+  const onRenderCell = (args: RenderCellEventArgs): void => {
     if (args.elementType === 'emptyCells' && args.element.classList.contains('e-resource-left-td')) {
       let target: HTMLElement = args.element.querySelector('.e-resource-text') as HTMLElement;
       target.innerHTML = '<div class="name">Rooms</div><div class="type">Type</div><div class="capacity">Capacity</div>';
