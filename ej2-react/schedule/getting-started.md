@@ -170,7 +170,7 @@ import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
   const data: object [] = [
     {
       Id: 1,
@@ -256,7 +256,7 @@ import {
   ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
     return (
       <ScheduleComponent width='100%' height='550px' currentView='Month'
       selectedDate={new Date(2017, 11, 15)}>

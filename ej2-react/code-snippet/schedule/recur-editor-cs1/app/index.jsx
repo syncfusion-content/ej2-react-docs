@@ -1,14 +1,14 @@
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
+import { useRef, useEffect } from 'react';
 import { RecurrenceEditorComponent } from '@syncfusion/ej2-react-schedule';
-function App() {
-    let recObject;
-    React.useEffect(() => {
-        let outputElement = document.querySelector('#rule-output');
+const App = () => {
+  const ruleOutput = useRef(null);
+    useEffect(() => {
+        let outputElement = ruleOutput.current;
         outputElement.innerText = 'Select Rule';
     }, []);
-    function onChange(args) {
-        let outputElement = document.querySelector('#rule-output');
+    const onChange = (args) => {
+        let outputElement = ruleOutput.current;
         if (args.value == "") {
             outputElement.innerText = 'Select Rule';
         }
@@ -20,11 +20,11 @@ function App() {
     <div style={{ paddingBottom: '15px' }}>
       <label>Rule Output</label>
       <div className='rule-output-container'>
-        <div id='rule-output'></div>
+        <div ref={ruleOutput}></div>
       </div>
     </div>
     <div className='RecurrenceEditor'>
-      <RecurrenceEditorComponent id='RecurrenceEditor' ref={t => recObject = t} change={onChange}></RecurrenceEditorComponent>
+      <RecurrenceEditorComponent id='RecurrenceEditor' change={onChange}></RecurrenceEditorComponent>
     </div>
   </div>);
 }

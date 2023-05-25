@@ -1,28 +1,26 @@
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
+import {useRef} from 'react';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize, Inject, ICalendarExport, ICalendarImport
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
   let multiple: boolean = false;
   let showFileList: boolean = false;
   const allowedExtensions: string = '.ics';
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data };
+  const eventSettings = { dataSource: scheduleData };
 
-  function onSelect(args): void {
-    scheduleObj.importICalendar(args.event.target.files[0]);
+  const onSelect = (args): void => {
+    scheduleObj.current.importICalendar(args.event.target.files[0]);
   }
   return (<div>
     <UploaderComponent id='fileUpload' type='file' allowedExtensions={allowedExtensions} cssClass='calendar-import'
       buttons={{ browse: 'Choose file' }} multiple={multiple} showFileList={showFileList}
       selected={onSelect}></UploaderComponent>
-    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='520px' selectedDate={new Date(2018, 1, 15)} allowDragAndDrop={false} eventSettings={eventSettings}>
+    <ScheduleComponent ref={scheduleObj} width='100%' height='520px' selectedDate={new Date(2018, 1, 15)} allowDragAndDrop={false} eventSettings={eventSettings}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, ICalendarExport, ICalendarImport, Resize, DragAndDrop]} />
     </ScheduleComponent></div>
   );

@@ -4,7 +4,7 @@ import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
   const data: object[] = [{
     TravelId: 2,
     TravelSummary: 'Paris',

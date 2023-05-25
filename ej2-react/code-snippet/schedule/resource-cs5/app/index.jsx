@@ -2,10 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Week, Month, TimelineViews, TimelineMonth, Agenda, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], resourceData, null, true);
-  const eventSettings = { dataSource: data }
+const App = () => {
+  const eventSettings = { dataSource: resourceData }
   const group = { resources: ['Owners'] }
   const ownerData = [
     { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },

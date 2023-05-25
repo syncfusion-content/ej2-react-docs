@@ -1,22 +1,16 @@
-
-
-
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { ScheduleComponent, ViewsDirective, ViewDirective, View, Day, Week, WorkWeek, Month, RenderCellEventArgs, Inject, TimelineViews } from '@syncfusion/ej2-react-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Inject, TimelineViews } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend, Internationalization } from '@syncfusion/ej2-base';
+import { Internationalization } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data };
-
+const App = () => {
+  const eventSettings = { dataSource: scheduleData };
   const instance: Internationalization = new Internationalization();
-  function getDateHeaderText(value: Date): string {
+  const getDateHeaderText = (value: Date): string => {
     return instance.formatDate(value, { skeleton: 'Ed' });
   }
-  function getWeather(value: Date) {
+  const getWeather = (value: Date) => {
     switch (value.getDay()) {
       case 0:
         return '<div class="weather-text">25°C</div>';
@@ -36,7 +30,7 @@ function App() {
         return null;
     }
   }
-  function dateHeaderTemplate(props): JSX.Element {
+  const dateHeaderTemplate = (props): JSX.Element => {
     return (<div><div>{getDateHeaderText(props.date)}</div><div className="date-text" dangerouslySetInnerHTML={{ __html: getWeather(props.date) }}></div></div>);
   }
 
@@ -54,6 +48,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

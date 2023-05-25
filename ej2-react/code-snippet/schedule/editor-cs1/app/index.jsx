@@ -1,16 +1,13 @@
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Inject } from '@syncfusion/ej2-react-schedule';
-import { extend, createElement } from '@syncfusion/ej2-base';
+import { createElement } from '@syncfusion/ej2-base';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { scheduleData } from './datasource';
-function App() {
-    let scheduleObj;
-    const data = extend([], scheduleData, null, true);
-    const eventSettings = { dataSource: data };
+const App = () => {
+    const eventSettings = { dataSource: scheduleData };
 
-    function onPopupOpen(args) {
+    const onPopupOpen = (args) => {
         if (args.type === 'Editor') {
             if (!args.element.querySelector('.custom-field-row')) {
                 let row = createElement('div', { className: 'custom-field-row' });
@@ -38,7 +35,7 @@ function App() {
             }
         }
     }
-    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} ref={schedule => scheduleObj = schedule} eventSettings={eventSettings} popupOpen={onPopupOpen}>
+    return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} popupOpen={onPopupOpen}>
         <ViewsDirective>
             <ViewDirective option='Day' />
             <ViewDirective option='Week' />

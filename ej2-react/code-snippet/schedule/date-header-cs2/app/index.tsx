@@ -1,18 +1,11 @@
-
-
-
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, View, Month, RenderCellEventArgs, Inject } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend, Internationalization } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data };
-
-  function getWeather(value: Date) {
+const App = () => {
+  const eventSettings = { dataSource: scheduleData };
+  const getWeather = (value: Date) => {
     switch (value.getDay()) {
       case 0:
         return '<div class="weather-text">25°C</div>';
@@ -32,7 +25,7 @@ function App() {
         return null;
     }
   }
-  function onRenderCell(args: RenderCellEventArgs): void {
+  const onRenderCell = (args: RenderCellEventArgs): void => {
     if (args.elementType === 'monthCells') {
       let ele: Element = document.createElement('div');
       ele.innerHTML = getWeather(args.date);

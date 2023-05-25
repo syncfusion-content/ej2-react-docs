@@ -2,19 +2,19 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Inject } from '@syncfusion/ej2-react-schedule';
-import { extend, isNullOrUndefined } from '@syncfusion/ej2-base';
+import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { scheduleData } from './datasource';
-function App() {
-  let scheduleObj;
-  const data = extend([], scheduleData, null, true);
-  const eventSettings = { dataSource: data };
+const App = () => {
+  const eventSettings = { dataSource: scheduleData };
 
-  function onPopupOpen(args) {
+  const onPopupOpen = (args) => {
     if (args.type === 'Editor') {
       let statusElement = args.element.querySelector('#EventType');
-      statusElement.setAttribute('name', 'EventType');
+      if (statusElement) {
+        statusElement.setAttribute('name', 'EventType');
+      }
       if (!isNullOrUndefined(document.getElementById("EventType_Error"))) {
         document.getElementById("EventType_Error").style.display = "none";
         document.getElementById("EventType_Error").style.left = "351px";
@@ -24,12 +24,12 @@ function App() {
       validator.addRules('EventType', { required: true });
     }
   }
-  function onSelect(args) {
+  const onSelect = (args) => {
     if (!isNullOrUndefined(document.getElementById("EventType_Error"))) {
       document.getElementById("EventType_Error").style.display = "none";
     }
   }
-  function editorTemplate(props) {
+  const editorTemplate = (props) => {
     return ((props !== undefined) ? <table className="custom-event-editor" style={{ width: '100%', padding: '5' }}><tbody>
       <tr><td className="e-textlabel">Summary</td><td colSpan={4}>
         <input id="Summary" className="e-field e-input" type="text" name="Subject" style={{ width: '100%' }} />
@@ -48,7 +48,7 @@ function App() {
         <textarea id="Description" className="e-field e-input" name="Description" rows={3} cols={50} style={{ width: '100%', height: '60px !important', resize: 'vertical' }}></textarea>
       </td></tr></tbody></table> : <div></div>);
   }
-  return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} ref={schedule => scheduleObj = schedule} eventSettings={eventSettings} editorTemplate={editorTemplate} popupOpen={onPopupOpen} showQuickInfo={false}>
+  return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} editorTemplate={editorTemplate} popupOpen={onPopupOpen} showQuickInfo={false}>
     <ViewsDirective>
       <ViewDirective option='Day' />
       <ViewDirective option='Week' />
@@ -58,6 +58,6 @@ function App() {
     <Inject services={[Day, Week, WorkWeek, Month]} />
   </ScheduleComponent>);
 }
-;
+  ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);

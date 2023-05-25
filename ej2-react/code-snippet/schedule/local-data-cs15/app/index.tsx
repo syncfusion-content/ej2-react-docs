@@ -5,7 +5,7 @@ import {
 } from '@syncfusion/ej2-react-schedule';
 import { generateObject } from './datasource';
 
-function App() {
+const App = () => {
   const data: Object[] = generateObject() as Object[];
   const eventSettings: EventSettingsModel = { dataSource: data };
 

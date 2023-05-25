@@ -1,23 +1,22 @@
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
+import { useRef } from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Inject, TimelineViews,
   Resize, DragAndDrop, ActionEventArgs, CellClickEventArgs, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { eventData, waitingList } from './datasource';
-import { extend, closest, remove, addClass } from '@syncfusion/ej2-base';
+import { closest, remove, addClass } from '@syncfusion/ej2-base';
 import { DragAndDropEventArgs } from '@syncfusion/ej2-navigations';
 import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  let treeObj: TreeViewComponent;
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const treeObj = useRef<TreeViewComponent>(null);
   let isTreeItemDropped: boolean = false;
   let draggedItemId: string = '';
   let allowDragAndDrops: boolean = true;
 
   const fields: Object = { dataSource: waitingList, id: 'Id', text: 'Name' };
-  const data: Object[] = extend([], eventData, null, true) as Object[];
 
   const fieldsData = {
     subject: { title: 'Patient Name', name: 'Name' },
@@ -25,16 +24,16 @@ function App() {
     endTime: { title: "To", name: "EndTime" },
     description: { title: 'Reason', name: 'Description' }
   }
-  const eventSettings: EventSettingsModel = { dataSource: data, fields: fieldsData };
+  const eventSettings: EventSettingsModel = { dataSource: eventData, fields: fieldsData };
 
-  function treeTemplate(props: any): JSX.Element {
+  const treeTemplate = (props: any): JSX.Element => {
     return (<div id="waiting"><div id="waitdetails"><div id="waitlist">{props.Name}</div>
       <div id="waitcategory">{props.DepartmentName}</div></div></div>);
   }
 
-  function onItemDrag(event: any): void {
-    if (scheduleObj.isAdaptive) {
-      let classElement: HTMLElement = scheduleObj.element.querySelector('.e-device-hover');
+  const onItemDrag = (event: any): void => {
+    if (scheduleObj.current.isAdaptive) {
+      let classElement: HTMLElement = scheduleObj.current.element.querySelector('.e-device-hover');
       if (classElement) {
         classElement.classList.remove('e-device-hover');
       }
@@ -54,12 +53,12 @@ function App() {
     }
   }
 
-  function onActionBegin(event: ActionEventArgs): void {
+  const onActionBegin = (event: ActionEventArgs): void => {
     if (event.requestType === 'eventCreate' && isTreeItemDropped) {
-      let treeViewdata: { [key: string]: Object }[] = treeObj.fields.dataSource as { [key: string]: Object }[];
+      let treeViewdata: { [key: string]: Object }[] = treeObj.current.fields.dataSource as { [key: string]: Object }[];
       const filteredPeople: { [key: string]: Object }[] =
         treeViewdata.filter((item: any) => item.Id !== parseInt(draggedItemId, 10));
-      treeObj.fields.dataSource = filteredPeople;
+      treeObj.current.fields.dataSource = filteredPeople;
       let elements: NodeListOf<HTMLElement> = document.querySelectorAll('.e-drag-item.treeview-external-drag');
       for (let i: number = 0; i < elements.length; i++) {
         remove(elements[i]);
@@ -67,9 +66,9 @@ function App() {
     }
   }
 
-  function onTreeDragStop(event: DragAndDropEventArgs): void {
+  const onTreeDragStop = (event: DragAndDropEventArgs): void => {
     let treeElement: Element = closest(event.target, '.e-treeview');
-    let classElement: HTMLElement = scheduleObj.element.querySelector('.e-device-hover');
+    let classElement: HTMLElement = scheduleObj.current.element.querySelector('.e-device-hover');
     if (classElement) {
       classElement.classList.remove('e-device-hover');
     }
@@ -78,11 +77,11 @@ function App() {
       let scheduleElement: Element = closest(event.target, '.e-content-wrap');
       if (scheduleElement) {
         let treeviewData: { [key: string]: Object }[] =
-          treeObj.fields.dataSource as { [key: string]: Object }[];
+          treeObj.current.fields.dataSource as { [key: string]: Object }[];
         if (event.target.classList.contains('e-work-cells')) {
           const filteredData: { [key: string]: Object }[] =
             treeviewData.filter((item: any) => item.Id === parseInt(event.draggedNodeData.id as string, 10));
-          let cellData: CellClickEventArgs = scheduleObj.getCellDetails(event.target);
+          let cellData: CellClickEventArgs = scheduleObj.current.getCellDetails(event.target);
           let eventData: { [key: string]: Object } = {
             Name: filteredData[0].Name,
             StartTime: cellData.startTime,
@@ -90,7 +89,7 @@ function App() {
             IsAllDay: cellData.isAllDay,
             Description: filteredData[0].Description
           };
-          scheduleObj.addEvent(eventData);
+          scheduleObj.current.addEvent(eventData);
           isTreeItemDropped = true;
           draggedItemId = event.draggedNodeData.id as string;
         }
@@ -106,7 +105,7 @@ function App() {
             <div className="title-container">
               <div className="title-text">Scheduler</div>
             </div>
-            <ScheduleComponent ref={schedule => scheduleObj = schedule} cssClass='schedule-drag-drop' width='100%' height='650px' selectedDate={new Date(2018, 7, 1)}
+            <ScheduleComponent ref={scheduleObj} cssClass='schedule-drag-drop' width='100%' height='650px' selectedDate={new Date(2018, 7, 1)}
               currentView='TimelineDay'
               eventSettings={eventSettings}
               actionBegin={onActionBegin} drag={onItemDrag} >
@@ -120,7 +119,7 @@ function App() {
             <div className="title-container">
               <div className="title-text">Waiting List</div>
             </div>
-            <TreeViewComponent ref={tree => treeObj = tree} cssClass='treeview-external-drag' nodeTemplate={treeTemplate} fields={fields} nodeDragStop={onTreeDragStop} nodeDragging={onItemDrag} allowDragAndDrop={allowDragAndDrops} />
+            <TreeViewComponent ref={treeObj} cssClass='treeview-external-drag' nodeTemplate={treeTemplate} fields={fields} nodeDragStop={onTreeDragStop} nodeDragging={onItemDrag} allowDragAndDrop={allowDragAndDrops} />
           </div>
         </div>
       </div>
@@ -129,6 +128,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

@@ -2,14 +2,17 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Week, Month, TimelineViews, TimelineMonth, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], resourceData, null, true);
-  const eventSettings = { dataSource: data }
-  const group = { resources: ['Rooms', 'Owners'], headerTooltipTemplate: headerTooltipTemplate.bind(this) }
-  function getRoomName(value) {
+const App = () => {
+  const eventSettings = { dataSource: resourceData }
+  const getRoomName = (value) => {
     return value.resourceData[value.resource.textField];
   }
+  const headerTooltipTemplate = (props) => {
+    return (<div className="template-wrap">
+      <div className="room-name">{getRoomName(props)}</div>
+    </div>);
+  }
+  const group = { resources: ['Rooms', 'Owners'], headerTooltipTemplate: headerTooltipTemplate.bind(this) }
   const roomData = [
     { RoomText: 'ROOM 1', Id: 1, RoomColor: '#cb6bb2' },
     { RoomText: 'ROOM 2', Id: 2, RoomColor: '#56ca85' }
@@ -19,11 +22,6 @@ function App() {
     { OwnerText: 'Steven', Id: 2, GroupId: 2, OwnerColor: '#f8a398' },
     { OwnerText: 'Michael', Id: 3, GroupId: 1, OwnerColor: '#7499e1' }
   ];
-  function headerTooltipTemplate(props) {
-    return (<div className="template-wrap">
-      <div className="room-name">{getRoomName(props)}</div>
-    </div>);
-  }
   return (<ScheduleComponent width='100%' height='550px' currentView='TimelineWeek' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings} group={group}>
     <ResourcesDirective>
       <ResourceDirective field='RoomId' title='Room' name='Rooms' dataSource={roomData} textField='RoomText' idField='Id' colorField='RoomColor'>
@@ -40,6 +38,6 @@ function App() {
     <Inject services={[Week, Month, TimelineViews, TimelineMonth]} />
   </ScheduleComponent>);
 }
-;
+  ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);

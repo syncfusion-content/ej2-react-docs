@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
-function App() {
+const App = () => {
     let data = [{
         Id: 1,
         Subject: 'Explosion of Betelgeuse Star',

@@ -1,6 +1,5 @@
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import { extend } from '@syncfusion/ej2-base';
+import { useRef } from 'react';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, ICalendarExport, ICalendarImport, Resize, Inject
 } from '@syncfusion/ej2-react-schedule';
@@ -11,17 +10,16 @@ import { scheduleData } from './datasource';
  *  Schedule header customization sample
  */
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data };
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const eventSettings = { dataSource: scheduleData };
 
-  function onClick(): void {
-    scheduleObj.exportToICalendar();
+  const onClick = (): void => {
+    scheduleObj.current.exportToICalendar();
   }
   return (<div>
     <ButtonComponent id='ics-export' title='Export' onClick={onClick}>Export</ButtonComponent>
-    <ScheduleComponent ref={schedule => scheduleObj = schedule} width='100%' height='520px' id='schedule' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
+    <ScheduleComponent ref={scheduleObj} width='100%' height='520px' id='schedule' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, ICalendarExport, ICalendarImport, Resize, DragAndDrop]} />
     </ScheduleComponent></div>
   );

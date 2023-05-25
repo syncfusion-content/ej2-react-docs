@@ -1,32 +1,29 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, TimelineMonth,
-  RenderCellEventArgs, EventRenderedArgs, Inject, Resize, DragAndDrop, ResourcesDirective, GroupModel, ResourceDirective, ResourceDetails, EventSettingsModel
+  Inject, Resize, DragAndDrop, ResourcesDirective, GroupModel, ResourceDirective, ResourceDetails, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { Internationalization, extend } from '@syncfusion/ej2-base';
+import { Internationalization } from '@syncfusion/ej2-base';
 import { webinarData } from './datasource';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Record<string, any>[] = extend([], webinarData, null, true) as Record<string, any>[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const eventSettings: EventSettingsModel = { dataSource: webinarData };
   const group: GroupModel = { resources: ['Doctors'] }
-
   const instance: Internationalization = new Internationalization();
-
   const resourceData: Record<string, any>[] = [
     { text: 'Will Smith', id: 1, color: '#ea7a57', workDays: [1, 2, 4, 5], startHour: '08:00', endHour: '15:00' },
     { text: 'Alice', id: 2, color: 'rgb(53, 124, 210)', workDays: [1, 3, 5], startHour: '08:00', endHour: '17:00' },
     { text: 'Robson', id: 3, color: '#7fa900', startHour: '08:00', endHour: '16:00' }
   ];
 
-  function getTimeString(value: Date) {
+  const getTimeString = (value: Date) => {
     return instance.formatDate(value, { skeleton: 'hm' });
   }
 
-  function eventTemplate(props): JSX.Element {
+  const eventTemplate = (props): JSX.Element => {
     return (<div className="app-template-wrap" style={{ background: props.SecondaryColor }}>
       <div className="subject" style={{ background: props.PrimaryColor }}>{props.Subject}</div>
       <div className="time" style={{ background: props.PrimaryColor }}>
@@ -37,26 +34,26 @@ function App() {
     );
   }
 
-  function getDoctorImage(value: ResourceDetails): string {
+  const getDoctorImage = (value: ResourceDetails): string => {
     return getDoctorName(value).replace(' ', '-').toLowerCase();
   }
 
-  function getDoctorName(value: ResourceDetails): string {
+  const getDoctorName = (value: ResourceDetails): string => {
     return (((value as ResourceDetails).resourceData) ?
       (value as ResourceDetails).resourceData[(value as ResourceDetails).resource.textField] :
       value.resourceName) as string;
   }
 
-  function getDoctorLevel(value: ResourceDetails): string {
+  const getDoctorLevel = (value: ResourceDetails): string => {
     let resourceName: string = getDoctorName(value);
     return (resourceName === 'Will Smith') ? 'Cardiologist' : (resourceName === 'Alice') ? 'Neurologist' : 'Orthopedic Surgeon';
   }
 
-  function getDateHeaderText(value: Date): string {
+  const getDateHeaderText = (value: Date): string => {
     return instance.formatDate(value, { skeleton: 'Ed' });
   }
 
-  function getWeather(value: Date) {
+  const getWeather = (value: Date) => {
     switch (value.getDay()) {
       case 0:
         return '<img class="weather-image"  src= "https://ej2.syncfusion.com/demos/src/schedule/images/weather-clear.svg" /><div class="weather-text">25°C</div>';
@@ -77,18 +74,18 @@ function App() {
     }
   }
 
-  function dateHeaderTemplate(props): JSX.Element {
+  const dateHeaderTemplate = (props): JSX.Element => {
     return (<div><div>{getDateHeaderText(props.date)}</div><div className="date-text"
       dangerouslySetInnerHTML={{ __html: getWeather(props.date) }}></div></div>);
   }
 
-  function resourceHeaderTemplate(props): JSX.Element {
+  const resourceHeaderTemplate = (props): JSX.Element => {
     return (<div className="res-template-wrap"><div className={"resource-image " + getDoctorImage(props)}></div>
       <div className="resource-detail"><div className="resource-name">{getDoctorName(props)}</div>
         <div className="resource-designation">{getDoctorLevel(props)}</div></div></div>);
   }
 
-  function getMonthCellText(date: Date): string {
+  const getMonthCellText = (date: Date): string => {
     if (date.getMonth() === 1 && date.getDate() === 23) {
       return '<img src= "https://ej2.syncfusion.com/demos/src/schedule/images/birthday.svg" />';
     } else if (date.getMonth() === 1 && date.getDate() === 9) {
@@ -102,14 +99,14 @@ function App() {
     }
     return '';
   }
-  function getWorkCellText(date: Date): string {
+  const getWorkCellText = (date: Date): string => {
     let weekEnds: number[] = [0, 6];
     if (weekEnds.indexOf(date.getDay()) >= 0) {
       return "<span class='caption'>Weekend</span>";
     }
     return '';
   }
-  function cellTemplate(props) {
+  const cellTemplate = (props) => {
     if (props.type === "workCells") {
       return (<div className="cell-template-wrap" dangerouslySetInnerHTML={{ __html: getWorkCellText(props.date) }}></div>);
     }
@@ -119,20 +116,20 @@ function App() {
     return (<div></div>);
   }
 
-  function refreshCellTemplate(): void {
-    scheduleObj.refreshTemplates("cellTemplate");
+  const refreshCellTemplate = (): void => {
+    scheduleObj.current.refreshTemplates("cellTemplate");
   }
-  function refreshDateHeaderTemplate(): void {
-    scheduleObj.refreshTemplates("dateHeaderTemplate");
+  const refreshDateHeaderTemplate = (): void => {
+    scheduleObj.current.refreshTemplates("dateHeaderTemplate");
   }
-  function refreshEventTemplate(): void {
-    scheduleObj.refreshTemplates("eventTemplate");
+  const refreshEventTemplate = (): void => {
+    scheduleObj.current.refreshTemplates("eventTemplate");
   }
-  function refreshResHeaderTemplate(): void {
-    scheduleObj.refreshTemplates("resourceHeaderTemplate");
+  const refreshResHeaderTemplate = (): void => {
+    scheduleObj.current.refreshTemplates("resourceHeaderTemplate");
   }
-  function refreshAllTemplate(): void {
-    scheduleObj.refreshTemplates();
+  const refreshAllTemplate = (): void => {
+    scheduleObj.current.refreshTemplates();
   }
 
   return (
@@ -156,7 +153,7 @@ function App() {
               <ButtonComponent cssClass='e-info' onClick={refreshAllTemplate}>Refresh All Templates</ButtonComponent>
             </div>
           </div>
-          <ScheduleComponent width='100%' height='650px' cssClass='schedule-date-header-template' ref={t => scheduleObj = t}
+          <ScheduleComponent width='100%' height='650px' cssClass='schedule-date-header-template' ref={scheduleObj}
             selectedDate={new Date(2021, 1, 15)} readonly={true}
             eventSettings={eventSettings} dateHeaderTemplate={dateHeaderTemplate} resourceHeaderTemplate={resourceHeaderTemplate} cellTemplate={cellTemplate}
             group={group}>
@@ -181,6 +178,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

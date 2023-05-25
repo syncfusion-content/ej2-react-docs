@@ -1,12 +1,10 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import {
   ScheduleComponent, Day, Week, WorkWeek, TimelineViews, Inject, ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
   return (<ScheduleComponent width='100%' height='550px' quickInfoOnSelectionEnd={true} >
     <ViewsDirective>
       <ViewDirective option='Day' />

@@ -1,22 +1,15 @@
-
-
-
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, EventSettingsModel,
   ResourcesDirective, ResourceDirective, Inject
 } from '@syncfusion/ej2-react-schedule';
-import { extend, isNullOrUndefined } from '@syncfusion/ej2-base';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
 import { eventData } from './datasource';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Object[] = extend([], eventData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: eventData };
   const group = { resources: ['Owners'] };
 
   const ownerData: Object[] = [
@@ -25,7 +18,7 @@ function App() {
     { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
   ];
   const fields: object = { text: 'OwnerText', value: 'Id' };
-  function editorTemplate(props: Object): JSX.Element {
+  const editorTemplate = (props: Object): JSX.Element => {
     return (props !== undefined && Object.keys(props).length > 0 ? <table className="custom-event-editor" style={{ width: '100%', padding: '5' }}><tbody>
       <tr><td className="e-textlabel">Summary</td><td colSpan={4}>
         <input id="Summary" className="e-field e-input" type="text" name="Subject" style={{ width: '100%' }} />
@@ -44,7 +37,7 @@ function App() {
           style={{ width: '100%', height: '60px !important', resize: 'vertical' }}></textarea>
       </td></tr></tbody></table> : <div></div>);
   }
-  return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} ref={schedule => scheduleObj = schedule}
+  return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)}
     eventSettings={eventSettings} editorTemplate={editorTemplate} showQuickInfo={false}
     group={group}>
     <ResourcesDirective>

@@ -1,18 +1,15 @@
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Inject, TimelineViews } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend, Internationalization } from '@syncfusion/ej2-base';
-function App() {
-    const data = extend([], scheduleData, null, true);
-    const eventSettings = { dataSource: data };
-
+import { Internationalization } from '@syncfusion/ej2-base';
+const App = () => {
+    const eventSettings = { dataSource: scheduleData };
     const instance = new Internationalization();
-    function getDateHeaderText(value) {
+    const getDateHeaderText = (value) => {
         return instance.formatDate(value, { skeleton: 'Ed' });
     }
-    function getWeather(value) {
+    const getWeather = (value) => {
         switch (value.getDay()) {
             case 0:
                 return '<div class="weather-text">25°C</div>';
@@ -32,7 +29,7 @@ function App() {
                 return null;
         }
     }
-    function dateHeaderTemplate(props) {
+    const dateHeaderTemplate = (props) => {
         return (<div><div>{getDateHeaderText(props.date)}</div><div className="date-text" dangerouslySetInnerHTML={{ __html: getWeather(props.date) }}></div></div>);
     }
     return (<ScheduleComponent width='100%' height='550px' cssClass='schedule-date-header-template' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} dateHeaderTemplate={dateHeaderTemplate}>

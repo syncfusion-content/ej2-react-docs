@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 import { Ajax, L10n, loadCldr } from '@syncfusion/ej2-base';
 import * as numberingSystems from '../numberingSystems.json';
 import * as gregorian from '../ca-gregorian.json';
@@ -16,9 +15,9 @@ ajax.onSuccess = (value) => {
 };
 ajax.send();
 L10n.load(JSON.parse(localeTexts));
-function App() {
-    const data = extend([], scheduleData, null, true);
-    return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} locale='fr-CH' eventSettings={{ dataSource: data }}>
+const App = () => {
+    const eventSettings = { dataSource: scheduleData }
+    return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} locale='fr-CH' eventSettings={eventSettings}>
     <ViewsDirective>
       <ViewDirective option='Day'/>
       <ViewDirective option='Week'/>

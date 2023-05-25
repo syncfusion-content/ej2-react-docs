@@ -2,9 +2,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { TimelineViews, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject, Resize, DragAndDrop } from '@syncfusion/ej2-react-schedule';
 import { roomData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], roomData, null, true);
+const App = () => {
   const ownerData = [
     { text: 'Room A', id: 1, color: '#98AFC7' },
     { text: 'Room B', id: 2, color: '#99c68e' },
@@ -25,7 +23,7 @@ function App() {
     startTime: { title: 'From', name: 'StartTime' },
     endTime: { title: 'To', name: 'EndTime' }
   }
-  const eventSettings = { dataSource: data, fields: fieldsData };
+  const eventSettings = { dataSource: roomData, fields: fieldsData };
   const group = { enableCompactView: false, resources: ['MeetingRoom'] };
 
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 7, 1)} rowAutoHeight={true} eventSettings={eventSettings} group={group}>

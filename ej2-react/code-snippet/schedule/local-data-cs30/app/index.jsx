@@ -2,14 +2,11 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { ScheduleComponent, Day, Week, Month, Timezone, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { fifaEventsData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  let fifaEvents = extend([], fifaEventsData, null, true);
-  const eventSettings = { dataSource: fifaEvents };
-
+const App = () => {
+  const eventSettings = { dataSource: fifaEventsData };
   let timezone = new Timezone();
-  function onCreate() {
-    for (let fifaEvent of fifaEvents) {
+  const onCreate = () => {
+    for (let fifaEvent of fifaEventsData) {
       let event = fifaEvent;
       event.StartTime = timezone.removeLocalOffset(event.StartTime);
       event.EndTime = timezone.removeLocalOffset(event.EndTime);

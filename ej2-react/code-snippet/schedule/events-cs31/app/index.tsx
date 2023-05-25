@@ -5,7 +5,7 @@ import {
   ViewsDirective, ViewDirective, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 
-function App() {
+const App = () => {
   const data: Object[] = [{
     Id: 1,
     Subject: 'Explosion of Betelgeuse Star',

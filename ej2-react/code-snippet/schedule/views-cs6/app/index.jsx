@@ -2,29 +2,27 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, getWeekNumber, HeaderRowDirective, HeaderRowsDirective, TimelineMonth, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { Internationalization, extend } from '@syncfusion/ej2-base';
-function App() {
-    const data = extend([], scheduleData, null, true);
-    const eventSettings = { dataSource: data }
-
+import { Internationalization } from '@syncfusion/ej2-base';
+const App = () => {
+    const eventSettings = { dataSource: scheduleData }
     const instance = new Internationalization();
-    function getYearDetails(value) {
+    const getYearDetails = (value) => {
         return 'Year: ' + instance.formatDate(value.date, { skeleton: 'y' });
     }
-    function getMonthDetails(value) {
+    const getMonthDetails = (value) => {
         return 'Month: ' + instance.formatDate(value.date, { skeleton: 'M' });
     }
-    function getWeekDetails(value) {
+    const getWeekDetails = (value) => {
         return 'Week ' + getWeekNumber(value.date);
         ;
     }
-    function yearTemplate(props) {
+    const yearTemplate = (props) => {
         return (<span className="year">{getYearDetails(props)}</span>);
     }
-    function monthTemplate(props) {
+    const monthTemplate = (props) => {
         return (<span className="month">{getMonthDetails(props)}</span>);
     }
-    function weekTemplate(props) {
+    const weekTemplate = (props) => {
         return (<span className="week">{getWeekDetails(props)}</span>);
     }
     return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 0, 1)} eventSettings={eventSettings}>

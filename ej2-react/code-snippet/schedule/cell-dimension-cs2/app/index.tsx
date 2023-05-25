@@ -4,14 +4,13 @@ import {
   ScheduleComponent, Day, Week, Month, Inject,
   RenderCellEventArgs, ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
-import { extend, createElement } from '@syncfusion/ej2-base';
+import { createElement } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
 
-function App() {
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings = { dataSource: data };
+const App = () => {
+  const eventSettings = { dataSource: scheduleData };
 
-  function onRenderCell(args: RenderCellEventArgs): void {
+  const onRenderCell = (args: RenderCellEventArgs): void => {
     if (args.elementType == 'workCells' || args.elementType == 'monthCells') {
       let weekEnds: number[] = [0, 6];
       if (weekEnds.indexOf((args.date).getDay()) >= 0) {

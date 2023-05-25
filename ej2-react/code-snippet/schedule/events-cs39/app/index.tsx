@@ -4,13 +4,11 @@ import {
     ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, ActionEventArgs, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-    let data: Object[] = extend([], scheduleData, null, true) as Object[];
-    const eventSettings: EventSettingsModel = { dataSource: data }
+const App = () => {
+    const eventSettings: EventSettingsModel = { dataSource: scheduleData }
 
-    function onActionBegin(args: ActionEventArgs) {
+    const onActionBegin = (args: ActionEventArgs) => {
         let weekEnds: number[] = [0, 6];
         if (args.requestType == 'eventCreate' && weekEnds.indexOf((args.data[0].StartTime).getDay()) >= 0) {
             args.cancel = true;

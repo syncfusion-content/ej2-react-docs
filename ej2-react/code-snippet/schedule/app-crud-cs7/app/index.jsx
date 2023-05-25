@@ -1,10 +1,11 @@
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DataManager, Query } from '@syncfusion/ej2-data';
-function App() {
-    let scheduleObj;
+
+const App = () => {
+    const scheduleObj = useRef(null);
     const scheduleData = [{
         Id: 3,
         Subject: 'Testing',
@@ -22,7 +23,7 @@ function App() {
     }];
     const eventSettings = { dataSource: scheduleData }
 
-    function onClickAdd() {
+    const onClickAdd = () => {
         let Data = [{
             Id: 1,
             Subject: 'Conference',
@@ -31,14 +32,14 @@ function App() {
             IsAllDay: false,
             RecurrenceRule: 'FREQ=DAILY;INTERVAL=1;COUNT=2'
         }];
-        scheduleObj.addEvent(Data);
+        scheduleObj.current.addEvent(Data);
     }
-    function onClickSave() {
-        let data = new DataManager(scheduleObj.getCurrentViewEvents()).executeLocal(new Query().where('RecurrenceID', 'equal', 3));
+    const onClickSave = () => {
+        let data = new DataManager(scheduleObj.current.getCurrentViewEvents()).executeLocal(new Query().where('RecurrenceID', 'equal', 3));
         data[0].Subject = 'Occurrence edited';
-        scheduleObj.saveEvent(data[0], 'EditOccurrence');
+        scheduleObj.current.saveEvent(data[0], 'EditOccurrence');
     }
-    function onClickDelete() {
+    const onClickDelete = () => {
         let Data = [{
             Id: 4,
             Subject: 'Vacation',
@@ -48,22 +49,27 @@ function App() {
             IsAllDay: false,
             RecurrenceRule: 'FREQ=DAILY;INTERVAL=1;COUNT=2'
         }];
-        scheduleObj.deleteEvent(Data, 'DeleteSeries');
+        scheduleObj.current.deleteEvent(Data, 'DeleteSeries');
     }
-    return (<div>
-        <ButtonComponent id='add' title='Add' onClick={onClickAdd}>Add</ButtonComponent>
-        <ButtonComponent id='edit' title='Edit' onClick={onClickSave}>Edit</ButtonComponent>
-        <ButtonComponent id='delete' title='Delete' onClick={onClickDelete}>Delete</ButtonComponent> <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings}>
-            <ViewsDirective>
-                <ViewDirective option='Day' />
-                <ViewDirective option='Week' />
-                <ViewDirective option='WorkWeek' />
-                <ViewDirective option='Month' />
-            </ViewsDirective>
-            <Inject services={[Day, Week, WorkWeek, Month]} />
-        </ScheduleComponent>
-    </div>);
-}
-;
+
+    return (
+        <div>
+            <ButtonComponent id='add' title='Add' onClick=
+                {onClickAdd}>Add</ButtonComponent>
+            <ButtonComponent id='edit' title='Edit' onClick={onClickSave}>Edit</ButtonComponent>
+            <ButtonComponent id='delete' title='Delete' onClick={onClickDelete}>Delete</ButtonComponent> <ScheduleComponent ref={scheduleObj} width='100%' height='550px' selectedDate=
+                {new Date(2018, 1, 15)} eventSettings={eventSettings}>
+                <ViewsDirective>
+                    <ViewDirective option='Day' />
+                    <ViewDirective option='Week' />
+                    <ViewDirective option='WorkWeek' />
+                    <ViewDirective option='Month' />
+                </ViewsDirective>
+                <Inject services={[Day, Week, WorkWeek, Month]} />
+            </ScheduleComponent>
+        </div>
+    )
+
+};
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);

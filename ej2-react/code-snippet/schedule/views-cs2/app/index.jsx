@@ -2,11 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, HeaderRowDirective, HeaderRowsDirective, TimelineViews, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], scheduleData, null, true);
-  const eventSettings = { dataSource: data }
-
+const App = () => {
+  const eventSettings = { dataSource: scheduleData }
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 11, 31)} eventSettings={eventSettings} startHour='09:00' endHour='13:00'>
     <HeaderRowsDirective>
       <HeaderRowDirective option='Year' />

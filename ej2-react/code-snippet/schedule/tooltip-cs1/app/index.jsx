@@ -2,14 +2,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import { eventsData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-  const data = extend([], eventsData, null, true);
+const App = () => {
   const eventSettings = {
-    dataSource: data, enableTooltip: true,
+    dataSource: eventsData, enableTooltip: true,
     tooltipTemplate: template
   };
-  function template(props) {
+  const template = (props) => {
     return (<div className="tooltip-wrap">
       <div className="content-area"><div className="name">{props.Subject}</div>
         {(props.City !== null && props.City !== undefined) ? <div className="city">{props.City}</div> : ''}

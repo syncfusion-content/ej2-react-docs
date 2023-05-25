@@ -5,11 +5,9 @@ import {
   ResourcesDirective, ResourceDirective, Inject
 } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], resourceData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data, ignoreWhitespace: true };
+const App = () => {
+  const eventSettings: EventSettingsModel = { dataSource: resourceData, ignoreWhitespace: true };
   const group: GroupModel = { resources: ['Rooms', 'Owners'] };
   const roomData: Object[] = [
     { RoomText: 'ROOM 1', Id: 1, RoomColor: '#cb6bb2' },

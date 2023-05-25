@@ -5,10 +5,8 @@ import {
   ViewDirective, ResourcesDirective, ResourceDirective, Inject, Resize, DragAndDrop, EventSettingsModel, GroupModel
 } from '@syncfusion/ej2-react-schedule';
 import { roomData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data: Object[] = extend([], roomData, null, true) as Object[];
+const App = () => {
 
   const ownerData: Object[] = [
     { text: 'Room A', id: 1, color: '#98AFC7' },
@@ -30,7 +28,7 @@ function App() {
     startTime: { title: 'From', name: 'StartTime' },
     endTime: { title: 'To', name: 'EndTime' }
   }
-  const eventSettings: EventSettingsModel = { dataSource: data, fields: fieldsData };
+  const eventSettings: EventSettingsModel = { dataSource: roomData, fields: fieldsData };
   const group: GroupModel = { enableCompactView: false, resources: ['MeetingRoom'] };
 
 

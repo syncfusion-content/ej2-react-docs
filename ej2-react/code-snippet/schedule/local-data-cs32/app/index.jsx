@@ -3,9 +3,7 @@ import * as ReactDOM from "react-dom";
 import { useEffect } from 'react';
 import { ScheduleComponent, Day, Week, Month, timezoneData, Inject } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
-function App() {
-    const data = extend([], scheduleData, null, true);
+const App = () => {
     const eventSettings = { dataSource: scheduleData };
 
     const timeZones = [

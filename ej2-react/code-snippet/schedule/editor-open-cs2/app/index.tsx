@@ -1,33 +1,27 @@
-
-
-
-
 import * as ReactDOM from 'react-dom';
-import * as React from 'react';
+import { useRef } from 'react';
 import {
-  Day, Week, WorkWeek, Month, ScheduleComponent, ViewsDirective, ViewDirective, CellClickEventArgs,EventSettingsModel, EventClickArgs, Inject
+  Day, Week, WorkWeek, Month, ScheduleComponent, ViewsDirective, ViewDirective, CellClickEventArgs, EventSettingsModel, EventClickArgs, Inject
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
-  function onCellClick(args: CellClickEventArgs): void {
-    scheduleObj.openEditor(args, 'Add');
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
+  const onCellClick = (args: CellClickEventArgs): void => {
+    scheduleObj.current.openEditor(args, 'Add');
   }
-  function onEventClick(args: EventClickArgs): void {
+  const onEventClick = (args: EventClickArgs): void => {
     if (!(args.event as any).RecurrenceRule) {
-      scheduleObj.openEditor(args.event, 'Save');
+      scheduleObj.current.openEditor(args.event, 'Save');
     }
     else {
-      scheduleObj.quickPopup.openRecurrenceAlert();
+      scheduleObj.current.quickPopup.openRecurrenceAlert();
     }
   }
 
   return (<div>
-    <ScheduleComponent ref={t => scheduleObj = t} height='550px' selectedDate={new Date(2021, 7, 15)}
+    <ScheduleComponent ref={scheduleObj} height='550px' selectedDate={new Date(2021, 7, 15)}
       eventSettings={eventSettings} showQuickInfo={false} eventClick={onEventClick}
       cellClick={onCellClick} >
       <ViewsDirective>
@@ -43,6 +37,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-
-

@@ -4,14 +4,12 @@ import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Inject, DragEventArgs, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  function onDragStart(args: DragEventArgs): void {
+const App = () => {
+  const onDragStart = (args: DragEventArgs): void => {
     args.interval = 10;
   }
-  const data: Object[] = extend([], scheduleData, undefined, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data }
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData }
 
   return <ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} dragStart={(onDragStart)}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop]} />

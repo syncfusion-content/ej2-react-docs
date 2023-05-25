@@ -1,38 +1,34 @@
-
-
-
-import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  let scheduleObj: ScheduleComponent;
-  const data: Object[] = extend([], scheduleData, null, true) as Object[];
-  const eventSettings: EventSettingsModel = { dataSource: data };
+const App = () => {
+  const scheduleObj = useRef<ScheduleComponent>(null);
+  const eventLog = useRef(null);
+  const eventSettings: EventSettingsModel = { dataSource: scheduleData };
 
-  function onDataBound(): void {
-    let event: Object[] = scheduleObj.getEvents();
+  const onDataBound = (): void => {
+    let event: Object[] = scheduleObj.current.getEvents();
     appendElement('Events present on scheduler <b>' + event.length + '<b><hr>');
   }
-  function appendElement(html: string): void {
+  const appendElement = (html: string): void => {
     let span: HTMLElement = document.createElement('span');
     span.innerHTML = html;
-    let log: HTMLElement = document.getElementById('EventLog');
+    let log: HTMLElement = eventLog.current;
     log.insertBefore(span, log.firstChild);
   }
-  function onClick(): void {
-    document.getElementById('EventLog').innerHTML = '';
+  const onClick = (): void => {
+    eventLog.current.innerHTML = '';
   }
 
   return (
     <div className='content-wrapper'>
       <div className='col-lg-9 control-section'>
-        <ScheduleComponent ref={t => scheduleObj = t} width='100%' height='550px' selectedDate=
+        <ScheduleComponent ref={scheduleObj} width='100%' height='550px' selectedDate=
           {new Date(2018, 1, 15)} eventSettings={eventSettings} dataBound={onDataBound}>
           <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
         </ScheduleComponent>
@@ -44,7 +40,7 @@ function App() {
               <tr style={{ height: '250px' }}>
                 <td>
                   <div className='eventarea' style={{ height: '245px', overflow: 'auto' }}>
-                    <span className='EventLog' id='EventLog' style={{ wordBreak: 'normal' }}></span>
+                    <span className='EventLog' ref={eventLog} style={{ wordBreak: 'normal' }}></span>
                   </div>
                 </td>
               </tr>
@@ -65,5 +61,3 @@ function App() {
 };
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
-
-

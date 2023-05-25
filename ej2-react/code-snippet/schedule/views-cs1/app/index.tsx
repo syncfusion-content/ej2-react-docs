@@ -5,12 +5,9 @@ import {
   ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 import { defaultData } from './datasource';
-import { extend } from '@syncfusion/ej2-base';
 
-function App() {
-  const data = extend([], defaultData, null, true);
-  const eventSettings = { dataSource: data }
-
+const App = () => {
+  const eventSettings = { dataSource: defaultData }
   return (
     <ScheduleComponent
       width='100%' height='550px' selectedDate={new Date(2018, 1, 15)}
