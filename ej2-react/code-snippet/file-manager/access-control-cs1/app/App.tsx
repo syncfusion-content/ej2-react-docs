@@ -5,6 +5,7 @@ import * as React from 'react';
 function App() {
   let fileObj: FileManagerComponent;
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+
   return (
   <div>
       <div className="control-section">
@@ -14,7 +15,7 @@ function App() {
                 getImageUrl: hostUrl +'api/FileManagerAccess/GetImage',
                 uploadUrl: hostUrl +'api/FileManagerAccess/Upload',
                 url: hostUrl + 'api/FileManagerAccess/FileOperations'         
-              }} view={"Details"} >
+              }} view={"Details"}>
               <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
           </FileManagerComponent>
       </div>
