@@ -308,3 +308,21 @@ PDF export provides an option to customize the Gantt style for the exported PDF 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs13" %}
+
+### Customized Font
+
+PDF export provides an option to customize the font for the exported PDF document. To apply custom font in exported PDF, define the [`font`](https://helpej2.syncfusion.com/react/documentation/api/gantt/iGanttStyle/#font) property in [`ganttStyle`](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/#ganttstyle) which is in [`pdfExportProperties`](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/). To use a custom font, the `PdfTrueTypeFont` constructor in the `PdfTrueTypeFont` class needs to be initialized in the font property. The required font should be passed as a `binary64String`, which is a format converted from the `TrueTypeFont` format. Additionally, the font size should be specified, and an optional `PdfFontStyle` parameter can be added.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/pdf-export-cs15/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/pdf-export-cs15/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/pdf-export-cs15/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs15" %}
