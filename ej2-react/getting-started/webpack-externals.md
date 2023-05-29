@@ -220,6 +220,8 @@ module.exports = {
 </html>
 ```
 
+> Refer to the [Script Dependency](../common/script-dependency.md) section to discover the correct script reference sequence and its dependencies for a certain Syncfusion React component.
+
 ## Configure the package JSON
 
 Open the `package.json` file and configure the application process in the scripts as follows.

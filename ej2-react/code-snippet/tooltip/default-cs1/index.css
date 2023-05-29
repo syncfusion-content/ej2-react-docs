@@ -1,6 +1,0 @@
-.tooltipElement {
-    position: relative;
-    left: 50%;
-    margin-top: 150px;
-    transform: translateX(-50%);
-}
