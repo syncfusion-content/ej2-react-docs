@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import * as ReactDOM from "react-dom";
 import { enableRipple } from "@syncfusion/ej2-base";
 import {

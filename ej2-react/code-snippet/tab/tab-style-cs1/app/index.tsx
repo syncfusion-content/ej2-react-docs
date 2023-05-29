@@ -1,6 +1,6 @@
 import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
-import {useRef} from 'react';
+import React, {useRef} from 'react';
 import * as ReactDOM from 'react-dom';
 
 const ReactApp = () => {
