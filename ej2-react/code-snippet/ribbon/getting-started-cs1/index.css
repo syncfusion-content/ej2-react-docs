@@ -1,0 +1,39 @@
+/* Represents the styles for loader */
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.ribbonTemplate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ribbonTemplate.Large {
+  flex-direction: column;
+}
+
+.ribbonTemplate.Large .e-icons {
+  font-size: 35px;
+}
+
+.ribbonTemplate.Medium .e-icons,
+.ribbonTemplate.Small .e-icons{
+  font-size: 20px;
+  margin: 15px 5px;
+}
+
+.ribbonTemplate.Small .text {
+  display:none;
+}
+
+/* Represents the styles for Ribbon group */
+.font-group .e-ribbon-group-content {
+  justify-content: center;
+}

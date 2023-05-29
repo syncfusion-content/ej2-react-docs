@@ -1,0 +1,10 @@
+disabletreegrid;
+{
+    pointer - events;
+    none;
+    opacity: 0.4;
+}
+wrapper;
+{
+    cursor: not - allowed;
+}

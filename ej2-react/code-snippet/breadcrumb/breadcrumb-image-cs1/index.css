@@ -1,0 +1,20 @@
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+body {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.e-image-home {
+	background-image: url('home.png');
+	height: 20px;
+	width: 20px;
+}
+  

@@ -1,0 +1,22 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+#treeparent {
+    display: block;
+    max-width: 350px;
+    max-height: 350px;
+    margin: auto;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
+#contentmenutree {
+    padding: 0;
+    font-size: inherit;
+}
+

@@ -1,0 +1,21 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+html,
+body,    
+#container,
+#dialog-target {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+#innerButton {
+  margin-left: 18px;
+}
