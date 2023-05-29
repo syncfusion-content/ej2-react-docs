@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Vue getting started with Vite | Syncfusion
-description: Check out and learn about how to use Syncfusion Vue UI components in Vite project.
+title: React getting started with Vite | Syncfusion
+description: Check out and learn about how to use Syncfusion React UI components in Vite project.
 control: Vite
 platform: ej2-react
 documentation: ug

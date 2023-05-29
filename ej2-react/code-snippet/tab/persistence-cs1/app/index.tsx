@@ -1,7 +1,7 @@
 import { Effect } from '@syncfusion/ej2-base';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
-import {useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import * as ReactDOM from 'react-dom';
 
 const ReactApp = () => {

@@ -1,10 +1,10 @@
-import {useRef} from 'react';
+import React, { useRef } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 
 const App = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const tabInstance = useRef<TabComponent>(null);
+  const tabInstance = useRef < TabComponent > (null);
   // define the array of data
   let headertext;
   headertext = [{ text: "Twitter" }, { text: "Facebook" }, { text: "WhatsApp" }];
