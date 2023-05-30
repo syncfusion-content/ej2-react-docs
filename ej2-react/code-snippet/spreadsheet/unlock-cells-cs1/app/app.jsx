@@ -1,14 +1,14 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, ColumnsDirective, ColumnDirective, RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import { budgetData, salaryData } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef(null);
-    const dialogRef = useRef(null);
-    useEffect(() => {
+    const spreadsheetRef = React.useRef(null);
+    const dialogRef = React.useRef(null);
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:D1');
@@ -18,12 +18,18 @@ function App() {
     const lockCells = () => {
         let spreadsheet = spreadsheetRef.current;
         let dialog = dialogRef.current;
-        spreadsheet?.lockCells('A1:F3', false);
-        dialog?.hide();
+        if (spreadsheet) {
+            spreadsheet.lockCells('A1:F3', false);
+        }
+        if (dialog) {
+            dialog.hide();
+        }
     };
     const showDlg = () => {
         let dialog = dialogRef.current;
-        dialog?.show();
+        if (dialog) {
+            dialog.show();
+        }
     };
     const protectSettings = { selectCells: true };
     const btn = [{ click: lockCells, buttonModel: { content: 'Ok', isPrimary: true } }];

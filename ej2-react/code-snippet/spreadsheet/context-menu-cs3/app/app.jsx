@@ -1,15 +1,15 @@
 {% raw %}
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-    const spreadsheetRef = useRef(null);
+    const spreadsheetRef = React.useRef(null);
     const onContextMenuBeforeOpen = (args) => {
         let spreadsheet = spreadsheetRef.current;
         //To enable / disable context menu items.
-        if (args.element.id === spreadsheet.element.id + '_contextmenu') {
-            spreadsheet?.enableContextMenuItems(['Rename'], false, false); // Contextmenu Items that needs to be enabled / disabled, Set true / false to enable / disable the menu items, Set true if the given text is a unique id.
+        if (spreadsheet && args.element.id === spreadsheet.element.id + '_contextmenu') {
+            spreadsheet.enableContextMenuItems(['Rename'], false, false); // Contextmenu Items that needs to be enabled / disabled, Set true / false to enable / disable the menu items, Set true if the given text is a unique id.
         }
     };
 

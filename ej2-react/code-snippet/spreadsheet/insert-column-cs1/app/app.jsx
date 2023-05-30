@@ -1,12 +1,12 @@
 {% raw %}
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, getCellAddress } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { data } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef(null);
+    const spreadsheetRef = React.useRef(null);
     const cellsModel = [{ value: 'Unit Price', style: { fontWeight: 'bold', textAlign: 'center' } }, { value: '18.00' },
     { value: '19.00' }, { value: '10.00' }, { value: '22.00' }, { value: '21.35' }, { value: '25.00' }, { value: '30.00' },
     { value: '21.00' }, { value: '40.00' }, { value: '97.00' }];
@@ -22,7 +22,9 @@ function App() {
             let rowIndex = 1;
             // Updating the 5th column data
             cellsModel.forEach((cell) => {
-                spreadsheet?.updateCell(cell, getCellAddress(rowIndex, 5)); rowIndex++;
+                if (spreadsheet) {
+                    spreadsheet.updateCell(cell, getCellAddress(rowIndex, 5)); rowIndex++;
+                }
             });
             // Applies style formatting after the columns are inserted
             spreadsheet.cellFormat({ textAlign: 'center' }, 'B3:B12');

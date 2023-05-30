@@ -1,13 +1,13 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective, ColumnsDirective, ColumnDirective, MenuSelectEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { select } from '@syncfusion/ej2-base';
 import { data } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
-    useEffect(() => {
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:F1');
@@ -52,10 +52,12 @@ function App() {
         // under filemenu before open event.
         // Hiding the `Save As` and `Open` item.
         let spreadsheet = spreadsheetRef.current;
-        spreadsheet?.hideFileMenuItems(['Save As', 'Open']);
-        // Set disable state to `New` item. You can perform any file menu items customization by specifying the item id,
-        // if it has more than one same item text. Set the last argument `isUniqueId` as true for using the item id.
-        spreadsheet?.enableFileMenuItems([`${spreadsheet.element.id}_New`], false, true);
+        if (spreadsheet) {
+            spreadsheet.hideFileMenuItems(['Save As', 'Open']);
+            // Set disable state to `New` item. You can perform any file menu items customization by specifying the item id,
+            // if it has more than one same item text. Set the last argument `isUniqueId` as true for using the item id.
+            spreadsheet.enableFileMenuItems([`${spreadsheet.element.id}_New`], false, true);
+        }
     };
     const fileMenuItemSelect = (args: MenuSelectEventArgs): void => {
         let spreadsheet = spreadsheetRef.current;
@@ -63,11 +65,11 @@ function App() {
         switch (args.item.text) {
             case 'Import': select(`#${spreadsheet.element.id}_fileUpload`, spreadsheet.element).click();
                 break;
-            case 'XLSX': spreadsheet?.save({ saveType: 'Xlsx' });
+            case 'XLSX': if (spreadsheet) { spreadsheet.save({ saveType: 'Xlsx' }) };
                 break;
-            case 'XLS': spreadsheet?.save({ saveType: 'Xls' });
+            case 'XLS': if (spreadsheet) { spreadsheet.save({ saveType: 'Xls' }) };
                 break;
-            case 'CSV': spreadsheet?.save({ saveType: 'Csv' });
+            case 'CSV': if (spreadsheet) { spreadsheet.save({ saveType: 'Csv' }) };
                 break;
             default:
                 break;

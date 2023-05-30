@@ -1,12 +1,12 @@
 {% raw %}
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { defaultData, itemData } from './datasource';
 
 function App() {
-  const spreadsheetRef = useRef(null);
+  const spreadsheetRef = React.useRef(null);
   const dataSourceChanged = (args) => {
     appendElement(`Data source changed with <b>&nbsp;${args.action}</b> action<hr>`);
   };

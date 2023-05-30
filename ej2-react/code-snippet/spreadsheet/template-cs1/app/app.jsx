@@ -1,5 +1,5 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellDirective, CellsDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -8,7 +8,7 @@ import { RadioButtonComponent, ButtonComponent } from '@syncfusion/ej2-react-but
 import { DropDownListComponent, MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
 
 function App() {
-    const spreadsheetRef = useRef(null);
+    const spreadsheetRef = React.useRef(null);
     const scrollSettings = { isFinite: true };
     const selectionSettings = { mode: 'None' };
     const boldCenter = {
@@ -47,7 +47,7 @@ function App() {
     const button = () => {
         return (<ButtonComponent content="Add" style={{ float: "right" }} cssClass="e-flat"></ButtonComponent>);
     };
-    useEffect(() => {
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             spreadsheet.cellFormat({ fontWeight: 'bold' }, 'B2:B9');

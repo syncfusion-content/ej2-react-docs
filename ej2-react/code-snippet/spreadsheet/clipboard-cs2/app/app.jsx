@@ -1,5 +1,5 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -7,7 +7,7 @@ import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
 import { defaultData } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef(null);
+    const spreadsheetRef = React.useRef(null);
     const items = [
         { text: 'Cut' },
         { text: 'Copy' },
@@ -29,7 +29,7 @@ function App() {
                 spreadsheet.paste();
         }
     };
-    useEffect(() => {
+    React.useEffect(() => {
         if (spreadsheetRef.current) {
             spreadsheetRef.current.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:H1');
         }

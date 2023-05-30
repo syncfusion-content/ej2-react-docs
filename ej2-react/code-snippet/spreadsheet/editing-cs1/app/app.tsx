@@ -1,13 +1,13 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellDirective, CellsDirective, CellEditEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { data } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
-    useEffect(() => {
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:E1');
@@ -30,7 +30,9 @@ function App() {
             args.cancel = true;
             // Manually removes the editable state without saving the changes. Use `endEdit` method if you want to save the changes.
             let spreadsheet = spreadsheetRef.current;
-            spreadsheet?.closeEdit();
+            if (spreadsheet) {
+                spreadsheet.closeEdit();
+            }   
         }
     };
 
