@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventRenderedArgs, EventSettingsModel
@@ -10,7 +10,7 @@ const App = () => {
   const eventSettings: EventSettingsModel = { dataSource: scheduleData }
 
   const onEventRendered = (args: EventRenderedArgs): void => {
-    applyCategoryColor(args, scheduleObj.currentView);
+    applyCategoryColor(args, scheduleObj.current.currentView);
   }
   const applyCategoryColor = (args: EventRenderedArgs, currentView: string): void => {
     let categoryColor: string = args.data.CategoryColor as string;

@@ -1,4 +1,4 @@
-import { useRef, useState, useMemo, useEffect } from 'react';
+import React, { useRef, useState, useMemo, useEffect } from 'react';
 import * as ReactDOM from 'react-dom';
 import { closest, isNullOrUndefined, remove, removeClass } from '@syncfusion/ej2-base';
 import { Query, DataManager } from '@syncfusion/ej2-data';

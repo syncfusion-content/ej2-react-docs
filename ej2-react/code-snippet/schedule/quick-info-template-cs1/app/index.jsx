@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, ResourcesDirective, ResourceDirective, Day, Week, WorkWeek, Month, Agenda, MonthAgenda, Inject } from '@syncfusion/ej2-react-schedule';
 import { Internationalization } from '@syncfusion/ej2-base';

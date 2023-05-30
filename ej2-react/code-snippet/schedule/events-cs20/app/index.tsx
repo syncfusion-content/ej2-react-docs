@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import React, { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Inject, DragEventArgs, EventSettingsModel
@@ -6,10 +6,10 @@ import {
 import { scheduleData } from './datasource';
 
 const App = () => {
-  const scheduleObj = useRef <ScheduleComponent> (null);
+  const scheduleObj = useRef<ScheduleComponent>(null);
   const onDragStop = (args: DragEventArgs): void => {
     args.cancel = true; //cancels the drop action
-    scheduleObj.openEditor(args.data, "Save"); //open the event window with updated start and end time
+    scheduleObj.current.openEditor(args.data, "Save"); //open the event window with updated start and end time
   }
   const eventSettings: EventSettingsModel = { dataSource: scheduleData }
 
