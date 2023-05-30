@@ -52,7 +52,7 @@ The following code example depicts how to bind the local JSON data to the `dataS
 
 
 ```ts
-import { useState } from 'react';
+import React, { useState } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Day, Week, WorkWeek, Month, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';
@@ -88,7 +88,7 @@ The following code example depicts how to bind the remote data for resources `da
 
 ```ts
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Week, Month, Agenda, ScheduleComponent, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';

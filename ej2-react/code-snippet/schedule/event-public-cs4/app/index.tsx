@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { TimePickerComponent, ChangeEventArgs } from '@syncfusion/ej2-react-calendars';
 import {

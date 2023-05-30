@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom';
-import {useRef} from 'react';
+import React, { useRef } from 'react';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize, Inject, ICalendarExport, ICalendarImport
 } from '@syncfusion/ej2-react-schedule';
@@ -13,7 +13,7 @@ const App = () => {
   const allowedExtensions = '.ics';
   const eventSettings = { dataSource: scheduleData };
 
-  const onSelect = (args)=> {
+  const onSelect = (args) => {
     scheduleObj.current.importICalendar(args.event.target.files[0]);
   }
   return (<div>
