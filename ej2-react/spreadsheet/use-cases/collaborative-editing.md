@@ -33,7 +33,7 @@ To broadcast the data for every action in the spreadsheet, you need to transfer 
 The following code example shows `Collaborative Editing` support in the Spreadsheet control.
 
 ```ts
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, CollaborativeEditArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -41,7 +41,7 @@ import * as signalR from '@aspnet/signalr';
 import { defaultData } from './datasource';
 
 function App() {
-  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
   // For signalR Hub connection
   const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', { // localhost from AspNetCore service
     skipNegotiation: true,
@@ -50,7 +50,7 @@ function App() {
   const onActionComplete = (args: any) => {
     connection.send('BroadcastData', JSON.stringify(args)); // send the action data to the server
   }
-  useEffect(() => {
+  React.useEffect(() => {
     let spreadsheet = spreadsheetRef.current;
     connection.on('dataReceived', (data: string) => {
       let model: CollaborativeEditArgs = JSON.parse(data) as CollaborativeEditArgs;
@@ -151,7 +151,7 @@ Using the `action` argument from the `actionComplete` event, you can prevent the
 The following code example shows how to prevent collaborative client from updating the `format` action.
 
 ```ts
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, CollaborativeEditArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -159,7 +159,7 @@ import * as signalR from '@aspnet/signalr';
 import { defaultData } from './datasource';
 
 function App() {
-  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
   // For signalR Hub connection
   const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', {// localhost from AspNetCore service
     skipNegotiation: true,
@@ -170,7 +170,7 @@ function App() {
       connection.send('BroadcastData', JSON.stringify(args)); // send the action data to the server
     }
   }
-  useEffect(() => {
+  React.useEffect(() => {
     let spreadsheet = spreadsheetRef.current;
     connection.on('dataReceived', (data: string) => {
       if (spreadsheet) {

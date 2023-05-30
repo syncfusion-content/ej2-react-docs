@@ -1,5 +1,5 @@
 {% raw %}
-import React from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, CellDirective, RowDirective, BeforeHyperlinkArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { ColumnsDirective, ColumnDirective, CellsDirective, RowsDirective } from '@syncfusion/ej2-react-spreadsheet';

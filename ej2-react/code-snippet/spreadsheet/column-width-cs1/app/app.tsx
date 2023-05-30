@@ -6,8 +6,8 @@ import { RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { defaultData } from './datasource';
 
 function App() {
-  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
-  useEffect(() => {
+  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+  React.useEffect(() => {
     let spreadsheet = spreadsheetRef.current;
     if (spreadsheet) {
       // To change width of single column

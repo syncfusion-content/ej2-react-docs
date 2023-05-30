@@ -1,12 +1,12 @@
 {% raw %}
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, SortDescriptor, SortEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { tradeData } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const onDataBound = (): void => {
         let spreadsheet = spreadsheetRef.current;
         let sortDescriptors: SortDescriptor[] = [
@@ -14,13 +14,15 @@ function App() {
             { field: 'E', order: 'Ascending' },
             { field: 'C', order: 'Descending' }
         ];
-        if (spreadsheet?.activeSheetIndex === 0) {
+        if (spreadsheet && spreadsheet.activeSheetIndex === 0) {
             spreadsheet.sort({ sortDescriptors: sortDescriptors, containsHeader: true }, 'A1:H30');
         }
     };
     const onSortComplete = (args: SortEventArgs) => {
         let spreadsheet = spreadsheetRef.current;
-        spreadsheet?.selectRange(args.range as string);
+        if (spreadsheet) {
+            spreadsheet.selectRange(args.range as string);
+        }      
     };
 
     return (

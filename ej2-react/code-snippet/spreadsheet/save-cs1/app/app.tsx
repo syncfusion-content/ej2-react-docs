@@ -1,5 +1,5 @@
 {% raw %}
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -7,7 +7,7 @@ import { DropDownButtonComponent, ItemModel, MenuEventArgs } from '@syncfusion/e
 import { defaultData } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const items: ItemModel[] = [
         { text: "Save As xlsx" },
         { text: "Save As xls" },

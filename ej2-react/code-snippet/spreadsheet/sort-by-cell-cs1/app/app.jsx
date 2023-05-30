@@ -1,22 +1,24 @@
 {% raw %}
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, SortEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { defaultData } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef(null);
+    const spreadsheetRef = React.useRef(null);
     const onDataBound = () => {
         let spreadsheet = spreadsheetRef.current;
-        if (spreadsheet?.activeSheetIndex === 0 && !spreadsheet.isOpen) {
+        if (spreadsheet && spreadsheet.activeSheetIndex === 0 && !spreadsheet.isOpen) {
             spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A1:H1');
             spreadsheet.sort({ containsHeader: true }, 'A1:H11');
         }
     };
     const onSortComplete = (args) => {
         let spreadsheet = spreadsheetRef.current;
-        spreadsheet?.selectRange(args.range);
+        if (spreadsheet) {
+            spreadsheet.selectRange(args.range);
+        }
     };
 
     return (

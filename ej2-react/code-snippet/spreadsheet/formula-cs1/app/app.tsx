@@ -1,5 +1,5 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellDirective, CellsDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -7,7 +7,7 @@ import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
 import { data } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const styles: CellStyleModel = { textAlign: 'center', fontWeight: 'bold', verticalAlign: 'middle', fontStyle: 'italic', fontSize: '15pt' };
     const cellStyle: CellStyleModel = { fontStyle: 'italic', fontWeight: 'bold' };
     const fontStyle: CellStyleModel = { fontWeight: 'bold', textAlign: 'right' };
@@ -15,7 +15,7 @@ function App() {
     const calculatePercentage = (firstCell: string, secondCell: string): number => {
         return Number(firstCell) / Number(secondCell);
     };
-    useEffect(() => {
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:E2');

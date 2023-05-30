@@ -1,5 +1,5 @@
 {% raw %}
-import React from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { L10n } from '@syncfusion/ej2-base';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';

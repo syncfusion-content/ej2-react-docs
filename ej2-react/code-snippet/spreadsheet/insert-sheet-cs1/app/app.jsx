@@ -1,13 +1,13 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { data } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef(null);
-    useEffect(() => {
+    const spreadsheetRef = React.useRef(null);
+    React.useEffect(() => {
         const insSheetModel = [{
             index: 1,
             name: 'Inserted Sheet',
