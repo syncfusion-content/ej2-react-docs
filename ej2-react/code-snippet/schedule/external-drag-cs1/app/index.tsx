@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Inject, TimelineViews,
   Resize, DragAndDrop, ActionEventArgs, CellClickEventArgs, EventSettingsModel

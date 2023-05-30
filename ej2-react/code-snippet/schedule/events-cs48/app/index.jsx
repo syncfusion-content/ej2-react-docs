@@ -1,6 +1,5 @@
-
 import * as ReactDOM from 'react-dom';
-import { useRef } from 'react';
+import * as React from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, TimelineMonth, TimelineYear, Resize, DragAndDrop, Inject } from '@syncfusion/ej2-react-schedule';
 const App = () => {
   const generateStaticEvents = (start, resCount, overlapCount) => {

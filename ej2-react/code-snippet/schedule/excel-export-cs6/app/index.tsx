@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { ItemModel } from '@syncfusion/ej2-react-navigations';
 import {
   ScheduleComponent, ViewDirective, Week, Resize, ExcelExport, ExportOptions,
@@ -26,7 +26,7 @@ const App = () => {
 
   const onExportClick = (): void => {
     let exportValues: ExportOptions = { fileName: "SchedulerData" };
-    scheduleObj.exportToExcel(exportValues);
+    scheduleObj.current.exportToExcel(exportValues);
   }
   return (
     <ScheduleComponent cssClass='excel-export' width='100%' height='550px' id='schedule' ref={scheduleObj}

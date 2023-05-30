@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import {
   ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, PopupOpenEventArgs, EventSettingsModel, PopupCloseEventArgs, Inject
 } from '@syncfusion/ej2-react-schedule';

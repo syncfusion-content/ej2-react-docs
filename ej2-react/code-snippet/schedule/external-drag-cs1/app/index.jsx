@@ -1,5 +1,5 @@
 import * as ReactDOM from 'react-dom';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Inject, TimelineViews, Resize, DragAndDrop } from '@syncfusion/ej2-react-schedule';
 import { eventData, waitingList } from './datasource';
 import { closest, remove, addClass } from '@syncfusion/ej2-base';

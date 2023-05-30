@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
@@ -7,7 +7,7 @@ const App = () => {
     const eventSettings = { dataSource: scheduleData }
 
     const onEventRendered = (args) => {
-        applyCategoryColor(args, scheduleObj.currentView);
+        applyCategoryColor(args, scheduleObj.current.currentView);
     }
     const applyCategoryColor = (args, currentView) => {
         let categoryColor = args.data.CategoryColor;
