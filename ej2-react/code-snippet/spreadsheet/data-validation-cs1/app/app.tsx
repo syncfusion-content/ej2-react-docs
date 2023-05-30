@@ -1,13 +1,13 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
-    useEffect(() => {
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             //Add Data validation to range.

@@ -1,10 +1,10 @@
 {% raw %}
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { getRangeAddress, ProtectSettingsModel, SheetModel, SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
   const openComplete = (): void => {
     let spreadsheet = spreadsheetRef.current;
     if (spreadsheet) {

@@ -1,5 +1,5 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SheetsDirective, SheetDirective, ColumnsDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RowsDirective, RowDirective, CellsDirective, CellDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -7,10 +7,10 @@ import { ColumnDirective, SpreadsheetComponent, CellStyleModel } from '@syncfusi
 import { imageData1, imageData2 } from './datasource'
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const bottomStyle: CellStyleModel = { verticalAlign: 'bottom' };
     const topStyle: CellStyleModel = { verticalAlign: 'top' };
-    useEffect(() => {
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             spreadsheet.merge('B2:D2');

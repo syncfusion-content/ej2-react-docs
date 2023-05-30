@@ -1,5 +1,5 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellDirective, CellsDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -7,9 +7,9 @@ import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
 import { data } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const styles: CellStyleModel = { fontFamily: 'Axettac Demo', verticalAlign: 'middle', textAlign: 'center', fontSize: '18pt', fontWeight: 'bold', color: '#279377', border: '1px solid #e0e0e0' };
-    useEffect(() => {
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             // Setting common styles to table header cells

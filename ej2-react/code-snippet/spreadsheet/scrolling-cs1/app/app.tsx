@@ -1,16 +1,18 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, ScrollSettingsModel } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { defaultData } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const scrollSettings: ScrollSettingsModel = { isFinite: true };
-    useEffect(() => {
+    React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
-        spreadsheet?.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:G1');
+        if (spreadsheet) {
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:G1');
+        }
     }, []);
 
     return (

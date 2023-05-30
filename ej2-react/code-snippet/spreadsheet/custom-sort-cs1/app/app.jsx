@@ -1,5 +1,5 @@
 {% raw %}
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -7,7 +7,7 @@ import { DataUtil } from '@syncfusion/ej2-data';
 import { tradeData } from './datasource';
 
 function App() {
-    const spreadsheetRef = useRef(null);
+    const spreadsheetRef = React.useRef(null);
     const mySortComparer = (x, y) => {
         // custom sort comparer to sort based on the custom list.
         let customList = ['Perfect', 'Sufficient', 'Insufficient'];
@@ -22,7 +22,9 @@ function App() {
     };
     const onSortComplete = (args) => {
         let spreadsheet = spreadsheetRef.current;
-        spreadsheet?.selectRange(args.range);
+        if (spreadsheet) {
+            spreadsheet.selectRange(args.range);
+        }  
     };
 
     return (

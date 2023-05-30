@@ -406,7 +406,7 @@ The Internationalization library is used to globalize number, date, and time val
 The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
 
 ```ts
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
@@ -462,12 +462,14 @@ L10n.load({
 });
 
 function App() {
-  const spreadsheetRef = useRef<SpreadsheetComponent>(null);
-  useEffect(() => {
+  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+  React.useEffect(() => {
     let spreadsheet = spreadsheetRef.current;
-    //Applies cell and number formatting to specified range of the active sheet
-    spreadsheet?.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
-    spreadsheet?.numberFormat('$#,##0.00', 'F2:F11');
+    if (spreadsheet) {
+      //Applies cell and number formatting to specified range of the active sheet
+      spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+      spreadsheet.numberFormat('$#,##0.00', 'F2:F11');
+    }
   }, []);
 
   return (
