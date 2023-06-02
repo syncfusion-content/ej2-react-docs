@@ -1,5 +1,5 @@
 {% raw %}
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
