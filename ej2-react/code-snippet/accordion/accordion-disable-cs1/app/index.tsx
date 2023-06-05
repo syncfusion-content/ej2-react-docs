@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import * as React from "react";
+import { useRef } from "react";
 import * as ReactDOM from "react-dom";
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';

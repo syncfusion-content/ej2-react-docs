@@ -1,7 +1,9 @@
-import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as ReactDOM from "react-dom";
+import * as React from "react";
+import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 
-function ReactApp() {
+
+const ReactApp = () => {
   const aspContent = () => {
     return (<div>
       Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.

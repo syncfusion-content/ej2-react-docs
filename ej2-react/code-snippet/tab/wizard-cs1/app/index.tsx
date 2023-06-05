@@ -1,5 +1,6 @@
-import * as ReactDOM from 'react-dom/client';
-import React, { useRef } from 'react';
+import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import { useRef } from 'react';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
@@ -96,7 +97,7 @@ const App = () => {
     journeyDate.current.show()
   }
 
-  function tabSelected(e: SelectEventArgs) {
+  const tabSelected = (e: SelectEventArgs) => {
     if (e.isSwiped) {
       e.cancel = true;
     }
@@ -276,7 +277,7 @@ const App = () => {
     }, 100);
   }
 
-  function content0() {
+  const content0 = () => {
     return (
       <div id="booking">
         <div className="wizard-title">Plan your journey</div>
@@ -344,7 +345,7 @@ const App = () => {
     );
   }
 
-  function content1() {
+  const content1 = () => {
     return (
       <div id="selectTrain">
         <div className="wizard-title">Select the train from the list </div>
@@ -397,7 +398,7 @@ const App = () => {
     );
   }
 
-  function content2() {
+  const content2 = () => {
     return (
       <div id="details">
         <div className="details-page wizard-title">
@@ -567,7 +568,7 @@ const App = () => {
     );
   }
 
-  function content3() {
+  const content3 = () => {
     return (
       <div id="confirm">
         <div className="tab-title1 wizard-title">

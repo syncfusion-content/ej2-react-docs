@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import * as React from "react";
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
-import { TabComponent, TabItemDirective, TabItemsDirective, SelectingEventArgs, SelectEventArgs } from '@syncfusion/ej2-react-navigations';
-import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
 const App = () => {
   const tabInstance = useRef(null);

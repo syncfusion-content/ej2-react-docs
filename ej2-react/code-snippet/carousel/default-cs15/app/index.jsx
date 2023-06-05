@@ -1,6 +1,7 @@
 import { CarouselComponent } from "@syncfusion/ej2-react-navigations";
 import { useMemo } from "react";
-import * as ReactDOM from "react-dom/client";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
 const App = () => {
 const productItems = useMemo(() => [

@@ -1,5 +1,6 @@
 import { CarouselComponent, CarouselItemsDirective, CarouselItemDirective } from "@syncfusion/ej2-react-navigations";
 import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
+import * as React from "react";
 import { useState } from "react";
 import * as ReactDOM from "react-dom";
 

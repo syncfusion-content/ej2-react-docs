@@ -1,7 +1,7 @@
-import { Effect } from '@syncfusion/ej2-base';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
-import React, {useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
+import * as React from "react";
 import * as ReactDOM from 'react-dom';
 
 const ReactApp = () => {
@@ -15,7 +15,7 @@ const ReactApp = () => {
     nextAnimationChange = nextAnimationChange;
 
   }, []);
-  const twitterContent = () =>{
+  const twitterContent = () => {
     return <div>
       Twitter is an online social networking service that enables users to send and read short 140-character messages called "tweets". Registered users can read and post tweets, but those who are unregistered can only read them. Users access Twitter through the website interface, SMS or mobile device app Twitter Inc. is based in San Francisco and has more than 25 offices around the world. Twitter was created in March 2006 by Jack Dorsey, Evan Williams, Biz Stone, and Noah Glass and launched in July 2006. The service rapidly gained worldwide popularity, with more than 100 million users posting 340 million tweets a day in 2012.The service also handled 1.6 billion search queries per day.
     </div>;
@@ -59,7 +59,7 @@ const ReactApp = () => {
         <TabItemsDirective>
           <TabItemDirective header={headerText[0]} content={twitterContent} />
           <TabItemDirective header={headerText[1]} content={faceBookContent} />
-          <TabItemDirective header={headerText[2]} content={ whatsAppcontent} />
+          <TabItemDirective header={headerText[2]} content={whatsAppcontent} />
         </TabItemsDirective>
       </TabComponent>
     </div>
