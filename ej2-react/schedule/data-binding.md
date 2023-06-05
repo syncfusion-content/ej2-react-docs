@@ -111,7 +111,8 @@ You can bind the event data through external ajax request and assign it to the `
 
 ```ts
 
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Ajax } from '@syncfusion/ej2-base';
 import {

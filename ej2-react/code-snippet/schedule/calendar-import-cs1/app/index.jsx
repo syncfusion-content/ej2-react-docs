@@ -1,5 +1,6 @@
 import * as ReactDOM from 'react-dom';
-import React, { useRef } from 'react';
+import * as React from 'react';
+import { useRef } from 'react';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize, Inject, ICalendarExport, ICalendarImport
 } from '@syncfusion/ej2-react-schedule';

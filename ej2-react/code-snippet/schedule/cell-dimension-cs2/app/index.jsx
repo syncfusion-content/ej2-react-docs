@@ -4,7 +4,7 @@ import { ScheduleComponent, Day, Week, Month, Inject, ViewsDirective, ViewDirect
 import { createElement } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource';
 const App = () => {
-    const eventSettings = { dataSource: scheduleData };
+    const eventSettings  = { dataSource: scheduleData};
     const onRenderCell = (args) => {
         if (args.elementType == 'workCells' || args.elementType == 'monthCells') {
             let weekEnds = [0, 6];

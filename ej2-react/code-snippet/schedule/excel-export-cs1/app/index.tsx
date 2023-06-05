@@ -1,5 +1,6 @@
 import * as ReactDOM from 'react-dom';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
+import * as React from 'react';
 import { ItemModel } from '@syncfusion/ej2-react-navigations';
 import {
   ScheduleComponent, ViewDirective, Week, Resize, ExcelExport, ExportOptions,
