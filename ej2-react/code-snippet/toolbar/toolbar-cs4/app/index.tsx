@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { Tooltip } from '@syncfusion/ej2-popups';
 import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
 
-function ReactApp() {
+const ReactApp = () => {
   React.useEffect(() => {
     let tooltip: Tooltip = new Tooltip({
       target: '#toolbar [title]',

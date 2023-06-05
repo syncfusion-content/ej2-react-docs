@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import { useRef, useEffect } from 'react';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Month, Inject } from '@syncfusion/ej2-react-schedule';
 import { createElement, compile } from '@syncfusion/ej2-base';
 import { Popup } from '@syncfusion/ej2-popups';

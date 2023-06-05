@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import * as React from "react";
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 let dbFlag= 0;

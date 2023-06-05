@@ -1,5 +1,6 @@
 import * as ReactDOM from 'react-dom';
-import React, { useRef } from 'react';
+import * as React from 'react';
+import { useRef } from 'react';
 import { ScheduleComponent, RecurrenceEditorComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Inject, PopupOpenEventArgs, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';

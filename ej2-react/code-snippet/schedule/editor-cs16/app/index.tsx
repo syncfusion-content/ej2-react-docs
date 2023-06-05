@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import * as React from 'react';
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Day, Week, WorkWeek, Month, ScheduleComponent, ViewsDirective, ViewDirective, EventSettingsModel, Inject } from '@syncfusion/ej2-react-schedule';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';

@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
+import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective, TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 import { isNullOrUndefined } from "@syncfusion/ej2-base";

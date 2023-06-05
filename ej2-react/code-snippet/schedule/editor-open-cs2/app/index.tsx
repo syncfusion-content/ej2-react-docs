@@ -1,4 +1,5 @@
 import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 import { useRef } from 'react';
 import {
   Day, Week, WorkWeek, Month, ScheduleComponent, ViewsDirective, ViewDirective, CellClickEventArgs, EventSettingsModel, EventClickArgs, Inject

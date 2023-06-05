@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import * as React from "react";
+import { useState, useRef } from "react";
 import ReactDOM from "react-dom";
 import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';
 const ReactApp = () => {

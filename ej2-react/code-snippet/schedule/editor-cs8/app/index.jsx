@@ -1,6 +1,7 @@
 
 import * as ReactDOM from 'react-dom';
-import React, { useRef } from 'react';
+import * as React from 'react';
+import { useRef } from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';

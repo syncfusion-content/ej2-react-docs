@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
+import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Week, Month, TimelineViews, TimelineMonth, Agenda, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { RadioButtonComponent } from '@syncfusion/ej2-react-buttons';

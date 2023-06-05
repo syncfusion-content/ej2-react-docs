@@ -1,5 +1,6 @@
-import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as ReactDOM from "react-dom";
+import * as React from "react";
+import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 
 const ReactApp = () => {
   const aspContent = () => {

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective, SelectEventArgs } from '@syncfusion/ej2-react-navigations';
 import { enableRipple } from '@syncfusion/ej2-base';
