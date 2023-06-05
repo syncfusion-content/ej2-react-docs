@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-ReactDOM.render(<App />, document.getElementById('container'));
 import { useState } from 'react';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { AccordionComponent } from '@syncfusion/ej2-react-navigations';

@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState, useEffect } from "react";
 import { Ajax } from "@syncfusion/ej2-base";
 import ReactDOM from "react-dom";

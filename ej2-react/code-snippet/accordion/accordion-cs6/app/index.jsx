@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useEffect, useState } from "react";
 import * as ReactDOM from "react-dom";
 import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';

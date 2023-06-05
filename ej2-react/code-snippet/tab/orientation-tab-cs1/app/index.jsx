@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import * as React from "react";
+import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
@@ -23,13 +24,13 @@ const ReactApp = () => {
   let orientationVal = 'scrollable';
 
   const changeOrientationMode = (e) => {
-    let placement = (headerPosition.current.value).charAt(0).toUpperCase() + (headerPosition.current.value as string).slice(1);
+    let placement = headerPosition.current.value.charAt(0).toUpperCase() + headerPosition.current.value.slice(1);
     tabObj.current.headerPlacement = placement;
     tabObj.current.dataBind();
   }
 
   const changeOverflowMode = (e) => {
-    let placement = (orientation.current.value).charAt(0).toUpperCase() + (orientation.current.value as string).slice(1);
+    let placement = orientation.current.value.charAt(0).toUpperCase() + orientation.current.value.slice(1);
     tabObj.current.overflowMode = placement;
     tabObj.current.dataBind();
   }
