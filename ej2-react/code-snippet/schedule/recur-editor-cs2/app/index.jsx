@@ -1,5 +1,6 @@
 import * as ReactDOM from 'react-dom';
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
+import { useRef, useEffect } from 'react';
 import { RecurrenceEditorComponent, RecurrenceEditorChangeEventArgs }
   from '@syncfusion/ej2-react-schedule';
 const App = () => {

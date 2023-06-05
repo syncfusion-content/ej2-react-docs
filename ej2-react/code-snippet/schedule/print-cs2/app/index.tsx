@@ -1,5 +1,6 @@
 import * as ReactDOM from 'react-dom';
-import React, { useRef } from 'react';
+import * as React from 'react';
+import { useRef } from 'react';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Print, EventSettingsModel, Inject, ScheduleModel, ActionEventArgs, ToolbarActionArgs } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { ItemModel } from '@syncfusion/ej2-react-navigations';
