@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Floating Action Button and demonstrate the basic usage of the Floating Action Button component in an React environment.
 
+To get start quickly with React Floating Action Button component, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=KO9tydK2D6A" %}
+
 ## Dependencies
 
 The list of dependencies required to use the Floating Action Button component in your application is given below:
