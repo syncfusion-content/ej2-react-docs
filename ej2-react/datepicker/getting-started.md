@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started
 
-This section explains you the steps required to create a simple DatePicker and demonstrate the basic usage of the DatePicker component.
+This section explains you the steps required to create a simple [React DatePicker](https://www.syncfusion.com/react-components/react-datepicker) and demonstrate the basic usage of the DatePicker component.
 
 To get start quickly with React Date Picker, you can check on this video:
 
@@ -185,3 +185,5 @@ Here the DatePicker allows to select a date within a range from 9th to 15th in a
 * [Render DatePicker with specific culture](./globalization)
 * [How to change the initial view of the DatePicker](./date-views)
 * [How to achieve dynamic form validation with DatePicker](./how-to/dynamic-form-validation)
+
+N> You can also explore our [React DatePicker example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/datepicker/default) that shows you how to render the DatePicker in React.
