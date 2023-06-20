@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting started with React Ribbon component | Syncfusion
-description:  Checkout and learn about Getting started with React Ribbon component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description:  Checkout and learn about Getting started with Syncfusion React Ribbon component of Syncfusion Essential JS 2 and more.
+control: Ribbon 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -67,7 +67,7 @@ npm start
 
 ## Adding Syncfusion packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 
 To install `Ribbon` component, use the following command
 
@@ -201,7 +201,7 @@ root.render(<App />);
 
 ## Adding Ribbon Item
 
-You can use the `RibbonCollectionDirective` to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `RibbonItemDirective` and the `type` property to specify the type of control to be rendered, like a button, a drop-down button, a combo box, and more.
+You can use the `RibbonCollectionDirective` to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `RibbonItemDirective` and the `type` property to specify the type of component to be rendered, like a button, a drop-down button, a combo box, and more.
 
 {% raw %}
 
@@ -256,7 +256,7 @@ Run the application in the browser using the following command:
 npm start
 ```
 
-The following example illustrates how tabs, groups, collections, and items are used in a ribbon control to form the ribbon layout.
+The following example illustrates how tabs, groups, collections, and items are used in a ribbon component to form the ribbon layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

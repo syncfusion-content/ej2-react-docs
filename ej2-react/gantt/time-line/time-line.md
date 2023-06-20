@@ -114,6 +114,24 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the upp
         
 {% previewsample "page.domainurl/code-snippet/gantt/hourtimeline-cs1" %}
 
+## Change timeline view mode programmatically
+
+In the Gantt component, the timeline view mode can be modified programmatically. As described below, the Dropdown menu is also used to change the timeline view. The `Dropdownlist` component can be used to create a dropdown menu. Once the dropdown menu is enabled, the [`timelineViewMode`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineViewMode/) property from the [`timelineSettings`](https://helpej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/) can be utilized to switch the timeline view between Hour, Day, Week, Month, and Year. Refer to the following code example.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/changetimeline-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/changetimeline-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/changetimeline-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/changetimeline-cs1" %}
+
 ## Week start day customization
 
 In the Gantt component, you can customize the week start day using the [`weekStartDay`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#weekstartday) property. By default, the [`weekStartDay`](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#weekstartday) is set to 0, which specifies the Sunday as a start day of the week. But, you can customize the week start day by using the following code example.

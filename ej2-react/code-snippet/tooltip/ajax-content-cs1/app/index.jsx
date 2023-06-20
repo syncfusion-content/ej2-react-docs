@@ -1,15 +1,14 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Ajax } from '@syncfusion/ej2-base';
+import { Fetch } from '@syncfusion/ej2-base';
 function App() {
     let tooltipInstance;
     function onBeforeRender(args) {
         tooltipInstance.content = 'Loading...';
         tooltipInstance.dataBind();
-        let ajax = new Ajax('./tooltipdata.json', 'GET', true);
-        ajax.send().then((result) => {
-            result = JSON.parse(result);
+        let fetchApi = new Fetch('./tooltipdata.json', 'GET');
+        fetchApi.send().then((result) => {
             for (let i = 0; i < result.length; i++) {
                 if (result[i].Id === args.target.getAttribute('data-content')) {
                     tooltipInstance.content = "<div class='contentWrap'>" + result[i].Sports + "</div>";
