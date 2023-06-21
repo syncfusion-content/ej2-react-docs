@@ -16,6 +16,7 @@ This section describes the ribbon events that will be triggered when appropriate
 
 The [tabSelected](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#tabselected) event is triggered after selecting the tab item.
 
+{% raw %}
 ```ts
 
 import * as React from "react";
@@ -50,11 +51,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ## Tab selecting
 
 The [tabSelecting](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#tabselecting) event is triggered before selecting the tab item.
 
+{% raw %}
 ```ts
 
 import * as React from "react";
@@ -89,11 +92,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ## Ribbon collapsing
 
 The [ribbonCollapsing](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#ribboncollapsing) event is triggered before collapsing the ribbon.
 
+{% raw %}
 ```ts
 
 import * as React from "react";
@@ -128,11 +133,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ## Ribbon expanding
 
 The [ribbonExpanding](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#ribbonexpanding) event is triggered before expanding the ribbon.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -166,11 +173,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ## Group launcher click
 
 The [launcherIconClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#launchericonclick) event is triggered when the launcher icon of the group is clicked.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -203,6 +212,7 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ## Button item events
 
@@ -210,6 +220,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 The [clicked](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings/#clicked) event is triggered when the button is clicked.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -241,11 +252,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Created
 
 The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings/#created) event is triggered when the button is created.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -277,6 +290,7 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ## Checkbox item events
 
@@ -284,6 +298,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings/#change) event is triggered when the the Checkbox state is changed.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -315,11 +330,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Created
 
 The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings/#created) event is triggered once the Checkbox is created.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -351,6 +368,7 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ## Colorpicker item events
 
@@ -358,6 +376,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#change) event is triggered while changing the colors.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -391,11 +410,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Created
 
 The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#created) event is triggered once the Colorpicker is created.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -429,11 +450,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Open
 
 The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#open) event is triggered while opening the Colorpicker popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -467,11 +490,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Select
 
 The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#select) event is triggered while selecting the color in picker / palette, when showButtons property is enabled.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -505,11 +530,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Before close
 
 The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforeclose) event is triggered before closing the Colorpicker popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -543,11 +570,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Before open
 
 The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforeopen) event is triggered before opening the Colorpicker popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -581,11 +610,12 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
-
+{% endraw %}
 ### Before tile render
 
 The [beforeTileRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforetilerender) event is triggered while rendering each palette tile.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -619,6 +649,7 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ## Combobox item events
 
@@ -626,6 +657,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#change) event is triggered when an item in a popup is selected or when the model value is changed by user.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -658,11 +690,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Close
 
 The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#close) event is triggered when the popup is closed.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -695,11 +729,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Open
 
 The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#open) event is triggered when the popup is opened.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -732,11 +768,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Created
 
 The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#created) event is triggered once the Combobox is created.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -769,11 +807,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Filtering
 
 The [filtering](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#filtering) event triggers on typing a character in the Combobox.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -806,11 +846,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Select
 
 The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#select) event is triggered when an item in the popup is selected.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -843,11 +885,13 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ### Before open
 
 The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#beforeopen) event triggers before opening the popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -880,6 +924,7 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
+{% endraw %}
 
 ## Dropdown item events
 
@@ -887,6 +932,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeclose) event is triggered before closing the DropdownButton popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -921,11 +967,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Before open
 
 The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeopen) event is triggered before opening the Dropdown button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -960,11 +1008,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Before item render
 
 The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeitemrender) event is triggered while rendering each Popup item of Dropdown button.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -999,11 +1049,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Open
 
 The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#open) event is triggered while opening the Dropdown button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1038,11 +1090,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Close
 
 The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#close) event is triggered while closing the Dropdown button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1077,11 +1131,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Created
 
 The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#created) event is triggered while selecting an action item in Dropdown button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1116,11 +1172,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Select
 
 The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#select) event is triggered while selecting an action item in Dropdown button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1155,6 +1213,7 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ## Split button item events
 
@@ -1162,6 +1221,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeclose) event is triggered before closing the Split button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1196,11 +1256,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Before open
 
 The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeopen) event is triggered before opening the Split button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1235,11 +1297,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Before item render
 
 The [beforeItemRender](../api/ribbon/ribbonSplitButtonSettings/#beforeitemrender) event is triggered while rendering each Popup item of Split button.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1274,11 +1338,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Open
 
 The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#open) event is triggered while opening the Split button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1313,11 +1379,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Close
 
 The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#close) event is triggered while closing the Split button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1352,11 +1420,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Created
 
 The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#created) event is triggered while selecting an action item in Split button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1391,11 +1461,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Select
 
 The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#select) event is triggered while selecting an action item in Split button popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1430,11 +1502,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Click
 
 The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#click) event is triggered while clicking the primary button in Split button.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1469,6 +1543,7 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ## File menu events
 
@@ -1476,6 +1551,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeclose) event is triggered before closing the file menu popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1521,11 +1597,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Before open
 
 The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeopen) event is triggered before opening the file menu popup.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1571,11 +1649,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Before item render
 
 The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeitemrender) event is triggered while rendering each ribbon file menu item.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1621,11 +1701,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Open
 
 The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#open) event is triggered when file menu popup is opened.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1671,11 +1753,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Close
 
 The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#close) event is triggered when file menu popup is closed.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1721,11 +1805,13 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}
 
 ### Select
 
 The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#select) event is triggered while selecting an item in ribbon file menu.
 
+{% raw %}
 ```ts
 import * as React from "react";
 import * as ReactDom from "react-dom";
@@ -1771,3 +1857,4 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 ```
+{% endraw %}

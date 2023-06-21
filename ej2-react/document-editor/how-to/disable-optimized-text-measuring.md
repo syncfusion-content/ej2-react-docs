@@ -18,6 +18,7 @@ If you want the Document editor component to retain the document pagination (dis
 
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditorContainer` instance.
 
+{% raw %}
 ```ts
 import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
@@ -45,6 +46,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
+{% endraw %}
 
 ## Disable optimized text measuring in `DocumentEditor` instance
 

@@ -34,9 +34,11 @@ As a backward compatibility to create older format SFDT files, refer the followi
 </td>
 <td>
 
+{% raw %}
 ```
 <DocumentEditorContainerComponent documentEditorSettings={{optimizeSfdt: false}}></DocumentEditorContainerComponent>
 ```
+{% endraw %}
 
 </td>
 </tr>
@@ -89,9 +91,11 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <td>Client-side</td>
 <td>
 
+{% raw %}
 ```
 <DocumentEditorContainerComponent documentEditorSettings={{optimizeSfdt: false}}></DocumentEditorContainerComponent>
 ```
+{% endraw %}
 
 </td>
 </tr>

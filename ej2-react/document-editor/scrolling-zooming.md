@@ -49,7 +49,7 @@ In case, if you wish to move the selection to any page in document editor and br
 You can scale the contents in document editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use ‘zoomFactor’ property of document editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
 
 
-
+{% raw %}
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -82,7 +82,8 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
-
+{% endraw %}
+{% raw %}
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -104,13 +105,14 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 ```
+{% endraw %}
 
 ## Page Fit Type
 
 Apart from specifying the zoom factor as value, the Document Editor provides option to specify page fit options such as fit to full page or fit to page width. You can set this option using ‘fitPage’ method of document editor instance. Refer to the following code example.
 
 
-
+{% raw %}
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -140,7 +142,8 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
-
+{% endraw %}
+{% raw %}
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -159,6 +162,7 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 ```
+{% endraw %}
 
 ## Zoom option using UI
 

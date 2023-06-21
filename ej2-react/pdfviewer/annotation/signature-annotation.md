@@ -31,6 +31,7 @@ The handwritten signature can be added to the PDF document using the annotation 
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
 
+{% raw %}
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -60,11 +61,13 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 ```
+{% endraw %}
 
 ## How to enable the handwritten signature
 
 The following code snippet describes how to enable the handwritten signature in PDF Viewer. When the value is set to `false` it disables the handwritten signature.
 
+{% raw %}
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -93,6 +96,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 ```    
+{% endraw %}
 
 ## Editing the properties of handwritten signature
 
