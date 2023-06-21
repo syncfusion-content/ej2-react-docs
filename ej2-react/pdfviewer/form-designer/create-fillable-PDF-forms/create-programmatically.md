@@ -410,6 +410,7 @@ function updateProperties(){
 
 The following code example explains how to update the properties of the signature field added to the document from the form designer toolbar.
 
+{% raw %}
 ```ts
 
 {/* Defines the signature field settings */}
@@ -441,11 +442,13 @@ let signatureFieldSettings = {
  </PdfViewerComponent>
 
 ```
+{% endraw %}
 
 ![Signature Field Settings](../../../pdfviewer/images/SignatureField.png)
 
 The following code example explains how to update the properties of the initial field added to the document from the form designer toolbar.
 
+{% raw %}
 ```ts
 
 {/* Defines the initial field settings */}
@@ -478,5 +481,6 @@ The following code example explains how to update the properties of the initial 
 </PdfViewerComponent>
 
 ```
+{% endraw %}
 
 ![Initial Field Settings](../../../pdfviewer/images/InitialField.png)

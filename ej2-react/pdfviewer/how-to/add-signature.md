@@ -16,6 +16,7 @@ The PDF Viewer library allows you to add signature in the signature field of the
 
 **Step 2:** Add the following code snippet to add signature in signature field.
 
+  {% raw %}
    ```javascript
 
   <PdfViewerComponent
@@ -65,5 +66,6 @@ The PDF Viewer library allows you to add signature in the signature field of the
   }
 
  ```
+ {% endraw %}
 
 Find the Sample [how to add signature in signature field](https://stackblitz.com/edit/react-ce6gat?file=src%2Findex.js)

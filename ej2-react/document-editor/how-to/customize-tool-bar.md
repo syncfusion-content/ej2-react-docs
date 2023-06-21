@@ -20,6 +20,7 @@ Document Editor Container allows you to customize(add, show, hide, enable, and d
 
 * Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/toolbar/#enableItems)
 
+{% raw %}
 ```ts
   import "./App.css";
   import * as React from "react";
@@ -83,5 +84,6 @@ Document Editor Container allows you to customize(add, show, hide, enable, and d
       };
   }
 ```
+{% endraw %}
 
 >Note: Default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields']`.
