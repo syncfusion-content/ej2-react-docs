@@ -2,19 +2,19 @@
 /**
  * Rich Text Editor - HTMLEditor KeyConfig sample
  */
-import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import { RichTextEditorComponent, Inject, Toolbar, HtmlEditor, Image, QuickToolbar, Link, FormatPainter} from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 class App extends React.Component {
     rteObj;
     toolbarSettings = {
         items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
-            'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-            'LowerCase', 'UpperCase', '|',
-            'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
-            'Outdent', 'Indent', '|',
-            'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
-            'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
-    };
+        'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
+        'LowerCase', 'UpperCase', '|',
+        'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
+        'Outdent', 'Indent', '|',
+        'CreateLink', 'Image', '|', 'FormatPainter', 'ClearFormat', 'Print',
+        'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
+    }
     docKeyUp(e) {
         if (e.altKey && e.keyCode === 84) { /* t */
             // press alt+t to focus the component.
@@ -61,7 +61,7 @@ class App extends React.Component {
             <p>Creates bulleted and numbered lists.</p>
           </li>
         </ul>
-        <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
+        <Inject services={[Toolbar, HtmlEditor, Image, QuickToolbar, Link, FormatPainter]} />
       </RichTextEditorComponent>);
     }
 }
