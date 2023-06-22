@@ -42,5 +42,8 @@ The execCommand will perform the following commands.
 | removeFormat | remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. |`rteObj.executeCommand('removeFormat');`|
 | insertText | Insert text to the current cursor position. | `rteObj.executeCommand('insertText', 'inserted a text');` |
 | insertImage | Insert an image to the current cursor position. | `rteObj.executeCommand('insertImage', { url: 'https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png', cssClass: 'rte-img'});`
+| copyFormatPainter | Copy the format of selected text and apply it to another text. | `rteObj.executeCommand('copyFormatPainter', formatPainterSettings);`|
+| applyFormatPainter | Apply the copied format to the selected text. | `rteObj.executeCommand('applyFormatPainter');`|
+| escapeFormatPainter | Remove the previously copied format and disable the sticky mode | `rteObj.executeCommand('escapeFormatPainter');`|
 
 >Note: The ‘ExecuteCommand’ public method is not supported in Syncfusion Markdown Editor
