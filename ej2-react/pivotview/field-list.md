@@ -110,6 +110,29 @@ To enable search box in the pivot table's built-in popup field list UI, set the 
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs82" %}
 
+## Option to sort fields
+
+End user can sort fields in the field list UI to ascending (or) descending (or) default order (as obtained from the data source) using the built-in sort icons.
+
+> By default, fields are displayed in the default order.
+
+![Field list with sorting options](images/fieldlist_default_sort.png)
+
+### Sort fields in a desired order
+
+To display the fields in descending order by default, set the [defaultFieldListOrder](https://ej2.syncfusion.com/react/documentation/api/pivotview/loadEventArgs/#defaultfieldlistorder) property to **Descending** in the [load](https://ej2.syncfusion.com/react/documentation/api/pivotview#load) event.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/pivot-table/default-cs311/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/pivot-table/default-cs311/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs311" %}
+
 ## Group fields under desired folder name
 
 In the field list UI, you can display fields by grouping them under the desired folder name. It can only be configured via code-behind by setting the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptionsModel/#groupname) property in [`fieldMapping`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#fieldmapping).
