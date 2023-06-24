@@ -268,6 +268,9 @@ The following code example illustrates how to create an icon of various shapes.
 
 * The expand icon can be aligned relative to the node boundaries. It has margin, offset, horizontalAlignment, and verticalAlignment settings. It is quite tricky, when all four alignments are used together but gives you more control over alignment.
 
+* The [`iconColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#iconColor-string) property can be used to set the strokeColor of the Icon.
+
+
 ## Customizing collapse icon
 
 * Set the [`borderColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#borderColor-string),
@@ -277,6 +280,9 @@ The following code example illustrates how to create an icon of various shapes.
 [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#height-number) properties.
 
 * Like expand icon, collapse icon also can be aligned relative to the node boundaries. It has margin, offset, horizontalAlignment, and verticalAlignment settings. It is quite tricky, when all four alignments are used together but gives you more control over alignment.
+
+* The [`iconColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#iconColor-string) property can be used to set the strokeColor of the Icon.
+
 
 ## Interaction
 
