@@ -8,6 +8,7 @@ import {
   NodeModel,
   SymbolPalette,
   SymbolInfo,
+  NodeConstraints,
   SymbolPaletteComponent,
 } from "@syncfusion/ej2-react-diagrams";
 //Initialize the basicshapes for the symbol palette
@@ -28,6 +29,11 @@ export function getBasicShapes(): NodeModel[] {
         shape: "Ellipse",
         symbolInfo: { description: { text: "Ellipse" } },
       },
+      tooltip:{
+        content: 'Customized Tooltip',
+      },
+      //Enable customized tooltip content to display on the symbol
+      constraints: NodeConstraints.Default | NodeConstraints.Tooltip
     },
     {
       id: "Hexagon",

@@ -78,6 +78,7 @@ function App() {
       layout={{
         //Sets layout type
         type: "MindMap",
+        orientation: "Horizontal"
       }}
       //Configures data source for diagram
       dataSourceSettings={{
