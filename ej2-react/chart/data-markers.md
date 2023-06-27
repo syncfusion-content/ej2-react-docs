@@ -18,7 +18,7 @@ Data markers are used to provide information about the data points in the series
 
 <!-- markdownlint-disable MD036 -->
 
-Markers can be added to the points by enabling the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings/#visible) option of the marker property.
+Markers can be added to points by enabling the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings/#visible) option of the marker property. By default, distinct markers will be enabled for each series in the chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,7 +33,7 @@ Markers can be added to the points by enabling the [`visible`](https://ej2.sync
 
 ## Shape
 
-Markers can be assigned with different shapes such as Rectangle, Circle, Diamond etc using the `shape`property.
+Markers can be assigned with different shapes such as Rectangle, Circle, Diamond, etc. using the [`shape`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings/#shape) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
