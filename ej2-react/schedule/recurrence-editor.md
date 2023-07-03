@@ -55,6 +55,30 @@ The other properties available in recurrence editor are tabulated below,
 | value | string | Sets the recurrence rule as its output values.|
 | selectedType | number | Sets the current repeat type to be set on the recurrence editor.|
 
+## Customizing the End Type Option in Editor
+
+By default, there are 3 types of end options available in the recurrence editor such as:
+
+* Never
+* Until
+* Count
+
+It is possible to customize the recurrence editor to display only the specific end options, such as the `Until` and `Count` options alone, by setting the appropriate [`endTypes` ](https://ej2.syncfusion.com/react/documentation/api/recurrence-editor/#endtypes)option.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/schedule/events-cs49/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/schedule/events-cs49/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/events-cs49/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/schedule/events-cs46" %}
+
 ## Accessing the recurrence rule string
 
 The recurrence rule is usually generated based on the options selected from the recurrence editor and also it follows the [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications. The generated recurrence rule string is a valid one to be used with the Scheduler event’s recurrence rule field.

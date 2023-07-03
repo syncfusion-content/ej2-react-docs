@@ -22,7 +22,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent toolbarTemplate={this.buttonTemplate} ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)}/>
+            <ImageEditorComponent toolbarTemplate={this.buttonTemplate} ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbar = {[]}/>
             </div>);
     }
 }
