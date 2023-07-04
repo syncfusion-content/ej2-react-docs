@@ -25,7 +25,7 @@ function App() {
     }
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent toolbarTemplate={buttonTemplate} ref={(img) => { imgObj = img }} created={imageEditorCreated}/>
+        <ImageEditorComponent toolbarTemplate={buttonTemplate} ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}/>
         </div>
     );
 }

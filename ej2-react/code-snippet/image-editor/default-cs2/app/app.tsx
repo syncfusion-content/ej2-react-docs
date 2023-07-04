@@ -25,7 +25,7 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated}>
+        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
         </ImageEditorComponent>
                 <div>
                     <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>

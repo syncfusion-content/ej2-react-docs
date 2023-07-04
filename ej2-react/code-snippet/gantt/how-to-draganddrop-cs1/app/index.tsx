@@ -38,6 +38,10 @@ function  App (){
           var index = ganttInstance.treeGrid.getRows().indexOf(gridEle);
           ganttInstance.selectRow(index);
         }
+        if(chartEle){
+          var index = chartEle.ariaRowIndex;
+         ganttInstance.selectRow(Number(index));
+      }
         let record: any = args.draggedNodeData;
         let selectedData = ganttInstance.flatData[ganttInstance.selectedRowIndex];
         let selectedDataResource = selectedData.taskData.resources;
