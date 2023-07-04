@@ -314,7 +314,7 @@ The following code illustrates how to arrange the nodes in a radial tree structu
 
 ## Mind Map layout
 
-A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout) of layout should be set as `MindMap`. 
+A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout) of layout should be set as `MindMap`.
 
 ## Tree Orientation in layout
 

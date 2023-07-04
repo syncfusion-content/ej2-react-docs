@@ -283,6 +283,7 @@ The following code example illustrates how to create an icon of various shapes.
 
 * The [`iconColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#iconColor-string) property can be used to set the strokeColor of the Icon.
 
+
 ## Interaction
 
 Diagram provides support to drag, resize, or rotate the node interactively. For more information about editing a node at runtime, refer to Edit Nodes.

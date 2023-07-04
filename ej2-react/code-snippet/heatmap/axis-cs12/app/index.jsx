@@ -40,7 +40,7 @@ export function App() {
                 'Month of November 2023',
                 'Month of December 2023'
             ],
-            enableTrim: 'true',
+            enableTrim: true,
             labelIntersectAction: 'Trim',
             opposedPosition: true,
         }}
@@ -54,7 +54,7 @@ export function App() {
                 'RR Garments',
                 'SR Garments'
             ],
-            enableTrim: 'true',
+            enableTrim: true,
             labelIntersectAction: 'Trim'
         }}
         paletteSettings={{
