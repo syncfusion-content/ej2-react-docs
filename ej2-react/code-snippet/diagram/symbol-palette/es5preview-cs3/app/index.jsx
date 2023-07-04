@@ -20,11 +20,11 @@ export function getBasicShapes() {
                 shape: "Ellipse",
                 symbolInfo: { description: { text: "Ellipse" } },
             },
-            tooltip: {
+            tooltip:{
                 content: 'Customized Tooltip',
-            },
-            //Enable customized tooltip content to display on the symbol
-            constraints: NodeConstraints.Default | NodeConstraints.Tooltip
+              },
+              //Enable customized tooltip content to display on the symbol
+              constraints: NodeConstraints.Default | NodeConstraints.Tooltip
         },
         {
             id: "Hexagon",

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Emoji Picker in React RichTextEditor Component
+# Emoji Picker in React RichTextEditor control
 
 An emoji picker is a tool that allows users to add emojis or emoticons to their text easily. Typically, it is a small window or panel that displays a variety of emojis arranged in different categories, such as smileys, animals, food, and so on. Users can select the desired emoji by clicking on it or by typing its name in a search bar.
 
@@ -142,3 +142,24 @@ The emoji picker popup offers keyboard navigation options, allowing you to move 
 `Enter`: Press Enter key to select the currently focused emoji.
 
 `Escape`: Press Escape to close the emoji picker popup without selecting an emoji.
+
+
+## Opening the emoji picker in a custom position
+
+Display the emoji picker anywhere within the editor by using the `showEmojiPicker` public method. By default, it opens at the current cursor position within the editor. If you wish to customize the position of the popup, call the `showEmojiPicker()` method and specify the `x` and `y` parameters.
+
+`x` - Left position.
+`y` - Top position.
+
+In the following sample, customize the left and top positions by specifying a value as 'center' and 'auto' in the showEmojiPicker method when pressing the slash (/) key within an editor.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/emoji-picker-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/emoji-picker-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/emoji-picker-cs2" %}

@@ -8,6 +8,7 @@ import {
   NodeModel,
   SymbolPalette,
   SymbolInfo,
+  NodeConstraints,
   SymbolPaletteComponent,
   NodeConstraints
 } from "@syncfusion/ej2-react-diagrams";
