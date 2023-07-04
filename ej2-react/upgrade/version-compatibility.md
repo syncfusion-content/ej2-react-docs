@@ -22,13 +22,15 @@ The following table represents the supported React versions by different Syncfus
 
 ## Syncfusion version information
 
-In a year, Syncfusion releases new volumes once every three months. Syncfusion React components follows sequence-based identifiers to process software releases based on the **YearlyVersion.Major.Revision** format to track all the release changes. It helps developers to keep track of the changes in every release.
+Syncfusion follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion React components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
 
-For example, if the release package version is `20.2.36`, the version number indicates the details as follows,
+For example, if the release package version is `22.1.34`, the version number can be interpreted as follows:
 
-* **20** denotes the `yearly release` version, which changes every year.
-* **2** denotes the `major release` version. Once every three months, Syncfusion releases a new volume. Here, 2 represents the second release of the year.
-* **36** denotes the `revision number` also known as the `patch number`, which increases for each service pack release and weekly patch release.
+* **22** represents the `major release` version. This number changes every three months and encompasses significant updates, new features, as well as bug fixes and breaking changes.
+
+* **1** corresponds to the `minor release` version. This number signifies releases primarily focused on new features and addressing bugs, without introducing breaking changes.
+
+* **34** denotes the `revision number`, also referred to as the `patch number`. This number increases for weekly patch releases, which predominantly consist of bug fixes and do not introduce new features or breaking changes.
 
 ## See also
 

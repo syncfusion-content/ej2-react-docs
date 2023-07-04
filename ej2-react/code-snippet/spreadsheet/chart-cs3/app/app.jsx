@@ -8,15 +8,13 @@ import { chartData } from './datasource';
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const style = { backgroundColor: '#357cd2', color: '#fff', fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' };
-    let spreadsheet = new Spreadsheet({
-        actionBegin: (args) => {
-            if (args.action === 'beforeInsertChart' && args.type.includes('Line')) {
-                args.args.eventArgs.markerSettings.shape = 'Triangle';
-                args.args.eventArgs.markerSettings.isFilled = false;
-                args.args.eventArgs.markerSettings.size = 10;
-            }
+    const onActionBegin = (args) => {
+        if (args.action === 'beforeInsertChart' && args.args.eventArgs.type.includes('Line')) {
+            args.args.eventArgs.markerSettings.shape = 'Triangle';
+            args.args.eventArgs.markerSettings.isFilled = false;
+            args.args.eventArgs.markerSettings.size = 10;
         }
-    });
+    }
     React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
@@ -28,7 +26,7 @@ function App() {
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef}>
+            <SpreadsheetComponent ref={spreadsheetRef} actionBegin={onActionBegin}>
                 <SheetsDirective>
                     <SheetDirective name='Book Sales'>
                         <RowsDirective>
