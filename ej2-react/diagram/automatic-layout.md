@@ -322,8 +322,8 @@ An [`Orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/la
 
 <table>
 <tr>
-<td><b>Orientation Type<b></td>
-<td><b>Description<b></td>
+<td><b>Orientation Type</b></td>
+<td><b>Description</b></td>
 </tr>
 <tr>
 <td>Horizontal</td>
@@ -335,7 +335,7 @@ An [`Orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/la
 </tr>
 </table>
 
-> Note: If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
+N> If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
 
 The following code example illustrates how to create an mindmap layout.
 
