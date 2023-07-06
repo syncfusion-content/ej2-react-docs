@@ -5,7 +5,7 @@ platform: ej2-React
 description: "Learn how to bind data from a PostgreSQL database in the Syncfusion React Pivot Table of Syncfusion Essential JS 2 and more."
 ---
 
-# PostgreSQL in EJ2 React Pivotview control
+# PostgreSQL in EJ2 React Pivotview Component
 
 This section describes how to consume data from PostgreSQL database using [Microsoft Npgsql](https://www.npgsql.org/doc/index.html) and bind it to the Pivot Table via a Web API controller.
 

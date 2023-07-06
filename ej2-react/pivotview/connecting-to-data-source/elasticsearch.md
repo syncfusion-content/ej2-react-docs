@@ -5,7 +5,7 @@ platform: ej2-React
 description: "Learn how to bind data from a Elasticsearch database in the Syncfusion React Pivot Table of Syncfusion Essential JS 2 and more."
 ---
 
-# Elasticsearch in EJ2 React Pivotview control
+# Elasticsearch in EJ2 React Pivotview Component
 
 This section describes how to retrieve data from Elasticsearch database using [Nest](https://www.nuget.org/packages/Nest) library and bind it to the Pivot Table via a Web API controller.
 

@@ -5,7 +5,7 @@ platform: ej2-React
 description: "Learn how to bind data from a Oracle database in the Syncfusion React Pivot Table of Syncfusion Essential JS 2 and more."
 ---
 
-# Oracle in EJ2 React Pivotview control
+# Oracle in EJ2 React Pivotview Component
 
 This section describes how to retrieve data from Oracle database using [Oracle Managed Data Access](https://www.nuget.org/packages/Oracle.ManagedDataAccess) and bind it to the Pivot Table via a Web API controller.
 
