@@ -41,3 +41,26 @@ Use the following CSS to customize the DatePicker icon element
 Please check the below section, to customize the style and appearance of the Calendar component.
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance/)
+
+## Full Screen Mode: Enhancing the DatePicker Component (Mobile Support Only)
+
+We have introduced the full screen mode functionality in our DatePicker component, enabling users to see the DatePicker calendar element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DatePicker component, simply set the `fullScreenMode` API value to `true`. This action will extend the calendar element to occupy the entire screen on mobile devices.
+
+```typescript
+import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+export default class App extends React.Component<{}, {}> {
+
+    private mobileMode:boolean = true;
+
+    public render() {
+        return <DatePickerComponent id="datepicker"  fullScreenMode={this.mobileMode} placeholder='Enter date' />
+    }
+};
+
+ReactDOM.render(<App />, document.getElementById('element'));
+```
+
+![DatePickerFullScreen](../images/DatePickerFullScreen.gif)

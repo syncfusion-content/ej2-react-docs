@@ -58,3 +58,27 @@ Use the following CSS to customize the TimePicker popup content
         font-size: 20px;
 }
 ```
+
+## Full Screen Mode: Enhancing the TimePicker Component (Mobile Support Only)
+
+We have introduced the full screen mode functionality in our TimePicker component, enabling users to see the TimePicker popup element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the TimePicker component, simply set the `fullScreenMode` API value to `true`. This action will extend the popup element to occupy the entire screen on mobile devices.
+
+```typescript
+// import the ripple effect
+import { enableRipple } from '@syncfusion/ej2-base';
+// import the timepicker
+import { TimePickerComponent } from '@syncfusion/ej2-react-calendars';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+// enable ripple effect
+enableRipple(true);
+
+function App(){
+    const mobileMode:boolean = true;
+
+    return <TimePickerComponent id="timepicker" fullScreenMode={this.mobileMode} />
+};
+ReactDOM.render(<App />, document.getElementById('timer'));
+```
+
+![TimePickerFullScreen](../images/TimePickerFullScreen.gif)
