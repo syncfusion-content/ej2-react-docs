@@ -154,3 +154,24 @@ Use the following CSS to customize the selected date cell grid in the DateRangeP
         border: 1px solid black;
     }
 ```
+
+## Full Screen Mode: Enhancing the DateRangePicker Component (Mobile Support Only)
+
+We have introduced the full screen mode functionality in our DateRangePicker component, enabling users to see the DateRangePicker calendar and presets popup element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateRangePicker component, simply set the `fullScreenMode` API value to `true`. This action will extend the calendar and presets popup element to occupy the entire screen on mobile devices.
+
+```typescript
+import { DateRangePickerComponent } from '@syncfusion/ej2-react-calendars';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+
+export default class App extends React.Component<{}, {}> {
+    private mobileMode:boolean = true;
+    public render() {
+        return <DateRangePickerComponent id="daterangepicker" fullScreenMode={this.mobileMode} />
+    }
+};
+ReactDOM.render(<App />, document.getElementById('element'));
+```
+
+![DateRangePickerDefaultFullScreen](../images/DateRangePickerDefaultFullScreen.gif)
+![DateRangePickerPresetsFullScreen](../images/DateRangePickerrPresetsFullScreen.gif)
