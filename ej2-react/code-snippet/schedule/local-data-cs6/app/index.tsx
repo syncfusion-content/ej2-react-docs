@@ -12,7 +12,7 @@ const App = () => {
 
   const onActionFailure = (): void => {
     const span = document.createElement('span');
-    scheduleRef.current?.element.parentNode?.insertBefore(span, scheduleRef.current?.element);
+    scheduleRef.current.element.parentNode.insertBefore(span, scheduleRef.current.element);
     if (span.style) {
       span.style.color = '#FF0000';
     }

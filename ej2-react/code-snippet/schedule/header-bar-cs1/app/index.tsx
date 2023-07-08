@@ -12,7 +12,7 @@ import { scheduleData } from './datasource';
 const App = () => {
   const schedule = useRef<ScheduleComponent>(null);
   const eventSettings: EventSettingsModel = { dataSource: scheduleData };
-  let profilePopup:Popup;
+  let profilePopup: Popup;
   const onActionBegin = (args: ActionEventArgs & ToolbarActionArgs): void => {
     if (args.requestType === 'toolbarItemRendering') {
       const userIconItem: ItemModel = {
@@ -44,12 +44,12 @@ const App = () => {
 
   useEffect(() => {
     const scheduleElement: HTMLElement = schedule.current.element;
-    let profilePopup:Popup;
+    let profilePopup: Popup;
     if (scheduleElement) {
       const userContentEle: HTMLElement = createElement('div', {
         className: 'e-profile-wrapper'
       });
-      scheduleElement.parentElement?.appendChild(userContentEle);
+      scheduleElement.parentElement.appendChild(userContentEle);
       const userIconEle: HTMLElement | null = scheduleElement.querySelector('.e-schedule-user-icon');
       const getDOMString: (data: object) => NodeList = compile('<div class="profile-container"><div class="profile-image">' +
         '</div><div class="content-wrap"><div class="name">Nancy</div>' +

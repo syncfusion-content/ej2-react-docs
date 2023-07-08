@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useRef, useEffect } from 'react';
-import ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { TabComponent } from '@syncfusion/ej2-react-navigations';
 
