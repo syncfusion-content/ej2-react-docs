@@ -1,7 +1,7 @@
 import { CarouselComponent, CarouselItemsDirective, CarouselItemDirective } from "@syncfusion/ej2-react-navigations";
 import { useMemo } from "react";
 import * as React from "react";
-import ReactDom from "react-dom";
+import * as ReactDom from "react-dom";
 
 const App = () => {
     const indicatorTemplate = useMemo(() => {

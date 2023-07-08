@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  Week, TimelineViews, TimelineMonth, Day, ScheduleComponent, GroupModel, ViewsDirective, ViewDirective, ResourcesDirective, EventSettingsModel
+  Week, TimelineViews, TimelineMonth, Day, ScheduleComponent, GroupModel, ViewsDirective, ViewDirective, ResourcesDirective, EventSettingsModel,
   ResourceDirective, Inject
 } from '@syncfusion/ej2-react-schedule';
 import { resourceData } from './datasource';

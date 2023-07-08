@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useRef } from "react";
-import ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom";
 import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';
 import { ExpandEventArgs, AccordionClickArgs } from '@syncfusion/ej2-navigations';
 const ReactApp = () => {

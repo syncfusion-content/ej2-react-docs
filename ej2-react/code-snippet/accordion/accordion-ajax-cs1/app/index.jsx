@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { Ajax } from "@syncfusion/ej2-base";
-import ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom";
 import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from "@syncfusion/ej2-react-navigations";
 
 const ReactApp = () => {
