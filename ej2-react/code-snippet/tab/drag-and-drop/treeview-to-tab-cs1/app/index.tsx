@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import * as React from "react";
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import { TabComponent, TabItemDirective, TabItemsDirective, TabItemModel, TreeViewComponent, DragAndDropEventArgs } from '@syncfusion/ej2-react-navigations';
 import { isNullOrUndefined } from "@syncfusion/ej2-base";
 

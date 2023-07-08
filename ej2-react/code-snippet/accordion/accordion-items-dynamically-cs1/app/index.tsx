@@ -57,7 +57,7 @@ const ReactApp = () => {
         if (dbFlag === array.length) {
           return;
         }
-        acrdnInstance.current?.addItem(array[dbFlag], acrdnInstance.current?.items.length);
+        acrdnInstance.current.addItem(array[dbFlag], acrdnInstance.current.items.length);
         ++dbFlag;
       }
     }

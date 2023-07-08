@@ -39,7 +39,7 @@ const ReactApp = () => {
       args.cancel = true;
       const dropContainer = document.querySelector('.treeview-external-drop-tab').querySelectorAll('.e-list-item');
       const dropIndex = Array.prototype.indexOf.call(dropContainer, dropNode);
-      const newNode = [{ id: 'list' + i, text: dragItem.header?.text ?? '' }];
+      const newNode = [{ id: 'list' + i, text: dragItem.header ? dragItem.header.text : '' }];
       tabObj.current.removeTab(dragTabIndex);
       treeObj.current.addNodes(newNode, 'Treeview', dropIndex);
     }

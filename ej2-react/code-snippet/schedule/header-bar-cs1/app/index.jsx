@@ -7,7 +7,7 @@ import { Popup } from '@syncfusion/ej2-popups';
 import { scheduleData } from './datasource';
 
 const App = () => {
-    const schedule = useRef < ScheduleComponent > (null);
+    const schedule = useRef(null);
     const eventSettings = { dataSource: scheduleData };
     let profilePopup;
     const onActionBegin = (args) => {
