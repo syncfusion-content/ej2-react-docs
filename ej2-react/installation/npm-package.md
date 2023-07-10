@@ -49,16 +49,17 @@ The Syncfusion React buttons package contains UI components such as Button, Chec
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-buttons](https://www.npmjs.com/package/@syncfusion/ej2-react-buttons)    | npm install @syncfusion/ej2-react-buttons | <li>Button</li> <li>CheckBox</li> <li>Chip</li> <li>RadioButton</li> <li>Switch</li> |
+| [ej2-react-buttons](https://www.npmjs.com/package/@syncfusion/ej2-react-buttons)    | npm install @syncfusion/ej2-react-buttons | &bull; Button<br> &bull; CheckBox<br> &bull; Chip<br> &bull; RadioButton<br> &bull; Switch<br> |
 
 ### Syncfusion React Calendars
 
 The Syncfusion React Calendars package contains date and time components such as Calendar, DatePicker, DateRangePicker, DateTimePicker, and TimePicker. These components come with options to disable dates, restrict selection, and show custom events.
 
 <!-- markdownlint-disable MD033 -->
+
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-calendars](https://www.npmjs.com/package/@syncfusion/ej2-react-calendars)    |npm install @syncfusion/ej2-react-calendars | <li>Calendar</li> <li>DatePicker</li> <li>DateRangePicker</li> <li>DateTimePicker</li> <li>TimePicker</li> |
+| [ej2-react-calendars](https://www.npmjs.com/package/@syncfusion/ej2-react-calendars)    |npm install @syncfusion/ej2-react-calendars | &bull; Calendar<br> &bull; DatePicker<br> &bull; DateRangePicker<br> &bull; DateTimePicker<br> &bull; TimePicker<br> |
 
 ### Syncfusion React Charts
 
@@ -68,7 +69,7 @@ The Syncfusion React Chart control is used to visualize the data with user inter
 
 |Package Name  |Installation command|Components
 |--------|--------|-------|
-| [ej2-react-charts](https://www.npmjs.com/package/@syncfusion/ej2-react-charts)    | npm install @syncfusion/ej2-react-charts | <li>Accumulation Chart</li> <li>Bullet Chart</li> <li>Chart</li> <li>Range Navigator</li> <li>Smith Chart</li> <li>Sparkline</li> <li>Stock Chart</li> |
+| [ej2-react-charts](https://www.npmjs.com/package/@syncfusion/ej2-react-charts)    | npm install @syncfusion/ej2-react-charts | &bull; Accumulation Chart<br> &bull; Bullet Chart<br> &bull; Chart<br> &bull; Range Navigator<br> &bull; Smith Chart<br> &bull; Sparkline<br> &bull; Stock Chart<br> |
 
 ### Syncfusion React CircularGauge
 
@@ -102,7 +103,7 @@ The Syncfusion React Dropdowns package contains a collection of Dropdown compone
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-dropdowns](https://www.npmjs.com/package/@syncfusion/ej2-react-dropdowns)    |npm i @syncfusion/ej2-react-dropdowns | <li>AutoComplete</li> <li>ComboBox</li> <li>Dropdown List</li> <li>Dropdown Tree</li> <li>ListBox</li> <li>Multiselect Dropdown</li> |
+| [ej2-react-dropdowns](https://www.npmjs.com/package/@syncfusion/ej2-react-dropdowns)    |npm i @syncfusion/ej2-react-dropdowns | &bull; AutoComplete<br> &bull; ComboBox<br> &bull; Dropdown List<br> &bull; Dropdown Tree<br> &bull; ListBox<br> &bull; Multiselect Dropdown<br> |
 
 ### Syncfusion React FileManager
 
@@ -152,7 +153,7 @@ The Syncfusion React Input components comes with a collection of form components
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-inputs](https://www.npmjs.com/package/@syncfusion/ej2-react-inputs)    |npm install @syncfusion/ej2-react-inputs | <li>ColorPicker</li> <li>MaskedTextBox</li> <li>NumericTextBox</li> <li>Slider</li> <li>Signature</li> <li>Textbox</li> <li>Uploader</li> |
+| [ej2-react-inputs](https://www.npmjs.com/package/@syncfusion/ej2-react-inputs)    |npm install @syncfusion/ej2-react-inputs | &bull; ColorPicker<br> &bull; MaskedTextBox<br> &bull; NumericTextBox<br> &bull; Slider<br> &bull; Signature<br> &bull; Textbox<br> &bull; Uploader<br> |
 
 ### Syncfusion React Kanban
 
@@ -178,7 +179,7 @@ The Syncfusion Layout package contains Cards, Avatars, Splitter and Dashboard La
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-layouts](https://www.npmjs.com/package/@syncfusion/ej2-react-layouts)    |npm install @syncfusion/ej2-react-layouts | <li>Avatar</li> <li>Card</li> <li>Dashboard Layout</li> <li>Splitter</li> |
+| [ej2-react-layouts](https://www.npmjs.com/package/@syncfusion/ej2-react-layouts)    |npm install @syncfusion/ej2-react-layouts | &bull; Avatar<br> &bull; Card<br> &bull; Dashboard Layout<br> &bull; Splitter<br> |
 
 ### Syncfusion React LinearGauge
 
@@ -212,7 +213,7 @@ A package of React navigation components such as Accordion, Breadcrumb, ContextM
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-navigations](https://www.npmjs.com/package/@syncfusion/ej2-react-navigations)    |npm install @syncfusion/ej2-react-navigations | <li>Accordion</li> <li>Breadcrumb</li> <li>ContextMenu</li> <li>MenuBar</li> <li>Tabs</li> <li>Toolbar</li> <li>TreeView</li> <li>Sidebar</li> |
+| [ej2-react-navigations](https://www.npmjs.com/package/@syncfusion/ej2-react-navigations)    |npm install @syncfusion/ej2-react-navigations | &bull; Accordion<br> &bull; Breadcrumb<br> &bull; ContextMenu<br> &bull; MenuBar<br> &bull; Tabs<br> &bull; Toolbar<br> &bull; TreeView<br> &bull; Sidebar<br> |
 
 ### Syncfusion React Notifications
 
@@ -222,7 +223,7 @@ The Syncfusion React Notification component is used to notify status or summary 
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-notifications](https://www.npmjs.com/package/@syncfusion/ej2-react-notifications)    |npm install @syncfusion/ej2-react-notifications | <li>Badge</li> <li>Spinner</li> <li>Toast</li> |
+| [ej2-react-notifications](https://www.npmjs.com/package/@syncfusion/ej2-react-notifications)    |npm install @syncfusion/ej2-react-notifications | &bull; Badge<br> &bull; Spinner<br> &bull; Toast<br> |
 
 ### Syncfusion React PdfViewer
 
@@ -248,7 +249,7 @@ A package of Popup components Dialog and Tooltip are used to display information
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-popups](https://www.npmjs.com/package/@syncfusion/ej2-react-popups)    |npm install @syncfusion/ej2-react-popups | <li>Dialog</li> <li>Tooltip</li> |
+| [ej2-react-popups](https://www.npmjs.com/package/@syncfusion/ej2-react-popups)    |npm install @syncfusion/ej2-react-popups | &bull; Dialog<br> &bull; Tooltip<br> |
 
 ### Syncfusion React ProgressBar
 
@@ -290,7 +291,7 @@ The Syncfusion React SplitButtons package contains UI components such as DropDow
 
 |Package Name  |Installation command|Components |
 |--------|--------|-------|
-| [ej2-react-splitbuttons](https://www.npmjs.com/package/@syncfusion/ej2-react-splitbuttons)    |npm install @syncfusion/ej2-react-splitbuttons | <li>ButtonGroup</li> <li>DropDownButton</li> <li>ProgressButton</li> <li>SplitButton</li> |
+| [ej2-react-splitbuttons](https://www.npmjs.com/package/@syncfusion/ej2-react-splitbuttons)    |npm install @syncfusion/ej2-react-splitbuttons | &bull; ButtonGroup<br> &bull; DropDownButton<br> &bull; ProgressButton<br> &bull; SplitButton<br> |
 
 ### Syncfusion React Spreadsheet
 
