@@ -23,7 +23,7 @@ function App() {
         title: 'Percentage (%)', labelFormat: '{value}%',
         minimum: 0, maximum: 20, interval: 2
     };
-    const titlestyle = { position: 'Custom', location: { x: 200, y: 20 } };
+    const titlestyle = { position: 'Custom', x: 300, y: 60 };
     const marker = { visible: true, width: 10, height: 10 };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Unemployment Rates 1975-2010' titleStyle={titlestyle}>
         <Inject services={[StepLineSeries, Legend, Tooltip, DataLabel, DateTime]} />

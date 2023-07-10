@@ -32,7 +32,8 @@ function App() {
               primaryXAxis={primaryxAxis}
               primaryYAxis={primaryyAxis}
               title='Unemployment Rates 1975-2010'
-              titleStyle={titlestyle}>
+              titleStyle={titlestyle}
+              legendSettings={{ visible: false }}>
               <Inject services={[StepLineSeries, Legend, Tooltip, DataLabel, DateTime]} />
               <SeriesCollectionDirective>
                      <SeriesDirective dataSource={data} xName='x' yName='y' name='China' width={2} type='StepLine' marker={marker}></SeriesDirective>
