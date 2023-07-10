@@ -25,7 +25,7 @@ function App() {
     };
     const titlestyle = { position: 'Bottom' };
     const marker = { visible: true, width: 10, height: 10 };
-    return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Unemployment Rates 1975-2010' titleStyle={titlestyle}>
+    return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Unemployment Rates 1975-2010' titleStyle={titlestyle} legendSettings={{ visible: false }}>
         <Inject services={[StepLineSeries, Legend, Tooltip, DataLabel, DateTime]} />
         <SeriesCollectionDirective>
             <SeriesDirective dataSource={data} xName='x' yName='y' name='China' width={2} type='StepLine' marker={marker}></SeriesDirective>

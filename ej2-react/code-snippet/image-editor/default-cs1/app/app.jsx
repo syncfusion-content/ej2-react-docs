@@ -15,7 +15,8 @@ export default class App extends React.Component {
         }
     }
     btnClick() {
-        this.imgObj.drawText(500, 500, 'Syncfusion', 'Arial', 100, true, true, '#000');
+        let dimension = imgObj.getImageDimension();
+        imgObj.drawText(dimension.x, dimension.y);
     }
     render() {
         return (<div className='e-img-editor-sample'>

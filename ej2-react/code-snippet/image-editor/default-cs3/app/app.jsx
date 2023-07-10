@@ -15,7 +15,12 @@ export default class App extends React.Component {
         }
     }
     btnClick() {
-        this.imgObj.drawRectangle(500, 500, 400, 400, 2, "#fff", 'blue');
+        let dimension = imgObj.getImageDimension();
+        imgObj.drawRectangle(dimension.x, dimension.y);
+        imgObj.drawEllipse(dimension.x, dimension.y);
+        imgObj.drawLine(dimension.x, dimension.y);
+        imgObj.drawArrow(dimension.x, dimension.y+10, dimension.x+50, dimension.y+10, 10);
+        imgObj.drawPath([{x: dimension.x, y: dimension.y}, {x: dimension.x+50, y: dimension.y+50}, {x: dimension.x+20, y: dimension.y+50}], 8);
     }
     render() {
         return (<div className='e-img-editor-sample'>

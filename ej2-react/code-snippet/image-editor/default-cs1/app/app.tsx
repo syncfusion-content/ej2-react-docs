@@ -17,7 +17,8 @@ function App() {
         }
     }
     function btnClick(): void {
-        imgObj.drawText(500, 500, 'Syncfusion', 'Arial', 100, true, true, '#000');
+        let dimension: any = imgObj.getImageDimension();
+        imgObj.drawText(dimension.x, dimension.y);
     }
 
     return (
