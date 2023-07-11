@@ -34,6 +34,7 @@ System.config({
         "@syncfusion/ej2-react-compression": "syncfusion:ej2-react-compression/dist/ej2-react-compression.umd.min.js",
         "@syncfusion/ej2-react-svg-base": "syncfusion:ej2-react-svg-base/dist/ej2-react-svg-base.umd.min.js",
         "@syncfusion/ej2-react-heatmap": "syncfusion:ej2-react-heatmap/dist/ej2-react-heatmap.umd.min.js",
+        "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js"
     },
