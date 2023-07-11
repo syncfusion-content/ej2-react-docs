@@ -42,7 +42,7 @@ export function App() {
                 'Month of November 2023',
                 'Month of December 2023'
             ],
-            labelRotation: 45,
+            labelRotation: 90,
             opposedPosition: true
         }}
         yAxis={{

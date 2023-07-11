@@ -55,7 +55,7 @@ Please check the below section, to customize the style and appearance of the Cal
 
 ## Full Screen Mode: Enhancing the DateTimePicker Component (Mobile Support Only)
 
-We have introduced the full screen mode functionality in our DateTimePicker component, enabling users to see the DateTimePicker calendar and time popup element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateTimePicker component, simply set the `fullScreenMode` API value to `true`. This action will extend the calendar and time popup element to occupy the entire screen on mobile devices.
+We have introduced the full screen mode functionality in our DateTimePicker component, enabling users to see the DateTimePicker calendar and time popup element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateTimePicker component, simply set the [fullScreenMode](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#fullScreenMode) API value to `true`. This action will extend the calendar and time popup element to occupy the entire screen on mobile devices.
 
 ```typescript
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
