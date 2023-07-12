@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open save in React Image editor component
+# Open save in the React Image Editor component
 
 To import an image into the canvas, it must first be converted into a blob object. The Uploader component can be used to facilitate the process of uploading an image from the user interface. Once the image has been uploaded, it can then be converted into a blob and drawn onto the canvas. 
 
@@ -38,7 +38,7 @@ The Image Editor component supports three common image formats: PNG, JPEG, and S
 
 When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG or SVG, based on your specific requirements or preferences. 
 
-## Save as Image
+## Save as image
 
 The [`export`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#export) method in the Image Editor component enables you to save the modified image as a file on the local device. This method accepts two parameters: the file name and the file type. 
 
@@ -64,7 +64,7 @@ In the following example, the [`export`](https://ej2.syncfusion.com/react/docume
 
 ## File opened event 
 
-The FileOpened event is triggered in the Image Editor component after an image is successfully loaded. It provides the FileOpenEventArgs as the event argument, which contains two specific arguments: 
+The [`FileOpened`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#fileopened) event is triggered in the Image Editor component after an image is successfully loaded. It provides the [`FileOpenEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/openEventArgs/) as the event argument, which contains two specific arguments: 
 
 * FileName: This argument is a string that contains the file name of the opened image. It represents the name of the file that was selected or provided when loading the image into the Image Editor. 
 
@@ -74,7 +74,7 @@ By accessing these arguments within the FileOpened event handler, you can retrie
 
 ## Saving event 
 
-The [`saved`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#saved) event is triggered in the Image Editor component when an image is being saved to the local disk. It provides the SaveEventArgs as the event argument, which includes the following specific arguments: 
+The [`saving`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#saving) event is triggered in the Image Editor component when an image is being saved to the local disk. It provides the [`SaveEventArgs`](https://ej2.syncfusion.com/react/documentation/api/image-editor/saveEventArgs/) as the event argument, which includes the following specific arguments: 
 
 * FileName: This argument is a string that holds the file name of the saved image. It represents the name of the file that will be used when saving the image to the local disk. 
 
@@ -91,7 +91,6 @@ The [`created`](https://helpej2.syncfusion.com/react/documentation/api/image-edi
 ## Destroyed event 
 
 The [`destroyed`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#destroyed) event is triggered once the Image Editor component is destroyed or removed from the application. This event serves as a notification that the component and its associated resources have been successfully cleaned up and are no longer active. 
-
 
 ## Reset an image 
 

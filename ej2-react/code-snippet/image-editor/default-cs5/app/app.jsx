@@ -7,8 +7,8 @@ import * as ReactDOM from "react-dom";
 export default class App extends React.Component {
     imgObj;
     shapeChanging(args)  {
-        if (args.currentShapeSettings.type === 'FreehandDraw') {
-            args.currentShapeSettings.color = 'red';
+         if (args.currentShapeSettings.type === 'FreehandDraw') {
+            args.currentShapeSettings.strokeColor = 'red';
         }
     }
     imageEditorCreated() {

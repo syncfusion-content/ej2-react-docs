@@ -131,14 +131,14 @@ A default indicator in a carousel is a set of dots that indicate the current pos
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/carousel/indicator-type-cs0/app/index.jsx %}
+{% include code-snippet/carousel/indicators-type-cs0/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/carousel/indicator-type-cs0/app/index.tsx %}
+{% include code-snippet/carousel/indicators-type-cs0/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/carousel/indicator-type-cs0" %}
+ {% previewsample "page.domainurl/code-snippet/carousel/indicators-type-cs0" %}
 
 #### Dynamic Indicator
 
@@ -146,14 +146,14 @@ A dynamic indicator in a carousel provides visual cues or markers that dynamical
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/carousel/indicator-type-cs1/app/index.jsx %}
+{% include code-snippet/carousel/indicators-type-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/carousel/indicator-type-cs1/app/index.tsx %}
+{% include code-snippet/carousel/indicators-type-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/carousel/indicator-type-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/carousel/indicators-type-cs1" %}
 
 #### Fraction Indicator
 
@@ -161,14 +161,14 @@ The fraction indicator type displays the current slide index and total slide cou
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/carousel/indicator-type-cs2/app/index.jsx %}
+{% include code-snippet/carousel/indicators-type-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/carousel/indicator-type-cs2/app/index.tsx %}
+{% include code-snippet/carousel/indicators-type-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/carousel/indicator-type-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/carousel/indicators-type-cs2" %}
 
 #### Progress Indicator
 
@@ -176,14 +176,14 @@ The Progress Indicator type displays the current slide as a progress bar. The Pr
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/carousel/indicator-type-cs3/app/index.jsx %}
+{% include code-snippet/carousel/indicators-type-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/carousel/indicator-type-cs3/app/index.tsx %}
+{% include code-snippet/carousel/indicators-type-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/carousel/indicator-type-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/carousel/indicators-type-cs3" %}
 
 ## Play button
 

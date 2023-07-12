@@ -9,11 +9,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter in React Image editor control
+# Filters in the React Image Editor component
 
 Filters are pre-defined effects that can be applied to an image to alter its appearance or mood. Image filters can be used to add visual interest or to enhance certain features of the image. Some common types of image filters include cold, warm, chrome, sepia, and invert. This can be done by either using the toolbar or the [`applyImageFilter`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#applyimagefilter) method which takes a single parameter: the filter applied to an image.
 
-## Apply filter effect 
+## Apply filter effect
+
+The [`applyImageFilter`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#applyimagefilter) method is utilized to apply filters to an image. By passing the desired filter type as the first parameter of the method, specified as [`ImageFilterOption`](https://ej2.syncfusion.com/react/documentation/api/image-editor/imageFilterOption/) the method applies the corresponding filter to the image. This allows for easy and convenient application of various filters to enhance or modify the image based on the chosen filter type.
 
 The [`applyImageFilter`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#applyimagefilter) method is used to perform filtering by specifying the type of filter as ImageFilterOption and send it a first parameter of the method. 
 

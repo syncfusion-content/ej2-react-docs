@@ -42,7 +42,7 @@ When you double click on a HeatMap cell, the [cellDoubleClick](https://ej2.syncf
 
  {% previewsample "page.domainurl/code-snippet/heatmap/events-cs2" %}
 
- ## cellRender
+## cellRender
 
 The [cellRender](https://ej2.syncfusion.com/react/documentation/api/heatmap/#cellrender) event will be triggered before each HeatMap cell is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/heatmap/iCellEventArgs/).
 
@@ -57,7 +57,7 @@ The [cellRender](https://ej2.syncfusion.com/react/documentation/api/heatmap/#cel
 
  {% previewsample "page.domainurl/code-snippet/heatmap/events-cs3" %}
 
- ## cellSelected
+## cellSelected
 
 When single or multiple cells in the HeatMap are selected, the [cellSelected](https://ej2.syncfusion.com/react/documentation/api/heatmap/#cellselected) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/heatmap/iSelectedEventArgs/).
 
@@ -72,7 +72,7 @@ When single or multiple cells in the HeatMap are selected, the [cellSelected](ht
 
  {% previewsample "page.domainurl/code-snippet/heatmap/events-cs4" %}
 
- ## created
+## created
 
 Once HeatMap has been completely rendered, the [created](https://ej2.syncfusion.com/react/documentation/api/heatmap/#created) event is triggered.
 
@@ -87,7 +87,7 @@ Once HeatMap has been completely rendered, the [created](https://ej2.syncfusion.
 
  {% previewsample "page.domainurl/code-snippet/heatmap/events-cs5" %}
 
- ## legendRender
+## legendRender
 
 The [legendRender](https://ej2.syncfusion.com/react/documentation/api/heatmap/#legendrender) event is triggered before the legend is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/heatmap/iLegendRenderEventArgs/).
 
@@ -103,7 +103,7 @@ The [legendRender](https://ej2.syncfusion.com/react/documentation/api/heatmap/#l
 
  {% previewsample "page.domainurl/code-snippet/heatmap/events-cs6" %}
 
- ## load
+## load
 
 The [load](https://ej2.syncfusion.com/react/documentation/api/heatmap/#load) event is triggered before the HeatMap is rendered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/heatmap/iLoadedEventArgs/).
 
@@ -118,7 +118,7 @@ The [load](https://ej2.syncfusion.com/react/documentation/api/heatmap/#load) eve
 
  {% previewsample "page.domainurl/code-snippet/heatmap/events-cs7" %}
 
- ## loaded
+## loaded
 
 Once HeatMap is loaded, the [loaded](https://ej2.syncfusion.com/react/documentation/api/heatmap/#loaded) event is triggered. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/heatmap/iLoadedEventArgs/).
 
@@ -133,7 +133,7 @@ Once HeatMap is loaded, the [loaded](https://ej2.syncfusion.com/react/documentat
 
  {% previewsample "page.domainurl/code-snippet/heatmap/events-cs8" %}
 
- ## resized
+## resized
 
 When the window is resized, the [resized](https://ej2.syncfusion.com/react/documentation/api/heatmap/#resized) event is triggered to notify the resize of the HeatMap. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/heatmap/iResizeEventArgs/).
 
@@ -148,7 +148,7 @@ When the window is resized, the [resized](https://ej2.syncfusion.com/react/docum
 
  {% previewsample "page.domainurl/code-snippet/heatmap/events-cs9" %}
 
- ## tooltipRender
+## tooltipRender
 
 The [tooltipRender](https://ej2.syncfusion.com/react/documentation/api/heatmap/#tooltiprender) event is triggered before the tooltip is rendered on the HeatMap cell. To know more about arguments of this event, refer [here](https://ej2.syncfusion.com/react/documentation/api/heatmap/iTooltipEventArgs/).
 

@@ -19,18 +19,11 @@ function App() {
             imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
         }
     }
-
-    function blurClick(): void {
-        imgObj.finetuneImage(ImageFinetuneOption.Blur,10);
+    function brightnessClick(): void {
+        imgObj.finetuneImage(ImageFinetuneOption.Brightness,10);
     }
-    function exposureClick(): void {
-        imgObj.finetuneImage(ImageFinetuneOption.Exposure,10);
-    }
-    function hueClick(): void {
-        imgObj.finetuneImage(ImageFinetuneOption.Hue,10);
-    }
-    function opacityClick(): void {
-        imgObj.finetuneImage(ImageFinetuneOption.Opacity,10);
+    function contrastClick(): void {
+        imgObj.finetuneImage(ImageFinetuneOption.Contrast,10);
     }
 
     return (
@@ -38,10 +31,8 @@ function App() {
         <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
         </ImageEditorComponent>
                 <div>
-                    <ButtonComponent cssClass='e-primary' content='Blur' onClick = {blurClick}/>
-                    <ButtonComponent cssClass='e-primary' content='Exposure' onClick = {exposureClick}/>
-                    <ButtonComponent cssClass='e-primary' content='Hue' onClick = {hueClick}/>
-                    <ButtonComponent cssClass='e-primary' content='Opacity' onClick = {opacityClick}/>
+                    <ButtonComponent cssClass='e-primary' content='Brightness' onClick = {brightnessClick}/>
+                    <ButtonComponent cssClass='e-primary' content='Contrast' onClick = {contrastClick}/>
                 </div>
             </div>
     );

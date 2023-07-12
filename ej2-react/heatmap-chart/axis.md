@@ -91,7 +91,7 @@ In HeatMap, you can place the axis label in an opposite position of its default 
 
  {% previewsample "page.domainurl/code-snippet/heatmap/axis-cs5" %}
 
- ## Axis labels customization
+## Axis labels customization
 
 ### Customizing the text style
 

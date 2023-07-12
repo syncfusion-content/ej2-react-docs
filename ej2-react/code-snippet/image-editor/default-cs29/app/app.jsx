@@ -14,36 +14,13 @@ export default class App extends React.Component {
             this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
         }
     }
-    brightnessClick() {
-        this.imgObj.finetuneImage(ImageFinetuneOption.Brightness, 10);
-    }
-    blurClick() {
-        this.imgObj.finetuneImage(ImageFinetuneOption.Blur, 10);
-    }
-    contrastClick() {
-        this.imgObj.finetuneImage(ImageFinetuneOption.Contrast, 10);
-    }
-    exposureClick() {
-        this.imgObj.finetuneImage(ImageFinetuneOption.Exposure, 10);
-    }
-    hueClick() {
-        this.imgObj.finetuneImage(ImageFinetuneOption.Hue, 10);
-    }
-    opacityClick() {
-        this.imgObj.finetuneImage(ImageFinetuneOption.Opacity, 10);
+    quickAccessToolbarOpen(args)  {
+        args.toolbarItems = ['Clone'];
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbar = {[]}>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} quickAccessToolbarOpen={this.quickAccessToolbarOpen.bind(this)} toolbar = {[]}>
             </ImageEditorComponent>
-                    <div>
-                        <ButtonComponent cssClass='e-primary' content='Brightness' onClick={this.brightnessClick.bind(this)}/>
-                        <ButtonComponent cssClass='e-primary' content='Blur' onClick={this.blurClick.bind(this)}/>
-                        <ButtonComponent cssClass='e-primary' content='Contrast' onClick={this.contrastClick.bind(this)}/>
-                        <ButtonComponent cssClass='e-primary' content='Exposure' onClick={this.exposureClick.bind(this)}/>
-                        <ButtonComponent cssClass='e-primary' content='Hue' onClick={this.hueClick.bind(this)}/>
-                        <ButtonComponent cssClass='e-primary' content='Opacity' onClick={this.opacityClick.bind(this)}/>
-                    </div>
                 </div>);
     }
 }

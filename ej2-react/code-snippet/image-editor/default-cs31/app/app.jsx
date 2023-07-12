@@ -5,6 +5,7 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 export default class App extends React.Component {
     imgObj;
+    toolbar = ['Annotate', "Line", "Rectangle", "Text", 'ZoomIn', 'ZoomOut', { text: 'Custom' }];
     toolbarItemClicked (args) {
         if (args.item.text === 'Custom') {
             imageEditorObj.rotate(90);
@@ -20,7 +21,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-                <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbarItemClicked={this.toolbarItemClicked.bind(this)}>
+                <ImageEditorComponent ref={(img) => { this.imgObj = img; }} toolbar={this.toolbar} created={this.imageEditorCreated.bind(this)} toolbarItemClicked={this.toolbarItemClicked.bind(this)}>
                 </ImageEditorComponent>
             </div>);
     }

@@ -185,7 +185,7 @@ Output will be appears as follows.
                             ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
    </PdfViewerComponent>
    ```
-   {% raw %}
+  {% endraw %}
    [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
 
 > You can refer to our [React PDF Viewer](https://www.syncfusion.com/react-ui-components/react-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/default) to understand how to explains core features of PDF Viewer.

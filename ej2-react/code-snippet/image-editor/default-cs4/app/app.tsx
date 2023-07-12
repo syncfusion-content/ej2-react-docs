@@ -14,6 +14,11 @@ function App() {
             args.currentShapeSettings.color = 'red';
         }
     }
+    function btnClick(): void {
+        let dimension: any = imgObj.getImageDimension();
+        imgObj.drawText(dimension.x, dimension.y, 'Enter\nText');
+    }
+
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
             imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
@@ -26,6 +31,9 @@ function App() {
         <div className='e-img-editor-sample'>
         <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} shapeChanging={shapeChanging} toolbar = {[]}>
         </ImageEditorComponent>
+        <div>
+                    <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
+                </div>
             </div>
     );
 }

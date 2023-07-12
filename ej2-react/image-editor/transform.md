@@ -108,9 +108,25 @@ Here is an example of specifying [`minZoomFactor`](https://helpej2.syncfusion.co
 
 The Image Editor allows to pan an image when the image exceeds the canvas size or selection range. When zooming in on an image or applying a selection for cropping, it is common for the image to exceed the size of the canvas or exceed the selection range. So, the panning is used to view the entire image, by clicking on the canvas and dragging it in the direction they want to move.
 
-### Pan event 
+Here is an example of Panning an image in a button click event.
 
-The [`panEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/panEventArgs/) event is activated when the user begins dragging the image within the canvas, and the OnPanEnd event is triggered once the panning action is completed. These events provide an opportunity to perform specific actions, such as updating the image's position, in response to the panning gesture. And these event uses [`panEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/panEventArgs/) to handle the action the panning action when the user starts dragging the image. 
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs21/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs21/app/app.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/image-editor/default-cs21/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs21" %}
+
+### Panning event 
+
+The [`panning`](https://helpej2.syncfusion.com/react/documentation/api/image-editor#panning) event is activated when the user begins dragging the image within the canvas. This event provide an opportunity to perform specific actions, like adjusting the position of an image, in response to the gesture of panning. And these event uses [`panEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/panEventArgs/) to handle the panning action when the user starts dragging the image. 
 
 The parameter available in the [`panEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/panEventArgs/) events are, 
 
@@ -122,7 +138,7 @@ The parameter available in the [`panEventArgs`](https://helpej2.syncfusion.com/r
 
 ## Zooming event 
 
-The [`zooming`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#zooming) event is triggered when performing zooming the image. This event can be used to perform certain actions, such as updating the position of the image. This event is passed an object that contains information about the zooming event, such as the amount of zooming performed. 
+The [`zooming`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#zooming) event is triggered when performing zooming the image. This event can be used to perform certain actions, such as updating the position of the image. This event is passed an object that contains information about the zooming event, such as the amount of zooming performed. And this event uses [`ZoomEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomEventArgs/) to handle the zooming action in the image.
 
 The parameter available in the Zooming event is, 
 
@@ -138,7 +154,7 @@ The parameter available in the Zooming event is,
 
 ## Rotating event 
 
-The [`rotating`](https://ej2.syncfusion.com/documentation/api/image-editor#rotating) event is triggered when performing rotating the image. This event is passed an object that contains information about the rotating event, such as the amount of rotation performed. 
+The [`rotating`](https://ej2.syncfusion.com/documentation/api/image-editor#rotating) event is triggered when performing rotating the image. This event is passed an object that contains information about the rotating event, such as the amount of rotation performed. And this event uses [`RotateEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/rotateEventArgs/) to handle the rotating action in the image.
 
 The parameter available in the Rotating event is, 
 
@@ -150,7 +166,7 @@ RotateEventArgs.cancel – Specifies a boolean value to cancel the rotating acti
 
 ## Flipping event 
 
-The [`flipping`](https://ej2.syncfusion.com/documentation/api/image-editor#flipping) event is triggered when performing flipping the image. This event is passed an object that contains information about the flipping event, such as the amount of flip performed. 
+The [`flipping`](https://ej2.syncfusion.com/documentation/api/image-editor#flipping) event is triggered when performing flipping the image. This event is passed an object that contains information about the flipping event, such as the amount of flip performed. And this event uses [`FlipEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/flipEventArgs/) to handle the flipping action in the image.
 
 The parameter available in the [`flipping`](https://ej2.syncfusion.com/documentation/api/image-editor#flipping) event is, 
 

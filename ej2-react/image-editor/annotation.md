@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation in React Image editor component
+# Annotation in the React Image Editor component
 
-The Image Editor allows adding annotations to the image, including text, freehand drawings, and shapes like rectangles, ellipses, arrows, paths, and lines. This gives the flexibility to mark up the image with notes, sketches, and other visual elements as needed. These annotation tools can help to communicate and share ideas more effectively. 
+The React Image Editor allows adding annotations to the image, including text, freehand drawings, and shapes like rectangles, ellipses, arrows, paths, and lines. This gives the flexibility to mark up the image with notes, sketches, and other visual elements as needed. These annotation tools can help to communicate and share ideas more effectively.
 
-## Text Annotation
+## Text annotation
 
-The Text annotation feature in the Image Editor provides the capability to add and customize labels, captions, and other text elements directly onto the image. With this feature, you can easily insert text at specific locations within the image and customize various aspects of the text to meet your requirements. 
+The text annotation feature in the Image Editor provides the capability to add and customize labels, captions, and other text elements directly onto the image. With this feature, you can easily insert text at specific locations within the image and customize various aspects of the text to meet your requirements. 
 
 You have control over the customization options including text content, font family, font style and font size for the text annotation.
 
-### Add a Text
+### Add a text
 
-The [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawtext) method in the Image Editor allows you to insert a text annotation into the image with specific customization options. This method accepts the following parameters:
+The [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawtext) method in the React Image Editor allows you to insert a text annotation into the image with specific customization options. This method accepts the following parameters:
 
 * x: Specifies the x-coordinate of the text, determining its horizontal position within the image. 
 
@@ -56,9 +56,9 @@ Here is an example of adding a text in a button click using [`drawText`](https:/
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs1" %}
 
-### Multiline Text
+### Multiline text
 
-The [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawtext) method in the Image Editor component is commonly used to insert text annotations into an image. If the provided text parameter contains a newline character (\n), the text will be automatically split into multiple lines, with each line appearing on a separate line in the annotation. 
+The [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawtext) method in the React Image Editor component is commonly used to insert text annotations into an image. If the provided text parameter contains a newline character (\n), the text will be automatically split into multiple lines, with each line appearing on a separate line in the annotation. 
 
 Here is an example of adding a multiline text in a button click using [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawtext) method.
 
@@ -76,11 +76,13 @@ Here is an example of adding a multiline text in a button click using [`drawText
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs22" %}
 
-### Delete Text
+### Delete a text
 
-The Image Editor component provides the [`deleteShape`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#deleteshape) method, which allows you to remove a text annotation from the image editor. To use this method, you need to pass the shapeId of the annotation as a parameter. 
+The [`deleteShape`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#deleteshape) method in the React Image Editor allows you to remove a text annotation from the image editor. To use this method, you need to pass the [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) of the annotation as a parameter.
 
-The shapeId is a unique identifier assigned to each text annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired text element. By specifying the shapeId associated with the text annotation you want to remove, you can effectively delete it from the image editor. 
+The [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) is a unique identifier assigned to each text annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired text element. By specifying the [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) associated with the text annotation you want to remove, you can effectively delete it from the image editor.
+
+To retrieve the inserted text annotations, you can utilize the [`getShapeSetting`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#getshapesetting) method, which provides a collection of annotations represented by [`ShapeSettings`](https://ej2.syncfusion.com/react/documentation/api/image-editor/shapeSettings/). This method allows you to access and work with the annotations that have been inserted into the image.
 
 Here is an example of deleting a text in a button click using [`deleteShape`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#deleteshape) method. 
 
@@ -122,15 +124,11 @@ Here is an example of changing the text’s color and its font family using the 
         
 ## Freehand drawing
 
-The [`freeHandDraw`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#freehanddraw) Draw annotation tool in the Image Editor component is a versatile feature that allows users to draw and sketch directly on the image using mouse or touch input. This tool provides a flexible and creative way to add freehand drawings or annotations to the image. 
+The Freehand Draw annotation tool in the React Image Editor component is a versatile feature that allows users to draw and sketch directly on the image using mouse or touch input. This tool provides a flexible and creative way to add freehand drawings or annotations to the image. 
 
-To enable or disable the freehand drawing option, the Image Editor component provides two methods: 
+The [`freehandDraw`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#freehanddraw) method is used to enable or disable the freehand drawing option in the React Image Editor component. 
 
-EnableFreehandDraw: This method is used to enable the freehand drawing option in the Image Editor. Once enabled, users can start drawing freely on the image using their mouse or touch input. 
-
-DisableFreehandDraw: This method is used to disable the freehand drawing option in the Image Editor. When disabled, users will no longer be able to perform freehand drawings on the image. 
-
-Here is an example of using the [`freeHandDraw`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#freehanddraw) method in a button click event. 
+Here is an example of using the [`freeHandDraw`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#freehanddraw) method in a button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -148,7 +146,7 @@ Here is an example of using the [`freeHandDraw`](https://ej2.syncfusion.com/reac
 
 ### Adjust the stroke width and color 
 
-The [shapeChanging](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#shapechanging) event in the Image Editor component is triggered when a freehand annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the freehand annotation’s color and stroke width by adjusting the relevant properties. 
+The [shapeChanging](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#shapechanging) event in the React Image Editor component is triggered when a freehand annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the freehand annotation's color and stroke width by adjusting the relevant properties. 
 
 By leveraging the [shapeChanging](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#shapechanging) event, you can enhance the customization options for freehand annotations and provide a more tailored and interactive experience within the Image Editor component. 
 
@@ -169,11 +167,13 @@ Here is an example of changing the freehand draw stroke width and color using th
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs5" %}
 
-### Delete Freehand drawing
+### Delete a freehand drawing
 
-The Image Editor component provides the [`deleteShape`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#deleteshape) method, which allows you to remove a freehand annotation from the image editor. To use this method, you need to pass the [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) of the annotation as a parameter. 
+The [`deleteShape`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#deleteshape) method in the React Image Editor allows you to remove a freehand annotation from the image editor. To use this method, you need to pass the [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) of the annotation as a parameter. 
 
-The [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) is a unique identifier assigned to each freehand annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired annotation. By specifying the [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) associated with the freehand annotation you want to remove, you can effectively delete it from the image editor. 
+The [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) is a unique identifier assigned to each freehand annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired annotation. By specifying the [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) associated with the freehand annotation you want to remove, you can effectively delete it from the image editor.
+
+To retrieve the inserted freehand annotations, you can utilize the [`getShapeSetting`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#getshapesetting) method, which provides a collection of annotations represented by [`ShapeSettings`](https://ej2.syncfusion.com/react/documentation/api/image-editor/shapeSettings/). This method allows you to access and work with the annotations that have been inserted into the image.
 
 Here is an example of deleting a freehand annotation in a button click using (https://ej2.syncfusion.com/react/documentation/api/image-editor/#deleteshape) method. 
 
@@ -192,15 +192,15 @@ Here is an example of deleting a freehand annotation in a button click using (ht
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs24" %}
 
-## Shape Annotation
+## Shape annotation
 
 The Image Editor component provides the ability to add shape annotations to an image. These shape annotations include rectangles, ellipses, arrows, paths, and lines, allowing you to highlight, emphasize, or mark specific areas or elements within the image. 
 
 ### Add a rectangle /ellipse / line / arrow / path
 
-The Image Editor component provides two ways to add rectangle annotations to an image: using the toolbar or the [`drawRectangle`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawrectangle) method. Rectangle annotations are valuable tools for highlighting, emphasizing, or marking specific areas of an image to draw attention or provide additional context. 
+The [`drawRectangle`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawrectangle) method is used to insert a rectangle to the React Image Editor component. Rectangle annotations are valuable tools for highlighting, emphasizing, or marking specific areas of an image to draw attention or provide additional context. 
 
-The [`drawRectangle`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawrectangle) method in the Image Editor component takes seven parameters to define the properties of the rectangle annotation: 
+The [`drawRectangle`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawrectangle) method in the React Image Editor component takes seven parameters to define the properties of the rectangle annotation: 
 
 * x: Specifies the x-coordinate of the top-left corner of the rectangle. 
 
@@ -216,7 +216,7 @@ The [`drawRectangle`](https://ej2.syncfusion.com/react/documentation/api/image-e
 
 * fillColor: Specifies the fill color of the rectangle.
 
-The Image Editor component offers two methods to add ellipse annotations to an image: utilizing the toolbar or using the [`drawEllipse`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawellipse) method. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
+The [`drawEllipse`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawellipse) method is used to insert a ellipse to the React Image Editor component. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
 The [`drawEllipse`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawellipse) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
 
@@ -234,7 +234,7 @@ The [`drawEllipse`](https://ej2.syncfusion.com/react/documentation/api/image-edi
 
 * fillColor: Specifies the fill color of the ellipse. 
 
-The Image Editor component offers two methods to add line annotations to an image: utilizing the toolbar or using the [`drawLine`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawline) method. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image. 
+The [`drawLine`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawline) method is used to insert a line to the React Image Editor component. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image. 
 
 The [`drawLine`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawline) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
 
@@ -251,7 +251,7 @@ The [`drawLine`](https://ej2.syncfusion.com/react/documentation/api/image-editor
 * strokeColor - Specifies the stroke color of the line. 
 
 
-The Image Editor component offers two methods to add arrow annotations to an image: utilizing the toolbar or using the ['drawArrow'](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawarrow) method. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
+The ['drawArrow'](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawarrow) method is used to insert a arrow to the React Image Editor component. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
 The ['drawArrow'](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawarrow) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
 
@@ -271,7 +271,7 @@ The ['drawArrow'](https://ej2.syncfusion.com/react/documentation/api/image-edito
 
 * arrowEnd - Specifies the arrowhead as ImageEditorArrowHeadType at the end of the arrow.
 
-The Image Editor component offers two methods to add path annotations to an image: utilizing the toolbar or using the ['drawPath'](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawpath) method. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
+The ['drawPath'](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawpath) method is used to insert a path to the React Image Editor component. Path annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
 The ['drawPath'](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawpath) method in the Image Editor component takes three parameters to define the properties of the ellipse annotation: 
 
@@ -299,9 +299,11 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in a b
 
 ## Delete a shape 
 
-The Image Editor component provides the [`deleteShape`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#deleteshape) method, which allows you to remove a shape annotation from the image editor. To use this method, you need to pass the shapeId of the annotation as a parameter. 
+The [`deleteShape`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#deleteshape) method in the React Image Editor allows you to remove a shape annotation from the image editor. To use this method, you need to pass the [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) of the annotation as a parameter. 
 
-The shapeId is a unique identifier assigned to each shape annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired annotation. By specifying the shapeId associated with the shape annotation you want to remove, you can effectively delete it from the image editor. 
+The [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) is a unique identifier assigned to each shape annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired annotation. By specifying the [`shapeId`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapeid) associated with the shape annotation you want to remove, you can effectively delete it from the image editor.
+
+To retrieve the inserted shape annotations, you can utilize the [`getShapeSetting`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#getshapesetting) method, which provides a collection of annotations represented by [`ShapeSettings`](https://ej2.syncfusion.com/react/documentation/api/image-editor/shapeSettings/). This method allows you to access and work with the annotations that have been inserted into the image.
 
 Here is an example of deleting rectangle, ellipse, arrow, path, and line in a button click event. 
 

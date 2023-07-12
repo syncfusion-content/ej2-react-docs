@@ -25,7 +25,7 @@ function App() {
 
     return (
         <div id="wrapperDiv">
-            <ImageEditorComponent toolbar={toolbar} ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]} toolbarItemClicked={toolbarItemClicked}/>
+            <ImageEditorComponent toolbar={toolbar} ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbarItemClicked={toolbarItemClicked}/>
         </div>
     );
 }
