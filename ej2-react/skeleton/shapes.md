@@ -65,7 +65,7 @@ import * as React from "react";
 function App() {
 
   return (
-    <SkeletonComponent shape= 'Text' width= "15px"></SkeletonComponent>);
+    <SkeletonComponent shape= 'Text' width= "50%" height="15px"></SkeletonComponent>);
 }
 export default App;
 ```

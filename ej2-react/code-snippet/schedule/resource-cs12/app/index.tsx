@@ -7,6 +7,8 @@ import {
   ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject, EventSettingsModel, GroupModel
 } from '@syncfusion/ej2-react-schedule';
 import { holidayData, birthdayData, companyData, personalData } from './datasource';
+import { Predicate, Query } from '@syncfusion/ej2-data';
+import { CheckBox } from '@syncfusion/ej2-buttons';
 
 const App = () => {
   const scheduleObj = useRef<ScheduleComponent>(null);
@@ -29,11 +31,12 @@ const App = () => {
   const group: GroupModel = { resources: ['Calendars'] };
 
   const onChange = (args: ChangeEventArgs): void => {
-    let value: number = parseInt((args.event.target as Element).getAttribute('value'), 10);
-    let resourceData: Object[] = calendarCollections.filter((calendar: { [key: string]: Object }) => calendar.CalendarId === value);
-    if (args.checked) {
-      scheduleObj.current.addResource(resourceData[0], 'Calendars', value - 1);
-    } else {
+    const value = parseInt((args.event.currentTarget).querySelector('input').getAttribute('value'), 10);
+    const resourceData = calendarCollections.filter((item: any) => item.CalendarId === value);
+    if(args.checked) {
+      scheduleObj.current.addResource(resourceData[0], 'Calendars', value);
+    }
+    else {
       scheduleObj.current.removeResource(value, 'Calendars');
     }
   }
@@ -42,14 +45,10 @@ const App = () => {
       <tbody>
         <tr style={{ height: '50px' }}>
           <td style={{ width: '100%' }}>
-            <CheckBoxComponent value='1' id='personal' checked={true} label='My Calendar' disabled={true}
-              change={onChange} ></CheckBoxComponent>
-            <CheckBoxComponent value='2' id='company' checked={false} label='Company'
-              change={onChange} ></CheckBoxComponent>
-            <CheckBoxComponent value='3' id='birthdays' checked={false} label='Birthday'
-              change={onChange} ></CheckBoxComponent>
-            <CheckBoxComponent value='4' id='holidays' checked={false} label='Holiday'
-              change={onChange} ></CheckBoxComponent>
+          <CheckBoxComponent value='1' id='personal' checked={true} label='My Calendar' disabled={true} change={onChange}></CheckBoxComponent>
+          <CheckBoxComponent value='2' id='company' checked={false} label='Company' change={onChange}></CheckBoxComponent>
+          <CheckBoxComponent value='3' id='birthdays' checked={false} label='Birthday' change={onChange}></CheckBoxComponent>
+          <CheckBoxComponent value='4' id='holidays' checked={false} label='Holiday' change={onChange}></CheckBoxComponent>
           </td>
         </tr>
       </tbody>

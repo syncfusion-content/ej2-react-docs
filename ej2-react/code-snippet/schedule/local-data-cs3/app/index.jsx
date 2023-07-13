@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       const manager = new DataManager({
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Schedule',
+        url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
         adaptor: new ODataV4Adaptor()
       });
       await manager.ready;
@@ -17,9 +17,17 @@ const App = () => {
     };
     fetchData();
   }, []);
-  const eventSettings = { dataSource: dataManager };
-  return (
-    <ScheduleComponent height='550px' selectedDate={new Date(2020, 9, 20)} readonly={true} eventSettings={eventSettings}>
+  const fieldsData = {
+    id: 'Id',
+    subject: { name: 'ShipName' },
+    location: { name: 'ShipCountry' },
+    description: { name: 'ShipAddress' },
+    startTime: { name: 'OrderDate' },
+    endTime: { name: 'RequiredDate' },
+    recurrenceRule: { name: 'ShipRegion' }
+  }
+  const eventSettings = { dataSource: dataManager, fields: fieldsData }; return (
+    <ScheduleComponent height='550px' selectedDate={new Date(1996, 6, 9)} readonly={true} eventSettings={eventSettings}>
       <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>
   );

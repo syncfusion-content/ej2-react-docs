@@ -4,7 +4,7 @@ import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
 import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 function App() {
     let data = new DataManager({
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/',
+        url: 'https://services.syncfusion.com/js/production/api/orders/',
         adaptor: new ODataAdaptor,
         crossDomain: true
     });

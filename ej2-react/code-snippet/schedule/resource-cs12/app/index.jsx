@@ -4,6 +4,8 @@ import * as ReactDOM from 'react-dom';
 import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
 import { TimelineMonth, Month, ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Inject } from '@syncfusion/ej2-react-schedule';
 import { holidayData, birthdayData, companyData, personalData } from './datasource';
+import { Query, Predicate } from '@syncfusion/ej2-data';
+
 const App = () => {
   const scheduleObj = useRef(null);
   const calendarCollections = [
@@ -24,10 +26,10 @@ const App = () => {
   const group = { resources: ['Calendars'] };
 
   const onChange = (args) => {
-    let value = parseInt(args.event.target.getAttribute('value'), 10);
-    let resourceData = calendarCollections.filter((calendar) => calendar.CalendarId === value);
-    if (args.checked) {
-      scheduleObj.current.addResource(resourceData[0], 'Calendars', value - 1);
+    const value = parseInt((args.event.currentTarget).querySelector('input').getAttribute('value'), 10);
+    const resourceData = calendarCollections.filter((item) => item.CalendarId === value);
+    if(args.checked) {
+      scheduleObj.current.addResource(resourceData[0], 'Calendars', value);    
     }
     else {
       scheduleObj.current.removeResource(value, 'Calendars');
@@ -57,6 +59,6 @@ const App = () => {
     </ScheduleComponent>
   </div>);
 }
-;
+  ;
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
