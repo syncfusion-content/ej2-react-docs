@@ -8,21 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redux Form Validation
+# Integration of Syncfusion React Components in Redux Form
 
 [Redux Form](https://redux-form.com/) is a popular library used in React project for managing and handling form state. It integrates with the Redux state management library ([Redux Store](https://redux.js.org/api/store)) and provides a simple and efficient way to handle form inputs, validation, submission, and data synchronization with Redux.
 
-Syncfusion React components can be effectively utilized within Redux Form, enabling seamless integration of advanced UI functionality into the form implementation.
-
-Let's see how to create a `Redux Form`, integrate the Syncfusion components, and do the form validation.
+This guide will provide you with a step-by-step process for creating a `Redux Form`, integrating Syncfusion components, and implementing form validation.
 
 ## Create a Redux Form
 
 To create a simple login form using React Redux Form, follow these steps:
 
-1\. First, create a [React 17](https://reactjs.org/docs/create-a-new-react-app.html) project equipped with `Redux Form` (as React 17 relies on redux-form).
+1\. Create a new [React](https://reactjs.org/docs/create-a-new-react-app.html) project.
 
-2\. Install the required Redux dependencies by executing the following command:
+2\. Install the necessary Redux dependencies by executing the following command:
 
 ```bash
 npm install --save redux react-redux redux-form
@@ -77,7 +75,7 @@ export default App;
 
 ## Setting up the Redux store
 
-Having created the form and integrated it into the React project, let's proceed to add a store in the **index.js** file to store the form state using the `Provider` component. This allows the `Redux store` to be accessible to the child components.
+After creating the form and integrating it into the React project, set up a store in the **index.js** file to store the form state using the `Provider` component. This allows the `Redux store` to be accessible to the child components.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -109,11 +107,15 @@ export default LoginForm = reduxForm({
 
 ## Add Syncfusion React components
 
-To incorporate Syncfusion React UI components into the login form, follow these steps:
+To incorporate Syncfusion React components (DatePicker, TextBox, Button) into the login form, follow these steps:
 
-1\. Install the necessary dependencies for Syncfusion React UI components.
+1\. Install the necessary dependencies for React components.
 
-2\. Integrate the Syncfusion components within the login form using the `Field` component provided by Redux Form.
+```bash
+npm install @syncfusion/ej2-react-calendars @syncfusion/ej2-react-inputs @syncfusion/ej2-react-buttons --save
+```
+
+2\. Integrate the React components within the login form using the `Field` component provided by Redux Form.
 
 {% tabs %}
 {% highlight js tabtitle="LoginForm.js" %}
@@ -184,9 +186,9 @@ let LoginForm = (props) => {
 {% endhighlight %}
 {% endtabs %}
 
-## Validate the Form
+## Form Validation
 
-Redux Form provides built-in functionality for form validation. Implement the `validate` function to validate the form and display error messages when needed. The form inputs will be automatically validated upon submission.
+`Redux Form` provides built-in functionality for form validation. Implement the `validate` function to validate the form and display error messages when needed. The form inputs will be automatically validated upon submission.
 
 {% tabs %}
 {% highlight js tabtitle="App.js" %}
@@ -213,9 +215,9 @@ export default LoginForm = reduxForm({
 {% endhighlight %}
 {% endtabs %}
 
-## Errors validation
+## Displaying Errors
 
-Upon form submission, the system will validate the inputs and display corresponding errors below the respective input fields.
+Upon form submission, the inputs will be validated and corresponding error messages will be displayed below the respective input fields.
 
 {% tabs %}
 {% highlight js tabtitle="App.js" %}

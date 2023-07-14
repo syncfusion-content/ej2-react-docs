@@ -309,14 +309,14 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/image-editor/default-cs23/app/app.jsx %}
+{% include code-snippet/image-editor/default-cs25/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/image-editor/default-cs23/app/app.tsx %}
+{% include code-snippet/image-editor/default-cs25/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/image-editor/default-cs23/index.html %}
+{% include code-snippet/image-editor/default-cs25/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/image-editor/default-cs23" %}
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs25" %}

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as ReactDom from "react-dom";
-import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonGroupsDirective, RibbonGroupDirective} from "@syncfusion/ej2-react-ribbon";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonGroupsDirective, RibbonGroupDirective } from "@syncfusion/ej2-react-ribbon";
 
 function App() {
     return (
