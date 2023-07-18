@@ -8,13 +8,13 @@ function App() {
 
     function emptyTemplate(){
         return(
-            <img src="star-emptytemplate.png" width="25" height="25" />
+            <img src="src/rating/images/star-emptytemplate.png" width="25" height="25" />
         );
     }
 
     function fullTemplate(){
         return(
-            <img src="star-fulltemplate.png" width="25" height="25" />
+            <img src="src/rating/images/star-fulltemplate.png" width="25" height="25" />
         );
     }
   

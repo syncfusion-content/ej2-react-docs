@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Finetune in ##Platform_Name## Image editor control | Syncfusion
+title: Finetune in ##Platform_Name## Image Editor component | Syncfusion
 description: Learn here all about Finetune in Syncfusion React Image editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Finetune 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Finetune in Image editor control
+# Finetune in Image Editor component
 
 Fine-tuning involves making precise adjustments to the settings of an image filter in order to achieve a specific desired effect. It provides control over the intensity and specific aspects of the filter's impact on the image. For example, fine-tuning allows you to modify parameters like brightness, saturation, or other relevant properties to fine-tune the level or quality of the filter's effect. This level of control enables you to achieve the exact look or outcome you want for your image.
 
