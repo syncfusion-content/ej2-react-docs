@@ -1,6 +1,4 @@
 {% raw %}
-
-
 import * as ReactDOM from 'react-dom';
 import {
   DocumentEditorComponent,
@@ -33,7 +31,4 @@ function App() {
 }
 export default App
 ReactDOM.render(<App />, document.getElementById('sample'));
-
-
-
 {% endraw %}

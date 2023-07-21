@@ -1,6 +1,4 @@
 {% raw %}
-
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, Print } from '@syncfusion/ej2-react-documenteditor';
@@ -8,7 +6,7 @@ import { DocumentEditorComponent, Print } from '@syncfusion/ej2-react-documented
 //Inject require modules.
 DocumentEditorComponent.Inject(Print);
 function App(){
-    let documenteditor: DocumentEditorComponent= new DocumentEditorComponent(undefined);
+    let documenteditor: DocumentEditorComponent;
      React.useEffect(() => {
     componentDidMount()
     }, []);
@@ -61,7 +59,4 @@ function App(){
 }
 export default App
 ReactDOM.render(<App />, document.getElementById('sample'));
-
-
-
 {% endraw %}
