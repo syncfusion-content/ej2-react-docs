@@ -16,7 +16,12 @@ function App() {
         values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
     };
     let pivotObj;
-    return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} hyperlinkCellClick={hyperlinkCellClick.bind(this)} showFieldList={true}><Inject services={[FieldList]}/></PivotViewComponent>);
+    return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} hyperlinkCellClick={hyperlinkCellClick.bind(this)} showFieldList={true} hyperlinkSettings={{
+        showHyperlink: true,
+        cssClass: 'e-custom-class'
+    }}>
+        <Inject services={[FieldList]} />
+    </PivotViewComponent>);
     function hyperlinkCellClick(args) {
         args.cancel = false;
         args.currentCell.setAttribute("data-url", "https://ej2.syncfusion.com/"); //here we have redirected to EJ2 Syncfusion on hyperlinkcell click

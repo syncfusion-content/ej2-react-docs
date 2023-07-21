@@ -154,4 +154,4 @@ N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your appli
 
 N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Google Cloud Storage. Make sure to pass the document name from the bucket to the `documentPath` property of the PDF viewer component
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

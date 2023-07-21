@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 import { renewableEnergy } from './datasource';
 function App() {
     function cellTemplate(props) {
-        return (<span className="tempwrap e-pivot-trend-neutral pv-icons"></span>);
+        return (<span className="tempwrap sb-icon-neutral pv-icons"></span>);
     }
     let dataSourceSettings = {
         dataSource: renewableEnergy,
