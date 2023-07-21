@@ -139,4 +139,4 @@ N> The **Azure.Storage.Blobs** NuGet package must be installed in your applicati
 
 N> replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Azure blob storage container. Make sure to pass the document name from the bucket to the `documentPath` property of the PDF viewer component
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20from%20AWS%20S3%20Storage)
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage).

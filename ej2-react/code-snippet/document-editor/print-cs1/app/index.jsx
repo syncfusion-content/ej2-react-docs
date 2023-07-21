@@ -5,7 +5,7 @@ import { DocumentEditorComponent, Print } from '@syncfusion/ej2-react-documented
 //Inject require modules.
 DocumentEditorComponent.Inject(Print);
 function App() {
-    let documenteditor = new DocumentEditorComponent(undefined);
+    let documenteditor;
     React.useEffect(() => {
         componentDidMount();
     }, []);

@@ -14,12 +14,11 @@ function App() {
         formatSettings: [{ name: 'Amount', format: 'C0' }],
         filters: []
     };
-    let hyperlinkSettings = {
+    let pivotObj;
+    return (<PivotViewComponent height={350} ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings} hyperlinkSettings={{
         showRowHeaderHyperlink: true,
         cssClass: 'e-custom-class'
-    };
-    let pivotObj;
-    return (<PivotViewComponent height={350} ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings} hyperlinkSettings={hyperlinkSettings}></PivotViewComponent>);
+    }}></PivotViewComponent>);
 }
 ;
 export default App;

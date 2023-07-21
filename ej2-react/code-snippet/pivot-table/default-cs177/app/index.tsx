@@ -18,10 +18,15 @@ function App() {
     formatSettings: [{ name: 'Amount', format: 'C0' }],
     rows: [{ name: 'Country' }, { name: 'Products' }],
     values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
-  }
+  };
   let pivotObj: PivotViewComponent;
 
-    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} hyperlinkCellClick={hyperlinkCellClick.bind(this)} showFieldList={true}><Inject services={[FieldList]} /></PivotViewComponent>);
+  return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} hyperlinkCellClick={hyperlinkCellClick.bind(this)} showFieldList={true} hyperlinkSettings={{
+    showHyperlink: true,
+    cssClass: 'e-custom-class'
+  }}>
+    <Inject services={[FieldList]} />
+  </PivotViewComponent>);
 
   function hyperlinkCellClick(args: HyperCellClickEventArgs): void  {
       args.cancel = false;

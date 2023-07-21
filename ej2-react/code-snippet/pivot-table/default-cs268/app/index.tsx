@@ -8,7 +8,7 @@ import { renewableEnergy } from './datasource';
 function App() {
 
   function cellTemplate(props): JSX.Element {
-    return (<span className="tempwrap e-pivot-trend-neutral pv-icons"></span>);
+    return (<span className="tempwrap sb-icon-neutral pv-icons"></span>);
   }
 
   let dataSourceSettings: IDataOptions = {
