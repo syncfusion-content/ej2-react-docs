@@ -14,17 +14,16 @@ function App() {
         formatSettings: [{ name: 'Amount', format: 'C0' }],
         filters: []
     };
-    let hyperlinkSettings = {
-        conditionalSettings: [{
-                measure: 'Sold',
-                conditions: 'Between',
-                value1: 150,
-                value2: 500
-            }],
-        cssClass: 'e-custom-class'
-    };
     let pivotObj;
-    return (<PivotViewComponent height={350} ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings} hyperlinkSettings={hyperlinkSettings}></PivotViewComponent>);
+    return (<PivotViewComponent height={350} ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings} hyperlinkSettings={{
+        conditionalSettings: [{
+            measure: 'Sold',
+            conditions: 'Between',
+            value1: 150,
+            value2: 500
+        }],
+        cssClass: 'e-custom-class'
+    }}></PivotViewComponent>);
 }
 ;
 export default App;

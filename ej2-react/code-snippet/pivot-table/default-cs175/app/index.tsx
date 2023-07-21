@@ -4,7 +4,6 @@ import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-reac
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
-import { HyperLinkSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/hypderlinksettings';
 
 function App() {
 
@@ -19,18 +18,17 @@ function App() {
     formatSettings: [{ name: 'Amount', format: 'C0' }],
     filters: []
   }
-  let hyperlinkSettings: HyperLinkSettings = {
-    conditionalSettings: [{
-        measure: 'Sold',
-        conditions: 'Between',
-        value1: 150,
-        value2: 500
-    }],
-    cssClass: 'e-custom-class'
-  } as HyperLinkSettings;
   let pivotObj: PivotViewComponent;
   
-  return (<PivotViewComponent height={350} ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings} hyperlinkSettings={hyperlinkSettings}></PivotViewComponent>)
+  return (<PivotViewComponent height={350} ref={d => pivotObj = d} id='PivotView' dataSourceSettings={dataSourceSettings} hyperlinkSettings={{
+    conditionalSettings: [{
+      measure: 'Sold',
+      conditions: 'Between',
+      value1: 150,
+      value2: 500
+    }],
+    cssClass: 'e-custom-class'
+  }}></PivotViewComponent>);
 };
 
 export default App;
