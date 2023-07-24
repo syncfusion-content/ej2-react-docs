@@ -6,3 +6,9 @@
   padding-bottom: 10px;
   width:70%;
 }
+
+.custom-class.e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment,
+.custom-class.e-schedule .e-vertical-view .e-day-wrapper .e-appointment,
+.custom-class.e-schedule .e-month-view .e-appointment {
+    background: green;
+}

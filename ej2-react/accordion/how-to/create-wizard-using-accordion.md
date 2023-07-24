@@ -24,6 +24,9 @@ The below Wizard sample is designed for Online Shopping model. In this,  each Ac
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/accordion/accordion-disable-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/accordion/accordion-disable-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/accordion/accordion-disable-cs1" %}

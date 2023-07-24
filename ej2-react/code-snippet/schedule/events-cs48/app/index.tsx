@@ -62,7 +62,7 @@ const App = () => {
     <ScheduleComponent cssClass='virtual-scrolling' width='100%'
       height='550px' selectedDate={new Date(2018, 4, 1)}
       eventSettings={eventSettings}
-      group={group} >
+      group={group}>
       <ResourcesDirective>
         <ResourceDirective field='ResourceId' title='Resource' name='Resources' allowMultiple={true}
           dataSource={generateResourceData(1, 300, 'Resource')}

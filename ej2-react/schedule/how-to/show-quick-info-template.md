@@ -22,6 +22,9 @@ This demo showcases the quick popups for cells and appointments with the customi
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/quick-info-template-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/quick-info-template-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/quick-info-template-cs1" %}

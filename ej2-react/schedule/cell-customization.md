@@ -26,6 +26,9 @@ The height and width of the Scheduler cells can be customized either to increase
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/cell-dimension-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/cell-dimension-cs1/index.css %}
+{% endhighlight %} 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/cell-dimension-cs1" %}
@@ -66,6 +69,9 @@ The `cellTemplate` option accepts the template string and is used to customize t
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/cell-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/cell-cs1/index.css %}
+{% endhighlight %} 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/cell-cs1" %}
@@ -83,6 +89,9 @@ An alternative to `cellTemplate` is the `renderCell` event, which can also be us
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/cell-dimension-cs2/index.html %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/cell-dimension-cs2/index.css %}
 {% endhighlight %}
 {% endtabs %}
         
