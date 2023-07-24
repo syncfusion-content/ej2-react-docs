@@ -730,6 +730,9 @@ Learn how easily you can customize the basic look and feel of React Scheduler ap
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/event-template-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/event-template-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/event-template-cs1" %}
@@ -767,6 +770,9 @@ The customization of events can also be achieved using `cssClass` property of th
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/events-cs28/index.html %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/events-cs28/index.css %}
 {% endhighlight %}
 {% endtabs %}
         

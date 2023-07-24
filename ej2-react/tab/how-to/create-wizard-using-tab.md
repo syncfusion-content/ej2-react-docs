@@ -36,6 +36,9 @@ In the below demo, designed for simple train reservation module that enable/disa
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/tab/wizard-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/tab/wizard-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/tab/wizard-cs1" %}

@@ -11,7 +11,7 @@ const App = () => {
   const getDateHeaderText = (props): JSX.Element => {
     return (<div>{instance.formatDate(props.date, { skeleton: "Ed" })}</div>);
   }
-  return (<ScheduleComponent height='550px' cellHeaderTemplate={getDateHeaderText}>
+  return (<ScheduleComponent height='550px' cssClass="schedule-cell-header-template" cellHeaderTemplate={getDateHeaderText}>
     <ViewsDirective>
       <ViewDirective option='Month' />
     </ViewsDirective>

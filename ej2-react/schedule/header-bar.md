@@ -86,6 +86,9 @@ The `dateHeaderTemplate` option is used to customize the date header cells of da
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/date-header-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/date-header-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/date-header-cs1" %}
@@ -143,6 +146,9 @@ It is possible to customize the header indent cells using the `headerIndentTempl
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/header-indent-cs1/index.html %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/header-indent-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         

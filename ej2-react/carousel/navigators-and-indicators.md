@@ -97,6 +97,9 @@ Template option is provided to customize the indicators by using the [`indicator
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/carousel/indicator-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/carousel/indicator-cs1/app/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/carousel/indicator-cs1" %}
@@ -111,6 +114,9 @@ You can customize the indicators by showing the preview image of each slide usin
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/carousel/indicator-template-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/carousel/indicator-template-cs1/app/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

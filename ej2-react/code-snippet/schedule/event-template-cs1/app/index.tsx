@@ -22,7 +22,7 @@ const App = () => {
     </div>);
   }
   const eventSettings: EventSettingsModel = { dataSource: webinarData, template: eventTemplate };
-  return <ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} readonly={true}>
+  return <ScheduleComponent cssClass='schedule-event-template' width='100%' height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={eventSettings} readonly={true}>
     <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
   </ScheduleComponent>
 };

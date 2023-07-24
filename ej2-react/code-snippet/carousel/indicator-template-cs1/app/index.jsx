@@ -1,7 +1,7 @@
 import { CarouselComponent, CarouselItemsDirective, CarouselItemDirective } from "@syncfusion/ej2-react-navigations";
 import { useState } from "react";
 import * as React from "react";
-import ReactDom from "react-dom";
+import * as ReactDom from "react-dom";
 
 const App = () => {
   const [slides] = useState(["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"]);
