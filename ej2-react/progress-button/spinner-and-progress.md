@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 <!-- markdownlint-disable MD002 MD022 -->
-## Spinner and progress in React Progress button component
+# Spinner and progress in React Progress button component
 
 ### Change spinner position
 

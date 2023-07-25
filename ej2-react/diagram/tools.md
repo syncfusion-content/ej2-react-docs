@@ -449,7 +449,7 @@ const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 ```
 
-# Events
+## Events
 
 [`elementDraw`](https://ej2.syncfusion.com/react/documentation/api/diagram)  event is triggered when node or connector is drawn using drawing tool.
 
