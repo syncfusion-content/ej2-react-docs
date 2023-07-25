@@ -38,7 +38,7 @@ The following sample demonstrates dragging and pushing of panels. For example, w
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/drag-pushing-cs1" %}
 
-# Customizing the dragging handler
+## Customizing the dragging handler
 
 Initially, the complete panel will act as the handler for dragging the panel such that the dragging action occurs on clicking anywhere over a panel. However, this dragging handler for the panels can be customized using the`draggableHandle` property to restrict the dragging action within a particular element in the panel.
 
@@ -61,7 +61,7 @@ The following sample demonstrates customizing the dragging handler of the panels
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/draggable-handler-cs1" %}
 
-# Disable dragging of panels
+## Disable dragging of panels
 
 By default, the dragging of panels is enabled in Dashboard Layout. It can also be disabled with the help of [allowDragging](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#allowdragging) API. Setting [allowDragging](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#allowdragging) to false disables the dragging functionality in Dashboard Layout.
 
