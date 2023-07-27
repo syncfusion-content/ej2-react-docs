@@ -1,7 +1,7 @@
 {% raw %}
 
 
-import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
+import { ImageEditorComponent, ZoomSettingsModel } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
@@ -9,21 +9,41 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     let imgObj: ImageEditorComponent;
+    let zoomSettings: ZoomSettingsModel = {maxZoomFactor: 30, minZoomFactor: 0.1};
+    let zoomLevel: number = 1;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         } else {
-            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
     }
     function zoomInClick(): void {
-        imgObj.zoom(.1); // Zoom in
+        if(zoomLevel < 1) {
+            zoomLevel += 0.1;
+        }else {
+            zoomLevel += 1;
+        }
+        const value: any = zoomSettings.maxZoomFactor;
+        if (zoomLevel > value) {
+            zoomLevel = value;
+        }
+        imgObj.zoom(zoomLevel); // Zoom in
     }
     function zoomOutClick(): void {
-        imgObj.zoom(-.1); // Zoom out
+        if(zoomLevel <= 1) {
+            zoomLevel -= 0.1;
+        }else {
+            zoomLevel -= 1;
+        }
+        const value: any = zoomSettings.minZoomFactor;
+        if (zoomLevel < value) {
+            zoomLevel = value;
+        }
+        imgObj.zoom(zoomLevel); // Zoom out
     }
     function panClick(): void {
-        imgObj.zoom(.1); // Zoom in
+        imgObj.zoom(2); // Zoom in
         imgObj.pan(true);
     }
 

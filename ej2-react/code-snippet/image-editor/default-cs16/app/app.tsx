@@ -11,9 +11,9 @@ function App() {
     let toolbar = ['Annotate', "Line", "Rectangle", "Text", 'ZoomIn', 'ZoomOut', {text: 'Custom'}];
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         } else {
-            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
     }
 
@@ -25,7 +25,7 @@ function App() {
 
     return (
         <div id="wrapperDiv">
-            <ImageEditorComponent toolbar={toolbar} ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]} toolbarItemClicked={toolbarItemClicked}/>
+            <ImageEditorComponent toolbar={toolbar} ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbarItemClicked={toolbarItemClicked}/>
         </div>
     );
 }

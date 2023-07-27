@@ -8,14 +8,15 @@ export default class App extends React.Component {
     imgObj;
     imageEditorCreated() {
         if (Browser.isDevice) {
-            this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            this.imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
         else {
-            this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            this.imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
     }
     btnClick() {
-        this.imgObj.drawText(500, 500, 'Syncfusion', 'Arial', 100, true, true, '#000');
+        let dimension = imgObj.getImageDimension();
+        imgObj.drawText(dimension.x, dimension.y);
     }
     render() {
         return (<div className='e-img-editor-sample'>

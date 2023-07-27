@@ -14,7 +14,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/22.1.34/"
     },
     map: {
         app: 'app',
@@ -38,13 +38,12 @@ System.config({
         "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
         "@syncfusion/ej2-filemanager": "syncfusion:ej2-filemanager/dist/ej2-filemanager.umd.min.js",
         "@syncfusion/ej2-richtexteditor": "syncfusion:ej2-richtexteditor/dist/ej2-richtexteditor.umd.min.js",
-
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-popups": "syncfusion:ej2-react-popups/dist/ej2-react-popups.umd.min.js",
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "@syncfusion/ej2-react-richtexteditor": "syncfusion:ej2-react-richtexteditor/dist/ej2-react-richtexteditor.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
-"react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
+        "react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
+        "react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },

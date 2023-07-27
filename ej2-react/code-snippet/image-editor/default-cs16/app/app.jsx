@@ -6,10 +6,10 @@ export default class App extends React.Component {
     toolbar = ['Annotate', "Line", "Rectangle", "Text", 'ZoomIn', 'ZoomOut', { text: 'Custom' }];
     imageEditorCreated() {
         if (Browser.isDevice) {
-            this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            this.imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
         else {
-            this.imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            this.imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
     }
     toolbarItemClicked(args) {
@@ -19,7 +19,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div id="wrapperDiv">
-            <ImageEditorComponent toolbar={this.toolbar} ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbar = {[]} toolbarItemClicked={this.toolbarItemClicked.bind(this)}/>
+            <ImageEditorComponent toolbar={this.toolbar} ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbarItemClicked={this.toolbarItemClicked.bind(this)}/>
         </div>);
     }
 }

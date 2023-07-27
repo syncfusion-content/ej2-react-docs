@@ -10,4 +10,4 @@ domainurl: ##DomainURL##
 
 # Index in React Image editor component
 
-The Image Editor control is a graphical user interface used for editing images. It provides built-in support for rotate, flip, zoom, and crop the images based on the selection. It also has support for inserting an Annotations including rectangle, ellipse, line, text, and freehand drawings.
+The Image Editor component is a graphical user interface used for editing images. It provides built-in support for rotate, flip, zoom, and crop the images based on the selection. It also has support for inserting an Annotations including rectangle, ellipse, line, text, and freehand drawings.

@@ -65,3 +65,5 @@ You can add collections of items to each group by using the [collections](https:
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Items" %}
+
+> Check out our [`items`](./items) page on adding the built-in and custom items.

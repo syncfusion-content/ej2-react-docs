@@ -11,13 +11,18 @@ function App() {
     let imgObj: ImageEditorComponent;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         } else {
-            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
     }
     function btnClick(): void {
-        imgObj.drawRectangle(500, 500, 400, 400, 2, "#fff", 'blue');
+        let dimension: any = imgObj.getImageDimension();
+        imgObj.drawRectangle(dimension.x, dimension.y);
+        imgObj.drawEllipse(dimension.x, dimension.y);
+        imgObj.drawLine(dimension.x, dimension.y);
+        imgObj.drawArrow(dimension.x, dimension.y+10, dimension.x+50, dimension.y+10, 10);
+        imgObj.drawPath([{x: dimension.x, y: dimension.y}, {x: dimension.x+50, y: dimension.y+50}, {x: dimension.x+20, y: dimension.y+50}], 8);
     }
 
     return (

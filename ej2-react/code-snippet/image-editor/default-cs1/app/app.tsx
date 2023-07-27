@@ -11,13 +11,14 @@ function App() {
     let imgObj: ImageEditorComponent;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         } else {
-            imgObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
     }
     function btnClick(): void {
-        imgObj.drawText(500, 500, 'Syncfusion', 'Arial', 100, true, true, '#000');
+        let dimension: any = imgObj.getImageDimension();
+        imgObj.drawText(dimension.x, dimension.y);
     }
 
     return (
