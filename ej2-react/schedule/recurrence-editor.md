@@ -77,7 +77,7 @@ It is possible to customize the recurrence editor to display only the specific e
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/schedule/events-cs49" %}
+{% previewsample "page.domainurl/code-snippet/schedule/events-cs46" %}
 
 ## Accessing the recurrence rule string
 

@@ -23,7 +23,7 @@ You can achieve collapse and expand functionality in Tab by adding/removing a cu
 {% include code-snippet/tab/collapse-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="index.css" %}
-{% include code-snippet/tab/collapse-cs1/app/index.css %}
+{% include code-snippet/tab/collapse-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

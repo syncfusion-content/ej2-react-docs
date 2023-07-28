@@ -6,28 +6,3 @@
   padding-bottom: 10px;
   width:70%;
 }
-
-.virtual-scrolling.e-schedule .template-wrap .subject {
-  padding: 10px 25px;
-}
-
-.virtual-scrolling.e-schedule .e-more-event-popup .template-wrap .subject {
-  padding: 0px 25px;
-}
-
-.virtual-scrolling.e-schedule .template-wrap {
-  width: 100%;
-}
-
-.virtual-scrolling.e-schedule .e-timeline-month-view .e-resource-left-td {
-  width: 150px;
-}
-
-.virtual-scrolling.e-schedule .e-month-view .template-wrap .subject {
-  padding: 3px 10px;
-}
-
-.virtual-scrolling.e-schedule .e-month-view .e-date-header-wrap table col,
-.virtual-scrolling.e-schedule .e-month-view .e-work-cells {
-  width: 46px;
-}
