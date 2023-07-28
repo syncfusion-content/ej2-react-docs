@@ -59,7 +59,7 @@ You can set the conditions from SQL query through the [`setRulesFromSql`](https:
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs20" %}
 
-# Exporting
+## Exporting
 
 Exporting allows you to save or maintain the created conditions through the Query Builder. You can export the defined conditions by the following ways.
 

@@ -100,6 +100,9 @@ The AppBar is rendered with the SideBar component below the AppBar. Click on the
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/appbar/sidebar-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/appbar/sidebar-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/appbar/sidebar-cs1" %}
