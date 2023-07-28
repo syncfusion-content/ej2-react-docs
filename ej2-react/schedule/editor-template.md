@@ -350,9 +350,6 @@ The look and feel of the built-in quick popup window, which opens when single cl
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/quick-info-cs1/index.html %}
 {% endhighlight %}
-{% highlight css tabtitle="index.css" %}
-{% include code-snippet/schedule/quick-info-cs1/index.css %}
-{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/quick-info-cs1" %}

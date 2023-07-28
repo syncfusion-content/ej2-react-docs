@@ -22,7 +22,7 @@ You can customize the Tab style by overriding its header and active tab CSS clas
 {% include code-snippet/tab/custom-styles-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="index.css" %}
-{% include code-snippet/tab/custom-styles-cs1/app/index.css %}
+{% include code-snippet/tab/custom-styles-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
