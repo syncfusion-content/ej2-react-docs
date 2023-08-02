@@ -4,7 +4,6 @@ title: Add custom aggregation type to the menu in React Pivotview component | Sy
 description: Learn here all about how to add custom aggregation type to the menu in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Add custom aggregation type to the menu 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
