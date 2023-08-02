@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Add custom aggregation type to the menu in React Pivotview component | Syncfusion
-description: Learn here all about how to add custom aggregation type to the menu in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: Load desired report from the report list as default in React Pivotview component | Syncfusion
+description: Learn here all about how to load desired report from the report list as default in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
-control: Add custom aggregation type to the menu 
-publishingplatform: ##Platform_Name##
+control: Load desired report from the report list as default
 documentation: ug
 domainurl: ##DomainURL##
 ---
