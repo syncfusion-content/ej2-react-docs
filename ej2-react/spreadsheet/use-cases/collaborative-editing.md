@@ -206,6 +206,73 @@ const root = createRoot(document.getElementById('root')!);
 root.render(<App />);
 ```
 
+## Perform import action for collaborative clients
+
+Using the `action` argument from the [`actionComplete`](../api/spreadsheet/#actioncomplete) event, you can identity whether the import action is performed or not. If the action is `import`, then you need to send the `response data` to the server and also update the same to the collaborative clients.
+
+The following code example shows how to perform the import functionality for collaborative clients.
+
+```ts
+import * as React from 'react';
+import { isNullOrUndefined } from "@syncfusion/ej2-base";
+import { SpreadsheetComponent, CollaborativeEditArgs } from '@syncfusion/ej2-react-spreadsheet';
+import * as signalR from "@microsoft/signalr";
+import { useEffect, useRef } from "react";
+import "./App.css";
+
+function App() {
+  const height: string = "400px";
+  const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl(`https://localhost:44385/hubs/spreadsheethub`, {
+    skipNegotiation: true,
+    transport: signalR.HttpTransportType.WebSockets
+  }).build();
+  const onActionComplete = (args: {action: string, response: any}): void => {
+    if (args.action === 'import') {
+      // Send the action data to the server in args.response at the time of importing an excel file.
+      connection.send("BroadcastData", JSON.stringify(args.response.data));
+    }
+    else {
+      // Send the action data to the server for other than import actions.
+      connection.send("BroadcastData", JSON.stringify(args));
+    }
+  };
+  const editor = useRef<SpreadsheetComponent>(null);
+  useEffect(() => {
+    connection.on("dataReceived", (data: string) => {
+      const model: CollaborativeEditArgs = JSON.parse(
+        data
+      ) as CollaborativeEditArgs;
+      // Condition to check whether action performed is import.
+      if (isNullOrUndefined(model['action'])) {  
+        // Load the imported excel file data as JSON to the connected clients.
+        const jsonData: object = { Workbook: model };
+        editor.current!.openFromJson({ file: jsonData });
+      }
+      else {
+        // Update the action details to the connected clients.
+        editor.current!.updateAction(model);
+      }
+    });
+    connection
+      .start()
+      .then(() => {
+        console.log("server connected!!!");
+      })
+      .catch((err) => console.log(err));
+  }, [connection]);
+  return (
+    <SpreadsheetComponent
+      ref={editor}
+      height={height}
+      openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open"
+      actionComplete={onActionComplete}
+    />
+  );
+};
+export default App;
+```
+
+## See Also
 * [Filtering](../filter)
 * [Sorting](../sort)
 * [Hyperlink](../link)

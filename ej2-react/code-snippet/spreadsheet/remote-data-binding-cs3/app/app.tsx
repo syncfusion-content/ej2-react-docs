@@ -7,7 +7,7 @@ import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/e
 
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-    const data: DataManager = (new DataManager({ adaptor: new WebApiAdaptor(), url: 'https://ej2services.syncfusion.com/production/web-services/api/Orders' }));
+    const data: DataManager = (new DataManager({ adaptor: new WebApiAdaptor(), url: 'https://services.syncfusion.com/react/production/api/Orders' }));
     React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         // Applies cell and number formatting to specified range of the active sheet
