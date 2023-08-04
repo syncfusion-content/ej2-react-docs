@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Layouts in Ribbon component
+# Ribbon Layouts
 
-The Ribbon offers to customize the layout by using the [activeLayout](https://ej2.syncfusion.com/react/documentation/api/ribbon/#activelayout) property. The Ribbon component supports the following layouts:
+The Ribbon allows to customize the layout by using the [activeLayout](https://ej2.syncfusion.com/react/documentation/api/ribbon/#activelayout) property. The Ribbon component supports the following layouts:
 
 ## Classic layout
 
-In classic layout, the Ribbon component organize the items and groups in a traditional form by setting the [activeLayout](https://ej2.syncfusion.com/react/documentation/api/ribbon/#activelayout) property to [Classic](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonLayout/). By default, the Ribbon component renders in `Classic` layout.
+In classic layout, the Ribbon component organizes the items and groups in a traditional form by setting the [activeLayout](https://ej2.syncfusion.com/react/documentation/api/ribbon/#activelayout) property to [Classic](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonLayout/). By default, the Ribbon component renders in the `Classic` layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,7 +32,7 @@ In classic layout, the Ribbon component organize the items and groups in a tradi
 
 ### Defining items size
 
-The [allowedSizes](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItemModel/#allowedsizes) property can be used to set the allowed size for an item. The Ribbon items can be appeared in three different sizes: Large(large icon with text), Medium(small icon with text) and Small(small icon only). On resizing, the items size can be changed based on the available width of the tab content from the order of Large-> Medium-> Small and viceversa.
+You can use the [allowedSizes](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItemModel/#allowedsizes) property to set the allowed size for an item. The Ribbon items can be appeared in three different sizes: Large(large icon with text), Medium(small icon with text) and Small(small icon only). On resizing, the items size can be changed based on the available width of the tab content from the order of Large-> Medium-> Small and viceversa.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +50,7 @@ The [allowedSizes](https://ej2.syncfusion.com/react/documentation/api/ribbon/rib
 
 ### Defining items orientation
 
-The Ribbon group [orientation](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#orientation) property allows to manage how the items are aligned. By default, the orientation is set to `Column`, in which the items are arranged vertically.
+The Ribbon group [orientation](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#orientation) property allows to manage how the items are aligned either in a `Row` or `Column`. By default, the orientation is set to `Column`, in which the items are arranged vertically.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -70,7 +70,7 @@ The Ribbon group [orientation](https://ej2.syncfusion.com/react/documentation/ap
 
 ### Defining group header
 
-The [header](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#header) property is used to set the name for each group header.
+You can use the [header](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#header) property to set the name for each group header.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -88,25 +88,25 @@ The [header](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGro
 
 ### Defining group icon
 
-The [groupIconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#groupiconcss) property is used to customize the icons in the group overflow button. When the ribbon's size is adjusted, the group popup will appear.
+You can use the [groupIconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#groupiconcss) property to customize the icons in the group overflow button. When the ribbon's size is adjusted, the group popup will appear.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/ribbon/GroupIcon/app/index.jsx %}
+{% include code-snippet/ribbon/GroupIconCss/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/ribbon/GroupIcon/app/index.tsx %}
+{% include code-snippet/ribbon/GroupIconCss/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
-{% include code-snippet/ribbon/GroupIcon/index.css %}
+{% include code-snippet/ribbon/GroupIconCss/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/ribbon/GroupIcon" %}
+{% previewsample "page.domainurl/code-snippet/ribbon/GroupIconCss" %}
 
 ### Enabling group launcher icon
 
-The [showLauncherIcon](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#showlaunchericon) property can be used to enable or disable the launcher icon for each group. By default, the property is set to `false`.
+You can use the [showLauncherIcon](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#showlaunchericon) property to enable or disable the launcher icon for each group. By default, the property is set to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -124,7 +124,7 @@ The [showLauncherIcon](https://ej2.syncfusion.com/react/documentation/api/ribbon
 
 #### Customize launcher icon
 
-The [launcherIconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#launchericoncss) property is used to customize the launcher icon by applying the custom styles.
+You can use the [launcherIconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#launchericoncss) property to customize the launcher icon by applying the custom styles.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -142,7 +142,7 @@ The [launcherIconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/
 
 ### Defining group collapsible state
 
-The [isCollapsible](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#iscollapsible) property can determine whether a group can be collapsed or not during resize. By default, the property is set to `true`. To prevent the group from being collapsed, set the property to `false`.
+You can use the [isCollapsible](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#iscollapsible) property to determine whether the group is collapsed or not during resize. By default, the property is set to `true`. To prevent the group from being collapsed, set the property to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -160,7 +160,7 @@ The [isCollapsible](https://ej2.syncfusion.com/react/documentation/api/ribbon/ri
 
 #### Defining priority order for group collapse or expand
 
-The [priority](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#priority) property define's the priority order for each group which should be collapsed or expanded on resizing. When collapsing, higher priority values are fetched first. When expanding, lower priority values are fetched first.
+You can use the [priority](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#priority) property to set the priority order for each group which should be collapsed or expanded on resizing. When collapsing, higher priority values are fetched first. When expanding, lower priority values are fetched first.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -178,7 +178,7 @@ The [priority](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonG
 
 ## Simplified layout
 
-In simplified layout, the Ribbon component organize the items and groups into a single row by setting the [activeLayout](https://ej2.syncfusion.com/react/documentation/api/ribbon/#activelayout) property to [Simplified](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonLayout/).
+In simplified layout, the Ribbon component organizes the items and groups into a single row by setting the [activeLayout](https://ej2.syncfusion.com/react/documentation/api/ribbon/#activelayout) property to [Simplified](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonLayout/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -196,7 +196,7 @@ In simplified layout, the Ribbon component organize the items and groups into a 
 
 ### Enabling group overflow popup
 
-The [enableGroupOverflow](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#enablegroupoverflow) property defines whether to add a separate popup for the overflow items in the group while resizing. The overflow items will appear in the standard overflow popup located at the right end of the tab content if it is set to `false`.
+You can use the [enableGroupOverflow](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#enablegroupoverflow) property to add a separate popup for the overflow items in the group while resizing. The overflow items will appear in the standard common popup, located at the right end of the tab content if it is set to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -216,7 +216,7 @@ The [enableGroupOverflow](https://ej2.syncfusion.com/react/documentation/api/rib
 
 You can hide the Ribbon contents and display only the tab headers by double-clicking on the tab header. In minimized state, the Ribbon component expands to its normal state when click on the tab header.
 
-Also, you can render or programmatically change the Ribbon component to minimized state by setting the [isMinimized](https://ej2.syncfusion.com/react/documentation/api/ribbon/#isminimized) property to `true`.
+You can use the [isMinimized](https://ej2.syncfusion.com/react/documentation/api/ribbon/#isminimized) property to change the Ribbon component to minimized state. By default, the value is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
