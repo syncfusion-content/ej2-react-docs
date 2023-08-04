@@ -15,6 +15,12 @@ function App() {
                                     <RibbonItemsDirective>
                                         <RibbonItemDirective type="Button" disabled={true} buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut", isToggle: true }}>
                                         </RibbonItemDirective>
+                                        <RibbonItemDirective type="CheckBox" disabled={true} checkBoxSettings={{ checked: true, label: "Ruler" }}>
+                                        </RibbonItemDirective>
+                                        <RibbonItemDirective type="DropDown" disabled={true} dropDownSettings={{ content: 'Table', iconCss: 'e-icons e-table' }}>
+                                        </RibbonItemDirective>
+                                        <RibbonItemDirective type="SplitButton" disabled={true} splitButtonSettings={{ content: 'Table', iconCss: 'e-icons e-table' }}>
+                                        </RibbonItemDirective>
                                     </RibbonItemsDirective>
                                 </RibbonCollectionDirective>
                             </RibbonCollectionsDirective>
