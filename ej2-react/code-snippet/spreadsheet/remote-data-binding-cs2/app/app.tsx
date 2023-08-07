@@ -9,7 +9,7 @@ function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const data: DataManager = (new DataManager({
         adaptor: new ODataAdaptor(),
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Orders'
+        url: 'https://services.syncfusion.com/react/production/api/Orders'
     }));
 
     React.useEffect(() => {

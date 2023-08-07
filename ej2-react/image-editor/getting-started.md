@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section explains how to create and configure a simple [React Image Editor component](https://www.syncfusion.com/react-ui-components/react-image-editor).
+This section explains how to create and configure a simple [React Image Editor component](https://www.syncfusion.com/react-components/react-image-editor).
 
 To get start quickly with Image Editor Component using React, you can check on this video:
 
@@ -34,7 +34,7 @@ The list of dependencies required to use the Image Editor component in your appl
 
 ## Installation and Configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
    ```bash
     npm install -g create-react-app
