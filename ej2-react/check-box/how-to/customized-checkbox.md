@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Customize CheckBox Appearance
 
-You can customize the appearance of the CheckBox component using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/check-box#cssclass) property.
+You can customize the appearance of the CheckBox component using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/check-box/#cssclass) property.
 
 The background and border color of the CheckBox is customized through custom classes to create primary, success, warning, danger, and info type of checkbox.
 

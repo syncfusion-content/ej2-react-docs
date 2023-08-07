@@ -121,7 +121,7 @@ Import the DropDownButton component required CSS references as follows in `src/A
 
 ## Binding data source
 
-After initialization, populate the DropDownButton with data using the [`items`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button#items) property. Here, an array of string values is passed to the DropDownButton component.
+After initialization, populate the DropDownButton with data using the [`items`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#items) property. Here, an array of string values is passed to the DropDownButton component.
 
 
 

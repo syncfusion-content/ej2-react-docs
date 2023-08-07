@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set the disabled state in React Button component
 
-Button component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button#disabled) property. To disable Button component, the `disabled` property can be set as `true`.
+Button component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button/#disabled) property. To disable Button component, the `disabled` property can be set as `true`.
 
 The following example demonstrates Button in `disabled` state.
 
