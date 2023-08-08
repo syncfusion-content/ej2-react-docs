@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 ## Icons
 
 The Popup action item have an icon/image in it to provide visual representation of the action. To place the icon on a popup item,
-set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button#iconcss) property to `e-icons` with the required icon CSS. By default, the icon is
+set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property to `e-icons` with the required icon CSS. By default, the icon is
 positioned to the left side of the popup action item.
 
 In the following sample, the icons for Edit, Delete, Mark As Read  and Like Message menu items are
@@ -49,7 +49,7 @@ Actions in DropDownButton is usage to navigate to the other web page when action
 
 ### Item Templating
 
-Popup items can be customized by using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button#beforeitemrender) event. The item render event triggers while rendering each Popup action item. The event argument will be used to identify the action item and customize it based on the requirement.
+Popup items can be customized by using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeitemrender) event. The item render event triggers while rendering each Popup action item. The event argument will be used to identify the action item and customize it based on the requirement.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -64,7 +64,7 @@ Popup items can be customized by using the [`beforeItemRender`](https://ej2.sync
 
 ### Popup Templating
 
-The whole popup can be customized as per the requirement and it can be customized by handling it in [`target`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button#target) property.
+The whole popup can be customized as per the requirement and it can be customized by handling it in [`target`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#target) property.
 
 In the following sample, the whole popup item is customized as table template by giving `div` as target and it can be achieved
 using `target` property.

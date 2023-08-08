@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Particular button
 
-To disable a particular button in a ButtonGroup, [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button#disabled) attribute should be added to corresponding button element.
+To disable a particular button in a ButtonGroup, [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button/#disabled) attribute should be added to corresponding button element.
 
 ## Whole ButtonGroup
 

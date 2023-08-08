@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Enable rtl in React Switch component
 
-Switch component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/switch#enablertl) as `true`.
+Switch component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/switch/#enablertl) as `true`.
 
 The following example illustrates how to enable right-to-left support in Switch component.
 

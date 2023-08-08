@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the appearance of a switch in React Switch component
 
-You can customize the appearance of the Switch component using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/switch#cssClass) property.
+You can customize the appearance of the Switch component using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/switch/#cssClass) property.
 
 ## Customize Switch bar and handle
 

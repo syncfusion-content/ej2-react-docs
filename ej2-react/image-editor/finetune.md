@@ -57,7 +57,7 @@ Here is an example of hue, exposure, and blur fine-tuning using the [`finetuneIm
 
 ## Finetune value changing event 
 
-The [`finetuneValueChanging`](https://ej2.syncfusion.com/documentation/api/image-editor#finetunevaluechanging) event is triggered when performing fine-tuning on the image. This event is passed an object that contains information about the fine-tuning event, such as the type of fine-tuning and the value of fine-tuning performed. 
+The [`finetuneValueChanging`](https://ej2.syncfusion.com/documentation/api/image-editor/#finetunevaluechanging) event is triggered when performing fine-tuning on the image. This event is passed an object that contains information about the fine-tuning event, such as the type of fine-tuning and the value of fine-tuning performed. 
 
 The parameter available in the [`FinetuneEventArgs`](https://ej2.syncfusion.com/react/documentation/api/image-editor/finetuneEventArgs/) event is, 
 
