@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started
 
-This section explain steps to create a simple [**Pivot Table**](https://www.syncfusion.com/react-ui-components/react-pivot-table) with OLAP data source in React environment.
+This section explain steps to create a simple [**Pivot Table**](https://www.syncfusion.com/react-components/react-pivot-table) with OLAP data source in React environment.
 
 To get start quickly with React Pivot Table, you can check on this video:
 
@@ -46,7 +46,7 @@ The following list of dependencies are required to use the pivot table component
 
 ## Setup for Local Development
 
-You can use [create-react-app](https://github.com/facebookincubator/create-react-app) to setup the application. To install **create-react-app** run the following command.
+You can use [create-react-app](https://github.com/facebook/create-react-app) to setup the application. To install **create-react-app** run the following command.
 
     ```
     npm install -g create-react-app
@@ -277,7 +277,7 @@ These modules should be injected into the PivotView using the `Inject` method wi
 
 ## Enable Field List
 
-The field list allows to add or remove fields and also rearrange the fields between different axes, including column, row, value, and filter along with filter and sort options dynamically at runtime. It can be enabled by setting the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/?no-cache=1#showfieldlist) property to **true** and by injecting the **FieldList** module as follows. To know more about field list, [`refer`](./field-list) here.
+The field list allows to add or remove fields and also rearrange the fields between different axes, including column, row, value, and filter along with filter and sort options dynamically at runtime. It can be enabled by setting the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#showfieldlist) property to **true** and by injecting the **FieldList** module as follows. To know more about field list, [`refer`](./field-list) here.
 
 > If the **FieldList** module is not injected, the Field List will not be rendered with the pivot table component.
 
@@ -294,7 +294,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
 
 ## Enable Grouping Bar
 
-The grouping bar feature automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and alter pivot table at runtime. It also provides option to sort, filter and remove fields. It can be enabled by setting the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/?no-cache=1#showgroupingbar) property to **true** and by injecting the **GroupingBar** module as follows. To know more about grouping bar, [`refer`](./grouping-bar) here.
+The grouping bar feature automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and alter pivot table at runtime. It also provides option to sort, filter and remove fields. It can be enabled by setting the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#showgroupingbar) property to **true** and by injecting the **GroupingBar** module as follows. To know more about grouping bar, [`refer`](./grouping-bar) here.
 
 > If the **GroupingBar** module is not injected, the grouping bar will not be rendered with the pivot table component.
 
@@ -326,7 +326,7 @@ The filter axis contains collection of fields that would act as master filter ov
 
 ## Calculated Field
 
-The calculated field feature allows user to insert or add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. The calculated field can be included in pivot table using the [`CalculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings/)  from code behind. Or else, calculated fields can be added at run time through the built-in dialog by just setting the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/?no-cache=1#allowcalculatedfield) property to **true** and by injecting the **CalculatedField** module as follows in pivot table. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation. To know more about calculated field, [`refer`](./calculated-field) here.
+The calculated field feature allows user to insert or add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. The calculated field can be included in pivot table using the [`CalculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings/)  from code behind. Or else, calculated fields can be added at run time through the built-in dialog by just setting the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#allowcalculatedfield) property to **true** and by injecting the **CalculatedField** module as follows in pivot table. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation. To know more about calculated field, [`refer`](./calculated-field) here.
 
 > If the **CalculatedField** module is not injected, the calculated field dialog will not be rendered with the pivot table component. Moreover calculated measure can be added only in value axis.
 

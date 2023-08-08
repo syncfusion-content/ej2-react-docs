@@ -435,7 +435,7 @@ The event [`columnRender`](https://ej2.syncfusion.com/react/documentation/api/pi
 
 ### CellClick
 
-The event [`cellClick`](https://ej2.syncfusion.com/react/documentation/api/pivotview#cellclick) triggers while clicking a cell in the pivot table. For instance, using this event end-user can either add or remove styles, edit value and also perform any other DOM manipulations. It has the following parameters:
+The event [`cellClick`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#cellclick) triggers while clicking a cell in the pivot table. For instance, using this event end-user can either add or remove styles, edit value and also perform any other DOM manipulations. It has the following parameters:
 
 * `currentCell` - It holds the current cell information.
 * `data` - It holds the clicked cell's data like axis, formatted text, actual text, row header, column header and value informations.

@@ -27,7 +27,7 @@ Similarly, to print the pivot chart, use the [`print`](https://ej2.syncfusion.co
 
 > To use pivot chart, you need to inject the `PivotChart` module in the pivot table.
 
-> To display the pivot chart, set the [`displayOption`](https://ej2.syncfusion.com/react/documentation/api/pivotview#displayoption) property to either **Chart** or **Both**. 
+> To display the pivot chart, set the [`displayOption`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#displayoption) property to either **Chart** or **Both**. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

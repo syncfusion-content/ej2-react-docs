@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 # Add custom aggregation type to the menu in React Pivotview component
 
-By using the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview#databound) event, you can add your own custom aggregate type(s) to the pivot table's aggregate menu.
+By using the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#databound) event, you can add your own custom aggregate type(s) to the pivot table's aggregate menu.
 
-In the following example, we have added the aggregation types **CustomAggregateType 1** and **CustomAggregateType 2** to the aggregate menu. The calculation for those aggregated types can be done using the [`aggregateCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview#aggregatecellinfo) event.
+In the following example, we have added the aggregation types **CustomAggregateType 1** and **CustomAggregateType 2** to the aggregate menu. The calculation for those aggregated types can be done using the [`aggregateCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#aggregatecellinfo) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

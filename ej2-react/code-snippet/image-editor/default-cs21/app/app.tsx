@@ -13,9 +13,9 @@ function App() {
     let zoomLevel: number = 1;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
+            imgObj.open('flower.png');
         } else {
-            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
+            imgObj.open('bridge.png');
         }
     }
     function zoomInClick(): void {

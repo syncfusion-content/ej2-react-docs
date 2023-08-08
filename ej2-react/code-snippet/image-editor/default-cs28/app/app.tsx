@@ -14,9 +14,9 @@ function App() {
     let imgObj: ImageEditorComponent;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
+            imgObj.open('flower.png');
         } else {
-            imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
+            imgObj.open('bridge.png');
         }
     }
 

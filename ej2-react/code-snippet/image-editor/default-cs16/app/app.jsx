@@ -6,10 +6,10 @@ export default class App extends React.Component {
     toolbar = ['Annotate', "Line", "Rectangle", "Text", 'ZoomIn', 'ZoomOut', { text: 'Custom' }];
     imageEditorCreated() {
         if (Browser.isDevice) {
-            this.imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
+            this.imgObj.open('flower.png');
         }
         else {
-            this.imgObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
+            this.imgObj.open('bridge.png');
         }
     }
     toolbarItemClicked(args) {

@@ -16,11 +16,11 @@ To get start quickly with Data Binding, you can check on this video:
 
 ## JSON
 
-For JSON data binding, the `type` property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings) needs to be set as `JSON`. By default, the default value is assumed as `JSON`.
+For JSON data binding, the `type` property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) needs to be set as `JSON`. By default, the default value is assumed as `JSON`.
 
 ### Binding JSON data via local
 
-In-order to bind local JSON data to the pivot table user can assign the local variable holding the JSON data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings).
+In-order to bind local JSON data to the pivot table user can assign the local variable holding the JSON data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,7 +46,7 @@ Using local variable, the JSON data can also be bound to the pivot table using [
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs24" %}
 
-In the meantime, the JSON data from the local *.json file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to JSON data that can be assigned to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings). The following code example illustrates the same.
+In the meantime, the JSON data from the local *.json file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to JSON data that can be assigned to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings). The following code example illustrates the same.
 
 ```javascript
 
@@ -89,7 +89,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ### Binding JSON data via remote
 
-In-order to bind remote JSON data, mention the endpoint [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings) property. The [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) property supports both direct downloadable file (*.json) and web service URL.
+In-order to bind remote JSON data, mention the endpoint [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) property. The [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) property supports both direct downloadable file (*.json) and web service URL.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,13 +104,13 @@ In-order to bind remote JSON data, mention the endpoint [`URL`](https://ej2.sync
 
 ## CSV
 
-For CSV data binding, the `type` property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings) needs to be set as `CSV` mandatorily.
+For CSV data binding, the `type` property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) needs to be set as `CSV` mandatorily.
 
 > The CSV format is considered to be the most compact format compared to JSON since it is half the size of JSON. This helps to reduce the bandwidth while transferring to the browser.
 
 ### Binding CSV data via local
 
-In-order to bind local CSV data to the pivot table, user needs to convert it as string array and then directly assign it to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings).
+In-order to bind local CSV data to the pivot table, user needs to convert it as string array and then directly assign it to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -123,7 +123,7 @@ In-order to bind local CSV data to the pivot table, user needs to convert it as 
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs26" %}
 
-In the meantime, the CSV data from the local *.csv file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to string array that can be assigned to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings). The following code example illustrates the same.
+In the meantime, the CSV data from the local *.csv file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to string array that can be assigned to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings). The following code example illustrates the same.
 
 ```javascript
 import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
@@ -167,7 +167,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ### Binding CSV data via remote
 
-In-order to bind remote CSV data, mention the endpoint [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings) property. The [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) property supports both direct downloadable file (*.csv) and web service URL.
+In-order to bind remote CSV data, mention the endpoint [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) property. The [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) property supports both direct downloadable file (*.csv) and web service URL.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -348,7 +348,7 @@ To show value header always in pivot table, even if it holds a single value, use
 
 ## Customize empty value cells
 
-User can show custom string in empty value cells using the [`emptyCellsTextContent`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#emptycellstextcontent) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings). Since the property is of string data type, user can fill empty value cells with any value like "0", "-", "*", "(blank)", etc. Its common for all value fields and can be configured through code behind.
+User can show custom string in empty value cells using the [`emptyCellsTextContent`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#emptycellstextcontent) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings). Since the property is of string data type, user can fill empty value cells with any value like "0", "-", "*", "(blank)", etc. Its common for all value fields and can be configured through code behind.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -365,7 +365,7 @@ User can show custom string in empty value cells using the [`emptyCellsTextConte
 
 ### Load
 
-The event [`load`](https://ej2.syncfusion.com/react/documentation/api/pivotview#load) fires before initiate rendering of pivot table. It holds following parameters like[`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings), `fieldsType` and `PivotView`. In this event user can customize data source settings before initiating pivot table render module.
+The event [`load`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#load) fires before initiate rendering of pivot table. It holds following parameters like[`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings), `fieldsType` and `PivotView`. In this event user can customize data source settings before initiating pivot table render module.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -380,7 +380,7 @@ The event [`load`](https://ej2.syncfusion.com/react/documentation/api/pivotview#
 
 ### EnginePopulated
 
-The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotview#enginepopulated) is triggered after engine is populated. It has following parameters - `dataSourceSettings`, `pivotFieldList` and `pivotValues`.
+The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enginepopulated) is triggered after engine is populated. It has following parameters - `dataSourceSettings`, `pivotFieldList` and `pivotValues`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -395,7 +395,7 @@ The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api
 
 ### EnginePopulating
 
-The event [`enginePopulating`](https://ej2.syncfusion.com/react/documentation/api/pivotview#enginepopulating) triggers  before the pivot engine starts to populate and allows to customize the pivot datasource settings. It has following parameter `dataSourceSettings`.
+The event [`enginePopulating`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enginepopulating) triggers  before the pivot engine starts to populate and allows to customize the pivot datasource settings. It has following parameter `dataSourceSettings`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
