@@ -89,7 +89,7 @@ Refer to the following code sample of actionComplete event.
     }
   ```
 
-* Render the dialog component with empty content and append the created dynamic ListView object to the dialog on [`created`](https://ej2.syncfusion.com/react/documentation/api/dialog#created) event.
+* Render the dialog component with empty content and append the created dynamic ListView object to the dialog on [`created`](https://ej2.syncfusion.com/react/documentation/api/dialog/#created) event.
 
 * Bind the click event for button icon (+) to update the ListView data source with tags, and open the dialog with this dynamic ListView. Refer to the following code sample.
 

@@ -24,7 +24,7 @@ The field list can be displayed in three different formats to interact with pivo
 
 ## In-built Field List (Popup)
 
-To enable the field list in pivot table UI, set the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showfieldlist) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true**. A small icon will appear on the top left corner of the pivot table and clicking on this icon, field list dialog will appear.
+To enable the field list in pivot table UI, set the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showfieldlist) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true**. A small icon will appear on the top left corner of the pivot table and clicking on this icon, field list dialog will appear.
 
 > The field list icon will be displayed at the top right corner of the pivot table, when grouping bar is enabled.
 
@@ -43,9 +43,9 @@ To use field list, you need to inject the `FieldList` module in pivot table.
 
 ## Stand-alone Field List (Fixed)
 
-The field list can be rendered in a static position, anywhere in web page layout, like a separate component. To do so, you need to set [`renderMode`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#rendermode) property to **Fixed**.
+The field list can be rendered in a static position, anywhere in web page layout, like a separate component. To do so, you need to set [`renderMode`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#rendermode) property to **Fixed**.
 
-> To make field list interact with pivot table, you need to use the [`updateView`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#updateview) and [`update`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#update) methods for data source update in both field list and pivot table simultaneously.
+> To make field list interact with pivot table, you need to use the [`updateView`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#updateview) and [`update`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#update) methods for data source update in both field list and pivot table simultaneously.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,10 +60,10 @@ The field list can be rendered in a static position, anywhere in web page layout
 
 ## Invoking dynamic Field List (Customized)
 
-Also, you can display the field list dialog independently through other means. For example, you can invoke the field list dialog on an external button click. To do so, set [`renderMode`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#rendermode) property to **Popup** and  since on button click, field list dialog will be invoked.
+Also, you can display the field list dialog independently through other means. For example, you can invoke the field list dialog on an external button click. To do so, set [`renderMode`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#rendermode) property to **Popup** and  since on button click, field list dialog will be invoked.
 
-> * Meanwhile, you can display the field list dialog over specific target element within a web page using [`target`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#target) property. By default, the [`target`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#target) value is "null", which by default refers the `document.body` element.
-> * To make field list interact with pivot table, you need to use the [`updateView`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#updateview) and [`update`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#update) methods for data source update in both field list and pivot table simultaneously.
+> * Meanwhile, you can display the field list dialog over specific target element within a web page using [`target`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#target) property. By default, the [`target`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#target) value is "null", which by default refers the `document.body` element.
+> * To make field list interact with pivot table, you need to use the [`updateView`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#updateview) and [`update`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#update) methods for data source update in both field list and pivot table simultaneously.
 
 The below sample code illustrates the field list dialog invoked on an external button click.
 
@@ -120,7 +120,7 @@ End user can sort fields in the field list UI to ascending (or) descending (or)
 
 ### Sort fields in a desired order
 
-To display the fields in descending order by default, set the [defaultFieldListOrder](https://ej2.syncfusion.com/react/documentation/api/pivotview/loadEventArgs/#defaultfieldlistorder) property to **Descending** in the [load](https://ej2.syncfusion.com/react/documentation/api/pivotview#load) event.
+To display the fields in descending order by default, set the [defaultFieldListOrder](https://ej2.syncfusion.com/react/documentation/api/pivotview/loadEventArgs/#defaultfieldlistorder) property to **Descending** in the [load](https://ej2.syncfusion.com/react/documentation/api/pivotview/#load) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -158,7 +158,7 @@ Using check box besides each field, end user can select or unselect to add or re
 
 ## Remove specific field(s) from displaying
 
-When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [`excludeFields`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#excludefields) property belonging to [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings).
+When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [`excludeFields`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#excludefields) property belonging to [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -197,7 +197,7 @@ Using the sort icon besides each field in row and column axes, members can be ar
 
 ## Calculated fields
 
-The calculated field support allows end user to add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. To enable this support in Field List UI, set the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview#allowcalculatedfield) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true** in pivot table. Now a button will be seen automatically inside the field list UI which will invoke the calculated field dialog on click. To know more about calculated field, [`refer`](./calculated-field) here.
+The calculated field support allows end user to add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. To enable this support in Field List UI, set the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowcalculatedfield) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true** in pivot table. Now a button will be seen automatically inside the field list UI which will invoke the calculated field dialog on click. To know more about calculated field, [`refer`](./calculated-field) here.
 
 ![output](images/gs_calc_button.png "Enabling calculated field in field list UI")
 <br/>
@@ -218,13 +218,13 @@ End user can perform calculations over a group of values using the aggregation o
 
 ## Defer layout update
 
-Defer layout update support to update the pivot table only on demand and not during every user action. To enable this support in Field List UI, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/react/documentation/api/pivotview#allowdeferlayoutupdate) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true** in pivot table. Now a check box inside Field List UI will be seen in checked state, allowing pivot table to update only on demand. To know more about defer layout, [`refer`](./defer-update) here.
+Defer layout update support to update the pivot table only on demand and not during every user action. To enable this support in Field List UI, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowdeferlayoutupdate) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true** in pivot table. Now a check box inside Field List UI will be seen in checked state, allowing pivot table to update only on demand. To know more about defer layout, [`refer`](./defer-update) here.
 
 ![output](images/fieldlist_deferupdate.png)
 
 ## Show built-in Field List (Popup) over specific target
 
-By passing the target element to the built-in field list dialog module in the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview#databound) event, the field list dialog will be displayed over the appropriate target element on a web page. By default, the Pivot Table's parent element is used as the target element to display the built-in field list dialog.
+By passing the target element to the built-in field list dialog module in the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#databound) event, the field list dialog will be displayed over the appropriate target element on a web page. By default, the Pivot Table's parent element is used as the target element to display the built-in field list dialog.
 
 The sample code below shows the built-in field list dialog using `document.body` as the target element.
 
@@ -241,7 +241,7 @@ The sample code below shows the built-in field list dialog using `document.body
 
 ## Show field list using toolbar
 
-It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showfieldlist) and [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showtoolbar) properties in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true**. Also, include the **FieldList** within the [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview#toolbar) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview). When toolbar is enabled, field list icon will be automatically added into the toolbar and the icon won't appear on top left corner in the pivot table component.
+It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showfieldlist) and [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showtoolbar) properties in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true**. Also, include the **FieldList** within the [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbar) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview). When toolbar is enabled, field list icon will be automatically added into the toolbar and the icon won't appear on top left corner in the pivot table component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -256,7 +256,7 @@ It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfu
 
 ## Set caption to fields which isn’t bound to the report
 
-One can set the caption to all fields from the data source even if it is not bound to the actual report. It can be achieved using the [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#enginepopulated) event. On doing so, caption of the respective field will be displayed in both grouping bar and field list.
+One can set the caption to all fields from the data source even if it is not bound to the actual report. It can be achieved using the [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#enginepopulated) event. On doing so, caption of the respective field will be displayed in both grouping bar and field list.
 
 In the sample, we have set caption to the fields `Year` and `Quarter` dynamically.
 
@@ -292,13 +292,13 @@ During runtime, the **Values** button in the field list can be moved to a differ
 
 ### EnginePopulated
 
-The [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#enginepopulated) event is available in both Pivot Table and Field List.
+The [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#enginepopulated) event is available in both Pivot Table and Field List.
 
-* The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#enginepopulated) is triggered in field list whenever the report gets modified. The updated report is passed to the pivot table via [`updateView`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#updateview) method written within this event to refresh the same.
+* The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#enginepopulated) is triggered in field list whenever the report gets modified. The updated report is passed to the pivot table via [`updateView`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#updateview) method written within this event to refresh the same.
 
-* Likewise, [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#enginepopulated) event is triggered in pivot table whenever the report gets modified. The updated report is passed to the field list via [`update`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#update) method written within this event to refresh the same.
+* Likewise, [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#enginepopulated) event is triggered in pivot table whenever the report gets modified. The updated report is passed to the field list via [`update`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#update) method written within this event to refresh the same.
 
-The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#enginepopulated) is triggered after engine is populated. It has following parameters - [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist#datasourcesettings), [`PivotFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist) and `pivotValues`.
+The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#enginepopulated) is triggered after engine is populated. It has following parameters - [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#datasourcesettings), [`PivotFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist) and `pivotValues`.
 
 >Note: This event is not required for Popup field list since it is a in built one.
 
@@ -315,7 +315,7 @@ The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api
 
 ### FieldDropped
 
-The event [`onFieldDropped`](https://ej2.syncfusion.com/react/documentation/api/pivotview#onfielddropped) fires whenever a field is dropped in an axis. It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSettings`. In this illustration, we have modified the `droppedField` caption through this event at runtime.
+The event [`onFieldDropped`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#onfielddropped) fires whenever a field is dropped in an axis. It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSettings`. In this illustration, we have modified the `droppedField` caption through this event at runtime.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

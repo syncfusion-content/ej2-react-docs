@@ -56,7 +56,7 @@ In normal edit mode, when user starts editing, the state of the currently select
 
 ## Dialog
 
-In dialog edit mode, when user starts editing, the currently selected row data will be shown in an exclusive dialog. User can change cell values and save it to the data source by clicking "Save" button in the dialog. To enable the dialog edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#editsettings) to **Dialog**.
+In dialog edit mode, when user starts editing, the currently selected row data will be shown in an exclusive dialog. User can change cell values and save it to the data source by clicking "Save" button in the dialog. To enable the dialog edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Dialog**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -71,7 +71,7 @@ In dialog edit mode, when user starts editing, the currently selected row data w
 
 ## Batch
 
-In batch edit mode, when user double-clicks any data grid cell, the state of target cell is changed to edit state. User can perform bulk changes and finally save (added, changed, and deleted data in the single request) to the data source by clicking "Update" toolbar button. To enable the batch edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#editsettings) to **Batch**.
+In batch edit mode, when user double-clicks any data grid cell, the state of target cell is changed to edit state. User can perform bulk changes and finally save (added, changed, and deleted data in the single request) to the data source by clicking "Update" toolbar button. To enable the batch edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Batch**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -86,7 +86,7 @@ In batch edit mode, when user double-clicks any data grid cell, the state of tar
 
 ## Command column
 
-An additional column appended in the data grid layout holds the command buttons to perform the CRUD operation. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowcommandcolumns) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#editsettings) to **true**.
+An additional column appended in the data grid layout holds the command buttons to perform the CRUD operation. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowcommandcolumns) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -101,7 +101,7 @@ An additional column appended in the data grid layout holds the command buttons 
 
 ## Inline Editing
 
-Allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettings/#allowinlineediting) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#editsettings) to **true**.
+Allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettings/#allowinlineediting) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

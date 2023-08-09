@@ -14,7 +14,7 @@ To have a quick glance on how to enable grouping bar in the React Pivot Table, w
 
 {% youtube "https://www.youtube.com/watch?v=6zKDyLyPnmg" %}
 
-The Grouping Bar option in pivot table automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and create pivot tables at runtime. It can be enabled by setting the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showgroupingbar) property to **true**.
+The Grouping Bar option in pivot table automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and create pivot tables at runtime. It can be enabled by setting the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showgroupingbar) property to **true**.
 
 > To use grouping bar, You need to inject the `GroupingBar` module in pivot table.
 
@@ -40,7 +40,7 @@ The grouping bar provides some additional options to customize it's UI using `gr
 
 ## Show or hide fields panel
 
-The fields panel, which is positioned above the grouping bar, displays the fields that are available in the data source but are not bound in the report. The fields can be dragged and dropped into the appropriate axis. In addition, any field removed from any axes will be automatically added to the fields panel. The fields panel can be displayed by setting the [`showFieldsPanel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showfieldspanel) property in the [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#groupingbarsettings) to **true**.
+The fields panel, which is positioned above the grouping bar, displays the fields that are available in the data source but are not bound in the report. The fields can be dragged and dropped into the appropriate axis. In addition, any field removed from any axes will be automatically added to the fields panel. The fields panel can be displayed by setting the [`showFieldsPanel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showfieldspanel) property in the [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#groupingbarsettings) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -55,7 +55,7 @@ The fields panel, which is positioned above the grouping bar, displays the field
 
 ## Show or hide all filter icon
 
-The Grouping Bar has an option to filter members of particular fields at runtime in pivot table. In order to filter members in a field, click the filter icon in the pivot button and check/uncheck the members that needs to be displayed. To disable the filter icon, you need to set [`showFilterIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showfiltericon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#groupingbarsettings) to **false**.
+The Grouping Bar has an option to filter members of particular fields at runtime in pivot table. In order to filter members in a field, click the filter icon in the pivot button and check/uncheck the members that needs to be displayed. To disable the filter icon, you need to set [`showFilterIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showfiltericon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#groupingbarsettings) to **false**.
 
 > By default, the filter icon is enabled in the grouping bar.
 
@@ -89,7 +89,7 @@ In the below sample, the filter icon of "Quarter" and "Products" fields have bee
 
 ## Show or hide all sort icon
 
-The Grouping Bar has an option to order members of a particular fields either in ascending or descending at run time. In order to sort a field, click the sort icon available in the respective pivot button. To reverse the sort direction, click the same sort icon again. To disable the sort option, you need to set the [`showSortIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showsorticon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#groupingbarsettings) to **false**.
+The Grouping Bar has an option to order members of a particular fields either in ascending or descending at run time. In order to sort a field, click the sort icon available in the respective pivot button. To reverse the sort direction, click the same sort icon again. To disable the sort option, you need to set the [`showSortIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showsorticon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#groupingbarsettings) to **false**.
 
 > By default, the sort icon is enabled in the grouping bar.
 
@@ -123,7 +123,7 @@ In the below sample, the sort icon of "Quarter" and "Country" fields have been h
 
 ## Show or hide all remove icon
 
-The Grouping Bar has an option to remove a particular field at run time. In order to remove a field, click the remove icon in the pivot button. To disable the remove icon, you need to set the [`showRemoveIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showremoveicon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#groupingbarsettings) to **false**.
+The Grouping Bar has an option to remove a particular field at run time. In order to remove a field, click the remove icon in the pivot button. To disable the remove icon, you need to set the [`showRemoveIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showremoveicon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#groupingbarsettings) to **false**.
 
 > By default, the remove icon is enabled in the grouping bar.
 
@@ -206,7 +206,7 @@ When a report is bound to the pivot table, fields will be automatically populate
 
 ## Changing aggregation type of value fields at runtime
 
-End user can perform calculations over a group of values using the aggregation option. The value fields bound to the field list, appears with a dropdown icon, helps to select an appropriate aggregation type at runtime. On selection, the values in the Pivot Table will be changed dynamically. By default, the icon to set aggregation type is enabled in the grouping bar. To disable this icon, set the property [`showValueTypeIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showvaluetypeicon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#groupingbarsettings) to **false**. To know more about aggregation, [`refer`](./aggregation) here.
+End user can perform calculations over a group of values using the aggregation option. The value fields bound to the field list, appears with a dropdown icon, helps to select an appropriate aggregation type at runtime. On selection, the values in the Pivot Table will be changed dynamically. By default, the icon to set aggregation type is enabled in the grouping bar. To disable this icon, set the property [`showValueTypeIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showvaluetypeicon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#groupingbarsettings) to **false**. To know more about aggregation, [`refer`](./aggregation) here.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -259,7 +259,7 @@ During runtime, the **Values** button in the grouping bar can be moved to a diff
 
 ### OnFieldDropped
 
-The event [`onFieldDropped`](https://ej2.syncfusion.com/react/documentation/api/pivotview#onfielddropped) fires on whenever a field is dropped over an axis.
+The event [`onFieldDropped`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#onfielddropped) fires on whenever a field is dropped over an axis.
 
 It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSettings`. In this sample we have modified the `droppedField` caption based on the `droppedAxis`.
 
@@ -276,7 +276,7 @@ It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSetti
 
 ### FieldDragStart
 
-The event [`fieldDragStart`](https://ej2.syncfusion.com/react/documentation/api/pivotview#fielddragstart) fires whenever a field drag starts from its axis. It allows the user to restrict the drag operation based on its parameters. It has the following parameters
+The event [`fieldDragStart`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#fielddragstart) fires whenever a field drag starts from its axis. It allows the user to restrict the drag operation based on its parameters. It has the following parameters
 
 * `fieldName`: It holds the name of the appropriate field.
 
@@ -301,7 +301,7 @@ In the below sample, the drag operation for the fields in row axis alone is rest
 
 ### FieldDrop
 
-The event [`fieldDrop`](https://ej2.syncfusion.com/react/documentation/api/pivotview#fielddrop) fires whenever a field is dropped into an axis. It allows the user to restrict the drop operation based on its parameters. It has the following parameters
+The event [`fieldDrop`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#fielddrop) fires whenever a field is dropped into an axis. It allows the user to restrict the drop operation based on its parameters. It has the following parameters
 
 * `fieldName`: It holds the name of the appropriate field.
 
@@ -332,7 +332,7 @@ In the below sample, dropping of any fields in value axis alone is restricted.
 
 ### FieldRemove
 
-The event [`fieldRemove`](https://ej2.syncfusion.com/react/documentation/api/pivotview#fieldremove) fires when removing any field from their axis. It helps the user to limit the elimination of a field based on its parameters. It has the following parameters
+The event [`fieldRemove`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#fieldremove) fires when removing any field from their axis. It helps the user to limit the elimination of a field based on its parameters. It has the following parameters
 
 * `fieldName`: It holds the name of the field to be removed.
 
@@ -359,11 +359,11 @@ In the below sample, the field "Country" could not be removed from report by any
 
 ### AggregateMenuOpen
 
-The event [`aggregateMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/pivotview#aggregatemenuopen) fires while clicking dropdown icon of the value field button UI. It allows to customize the aggregate types to be displayed in the dropdown menu. It has the following parameters
+The event [`aggregateMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#aggregatemenuopen) fires while clicking dropdown icon of the value field button UI. It allows to customize the aggregate types to be displayed in the dropdown menu. It has the following parameters
 
 * `fieldName`: It holds the name of the field that opens the aggregate menu.
 
-* [`aggregateTypes`](https://ej2.syncfusion.com/react/documentation/api/pivotview#aggregatetypes): It holds the aggregation types set for a field.
+* [`aggregateTypes`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#aggregatetypes): It holds the aggregation types set for a field.
 
 * `displayMenuCount`: It allows to set the menu count to be displayed initially. By default, its count is 7.
 
@@ -382,7 +382,7 @@ In the below sample, the aggregate types of the field "Amount" has been customiz
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs142" %}
 
- >The events [`aggregateMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/pivotview#aggregatemenuopen), [`fieldRemove`](https://ej2.syncfusion.com/react/documentation/api/pivotview#fieldremove), [`fieldDrop`](https://ej2.syncfusion.com/react/documentation/api/pivotview#fielddrop), [`fieldDragStart`](https://ej2.syncfusion.com/react/documentation/api/pivotview#fielddragstart) and [`onFieldDropped`](https://ej2.syncfusion.com/react/documentation/api/pivotview#onfielddropped) are applicable for both grouping bar and field list.
+ >The events [`aggregateMenuOpen`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#aggregatemenuopen), [`fieldRemove`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#fieldremove), [`fieldDrop`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#fielddrop), [`fieldDragStart`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#fielddragstart) and [`onFieldDropped`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#onfielddropped) are applicable for both grouping bar and field list.
 
 ### ActionBegin
 
