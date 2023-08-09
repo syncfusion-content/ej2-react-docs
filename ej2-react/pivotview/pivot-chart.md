@@ -220,7 +220,7 @@ Exploding can be enabled by setting the `explode` property in [`chartSeries`](ht
 
 ## Field List
 
-User can enable the field list by setting the property [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showfieldlist) as **true**.
+User can enable the field list by setting the property [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showfieldlist) as **true**.
 By using this, user can customize the report dynamically and view the result in pivot chart. For more information regarding the field list, refer the [field list](./field-list) topic.
 
 In the following sample, the Popup mode of field list is enabled in the pivot chart.
@@ -238,7 +238,7 @@ In the following sample, the Popup mode of field list is enabled in the pivot ch
 
 ## Grouping Bar
 
-User can enable the grouping bar by setting the property [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showgroupingbar) as **true**. The grouping bar in pivot chart shows a dropdown list in value axis instead of buttons. The dropdown list holds list of value fields bounded in the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings) and it can be switched to draw the pivot chart with the selected value field. This has been defined as the default behavior in the pivot chart component. For more information regarding the grouping bar, refer the [grouping bar](./grouping-bar) topic.
+User can enable the grouping bar by setting the property [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showgroupingbar) as **true**. The grouping bar in pivot chart shows a dropdown list in value axis instead of buttons. The dropdown list holds list of value fields bounded in the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) and it can be switched to draw the pivot chart with the selected value field. This has been defined as the default behavior in the pivot chart component. For more information regarding the grouping bar, refer the [grouping bar](./grouping-bar) topic.
 
 > For multiple axis support, buttons will be placed in value axis instead of dropdown list.
 
@@ -345,7 +345,7 @@ Furthermore, with a single click over the legend item, you can show or hide spec
 
 ## Series customization
 
-User can customize series of the pivot chart using [`chartSeries`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#chartseries) in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#chartsettings) class. The changes handled in the property will be reflected commonly in all chart series.
+User can customize series of the pivot chart using [`chartSeries`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#chartseries) in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#chartsettings) class. The changes handled in the property will be reflected commonly in all chart series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -375,7 +375,7 @@ In the following sample, the even series are hidden in the pivot chart.
 
 ## Axis customization
 
-User can customize axis of the pivot chart using [`primaryXAxis`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#primaryxaxis) and [`primaryYAxis`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#primaryyaxis) properties in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#chartsettings).
+User can customize axis of the pivot chart using [`primaryXAxis`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#primaryxaxis) and [`primaryYAxis`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#primaryyaxis) properties in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#chartsettings).
 
 > Axis customization is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
@@ -415,7 +415,7 @@ One can also customize multi-level labels of primary x-axis by using the [`multi
 
 ## Legend customization
 
-User can customize legend using [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#legendsettings) in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#chartsettings). By default, legend will be visible and it can be hidden by setting the property `Visible` in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#legendsettings) as **false**.
+User can customize legend using [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#legendsettings) in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#chartsettings). By default, legend will be visible and it can be hidden by setting the property `Visible` in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/chartSettingsModel/#legendsettings) as **false**.
 
 The pivot chart support different types of legend shapes as follows,
 
@@ -477,7 +477,7 @@ Also user can enable and customize the crosshair tooltip for axes using [`crossh
 
 ### Zooming and Panning
 
-User can customize zooming and panning option using the property [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotZoomSettings/) in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#chartsettings).
+User can customize zooming and panning option using the property [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotZoomSettings/) in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#chartsettings).
 
 The pivot chart support four types of zooming which can be set as follows,
 
@@ -509,7 +509,7 @@ This can be set using the property [`mode`](https://ej2.syncfusion.com/react/doc
 
 ### Tooltip
 
-By default, tooltip for the pivot chart is enabled. User can customize it by using the property [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotTooltipSettings/) in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#chartsettings).
+By default, tooltip for the pivot chart is enabled. User can customize it by using the property [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotTooltipSettings/) in [`chartSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#chartsettings).
 
 > The tooltip can be disabled by setting the property [`enable`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotTooltipSettings/#enable) in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotTooltipSettings/) as **false**.
 

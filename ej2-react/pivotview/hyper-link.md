@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Hyper link in React Pivotview component
 
-The pivot table supports to show hyperlink option to link data for individual cells that are displayed in the component. Also, the hyperlink can be enabled separately for row headers, column headers, value cells, and summary cells using the [`hyperlinkSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#hyperlinksettings). It can be configured through code behind, during initial rendering and the settings available to show hyperlink are:
+The pivot table supports to show hyperlink option to link data for individual cells that are displayed in the component. Also, the hyperlink can be enabled separately for row headers, column headers, value cells, and summary cells using the [`hyperlinkSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#hyperlinksettings). It can be configured through code behind, during initial rendering and the settings available to show hyperlink are:
 
 * [`showHyperlink`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettingsModel/#showhyperlink): It allows to set the visibility of hyperlink in all cells.
 * [`showRowHeaderHyperlink`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettingsModel/#showrowheaderhyperlink): It allows to set the visibility of hyperlink in row headers.
@@ -22,7 +22,7 @@ The pivot table supports to show hyperlink option to link data for individual ce
 
 > By default, the hyperlink options are disabled for all cells in the pivot table.
 >
-> User defined style can be applied to hyperlink using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettingsModel/#cssclass) property in [`hyperlinkSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#hyperlinksettings).
+> User defined style can be applied to hyperlink using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettingsModel/#cssclass) property in [`hyperlinkSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#hyperlinksettings).
 
 ## Hyperlink for all cells
 
@@ -136,7 +136,7 @@ The pivot table has an option to show hyperlink in the cells based on specific r
 
 ## Event
 
-The event [`hyperlinkCellClick`](https://ej2.syncfusion.com/react/documentation/api/pivotview#hyperlinkcellclick) fires on every hyperlink cell click.
+The event [`hyperlinkCellClick`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#hyperlinkcellclick) fires on every hyperlink cell click.
 
 It has following parameters - `Cancel` and `CurrentCell`. The parameter `CurrentCell` is used to customize the host cell element by any means. Meanwhile, when the parameter `Cancel` is set to **true**, applied customization will not be updated to the host cell element.
 

@@ -26,7 +26,7 @@ Install the below required dependent packages to render the ListView component.
 
 ## Installation and Configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 
 To install `create-react-app` run the following command.
 
@@ -185,7 +185,7 @@ npm start
 
  {% previewsample "page.domainurl/code-snippet/listview/getting-started-cs1" %}
 
-N> You can refer to our [React ListView](https://www.syncfusion.com/react-ui-components/react-listview) feature tour page for its groundbreaking feature representations. You can also explore our [React ListView example](https://ej2.syncfusion.com/react/demos/#/material/listview/default) to know how to render and configure the listview.
+N> You can refer to our [React ListView](https://www.syncfusion.com/react-components/react-listview) feature tour page for its groundbreaking feature representations. You can also explore our [React ListView example](https://ej2.syncfusion.com/react/demos/#/material/listview/default) to know how to render and configure the listview.
 
 ## See Also
 

@@ -98,7 +98,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
       listRequest.Q = "mimeType='application/pdf' and '" + folderId + "' in parents and trashed=false";
       listRequest.Fields = "files(id, name)";
       var files = await listRequest.ExecuteAsync();
-      string fileIdToDownload = null;
+      string fileIdToDownload = string.Empty;
       foreach (var file in files.Files)
       { 
         string fileId = file.Id;

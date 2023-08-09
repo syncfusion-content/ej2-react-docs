@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Allows end user to change the appearance of the pivot table value cells with its background color, font color, font family, and font size based on specific conditions.
 
-The conditional formatting can be applied at runtime through the built-in dialog, invoked from the toolbar. To do so, set [`allowConditionalFormatting`](https://ej2.syncfusion.com/react/documentation/api/pivotview#allowconditionalformatting) and [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showtoolbar) properties to **true**. Also, include the item **ConditionalFormatting** within the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview#toolbar) property. End user can now see the "Conditional Formatting" icon in toolbar UI automatically, which on clicking will invoke the formatting dialog to perform necessary operations.
+The conditional formatting can be applied at runtime through the built-in dialog, invoked from the toolbar. To do so, set [`allowConditionalFormatting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowconditionalformatting) and [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showtoolbar) properties to **true**. Also, include the item **ConditionalFormatting** within the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbar) property. End user can now see the "Conditional Formatting" icon in toolbar UI automatically, which on clicking will invoke the formatting dialog to perform necessary operations.
 
 > To use the conditional formatting feature, You need to inject the `ConditionalFormatting` module in pivot table.
 
@@ -46,7 +46,7 @@ The available style properties in [`style`](https://ej2.syncfusion.com/react/doc
 * [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/pivotview/style/#fontfamily): Specifies the font family.
 * [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/pivotview/style/#fontsize): Specifies the font size.
 
-Meanwhile, user can also view conditional formatting dialog in UI by invoking [`showConditionalFormattingDialog`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showconditionalformattingdialog) method on an external button click which is shown in the below code sample.
+Meanwhile, user can also view conditional formatting dialog in UI by invoking [`showConditionalFormattingDialog`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showconditionalformattingdialog) method on an external button click which is shown in the below code sample.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -99,7 +99,7 @@ Editing and removing existing conditional format can be done through the UI at r
 
 ### ConditionalFormatting
 
-The event [`conditionalFormatting`](https://ej2.syncfusion.com/react/documentation/api/pivotview#conditionalformatting) is triggered initially while clicking the “ADD CONDITION” button inside the conditional formatting dialog in-order to fill user specific condition instead of default condition at runtime. To use this event, [`allowConditionalFormatting`](https://ej2.syncfusion.com/react/documentation/api/pivotview#allowconditionalformatting) property in PivotView must be set to **true**. It has following parameters -
+The event [`conditionalFormatting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#conditionalformatting) is triggered initially while clicking the “ADD CONDITION” button inside the conditional formatting dialog in-order to fill user specific condition instead of default condition at runtime. To use this event, [`allowConditionalFormatting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowconditionalformatting) property in PivotView must be set to **true**. It has following parameters -
 
 * `applyGrandTotals` - boolean property, by setting this to true user can enable formatting to grand totals.
 * `conditions` - condition to be filled in conditional formatting dialog.

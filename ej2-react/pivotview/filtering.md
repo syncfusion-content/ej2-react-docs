@@ -80,7 +80,7 @@ User can sort members within the member editor either to ascending (or) descendi
 
 In member filter dialog, end user can set the limit to display members while loading large data. Based on this limit, initial loading will get completed quickly without any performance constraint. Also, a message with remaining member count, which are not part of the UI, will be displayed in the member editor.
 
-The data limit can be set using the [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview#maxnodelimitinmembereditor) property. By default, the property holds the numeric value **1000**.
+The data limit can be set using the [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#maxnodelimitinmembereditor) property. By default, the property holds the numeric value **1000**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -93,13 +93,13 @@ The data limit can be set using the [`maxNodeLimitInMemberEditor`](https://ej2.s
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs96" %}
 
-Meanwhile, end user can utilize the search option to refine the members from the exceeded limit. For example, consider that there are 5000 members in the name "Node 1", "Node 2", "Node 3", and so on... and user has set the property [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview#maxnodelimitinmembereditor) to **500**. In this case, only the initial 500 members will be displayed by default leaving a message "4500 more items. Search to refine further.". To get the member(s) between 501 to 5000, enter the starting character(s) in search option to bring the desired member(s) from the exceeded limit to the UI. Now, end user can either check or uncheck to continue with the filtering process.
+Meanwhile, end user can utilize the search option to refine the members from the exceeded limit. For example, consider that there are 5000 members in the name "Node 1", "Node 2", "Node 3", and so on... and user has set the property [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#maxnodelimitinmembereditor) to **500**. In this case, only the initial 500 members will be displayed by default leaving a message "4500 more items. Search to refine further.". To get the member(s) between 501 to 5000, enter the starting character(s) in search option to bring the desired member(s) from the exceeded limit to the UI. Now, end user can either check or uncheck to continue with the filtering process.
 
 ### Loading members on-demand
 
 > This property is applicable only for OLAP data sources.
 
-Allows to load members inside the filter dialog on-demand by setting the [`loadOnDemandInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview#loadondemandinmembereditor) property to **true**. By default, first level is loaded in the member editor from the OLAP cube. So, the member editor will be opened quickly, without any performance constraints. By default, this property is set to **true** and the search will only be applied to the level members that are loaded. In the meantime, the next level members can be added using either of the following methods.
+Allows to load members inside the filter dialog on-demand by setting the [`loadOnDemandInMemberEditor`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#loadondemandinmembereditor) property to **true**. By default, first level is loaded in the member editor from the OLAP cube. So, the member editor will be opened quickly, without any performance constraints. By default, this property is set to **true** and the search will only be applied to the level members that are loaded. In the meantime, the next level members can be added using either of the following methods.
 
 * By clicking on the expander button of the respective member, only its child members will be loaded.
 * Select a level from the drop-down list that will load all members up to the chosen level from the cube.
@@ -274,7 +274,7 @@ End user can clear the applied label filter by simply click the "Clear" option a
 
 The value filtering helps to perform filter operation based only on value fields and its resultant aggregated values over other fields defined in row and column axes.
 
-The value filtering dialog can be enabled by setting the [`AllowValueFilter`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.DataSourceSettingsModel%601~AllowValueFilter.html) property in [`PivotViewDataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings) class to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Value" tab to perform value filtering operations.
+The value filtering dialog can be enabled by setting the [`AllowValueFilter`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.DataSourceSettingsModel%601~AllowValueFilter.html) property in [`PivotViewDataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) class to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Value" tab to perform value filtering operations.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -343,7 +343,7 @@ End user can clear the applied value filter by simply click the "Clear" option a
 
 ### MemberFiltering
 
-The event [`memberFiltering`](https://ej2.syncfusion.com/react/documentation/api/pivotview#memberfiltering) triggers before applying filter using the dialog, that is, specifically while clicking the **"OK"** button. Using this event user can view or modify the applied [filter settings](https://ej2.syncfusion.com/javascript/documentation/api/pivotview/filter/) such as filter items, type of filter, conditions, etc. It has following parameters:
+The event [`memberFiltering`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#memberfiltering) triggers before applying filter using the dialog, that is, specifically while clicking the **"OK"** button. Using this event user can view or modify the applied [filter settings](https://ej2.syncfusion.com/javascript/documentation/api/pivotview/filter/) such as filter items, type of filter, conditions, etc. It has following parameters:
 
 * `cancel` - Boolean property, when the parameter `cancel` is set to **true**, applied filtering will not be updated
 * [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/filter/) - It holds current [filter settings](https://ej2.syncfusion.com/react/documentation/api/pivotview/filter/).
@@ -362,7 +362,7 @@ The event [`memberFiltering`](https://ej2.syncfusion.com/react/documentation/api
 
 ### MemberEditorOpen
 
-The event [`memberEditorOpen`](https://ej2.syncfusion.com/react/documentation/api/pivotview#membereditoropen) fires while opening member editor dialog. It allows to customize the field members to be displayed in the dialog. It has the following parameters
+The event [`memberEditorOpen`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#membereditoropen) fires while opening member editor dialog. It allows to customize the field members to be displayed in the dialog. It has the following parameters
 
 * `fieldName`: It holds the name of the appropriate field.
 
