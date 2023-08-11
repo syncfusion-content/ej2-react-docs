@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js Application Using Syncfusion React Components
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion React components.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion React Grid component.
 
 ## What is Next.js?
 
@@ -281,7 +281,3 @@ yarn run dev
 To learn more about the functionality of the Grid component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started#module-injection).
 
 > [View the NEXT.js Grid sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-grid).
-
-## See also
-
-[Getting Started with the Syncfusion React UI Component](../getting-started/quick-start.md)

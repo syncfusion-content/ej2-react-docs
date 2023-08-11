@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, ExcelExport, ExcelExportProperties, Inject } from '@syncfusion/ej2-react-treegrid';
@@ -18,12 +15,12 @@ function App() {
             let excelExportProperties: ExcelExportProperties = {
                 fileName:"new.xlsx"
             };
-            (treegrid.current as any).excelExport(excelExportProperties);
+            (treegrid as any).excelExport(excelExportProperties);
         }
     }
 
     return <TreeGridComponent dataSource={sampleData} treeColumnIndex={1} childMapping='subtasks' allowPaging={true} pageSettings={{ pageSize: 7 }} allowExcelExport={true} height='220'
-    toolbarClick={toolbarClick} ref={treegrid}
+    toolbarClick={toolbarClick} ref={g => treegrid = g}
     toolbar={toolbarOptions}>
         <ColumnsDirective>
             <ColumnDirective field='taskID' headerText='Task ID' width='90' textAlign='Right'></ColumnDirective>
@@ -35,6 +32,3 @@ function App() {
     </TreeGridComponent>
 };
 export default App;
-
-
-{% endraw %}
