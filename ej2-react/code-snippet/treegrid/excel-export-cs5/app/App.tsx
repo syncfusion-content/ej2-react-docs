@@ -3,7 +3,7 @@
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { ColumnDirective, ColumnsDirective, Page, PageSettingsModel, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Column, ExcelExport, Inject, Toolbar, ToolbarItems, TreeGrid } from '@syncfusion/ej2-react-treegrid';
-import * as React from 'react';v
+import * as React from 'react';
 import { sampleData } from './datasource';
 
 function App() {

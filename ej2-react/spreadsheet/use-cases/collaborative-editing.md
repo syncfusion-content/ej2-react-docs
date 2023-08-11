@@ -273,7 +273,6 @@ export default App;
 ```
 
 ## See Also
-
 * [Filtering](../filter)
 * [Sorting](../sort)
 * [Hyperlink](../link)
