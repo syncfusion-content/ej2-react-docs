@@ -50,6 +50,8 @@ The `Separator` type adds a vertical separation between the Toolbar single/multi
 
 The `Input` type is only applicable for adding `template` elements when the [`template`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#template) property is defined as an `object`. Input type creates an `input element` internally that acts as the container for `Syncfusion` input based components.
 
+>Note: Set toolbar item **type** property value as `Input` only for Input components.
+
 ### NumericTextBox
 
  E.g. The following code explains about how to add `NumericTextBox` component to the Toolbar.
