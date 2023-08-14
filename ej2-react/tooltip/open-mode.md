@@ -35,12 +35,6 @@ To open the Tooltip for multiple actions, say while hovering over or clicking on
 The following code example shows how to set the open mode for Tooltips.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/open-mode-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/open-mode-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/open-mode-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -58,12 +52,6 @@ Other than the above specified options, the `custom` mode makes the Tooltip appe
 The following code example shows how to define custom open mode for the Tooltip.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/custom-open-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/custom-open-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/custom-open-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -79,12 +67,6 @@ The following code example shows how to define custom open mode for the Tooltip.
 With this mode set to `true`, Tooltips can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `isSticky` property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/sticky-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/sticky-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/sticky-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -100,12 +82,6 @@ With this mode set to `true`, Tooltips can be made to show up on the screen as l
 The Tooltips can be opened or closed after some delay by using the `openDelay` and `closeDelay` properties.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/open-delay-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/open-delay-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/open-delay-cs1/app/index.jsx %}
 {% endhighlight %}

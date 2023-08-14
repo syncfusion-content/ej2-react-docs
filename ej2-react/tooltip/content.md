@@ -20,12 +20,6 @@ Any text or image can be added to the Tooltip, by default. To customize the Tool
 Refer to the following code example to add formatted HTML content to the Tooltip.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/content-1-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/content-1-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/content-1-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -41,12 +35,6 @@ Refer to the following code example to add formatted HTML content to the Tooltip
 The Tooltip content can be dynamically loaded  by making use of the Fetch call. The Fetch request is usually made within the `beforeRender` event of the Tooltip, and then the Tooltip's `content` is assigned the value retrieved on it's success.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/ajax-content-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/ajax-content-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/ajax-content-cs1/app/index.jsx %}
 {% endhighlight %}

@@ -42,12 +42,6 @@ The following are the standard keys that work on Tooltip.
 In the following preview sample, focusing the input element through `tab` key opens the Tooltip and  pressing the `esc` key closes it.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/multi-target-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/multi-target-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/multi-target-cs1/app/index.jsx %}
 {% endhighlight %}

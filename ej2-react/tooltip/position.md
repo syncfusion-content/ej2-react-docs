@@ -28,12 +28,6 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 > By default, Tooltip is placed at the `TopCenter` of the target element.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/position-default-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/position-default-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/position-default-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -57,12 +51,6 @@ Pointer positions can be adjusted using the `tipPointerPosition` property that c
 The following code example illustrates how to set the pointer to the start position of the Tooltip.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/position-tip-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/position-tip-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/position-tip-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -80,12 +68,6 @@ By default, tip pointers are auto adjusted so that the arrow does not point outs
 The Tooltip and its tip pointer can be positioned dynamically based on the target's location. This can be achieved by using the `refresh` method, which auto adjusts the Tooltip over the target.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/dragabble-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/dragabble-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/dragabble-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -102,12 +84,6 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
 By default, it is set to `false`.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/mouse-trail-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/mouse-trail-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/mouse-trail-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -131,12 +107,6 @@ Offset values are set to specify the distance between the target and tooltip ele
 The following code example illustrates how to set offset values.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/offset-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/offset-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/offset-cs1/app/index.jsx %}
 {% endhighlight %}
