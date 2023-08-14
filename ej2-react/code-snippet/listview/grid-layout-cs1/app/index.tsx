@@ -12,7 +12,7 @@ function App() {
 
   function listtemplate(data: any): JSX.Element {
     return (
-        <img id="listImage" src="./apple.png" alt="apple" />
+        <img id="listImage" src="https://helpej2.syncfusion.com/documentation/code-snippet/listview/grid-layout-cs1/apple.png" alt="apple" />
     )};
 
   return (

@@ -19,7 +19,11 @@ function App() {
     let cssClass = "custom";
     function nodeTemplate(data) {
         return (<div>
-        <img className='eimage' src={`./../template-cs1/${data.eimg}.png`} alt='${data.eimg}'/>
+        <img
+            className="eimage"
+            src={`https://ej2.syncfusion.com/demos/src/treeview/images/employees/${data.eimg}.png`}
+            alt="${data.eimg}"
+          />
         <div className='ename'>{data.name}</div>
         <div className='ejob'>{data.job}</div>
       </div>);
