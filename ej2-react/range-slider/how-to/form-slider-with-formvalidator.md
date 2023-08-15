@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through slider validation.
 
 * Render slider component inside a form.
-* Bind [changed](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html#changed) event in the slider component to validate the slider value when the value changes.
+* Bind [changed](https://ej2.syncfusion.com/react/documentation/api/slider/#changed) event in the slider component to validate the slider value when the value changes.
 * Initialize and render FormValidator for the form using form ID.
 
    ```ts
@@ -24,7 +24,7 @@ The Slider component can be validated using our [FormValidator](https://ej2.sync
 
     ```
 
-* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript#rules) collection. Here, the [min](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html#min) property of slider that sets the minimum value in the slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
+* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/react/documentation/api/form-validator#rules) collection. Here, the [min](https://ej2.syncfusion.com/react/documentation/api/slider/#min) property of slider that sets the minimum value in the slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
 
     ```ts
 
@@ -64,7 +64,7 @@ Using slider name: Render slider with name attribute. In the following code snip
 
   ```
 
-* Validate the form using [validate](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript#validate) method, and it validates the slider value with the defined rules collection and returns the result. If user selects the value less than the minimum value, form will not submit.
+* Validate the form using [validate](https://ej2.syncfusion.com/react/documentation/api/form-validator#validate) method, and it validates the slider value with the defined rules collection and returns the result. If user selects the value less than the minimum value, form will not submit.
 
    ```ts
    formObj.validate();
