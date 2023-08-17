@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
-import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
-const CustomAdaptor = () => {
+function CustomAdaptor() {
   ODataV4Adaptor.call(this);
 }
 
@@ -26,12 +26,11 @@ const App = () => {
       const manager = new DataManager({
         url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
         adaptor: new CustomAdaptor(),
+        crossDomain: true
       });
-      const query = new Query().take(10); // Example query to limit the number of records
-      const data = await manager.executeQuery(query) as any;
-      setDataManager(new DataManager(data));
+      await manager.ready;
+      setDataManager(manager);
     };
-
     fetchData();
   }, []);
   
