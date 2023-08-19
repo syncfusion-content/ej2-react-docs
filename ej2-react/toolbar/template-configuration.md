@@ -37,6 +37,30 @@ Here, the template ID, `#template_toolbar` is directly appended to the Toolbar.
         
 {% previewsample "page.domainurl/code-snippet/toolbar/toolbar-cs11" %}
 
+## Stateless template
+
+In React, a state is an object that contains data or information about the component. The component state can be used in React component templates to determine a component’s behavior and render information to the user. The state can change based on user input, data from a server, the result of a calculation, or system-generated events.
+
+Whenever the state changes, the component will automatically re-render to display the updated information to the user. This allows for a dynamic and interactive user experience.
+
+For specific needs of the application, users don’t want to re-render components during state updates. This can be achieved using the `statelessTemplates` property. 
+
+Toolbar `template` property are defined in `ItemDirective` tag of the toolbar component. So, you have to pass the `statelessTemplates` property array value as `directiveTemplates` to prevent the toolbar component from re-rendering while the state is being updated.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/toolbar/toolbar-stateless-template-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/toolbar/toolbar-stateless-template-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/toolbar/toolbar-stateless-template-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/toolbar/toolbar-stateless-template-cs1" %}
+
 ## Popup customization
 
 `Popup` is one of the supported responsive modes of the Toolbar. The Toolbar commands, popup mode priority and button text mode customizations are achieved in the item based rendering through property declaration. For more information on popup mode, refer [here](./responsive-mode/)
