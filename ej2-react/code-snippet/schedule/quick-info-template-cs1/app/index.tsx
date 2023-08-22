@@ -95,9 +95,9 @@ const App = () => {
   ];
   const eventSettings: EventSettingsModel = { dataSource: ScheduleData };
   const quickInfoTemplates = {
-    header: headerTemplate as any,
-    content: contentTemplate as any,
-    footer: footerTemplate as any
+    header: headerTemplate,
+    content: contentTemplate,
+    footer: footerTemplate
   };
   const getResourceData = (data: { [key: string]: Object }): { [key: string]: Object } => {
     const resources: ResourcesModel = scheduleObj.current.getResourceCollections().slice(-1)[0];
