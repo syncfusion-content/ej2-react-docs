@@ -184,8 +184,7 @@ export let data: object[] = [{
 
 2.Then, import and define the Diagram component in the **src/app/page.tsx** file, as shown below: 
 
-{% tabs %}
-{% highlight ts tabtitle="page.tsx" %}
+{% raw %}
 
 'use client'
 import { DataManager, Query } from '@syncfusion/ej2-data';
@@ -274,8 +273,7 @@ export default function Home() {
   )
 }
 
-{% endhighlight %}
-{% endtabs %}
+{% endraw %}
 
 ## Run the application
 
