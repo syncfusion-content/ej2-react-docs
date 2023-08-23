@@ -186,6 +186,8 @@ export let data: object[] = [{
 
 {% raw %}
 
+~~~
+
 'use client'
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { StackPanel, TextElement, DataBinding, HierarchicalTree, DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
@@ -272,6 +274,8 @@ export default function Home() {
     </>
   )
 }
+
+~~~
 
 {% endraw %}
 
