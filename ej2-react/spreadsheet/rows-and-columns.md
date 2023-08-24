@@ -214,7 +214,7 @@ The following code example shows how to change the width for single/multiple col
 
 ## Changing text in column headers
 
-Using the `beforeCellRender` event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
+Using the [`beforeCellRender`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforecellrender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
 
 The following code example shows how to change the text in the column headers.
 
