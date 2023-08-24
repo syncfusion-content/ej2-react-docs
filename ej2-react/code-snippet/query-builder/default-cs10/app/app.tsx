@@ -32,6 +32,8 @@ L10n.load({
             "SelectOperator": "Operator auswählen",
             "StartsWith": "Beginnt mit",
             "ValidationMessage": "Dieses Feld wird benötigt",
+            "True": "Wahr",
+            "False": "Falsch",
         }
     }
 });
