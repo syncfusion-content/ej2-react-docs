@@ -288,4 +288,4 @@ To learn more about the functionality of the Grid component, refer to the [docum
 
 ## See also
 
-[Getting Started with the Syncfusion React UI Component](../getting-started/quick-start.md)
+[Getting Started with the Syncfusion React UI Component](../getting-started/quick-start)

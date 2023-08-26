@@ -177,6 +177,8 @@ Enabling the [showBackdrop](https://ej2.syncfusion.com/react/documentation/api/s
 
 Here, DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen. Sidebar can be rendered with specific width by setting `width` property
 
+>Note: To achieve a proper **backdrop**, we suggest that you create a wrapper parent container for the div block in which you intend to enable the backdrop. Set the class name of this parent container as the **target** for the Sidebar. Alternatively, you can place an empty div container after the target container.
+
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/sidebar/backdrop-cs1/app/App.jsx %}
