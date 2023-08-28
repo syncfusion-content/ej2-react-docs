@@ -40,6 +40,8 @@ Refer to the following code example to add formatted HTML content to the Tooltip
 
 The Tooltip content can be dynamically loaded  by making use of the Fetch call. The Fetch request is usually made within the `beforeRender` event of the Tooltip, and then the Tooltip's `content` is assigned the value retrieved on it's success.
 
+>Note: The Tooltip **target** property includes a unique identifier used to associate Tooltips with specific elements on a webpage or application interface. When setting the Tooltip **target** value as a GUID (Globally Unique Identifier), it's important to note that the GUID must start with a combination of **letters** before the numeric portion of the GUID. For example, **target: '#' +  ' tooltip'+ '96ad88bd-294c-47c3-999b-a9daa3285a05'**.
+
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/tooltip/ajax-content-cs1/app/App.jsx %}

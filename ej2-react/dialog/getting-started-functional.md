@@ -28,7 +28,7 @@ The following list of dependencies are required to use the Dialog component in y
 
 ## Installation and configuration
 
-You can use [Create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [Create-react-app](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
     ```bash
        npm install -g create-react-app

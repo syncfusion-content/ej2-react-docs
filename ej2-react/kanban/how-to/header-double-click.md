@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Header double click in React Kanban component
 
-You can bind the header double click event by using the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/kanban#dataBound) event at the initial rendering. You can get the column header text when you double click on the headers.
+You can bind the header double click event by using the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/kanban/#dataBound) event at the initial rendering. You can get the column header text when you double click on the headers.
 
 `[Class-component]`
 
