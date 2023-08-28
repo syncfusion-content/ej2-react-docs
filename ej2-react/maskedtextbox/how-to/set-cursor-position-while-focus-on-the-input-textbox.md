@@ -18,7 +18,7 @@ By default, on focusing the MaskedTextBox the entire mask gets selected. You can
 
 > The **selectionStart** and **selectionEnd** set to **0** instead of the input element value's length, when we focus on a MaskedTextBox control filled with all mask characters. This is the default behavior of the HTML 5 input element.
 
-Following is an example that demonstrates the above cases to set cursor position in the MaskedTextBox using [`focus`](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox#focus) event.
+Following is an example that demonstrates the above cases to set cursor position in the MaskedTextBox using [`focus`](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox/#focus) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

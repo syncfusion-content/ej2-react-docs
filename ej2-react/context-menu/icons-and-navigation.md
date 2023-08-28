@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Icons
 
-The ContextMenu item have an icon / image in it to provide visual representation of the action. To place the icon on a menu item, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel#iconcss) property to e-icons with the required icon CSS. By default, the icon is positioned to the left side of the menu item. In the following sample, the icons for Cut, Copy and Paste menu items are added using `iconCss` property.
+The ContextMenu item have an icon / image in it to provide visual representation of the action. To place the icon on a menu item, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#iconcss) property to e-icons with the required icon CSS. By default, the icon is positioned to the left side of the menu item. In the following sample, the icons for Cut, Copy and Paste menu items are added using `iconCss` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The ContextMenu item have an icon / image in it to provide visual representation
 
 ## Navigation URL
 
-Navigation URL in ContextMenu is used for navigating to other web page when menu item is clicked. This can be achieved by providing link to the menu item using the [`url`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel#url) property.In the following sample, Navigation URL for Flipkart, Amazon, and Snapdeal menu items are added using the `url` property.
+Navigation URL in ContextMenu is used for navigating to other web page when menu item is clicked. This can be achieved by providing link to the menu item using the [`url`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#url) property.In the following sample, Navigation URL for Flipkart, Amazon, and Snapdeal menu items are added using the `url` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -41,7 +41,7 @@ Navigation URL in ContextMenu is used for navigating to other web page when menu
  {% previewsample "page.domainurl/code-snippet/context-menu/navigation-cs1" %}
 
 > To open the links in new tab, set 'target' attribute with the value '_blank' in the
-[`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu#beforeitemrender) event.
+[`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#beforeitemrender) event.
 
 ## See Also
 

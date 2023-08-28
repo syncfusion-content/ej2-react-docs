@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Display tool tip on tab header in React Tab component
 
-You can display tooltip for the tab component header using [`beforeRender`](https://ej2.syncfusion.com/react/documentation/api/tooltip#beforerender) event of React Tooltip component which can be viewed as hint texts on mouse hovers over tab.
+You can display tooltip for the tab component header using [`beforeRender`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#beforerender) event of React Tooltip component which can be viewed as hint texts on mouse hovers over tab.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

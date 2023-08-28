@@ -30,7 +30,7 @@ The following list of dependencies are required to use the Menu component in you
 
 ## Setup your development environment
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
 To install `create-react-app` run the following command.
 

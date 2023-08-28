@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Inline
 
-By default, the ColorPicker will be rendered using SplitButton and open the pop-up to access the ColorPicker. To render the ColorPicker container alone and to access it directly, render it as inline. It can be achieved by setting the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker#inline) property to `true`.
+By default, the ColorPicker will be rendered using SplitButton and open the pop-up to access the ColorPicker. To render the ColorPicker container alone and to access it directly, render it as inline. It can be achieved by setting the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#inline) property to `true`.
 
 The following sample shows the inline type rendering of ColorPicker.
 
@@ -31,7 +31,7 @@ The following sample shows the inline type rendering of ColorPicker.
 
 ## Rendering palette at initial load
 
-By default, the `Picker` area will be rendered at initial load. To render the Palette area while opening the ColorPicker pop-up, and specify the [`mode`](https://ej2.syncfusion.com/react/documentation/api/color-picker#mode) property as `Palette`.
+By default, the `Picker` area will be rendered at initial load. To render the Palette area while opening the ColorPicker pop-up, and specify the [`mode`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#mode) property as `Palette`.
 
 In the following sample, it will render the `Palette` at initial load.
 
@@ -48,7 +48,7 @@ In the following sample, it will render the `Palette` at initial load.
 
 ## Color value
 
-The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker#value) property can be used to specify the color value to the ColorPicker. It supports either `three` or `six` digit hex codes. To include `opacity`, set the color value as `four` or `eight` digit hex code.
+The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#value) property can be used to specify the color value to the ColorPicker. It supports either `three` or `six` digit hex codes. To include `opacity`, set the color value as `four` or `eight` digit hex code.
 
 In the following sample, the color value sets as `four` digit hex code, the last digit represents the `opacity` value.
 
@@ -63,7 +63,7 @@ In the following sample, the color value sets as `four` digit hex code, the last
 
  {% previewsample "page.domainurl/code-snippet/colorpicker/mode-and-value-cs1" %}
 
->> The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker#value) property supports hex code with or without `#` prefix.
+>> The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#value) property supports hex code with or without `#` prefix.
 
 ## See Also
 

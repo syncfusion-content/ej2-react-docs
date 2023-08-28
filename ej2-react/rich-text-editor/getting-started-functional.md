@@ -33,7 +33,7 @@ The following minimum dependencies are required to use the Rich Text Editor.
 
 ## Setup for local development
 
-Before starting, need to install [`Create-react-app`](https://github.com/facebookincubator/create-react-app) command line interface into your machine globally by using following command.
+Before starting, need to install [`Create-react-app`](https://github.com/facebook/create-react-app) command line interface into your machine globally by using following command.
 
    ```bash
      npm install -g create-react-app
@@ -283,7 +283,7 @@ Specifies the items to be rendered in the quick toolbar based on the target elem
 
 ## Run the application
 
-The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+The [`create-react-app`](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
   ```bash
     npm start
@@ -303,4 +303,4 @@ Output will be displayed as follows
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs7" %}
 
-> You can refer to our [React Rich Text Editor](https://www.syncfusion.com/react-ui-components/react-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Rich Text Editor example](https://ej2.syncfusion.com/react/demos/#/material/rich-text-editor/rich-text-editor) that shows how to render the rich text editor tools.
+> You can refer to our [React Rich Text Editor](https://www.syncfusion.com/react-components/react-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Rich Text Editor example](https://ej2.syncfusion.com/react/demos/#/material/rich-text-editor/rich-text-editor) that shows how to render the rich text editor tools.

@@ -25,7 +25,7 @@ The following list of dependencies are required to use the MaskedTextBox compone
 
 ## Installation and configuration
 
-You can use [Create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [Create-react-app](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
    ```bash 
@@ -82,7 +82,7 @@ ReactDOM.render(<App />, document.getElementById('maskedContainer'));
 
 ## Set the mask
 
-You can set the mask to the MaskedTextBox to validate the user input by using the [mask](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox#mask) property. To know more about the usage of mask and configuration, refer to this [link](./mask-configuration/).
+You can set the mask to the MaskedTextBox to validate the user input by using the [mask](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox/#mask) property. To know more about the usage of mask and configuration, refer to this [link](./mask-configuration/).
 
 The following example demonstrates the usage of mask element 0 that allows any single digit from 0 to 9.
 

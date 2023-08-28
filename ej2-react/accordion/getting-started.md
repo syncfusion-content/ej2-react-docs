@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section briefly explains you the steps required to create a simple [React Accordion](https://www.syncfusion.com/react-ui-components/react-accordion) and demonstrate the basic usage of the Accordion control.
+This section briefly explains you the steps required to create a simple [React Accordion](https://www.syncfusion.com/react-components/react-accordion) and demonstrate the basic usage of the Accordion control.
 
 ## Dependencies
 

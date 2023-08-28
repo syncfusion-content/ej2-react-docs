@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Adding dynamic items with content reuse in React Tab component
 
-You can add dynamic tabs by reusing the content using React **template**. Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/react/documentation/api/tab#addtab) method.
+You can add dynamic tabs by reusing the content using React **template**. Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/react/documentation/api/tab/#addtab) method.
 
 Content reuse can be achieved by using the following steps:
 1. Declare a template within the function returns jsx element. If the template does not need arguments no need to pass the properties.

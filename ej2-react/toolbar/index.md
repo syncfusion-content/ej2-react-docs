@@ -22,6 +22,6 @@ Displays a group of command buttons arranged horizontally.
 
 4. **[Keyboard Support](./accessibility#keyboard-interaction)**  : By default, the Toolbar allows to interact with commands by using keyboard shortcuts.
 
-5. **[RTL Support](https://ej2.syncfusion.com/react/documentation/api/toolbar#enablertl)**: The Toolbar supports right to left alignment.
+5. **[RTL Support](https://ej2.syncfusion.com/react/documentation/api/toolbar/#enablertl)**: The Toolbar supports right to left alignment.
 
 6. **[Accessibility](../toolbar/accessibility)** : The Toolbar provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications and it is achieved through attributes.

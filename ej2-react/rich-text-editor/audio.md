@@ -379,7 +379,7 @@ function App() {
 
 ## Rename audio before inserting
 
-You can use the [insertAudioSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor#insertaudiosettings) property, to specify the server handler to upload the selected audio. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
+You can use the [insertAudioSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertaudiosettings) property, to specify the server handler to upload the selected audio. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
 
 `[Class-component]`
 

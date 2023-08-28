@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Tooltip in React Rating Component
 
-The rating component supports tooltip to show additional information in rating items by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/rating#showtooltip) property. If enabled, the tooltip appears when the user hovers over a rating item.
+The rating component supports tooltip to show additional information in rating items by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/rating/#showtooltip) property. If enabled, the tooltip appears when the user hovers over a rating item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -26,7 +26,7 @@ The rating component supports tooltip to show additional information in rating i
 
 ## Tooltip template
 
-You can use the [`tooltipTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating#tooltiptemplate) tag directive to specify a custom template for the `tooltip` of the rating. The current value of the rating will be passed as the `value` property in the template context when building the content of the tooltip. This allows you to include dynamic information about the rating in the template.
+You can use the [`tooltipTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#tooltiptemplate) tag directive to specify a custom template for the `tooltip` of the rating. The current value of the rating will be passed as the `value` property in the template context when building the content of the tooltip. This allows you to include dynamic information about the rating in the template.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

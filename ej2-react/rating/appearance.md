@@ -14,7 +14,7 @@ You can also customize the appearance of rating component.
 
 ## Items Count
 
-You can specify the number of rating items using the [`itemsCount`](https://ej2.syncfusion.com/react/documentation/api/rating#itemscount) property.
+You can specify the number of rating items using the [`itemsCount`](https://ej2.syncfusion.com/react/documentation/api/rating/#itemscount) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ You can specify the number of rating items using the [`itemsCount`](https://ej2.
 
 ## Disabled
 
-You can disable the rating component by using the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/rating#disabled) property. When the `disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
+You can disable the rating component by using the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/rating/#disabled) property. When the `disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ You can disable the rating component by using the [`disabled`](https://ej2.syncf
 
 ## Visible
 
-You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/rating#visible) property of the rating component to component the visibility of the component. When the `visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
+You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/rating/#visible) property of the rating component to component the visibility of the component. When the `visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,7 +59,7 @@ You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/r
 
 ## Read only
 
-You can use the [`readOnly`](https://ej2.syncfusion.com/react/documentation/api/rating#readonly) property of the rating component to make the component non-interactive and prevent the user from changing the rating value.
+You can use the [`readOnly`](https://ej2.syncfusion.com/react/documentation/api/rating/#readonly) property of the rating component to make the component non-interactive and prevent the user from changing the rating value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,7 +74,7 @@ You can use the [`readOnly`](https://ej2.syncfusion.com/react/documentation/api/
 
 ## CssClass
 
-You can customize the appearance of the rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/rating#cssclass) property.
+You can customize the appearance of the rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/rating/#cssclass) property.
 
 ### Changing rating symbol border color
 

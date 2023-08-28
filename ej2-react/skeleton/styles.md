@@ -14,7 +14,7 @@ You can customize skeleton control in the below ways.
 
 ## cssClass
 
-You can customize the style of a Skeleton control by using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/skeleton#cssclass). The appearance of React Skeleton can be customized by changing the wave color, background color, width, and height. For detailed information, refer `index.css` file below.
+You can customize the style of a Skeleton control by using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#cssclass). The appearance of React Skeleton can be customized by changing the wave color, background color, width, and height. For detailed information, refer `index.css` file below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,7 +32,7 @@ You can customize the style of a Skeleton control by using [`cssClass`](https://
 
 ## Visible
 
-You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/skeleton#visible) property which defines the visible state of Skeleton.
+You can use the [`visible`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#visible) property which defines the visible state of Skeleton.
 
 ```ts
 import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';

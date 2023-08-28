@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ContextMenu can be opened and closed programmatically whenever required by using `open` and `close` methods.
 
-In the following example, the ContextMenu is opened using the [`open`](https://ej2.syncfusion.com/react/documentation/api/context-menu#open) method at the specified position using `top` and `left`. Also, ContextMenu is closed using [`close`](https://ej2.syncfusion.com/react/documentation/api/context-menu#close) method on ContextMenu item click or document click.
+In the following example, the ContextMenu is opened using the [`open`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#open) method at the specified position using `top` and `left`. Also, ContextMenu is closed using [`close`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#close) method on ContextMenu item click or document click.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

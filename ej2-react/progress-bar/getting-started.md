@@ -25,7 +25,7 @@ Below is the list of minimum dependencies required to use the progress bar compo
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
     ```

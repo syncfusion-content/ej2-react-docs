@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The `Localization` library allows you to localize default text content of the ColorPicker. The ColorPicker component has static text for `control buttons (apply / cancel)` and `mode switcher` that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/color-picker#locale) value and translation object.
+The `Localization` library allows you to localize default text content of the ColorPicker. The ColorPicker component has static text for `control buttons (apply / cancel)` and `mode switcher` that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#locale) value and translation object.
 
 The following list of properties and its values are used in the ColorPicker.
 
@@ -42,7 +42,7 @@ The below example demonstrates the ColorPicker in `Deutsch` culture.
 ## Right to Left - RTL
 
 ColorPicker component has `RTL` support. It helps to render the ColorPicker from right-to-left direction.
-It improves the user experiences and accessibility for users who use right-to-left languages(Arabic, Farsi, Urdu, etc). This can be achieved by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/color-picker#enablertl) property to `true`.
+It improves the user experiences and accessibility for users who use right-to-left languages(Arabic, Farsi, Urdu, etc). This can be achieved by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#enablertl) property to `true`.
 
 The following example illustrates how to enable right-to-left support in ColorPicker component.
 

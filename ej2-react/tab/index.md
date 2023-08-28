@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in React Tab component
 
-The [React Tab](https://www.syncfusion.com/react-ui-components/react-tabs) is a content panel to show multiple contents in a specific space, one at a time.
+The [React Tab](https://www.syncfusion.com/react-components/react-tabs) is a content panel to show multiple contents in a specific space, one at a time.
 
 ## Key features
 

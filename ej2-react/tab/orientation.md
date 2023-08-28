@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This section explains about modifying the position and modes of Tab header.
 
-It allows placing the header section inside the Tab component at different positions by using the  [`headerPlacement`](https://ej2.syncfusion.com/react/documentation/api/tab#headerplacement) property. The available positions are as follows:
+It allows placing the header section inside the Tab component at different positions by using the  [`headerPlacement`](https://ej2.syncfusion.com/react/documentation/api/tab/#headerplacement) property. The available positions are as follows:
 
 * **Top**: Tab header items can be arranged horizontally, and their content can be placed after the header.
 * **Bottom**: Tab header items can be arranged horizontally, and their content can be placed before the header.
