@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Add toggle button in React Toolbar component
 
-Toolbar supports to add a toggle Button by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#template) property. Refer below steps
+Toolbar supports to add a toggle Button by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#template) property. Refer below steps
 
 * By using Toolbar template property, pass required HTML String to render toggle button.
 
@@ -18,7 +18,7 @@ Toolbar supports to add a toggle Button by using the [`template`](https://ej2.sy
   <ItemDirective template='<button class="e-btn" id="media_btn"></button>' />
 ```
 
-* Now render the toggle Button into the targeted element in Toolbar [`created`](https://ej2.syncfusion.com/react/documentation/api/toolbar#created) event handler and bind click event for it. On clicking the toggle Button, change the required icon and content based on current active state.
+* Now render the toggle Button into the targeted element in Toolbar [`created`](https://ej2.syncfusion.com/react/documentation/api/toolbar/#created) event handler and bind click event for it. On clicking the toggle Button, change the required icon and content based on current active state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

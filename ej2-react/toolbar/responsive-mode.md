@@ -53,7 +53,7 @@ The default overflow mode of the Toolbar is `Scrollable`. Scrollable display mod
 
 ## Popup
 
-`Popup` is another type of [`overflowMode`](https://ej2.syncfusion.com/react/documentation/api/toolbar#overflowmode) in which the Toolbar container holds the commands that can be placed in the available space. The rest of the overflowing commands that do not fit within the viewing area moves to the overflow popup container.
+`Popup` is another type of [`overflowMode`](https://ej2.syncfusion.com/react/documentation/api/toolbar/#overflowmode) in which the Toolbar container holds the commands that can be placed in the available space. The rest of the overflowing commands that do not fit within the viewing area moves to the overflow popup container.
 
 The commands placed in the popup can be viewed by opening the popup using the drop down icon given at the end of the Toolbar.
 
@@ -65,7 +65,7 @@ The commands placed in the popup can be viewed by opening the popup using the dr
 
 Default popup priority is set as `none` and when the commands of Toolbar overflows, the ones that are listed at last in it will be moved into the popup.
 
-User can customize the priority of commands to be displayed in the Toolbar and popup by using the [`overflow`](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#overflow) property.
+User can customize the priority of commands to be displayed in the Toolbar and popup by using the [`overflow`](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/#overflow) property.
 Possible options:
 
 Property     | Description
@@ -76,7 +76,7 @@ Property     | Description
 
 If primary priority commands are also exceeds from available space, then those are moved to the popup container at top order position and placed before the secondary priority commands.
 
-> You can maintain toolbar item on popup always by using the [`showAlwaysInPopup`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#showalwaysinpopup) property, and this behavior is not applicable for toolbar items with [`overflow`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#overflow) property as 'show'.
+> You can maintain toolbar item on popup always by using the [`showAlwaysInPopup`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#showalwaysinpopup) property, and this behavior is not applicable for toolbar items with [`overflow`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#overflow) property as 'show'.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -94,7 +94,7 @@ If primary priority commands are also exceeds from available space, then those a
 
 ### Text mode for buttons
 
-The [`showTextOn`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#showtexton) property is used to decide the button text display area in the Toolbar, popup or in both places. This is useful to do customization in which the user needs to show the text and image representation of commands.
+The [`showTextOn`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#showtexton) property is used to decide the button text display area in the Toolbar, popup or in both places. This is useful to do customization in which the user needs to show the text and image representation of commands.
 
 For example, the user can show icon only button in the Toolbar and where in a popup container user can show more information about the commands with icon and text.
 

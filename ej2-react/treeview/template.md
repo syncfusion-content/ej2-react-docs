@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React Treeview component
 
-The TreeView component allows you to customize the look of TreeView nodes by using the [nodeTemplate](https://ej2.syncfusion.com/react/documentation/api/treeview#nodetemplate) property. This property accepts either `template string` or HTML element ID.
+The TreeView component allows you to customize the look of TreeView nodes by using the [nodeTemplate](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodetemplate) property. This property accepts either `template string` or HTML element ID.
 
 In the following sample, employee information such as employee photo, name, and designation have been included using the `nodeTemplate` property.
 

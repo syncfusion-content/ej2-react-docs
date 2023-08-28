@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Timeout in React Toast component
 
-The [`timeOut`](https://ej2.syncfusion.com/react/documentation/api/toast#timeout) property helps to change the default value of toast expire time. By default, the set timeOut value will be `5000` milliseconds. React Toast will live till the timeOut reaches without user interaction, the timeOut value will be taken in milliseconds. Once the toast reached a given timeOut it will expire automatically.
+The [`timeOut`](https://ej2.syncfusion.com/react/documentation/api/toast/#timeout) property helps to change the default value of toast expire time. By default, the set timeOut value will be `5000` milliseconds. React Toast will live till the timeOut reaches without user interaction, the timeOut value will be taken in milliseconds. Once the toast reached a given timeOut it will expire automatically.
 
 ## Visual representation of timeOut
 
@@ -18,7 +18,7 @@ The toast component's `expire time` can be visually shown using a [Progress Bar]
 
 ## How long the toast displayed in page
 
-The [`extendedTimeOut`](https://ej2.syncfusion.com/react/documentation/api/toast#extendedtimeout) property is used to decide how long the toast to be displayed after the user hovers on it.
+The [`extendedTimeOut`](https://ej2.syncfusion.com/react/documentation/api/toast/#extendedtimeout) property is used to decide how long the toast to be displayed after the user hovers on it.
 
 > You can destroy toast at any time by clicking on the close button. The close button can be enabled by `showCloseButton` property as true.
 

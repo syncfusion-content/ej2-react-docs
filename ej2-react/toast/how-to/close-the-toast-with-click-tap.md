@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Close the toast with click tap in React Toast component
 
-By default, Toast gets expired based on timeOut value. You can customize Toast hide with click/tap action by setting boolean value to [clickToClose](https://ej2.syncfusion.com/react/documentation/api/toast/toastClickEventArgs#clicktoclose) in `click` callback function with [static Toast](../timeout#static-toast).
+By default, Toast gets expired based on timeOut value. You can customize Toast hide with click/tap action by setting boolean value to [clickToClose](https://ej2.syncfusion.com/react/documentation/api/toast/toastClickEventArgs/#clicktoclose) in `click` callback function with [static Toast](../timeout#static-toast).
 
 `[Class-component]`
 

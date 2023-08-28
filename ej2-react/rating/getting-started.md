@@ -26,7 +26,7 @@ The list of dependencies required to use the Rating component in your applicatio
 
 ## Installation and Configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
    ```bash 
       npm install -g create-react-app
@@ -124,7 +124,7 @@ The following example shows a basic Rating component.
 
 ## Value
 
-You can set the rating value by using the [`value`](https://ej2.syncfusion.com/react/documentation/api/rating#value) property.
+You can set the rating value by using the [`value`](https://ej2.syncfusion.com/react/documentation/api/rating/#value) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

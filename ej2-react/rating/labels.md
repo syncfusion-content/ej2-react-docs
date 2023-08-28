@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Labels in React Rating Component
 
-You can use the [`showLabel`](https://ej2.syncfusion.com/react/documentation/api/rating#showlabel) property to display a label that shows the current value of the rating. When the `showLabel` property is set to `true`, a label will be displayed.
+You can use the [`showLabel`](https://ej2.syncfusion.com/react/documentation/api/rating/#showlabel) property to display a label that shows the current value of the rating. When the `showLabel` property is set to `true`, a label will be displayed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,7 +25,7 @@ You can use the [`showLabel`](https://ej2.syncfusion.com/react/documentation/api
 
 ## Label position
 
-The rating component allows you to place the label on the top, bottom, left, or right side of the rating using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/rating#labelposition) property.
+The rating component allows you to place the label on the top, bottom, left, or right side of the rating using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/rating/#labelposition) property.
 
 The following label positions are supported:
 
@@ -47,7 +47,7 @@ The following label positions are supported:
 
 ## Label template
 
-You can use the [`labelTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating#labeltemplate) tag directive to specify a custom template for the `Label` of the rating. The current value of the rating will be passed as the `value` property in the template context when building the content of the label. This allows you to include dynamic information about the rating in the template.
+You can use the [`labelTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#labeltemplate) tag directive to specify a custom template for the `Label` of the rating. The current value of the rating will be passed as the `value` property in the template context when building the content of the label. This allows you to include dynamic information about the rating in the template.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -16,7 +16,7 @@ The Menu supports data source bindings such as array of JavaScript objects that 
 
 ### Hierarchical data
 
-The Menu can be populated with hierarchical data source by assigning it to the [`items`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel#items) property, and the fields with corresponding keys can be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldSettingsModel) property.
+The Menu can be populated with hierarchical data source by assigning it to the [`items`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#items) property, and the fields with corresponding keys can be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldSettingsModel) property.
 
 #### JSON data
 
@@ -35,7 +35,7 @@ The Menu can generate its menu items through an array of complex data source by 
 
 #### Data Service
 
-In application level, remote data binding can be achieved using [`DataManager`](https://ej2.syncfusion.com/angular/documentation/data). To create Menu, assign items property with resultant data from [`callback`](https://ej2.syncfusion.com/documentation/api/data/deferred#then) function.
+In application level, remote data binding can be achieved using [`DataManager`](https://ej2.syncfusion.com/angular/documentation/data). To create Menu, assign items property with resultant data from [`callback`](https://ej2.syncfusion.com/documentation/api/data/deferred/#then) function.
 
 The following example displays five employees' **FirstName** from **Employees** table and **ShipName** details from **Orders** table of the `Northwind` Data Service.
 
@@ -71,7 +71,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 The Menu can be customized using Essential JS2 `Template engine` to render the elements.
 
-To customize menu items in your application, set your customized template string to the [`template`](https://ej2.syncfusion.com/react/documentation/api/menu#template) property. In the following example, the menu has been rendered with customized menu items.
+To customize menu items in your application, set your customized template string to the [`template`](https://ej2.syncfusion.com/react/documentation/api/menu/#template) property. In the following example, the menu has been rendered with customized menu items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -84,7 +84,7 @@ To customize menu items in your application, set your customized template string
 
  {% previewsample "page.domainurl/code-snippet/menu/template-cs1" %}
 
->To prevent sub menu closing, set `args.cancel` to `true` in [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/menu#beforeclose) event.
+>To prevent sub menu closing, set `args.cancel` to `true` in [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeclose) event.
 
 ## See Also
 

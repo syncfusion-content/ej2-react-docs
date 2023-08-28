@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Prevent duplicate toast display in React Toast component
 
-You can prevent identical same Toast displaying in a screen by event function. You can terminate the Toast displaying process by setting cancel event property in [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) Event.
+You can prevent identical same Toast displaying in a screen by event function. You can terminate the Toast displaying process by setting cancel event property in [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) Event.
 
 Here below sample demonstrates preventing duplicate title Toast element displaying, with custom code blocks.
 

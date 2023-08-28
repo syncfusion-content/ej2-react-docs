@@ -25,7 +25,7 @@ The following list of dependencies are required to use the TextBox component in 
 
 ## Installation and Configuration
 
-* You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+* You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
    ```bash

@@ -25,7 +25,7 @@ The following list of dependencies are required to use the NumericTextBox compon
 
 ## Installation and configuration
 
-You can use [Create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [Create-react-app](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
     ```bash
@@ -132,9 +132,9 @@ The below example shows the NumericTextBox.
 
 ## Range validation
 
-You can set the minimum and maximum range of values in the NumericTextBox using the [`min`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#max) properties, so the numeric value should be in the min and max range.
+You can set the minimum and maximum range of values in the NumericTextBox using the [`min`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#max) properties, so the numeric value should be in the min and max range.
 
-The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#strictmode) property.
+The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#strictmode) property.
 
 `[Class-component]`
 
@@ -164,7 +164,7 @@ The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com
 
 ## Formatting the value
 
-User can set the format of the NumericTextBox component using [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#format) property. The value will be displayed in the specified format, when the component is in focused out state. For more information about
+User can set the format of the NumericTextBox component using [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#format) property. The value will be displayed in the specified format, when the component is in focused out state. For more information about
 formatting the value, refer to this [link](./formats/).
 
 The below example demonstrates format the value by using currency format value `c2`.
@@ -197,7 +197,7 @@ The below example demonstrates format the value by using currency format value `
 
 ## Precision of numbers
 
-You can restrict the number of decimals to be entered in the NumericTextBox by using the [`decimals`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#decimals) and [`validateDecimalOnType`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#validatedecimalontype) properties.
+You can restrict the number of decimals to be entered in the NumericTextBox by using the [`decimals`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#decimals) and [`validateDecimalOnType`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#validatedecimalontype) properties.
 So, you can't enter the number whose precision is greater than the mentioned decimals.
 
 * If `validateDecimalOnType` is false, number of decimals will not be restricted.
