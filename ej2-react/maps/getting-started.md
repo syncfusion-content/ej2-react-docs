@@ -32,7 +32,7 @@ Below is the list of minimum dependencies required to use the Maps.
 
 ## Installation and Configuration
 
-To get started with the React application, [create-react-app](https://github.com/facebookincubator/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
+To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
 
    ```
      npm install -g create-react-app
