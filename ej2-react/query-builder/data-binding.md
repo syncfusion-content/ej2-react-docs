@@ -34,7 +34,7 @@ To bind local data to the query builder, you can assign the [`dataSource`](https
 
 ## Remote data
 
-To bind remote  data to the query builder, assign service data as an instance of  `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/documentation/api/query-builder/#datasource) property. To interact with remote data source, provide the endpoint `url`.
+To bind remote  data to the query builder, assign service data as an instance of  `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) property. To interact with remote data source, provide the endpoint `url`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
