@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Row Editing
 
-You can make a row editable on a single click with **Row** mode of editing in TreeGrid, by using the [`startEdit`](https://ej2.syncfusion.com/react/documentation/api/treegrid#startedit) and [`endEdit`](https://ej2.syncfusion.com/react/documentation/api/treegrid#endedit) methods.
+You can make a row editable on a single click with **Row** mode of editing in TreeGrid, by using the [`startEdit`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#startedit) and [`endEdit`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#endedit) methods.
 
-Bind the **mousedown** event for TreeGrid and in the event handler call the [`startEdit`](https://ej2.syncfusion.com/react/documentation/api/treegrid#startedit) and [`endEdit`](https://ej2.syncfusion.com/react/documentation/api/treegrid#endedit), based on the clicked target element.
+Bind the **mousedown** event for TreeGrid and in the event handler call the [`startEdit`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#startedit) and [`endEdit`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#endedit), based on the clicked target element.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -35,9 +35,9 @@ Bind the **mousedown** event for TreeGrid and in the event handler call the [`st
 
 ## Cell Editing
 
-You can make a cell editable on a single click with **Cell** mode of editing in TreeGrid, by using the [`editCell`](https://ej2.syncfusion.com/react/documentation/api/treegrid#editcell) method.
+You can make a cell editable on a single click with **Cell** mode of editing in TreeGrid, by using the [`editCell`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#editcell) method.
 
-Bind the **mousedown** event for TreeGrid and in the event handler call the [`editCell`](https://ej2.syncfusion.com/react/documentation/api/treegrid#editcell) method, based on the clicked target element.
+Bind the **mousedown** event for TreeGrid and in the event handler call the [`editCell`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#editcell) method, based on the clicked target element.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -56,4 +56,4 @@ Bind the **mousedown** event for TreeGrid and in the event handler call the [`ed
 
  {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs3" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

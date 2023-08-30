@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Header text
 
-By default, column header title is displayed from column [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#field) value. To override the default header title, you have to define the [`headerText`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#headertext)value.
+By default, column header title is displayed from column [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) value. To override the default header title, you have to define the [`headerText`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#headertext)value.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -68,4 +68,4 @@ If column's width is not defined then tree grid will consider its value as `200p
 * Programmatic selection using the **selectRows** method is not supported in virtual scrolling.
 * Virtual scrolling is not compatible with Batch editing, clipboard functionality and detail template.
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

@@ -29,7 +29,7 @@ To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/react/docum
 
 ## Reorder multiple columns
 
-Multiple columns can be reordered at a time by using the [`reorderColumns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#reordercolumns) method.
+Multiple columns can be reordered at a time by using the [`reorderColumns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#reordercolumns) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

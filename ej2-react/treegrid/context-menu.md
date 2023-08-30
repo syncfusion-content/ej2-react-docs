@@ -81,4 +81,4 @@ You can enable and disable the context menu items using the [`enableItems`](http
  {% previewsample "page.domainurl/code-snippet/treegrid/contextmenu-cs3" %}
 
 > You can hide or show an item in context menu for specific area inside of treegrid by defining the [`target`](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/#target) property.
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

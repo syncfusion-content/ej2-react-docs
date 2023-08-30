@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data binding in React Treegrid component
 
-The TreeGrid uses **DataManager**, which supports both RESTful JSON data services binding and local JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#dataSource) property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/documentation/data/data-binding/) or JavaScript object array collection.
+The TreeGrid uses **DataManager**, which supports both RESTful JSON data services binding and local JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#dataSource) property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/documentation/data/data-binding/) or JavaScript object array collection.
 It supports two kinds of data binding method:
 * Local data
 * Remote data
@@ -21,7 +21,7 @@ To get start quickly with Data Binding, you can check on this video:
 
 ## Binding with ajax
 
-You can use TreeGrid [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property to bind the data source to TreeGrid from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property by using `onSuccess` event of the Ajax.
+You can use TreeGrid [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property to bind the data source to TreeGrid from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property by using `onSuccess` event of the Ajax.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -681,4 +681,4 @@ export default App;
 
 ```
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

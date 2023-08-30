@@ -59,7 +59,7 @@ In the following code, the rows which contains *taskID* value as *3* and *5* are
 
 ## Toggle selection
 
-The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [`enableToggle`](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#enable toggle) property of the selectionSettings as true. If you click on the selected row or cell then it will be unselected and vice versa.
+The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [`enableToggle`](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#enabletoggle) property of the selectionSettings as true. If you click on the selected row or cell then it will be unselected and vice versa.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

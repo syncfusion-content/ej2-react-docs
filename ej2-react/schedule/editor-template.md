@@ -456,7 +456,7 @@ You can close the editor window by using [closeEditor](https://ej2.syncfusion.co
 
 ### How to open the quick info popup manually
 
-You can open the quick info popup in scheduler by using the [openQuickInfoPopup](https://ej2.syncfusion.com/react/documentation/api/schedule#openquickinfopopup) public method. To open the cell quick info popup, you can pass the cell data as an argument to the method. To open the event quick info popup, you should pass the event data object as an argument to the method.
+You can open the quick info popup in scheduler by using the [openQuickInfoPopup](https://ej2.syncfusion.com/react/documentation/api/schedule/#openquickinfopopup) public method. To open the cell quick info popup, you can pass the cell data as an argument to the method. To open the event quick info popup, you should pass the event data object as an argument to the method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -490,4 +490,4 @@ You can close the quick info popup in scheduler by using the [closeQuickInfoPopu
         
 {% previewsample "page.domainurl/code-snippet/schedule/editor-cs17" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-ui-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
