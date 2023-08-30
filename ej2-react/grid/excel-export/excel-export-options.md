@@ -149,7 +149,7 @@ In grid, we have provided the outline option for the exported document when the 
 
 ## Define file name
 
-You can assign the file name for the exported document by defining `fileName` property in [`excelExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties).
+You can assign the file name for the exported document by defining `fileName` property in [`excelExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

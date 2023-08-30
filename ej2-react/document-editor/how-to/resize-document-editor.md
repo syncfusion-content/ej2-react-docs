@@ -30,7 +30,7 @@ The following example code illustrates how to change height of Document Editor.
       />
 ```
 
-Similarly, you can use [`height`](https://ej2.syncfusion.com/react/documentation/api/document-editor#height) property for DocumentEditor also.
+Similarly, you can use [`height`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#height) property for DocumentEditor also.
 
 ## Change width of Document Editor
 
@@ -52,11 +52,11 @@ The following example code illustrates how to change width of Document Editor.
 
 ```
 
-Similarly, you can use [`width`](https://ej2.syncfusion.com/react/documentation/api/document-editor#width) property for DocumentEditor also.
+Similarly, you can use [`width`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#width) property for DocumentEditor also.
 
 ## Resize Document Editor
 
-Using [`resize`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#resize) method, you change height and width of Document editor.
+Using [`resize`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/#resize) method, you change height and width of Document editor.
 
 The following example code illustrates how to fit Document Editor to browser window size.
 

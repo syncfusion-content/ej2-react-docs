@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section explains how to create and configure a simple [React Query Builder component](https://www.syncfusion.com/react-ui-components/react-query-builder).
+This section explains how to create and configure a simple [React Query Builder component](https://www.syncfusion.com/react-components/react-query-builder).
 
 ## Dependencies
 
@@ -30,7 +30,7 @@ The list of dependencies required to use the Query Builder component in your app
 
 ## Installation and Configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
 ```bash
 npm install -g create-react-app

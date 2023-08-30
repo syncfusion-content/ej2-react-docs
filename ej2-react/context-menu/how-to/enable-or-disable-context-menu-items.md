@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Enable or disable context menu items in React Context menu component
 
-You can enable and disable the menu items using the [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/menu#enableitems) method in ContextMenu. To enable menuItems, set the `enable` property in argument to `true` and vice-versa.
+You can enable and disable the menu items using the [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/menu/#enableitems) method in ContextMenu. To enable menuItems, set the `enable` property in argument to `true` and vice-versa.
 
 In the following example, the **Display Settings** in parent items and **Medium icons** in sub menu items are disabled.
 
@@ -24,4 +24,4 @@ In the following example, the **Display Settings** in parent items and **Medium 
 
  {% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs4" %}
 
-> To disable sub menu items, use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/menu#beforeopen) event.
+> To disable sub menu items, use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeopen) event.

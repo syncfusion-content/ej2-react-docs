@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Restrict the maximum toast to show in React Toast component
 
-You can restrict the maximum toast count by event callback function. You can terminate the toast displaying process by setting boolean as true to cancel, the argument which is obtained from [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) Event.
+You can restrict the maximum toast count by event callback function. You can terminate the toast displaying process by setting boolean as true to cancel, the argument which is obtained from [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) Event.
 
 You can restrict by your own count with custom code blocks. The below sample demonstrates that, how to restrict toast displaying up to 3.
 

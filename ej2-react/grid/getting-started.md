@@ -18,7 +18,7 @@ To get start quickly with React Grid, you can check on this video:
 
 ## Setup for Local Development
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install **create-react-app** run the following command.
 
 ```
@@ -208,7 +208,7 @@ Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusio
 
 ## Run the application
 
-The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+The [`create-react-app`](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
 ```
 
@@ -229,9 +229,9 @@ Output will be appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs5" %}
 
-> You can refer to our [React Grid](https://www.syncfusion.com/react-ui-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/material/grid/overview) that shows how to render the Grid in React.
+> You can refer to our [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/material/grid/overview) that shows how to render the Grid in React.
 
 ## See also
 
 * [Top 5 Features of React Data Grid](https://www.syncfusion.com/blogs/post/top-5-features-react-data-grid.aspx)
-* [How to render React Grid with bootstrap theme](https://www.syncfusion.com/kb/11328/how-to-render-react-grid-with-bootstrap-theme)
+* [How to render React Grid with bootstrap theme](https://support.syncfusion.com/kb/article/10054/how-to-render-react-grid-with-bootstrap-theme)

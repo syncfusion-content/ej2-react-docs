@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Prevent content swipe selection in React Tab component
 
-We can prevent the tab selection on touch swipe action by using the Tab [`selecting`](https://ej2.syncfusion.com/react/documentation/api/tab#selecting) event. Refer the below sample with preventing swipe selection.
+We can prevent the tab selection on touch swipe action by using the Tab [`selecting`](https://ej2.syncfusion.com/react/documentation/api/tab/#selecting) event. Refer the below sample with preventing swipe selection.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

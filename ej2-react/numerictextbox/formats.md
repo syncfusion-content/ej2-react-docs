@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Formats in React Numerictextbox component
 
-You can format the value of NumericTextBox using [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#format) property. The value will be displayed in the specified format when the component is in focused out state. The format string supports both the [standard numeric format string](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers) and [custom numeric format string](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-number-formatting-and-parsing).
+You can format the value of NumericTextBox using [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#format) property. The value will be displayed in the specified format when the component is in focused out state. The format string supports both the [standard numeric format string](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers) and [custom numeric format string](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-number-formatting-and-parsing).
 
 ## Standard formats
 

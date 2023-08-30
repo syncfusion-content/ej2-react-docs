@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 # Data binding in React Grid component
 
 The Grid uses **DataManager** which supports both RESTful JSON data services binding and local JavaScript object array binding.
-The [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started/) or JavaScript object collection.
+The [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) or JavaScript object collection.
 It supports two kind of data binding method they are,
 * Local data
 * Remote data
@@ -452,5 +452,5 @@ export default App;
 * [How to perform filtering, sorting operation using custom service in React Grid](https://www.syncfusion.com/forums/166390/how-to-perform-filtering-sorting-operation-using-custom-service-in-react-grid)
 * [Custom binding approach to bind data in React Grid](https://www.syncfusion.com/forums/159221/custom-binding-approach-to-bind-data-in-react-grid)
 * [How to customize query parameters while performing sorting and filtering in React Grid](https://www.syncfusion.com/forums/158697/how-to-customize-query-parameters-while-performing-sorting-and-filtering-in-react-grid)
-* [How to bind SQL Server data in React DataGrid using SqlClient data provider](https://www.syncfusion.com/kb/11449/how-to-bind-sql-server-data-in-react-datagrid-using-sqlclient-data-provider)
-* [How to show the spinner in React Grid while binding custom data source](https://www.syncfusion.com/kb/11226/how-to-show-the-spinner-in-react-grid-while-binding-custom-data-source)
+* [How to bind SQL Server data in React DataGrid using SqlClient data provider](https://support.syncfusion.com/kb/article/11684/how-to-bind-sql-server-data-in-react-datagrid-using-sqlclient-data-provider)
+* [How to show the spinner in React Grid while binding custom data source](https://support.syncfusion.com/kb/article/11657/how-to-show-the-spinner-in-react-grid-while-binding-custom-data-source)

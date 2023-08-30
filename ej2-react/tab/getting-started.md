@@ -84,7 +84,7 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ## Initialize the Tab using JSON items collection
 
-The Tab can be rendered by defining a JSON array. The item is rendered with [`header`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#header) text and [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#content) for each Tab.
+The Tab can be rendered by defining a JSON array. The item is rendered with [`header`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#header) text and [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#content) for each Tab.
 
 * Import the Tab component to your `src/App.tsx` file using following code.
 

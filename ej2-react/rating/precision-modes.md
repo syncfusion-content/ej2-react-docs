@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Precision Modes in React Rating Component
 
-You can use the [`precision`](https://ej2.syncfusion.com/react/documentation/api/rating#precision) property of the rating component to provide ratings with varying levels of precision.
+You can use the [`precision`](https://ej2.syncfusion.com/react/documentation/api/rating/#precision) property of the rating component to provide ratings with varying levels of precision.
 
 The precision types of Rating are as follows:
 

@@ -20,10 +20,10 @@ Sidebar can be set to initialize based on four different types that are consiste
 
  | Item | Description |
 |-----|-----|
-| [`Over`](https://ej2.syncfusion.com/react/documentation/api/sidebar#type) | Sidebar floats over the main content area.|
-| [`Push`](https://ej2.syncfusion.com/react/documentation/api/sidebar#type) | Sidebar pushes the main content area to appear side-by-side, and shrinks the main content within the screen width.|
-| [`Slide`](https://ej2.syncfusion.com/react/documentation/api/sidebar#type) | Sidebar translates the x and y positions of main content area based on the Sidebar width. The main content area will not be adjusted within the screen width. |
-| [`Auto`](https://ej2.syncfusion.com/react/documentation/api/sidebar#type) | Sidebar with `Over` type in mobile resolution, and `Push` type in other higher resolutions. |
+| [`Over`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | Sidebar floats over the main content area.|
+| [`Push`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | Sidebar pushes the main content area to appear side-by-side, and shrinks the main content within the screen width.|
+| [`Slide`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | Sidebar translates the x and y positions of main content area based on the Sidebar width. The main content area will not be adjusted within the screen width. |
+| [`Auto`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | Sidebar with `Over` type in mobile resolution, and `Push` type in other higher resolutions. |
 
 > `Auto` is the default expand mode.
 

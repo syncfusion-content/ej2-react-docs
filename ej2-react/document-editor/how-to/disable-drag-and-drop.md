@@ -32,4 +32,4 @@ var hostUrl = 'https://services.syncfusion.com/react/production/api/documentedit
 <DocumentEditorComponent id="container" height={'590px'} documentEditorSettings={settings}/>
 ```
 
->Note: Default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettings/#allowDragAndDrop) property is `true`.
+>Note: Default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettings/#allowDragAndDrop) property is `true`.

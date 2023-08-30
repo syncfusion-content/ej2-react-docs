@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Icons
 
-The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel#iconcss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the `iconCss` property.
+The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#iconcss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the `iconCss` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ Navigation in Menu is used to navigate to the other web page when a menu item is
 
 ## Multilevel nesting
 
-The Menu supports multiple level nesting, and it can be achieved by mapping the [`items`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel#items) property inside the parent [`menuItems`](https://ej2.syncfusion.com/react/documentation/api/menu#items). In the following sample, three-level nesting of menu has been provided.
+The Menu supports multiple level nesting, and it can be achieved by mapping the [`items`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#items) property inside the parent [`menuItems`](https://ej2.syncfusion.com/react/documentation/api/menu/#items). In the following sample, three-level nesting of menu has been provided.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -55,7 +55,7 @@ The Menu supports multiple level nesting, and it can be achieved by mapping the 
 
  {% previewsample "page.domainurl/code-snippet/menu/getting-started-cs13" %}
 
-> You can achieve multi level nesting with data source by mapping `name` of the child items to the [`children`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldSettingsModel#children) sub-property of [`fields`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldSettingsModel) property. Also, we can specify [`id`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#id) property for menu items. For more information, refer to the [`data source binding`](./data-source-binding-and-custom-menu-items#data-binding) section. To open sub menu items only on item click, [`showItemOnClick`](https://ej2.syncfusion.com/react/documentation/api/menu#showitemonclick) should be set as `true`.
+> You can achieve multi level nesting with data source by mapping `name` of the child items to the [`children`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldSettingsModel/#children) sub-property of [`fields`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldSettingsModel) property. Also, we can specify [`id`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#id) property for menu items. For more information, refer to the [`data source binding`](./data-source-binding-and-custom-menu-items#data-binding) section. To open sub menu items only on item click, [`showItemOnClick`](https://ej2.syncfusion.com/react/documentation/api/menu/#showitemonclick) should be set as `true`.
 
 The below table represents the MenuItem properties and it's description.
 

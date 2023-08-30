@@ -40,7 +40,7 @@ When the iframeSettings option is enabled, the Rich Text Editor creates the ifra
 
 ## IFrame attributes
 
-The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using attributes fields of the [iframeSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor#iframesettings) property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
+The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using attributes fields of the [iframeSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
 
 `[Class-component]`
 

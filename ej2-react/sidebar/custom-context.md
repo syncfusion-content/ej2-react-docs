@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Custom context in React Sidebar component
 
-By default, Sidebar initializes target to the body element. Using the [target](https://ej2.syncfusion.com/react/documentation/api/sidebar#target) property, set target element to initialize the Sidebar inside any HTML element apart from the body element.
+By default, Sidebar initializes target to the body element. Using the [target](https://ej2.syncfusion.com/react/documentation/api/sidebar/#target) property, set target element to initialize the Sidebar inside any HTML element apart from the body element.
 
 > If required , `zIndex` can be set when sidebar act as overlay type.
 

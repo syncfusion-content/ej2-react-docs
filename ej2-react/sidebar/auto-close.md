@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Auto close in React Sidebar component
 
-Sidebar often behaves differently on mobile display and differently on desktop display. It has an effective feature that offers to set it in opened or closed state depending on the specified resolution. This is achieved through [mediaQuery](https://ej2.syncfusion.com/react/documentation/api/sidebar#mediaquery) property that allows you to set the Sidebar in an expanded state or collapsed state only in user-defined resolution.
+Sidebar often behaves differently on mobile display and differently on desktop display. It has an effective feature that offers to set it in opened or closed state depending on the specified resolution. This is achieved through [mediaQuery](https://ej2.syncfusion.com/react/documentation/api/sidebar/#mediaquery) property that allows you to set the Sidebar in an expanded state or collapsed state only in user-defined resolution.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

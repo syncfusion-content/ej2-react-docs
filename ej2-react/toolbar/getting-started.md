@@ -83,7 +83,7 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ## Initialize the Toolbar with commands
 
-The Toolbar can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/toolbar#items). An item is rendered with text by defining the default item type as a `Button`. For more information about item configuration, refer the [Item Configuration](./item-configuration/) section.
+The Toolbar can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/toolbar/#items). An item is rendered with text by defining the default item type as a `Button`. For more information about item configuration, refer the [Item Configuration](./item-configuration/) section.
 
 * Import the Toolbar component to your `src/App.tsx` file using following code.
 
@@ -155,4 +155,4 @@ The Toolbar component can be rendered based on the given HTML element using `<To
 
 * [How to add Toggle Button](./how-to/add-toggle-button/)
 
-N> You can refer to our [React Toolbar](https://www.syncfusion.com/react-ui-components/react-toolbar) feature tour page for its groundbreaking feature representations. You can also explore our [React Toolbar Example](https://ej2.syncfusion.com/react/demos/#/fabric/toolbar/default) that shows you how to render the Toolbar in React.
+N> You can refer to our [React Toolbar](https://www.syncfusion.com/react-components/react-toolbar) feature tour page for its groundbreaking feature representations. You can also explore our [React Toolbar Example](https://ej2.syncfusion.com/react/demos/#/fabric/toolbar/default) that shows you how to render the Toolbar in React.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Add dynamic template in React Toast component
 
-Toast provides the support to change its templates dynamically, So that you can update templates to multiple Toasts. We can change Toast properties while calling [`show`](https://ej2.syncfusion.com/react/documentation/api/toast#show) method.
+Toast provides the support to change its templates dynamically, So that you can update templates to multiple Toasts. We can change Toast properties while calling [`show`](https://ej2.syncfusion.com/react/documentation/api/toast/#show) method.
 
 `[Class-component]`
 

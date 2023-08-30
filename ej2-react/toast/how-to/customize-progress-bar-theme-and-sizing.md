@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 In default, the Progress bar will appear based on the theme stylings and dimensions. You can customize progress bar stylings through custom CSS or Event functions.
 
-Here below sample demonstrates customize the progress bar Stylings using [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) Event.
+Here below sample demonstrates customize the progress bar Stylings using [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) Event.
 
 `[Class-component]`
 

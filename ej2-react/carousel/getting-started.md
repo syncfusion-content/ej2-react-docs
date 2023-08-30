@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section explains how to create a simple [React Carousel](https://www.syncfusion.com/react-ui-components/react-carousel), and configure its available functionalities in React.
+This section explains how to create a simple [React Carousel](https://www.syncfusion.com/react-components/react-carousel), and configure its available functionalities in React.
 
 To get started quickly with React Carousel component, you can check out this video:
 

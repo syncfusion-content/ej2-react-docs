@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in React Accordion component
 
-The [React Accordion](https://www.syncfusion.com/react-ui-components/react-accordion) is a vertically collapsible content panel that displays one or more panels at a time within the available space.
+The [React Accordion](https://www.syncfusion.com/react-components/react-accordion) is a vertically collapsible content panel that displays one or more panels at a time within the available space.
 
 ## Key features
 
@@ -18,6 +18,6 @@ The [React Accordion](https://www.syncfusion.com/react-ui-components/react-accor
 
 2. **[Expand Mode](../accordion/expand-mode)**: Supports to define single or multiple expand mode for Accordion panels.
 
-3. **[RTL Support](https://ej2.syncfusion.com/react/documentation/api/accordion#enablertl)**:  Supports right-to-left alignment of the Accordion component by enabling [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/accordion#enablertl) property.
+3. **[RTL Support](https://ej2.syncfusion.com/react/documentation/api/accordion/#enablertl)**:  Supports right-to-left alignment of the Accordion component by enabling [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/accordion/#enablertl) property.
 
 4. **[Accessibility](../accordion/accessibility)**: Provides built-in compliance with the WAI-ARIA specifications and it is achieved through attributes. By default, it allows to interact with Accordion by using keyboard shortcuts.
