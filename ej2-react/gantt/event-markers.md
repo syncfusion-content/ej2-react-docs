@@ -67,3 +67,23 @@ The following code example shows how to add label positions in the gantt control
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/labelposition-cs1" %}
+
+# Displaying eventMarkers in stacked manner
+
+When [`eventMarkers`](https://ej2.syncfusion.com/react/documentation/api/gantt/eventMarker/) are given in consecutive dates and zoomToFit is performed, they may overlap. To avoid this, you can update the position of the eventMarkers in the [dataBound](https://ej2.syncfusion.com/react/documentation/api/gantt/#databound) and [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/gantt/#actioncomplete) events so that they are not overlapped and are visible to read.
+
+The following code example demonstrates how to display event markers in a stacked manner in the Gantt control.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/event-markers-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/event-markers-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/event-markers-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/event-markers-cs2" %}
