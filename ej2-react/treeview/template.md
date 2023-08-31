@@ -29,7 +29,7 @@ The template expression should be provided inside the `${...}` interpolation syn
 
  ## Stateless template
 
-For specific needs of the application, users don’t want to re-render the TreeView component during state updates. This can be achieved using the `statelessTemplates` property. It specifies the array of template names where the state value updates need to be ignored. It will increase the performance of the components if users prevent state updates for the templates that are not required. Refer to the following code snippet.
+For specific needs of the application, users don’t want to re-render the TreeView component during state updates. This can be achieved using the `statelessTemplates` property. It specifies the array of template names where the state value updates need to be ignored. It will increase the performance of the components if users prevent state updates for the templates that are not required.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

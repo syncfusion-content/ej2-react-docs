@@ -1,8 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
-import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
+import {TreeViewComponent} from '@syncfusion/ej2-react-navigations';
 function App() {
   let templateData = [
      { id: 1, name: "Favorites", hasChild: true},
