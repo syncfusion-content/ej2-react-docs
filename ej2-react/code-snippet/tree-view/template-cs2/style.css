@@ -1,0 +1,45 @@
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+#treeparent {
+  display: block;
+  max-width: 350px;
+  max-height: 350px;
+  margin: auto;
+  overflow: auto;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.tree-control-wrapper {
+  max-width: 420px;
+  margin: auto;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+.e-treeview .e-list-text {
+  width: 100%;
+}
+.e-treeview .textcontent {
+  float: left;
+}
+.e-treeview.e-rtl .textcontent {
+  float: right;
+}
+.e-treeview .countcontainer {
+  float: right;
+  margin-right: 5px !important;
+}
+.template-tree.e-treeview.e-rtl .countcontainer {
+  float: left;
+  margin-left: 5px;
+}
+.template-tree.e-treeview.e-interaction.e-fullrow-wrap .e-text-content {
+  pointer-events: none;
+}
