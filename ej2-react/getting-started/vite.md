@@ -97,7 +97,7 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion React component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
+You can import themes for the Syncfusion React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the **src/App.css** file.
 
@@ -191,4 +191,4 @@ The output will appear as follows:
 
 ## See also
 
-[Getting Started with the Syncfusion React UI Component](../getting-started/quick-start.md)
+[Getting Started with the Syncfusion React UI Component](../getting-started/quick-start)

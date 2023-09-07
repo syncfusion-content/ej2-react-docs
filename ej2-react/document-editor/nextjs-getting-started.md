@@ -109,7 +109,7 @@ Syncfusion React components come with [built-in themes](https://ej2.syncfusion.c
 Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
 
 {% tabs %}
-{% highlight js tabtitle="globals.css" %}
+{% highlight css tabtitle="globals.css" %}
 
 @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -133,7 +133,7 @@ Follow the below steps to add the React Document Editor component to the Next.js
 1.Before adding the Document Editor component to your markup, import the Document Editor component in the **src/app/page.tsx** file.
 
 {% tabs %}
-{% highlight js tabtitle="page.tsx" %}
+{% highlight ts tabtitle="page.tsx" %}
 
 'use client'
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';

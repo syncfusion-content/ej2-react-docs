@@ -169,7 +169,7 @@ export default function Home() {
     dataSource: pivotData as IDataSet[],
     expandAll: false,
     filters: [],
-    drilledMembers: [{ name: 'Country', items: ['France'] }],
+    drilledMembers: [{ name: 'Country', items: ['Germany'] }],
     formatSettings: [{ name: 'Amount', format: 'C0' }],
     rows: [{ name: 'Country' }, { name: 'Products' }],
     values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
