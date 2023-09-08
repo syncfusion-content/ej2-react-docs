@@ -109,7 +109,7 @@ Syncfusion React components come with [built-in themes](https://ej2.syncfusion.c
 Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
 
 {% tabs %}
-{% highlight js tabtitle="globals.css" %}
+{% highlight css tabtitle="globals.css" %}
 
 @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
@@ -187,7 +187,6 @@ export let data: object[] = [{
 {% raw %}
 
 ~~~
-
 'use client'
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { StackPanel, TextElement, DataBinding, HierarchicalTree, DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
@@ -274,7 +273,6 @@ export default function Home() {
     </>
   )
 }
-
 ~~~
 
 {% endraw %}
