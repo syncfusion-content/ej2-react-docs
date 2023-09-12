@@ -26,9 +26,11 @@ In the pan mode, if the free text annotation mode is entered, the PDF Viewer con
 
 Refer to the following code sample to switch to the Free Text annotation mode.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -47,7 +49,44 @@ function App() {
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function freetextMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('FreeText');
+  }
+  return (<div>
+    <button onClick={freetextMode}>FreeText</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
@@ -59,9 +98,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
-{% endraw %}
 
+```
+{% endhighlight %}
+{% endtabs %}
 
 ## Editing the properties of free text annotation
 
@@ -127,9 +167,11 @@ The properties of the free text annotation can be set before creating the contro
 
 After editing the default values, they will be changed to the selected values. Refer to the following code sample to set the default free text annotation settings.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -142,7 +184,40 @@ function App() {
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        freeTextSettings={{fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         freeTextSettings={{fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}}
         style={{ 'height': '640px' }}>
@@ -156,15 +231,18 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
-{% endraw %}
 
+```
+{% endhighlight %}
+{% endtabs %}
 
 You can also enable the autofit support for free text annotation by using the enableAutoFit boolean property in freeTextSettings as below. The width of the free text rectangle box will be increased based on the text added to it.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -176,7 +254,38 @@ function App() {
     <div className='control-section'>
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        freeTextSettings={{enableAutoFit: true}}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         freeTextSettings={{enableAutoFit: true}}
         style={{ 'height': '640px' }}>
@@ -189,5 +298,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+
+{% endhighlight %}
+{% endtabs %}

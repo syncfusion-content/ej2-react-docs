@@ -24,12 +24,14 @@ The default toolbar of PDF Viewer contains the following navigation options
 
 You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -39,7 +41,40 @@ function App() {
     {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enableNavigation={true}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, 
+                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+    return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableNavigation={true}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
@@ -54,7 +89,9 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/navigation.png)
 
@@ -62,12 +99,14 @@ root.render(<App />);
 
 The Bookmarks saved in PDF files are loaded and made ready for easy navigation. You can enable/disable bookmark navigation by using the following code snippet.,
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -77,7 +116,40 @@ function App() {
     {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enableBookmark={true}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, 
+                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+    return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableBookmark={true}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
@@ -92,7 +164,9 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/bookmark.png)
 
@@ -100,12 +174,14 @@ root.render(<App />);
 
 Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation. You can enable/disable thumbnail navigation by using the following code snippet.,
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -116,7 +192,40 @@ function App() {
     {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enableThumbnail={true}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, 
+                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+
+  return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableThumbnail={true}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
@@ -129,8 +238,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/thumbnail.png)
 
@@ -146,12 +257,14 @@ Table of contents navigation allows users to navigate to different parts of a PD
 
 You can enable/disable link navigation by using the following code snippet.,
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -162,7 +275,40 @@ function App() {
     {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enableHyperlink={true}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, 
+                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+
+  return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableHyperlink={true}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
@@ -177,16 +323,20 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+
+{% endhighlight %}
+{% endtabs %}
 
 You can change the open state of the hyperlink in the PDF Viewer by using the following code snippet,
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -197,7 +347,42 @@ function App() {
     {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enableHyperlink="true"
+        hyperlinkOpenState="NewTab"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, 
+                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+
+  return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableHyperlink="true"
         hyperlinkOpenState="NewTab"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
@@ -213,7 +398,9 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/toc.png)
 

@@ -35,7 +35,8 @@ In the pan mode, if the shape annotation mode is entered, the PDF Viewer control
 
 Refer to the following code sample to switch to the circle annotation mode.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -54,7 +55,41 @@ function App() {
     <div className='control-section'>
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function circleMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Circle');
+  }
+  return (<div>
+    <button onClick={circleMode}>Circle</button>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
@@ -66,8 +101,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Editing the properties of the shape annotation
 
@@ -152,7 +189,8 @@ Here is an example of how you can use this method to delete an annotation:
 
 The properties of the shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -166,7 +204,41 @@ function App() {
     <div className='control-section'>
       <PdfViewerComponent  ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        lineSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
+        arrowSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
+        rectangleSettings={{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'}}
+        circleSettings={{fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'}}
+        polygonSettings={{fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent  ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         lineSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
         arrowSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
@@ -183,5 +255,7 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}

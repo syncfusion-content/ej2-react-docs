@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started with React Pdfviewer component | Syncfusion
-description:  Checkout and learn about Getting started with React Pdfviewer component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting started with Standalone React PDF Viewer component | Syncfusion
+description: Learn here all about Getting started with Standalone React PDF Viewer component of Syncfusion Essential JS 2 and more details.
+control: PDF Viewer
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with Standalone PDF Viewer component
 
-This section explains the steps required to create a simple React PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a React application.
+This section explains the steps required to create a simple Standalone React PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a React application.
 
 ## Prerequisites
 
@@ -20,9 +20,9 @@ To get started with Syncfusion React UI components, ensure the compatible versio
 
 ## Setup for Local Development
 
-1. Create a new React app [`create-react-app`](https://github.com/facebook/create-react-app) and install it using the following command.
+1. Create a new React app [`create-react-app`](https://github.com/facebookincubator/create-react-app) and install it using the following command.
 
-   ```
+   ```bash
    npm install -g create-react-app
    ```
 
@@ -55,11 +55,22 @@ To get started with Syncfusion React UI components, ensure the compatible versio
 ## Adding Syncfusion packages
 
 All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-To install PDF Viewer component, use the following command
+
+* To install PDF Viewer component, use the following command
 
   ```
    npm install @syncfusion/ej2-react-pdfviewer --save
   ```
+  
+* Copy the contents of the ej2-pdfviewer-lib folder from ./node_modules/@syncfusion/ej2-pdfviewer/dist to the public directory using the command:
+
+```bash
+cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/ej2-pdfviewer-lib
+```
+
+* Confirm that there is an 'ej2-pdfviewer-lib' directory within your public directory.
+
+* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
 
 ## Adding PDF Viewer component and the CSS reference
 
@@ -112,8 +123,7 @@ To install PDF Viewer component, use the following command
       <div className='control-section'>
          <PdfViewerComponent 
                id="container" 
-               documentPath="PDF_Succinctly.pdf"
-               serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" 
+               documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                style={{ 'height': '640px' }}>
 
                   <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
@@ -152,40 +162,4 @@ Output will be appears as follows.
         
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs1" %}
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service/)
-
-## How to run the PDF Viewer web service
-
-1.Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) link.
-
-2.Navigate to the `ASP.NET Core` folder and open it in the command prompt.
-
-3.Use the below command to restore the required packages.
-
-     ```
-       dotnet restore
-     ```
-
-4.Use the below command to run the web service.
-
-   ```
-   dotnet run
-   ```
-
-5.You can see that the PDF Viewer server instance runs in the local host with the port number `localhost:5001` and navigate to the PDF Viewer Web control `localhost:5001/pdfviewer` which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
-
-   {% raw %}
-   ```js
-   <PdfViewerComponent 
-      id="container" 
-      documentPath="PDF_Succinctly.pdf" 
-      serviceUrl="https://localhost:5001/pdfviewer" 
-      style={{ 'height': '640px' }}>
-        <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
-                            ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
-   </PdfViewerComponent>
-   ```
-  {% endraw %}
-   [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
-
-> You can refer to our [React PDF Viewer](https://www.syncfusion.com/react-components/react-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/default) to understand how to explains core features of PDF Viewer.
+> You can refer to our [React PDF Viewer](https://www.syncfusion.com/react-ui-components/react-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/default) to understand how to explains core features of PDF Viewer.

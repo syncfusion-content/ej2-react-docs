@@ -25,12 +25,14 @@ The PDF viewer control provides the option for interaction with Form Fields such
 
 We should inject FormDesigner module and set enableFormDesignerToolbar as true to enable the Form designer icon on the toolbar. By default, enableFormDesignerToolbar is set as true. Use the following code to inject FormDesigner module and to enable the enableFormDesignerToolbar property.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
          Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
@@ -42,7 +44,41 @@ function App() {
       <PdfViewerComponent
         id="container"
         ref={(scope) => { pdfviewer = scope; }}
-        documentPath="FormDesigner.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        enableFormDesignerToolbar={true}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        ref={(scope) => { pdfviewer = scope; }}
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         enableFormDesignerToolbar={true}
         style={{ 'height': '640px' }}>
@@ -56,9 +92,9 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Add the form field dynamically
 
@@ -98,12 +134,14 @@ The PDF Viewer control supports the clipboard operations such as cut, copy and p
 
 We provided support to undo/redo the Form Field actions that are performed at runtime. Use the following code example to perform undo/redo actions.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
          Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
@@ -125,7 +163,50 @@ function App() {
     <PdfViewerComponent
       id="container"
       ref={(scope) => { pdfviewer = scope; }}
-      documentPath="FormDesigner.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+      style={{ 'height': '640px' }}>
+
+            <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+    </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function undoClicked() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.undo();
+  }
+  function redoClicked() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.redo();
+  }
+  return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+    <button onClick={undoClicked}>Undo</button>
+    <button onClick={redoClicked}>Redo</button>
+    <PdfViewerComponent
+      id="container"
+      ref={(scope) => { pdfviewer = scope; }}
+      documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
       serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
       style={{ 'height': '640px' }}>
 
@@ -139,4 +220,5 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}

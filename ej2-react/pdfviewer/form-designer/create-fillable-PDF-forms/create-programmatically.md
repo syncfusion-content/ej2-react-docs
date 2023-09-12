@@ -34,7 +34,14 @@ Using addFormField method, the form fields can be added to the PDF document prog
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
+{% tabs %}
+{% highlight tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1-standalone" %}
+{% endhighlight %}
+{% highlight tabtitle="Server-Backed" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Edit/Update form field programmatically
 
@@ -49,7 +56,14 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
+{% tabs %}
+{% highlight tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1-standalone" %}
+{% endhighlight %}
+{% highlight tabtitle="Server-Backed" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Delete form field programmatically
 
@@ -63,15 +77,22 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% include code-snippet/pdfviewer/deleteformfield-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
+ 
+{% tabs %}
+{% highlight tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1-standalone" %}
+{% endhighlight %}
+{% highlight tabtitle="Server-Backed" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
+{% endhighlight %}
+{% endtabs %}
 
 ## setFormFieldMode programmatically
 
 The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer library that allows you to add a form field dynamically by passing the type of the form field. You can pass the form fields as a parameter like below.
 
-{% raw %}
-
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 ```ts
 
 import * as ReactDOM from 'react-dom';
@@ -90,7 +111,41 @@ function App() {
       <button onClick={addPasswordField}>Add Password Field</button>
       <PdfViewerComponent 
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function addPasswordField() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.setFormFieldMode("Password");
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <button onClick={addPasswordField}>Add Password Field</button>
+      <PdfViewerComponent 
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
@@ -104,7 +159,8 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Saving the form fields
 
@@ -114,8 +170,8 @@ When the download icon is selected on the toolbar, the Form Fields will be saved
 
 You can invoke download action using following code snippet.,
 
-{% raw %}
-
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 ```ts
 
 import * as ReactDOM from 'react-dom';
@@ -135,7 +191,42 @@ function App() {
       <button onClick={downloadClicked}>Download</button>
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function downloadClicked() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.download();
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <button onClick={downloadClicked}>Download</button>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
@@ -149,7 +240,8 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Printing the form fields
 
@@ -157,7 +249,8 @@ When the print icon is selected on the toolbar, the PDF document will be printed
 
 ![Alt text](../../../pdfviewer/images/printformfield.gif)
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
@@ -173,7 +266,39 @@ function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enablePrint={true}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enablePrint={true}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
@@ -188,7 +313,8 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Open the existing PDF document
 
@@ -202,8 +328,8 @@ The form fields in the PDF Document will be validated when the `enableFormFields
 
 Add the following code snippet to validate the form fields,
 
-{% raw %}
-
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 ```ts
 
 import * as ReactDOM from 'react-dom';
@@ -226,7 +352,48 @@ function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="FormDesigner.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        documentLoad={documentLoaded}
+        enableFormFieldsValidation={true}
+        ValidateFormFields= {validateFormFields}
+        style={{ 'height': '640px' }}>
+
+            <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                                ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function documentLoaded () {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Textbox", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
+  }
+  function validateFormFields(args){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.nonfilledFormFields = args.nonFillableFields
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         documentLoad={documentLoaded}
         enableFormFieldsValidation={true}
@@ -243,7 +410,8 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Export and import form fields
 
@@ -410,7 +578,9 @@ function updateProperties(){
 
 The following code example explains how to update the properties of the signature field added to the document from the form designer toolbar.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+
 ```ts
 
 {/* Defines the signature field settings */}
@@ -431,7 +601,41 @@ let signatureFieldSettings = {
 //   . . .
  <PdfViewerComponent
     id="container"
-    documentPath="PDF_Succinctly.pdf"
+     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    style={{ height: '640px' }}
+    signatureFieldSettings={signatureFieldSettings}>
+
+        <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                            Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]}/>
+
+ </PdfViewerComponent>
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+{/* Defines the signature field settings */}
+let signatureFieldSettings = {
+  name: 'Signature', isReadOnly: false, visibility: 'visible', isRequired: false, isPrint: true,
+  tooltip: 'Signature', thickness: 4,
+  // Specify the properties of the signature indicator in the signature field.
+  signatureIndicatorSettings: {
+    opacity: 1, backgroundColor: '#237ba2', height: 50,
+    fontSize: 15,  text: 'Signature Field', color: 'white'
+  },
+  // Specify the properties of the signature Dialog Settings in the intial field.
+  signatureDialogSettings: {
+    displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text, hideSaveSignature: false
+  }
+};
+//   . . .
+//   . . .
+ <PdfViewerComponent
+    id="container"
+     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
     style={{ height: '640px' }}
     signatureFieldSettings={signatureFieldSettings}>
@@ -442,13 +646,15 @@ let signatureFieldSettings = {
  </PdfViewerComponent>
 
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ![Signature Field Settings](../../../pdfviewer/images/SignatureField.png)
 
 The following code example explains how to update the properties of the initial field added to the document from the form designer toolbar.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 ```ts
 
 {/* Defines the initial field settings */}
@@ -470,7 +676,43 @@ The following code example explains how to update the properties of the initial 
 
 {/* Render the PDF Viewer */}
 <PdfViewerComponent
-  id="container" documentPath="PDF_Succinctly.pdf"
+  id="container"  
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  style={{ height: '640px' }}
+  initialFieldSettings={initialFieldSettings}>
+
+      <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                          ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]} />
+
+</PdfViewerComponent>
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+```ts
+
+{/* Defines the initial field settings */}
+  let initialFieldSettings = {
+    name: 'Initial', isReadOnly: false, visibility: 'visible',
+    isRequired: false, isPrint: true, tooltip: 'Initial', thickness: 4,
+    // Specify the properties of the initial indicator in the initial field.
+    initialIndicatorSettings: {
+      opacity: 1, backgroundColor: '#237ba2', height: 50, fontSize: 15, text: 'Initial Field',  color: 'white'
+    },
+    // Specify the properties of the initial Dialog Settings in the intial field.
+    initialDialogSettings: {
+      displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text, hideSaveSignature: false
+    }
+  };
+
+//   . . .
+//   . . .
+
+{/* Render the PDF Viewer */}
+<PdfViewerComponent
+  id="container"  
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
   style={{ height: '640px' }}
   initialFieldSettings={initialFieldSettings}>
@@ -481,6 +723,7 @@ The following code example explains how to update the properties of the initial 
 </PdfViewerComponent>
 
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ![Initial Field Settings](../../../pdfviewer/images/InitialField.png)
