@@ -124,8 +124,8 @@ Syncfusion React Themes are available in the CDN. Make sure that the version in 
 
 | Theme Name | CDN Reference |
 |--- | --- |
-| Material3 | [https://cdn.syncfusion.com/ej2/22.1.34/material3.css](https://cdn.syncfusion.com/ej2/22.1.34/material3.css) |
-| Material3 Dark | [https://cdn.syncfusion.com/ej2/22.1.34/material3-dark.css](https://cdn.syncfusion.com/ej2/22.1.34/material3-dark.css) |
+| Material 3 | [https://cdn.syncfusion.com/ej2/22.1.34/material3.css](https://cdn.syncfusion.com/ej2/22.1.34/material3.css) |
+| Material 3 Dark | [https://cdn.syncfusion.com/ej2/22.1.34/material3-dark.css](https://cdn.syncfusion.com/ej2/22.1.34/material3-dark.css) |
 | Fluent | [https://cdn.syncfusion.com/ej2/22.1.34/fluent.css](https://cdn.syncfusion.com/ej2/22.1.34/fluent.css) |
 | Fluent Dark | [https://cdn.syncfusion.com/ej2/22.1.34/fluent-dark.css](https://cdn.syncfusion.com/ej2/22.1.34/fluent-dark.css) |
 | Bootstrap 5 | [https://cdn.syncfusion.com/ej2/22.1.34/bootstrap5.css](https://cdn.syncfusion.com/ej2/22.1.34/bootstrap5.css) |
@@ -147,7 +147,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
 
 <!-- markdownlint-disable MD033 -->
 
-### Syncfusion Material3 theme
+### Syncfusion Material 3 theme
 
 <table>
     <style>
