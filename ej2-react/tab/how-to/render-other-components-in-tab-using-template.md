@@ -16,6 +16,10 @@ You can render other components inside Tab using React **template**. Through thi
 
 * Assign the function as value for the template property.
 
+To quickly get started with integrating UI components inside the React Tabs component, you can check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=6NKtKpB8XNI" %}
+
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tab/direct-components-cs1/app/index.jsx %}
