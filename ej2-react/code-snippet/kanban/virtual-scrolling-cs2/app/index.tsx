@@ -71,8 +71,8 @@ function App() {
     const types: string[] = ['Epic', 'Bug', 'Story'];
     const tagsField: string[] = ['Feature', 'Bug', 'Enhancement', 'Documentation', 'Automation', 'Mobile', 'Web', 'iOS', 'Safari', 'Chrome', 'Firefox', 'Manual Testing'];
     const storyPoints: string[] = ['1', '2', '3', '3.5', '4', '4.5', '5', '6', '7.5', '8'];
-    const count: number = 600000;
-    for (let a: number = 500000, id: number = 500000; a < count; a++) {
+    const count: number = 60000;
+    for (let a: number = 50000, id: number = 50000; a < count; a++) {
       const typeValue: string = types[Math.floor(Math.random() * types.length)];
       const summary: string = typeValue === 'Bug' ? BUG_TASKS[Math.floor(Math.random() * BUG_TASKS.length)] :
         typeValue === 'Story' ? FEATURE_TASKS[Math.floor(Math.random() * FEATURE_TASKS.length)] :

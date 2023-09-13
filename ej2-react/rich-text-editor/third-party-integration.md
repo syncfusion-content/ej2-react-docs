@@ -57,35 +57,6 @@ Add a custom icon for HTML source editor in the toolbar of Rich Text Editor usin
 {% endhighlight %}
 {% endtabs %}
 
-## At.js Integration
-
-Rich Text Editor can easily be integrated with At.js library. To display the autocomplete list, type `@`.
-
-Include At.JS style.
-
-   ``` javascript
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/at.js/1.4.0/css/jquery.atwho.min.css">
-  ```
-
-Include At.JS javascript.
-
-   ``` javascript
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/at.js/1.4.0/js/jquery.atwho.min.js"></script>
-   ```
-
-Define the At.js configuration.
-
-   ```ts
-    var config = {
-        at: "@",
-        data: [email id of employees list],
-        displayTpl: '<li>${name} <small>${email}</small></li>',
-        limit: 200
-      }
-  ```
-
-Populate the employee’s email id from local or remote data and set the result to the data of At.js configuration.
-
 ## Embed.ly Integration
 
 Rich Text Editor easily integrate with embed.ly which is probably the best service when it comes to embed the rich content such as Twitter, Facebook, Instagram, and lots of other publishing platform embeds.

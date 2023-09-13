@@ -1,8 +1,8 @@
 /**
  * Rich Text Editor - TextArea Sample
  */
-import { Count, HtmlEditor, Image, Link, RichTextEditor, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-RichTextEditor.Inject(HtmlEditor, Image, Link, Toolbar, Count);
+import { Count, HtmlEditor, Image, Link, RichTextEditor, Toolbar, QuickToolbar } from '@syncfusion/ej2-react-richtexteditor';
+RichTextEditor.Inject(HtmlEditor, Image, Link, Toolbar, Count, QuickToolbar);
 import * as React from 'react';
 import { useEffect } from "react";
 function App() {
