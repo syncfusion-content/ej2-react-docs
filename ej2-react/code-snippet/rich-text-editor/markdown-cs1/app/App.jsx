@@ -38,7 +38,7 @@ class App extends React.Component {
         if (this.mdsource.classList.contains('e-active')) {
             const id = this.rteObj.getID() + 'html-view';
             const htmlPreview = this.rteObj.element.querySelector('#' + id);
-            htmlPreview.innerHTML = Marked(this.rteObj.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = Marked.marked(this.rteObj.contentModule.getEditPanel().value);
         }
     }
     fullPreview() {
@@ -59,7 +59,7 @@ class App extends React.Component {
             }
             this.textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = Marked(this.rteObj.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = Marked.marked(this.rteObj.contentModule.getEditPanel().value);
             this.mdsource.parentElement.title = 'Code View';
         }
     }
@@ -82,7 +82,7 @@ class App extends React.Component {
         });
     }
     render() {
-        return (<RichTextEditorComponent id="markdownRTE" ref={(richtexteditor) => { this.rteObj = richtexteditor; }} editorMode='Markdown' height='250px' valueTemplate={this.template} toolbarSettings={this.toolbarSettings}>
+        return (<RichTextEditorComponent id="markdownRTE" ref={(richtexteditor) => { this.rteObj = richtexteditor; }} editorMode='Markdown' height='250px' valueTemplate={this.template} toolbarSettings={this.toolbarSettings} created={this.rendereComplete.bind(this)}>
               <Inject services={[MarkdownEditor, Toolbar, Image, Link, QuickToolbar]}/>
               </RichTextEditorComponent>);
     }

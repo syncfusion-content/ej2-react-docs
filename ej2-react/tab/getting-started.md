@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 This section briefly explains about how to create a simple **Tab** component and configuring the Tab header content in React.
 
+To get started quickly with React Tabs using Create React App, you can check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=k1yvVlO-RN8" %}
+
 ## Dependencies
 
 The following is the list of dependencies required to use the Tab component in your application.
