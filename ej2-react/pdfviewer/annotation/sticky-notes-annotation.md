@@ -59,7 +59,8 @@ The properties of the sticky note annotation can be set before creating the cont
 
 After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values. Refer to the following code sample to set the default sticky note annotation settings.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -73,7 +74,7 @@ function App() {
     <div className='control-section'>
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         stickyNotesSettings={{author: 'Syncfusion'}}
         style={{ 'height': '640px' }}>
@@ -86,14 +87,11 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
 
-## Disabling sticky note annotations
-
-The PDF Viewer control provides an option to disable the sticky note annotations feature. The code sample for disabling the feature is as follows.
-
-{% raw %}
+{% highlight js tabtitle="Server-Backed" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -107,7 +105,43 @@ function App() {
     <div className='control-section'>
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        stickyNotesSettings={{author: 'Syncfusion'}}
+        style={{ 'height': '640px' }}>
+
+            <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                ThumbnailView, Print, TextSelection, TextSearch]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+{% endtabs %}
+
+## Disabling sticky note annotations
+
+The PDF Viewer control provides an option to disable the sticky note annotations feature. The code sample for disabling the feature is as follows.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         enableStickyNotesAnnotation={false}
         style={{ 'height': '640px' }}>
@@ -120,5 +154,38 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        enableStickyNotesAnnotation={false}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+{% endtabs %}

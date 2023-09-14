@@ -16,20 +16,39 @@ The PDF Viewer library allows you to trigger an event when you double click on t
 
 **Step 2:** Add the following code snippet in the `index.js` file to add the form field double click event in the PDF Viewer.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```javascript
 <PdfViewerComponent
   id="container"
-  documentPath="FormFillingDocument.pdf"
-  formFieldDoubleClick={this.formFieldDoubleClick}
-  serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+  documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+  formFieldDoubleClick={formFieldDoubleClick}
   style={{ height: '640px' }}>
 </PdfViewerComponent>
 
-formFieldDoubleClick(args) {
+function formFieldDoubleClick(args) {
     //Prints the argument value in the console window
     console.log(args);
   }
 ```
-{% endraw %}
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```javascript
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+  formFieldDoubleClick={formFieldDoubleClick}
+  serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+  style={{ height: '640px' }}>
+</PdfViewerComponent>
+
+function formFieldDoubleClick(args) {
+    //Prints the argument value in the console window
+    console.log(args);
+  }
+```
+{% endhighlight %}
+{% endtabs %}

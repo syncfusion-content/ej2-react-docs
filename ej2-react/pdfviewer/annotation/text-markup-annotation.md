@@ -36,7 +36,8 @@ In the pan mode, if the highlight mode is entered, the PDF Viewer control will s
 
 Refer to the following code snippet to switch to highlight mode.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -57,7 +58,43 @@ function App() {
         {/* Render the PDF Viewer */}
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container" 
-          documentPath="PDF_Succinctly.pdf"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          style={{ 'height': '640px' }}>
+
+                <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                    Print, TextSelection, TextSearch]} />
+        </PdfViewerComponent>
+      </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+   function highlightMode() {
+      var viewer = document.getElementById('container').ej2_instances[0];
+      viewer.annotation.setAnnotationMode('Highlight');
+    }
+  return (
+    <div>
+    <button onClick={highlightMode}>Highlight</button>
+      <div className='control-section'>
+        {/* Render the PDF Viewer */}
+        <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+          id="container" 
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
           style={{ 'height': '640px' }}>
 
@@ -69,14 +106,15 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-
- {% endraw %}
-
+{% endhighlight %}
+{% endtabs %}
 
 Refer to the following code snippet to switch back to normal mode from highlight mode.
 
-   {% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -102,7 +140,48 @@ function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function highlightMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Highlight');
+  }
+
+  function normalMode () {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('None');
+  }
+  return (<div>
+  <button onClick={highlightMode}>Highlight</button>
+  <button onClick={normalMode}>Normal Mode</button>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
@@ -114,8 +193,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
- {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Underline a text
 
@@ -139,7 +220,8 @@ In the pan mode, if the underline mode is entered, the PDF Viewer control will s
 
 Refer to the following code snippet to switch to underline mode.
 
-   {% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -159,7 +241,42 @@ function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function underlineMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Underline');
+  }
+  return ( <div>
+  <button onClick={underlineMode}>Underline</button>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
@@ -171,12 +288,15 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-  {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 Refer to the following code snippet to switch back to normal mode from underline mode.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -201,7 +321,48 @@ function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function underlineMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Underline');
+  }
+  function normalMode () {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('None');
+  }
+  return ( <div>
+    <button onClick={underlineMode}>Underline</button>
+    <button onClick={normalMode}>Normal Mode</button>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
@@ -214,8 +375,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Strikethrough a text
 
@@ -239,7 +402,8 @@ In the pan mode, if the strikethrough mode is entered, the PDF Viewer control wi
 
 Refer to the following code snippet to switch to strikethrough mode.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -259,7 +423,43 @@ function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function strikethroughMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Strikethrough');
+  }
+  return ( <div>
+    <button onClick={strikethroughMode}>Strikethrough</button>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
@@ -272,12 +472,15 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 Refer to the following code snippet to switch back to normal mode from underline mode.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -303,7 +506,49 @@ function App() {
         {/* Render the PDF Viewer */}
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
-          documentPath="PDF_Succinctly.pdf"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          style={{ 'height': '640px' }}>
+
+                <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                    ThumbnailView, Print, TextSelection, TextSearch]} />
+        </PdfViewerComponent>
+      </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function strikethroughMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Strikethrough');
+  }
+  function normalMode () {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('None');
+  }
+  return (
+  <div>
+    <button onClick={strikethroughMode}>Strikethrough</button>
+    <button onClick={normalMode}>Normal Mode</button>
+      <div className='control-section'>
+        {/* Render the PDF Viewer */}
+        <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
           style={{ 'height': '640px' }}>
 
@@ -316,8 +561,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Deleting a text markup annotation
 
@@ -357,10 +604,11 @@ The properties of the text markup annotation can be set before creating the cont
 
 Refer to the following code snippet to set the default annotation settings.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
-import * as ReactDOM from 'react-dom;
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -373,7 +621,42 @@ function App() {
       {/* Render the PDF Viewer */}
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
-          documentPath="PDF_Succinctly.pdf"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          style={{ 'height': '640px' }}
+          highlightSettings = {{author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''}}
+          underlineSettings = {{author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9,modifiedDate: ''}}
+          strikethroughSettings = {{author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''}}>
+
+                <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                    ThumbnailView, Print, TextSelection, TextSearch]} />
+        </PdfViewerComponent>
+    </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (
+  <div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+        <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
           style={{ 'height': '640px' }}
           highlightSettings = {{author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''}}
@@ -389,8 +672,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Performing undo and redo
 
@@ -409,7 +694,8 @@ The PDF Viewer performs undo and redo for the changes made in the PDF document. 
 
 Refer to the following code snippet for calling undo and redo actions from the client-side.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -435,7 +721,49 @@ function App() {
       {/* Render the PDF Viewer */}
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
-          documentPath="PDF_Succinctly.pdf"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          style={{ 'height': '640px' }}>
+
+                <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                    ThumbnailView, Print, TextSelection, TextSearch]} />
+        </PdfViewerComponent>
+    </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function undo() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.undo();
+  }
+  function redo () {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.redo();
+  }
+  return (
+  <div>
+    <button onClick={undo}>Undo</button>
+    <button onClick={redo}>Redo</button>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+        <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
           style={{ 'height': '640px' }}>
 
@@ -448,8 +776,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Saving the text markup annotation
 
@@ -463,7 +793,8 @@ When the print tool is selected in the toolbar, the PDF document will be printed
 
 The PDF Viewer control provides an option to disable the text markup annotation feature. The code snippet for disabling the feature is as follows.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -479,7 +810,40 @@ function App() {
       {/* Render the PDF Viewer */}
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
-          documentPath="PDF_Succinctly.pdf"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          enableTextMarkupAnnotation = {false}
+          style={{ 'height': '640px' }}>
+
+                <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                    ThumbnailView, Print, TextSelection, TextSearch]} />
+        </PdfViewerComponent>
+    </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  return (
+  <div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+        <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           enableTextMarkupAnnotation = {false}
           serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
           style={{ 'height': '640px' }}>
@@ -493,8 +857,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 ```
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 

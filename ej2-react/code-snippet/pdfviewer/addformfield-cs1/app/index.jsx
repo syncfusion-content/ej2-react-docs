@@ -13,7 +13,7 @@ function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="FormDesigner.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         documentLoad={documentLoaded}
         style={{ 'height': '640px' }}>

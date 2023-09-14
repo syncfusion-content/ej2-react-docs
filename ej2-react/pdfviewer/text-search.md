@@ -17,6 +17,7 @@ The Text Search option in PDF Viewer is used to find and highlight the text cont
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -27,7 +28,7 @@ function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableTextSearch={true}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>

@@ -16,8 +16,8 @@ The PDF Viewer provides API for user interactions options provided in it's built
 
 **Step 2:** Now, add an HTML div element in template to act as the custom toolbar PDF Viewer using the following code.
 
-  {% raw %}
-
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
    ```ts
      render() {
         function template() {
@@ -53,8 +53,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
                         enableToolbar={false}
                         documentLoad={this.documentLoaded}
                         pageChange={this.onPageChange}
-                        documentPath="Hive_Succinctly.pdf"
-                        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+                        documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
                         style={{ 'display': 'block', 'height': '640px' }}>
 
                                 <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -77,38 +76,78 @@ The PDF Viewer provides API for user interactions options provided in it's built
 
                 </div>
             </div>
-            <div id="action-description">
-                <p>This sample demonstrate how to perform the PDF Viewer core functionalities using a custom toolbar.</p>
-            </div>
-            <div id="description">
-                <p>
-                    This sample demonstrate how to perform the PDF Viewer core functionalities using a custom toolbar.
-                </p>
-                <p>
-                    In this example, you can see PDF Viewer control API in action to perform the functionalities.
-                </p>
-                <ul>
-                    <li>Go to Previous Page - <code>viewer.navigation.goToPreviousPage()</code></li>
-                    <li>Go to Next Page - <code>viewer.navigation.goToNextPage()</code></li>
-                    <li>Go to Page - <code>viewer.navigation.goToPage(pageindex)</code></li>
-                    <li>Print - <code>viewer.print.print()</code></li>
-                    <li>Download - <code>viewer.download()</code></li>
-                    <li>Fit To Page - <code>viewer.magnification.fitToPage()</code></li>
-                    <li>Zoom In - <code>viewer.magnification.zoomIn()</code></li>
-                    <li>Zoom Out - <code>viewer.magnification.zoomOut()</code></li>
-                    <li>Load document - <code>viewer.load(fileName, password)</code></li>
-                </ul>
-                <p>
-                    More information on the PDF Viewer instantiation can be found in this <a target="_blank" href="https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started">
-                      documentation section
-                    </a>.
-                </p>
-            </div>
         </div>
         );
       }
    ```
-  {% endraw %}
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+   ```ts
+     render() {
+        function template() {
+            return (
+                <div ><span className='e-pv-total-page-number' id='totalPage'>of 0</span></div>
+            );
+        }
+        function inputTemplate() {
+            return (
+                <div><input type='text' className='e-input-group e-pv-current-page-number' id='currentPage' /></div>
+            );
+        }
+        return (<div>
+            <div className='control-section'>
+                <div>
+                    <div className='e-pdf-toolbar'>
+                        <ToolbarComponent ref={(scope) => { this.toolbar = scope; }} clicked={this.clickHandler.bind(this)}>
+                            <ItemsDirective>
+                                <ItemDirective prefixIcon='e-pv-open-document-icon' id='file_Open' tooltipText='Open'></ItemDirective>
+                                <ItemDirective prefixIcon="e-pv-previous-page-navigation-icon" id='previous_page' tooltipText="Previous Page" align="Center"></ItemDirective>
+                                <ItemDirective prefixIcon="e-pv-next-page-navigation-icon" id='next_page' tooltipText="Next Page" align="Center"></ItemDirective>
+                                <ItemDirective template={inputTemplate} tooltipText="Page Number" type="Input" align="Center"></ItemDirective>
+                                <ItemDirective template={template} align="Center" tooltipText="Page Number"></ItemDirective>
+                                <ItemDirective prefixIcon="e-pv-print-document-icon" tooltipText="Print" id='print' align="Right"></ItemDirective>
+                                <ItemDirective prefixIcon="e-pv-download-document-icon" tooltipText="Download" id='download' align="Right"></ItemDirective>
+                            </ItemsDirective>
+                        </ToolbarComponent>
+                    </div>
+                    {/* Render the PDF Viewer */}
+                    <PdfViewerComponent
+                        id="container"
+                        ref={(scope) => { this.viewer = scope; }}
+                        enableToolbar={false}
+                        documentLoad={this.documentLoaded}
+                        pageChange={this.onPageChange}
+                        documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
+                        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+                        style={{ 'display': 'block', 'height': '640px' }}>
+
+                                <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                                    ThumbnailView, Print, TextSelection, TextSearch]} />
+                    </PdfViewerComponent>
+                    <input type="file"
+                    id="fileUpload"
+                    accept=".pdf"
+                    onChange={this.readFile.bind(this)}
+                    style={{ 'display': 'block', 'visibility': 'hidden', 'width': '0', 'height': '0' }} />
+                    <div className='e-pdf-toolbar' id="magnificationToolbarItems">
+                        <ToolbarComponent id="magnificationToolbar" clicked={this.clickHandler.bind(this)}>
+                            <ItemsDirective >
+                                <ItemDirective prefixIcon="e-pv-fit-page" id='fit_to_page' tooltipText="Fit to page" ></ItemDirective>
+                                <ItemDirective prefixIcon="e-pv-zoom-in-icon" id='zoom_in' tooltipText="Zoom in"></ItemDirective>
+                                <ItemDirective prefixIcon="e-pv-zoom-out-sample" id='zoom_out' tooltipText="Zoom out" ></ItemDirective>
+                            </ItemsDirective>
+                        </ToolbarComponent>
+                    </div>
+
+                </div>
+            </div>           
+        </div>
+        );
+      }
+   ```
+{% endhighlight %}
+{% endtabs %}
 
 **Step 3:** Import and inject the modules used for the custom toolbar,
 
@@ -128,9 +167,28 @@ The PDF Viewer provides API for user interactions options provided in it's built
 
 **Step 4:** Hide the default toolbar of PDF Viewer using below code snippet,
 
-   {% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+```ts
 
-   ```ts
+<PdfViewerComponent
+id="container"
+ref={(scope) => { this.viewer = scope; }}
+enableToolbar={false}
+documentLoad={this.documentLoaded}
+pageChange={this.onPageChange}
+documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
+style={{ 'display': 'block', 'height': '640px' }}>
+
+        <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
+                            ThumbnailView, Print, TextSelection, TextSearch]} />
+</PdfViewerComponent>
+
+```
+{% endhighlight %}
+
+{% highlight js tabtitle="Server-Backed" %}
+```ts
 
     <PdfViewerComponent
     id="container"
@@ -138,7 +196,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
     enableToolbar={false}
     documentLoad={this.documentLoaded}
     pageChange={this.onPageChange}
-    documentPath="Hive_Succinctly.pdf"
+    documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
     serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
     style={{ 'display': 'block', 'height': '640px' }}>
 
@@ -146,8 +204,9 @@ The PDF Viewer provides API for user interactions options provided in it's built
                                 ThumbnailView, Print, TextSelection, TextSearch]} />
     </PdfViewerComponent>
 
-  ```
-  {% endraw %}
+```
+{% endhighlight %}
+{% endtabs %}
 
 **Step 5:** Add the following style to achieve the custom toolbar styling,
 

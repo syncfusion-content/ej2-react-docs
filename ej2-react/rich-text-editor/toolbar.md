@@ -241,7 +241,7 @@ Quick commands are opened as context-menu on clicking the corresponding element.
 | --- | --- |
 | Image | 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText', and 'Dimension' |
 | Link | 'Open', 'Edit', and 'UnLink' |
-| Text (`Deprecated`) | 'Cut', 'Copy', and 'Paste' |
+| Text | null <br> (Any toolbar [items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/toolbar#toolbar-items) in the Rich Text Editor can be configured here). |
 | Table | 'TableHeader', 'TableRows', 'TableColumns', 'BackgroundColor', 'TableRemove', 'Alignments', 'TableCellVerticalAlign' and 'Styles' |
 
 Custom tool can be added to the corresponding quick toolbar, using the [quickToolbarSettings](/rich-text-editor/api-quickToolbarSettings.html)  property.

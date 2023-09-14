@@ -18,12 +18,6 @@ To animate the Tooltip, a set of specific animation effects are available, and i
 By default, Tooltip entrance occurs over 150 ms using the `ease-out` timing function. It exits also at 150 ms, but uses `ease-in` timing function.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/animation-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/animation-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/animation-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -69,12 +63,6 @@ Animations can also be applied on Tooltips dynamically through `open` and `close
 Refer to the code snippet below to apply animations using public methods.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/effects-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/effects-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/effects-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -90,12 +78,6 @@ Refer to the code snippet below to apply animations using public methods.
 The transition effect can be applied on Tooltips by using the `beforeRender` event as given in the following work-around code example.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/transition-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/transition-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/transition-cs1/app/index.jsx %}
 {% endhighlight %}

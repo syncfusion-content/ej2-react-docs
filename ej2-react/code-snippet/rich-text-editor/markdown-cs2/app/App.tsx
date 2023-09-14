@@ -27,7 +27,7 @@ function App() {
 
   // Rich Text Editor ToolbarSettings
   let toolbarSettings: object = {
-      items: items;
+      items: items
   };
   // set the value to Rich Text Editor
   function template(): JSX.Element {

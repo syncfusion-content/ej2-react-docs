@@ -16,12 +16,14 @@ The PDF Viewer provides interaction mode for easy interaction with the loaded PD
 
 In this mode, the text selection can be performed in the PDF document loaded in PDF Viewer. The panning and scrolling of the pages by touch cannot be performed in this mode. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content. You can enable/disable the text selection using the following code snippet.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -32,7 +34,41 @@ function App() {
     {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enableTextSelection={true}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, 
+                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+
+  return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableTextSelection={true}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
         style={{ 'height': '640px' }}>
@@ -48,7 +84,9 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/selection.png)
 
@@ -60,12 +98,14 @@ In this mode, the panning and scrolling of the pages by touch can be performed i
 
 You can switch the interaction mode of PDF Viewer by using the following code snippet.,
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
 
 ```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -76,7 +116,42 @@ function App() {
     {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
-        documentPath="PDF_Succinctly.pdf"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enableTextSelection={false}
+        interactionMode="interactionMode"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, 
+                                  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+```
+
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+
+  return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableTextSelection={false}
         interactionMode="interactionMode"
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
@@ -93,7 +168,9 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
-{% endraw %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 

@@ -21,7 +21,7 @@ To get start quickly with Data Binding, you can check on this video:
 
 ## Binding with ajax
 
-You can use TreeGrid [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property to bind the data source to TreeGrid from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property by using `onSuccess` event of the Ajax.
+You can use TreeGrid [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property to bind the data source to TreeGrid from external Fetch request. In the below code we have fetched the data source from the server with the help of Fetch request and provided that to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property by using `onSuccess` event of the Fetch.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -135,19 +135,19 @@ public class TreeData
 
 It is possible to handle data processing externally and bind the result to the TreeGrid. This helps you to provide your own custom data logic. TreeGrid expects an object as the result of the custom logic and the emitted value should be an object with properties result and count.
 
->In this context, we are going to use Ajax from our @syncfusion/ej2-base library for handling remote interaction, you can choose any HTTP client as per your choice.
+>In this context, we are going to use Fetch from our @syncfusion/ej2-base library for handling remote interaction, you can choose any HTTP client as per your choice.
 
 ```ts
 
 import React, { Component } from 'react';
 
-import { Ajax, getValue } from '@syncfusion/ej2-base';
+import { Fetch, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
 
 function App() {
 
-  const ajax: Ajax = new Ajax({
+  const fetch: Fetch = new Fetch({
       mode: true,
       onFailure: (e: Error) => false,
       type: 'GET'
@@ -167,10 +167,10 @@ function App() {
       /// filter query for fetching only the root level records
       const treegridQuery = "$filter='ParentId eq null'";
 
-      ajax.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&$inlinecount=allpages&$format=json`;
+      fetch.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&$inlinecount=allpages&$format=json`;
 
-      return ajax.send().then((response: any) => {
-          const data: any = JSON.parse(response);
+      return fetch.send().then((response: any) => {
+          const data: any = response;
           return {
               count:  parseInt(getValue('d.__count', data), 10),
               result: getValue('d.results', data)
@@ -231,13 +231,13 @@ Using the custom binding feature you can bind the child data for a parent record
 
 import React, { Component } from 'react';
 
-import { Ajax, getValue } from '@syncfusion/ej2-base';
+import { Fetch, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
 
 function App() {
 
-  const ajax: Ajax = new Ajax({
+  const fetch: Fetch = new Fetch({
       mode: true,
       onFailure: (e: Error) => false,
       type: 'GET'
@@ -259,10 +259,10 @@ function App() {
       /// filter query for fetching only the root level records
       const treegridQuery = "$filter='ParentId eq null'";
 
-      ajax.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&$inlinecount=allpages&$format=json`;
+      fetch.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&$inlinecount=allpages&$format=json`;
 
-      return ajax.send().then((response: any) => {
-          const data: any = JSON.parse(response);
+      return fetch.send().then((response: any) => {
+          const data: any = response;
           return {
               count:  parseInt(getValue('d.__count', data), 10),
               result: getValue('d.results', data)
@@ -278,10 +278,10 @@ function App() {
       expandQuery = `$filter=${'ParentId eq ' + getValue('TaskId', state.data)}`;
     }
 
-    ajax.url = `${BASE_URL}?&${expandQuery}&$inlinecount=allpages&$format=json`;
+    fetch.url = `${BASE_URL}?&${expandQuery}&$inlinecount=allpages&$format=json`;
 
-    return ajax.send().then((response: any) => {
-        const data: any = JSON.parse(response);
+    return fetch.send().then((response: any) => {
+        const data: any = response;
         return data;
     });
 }
@@ -336,19 +336,19 @@ export default App;
 
 ### Handling Tree Grid actions
 
-For TreeGrid actions such as paging, sorting, etc dataStateChange event will be invoked. You have to query and resolve data using Ajax in this event based on the state arguments.
+For TreeGrid actions such as paging, sorting, etc dataStateChange event will be invoked. You have to query and resolve data using Fetch in this event based on the state arguments.
 
 ```ts
 
 import React, { Component } from 'react';
 
-import { Ajax, getValue } from '@syncfusion/ej2-base';
+import { Fetch, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
 
 function App() {
 
-  const ajax: Ajax = new Ajax({
+  const fetch: Fetch = new Fetch({
       mode: true,
       onFailure: (e: Error) => false,
       type: 'GET'
@@ -373,10 +373,10 @@ function App() {
         }).reverse().join(',');
       }
 
-      ajax.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&${sortQuery}&$inlinecount=allpages&$format=json`;
+      fetch.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&${sortQuery}&$inlinecount=allpages&$format=json`;
 
-      return ajax.send().then((response: any) => {
-          const data: any = JSON.parse(response);
+      return fetch.send().then((response: any) => {
+          const data: any = response;
           return {
               count:  parseInt(getValue('d.__count', data), 10),
               result: getValue('d.results', data)
@@ -433,7 +433,7 @@ The [`dataSourceChanged`](https://ej2.syncfusion.com/react/documentation/api/tre
 
 import * as React from 'react';
 
-import { Ajax, getValue } from '@syncfusion/ej2-base';
+import { Fetch, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
 import * as ReactDOM from 'react-dom';
@@ -441,7 +441,7 @@ import { DataSourceChangedEventArgs } from '@syncfusion/ej2-grids';
 
 function App() {
 
-    const ajax: Ajax = new Ajax({
+    const fetch: Fetch = new Fetch({
         mode: true,
         onFailure: (e: Error) => false,
         type: 'GET'
@@ -462,10 +462,10 @@ function App() {
         /// filter query for fetching only the root level records
         const treegridQuery = "$filter='ParentId eq null'";
   
-        ajax.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&$inlinecount=allpages&$format=json`;
+        fetch.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&$inlinecount=allpages&$format=json`;
   
-        return ajax.send().then((response: any) => {
-            const data: any = JSON.parse(response);
+        return fetch.send().then((response: any) => {
+            const data: any = response;
             return {
                 count:  parseInt(getValue('d.__count', data), 10),
                 result: getValue('d.results', data)
@@ -478,44 +478,44 @@ function App() {
           if(state.requestType === 'expand') {
           expandQuery = `$filter=${'ParentId eq ' + getValue('TaskId', state.data)}`;
           }
-          ajax.url = `${BASE_URL}?&${expandQuery}&$inlinecount=allpages&$format=json`;
+          fetch.url = `${BASE_URL}?&${expandQuery}&$inlinecount=allpages&$format=json`;
   
-          return ajax.send().then((response: any) => {
-              const data: any = JSON.parse(response);
+          return fetch.send().then((response: any) => {
+              const data: any = response;
               return data;
           });
       }
   
       const addRecord = (state: DataSourceChangedEventArgs) : Promise<DataResult> => {
-          const add: Ajax = new Ajax({
+          const add: Fetch = new Fetch({
               mode: true,
               onFailure: (e: Error) => false,
               type: 'POST'
           });
           return add.send(JSON.stringify(state.data)).then((response: any) => {
-              const data: any = JSON.parse(response);
+              const data: any = response;
               return data;
           });
       }
       const updateRecord = (state: DataSourceChangedEventArgs) : Promise<DataResult> => {
-          const update: Ajax = new Ajax({
+          const update: Fetch = new Fetch({
               mode: true,
               onFailure: (e: Error) => false,
               type: 'PUT'
           });
           return update.send(JSON.stringify(state.data)).then((response: any) => {
-              const data: any = JSON.parse(response);
+              const data: any = response;
               return data;
           });
       }
       const deleteRecord = (state: any) : Promise<DataResult> => {
-          const remove: Ajax = new Ajax({
+          const remove: Fetch = new Fetch({
               mode: true,
               onFailure: (e: Error) => false,
               type: 'DELETE'
           });
           return remove.send(JSON.stringify((state.data && state.data[0]))).then((response: any) => {
-              const data: any = JSON.parse(response);
+              const data: any = response;
               return data;
           });
       }
@@ -596,13 +596,13 @@ The [`dataStateChange`](https://ej2.syncfusion.com/react/documentation/api/treeg
 
 import React, { Component } from 'react';
 
-import { Ajax, getValue } from '@syncfusion/ej2-base';
+import { Fetch, getValue } from '@syncfusion/ej2-base';
 import { TreeGridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Edit, Sort, PageSettingsModel, EditSettingsModel, FilterSettingsModel, DataStateChangeEventArgs } from '@syncfusion/ej2-react-treegrid';
 import { DataResult } from '@syncfusion/ej2-data';
 
 function App() {
 
-  const ajax: Ajax = new Ajax({
+  const fetch: Fetch = new Fetch({
       mode: true,
       onFailure: (e: Error) => false,
       type: 'GET'
@@ -622,10 +622,10 @@ function App() {
       /// filter query for fetching only the root level records
       const treegridQuery = "$filter='ParentId eq null'";
 
-      ajax.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&$inlinecount=allpages&$format=json`;
+      fetch.url = `${BASE_URL}?${pageQuery}&${treegridQuery}&$inlinecount=allpages&$format=json`;
 
-      return ajax.send().then((response: any) => {
-          const data: any = JSON.parse(response);
+      return fetch.send().then((response: any) => {
+          const data: any = response;
           return {
               count:  parseInt(getValue('d.__count', data), 10),
               result: getValue('d.results', data)

@@ -17,14 +17,14 @@ The retryTimeout allows developers to specify a duration after which the AJAX re
 By default, when an AJAX request fails, the Retry Timeout property is set to `0`, indicating that no timeout is set. In this case, the PDF Viewer will wait indefinitely for a response, potentially leading to a hanging request. However, you can set the Retry Timeout property to a positive number, specifying the maximum number of seconds the PDF Viewer should wait for a response. If the response is not received within the specified time, the request will be aborted, triggering an appropriate error or timeout property.
 
 To set the retry timeout, use the `retryTimeout` property in the PDF Viewer configuration. This property takes a value in seconds.
- 
+
 {% raw %}
 
 ```javascript
 
 <PdfViewerComponent
     id="container"
-    documentPath="PDF_Succinctly.pdf"
+    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
     retryTimeout={10}
     retryCount={5}

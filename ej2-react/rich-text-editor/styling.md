@@ -102,7 +102,7 @@ To apply font color or background color for a selected content of RTE, use font 
 
 Rich Text Editor supports to provide customs font color and background color with existing list through the [colorCode](/rich-text-editor/api-backgroundColor.html#colorcode) field of fontColor and backgroundColor.
 
-The FontColor and the BackgroundColor property has two [mode](/rich-text-editor/api-backgroundColor.html#mode) Picker and Palette. Palette mode has predefined set of colorCode and in the picker mode, more colors has been provided. Through [modeSwitcher](/rich-text-editor/api-backgroundColor.html#modeswitcher), you can able to switch between these two options.
+The FontColor and the BackgroundColor property has two [mode](/rich-text-editor/api-backgroundColor.html#mode) Picker and Palette. Palette mode has predefined set of colorCode and in the picker mode, more colors has been provided. Through [modeSwitcher](../api/rich-text-editor/backgroundColor/#modeswitcher), you can able to switch between these two options.
 
 `[Class-component]`
 

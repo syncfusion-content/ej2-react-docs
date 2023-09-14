@@ -17,12 +17,6 @@ The Tooltip can be customized by using the `cssClass` property, which accepts cu
 Styling the tip pointer's size, background, and border colors can be done using the `cssClass` property, as given below.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/custom-tip-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/custom-tip-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/custom-tip-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -38,12 +32,6 @@ Styling the tip pointer's size, background, and border colors can be done using 
 The complete look and feel of the Tooltip can be customized by changing it's background color, opacity, content font, etc. The following code example shows the way to achieve it.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/custom-tooltip-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/custom-tooltip-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/custom-tooltip-cs1/app/index.jsx %}
 {% endhighlight %}

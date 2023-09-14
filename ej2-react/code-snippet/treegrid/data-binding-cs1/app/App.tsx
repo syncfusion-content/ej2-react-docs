@@ -1,6 +1,6 @@
 
 
-import { Ajax } from '@syncfusion/ej2-base';
+import { Fetch } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, TreeGrid, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
@@ -9,13 +9,13 @@ function App() {
     let treegridInstance: TreeGridComponent | null;
     const handleClick = () => {
         if (treegridInstance) {
-            const ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData","GET");
+            const fetch = new Fetch("https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData","GET");
             treegridInstance.showSpinner();
             const treegrid = treegridInstance;
-            ajax.send();
-            ajax.onSuccess = (data: string) => {
+            fetch.send();
+            fetch.onSuccess = (data: object) => {
                 treegrid.hideSpinner();
-                treegrid.dataSource = JSON.parse(data);
+                treegrid.dataSource = data;
             };
         }
     }

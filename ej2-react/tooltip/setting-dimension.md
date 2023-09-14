@@ -17,12 +17,6 @@ The Tooltip can either be assigned auto height and width values or specific pixe
 The following sample explains how to set dimensions for the Tooltip.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/height-width-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/height-width-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/height-width-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -38,12 +32,6 @@ The following sample explains how to set dimensions for the Tooltip.
 When `height` is specified with a certain pixel value and the Tooltip content overflows, the scrolling mode gets enabled.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/scroll-mode-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/scroll-mode-cs1/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/scroll-mode-cs1/app/index.jsx %}
 {% endhighlight %}

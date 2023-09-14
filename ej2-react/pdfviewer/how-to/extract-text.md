@@ -19,7 +19,7 @@ Here is an example of how you can use the isExtractText property and extractText
 ```javascript
 <PdfViewerComponent
     id="container"
-    documentPath="PDF_Succinctly.pdf"
+    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
     isExtractText={true}
     extractTextCompleted={extractTextCompleted}

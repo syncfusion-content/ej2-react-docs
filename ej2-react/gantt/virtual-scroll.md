@@ -34,10 +34,29 @@ This mode can be enable by setting the `enableVirtualization` property to `true`
         
 {% previewsample "page.domainurl/code-snippet/gantt/virtualscroll-cs1" %}
 
+## Get filtered data when virtual scrolling is enabled
+
+While enabling virtual scroll you can get the filtered or sorted record count using `filteredResult` from the filterModule of the treegrid inside the `actionComplete` event.
+
+The following code example shows how to get filtered data count in the gantt control.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/filtered-data-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/filtered-data-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/filtered-data-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/filtered-data-cs1" %}
+
 ## Limitations for Virtual Scroll
 
 * Due to the element height limitation in browsers, the maximum number of records loaded is limited by the browser capacity.
 * Cell selection will not be persisted.
 * The number of records rendered will be determined by the `height` property.
 * It is necessary to mention the height of the Gantt in pixels when enabling Virtual Scrolling.
-* Virtual Scroll does not support Multi Taskbar support in Resource View.

@@ -29,7 +29,12 @@
             top: 45%;
             width: 30%;
         }
-
+        .e-md-preview::before {
+            content: "\e7de";
+        }
+        .e-icon-btn.e-active .e-md-preview.e-icons::before {
+            content: '\E80E'; 
+        }
         #rteMarkdown .e-richtexteditor textarea.e-content#markdownPreview_editable-content {
             float: left;
             border-right: 1px solid rgba(0, 0, 0, 0.12);

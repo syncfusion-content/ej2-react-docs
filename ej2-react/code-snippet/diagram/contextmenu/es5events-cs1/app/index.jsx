@@ -85,7 +85,7 @@ function App() {
                 if (item.text === 'delete') {
                     if (!diagramInstance.selectedItems.nodes.length &&
                         !diagramInstance.selectedItems.connectors.length) {
-                        args.hiddenItems.push(item.text);
+                        args.hiddenItems.push(item.id);
                     }
                 }
             }

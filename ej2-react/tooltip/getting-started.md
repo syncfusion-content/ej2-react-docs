@@ -144,12 +144,6 @@ You can create Tooltips on multiple targets within a container. To do so, you ha
 Refer to the following code example to create a Tooltip on multiple targets within a container.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/multi-target-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/multi-target-cs2/app/App.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/tooltip/multi-target-cs2/app/index.jsx %}
 {% endhighlight %}

@@ -43,7 +43,15 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2" %}
+{% tabs %}
+{% highlight tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2-standalone" %}
+{% endhighlight %}
+{% highlight tabtitle="Server-Backed" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2" %}
+{% endhighlight %}
+{% endtabs %}
+ 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/Toolbar/How%20to%20hide%20toolbar/src/index.js)
 
@@ -58,7 +66,14 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3" %}
+{% tabs %}
+{% highlight tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3-standalone" %}
+{% endhighlight %}
+{% highlight tabtitle="Server-Backed" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3" %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Show/Hide the default toolbaritem
 
@@ -74,8 +89,15 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 {% include code-snippet/pdfviewer/base-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4" %}
+ 
+{% tabs %}
+{% highlight tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4-standalone" %}
+{% endhighlight %}
+{% highlight tabtitle="Server-Backed" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4" %}
+{% endhighlight %}
+{% endtabs %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -87,8 +109,15 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 {% include code-snippet/pdfviewer/base-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5" %}
+ 
+{% tabs %}
+{% highlight tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5-standalone" %}
+{% endhighlight %}
+{% highlight tabtitle="Server-Backed" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5" %}
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 

@@ -86,7 +86,7 @@ class App extends React.Component<{},{}> {
     public render() {
         return (
           <RichTextEditorComponent id="markdownRTE" ref={(richtexteditor) => { this.rteObj = richtexteditor! }} editorMode='Markdown'
-              height='250px' valueTemplate={this.template} toolbarSettings={this.toolbarSettings} >
+              height='250px' valueTemplate={this.template} toolbarSettings={this.toolbarSettings} created={this.rendereComplete.bind(this)}>
               <Inject services={[MarkdownEditor, Toolbar, Image, Link, QuickToolbar]} />
               </RichTextEditorComponent>
         );

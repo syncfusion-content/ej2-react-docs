@@ -16,7 +16,8 @@ class App extends React.Component {
             { text: 'Impact', value: 'Impact,Charcoal,sans-serif' },
             { text: 'Calibri Light', value: 'CalibriLight' }
         ],
-        width: '60px'
+        width: '60px',
+        default: 'Segoe UI'
     };
     fontSize = {
         items: [
@@ -26,7 +27,8 @@ class App extends React.Component {
             { text: '14', value: '14pt' },
             { text: '42', value: '42pt' }
         ],
-        width: '40px'
+        width: '40px',
+        default: '10',
     };
     render() {
         return (<RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} fontFamily={this.fontFamily} fontSize={this.fontSize}>
