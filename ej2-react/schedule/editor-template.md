@@ -190,6 +190,26 @@ Learn how to customize the event editor window using templates from this video:
         
 {% previewsample "page.domainurl/code-snippet/schedule/editor-cs4" %}
 
+### How to customize header and footer using template
+
+The editor window's header and footer can be enhanced with custom designs using the [`editorHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#editorheadertemplate) and [`editorFooterTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#editorfootertemplate) options. To achieve this, create a script template that includes the necessary fields. Ensure that the template type is set to **text/x-template**.
+
+In this demo, we tailor the editor's header according to the appointment's subject field using the [`editorHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#editorheadertemplate). Furthermore, we make use of the [`editorFooterTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#editorfootertemplate) to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/schedule/editor-header-footer-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/schedule/editor-header-footer-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/editor-header-footer-cs1" %}
+
 ### How to add resource options within editor template
 
 The resource field can be added within editor template with multiselect control for allow multiple resources.
