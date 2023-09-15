@@ -96,8 +96,7 @@ The `PdfHeaderCellRendering` will be triggered when creating a column header for
 In the following demo, the `DrawString` method from the `Graphics` is used to rotate the header text of the column header inside the `BeginCellLayout` event handler.
 
 > A PDF exporting is not supported to rotate the column header on the client side.
-```typescript
-
+```ts
 public IActionResult PdfExport(string treeGridModel)
 {
     if (treeGridModel == null)

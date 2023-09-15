@@ -156,7 +156,7 @@ The `ExcelHeaderCellRendering` will be triggered when creating a column header f
 
 In the following demo, using the `HeaderCellRotate` method of the `TreeGridExcelExport` class in the `ExcelHeaderCellRendering` event, you can rotate the header text of the column header in the excel exported document.
 
-```typescript
+```ts
 
 public IActionResult ExcelExport(string treeGridModel)
 {
