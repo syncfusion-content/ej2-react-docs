@@ -16,11 +16,11 @@ All the CRUD operations in the treegrid are done through [`DataManager`](../../d
 
 > For your information, the ODataAdaptor persists data in the server as per OData protocol.
 
-In the following section, we have explained how to perform CRUD operation in server-side using the [`UrlAdaptor`](../../../data/adaptors#url-adaptor) and `RemoteSave Adaptor`.
+In the following section, we have explained how to perform CRUD operation in server-side using the [`UrlAdaptor`](../../../data/adaptors.html#url-adaptor) and `RemoteSave Adaptor`.
 
 ## URL adaptor
 
-You can use the [`UrlAdaptor`](../../../data/adaptors#url-adaptor) of `DataManager` when binding data source from remote data. In the initial load of treegrid, data are fetched from remote data and bound to the treegrid using `url` property of `DataManager`.You can map The CRUD operation in treegrid can be mapped to server-side Controller actions using the properties `insertUrl`, `removeUrl`, `updateUrl` and `batchUrl`.
+You can use the [`UrlAdaptor`](../../../data/adaptors.html#url-adaptor) of `DataManager` when binding data source from remote data. In the initial load of treegrid, data are fetched from remote data and bound to the treegrid using `url` property of `DataManager`.You can map The CRUD operation in treegrid can be mapped to server-side Controller actions using the properties `insertUrl`, `removeUrl`, `updateUrl` and `batchUrl`.
 
 The following code example describes the above behavior.
 

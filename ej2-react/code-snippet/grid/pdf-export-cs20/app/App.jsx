@@ -4,18 +4,16 @@ import * as React from 'react';
 import { data, employeeData } from './datasource';
 function App() {
     const toolbar = ['PdfExport'];
-    const gridsToExport = ['FirstGrid', 'SecondGrid']
+    const gridsToExport = ['FirstGrid', 'SecondGrid'];
     let firstGrid;
     let secondGrid;
     const toolbarClick = (args) => {
         if (firstGrid && args.item.id === 'FirstGrid_pdfexport') {
-            if (firstGrid && args.item.id === 'FirstGrid_pdfexport') {
-                const appendPdfExportProperties = {
-                  multipleExport: { type: 'NewPage' }
-                };
-                  firstGrid.pdfExport(appendPdfExportProperties, true);
-              }
-        }
+            const appendPdfExportProperties = {
+              multipleExport: { type: "AppendToPage", blankSpace: 10 }
+            };
+              firstGrid.pdfExport(appendPdfExportProperties, true);
+          }
     };
     return (<div>
         <div><b>First Grid:</b></div>

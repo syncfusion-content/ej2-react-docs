@@ -30,7 +30,7 @@ To use Sorting, inject **Sort** module in TreeGrid.
  {% previewsample "page.domainurl/code-snippet/treegrid/sorting-cs1" %}
 
 > * TreeGrid columns are sorted in the **Ascending** order. If you click the already sorted column, the sort direction toggles.
-> * You can apply and clear sorting by invoking [`sortByColumn`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#sortbycolumn) and [`clearSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#clearsorting) methods.
+> * You can apply and clear sorting by invoking [`sortByColumn`](https://ej2.syncfusion.com/react/documentation/api/treegrid#sortbycolumn) and [`clearSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#clearsorting) methods.
 > * To disable sorting for a particular column, set the [`columns.allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowSorting) to *false*.
 
 ## Initial Sort
@@ -94,4 +94,4 @@ The following screenshot shows treegrid touch sorting.
 <img src="images/touch-sorting.jpg" alt="Touch Sorting" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

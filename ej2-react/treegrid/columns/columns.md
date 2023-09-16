@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Columns in React Treegrid component
 
-The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#dataSource) schema in the TreeGrid. This plays a vital role in rendering column values in the required format. The treegrid operations such as sorting, filtering and searching etc. are performed based on column definitions. The [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) property of the [`columns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#column) is necessary to map the data source values in TreeGrid columns.
+The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#dataSource) schema in the TreeGrid. This plays a vital role in rendering column values in the required format. The treegrid operations such as sorting, filtering and searching etc. are performed based on column definitions. The [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#field) property of the [`columns`](https://ej2.syncfusion.com/react/documentation/api/treegrid#column) is necessary to map the data source values in TreeGrid columns.
 
 > 1. If the column [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) is not specified in the dataSource, the column values will be empty.
 > 2. If the [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) name contains “dot” operator, it is considered as complex binding.
@@ -215,4 +215,4 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs18" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

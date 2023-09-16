@@ -31,9 +31,9 @@ The excel export provides an option to export hidden columns of treegrid by defi
 
 ### Show or hide columns on exported excel
 
-You can show a hidden column or hide a visible column while printing the treegrid using [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) and [`excelExportComplete`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties) events.
+You can show a hidden column or hide a visible column while printing the treegrid using [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid#toolbarclick) and [`excelExportComplete`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties) events.
 
-In the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event, based on **args.item.text** as **Excel Export**. We can show or hide columns by setting [`column.visible`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#visible) property to *true* or *false* respectively.
+In the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/treegrid#toolbarclick) event, based on **args.item.text** as **Excel Export**. We can show or hide columns by setting [`column.visible`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#visible) property to *true* or *false* respectively.
 
 In the excelExportComplete event, We have reversed the state back to the previous state.
 
