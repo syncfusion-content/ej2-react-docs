@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting tree grid in server in React Tree Grid component | Syncfusion
+title: Exporting Tree Grid in server in React Tree Grid component | Syncfusion
 description: Learn here all about Exporting tree grid in server in Syncfusion React Tree Grid component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Exporting tree grid in server 
