@@ -14,7 +14,7 @@ function App() {
   const toolbarClick = (args: ClickEventArgs) => {
     if (firstGrid && args.item.id === 'FirstGrid_pdfexport') {
       const appendPdfExportProperties: PdfExportProperties = {
-        multipleExport: { type: 'NewPage' }
+        multipleExport: { type: "AppendToPage", blankSpace: 10 }
       };
         firstGrid.pdfExport(appendPdfExportProperties, true);
     }

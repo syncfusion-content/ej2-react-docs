@@ -10,24 +10,20 @@ function App() {
   let firstGrid: Grid | null;
   let secondGrid: Grid | null;
   const toolbar: ToolbarItems[] = ['ExcelExport'];
+  const gridsToExport: string[] = ['FirstGrid', 'SecondGrid'];
   const toolbarClick = (args: ClickEventArgs) => {
     if (firstGrid &&
         args.item.id === 'FirstGrid_excelexport') {
       const appendExcelExportProperties: ExcelExportProperties = {
         multipleExport: { type: 'AppendToSheet', blankRows: 2 }
       };
-      const firstGridExport: Promise<any> = firstGrid.excelExport(appendExcelExportProperties, true);
-      firstGridExport.then((fData: any) => {
-        if (secondGrid) {
-          secondGrid.excelExport(appendExcelExportProperties, false, fData);
-        }
-      });
+      firstGrid.excelExport(appendExcelExportProperties, true);
     }
 }
     return (
       <div>
       <p><b>First Grid:</b></p>
-      <GridComponent id='FirstGrid' dataSource={data.slice(0, 5)} toolbar={toolbar}
+      <GridComponent id='FirstGrid' dataSource={data.slice(0, 5)} toolbar={toolbar} exportGrids={gridsToExport}
         allowExcelExport={true} toolbarClick={toolbarClick} ref={g => firstGrid = g}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>

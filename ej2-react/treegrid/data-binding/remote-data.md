@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Remote data in React Treegrid component
 
-To bind remote data to TreeGrid component, assign service data as an instance of **DataManager** to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property. To interact with remote data source,  provide the endpoint **url** and define the [`hasChildMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#hasChildMapping) property of treegrid.
+To bind remote data to TreeGrid component, assign service data as an instance of **DataManager** to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property. To interact with remote data source,  provide the endpoint **url** and define the [`hasChildMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid#hasChildMapping) property of treegrid.
 
 The [`hasChildMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#haschildmapping) property maps the field name in data source, that denotes whether current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
 
@@ -207,9 +207,9 @@ To add a custom parameter to the data request, use the [`addParams`](https://ej2
 
 ## Handling HTTP error
 
-During server interaction from the treegrid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event.
+During server interaction from the treegrid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event.
 
-The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event contains the error details returned from the server.
+The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event contains the error details returned from the server.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -222,7 +222,7 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/do
 
  {% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs8" %}
 
-> The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the treegrid actions.
+> The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the treegrid actions.
 
 ## Load on demand with virtualization
 

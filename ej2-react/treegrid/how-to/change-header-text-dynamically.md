@@ -16,7 +16,7 @@ Follow the given steps to change the header text dynamically:
 
 **Step 1**:
 
-Get the column object corresponding to the field name by using the [`getColumnByField`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getcolumnbyfield) method.
+Get the column object corresponding to the field name by using the [`getColumnByField`](https://ej2.syncfusion.com/react/documentation/api/treegrid#getcolumnbyfield) method.
 Then change the header Text value.
 
 ```ts
@@ -28,7 +28,7 @@ Then change the header Text value.
 
 **Step 2**:
 
-To reflect the changes in the grid header, invoke the [`refreshColumns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#refreshcolumns) method.
+To reflect the changes in the grid header, invoke the [`refreshColumns`](https://ej2.syncfusion.com/react/documentation/api/treegrid#refreshcolumns) method.
 
 ```ts
 
@@ -53,4 +53,4 @@ To reflect the changes in the grid header, invoke the [`refreshColumns`](https:/
 
  {% previewsample "page.domainurl/code-snippet/treegrid/change-headertext-cs1" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

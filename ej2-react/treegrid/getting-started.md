@@ -18,7 +18,7 @@ To get start quickly with React Tree Grid, you can check on this video:
 
 ## Setup for Local Development
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install **create-react-app** run the following command.
 
 ```
@@ -170,7 +170,7 @@ By default, filtered records are shown along with its parent records. This behav
 
 ## Run the application
 
-The [`create-react-app`](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
 ```
 
@@ -197,4 +197,4 @@ Output will be appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/getting-started-cs4" %}
 
-> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
+> You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
