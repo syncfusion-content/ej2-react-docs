@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Bar Chart in React Chart component | Syncfusion
-description: Learn here all about Bar Area Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Bar Chart 
+description: Learn here all about Bar Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+control: Bar chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -23,7 +23,7 @@ To render a bar series, use series [`type`](https://ej2.syncfusion.com/react/doc
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs27" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs27" %}
 
 ## Bar space and width
 
@@ -38,9 +38,9 @@ The [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/s
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs37" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs37" %}
 
-## Grouped Bar
+## Grouped bar
 
 You can use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#groupname) property to group the data points in the Bar type charts. Data points with same group name are grouped together.
 
@@ -53,8 +53,22 @@ You can use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/group-bar-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/group-bar-cs1" %}
 
+## Cylindrical bar chart
+
+To render a cylindrical bar chart, set the `columnFacet` property to `Cylinder` in the chart series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs39/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs39/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs39" %}
 
 ## Series customization
 
@@ -74,9 +88,9 @@ The following properties can be used to customize the `bar` series.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs30" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs30" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)

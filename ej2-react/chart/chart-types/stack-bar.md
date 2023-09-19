@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Stacked Bar Chart in React Chart component | Syncfusion
-description: Learn here all about Stacked Bar Area Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Stacked Bar Chart 
+description: Learn here all about Stacked Bar Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+control: Stacked bar chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -22,9 +22,9 @@ To render a stacked bar series, use series [`type`](https://ej2.syncfusion.com/r
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs28" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs28" %}
 
-## Stacking Group
+## Stacking group
 
 You can use the [`stackingGroup`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#stackinggroup) property to group the stacked bar and 100% stacked bar. Columns with same group name are stacked on top of each other.
 
@@ -37,7 +37,22 @@ You can use the [`stackingGroup`](https://ej2.syncfusion.com/react/documentation
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs31" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs31" %}
+
+## Cylindrical stacked bar chart
+
+To render a cylindrical stacked bar chart, set the `columnFacet` property to `Cylinder` in the chart series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs41/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs41/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs41" %}
 
 ## Series customization
 
@@ -57,9 +72,9 @@ The following properties can be used to customize the `stacked bar` series.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/stackedbar-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/stackedbar-cs" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)

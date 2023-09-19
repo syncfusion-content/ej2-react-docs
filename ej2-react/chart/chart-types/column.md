@@ -23,7 +23,7 @@ To render a column series, use series [`type`](https://ej2.syncfusion.com/react/
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs22" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs22" %}
 
 ## Column space and width
 
@@ -38,9 +38,9 @@ The [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/s
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs38" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs38" %}
 
-## Grouped Column
+## Grouped column
 
 You can use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#groupname) property to group the data points in the column type charts. Data points with same group name are grouped together.
 
@@ -53,7 +53,22 @@ You can use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/group-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/group-column-cs1" %}
+
+## Cylindrical column chart
+
+To render a cylindrical column chart, set the `columnFacet` property to `Cylinder` in the chart series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs40/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs40/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs40" %}
 
 ## Series customization
 
@@ -73,9 +88,9 @@ The following properties can be used to customize the `column` series.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs25" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs25" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)
