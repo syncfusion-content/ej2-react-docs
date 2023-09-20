@@ -52,4 +52,8 @@ PDF export functionality enables the exporting of multiple grids into separate p
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs5" %}
+{% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs5" %}
+ 
+## Limitations
+
+Multiple grids exporting feature is not supported with server side exporting.
