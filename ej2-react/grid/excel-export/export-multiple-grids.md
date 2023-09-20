@@ -54,4 +54,8 @@ Excel export functionality enables the exporting of multiple grids onto separate
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/excel-export-cs13" %}
+{% previewsample "page.domainurl/code-snippet/grid/excel-export-cs13" %}
+
+## Limitations
+
+Multiple grids exporting feature is not supported with server side exporting.

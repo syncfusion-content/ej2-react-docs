@@ -44,10 +44,10 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endtabs %}
 
 {% tabs %}
-{% highlight tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2-standalone" %}
 {% endhighlight %}
-{% highlight tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2" %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,10 +67,10 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endtabs %}
 
 {% tabs %}
-{% highlight tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3-standalone" %}
 {% endhighlight %}
-{% highlight tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3" %}
 {% endhighlight %}
 {% endtabs %}
@@ -91,10 +91,10 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 {% endtabs %}
  
 {% tabs %}
-{% highlight tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4-standalone" %}
 {% endhighlight %}
-{% highlight tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4" %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,10 +111,10 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 {% endtabs %}
  
 {% tabs %}
-{% highlight tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5-standalone" %}
 {% endhighlight %}
-{% highlight tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5" %}
 {% endhighlight %}
 {% endtabs %}
