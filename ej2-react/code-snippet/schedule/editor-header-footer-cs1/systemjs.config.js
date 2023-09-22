@@ -33,20 +33,18 @@ System.config({
         "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
         "@syncfusion/ej2-excel-export": "syncfusion:ej2-excel-export/dist/ej2-excel-export.umd.min.js",
         "@syncfusion/ej2-schedule": "syncfusion:ej2-schedule/dist/ej2-schedule.umd.min.js",
-
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-schedule": "syncfusion:ej2-react-schedule/dist/ej2-react-schedule.umd.min.js",
-        "@syncfusion/ej2-react-calendars": "syncfusion:ej2-react-calendars/dist/ej2-react-calendars.umd.min.js",
-        "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js", 
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
+        "@syncfusion/ej2-react-notification": "syncfusion:ej2-react-notification/dist/ej2-react-notification.umd.min.js",
+        "@syncfusion/ej2-react-calendars": "syncfusion:ej2-react-calendars/dist/ej2-react-calendars.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
-        "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
-        
+        "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js"
     },
     packages: {
-        'app': { main: 'index', defaultExtension: 'tsx' },
+        'app': { main: 'index', defaultExtension: 'tsx' }
     }
-    
 });
 
 System.import('app');
