@@ -34,14 +34,10 @@ Using addFormField method, the form fields can be added to the PDF document prog
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1-standalone" %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**.
+
 {% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
-{% endhighlight %}
-{% endtabs %}
 
 ## Edit/Update form field programmatically
 
@@ -56,14 +52,10 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1-standalone" %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**.
+
 {% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
-{% endhighlight %}
-{% endtabs %}
 
 ## Delete form field programmatically
 
@@ -77,15 +69,9 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% include code-snippet/pdfviewer/deleteformfield-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
- 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1-standalone" %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
-{% endhighlight %}
-{% endtabs %}
+
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**. 
 
 ## setFormFieldMode programmatically
 

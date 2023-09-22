@@ -43,16 +43,11 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2-standalone" %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2" %}
-{% endhighlight %}
-{% endtabs %}
- 
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**.
 
+{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2" %}
+ 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/Toolbar/How%20to%20hide%20toolbar/src/index.js)
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
@@ -66,14 +61,10 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3-standalone" %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**.
+
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3" %}
-{% endhighlight %}
-{% endtabs %}
 
 ## Show/Hide the default toolbaritem
 
@@ -89,15 +80,11 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 {% include code-snippet/pdfviewer/base-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
- 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4-standalone" %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
+
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**. 
+
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4" %}
-{% endhighlight %}
-{% endtabs %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -109,15 +96,11 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 {% include code-snippet/pdfviewer/base-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
- 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5-standalone" %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
+
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**. 
+  
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5" %}
-{% endhighlight %}
-{% endtabs %}
 
 ## See also
 
