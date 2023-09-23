@@ -1,7 +1,8 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 export function App() {
   function showToolbarClicked() {
@@ -15,12 +16,11 @@ export function App() {
       {/* Render the PDF Viewer */}
       <PdfViewerComponent
           id="container"
-          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
           style={{ 'height': '640px' }}>
 
                 <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
-                                    ThumbnailView, Print, TextSelection, TextSearch]} />
+                                    ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
       </PdfViewerComponent>
     </div>
   </div>);
