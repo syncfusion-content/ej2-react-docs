@@ -154,7 +154,7 @@ Here’s how to handle the server-side action for converting word document in to
     }
 ```
 
-To know about server-side action, please refer this [page](../document-editor/web-services).
+To know about server-side action, please refer this [page](../document-editor/web-services-overview).
 
 ## Compatibility with Microsoft Word
 
