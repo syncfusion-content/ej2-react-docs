@@ -8,9 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge axes in React Circular gauge component
+# Gauge axes in React Circular Gauge component
 
 By default, gauge will be displayed with an axis. Each axis contains its own ranges, pointers and annotation.
+
+The video below demonstrates how to add and customize axis in the Circular Gauge component.
+
+{% youtube "https://www.youtube.com/watch?v=8hUwWI842ho" %}
 
 <!-- markdownlint-disable MD036 -->
 
