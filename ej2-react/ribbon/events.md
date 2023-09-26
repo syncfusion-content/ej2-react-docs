@@ -1545,6 +1545,127 @@ ReactDom.render(<App />, document.getElementById("element"));
 ```
 {% endraw %}
 
+## GroupButton item events
+
+### beforeClick
+
+The [beforeClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before selecting a button from the groupbutton items.
+
+{% raw %}
+```ts
+
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonGroupButtonSelection , RibbonItemSize } from "@syncfusion/ej2-react-ribbon";
+
+function App() {
+    
+  const groupButtonMultiple: RibbonGroupButtonSettingsModel = {
+        selection: RibbonGroupButtonSelection.Multiple,
+      items: [
+          { iconCss: 'e-icons e-bold', content: 'Bold', selected: true, beforeClick: () => { 
+              // Your required action here
+              alert("")
+          } },
+          { iconCss: 'e-icons e-italic', content: 'Italic', beforeClick: () => { 
+              // Your required action here
+          } },
+          { iconCss: 'e-icons e-underline', content: 'Underline', beforeClick: () => { 
+              // Your required action here
+          } }, 
+          { iconCss: 'e-icons e-strikethrough', content: 'Strikethrough', beforeClick: () => {
+              // Your required action here
+          } }, { iconCss: 'e-icons e-change-case', content: 'Change Case', beforeClick: () => {
+              // Your required action here
+          } }
+      ] 
+  }
+
+  return (
+      <RibbonComponent id="ribbon">
+          <RibbonTabsDirective>
+              <RibbonTabDirective header="Home" >
+                  <RibbonGroupsDirective>
+                      <RibbonGroupDirective header="Paragraph"> 
+                          <RibbonCollectionsDirective>
+                              <RibbonCollectionDirective>
+                                  <RibbonItemsDirective>
+                                      <RibbonItemDirective type="GroupButton" allowedSizes={RibbonItemSize.Medium} groupButtonSettings={ groupButtonMultiple }>
+                                      </RibbonItemDirective>
+                                  </RibbonItemsDirective>
+                              </RibbonCollectionDirective>
+                          </RibbonCollectionsDirective>
+                      </RibbonGroupDirective>
+                  </RibbonGroupsDirective>
+              </RibbonTabDirective>
+          </RibbonTabsDirective>
+      </RibbonComponent>
+  );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+
+```
+{% endraw %}
+
+### click
+
+The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when selecting a button from the groupbutton items.
+
+{% raw %}
+```ts
+
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonGroupButtonSelection , RibbonItemSize } from "@syncfusion/ej2-react-ribbon";
+
+function App() {
+    
+  const groupButtonSingle: RibbonGroupButtonSettingsModel = {
+    selection: RibbonGroupButtonSelection.Single,
+    items: [
+        {iconCss: 'e-icons e-align-left', content: 'Align Left', selected: true, click: () => { 
+            // Your required action here
+        }},
+        {iconCss: 'e-icons e-align-center',content: 'Align Center', click: () => { 
+            // Your required action here
+        }}, 
+        {iconCss: 'e-icons e-align-right',content: 'Align Right', click: () => {
+            // Your required action here
+        }}, 
+        {iconCss: 'e-icons e-justify',content: 'Justify', click: () => { 
+            // Your required action here
+        }}
+    ]
+  }
+
+  return (
+      <RibbonComponent id="ribbon">
+          <RibbonTabsDirective>
+              <RibbonTabDirective header="Home" >
+                  <RibbonGroupsDirective>
+                      <RibbonGroupDirective header="Paragraph"> 
+                          <RibbonCollectionsDirective>
+                              <RibbonCollectionDirective>
+                                  <RibbonItemsDirective>
+                                      <RibbonItemDirective type="GroupButton" allowedSizes={RibbonItemSize.Medium} groupButtonSettings={ groupButtonSingle }>
+                                      </RibbonItemDirective>
+                                  </RibbonItemsDirective>
+                              </RibbonCollectionDirective>
+                          </RibbonCollectionsDirective>
+                      </RibbonGroupDirective>
+                  </RibbonGroupsDirective>
+              </RibbonTabDirective>
+          </RibbonTabsDirective>
+      </RibbonComponent>
+  );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+
+```
+{% endraw %}
+
 ## FileMenu events
 
 ### beforeClose
@@ -1856,5 +1977,61 @@ function App() {
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
+```
+{% endraw %}
+
+## Backstage view events
+
+### backStageItemClick
+
+The [backStageItemClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemClickArgs/) event is triggered when backstage item is selected.
+
+{% raw %}
+```ts 
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonBackstage , Inject, BackStageMenuModel } from "@syncfusion/ej2-react-ribbon";
+
+function App() {
+    const backstageSettings: BackStageMenuModel = {
+        visible: true,
+        items: [
+            { id: 'home', text: 'Home', iconCss: 'e-icons e-home', content: homeContentTemplate(), backStageItemClick: () => {
+                  // Your required action here
+          } },
+        ],
+        backButton: {
+            text: 'Close',
+        }
+    }
+
+    return (
+        <RibbonComponent id="backstage-ribbon" backStageMenu={backstageSettings}>
+            <RibbonTabsDirective>
+                <RibbonTabDirective header="Home" >
+                    <RibbonGroupsDirective>
+                        <RibbonGroupDirective header="Paragraph">
+                            <RibbonCollectionsDirective>
+                                <RibbonCollectionDirective>
+                                    <RibbonItemsDirective>
+                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        </RibbonItemDirective>
+                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-copy", content: "Copy" }}>
+                                        </RibbonItemDirective>
+                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-paste", content: "Paste" }}>
+                                        </RibbonItemDirective>
+                                    </RibbonItemsDirective>
+                                </RibbonCollectionDirective>
+                            </RibbonCollectionsDirective>
+                        </RibbonGroupDirective>
+                    </RibbonGroupsDirective>
+                </RibbonTabDirective>
+            </RibbonTabsDirective>
+            <Inject services={[RibbonBackstage]} />
+        </RibbonComponent>
+    );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
 ```
 {% endraw %}
