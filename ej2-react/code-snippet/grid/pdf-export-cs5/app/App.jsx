@@ -23,10 +23,8 @@ function App() {
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
-                <ColumnDirective field='Freight' width='100' format='C2' textAlign='Right'/>
-                <ColumnDirective field='OrderDate' width='140' format='yMd' textAlign='Right'/>
-                <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' visible={false}/>
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
             </ColumnsDirective>
             <Inject services={[Toolbar, PdfExport]}/>
         </GridComponent>
@@ -36,7 +34,7 @@ function App() {
                 <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>
                 <ColumnDirective field='FirstName' headerText='First Name' width='120'/>
                 <ColumnDirective field='LastName' headerText='Last Name' width='120'/>
-                <ColumnDirective field='Title' headerText='Title' width='150'/>
+                <ColumnDirective field='City' headerText='City' width='150'/>
             </ColumnsDirective>
             <Inject services={[PdfExport]}/>
         </GridComponent>
