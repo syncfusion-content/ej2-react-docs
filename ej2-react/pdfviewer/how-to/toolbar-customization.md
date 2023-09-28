@@ -119,7 +119,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
                         documentLoad={this.documentLoaded}
                         pageChange={this.onPageChange}
                         documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-                        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+                        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
                         style={{ 'display': 'block', 'height': '640px' }}>
 
                                 <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -197,7 +197,7 @@ style={{ 'display': 'block', 'height': '640px' }}>
     documentLoad={this.documentLoaded}
     pageChange={this.onPageChange}
     documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-    serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
     style={{ 'display': 'block', 'height': '640px' }}>
 
             <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,

@@ -118,7 +118,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="PDF_Succinctly.pdf"
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
            <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
                                ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />
@@ -154,7 +154,7 @@ export function App() {
         id="container"
         documentPath="PDF_Succinctly.pdf"
         enablePrint={true}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
           <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
                               ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />

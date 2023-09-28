@@ -41,7 +41,7 @@ function formFieldDoubleClick(args) {
   id="container"
   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
   formFieldDoubleClick={formFieldDoubleClick}
-  serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+  serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
   style={{ height: '640px' }}>
 </PdfViewerComponent>
 

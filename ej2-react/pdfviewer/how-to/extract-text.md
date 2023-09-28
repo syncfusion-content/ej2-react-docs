@@ -20,7 +20,7 @@ Here is an example of how you can use the isExtractText property and extractText
 <PdfViewerComponent
     id="container"
     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
     isExtractText={true}
     extractTextCompleted={extractTextCompleted}
     style={{ height: '640px' }}>

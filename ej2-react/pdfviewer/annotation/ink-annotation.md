@@ -84,7 +84,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container" 
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, 
@@ -175,7 +175,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         inkAnnotationSettings={{author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6}}
         style={{ 'height': '640px' }}>
 

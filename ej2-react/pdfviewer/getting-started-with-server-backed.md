@@ -113,7 +113,7 @@ To install PDF Viewer component, use the following command
          <PdfViewerComponent 
                id="container" 
                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-               serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" 
+               serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer" 
                style={{ 'height': '640px' }}>
 
                   <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
@@ -186,6 +186,9 @@ Output will be appears as follows.
    </PdfViewerComponent>
    ```
   {% endraw %}
-   [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
+
+N> When configuring the server-backed PDF viewer, it's essential to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for deployment process, as they are not required to load and display PDFs in this context.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
 
 > You can refer to our [React PDF Viewer](https://www.syncfusion.com/react-components/react-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/default) to understand how to explains core features of PDF Viewer.

@@ -16,7 +16,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/pdf-export-cs9/app/App.jsx %}
+{% include code-snippet/grid/pdf-export-cs9/app/App.jsx  %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/pdf-export-cs9/app/App.tsx %}

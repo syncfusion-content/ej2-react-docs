@@ -35,7 +35,7 @@ Using addFormField method, the form fields can be added to the PDF document prog
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**.
+**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
 
@@ -53,7 +53,7 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**.
+**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
 
@@ -71,7 +71,7 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**. 
+**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**. 
 
 ## setFormFieldMode programmatically
 
@@ -132,7 +132,7 @@ function App() {
       <PdfViewerComponent 
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -213,7 +213,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -286,7 +286,7 @@ function App() {
         id="container"
          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enablePrint={true}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -380,7 +380,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         documentLoad={documentLoaded}
         enableFormFieldsValidation={true}
         ValidateFormFields= {validateFormFields}
@@ -622,7 +622,7 @@ let signatureFieldSettings = {
  <PdfViewerComponent
     id="container"
      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
     style={{ height: '640px' }}
     signatureFieldSettings={signatureFieldSettings}>
 
@@ -699,7 +699,7 @@ The following code example explains how to update the properties of the initial 
 <PdfViewerComponent
   id="container"  
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-  serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+  serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
   style={{ height: '640px' }}
   initialFieldSettings={initialFieldSettings}>
 

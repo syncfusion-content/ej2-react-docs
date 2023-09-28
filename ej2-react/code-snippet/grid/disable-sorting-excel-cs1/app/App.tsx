@@ -6,7 +6,7 @@ import { ChangeEventArgs, DropDownList } from '@syncfusion/ej2-dropdowns';
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
 import { Column, Filter, ForeignKey, Grid } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import { data, employeeData } from './datasource';
+import { data } from './datasource';
 
 function App() {
   let grid: Grid | null;
