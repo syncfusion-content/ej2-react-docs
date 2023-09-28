@@ -38,6 +38,21 @@ PDF export provides an option for exporting multiple pivot tables to same file. 
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs209" %}
 
+## Export table and chart into the same document
+
+When the [`displayOption`](https://ej2.syncfusion.com/react/documentation/api/pivotview#displayoption) is set to **Both**, you can export both the table and the chart into the same PDF document. To achieve this, use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#pdfexport) method and set the `exportBothTableAndChart` parameter to **true**.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/pivot-table/default-cs322/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/pivot-table/default-cs322/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs322" %}
+
 ## Customization during PDF export
 
 PDF export provides option to customize mapping of pivot table to the exported PDF document.
@@ -246,6 +261,74 @@ The PDF export provides an option to change page size of the document before exp
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs213" %}
+
+### Changing document width and height while exporting
+
+Before exporting, you can change the height and width of the PDF document. To achieve this, use the **height** and **width** properties in the [`beforeExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#beforeexport) event.
+
+> This option is only available if [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/pivot-table/default-cs323/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/pivot-table/default-cs323/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs323" %}
+
+### Customize the table column count while exporting
+
+Before exporting, you can split and export the pivot table columns on each page of the PDF document by using the **columnSize** property in the [`beforeExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#beforeexport) event.
+
+> This option is only available if [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/pivot-table/default-cs324/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/pivot-table/default-cs324/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs324" %}
+
+### Changing the table's column width and row height while exporting
+
+You can change the column width and row height in the PDF document during the pivot table export by using the [`onPdfCellRender`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#onpdfcellrender) event. Within this event, the `args.column.width` property allows you to change the width of specific columns.
+
+As shown in the code example below, the **"Unit Sold"** column under **"FY 2015"** is changed to a width of **60** pixels.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/pivot-table/default-cs325/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/pivot-table/default-cs325/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs325" %}
+
+Similarly, you can change the height of specific rows in the PDF document by using the `args.cell.height` property in the [`onPdfCellRender`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#onpdfcellrender) event. 
+
+As shown in the code example below, the **"Mountain Bikes"** row under **"France"** is changed to a height of **30** pixels.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/pivot-table/default-cs326/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/pivot-table/default-cs326/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs326" %}
+
+> This option is only available if [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
 
 ## Changing the pivot table style while exporting
 

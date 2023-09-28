@@ -12,8 +12,8 @@ function App() {
     if (instance) {
       instance.element.addEventListener('mouseup', (e: MouseEventArgs) => {
         if ((e.target as HTMLElement).classList.contains("e-rowcell")) {
-          let index: number = parseInt((e.target as HTMLElement).parentElement.getAttribute("aria-rowindex"));
-          let colindex: number = parseInt((e.target as HTMLElement).getAttribute("aria-colindex"));
+          let index: number = parseInt((e.target as HTMLElement).parentElement.getAttribute("data-rowindex"));
+          let colindex: number = parseInt((e.target as HTMLElement).getAttribute("data-colindex"));
           let field: string = instance.getColumns()[colindex].field;
           instance.editModule.editCell(index, field);
         };
@@ -31,4 +31,4 @@ function App() {
   </GridComponent>
 }
 
-
+export default App
