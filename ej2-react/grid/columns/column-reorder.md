@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Column reorder in React Grid component
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the Grid. To enable reordering, set the [`allowReordering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowreordering) to true.
+Reordering can be done by drag and drop of a particular column header from one index to another index within the Grid. To enable reordering, set the [allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/#allowreordering) to true.
 
-To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/angular/documentation/api/grid/reorder/) module in the grid.
+To use reordering, inject the [Reorder](https://ej2.syncfusion.com/react/documentation/api/grid/reorder/) module in the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -31,11 +31,11 @@ To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/angular/doc
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs11" %}
 
-> You can disable reordering a particular column by setting the [`columns.allowReordering`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowreordering) to false.
+> You can disable reordering a particular column by setting the [columns.allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/column/#allowreordering) to false.
 
 ## Reorder single column
 
-Grid have option to reorder Columns either by Interaction or by using the [`reorderColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/reorder/#reordercolumns) method. In the below sample, **ShipCity** column is reordered to last column position by using the method.
+Grid have option to reorder Columns either by Interaction or by using the [reorderColumns](https://ej2.syncfusion.com/react/documentation/api/grid/reorder/#reordercolumns) method. In the below sample, **ShipCity** column is reordered to last column position by using the method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -56,7 +56,7 @@ Grid have option to reorder Columns either by Interaction or by using the [`reor
 
 ## Reorder multiple columns
 
-User can reorder a single column at a time by Interaction. Sometimes we need to have reorder multiple columns at the same time, It can be achieved through programmatically by using [`reorderColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/reorder/#reordercolumns) method.
+User can reorder a single column at a time by Interaction. Sometimes we need to have reorder multiple columns at the same time, It can be achieved through programmatically by using [reorderColumns](https://ej2.syncfusion.com/react/documentation/api/grid/reorder/#reordercolumns) method.
 
 In the below sample, **Ship City** and **Ship Region** column is reordered to last column position.
 
@@ -81,9 +81,9 @@ In the below sample, **Ship City** and **Ship Region** column is reordered to la
 
 During the reorder action, the grid component triggers the below three events.
 
-1. The [`columnDragStart`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columndragstart) event triggers when column header element drag (move) starts.
-2. The [`columnDrag`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnDrag) event triggers when column header element is dragged (moved) continuously.
-3. The [`columnDrop`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnDrop) event triggers when a column header element is dropped on the target column.
+1. The [columnDragStart](https://ej2.syncfusion.com/react/documentation/api/grid/#columndragstart) event triggers when column header element drag (move) starts.
+2. The [columnDrag](https://ej2.syncfusion.com/react/documentation/api/grid/#columnDrag) event triggers when column header element is dragged (moved) continuously.
+3. The [columnDrop](https://ej2.syncfusion.com/react/documentation/api/grid/#columnDrop) event triggers when a column header element is dropped on the target column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

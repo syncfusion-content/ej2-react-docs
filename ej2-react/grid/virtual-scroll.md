@@ -18,9 +18,9 @@ To use virtualization, you need to inject **VirtualScroll** module in grid.
 
 Row virtualization allows you to load and render rows only in content viewport.
 It is an alternative way of paging in which the data will load while scrolling vertically.
-To setup the row virtualization, you need to define [`enableVirtualization`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablevirtualization) as **true** and content height by [`height`](https://ej2.syncfusion.com/angular/documentation/api/grid/#height) property.
+To setup the row virtualization, you need to define [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid/#enablevirtualization) as **true** and content height by [height](https://ej2.syncfusion.com/react/documentation/api/grid/#height) property.
 
-The number of records displayed in the Grid is determined implicitly by height of content area. Also you have an option to define visible number of records by [`pageSettings.pageSize`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettingsModel/#pagesize)property.
+The number of records displayed in the Grid is determined implicitly by height of content area. Also you have an option to define visible number of records by [pageSettings.pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettingsModel/#pagesize)property.
 The loaded data will be cached and reused when it is needed for next time.
 
 {% tabs %}
@@ -45,7 +45,7 @@ The loaded data will be cached and reused when it is needed for next time.
 Column virtualization allows you to virtualize columns. It will render columns which are in viewport.
 You can scroll horizontally to view more columns.
 
-To setup the column virtualization, set the [`enableVirtualization`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablevirtualization) and [`enableColumnVirtualization`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablecolumnvirtualization) properties as **true**.
+To setup the column virtualization, set the [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid/#enablevirtualization) and [enableColumnVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid/#enablecolumnvirtualization) properties as **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -58,7 +58,7 @@ To setup the column virtualization, set the [`enableVirtualization`](https://ej2
 
  {% previewsample "page.domainurl/code-snippet/grid/virtual-scroll-cs5" %}
 
-> Column's [`width`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#width) is required for column virtualization.
+> Column's [width](https://ej2.syncfusion.com/react/documentation/api/grid/column/#width) is required for column virtualization.
 If column's width is not defined then Grid will consider its value as **200px**.
 
 ## Virtualization with Grouping
@@ -74,7 +74,7 @@ Both the row and column virtualization can be used along with grouping. At initi
 * Cell selection is not supported for both row and column virtual scrolling.
 * Virtual scrolling is not compatible with batch editing, detail template, rowspan, colspan and hierarchy features.
 * Group expand and collapse state will not be persisted.
-* Since data is virtualized in grid, the aggregated information and total group items are displayed based on the current view items. To get these information regardless of the view items, refer to the [`Group with Page`](./grouping/#group-with-paging) topic.
+* Since data is virtualized in grid, the aggregated information and total group items are displayed based on the current view items. To get these information regardless of the view items, refer to the [Group with Page](./grouping/#group-with-paging) topic.
 * The page size provided must be two times larger than the number of visible rows in the grid. If the page size is failed to meet this condition then the size will be determined by grid.
 * The height of the grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the row height as below to ensure all the table rows are in same height.
 
@@ -84,11 +84,11 @@ Both the row and column virtualization can be used along with grouping. At initi
 }
 ```
 
-* Programmatic selection using the [`selectRows`](https://ej2.syncfusion.com/angular/documentation/api/grid/#selectrows) method is not supported in virtual scrolling.
+* Programmatic selection using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/grid/#selectrows) method is not supported in virtual scrolling.
 
 ## Browser height limitation in virtual scrolling and solution
 
-You can load millions of records in the Grid by using virtual scrolling, where the grid loads and renders rows on-demand while scrolling vertically. As a result, Grid lightens the browser’s load by minimizing the DOM elements and rendering elements visible in the viewport. The height of the grid is calculated using the Total Records Count * [Row Height](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowheight) property.
+You can load millions of records in the Grid by using virtual scrolling, where the grid loads and renders rows on-demand while scrolling vertically. As a result, Grid lightens the browser’s load by minimizing the DOM elements and rendering elements visible in the viewport. The height of the grid is calculated using the Total Records Count * [Row Height](https://ej2.syncfusion.com/react/documentation/api/grid/#rowheight) property.
 
 The browser has some maximum pixel height limitations for the scroll bar element. The content placed above the maximum height can't be scrolled if the element height is greater than the browser's maximum height limit. The browser height limit affects the virtual scrolling of the grid. When a large number of records are bound to the Grid, it can only display the records until the maximum height limit of the browser. Once the browser's height limit is reached while scrolling, the user won't able to scroll further to view the remaining records.
 
@@ -209,7 +209,7 @@ Also, you can view the hosted link for this sample [here](https://ej2.syncfusion
 
 ### Solution 2: Using RowHeight property
 
-You can reduce the [row height](https://ej2.syncfusion.com/react/documentation/grid/row/row-height) using the [rowHeight](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowheight) property of the Grid. It will reduce the overall height to accommodate more rows. But this approach optimizes the limitation, but if the height limit is reached after reducing row height also, you have to opt for the previous solution or use paging.
+You can reduce the [row height](https://ej2.syncfusion.com/react/documentation/grid/row/row-height) using the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid/#rowheight) property of the Grid. It will reduce the overall height to accommodate more rows. But this approach optimizes the limitation, but if the height limit is reached after reducing row height also, you have to opt for the previous solution or use paging.
 
 In the following image, you can see how many records will be scrollable when setting rowHeight to "36px" and "30px".
 

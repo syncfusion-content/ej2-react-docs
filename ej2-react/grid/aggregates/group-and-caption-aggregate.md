@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Group and caption aggregate in React Grid component
 
-Group and caption aggregate values are calculated from the current group items. If [`groupFooterTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#groupfootertemplate) is provided, the aggregate values are displayed in the group footer cells; and if [`groupCaptionTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#groupcaptiontemplate) is provided, aggregate values are displayed in the group caption cells.
+Group and caption aggregate values are calculated from the current group items. If [groupFooterTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#groupfootertemplate) is provided, the aggregate values are displayed in the group footer cells; and if [groupCaptionTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#groupcaptiontemplate) is provided, aggregate values are displayed in the group caption cells.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -29,5 +29,5 @@ Group and caption aggregate values are calculated from the current group items. 
 
  {% previewsample "page.domainurl/code-snippet/grid/aggregate-cs5" %}
 
-> The aggregate values must be accessed inside the template using their corresponding [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#type)
+> The aggregate values must be accessed inside the template using their corresponding [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type)
 name.

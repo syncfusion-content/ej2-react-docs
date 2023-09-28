@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Row template in React Grid component
 
-The [rowTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowtemplate) has an option to customize the look and behavior of the grid rows. The [rowTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowtemplate) property accepts the template for the row.
+The [rowTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/#rowtemplate) has an option to customize the look and behavior of the grid rows. The [rowTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/#rowtemplate) property accepts the template for the row.
 
 In the following example, Employee Information with Employee Photo is presented in the first column and employee details like Name, Address, etc., are presented in the second column.
 
@@ -33,7 +33,7 @@ In the following example, Employee Information with Employee Photo is presented 
 
 ## Row template with formatting
 
-If the [rowTemplate](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowtemplate) is used, the value cannot be formatted inside the template using the [columns.format](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
+If the [rowTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/#rowtemplate) is used, the value cannot be formatted inside the template using the [columns.format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

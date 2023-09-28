@@ -14,7 +14,7 @@ The excel export provides an option to customize mapping of the grid to excel do
 
 ## Export current page
 
-The excel export provides an option to export the current page into excel. To export current page, define [`exportType`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/#exporttype) to **CurrentPage**.
+The excel export provides an option to export the current page into excel. To export current page, define [exportType](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/#exporttype) to **CurrentPage**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -35,9 +35,9 @@ The excel export provides an option to export the current page into excel. To ex
 
 ## Export the selected records only
 
-You can export the selected records data by passing it to [`PdfExportProperties.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/) or [`ExcelExportProperties.dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/) property in the [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbarclick) event.
+You can export the selected records data by passing it to [PdfExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) or [ExcelExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) property in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event.
 
-In the below exporting demo, we can get the selected records using [`getSelectedRecords`](https://ej2.syncfusion.com/angular/documentation/api/grid/#getselectedrecords) method and pass the selected data to [`pdfExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfexport) or [`excelExport`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelExport) methods using respective export properties..
+In the below exporting demo, we can get the selected records using [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid/#getselectedrecords) method and pass the selected data to [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfexport) or [excelExport](https://ej2.syncfusion.com/react/documentation/api/grid/#excelexport) methods using respective export properties..
 
  {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -58,7 +58,7 @@ In the below exporting demo, we can get the selected records using [`getSelected
 
 ## Export hidden columns
 
-The excel export provides an option to export hidden columns of grid by defining [`ExcelExportProperties.includeHiddenColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/#includehiddencolumn) as **true**.
+The excel export provides an option to export hidden columns of grid by defining [ExcelExportProperties.includeHiddenColumn](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/#includehiddencolumn) as **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -79,9 +79,9 @@ The excel export provides an option to export hidden columns of grid by defining
 
 ## Show or hide columns
 
-You can show a hidden column or hide a visible column while printing the grid using [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbarclick) and [`ExcelExportComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelexportcomplete) events.
+You can show a hidden column or hide a visible column while printing the grid using [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) and [ExcelExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#excelexportcomplete) events.
 
-In the [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbarclick) event, based on **args.item.id** as **Grid_excelexport**. We can show or hide columns by setting [`column.visible`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#visible) property to **true** or **false** respectively.
+In the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event, based on **args.item.id** as **Grid_excelexport**. We can show or hide columns by setting [column.visible](https://ej2.syncfusion.com/react/documentation/api/grid/column/#visible) property to **true** or **false** respectively.
 
 In the excelExportComplete event, We have reversed the state back to the previous state.
 
@@ -106,7 +106,7 @@ In the below example, we have **CustomerID** as a hidden column in the grid. Whi
 
 ## Export with filter options
 
-The excel export provides an option to export with filter option in excel by defining `enableFilter` as **true** . It requires the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to be true.
+The excel export provides an option to export with filter option in excel by defining `enableFilter` as **true** . It requires the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/#allowfiltering) to be true.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -149,7 +149,7 @@ In grid, we have provided the outline option for the exported document when the 
 
 ## Define file name
 
-You can assign the file name for the exported document by defining `fileName` property in [`excelExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/).
+You can assign the file name for the exported document by defining `fileName` property in [excelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

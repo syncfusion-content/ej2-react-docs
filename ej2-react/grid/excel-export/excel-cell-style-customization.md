@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Conditional cell formatting
 
-Grid cells in the exported Excel can be customized or formatted using [`excelQueryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/#excelquerycellinfo) event. In this event, we can format the grid cells of exported PDF document based on the column cell value.
+Grid cells in the exported Excel can be customized or formatted using [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#excelquerycellinfo) event. In this event, we can format the grid cells of exported PDF document based on the column cell value.
 
-In the below sample, we have set the background color for **Freight** column in the exported excel by **args.style** and [`backColor`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelStyle/#backcolor) property.
+In the below sample, we have set the background color for **Freight** column in the exported excel by **args.style** and [backColor](https://ej2.syncfusion.com/react/documentation/api/grid/excelStyle/#backcolor) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -37,7 +37,7 @@ In the below sample, we have set the background color for **Freight** column in 
 
 The excel export provides an option to include theme for exported excel document.
 
-To apply theme in exported Excel, define the [`theme`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/#theme) in [`ExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/) .
+To apply theme in exported Excel, define the [theme](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/#theme) in [ExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) .
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -60,7 +60,7 @@ To apply theme in exported Excel, define the [`theme`](https://ej2.syncfusion.co
 
 ## Rotate a header text to a certain degree in the exported grid
 
-The DataGrid has support to customize the column header styles such as changing text orientation, the font color, and so on in the exported Excel file. To achieve this requirement, use the [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/angular/documentation/api/grid#excelheaderquerycellinfo) event of the Grid.
+The DataGrid has support to customize the column header styles such as changing text orientation, the font color, and so on in the exported Excel file. To achieve this requirement, use the [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#excelheaderquerycellinfo) event of the Grid.
 
 The `excelHeaderQueryCellInfo` will be triggered when creating a column header for the excel document to be exported. Customize the column header in this event.
 

@@ -12,8 +12,8 @@ domainurl: ##DomainURL##
 
 ## Header text
 
-By default, column header title is displayed from column [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) value.
-To override the default header title by defining [`headerText`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#headertext) value.
+By default, column header title is displayed from column [field](https://ej2.syncfusion.com/react/documentation/api/grid/column/#field) value.
+To override the default header title by defining [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column/#headertext) value.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -32,11 +32,11 @@ To override the default header title by defining [`headerText`](https://ej2.sync
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs29" %}
 
-> * If both the [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field) and [`headerText`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#headertext) are not defined in the column, the column renders with “empty” header text.
+> * If both the [field](https://ej2.syncfusion.com/react/documentation/api/grid/column/#field) and [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column/#headertext) are not defined in the column, the column renders with “empty” header text.
 
 ## Header template
 
-You can customize the header element by using the [`headerTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#headertemplate) property. In this demo, the custom element is rendered for both CustomerID and OrderDate column headers.
+You can customize the header element by using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column/#headertemplate) property. In this demo, the custom element is rendered for both CustomerID and OrderDate column headers.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -57,13 +57,13 @@ You can customize the header element by using the [`headerTemplate`](https://ej2
 
 ## Change header text dynamically
 
-You can change the column [`headerText`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#headertext) dynamically through an external button.
+You can change the column [headerText](https://ej2.syncfusion.com/react/documentation/api/grid/column/#headertext) dynamically through an external button.
 
 Follow the given steps to change the header text dynamically:
 
 **Step 1**:
 
-Get the column object corresponding to the field name by using the [`getColumnByField`](https://ej2.syncfusion.com/angular/documentation/api/grid/#getcolumnbyfield) method.
+Get the column object corresponding to the field name by using the [getColumnByField](https://ej2.syncfusion.com/react/documentation/api/grid/#getcolumnbyfield) method.
 Then change the header Text value.
 
 ```ts
@@ -76,7 +76,7 @@ Then change the header Text value.
 
 **Step 2**:
 
-To reflect the changes in the grid header, invoke the [`refreshHeader`](https://ej2.syncfusion.com/angular/documentation/api/grid/#refreshheader) method.
+To reflect the changes in the grid header, invoke the [refreshHeader](https://ej2.syncfusion.com/react/documentation/api/grid/#refreshheader) method.
 
 ```ts
 
@@ -103,7 +103,7 @@ To reflect the changes in the grid header, invoke the [`refreshHeader`](https://
 
 ## Change the orientation of header text
 
-You can change the orientation of the header text by using the [`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
+You can change the orientation of the header text by using the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/grid/column/#customattributes) property.
 
 Ensure the following steps:
 
@@ -120,7 +120,7 @@ Create a css class with orientation style for grid header cell.
 
 **Step 2**:
 
-Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property.
+Add the custom css class to particular column by using [customAttributes](https://ej2.syncfusion.com/react/documentation/api/grid/column/#customattributes) property.
 
 ```ts
     <ColumnDirective field='Freight' headerText='Freight' customAttributes={customAttributes} width='80' format="C2" textAlign="Center"/>

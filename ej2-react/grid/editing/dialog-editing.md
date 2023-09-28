@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 In Dialog edit mode, when you start editing the currently selected row data will be shown on a dialog.
 You can change the cell values and save edited data to the data source.
-To enable Dialog edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as **Dialog**.
+To enable Dialog edit, set the [editSettings.mode](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as **Dialog**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,7 +33,7 @@ To enable Dialog edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/
 
 ## Customize edit dialog
 
-You can customize the appearance of the edit dialog in the [`actionComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event based on [`requestType`](https://ej2.syncfusion.com/angular/documentation/api/grid/dialogEditEventArgs/#requesttype) as **beginEdit** or **add**.
+You can customize the appearance of the edit dialog in the [actionComplete](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event based on [requestType](https://ej2.syncfusion.com/angular/documentation/api/grid/dialogEditEventArgs/#requesttype) as **beginEdit** or **add**.
 
 In the following example, the dialog's properties like header text, showCloseIcon, height have been changed while editing and adding the records.
 
@@ -87,7 +87,7 @@ In the following example, the CustomerID column is rendered as a hidden column, 
 
 ## Use wizard like dialog editing
 
-Wizard helps you create intuitive step-by-step forms to fill. You can achieve the wizard like editing by using the dialog template feature. It support your own editing template by defining [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as **Dialog** and [`editSetting.template`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#template) as a REACT Component.
+Wizard helps you create intuitive step-by-step forms to fill. You can achieve the wizard like editing by using the dialog template feature. It support your own editing template by defining [editSettings.mode](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as **Dialog** and [editSetting.template](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#template) as a REACT Component.
 
 The following example demonstrate the wizard like editing in the grid with the obtrusive Validation.
 

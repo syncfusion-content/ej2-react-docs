@@ -1,0 +1,227 @@
+import { ColumnDirective, ColumnsDirective, GridComponent, DetailRow, Inject,
+  ExcelExport, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { employeeData } from './datasource';
+
+function App() {
+  let grid;
+  const toolbar = ['ExcelExport'];
+  const gridTemplate = (props) => {
+    return (
+      <table className="detailtable" width="100%">
+        <colgroup>
+          <col style={{ width: '40%' }} />
+          <col style={{ width: '60%' }} />
+        </colgroup>
+        <thead>
+          <tr>
+            <th
+              colSpan={2}
+              style={{
+                fontWeight: 500,
+                textAlign: 'center',
+                backgroundColor: '#ADD8E6',
+              }}
+            >
+              Product Details
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowSpan={4} className="photo" style={{ textAlign: 'center' }}>
+              <img
+                src={'data:image/jpeg;base64,' + props.ProductImg}
+                alt={props.EmployeeID}
+              />
+            </td>
+            <td>
+              <span style={{ fontWeight: 500, color: '#0A76FF' }}>
+                Offers: {props.Offers}
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span>Available: {props.Available} </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span className="link">
+                Contact: <a href={'mailto:' + props.Contact}>{props.Contact}</a>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style={{ fontWeight: 500, color: '#0A76FF' }}>
+                Ratings: {props.Ratings}
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td style={{ textAlign: 'center' }}>
+              <span> {props.productDesc}</span>
+            </td>
+            <td>
+              <span>{props.ReturnPolicy}</span>
+            </td>
+          </tr>
+          <tr>
+            <td style={{ textAlign: 'center' }}>
+              <span style={{ fontWeight: 500 }}> {props.Cost}</span>
+            </td>
+            <td>
+              <span>{props.Cancellation}</span>
+            </td>
+          </tr>
+          <tr>
+            <td style={{ textAlign: 'center' }}>
+              <span className={props.Status} style={{ fontWeight: 500 }}>
+                {' '}
+                {props.Status}
+              </span>
+            </td>
+            <td>
+              <span style={{ fontWeight: 500, color: '#0A76FF' }}>
+                {props.Delivery}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    );
+  };
+
+  const toolbarClick = (args) => {
+    if (grid && args['item'].id === 'DetailTemplateGrid_excelexport') {
+      grid.excelExport({
+        hierarchyExportMode: 'Expanded',
+      });
+    }
+  };
+  const exportDetailTemplate = (args) => {
+    args.value = {
+      columnHeader: [
+        {
+          cells: [
+            {
+              index: 0,
+              colSpan: 2,
+              value: 'Product Details',
+              style: {
+                backColor: '#ADD8E6',
+                excelHAlign: 'Center',
+                bold: true,
+              },
+            },
+          ],
+        },
+      ],
+      rows: [
+        {
+          cells: [
+            {
+              index: 0,
+              rowSpan: 4,
+              image: {
+                base64: args.parentRow.data['ProductImg'],
+                height: 80,
+                width: 100,
+              },
+            },
+            {
+              index: 1,
+              value: 'Offers: ' + args.parentRow.data['Offers'],
+              style: { bold: true, fontColor: '#0a76ff' },
+            },
+          ],
+        },
+        {
+          cells: [
+            {
+              index: 1,
+              value: 'Available: ' + args.parentRow.data['Available'],
+            },
+          ],
+        },
+        {
+          cells: [
+            {
+              index: 1,
+              value: 'Contact: ',
+              hyperLink: {
+                target: 'mailto:' + args.parentRow.data['Contact'],
+                displayText: args.parentRow.data['Contact'],
+              },
+            },
+          ],
+        },
+        {
+          cells: [
+            {
+              index: 1,
+              value: 'Ratings: ' + args.parentRow.data['Ratings'],
+              style: { bold: true, fontColor: '#0a76ff' },
+            },
+          ],
+        },
+        {
+          cells: [
+            {
+              index: 0,
+              value: args.parentRow.data['productDesc'],
+              style: { excelHAlign: 'Center' },
+            },
+            { index: 1, value: args.parentRow.data['ReturnPolicy'] },
+          ],
+        },
+        {
+          cells: [
+            {
+              index: 0,
+              value: args.parentRow.data['Cost'],
+              style: { excelHAlign: 'Center', bold: true },
+            },
+            { index: 1, value: args.parentRow.data['Cancellation'] },
+          ],
+        },
+        {
+          cells: [
+            {
+              index: 0,
+              value: args.parentRow.data['Status'],
+              style: {
+                bold: true,
+                fontColor: args.parentRow.data['Status'] === 'Available' ? '#00FF00' : '#FF0000',
+                excelHAlign: 'Center',
+              },
+            },
+            {
+              index: 1,
+              value: args.parentRow.data['Delivery'],
+              style: { bold: true, fontColor: '#0a76ff' },
+            },
+          ],
+        },
+      ],
+    };
+  };
+  
+  return (
+    <div>
+      <GridComponent id="DetailTemplateGrid" ref={(g) => (grid = g)} dataSource={employeeData}
+        detailTemplate={gridTemplate} toolbar={toolbar} allowExcelExport={true}
+        toolbarClick={toolbarClick} exportDetailTemplate={exportDetailTemplate} height="315">
+        <ColumnsDirective>
+          <ColumnDirective field="Category" headerText="Category" width="140" />
+          <ColumnDirective field="ProductID" headerText="Product ID" width="120" />
+          <ColumnDirective headerText="Status" field="Status" width="200" />
+        </ColumnsDirective>
+        <Inject services={[DetailRow, Toolbar, ExcelExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;

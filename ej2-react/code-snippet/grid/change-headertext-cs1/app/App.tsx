@@ -5,11 +5,6 @@ import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfus
 import * as React from 'react';
 import { data } from './datasource';
 
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
-import { data } from './datasource';
-
 function App() {
   let grid: Grid | null;
 

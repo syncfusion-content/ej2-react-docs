@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Display null values at bottom in React Grid component
 
-By default the null values are displayed at bottom of the Grid row while perform sorting in ascending order. As well as this values are displayed at top of the Grid row while perform sorting with descending order. But you can customize this default order to display the null values at always bottom row of the Grid by using [`column.sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#sortcomparer) method.
+By default the null values are displayed at bottom of the Grid row while perform sorting in ascending order. As well as this values are displayed at top of the Grid row while perform sorting with descending order. But you can customize this default order to display the null values at always bottom row of the Grid by using [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column/#sortcomparer) method.
 
 In the below demo we have displayed the null date values at bottom of the Grid row while sorting the **OrderDate** column in both ways.
 

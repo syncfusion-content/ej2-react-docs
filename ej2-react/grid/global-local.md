@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows you to localize default text content of the Grid.The grid component has static text on some features (like group drop area text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value and translation object.
+The [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows you to localize default text content of the Grid.The grid component has static text on some features (like group drop area text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [locale](https://ej2.syncfusion.com/react/documentation/api/grid/#locale) value and translation object.
 
 The following list of properties and its values are used in the grid.
 
@@ -116,7 +116,7 @@ All | All
 
 ### Loading translations
 
-To load translation object in an application use [`load`](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) function of [`L10n`](https://ej2.syncfusion.com/documentation/api/base/l10n/) class.
+To load translation object in an application use [load](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) function of [L10n](https://ej2.syncfusion.com/documentation/api/base/l10n/) class.
 
 The below example demonstrates the Grid in **Deutsch** culture.
 
@@ -139,7 +139,7 @@ The below example demonstrates the Grid in **Deutsch** culture.
 
 ## Internationalization
 
-The [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library is used to globalize number, date, and time values in grid component using format strings in the [`columns.format`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#format).
+The [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library is used to globalize number, date, and time values in grid component using format strings in the [columns.format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -159,13 +159,13 @@ The [`Internationalization`](https://ej2.syncfusion.com/react/documentation/comm
  {% previewsample "page.domainurl/code-snippet/grid/internationalization-cs1" %}
 
 > * In the above sample, `Freight` column is formatted by `NumberFormatOptions`.
-> * By default, [`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale) value is `en-US`. If you want to change `en-US` culture, then set the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/grid/#locale).
+> * By default, [locale](https://ej2.syncfusion.com/react/documentation/api/grid/#locale) value is `en-US`. If you want to change `en-US` culture, then set the [locale](https://ej2.syncfusion.com/react/documentation/api/grid/#locale).
 
 ## Right to Left - RTL
 
 RTL provides an option to switch the text direction and layout of Grid component from right to left.
 It improves the user experiences and accessibility for users who use right-to-left languages(Arabic, Farsi, Urdu, etc).
-To enable RTL in the Grid, set the [`enableRtl`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablertl) to **true**.
+To enable RTL in the Grid, set the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/grid/#enablertl) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

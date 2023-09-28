@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize pager drop down in React Grid component
 
-To customize default values of pager dropdown, you need to define [`pageSizes`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagesizes) as array of strings.
+To customize default values of pager dropdown, you need to define [pageSizes](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#pagesizes) as array of strings.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

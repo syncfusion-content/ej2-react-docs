@@ -14,7 +14,7 @@ The Excel export provides an option to export multiple grid data in the same or 
 
 ## Same sheet
 
-Excel exporting provides support for exporting multiple grids on the same sheet. To export the grids in the same sheet, define [`multipleExport.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/multipleExport/#type) as **AppendToSheet** in [`ExcelExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/). It also has an option to provide blank rows between the grids. These blank rows count can be defined by using [`multipleExport.blankRows`](https://ej2.syncfusion.com/angular/documentation/api/grid/multipleExport/#blankrows) property.
+Excel exporting provides support for exporting multiple grids on the same sheet. To export the grids in the same sheet, define [multipleExport.type](https://ej2.syncfusion.com/react/documentation/api/grid/multipleExport/#type) as **AppendToSheet** in [ExcelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/). It also has an option to provide blank rows between the grids. These blank rows count can be defined by using [multipleExport.blankRows](https://ej2.syncfusion.com/react/documentation/api/grid/multipleExport/#blankrows) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,11 +33,11 @@ Excel exporting provides support for exporting multiple grids on the same sheet.
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-export-cs12" %}
 
->By default, [`multipleExport.blankRows`](https://ej2.syncfusion.com/angular/documentation/api/grid/multipleExport/#blankrows) value is 5.
+>By default, [multipleExport.blankRows](https://ej2.syncfusion.com/react/documentation/api/grid/multipleExport/#blankrows) value is 5.
 
 ## New sheet
 
-Excel export functionality enables the exporting of multiple grids onto separate sheets (each grid in new sheet of excel) within the Excel file. To achieve this, you can specify  [`multipleExport.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/multipleExport/#type) as **NewSheet** in [`ExcelExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/excelExportProperties/).
+Excel export functionality enables the exporting of multiple grids onto separate sheets (each grid in new sheet of excel) within the Excel file. To achieve this, you can specify  [multipleExport.type](https://ej2.syncfusion.com/react/documentation/api/grid/multipleExport/#type) as **NewSheet** in [ExcelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 # Data binding in React Grid component
 
 The Grid uses **DataManager** which supports both RESTful JSON data services binding and local JavaScript object array binding.
-The [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) or JavaScript object collection.
+The [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property can be assigned either with the instance of [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) or JavaScript object collection.
 It supports two kind of data binding method they are,
 * Local data
 * Remote data
@@ -22,8 +22,8 @@ To get start quickly with Data Binding, you can check on this video:
 
 ## Sending additional parameters to the server
 
-To add a custom parameter to the data request, use the [`addParams`](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method of [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#query) class.
-Assign the [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#query) object with additional parameters to the grid [`query`](https://ej2.syncfusion.com/angular/documentation/api/grid/#query) property.
+To add a custom parameter to the data request, use the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method of [Query](https://ej2.syncfusion.com/documentation/api/data/query/#query) class.
+Assign the [Query](https://ej2.syncfusion.com/documentation/api/data/query/#query) object with additional parameters to the grid [query](https://ej2.syncfusion.com/react/documentation/api/grid/#query) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -36,13 +36,13 @@ Assign the [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#qu
 
  {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs1" %}
 
-> The parameters added using the [`query`](https://ej2.syncfusion.com/angular/documentation/api/grid/#query) property will be sent along with the data request for every grid action.
+> The parameters added using the [query](https://ej2.syncfusion.com/react/documentation/api/grid/#query) property will be sent along with the data request for every grid action.
 
 ## Handling HTTP error
 
-During server interaction from the grid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event.
+During server interaction from the grid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid/#actionfailure) event.
 
-The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) Grid event contains the error details returned from server.
+The argument passed to the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid/#actionfailure) Grid event contains the error details returned from server.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -55,11 +55,11 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/angular/
 
  {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs2" %}
 
-> The [`actionFailure`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the Grid actions.
+> The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the Grid actions.
 
 ## Binding with ajax
 
-You can use Grid [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property to bind the datasource to Grid from external ajax request. In the below code we have fetched the datasource from the server with the help of ajax request and provided that to [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property by using **onSuccess** event of the ajax.
+You can use Grid [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property to bind the datasource to Grid from external ajax request. In the below code we have fetched the datasource from the server with the help of ajax request and provided that to [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property by using **onSuccess** event of the ajax.
 
 ```ts
 import { Ajax } from '@syncfusion/ej2-base';
@@ -100,7 +100,7 @@ export default App;
 
 It is possible to handle data processing externally and bind the result to the Grid. This help you to provide your own custom data logic. Grid expects an object as the result of the custom logic and the emitted value should be an object with properties **result** and **count**.
 
-> In this context, we are going to use [`Ajax`](https://ej2.syncfusion.com/documentation/api/base/ajax/) from our **@syncfusion/ej2-base** library for handling remote interaction, you can choose any HTTP client as per your choice.
+> In this context, we are going to use [Ajax](https://ej2.syncfusion.com/documentation/api/base/ajax/) from our **@syncfusion/ej2-base** library for handling remote interaction, you can choose any HTTP client as per your choice.
 
 ```ts
 import { Ajax, getValue } from '@syncfusion/ej2-base';
@@ -175,7 +175,7 @@ export class OrderService {
 
 ## Handling Grid actions
 
-For grid actions such as **paging**, **grouping**, **sorting** etc, the [`dataStateChange`](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event will be invoked. You have to query and resolve data using [`Ajax`](https://ej2.syncfusion.com/documentation/api/base/ajax/) in this event based on the state arguments.
+For grid actions such as **paging**, **grouping**, **sorting** etc, the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event will be invoked. You have to query and resolve data using [Ajax](https://ej2.syncfusion.com/documentation/api/base/ajax/) in this event based on the state arguments.
 
 ```ts
 import { Ajax, getValue } from '@syncfusion/ej2-base';
@@ -258,11 +258,11 @@ export class OrderService {
 };
 ```
 
-> While initial rendering, the [`dataStateChange`](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event will not be triggered. You can perform the operation in the **componentDidMount** or when you want the grid to show record.
+> While initial rendering, the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event will not be triggered. You can perform the operation in the **componentDidMount** or when you want the grid to show record.
 
 ## Perform CRUD operations
 
-The [`dataSourceChanged`](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event will be triggered for updating the grid data. You can perform the save operation based on the event arguments and call the [`endEdit`](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) method to indicate the completion of save operation.
+The [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event will be triggered for updating the grid data. You can perform the save operation based on the event arguments and call the [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) method to indicate the completion of save operation.
 
 ```ts
 import { Ajax, getValue } from '@syncfusion/ej2-base';
@@ -395,7 +395,7 @@ The footer aggregate values  should be calculated and send along with the **data
 
 ## Provide excel filter data source
 
-The [`dataStateChange`](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event will be triggered with appropriate arguments when the excel filter requests the filter choice data source. You need to resolve the excel filter data source using the **dataSource** resolver function from the state argument as follows.
+The [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event will be triggered with appropriate arguments when the excel filter requests the filter choice data source. You need to resolve the excel filter data source using the **dataSource** resolver function from the state argument as follows.
 
 ```ts
 import { ColumnDirective, ColumnsDirective, DataStateChangeEventArgs, Grid, GridComponent } from '@syncfusion/ej2-react-grids';

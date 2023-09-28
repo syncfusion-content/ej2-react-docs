@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Built-in toolbar items
 
-Built-in toolbar items execute standard actions of the grid, and it can be added by defining the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) as a collection of built-in items. It renders the button with icon and text.
+Built-in toolbar items execute standard actions of the grid, and it can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) as a collection of built-in items. It renders the button with icon and text.
 
 The following table shows Built-in toolbar items and its action.
 
@@ -41,7 +41,7 @@ The following table shows Built-in toolbar items and its action.
 
  {% previewsample "page.domainurl/code-snippet/grid/toolbar-cs1" %}
 
-> * The [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) has options to define both built-in and custom toolbar items.
+> * The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) has options to define both built-in and custom toolbar items.
 
 ### Show only icons in built-in toolbar items
 
@@ -68,10 +68,10 @@ This is demonstrated in the following sample:
 
 ## Custom toolbar items
 
-Custom toolbar items can be added by defining the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) as a collection of [`itemModel`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/itemModel).
-Actions for this customized toolbar items are defined in the [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbarclick) event.
+Custom toolbar items can be added by defining the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) as a collection of [itemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel).
+Actions for this customized toolbar items are defined in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event.
 
-By default, Custom toolbar items are in position **Left**. You can change the position by using the [`align`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/itemModel/#align) property. In the below sample, we have applied position **Right** for the **Collapse All** toolbar item.
+By default, Custom toolbar items are in position **Left**. You can change the position by using the [align](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/#align) property. In the below sample, we have applied position **Right** for the **Collapse All** toolbar item.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -90,7 +90,7 @@ By default, Custom toolbar items are in position **Left**. You can change the po
 
  {% previewsample "page.domainurl/code-snippet/grid/toolbar-cs2" %}
 
-> * The [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) has options to define both built-in and custom toolbar items.
+> * The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) has options to define both built-in and custom toolbar items.
 > * If a toolbar item does not match with built-in items, it will be treated as custom toolbar item.
 
 ## Both built-in and custom items in toolbar
@@ -118,7 +118,7 @@ In the below example, **Add**, **Edit**, **Delete**, **Update**, **Cancel** are 
 
 ## Custom toolbar component in a specific position
 
-By default, Custom toolbar items are in the Left position. You can change the position by using the [align](https://ej2.syncfusion.com/angular/documentation/api/toolbar/itemModel) property. In the following sample, we have applied the Right position for the Collapse All toolbar item, Left for the Expand All toolbar item, and Center for the Search toolbar item.
+By default, Custom toolbar items are in the Left position. You can change the position by using the [align](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel) property. In the following sample, we have applied the Right position for the Collapse All toolbar item, Left for the Expand All toolbar item, and Center for the Search toolbar item.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filter bar in React Grid component
 
-By defining the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to **true**, then filter bar row will be rendered next to header which allows you to filter data. You can filter the records with different expressions depending upon the column type.
+By defining the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/#allowfiltering) to **true**, then filter bar row will be rendered next to header which allows you to filter data. You can filter the records with different expressions depending upon the column type.
 
  **Filter bar Expressions:**
 
@@ -46,11 +46,11 @@ N/A |N/A |Always **equal** operator will be used for Boolean filter |Boolean
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs2" %}
 
-> By default, the [`filterSettings.columns.operator`](https://ej2.syncfusion.com/angular/documentation/api/grid/predicateModel/#operator) value is **equal**.
+> By default, the [filterSettings.columns.operator](https://ej2.syncfusion.com/react/documentation/api/grid/predicateModel/#operator) value is **equal**.
 
 ## Filter bar template with custom component
 
-The [`filterBarTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filterbartemplate) is used to add a custom component for a particular column and this contains the following functions.
+The [filterBarTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filterbartemplate) is used to add a custom component for a particular column and this contains the following functions.
 
 * **create** – It is used for creating custom components.
 * **write** - It is used to perform filtering actions on Grid from custom components.

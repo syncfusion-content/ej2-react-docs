@@ -9,8 +9,8 @@ function App() {
         if (instance) {
             instance.element.addEventListener('mouseup', (e) => {
                 if (e.target.classList.contains("e-rowcell")) {
-                    let index = parseInt(e.target.parentElement.getAttribute("aria-rowindex"));
-                    let colindex = parseInt(e.target.getAttribute("aria-colindex"));
+                    let index = parseInt(e.target.parentElement.getAttribute("data-rowindex"));
+                    let colindex = parseInt(e.target.getAttribute("data-colindex"));
                     let field = instance.getColumns()[colindex].field;
                     instance.editModule.editCell(index, field);
                 }
@@ -28,3 +28,5 @@ function App() {
     <Inject services={[Page, Toolbar, Edit]}/>
   </GridComponent>;
 }
+
+export default App

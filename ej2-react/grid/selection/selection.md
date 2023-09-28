@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 Selection provides an option to highlight a row or cell or column.
 Selection can be done through simple Mouse down or Arrow keys.
-To disable selection in the Grid, set the [`allowSelection`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowselection) to false.
+To disable selection in the Grid, set the [allowSelection](https://ej2.syncfusion.com/react/documentation/api/grid/#allowselection) to false.
 
-The grid supports two types of selection that can be set by using the [`selectionSettings.type`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#type). They are:
+The grid supports two types of selection that can be set by using the [selectionSettings.type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type). They are:
 
 * **Single** - The **Single** is set by default. Allows you to select only a single row or cell or column.
 * **Multiple** - It allows you to select multiple rows or cells or columns.
@@ -40,7 +40,7 @@ To select range of rows or cells or columns, press and hold the SHIFT key and cl
 
 ## Selection mode
 
-The grid supports three types of selection mode that can be set by using the [`selectionSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#mode). They are:
+The grid supports three types of selection mode that can be set by using the [selectionSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#mode). They are:
 
 * **Row** - The **Row** value is set by default. Allows you to select rows only.
 * **Cell** - Allows you to select cells only.
@@ -69,13 +69,13 @@ When you tap a grid row on touchscreen device, the tapped row is selected.
 It also shows a popup ![Selection](../images/selection.jpg)  for multi-row selection.
 To select multiple rows or cells, tap the popup![Multi Selection](../images/mselection.jpg)  and then tap the desired rows or cells.
 
-> For multi-selection, It requires the selection [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#type) to be **Multiple**.
+> For multi-selection, It requires the selection [type](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#type) to be **Multiple**.
 
 The following screenshot represents a grid touch selection in the device.
 
 ![Touch Interaction](../images/touch-selection.jpg)
 
-> [`getSelectedRecords`](https://ej2.syncfusion.com/angular/documentation/api/grid/#getselectedrecords) method has been used to retrieve the selected records.
+> [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid/#getselectedrecords) method has been used to retrieve the selected records.
 
 ## See Also
 

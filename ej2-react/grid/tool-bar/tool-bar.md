@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tool bar in React Grid component
 
-The Grid provides ToolBar support to handle grid actions. The [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) property accepts either the collection of built-in toolbar items and [`itemModel`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/itemModel) objects for custom toolbar items or HTML element ID for toolbar template.
+The Grid provides ToolBar support to handle grid actions. The [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) property accepts either the collection of built-in toolbar items and [itemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel) objects for custom toolbar items or HTML element ID for toolbar template.
 
 To use Toolbar, inject **Toolbar** module in Grid.
 
@@ -37,7 +37,7 @@ You can enable/disable toolbar items by using the **enableItems** method.
 
 ## Add toolbar at the bottom of Grid
 
-You can add the Grid toolbar component at the bottom of Grid using the ['created'](https://ej2.syncfusion.com/angular/documentation/api/grid/#created) event.
+You can add the Grid toolbar component at the bottom of Grid using the [created](https://ej2.syncfusion.com/react/documentation/api/grid/#created) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

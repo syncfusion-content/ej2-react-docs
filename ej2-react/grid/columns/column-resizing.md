@@ -14,7 +14,7 @@ Columns width can be resized by clicking and dragging at the right edge of colum
 While dragging, the width of respective column will be resized immediately.
 Each columns can be auto resized by double clicking at the right edge of column header.
 It will fit the width of that column based on widest cell content.
-To enable the column resize, set the [`allowResizing`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowresizing) property to true.
+To enable the column resize, set the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/grid/#allowresizing) property to true.
 
 To use the column resize, inject **Resize** module in the grid.
 
@@ -35,12 +35,12 @@ To use the column resize, inject **Resize** module in the grid.
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs15" %}
 
-> You can disable Resizing for a particular column, by specifying [`columns.allowResizing`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#allowresizing) to false.
+> You can disable Resizing for a particular column, by specifying [columns.allowResizing](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#allowresizing) to false.
 > In RTL mode, you can click and drag the left edge of header cell to resize the column.
 
 ## Min and max width
 
-Columns can be restricted to resize in between minimum and maximum width by defining the [`columns->minWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#minwidth) and [`columns->maxWidth`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#maxwidth).
+Columns can be restricted to resize in between minimum and maximum width by defining the [columns->minWidth](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#minwidth) and [columns->maxWidth](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#maxwidth).
 
 In the below sample, **OrderID**, **Ship Name** and **Ship Country** columns are defined with minimum and maximum width.
 
@@ -65,7 +65,7 @@ In the below sample, **OrderID**, **Ship Name** and **Ship Country** columns are
 
 ## Resize stacked column
 
-Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for any particular stacked column by setting [`allowResizing`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#allowresizing) as **false** to its columns.
+Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for any particular stacked column by setting [allowResizing](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel/#allowresizing) as **false** to its columns.
 
 In this example, we have disabled resize for **Ship City** column.
 
@@ -99,9 +99,9 @@ The following screenshot represents the column resizing in the touch device.
 
 During the resizing action, the grid component triggers the below three events.
 
-1. The [`resizeStart`](https://ej2.syncfusion.com/angular/documentation/api/grid/#resizestart) event triggers when column resize starts.
-2. The [`resizing`](https://ej2.syncfusion.com/angular/documentation/api/grid/#resizing) event triggers when column header element is dragged (moved) continuously..
-3. The [`resizeStop`](https://ej2.syncfusion.com/angular/documentation/api/grid/#resizeStop) event triggers when column resize ends.
+1. The [resizeStart](https://ej2.syncfusion.com/react/documentation/api/grid/#resizestart) event triggers when column resize starts.
+2. The [resizing](https://ej2.syncfusion.com/react/documentation/api/grid/#resizing) event triggers when column header element is dragged (moved) continuously..
+3. The [resizeStop](https://ej2.syncfusion.com/react/documentation/api/grid/#resizeStop) event triggers when column resize ends.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

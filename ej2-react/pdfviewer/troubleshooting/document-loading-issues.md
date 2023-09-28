@@ -25,7 +25,7 @@ let pdfviewer;
 function App() {
   function documentLoad() {
     var viewer = document.getElementById('container').ej2_instances[0];
-    viewer.serviceUrl = "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    viewer.serviceUrl = "https://services.syncfusion.com/react/production/api/pdfviewer";
     viewer.dataBind();
     viewer.load("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",null);
   }

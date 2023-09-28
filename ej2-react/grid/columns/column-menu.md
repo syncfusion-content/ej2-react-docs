@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The column menu has options to integrate features like sorting, grouping, filtering, column chooser, and autofit.
 It will show a menu with the integrated feature when users click on multiple icon of the column.
-To enable column menu, you need to define the [`showColumnMenu`](https://ej2.syncfusion.com/angular/documentation/api/grid/#showcolumnmenu) property as true.
+To enable column menu, you need to define the [showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/grid/#showcolumnmenu) property as true.
 
 To use the column menu, inject the **ColumnMenu** module in the grid.
 
@@ -46,15 +46,15 @@ The default items are displayed in following table.
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs7" %}
 
-> You can disable column menu for a particular column by defining the [`columns.showColumnMenu`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#showcolumnmenu) as **false**.
-> You can customize the default items by defining the [`columnMenuItems`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuitems) with required items.
+> You can disable column menu for a particular column by defining the [columns.showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/grid/column/#showcolumnmenu) as **false**.
+> You can customize the default items by defining the [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#columnmenuitems) with required items.
 
 ## Column menu events
 
 During the resizing action, the grid component triggers the below two events.
 
-1. The [`columnMenuOpen`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuopen) event triggers before the column menu opens.
-2. The [`columnMenuClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuclick) event triggers when the user clicks the column menu of the grid.
+1. The [columnMenuOpen](https://ej2.syncfusion.com/react/documentation/api/grid/#columnmenuopen) event triggers before the column menu opens.
+2. The [columnMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/#columnmenuclick) event triggers when the user clicks the column menu of the grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -75,8 +75,8 @@ During the resizing action, the grid component triggers the below two events.
 
 ## Custom column menu item
 
-Custom column menu items can be added by defining the [`columnMenuItems`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuitems) as collection of the [`columnMenuItemModel`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnMenuItemModel).
-Actions for this customized items can be defined in the [`columnMenuClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuclick) event.
+Custom column menu items can be added by defining the [columnMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#columnmenuitems) as collection of the [columnMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/columnMenuItemModel).
+Actions for this customized items can be defined in the [columnMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/#columnmenuclick) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -97,7 +97,7 @@ Actions for this customized items can be defined in the [`columnMenuClick`](http
 
 ## Customize menu items for particular columns
 
-Sometimes, if you need to hide an item from column menu for particular columns, define the [`items.hide`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnMenuItemModel/#items) as **true** of the argument interface [`columnMenuOpenEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/columnMenuOpenEventArgs) in the [`columnMenuOpen`](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuopen) event.
+Sometimes, if you need to hide an item from column menu for particular columns, define the [items.hide](https://ej2.syncfusion.com/react/documentation/api/grid/columnMenuItemModel/#items) as **true** of the argument interface [columnMenuOpenEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/columnMenuOpenEventArgs) in the [columnMenuOpen](https://ej2.syncfusion.com/react/documentation/api/grid/#columnmenuopen) event.
 
 The following sample, **Filter** item was hidden in column menu when opens for the **OrderID** column.
 

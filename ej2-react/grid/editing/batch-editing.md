@@ -11,8 +11,8 @@ domainurl: ##DomainURL##
 # Batch editing in React Grid component
 
 In Batch edit mode, when you double-click on the grid cell, then the target cell changed to edit state.
-You can bulk save (added, changed and deleted data in the single request) to data source by click on the toolbar's **Update** button or by externally invoking the [`batchSave`](https://ej2.syncfusion.com/angular/documentation/api/grid/edit/#batchsave) method.
-To enable Batch edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as **Batch**.
+You can bulk save (added, changed and deleted data in the single request) to data source by click on the toolbar's **Update** button or by externally invoking the [batchSave](https://ej2.syncfusion.com/react/documentation/api/grid/edit/#batchsave) method.
+To enable Batch edit, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as **Batch**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -31,7 +31,7 @@ To enable Batch edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/a
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs2" %}
 
-> If a column's [allowEditing](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowediting) property is set to false, then the focus can be skipped in that non-editable column by clicking the tab or shift-tab key while in batch edit mode.
+> If a column's [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/column/#allowediting) property is set to false, then the focus can be skipped in that non-editable column by clicking the tab or shift-tab key while in batch edit mode.
 
 ## Automatically update the column based on another column edited value in batch mode
 
@@ -58,7 +58,7 @@ In the below demo, we have update the `TotalCost` column value based on the `Uni
 
 ## Cancel edit based on condition in batch mode
 
-You can prevent the CRUD operations of the Batch edit Grid by using condition in the [`cellEdit`](https://ej2.syncfusion.com/angular/documentation/api/grid/#cellEdit), [`beforeBatchAdd`](https://ej2.syncfusion.com/angular/documentation/api/grid/#beforeBatchAdd) and [`beforeBatchDelete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#beforeBatchDelete) events for Edit, Add and Delete actions respectively.
+You can prevent the CRUD operations of the Batch edit Grid by using condition in the [cellEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#celledit), [beforeBatchAdd](https://ej2.syncfusion.com/react/documentation/api/grid/#beforebatchadd) and [beforeBatchDelete](https://ej2.syncfusion.com/react/documentation/api/grid/#beforebatchdelete) events for Edit, Add and Delete actions respectively.
 
 In the below demo, we prevent the CRUD operation based on the `Role` column value. If the Role Column is `Employee`, we are unable to edit/delete that row.
 
@@ -100,5 +100,5 @@ By default, grid will show the confirm dialog when saving or cancelling or perfo
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs5" %}
 
-> * [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#showconfirmdialog) requires the [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) to be **Batch**.
-> * If [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#showconfirmdialog) set to **false**, then confirmation dialog does not display in batch editing.
+> * [editSettings.showConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#showconfirmdialog) requires the [`editSettings.mode`](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) to be **Batch**.
+> * If [editSettings.showConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#showconfirmdialog) set to **false**, then confirmation dialog does not display in batch editing.
