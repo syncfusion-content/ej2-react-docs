@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in React Grid component
 
-Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/filterSettings/).
+Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/#allowfiltering) to true. Filtering options can be configured through [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/).
 
 To use filter, inject the **Filter** module in the grid.
 
@@ -41,12 +41,12 @@ The Grid supports two types of filter, they are
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs8" %}
 
-> * You can apply and clear filtering, by using [`filterByColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#filterbycolumn) and [`clearFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#clearfiltering) methods.
-> * To disable Filtering for a particular column, by specifying [`columns.allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowfiltering) to **false**.
+> * You can apply and clear filtering, by using [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid/filter/#filterbycolumn) and [clearFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/filter/#clearfiltering) methods.
+> * To disable Filtering for a particular column, by specifying [columns.allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/column/#allowfiltering) to **false**.
 
 ## Initial filter
 
-To apply the filter at initial rendering, set the filter [`predicate`](https://ej2.syncfusion.com/angular/documentation/api/grid/predicate/) object in [`filterSettings.columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/filterSettingsModel/#columns).
+To apply the filter at initial rendering, set the filter [predicate](https://ej2.syncfusion.com/react/documentation/api/grid/predicate/) object in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel/#columns).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -67,7 +67,7 @@ To apply the filter at initial rendering, set the filter [`predicate`](https://e
 
 ## Filter operators
 
-The filter operator for a column can be defined in [`filterSettings.columns.operator`](https://ej2.syncfusion.com/angular/documentation/api/grid/predicateModel/#operator) property.
+The filter operator for a column can be defined in [filterSettings.columns.operator](https://ej2.syncfusion.com/react/documentation/api/grid/predicateModel/#operator) property.
 
 The available operators and its supported data types are,
 
@@ -118,7 +118,7 @@ a* |Everything that starts with "a".
 The **LIKE** filter can process single search patterns using the "%" symbol, retrieving values matching the specified patterns. The following Grid features support LIKE filtering on string-type columns:
 
 * Filter Menu
-* Filter Bar with the [`filterSettings.showFilterBarOperator`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#showFilterBarOperator) property enabled on the Grid [`filterSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/filterSettings/).
+* Filter Bar with the [filterSettings.showFilterBarOperator](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/#showfilterbaroperator) property enabled on the Grid [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/).
 * Custom Filter of Excel filter type.
 
 **For example:**
@@ -133,7 +133,7 @@ ab% |Returns all the value that are ends with "ab" character.
 
 ## Diacritics filter
 
-By default, grid ignores diacritic characters while filtering. To include diacritic characters, set the [`filterSettings.ignoreAccent`](https://ej2.syncfusion.com/angular/documentation/api/grid/filter/#ignoreaccent) as **true**.
+By default, grid ignores diacritic characters while filtering. To include diacritic characters, set the [filterSettings.ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/#ignoreaccent) as **true**.
 
 In the following sample, type **aero** in **Name** column to filter diacritic characters.
 
@@ -156,7 +156,7 @@ In the following sample, type **aero** in **Name** column to filter diacritic ch
 
 ## Filter bar
 
-You can customize default filter bar component of a column by custom component using [`filter template`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filtertemplate).
+You can customize default filter bar component of a column by custom component using [filter template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filtertemplate).
 
 The following example demonstrates the way to use filter template for a column when using filter bar. In the following example, the **DropdownList** component is used to filter **CustomerID** column using filter template.
 
@@ -179,7 +179,7 @@ The following example demonstrates the way to use filter template for a column w
 
 ## Filter menu
 
-You can customize default filter menu component of a column by custom component using [`filter template`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#filtertemplate).
+You can customize default filter menu component of a column by custom component using [filter template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filtertemplate).
 
 The following example demonstrates the way to use filter template for a column when using filter menu. In the following example, the **DropdownList** component is used to filter **ShipName** column using filter template.
 

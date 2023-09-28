@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 By default, React components are automatically re-rendered based on the state value change. In this cause, Grid component is also forced to re-render. So the Grid previous state neglect in this process. But we can prevent this behavior by overriding the `shouldComponentUpdate` method.
 
-In the below code, we have prevented the Grid re-rendering, when we change the state value in [`rowSelected`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowselected) event.
+In the below code, we have prevented the Grid re-rendering, when we change the state value in [rowSelected](https://ej2.syncfusion.com/react/documentation/api/grid/#rowselected) event.
 
 ```ts
 import * as React from 'react';

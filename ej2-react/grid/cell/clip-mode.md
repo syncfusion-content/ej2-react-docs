@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Clip mode in React Grid component
 
-The clip mode provides options to display its overflow cell content and it can be defined by the [`columns.clipMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#clipmode) property.
+The clip mode provides options to display its overflow cell content and it can be defined by the [columns.clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#clipmode) property.
 
-There are three types of [`clipMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#clipmode). They are:
+There are three types of [clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#clipmode). They are:
 
 * **Clip**: Truncates the cell content when it overflows its area.
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
@@ -35,4 +35,4 @@ There are three types of [`clipMode`](https://ej2.syncfusion.com/angular/documen
 
  {% previewsample "page.domainurl/code-snippet/grid/autowrap-cs3" %}
 
->By default, [`columns.clipMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#clipmode) value is **Ellipsis**.
+>By default, [columns.clipMode](https://ej2.syncfusion.com/react/documentation/api/grid/column/#clipmode) value is **Ellipsis**.

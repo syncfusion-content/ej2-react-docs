@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Complex data binding in React Grid component
 
-You can achieve complex data binding in the grid by using the dot(.) operator in the [`column.field`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#field).
+You can achieve complex data binding in the grid by using the dot(.) operator in the [column.field](https://ej2.syncfusion.com/react/documentation/api/grid/column/#field).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -29,7 +29,7 @@ You can achieve complex data binding in the grid by using the dot(.) operator in
 
  {% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs1" %}
 
-For OData and ODataV4 adaptors, you need to add [`expand`](https://ej2.syncfusion.com/documentation/api/data/query/#expand) query to the [`query`](https://ej2.syncfusion.com/angular/documentation/api/grid/#query) property (of Grid), to eager load the complex data.
+For OData and ODataV4 adaptors, you need to add [expand](https://ej2.syncfusion.com/documentation/api/data/query/#expand) query to the [query](https://ej2.syncfusion.com/react/documentation/api/grid/#query) property (of Grid), to eager load the complex data.
 
 ```ts
 import { DataManager, ODataAdaptor, Query } from '@syncfusion/ej2-data';

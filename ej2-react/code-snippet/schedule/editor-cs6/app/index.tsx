@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { useRef } from 'react';
-import { ScheduleComponent, RecurrenceEditorComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Inject, PopupOpenEventArgs, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
+import { ScheduleComponent, RecurrenceEditorComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Inject, PopupCloseEventArgs, EventSettingsModel } from '@syncfusion/ej2-react-schedule';
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { scheduleData } from './datasource';
@@ -10,9 +10,9 @@ const App = () => {
   const scheduleObj = useRef<ScheduleComponent>(null);
   const recurrObject = useRef<RecurrenceEditorComponent>(null);
   const eventSettings: EventSettingsModel = { dataSource: scheduleData };
-  const onPopupOpen = (args: PopupOpenEventArgs): void => {
-    if (args.type === 'Editor') {
-      (scheduleObj.current.eventWindow as any).recurrenceEditor = recurrObject.current;
+  const onPopupClose = (args: PopupCloseEventArgs): void => {
+    if (args.type === 'Editor' && args.data) {
+      args.data.RecurrenceRule = recurrObject.current.value;
     }
   }
   const editorTemplate = (props: any) => {
@@ -88,7 +88,7 @@ const App = () => {
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)}
     ref={scheduleObj}
     eventSettings={eventSettings} editorTemplate={editorTemplate} showQuickInfo={false}
-    popupOpen={onPopupOpen} >
+    popupClose={onPopupClose}>
     <ViewsDirective>
       <ViewDirective option='Day' />
       <ViewDirective option='Week' />

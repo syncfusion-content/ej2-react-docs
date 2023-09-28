@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Responsive columns in React Grid component
 
-You can toggle column visibility based on media queries which are defined at the [`hideAtMedia`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#hideatmedia). The [`hideAtMedia`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#hideatmedia) accepts valid [`Media Queries`]( http://cssmediaqueries.com/what-are-css-media-queries.html ). In the below sample, for **OrderID** column, [`hideAtMedia`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#hideatmedia) property value is set as **(min-width: 700px)** so that **OrderID** column will gets hidden when the browser screen width is **lessthan 700px**.
+You can toggle column visibility based on media queries which are defined at the [hideAtMedia](https://ej2.syncfusion.com/react/documentation/api/grid/column/#hideatmedia). The [hideAtMedia](https://ej2.syncfusion.com/react/documentation/api/grid/column/#hideatmedia) accepts valid [Media Queries]( http://cssmediaqueries.com/what-are-css-media-queries.html ). In the below sample, for **OrderID** column, [hideAtMedia](https://ej2.syncfusion.com/react/documentation/api/grid/column/#hideatmedia) property value is set as **(min-width: 700px)** so that **OrderID** column will gets hidden when the browser screen width is **lessthan 700px**.
 
 {% tabs %}
 {% highlight js tabtitle="datasource.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Get or set local storage value in React Grid component
 
-If the [`enablePersistence`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enablepersistence) property is set to **true**, the grid property value is saved in the **window.localStorage** for reference.
+If the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) property is set to **true**, the grid property value is saved in the **window.localStorage** for reference.
 You can get/set the localStorage value by using the **getItem/setItem** method in the **window.localStorage**.
 
 ```ts

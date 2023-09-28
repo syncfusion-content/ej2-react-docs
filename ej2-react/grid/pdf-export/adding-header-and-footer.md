@@ -14,7 +14,7 @@ You can customize text, page number, line, page size and changing orientation in
 
 ## Write a text in header and footer
 
-You can add text either in Header or Footer of exported PDF document using [`pdfExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfexportproperties).
+You can add text either in Header or Footer of exported PDF document using [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfexportproperties).
 
 ```ts
 
@@ -102,7 +102,7 @@ const exportProperties: PdfExportProperties = {
 
 ## Insert an image in header and footer
 
-Image (Base64 string) can be added in the exported document in header/footer using the [`PdfExportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/).
+Image (Base64 string) can be added in the exported document in header/footer using the [PdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/).
 
 ```ts
 
@@ -152,7 +152,7 @@ The below code illustrates the pdf export customization.
 
 By default, column header will be placed on the first page of the pdf document but you can display column header on every page using **repeatHeader** property of **pdfGrid**.
 
-In the below sample, we have enabled **repeatHeader** property in [`pdfHeaderQueryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfheaderquerycellinfo) event to show the header on every page.
+In the below sample, we have enabled **repeatHeader** property in [pdfHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfheaderquerycellinfo) event to show the header on every page.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

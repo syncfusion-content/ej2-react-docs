@@ -10,8 +10,8 @@ domainurl: ##DomainURL##
 
 # Print in React Grid component
 
-To print the Grid, use the [`print`](https://ej2.syncfusion.com/angular/documentation/api/grid/print/#print) method from grid instance.
-The print option can be displayed on the [`toolbar`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbar) by adding the **Print** toolbar item.
+To print the Grid, use the [print](https://ej2.syncfusion.com/react/documentation/api/grid/print/#print) method from grid instance.
+The print option can be displayed on the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) by adding the **Print** toolbar item.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -34,14 +34,14 @@ The print option can be displayed on the [`toolbar`](https://ej2.syncfusion.com/
 
 Some of the print options cannot be configured through JavaScript code. So, you have to customize the layout, paper size, and margin options using the browser page setup dialog. Please refer to the following links to know more about the browser page setup:
 
-* [`Chrome`](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
-* [`Firefox`](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
-* [`Safari`](http://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [`IE`](http://www.helpteaching.com/help/print/index.htm)
+* [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
+* [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
+* [Safari](http://www.mintprintables.com/print-tips/adjust-margins-osx/)
+* [IE](http://www.helpteaching.com/help/print/index.htm)
 
 ## Print by external button
 
-To print the grid from an external button, invoke the [`print`](https://ej2.syncfusion.com/angular/documentation/api/grid/print/#print) method.
+To print the grid from an external button, invoke the [print](https://ej2.syncfusion.com/react/documentation/api/grid/print/#print) method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -62,7 +62,7 @@ To print the grid from an external button, invoke the [`print`](https://ej2.sync
 
 ## Print visible Page
 
-By default, the grid prints all the pages. To print the current page alone, set the [`printMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/#printmode) to **CurrentPage**.
+By default, the grid prints all the pages. To print the current page alone, set the [printMode](https://ej2.syncfusion.com/react/documentation/api/grid/#printmode) to **CurrentPage**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -83,7 +83,7 @@ By default, the grid prints all the pages. To print the current page alone, set 
 
 ## Print the hierarchy grid
 
-By default, the grid will be print the master and expanded child grids alone. you can change the print option by using the [`hierarchyPrintMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/#hierarchyprintmode) property. The available options are,
+By default, the grid will be print the master and expanded child grids alone. you can change the print option by using the [hierarchyPrintMode](https://ej2.syncfusion.com/react/documentation/api/grid/#hierarchyprintmode) property. The available options are,
 
 | Mode     | Behavior    |
 |----------|-------------|
@@ -118,9 +118,9 @@ To show large number of columns when printing, adjust the scale option from prin
 
 ## Show or Hide columns while Printing
 
-You can show a hidden column or hide a visible column while printing the grid using [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbarclick) and [`printComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#printcomplete) events.
+You can show a hidden column or hide a visible column while printing the grid using [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) and [printComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#printcomplete) events.
 
-In the [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/grid/#toolbarclick) event, based on **args.item.id** as **grid_print**. We can show or hide columns by setting [`column.visible`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#visible) property to **true** or **false** respectively.
+In the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event, based on **args.item.id** as **grid_print**. We can show or hide columns by setting [column.visible](https://ej2.syncfusion.com/react/documentation/api/grid/column/#visible) property to **true** or **false** respectively.
 
 In the printComplete event, We have reversed the state back to the previous state.
 
