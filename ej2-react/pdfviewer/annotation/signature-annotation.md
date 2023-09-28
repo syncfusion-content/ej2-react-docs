@@ -86,7 +86,7 @@ function App() {
       <PdfViewerComponent
         id="container" 
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, 
@@ -157,7 +157,7 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         // Enable or disable handwritten signature.
         enableHandwrittenSignature = {true}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

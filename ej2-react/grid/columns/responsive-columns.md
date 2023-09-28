@@ -21,4 +21,4 @@ You can toggle column visibility based on media queries which are defined at the
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-cs30" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-cs30" %}

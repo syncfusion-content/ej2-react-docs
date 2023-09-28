@@ -44,7 +44,7 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**.
+**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2" %}
  
@@ -62,7 +62,7 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**.
+**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3" %}
 
@@ -82,7 +82,7 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**. 
+**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**. 
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4" %}
 
@@ -98,7 +98,7 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**. 
+**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**. 
   
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5" %}
 
