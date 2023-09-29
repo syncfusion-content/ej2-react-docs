@@ -35,13 +35,40 @@
             top: 45%;
             width: 30%;
         }
+
+        #reorderMultipleCols {
+            text-transform: none;
+        }
+
+        .e-grid .e-rowcell.customcss{
+            background-color: #ecedee;
+        }
+
+        .e-grid .e-headercell.customcss{
+            background-color: #ecedee;
+        }
     </style>
 </head>
 
 <body>
-        <div id='grid'>
+        <div id='root'>
             <div id='loader'>Loading....</div>
         </div>
+        <style>
+            .e-grid .e-headercell.customcss {
+                background-color: #ecedee;
+            }
+            
+            .e-grid .e-rowcell.customcss {
+                background-color: #ecedee;
+            }
+            .e-column:before {
+                content: '\e815';
+            }
+            .e-header:before {
+                content: '\ea9a';
+            }        
+        </style>
 </body>
 
 </html>

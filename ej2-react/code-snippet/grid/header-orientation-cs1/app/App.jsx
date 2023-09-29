@@ -1,6 +1,5 @@
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import './custom.css';
 import { data } from './datasource';
 function App() {
     const customAttributes = { class: 'orientationcss' };

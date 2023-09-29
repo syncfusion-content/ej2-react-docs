@@ -10,9 +10,9 @@ const App = () => {
   const scheduleObj = useRef(null);
   const recurrObject = useRef(null);
   const eventSettings = { dataSource: scheduleData };
-  const onPopupOpen = (args) => {
-    if (args.type === 'Editor') {
-      scheduleObj.current.eventWindow.recurrenceEditor = recurrObject.current;
+  const onPopupClose = (args) => {
+    if (args.type === 'Editor' && args.data) {
+      args.data.RecurrenceRule = recurrObject.current.value;
     }
   }
   const editorTemplate = (props) => {
@@ -88,7 +88,7 @@ const App = () => {
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 1, 15)}
     ref={scheduleObj}
     eventSettings={eventSettings} editorTemplate={editorTemplate} showQuickInfo={false}
-    popupOpen={onPopupOpen} >
+    popupClose={onPopupClose}>
     <ViewsDirective>
       <ViewDirective option='Day' />
       <ViewDirective option='Week' />
