@@ -7,3 +7,5 @@ function App() {
           <Target />
          </div>);
 }
+
+export default App;

@@ -2,7 +2,6 @@
 
 import { ColumnDirective, ColumnMenu, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import './custom.css';
 import { data } from './datasource';
 
 function App() {
