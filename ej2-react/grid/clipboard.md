@@ -38,7 +38,7 @@ Interaction keys |Description
 
 ## Copy to clipboard by external buttons
 
-To copy selected rows or cells data into clipboard with help of external buttons, you need to invoke the [`copy`](https://ej2.syncfusion.com/angular/documentation/api/grid/clipboard/#copy) method.
+To copy selected rows or cells data into clipboard with help of external buttons, you need to invoke the [copy](https://ej2.syncfusion.com/react/documentation/api/grid/clipboard/#copy) method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -59,7 +59,7 @@ To copy selected rows or cells data into clipboard with help of external buttons
 
 ## AutoFill
 
-AutoFill Feature allows you to copy the data of selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to required cells. This feature is enabled by defining [`enableAutoFill`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enableautofill) property as **true**.
+AutoFill Feature allows you to copy the data of selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to required cells. This feature is enabled by defining [enableAutoFill](https://ej2.syncfusion.com/react/documentation/api/grid/#enableautofill) property as **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -78,8 +78,8 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
  {% previewsample "page.domainurl/code-snippet/grid/clipboard-cs3" %}
 
-> * If [`enableAutoFill`](https://ej2.syncfusion.com/angular/documentation/api/grid/#enableautofill) is set to **true**, then the autofill icon will be displayed on cell selection to copy cells.
-> * It requires the selection [`mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettingsModel/#mode) to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettingsModel/#cellselectionmode) to be **Box** and also Batch Editing should be enabled.
+> * If [enableAutoFill](https://ej2.syncfusion.com/react/documentation/api/grid/#enableautofill) is set to **true**, then the autofill icon will be displayed on cell selection to copy cells.
+> * It requires the selection [mode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettingsModel/#mode) to be **Cell**,  [cellSelectionMode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettingsModel/#cellselectionmode) to be **Box** and also Batch Editing should be enabled.
 
 ### Limitations of AutoFill
 
@@ -107,7 +107,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
  {% previewsample "page.domainurl/code-snippet/grid/clipboard-cs4" %}
 
-> To perform paste functionality, it requires the selection **mode** to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettingsModel/#cellselectionmode) to be **Box** and also Batch Editing should be enabled.
+> To perform paste functionality, it requires the selection **mode** to be **Cell**,  [cellSelectionMode](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettingsModel/#cellselectionmode) to be **Box** and also Batch Editing should be enabled.
 
 ### Limitations of Paste Functionality
 

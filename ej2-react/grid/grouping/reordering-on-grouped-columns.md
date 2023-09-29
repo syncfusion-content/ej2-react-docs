@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Grid provides an option to interchange the position of the Grouped Columns by dragging and dropping the grouped headercells in the droparea. So, any new column entering into the droparea can also be dropped in any position.
 
-To enable this feature, you have to set the [`groupSettings.allowReordering`](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/#allowReordering) property as **true**.
+To enable this feature, you have to set the [groupSettings.allowReordering](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings/#allowReordering) property as **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

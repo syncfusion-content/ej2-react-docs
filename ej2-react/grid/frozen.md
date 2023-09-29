@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Frozen rows and columns provides an option to make rows and columns always visible in the top and left side of the grid while scrolling.
 
-In this demo, the [`frozenColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/#frozencolumns) is set as **'2'** and the [`frozenRows`](https://ej2.syncfusion.com/angular/documentation/api/grid/#frozenrows)
+In this demo, the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#frozencolumns) is set as **'2'** and the [frozenRows](https://ej2.syncfusion.com/react/documentation/api/grid/#frozenrows)
 is set as **'3'**. Hence, the left two columns and top three rows are frozen.
 
 {% tabs %}
@@ -44,9 +44,9 @@ The following features are not supported in frozen rows and columns:
 
 ## Freeze Direction
 
-You can freeze the Grid columns on the left or right side by using the [`column.freeze`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#freeze) property and the remaining columns will be movable. The grid will automatically move the columns to the left or right position based on the [`column.freeze`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#freeze) value.
+You can freeze the Grid columns on the left or right side by using the [column.freeze](https://ej2.syncfusion.com/react/documentation/api/grid/column/#freeze) property and the remaining columns will be movable. The grid will automatically move the columns to the left or right position based on the [column.freeze](https://ej2.syncfusion.com/react/documentation/api/grid/column/#freeze) value.
 
-Types of the [`column.freeze`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#freeze) directions:
+Types of the [column.freeze](https://ej2.syncfusion.com/react/documentation/api/grid/column/#freeze) directions:
 
 * **`Left`**: Allows you to freeze the columns at the left.
 * **`Right`**: Allows you to freeze the columns at the right.
@@ -71,7 +71,7 @@ In this demo, the **ShipCountry** column is frozen at the left and the **Custome
 
  {% previewsample "page.domainurl/code-snippet/grid/scrolling-cs2" %}
 
-> * Freeze Direction is not compatible with the [`isFrozen`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#isfrozen) and [`frozenColumns`](https://ej2.syncfusion.com/angular/documentation/api/grid/#frozencolumns) properties.
+> * Freeze Direction is not compatible with the [isFrozen](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isfrozen) and [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#frozencolumns) properties.
 
 ## Deprecated Methods
 

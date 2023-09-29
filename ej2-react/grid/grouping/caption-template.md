@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Caption template in React Grid component
 
-You can customize the group caption by using the [`groupSettings.captionTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/#captionTemplate) property.
+You can customize the group caption by using the [groupSettings.captionTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings/#captionTemplate) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

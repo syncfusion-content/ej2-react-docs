@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Column selection can be done through simple mouse down or arrow keys.
 
-You can enable column selection by setting the [`selectionSettings.allowColumnSelection`](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#allowcolumnselection) property as true.
+You can enable column selection by setting the [selectionSettings.allowColumnSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#allowcolumnselection) property as true.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

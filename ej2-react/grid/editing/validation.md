@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data.
 Grid uses **Form Validator** component for column validation.
-You can set validation rules by defining the [`columns.validationRules`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#validationrules).
+You can set validation rules by defining the [columns.validationRules](https://ej2.syncfusion.com/react/documentation/api/grid/column/#validationrules).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

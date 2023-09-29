@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Custom aggregate in React Grid component
 
-To calculate the aggregate value with your own aggregate functions, use the custom aggregate option. To use custom aggregation, specify the [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#type) as **Custom**, and provide the custom aggregate function in the [`customAggregate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#customaggregate) property.
+To calculate the aggregate value with your own aggregate functions, use the custom aggregate option. To use custom aggregation, specify the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) as **Custom**, and provide the custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#customaggregate) property.
 
 The custom aggregate function will be invoked with different arguments for total and group aggregations.
-* **Total aggregation**: The custom aggregate function will be called with the whole data and current [`AggregateColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/) object.
-* **Group aggregation**: This will be called with the current group details and [`AggregateColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/) object.
+* **Total aggregation**: The custom aggregate function will be called with the whole data and current [AggregateColumn](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/) object.
+* **Group aggregation**: This will be called with the current group details and [AggregateColumn](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/) object.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

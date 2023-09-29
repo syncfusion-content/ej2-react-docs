@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Inline or dialog template editing
 
-The Dialog/Inline template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your own editors by defining the [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as **Dialog/Normal** and [`editSetting.template`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#template) as a React component.
+The Dialog/Inline template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your own editors by defining the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as **Dialog/Normal** and [editSetting.template](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#template) as a React component.
 
 In some cases, you need to add the new field editors in the dialog which are not present in the column model. In that situation, the dialog template will help you to customize the default edit dialog.
 
@@ -69,7 +69,7 @@ In the following code example, the **OrderID** textbox has been disabled by usin
 
 ## Get value from editor
 
-You can read, format, and update the current editor value in the [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionbegin) event at the time of setting [`requestType`](https://ej2.syncfusion.com/angular/documentation/api/grid/saveEventArgs/#requesttype) to **save**.
+You can read, format, and update the current editor value in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event at the time of setting [requestType](https://ej2.syncfusion.com/react/documentation/api/grid/saveEventArgs/#requesttype) to **save**.
 
 In the following code example, the **Freight** value has been formatted and updated.
 
@@ -86,7 +86,7 @@ In the following code example, the **Freight** value has been formatted and upda
 ## Set focus to editor
 
 By default, the first input element in the dialog will be focused while opening the dialog.
-If the first input element is in disabled or hidden state, focus the valid input element in the [`actionComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event based on `requestType` as `beginEdit`.
+If the first input element is in disabled or hidden state, focus the valid input element in the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event based on `requestType` as `beginEdit`.
 
 ```ts
 
@@ -101,7 +101,7 @@ const actionComplete = (args: DialogEditEventArgs) => {
 
 ## Adding validation rules for custom editors
 
-If you have used additional fields that are not present in the column model, then add the validation rules to the [`actionComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event.
+If you have used additional fields that are not present in the column model, then add the validation rules to the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event.
 
 ```ts
 
@@ -116,7 +116,7 @@ If you have used additional fields that are not present in the column model, the
 
 ## Render tab component inside the dialog template
 
-You can use [`tab`](../../../tab) component inside dialog edit UI using dialog template feature. The dialog template feature can be enabled by defining  [`editSettings.mode`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#mode) as `Dialog` and [`editSetting.template`](https://ej2.syncfusion.com/angular/documentation/api/grid/editSettings/#template) as a REACT Component.
+You can use [tab](../../../tab) component inside dialog edit UI using dialog template feature. The dialog template feature can be enabled by defining  [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as `Dialog` and [editSetting.template](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#template) as a REACT Component.
 
 The following example demonstrate the usage of tab control inside the dialog template.
 

@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 # Paging in React Grid component
 
 Paging provides an option to display Grid data in page segments.
-To enable paging, set the [`allowPaging`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowpaging) to true.
+To enable paging, set the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/#allowpaging) to true.
 When paging is enabled, pager component renders at the bottom of the grid.
-Paging options can be configured through the [`pageSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/).
+Paging options can be configured through the [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/).
 
-In the below sample, [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagesize) is calculated based on the grid height by using the [`load`](https://ej2.syncfusion.com/angular/documentation/api/grid/#load) event.
+In the below sample, [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#pagesize) is calculated based on the grid height by using the [load](https://ej2.syncfusion.com/react/documentation/api/grid/#load) event.
 
 To use Paging, inject **Page** module in Grid.
 
@@ -40,7 +40,7 @@ To use Paging, inject **Page** module in Grid.
 
 ## Template
 
-You can use custom elements inside the pager instead of default elements. The custom elements can be defined by using the [`template`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#template) property. Inside this template, you can access the [`currentPage`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#currentpage), [`pageSize`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagesize), [`pageCount`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagecount), totalPage and totalRecordsCount values.
+You can use custom elements inside the pager instead of default elements. The custom elements can be defined by using the [template](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#template) property. Inside this template, you can access the [currentPage](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#currentpage), [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#pagesize), [pageCount](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#pagecount), totalPage and totalRecordsCount values.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -61,7 +61,7 @@ You can use custom elements inside the pager instead of default elements. The cu
 
 ## Pager with Page Size Dropdown
 
-The pager Dropdown allows you to change the number of records in the Grid dynamically. It can be enabled by defining the [`pageSettings.pageSizes`](https://ej2.syncfusion.com/angular/documentation/api/grid/pageSettings/#pagesizes) property as **true**.
+The pager Dropdown allows you to change the number of records in the Grid dynamically. It can be enabled by defining the [pageSettings.pageSizes](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#pagesizes) property as **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -82,7 +82,7 @@ The pager Dropdown allows you to change the number of records in the Grid dynami
 
 ## How to render Pager at the Top of the Grid
 
-By default, Pager will be rendered at the bottom of the Grid. You can also render the Pager at the top of the Grid by using the [`dataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#databound) event.
+By default, Pager will be rendered at the bottom of the Grid. You can also render the Pager at the top of the Grid by using the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -102,9 +102,9 @@ By default, Pager will be rendered at the bottom of the Grid. You can also rende
  {% previewsample "page.domainurl/code-snippet/grid/pager-cs5" %}
 
 > During the paging action, the pager component triggers the below three events.
-> * The [`created`](https://ej2.syncfusion.com/react/documentation/api/pager/#created) event triggers when Pager is created.
-> * The [`click`](https://ej2.syncfusion.com/react/documentation/api/pager/#click) event triggers when the numeric items in the pager is clicked.
-> * The [`dropDownChanged`](https://ej2.syncfusion.com/react/documentation/api/pager/#dropdownchanged) event triggers when pageSize DropDownList value is selected.
+> * The [created](https://ej2.syncfusion.com/react/documentation/api/pager/#created) event triggers when Pager is created.
+> * The [click](https://ej2.syncfusion.com/react/documentation/api/pager/#click) event triggers when the numeric items in the pager is clicked.
+> * The [dropDownChanged](https://ej2.syncfusion.com/react/documentation/api/pager/#dropdownchanged) event triggers when pageSize DropDownList value is selected.
 
 ## See Also
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Footer aggregate in React Grid component
 
-Footer aggregate value is calculated for all the rows, and it is displayed in the footer cells. Use the [`footerTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in footer cells.
+Footer aggregate value is calculated for all the rows, and it is displayed in the footer cells. Use the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in footer cells.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -29,11 +29,11 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 
  {% previewsample "page.domainurl/code-snippet/grid/aggregate-cs2" %}
 
-> The aggregate values must be accessed inside the template using their corresponding [`type`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#type) name.
+> The aggregate values must be accessed inside the template using their corresponding [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) name.
 
 ## How to format aggregate value
 
-You can format the aggregate value result by using the [`format`](https://ej2.syncfusion.com/angular/documentation/api/grid/aggregateColumn/#format) property.
+You can format the aggregate value result by using the [format](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#format) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -54,7 +54,7 @@ You can format the aggregate value result by using the [`format`](https://ej2.sy
 
 ## How to place aggregates on top of the Grid
 
-By default, the aggregated values are placed at the bottom of the footer section. It is possible to place the aggregated values at the top of the header. This is achieved by using the [dataBound](https://ej2.syncfusion.com/angular/documentation/api/grid/#databound) event, [getHeaderContent](https://ej2.syncfusion.com/angular/documentation/api/grid/#getheadercontent), and [getFooterContent](https://ej2.syncfusion.com/angular/documentation/api/grid/#getfootercontent) methods of the Grid.
+By default, the aggregated values are placed at the bottom of the footer section. It is possible to place the aggregated values at the top of the header. This is achieved by using the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event, [getHeaderContent](https://ej2.syncfusion.com/react/documentation/api/grid/#getheadercontent), and [getFooterContent](https://ej2.syncfusion.com/react/documentation/api/grid/#getfootercontent) methods of the Grid.
 
 In the following sample, the footer element is appended to the header element using the `getHeaderContent` and `getFooterContent` methods in the `dataBound` event.
 

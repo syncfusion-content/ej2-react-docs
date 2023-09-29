@@ -12,32 +12,32 @@ domainurl: ##DomainURL##
 
 ## Customize editors using params
 
-The [`columns.editType`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#edittype) is used to define the editor component for any particular column.
-You can set the [`columns.editType`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#edittype) based on data type of the column.
+The [columns.editType](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edittype) is used to define the editor component for any particular column.
+You can set the [columns.editType](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edittype) based on data type of the column.
 
-* [`NumericTextBox`](../../numerictextbox) component for integers, double, and decimal data types.
+* [NumericTextBox](../../numerictextbox) component for integers, double, and decimal data types.
 
-* [`TextBox`](../../textbox) component for string data type.
+* [TextBox](../../textbox) component for string data type.
 
-* [`DropDownList`](../../drop-down-list) component to show all unique values related to that field.
+* [DropDownList](../../drop-down-list) component to show all unique values related to that field.
 
-* [`CheckBox`](../../check-box) component for boolean data type.
+* [CheckBox](../../check-box) component for boolean data type.
 
-* [`DatePicker`](../../datepicker) component for date data type.
+* [DatePicker](../../datepicker) component for date data type.
 
-* [`DateTimePicker`](../../datetimepicker) component for date time data type.
+* [DateTimePicker](../../datetimepicker) component for date time data type.
 
-Also, you can customize the behavior of the component through the [`columns.edit.params`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#edit).
+Also, you can customize the behavior of the component through the [columns.edit.params](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit).
 
 The following table describes editor component and their example edit params of the column.
 
 Component |Example
 -----|-----
-[`NumericTextBox`](../../numerictextbox) | params: { decimals: 2, value: 5 }
-[`DropDownList`](../../drop-down-list) | params: { value: 'Germany' }
-[`Checkbox`](../../check-box) | params: { checked: true}
-[`DatePicker`](../../datepicker) | params: { format:'dd.MM.yyyy' }
-[`DateTimePicker`](../../datetimepicker) | params: { value: new Date() }
+[NumericTextBox](../../numerictextbox) | params: { decimals: 2, value: 5 }
+[DropDownList](../../drop-down-list) | params: { value: 'Germany' }
+[Checkbox](../../check-box) | params: { checked: true}
+[DatePicker](../../datepicker) | params: { format:'dd.MM.yyyy' }
+[DateTimePicker](../../datetimepicker) | params: { value: new Date() }
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -83,7 +83,7 @@ In the below demo, while editing the row we have restricted to type the decimal 
 
 ### Provide custom data source and enabling filtering to DropDownList
 
-You can provide data source to the DropDownList by using the **params** of [`columns.edit`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#edit) property.
+You can provide data source to the DropDownList by using the **params** of [columns.edit](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property.
 
 While setting new data source using edit params, you must specify a new **query** property for the DropDownList as follows,
 
@@ -99,9 +99,9 @@ While setting new data source using edit params, you must specify a new **query*
   };
 ```
 
-You can also enable filtering for the DropDownList by passing the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/drop-down-list/#allowfiltering) as **true** to the edit params.
+You can also enable filtering for the DropDownList by passing the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#allowfiltering) as **true** to the edit params.
 
-In the below demo, DropDownList is rendered with custom [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/drop-down-list/#datasource) for the *ShipCountry* column and enabled filtering to search DropDownList items.
+In the below demo, DropDownList is rendered with custom [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#datasource) for the *ShipCountry* column and enabled filtering to search DropDownList items.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -218,7 +218,7 @@ Use the cell edit template feature of the Grid to render the MaskedTextBox compo
 
 ### Render RichTextEditor component while editing
 
-Use the cell edit template feature of the Grid to render the RichTextEditor component in the Grid edit form. In the below sample, we have rendered RichTextEditor component in the **ShipAddress** column, so we use [allowTextWrap](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowtextwrap) property to true.
+Use the cell edit template feature of the Grid to render the RichTextEditor component in the Grid edit form. In the below sample, we have rendered RichTextEditor component in the **ShipAddress** column, so we use [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid/#allowtextwrap) property to true.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -241,7 +241,7 @@ Use the cell edit template feature of the Grid to render the RichTextEditor comp
 
 Use the cell edit template feature of the Grid to render the DropDownList component in the Grid edit form.
 
-The DropDownList has been provided with several options to customize each list item, group title, selected value, header, and footer element. By default, list items can be rendered as a single column in the DropDownList component. Instead of this, multiple columns can be rendered. This can be achieved by using the [headerTemplate](https://ej2.syncfusion.com/angular/documentation/api/drop-down-list/#headertemplate) and [itemTemplate](https://ej2.syncfusion.com/angular/documentation/api/drop-down-list/#itemtemplate) properties of the DropDownList component.
+The DropDownList has been provided with several options to customize each list item, group title, selected value, header, and footer element. By default, list items can be rendered as a single column in the DropDownList component. Instead of this, multiple columns can be rendered. This can be achieved by using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#headertemplate) and [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#itemtemplate) properties of the DropDownList component.
 
 This is demonstrated in the following sample.
 
@@ -264,7 +264,7 @@ This is demonstrated in the following sample.
 
 ### Using template
 
-The cell editor for a particular column can be specified using a React Component. The [`column.editTemplate`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#edittemplate) property used to define the corresponding column editor.
+The cell editor for a particular column can be specified using a React Component. The [column.editTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edittemplate) property used to define the corresponding column editor.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

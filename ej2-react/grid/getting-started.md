@@ -105,15 +105,15 @@ Please find relevant feature service name and description as follows.
 
 These modules should be injected into the grid using the **Inject** directive.
 
-> Additional feature modules are available [`here`](./module).
+> Additional feature modules are available [here](./module).
 
 ## Enable Paging
 
 The paging feature enables users to view the Grid record in a paged view.
-It can be enabled by setting [`allowPaging`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowpaging) property to true.
+It can be enabled by setting [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/#allowpaging) property to true.
 Inject the **Page** module in **Inject.services** as follows.
 If the **Page** service is not injected, the pager will not be rendered in the grid.
-Pager can be customized using [`pageSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#pagesettings) property.
+Pager can be customized using [pageSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#pagesettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -135,10 +135,10 @@ Pager can be customized using [`pageSettings`](https://ej2.syncfusion.com/angula
 ## Enable Sorting
 
 The sorting feature enables you to order the records.
-It can be enabled by setting the [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowsorting) property as true.
+It can be enabled by setting the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) property as true.
 Inject the **Sort** module in the **Inject.services** as follows.
 If the **Sort** module is not injected, you cannot sort when a header is clicked.
-Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#sortsettings) property.
+Sorting feature can be customized using [sortSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#sortsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -159,10 +159,10 @@ Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.
 
 ## Enable Filtering
 
-It can be enabled by setting the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowfiltering) property as true.
-Inject the [`Filter`](https://ej2.syncfusion.com/angular/documentation/api/grid/#filtermodule) module in the **Inject.services** as follows.
-If [`Filter`](https://ej2.syncfusion.com/angular/documentation/api/grid/#filtermodule) module is not injected, filter bar will not be rendered in Grid.
-Filtering feature can be customized using [`filterSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#filtersettings) property.
+It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/grid/#allowfiltering) property as true.
+Inject the [Filter](https://ej2.syncfusion.com/react/documentation/api/grid/#filtermodule) module in the **Inject.services** as follows.
+If [Filter`](https://ej2.syncfusion.com/react/documentation/api/grid/#filtermodule) module is not injected, filter bar will not be rendered in Grid.
+Filtering feature can be customized using [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#filtersettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -184,10 +184,10 @@ Filtering feature can be customized using [`filterSettings`](https://ej2.syncfus
 ## Enable Grouping
 
 The grouping feature enables you to view the grid record in a grouped view.
-It can be enabled by setting [`allowGrouping`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowgrouping) property to true.
-The [`Group`](https://ej2.syncfusion.com/angular/documentation/api/grid/#groupmodule) module has to be injected as follows.
-If [`Group`](https://ej2.syncfusion.com/angular/documentation/api/grid/#groupmodule) module is not injected, the group drop area will not be rendered in Grid.
-Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusion.com/angular/documentation/api/grid/#groupsettings) property.
+It can be enabled by setting [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/#allowgrouping) property to true.
+The [Group](https://ej2.syncfusion.com/react/documentation/api/grid/#groupmodule) module has to be injected as follows.
+If [Group](https://ej2.syncfusion.com/react/documentation/api/grid/#groupmodule) module is not injected, the group drop area will not be rendered in Grid.
+Grouping feature can be customized using [groupSettings](https://ej2.syncfusion.com/react/documentation/api/grid/#groupsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

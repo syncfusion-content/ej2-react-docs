@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Row in React Grid component
 
-It represents the record details that are fetched from the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource).
+It represents the record details that are fetched from the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource).
 
 ## Row Customization
 
 ### Using event
 
-You can customize the appearance of the Row by using the [`rowDataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdatabound) event.
-The [`rowDataBound`](https://ej2.syncfusion.com/angular/documentation/api/grid/#rowdatabound) event triggers for every row. In that event handler, you can get [`RowDataBoundEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/rowDataBoundEventArgs/) which contain details of the row.
+You can customize the appearance of the Row by using the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdatabound) event.
+The [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdatabound) event triggers for every row. In that event handler, you can get [RowDataBoundEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/rowDataBoundEventArgs/) which contain details of the row.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -96,7 +96,7 @@ This is demonstrated in the following sample:
 
 ## Adding a new row programmatically
 
-The Grid can add a new row between the existing rows using the [addRecord](https://ej2.syncfusion.com/angular/documentation/api/grid/#addrecord) method of the Grid.
+The Grid can add a new row between the existing rows using the [addRecord](https://ej2.syncfusion.com/react/documentation/api/grid/#addrecord) method of the Grid.
 
 This is demonstrated in the following sample:
 
@@ -121,7 +121,7 @@ This is demonstrated in the following sample:
 
 ## How to get the row information when hovering over the cell
 
-It is possible to get the row information when hovering over the specific cell. This can be achieved by using the [rowDataBound](https://ej2.syncfusion.com/angular/documentation/api/grid#rowdatabound) event and [getRowInfo](https://ej2.syncfusion.com/angular/documentation/api/grid#getrowinfo) method of the Grid.
+It is possible to get the row information when hovering over the specific cell. This can be achieved by using the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event and [getRowInfo](https://ej2.syncfusion.com/react/documentation/api/grid#getrowinfo) method of the Grid.
 
 In the following sample, the `mouseover` event is bound to a grid row in the `rowDataBound` event, and when hovering over the specific cell, using the `getRowInfo` method, row information will be retrieved and displayed in the console.
 

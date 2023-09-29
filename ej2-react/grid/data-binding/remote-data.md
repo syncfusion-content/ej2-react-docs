@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Remote data in React Grid component
 
-To bind remote data to grid component, assign service data as an instance of **DataManager** to the [`dataSource`](https://ej2.syncfusion.com/angular/documentation/api/grid/#datasource) property. To interact with remote data source, provide the endpoint **url**.
+To bind remote data to grid component, assign service data as an instance of **DataManager** to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property. To interact with remote data source, provide the endpoint **url**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -23,7 +23,7 @@ To bind remote data to grid component, assign service data as an instance of **D
 
  {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs4" %}
 
-> By default **DataManager** uses [`ODataAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
+> By default **DataManager** uses [ODataAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
 
 ## OData adaptor - Binding OData service
 
@@ -45,7 +45,7 @@ You can retrieve data from OData service using DataManager. You can refer to the
 
 The ODataV4 is an improved version of OData protocols, and the **DataManager** can also retrieve and consume OData v4 services.
 For more details on OData v4 services, refer to the [odata documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197).
-To bind OData v4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odatav4-adaptor).
+To bind OData v4 service, use the [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odatav4-adaptor).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -60,7 +60,7 @@ To bind OData v4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/
 
 ## Web API adaptor
 
-You can use [`WebApiAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#web-api-adaptor) to bind grid with Web API created using OData endpoint.
+You can use [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/#web-api-adaptor) to bind grid with Web API created using OData endpoint.
 
 ```ts
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
@@ -156,7 +156,7 @@ The following code example describes the CRUD operations handled at server-side.
 
 ## Custom adaptor
 
-You can create your own adaptor by extending the built-in adaptors. For the sake of demonstrating custom adaptor approach, we are going to see how to add serial number for the records by overriding the built-in response processing using **processResponse** method of the [`ODataAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor).
+You can create your own adaptor by extending the built-in adaptors. For the sake of demonstrating custom adaptor approach, we are going to see how to add serial number for the records by overriding the built-in response processing using **processResponse** method of the [ODataAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odata-adaptor).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Cell customization
 
-The appearance of cells can be customized by using the [`queryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querycellinfo) event.
-The [`queryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/#querycellinfo) event triggers for every cell.
-In that event handler, you can get [`QueryCellInfoEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/grid/queryCellInfoEventArgs/) that contains the details of the cell.
+The appearance of cells can be customized by using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event.
+The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event triggers for every cell.
+In that event handler, you can get [QueryCellInfoEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/) that contains the details of the cell.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -35,7 +35,7 @@ In that event handler, you can get [`QueryCellInfoEventArgs`](https://ej2.syncfu
 
 ## Custom attributes
 
-You can customize the grid cells by adding a CSS class to the [`customAttribute`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#customattributes) property of the column.
+You can customize the grid cells by adding a CSS class to the [customAttribute](https://ej2.syncfusion.com/react/documentation/api/grid/column/#customattributes) property of the column.
 
 ```css
 .e-attr {
@@ -70,7 +70,7 @@ In the below example, we have customized the cells of **OrderID** and **ShipCity
 
 ## Grid lines
 
-The [`gridLines`](https://ej2.syncfusion.com/angular/documentation/api/grid/#gridlines) have option to display cell border and it can be defined by the [`gridLines`](https://ej2.syncfusion.com/angular/documentation/api/grid/#gridlines) property.
+The [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid/#gridlines) have option to display cell border and it can be defined by the [gridLines](https://ej2.syncfusion.com/react/documentation/api/grid/#gridlines) property.
 
 The available modes of grid lines are:
 

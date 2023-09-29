@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Conditional cell formatting
 
-Grid cells in the exported PDF can be customized or formatted using [`pdfQueryCellInfo`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfQueryCellInfoEventArgs/#cell) event. In this event, we can format the grid cells of exported PDF document based on the column cell value.
+Grid cells in the exported PDF can be customized or formatted using [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/pdfQueryCellInfoEventArgs/#cell) event. In this event, we can format the grid cells of exported PDF document based on the column cell value.
 
 In the below sample, we have set the background color for **Freight** column in the exported document by **args.cell** and **backgroundColor** property.
 
@@ -37,7 +37,7 @@ In the below sample, we have set the background color for **Freight** column in 
 
 PDF export provides an option to include theme for exported PDF document.
 
-To apply theme in exported PDF, define the [`theme`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#theme) in [`exportProperties`](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/) .
+To apply theme in exported PDF, define the [theme](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#theme) in [exportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) .
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 # Sorting in React Grid component
 
 The Grid component has support to sort data bound columns in **Ascending** or **Descending** order.
-This can be achieved by setting [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowsorting) property as true.
+This can be achieved by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) property as true.
 
 To dynamically sort a particular column, click on its column header.
 The order switch between **Ascending** and **Descending** each time you click a column header for sorting.
@@ -36,12 +36,12 @@ To use Sorting, inject **Sort** module in Grid.
  {% previewsample "page.domainurl/code-snippet/grid/sort-cs1" %}
 
 > * Grid column sorted in **Ascending** order. If you click on already sorted column, Grid toggles the sort direction.
-> * You can apply and clear sorting by invoking [`sortColumn`](https://ej2.syncfusion.com/angular/documentation/api/grid/#sortcolumn) and [`clearSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#clearsorting) methods.
-> * To disable Sorting for a particular column, by specifying [`columns.allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#allowsorting) to **false**.
+> * You can apply and clear sorting by invoking [`sortColumn`](https://ej2.syncfusion.com/react/documentation/api/grid/#sortcolumn) and [`clearSorting`](https://ej2.syncfusion.com/react/documentation/api/grid/#clearsorting) methods.
+> * To disable Sorting for a particular column, by specifying [`columns.allowSorting`](https://ej2.syncfusion.com/react/documentation/api/grid/column/#allowsorting) to **false**.
 
 ## Initial Sort
 
-To apply sort at initial rendering, set the [`field`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortDescriptorModel/#field) and [`direction`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortDescriptorModel/#direction) in [`sortSettings.columns`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortSettingsModel/#columns).
+To apply sort at initial rendering, set the [field](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel/#field) and [direction](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel/#direction) in [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/sortSettingsModel/#columns).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -66,8 +66,8 @@ You can sort more than one column in a Grid. To sort multiple columns, press and
 
 To clear sorting for a particular column, press the **Shift + mouse left click**.
 
-> The [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowsorting) must be true while enabling multi-column sort.
-> Set [`allowMultiSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowmultisorting) property as **false** to disable multi-column sorting.
+> The [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) must be true while enabling multi-column sort.
+> Set [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowmultisorting) property as **false** to disable multi-column sorting.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -94,9 +94,9 @@ When first click a column header it sorts the column in ascending. Again click t
 
 ## Sort foreign key column based on Text
 
-For local data in Grid, sorting will be performed based on the [`foreignKeyValue`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyvalue).
+For local data in Grid, sorting will be performed based on the [foreignKeyValue](https://ej2.syncfusion.com/react/documentation/api/grid/column/#foreignkeyvalue).
 
-For remote data in Grid, sorting will be performed based on the [`foreignKeyField`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#foreignkeyfield), we need to handle the sorting operation at the server side.
+For remote data in Grid, sorting will be performed based on the [foreignKeyField](https://ej2.syncfusion.com/react/documentation/api/grid/column/#foreignkeyfield), we need to handle the sorting operation at the server side.
 
 ```ts
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
@@ -174,7 +174,7 @@ The following code example describes the handling of sorting operation at the se
 
 ## Sorting Events
 
-During the sort action, the Grid component triggers two events. [`actionBegin`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actionbegin) event triggers before the sort action starts, and [`actionComplete`](https://ej2.syncfusion.com/angular/documentation/api/grid/#actioncomplete) event triggers after the sort action complete. Using these events you can perform the needed actions.
+During the sort action, the Grid component triggers two events. [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event triggers before the sort action starts, and [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event triggers after the sort action complete. Using these events you can perform the needed actions.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -193,13 +193,13 @@ During the sort action, the Grid component triggers two events. [`actionBegin`](
 
  {% previewsample "page.domainurl/code-snippet/grid/sort-cs4" %}
 
-> [`args.requestType`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortEventArgs/#requesttype) retrieves the current action name.
-For example in sorting, the [`args.requestType`](https://ej2.syncfusion.com/angular/documentation/api/grid/sortEventArgs/#requesttype) value is **sorting**.
+> [args.requestType](https://ej2.syncfusion.com/react/documentation/api/grid/sortEventArgs/#requesttype) retrieves the current action name.
+For example in sorting, the [args.requestType](https://ej2.syncfusion.com/react/documentation/api/grid/sortEventArgs/#requesttype) value is **sorting**.
 
 ## Custom sort comparer
 
-You can customize the default sort action for a column by defining the [`column.sortComparer`](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#sortcomparer) property.
-The sort comparer function has the same functionality like [`Array.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) sort comparer.
+You can customize the default sort action for a column by defining the [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/grid/column/#sortcomparer) property.
+The sort comparer function has the same functionality like [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) sort comparer.
 
 In the following example, custom sort comparer function was defined in the **Customer ID** column.
 
@@ -227,7 +227,7 @@ In the following example, custom sort comparer function was defined in the **Cus
 When you tap the grid header on touchscreen devices, the selected column header is sorted. A popup ![Sorting](images/sorting.jpg) is displayed for multi-column sorting.
 To sort multiple columns, tap the popup![Multi Sorting](images/msorting.jpg), and then tap the desired grid headers.
 
-The [`allowMultiSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowmultisorting) and [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/grid/#allowsorting) should be **true** then only the popup will be shown.
+The [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowmultisorting) and [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) should be **true** then only the popup will be shown.
 
 The following screenshot shows grid touch sorting.
 
