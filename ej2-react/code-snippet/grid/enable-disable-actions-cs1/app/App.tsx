@@ -4,7 +4,6 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Edit, Grid, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import './custom.css';
 import { data } from './datasource';
 
 function App() {

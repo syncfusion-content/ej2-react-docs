@@ -2,7 +2,6 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import './custom.css';
 import { data } from './datasource';
 function App() {
     const editOptions = { allowAdding: true, allowEditing: true, allowDeleting: true };

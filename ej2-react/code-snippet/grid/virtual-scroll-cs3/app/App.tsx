@@ -6,10 +6,10 @@ import * as React from 'react';
 import { data } from './largeData';
 
 function App() {
-  const data: object[] = data(1000);
+  const datas: object[] = data(1000);
   const pageSettings: PageSettingsModel = { pageSize: 50 };
   const infiniteOptions: InfiniteScrollSettingsModel = { enableCache: true };
-  return <GridComponent dataSource={data} height={300} enableInfiniteScrolling={true} infiniteScrollSettings={ infiniteOptions } pageSettings={ pageSettings }>
+  return <GridComponent dataSource={datas} height={300} enableInfiniteScrolling={true} infiniteScrollSettings={ infiniteOptions } pageSettings={ pageSettings }>
           <Inject services={[InfiniteScroll]} />
           <ColumnsDirective>
               <ColumnDirective field='TaskID' headerText='Task ID' width='70' textAlign='Right'/>
