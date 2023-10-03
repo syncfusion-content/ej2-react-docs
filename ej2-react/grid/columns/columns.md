@@ -388,11 +388,17 @@ By default, cells in the grid will be blank if the corresponding column values i
 In the following sample, the `rowDataBound` event of the Grid is used to set the innerHTML of the checkbox element to empty.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/grid/blank-row-cs1/app/index.jsx %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/blank-row-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/grid/blank-row-cs1/app/index.tsx %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/blank-row-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/blank-row-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/blank-row-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
