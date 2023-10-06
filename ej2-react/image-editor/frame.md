@@ -19,7 +19,7 @@ The [`drawFrame`](https://ej2.syncfusion.com/react/documentation/api/image-edito
 
 Depending on the frame type selected, users may have additional customization options, such as adjusting the frame's thickness, color, texture, or other attributes. This allows for fine-tuning the appearance of the frame to match the image's theme or the user's preferences
 
-The [`drawFrame`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawframe) method in the Image Editor control takes six parameters to define the properties of the rectangle annotation:
+The [`drawFrame`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#drawframe) method in the Image Editor control takes nine parameters to define the properties of the frame to the image:
 
 * frameType - Specified the image data or url of the image to be inserted.
 

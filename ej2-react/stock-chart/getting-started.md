@@ -13,6 +13,10 @@ domainurl: ##DomainURL##
 
 This section explains you the steps required to create a simple Stock Chart and demonstrate the basic usage of the Stock Chart control.
 
+To get start quickly with React Stock Chart, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=LdTuxkJFfJI" %}
+
 ## Dependencies
 
 Below is the list of minimum dependencies required to use the chart component.
