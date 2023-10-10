@@ -24,10 +24,16 @@ function App() {
         let index: number = parseInt((Math.random() * 10).toString());
         listData.push({ name: listData[index].name, icon: listData[index].icon, imgUrl: listData[index].imgUrl, id: i.toString() });
     }
-    let template: string = '<div class="list-container"><div id="icon" class="${$imgUrl ? \'img\' : $icon }">' +
-        '<span class="${$imgUrl ? \'hideUI\' : \'showUI\' }"> ${icon}</span>' +
-        '<img class="${$imgUrl ? \'showUI\' : \'hideUI\' }" width = 45 height = 45 src="${$imgUrl ?  $imgUrl : \' \' }" /></div><div class="name">${name}</div></div>';
-
+       // Set customized list template
+    function template(data: any) {
+        return (
+            <div className="e-list-wrapper e-list-avatar">
+                <span className={`e-avatar e-avatar-circle ${data.icon} ${data.imgUrl ? 'hideUI' : 'showUI'}`}>{data.icon}</span>
+                <img className={`e-avatar e-avatar-circle ${data.imgUrl ? 'showUI' : 'hideUI'}`} src={data.imgUrl ? data.imgUrl : ' '} />
+                <span className="e-list-content">{data.name}</span>
+            </div>
+        );
+    }
     return (
         // specifies the tag to render the ListView component
         <ListViewComponent id='ui-list' dataSource={listData} enableVirtualization={true} template={template} height={500} headerTitle="contacts" showHeader={true}>

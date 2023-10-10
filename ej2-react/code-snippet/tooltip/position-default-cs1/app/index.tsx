@@ -16,7 +16,7 @@ function App() {
             <TooltipComponent  ref={t => tooltipInstance = t} className="tooltip-box" content='Tooltip Content' target='#tooltip'>
                 <div id="tooltip">Show Tooltip</div>
             </TooltipComponent>
-            <div class='ddl'>
+            <div className='ddl'>
                 <select id="positions" ref={d => dropElement = d} onChange={change.bind(this)} className="form-control drop-inline">
                     <option value="TopLeft">Top Left</option>
                     <option value="TopCenter" selected>Top Center</option>

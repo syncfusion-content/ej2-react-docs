@@ -2,16 +2,14 @@
 layout: post
 title: 100% Stacked Column Chart in React Chart component | Syncfusion
 description: Learn here all about 100% Stacked Column Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: 100% Stacked Column Chart 
+control: 100% Stacked column chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 # 100% Stacked Column Chart in React Chart component
 
-## 100% Stacked Column
-
-**100% Stacked Column**
+## 100% Stacked column
 
 To render a 100% stacked column series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `StackingColumn100` and inject `StackingColumnSeries` module into the `services`.
 
@@ -24,7 +22,22 @@ To render a 100% stacked column series, use series [`type`](https://ej2.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs24" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs24" %}
+
+## 100% Cylindrical stacked column chart
+
+To render a 100% cylindrical stacked column chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnfacet) property to `Cylinder` in the chart series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs44/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs44/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs44" %}
 
 ## Series customization
 
@@ -44,9 +57,9 @@ The following properties can be used to customize the `100% stacked column` seri
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/100-stackedcolumn-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedcolumn-cs" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)
