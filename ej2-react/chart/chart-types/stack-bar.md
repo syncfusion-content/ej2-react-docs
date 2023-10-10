@@ -41,7 +41,7 @@ You can use the [`stackingGroup`](https://ej2.syncfusion.com/react/documentation
 
 ## Cylindrical stacked bar chart
 
-To render a cylindrical stacked bar chart, set the `columnFacet` property to `Cylinder` in the chart series.
+To render a cylindrical stacked bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnfacet) property to `Cylinder` in the chart series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

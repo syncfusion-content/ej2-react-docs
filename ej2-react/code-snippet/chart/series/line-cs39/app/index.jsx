@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, BarSeries } from '@syncfusion/ej2-react-charts';
 import { cylindricalData } from 'datasource.ts';
 function App() {
-    const primaryxAxis = { minimum: 2006, maximum: 2011, interval: 1 };
+    const primaryxAxis = { minimum: 2005, maximum: 2012, interval: 1 };
     const primaryyAxis = {
       minimum: 3, 
       maximum: 12,

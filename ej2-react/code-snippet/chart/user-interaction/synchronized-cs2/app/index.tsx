@@ -3,7 +3,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Chart, AreaSeries, SplineSeries, DateTime, DataLabel, Tooltip, Highlight, Crosshair, Zoom, ZoomSettings, IZoomCompleteEventArgs, Legend, Selection, ISelectionCompleteEventArgs, IMouseEventArgs, ITooltipRenderEventArgs, ILegendClickEventArgs, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
+import { Chart, AreaSeries, SplineSeries, DateTime, Crosshair, IMouseEventArgs, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
 import { synchronizedData } from 'datasource.ts';
 import { Browser } from '@syncfusion/ej2/base';
 
@@ -61,7 +61,8 @@ function App() {
                         majorGridLines: { width: 0 },
                         edgeLabelPlacement: Browser.isDevice ? 'None' : 'Shift',
                         labelRotation: Browser.isDevice ? -45 : 0,
-                        interval: Browser.isDevice ? 2 : 1
+                        interval: Browser.isDevice ? 2 : 1,
+                        crosshairTooltip: { enable: true }
                     }}
                     primaryYAxis={{
                         labelFormat: 'n2',
@@ -78,7 +79,7 @@ function App() {
                     crosshair={{ enable: true, lineType: 'Vertical', dashArray: '2,2' }}
                     titleStyle={{ textAlignment: 'Near' }}
                     title="US to Euro">
-                    <Inject services={[SplineSeries, DataLabel, DateTime, Tooltip, Highlight, Legend]} />
+                    <Inject services={[SplineSeries, DateTime, Crosshair]} />
                     <SeriesCollectionDirective>
                         <SeriesDirective type="Spline" dataSource={synchronizedData} xName="USD" yName="EUR" width={2} emptyPointSettings={{ mode: 'Drop' }}></SeriesDirective>
                     </SeriesCollectionDirective>
@@ -97,7 +98,8 @@ function App() {
                         majorGridLines: { width: 0 },
                         edgeLabelPlacement: Browser.isDevice ? 'None' : 'Shift',
                         labelRotation: Browser.isDevice ? -45 : 0,
-                        interval: Browser.isDevice ? 2 : 1
+                        interval: Browser.isDevice ? 2 : 1,
+                        crosshairTooltip: { enable: true }
                     }}
                     primaryYAxis={{
                         labelFormat: 'n1',
@@ -114,7 +116,7 @@ function App() {
                     crosshair={{ enable: true, lineType: 'Vertical', dashArray: '2,2' }}
                     titleStyle={{ textAlignment: 'Near' }}
                     title="US to INR">
-                    <Inject services={[AreaSeries, DataLabel, DateTime, Tooltip, Zoom, Highlight, Legend, Selection, Crosshair]} />
+                    <Inject services={[AreaSeries, DateTime, Crosshair]} />
                     <SeriesCollectionDirective>
                         <SeriesDirective type="Area" dataSource={synchronizedData} xName="USD" yName="INR" opacity={0.6} width={2} border={{ width: 2 }}></SeriesDirective>
                     </SeriesCollectionDirective>

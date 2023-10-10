@@ -3,8 +3,9 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Chart, SplineAreaSeries, LineSeries, DateTime, DataLabel, Tooltip, Highlight, Crosshair, Zoom, ZoomSettings, IZoomCompleteEventArgs, Legend, Selection, ISelectionCompleteEventArgs, IMouseEventArgs, ITooltipRenderEventArgs, ILegendClickEventArgs, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
+import { Chart, SplineAreaSeries, LineSeries, DateTime, Zoom, IZoomCompleteEventArgs, Selection, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
 import { synchronizedData } from 'datasource.ts';
+import { useEffect } from 'react';
 import { Browser } from '@syncfusion/ej2/base';
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
     let chart2;
 
     let charts = [];
-    charts = [chart1, chart2];
+    useEffect(() => {
+        charts = [chart1, chart2];
+    }, []);
     let zoomFactor = 0;
     let zoomPosition = 0;
 
@@ -73,7 +76,7 @@ function App() {
                     zoomComplete={zoomComplete.bind(this)}
                     titleStyle={{ textAlignment: 'Near' }}
                     title="US to Euro">
-                    <Inject services={[SplineAreaSeries, LineSeries, DataLabel, DateTime, Tooltip, Zoom, Highlight, Legend, Selection, Crosshair]} />
+                    <Inject services={[LineSeries, DateTime, Zoom, Selection]} />
                     <SeriesCollectionDirective>
                         <SeriesDirective type="Line" dataSource={synchronizedData} xName="USD" yName="EUR" width={2} emptyPointSettings={{ mode: 'Drop' }}></SeriesDirective>
                     </SeriesCollectionDirective>
@@ -116,7 +119,7 @@ function App() {
                     zoomComplete={zoomComplete.bind(this)}
                     titleStyle={{ textAlignment: 'Near' }}
                     title="US to INR">
-                    <Inject services={[SplineAreaSeries, LineSeries, DataLabel, DateTime, Tooltip, Zoom, Highlight, Legend, Selection, Crosshair]} />
+                    <Inject services={[SplineAreaSeries, DateTime, Zoom, Selection]} />
                     <SeriesCollectionDirective>
                         <SeriesDirective type="SplineArea" dataSource={synchronizedData} xName="USD" yName="INR" opacity={0.6} width={2} border={{ width: 2 }}></SeriesDirective>
                     </SeriesCollectionDirective>

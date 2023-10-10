@@ -12,7 +12,7 @@ function App() {
   return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} tooltip={tooltip} title='Olympic Gold Medal Counts - RIO'>
     <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Category]} />
     <SeriesCollectionDirective>
-      <SeriesDirective dataSource={cylindricalData} xName='country' yName='gold' type='Column' columnFacet='Cylinder'>
+      <SeriesDirective dataSource={cylindricalData} xName='country' yName='gold' type='Column' columnFacet='Cylinder' tooltipMappingName='tooltipMappingName'>
       </SeriesDirective>
     </SeriesCollectionDirective>
   </ChartComponent>;

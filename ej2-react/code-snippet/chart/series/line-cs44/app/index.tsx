@@ -4,7 +4,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
   AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-  Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, StackingColumnSeries, Selection
+  Legend, DateTime, Tooltip, DataLabel, StackingColumnSeries
 }
   from '@syncfusion/ej2-react-charts';
 import { cylindricalData } from 'datasource.ts';
@@ -18,7 +18,7 @@ function App() {
     primaryXAxis={primaryxAxis}
     primaryYAxis={primaryyAxis}
     title='Gross Domestic Product Growth'>
-    <Inject services={[StackingColumnSeries, Legend, Tooltip, DataLabel, Category]} />
+    <Inject services={[StackingColumnSeries, Legend, Tooltip, DataLabel, DateTime]} />
     <SeriesCollectionDirective>
       <SeriesDirective dataSource={cylindricalData} xName='x' yName='y' name='UK' type='StackingColumn100' columnFacet='Cylinder'>
       </SeriesDirective>

@@ -8,7 +8,7 @@ function App() {
       { x: 'John', y: 10000 }, { x: 'Jake', y: 12000 }, { x: 'Peter', y: 18000 },
       { x: 'James', y: 11000 }, { x: 'Mary', y: 9700 }
     ];
-    const chartInstance;
+    let chartInstance;
     function clickHandler() {
       const header = {
         content: 'Chart Header',

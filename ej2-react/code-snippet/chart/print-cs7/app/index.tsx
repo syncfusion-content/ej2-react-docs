@@ -3,8 +3,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-  ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject, AxisModel,
-  ColumnSeries, Export, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries, Selection
+  ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AxisModel, DateTime,
+  ColumnSeries, Export, Legend, Category, Tooltip, DataLabel, LineSeries,
 }
   from '@syncfusion/ej2-react-charts';
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, AccumulationDataLabel, AccumulationLegend } from '@syncfusion/ej2-react-charts';
@@ -81,7 +81,7 @@ function App() {
 
   return (<div><button value='print' onClick={clickHandler.bind(this)}>Export</button>
     <ChartComponent id='charts1' ref={chart => chartInstance = chart} primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Medal Count'>
-      <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Export, LineSeries, Category]} />
+      <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Export, LineSeries, Category, DateTime]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={data1} xName='x' yName='y' type='Line' width='2' name='Germany' marker={marker}>
         </SeriesDirective>
