@@ -1,15 +1,15 @@
 ---
 layout: post
 title: 100% Stacked Bar Chart in React Chart component | Syncfusion
-description: Learn here all about 100% Stacked Bar Area Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: 100% Stacked Bar Chart 
+description: Learn here all about 100% Stacked Bar Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+control: 100% Stacked bar chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 # 100% Stacked Bar Charts in React Chart component
 
-## 100% Stacked Bar
+## 100% Stacked bar
 
 To render a 100% stacked bar series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `StackingBar100` and inject `StackingBarSeries` module into the `services`.
 
@@ -22,7 +22,22 @@ To render a 100% stacked bar series, use series [`type`](https://ej2.syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs29" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs29" %}
+
+## 100% Cylindrical stacked bar chart
+
+To render a 100% cylindrical stacked bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnfacet) property to `Cylinder` in the chart series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs43/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs43/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs43" %}
 
 ## Series customization
 
@@ -42,9 +57,9 @@ The following properties can be used to customize the `100% stacked bar` series.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/100-stackedbar-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedbar-cs" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)

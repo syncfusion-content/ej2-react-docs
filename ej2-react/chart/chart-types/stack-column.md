@@ -2,14 +2,14 @@
 layout: post
 title: Stacked Column Chart in React Chart component | Syncfusion
 description: Learn here all about Stacked Column Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Stacked Column Chart 
+control: Stacked column chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 # Stacked Column Chart in React Chart component
 
-## Stacked Column
+## Stacked column
 
 To render a stacked column series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `StackingColumn` and inject `StackingColumnSeries` module into the `services`.
 
@@ -22,7 +22,22 @@ To render a stacked column series, use series [`type`](https://ej2.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs23" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs23" %}
+
+## Cylindrical stacked column chart
+
+To render a cylindrical stacked column chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnfacet) property to `Cylinder` in the chart series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs42/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs42/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs42" %}
 
 ## Series customization
 
@@ -42,9 +57,9 @@ The following properties can be used to customize the `stacked column` series.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)
