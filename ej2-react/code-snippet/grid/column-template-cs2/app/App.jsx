@@ -4,16 +4,11 @@ import { productData } from './datasource';
 function App() {
     let template;
     const gridTemplate = (props) => {
-        if (props.Discontinued) {
-            return (<div className="template_checkbox">
-                <input type="checkbox" checked={true}/>
-            </div>);
-        }
-        else {
-            return (<div className="template_checkbox">
-                <input type="checkbox"/>
-            </div>);
-        }
+        return (
+            <div className="template_checkbox">
+              <input type="checkbox" defaultChecked={props.Discontinued} />
+            </div>
+          );
     };
     template = gridTemplate;
     return <GridComponent dataSource={productData} height={315}>

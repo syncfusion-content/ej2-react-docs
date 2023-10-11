@@ -5,7 +5,7 @@ function App() {
     let grid;
     const gridTemplate = (props) => {
         return (<div>
-      <input id={props.OrderID} value={props.Freight} className='custemp' type='text'/>
+      <input id={props.OrderID} defaultValue={props.Freight} className='custemp' type='text'/>
     </div>);
     };
     const created = (args) => {
