@@ -38,7 +38,7 @@ function App() {
               <button className="e-btn" id="tooltip" style={margin}>Show Tooltip</button>
             </TooltipComponent>
             <div className="switchContainer">
-                <label for="checked" style={padding}>Enable Tooltip</label>
+                <label htmlFor="checked" style={padding}>Enable Tooltip</label>
                 <SwitchComponent id="checked" checked={true} change={change.bind(this)}></SwitchComponent>
             </div>
         </div>

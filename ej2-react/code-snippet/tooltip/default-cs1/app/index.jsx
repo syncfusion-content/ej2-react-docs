@@ -4,7 +4,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 function App() {
     return (<div id="container">
       <TooltipComponent position="TopCenter" content="Tooltip Content" target="#target">
-        <button className="e-btn" id="target" cssClass="tooltipElement">Show Tooltip</button>
+        <button className="e-btn tooltipElement" id="target" >Show Tooltip</button>
       </TooltipComponent>
     </div>);
 }

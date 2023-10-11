@@ -5,10 +5,10 @@ import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  let grid: Grid | null;
+  let grid: GridComponent | null;
   const gridTemplate = (props: any): any => {
     return (<div>
-      <input id={props.OrderID} value={props.Freight} className='custemp' type='text' />
+      <input id={props.OrderID} defaultValue={props.Freight} className='custemp' type='text' />
     </div>);
   }
   const created = (args): void => {
