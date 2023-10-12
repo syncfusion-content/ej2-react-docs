@@ -9,14 +9,16 @@ export default class App extends React.Component {
         this.state = { items: [] };
         new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor })
             .executeQuery(new Query()
-            .expand('Employee').select(['OrderID', 'CustomerID', 'Employee.FirstName']).take(8))
+                .expand('Employee')
+                .select(['OrderID', 'CustomerID', 'Employee.FirstName'])
+                .take(8))
             .then((e) => {
-            const res = e.result.map((row) => (<Row {...row}/>));
-            this.setState({
-                items: res
+                const res = e.result.map((row) => <Row key={row.OrderID} {...row} />);
+                this.setState({
+                    items: res,
+                });
             });
-        });
-    }
+        }
     render() {
         return (<table id='datatable' className='e-table'>
                 <thead>

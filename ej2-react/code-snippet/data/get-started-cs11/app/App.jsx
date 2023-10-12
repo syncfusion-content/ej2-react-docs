@@ -9,9 +9,9 @@ export default class App extends React.Component {
         this.state = { items: [] };
         const dm = new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor, offline: true }, new Query().take(8));
         dm.ready.then((e) => {
-            const res = e.result.map((row) => (<Row {...row}/>));
+            const res = e.result.map((row) => <Row key={row.OrderID} {...row} />);
             this.setState({
-                items: res
+                items: res,
             });
         });
     }

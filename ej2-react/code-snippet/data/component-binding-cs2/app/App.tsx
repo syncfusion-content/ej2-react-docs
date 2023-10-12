@@ -5,7 +5,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent} from '@syncfusion/ej2
 import * as React from "react";
 import './App.css';
 
-const SERVICE_URI = 'http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/?$top=20';
+const SERVICE_URI = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/?$top=20';
 
 export default class App extends React.Component<{}, {}>{
     public data: DataManager = new DataManager({ url: SERVICE_URI });

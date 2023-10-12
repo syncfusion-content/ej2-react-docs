@@ -14,10 +14,12 @@ export default class App extends React.Component<{}, {}>{
         this.state = { items: [] };
         const dm: DataManager = new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor, offline: true }, new Query().take(8));
             dm.ready.then((e: ReturnOption) => {
-                const res = (e.result as IOrders[]).map((row: IOrders) => (<Row {...row}/>));
-                this.setState({
+                const res = (e.result as IOrders[]).map((row: IOrders, index: number) => (
+                    <Row key={row.OrderID} {...row} />
+                  ));
+                  this.setState({
                     items: res
-                });
+                  });
             });
      }
 

@@ -15,7 +15,9 @@ export default class App extends React.Component<{}, {}>{
         new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor })
             .executeQuery(new Query().where('EmployeeID', 'equal', 3).take(8))
             .then((e: ReturnOption) => {
-                const res = (e.result as IOrders[]).map((row: IOrders) => (<Row {...row}/>));
+                const res = (e.result as IOrders[]).map((row: IOrders) => (
+                    <Row key={row.OrderID} {...row} />
+                ));
                 this.setState({
                     items: res
                 });

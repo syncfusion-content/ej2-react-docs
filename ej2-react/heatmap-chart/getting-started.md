@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Heatmap chart component | Syncfusion
-description:  Checkout and learn about Getting started with React Heatmap chart component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React HeatMap chart component | Syncfusion
+description:  Checkout and learn about Getting started with React HeatMap chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section explains the steps required to create a heat map and demonstrates the basic usage of the heat map control.
+This section explains the steps required to create a heat map and demonstrates the basic usage of the HeatMap component.
+
+You can explore some useful features in the HeatMap component using the following video.
+
+{% youtube "https://www.youtube.com/watch?v=F5H2BMOl_6A" %}
 
 ## Dependencies
 
