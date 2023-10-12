@@ -13,15 +13,21 @@ export default class App extends React.Component<{}, {}>{
         super(props);
         this.state = { items: [] };
         new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor })
-            .executeQuery(new Query()
-                .expand('Employee').select(['OrderID', 'CustomerID', 'Employee.FirstName']).take(8))
+            .executeQuery(
+                new Query()
+                    .expand('Employee')
+                    .select(['OrderID', 'CustomerID', 'Employee.FirstName'])
+                    .take(8)
+            )
             .then((e: ReturnOption) => {
-                const res = (e.result as IOrders[]).map((row: IOrders) => (<Row {...row}/>));
+                const res = (e.result as IOrders[]).map((row: IOrders) => (
+                    <Row key={row.OrderID} {...row} />
+                ));
                 this.setState({
                     items: res
                 });
             });
-     }
+        }
 
     public render() {
         return (<table id='datatable' className='e-table'>

@@ -8,9 +8,11 @@ export default class App extends React.Component {
         super(props);
         this.state = { items: [] };
         new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor })
-            .executeQuery(new Query().take(8))
-            .then((e) => {
-            const res = e.result.map((row) => (<Row {...row}/>));
+        .executeQuery(new Query().take(8))
+        .then((e) => {
+            const res = e.result.map((row) => (
+                <Row key={row.OrderID} {...row} />
+            ));
             this.setState({
                 items: res
             });

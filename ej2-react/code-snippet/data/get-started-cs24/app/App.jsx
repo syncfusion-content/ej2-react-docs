@@ -11,14 +11,16 @@ export default class App extends React.Component {
         new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor })
             .executeQuery(new Query().take(5).requiresCount().aggregate('min', 'EmployeeID'))
             .then((e) => {
-            const agg = { min: e.aggregates['EmployeeID - min'] };
-            const ret = <AggregateRow {...agg}/>;
-            const res = e.result.map((row) => (<Row {...row}/>));
-            this.setState({
-                aggregates: [ret],
-                items: res
+                const agg = { min: e.aggregates['EmployeeID - min'] };
+                const ret = <AggregateRow key="aggregate" {...agg} />;
+                const res = e.result.map((row) => (
+                    <Row key={row.OrderID} {...row} />
+                ));
+                this.setState({
+                    aggregates: [ret],
+                    items: res
+                });
             });
-        });
     }
     render() {
         return (<table id='datatable' className='e-table'>

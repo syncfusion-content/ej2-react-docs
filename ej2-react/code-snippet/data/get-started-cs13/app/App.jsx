@@ -13,10 +13,12 @@ export default class App extends React.Component {
         this.dm = new DataManager(data.slice(0, 5));
         this.dm.executeQuery(new Query())
             .then((e) => {
-            this.setState({
-                items: e.result.map((row) => (<Row {...row}/>))
+                this.setState({
+                    items: e.result.map((row) => (
+                        <Row key={row.OrderID} {...row} />
+                    ))
+                });
             });
-        });
         this.insertUpdate = this.insertUpdate.bind(this);
     }
     insertUpdate() {
@@ -35,7 +37,9 @@ export default class App extends React.Component {
         this.dm.executeQuery(new Query())
             .then((e) => {
             this.setState({
-                items: e.result.map((row) => (<Row {...row}/>))
+                items: e.result.map((row) => (
+                    <Row key={row.OrderID} {...row} />
+                ))
             });
         });
     }

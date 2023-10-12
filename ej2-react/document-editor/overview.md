@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Index in React Document editor component | Syncfusion
+title: Overview in React Document editor component | Syncfusion
 description: Learn here all about Index in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Document editor component
+# Overview
 
 The Document Editor component is used to create, edit, view, and print Word documents in web applications. All the user interactions and editing operations that run purely in the client-side provides much faster editing experience to the users.
 

@@ -1,5 +1,3 @@
-
-
 import { getValue } from '@syncfusion/ej2-base';
 import { DataManager, ODataAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
@@ -16,10 +14,12 @@ export default class App extends React.Component<{}, {}>{
         new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor })
             .executeQuery(new Query().take(8))
             .then((e: ReturnOption) => {
-                const res = (e.result as IOrders[]).map((row: IOrders) => (<Row {...row}/>));
-                this.setState({
+                const res = (e.result as IOrders[]).map((row: IOrders, index: number) => (
+                    <Row key={row.OrderID} {...row} />
+                  ));
+                  this.setState({
                     items: res
-                });
+                  });
             });
      }
 

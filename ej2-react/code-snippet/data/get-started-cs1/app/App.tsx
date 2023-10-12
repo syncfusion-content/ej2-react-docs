@@ -1,6 +1,3 @@
-
-
-
 import { DataManager, JsonAdaptor, Query } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { data } from './datasource';
@@ -11,8 +8,9 @@ export default class App extends React.Component<{}, {}>{
 
     public result: object[] = new DataManager({ json: data, adaptor: new JsonAdaptor })
         .executeLocal(new Query().take(8));
-
-    public items: object[] = this.result.map((row: IOrders) => (<Row {...row}/>));
+    public items: object[] = this.result.map((row: IOrders, index) => (
+            <Row key={index} {...row} />
+    ));
     public render() {
     return (<table id='datatable' className='e-table'>
             <thead>

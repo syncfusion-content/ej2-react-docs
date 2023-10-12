@@ -2,7 +2,7 @@ import { DataManager } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from "react";
 import './App.css';
-const SERVICE_URI = 'http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/?$top=20';
+const SERVICE_URI = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/?$top=20';
 export default class App extends React.Component {
     data = new DataManager({ url: SERVICE_URI });
     render() {
