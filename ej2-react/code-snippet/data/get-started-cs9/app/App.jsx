@@ -5,7 +5,9 @@ import { Row } from './rowTemplate';
 export default class App extends React.Component {
     result = new DataManager(data).executeLocal(new Query()
         .sortBy('CustomerID').take(8));
-    items = this.result.map((row) => (<Row {...row}/>));
+    items = this.result.map((row, index) => (
+        <Row key={index} {...row} />
+    ));
     render() {
         return (<table id='datatable' className='e-table'>
                 <thead>

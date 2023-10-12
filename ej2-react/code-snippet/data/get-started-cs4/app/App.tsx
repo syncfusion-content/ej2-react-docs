@@ -10,7 +10,9 @@ export default class App extends React.Component<{}, {}>{
 
     public result: object[] = new DataManager(data).executeLocal(new Query().take(8));
 
-    public items: object[] = this.result.map((row: IOrders) => (<Row {...row}/>));
+    public items: object[] = this.result.map((row: IOrders, index) => (
+        <Row key={index} {...row} />
+    ));
     public render() {
     return (<table id='datatable' className='e-table'>
             <thead>

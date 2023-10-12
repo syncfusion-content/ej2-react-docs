@@ -14,9 +14,11 @@ export default class App extends React.Component {
         this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };
         this.dm = new DataManager(data.slice(0, 5));
         this.dm.executeQuery(new Query())
-            .then((e) => {
+        .then((e) => {
             this.setState({
-                items: e.result.map((row) => (<Row {...row}/>))
+                items: e.result.map((row) => (
+                    <Row key={row.OrderID} {...row} />
+                ))
             });
         });
         this.action = this.action.bind(this);
@@ -44,7 +46,9 @@ export default class App extends React.Component {
         this.dm.executeQuery(new Query())
             .then((e) => {
             this.setState({
-                items: e.result.map((row) => (<Row {...row}/>))
+                items: e.result.map((row) => (
+                    <Row key={row.OrderID} {...row} />
+                ))
             });
         });
         this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };

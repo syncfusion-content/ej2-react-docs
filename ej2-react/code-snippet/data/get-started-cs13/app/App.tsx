@@ -15,13 +15,15 @@ export default class App extends React.Component<{}, {}>{
         this.style = { class: 'e-form' };
         this.dm = new DataManager(data.slice(0, 5));
         this.dm.executeQuery(new Query())
-            .then((e: ReturnOption) => {
-                this.setState({
-                    items: (e.result as object[]).map((row: object) => (<Row {...row}/>))
-                });
-            });
-        this.insertUpdate = this.insertUpdate.bind(this)
-    }
+      .then((e: ReturnOption) => {
+        this.setState({
+          items: (e.result as object[]).map((row: object) => (
+            <Row key={row.OrderID} {...row} />
+          ))
+        });
+      });
+    this.insertUpdate = this.insertUpdate.bind(this);
+  }
 
     public insertUpdate() {
         const orderid: HTMLInputElement = document.getElementById('OrderID') as HTMLInputElement;
@@ -37,8 +39,11 @@ export default class App extends React.Component<{}, {}>{
         this.dm.executeQuery(new Query())
             .then((e: ReturnOption) => {
                 this.setState({
-                    items: (e.result as object[]).map((row: object) => (<Row {...row}/>))
+                    items: (e.result as object[]).map((row: object) => (
+                        <Row key={row.OrderID} {...row} />
+                      ))
                 });
+                
             });
     }
 

@@ -21,11 +21,19 @@ export default class App extends React.Component<{}, {}>{
         this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };
         this.dm = new DataManager(data.slice(0, 5));
         this.dm.executeQuery(new Query())
-            .then((e: ReturnOption) => {
-                this.setState({
-                    items: (e.result as object[]).map((row: object) => (<Row {...row}/>))
-                });
-            });
+      .then((e: ReturnOption) => {
+        this.setState({
+          items: (e.result as object[]).map((row: object) => (
+            <Row key={row.OrderID} {...row} />
+          ))
+        });
+      });
+        // this.dm.executeQuery(new Query())
+        //     .then((e: ReturnOption) => {
+        //         this.setState({
+        //             items: (e.result as object[]).map((row: object) => (<Row {...row}/>))
+        //         });
+        //     });
         this.action = this.action.bind(this);
         this.saveChanges = this.saveChanges.bind(this);
     }
@@ -51,7 +59,9 @@ export default class App extends React.Component<{}, {}>{
         this.dm.executeQuery(new Query())
             .then((e: ReturnOption) => {
                 this.setState({
-                    items: (e.result as object[]).map((row: object) => (<Row {...row}/>))
+                    items: (e.result as object[]).map((row: object) => (
+                        <Row key={row.OrderID} {...row} />
+                      ))
                 });
             });
         this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };

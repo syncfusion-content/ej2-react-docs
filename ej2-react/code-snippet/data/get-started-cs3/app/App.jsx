@@ -10,7 +10,9 @@ export default class App extends React.Component {
         new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor })
             .executeQuery(new Query().take(8))
             .then((e) => {
-            const res = e.result.map((row) => (<Row {...row}/>));
+            const res = e.result.map((row, index) => (
+                <Row key={row.OrderID} {...row} />
+            ));
             this.setState({
                 items: res
             });
