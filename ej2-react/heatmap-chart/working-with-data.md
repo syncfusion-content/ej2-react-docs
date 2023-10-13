@@ -1,16 +1,20 @@
 ---
 layout: post
-title: Working with data in React Heatmap chart component | Syncfusion
-description: Learn here all about Working with data in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Working with data in React HeatMap chart component | Syncfusion
+description: Learn here all about Working with data in Syncfusion React HeatMap chart component of Syncfusion Essential JS 2 and more.
 control: Working with data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Working with data in React Heatmap chart component
+# Working with data in React HeatMap chart component
 
 Heat map visualizes the JSON data and two-dimensional array data. Using the data adaptor support, data can be bound to the heat map.
+
+You can explore how to bind data in the HeatMap component using the following video.
+
+{% youtube "https://www.youtube.com/watch?v=64lYt3C4LaI" %}
 
 ## Data adaptor
 
