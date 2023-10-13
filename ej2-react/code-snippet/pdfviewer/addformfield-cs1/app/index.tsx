@@ -35,6 +35,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoaded}
         style={{ 'height': '640px' }}>
 
