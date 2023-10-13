@@ -215,6 +215,6 @@ There are scenarios where you may need to load the Scheduler displaying the syst
 ## See Also
 
 * [To display the current time indicator](./timescale#highlighting-current-date-and-time)
-* [To set different working hours dynamically](./how-toset-different-work-hours)
+* [To set different working hours dynamically](./how-to/set-different-work-hours)
 * [To set different working hours for each resources](./resources#set-different-work-hours)
 * [To set different working days for each resources](./resources#set-different-work-days)
