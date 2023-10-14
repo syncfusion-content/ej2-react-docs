@@ -73,6 +73,8 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**. 
 
+{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
+
 ## setFormFieldMode programmatically
 
 The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer library that allows you to add a form field dynamically by passing the type of the form field. You can pass the form fields as a parameter like below.
