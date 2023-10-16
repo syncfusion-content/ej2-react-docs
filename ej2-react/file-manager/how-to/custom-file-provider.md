@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  Implement own service provider in ##Platform_Name## File manager control | Syncfusion
-description: Learn here all about implementation own service provider in Syncfusion ##Platform_Name## File manager control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+title: Implement own service provider in React File manager component | Syncfusion
+description: Learn here all about implementation own service provider in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
 control: Implement own service provider
-publishingplatform: ##Platform_Name##
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
