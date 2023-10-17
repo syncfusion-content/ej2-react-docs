@@ -39,7 +39,7 @@ The [`insert`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#in
 
 ## Update
 
-The [`update`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#update) method of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/datamanager/) is used to modify/update a record in the data source. For remote data source, the modified record will be send along with the request to the server.
+The [`update`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#update) method of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) is used to modify/update a record in the data source. For remote data source, the modified record will be send along with the request to the server.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

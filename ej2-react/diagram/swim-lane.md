@@ -253,7 +253,7 @@ The following image illustrates how to edit the lane header.
 
 ## Phase
 
- Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of [`Phase`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel//) can be added to swimlane.
+ Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of [`Phase`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel/) can be added to swimlane.
 The following code example illustrates how to add phase at swimlane.
 
 {% tabs %}
@@ -284,10 +284,10 @@ The following code example illustrates how to add phase at swimlane.
 
 ### Customizing phase
 
-* The length of region can be set by using the  [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel//#offset) property of the phase.
+* The length of region can be set by using the  [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel/#offset) property of the phase.
 * Every phase region can be textually described with the [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel/) property of the phase
 * You can increase the width of phase by using [`phaseSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel/#phaseSize) property of swimlane.
-* We can provide additional information to the phase by using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel//#addInfo) property of the phase.
+* We can provide additional information to the phase by using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel/#addInfo) property of the phase.
 
 The following code example illustrates how to customize the phase in swimlane.
 
