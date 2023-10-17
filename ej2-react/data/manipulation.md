@@ -39,7 +39,7 @@ The [`insert`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#in
 
 ## Update
 
-The [`update`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#update) method of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager) is used to modify/update a record in the data source. For remote data source, the modified record will be send along with the request to the server.
+The [`update`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#update) method of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/datamanager/) is used to modify/update a record in the data source. For remote data source, the modified record will be send along with the request to the server.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -62,7 +62,7 @@ The [`update`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#up
 
 ## Remove
 
-The [`remove`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#remove) method of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager) is used to remove a record from the data source. For remote data source, the record details such as primary key and data will be send along with the request to the server.
+The [`remove`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#remove) method of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) is used to remove a record from the data source. For remote data source, the record details such as primary key and data will be send along with the request to the server.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -85,7 +85,7 @@ The [`remove`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#re
 
 ## Batch Edit Operation
 
-[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager) supports batch processing for the CRUD operations. You can use the [`saveChanges`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#savechanges) method to batch the edit operation. For remote data source, requests to add, remove and change are handled altogether at a time rather than passing the request separately for each operation.
+[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) supports batch processing for the CRUD operations. You can use the [`saveChanges`](https://ej2.syncfusion.com/documentation/api/data/dataManager/#savechanges) method to batch the edit operation. For remote data source, requests to add, remove and change are handled altogether at a time rather than passing the request separately for each operation.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

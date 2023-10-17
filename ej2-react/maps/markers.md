@@ -72,7 +72,7 @@ The following properties are available in [`markerSettings`](https://ej2.syncfus
 
 ## Marker shapes
 
-The Maps component supports the following marker shapes. To set the shape of the marker, the [`shape`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/#shape) property in [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel) is used.
+The Maps component supports the following marker shapes. To set the shape of the marker, the [`shape`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/#shape) property in [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markersettingsmodel/) is used.
 
 * Balloon
 * Circle
@@ -102,7 +102,7 @@ To render a marker as an image in Maps, set the [`shape`](https://ej2.syncfusion
 
 ## Multiple marker groups
 
-Multiple groups of markers can be added to the Maps by adding multiple [`MarkerDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel) in the [`MarkersDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#markersettings) and the customization for the markers can be done with the [`MarkerDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel).
+Multiple groups of markers can be added to the Maps by adding multiple [`MarkerDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/) in the [`MarkersDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#markersettings) and the customization for the markers can be done with the [`MarkerDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -207,7 +207,7 @@ The Maps can be initially scaled to the center value based on the marker distanc
 
 Maps provide support to cluster the markers when they overlap each other. The number on a cluster indicates how many overlapped markers it contains. If zooming is performed on any of the cluster locations in Maps, the number on the cluster will decrease, and the individual markers will be seen on the map. When zooming out, the overlapping marker will increase. So that it can cluster again and increase the count over the cluster.
 
-To enable clustering in markers, set the [`allowClustering`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel/#allowclustering) property of [`markerClusterSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel) as **true** and customization of clustering can be done with the [`markerClusterSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel).
+To enable clustering in markers, set the [`allowClustering`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel/#allowclustering) property of [`markerClusterSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel/) as **true** and customization of clustering can be done with the [`markerClusterSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -249,7 +249,7 @@ The following properties are available to customize the marker clustering in the
 
 ## Expanding the marker cluster
 
-The cluster is formed by grouping an identical and non-identical marker from the surrounding area. By clicking on the cluster and setting the [`allowClusterExpand`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel/#allowclusterexpand) property in [`markerClusterSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel) as **true** to expand the identical markers. If zoom in any of the locations of the cluster, the number on the cluster will decrease and the overlapping marker will be split into an individual marker on the map. When performing zoom out, it will increase the marker count and then cluster it again.
+The cluster is formed by grouping an identical and non-identical marker from the surrounding area. By clicking on the cluster and setting the [`allowClusterExpand`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel/#allowclusterexpand) property in [`markerClusterSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerClusterSettingsModel/) as **true** to expand the identical markers. If zoom in any of the locations of the cluster, the number on the cluster will decrease and the overlapping marker will be split into an individual marker on the map. When performing zoom out, it will increase the marker count and then cluster it again.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -264,7 +264,7 @@ The cluster is formed by grouping an identical and non-identical marker from the
 
 ## Tooltip for marker
 
-Tooltip is used to display more information about a marker on mouse over or touch end event. This can be enabled separately for marker by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/#visible) property of [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel) to **true**. The [`valuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/#valuepath) property in the [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel) takes the field name that presents in dataSource and displays that value as tooltip text.
+Tooltip is used to display more information about a marker on mouse over or touch end event. This can be enabled separately for marker by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/#visible) property of [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/) to **true**. The [`valuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/#valuepath) property in the [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/) takes the field name that presents in dataSource and displays that value as tooltip text.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
