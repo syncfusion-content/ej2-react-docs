@@ -14,7 +14,7 @@ Range selection in a DateRangePicker can be made-to-order with desire restrictio
 
 ## Restrict the range within a range
 
-You can restrict the minimum and maximum date that can be allowed as start date, end date in a range selection with help of [`min`](https://helpej2.syncfusion.com/react/documentation/api/daterangepicker/#min), [`max`](https://helpej2.syncfusion.com/react/documentation/api/daterangepicker/#max) properties.
+You can restrict the minimum and maximum date that can be allowed as start date, end date in a range selection with help of [`min`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#min), [`max`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#max) properties.
 * `min` – sets the minimum  date that can be selected as startDate.
 * `max` – sets the maximum date that can be selected as endDate
 
@@ -50,7 +50,7 @@ In the following sample, you can select a date range from 15th date of this mont
 
 ## Range span
 
-Days span between ranges can be limited in order to avoid excess or less days selection towards the required days in a range. In this, minimum and maximum span that can be allowed within the date range can be customized by [`minDays`](https://helpej2.syncfusion.com/react/documentation/api/daterangepicker/#mindays), [`maxDays`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#maxdays) properties.
+Days span between ranges can be limited in order to avoid excess or less days selection towards the required days in a range. In this, minimum and maximum span that can be allowed within the date range can be customized by [`minDays`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#mindays), [`maxDays`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#maxdays) properties.
 
 * `minDays`- Sets the minimum number of days between start date and end date.
 * `maxDays`- Sets the maximum number of days between start date and end date.
@@ -86,7 +86,7 @@ In the following sample, the range selection should be greater than 3 days and l
 ## Strict mode
 
 DateRangePicker provides the option to limit the user towards entering the valid date only. With strict mode, you can set only valid selection. Also, If any invalid range is specified then the date range value will reset to previous value.
-This restriction can be availed by enabling the strict mode by setting true to [`strictMode`](https://helpej2.syncfusion.com/react/documentation/api/daterangepicker/#strictmode) property.
+This restriction can be availed by enabling the strict mode by setting true to [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#strictmode) property.
 
 `[Class-component]`
 
