@@ -70,4 +70,4 @@ By default, action buttons positioned in horizontal alignment , and also it can 
 
 ## See Also
 
-* [How to integrate other component inside the card](./how-to/integrate-other-component-inside-the-card/)
+* [How to integrate other component inside the card](./how-to/integrate-other-component-inside-the-card)
