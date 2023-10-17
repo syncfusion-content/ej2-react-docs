@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with React Spreadsheet component | Syncfusion
-description:  Checkout and learn about Getting started with React Spreadsheet component of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about Getting started with React Spreadsheet component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Spreadsheet component
 
 This section explains the steps to create a simple Spreadsheet component in a React application.
 

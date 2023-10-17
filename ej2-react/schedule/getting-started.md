@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Schedule component
 
 This section briefly explains how to create [**React Scheduler**](https://www.syncfusion.com/react-components/react-scheduler) component and configure its available functionalities in React environment, using Essential JS 2 [quickstart](https://github.com/syncfusion/ej2-quickstart.git) seed repository.
 
