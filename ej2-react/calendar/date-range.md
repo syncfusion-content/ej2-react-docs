@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Date range in React Calendar component
 
-Calendar provides an option to select a date value within a specified range by using the [`min`](https://ej2.syncfusion.com/react/documentation/api/calendar#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/calendar#max) properties. Always the min date has to be lesser than the max date.
+Calendar provides an option to select a date value within a specified range by using the [`min`](https://helpej2.syncfusion.com/react/documentation/api/calendar/#min) and [`max`](https://helpej2.syncfusion.com/react/documentation/api/calendar/#max) properties. Always the min date has to be lesser than the max date.
 
 The below example allows to select a date within a range from 7th to 27th dates in a month.
 
