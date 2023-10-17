@@ -72,7 +72,7 @@ The following properties are available in [`markerSettings`](https://ej2.syncfus
 
 ## Marker shapes
 
-The Maps component supports the following marker shapes. To set the shape of the marker, the [`shape`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/#shape) property in [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markersettingsmodel/) is used.
+The Maps component supports the following marker shapes. To set the shape of the marker, the [`shape`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/#shape) property in [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/) is used.
 
 * Balloon
 * Circle
