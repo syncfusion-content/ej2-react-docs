@@ -174,7 +174,7 @@ root.render(<App />);
 
 ## Objects
 
-The layer's [objects](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#objects-string) property defines the diagram elements to the layer.
+The layer's [objects](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#objects-string[]) property defines the diagram elements to the layer.
 
 ```ts
 
