@@ -6,9 +6,9 @@ import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { LinearGaugeComponent, Print, Inject, IPrintEventArgs } from '@syncfusion/ej2-react-lineargauge';
 export function App() {
-    let gaugeInstance : LinearGaugeComponent | null;
+    let gaugeInstance : LinearGaugeComponent;
     function clickHandler(){
-      gaugeInstance?.print();
+      gaugeInstance.print();
     }
     function beforePrint(args: IPrintEventArgs){
     }

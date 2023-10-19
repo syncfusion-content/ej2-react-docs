@@ -15,7 +15,7 @@ export function App() {
     gaugeInstance.axes[0].pointers[0].value = 50;
     gaugeInstance?.refresh();
   }
-  let gaugeInstance : LinearGaugeComponent | null;
+  let gaugeInstance : LinearGaugeComponent;
   return (
     <div>
       <ButtonComponent onClick={clickHandler}>
