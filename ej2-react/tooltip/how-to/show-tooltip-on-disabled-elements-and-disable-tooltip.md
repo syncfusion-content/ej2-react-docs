@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Show tooltip on disabled elements and disable tooltip in React Tooltip component | Syncfusion
+title: Show tooltip on disabled elements in React Tooltip component | Syncfusion
 description: Learn here all about Show tooltip on disabled elements and disable tooltip in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
 control: Show tooltip on disabled elements and disable tooltip 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show tooltip on disabled elements and disable tooltip in React Tooltip component
+# Show tooltip on disabled elements in React Tooltip component
 
 By default, Tooltips will not be displayed on disabled elements. However, it is possible to enable this behavior by following the steps below.
 1. Add a disabled element like the `button` element into a div whose display style is set to `inline-block`.
