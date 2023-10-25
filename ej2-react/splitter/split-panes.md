@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Split panes in React Splitter component | Syncfusion
+title: Split panes in React Splitter Component | Syncfusion
 description: Learn here all about Split panes in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
 control: Split panes 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Split panes in React Splitter component
+# Split panes in React Splitter Component
 
 This section explain about split panes behaviors.
 
@@ -169,7 +169,7 @@ Splitter provides support to render the nested pane to achieve the complex layou
 
 ## Add or remove pane
 
-You can add or remove panes programmatically to the splitter. By using [addPane](https://ej2.syncfusion.com/react/documentation/api/splitter#addpane) and [removePane](https://ej2.syncfusion.com/react/documentation/api/splitter#removepane) methods.
+You can add or remove panes programmatically to the splitter. By using [addPane](https://ej2.syncfusion.com/react/documentation/api/splitter/#addpane) and [removePane](https://ej2.syncfusion.com/react/documentation/api/splitter/#removepane) methods.
 
 ### Add pane
 
@@ -203,7 +203,7 @@ You can add the panes dynamically in the splitter by passing [pane properties](h
 
 ### Remove pane
 
-You can remove the split panes dynamically by passing the pane index to [removePane](https://ej2.syncfusion.com/react/documentation/api/splitter#removepane) method.
+You can remove the split panes dynamically by passing the pane index to [removePane](https://ej2.syncfusion.com/react/documentation/api/splitter/#removepane) method.
 
 `[Class-component]`
 
