@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React Datetimepicker component | Syncfusion
+title: Getting started with React Datetimepicker Component | Syncfusion
 description:  Checkout and learn about Getting started with React Datetimepicker component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React Datetimepicker
 
 This section explains you the steps required to create a simple DateTimePicker and demonstrate the basic usage of the DateTimePicker component.
 

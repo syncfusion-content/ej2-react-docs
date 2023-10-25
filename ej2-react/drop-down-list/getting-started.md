@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Drop down list component | Syncfusion
-description:  Checkout and learn about Getting started with React Drop down list component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Dropdown List Component | Syncfusion
+description:  Checkout and learn about Getting started with React Dropdown List component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Dropdown List Component
 
 This section briefly explains how to create a simple **DropDownList** component and configure its available functionalities in React.
 
@@ -228,4 +228,4 @@ In the following sample, popup list's width and height are configured.
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
+* [How to bind the data](./data-binding)

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Print in React Document editor component | Syncfusion
-description: Learn here all about Print in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Print in React Document Editor Component | Syncfusion
+description: Learn here all about Print in Syncfusion Essential React Document Editor component, its elements and more.
 control: Print 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React Document editor component
+# Print in React Document Editor Component
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/react/documentation/api/document-editor#print) method from document editor instance.
+To print the document, use the [`print`](https://helpej2.syncfusion.com/react/documentation/api/document-editor/#print) method from document editor instance.
 
 Refer to the following example for showing a document and print it.
 
@@ -49,7 +49,7 @@ Refer to the following example for creating a document and print it.
 
 ## Improve print quality
 
-Document editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel/#printdevicepixelratio) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using printDevicePixelRatio API, you can increase the image quality based on your requirement.
+Document editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettingsmodel/#printdevicepixelratio) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using printDevicePixelRatio API, you can increase the image quality based on your requirement.
 
 The following example code illustrates how to improve the print quality in Document editor container.
 
@@ -140,7 +140,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 Some of the print options cannot be configured using JavaScript. Refer to the following links to learn more about the browser page setup:
 
 * [`Chrome`](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1/)
-* [`Firefox`](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox/)
+* [`Firefox`](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 
 However, you can customize margins, paper, and layout options by modifying the section format properties using page setup dialog
 

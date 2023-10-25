@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrolling in React Grid component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Scrolling in React Grid Component | Syncfusion
+description: Learn here all about Scrolling in Syncfusion Essential React Grid component, its elements and more.
 control: Scrolling 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling in React Grid component
+# Scrolling in React Grid Component
 
  The scrollbar will be displayed in the grid when content exceeds the element [width](https://ej2.syncfusion.com/react/documentation/api/grid/#width) or [height](https://ej2.syncfusion.com/react/documentation/api/grid/#height).
  The vertical and horizontal scrollbars will be displayed based on the following criteria:
