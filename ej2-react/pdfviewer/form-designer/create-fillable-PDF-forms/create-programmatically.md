@@ -154,7 +154,7 @@ root.render(<App />);
 
 When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
 
-![React Pdfviewer Alt text](../../../pdfviewer/images/react-pdfviewer-save-form-field.gif)
+![Saving the form fields in React Pdfviewer](../../../pdfviewer/images/react-pdfviewer-save-form-field.gif)
 
 You can invoke download action using following code snippet.,
 
@@ -235,7 +235,7 @@ root.render(<App />);
 
 When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
 
-![React Pdfviewer Alt text](../../../pdfviewer/images/react-pdfviewer-printformfield.gif)
+![Printing the form fields in React Pdfviewer](../../../pdfviewer/images/react-pdfviewer-print-form-field.gif)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -308,7 +308,7 @@ root.render(<App />);
 
 We can open the already saved PDF document contains Form Fields in it by clicking the open icon in the toolbar. Refer the below GIF for further reference.
 
-![React Pdfviewer Alt text](../../../pdfviewer/images/react-pdfviewer-openexistingpdf.gif)
+![Open the existing PDF document in React Pdfviewer](../../../pdfviewer/images/react-pdfviewer-open-existing-pdf.gif)
 
 ## Validate form fields
 
@@ -1492,7 +1492,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![React Pdfviewer RadioButton Field Settings](../../../pdfviewer/images/react-pdfviewer-radiobutton.png)
+![React Pdfviewer RadioButton Field Settings](../../../pdfviewer/images/react-pdfviewer-radio-button.png)
 
 ### ListBox field settings
 
