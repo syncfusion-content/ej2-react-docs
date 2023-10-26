@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Calendar component | Syncfusion
-description:  Checkout and learn about Getting started with React Calendar component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Calendar Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential React Calendar component, it's elements and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React Calendar
 
 This section explains you the steps required to create a simple Calendar and demonstrate the basic usage of the Calendar component.
 
@@ -35,7 +35,7 @@ The below list of dependencies are required to use the `Calendar` component in y
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
      ```
        npm install -g create-react-app
