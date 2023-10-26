@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check list in React Listview component | Syncfusion
-description: Learn here all about Check list in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Check list in React Listview Component | Syncfusion
+description: Learn here all about check list in Syncfusion Essential React Listview component, it's elements and more details.
 control: Check list 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check list in React Listview component
+# Check list in React Listview Component
 
 The ListView supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the `showCheckBox` property.
 

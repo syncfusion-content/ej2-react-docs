@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React functional component in React Form validator component | Syncfusion
-description: Learn here all about React functional component in Syncfusion React Form validator component of Syncfusion Essential JS 2 and more.
+title: React Functional Component in React Form Validator Component | Syncfusion
+description: Learn here all about React functional component in Syncfusion Essential Form validator component, it's elements and more details.
 control: React functional component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React functional component in React Form validator component
+# React Functional Component in React Form validator
 
 This article provides a step-by-step instructions on using the React functional Hooks in a simple HTML form with the FormValidator component.
 
@@ -23,12 +23,12 @@ The following is a list of React Hooks methods to utilize while performing form 
 
 ## Create a React form with Syncfusion form components
 
-To create a React application with Syncfusion components, refer to the [`Getting Started`](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/#create-the-react-application) section. Once the application is set up, replace the components with React form and Syncfusion form components to create a simple form.
+To create a React application with Syncfusion components, refer to the [`Getting Started`](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start#create-the-react-application) section. Once the application is set up, replace the components with React form and Syncfusion form components to create a simple form.
 
 In the following example, a login form is created with Syncfusion components such as TextBox, DatePicker, and Button. This form is validated using the React FormValidator component.
 
-* [`TextBox`](https://ej2.syncfusion.com/react/documentation/textbox/getting-started/) - To get the user's email and password
-* [`DatePicker`](https://ej2.syncfusion.com/react/documentation/datepicker/getting-started/) - To get the user's date of birth
+* [`TextBox`](https://ej2.syncfusion.com/react/documentation/textbox/getting-started) - To get the user's email and password
+* [`DatePicker`](https://ej2.syncfusion.com/react/documentation/datepicker/getting-started) - To get the user's date of birth
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -66,7 +66,7 @@ For the input validation, specify rules for the email, password, and date of bir
     }, []);
 ```
 
-Check out the [`validation rules`](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules/#validation-rules) section to learn more about the validation rules.
+Check out the [`validation rules`](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules#validation-rules) section to learn more about the validation rules.
 
 Here, the `useState` Hook is used to store the value of the date of birth field.
 

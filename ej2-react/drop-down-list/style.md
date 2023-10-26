@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Drop down list component | Syncfusion
-description: Learn here all about Style in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Style in React Dropdown List Component | Syncfusion
+description: Learn here all about style in Syncfusion Essential React Dropdown List component, it's elements and more details.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Drop down list component
+# Style in React Dropdown List Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

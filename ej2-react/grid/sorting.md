@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in React Grid component | Syncfusion
-description: Learn here all about Sorting in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Sorting in React Grid Component | Syncfusion
+description: Learn here all about sorting in Syncfusion Essential React Grid component, it's elements and more details.
 control: Sorting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in React Grid component
+# Sorting in React Grid Component
 
 The Grid component has support to sort data bound columns in **Ascending** or **Descending** order.
 This can be achieved by setting [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) property as true.
@@ -231,4 +231,4 @@ The [allowMultiSorting](https://ej2.syncfusion.com/react/documentation/api/grid/
 
 The following screenshot shows grid touch sorting.
 
-![Touch Interaction](images/touch-sorting.jpg)
+![Touch Interaction in React Grid Sorting](images/react-grid-touch-sorting.jpg)
