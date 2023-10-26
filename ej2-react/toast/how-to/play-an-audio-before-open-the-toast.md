@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Play an audio before open the toast in React Toast component | Syncfusion
-description: Learn here all about Play an audio before open the toast in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Play audio before open toast in React Toast Component | Syncfusion
+description: Learn here all about Play an audio before open the toast in Syncfusion Essential React Toast component, it's elements and more.
 control: Play an audio before open the toast 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Play an audio before open the toast in React Toast component
+# Play audio before open toast in React Toast Component
 
 Here below sample demonstrates to playing audio background while opening Toast. Here we have included audio play codes into beforeOpen event Function.
 

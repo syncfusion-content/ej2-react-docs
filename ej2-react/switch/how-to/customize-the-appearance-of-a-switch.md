@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the appearance of a switch in React Switch component | Syncfusion
-description: Learn here all about Customize the appearance of a switch in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: Customize the appearance in React Switch Component | Syncfusion
+description: Learn here all about Customize the appearance of a switch in Syncfusion Essential React Switch component, it's element and more.
 control: Customize the appearance of a switch 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the appearance of a switch in React Switch component
+# Customize the appearance in React Switch Component
 
 You can customize the appearance of the Switch component using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/switch/#cssClass) property.
 
