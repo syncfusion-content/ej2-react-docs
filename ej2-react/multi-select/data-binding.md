@@ -157,6 +157,6 @@ The following sample displays the first 6 contacts from “Customers” table of
 
 ## See Also
 
-* [How to load data using template](./templates#item-template)
-* [How to group the data using header](./grouping/)
-* [How to filter the bound data](./filtering/)
+* [How to load data using template](https://ej2.syncfusion.com/react/documentation/multi-select/templates#item-template)
+* [How to group the data using header](https://ej2.syncfusion.com/react/documentation/multi-select/grouping)
+* [How to filter the bound data](https://ej2.syncfusion.com/react/documentation/multi-select/filtering)
