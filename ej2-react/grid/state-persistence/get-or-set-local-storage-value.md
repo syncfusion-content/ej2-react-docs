@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get or set local storage value in React Grid component | Syncfusion
-description: Learn here all about Get or set local storage value in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Get or set local storage value in React Grid Component | Syncfusion
+description: Learn here all about get or set local storage value in Syncfusion Essential React Grid component, it's elements and more.
 control: Get or set local storage value 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get or set local storage value in React Grid component
+# Get or set local storage value in React Grid Component
 
 If the [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid/#enablepersistence) property is set to **true**, the grid property value is saved in the **window.localStorage** for reference.
 You can get/set the localStorage value by using the **getItem/setItem** method in the **window.localStorage**.

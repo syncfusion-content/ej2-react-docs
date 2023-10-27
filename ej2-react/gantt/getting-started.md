@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Gantt component | Syncfusion
-description:  Checkout and learn about Getting started with React Gantt component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Gantt Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential React Gantt component, it's elements more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React Gantt
 
 This section explains you the steps required to create a simple Essential JS 2 Gantt in a React application and demonstrates its basic features.
 
@@ -718,4 +718,4 @@ Output will be appears as follows.
         
 {% previewsample "page.domainurl/code-snippet/gantt/run-cs1" %}
 
-> You can refer to our [React Gantt Chart]( https://www.syncfusion.com/react-ui-components/react-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Gantt Chart example]( https://ej2.syncfusion.com/react/demos/#/material/gantt/default) that shows how to render the Gantt Chart in React.
+N> You can refer to our [React Gantt Chart]( https://www.syncfusion.com/react-components/react-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Gantt Chart example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/gantt/default) that shows you how to render the Gantt Chart in React.

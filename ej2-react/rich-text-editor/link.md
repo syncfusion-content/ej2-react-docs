@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in React Rich text editor component | Syncfusion
-description: Learn here all about Link in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Link in React Rich Text Editor Component | Syncfusion
+description: Learn here all about link support in Syncfusion Essential React Rich Text Editor component, it's elements and more.
 control: Link 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in React Rich text editor component
+# Link in React Rich Text Editor Component
 
 A hyperlink can be insert into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
 
