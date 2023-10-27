@@ -1,14 +1,14 @@
 ---
 layout: post
-title: File source in React Uploader component | Syncfusion
-description: Learn here all about File source in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: File source in React Uploader Component | Syncfusion
+description: Learn here all about File source in Syncfusion Essential React Uploader component, its elements and more.
 control: File source 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File source in React Uploader component
+# File source in React Uploader Component
 
 ## Paste to upload
 
@@ -201,7 +201,7 @@ You can customize the appearance of drop area by overriding the default drop are
 
  {% previewsample "page.domainurl/code-snippet/uploader/customize-drop-cs2" %}
 
->You can also explore [React File Upload](https://www.syncfusion.com/react-ui-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/material/uploader/default) to understand how to browse the files which you want to upload to the server.
+>You can also explore [React File Upload](https://www.syncfusion.com/react-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/material/uploader/default) to understand how to browse the files which you want to upload to the server.
 
 ## See Also
 

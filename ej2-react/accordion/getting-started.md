@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Accordion component | Syncfusion
-description:  Checkout and learn about Getting started with React Accordion component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Accordion Component | Syncfusion
+description:  Checkout and learn about getting started with React Accordion component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Accordion
 
 This section briefly explains you the steps required to create a simple [React Accordion](https://www.syncfusion.com/react-components/react-accordion) and demonstrate the basic usage of the Accordion control.
 
@@ -87,7 +87,7 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ## Initialize the Accordion using Items
 
-The React Accordion can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/accordion#items).
+The React Accordion can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/accordion/#items/).
 
 * Import the Accordion component to your `src/App.ts` file using following code.
 
@@ -176,10 +176,10 @@ You need to follow the below structure of HTML elements to render the Accordion.
         
 {% previewsample "page.domainurl/code-snippet/accordion/accordion-cs5" %}
 
-> You can add the custom class into Accordion component using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItem#cssclass) property which is used to customize the Accordion component.
+> You can add the custom class into Accordion component using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItem/#cssclass) property which is used to customize the Accordion component.
 
 ## See Also
 
-* [How to load accordion items dynamically](./how-to/load-accordion-items-dynamically/)
+* [How to load accordion items dynamically](./how-to/load-accordion-items-dynamically)
 
 N> You can also explore our [React Accordion example](https://ej2.syncfusion.com/react/demos/#/fabric/accordion/default) that shows you how to configure the Accordion in React.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Rich text editor component | Syncfusion
-description:  Checkout and learn about Getting started with React Rich text editor component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Rich Text Editor Component | Syncfusion
+description:  Checkout and learn about getting started with React Rich Text Editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React Rich Text Editor Component
 
 This section explains the steps to create a simple Rich Text Editor and demonstrates the basic usage of the RTE component.
 
@@ -526,8 +526,8 @@ Output will be displayed as follows
 
 ## See Also
 
-* [How to change the editor type](./editor-modes/)
-* [How to render the iframe](./iframe/)
-* [How to render the toolbar in inline mode](./inline-mode/)
+* [How to change the editor type](./editor-modes)
+* [How to render the iframe](./iframe)
+* [How to render the toolbar in inline mode](./inline-mode)
 * [How to insert Emoticons](https://ej2.syncfusion.com/react/demos/#/material/rich-text-editor/insert-emoticons)
 * [Blog posting using Rich Text Editor](https://ej2.syncfusion.com/react/demos/#/material/rich-text-editor/blog-posting)
