@@ -7,7 +7,7 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective } from '@syncfusion/ej2-react-lineargauge';
 export function App() {
     function clickHandler(){
-       gaugeInstance?.setPointerValue(0, 0, 30);
+       gaugeInstance.setPointerValue(0, 0, 30);
     }
     let gaugeInstance : LinearGaugeComponent;
     return (<div>
