@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position in React Tooltip component | Syncfusion
-description: Learn here all about Position in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Position in React Tooltip Component | Syncfusion
+description: Learn here all about position in Syncfusion Essential React Tooltip component, it's elements and more details.
 control: Position 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position in React Tooltip component
+# Position in React Tooltip Component
 
 Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, you can set the position property with any one of the following values:
 

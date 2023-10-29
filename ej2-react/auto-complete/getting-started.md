@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Auto complete component | Syncfusion
-description:  Checkout and learn about Getting started with React Auto complete component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React AutoComplete Component | Syncfusion
+description:  Learn about getting started with Syncfusion Essential React Autocomplete component, it's elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React AutoComplete Component
 
 This section explains how to create a simple **AutoComplete** component and configure its available functionalities in React.
 
@@ -229,4 +229,4 @@ In the following sample, popup list's width and height are configured.
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
+* [How to bind the data](./data-binding)
