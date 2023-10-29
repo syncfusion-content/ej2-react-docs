@@ -85,6 +85,7 @@ EditRecord | Edit Record
 DeleteRecord | Delete Record
 FilterMenu | Filter
 SelectAll | Select All
+AddCurrentSelection: | Add current selection to filter
 Blanks | Blanks
 FilterTrue | True
 FilterFalse | False
