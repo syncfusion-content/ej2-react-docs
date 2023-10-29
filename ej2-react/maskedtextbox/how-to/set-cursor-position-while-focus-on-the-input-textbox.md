@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set cursor position while focus on the input textbox in React Maskedtextbox component | Syncfusion
-description: Learn here all about Set cursor position while focus on the input textbox in Syncfusion React Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Set cursor position in React MaskedTextBox Component | Syncfusion
+description: Learn here all about set cursor position while focus on the input textbox in Syncfusion Essential React Maskedtextbox component, it's elements and more.
 control: Set cursor position while focus on the input textbox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set cursor position while focus on the input textbox in React Maskedtextbox component
+# Set cursor position in React MaskedTextBox Component
 
 By default, on focusing the MaskedTextBox the entire mask gets selected. You can customize by using any one of the following methods:
 
