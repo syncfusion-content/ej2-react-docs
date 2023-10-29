@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clear item in React Drop down list component | Syncfusion
-description: Learn here all about Clear item in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Clear item in React Drop down list Component | Syncfusion
+description: Learn here all about clear item in Syncfusion Essential React Drop down list component, it's elements and more.
 control: Clear item 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear item in React Drop down list component
+# Clear item in React Drop down list Component
 
 You can clear the selected item in the below two different ways.
 
