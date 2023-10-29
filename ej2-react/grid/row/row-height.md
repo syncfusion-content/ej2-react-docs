@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row height in React Grid component | Syncfusion
-description: Learn here all about Row height in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Row height in React Grid Component | Syncfusion
+description: Learn here all about Row height support in Syncfusion Essential React Grid component, it's elements and more.
 control: Row height 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row height in React Grid component
+# Row height in React Grid Component
 
 You can customize the row height of grid rows through the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid/#rowheight) property. The **rowHeight** property is used to change the row height of entire grid rows.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set disabled state in React Switch component | Syncfusion
-description: Learn here all about Set disabled state in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: Set disabled state in React Switch Component | Syncfusion
+description: Learn here all about Set disabled state support in Syncfusion Essential React Switch component, it's elements and more.
 control: Set disabled state 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set disabled state in React Switch component
+# Set disabled state in React Switch Component
 
 Switch can be disabled by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/switch/#disabled) property to true.
 

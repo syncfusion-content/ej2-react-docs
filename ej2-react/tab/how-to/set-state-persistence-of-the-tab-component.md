@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set state persistence of the tab component in React Tab component | Syncfusion
-description: Learn here all about Set state persistence of the tab component in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: Set state persistence in React Tab Component | Syncfusion
+description: Learn here all about Set state persistence of the tab component in Syncfusion Essential React Tab component, it's elements and more.
 control: Set state persistence of the tab component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set state persistence of the tab component in React Tab component
+# Set state persistence of the tab component in React Tab Component
 
 State persistence allows the Tab to retain the current modal value in the browser cookies for state maintenance. This action is handled through the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/tab/#enablepersistence) property which is set to false by default. When it is set to true, some of the Tab component model values will be retained even after refreshing the page.
 

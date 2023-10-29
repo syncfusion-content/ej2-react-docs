@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Horizontal in React Card component | Syncfusion
-description: Learn here all about Horizontal in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: Horizontal in React Card Component | Syncfusion
+description: Learn here all about horizontal support in Syncfusion Essential React Card component, it's elements and more.
 control: Horizontal 
 platform: ej2-react
 documentation: ug
