@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React Maps component | Syncfusion
+title: Getting Started with React Maps Component | Syncfusion
 description:  Checkout and learn about Getting started with React Maps component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Maps Component
 
 This section explains you the steps required to create a map and demonstrate the basic usage of the maps component.
 

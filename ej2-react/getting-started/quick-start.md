@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quick start with React Getting started component | Syncfusion
+title: Quick start with React Getting Started Component | Syncfusion
 description:  Checkout and learn about Quick start with React Getting started component of Syncfusion Essential JS 2 and more details.
 control: Quick start 
 platform: ej2-react
@@ -207,4 +207,4 @@ The output will appears as follows.
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs9" %}
 
-To know more functionality about the Grid component, refer to the [Grid component](https://ej2.syncfusion.com/react/documentation/grid/getting-started/) section.
+To know more functionality about the Grid component, refer to the [Grid component](https://ej2.syncfusion.com/react/documentation/grid/getting-started) section.

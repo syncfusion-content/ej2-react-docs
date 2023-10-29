@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Config in React Toast component | Syncfusion
-description: Learn here all about Config in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Config in React Toast Component | Syncfusion
+description: Learn here all about config support in Syncfusion Essential React Toast component, it's elements and more.
 control: Config 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Config in React Toast component
+# Config in React Toast Component
 
 This section explains on customizing the Toast appearance using built-in APIs.
 
