@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text format in React Document editor component | Syncfusion
-description: Learn here all about Text format in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Text format in React Document Editor Component | Syncfusion
+description: Learn here all about text format in Syncfusion Essential React Document Editor component, it's elements and more details.
 control: Text format 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in React Document editor component
+# Text format in React Document editor Component
 
 Document Editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
@@ -314,6 +314,6 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [Font dialog](../document-editor/dialog#font-dialog)
 * [Keyboard shortcuts](../document-editor/keyboard-shortcut#text-formatting)

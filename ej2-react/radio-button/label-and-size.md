@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Label and size in React Radio button component | Syncfusion
-description: Learn here all about Label and size in Syncfusion React Radio button component of Syncfusion Essential JS 2 and more.
+title: Label and size in React Radio Button Component | Syncfusion
+description: Learn here all about label and size in Syncfusion Essential React Radio Button component, it's elements and more details.
 control: Label and size 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Label and size in React Radio button component
+# Label and size in React Radio Button Component
 
 This section explains the different sizes and labels.
 
 ## Label
 
-RadioButton caption can be defined by using the [`label`](https://ej2.syncfusion.com/react/documentation/api/radio-button#label) property. This reduces the manual addition of label for RadioButton. You can customize the label position before or after the RadioButton through the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/radio-button#labelposition) property.
+RadioButton caption can be defined by using the [`label`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#label) property. This reduces the manual addition of label for RadioButton. You can customize the label position before or after the RadioButton through the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#labelposition) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,7 +29,7 @@ RadioButton caption can be defined by using the [`label`](https://ej2.syncfusion
 
 ## Size
 
-The different RadioButton sizes available are default and small. To reduce the size of the default RadioButton to small, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button#cssclass) property to `e-small`.
+The different RadioButton sizes available are default and small. To reduce the size of the default RadioButton to small, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#cssclass) property to `e-small`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

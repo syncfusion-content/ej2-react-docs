@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Barcode component | Syncfusion
-description:  Checkout and learn about Getting started with React Barcode component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Barcode Component | Syncfusion
+description:  Learn about Getting Started with React Barcode component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -33,7 +33,7 @@ Below is the list of minimum dependencies required to use the barcode component.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
 ```
