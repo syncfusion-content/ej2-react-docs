@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Webpack externals with React Getting started component | Syncfusion
-description:  Checkout and learn about Webpack externals with React Getting started component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with webpack externals in React Platform | Syncfusion
+description: Learn here all about webpack externals with Syncfusion Essential React platform, it's elements and more.
 control: Webpack externals 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Webpack Externals in React
+# Getting Started with webpack externals in React
 
 The [Webpack Externals](https://webpack.js.org/configuration/externals/) are used to ignore the packages from the application while bundling and adding them as external CDN script references.
 

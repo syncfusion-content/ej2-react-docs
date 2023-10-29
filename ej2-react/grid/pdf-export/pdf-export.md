@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pdf export in React Grid component | Syncfusion
-description: Learn here all about Pdf export in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: PDF export in React Grid Component | Syncfusion
+description: Learn here all about pdf export support in Syncfusion Essential React Grid component, it's elements and more.
 control: Pdf export 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf export in React Grid component
+# PDF export in React Grid Component
 
 PDF export allows exporting Grid data to PDF document. You need to use the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfexport) method for exporting. To enable PDF export in the grid, set the [allowPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#allowpdfexport) as **true**.
 
