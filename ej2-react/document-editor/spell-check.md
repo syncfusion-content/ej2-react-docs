@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spell check in React Document editor component | Syncfusion
-description: Learn here all about Spell check in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Spell check in React Document Editor Component | Syncfusion
+description: Learn here all about spell check support in Syncfusion Essential React Document editor component, it's elements and more.
 control: Spell check 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell check in React Document editor component
+# Spell check in React Document Editor Component
 
 Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
 
@@ -46,17 +46,17 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Enable SpellCheck
 
-To enable spell check in Document Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/react/documentation/api/document-editor#enablespellcheck) property as `true` and then configure SpellCheckSettings.
+To enable spell check in Document Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#enablespellcheck) property as `true` and then configure SpellCheckSettings.
 
 ## Disable SpellCheck
 
-To disable spell check in Document Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/react/documentation/api/document-editor#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/react/documentation/api/document-editor#enablespellcheck) property initialization code. The default value of this property is false.
+To disable spell check in Document Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#enablespellcheck) property initialization code. The default value of this property is false.
 
 ## Spell check settings
 
 ### Remove Underline
 
-By default, mis-spelled words are marked with squiggly line. You can also disable this behavior by enabling the [`removeUnderline`](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellChecker#removeunderline) API and now, the squiggly lines will never be rendered for mis-spelled words.
+By default, mis-spelled words are marked with squiggly line. You can also disable this behavior by enabling the [`removeUnderline`](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellChecker/#removeunderline) API and now, the squiggly lines will never be rendered for mis-spelled words.
 
 ```ts
 documentEditor.spellChecker.removeUnderline = false;
@@ -64,7 +64,7 @@ documentEditor.spellChecker.removeUnderline = false;
 
 ### AllowSpellCheckAndSuggestion
 
-By default, on performing spell check in Document Editor, both spelling and suggestions of the mis-spelled words will be retrieved, and this mis-spelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
+By default, on performing spell check in Document Editor, both spelling and suggestions of the mis-spelled words will be retrieved, and this mis-spelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellChecker/#allowspellcheckandsuggestion) API, which will perform only spell check.
 
 ```ts
 documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
@@ -72,13 +72,13 @@ documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
 
 ### LanguageID
 
-Document Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in Document Editor, it must be matched with [`languageID`](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellChecker#languageid) you pass in the Document Editor.
+Document Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in Document Editor, it must be matched with [`languageID`](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellChecker/#languageid) you pass in the Document Editor.
 
      ```ts
       documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
      ```
 
-* Refer to the [Spell checker](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) link for configuring spell checker in server-side.
+* Refer to the [Spell checker](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services) link for configuring spell checker in server-side.
 
 ### EnableOptimizedSpellCheck
 

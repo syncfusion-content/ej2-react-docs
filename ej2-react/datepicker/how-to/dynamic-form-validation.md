@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dynamic form validation in React Datepicker component | Syncfusion
-description: Learn here all about Dynamic form validation in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Dynamic form validation in React Datepicker Component | Syncfusion
+description: Learn here all about dynamic form validation in Syncfusion Essential React Datepicker component, it's elements and more.
 control: Dynamic form validation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dynamic form validation in React Datepicker component
+# Dynamic form validation in React Datepicker Component
 
 Dynamic form can be very useful and more economical to create the forms based on JSON data and without need for adding/changing any code.
 
