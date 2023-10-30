@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize colorpicker in React Color picker component | Syncfusion
-description: Learn here all about Customize colorpicker in Syncfusion React Color picker component of Syncfusion Essential JS 2 and more.
+title: Customize in React Color Picker Component | Syncfusion
+description: Learn here all about customize support in Syncfusion Essential React Color Picker component, it's elements and more.
 control: Customize colorpicker 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize colorpicker in React Color picker component
+# Customize in React Color Picker Component
 
 ## Custom palette
 
