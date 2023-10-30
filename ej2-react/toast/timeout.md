@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timeout in React Toast component | Syncfusion
-description: Learn here all about Timeout in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Timeout in React Toast Component | Syncfusion
+description: Learn here all about timeout support in Syncfusion Essential React Toast component, it's elements and more.
 control: Timeout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timeout in React Toast component
+# Timeout in React Toast Component
 
 The [`timeOut`](https://ej2.syncfusion.com/react/documentation/api/toast/#timeout) property helps to change the default value of toast expire time. By default, the set timeOut value will be `5000` milliseconds. React Toast will live till the timeOut reaches without user interaction, the timeOut value will be taken in milliseconds. Once the toast reached a given timeOut it will expire automatically.
 
@@ -80,4 +80,4 @@ You can prevent auto-hiding of React toast by set timeOut value of timeOut prope
 
 ## See Also
 
-* [Hide the toast on click](./how-to/close-the-toast-with-click-tap/)
+* [Hide the toast on click](./how-to/close-the-toast-with-click-tap)
