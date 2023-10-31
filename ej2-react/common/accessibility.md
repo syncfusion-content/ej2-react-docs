@@ -150,7 +150,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/circular-gauge/accessibility">Circular Gauge</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/linear-gauge/accessibility">Linear Gauge</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maps/accessibility">Maps</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/diagram/accessibility">Diagram Component</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/diagram/accessibility">Diagram</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/range-navigator/accessibility">Range Selector</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/smithchart/accessibility">Smith Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/sparkline/accessibility">Sparkline Charts</a></div>
