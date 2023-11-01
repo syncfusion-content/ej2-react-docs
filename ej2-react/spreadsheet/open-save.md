@@ -286,7 +286,7 @@ The following code snippets shows server configuration using `WebAPI` service.
         [HttpPost]
         [EnableCors("AllowAllOrigins")]
         [Route("Save")]
-        public IActionResult Save(SaveSettings saveSettings)
+        public IActionResult Save([FromForm]SaveSettings saveSettings)
         {
             return Workbook.Save(saveSettings);
         }
