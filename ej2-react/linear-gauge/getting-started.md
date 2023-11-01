@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Linear gauge component | Syncfusion
-description:  Checkout and learn about Getting started with React Linear gauge component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Linear Gauge component | Syncfusion
+description:  Checkout and learn about Getting started with React Linear Gauge component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -12,7 +12,11 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD013 -->
 
-This section explains you the steps required to create a simple Linear Gauge and demonstrate the basic usage of the Linear Gauge control.
+This section explains the steps required to create a Linear Gauge and demonstrates the basic usage of the Linear Gauge component.
+
+You can explore some useful features in the Linear Gauge component using the following video.
+
+{% youtube "https://www.youtube.com/watch?v=PTBeKSNHp1k" %}
 
 ## Dependencies
 
@@ -109,7 +113,7 @@ npm start
 
 ## Module Injection
 
-Linear gauge component are segregated into individual feature-wise modules. In order to use a particular feature,
+Linear Gauge component are segregated into individual feature-wise modules. In order to use a particular feature,
 inject its feature service in the **AppModule**. Please find the feature service name and description as follows.
 
 * `Annotations` - Inject this module in to `services` to use annotation feature.
