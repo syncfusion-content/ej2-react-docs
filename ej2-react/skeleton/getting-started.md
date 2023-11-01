@@ -85,28 +85,15 @@ Add Skeleton component's styles as given below in `App.css`.
 
 Now, you can create `Skeleton` component in the application. Add `Skeleton` component in `src/App.tsx` file using the following code snippet.
 
-
-
 ```ts
 import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 
 function App() {
-
-  return (
-    <SkeletonComponent height='15px'></SkeletonComponent>);
-}
-export default App;
-ReactDOM.render(<App />, document.getElementById('element'));
-```
-
-```ts
-import { SkeletonComponent } from '@syncfusion/ej2-react-notifications';
-import * as React from "react";
-import * as ReactDOM from 'react-dom';
-function App() {
-    return (<SkeletonComponent height='15px'></SkeletonComponent>);
+    return (
+        <SkeletonComponent height='15px'></SkeletonComponent>
+    );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));
