@@ -229,7 +229,7 @@ Output will be appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs5" %}
 
-> You can refer to our [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/material/grid/overview) that shows how to render the Grid in React.
+> You can refer to our [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/grid/overview) that shows how to render the Grid in React.
 
 ## See also
 

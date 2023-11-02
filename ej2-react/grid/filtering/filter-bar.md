@@ -76,4 +76,4 @@ In the following sample dropdown is used  as custom component in **EmployeeID** 
 
  ## See also
 
-* [How to perform filter by using Wildcard and LIKE operator filter](./filtering/#wildcard-and-like-operator-filter)
+* [How to perform filter by using Wildcard and LIKE operator filter](https://ej2.syncfusion.com/react/documentation/grid/filtering/filtering#wildcard-and-like-operator-filter)
