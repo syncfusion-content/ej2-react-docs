@@ -1,26 +1,35 @@
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Reorder } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
 function App() {
     let grid;
-    const reorder = () => {
+    const reorderSingleColumnUsingFieldName = (() => {
         if (grid) {
-            grid.reorderColumns(['ShipCity', 'ShipRegion'], 'ShipName');
+            grid.reorderColumns("ShipCity", "OrderID");
         }
-    };
-    return (<div>
-        <ButtonComponent id='reorderMultipleCols' onClick={reorder}>Reorder Ship City and Ship Region to Last</ButtonComponent>
-        <GridComponent dataSource={data} allowReordering={true} height={275} ref={g => grid = g}>
-            <Inject services={[Reorder]}/>
-            <ColumnsDirective>
-                <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
-                <ColumnDirective field='CustomerID' width='100'/>
-                <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right"/>
-                <ColumnDirective field='ShipRegion' headerText='Ship Region' width='100' textAlign="Right"/>
-                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' textAlign="Right"/>
-            </ColumnsDirective>
-        </GridComponent></div>);
+    })
+    const reorderMultipleColumnsUsingFieldName = (() => {
+        if (grid) {
+            grid.reorderColumns(['ShipCity', 'ShipCountry', 'ShipName'], 'OrderID');
+        }
+    })
+    return (
+        <div>
+            <ButtonComponent id='reordersingle' cssClass="e-info" onClick={reorderSingleColumnUsingFieldName}>Reorder single column</ButtonComponent>
+            <ButtonComponent id='reordermultiple' cssClass="e-info" onClick={reorderMultipleColumnsUsingFieldName}>Reorder Multiple columns</ButtonComponent>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} allowReordering={true} >
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                    <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                    <ColumnDirective field='ShipCity' headerText='ShipCity' width='120' />
+                    <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='120' />
+                </ColumnsDirective>
+                <Inject services={[Reorder]} />
+            </GridComponent></div>)
 }
-;
 export default App;

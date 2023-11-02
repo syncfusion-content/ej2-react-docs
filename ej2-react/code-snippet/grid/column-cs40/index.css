@@ -1,0 +1,23 @@
+.e-grid .custom {
+  background-color: #f48fb1 !important;/* csslint allow: important */
+  color: white;
+}
+
+.e-grid .custom {
+  background-color: #fce4ec;
+  color: white;
+}
+
+.e-small {
+  background-color: rgb(238, 247, 247);
+
+}
+
+#small {
+  margin-right: 30px;
+
+}
+
+#medium {
+  margin-right: 30px;
+}

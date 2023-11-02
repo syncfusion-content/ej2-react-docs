@@ -7,3 +7,9 @@
   background-color: #fce4ec;
   color: white;
 }
+
+#message {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}

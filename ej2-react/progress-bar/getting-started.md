@@ -28,16 +28,16 @@ Below is the list of minimum dependencies required to use the progress bar compo
 You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-    ```
-     npm install -g create-react-app
-    ```
+   ```
+    npm install -g create-react-app
+   ```
 
 * To setup basic `React` sample use following commands.
 
      ```
-       create-react-app quickstart --scripts-version=react-scripts-ts
+       create-react-app quickstart --template typescript
        cd quickstart
-       npm install
+       npm start
      ```
 
 * Install Syncfusion packages using below command.

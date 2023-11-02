@@ -41,27 +41,23 @@ Below is the list of minimum dependencies required to use the accumulation chart
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
   
-    ```
-     npm install -g create-react-app
-    ```
-
-* To setup basic `React` sample use following commands.
-
-    <div class='tsx'>
-
-    ```
-     create-react-app quickstart --scripts-version=react-scripts-ts
-     cd quickstart
-     npm install
    ```
-   </div>
-   <div class='jsx'>
+    npm install -g create-react-app
+   ```
 
+* To set-up a React application in TypeScript environment, run the following command.
+
+    ```
+     create-react-app quickstart --template typescript
+     cd quickstart
+     npm start
+   ```
+* To set-up a React application in JavaScript environment, run the following command.
    ```
     create-react-app quickstart
     cd quickstart
+    npm start
    ```
-   </div>
 
 * Install Syncfusion packages using below command.
 
@@ -75,8 +71,9 @@ Now, you can start adding Accumulation Chart component in the application.
 For getting started, add the Accumulation Chart component in `src/App.tsx` file using following code.
 
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
-```ts
 import {AccumulationChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
 
@@ -87,16 +84,19 @@ function App() {
 }
 export default App;
 
-```
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
 
-```ts
 import { AccumulationChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
 function App() {
     return (<AccumulationChartComponent />);
 }
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 **Pie Series**
 

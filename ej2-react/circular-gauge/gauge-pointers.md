@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Gauge pointers in React Circular gauge component
 
-Pointers are used to indicate values on the axis. Value of the pointer can be modified using the [`value`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#value) property.
+Pointers are used to indicate values on the axis. Value of the pointer can be modified using the [`value`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#value-number) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -24,13 +24,13 @@ Pointers are used to indicate values on the axis. Value of the pointer can be mo
 
  {% previewsample "page.domainurl/code-snippet/circulargauge/gauge-pointers-cs1" %}
 
-Gauge supports 3 types of pointers such as `Needle`, `RangeBar` and `Marker`. You can choose any one of the pointer by using [`type`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#type) property.
+Gauge supports 3 types of pointers such as `Needle`, `RangeBar` and `Marker`. You can choose any one of the pointer by using [`type`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#type-string) property.
 
 ## Needle Pointers
 
-A needle pointer contains three parts, a needle, a cap / knob and a tail. The length of the needle can be customized by using [`radius`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#radius) property.
-The length of the tail can be customized by using [`length`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/needleTailModel/#length)property.
-The radius of the cap can be customized by using [`radius`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/capModel/#radius)
+A needle pointer contains three parts, a needle, a cap / knob and a tail. The length of the needle can be customized by using [`radius`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#radius-string) property.
+The length of the tail can be customized by using [`length`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/needleTailModel/#length-string)property.
+The radius of the cap can be customized by using [`radius`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/capModel/#radius-number)
 in cap object. The needle and tail length takes value either in `percentage` or `pixel`.
 
 {% tabs %}
@@ -48,8 +48,8 @@ in cap object. The needle and tail length takes value either in `percentage` o
 
 **Customization**
 
-Needle color and width can be customized by using [`color`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#color) and [`pointerWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#pointerwidth) property.
-Cap and tails can be customized by using [`cap`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#cap) and [`needleTail`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#needletail) object.
+Needle color and width can be customized by using [`color`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#color-string) and [`pointerWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#pointerwidth-number) property.
+Cap and tails can be customized by using [`cap`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#cap-capmodel) and [`needleTail`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#needletail-needletailmodel) object.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -92,7 +92,7 @@ RangeBar pointer is like ranges in an axis, that can be placed on gauge to mark 
 
 **Customization**
 
-RangeBar can be customized in terms of color, border and thickness by using [`color`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#color), [`border`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#border) and [`pointerWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#pointerwidth) property.
+RangeBar can be customized in terms of color, border and thickness by using [`color`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#color-string), [`border`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#border-bordermodel) and [`pointerWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#pointerwidth-number) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -122,9 +122,9 @@ The start and end pointers of range bar in the circular gauge are rounded to for
 
 ## Marker Pointer
 
-Different type of marker shape can be used to mark the pointer value in axis. You can change the marker shape using [`markerShape`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#markershape) property in pointer. Gauge marker supports `Circle`, `Rectangle`, `Triangle`, `InvertedTriangle` and `Diamond` shape.
+Different type of marker shape can be used to mark the pointer value in axis. You can change the marker shape using [`markerShape`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#markershape-string) property in pointer. Gauge marker supports `Circle`, `Rectangle`, `Triangle`, `InvertedTriangle` and `Diamond` shape.
 
-We can use image instead of rendering marker shape to denote the pointer value. It can be achieved by setting [`markerShape`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#markershape) to Image and assigning  image path to [`imageUrl`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#imageurl) in pointer.
+We can use image instead of rendering marker shape to denote the pointer value. It can be achieved by setting [`markerShape`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#markershape-string) to Image and assigning  image path to [`imageUrl`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#imageurl-string) in pointer.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -139,7 +139,7 @@ We can use image instead of rendering marker shape to denote the pointer value. 
 
 **Customization**
 
-The marker can be customized in terms of color, border, width and height by using [`color`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#color), [`border`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#border), [`markerWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#markerwidth) and [`markerHeight`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#markerheight) property in [`pointer`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/).
+The marker can be customized in terms of color, border, width and height by using [`color`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#color-string), [`border`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#border-bordermodel), [`markerWidth`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#markerwidth-number) and [`markerHeight`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#markerheight-number) property in [`pointer`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -184,9 +184,9 @@ In addition to the default pointer, you can add n number of pointer to an axis b
 
 ## Animation
 
-Pointer will get animate on loading the gauge, this can be handled by using [`animation`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#animation) property in pointer.
-The [`enable`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/animationModel/#enable) property in animation allows you to enable or disable the animation.
-The [`duration`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/animationModel/#duration) property specify the duration of the animation in milliseconds.
+Pointer will get animate on loading the gauge, this can be handled by using [`animation`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#animation-animationmodel) property in pointer.
+The [`enable`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/animationModel/#enable-boolean) property in animation allows you to enable or disable the animation.
+The [`duration`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/animationModel/#duration-number) property specify the duration of the animation in milliseconds.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

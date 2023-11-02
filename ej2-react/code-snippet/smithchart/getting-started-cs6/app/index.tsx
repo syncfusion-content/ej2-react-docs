@@ -12,7 +12,7 @@ function App() {
                         title = { {
                             visible: true,
                             text: 'Transmission lines applied for both impedance and admittance'
-                        } as TitleModel & string } >
+                        } } >
                         <Inject services={[SmithchartLegend]} />
                         <SmithchartSeriesCollectionDirective>
                             <SmithchartSeriesDirective

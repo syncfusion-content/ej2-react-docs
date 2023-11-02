@@ -12,6 +12,6 @@ class App extends React.Component {
       </RangenavigatorSeriesCollectionDirective>
     </RangeNavigatorComponent>;
     }
-}
-;
+};
+export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));

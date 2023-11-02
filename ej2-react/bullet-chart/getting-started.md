@@ -40,21 +40,19 @@ To install `create-react-app` run the following command.
     npm install -g create-react-app
    ```
 
-To setup basic `React` sample use following commands.
+* To set-up a React application in TypeScript environment, run the following command.
 
-   <div class='tsx'>
     ```
-    create-react-app quickstart --scripts-version=react-scripts-ts
+     create-react-app quickstart --template typescript
+     cd quickstart
+     npm start
+   ```
+* To set-up a React application in JavaScript environment, run the following command.
+   ```
+    create-react-app quickstart
     cd quickstart
-    npm install
-  ```
-  </div>
-  <div class='jsx'>
-  ```
-  create-react-app quickstart
-  cd quickstart
-  ```
-  </div>
+    npm start
+   ```
 
 Install Syncfusion packages using below command.
 
@@ -67,9 +65,9 @@ Install Syncfusion packages using below command.
 Now, you can start adding Bullet Chart component in the application.
 For getting started, add the Bullet Chart component in `src/App.tsx` file using following code.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
-
-```ts
 import { BulletChartComponent } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
 
@@ -77,16 +75,19 @@ function App() {
     return <BulletChartComponent />;
 }
 export default App;
-```
 
-```ts
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+
 import { BulletChartComponent } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
 function App() {
     return <BulletChartComponent />;
 }
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now run the `npm start` command in the console, it will run your application and open the browser window.
 
@@ -116,12 +117,10 @@ Bullet Chart are segregated into individual feature-wise modules. In order to us
 These modules should be injected to the `services` section as follows,
 
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
-```ts
-import {
-  BulletChartComponent,
-  BulletTooltip
-} from "@syncfusion/ej2-react-charts";
+import { BulletChartComponent, BulletTooltip } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
@@ -134,12 +133,14 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-```
 
-```ts
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+
 import { BulletChartComponent, BulletTooltip } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+
 function App() {
     return (<BulletChartComponent id="bulletChart">
         <Inject services={[BulletTooltip]}/>
@@ -147,25 +148,19 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Bullet Chart With Data
 
 This section explains how to plot local data to the Bullet Chart.
 
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
-```ts
-const data: any[] = [
-  { value: 100, target: 80 },
-  { value: 200, target: 180 },
-  { value: 300, target: 280 },
-  { value: 400, target: 380 },
-  { value: 500, target: 480 }
-];
-```
-
-```ts
 const data = [
     { value: 100, target: 80 },
     { value: 200, target: 180 },
@@ -173,7 +168,20 @@ const data = [
     { value: 400, target: 380 },
     { value: 500, target: 480 }
 ];
-```
+
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+
+const data: any[] = [
+  { value: 100, target: 80 },
+  { value: 200, target: 180 },
+  { value: 300, target: 280 },
+  { value: 400, target: 380 },
+  { value: 500, target: 480 }
+];
+
+{% endhighlight %}
+{% endtabs %}
 
 Now assign the local data to `dataSource` property. **value** and **target** values should be mapped with `valueField` and `targetField` respectively.
 
