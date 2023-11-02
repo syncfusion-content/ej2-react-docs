@@ -7,3 +7,7 @@
   background-color: #fce4ec;
   color: white;
 }
+
+.e-grid .e-headercell.customcss , .e-grid .e-rowcell.customcss {
+  background-color: rgb(43, 195, 226);
+}

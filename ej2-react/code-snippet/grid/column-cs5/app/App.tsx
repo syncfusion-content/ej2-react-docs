@@ -10,7 +10,6 @@ function App() {
     return <GridComponent dataSource={data} toolbar={toolbarOptions} height={272} showColumnChooser={true} >
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' showInColumnChooser={false} />
             <ColumnDirective field='Freight' width='100' format='C2' textAlign='Right' />
             <ColumnDirective field='OrderDate' width='140' format='yMd' textAlign='Right' />
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />

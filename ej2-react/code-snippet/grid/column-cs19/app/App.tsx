@@ -9,7 +9,7 @@ function App() {
     const currencyFormatter = (field: string, data: object, column: Column) => {
         return '€' + getValue('Freight', data);
     }
-    const valueAccess = (field: string, data: object, column: Column) => {
+    const concatenateFields = (field: string, data: object, column: Column) => {
         return data[field] + '-' + getValue('ShipRegion', data);
     }
     return (<div>
@@ -19,7 +19,7 @@ function App() {
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
                 <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
                 <ColumnDirective field='Freight' headerText='Freight' width='80' textAlign="Right" valueAccessor={currencyFormatter} />
-                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' valueAccessor={valueAccess} />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' valueAccessor={concatenateFields} />
             </ColumnsDirective>
         </GridComponent>
     </div>)

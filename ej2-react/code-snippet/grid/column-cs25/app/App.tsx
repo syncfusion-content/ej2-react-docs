@@ -1,20 +1,19 @@
 
-
-import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent } from '@syncfusion/ej2-react-grids';
-import { Edit, Filter, Group, Inject, Reorder, Sort } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Filter, Group, Reorder, Inject, Toolbar, Page } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
-  return <GridComponent dataSource={data} allowSorting={true} editSettings={editOptions} allowFiltering={true} allowReordering={true} allowGrouping={true} height={230}>
+  const toolbarOptions: any = ['Search'];
+  return <GridComponent dataSource={data} allowSorting={true} allowPaging={true} allowResizing={true} toolbar={toolbarOptions} allowFiltering={true} allowReordering={true} allowGrouping={true} height={230}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' width='100' textAlign="Right" isPrimaryKey={true} allowGrouping={false} />
-      <ColumnDirective field='CustomerID' width='100' />
-      <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right" allowEditing={false} allowReordering={false} allowFiltering={false} />
-      <ColumnDirective field='OrderDate' width='140' format="yMd" textAlign="Right" allowSorting={false} />
+      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} allowGrouping={false} allowResizing={false}/>
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' allowSorting={false}/>
+      <ColumnDirective field='ShipCity' headerText='Ship City' width='100' allowReordering={false}/>
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' allowSearching={false}/>
+      <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2" textAlign="Right" allowFiltering={false}/>
     </ColumnsDirective>
-    <Inject services={[Edit, Sort, Filter, Group, Reorder]} />
+    <Inject services={[Sort, Filter, Group, Reorder, Toolbar, Page]} />
   </GridComponent>
 };
 export default App;

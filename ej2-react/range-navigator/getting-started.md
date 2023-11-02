@@ -39,21 +39,19 @@ To install `create-react-app` run the following command.
     npm install -g create-react-app
    ```
 
-* To setup basic `React` sample use following commands.
+* To set-up a React application in TypeScript environment, run the following command.
 
-    <div class='tsx'>
-     ```
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-      npm install
     ```
-   </div>
-   <div class='jsx'>
-  ```
-  create-react-app quickstart
-  cd quickstart
-  ```
- </div>
+     create-react-app quickstart --template typescript
+     cd quickstart
+     npm start
+   ```
+* To set-up a React application in JavaScript environment, run the following command.
+   ```
+    create-react-app quickstart
+    cd quickstart
+    npm start
+   ```
 
 * Install Syncfusion packages using below command.
 

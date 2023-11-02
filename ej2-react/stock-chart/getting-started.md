@@ -51,32 +51,19 @@ To install `create-react-app` run the following command.
 npm install -g create-react-app
 ```
 
-* To setup basic `React` sample use following commands.
+* To set-up a React application in TypeScript environment, run the following command.
 
-<div class='tsx'>
-
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-npm install
-
-```
-
-</div>
-
-<div class='jsx'>
-
-```
-
-create-react-app quickstart
-
-cd quickstart
-
-```
-
-</div>
+    ```
+     create-react-app quickstart --template typescript
+     cd quickstart
+     npm start
+   ```
+* To set-up a React application in JavaScript environment, run the following command.
+   ```
+    create-react-app quickstart
+    cd quickstart
+    npm start
+   ```
 
 * Install Syncfusion packages using below command.
 
@@ -90,8 +77,8 @@ Now, you can start adding Chart component in the application.
 For getting started, add the Chart component in `src/App.tsx` file using following code.
 
 
-
-```ts
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
 import {StockChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -103,16 +90,18 @@ function App()  {
 }
 export  default  App;
 
-```
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
 
-```ts
 import { StockChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
 function App() {
     return (<StockChartComponent />);
 }
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now run the `npm start` command in the console, it will run your application and open the browser window.
 
@@ -147,8 +136,9 @@ feature of the chart. Please find the relevant feature service name and descript
 These modules should be injected to the `services` section as follows,
 
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
-```ts
 import { DateTime, StockChartComponent, DataLabel, CandleSeries, Tooltip } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -162,9 +152,10 @@ function App() {
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-```
 
-```ts
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+
 import { StockChartComponent, DataLabel, CandleSeries, Tooltip } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -172,51 +163,21 @@ function App() {
     return <StockChartComponent id='stockcharts'>
       <Inject services={[CandleSeries, Tooltip, DataLabel, Category]}/>
     </StockChartComponent>;
-}
-;
+};
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Populate Chart with Data
 
 This section explains how to plot below JSON data to the  Stock Chart.Please find the below imported datasource.
 
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
-```ts
-export let data: any[] = [{
-            "x": new Date('2012-04-02T00:00:00.000Z'),
-            "open": 320.705719,
-            "high": 324.074066,
-            "low": 317.737732,
-            "close": 323.783783,
-            "volume": 45638000
-        }, {
-            "x": new Date('2012-04-03T00:00:00.000Z'),
-            "open": 323.028015,
-            "high": 324.299286,
-            "low": 319.639648,
-            "close": 321.631622,
-            "volume": 40857000
-        }, {
-            "x": new Date('2012-04-04T00:00:00.000Z'),
-            "open": 319.544556,
-            "high": 319.819824,
-            "low": 315.865875,
-            "close": 317.892883,
-            "volume": 32519000
-        }, {
-            "x": new Date('2012-04-05T00:00:00.000Z'),
-            "open": 316.436432,
-            "high": 318.533539,
-            "low": 314.599609,
-            "close": 316.476471,
-            "volume": 46327000
-        }]
-```
-
-```ts
 export let data = [{
         "x": new Date('2012-04-02T00:00:00.000Z'),
         "open": 320.705719,
@@ -246,7 +207,43 @@ export let data = [{
         "close": 316.476471,
         "volume": 46327000
     }];
-```
+
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+
+export let data: any[] = [{
+            "x": new Date('2012-04-02T00:00:00.000Z'),
+            "open": 320.705719,
+            "high": 324.074066,
+            "low": 317.737732,
+            "close": 323.783783,
+            "volume": 45638000
+        }, {
+            "x": new Date('2012-04-03T00:00:00.000Z'),
+            "open": 323.028015,
+            "high": 324.299286,
+            "low": 319.639648,
+            "close": 321.631622,
+            "volume": 40857000
+        }, {
+            "x": new Date('2012-04-04T00:00:00.000Z'),
+            "open": 319.544556,
+            "high": 319.819824,
+            "low": 315.865875,
+            "close": 317.892883,
+            "volume": 32519000
+        }, {
+            "x": new Date('2012-04-05T00:00:00.000Z'),
+            "open": 316.436432,
+            "high": 318.533539,
+            "low": 314.599609,
+            "close": 316.476471,
+            "volume": 46327000
+        }]
+
+{% endhighlight %}
+{% endtabs %}
+
 
  Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeries/) property and then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockSeries/#datasource) property.
 

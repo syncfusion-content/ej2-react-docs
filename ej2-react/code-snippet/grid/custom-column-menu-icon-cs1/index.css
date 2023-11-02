@@ -7,3 +7,7 @@
   background-color: #fce4ec;
   color: white;
 }
+
+.e-grid .e-columnheader .e-icons.e-columnmenu::before {
+  content: "\e99a";
+}

@@ -10,7 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section explains you the steps required to create a Smith Chart and demonstrate the basic usage of the Smith Chart control.
+This section explains you the steps required to create a simple Smith Chart and demonstrate the basic usage of the Smith Chart control.
+
+To get start quickly with React Smith Chart, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=9FVLSNIMxnU" %}
 
 ## Dependencies
 
@@ -37,20 +41,19 @@ To install `create-react-app` run the following command.
 npm install -g create-react-app
 ```
 
-* To setup basic `React` sample use following commands.
+* To set-up a React application in TypeScript environment, run the following command.
 
-<div class='tsx'>
-
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-npm install
-
-```
-
-</div>
+    ```
+     create-react-app quickstart --template typescript
+     cd quickstart
+     npm start
+   ```
+* To set-up a React application in JavaScript environment, run the following command.
+   ```
+    create-react-app quickstart
+    cd quickstart
+    npm start
+   ```
 
 * Install Syncfusion packages using below command.
 
@@ -61,7 +64,6 @@ npm install @syncfusion/ej2-react-charts --save
 ## Add Smith Chart to the Project
 
 Now, you can start adding Smith Chart component in the application. For getting started, add the Smith Chart component in `src/App.tsx` file using following code.
-
 
 
 ```ts
@@ -76,15 +78,6 @@ function App() {
 }
 export default App;
 
-```
-
-```ts
-import * as React from "react";
-import { SmithchartComponent } from '@syncfusion/ej2-react-charts';
-function App() {
-    return (<SmithchartComponent></SmithchartComponent>);
-}
-export default App;
 ```
 
 Now use the `npm start` command to run the application in the browser.
@@ -136,17 +129,6 @@ function App() {
 }
 export default App;
 
-```
-
-```ts
-import * as React from "react";
-import { SmithchartComponent } from '@syncfusion/ej2-react-charts';
-function App() {
-    return (<SmithchartComponent>
-  <Inject services={[SmithchartLegend, TooltipRender]}/>
-  </SmithchartComponent>);
-}
-export default App;
 ```
 
 ## Add Series to Smithchart

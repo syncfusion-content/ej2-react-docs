@@ -65,33 +65,17 @@ To include the Floating Action Button component in your application import the 
 
 Add the Floating Action Button component in application as shown in below code example.
 
-
-
-```ts
-
-{/* Import the Floating Action Button */}.
-import { FabComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-import './App.css';
-
-{/* To render Floating Action Button. */}
-function App() {
-    return (
-        <FabComponent id='fab'></FabComponent>
-    );
-}
-export default App;
-
-```
-
 ```ts
 { /* Import the Floating Action Button */ }
 import { FabComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import './App.css';
+
 { /* To render Floating Action Button. */ }
 function App() {
-    return (<FabComponent id='fab'></FabComponent>);
+    return (
+        <FabComponent id='fab'></FabComponent>
+    );
 }
 export default App;
 ```

@@ -22,5 +22,6 @@ export class App extends React.Component {
         </SparklineComponent>);
     }
 }
+export default App;
 ReactDOM.render(<App />, document.getElementById('sparkline'));
 {% endraw %}
