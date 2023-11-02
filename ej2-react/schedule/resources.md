@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resources in React Schedule component | Syncfusion
-description: Learn here all about Resources in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Resources in React Schedule Component | Syncfusion
+description: Learn here all about resources support in Syncfusion Essential React Schedule component, it's elements and more.
 control: Resources 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resources in React Schedule component
+# Resources in React Schedule Component
 
 Resources and grouping support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column/row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
 
@@ -30,7 +30,7 @@ The default options available within the `resources` collection are as follows,
 | `title` | String | It holds the title of the resource field to be displayed on the event editor window. |
 | `name` | String | A unique resource name used for differentiating various resource objects while grouping. |
 | `allowMultiple` | Boolean | When set to `true`, allows multiple selection of resource names, thus creating multiple instances of same appointment for the selected resources. |
-| `dataSource` | Object | Assigns the resource `dataSource`, where data can be passed either as an array of JavaScript objects, or else can create an instance of [`DataManager`](http://ej2.syncfusion.com/documentation/data/api-dataManager) in case of processing remote data and can be assigned to the `dataSource` property. With the remote data assigned to `dataSource`, check the available [adaptors](http://ej2.syncfusion.com/documentation/data/adaptors) to customize the data processing. |
+| `dataSource` | Object | Assigns the resource `dataSource`, where data can be passed either as an array of JavaScript objects, or else can create an instance of [`DataManager`](https://ej2.syncfusion.com/documentation/data/api-datamanager) in case of processing remote data and can be assigned to the `dataSource` property. With the remote data assigned to `dataSource`, check the available [adaptors](http://ej2.syncfusion.com/documentation/data/adaptors) to customize the data processing. |
 | `query` | Query | Defines the external [`query`](http://ej2.syncfusion.com/documentation/data/api-query) that will be executed along with the data processing. |
 | `idField` | String | Binds the resource ID field name from the resources `dataSource`. |
 | `expandedField` | String | Binds the `expandedField` name from the resources `dataSource`. It usually holds boolean value which decide whether the resource of timeline views is in collapse or expand state on initial load. |
@@ -518,4 +518,4 @@ Some of the default changes made for compact Scheduler to render in desktop devi
         
 {% previewsample "page.domainurl/code-snippet/schedule/resource-cs16" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+N> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/schedule/default) to knows how to present and manipulate data.

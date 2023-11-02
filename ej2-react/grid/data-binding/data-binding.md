@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Grid component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Data binding in React Grid Component | Syncfusion
+description: Learn here all about data binding support in Syncfusion Essential React Grid component, it's elements and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Grid component
+# Data binding in React Grid Component
 
 The Grid uses **DataManager** which supports both RESTful JSON data services binding and local JavaScript object array binding.
 The [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property can be assigned either with the instance of [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) or JavaScript object collection.
