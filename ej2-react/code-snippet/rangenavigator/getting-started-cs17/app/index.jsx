@@ -5,6 +5,6 @@ class App extends React.Component {
     render() {
         return <RangeNavigatorComponent id="charts"/>;
     }
-}
-;
+};
+export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));

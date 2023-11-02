@@ -10,17 +10,17 @@ function App() {
     const editOption = { allowEditing: true };
     const toolbar = ['Edit', 'Update', 'Cancel'];
     const edit = {
-        create: () => {
+        create: () => { // to create input element
             return createElement('input');
         },
-        destroy: () => {
+        destroy: () => { // to destroy the custom component.
             autoComplete.destroy();
         },
-        read: () => {
+        read: () => { // return edited value to update data source
             const value = new DataManager(employeeData).executeLocal(new Query().where('FirstName', 'equal', autoComplete.value));
             return value.length && getValue('EmployeeID', value[0]); // to convert foreign key value to local value.
         },
-        write: (args) => {
+        write: (args) => { // to show the value for date picker
             autoComplete = new AutoComplete({
                 dataSource: new DataManager(employeeData),
                 fields: { value: args.column.foreignKeyValue },

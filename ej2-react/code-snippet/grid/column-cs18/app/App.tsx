@@ -1,51 +1,41 @@
-
-
-import { createElement } from '@syncfusion/ej2-base';
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent, Resize, Inject } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
 import { data } from './datasource';
 
 function App() {
-    const resizeStart = () => {
-        const span: HTMLElement = createElement('span');
-        span.innerHTML = 'resizeStart event is Triggered </br>';
-        (document.getElementById('events') as HTMLElement).append(span);
-    }
-    const resizing = () => {
-        const span: HTMLElement = createElement('span');
-        span.innerHTML = 'resizing event is Triggered </br>';
-        (document.getElementById('events') as HTMLElement).append(span);
-    }
-    const resizeStop = () => {
-        const span: HTMLElement = createElement('span');
-        span.innerHTML = 'resizeStop event is Triggered </br>';
-        (document.getElementById('events') as HTMLElement).append(span);
-    }
-    const styles: object = {
-        'borderStyle': 'outset',
-        'fontSize': '14px',
-        'height': '40px',
-        'overflowY': 'scroll',
-        'width': '240px'
-    }
-    return (<div>
-        <div id='events' style={styles} />
-        <GridComponent dataSource={data} allowResizing={true} height={315}
-            resizeStart={resizeStart} resizing={resizing} resizeStop={resizeStop}>
-            <Inject services={[Resize]} />
-            <ColumnsDirective>
-                <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign="Right" />
-                <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-                <ColumnDirective field='Freight' width='150' format="C2" textAlign="Right" />
-                <ColumnDirective field='OrderDate' headerText='Order ID' width='150' format="yMd" textAlign="Right" />
-                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' textAlign="Right" />
-                <ColumnDirective field='ShipAddress' headerText='Ship Address' width='150' format="yMd" textAlign="Right" />
-                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
-                <ColumnDirective field='ShipCity' headerText='Ship City' width='150' textAlign="Right" />
-            </ColumnsDirective>
-        </GridComponent>
-    </div>)
-};
+    let grid: Grid | null;
+    const [message, setMessage] = useState('');
+    const resizeStart = ((args: any) => {
+        setMessage('resizeStart event triggered');
+        if (args.column.field === 'OrderID') {
+            args.cancel = true;
+        }
+    })
+    const resizeStop = ((args: any) => {
+        setMessage('resizeStop event triggered');
+        const headerCell = (grid as any).getColumnHeaderByField(args.column.field);
+        headerCell.classList.add('customcss');
+        const columnCells = (grid as any).getContentTable().querySelectorAll(`[data-colindex="${(args as any).column.index}"]`);
+        for (let i = 0; i < columnCells.length; i++) {
+            const cell = columnCells[i] as HTMLElement;
+            cell.style.backgroundColor = 'rgb(43, 195, 226)';
+        }
+
+    })
+    const resizing = ((args: any) => {
+        setMessage('resizing event triggered');
+    })
+    return (
+        <div>
+            <div style={{ marginLeft: '180px' }}><p style={{ color: 'red' }}>{message}</p></div>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true} enableHover={false} resizeStart={resizeStart} resizeStop={resizeStop} resizing={resizing}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                    <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                </ColumnsDirective>
+                <Inject services={[Resize]} />
+            </GridComponent></div>)
+}
 export default App;
-
-

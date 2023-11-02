@@ -43,22 +43,19 @@ To install `create-react-app` run the following command.
     npm install -g create-react-app
    ```
 
-* To setup basic `React` sample use following commands.
-
-   <div class='tsx'>
+* To set-up a React application in TypeScript environment, run the following command.
 
     ```
-     create-react-app quickstart --scripts-version=react-scripts-ts
+     create-react-app quickstart --template typescript
      cd quickstart
-     npm install
-    ```
-    </div>
-   <div class='jsx'>
-    ```
-     create-react-app quickstart
-     cd quickstart
-    ```
-   </div>
+     npm start
+   ```
+* To set-up a React application in JavaScript environment, run the following command.
+   ```
+    create-react-app quickstart
+    cd quickstart
+    npm start
+   ```
 
 * Install Syncfusion packages using below command.
 
@@ -71,9 +68,8 @@ To install `create-react-app` run the following command.
 Now, you can start adding Chart component in the application.
 For getting started, add the Chart component in `src/App.tsx` file using following code.
 
-
-
-```ts
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
 import { ChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -83,16 +79,18 @@ function App() {
 }
 export default App;
 
-```
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
 
-```ts
 import { ChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
 function App() {
     return (<ChartComponent />);
 }
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now run the `npm start` command in the console, it will run your application and open the browser window.
 
@@ -100,7 +98,7 @@ Now run the `npm start` command in the console, it will run your application and
 npm start
 ```
 
-he below example shows a basic Chart.
+The below example shows a basic Chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,9 +123,9 @@ Chart component are segregated into individual feature-wise modules. In order to
 
 These modules should be injected to the `services` section as follows,
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
-
-```ts
 import { Category, ChartComponent, DataLabel, LineSeries, Legend, Tooltip, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -140,9 +138,9 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
-```
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
 
-```ts
 import { Category, ChartComponent, DataLabel, LineSeries, Legend, Tooltip, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
@@ -153,15 +151,29 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Populate Chart with Data
 
 This section explains how to plot below JSON data to the chart.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
 
+export let data = [
+    { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
+    { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
+    { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
+    { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
+    { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
+    { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
+];
 
-```ts
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+
 export let data: any[] = [
             { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
             { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
@@ -171,18 +183,8 @@ export let data: any[] = [
             { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
             ];
 
-```
-
-```ts
-export let data = [
-    { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-    { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-    { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-    { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-    { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-    { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-];
-```
+{% endhighlight %}
+{% endtabs %}
 
  Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property.
 
