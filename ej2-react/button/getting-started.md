@@ -29,7 +29,7 @@ The list of dependencies required to use the Button component in your applicatio
 
 ## Installation and Configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
 ```bash
 npm install -g create-react-app
@@ -123,7 +123,7 @@ The following example shows a basic Button component.
 
  {% previewsample "page.domainurl/code-snippet/button/default-cs1" %}
 
-> You can refer to our [React Button](https://www.syncfusion.com/react-components/react-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Button example]( https://ej2.syncfusion.com/react/demos/#/material/button/default) that shows how to render the Button in React.
+> You can refer to our [React Button](https://www.syncfusion.com/react-components/react-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Button example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/button/default) that shows how to render the Button in React.
 
 ## See Also
 
