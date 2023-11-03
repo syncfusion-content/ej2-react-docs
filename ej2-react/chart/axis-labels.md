@@ -222,7 +222,7 @@ You can customize the specific text in the axis labels using `axisLabelRender` e
 
 ## Trim using maximum label width
 
-You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/react/documentation/api/chart/axismodel/#enabletrim) property and width of the labels can also be customized using [`maximumLabelWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#maximumlabelwidth) property in the axis, the value maximum label width is `34` by default.
+You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#enabletrim) property and width of the labels can also be customized using [`maximumLabelWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#maximumlabelwidth) property in the axis, the value maximum label width is `34` by default.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

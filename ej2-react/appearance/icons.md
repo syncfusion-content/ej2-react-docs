@@ -71,7 +71,7 @@ cd my-app
 npm start
 ```
 
-For an introduction and configuration of the common specifications, see [getting started with the Syncfusion React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start).
+For an introduction and configuration of the common specifications, see [getting started with the Syncfusion React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/).
 
 ### Using icons directly in HTML element
 
@@ -208,4 +208,4 @@ The complete package of Essential JS 2 icons is listed below. The corresponding 
 
 ## See also
 
-* [Using icons in Syncfusion React Button](https://ej2.syncfusion.com/react/documentation/button/types-and-styles#icons)
+* [Using icons in Syncfusion React Button](https://ej2.syncfusion.com/react/documentation/button/types-and-styles/#icons)

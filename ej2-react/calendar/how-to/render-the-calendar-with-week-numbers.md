@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Render the calendar with week numbers in React Calendar component
 
-You can enable the `weekNumber` in Calendar by using the [`weekNumber`](https://helpej2.syncfusion.com/react/documentation/api/calendar/#weeknumber)
+You can enable the `weekNumber` in Calendar by using the [`weekNumber`](https://ej2.syncfusion.com/react/documentation/api/calendar#weeknumber)
 property.
 
 {% tabs %}
