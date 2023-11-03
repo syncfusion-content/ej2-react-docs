@@ -318,4 +318,4 @@ The following example that example demonstrates how to use these events to displ
 
 ## See Also
 
-* [Group with Paging](./grouping/grouping/#group-with-paging)
+* [Group with Paging](./grouping/grouping#group-with-paging)

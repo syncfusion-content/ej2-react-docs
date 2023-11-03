@@ -136,7 +136,7 @@ Using [`enableSelectionOrder`](https://ej2.syncfusion.com/react/documentation/ap
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
-* [How to filter the bound data](./filtering/)
-* [How to add custom value to the MultiSelect](./custom-value/)
-* [How to render grouping with checkbox](./grouping/#grouping-with-checkbox).
+* [How to bind the data](https://ej2.syncfusion.com/react/documentation/multi-select/data-binding)
+* [How to filter the bound data](https://ej2.syncfusion.com/react/documentation/multi-select/filtering)
+* [How to add custom value to the MultiSelect](https://ej2.syncfusion.com/react/documentation/multi-select/custom-value)
+* [How to render grouping with checkbox](https://ej2.syncfusion.com/react/documentation/multi-select/grouping#grouping-with-checkbox).
