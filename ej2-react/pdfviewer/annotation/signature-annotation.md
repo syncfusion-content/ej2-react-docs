@@ -33,8 +33,8 @@ Refer to the following code sample to switch to the handwritten signature mode p
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -63,12 +63,12 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -98,7 +98,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,8 +108,8 @@ The following code snippet describes how to enable the handwritten signature in 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -136,12 +136,12 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```   
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -169,7 +169,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```    
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

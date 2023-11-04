@@ -105,6 +105,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/ej2
 
 {% tabs %}
 {% highlight js tabtitle="JSX" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -132,8 +133,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="TSX" %}
+{% raw %} 
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -158,6 +161,7 @@ const rootElement = document.getElementById('sample')!;
 const root = ReactDOM.createRoot(rootElement);
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
