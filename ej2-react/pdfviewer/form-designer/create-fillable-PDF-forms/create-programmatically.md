@@ -81,7 +81,7 @@ The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer l
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -111,11 +111,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -146,7 +145,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -160,7 +159,7 @@ You can invoke download action using following code snippet.,
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -191,11 +190,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -227,7 +225,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -239,8 +237,7 @@ When the print icon is selected on the toolbar, the PDF document will be printed
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -267,12 +264,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -300,7 +295,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -318,7 +313,7 @@ Add the following code snippet to validate the form fields,
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -355,12 +350,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -397,7 +391,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -577,6 +571,7 @@ The following code example explains how to update the properties of the signatur
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -637,8 +632,10 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -700,6 +697,7 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -710,6 +708,7 @@ The following code example explains how to update the properties of the initial 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -761,8 +760,10 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -815,6 +816,7 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -863,6 +865,7 @@ The following code example explains how to update the properties of the Textbox 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -929,8 +932,10 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -997,6 +1002,7 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1043,6 +1049,7 @@ The following code example explains how to update the properties of the Password
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1107,8 +1114,10 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1174,6 +1183,7 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1214,6 +1224,7 @@ The following code example explains how to update the properties of the CheckBox
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1270,8 +1281,10 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1329,6 +1342,7 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1370,6 +1384,7 @@ The following code example explains how to update the properties of the RadioBut
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1428,8 +1443,10 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1489,6 +1506,7 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1536,6 +1554,7 @@ The following code example explains how to update the properties of the ListBox 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1601,8 +1620,10 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1669,6 +1690,7 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1712,6 +1734,7 @@ The following code example explains how to update the properties of the DropDown
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1778,8 +1801,10 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -1847,6 +1872,7 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
