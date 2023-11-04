@@ -38,8 +38,8 @@ Refer to the following code snippet to switch to highlight mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -70,12 +70,12 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -107,7 +107,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,8 +115,8 @@ Refer to the following code snippet to switch back to normal mode from highlight
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -152,12 +152,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -194,7 +193,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -222,8 +221,8 @@ Refer to the following code snippet to switch to underline mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -252,13 +251,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 
 {% highlight js tabtitle="Server-Backed" %}
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -288,8 +284,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -297,8 +291,8 @@ Refer to the following code snippet to switch back to normal mode from underline
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -333,13 +327,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 
 {% highlight js tabtitle="Server-Backed" %}
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -375,8 +366,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -404,8 +393,8 @@ Refer to the following code snippet to switch to strikethrough mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -435,13 +424,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 
 {% highlight js tabtitle="Server-Backed" %}
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -472,8 +458,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -481,8 +465,8 @@ Refer to the following code snippet to switch back to normal mode from underline
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -518,13 +502,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 
 {% highlight js tabtitle="Server-Backed" %}
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -561,8 +542,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -606,8 +585,8 @@ Refer to the following code snippet to set the default annotation settings.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -636,13 +615,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 
 {% highlight js tabtitle="Server-Backed" %}
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -672,8 +648,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -696,8 +670,8 @@ Refer to the following code snippet for calling undo and redo actions from the c
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -733,13 +707,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 
 {% highlight js tabtitle="Server-Backed" %}
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -776,8 +747,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -795,8 +764,8 @@ The PDF Viewer control provides an option to disable the text markup annotation 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -823,13 +792,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 
 {% highlight js tabtitle="Server-Backed" %}
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -857,8 +823,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-```
 {% endhighlight %}
 {% endtabs %}
 

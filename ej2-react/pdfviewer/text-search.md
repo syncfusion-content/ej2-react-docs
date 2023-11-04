@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
 
-{% raw %}
-
-```ts
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -22,8 +22,38 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  return (
-  <div>
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        enableTextSearch={true}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  return (<div>
     <div className='control-section'>
       {/* Render the PDF Viewer */}
       <PdfViewerComponent
@@ -33,18 +63,18 @@ function App() {
         serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
-             <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, 
-                                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]} />
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch]} />
       </PdfViewerComponent>
     </div>
   </div>);
-
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
 {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 The following text search methods are available in the PDF Viewer,
 

@@ -37,8 +37,8 @@ Refer to the following code sample to switch to the circle annotation mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -67,12 +67,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -102,7 +101,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,8 +147,6 @@ We can edit the annotations programmatically using the **editAnnotation()** meth
 
 Here is an example of how you can use this method to modify an annotation:
 
-```
-
 <button onclick="editAnnotation()()">Edit Annotation</button>
 
 <script>
@@ -163,15 +160,11 @@ var pdfviewer = document.getElementById('container').ej2_instances[0];
 }
 </script>
 
-```
-
 ### Delete annotation programmatically
 
 We can delete a specific annotation using the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
 
 Here is an example of how you can use this method to delete an annotation:
-
-```
 
 <button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
 
@@ -183,16 +176,14 @@ Here is an example of how you can use this method to delete an annotation:
   }
 </script>
 
-```
-
 ## Setting default properties during the control initialization
 
 The properties of the shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -221,12 +212,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -256,6 +246,6 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
