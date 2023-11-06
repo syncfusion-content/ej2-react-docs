@@ -31,7 +31,7 @@ The Syncfusion React UI can allow you to apply styles for the components. The fo
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
 
-> The Syncfusion React Bootstrap theme is designed based on the `Bootstrap v3`, whereas the Bootstrap 4 theme is designed based on `Bootstrap v4`. In addition to these built-in themes, the [ThemeStudio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/) provides support for the Fusion Theme that can only be downloaded from the [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
+> The Syncfusion React Bootstrap theme is designed based on the `Bootstrap v3`, whereas the Bootstrap 4 theme is designed based on `Bootstrap v4`. In addition to these built-in themes, the [ThemeStudio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) provides support for the Fusion Theme that can only be downloaded from the [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
 
 ## Reference themes in the React application
 
@@ -41,9 +41,9 @@ Using the following approaches, the themes can be referenced in the React applic
 
 * [CDN](#refer-themes-through-cdn-reference) - Used to refer complete css via static web assest.
 
-* [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) - Used to generate resources only for the selected (used) components.
+* [CRG](https://crg.syncfusion.com/) - Used to generate resources only for the selected (used) components.
 
-* [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/) - Used to customize and generate themes only for the selected (used) components.
+* [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components.
 
 Instead of using the `CDN reference`, use the `npm packages` reference in your projects to customize the theme or bundle it with the other style sheets.
 
@@ -3087,5 +3087,5 @@ The following list of common variables are used in the Syncfusion JavaScript lib
 
 ## See also
 
-* [Syncfusion icons and customization](../appearance/icons/)
-* [Theme Studio for Syncfusion components](../appearance/theme-studio/)
+* [Syncfusion icons and customization](../appearance/icons)
+* [Theme Studio for Syncfusion components](../appearance/theme-studio)
