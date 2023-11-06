@@ -52,4 +52,4 @@ To get started with grouping, grouping templates and adding icons in React DropD
 ## See Also
 
 * [Group Template support to DropDownList](./templates#group-template).
-* [How to disable the fixed group header](./how-to/group-header/)
+* [How to disable the fixed group header](./how-to/group-header)
