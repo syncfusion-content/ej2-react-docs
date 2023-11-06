@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set the disabled state in React Button Component | Syncfusion
-description: Learn here all about set the disabled state support in Syncfusion Essential React Button component, it'e elements and more.
+description: Learn here all about set the disabled state support in Syncfusion Essential React Button component, it's elements and more.
 control: Set the disabled state 
 platform: ej2-react
 documentation: ug
