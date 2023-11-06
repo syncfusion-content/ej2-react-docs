@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set the read only textbox in React Textbox component | Syncfusion
-description: Learn here all about set the read only support in Syncfusion Essential React Textbox component, it's elements and more.
+description: Learn here all about set the read only textbox in Syncfusion Essential React Textbox component, it's elements and more.
 control: Set the read only textbox 
 platform: ej2-react
 documentation: ug
