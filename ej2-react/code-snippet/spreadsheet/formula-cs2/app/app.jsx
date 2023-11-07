@@ -14,25 +14,22 @@ function App() {
     const calculatePercentage = (firstCell, secondCell) => {
         return Number(firstCell) / Number(secondCell);
     };
-    // Custom function to calculate round down for values.
-    const roundDownHandler = (value, digit) => {
-        var multiplier = Math.pow(10, digit);
-        return Math.floor(value * multiplier) / multiplier;
-    }
     React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
-            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:F2');
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:E2');
             spreadsheet.numberFormat('$#,##0', 'B3:D12');
             spreadsheet.numberFormat('0%', 'E3:E12');
             // Adding custom function for calculating the percentage between two cells.
             spreadsheet.addCustomFunction(calculatePercentage, 'PERCENTAGE');
-            // Adding custom function for calculating round down for the value.
-            spreadsheet.addCustomFunction(roundDownHandler, 'ROUNDDOWN');
-            // Calculate percentage using custom added formula in E12 cell.
-            spreadsheet.updateCell({ formula: '=PERCENTAGE(C12,D12)' }, 'E12');
-            // Calculate round down for average values using custom added formula in F12 cell.
-            spreadsheet.updateCell({ formula: '=ROUNDDOWN(F11,1)' }, 'F12');
+            // Calculate percentage using custom added formula in E11 cell.
+            spreadsheet.updateCell({ formula: '=PERCENTAGE(C11,D11)' }, 'E11');
+            // Calculate expressions using computeExpression in E10 cell.
+            spreadsheet.updateCell({ value: spreadsheet.computeExpression('C10/D10') }, 'E10');
+            // Calculate custom formula values using computeExpression in E12 cell.
+            spreadsheet.updateCell({ value: spreadsheet.computeExpression('=PERCENTAGE(C12,D12)') }, 'E12');
+            // Calculate SUM (built-in) formula values using computeExpression in D12 cell.
+            spreadsheet.updateCell({ value: spreadsheet.computeExpression('=SUM(D3:D11)') }, 'D12');
         }
     }, []);
 
@@ -88,8 +85,8 @@ function App() {
                         <ColumnDirective width={120}></ColumnDirective>
                         <ColumnDirective width={120}></ColumnDirective>
                         <ColumnDirective width={120}></ColumnDirective>
-                        <ColumnDirective width={140}></ColumnDirective>
-                        <ColumnDirective width={150}></ColumnDirective>
+                        <ColumnDirective width={120}></ColumnDirective>
+                        <ColumnDirective width={120}></ColumnDirective>
                     </ColumnsDirective>
                 </SheetDirective>
             </SheetsDirective>

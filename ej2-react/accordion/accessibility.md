@@ -12,6 +12,26 @@ domainurl: ##DomainURL##
 
 The Accordion component has been designed keeping in mind the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications, by applying the prompt WAI-ARIA roles, states, and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-labelledby`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and tested in major screen readers.
 
+The accessibility compliance for the Accordion component is outlined below.
+
+| Accessibility Criteria                                                              | Compatibility                                                                        |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards)                 | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards)              | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support)              | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support)              | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast)                            | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support)              | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support)  | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility)  | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
 ## ARIA attributes
 
 | **Roles and Attributes** | **Functionalities**                                                                                                                             |
@@ -34,6 +54,8 @@ Keyboard navigation is enabled by default. Possible keys are:
 | <kbd>Up Arrow</kbd>         | Focus the previous Accordion header. |
 | <kbd>Home</kbd>           | Focus the first Accordion header.                                                                     |
 | <kbd>End</kbd>   | Focus the last Accordion header.                                                |
+| <kbd>Tab</kbd>     | To Move focus through the interactive elements.                 |
+| <kbd>Shift + Tab</kbd> | To Move focus through the interactive elements.             |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,3 +70,15 @@ Keyboard navigation is enabled by default. Possible keys are:
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/accordion/accordion-cs1" %}
+
+## Ensuring accessibility
+
+The Accordion component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Accordion component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/accordion.html) in a new window to evaluate the accessibility of the Accordion component with accessibility tools.
+
+{% previewsample "https://ej2.syncfusion.com/accessibility/accordion.html" %}
+
+## See also
+
+- [Accessibility in Syncfusion React components](../common/accessibility)

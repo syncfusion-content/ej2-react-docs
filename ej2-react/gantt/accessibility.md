@@ -38,55 +38,55 @@ The accessibility compliance for the Gantt component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA
+## WAI-ARIA attributes
 
-WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. It helps to provide information about elements in a document for assistive technology.
+The Gantt component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns) patterns to meet the accessibility of splitter and treelist components. The following ARIA attributes are used in the Gantt component:
 
 The following ARIA attributes are used in Gantt:
 
-| **Attributes** | **Description** |
+| Attributes | Purpose |
 | --- | --- |
-| grid (role) | This attribute is added to the `e-table` element present in the Gantt, which represents Grid part |
-| gridcell (role) | This attribute is added to the `td` elements present within the `e-table`, which represents the work cells of Gantt |
-| columnheader (role) | This attribute is added to the `th` elements within the `e-table`, which represents the header cells of Grid table |
-| separator (role) | This attribute is added to the `e-split-bar` element, which represents the splitter between the Grid table and Chart |
-| dialog (role) | This attribute is added to the `e-dialog` element, which represents the pop-up dialog |
-| toolbar (role) | This attribute is added to the `e-gantt-toolbar` element, which represents the toolbars of Gantt |
-| aria-label | It indicates the element's information`<br>` It is assigned to the Gantt UI elements such as timeline cell, taskbar, left label, right label, dependency line, and event markers. |
-| aria-selected | This attribute is assigned to the Gantt chart row, and it defaults to `false`. The value is changed to `true` when the user selects a grid cell or task |
-| aria-expanded | This attribute is assigned to the Gantt chart parent task row. The value is changed to `true` when the user clicks a parent taskbar to expand. After the user clicked a parent taskbar to collapse, the attribute value is changed to `false` |
-| aria-grabbed | This attribute is assigned to the taskbars of Gantt when the user tries to achieve taskbar editing |
+| `grid (role)` | This attribute is added to the `e-table` element present in the Gantt, which represents Grid part |
+| `gridcell (role)` | This attribute is added to the `td` elements present within the `e-table`, which represents the work cells of Gantt |
+| `columnheader (role)` | This attribute is added to the `th` elements within the `e-table`, which represents the header cells of Grid table |
+| `separator (role)` | This attribute is added to the `e-split-bar` element, which represents the splitter between the Grid table and Chart |
+| `dialog (role)` | This attribute is added to the `e-dialog` element, which represents the pop-up dialog |
+| `toolbar (role)` | This attribute is added to the `e-gantt-toolbar` element, which represents the toolbars of Gantt |
+| `aria-label` | It indicates the element's information`<br>` It is assigned to the Gantt UI elements such as timeline cell, taskbar, left label, right label, dependency line, and event markers. |
+| `aria-selected` | This attribute is assigned to the Gantt chart row, and it defaults to `false`. The value is changed to `true` when the user selects a grid cell or task |
+| `aria-expanded` | This attribute is assigned to the Gantt chart parent task row. The value is changed to `true` when the user clicks a parent taskbar to expand. After the user clicked a parent taskbar to collapse, the attribute value is changed to `false` |
+| `aria-grabbed` | This attribute is assigned to the taskbars of Gantt when the user tries to achieve taskbar editing |
 
 ## Keyboard navigation
 
-Gantt functionalities can be interactive with keyboard shortcuts.
+The Gantt component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component.
 
-The following keyboard shortcuts are supported by Gantt.
-
-Interaction Keys |Description
------|-----
-<kbd>Home</kbd> |Selects the first row.
-<kbd>End</kbd> |Selects the last row.
-<kbd>DownArrow</kbd> |Moves the cell focus/row or cell selection downward.
-<kbd>UpArrow</kbd> |Moves the cell focus/row or cell selection upward.
-<kbd>LeftArrow</kbd> |Moves the cell focus/row or cell selection left side.
-<kbd>RightArrow</kbd> |Moves the cell focus/row or cell selection right side.
-<kbd>Ctrl + Up Arrow</kbd> |Collapses all tasks.
-<kbd>Ctrl + Down Arrow</kbd> |Expands all tasks.
-<kbd>Ctrl + Shift + Up Arrow</kbd> |Collapses the selected row.
-<kbd>Ctrl + Shift + Down Arrow</kbd> |Expands the selected row.
-<kbd>Enter</kbd> |Saves request.
-<kbd>Esc</kbd> |Cancels request.
-<kbd>Insert</kbd> |Adds a new row.
-<kbd>Ctrl + Insert</kbd> |Opens addRowDialog.
-<kbd>Ctrl + F2</kbd> |Opens editRowDialog.
-<kbd>Delete</kbd> |Deletes the selected row.
-<kbd>Shift + F5</kbd> |FocusTask
-<kbd>Ctrl + Shift + F</kbd> |Focus search
-<kbd>Shift + DownArrow</kbd> |Extends the row/cell selection downwards.
-<kbd>Shift + UpArrow</kbd> |Extends the row/cell selection upwards.
-<kbd>Shift + LeftArrow</kbd> |Extends the cell selection to the left side.
-<kbd>Shift + RightArrow</kbd> |Extends the cell selection to the right side.
+| **Press** | **To do this** |
+| --- | --- |
+| <kbd>Home</kbd> | Selects the first row. |
+| <kbd>End</kbd> | Selects the last row. |
+| <kbd>DownArrow</kbd> | Moves the cell focus/row or cell selection downward. |
+| <kbd>UpArrow</kbd> | Moves the cell focus/row or cell selection upward. |
+| <kbd>LeftArrow</kbd> | Moves the cell focus/row or cell selection left side. |
+| <kbd>RightArrow</kbd> | Moves the cell focus/row or cell selection right side. |
+| <kbd>Ctrl + Up Arrow</kbd> | Collapses all tasks. |
+| <kbd>Ctrl + Down Arrow</kbd> | Expands all tasks. |
+| <kbd>Ctrl + Shift + Up Arrow</kbd> | Collapses the selected row. |
+| <kbd>Ctrl + Shift + Down Arrow</kbd> | Expands the selected row. |
+|<kbd>Enter</kbd> | Saves request. |
+| <kbd>Esc</kbd> | Cancels request. |
+| <kbd>Insert</kbd> | Adds a new row. |
+| <kbd>Ctrl + Insert</kbd> | Opens addRowDialog. |
+| <kbd>Ctrl + F2</kbd> | Opens editRowDialog. |
+| <kbd>Delete</kbd> | Deletes the selected row. |
+| <kbd>Shift + F5</kbd> | FocusTask |
+| <kbd>Ctrl + Shift + F</kbd> | Focus search |
+| <kbd>Shift + DownArrow</kbd> | Extends the row/cell selection downwards. |
+| <kbd>Shift + UpArrow</kbd> | Extends the row/cell selection upwards. |
+| <kbd>Shift + LeftArrow</kbd> | Extends the cell selection to the left side. |
+| <kbd>Shift + RightArrow</kbd> | Extends the cell selection to the right side. |
+| <kbd>Tab / Shift + Tab</kbd> | To focus the close icon in the message. |
+| <kbd>Alt + j</kbd> | Focus Gantt component. |
 
 ## Ensuring accessibility
 

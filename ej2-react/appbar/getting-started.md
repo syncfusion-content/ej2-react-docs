@@ -67,6 +67,8 @@ To install `AppBar` component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-navigations --save
+npm install @syncfusion/ej2-react-buttons --save
+
 ```
 
 The above command installs [AppBar dependencies](./getting-started#dependencies)
@@ -91,7 +93,6 @@ Now, you can create `AppBar` component in the application. Add `AppBar` componen
 import { AppBarComponent } from "@syncfusion/ej2-react-navigations";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 
 const App = () => {
   return (
@@ -106,8 +107,7 @@ const App = () => {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<App />);
+export default App;
 ```
 
 ## Run the application
