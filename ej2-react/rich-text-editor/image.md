@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Image in React Rich text editor component | Syncfusion
-description: Learn here all about Image in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Image in React Rich Text Editor Component | Syncfusion
+description: Learn here all about image in Syncfusion Essential React Rich Text Editor component, it's elements and more.
 control: Image 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in React Rich text editor component
+# Image in React Rich Text Editor Component
 
 Rich Text Editor allows to insert images from online sources as well as local computer where you want to insert the image in your content. For inserting the image to the Rich Text Editor, the following list of options have been provided in the [insertImageSettings](/rich-text-editor/api-imageSettingsModel.html).
 
@@ -69,7 +69,7 @@ To remove an image from the Rich Text Editor content, select the image and click
 
 Once you select the image from the local machine, the URL for the image will be generate. From there, you can remove the image from the service location by clicking the cross icon.
 
-![RTE Image delete](images/image-del.png)
+![RTE Image delete in React](images/react-rich-text-editor-image-delete.png)
 
 The following sample explains, how to configure `removeUrl` to remove a saved image from the remote service location, when the following image remove actions are performed:
 
@@ -108,14 +108,14 @@ The following sample explains, how to configure `removeUrl` to remove a saved im
 
 To insert an image from the online source like Google, Ping, etc., you should enable the image tool on the editor’s toolbar. By default, the image tool opens a simple dialog which allows you to insert an image from online source.
 
-![RTE Image insert](images/image-web.png)
+![RTE Image insert in React](images/react-rich-text-editor-web.png)
 
 ## Dimension
 
 Sets the default width and height of the image when it is inserted in the Rich Text Editor using [width](/rich-text-editor/api-imageSettingsModel.html#width) and [height](/rich-text-editor/api-imageSettingsModel.html#height)  of the insertImageSettings.
 Through the quick toolbar, change the width and height using `Change Size` option. Once you click, the Image Size dialog box will open as follows. In that, you can specify the width and height of the image in pixel.
 
-![RTE Image dimension](images/image-size.png)
+![RTE Image dimension in React](images/react-rich-text-editor-image-dimension.png)
 
 ## Caption and Alt Text
 
@@ -142,13 +142,13 @@ defaultRTE.appendTo('#defaultRTE');
 
 The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, the remove, edit, and open link will be added to the quick toolbar of image. For further details about link, see the [link](./link) documentation.
 
-![RTE image with link](images/image-link.png)
+![RTE image with link in React](images/react-rich-tect-editor-image-link.png)
 
 ## Resize
 
 Rich Text Editor has a built-in image inserting support.  The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio.
 
-![RTE image resize](images/image-resize.png)
+![RTE image resize in React](images/react-rich-text-editor-image-resize.png)
 
 ## Drag and Drop
 
