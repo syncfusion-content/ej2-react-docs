@@ -3,36 +3,34 @@ import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellDirective, CellsDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
 import { data } from './datasource';
 
 function App() {
-    const spreadsheetRef = React.useRef(null);
-    const styles = { textAlign: 'center', fontWeight: 'bold', verticalAlign: 'middle', fontStyle: 'italic', fontSize: '15pt' };
-    const cellStyle = { fontStyle: 'italic', fontWeight: 'bold' };
-    const fontStyle = { fontWeight: 'bold', textAlign: 'right' };
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+    const styles: CellStyleModel = { textAlign: 'center', fontWeight: 'bold', verticalAlign: 'middle', fontStyle: 'italic', fontSize: '15pt' };
+    const cellStyle: CellStyleModel = { fontStyle: 'italic', fontWeight: 'bold' };
+    const fontStyle: CellStyleModel = { fontWeight: 'bold', textAlign: 'right' };
     // Custom function to calculate percentage between two cell values.
-    const calculatePercentage = (firstCell, secondCell) => {
+    const calculatePercentage = (firstCell: string, secondCell: string): number => {
         return Number(firstCell) / Number(secondCell);
     };
-    // Custom function to calculate round down for values.
-    const roundDownHandler = (value, digit) => {
-        var multiplier = Math.pow(10, digit);
-        return Math.floor(value * multiplier) / multiplier;
-    }
     React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
-            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:F2');
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:E2');
             spreadsheet.numberFormat('$#,##0', 'B3:D12');
             spreadsheet.numberFormat('0%', 'E3:E12');
             // Adding custom function for calculating the percentage between two cells.
             spreadsheet.addCustomFunction(calculatePercentage, 'PERCENTAGE');
-            // Adding custom function for calculating round down for the value.
-            spreadsheet.addCustomFunction(roundDownHandler, 'ROUNDDOWN');
-            // Calculate percentage using custom added formula in E12 cell.
-            spreadsheet.updateCell({ formula: '=PERCENTAGE(C12,D12)' }, 'E12');
-            // Calculate round down for average values using custom added formula in F12 cell.
-            spreadsheet.updateCell({ formula: '=ROUNDDOWN(F11,1)' }, 'F12');
+            // Calculate percentage using custom added formula in E11 cell.
+            spreadsheet.updateCell({ formula: '=PERCENTAGE(C11,D11)' }, 'E11');
+            // Calculate expressions using computeExpression in E10 cell.
+            spreadsheet.updateCell({ value: spreadsheet.computeExpression('C10/D10') as string }, 'E10');
+            // Calculate custom formula values using computeExpression in E12 cell.
+            spreadsheet.updateCell({ value: spreadsheet.computeExpression('=PERCENTAGE(C12,D12)') as string }, 'E12');
+            // Calculate SUM (built-in) formula values using computeExpression in D12 cell.
+            spreadsheet.updateCell({ value: spreadsheet.computeExpression('=SUM(D3:D11)') as string }, 'D12');
         }
     }, []);
 
@@ -88,8 +86,8 @@ function App() {
                         <ColumnDirective width={120}></ColumnDirective>
                         <ColumnDirective width={120}></ColumnDirective>
                         <ColumnDirective width={120}></ColumnDirective>
-                        <ColumnDirective width={140}></ColumnDirective>
-                        <ColumnDirective width={150}></ColumnDirective>
+                        <ColumnDirective width={120}></ColumnDirective>
+                        <ColumnDirective width={120}></ColumnDirective>
                     </ColumnsDirective>
                 </SheetDirective>
             </SheetsDirective>
@@ -98,6 +96,6 @@ function App() {
 };
 export default App;
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root')!);
 root.render(<App />);
 {% endraw %}
