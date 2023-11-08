@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Calendar component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: Style appearance in React Calendar Component | Syncfusion
+description: Learn here all about style appearance support in Syncfusion Essential React Calendar component, it's elements and more.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React Calendar component
+# Style appearance in React Calendar Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

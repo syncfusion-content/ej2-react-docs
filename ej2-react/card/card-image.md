@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Card image in React Card component | Syncfusion
-description: Learn here all about Card image in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: Card image in React Card Component | Syncfusion
+description: Learn here all about card image support in Syncfusion Essential React Card component, it's elements and more.
 control: Card image 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Card image in React Card component
+# Card image in React Card Component
 
 ## Images
 
@@ -107,4 +107,4 @@ Divider used to separate the elements inside the card. You can add divider insid
 
 ## See Also
 
-* [How to customize the card image title position](./how-to/customize-the-card-image-title-position/)
+* [How to customize the card image title position](./how-to/customize-the-card-image-title-position)

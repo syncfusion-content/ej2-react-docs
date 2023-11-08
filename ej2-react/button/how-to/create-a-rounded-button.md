@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create a rounded button in React Button component | Syncfusion
-description: Learn here all about Create a rounded button in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: Create a rounded button in React Button Component | Syncfusion
+description: Learn here all about create a rounded button support in Syncfusion Essential React Button component, it's elements and more.
 control: Create a rounded button 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create a rounded button in React Button component
+# Create a rounded button in React Button Component
 
 Button with rounded corner can be achieved by adding `border-radius` property.
 

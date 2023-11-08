@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent the popup close in React Datepicker component | Syncfusion
-description: Learn here all about Prevent the popup close in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Prevent the popup close in React DatePicker Component | Syncfusion
+description: Learn here all about prevent the popup close support in Syncfusion Essential React DatePicker component, it's elements and more.
 control: Prevent the popup close 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent the popup close in React Datepicker component
+# Prevent the popup close in React DatePicker Component
 
 To prevent the DatePicker popup from closing, use the preventDefault method.
 
