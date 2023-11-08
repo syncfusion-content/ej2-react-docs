@@ -26,7 +26,7 @@ To modify the AppBar appearance, you need to override the default CSS of the App
 
 ## CssClass
 
-CssClass is used for AppBar customization based on the custom class. In the example below, the AppBar background and color are customized using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/appbar#cssclass) property.
+CssClass is used for AppBar customization based on the custom class. In the example below, the AppBar background and color are customized using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/appbar/#cssclass) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
