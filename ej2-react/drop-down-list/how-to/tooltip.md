@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip in React Drop down list component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Tooltip in React DropDown List Component | Syncfusion
+description: Learn here all about tooltip support in Syncfusion Essential React DropDown List component, it's elements and more.
 control: Tooltip 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in React Drop down list component
+# Tooltip in React DropDown List Component
 
 You can achieve this behavior by using `ej2-tooltip` component. When the mouse hover on the DropDownList option that tooltip display some details related to hovered list item.
 
