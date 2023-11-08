@@ -38,22 +38,21 @@ The accessibility compliance for the Tree Grid component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA
+## WAI-ARIA attributes
 
-WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
+The Tree Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/) patterns to meet the accessibility. The following ARIA attributes are used in the Tree Grid component:
 
-The following ARIA attributes are used in the TreeGrid:
-* grid (role)
-* row (role)
-* gridcell (role)
-* aria-selected (attribute)
-* aria-expanded (attribute)
-* aria-sort (attribute)
-* aria-busy (attribute)
-* aria-invalid (attribute)
-* aria-grabbed (attribute)
-* aria-owns (attribute)
-* aria-label (attribute)
+| Attributes | Purpose |
+| --- | --- |
+| `role=treegrid` | Used to convey a significant and contextual message to the user. |
+| `aria-selected` | Accurately reflect the selection state, whether it's single-select or multi-select. |
+| `aria-expanded` | It can be used to show whether a node is expanded or collapsed, making it easier for screen reader users to navigate and understand the hierarchy. |
+| `aria-sort` | Indicate the current sorting order of a table column for users with disabilities, facilitating accessible data presentation and interaction. |
+| `aria-busy` |  Loading state to improve accessibility for users, particularly those relying on screen readers. |
+| `aria-invalid` | To indicate whether the user's input in a form field is valid or invalid, aiding users, including those with disabilities, in understanding and correcting their input. |
+| `aria-grabbed` | Provides accessibility information for users interacting with draggable elements |
+| `aria-owns` | Establishing relationships between an element and the elements it owns or controls. |
+| `aria-label` | Provides an accessible name for the close icon. |
 
 ## Keyboard navigation
 

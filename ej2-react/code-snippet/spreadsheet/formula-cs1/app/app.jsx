@@ -16,7 +16,7 @@ function App() {
     };
     // Custom function to calculate round down for values.
     const roundDownHandler = (value, digit) => {
-        var multiplier = Math.pow(10, digit);
+        let multiplier = Math.pow(10, digit);
         return Math.floor(value * multiplier) / multiplier;
     }
     React.useEffect(() => {
