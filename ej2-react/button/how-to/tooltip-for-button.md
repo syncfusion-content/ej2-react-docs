@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip for button in React Button component | Syncfusion
-description: Learn here all about Tooltip for button in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: Tooltip for button in React Button Component | Syncfusion
+description: Learn here all about Tooltip for button in Syncfusion React Button Component of Syncfusion Essential JS 2 and more.
 control: Tooltip for button 
 platform: ej2-react
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Headers in React Grid component | Syncfusion
-description: Learn here all about Headers in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Headers in React Grid Component | Syncfusion
+description: Learn here all about Headers in Syncfusion React Grid Component of Syncfusion Essential JS 2 and more.
 control: Headers 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Headers in React Grid component
+# Headers in React Grid Component
 
 ## Header text
 

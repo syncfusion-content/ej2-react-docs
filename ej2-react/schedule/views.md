@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Views in React Schedule component | Syncfusion
-description: Learn here all about Views in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Views in React Schedule Component | Syncfusion
+description: Learn here all about Views in Syncfusion React Schedule Component of Syncfusion Essential JS 2 and more.
 control: Views 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Views in React Schedule component
+# Views in React Schedule Component
 
 The Scheduler includes wide variety of view modes with unique configuration options for each view. The available view modes are listed below, out of which the `Week` view is set as active.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto wrap in React Grid component | Syncfusion
-description: Learn here all about Auto wrap in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Auto wrap in React Grid Component | Syncfusion
+description: Learn here all about Auto wrap in Syncfusion React Grid Component of Syncfusion Essential JS 2 and more.
 control: Auto wrap 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto wrap in React Grid component
+# Auto wrap in React Grid Component
 
 The auto wrap allows the cell content of the grid to wrap to the next line when it exceeds the boundary of the cell width. The Cell Content wrapping works based on the position of white space between words.
 To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid/#allowtextwrap) property to **true**.

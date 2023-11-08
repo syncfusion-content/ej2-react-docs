@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Combo box component | Syncfusion
-description:  Checkout and learn about Getting started with React Combo box component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Combo box Component | Syncfusion
+description:  Checkout and learn about Getting started with React Combo box Component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section explains how to create a simple **ComboBox** component and configure its available functionalities in React.
+This section explains how to create a simple **ComboBox** Component and configure its available functionalities in React.
 
 To get start quickly with React ComboBox, you can check on this video:
 

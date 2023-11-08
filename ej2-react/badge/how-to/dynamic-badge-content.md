@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dynamic badge content in React Badge component | Syncfusion
-description: Learn here all about Dynamic badge content in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
+title: Dynamic badge content in React Badge Component | Syncfusion
+description: Learn here all about Dynamic badge content in Syncfusion React Badge Component of Syncfusion Essential JS 2 and more.
 control: Dynamic badge content 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dynamic badge content in React Badge component
+# Dynamic badge content in React Badge Component
 
 Badges in real-time needs to be updated dynamically based on the requirements. In this sample, using React `states`
 the badges content will be updated dynamically. Click the increment button to change the badge value.

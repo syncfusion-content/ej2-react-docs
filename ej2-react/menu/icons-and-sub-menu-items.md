@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons and sub menu items in React Menu component | Syncfusion
-description: Learn here all about Icons and sub menu items in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: Icons and sub menu items in React Menu Component | Syncfusion
+description: Learn here all about Icons and sub menu items in Syncfusion React Menu Component of Syncfusion Essential JS 2 and more.
 control: Icons and sub menu items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons and sub menu items in React Menu component
+# Icons and sub menu items in React Menu Component
 
 ## Icons
 

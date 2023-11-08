@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dynamic tooltip content with html elements in React Tooltip component | Syncfusion
-description: Learn here all about Dynamic tooltip content with html elements in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Dynamic tooltip content with html elements in React Tooltip Component | Syncfusion
+description: Learn here all about Dynamic tooltip content with html elements in Syncfusion React Tooltip Component of Syncfusion Essential JS 2 and more.
 control: Dynamic tooltip content with html elements 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dynamic tooltip content with html elements in React Tooltip component
+# Dynamic tooltip content with html elements in React Tooltip Component
 
 Tooltip loads HTML pages via HTML tags such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) property, which supports both string and HTML tags.
 
