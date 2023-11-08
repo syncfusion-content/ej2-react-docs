@@ -184,7 +184,7 @@ end-to-end before starting to write code, all other information can be referred 
 * Now that you are familiar with the basics of using the component, the next
 step would be to start integrating the component into your application.
 A good starting point would be to refer to the code snippets in the
-[online sample browser](http://ej2.syncfusion.com/react/demos/) which contains
+[online sample browser](https://ej2.syncfusion.com/react/demos/#/bootstrap5/grid/overview) which contains
 hundreds of code samples, it is very likely that you will find a code sample that
 resembles your intended usage scenario.
 
@@ -203,7 +203,7 @@ ticket in our support site or ask your query in StackOverflow with tag `syncfusi
 
 ## See also
 
-* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
-* [Getting Started with Syncfusion React UI Components](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/)
-* [Project Setup with Visual Studio Code](https://ej2.syncfusion.com/react/documentation/visual-studio-code-integration/create-project/)
-* [Project Setup with Visual Studio](https://ej2.syncfusion.com/react/documentation/visual-studio-integration/overview/)
+* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
+* [Getting Started with Syncfusion React UI Components](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+* [Project Setup with Visual Studio Code](https://ej2.syncfusion.com/react/documentation/visual-studio-code-integration/create-project)
+* [Project Setup with Visual Studio](https://ej2.syncfusion.com/react/documentation/visual-studio-integration/overview)

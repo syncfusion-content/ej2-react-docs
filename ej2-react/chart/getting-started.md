@@ -186,9 +186,9 @@ export let data: any[] = [
 {% endhighlight %}
 {% endtabs %}
 
- Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property.
+ Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/series/) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#datasource) property.
 
-Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
+Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -201,7 +201,7 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 
  {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs3" %}
 
-The sales data are in thousands, so format the vertical axis label by adding `$` as a prefix and `K` as a suffix to each label. This can be achieved by setting the `${value}K` to the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
+The sales data are in thousands, so format the vertical axis label by adding `$` as a prefix and `K` as a suffix to each label. This can be achieved by setting the `${value}K` to the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -216,7 +216,7 @@ The sales data are in thousands, so format the vertical axis label by adding `$`
 
 ## Add Chart Title
 
-You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#title) property to the chart to provide quick information to the user about the data plotted in the chart.
+You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/chart/chart/#title) property to the chart to provide quick information to the user about the data plotted in the chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -231,7 +231,7 @@ You can add a title using [`title`](https://ej2.syncfusion.com/react/documentati
 
 ## Enable Legend
 
-You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#visible) object and by injecting the `Legend` module into the `services`.
+You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings/#visible) object and by injecting the `Legend` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -261,7 +261,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 ## Enable Tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel/#enable) object and by injecting `Tooltip` module into the `services`.
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettings/#enable) object and by injecting `Tooltip` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -274,4 +274,4 @@ The tooltip is useful when you cannot display information by using the data labe
 
  {% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs2" %}
 
-> You can refer to our [React Charts](https://www.syncfusion.com/react-ui-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos/#/material/chart/line) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our [React Charts](https://www.syncfusion.com/react-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/chart/line) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
