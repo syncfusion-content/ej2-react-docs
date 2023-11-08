@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in React Listview component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Grouping in React Listview Component | Syncfusion
+description: Learn here all about Grouping in Syncfusion React Listview Component of Syncfusion Essential JS 2 and more.
 control: Grouping 
 platform: ej2-react
 documentation: ug
