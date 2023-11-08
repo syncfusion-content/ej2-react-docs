@@ -22,6 +22,6 @@ It is used to denote the delay value in milliseconds and indicating the waiting 
 
 It is used to denote the duration of the animation that is completed per animation cycle.
 
-### effect [`Effect`](https://ej2.syncfusion.com/react/documentation/api-effect.html)
+### effect [`Effect`](https://ej2.syncfusion.com/react/documentation/api/tooltip/effect/)
 
 It is used to apply the Animation effect on the Tooltip, during open and close actions.

@@ -33,7 +33,7 @@ The following list of dependencies are required to use the Spreadsheet component
 
 ## Setup for Local Development
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications and run the following command to install create-react-app.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications and run the following command to install create-react-app.
 
 ```
 npm install -g create-react-app
@@ -92,7 +92,7 @@ export default function App() {
 
 ## Run the application
 
-The [create-react-app](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+The [create-react-app](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
 ```
 
