@@ -24,25 +24,43 @@ Below is the list of minimum dependencies required to use the DataManager.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install **create-react-app** run the following command.
+To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
 
-   ```
-    npm install -g create-react-app
-   ```
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
+```
 
-* To setup basic **React** sample use following commands.
+or
 
-    ```
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-      npm install
-    ```
+```bash
+yarn create react-app my-app
+cd my-app
+yarn start
+```
 
-* Install Syncfusion packages using below command.
+To set-up a React application in `TypeScript` environment, run the following command.
 
-    ```
-     npm install @syncfusion/ej2-data --save
-    ```
+```bash
+npx create-react-app my-app --template typescript
+cd my-app
+npm start
+```
+
+Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+
+```bash
+npm init react-app my-app
+cd my-app
+npm start
+```
+
+Install Syncfusion packages using below command.
+
+```
+npm install @syncfusion/ej2-data --save
+```
 
 ## Connection to a data source
 
