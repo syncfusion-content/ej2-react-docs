@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Error messages in React Form Validator Component | Syncfusion
-description: Learn here all about error messages in Syncfusion Essential React Form Validator component, it's elements and more.
+description: Learn here all about error messages support in Syncfusion Essential React Form Validator component, it's elements and more.
 control: Error messages 
 platform: ej2-react
 documentation: ug
