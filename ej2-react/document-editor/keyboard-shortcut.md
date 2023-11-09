@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard shortcut in React Document editor component | Syncfusion
+title: Keyboard shortcut in React Document Editor Component | Syncfusion
 description: Learn here all about Keyboard shortcut in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Keyboard shortcut 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard shortcut in React Document editor component
+# Keyboard shortcut in React Document Editor Component
 
 ## Text formatting
 

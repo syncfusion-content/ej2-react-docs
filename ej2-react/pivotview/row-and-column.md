@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row and column in React Pivotview component | Syncfusion
-description: Learn here all about Row and column in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: Row and column in React PivotView Component | Syncfusion
+description: Learn here all about row and column in Syncfusion React PivotView component of Syncfusion Essential JS 2 and more.
 control: Row and column 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row and column in React Pivotview component
+# Row and column in React PivotView Component
 
 To learn about how to use the row and column options effectively in the React Pivot Table, watch this video:
 

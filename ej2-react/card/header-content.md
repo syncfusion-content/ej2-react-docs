@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header content in React Card component | Syncfusion
+title: Header content in React Card Component | Syncfusion
 description: Learn here all about Header content in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
 control: Header content 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header content in React Card component
+# Header content in React Card Component
 
 ## Header
 
