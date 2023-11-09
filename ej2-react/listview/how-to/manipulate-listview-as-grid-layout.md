@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Manipulate listview as grid layout in React Listview component | Syncfusion
-description: Learn here all about Manipulate listview as grid layout in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Manipulate listview in React Listview Component | Syncfusion
+description: Learn here all about manipulate listview as grid layout in Syncfusion Essential React Listview component, it's elements and more.
 control: Manipulate listview as grid layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manipulate listview as grid layout in React Listview component
+# Manipulate listview as grid layout in React Listview Component
 
 In Listview, list items can be rendered in grid layout with following data manipulations.
 
@@ -101,7 +101,7 @@ In the below sample, we have sorted fruits in `Ascending` order. To sort it in d
 
 ### Filter Items
 
-Listview data can be filtered with the help of [`dataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started/). After filtering the data, update ListView [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) with filtered data.
+Listview data can be filtered with the help of [`dataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started). After filtering the data, update ListView [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) with filtered data.
 
 ```ts
 
@@ -114,7 +114,7 @@ listViewInstance.dataSource = filteredData;
 
 ```
 
-In the below sample, we can filter fruit items with the help of search text box. This will filter fruit items based on your input. Here we used [`startswith`](https://ej2.syncfusion.com/react/documentation/data/querying/#filter-operators) of input text to filter data in DataManager.
+In the below sample, we can filter fruit items with the help of search text box. This will filter fruit items based on your input. Here we used [`startswith`](https://ej2.syncfusion.com/react/documentation/data/querying#filter-operators) of input text to filter data in DataManager.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

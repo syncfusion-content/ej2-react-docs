@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paging in React Grid component | Syncfusion
-description: Learn here all about Paging in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Paging in React Grid Component | Syncfusion
+description: Learn here all about paging support in Syncfusion Essential React Grid component, it's elements and more.
 control: Paging 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paging in React Grid component
+# Paging in React Grid Component
 
 Paging provides an option to display Grid data in page segments.
 To enable paging, set the [allowPaging](https://ej2.syncfusion.com/react/documentation/api/grid/#allowpaging) to true.
@@ -108,4 +108,4 @@ By default, Pager will be rendered at the bottom of the Grid. You can also rende
 
 ## See Also
 
-[Group with Paging](./grouping/grouping/#group-with-paging)
+[Group with Paging](./grouping/grouping#group-with-paging)

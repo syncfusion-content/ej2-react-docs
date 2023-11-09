@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Drill down in React Pivotview component | Syncfusion
-description: Learn here all about Drill down in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: Drill down in React Pivotview Component | Syncfusion
+description: Learn here all about drill down in Syncfusion Essential React Pivotview component, it's elements and more.
 control: Drill down 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drill down in React Pivotview component
+# Drill down in React Pivotview Component
 
 ## Drill down and drill up
 
 The drill down and drill up action helps to view the bound data in detailed and abstract view respectively. By default, if member(s) has children, then expand and collapse icon will be displayed in the respective row/column header. On clicking the icon, expand or collapse action will be performed automatically through built-in source code. Meanwhile, leaf member(s) does not contain expand and collapse icon.
 
-![output](images/drill.png)
+![Drill down and drill up in React Pivotview](images/react-pivotview-drill-down-and-drill-up.png)
 
 ## Drill position
 
@@ -22,7 +22,7 @@ Allows to drill only the current position of the selected member and exclude the
 
 > This feature is built-in and occurs every time when expand or collapse action is done for better performance.
 
-![output](images/drill_position.png)
+![Drill position in React Pivotview](images/react-pivotview-drill-position.png)
 
 ## Expand all
 
