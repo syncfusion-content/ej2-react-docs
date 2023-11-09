@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The auto wrap allows the cell content of the grid to wrap to the next line when it exceeds the boundary of the cell width. The Cell Content wrapping works based on the position of white space between words.
 To enable auto wrap, set the [allowTextWrap](https://ej2.syncfusion.com/react/documentation/api/grid/#allowtextwrap) property to **true**.
-You can configure the auto wrap mode by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings/#wrapmode) property.
+You can configure the auto wrap mode by setting the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textwrapsettings/#wrapmode) property.
 
-There are three types of [wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings/#wrapmode). They are
+There are three types of [wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textwrapsettings/#wrapmode). They are
 
 * **Both** - It is the default value. Auto wrap will be enabled for both content and Header.
 * **Header** - Auto wrap will be enabled only for header.
@@ -22,7 +22,7 @@ There are three types of [wrapMode](https://ej2.syncfusion.com/react/documentati
 
 > When a column width is not specified, then auto wrap of columns will be adjusted with respect to the Grid's width.
 
-In the below example, the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textWrapSettings/#wrapmode) is set as **Content**.
+In the below example, the [textWrapSettings.wrapMode](https://ej2.syncfusion.com/react/documentation/api/grid/textwrapsettings/#wrapmode) is set as **Content**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
