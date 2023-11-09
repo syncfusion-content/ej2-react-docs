@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check box in React Treeview component | Syncfusion
-description: Learn here all about Check box in Syncfusion React Treeview component of Syncfusion Essential JS 2 and more.
+title: Check box in React Treeview Component | Syncfusion
+description: Learn here all about check box in Syncfusion Essential React Treeview component, it's elements and more details.
 control: Check box 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check box in React Treeview component
+# Check box in React Treeview Component
 
 The TreeView component allows you to check more than one node in TreeView without affecting the UI's appearance by enabling the [showCheckBox](https://ej2.syncfusion.com/react/documentation/api/treeview/#showcheckbox) property. When this property is enabled, checkbox appears before each TreeView node text.
 
