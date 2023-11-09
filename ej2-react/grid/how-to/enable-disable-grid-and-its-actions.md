@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable disable grid and its actions in React Grid component | Syncfusion
-description: Learn here all about Enable disable grid and its actions in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Enable disable and its actions in React Grid Component | Syncfusion
+description: Learn here all about enable disable and its actions in Syncfusion Essential React Grid component, it's elements and more.
 control: Enable disable grid and its actions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable disable grid and its actions in React Grid component
+# Enable disable and its actions in React Grid Component
 
 You can enable/disable the Grid and its actions by applying/removing corresponding CSS styles.
 

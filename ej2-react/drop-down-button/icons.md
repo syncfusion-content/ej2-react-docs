@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in React Drop down button component | Syncfusion
-description: Learn here all about Icons in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Icons in React Dropdown Button Component | Syncfusion
+description: Learn here all about icons support in Syncfusion Essential React Dropdown Button component, it's elements and more.
 control: Icons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in React Drop down button component
+# Icons in React Dropdown Button Component
 
 ## DropDownButton icons
 

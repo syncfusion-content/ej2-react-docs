@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with React Context menu component | Syncfusion
-description:  Checkout and learn about Getting started with React Context menu component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Context Menu Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential React Context Menu component, it's elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Getting Started
+# Getting Started with React Context Menu
 
 This section explains how to create a simple ContextMenu, and configure its available functionalities in React
 
@@ -135,7 +135,7 @@ function App() {
       </div>
     );
 }
-export default App;  
+export default App;
 ```
 
 ```ts
