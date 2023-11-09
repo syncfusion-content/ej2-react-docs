@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Grid component | Syncfusion
-description:  Checkout and learn about Getting started with React Grid component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Grid Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential React Grid component, it's elements and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React Grid
 
 This section explains you the steps required to create a simple Grid and demonstrate the basic usage of the Grid component in React environment.
 
@@ -243,7 +243,7 @@ Output will be appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/grid/getting-started-cs5" %}
 
-> You can refer to our [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/material/grid/overview) that shows how to render the Grid in React.
+> You can refer to our [React Grid](https://www.syncfusion.com/react-components/react-data-grid) feature tour page for its groundbreaking feature representations. You can also explore our [React Grid Component example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/grid/overview) that shows how to render the Grid in React.
 
 ## See also
 
