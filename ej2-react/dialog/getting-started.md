@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Dialog component | Syncfusion
-description:  Checkout and learn about Getting started with React Dialog component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Dialog Component | Syncfusion
+description:  Checkout and learn about getting started with Syncfusion Essential React Dialog component, its elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Dialog Component
 
 The following section explains the required steps to build the Dialog component with its basic usage in step by step procedure.
 
