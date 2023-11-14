@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize expand collapse actions in React Accordion component | Syncfusion
-description: Learn here all about Customize expand collapse actions in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: Customize expand collapse actions in React Accordion Component | Syncfusion
+description: Learn here all about customize expand collapse actions in Syncfusion Essential React Accordion component, its elements and more.
 control: Customize expand collapse actions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize expand collapse actions in React Accordion component
+# Customize expand collapse actions in React Accordion Component
 
 Accordion component supports customizing the expand or collapse animation action behavior. You can manually change the expand animation action performed after the collapse animation operation performed on already expand pane when the expand icons are clicked.
 

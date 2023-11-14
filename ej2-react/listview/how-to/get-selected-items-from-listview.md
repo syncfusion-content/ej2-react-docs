@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get selected items from listview in React Listview component | Syncfusion
-description: Learn here all about Get selected items from listview in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Get selected items from listview in React Listview Component | Syncfusion
+description: Learn here all about get selected items from listview in Syncfusion Essential React Listview component, its elements and more.
 control: Get selected items from listview 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get selected items from listview in React Listview component
+# Get selected items from listview in React Listview Component
 
 Single or many items can be selected by users in the ListView component. An API is used to get selected items from the
 list items. This is called as the

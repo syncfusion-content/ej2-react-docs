@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in React Grid component | Syncfusion
-description: Learn here all about Print in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Print in React Grid Component | Syncfusion
+description: Learn here all about Print in Syncfusion Essential React Grid component, its elements and more.
 control: Print 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React Grid component
+# Print in React Grid Component
 
 To print the Grid, use the [print](https://ej2.syncfusion.com/react/documentation/api/grid/print/#print) method from grid instance.
 The print option can be displayed on the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) by adding the **Print** toolbar item.
