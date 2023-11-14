@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Spreadsheet component
+# Getting Started with React Spreadsheet
 
 This section explains the steps to create a simple Spreadsheet component in a React application.
 

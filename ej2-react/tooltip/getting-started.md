@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Tooltip component
+# Getting Started with React Tooltip
 
 This section briefly explains how to create a simple **Tooltip** component and configure its available functionalities in React.
 

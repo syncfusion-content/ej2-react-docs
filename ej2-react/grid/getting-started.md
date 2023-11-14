@@ -8,8 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Grid component
-
+# Getting started with React Grid
 This section explains you the steps required to create a simple Grid and demonstrate the basic usage of the Grid component in React environment.
 
 To get start quickly with React Grid, you can check on this video:

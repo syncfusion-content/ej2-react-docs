@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Document editor component 
+# Getting Started with React Document Editor 
 
 This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the DocumentEditor component.
 
