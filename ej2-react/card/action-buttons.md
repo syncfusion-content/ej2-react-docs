@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Action buttons in React Card Component | Syncfusion
-description: Learn here all about Action buttons in Syncfusion Essential React Card component, its elements and more.
+description: Learn here all about action buttons in Syncfusion Essential React Card component, its elements and more.
 control: Action buttons 
 platform: ej2-react
 documentation: ug

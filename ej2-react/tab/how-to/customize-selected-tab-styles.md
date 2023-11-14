@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize selected tab styles in React Tab Component | Syncfusion
-description: Learn here all about Customize selected tab styles in Syncfusion Essential React Tab component, its elements and more.
+title: Customize selected tab styles in React Component | Syncfusion
+description: Learn here all about customize selected tab styles in Syncfusion Essential React Tab component, its elements and more.
 control: Customize selected tab styles 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize selected tab styles in React Tab Component
+# Customize selected tab styles in React Component
 
 You can customize the Tab style by overriding its header and active tab CSS classes. Define HTML string for adding animation and customizing the Tab header and pass it to [`text`](https://ej2.syncfusion.com/react/documentation/api/tab/header/#text) property. Now you can override the style using custom CSS classes added to the Tab elements.
 

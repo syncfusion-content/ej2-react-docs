@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React MultiSelect Component | Syncfusion
-description:  Checkout and learn about getting started with React MultiSelect component of Syncfusion Essential JS 2 and more details.
+description:  Checkout and learn about getting started with Syncfusion Essential React MultiSelect component, its elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -35,7 +35,7 @@ The following list of dependencies are required to use the `MultiSelect` compone
 
 ## Installation and configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
     ```bash
       npm install -g create-react-app

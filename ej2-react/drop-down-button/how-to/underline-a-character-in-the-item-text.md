@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Underline a character in React Dropdown Button Component | Syncfusion
-description: Learn here all about Underline a character in the item text in Syncfusion Essential React Dropdown Button component, its elements and more.
+description: Learn here all about underline a character in the item text in Syncfusion Essential React Dropdown Button component, its elements and more.
 control: Underline a character in the item text 
 platform: ej2-react
 documentation: ug
