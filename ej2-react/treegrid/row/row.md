@@ -17,7 +17,7 @@ To get start quickly with features in Row, you can check on this video:
 
 ## Customize rows
 
-You can customize the appearance of a row by using the [`rowDataBound`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdatabound) event. The [`rowDataBound`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdatabound) event triggers for every row. In the event handler, you can get the [`RowDataBoundEventArgs`](https://ej2.syncfusion.com/react/documentation/api/grid/rowDataBoundEventArgs/) that contains details of the row.
+You can customize the appearance of a row by using the [`rowDataBound`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdatabound) event. The [`rowDataBound`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdatabound) event triggers for every row. In the event handler, you can get the [`RowDataBoundEventArgs`](https://ej2.syncfusion.com/react/documentation/api/grid/rowdataboundeventargs/) that contains details of the row.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -53,4 +53,4 @@ Please refer the following example.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/alt-row-cs1" %}
 
-> Refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to know how to present and manipulate data.
+> Refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to know how to present and manipulate data.

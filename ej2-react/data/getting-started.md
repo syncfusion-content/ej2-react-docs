@@ -24,7 +24,7 @@ Below is the list of minimum dependencies required to use the DataManager.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install **create-react-app** run the following command.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install **create-react-app** run the following command.
 
    ```
     npm install -g create-react-app
@@ -50,7 +50,7 @@ The DataManager can act as gateway for both local and remote data source which w
 
 ### Binding to JSON data
 
-[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) can be bound to local data source by assigning the array of JavaScript objects to the **json** property or simply passing them to the constructor while instantiating.
+[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/datamanager/) can be bound to local data source by assigning the array of JavaScript objects to the **json** property or simply passing them to the constructor while instantiating.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -77,7 +77,7 @@ The DataManager can act as gateway for both local and remote data source which w
 
 ### Binding to OData
 
-[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/)  can be bound to remote data source by assigning service end point URL to the **url** property. Now all [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/)  operations will address the provided service end point.
+[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/datamanager/)  can be bound to remote data source by assigning service end point URL to the **url** property. Now all [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/datamanager/)  operations will address the provided service end point.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -204,7 +204,7 @@ A DataSource can be created in-line with other Syncfusion component configuratio
 
 ### Remote data binding
 
-To bind remote data to Syncfusion component, you can assign a service data as an instance of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) to the **dataSource** property.
+To bind remote data to Syncfusion component, you can assign a service data as an instance of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/datamanager/) to the **dataSource** property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
