@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React Chart Component | Syncfusion
-description:  Checkout and learn about Getting started with React Chart component of Syncfusion Essential JS 2 and more details.
+description:  Checkout and learn about getting started with Syncfusion Essential React Chart component. its elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -36,7 +36,7 @@ Below is the list of minimum dependencies required to use the chart component.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
    ```

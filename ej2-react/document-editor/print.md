@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in React Document Editor Component | Syncfusion
-description: Learn here all about Print in Syncfusion Essential React Document Editor component, its elements and more.
+description: Learn here all about print in Syncfusion Essential React Document Editor component, its elements and more.
 control: Print 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print in React Document Editor Component
 
-To print the document, use the [`print`](https://helpej2.syncfusion.com/react/documentation/api/document-editor/#print) method from document editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#print) method from document editor instance.
 
 Refer to the following example for showing a document and print it.
 
@@ -206,7 +206,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
-By customizing margins, papers, and layouts, the layout of the document will be changed in document editor. To modify these options during print operation, serialize the document as SFDT using the  [`serialize`](https://ej2.syncfusion.com/react/documentation/api/document-editor#serialize) method in document editor instance and open the SFDT data in another instance of document editor in separate window.
+By customizing margins, papers, and layouts, the layout of the document will be changed in document editor. To modify these options during print operation, serialize the document as SFDT using the  [`serialize`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#serialize) method in document editor instance and open the SFDT data in another instance of document editor in separate window.
 
 The following example shows how to customize layout options only for printing.
 

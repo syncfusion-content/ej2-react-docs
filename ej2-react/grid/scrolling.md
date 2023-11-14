@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling in React Grid Component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion Essential React Grid component, its elements and more.
+description: Learn here all about scrolling in Syncfusion Essential React Grid component, its elements and more.
 control: Scrolling 
 platform: ej2-react
 documentation: ug

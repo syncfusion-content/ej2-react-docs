@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React Dropdown List Component | Syncfusion
-description:  Checkout and learn about Getting started with React Dropdown List component of Syncfusion Essential JS 2 and more details.
+description:  Checkout and learn about getting started with Syncfusion Essential React Dropdown List component, its elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
