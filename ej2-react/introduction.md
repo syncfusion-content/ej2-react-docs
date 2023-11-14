@@ -184,7 +184,7 @@ end-to-end before starting to write code, all other information can be referred 
 * Now that you are familiar with the basics of using the component, the next
 step would be to start integrating the component into your application.
 A good starting point would be to refer to the code snippets in the
-[online sample browser](http://ej2.syncfusion.com/react/demos/) which contains
+[online sample browser](https://ej2.syncfusion.com/home/react.html) which contains
 hundreds of code samples, it is very likely that you will find a code sample that
 resembles your intended usage scenario.
 
