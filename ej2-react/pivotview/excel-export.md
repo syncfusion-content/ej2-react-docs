@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Excel export in React Pivotview component
 
-The Excel export allows Pivot Table data to be exported as Excel document. To enable Excel export in the pivot table, set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowexcelexport) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true**. Once the API is set, user needs to call the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method for exporting on external button click.
+The Excel export allows Pivot Table data to be exported as Excel document. To enable Excel export in the pivot table, set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowexcelexport) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/) to **true**. Once the API is set, user needs to call the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method for exporting on external button click.
 
 > The pivot table component can be exported to Excel format using options available in the toolbar. For more details [`refer`](./tool-bar) here.
 
@@ -110,7 +110,7 @@ The Excel export provides an option to change file name of the document before e
 
 ## CSV Export
 
-The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowexcelexport) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) as **true**. Once the API is set, user needs to call the [`csvExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#csvexport) method for exporting on external button click.
+The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowexcelexport) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/) as **true**. Once the API is set, user needs to call the [`csvExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#csvexport) method for exporting on external button click.
 
 > The pivot table component can be exported to CSV format using options available in the toolbar. For more details [`refer`](./tool-bar) here.
 

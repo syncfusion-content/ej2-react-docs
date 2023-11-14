@@ -100,4 +100,4 @@ In the following sample, first editor value submitted without select any date, s
 
 ## See Also
 
-* [Indication to unsaved value](./how-to/custom-indication/)
+* [Indication to unsaved value](./how-to/custom-indication)
