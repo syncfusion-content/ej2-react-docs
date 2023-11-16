@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with React Progress bar component | Syncfusion
-description:  Checkout and learn about Getting started with React Progress bar component of Syncfusion Essential JS 2 and more details.
+description: Learn here all about Getting started with React Progress bar component of Syncfusion Essential JS 2 and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Progress bar
 
 This section explains the steps required to create the ProgressBar control using React and configure its properties.
 
