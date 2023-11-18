@@ -13,16 +13,16 @@ export default function App() {
     {
       id: 'Start', width: 140, height: 50, offsetX: 300, offsetY: 50,
       annotations: [{
-          id: 'label1',
-          content: 'Start'
+        id: 'label1',
+        content: 'Start'
       }],
-      shape: { type: 'Flow', shape: 'Terminator'}
-  },
-  {
+      shape: { type: 'Flow', shape: 'Terminator' }
+    },
+    {
       id: 'Init', width: 140, height: 50, offsetX: 300, offsetY: 140,
       shape: { type: 'Flow', shape: 'Process' },
       annotations: [{ content: 'var i = 0;' }]
-  }
+    }
   ];
   const connectors: ConnectorModel[] = [
     {
@@ -43,5 +43,4 @@ export default function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
-
 

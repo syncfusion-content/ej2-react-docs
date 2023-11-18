@@ -95,9 +95,10 @@ export default function App() {
       targetID: "node6",
       annotations: [{ content: "No" }],
       type: 'Orthogonal',
+
       segments: [
-        { type: 'Orthogonal',length: 50, direction: "Right" },
-        { type: 'Orthogonal',length: 300, direction: "Bottom" }
+        { type: 'Orthogonal', length: 50, direction: "Right" },
+        { type: 'Orthogonal', length: 300, direction: "Bottom" }
       ]
     },
     {
