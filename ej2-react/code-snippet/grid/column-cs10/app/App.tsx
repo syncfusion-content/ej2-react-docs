@@ -12,8 +12,6 @@ function App() {
         for (const item of args.items) {
             if (item.text === 'Filter' && (args.column as Column).field === 'OrderID') {
                 (item as ColumnMenuItemModel).hide = true;
-            } else {
-                (item as ColumnMenuItemModel).hide = false;
             }
         }
     }

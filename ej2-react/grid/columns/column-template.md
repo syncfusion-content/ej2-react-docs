@@ -10,9 +10,15 @@ domainurl: ##DomainURL##
 
 # Column template in React Grid component
 
+Grid component provides a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
+
+> When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for grid actions like sorting, filtering, editing. It is must to define the `field` property of the column to perform any grid actions.
+
 ## Render image in a column
 
-The column [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) has options to display custom element instead of a field value in the column.
+To render an image in a grid column, you need to define a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) for the column using the template property. The `template` property expects the HTML element or a function that returns the HTML element.
+
+The following example demonstrates how to define a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) for the **Employee Image** field that displays an image element. The `template` property is set to the HTML element that contains an image tag. You have utilized the `src` and `alt` attributes to the image tag. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -31,96 +37,221 @@ The column [template](https://ej2.syncfusion.com/react/documentation/api/grid/co
 
  {% previewsample "page.domainurl/code-snippet/grid/column-template-cs1" %}
 
-## Render other components in a column
+> The [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) option allows to define any HTML content within a column.
 
-You can use [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event to render the React component inside Grid cells.
-In the following sample, the DropDownList is rendered in the **ShipCountry** column
+## Render hyperlink in a column
+
+The Grid component provides support for rendering hyperlink columns and performing routing on click using the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property. This feature is useful when displaying data that requires a link to another page or website.
+
+The following example demonstrates, hot to render hyperlink column in the Grid using the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property of the `ColumnDirective` tag. To define a `template` for the column,  you can use the `template` method with an `a` tag to create the hyperlink. The onClick function is triggered when the hyperlink is clicked.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/dropdown-component-cs1/app/App.jsx %}
+{% include code-snippet/grid/header-template-cs3/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/dropdown-component-cs1/app/App.tsx %}
+{% include code-snippet/grid/header-template-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/dropdown-component-cs1/app/datasource.jsx %}
+{% include code-snippet/grid/header-template-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/dropdown-component-cs1/app/datasource.tsx %}
+{% include code-snippet/grid/header-template-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/dropdown-component-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/grid/header-template-cs3" %}
+
+> The window.open() method is a built-in JavaScript function that opens a new browser window or tab with the specified URL.
+
+## Render other components in a column
+
+The column template has options to render a custom component in a grid column instead of a field value.
+
+### Render LineChart component in a column
+
+The [LineChart](https://ej2.syncfusion.com/react/documentation/sparkline/getting-started) component of Syncfusion provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
+
+In the following example, we rendered the Sparkline Chart component in the Grid column by defining the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-cs6/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-cs6/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-cs6/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs6" %}
+
+### Render ColorPicker component in a column
+
+The [ColorPicker](https://ej2.syncfusion.com/react/documentation/color-picker/getting-started) component of Syncfusion provides a user-friendly way to select colors from a pre-defined color palette or custom colors. It can be used in a variety of scenarios such as picking a theme color or changing the color of an element on a page.
+
+In the following code, we rendered the ColorPicker component in the Grid column by defining the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property.
+
+```
+<div>
+    <ColorPickerComponent id="color-picker" type="color" mode='Palette' change={change}></ColorPickerComponent>
+</div>
+```
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs1" %}
+
+### Render DropDownList component in a column
+
+To render a custom component in a grid column, you need to define a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) for the column using the `template` property. In the following code, we rendered the [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component in the **Order Status** column by defining the `template` property.
+
+```
+<div>
+    <DropDownListComponent value={props.OrderStatus} width="100" dataSource={dropData} popupHeight='150' popupWidth='150' ></DropDownListComponent>
+</div>
+```
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-cs2/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs2" %}
+
+### Render Chip component in a column
+
+The Grid component provides support for rendering [Chips](https://ej2.syncfusion.com/react/documentation/chips/getting-started) component in a column using the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property. This feature is useful when displaying data that requires a chip component to be rendered in a column.
+
+In the following code, we rendered the Chips component in the Grid **First Name** column by defining the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property.
+
+```
+<div>
+    <ChipListComponent id='chip' text={props.FirstName}></ChipListComponent>
+</div>
+```
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-cs3/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs3" %}
 
 ## Using condition template
 
-You can render the template elements based on condition.
+The conditional column [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) allows you to display template elements based on specific conditions.
 
-In the following code, checkbox is rendered based on **Discontinued** field value.
+The following example demonstrates how to use the `template` property with the `template` element and add the condition to render the checkbox based on the value of the **Discontinued** field. The **Discontinued** field will render a checkbox in each row for which the value of the **Discontinued** field is **true**. 
 
-```ts
-  const gridTemplate = (props: any): any => {
-    if(props.Discontinued){
-   return (<div className="template_checkbox">
-            <input type="checkbox" checked={true}/>
-        </div>);
-    }else{
-         return (<div className="template_checkbox">
-            <input type="checkbox"/>
-        </div>);
-    }
-  }
+```
+<div>
+    {props.Verified ? (<input type="checkbox" checked />) : (<input type="checkbox" />)}
+</div>
 ```
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-template-cs2/app/App.jsx %}
+{% include code-snippet/grid/template-cs4/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-template-cs2/app/App.tsx %}
+{% include code-snippet/grid/template-cs4/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-template-cs2/app/datasource.jsx %}
+{% include code-snippet/grid/template-cs4/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-template-cs2/app/datasource.tsx %}
+{% include code-snippet/grid/template-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-template-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs4" %}
+
+> You can use any template element or custom component instead of the checkbox in the conditional template based on your requirement.
 
 ## How to get the row object by clicking on the template element
 
-You can get the row object without selecting the row and achieve it using the column template feature and the `getRowObjectFromUID` method of the Grid.
+The Grid component allows you to retrieve the row object of the selected record when clicking on a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) element. This feature can be useful when you need to perform custom actions based on the selected record.
 
-In the following sample, the button element is rendered in the Employee Data column. By clicking the button, you can get the row object using the `getRowObjectFromUID` method of the Grid and display it in the console.
+In the following code, the button element is rendered in the **Employee Data** column and `click` event binding is used to call the **showDetails** method when the template element is clicked. The **showDetails** method is passed the data object as an argument, which allows you to access the selected row object and display it in the dialog popup.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-template-cs3/app/App.jsx %}
+{% include code-snippet/grid/template-cs7/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-template-cs3/app/App.tsx %}
+{% include code-snippet/grid/template-cs7/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/column-template-cs3/app/datasource.jsx %}
+{% include code-snippet/grid/template-cs7/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/column-template-cs3/app/datasource.tsx %}
+{% include code-snippet/grid/template-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/column-template-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs7" %}
 
-### Improve performance while rendering templates
+## Use custom helper inside the template
 
-By default, you can access the column template elements via grid events such as queryCellInfo and headerCellInfo during initial rendering, through which you can customize the template elements. It affects the rendering performance of React Grid while binding a large number of template columns in the grid.
+The Syncfusion Grid allows you to use custom helpers inside the `template` method of a column. This feature allows you to create complex templates that can incorporate additional helper functions that are not available through the default [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) syntax.
 
-Grid has an option to improve the rendering performance by setting the `requireTemplateRef` argument to false in the [load](https://ej2.syncfusion.com/react/documentation/api/grid/#load) event of the Grid. When requireTemplateRef is set to false, the template element is not accessible via queryCellInfo, headerCellInfo, and so on. So if you need to do any customization for those template elements, use the conditional rendering template concept instead of accessing them via grid events.
+To use the custom helper function inside a column template, you must first add the function to the template's context. This can be done by using the let keyword to create a new variable that references the function.
 
-```ts
-public load(args: LoadEventArgs) {
-    args.requireTemplateRef = false;
-}
-```
+The following example demonstrates how to use a custom helper function inside the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property, using the `template` element for the Freight column.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-cs5/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-cs5/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-cs5/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs5" %}
+
+> Custom helpers can only be used inside the template method of a column.

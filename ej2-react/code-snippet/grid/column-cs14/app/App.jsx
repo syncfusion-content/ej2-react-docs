@@ -1,42 +1,44 @@
-import { createElement } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Reorder } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
+import React, { useState } from 'react';
 import { data } from './datasource';
+
 function App() {
-    const columnDrop = () => {
-        const span = createElement('span');
-        span.innerHTML = 'columnDrop event is Triggered </br>';
-        document.getElementById('events').append(span);
-    };
-    const columnDragStart = () => {
-        const span = createElement('span');
-        span.innerHTML = 'columnDragStart event is Triggered </br>';
-        document.getElementById('events').append(span);
-    };
-    const columnDrag = () => {
-        const span = createElement('span');
-        span.innerHTML = 'columnDrag event is Triggered </br>';
-        document.getElementById('events').append(span);
-    };
-    const styles = {
-        'borderStyle': 'outset',
-        'fontSize': '14px',
-        'height': '40px',
-        'overflowY': 'scroll',
-        'width': '240px'
-    };
-    return (<div>
-        <div id='events' style={styles}/>
-        <GridComponent dataSource={data} allowReordering={true} height={275} columnDragStart={columnDragStart} columnDrag={columnDrag} columnDrop={columnDrop}>
-            <Inject services={[Reorder]}/>
-            <ColumnsDirective>
-                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
-                <ColumnDirective field='CustomerID' headerText='Customer ID' width='100'/>
-                <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right"/>
-                <ColumnDirective field='ShipRegion' headerText='Ship Region' width='100' textAlign="Right"/>
-                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' textAlign="Right"/>
-            </ColumnsDirective>
-        </GridComponent></div>);
+    let grid;
+    const [message, setMessage] = useState('');
+    const columnDrop = ((args) => {
+        setMessage('columnDrop event triggered');
+        if (args.column.allowReordering === true) {
+            grid.getColumnByField(args.column.field).customAttributes = {
+                class: 'customcss',
+            };
+        }
+    })
+    const columnDragStart = ((args) => {
+        setMessage('columnDragStart event triggered');
+        if (args.column.field === 'OrderID') {
+            grid.getColumnByField(args.column.field).allowReordering = false;
+        }
+    })
+    const columnDrag = ((args) => {
+        var index = args.target.getAttribute('data-colIndex');
+        if (index) {
+            setMessage('columnDrag event is triggered. ' + args.column.headerText + ' column is dragged to index ' + index);
+        }
+    })
+    return (
+        <div>
+            <p id='message'>{message}</p>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} allowReordering={true} enableHover={false} columnDrag={columnDrag} columnDragStart={columnDragStart} columnDrop={columnDrop}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                    <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                    <ColumnDirective field='ShipCity' headerText='ShipCity' width='120' />
+                    <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='120' />
+                </ColumnsDirective>
+                <Inject services={[Reorder]} />
+            </GridComponent></div>)
 }
-;
 export default App;

@@ -28,8 +28,7 @@ Refer to the following code sample to switch to the Free Text annotation mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -61,12 +60,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -99,7 +97,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -169,8 +167,7 @@ After editing the default values, they will be changed to the selected values. R
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -198,12 +195,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -232,7 +228,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,8 +236,8 @@ You can also enable the autofit support for free text annotation by using the en
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -267,12 +263,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -299,7 +294,6 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}

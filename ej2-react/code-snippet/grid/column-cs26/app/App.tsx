@@ -1,7 +1,5 @@
-
-
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import {ButtonComponent} from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import { data } from './datasource';
 
@@ -9,19 +7,17 @@ function App() {
   let grid: Grid | null;
   const show = () => {
     if (grid) {
-      /** show by HeaderText */
-      grid.showColumns(['Customer ID', 'Freight']);
+      grid.showColumns('Customer ID', 'headerText'); //show by HeaderText
     }
   }
   const hide = () => {
     if (grid) {
-      /** hide by HeaderText */
-      grid.hideColumns(['Customer ID', 'Freight']);
+      grid.hideColumns('Customer ID', 'headerText'); //hide by HeaderText
     }
   }
   return (<div>
-    <ButtonComponent cssClass='e-flat' onClick={show}>Show</ButtonComponent>
-    <ButtonComponent cssClass='e-flat' onClick={hide}>Hide</ButtonComponent>
+    <ButtonComponent cssClass='e-info' onClick={show}>Show</ButtonComponent>
+    <ButtonComponent style={{marginLeft:'20px'}} cssClass='e-info' onClick={hide}>Hide</ButtonComponent>
     <GridComponent dataSource={data} height={295} ref={g => grid = g}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
@@ -34,5 +30,3 @@ function App() {
   </div>)
 };
 export default App;
-
-

@@ -1,13 +1,12 @@
 
 
-import { ColumnDirective, ColumnsDirective, GridComponent, Grid } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
   let gridInstance: GridComponent;
   const rowDataBound = (args) => {
-  
     let count = 0;
     let keys = Object.keys(args.data);
     for (let i = 0; i < keys.length; i++) {
@@ -32,8 +31,8 @@ function App() {
     <ColumnsDirective>
       <ColumnDirective field='OrderID' type="number" textAlign="Right" headerTextAlign="Right" width='120' />
       <ColumnDirective field='CustomerID' type="string" textAlign="Left" headerTextAlign="Left" width='90' />
-      <ColumnDirective field="Freight" headerText="Freight" width="80" textAlign="Right"/>
-      <ColumnDirective field="Verified" headerText="Verified" width="100" displayAsCheckBox="true"/>
+      <ColumnDirective field="Freight" headerText="Freight" width="80" textAlign="Right" />
+      <ColumnDirective field="Verified" headerText="Verified" width="100" displayAsCheckBox="true" />
     </ColumnsDirective>
   </GridComponent>
 }

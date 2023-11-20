@@ -1,0 +1,13 @@
+.e-grid .custom {
+  background-color: #f48fb1 !important;/* csslint allow: important */
+  color: white;
+}
+
+.e-grid .custom {
+  background-color: #fce4ec;
+  color: white;
+}
+
+.e-grid .e-headercell.customcss {
+  background-color: rgb(43, 195, 226);
+}

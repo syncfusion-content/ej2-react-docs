@@ -1,22 +1,26 @@
-
-
-import { getValue } from '@syncfusion/ej2-base';
-import { ColumnDirective, ColumnsDirective, GridComponent, RowDataBoundEventArgs } from '@syncfusion/ej2-react-grids';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  return (<div>
-    <GridComponent dataSource={data.slice(0, 8)} height={315} rowHeight={60}>
-      <ColumnsDirective>
-        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
-        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
-        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" />
-        <ColumnDirective field='OrderDate' headerText='OrderDate' width='140' format='yMd' />
-      </ColumnsDirective>
-    </GridComponent>
-  </div>)
-};
+  let grid: GridComponent | null;
+  let heightRow: Object = { small: 20, medium: 40, big: 60 };
+  const changeHeight = ((args) => {
+    (grid as GridComponent).rowHeight = heightRow[args.target.id];
+  });
+  return (
+    <div>
+      <ButtonComponent id="small" cssClass="e-small" onClick={changeHeight}>Change height 20px</ButtonComponent>
+      <ButtonComponent id="medium" cssClass="e-small" onClick={changeHeight}>Change height 40px</ButtonComponent>
+      <ButtonComponent id="big" cssClass="e-small" onClick={changeHeight}>Change height 60px</ButtonComponent>
+      <GridComponent dataSource={data} height={315} ref={g => grid = g} rowHeight={42}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='Freight' headerText='Freight' width='100' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+      </GridComponent></div>)
+}
 export default App;
-
-

@@ -60,33 +60,17 @@ To include the Speed Dial component in your application import the `SpeedDialCo
 
 Add the Speed Dial component in application as shown in below code example.
 
-
-
-```ts
-
-{/* Import the Speed Dial.*/}
-import { SpeedDialComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-import './App.css';
-
-{/* To render Speed Dial. */}
-function App() {
-  
-  return (
-      <SpeedDialComponent id='speeddial'></SpeedDialComponent>
-  );
-}
-export default App;
-```
-
 ```ts
 { /* Import the Speed Dial.*/ }
 import { SpeedDialComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import './App.css';
+
 { /* To render Speed Dial. */ }
 function App() {
-    return (<SpeedDialComponent id='speeddial'></SpeedDialComponent>);
+    return (
+        <SpeedDialComponent id='speeddial'></SpeedDialComponent>
+    );
 }
 export default App;
 ```

@@ -18,8 +18,7 @@ In this mode, the text selection can be performed in the PDF document loaded in 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -48,12 +47,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -83,8 +80,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,8 +96,7 @@ You can switch the interaction mode of PDF Viewer by using the following code sn
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -131,12 +126,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -167,8 +160,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

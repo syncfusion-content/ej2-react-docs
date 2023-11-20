@@ -3,7 +3,7 @@ import * as React from 'react';
 import { data } from './datasource';
 function App() {
     const stackedCols1 = [
-        { field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 120, textAlign: 'Right' },
+        { field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 120, textAlign: 'Right', allowResizing: false },
         { field: 'Freight', headerText: 'Freight ($)', width: 100, format: 'C1', textAlign: 'Right' }
     ];
     const stackedCols2 = [

@@ -4,9 +4,9 @@ import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/e
 
 const App = () => {
   let headertext: any = [
-    { 'text': '<div><div class="e-image e-andrew"></div><div class="e-title fade-in">Andrew</div></div>' },
-    { 'text': '<div><div class="e-image e-margaret"></div><div class="e-title fade-in">Margaret</div></div>' },
-    { 'text': '<div><div class="e-image e-janet"></div><div class="e-title fade-in">Janet</div></div>' }
+    { 'text': '<div><div id="template-wrap" class="e-image e-andrew"></div><div class="e-title fade-in">Andrew</div></div>' },
+    { 'text': '<div><div id="template-wrap" class="e-image e-margaret"></div><div class="e-title fade-in">Margaret</div></div>' },
+    { 'text': '<div><div id="template-wrap" class="e-image e-janet"></div><div class="e-title fade-in">Janet</div></div>' }
   ];
 
   return (

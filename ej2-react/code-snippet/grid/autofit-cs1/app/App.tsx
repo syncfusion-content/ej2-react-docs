@@ -1,4 +1,4 @@
-import { ColumnDirective, ColumnsDirective, Grid, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 

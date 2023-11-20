@@ -33,25 +33,23 @@ The following list of minimum dependencies are required to use the sparkline:
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-    ```
+   ```
     npm install -g create-react-app
-    ```
+   ```
 
-* To setup basic `React` sample use following commands.
-
-    <div class='tsx'>
+* To set-up a React application in TypeScript environment, run the following command.
 
     ```
-    create-react-app quickstart --scripts-version=react-scripts-ts
-
+     create-react-app quickstart --template typescript
+     cd quickstart
+     npm start
+   ```
+* To set-up a React application in JavaScript environment, run the following command.
+   ```
+    create-react-app quickstart
     cd quickstart
-
-    npm install
-
-    ```
-
-    </div>
-
+    npm start
+   ```
 * Install Syncfusion packages using below command.
 
     ```
@@ -76,17 +74,6 @@ render() {
 }
 export default App;
 
-```
-
-```ts
-import * as React from 'react';
-import { SparklineComponent } from '@syncfusion/ej2-react-charts';
-class App extends React.Component {
-    render() {
-        return (<SparklineComponent></SparklineComponent>);
-    }
-}
-export default App;
 ```
 
 Now run the `npm start` command in the console, it will run your application and open the browser window.
@@ -121,17 +108,6 @@ render() {
 }
 export default App;
 
-```
-
-```ts
-import * as React from 'react';
-import { SparklineComponent } from '@syncfusion/ej2-react-charts';
-class App extends React.Component {
-    render() {
-        return (<SparklineComponent><Inject services={[SparklineTooltip]}/></SparklineComponent>);
-    }
-}
-export default App;
 ```
 
 ## Bind data source to Sparkline

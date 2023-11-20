@@ -9,9 +9,6 @@ function App() {
             if (item.text === 'Filter' && args.column.field === 'OrderID') {
                 item.hide = true;
             }
-            else {
-                item.hide = false;
-            }
         }
     };
     return (<div>

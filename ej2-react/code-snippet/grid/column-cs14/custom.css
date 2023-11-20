@@ -1,3 +1,13 @@
 .e-grid .customcss {
   background-color: #ecedee;
 }
+
+#message {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.e-grid .e-headercell.customcss , .e-grid .e-rowcell.customcss {
+  background-color: rgb(43, 195, 226);
+}

@@ -26,8 +26,7 @@ You can enable/disable page navigation option in PDF Viewer using the following 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -54,13 +53,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -88,8 +84,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -101,8 +96,7 @@ The Bookmarks saved in PDF files are loaded and made ready for easy navigation. 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -129,13 +123,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -163,8 +154,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -176,8 +166,7 @@ Thumbnails is the miniature representation of actual pages in PDF files. This fe
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -205,12 +194,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -239,7 +226,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -259,8 +246,7 @@ You can enable/disable link navigation by using the following code snippet.,
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -288,12 +274,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -322,8 +306,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -331,8 +314,7 @@ You can change the open state of the hyperlink in the PDF Viewer by using the fo
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -361,13 +343,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -397,8 +376,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

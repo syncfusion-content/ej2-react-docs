@@ -87,20 +87,20 @@ After installing the Syncfusion component packages in the application, import th
 
 The Syncfusion React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion React components based on the application style by referring to any of the built-in themes. Import the `Material` theme for the Message component.
 
-Import the CSS styles for the Message component and its dependencies in the `src/App.css.` file.
+Import the CSS styles for the Message component and its dependencies in the `src/App.css` file.
 
 ```css
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-react-notifications/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-react-notifications/styles/material.css';
 ```
 
 Check out the [Themes topic](../appearance/theme) to know more about built-in themes and different ways to refer to themes in React applications.
 
 ## Add Message component to the application
 
-Start adding the required components to the application. Add the Message component in the `src/App.tsx` file using the following code.
+Start adding the required components to the application. Add the Message component in the `src/App.js` or `src/App.tsx` file using the following code.
 
-* Before adding the Message component to the markup, import the Message component in the `src/App.tsx` file.
+* Before adding the Message component to the markup, import the Message component in the `src/App.js` or `src/App.tsx` file.
 
      ```bash
         import { MessageComponent } from '@syncfusion/ej2-react-notifications';
@@ -109,15 +109,14 @@ Start adding the required components to the application. Add the Message compone
 * Then, add the `Message` component in the application using the following code sample.
 
 ```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import './App.css';
 import { MessageComponent } from '@syncfusion/ej2-react-notifications';
 
 function App() {
   return (<MessageComponent content="Please read the comments carefully"></MessageComponent>);
 }
+
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Run the application
