@@ -10,11 +10,13 @@ domainurl: ##DomainURL##
 
 # Row spanning in React Grid component
 
-The grid has option to span row cells. To achieve this, You need to define the [rowSpan](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/#rowspan) attribute to span cells in the [QueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event.
+The grid provides an option to span row cells, allowing you to merge two or more cells in a row into a single cell. This feature can be useful in scenarios where you want to display information that spans across multiple rows, but want to avoid repeating the same information in each row.
 
-In the following demo, **Davolio** cell is spanned to two rows in the **EmployeeName** column.
+To achieve this, You need to define the [rowSpan](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/#rowspan) attribute to span cells in the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs) event. The rowSpan attribute is used to specify the number of rows that the current cell should span.
 
-Also Grid supports the spanning of rows and columns for same cells. **Lunch Break** cell is spanned to all the rows and three columns in the **1:00** column.
+The `queryCellInfo` event is triggered for each cell in the grid, and allows you to customize the cells in the grid. By handling this event, you can set the `rowSpan` attribute for a cell to achieve row spanning.
+
+In the following demo, **Davolio** cell is spanned to two rows in the **EmployeeName** column. Also Grid supports the spanning of rows and columns for same cells. **Lunch Break** cell is spanned to two rows and three columns in the **1:00** column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -39,4 +41,5 @@ Also Grid supports the spanning of rows and columns for same cells. **Lunch Brea
 
  {% previewsample "page.domainurl/code-snippet/grid/spanning-cs2" %}
 
-> To disable the spanning for particular Grid page, use [requestType](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/#requesttype) from [QueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event argument.
+>* To disable the spanning for particular grid page, you need to use **requestType** from `queryCellInfo` event argument.
+>* The `rowSpan` and `colSpan` attributes can be used together to merge cells both vertically and horizontally.
