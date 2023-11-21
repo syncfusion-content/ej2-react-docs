@@ -28,22 +28,33 @@ You can use [`Create-react-app`](https://github.com/facebookincubator/create-rea
       npm install -g create-react-app
    ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-    <div class='tsx'>
-       ```bash
-         create-react-app quickstart --scripts-version=react-scripts-ts
-         cd quickstart
-       ```
-       </div>
-     <div class='jsx'>
-    ```bash
-       create-react-app quickstart
-       cd quickstart
-    ```
-   </div>
+<div class='tsx'>
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+```
+npx create-react-app my-app --template typescript
+
+cd my-app
+
+npm start
+
+```
+
+</div>
+
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 
 ## Adding Syncfusion packages
 
@@ -53,6 +64,17 @@ To install ButtonGroup component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-splitbuttons --save
+```
+
+## Adding CSS Reference
+
+Import the ButtonGroup component's required CSS references as follows in `src/App.css`.
+
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 ```
 
 ## Adding ButtonGroup component to the Application
@@ -76,7 +98,7 @@ import './App.css';
 // To render ButtonGroup.
 function App() {
   return (
-    <div className='e-btn-group'>
+    <div className='e-btn-group' style={{marginTop: '150px'}}>
       <ButtonComponent>HTML</ButtonComponent>
       <ButtonComponent>CSS</ButtonComponent>
       <ButtonComponent>Javascript</ButtonComponent>
@@ -87,34 +109,7 @@ export default App;
 
 ```
 
-```ts
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-import './App.css';
-// Import the Button.
-// To render ButtonGroup.
-function App() {
-    return (<div className='e-btn-group'>
-      <ButtonComponent>HTML</ButtonComponent>
-      <ButtonComponent>CSS</ButtonComponent>
-      <ButtonComponent>Javascript</ButtonComponent>
-    </div>);
-}
-export default App;
-```
-
-## Adding CSS Reference
-
-Import the ButtonGroup component's required CSS references as follows in `src/App.css`.
-
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-```
-
-## Running the application
+## Run the application
 
 Run the application in the browser by using the following command:
 

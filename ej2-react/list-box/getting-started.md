@@ -37,21 +37,33 @@ You can use [`Create-react-app`](https://github.com/facebookincubator/create-rea
      npm install -g create-react-app
    ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-    <div class='tsx'>
+<div class='tsx'>
 
-   ```
-   create-react-app quickstart --scripts-version=react-scripts-ts
-   cd quickstart
-  ```
-   </div>
-  <div class='jsx'>
-  ```
-  create-react-app quickstart
-  cd quickstart
-  ```
- </div>
+```
+npx create-react-app my-app --template typescript
+
+cd my-app
+
+npm start
+
+```
+
+</div>
+
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 
 ## Adding syncfusion packages
 
@@ -60,45 +72,7 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 To install ListBox component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-dropdowns –save
-```
-
-## Adding ListBox component
-
-Now, you can start adding ListBox component in the application. For getting started, add the ListBox component in `src/App.tsx` file using following code.
-
-Add the below code in the `src/App.tsx` to initialize the ListBox.
-
-
-
-```ts
-
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
-
-function App() {
-  return (
-      // specifies the tag for render the ListBox component
-    <ListBoxComponent id='listbox'></ListBoxComponent>
-  );
-}
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
-
-```
-
-```ts
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
-function App() {
-    return (
-    // specifies the tag for render the ListBox component
-    <ListBoxComponent id='listbox'></ListBoxComponent>);
-}
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+npm install @syncfusion/ej2-react-dropdowns --save
 ```
 
 ## Adding CSS reference
@@ -115,17 +89,39 @@ Import the ListBox component required CSS references as follows in `src/App.css`
 
 ```
 
+## Adding ListBox component
+
+Now, you can start adding ListBox component in the application. For getting started, add the ListBox component in `src/App.tsx` file using following code.
+
+Add the below code in the `src/App.tsx` to initialize the ListBox.
+
+```ts
+
+import * as React from 'react';
+import * as ReactDOM from "react-dom";
+import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
+import './App.css';
+
+function App() {
+  return (
+      // specifies the tag for render the ListBox component
+    <ListBoxComponent id='listbox'></ListBoxComponent>
+  );
+}
+export default App;
+
+```
+
 ## Binding data source
 
 After initialization, populate the ListBox with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/list-box/#datasource) property. Here, an array of object is passed to the ListBox component.
-
-
 
 ```ts
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
+import './App.css';
 
 function App() {
   // define the array of object
@@ -147,34 +143,7 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
-
-```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
-function App() {
-    // define the array of object
-    let data = [
-        { text: 'Hennessey Venom', id: 'list-01' },
-        { text: 'Bugatti Chiron', id: 'list-02' },
-        { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
-        { text: 'SSC Ultimate Aero', id: 'list-04' },
-        { text: 'Koenigsegg CCR', id: 'list-05' },
-        { text: 'McLaren F1', id: 'list-06' },
-        { text: 'Aston Martin One- 77', id: 'list-07' },
-        { text: 'Jaguar XJ220', id: 'list-08' },
-        { text: 'McLaren P1', id: 'list-09' },
-        { text: 'Ferrari LaFerrari', id: 'list-10' },
-    ];
-    return (
-    // specifies the tag for render the ListBox component
-    <ListBoxComponent dataSource={data}/>);
-}
-export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Run the application
@@ -184,6 +153,8 @@ After completing the configuration required to render a basic ListBox, run the f
 ```
 npm start
 ```
+
+The following example shows a basic Listbox component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

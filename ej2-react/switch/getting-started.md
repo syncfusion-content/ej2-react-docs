@@ -27,27 +27,37 @@ The following list of dependencies are required to use Switch component in your 
 
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-     ```bash
-        npm install -g create-react-app
-     ```
+```bash
+  npm install -g create-react-app
+```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-      <div class='tsx'>
+<div class='tsx'>
 
-       ```
-         create-react-app quickstart --scripts-version=react-scripts-ts
-         cd quickstart
-       ```
-       </div>
-       <div class='jsx'>
-       ```
-       create-react-app quickstart
-       cd quickstart
-       ```
-      </div>
+```
+npx create-react-app my-app --template typescript
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+cd my-app
+
+npm start
+
+```
+
+</div>
+
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 
 ## Adding Syncfusion packages
 
@@ -59,41 +69,6 @@ To install Switch component, use the following command
 npm install @syncfusion/ej2-react-buttons --save
 ```
 
-## Adding Switch component to the Application
-
-To include Switch component in your application import the `SwitchComponent` from `ej2-react-buttons` package in `App.tsx`.
-
-Add Switch component in application as shown in below code example.
-
-
-
-```ts
-// Import the Switch.
-import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-import './App.css';
-
-// To render Switch.
-function App() {
-  return (
-    <SwitchComponent />
-  );
-}
-export default App;
-```
-
-```ts
-// Import the Switch.
-import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-import './App.css';
-// To render Switch.
-function App() {
-    return (<SwitchComponent />);
-}
-export default App;
-```
-
 ## Adding CSS Reference
 
 Import the Switch component's required CSS references as follows in `src/App.css`.
@@ -103,7 +78,25 @@ Import the Switch component's required CSS references as follows in `src/App.css
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 ```
 
-## Running the application
+## Adding Switch component to the Application
+
+To include Switch component in your application import the `SwitchComponent` from `ej2-react-buttons` package in `App.tsx`.
+
+Add Switch component in application as shown in below code example.
+
+```ts
+// Import the Switch.
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+import './App.css';
+// To render Switch.
+function App() {
+    return ( <div style={{marginTop: '150px'}}><SwitchComponent /></div>);
+}
+export default App;
+```
+
+## Run the application
 
 Run the application in the browser using the following command:
 

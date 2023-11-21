@@ -33,23 +33,33 @@ You can use [`Create-react-app`](https://github.com/facebook/create-react-app) t
      npm install -g create-react-app
    ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-    <div class='tsx'>
+<div class='tsx'>
 
-    ```bash
-     create-react-app quickstart --scripts-version=react-scripts-ts
-     cd quickstart
-    ```
-   </div>
-   <div class='jsx'>
-   ```bash
-    create-react-app quickstart
-    cd quickstart
-   ```
-  </div>
+```
+npx create-react-app my-app --template typescript
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+cd my-app
+
+npm start
+
+```
+
+</div>
+
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 
 ## Adding syncfusion packages
 
@@ -58,51 +68,7 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 To install DropDownButton component, use the following command
 
 ```bash
-
-npm install @syncfusion/ej2-react-splitbuttons –save
-
-```
-
-## Adding DropDownButton component
-
-Now, you can start adding DropDownButton component in the application. For getting started, add the DropDownButton component in `src/App.tsx` file using following code.
-
-Add the below code in the `src/App.tsx` to initialize the DropDownButton.
-
-
-
-```ts
-import { enableRipple } from '@syncfusion/ej2-base';
-import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
-import * as React from 'react';
-import './App.css';
-
-enableRipple(true);
-
-// To render DropDownButton.
-function App() {
-  return (
-    <div>
-      <DropDownButtonComponent id="element" />
-    </div>
-  );
-}
-export default App;
-```
-
-```ts
-import { enableRipple } from '@syncfusion/ej2-base';
-import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
-import * as React from 'react';
-import './App.css';
-enableRipple(true);
-// To render DropDownButton.
-function App() {
-    return (<div>
-      <DropDownButtonComponent id="element"/>
-    </div>);
-}
-export default App;
+npm install @syncfusion/ej2-react-splitbuttons --save
 ```
 
 ## Adding CSS reference
@@ -117,6 +83,31 @@ Import the DropDownButton component required CSS references as follows in `src/A
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 
+```
+
+## Adding DropDownButton component
+
+Now, you can start adding DropDownButton component in the application. For getting started, add the DropDownButton component in `src/App.tsx` file using following code.
+
+Add the below code in the `src/App.tsx` to initialize the DropDownButton.
+
+```ts
+import { enableRipple } from '@syncfusion/ej2-base';
+import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
+import * as React from 'react';
+import './App.css';
+
+enableRipple(true);
+
+// To render DropDownButton.
+function App() {
+  return (
+    <div style={{marginTop: '150px'}}>
+      <DropDownButtonComponent id="element" />
+    </div>
+  );
+}
+export default App;
 ```
 
 ## Binding data source
@@ -146,36 +137,10 @@ function App() {
       text: 'Paste',
     }];
     return (
-      <div>
+      <div style={{marginTop: '150px'}}>
         <DropDownButtonComponent id="element" items={items}> Clipboard </DropDownButtonComponent>
       </div>
     );
-}
-export default App;
-```
-
-```ts
-import { enableRipple } from '@syncfusion/ej2-base';
-import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
-import * as React from 'react';
-import './App.css';
-enableRipple(true);
-// To render DropDownButton.
-function App() {
-    let items = [
-        {
-            text: 'Cut',
-        },
-        {
-            text: 'Copy',
-        },
-        {
-            text: 'Paste',
-        }
-    ];
-    return (<div>
-        <DropDownButtonComponent id="element" items={items}> Clipboard </DropDownButtonComponent>
-      </div>);
 }
 export default App;
 ```
@@ -187,6 +152,8 @@ After completing the configuration required to render a basic DropDownButton, ru
    ```
    npm start
    ```
+  
+The following example shows a basic Drop Button component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
