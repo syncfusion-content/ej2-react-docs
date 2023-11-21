@@ -5,7 +5,7 @@ import * as React from 'react';
 import { employeeData, data } from './datasource';
 
 function App() {
-  const gridTemplate = (props): any => {
+  const gridTemplate = (props) => {
     const src = props.EmployeeID + ".png";
     return (
       <div className="custom-grid" ></div>

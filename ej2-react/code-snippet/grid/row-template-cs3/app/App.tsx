@@ -1,12 +1,9 @@
-
-
-import { getValue } from '@syncfusion/ej2-base';
-import { ColumnDirective, ColumnsDirective, GridComponent, RowDataBoundEventArgs } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { employeeData } from './datasource';
 
 function App() {
-  const gridTemplate = (props): any => {
+  const gridTemplate = (props) => {
     const src = props.EmployeeID + ".png";
     return (<tr className="templateRow">
       <td className="photo">
@@ -15,20 +12,23 @@ function App() {
       <td className="details">
         <table className="CardTable" cellPadding={3} cellSpacing={2}>
           <colgroup>
-            <col style={{ width: "50%" }} />
-            <col style={{ width: "50%" }} />
+            <col style={{ width: "30%" }} />
+            <col style={{ width: "10%" }} />
           </colgroup>
           <tbody>
             <tr>
               <td className="CardHeader">First Name </td>
+              <span>:</span>
               <td>{props.FirstName} </td>
             </tr>
             <tr>
               <td className="CardHeader">Last Name</td>
+              <span>:</span>
               <td>{props.LastName} </td>
             </tr>
             <tr>
               <td className="CardHeader">Title</td>
+              <span>:</span>
               <td>{props.Title}</td>
             </tr>
           </tbody>
