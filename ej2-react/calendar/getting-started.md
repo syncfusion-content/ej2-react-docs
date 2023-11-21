@@ -35,7 +35,7 @@ The below list of dependencies are required to use the `Calendar` component in y
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
      ```
        npm install -g create-react-app
