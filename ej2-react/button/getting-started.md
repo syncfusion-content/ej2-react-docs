@@ -35,33 +35,33 @@ You can use [`Create-react-app`](https://github.com/facebookincubator/create-rea
 npm install -g create-react-app
 ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
 <div class='tsx'>
 
-```bash
+```
+npx create-react-app my-app --template typescript
 
-create-react-app quickstart --scripts-version=react-scripts-ts
+cd my-app
 
-cd quickstart
+npm start
 
 ```
 
 </div>
 
-<div class='jsx'>
+To set-up a React application in JavaScript environment, run the following command.
 
-```bash
-
-create-react-app quickstart
-
-cd quickstart
+<div class='tsx'>
 
 ```
+npx create-react-app my-app
 
-</div>
+cd my-app
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+npm start
+
+```
 
 ## Adding Syncfusion packages
 
@@ -73,13 +73,21 @@ To install Button component, use the following command
 npm install @syncfusion/ej2-react-buttons --save
 ```
 
+## Adding CSS Reference
+
+Import the Button component's required CSS references as follows in `src/App.css`.
+
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+```
+
+
 ## Adding Button component to the Application
 
 To include the Button component in your application import the `ButtonComponent` from `ej2-react-buttons` package in `App.tsx`.
 
 Add the Button component in application as shown in below code example.
-
-
 
 ```ts
 
@@ -90,35 +98,15 @@ import './App.css';
 
 // To render Button.
 function App() {
-  return (
+  return ( <div style={{marginTop: '150px'}}>
     <ButtonComponent>Button</ButtonComponent>
+  </div>
   );
 }
 export default App;
 ```
 
-```ts
-// Import the Button.
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-import './App.css';
-// To render Button.
-function App() {
-    return (<ButtonComponent>Button</ButtonComponent>);
-}
-export default App;
-```
-
-## Adding CSS Reference
-
-Import the Button component's required CSS references as follows in `src/App.css`.
-
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-```
-
-## Running the application
+## Run the application
 
 Run the application in the browser using the following command:
 

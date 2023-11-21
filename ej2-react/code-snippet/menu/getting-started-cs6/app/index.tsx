@@ -1,5 +1,3 @@
-
-
 import { enableRipple } from '@syncfusion/ej2-base';
 import { MenuComponent, MenuItemModel } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';

@@ -30,8 +30,7 @@ The following list of dependencies are required to use the Breadcrumb component 
 
 ## Setup your development environment
 
-You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup
-the applications.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 
 To install `create-react-app` run the following command.
 
@@ -39,33 +38,31 @@ To install `create-react-app` run the following command.
 npm install -g create-react-app
 ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
 <div class='tsx'>
 
-```bash
+```
+npx create-react-app my-app --template typescript
 
-create-react-app quickstart --scripts-version=react-scripts-ts
+cd my-app
 
-cd quickstart
+npm start
 
 ```
 
-</div>
+To set-up a React application in JavaScript environment, run the following command.
 
-<div class='jsx'>
-
-```bash
-
-create-react-app quickstart
-
-cd quickstart
+<div class='tsx'>
 
 ```
+npx create-react-app my-app
 
-</div>
+cd my-app
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+npm start
+
+```
 
 ## Adding Syncfusion packages
 
@@ -99,19 +96,11 @@ Now, you can create `Breadcrumb` component in the application. Add `Breadcrumb` 
 
 import { BreadcrumbComponent, BreadcrumbItemDirective, BreadcrumbItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
+import './App.css';
 
 function App() {
 
     return (<BreadcrumbComponent enableNavigation={false} > </BreadcrumbComponent>);
-}
-export default App;
-```
-
-```ts
-import { BreadcrumbComponent } from '@syncfusion/ej2-react-navigations';
-import * as React from 'react';
-function App() {
-    return (<BreadcrumbComponent enableNavigation={false}> </BreadcrumbComponent>);
 }
 export default App;
 ```

@@ -32,39 +32,37 @@ The following list of dependencies are required to use the Menu component in you
 
 You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-To install `create-react-app` run the following command.
-
 ```bash
 npm install -g create-react-app
 ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
 <div class='tsx'>
 
-```bash
+```
+npx create-react-app my-app --template typescript
 
-create-react-app quickstart --scripts-version=react-scripts-ts
+cd my-app
 
-cd quickstart
+npm start
 
 ```
 
 </div>
 
-<div class='jsx'>
+To set-up a React application in JavaScript environment, run the following command.
 
-```bash
-
-create-react-app quickstart
-
-cd quickstart
+<div class='tsx'>
 
 ```
+npx create-react-app my-app
 
-</div>
+cd my-app
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+npm start
+
+```
 
 ## Adding Syncfusion packages
 
@@ -88,16 +86,17 @@ Add Menu component's styles as given below in `App.css`.
 
 ```
 
+> To refer `App.css` in the application then import it in the `src/App.tsx` file.
+
 ## Add Menu to the project
 
 Now, you can add `Menu` component in the application. For getting started, add `Menu` component in `src/App.tsx` file. Using the following code snippet.
-
-
 
 ```ts
 
 import { MenuComponent, MenuItemModel } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
+import './App.css';
 
 function App() {
     // Menu items definition
@@ -140,51 +139,6 @@ function App() {
     return (
         <MenuComponent items={menuItems}/>
     );
-}
-export default App;
-```
-
-```ts
-import { MenuComponent } from '@syncfusion/ej2-react-navigations';
-import * as React from 'react';
-function App() {
-    // Menu items definition
-    let menuItems = [
-        {
-            items: [
-                { text: 'Open' },
-                { text: 'Save' },
-                { text: 'Exit' }
-            ],
-            text: 'File'
-        },
-        {
-            items: [
-                { text: 'Cut' },
-                { text: 'Copy' },
-                { text: 'Paste' }
-            ],
-            text: 'Edit'
-        },
-        {
-            items: [
-                { text: 'Toolbar' },
-                { text: 'Sidebar' }
-            ],
-            text: 'View'
-        },
-        {
-            items: [
-                { text: 'Spelling & Grammar' },
-                { text: 'Customize' },
-                { text: 'Options' }
-            ],
-            text: 'Tools'
-        },
-        { text: 'Go' },
-        { text: 'Help' }
-    ];
-    return (<MenuComponent items={menuItems}/>);
 }
 export default App;
 ```
