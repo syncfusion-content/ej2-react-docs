@@ -21,7 +21,6 @@ The following list of dependencies is required to use the Dashboard Layout compo
     |-- @syncfusion/ej2-react-base
         |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-layouts
-
 ```
 
 ## Installation and configuration
@@ -29,42 +28,53 @@ The following list of dependencies is required to use the Dashboard Layout compo
 You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-     ```
-     npm install -g create-react-app
-     ```
+```
+npm install -g create-react-app
+```
 
-* To setup basic `React` sample use following commands.
+To set-up a React application in TypeScript environment, run the following command.
 
-     <div class='tsx'>
+<div class='tsx'>
 
-     ```
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-     ```
+```
+npx create-react-app my-app --template typescript
 
-     </div>
-     <div class='jsx'>
+cd my-app
 
-     ```
-      create-react-app quickstart
-      cd quickstart
-     ```
-     </div>
+npm start
+```
 
-* Install Syncfusion Dashboard Layout package using below command.
+</div>
 
-    ```
-    npm install @syncfusion/ej2-react-layouts --save
-    ```
+To set-up a React application in JavaScript environment, run the following command.
 
-## Adding Style sheet to the Application
+<div class='tsx'>
 
-To render the Dashboard Layout component, need to import Dashboard Layout and its dependent component's styles as given below in `App.css`.
+```
+npx create-react-app my-app
 
-   ```css
-   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-   @import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
-   ```
+cd my-app
+
+npm start
+```
+## Adding Syncfusion packages
+
+All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+
+To install `Dashboard Layout` component, use the following command
+
+```bash
+npm install @syncfusion/ej2-react-layouts --save
+```
+
+## Adding CSS Reference
+
+To render the Dashboard Layout component, need to import Dashboard Layout and its dependent component's styles as given below in `src/App.css`.
+
+```css
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
+```
 
 >Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
@@ -80,8 +90,6 @@ You can render the Dashboard Layout component in the following two ways.
 You can render the Dashboard Layout component by adding the panels property as the attribute to the HTML element. Add the HTML div element with panel definition for Dashboard Layout into your `App.tsx` file.
 
 `[src/App.tsx]`
-
-
 
 ```ts
 // import the DashboardLayout component
@@ -219,9 +227,9 @@ export default App;
 
 Now, use the `npm start` command to run the application in the browser.
 
-   ```
-   npm start
-   ```
+```
+npm start
+```
 
 The following example shows a basic Dashboard Layout by adding the panels property directly into the HTML element.
 
@@ -240,14 +248,13 @@ The following example shows a basic Dashboard Layout by adding the panels proper
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-cs1" %}
 
 ## Setting the `panels` property directly
 
 You can render the Dashboard Layout component by using the **panels** property directly.
 
 `[src/App.tsx]`
-
 
 
 ```ts
@@ -285,13 +292,13 @@ import * as React from 'react';
 function App() {
     let cellSpacing = [5, 5];
     let panels = [
-        { "sizeX": 1, "sizeY": 1, "row": 0, "col": 0, content: '<div class="content">0</div>' },
-        { "sizeX": 3, "sizeY": 2, "row": 0, "col": 1, content: '<div class="content">1</div>' },
-        { "sizeX": 1, "sizeY": 3, "row": 0, "col": 4, content: '<div class="content">2</div>' },
-        { "sizeX": 1, "sizeY": 1, "row": 1, "col": 0, content: '<div class="content">3</div>' },
-        { "sizeX": 2, "sizeY": 1, "row": 2, "col": 0, content: '<div class="content">4</div>' },
-        { "sizeX": 1, "sizeY": 1, "row": 2, "col": 2, content: '<div class="content">5</div>' },
-        { "sizeX": 1, "sizeY": 1, "row": 2, "col": 3, content: '<div class="content">6</div>' }
+      { "sizeX": 1, "sizeY": 1, "row": 0, "col": 0, content: '<div class="content">0</div>'},
+      { "sizeX": 3, "sizeY": 2, "row": 0, "col": 1, content: '<div class="content">1</div>'},
+      { "sizeX": 1, "sizeY": 3, "row": 0, "col": 4, content: '<div class="content">2</div>'},
+      { "sizeX": 1, "sizeY": 1, "row": 1, "col": 0, content: '<div class="content">3</div>'},
+      { "sizeX": 2, "sizeY": 1, "row": 2, "col": 0, content: '<div class="content">4</div>'},
+      { "sizeX": 1, "sizeY": 1, "row": 2, "col": 2, content: '<div class="content">5</div>'},
+      { "sizeX": 1, "sizeY": 1, "row": 2, "col": 3, content: '<div class="content">6</div>'}
     ];
     return (<div>
       <div className="control-section">

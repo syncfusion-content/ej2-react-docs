@@ -112,8 +112,10 @@ const App = () => {
       </CarouselComponent>
     </div>);
 }
-const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<App />);
+
+export default App;
+ReactDOM.render(<App />, document.getElementById("element"));
+
 ```
 
 ## Run the application
