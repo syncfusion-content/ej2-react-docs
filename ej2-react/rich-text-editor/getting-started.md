@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Rich text editor component | Syncfusion
-description:  Checkout and learn about Getting started with React Rich text editor component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Rich Text Editor Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential React Rich Text Rditor component, it's elements and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React Rich Text Editor
 
 This section explains the steps to create a simple Rich Text Editor and demonstrates the basic usage of the RTE component.
 
