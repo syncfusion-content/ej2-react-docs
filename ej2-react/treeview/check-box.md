@@ -56,8 +56,8 @@ In the following example, the **New South Wales** and **Western Australia** node
 
 ## See Also
 
-* [How to check/uncheck the checkbox on clicking the tree node text](https://ej2.syncfusion.com/react/documentation/treeview/how-to/check-uncheck-the-checkbox-on-clicking-the-tree-node-text)
+* [How to check/uncheck the checkbox on clicking the tree node text](./how-to/check-uncheck-the-checkbox-on-clicking-the-tree-node-text)
 
-* [How to disable the checkboxes alone in the tree nodes](https://ej2.syncfusion.com/react/documentation/treeview/how-to/disable-checkbox-of-the-tree-node)
+* [How to disable the checkboxes alone in the tree nodes](./how-to/disable-checkbox-of-the-tree-node)
 
-* [How to remove the checkbox of the parent node in treeview](https://ej2.syncfusion.com/react/documentation/treeview/how-to/remove-parent-checkbox)
+* [How to remove the checkbox of the parent node in treeview](./how-to/remove-parent-checkbox)

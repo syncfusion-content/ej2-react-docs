@@ -244,7 +244,7 @@ In the following sample, when the data fetch request fails, the DropDownList dis
 
 ## See Also
 
-* [How to achieve filtering](https://ej2.syncfusion.com/react/documentation/drop-down-list/filtering)
-* [How to group the data using header](https://ej2.syncfusion.com/react/documentation/drop-down-list/grouping)
-* [How to show the list items with icon](https://ej2.syncfusion.com/react/documentation/drop-down-list/how-to/icons-support)
-* [How to render tooltip for the options](https://ej2.syncfusion.com/react/documentation/drop-down-list/how-to/tooltip)
+* [How to achieve filtering](./filtering)
+* [How to group the data using header](./grouping)
+* [How to show the list items with icon](./how-to/icons-support)
+* [How to render tooltip for the options](./how-to/tooltip)

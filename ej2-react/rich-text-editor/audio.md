@@ -593,5 +593,5 @@ public void SaveFiles(IList<IFormFile> UploadFiles)
 
 ## See Also
 
-* [How to edit the quick toolbar settings](https://ej2.syncfusion.com/react/documentation/rich-text-editor/toolbar#quick-inline-toolbar)
-* [How to use the link editing option in the toolbar items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/link)
+* [How to edit the quick toolbar settings](./toolbar#quick-inline-toolbar)
+* [How to use the link editing option in the toolbar items](./link)

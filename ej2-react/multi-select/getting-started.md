@@ -229,4 +229,4 @@ In the following sample, popup list's width and height are configured.
 
 ## See Also
 
-* [How to bind the data](https://ej2.syncfusion.com/react/documentation/multi-select/data-binding)
+* [How to bind the data](./data-binding)
