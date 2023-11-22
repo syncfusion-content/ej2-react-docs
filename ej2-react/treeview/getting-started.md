@@ -381,7 +381,7 @@ npm start
 
 * [How to customize treeview as accordion](./how-to/accordion-tree)
 
-* [How to set tooltip for treeview nodes](./how-to/set-tool-tip-for-tree-nodes/)
+* [How to set tooltip for treeview nodes](./how-to/set-tool-tip-for-tree-nodes)
 
 * [How to filter nodes in treeview](./how-to/filtering-tree-nodes)
 
