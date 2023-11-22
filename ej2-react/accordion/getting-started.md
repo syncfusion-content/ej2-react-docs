@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React Accordion Component | Syncfusion
-description:  Checkout and learn about Getting started with Syncfusion Essential React Accordion component, its elements and more.
+description: Checkout and learn about Getting started with React Accordion component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug

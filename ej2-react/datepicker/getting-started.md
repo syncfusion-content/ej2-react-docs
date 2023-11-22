@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React DatePicker Component | Syncfusion
-description:  Checkout and learn about Getting started with Syncfusion Essential React DatePicker component, its elements and more details.
+description: Checkout and learn about Getting started with React Datepicker component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug

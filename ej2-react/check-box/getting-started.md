@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React Checkbox Component | Syncfusion
-description:  Checkout and learn about Getting started with Syncfusion Essential React Checkbox component, its elements and more.
+description: Checkout and learn about Getting started with React Check box component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
