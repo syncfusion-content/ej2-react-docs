@@ -38,31 +38,27 @@ To install `create-react-app` run the following command.
 npm install -g create-react-app
 ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
 <div class='tsx'>
 
-```bash
+```
+npx create-react-app my-app --template typescript
 
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
+cd my-app
 ```
 
 </div>
 
-<div class='jsx'>
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
 
 ```
+npx create-react-app my-app
 
-create-react-app quickstart
-
-cd quickstart
-
+cd my-app
 ```
-
-</div>
 
 ## Adding syncfusion packages
 
@@ -121,9 +117,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 Import the TreeView component required CSS references as follows in `src/App.css`.
 
 ```css
-
 /* import the TreeView dependency styles */
-
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";

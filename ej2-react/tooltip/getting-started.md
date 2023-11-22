@@ -31,49 +31,58 @@ The following list of dependencies are required to use the Tooltip component in 
 
 ## Installation and configuration
 
-* You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-    ```bash
-      npm install -g create-react-app
-    ```
+```
+npm install -g create-react-app
+```
 
-Start a new project using `create-react-app` command as follows
+To set-up a React application in TypeScript environment, run the following command.
+
 <div class='tsx'>
 
-    ```bash
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
+```
+npx create-react-app my-app --template typescript
 
-  </div>
+cd my-app
 
-  <div class='jsx'>
-
-  ```
-   create-react-app quickstart
-   cd quickstart
-  ```
+npm start
+```
 
 </div>
 
-* Install the below required dependency package in order to use the `Tooltip` component in your application.
+To set-up a React application in JavaScript environment, run the following command.
 
-   ```bash
-    npm install @syncfusion/ej2-react-popups --save
-   ```
+<div class='tsx'>
 
-The above package installs [tooltip dependencies](#dependencies) which are required to render the Tooltip component in React environment.
+```
+npx create-react-app my-app
 
-* Tooltip CSS files are available in the `ej2-react-popups` package folder.
-Import the Tooltip component's required CSS references as follows in `src/App.css`.
+cd my-app
 
-   ```css
-    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
-   ```
+npm start
+```
 
-> We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
+## Adding Syncfusion packages
+
+All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+
+Install the below required dependency package in order to use the `Tooltip` component in your application.
+
+```bash
+npm install @syncfusion/ej2-react-popups --save
+```
+
+## Adding CSS Reference
+
+To render the Tooltip component, need to import Tooltip and its dependent component's styles as given below in `src/App.css`.
+
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-popups/styles/material.css";
+```
+
+>Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Initialize the Tooltip on a single element
 
@@ -115,11 +124,13 @@ function App() {
 }
 ```
 
-* Now, run the application in the browser using the following command.
+## Run the application
 
-   ```bash
-    npm start
-   ```
+Now, use the `npm start` command to run the application in the browser.
+
+```
+npm start
+```
 
 The output will be as follows:
 
@@ -154,8 +165,7 @@ Refer to the following code example to create a Tooltip on multiple targets with
 
  {% previewsample "page.domainurl/code-snippet/tooltip/multi-target-cs2" %}
 
-> In the above sample, `details` refers to the container's id, and the target `.e-info` refers to the target elements available
-> within that container.
+> In the above sample, `details` refers to the container's id, and the target `.e-info` refers to the target elements available within that container.
 
 ## See Also
 

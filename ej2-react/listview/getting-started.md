@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-The following section explains the required steps to build the simple ListView component with its basic usage in step by step procedure.
+The following section explains the required steps to build the simple **ListView** component with its basic usage in step by step procedure.
 
 ## Dependencies
 
@@ -26,29 +26,37 @@ Install the below required dependent packages to render the ListView component.
 
 ## Installation and Configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-To install `create-react-app` run the following command.
+```bash
+npm install -g create-react-app
+```
 
-  ```bash
-   npm install -g create-react-app
-  ```
+To set-up a React application in TypeScript environment, run the following command.
 
-Start a new project using `create-react-app` command as follows
+<div class='tsx'>
 
-   <div class='tsx'>
+```
+npx create-react-app my-app --template typescript
 
-   ```
-    create-react-app quickstart --typescript
-    cd quickstart
-   ```
-   </div>
-   <div class='jsx'>
-   ```
-   create-react-app quickstart
-   cd quickstart
-   ```
-  </div>
+cd my-app
+
+npm start
+```
+
+</div>
+
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+```
 
 ## Adding Syncfusion packages
 
@@ -57,9 +65,9 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 
 To install `ListView` component, use the following command.
 
-  ```bash
-    npm install @syncfusion/ej2-react-lists --save
-  ```
+```bash
+npm install @syncfusion/ej2-react-lists --save
+```
 
 The above command installs [ListView dependencies](#dependencies) which are required to render the component in the `React` environment.
 
@@ -70,7 +78,6 @@ Now, you can add `ListView` component in the application. For getting started, a
 
 
 ```ts
-
 import * as React from 'react';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import './App.css';
@@ -100,20 +107,17 @@ export default App;
 
 Import `ListView` component required theme references at the top of `src/App.css`.
 
-   ```css
+```css
+/* import the ListView dependency styles */
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-lists/styles/material.css";
+```
 
-   /* import the ListView dependency styles */
+If you are using `CheckList` behavior in ListView, we need to add `Button` component's styles as given below in `src/App.css` file
 
-   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-   @import "../node_modules/@syncfusion/ej2-react-lists/styles/material.css";
-
-   ```
-
-* If you are using `CheckList` behavior in ListView, we need to add `Button` component's styles as given below in `src/App.css` file
-
-  ```css
-   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  ```
+```css
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+```
 
 ## Bind dataSource
 
@@ -122,7 +126,6 @@ Populate the data in ListView using `dataSource` property. Here, an array of JSO
 
 
 ```ts
-
 import * as React from 'react';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import './App.css';
@@ -185,7 +188,7 @@ npm start
 
  {% previewsample "page.domainurl/code-snippet/listview/getting-started-cs1" %}
 
-N> You can refer to our [React ListView](https://www.syncfusion.com/react-components/react-listview) feature tour page for its groundbreaking feature representations. You can also explore our [React ListView example](https://ej2.syncfusion.com/react/demos/#/material/listview/default) to know how to render and configure the listview.
+> You can refer to our [React ListView](https://www.syncfusion.com/react-components/react-listview) feature tour page for its groundbreaking feature representations. You can also explore our [React ListView example](https://ej2.syncfusion.com/react/demos/#/material/listview/default) to know how to render and configure the listview.
 
 ## See Also
 

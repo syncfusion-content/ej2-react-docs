@@ -31,29 +31,36 @@ The following list of dependencies are required to use the `Dropdown Tree` compo
 
 ## Installation and configuration
 
-You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-To install `create-react-app` run the following command.
+```bash
+npm install -g create-react-app
+```
+To set-up a React application in TypeScript environment, run the following command.
 
-   ```bash
-      npm install -g create-react-app
-   ```
+<div class='tsx'>
 
-Start a new project using create-react-app command as follows
+```
+npx create-react-app my-app --template typescript
 
-### Using Tsx
+cd my-app
 
-    ```bash
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
+npm start
+```
 
-### Using Jsx
+</div>
 
-   ```
-    create-react-app quickstart
-    cd quickstart
-   ```
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+```
 
 ## Adding syncfusion packages
 
@@ -68,8 +75,6 @@ npm install @syncfusion/ej2-react-dropdowns --save
 ## Adding Dropdown Tree component
 
 Now, you can start adding Dropdown Tree component in the application. For getting started, add the Dropdown Tree component in `src/App.tsx` file using following code. Add the below code in the `src/App.tsx` to initialize the Dropdown Tree.
-
-
 
 ```ts
 

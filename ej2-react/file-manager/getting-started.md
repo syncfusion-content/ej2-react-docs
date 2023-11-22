@@ -31,28 +31,33 @@ The following list of dependencies are required to use the File Manager componen
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-   ```
-    npm install -g create-react-app
-   ```
+```
+ npm install -g create-react-app
+```
 
-* To setup basic `React` sample use following commands.
+To set-up a React application in TypeScript environment, run the following command.
 
-    <div class='tsx'>
+<div class='tsx'>
 
-     ```
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
-    </div>
-   <div class='jsx'>
-    ```
-    create-react-app quickstart
-    cd quickstart
-   ```
-   </div>
+```
+npx create-react-app my-app --template typescript
+
+cd my-app
+```
+
+</div>
+
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+```
 
 ## Adding Syncfusion packages
 
@@ -141,9 +146,7 @@ export default App;
 Now run the `npm start` command in the console, it will run your application and open the browser window.
 
 ```
-
 npm start
-
 ```
 
 The following sample, shows the basic File Manager component.
@@ -381,4 +384,4 @@ export default App;
 ```
 {% endraw %}
 
-N> You can refer to our [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) feature tour page for its groundbreaking feature representations. You can also explore our [React File Manager example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/file-manager/overview) that shows you how to render the File Manager in React.
+>Note: You can refer to our [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) feature tour page for its groundbreaking feature representations. You can also explore our [React File Manager example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/file-manager/overview) that shows you how to render the File Manager in React.
