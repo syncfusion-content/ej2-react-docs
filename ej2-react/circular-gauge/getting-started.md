@@ -29,26 +29,21 @@ Following is the list of minimum dependencies required to use the Circular Gauge
 
 To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
 
-     ```
-       npm install -g create-react-app
-     ```
+```
+npm install -g create-react-app
+```
 
 To create basic React application, run the following command.
 
-     <div class='jsx'>
+```
+create-react-app quickstart
+```
 
-     ```
-      create-react-app quickstart
-     ```
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-    </div>
-
-   Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-     ```
-      cd quickstart
-      npm install
-   ```
+```
+cd quickstart
+```
 
 > In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
 
@@ -56,19 +51,15 @@ To create basic React application, run the following command.
 
 To create React application with TypeScript, use the following command.
 
-    <div class='jsx'>
+```
+create-react-app quickstart --template typescript
+```
 
-     ```
-      create-react-app quickstart --template typescript
-     ```
-     </div>
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-    Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-    ```
-     cd quickstart
-     npm install
-    ```
+```
+cd quickstart
+```
 
 ### Adding Syncfusion packages
 
@@ -90,8 +81,8 @@ import { CircularGaugeComponent } from '@syncfusion/ej2-react-circulargauge';
 export function App() {
     return (<CircularGaugeComponent></CircularGaugeComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('container'));
-root.render(<App />);
+
+export default App;
 
 ```
 
@@ -118,7 +109,7 @@ The below example shows the basic Circular Gauge.
 
 ## Set Pointer Value
 
-You can change the pointer value in the above sample using [`value`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#value-number)property in [`pointers`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/).
+You can change the pointer value in the above sample using [value](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/#value-number)property in [pointers](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer/).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

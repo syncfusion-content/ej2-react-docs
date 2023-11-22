@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ScheduleComponent, WorkWeek, Week, Month, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { defaultData } from './datasource';
+import './App.css';
 const App = () => {
     const eventSettings = { dataSource: defaultData }
 
@@ -14,3 +15,4 @@ const App = () => {
     </ScheduleComponent>);
 }
 export default App;
+ReactDOM.render(<App />, document.getElementById("schedule"));
