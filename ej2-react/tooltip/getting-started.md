@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 This section briefly explains how to create a simple **Tooltip** component and configure its available functionalities in React.
 
+To get start quickly with React Tooltip, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=lCzUw3fOS1g" %}
+
 Tooltips can be initialized on,
 
 * A single element (or)
