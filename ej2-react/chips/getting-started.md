@@ -28,24 +28,35 @@ The list of dependencies required to use the Chip component in your application 
 You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup
 the applications. To install `create-react-app` run the following command.
 
-   ```bash
-     npm install -g create-react-app
-   ```
+```bash
+npm install -g create-react-app
+```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-   <div class='tsx'>
-    ```bash
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
-   </div>
-   <div class='jsx'>
-   ```bash
-     create-react-app quickstart
-     cd quickstart
-    ```
-  </div>
+<div class='tsx'>
+
+```
+npx create-react-app my-app --template typescript
+
+cd my-app
+
+npm start
+```
+
+</div>
+
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+```
 
 ## Adding Syncfusion packages
 
@@ -57,6 +68,14 @@ To install Chip component, use the following command
 npm install @syncfusion/ej2-react-buttons --save
 ```
 
+## Adding CSS Reference
+
+Import the Chip component's required CSS references as follows in `src/App.css`.
+
+```css
+@import "../node_modules/@syncfusion/ej2-react-buttons/styles/material.css";
+```
+
 ## Adding Chip component to the Application
 
 To include the Chip component in your application import the `ChipListComponent` from `ej2-react-buttons` package in `App.tsx`.
@@ -64,9 +83,7 @@ To include the Chip component in your application import the `ChipListComponent
 Add the Chip component in application as shown in below code example.
 
 
-
 ```ts
-
 import * as React from 'react';
 import './App.css';
 // Import the Button.
@@ -79,36 +96,15 @@ function App() {
   );
 }
 export default App;
-
-```
-
-```ts
-import * as React from 'react';
-import './App.css';
-// Import the Button.
-import { ChipListComponent } from '@syncfusion/ej2-react-buttons';
-// To render Button.
-function App() {
-    return (<ChipListComponent text="Janet Leverling"></ChipListComponent>);
-}
-export default App;
-```
-
-## Adding CSS Reference
-
-Import the Chip component's required CSS references as follows in `src/App.css`.
-
-```css
-@import "../node_modules/@syncfusion/ej2-react-buttons/styles/material.css";
 ```
 
 ## Running the application
 
 Run the application in the browser using the following command:
 
-    ```
-    npm start
-    ```
+```
+npm start
+```
 
 The following example shows a basic Chip component.
 
@@ -121,4 +117,4 @@ The following example shows a basic Chip component.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chips/default-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chips/default-cs2" %}
