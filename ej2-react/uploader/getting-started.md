@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Uploader component | Syncfusion
-description:  Checkout and learn about Getting started with React Uploader component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Uploader Component | Syncfusion
+description:  Checkout and learn about getting started with Syncfusion Essential React Uploader component, it's elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Uploader Component
 
 This section explains how to create and configure the simple uploader component with its basic usage in step by step procedure.
 
@@ -238,4 +238,4 @@ You can handle the success and failure actions using the **success** and **failu
 * [Achieve file upload programmatically](./how-to/achieve-file-upload-programmatically)
 * [Achieve invisible upload](./how-to/achieve-invisible-upload)
 
-> You can also explore [React File Upload](https://www.syncfusion.com/react-ui-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/material/uploader/default) that shows how to render the file upload and browse the files which you want to upload to the server.
+> You can also explore [React File Upload](https://www.syncfusion.com/react-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/material/uploader/default) that shows how to render the file upload and browse the files which you want to upload to the server.

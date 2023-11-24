@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Image editor component | Syncfusion
-description:  Checkout and learn about Getting started with React Image editor component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Image Editor Component | Syncfusion
+description:  Checkout and learn about getting started with Syncfusion Essential React Image Editor component, it's elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Image Editor Component
 
 This section explains how to create and configure a simple [React Image Editor component](https://www.syncfusion.com/react-components/react-image-editor).
 
