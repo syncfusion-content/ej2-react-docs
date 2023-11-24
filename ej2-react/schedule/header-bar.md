@@ -66,7 +66,7 @@ By default, the header bar holds the view navigation options, through which the 
         
 {% previewsample "page.domainurl/code-snippet/schedule/header-bar-cs2" %}
 
-> Refer [here](./resources/#adaptive-ui-in-desktop) to know more about adaptive UI in resources scheduler.
+> Refer [here](./resources#adaptive-ui-in-desktop) to know more about adaptive UI in resources scheduler.
 
 ## Date header customization
 
