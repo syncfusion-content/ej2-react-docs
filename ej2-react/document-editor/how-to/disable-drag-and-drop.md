@@ -21,7 +21,7 @@ var hostUrl = 'https://services.syncfusion.com/react/production/api/documentedit
 <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl={hostUrl} documentEditorSettings={settings}/>
 ```
 
->Note: Default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documenteditorsettings/#allowDragAndDrop) property is `true`.
+>Note: Default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettings/#allowdraganddrop) property is `true`.
 
 The following example illustrates to disable the drag and drop option in DocumentEditor.
 

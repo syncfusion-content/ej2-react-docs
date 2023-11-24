@@ -1,10 +1,7 @@
-{% raw %}
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-    PivotViewComponent, IDataOptions, Toolbar
+    PivotViewComponent, IDataOptions, Toolbar, Inject
 } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
 function App() {
@@ -25,7 +22,3 @@ function App() {
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
-
-
-
-{% endraw %}
