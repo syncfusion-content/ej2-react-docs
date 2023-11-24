@@ -8,71 +8,69 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Drop down button component
+# Accessibility in React Drop down component
 
-## ARIA attributes
+The Drop down button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The web accessibility makes web content and web applications more accessible for people with disabilities.
-It especially helps in dynamic content change and development of advanced user interface controls
-with AJAX, HTML, JavaScript, and related technologies. DropDownButton provides built-in compliance
-with `WAI-ARIA` specifications.`WAI-ARIA` support is achieved through the attributes like
-`aria-expanded`, `aria-owns` and `aria-haspopup` applied for action item in DropDownButton.
-It helps the people with disabilities by providing information about the widget for assistive
-technology in the screen readers. DropDownButton component contains the `menu` role and `menuItem` role.
+The accessibility compliance for the Drop down button component is outlined below.
 
-| Properties | Functionality |
-| ------------ | ----------------------- |
-| menu | This role will be specified for an DropDownButton element. |
-| menuItem | This role will be specified for an action items. |
-| aria-haspopup | Indicates the availability and type of interactive dropdown popup element. |
-| aria-expanded | Indicates whether the dropdown popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
-| aria-owns | Identifies an elements in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship. |
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
+The Drop down button component followed the [WAI-ARIA] patterns to meet the accessibility. The following ARIA attributes are used in the Drop down button component:
+
+| Attributes | Purpose |
+| --- | --- |
+| `menu` | Specified for an DropDownButton element. |
+| `menuItem` | This role will be specified for an action items. |
+| `aria-haspopup` | Indicates the availability and type of interactive splitbutton popup element. |
+| `aria-expanded` | Indicates whether the splitbutton popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
+| `aria-owns` | Identifies an elements in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship. |
 
 ## Keyboard interaction
 
-<!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td>
-<b>Keyboard shortcuts</b></td><td>
-<b>Actions</b></td></tr>
-<tr>
-<td>
-<kbd>Esc</kbd></td><td>
-Closes the opened popup.</td></tr>
-<tr>
-<td>
-<kbd>Enter</kbd></td><td>
-Opens the popup, or activates the highlighted item and closes the popup.</td></tr>
-<tr>
-<td>
-<kbd>Space</kbd></td><td>
-Opens the popup.</td></tr>
-<tr>
-<td>
-<kbd>Up</kbd></td><td>
-Navigates up or to the previous action item.</td></tr>
-<tr>
-<td>
-<kbd>Down</kbd></td><td>
-Navigates down or to the next action item.</td></tr>
-<tr>
-<td>
-<kbd>Alt + Up Arrow</kbd></td><td>
-Closes the popup.</td></tr>
-<tr>
-<td>
-<kbd>Alt + Down Arrow</kbd></td><td>
-Opens the popup</td></tr>
-</table>
+The Drop down button component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Drop down button component.
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/drop-down-button/accessibility-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/drop-down-button/accessibility-cs1/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
+| **Press** | **To do this** |
+| --- | --- |
+| <kbd>Esc</kbd> | Closes the popup. |
+| <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
+| <kbd>Space</kbd> | Opens the popup. |
+| <kbd>Up</kbd> | Navigates up or to the previous action item. |
+| <kbd>Alt + Up Arrow</kbd> | Closes the popup. |
+| <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/accessibility-cs1" %}
+## Ensuring accessibility
+
+The Drop down component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Drop down button component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-button.html) in a new window to evaluate the accessibility of the Drop down button component with accessibility tools.
+
+{% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-button.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion React components](../common/accessibility)
