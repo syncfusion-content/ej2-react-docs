@@ -162,13 +162,13 @@ In this example, the **"EmployeeID"** column is a foreign key column, and the **
 
 ## Perform aggregation in foreign key column
 
-By default, aggregations are not supported in a foreign key column in the Syncfusion Grid. However, you can achieve aggregation for a foreign key column by using [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#customaggregate).
+By default, aggregations are not supported in a foreign key column in the Syncfusion Grid. However, you can achieve aggregation for a foreign key column by using [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#customaggregate).
 
 To perform aggregation in a foreign key column, follow these steps:
 
 1.Define a foreign key column in the Grid.
 2.Implement a custom aggregate function to calculate the aggregation for the foreign key column.
-3.Set the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#customaggregate) property of the column to the custom aggregate function.
+3.Set the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#customaggregate) property of the column to the custom aggregate function.
 
 Here's an example that demonstrates how to perform aggregation in a foreign key column:
 
