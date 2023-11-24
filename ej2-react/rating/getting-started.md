@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Rating Control
+# Getting Started with React Rating Component
 
 This section explains how to create a simple Rating and demonstrate the basic usage of the Rating component in an React environment.
 
