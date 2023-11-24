@@ -34,28 +34,33 @@ To install `create-react-app` run the following command.
     npm install -g create-react-app
    ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-    <div class='tsx'>
+<div class='tsx'>
 
-    ```
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
+```
+npx create-react-app my-app --template typescript
 
-   </div>
+cd my-app
 
-   <div class='jsx'>
+npm start
 
-    ```
-    create-react-app quickstart
-    cd quickstart
-   ```
+```
 
-   </div>
+</div>
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+To set-up a React application in JavaScript environment, run the following command.
 
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 ## Adding Syncfusion packages
 
 All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
@@ -82,22 +87,14 @@ Add Signature component's styles as given below in `App.css`.
 
 Now, you can create `Signature` component in the application. Add `Signature` component in `src/App.tsx` file using the following code snippet.
 
-
-
 ```ts
 import { SignatureComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 function App() {
-    return (<SignatureComponent id='signature'></SignatureComponent>);
-}
-export default App;
-```
-
-```ts
-import { SignatureComponent } from '@syncfusion/ej2-react-inputs';
-import * as React from 'react';
-function App() {
-    return (<SignatureComponent id='signature'></SignatureComponent>);
+    return (<div style={{marginTop: '150px'}}>
+        <SignatureComponent id='signature'></SignatureComponent>
+    </div>);
+    
 }
 export default App;
 ```

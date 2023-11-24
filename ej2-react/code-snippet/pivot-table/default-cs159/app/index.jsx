@@ -3,10 +3,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { renewableEnergy } from './datasource';
 function App() {
-    let cellTemplate;
-    (props) => {
+    function cellTemplate(props) {
         return (<span className="tempwrap e-pivot-trend-neutral pv-icons"></span>);
-    };
+    }
     let dataSourceSettings = {
         dataSource: renewableEnergy,
         expandAll: true,

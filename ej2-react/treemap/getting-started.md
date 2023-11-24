@@ -30,31 +30,21 @@ The following list of minimum dependencies are required to use the TreeMap contr
 
 To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
 
-    <div class='jsx'>
-
-    ```
-    npm install -g create-react-app
-    ```
-
-    </div>
+```
+npm install -g create-react-app
+```
 
 To create basic React application, run the following command.
 
-    <div class='jsx'>
+```
+create-react-app quickstart
+```
 
-    ```
-    create-react-app quickstart
-    ```
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm**  packages.
 
-    </div>
-
-Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm**  packages.
-
-    ```
-    cd quickstart
-
-    npm install
-    ```
+```
+cd quickstart
+```
 
 > In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
 
@@ -62,29 +52,23 @@ Now, the application is created in the **quickstart** folder. Run the following 
 
 To create React application with TypeScript, use the following command.
 
-    <div class='jsx'>
+```
+create-react-app quickstart --template typescript
+```
 
-    ```
-    create-react-app quickstart --template typescript
-    ```
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-    </div>
-
-Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-    ```
-    cd quickstart
-
-    npm install
-    ```
+```
+cd quickstart
+```
 
 ### Adding Syncfusion packages
 
 All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install TreeMap package, use the following command.
 
-    ```
-    npm install @syncfusion/ej2-react-treemap --save
-    ```
+```
+npm install @syncfusion/ej2-react-treemap --save
+```
 
 ### Add TreeMap to project
 
@@ -93,22 +77,32 @@ or **src/App.tsx** as per the application. Please use the below code to include 
 
 ```ts
 
-import * as React from 'react';
+import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { TreeMapComponent } from '@syncfusion/ej2-react-treemap';
 
 export function App() {
-  return ( <TreeMapComponent ></TreeMapComponent> );
+  return ( <TreeMapComponent 
+        height= '350px'
+        dataSource={[
+            { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
+            { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 1 },
+            { Title: 'State wise International Airport count in South America', State: "Argentina", Count: 9 },
+            { Title: 'State wise International Airport count in South America', State: "Ecuador", Count: 7 },
+            { Title: 'State wise International Airport count in South America', State: "Chile", Count: 6 },
+            ]}
+            weightValuePath='Count'
+            leafItemSettings= { {
+                labelPath: 'State'
+            }}>
+        </TreeMapComponent> );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('container'));
-root.render(<App />);
+export default App;
 
 ```
 
 ### Run the application
-
-Since any data source has not been bound to the TreeMap, no item will be rendered. Only an empty SVG element is appended to the TreeMap container.
 
 The TreeMap control is now included in the **quickstart** application. Use the following command to run the application.
 
@@ -118,20 +112,16 @@ npm start
 
 ## Module injection
 
-The TreeMap control is segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `<Inject services={} />` method. Find the modules available in TreeMap and their descriptions as follows.
+The TreeMap control is segregated into individual feature-wise modules. To use a particular feature, inject its feature module using the `<Inject services={} />` method. You can find the modules available in TreeMap and their descriptions below.
 
 * TreeMapHighlight - Inject this provider to use highlight feature.
 * TreeMapSelection - Inject this provider to use selection feature.
 * TreeMapLegend - Inject this provider to use legend feature.
 * TreeMapTooltip - Inject this provider to use tooltip series.
 
-In the current application, the above basic TreeMap is modified to visualize international airport count in South America.
-
-In this demo, the TreeMap is just rendered with labels. For this, you need not to import any modules.
-
 ## Render TreeMap
 
-This section explains how to render the TreeMap with data source.
+This section explains how to render the TreeMap with data source. In the below example, TreeMap is modified to visualize international airport count in South America.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -144,7 +134,7 @@ This section explains how to render the TreeMap with data source.
 
  {% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs1" %}
 
-Here, the TreeMap is created with data source and set with the weightValuePath as count. You can customize the leaf level TreeMap items using the leafItemSettings. The properties such as fill, border, and labelPosition can be changed using the leafItemSettings.
+Here, the TreeMap is created with data source and the `weightValuePath` property is set to the data source's **count** field as the value. The leaf level items of TreeMap can be customized using `leafItemSettings`. `leafItemSettings` allows you to change properties such as `fill`, `border`, and `labelPosition`.
 
 ## Apply color mapping
 

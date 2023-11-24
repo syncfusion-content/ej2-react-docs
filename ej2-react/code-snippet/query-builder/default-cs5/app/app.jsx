@@ -4,7 +4,7 @@ import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
 import { DataManager } from '@syncfusion/ej2-data';
 function App() {
     let data = new DataManager({
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/',
+        url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
     });
     let columnData = [
         { field: 'EmployeeID', label: 'EmployeeID', type: 'number' },

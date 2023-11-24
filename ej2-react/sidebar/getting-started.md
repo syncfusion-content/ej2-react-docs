@@ -38,30 +38,27 @@ To install `create-react-app` run the following command.
 npm install -g create-react-app
 ```
 
-* To setup basic `React` sample use following commands.
+To set-up a React application in TypeScript environment, run the following command.
 
 <div class='tsx'>
 
 ```
-create-react-app quickstart --scripts-version=react-scripts-ts
+npx create-react-app my-app --template typescript
 
-cd quickstart
-
+cd my-app
 ```
 
 </div>
 
-<div class='jsx'>
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
 
 ```
+npx create-react-app my-app
 
-create-react-app quickstart
-
-cd quickstart
-
+cd my-app
 ```
-
-</div>
 
 ## Adding Syncfusion packages
 
@@ -78,10 +75,8 @@ npm install @syncfusion/ej2-react-navigations --save
 To render the Sidebar component, need to import Sidebar and its dependent component's styles as given below in `App.css`.
 
 ```css
-
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-navigations/styles/material.css";
-
 ```
 
 >Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
@@ -147,9 +142,7 @@ export default App;
 Now run the `npm start` command in the console, it will run your application and open the browser window.
 
 ```
-
 npm start
-
 ```
 
 The following sample, shows the basic Sidebar component.
