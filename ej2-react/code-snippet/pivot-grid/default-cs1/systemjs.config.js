@@ -2,7 +2,7 @@ System.config({
     transpiler: "ts",
     typescriptOptions: {
         target: "es5",
-        module: "commonjs",
+        module: "system",
         moduleResolution: "node",
         emitDecoratorMetadata: true,
         experimentalDecorators: true,
@@ -20,6 +20,8 @@ System.config({
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
         "@syncfusion/ej2-grids": "syncfusion:ej2-grids/dist/ej2-grids.umd.min.js",
+        "@syncfusion/ej2-charts": "syncfusion:ej2-charts/dist/ej2-charts.umd.min.js",
+        "@syncfusion/ej2-svg-base": "syncfusion:ej2-svg-base/dist/ej2-svg-base.umd.min.js",
         "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
         "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
         "@syncfusion/ej2-popups": "syncfusion:ej2-popups/dist/ej2-popups.umd.min.js",
@@ -38,8 +40,8 @@ System.config({
         "@syncfusion/ej2-react-pivotview": "syncfusion:ej2-react-pivotview/dist/ej2-react-pivotview.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
         "plugin-json": "https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-json/0.3.0/json.min.js",
-        "react-dom":"https://unpkg.com/react-dom@18.2.0/dist/react-dom.production.min.js",
-        "react":"https://unpkg.com/react@18.2.0/dist/react.production.min.js",
+        "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",    
     },
     meta: {
         '*.json': { loader: 'plugin-json' },
