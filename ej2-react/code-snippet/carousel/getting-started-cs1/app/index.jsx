@@ -1,6 +1,8 @@
 import { CarouselComponent, CarouselItemsDirective, CarouselItemDirective } from "@syncfusion/ej2-react-navigations";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import './App.css';
+
 const App = () => {
     return (<div className='control-container'>
       <CarouselComponent>
@@ -14,5 +16,6 @@ const App = () => {
       </CarouselComponent>
     </div>);
 }
-const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<App />);
+
+export default App;
+ReactDOM.render(<App />, document.getElementById("element"));

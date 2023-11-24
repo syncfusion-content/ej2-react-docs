@@ -31,53 +31,63 @@ For using heat map, the following minimum requirements are needed.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app**, run the following command.
 
-   ``` 
-    npm install -g create-react-app
-   ```
+```
+npm install -g create-react-app
+```
 
-* To setup basic `React` sample use following commands.
+To create basic React application, run the following command.
 
-   <div class='tsx'>
+```
+create-react-app quickstart
+```
 
-    ```
-    create-react-app quickstart --scripts-version=react-scripts-ts
-    cd quickstart
-    npm install
-    ```
-    </div>
-    <div class='jsx'>
-   ```
-  create-react-app quickstart
-  cd quickstart
-  ```
-  </div>
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-* Install Syncfusion packages using below command.
+```
+cd quickstart
+```
 
-  ```
-   npm install @syncfusion/ej2-react-heatmap --save
-  ```
+> In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
 
-## Adding heat map to the project
+### Creating a React application with TypeScript
+
+To create React application with TypeScript, use the following command.
+
+```
+create-react-app quickstart --template typescript
+```
+
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
+
+```
+cd quickstart
+```
+
+### Adding Syncfusion packages
+
+All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install Heatmap package, use the following command.
+
+```
+npm install @syncfusion/ej2-react-heatmap --save
+```
+
+## Adding HeatMap to the project
 
 Now, you can start adding HeatMap component in the application. For getting started, add the HeatMap component in `src/App.tsx` file using following code.
 
-
-
   ```ts
 
-  import * as React from 'react';
+  import * as React from 'react';
   import * as ReactDOM from 'react-dom';
-  import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
+  import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
 
-   export function App() {
-    return ( <HeatMapComponent id='heatmap'></HeatMapComponent> );
+   export function App() {
+    return ( <HeatMapComponent id='heatmap'></HeatMapComponent> );
   }
 
-  const root = ReactDOM.createRoot(document.getElementById('container'));
-  root.render(<App />);
+  export default App;
 
  ```
 

@@ -48,3 +48,5 @@ In checkbox selection, selection can also be done by clicking on rows. This sele
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/treegrid/selection-cs3" %}
+
+ > Checkbox Selection feature is intended for row selection only; it is not compatible with cell selection mode.

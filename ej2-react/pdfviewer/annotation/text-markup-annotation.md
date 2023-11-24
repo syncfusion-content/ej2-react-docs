@@ -251,9 +251,11 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -284,6 +286,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -327,9 +331,11 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -366,6 +372,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -424,9 +432,11 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -458,6 +468,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -502,9 +514,11 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -542,6 +556,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -615,9 +631,11 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -648,6 +666,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -707,9 +727,11 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -747,6 +769,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -792,9 +816,11 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -823,6 +849,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
