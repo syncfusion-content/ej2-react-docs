@@ -112,7 +112,7 @@ Add pivot table and its [dependent](#dependencies) components styles as given be
     @import '../node_modules/@syncfusion/ej2-react-pivotview/styles/material.css';
     ```
 
-> You can also refer other themes like bootstrap, fabric, high-contrast etc. To know about individual component CSS, please refer [here](https://ej2.syncfusion.com/react/documentation/appearance/theme). 
+> You can also refer other themes like bootstrap, fabric, high-contrast etc. To know about individual component CSS, please refer [here](../../appearance/theme).
 
 Next we need to refer **App.css** in the application by importing it in the **src/App.tsx** file as follows.
 

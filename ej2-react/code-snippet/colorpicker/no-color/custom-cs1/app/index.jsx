@@ -4,10 +4,10 @@ import * as ReactDOM from "react-dom";
 import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
 import { SplitButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
 class App extends React.Component {
-    preview;
-    splitBtn;
-    colorPicker;
-    presets = {
+    var preview;
+    var splitBtn;
+    var colorPicker;
+    var presets = {
         'custom': ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#8bc34a', '#cddc39', '#ffeb3b', '#ffc107']
     };
     beforeTileRender(args) {

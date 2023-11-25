@@ -116,7 +116,7 @@ If you have used additional fields that are not present in the column model, the
 
 ## Render tab component inside the dialog template
 
-You can use [tab](https://ej2.syncfusion.com/react/documentation/tab/getting-started) component inside dialog edit UI using dialog template feature. The dialog template feature can be enabled by defining  [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as `Dialog` and [editSetting.template](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#template) as a REACT Component.
+You can use [tab](../../../tab) component inside dialog edit UI using dialog template feature. The dialog template feature can be enabled by defining  [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as `Dialog` and [editSetting.template](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#template) as a REACT Component.
 
 The following example demonstrate the usage of tab control inside the dialog template.
 
