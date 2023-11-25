@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 The following section explains the required steps to build the simple Slider component with its basic usage in step by step procedure.
 
+To get start quickly with React Range Slider, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=B0rPxt5tOSE" %}
+
 ## Dependencies
 
 Install the below required dependent packages to render the Slider component.

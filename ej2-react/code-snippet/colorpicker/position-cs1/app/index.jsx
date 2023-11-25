@@ -16,31 +16,32 @@ class App extends React.Component {
                 <ColorPickerComponent id='picker' inline={true} modeSwitcher={false} change={proxy.onPickerChange} ref={(scope) => { proxy.colorPicker = scope; }}></ColorPickerComponent>
             </div>);
     }
-    onPaletteChange(args) {
+    function onPaletteChange(args) {
+        splitIcon =  document.getElementById("split-btn").children[0];
         splitIcon.style.borderBottomColor = args.currentValue.rgba;
     }
-    onPickerChange(args) {
+    function onPickerChange(args) {
         onPaletteChange(args);
         pickerDlg.hide();
     }
-    onDdPopupOpen(args) {
+    function onDdPopupOpen(args) {
         args.element.children[1].addEventListener('click', openPickerDlg.bind(this));
     }
-    onBeforeDdPopupClose(args) {
+    function onBeforeDdPopupClose(args) {
         args.element.children[1].removeEventListener('click', openPickerDlg.bind(this));
     }
-    openPickerDlg() {
+    function openPickerDlg() {
         pickerDlg.show();
     }
-    pickerDlgOpen() {
+    function pickerDlgOpen() {
         colorPicker.refresh();
         colorPicker.element.nextElementSibling.querySelector('.e-ctrl-btn .e-cancel').addEventListener('click', pickerDlgClose.bind(this));
     }
-    pickerDlgClose() {
+    function pickerDlgClose() {
         pickerDlg.hide();
     }
-    onSplitBtnCreated() {
-        splitIcon = element.children[0];
+    function onSplitBtnCreated() {
+        splitIcon = document.getElementById("split-btn").children[0];
     }
     render() {
         return (<div id='container'>

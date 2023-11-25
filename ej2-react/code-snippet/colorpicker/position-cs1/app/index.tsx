@@ -25,6 +25,7 @@ class App extends React.Component<{}, {}> {
     }
 
     public onPaletteChange (args: ColorPickerEventArgs): void {
+        splitIcon = document.getElementById("split-btn").children[0] as HTMLElement;
         splitIcon.style.borderBottomColor = args.currentValue.rgba;
     }
 
@@ -55,7 +56,7 @@ class App extends React.Component<{}, {}> {
     }
 
     public onSplitBtnCreated() {
-       splitIcon = element.children[0] as HTMLElement;
+       splitIcon = document.getElementById("split-btn").children[0] as HTMLElement;
     }
 
     render() {
