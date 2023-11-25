@@ -97,8 +97,7 @@ The following sample shows the color picker with input.
 
  {% previewsample "page.domainurl/code-snippet/colorpicker/input-cs1" %}
 
-<!-- markdownlint-disable -->
-<!-- ## Custom UI
+## Custom UI
 
 The color picker UI can be customized in all possible ways. The following sample shows the excel like UI customization with help of SplitButton and Dialog component. In that by clicking the more colors option from color palette, the dialog contains color picker will open.
 
@@ -111,5 +110,5 @@ The color picker UI can be customized in all possible ways. The following sample
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/colorpicker/position-cs1" %} -->
+ {% previewsample "page.domainurl/code-snippet/colorpicker/position-cs1" %}
 
