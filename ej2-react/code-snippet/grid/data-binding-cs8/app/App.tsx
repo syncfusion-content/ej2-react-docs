@@ -9,7 +9,7 @@ function App() {
     const data = new DataManager({
         adaptor: new ODataAdaptor,
         offline: true,
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/'
+        url: 'https://services.syncfusion.com/react/production/api/Orders'
     });
     const page: PageSettingsModel = { pageSize: 7 };
     return <GridComponent dataSource={data} allowPaging={true} allowGrouping={true} allowSorting={true} pageSettings={page}>

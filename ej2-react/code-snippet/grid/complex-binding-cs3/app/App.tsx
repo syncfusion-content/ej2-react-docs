@@ -6,7 +6,7 @@ function App() {
   const data: DataManager = new DataManager({
     adaptor: new ODataAdaptor(),
     crossDomain: true,
-    url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders'
+    url: 'https://services.syncfusion.com/react/production/api/Orders'
   });
   const query = new Query().expand('Employee');
   return <GridComponent dataSource={data} query={query} height={315} allowPaging={true}>
