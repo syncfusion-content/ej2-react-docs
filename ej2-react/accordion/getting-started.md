@@ -130,7 +130,7 @@ const ReactApp = () => {
 }
 
 export default ReactApp;
-ReactDOM.render(<App />, document.getElementById("element"));
+ReactDOM.render(<ReactApp />, document.getElementById("element"));
 
 ```
 

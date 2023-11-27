@@ -1,0 +1,19 @@
+#datatable {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+}
+
+#datatable td,
+#datatable th {
+    border: solid #e0e0e0;
+    border-width: 1px 0 0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}

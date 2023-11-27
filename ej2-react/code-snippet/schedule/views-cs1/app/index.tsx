@@ -4,7 +4,6 @@ import {
   ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
 import { defaultData } from './datasource';
-import './App.css';
 
 const App = () => {
   const eventSettings = { dataSource: defaultData }

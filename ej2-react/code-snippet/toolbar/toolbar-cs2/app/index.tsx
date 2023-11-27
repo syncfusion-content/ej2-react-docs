@@ -17,8 +17,7 @@ const ReactApp = () => {
     </ToolbarComponent>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById('toolbar'));
-root.render(<ReactApp />);
-
+export default ReactApp;
+ReactDOM.render(<ReactApp />, document.getElementById("toolbar"));
 
 

@@ -1,8 +1,8 @@
 import { DataManager } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from "react";
-import './App.css';
 import { data } from './datasource';
+
 export default class App extends React.Component {
     data = new DataManager(data);
     render() {

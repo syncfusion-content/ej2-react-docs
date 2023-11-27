@@ -1,7 +1,6 @@
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import './App.css'
 
 const ReactApp = () => {
   const aspContent = () => {
@@ -33,4 +32,4 @@ const ReactApp = () => {
   );
 }
 export default ReactApp;
-ReactDOM.render(<App />, document.getElementById("element"));
+ReactDOM.render(<ReactApp />, document.getElementById("element"));
