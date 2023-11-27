@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with React Uploader Component | Syncfusion
-description:  Checkout and learn about getting started with Syncfusion Essential React Uploader component, it's elements and more details.
+description: Checkout and learn about getting started with React Uploader component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
