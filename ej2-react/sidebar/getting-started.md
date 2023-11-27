@@ -34,29 +34,22 @@ The following list of dependencies are required to use the Sidebar component in 
 You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-```
+```bash
 npm install -g create-react-app
 ```
 
 To set-up a React application in TypeScript environment, run the following command.
 
-<div class='tsx'>
-
-```
+```bash
 npx create-react-app my-app --template typescript
-
 cd my-app
 ```
 
-</div>
-
 To set-up a React application in JavaScript environment, run the following command.
 
-<div class='tsx'>
 
-```
+```bash
 npx create-react-app my-app
-
 cd my-app
 ```
 
@@ -77,9 +70,10 @@ To render the Sidebar component, need to import Sidebar and its dependent compon
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-navigations/styles/material.css";
+
 ```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+> Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Adding Sidebar component to the Application
 
@@ -141,7 +135,7 @@ export default App;
 
 Now run the `npm start` command in the console, it will run your application and open the browser window.
 
-```
+```bash
 npm start
 ```
 
@@ -170,7 +164,7 @@ Enabling the [showBackdrop](https://ej2.syncfusion.com/react/documentation/api/s
 
 Here, DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen. Sidebar can be rendered with specific width by setting `width` property
 
-N> To achieve a proper **backdrop**, we suggest that you create a wrapper parent container for the div block in which you intend to enable the backdrop. Set the class name of this parent container as the **target** for the Sidebar. Alternatively, you can place an empty div container after the target container.
+> To achieve a proper **backdrop**, we suggest that you create a wrapper parent container for the div block in which you intend to enable the backdrop. Set the class name of this parent container as the **target** for the Sidebar. Alternatively, you can place an empty div container after the target container.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

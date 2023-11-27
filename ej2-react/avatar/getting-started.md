@@ -27,9 +27,7 @@ npm install -g create-react-app
 
 To set-up a React application in TypeScript environment, run the following command.
 
-<div class='tsx'>
-
-```
+```bash
 npx create-react-app my-app --template typescript
 
 cd my-app
@@ -37,13 +35,9 @@ cd my-app
 npm start
 ```
 
-</div>
-
 To set-up a React application in JavaScript environment, run the following command.
 
-<div class='tsx'>
-
-```
+```bash
 npx create-react-app my-app
 
 cd my-app
@@ -76,7 +70,7 @@ The Avatar CSS files are available in the `ej2-layouts` package folder. This can
 
 Add the HTML `div` element with `e-avatar` class into your `App.tsx`.
 
-```
+```bash
 <div className="e-avatar">AJ</div>
 ```
 
@@ -84,7 +78,7 @@ Add the HTML `div` element with `e-avatar` class into your `App.tsx`.
 
 Run the application in the browser using the following command:
 
-```
+```bash
 npm start
 ```
 

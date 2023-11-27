@@ -34,9 +34,7 @@ npm install -g create-react-app
 
 To set-up a React application in TypeScript environment, run the following command.
 
-<div class='tsx'>
-
-```
+```bash
 npx create-react-app my-app --template typescript
 
 cd my-app
@@ -44,19 +42,16 @@ cd my-app
 npm start
 ```
 
-</div>
-
 To set-up a React application in JavaScript environment, run the following command.
 
-<div class='tsx'>
-
-```
+```bash
 npx create-react-app my-app
 
 cd my-app
 
 npm start
 ```
+
 ## Adding Syncfusion packages
 
 All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
@@ -76,7 +71,7 @@ To render the Dashboard Layout component, need to import Dashboard Layout and it
 @import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
 ```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+> Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Add Dashboard Layout to the application
 
@@ -227,7 +222,7 @@ export default App;
 
 Now, use the `npm start` command to run the application in the browser.
 
-```
+```bash
 npm start
 ```
 

@@ -35,5 +35,5 @@ const ReactApp = () => {
       </div>
     </AccordionComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<ReactApp />);
+export default ReactApp;
+ReactDOM.render(<ReactApp />, document.getElementById("element"));

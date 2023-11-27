@@ -2,7 +2,7 @@ import { getValue } from '@syncfusion/ej2-base';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { Row } from './rowTemplate';
-const SERVICE_URI = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders';
+const SERVICE_URI = 'https://services.syncfusion.com/react/production/api/Orders';
 export default class App extends React.Component {
     constructor(props) {
         super(props);
