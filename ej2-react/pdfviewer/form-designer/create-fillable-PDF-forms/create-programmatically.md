@@ -27,6 +27,7 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -75,8 +76,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -126,6 +129,7 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -140,6 +144,7 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -189,8 +194,10 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -240,6 +247,7 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -254,6 +262,7 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -303,8 +312,10 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -354,6 +365,7 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -369,7 +381,6 @@ The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer l
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %} 
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
@@ -397,12 +408,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 {% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
@@ -431,7 +440,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -447,7 +455,6 @@ You can invoke download action using following code snippet.,
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %} 
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -476,12 +483,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 {% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -511,7 +516,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -525,7 +529,6 @@ When the print icon is selected on the toolbar, the PDF document will be printed
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %} 
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -550,12 +553,10 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 {% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -581,7 +582,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}

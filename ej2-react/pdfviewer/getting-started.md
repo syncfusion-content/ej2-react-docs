@@ -177,6 +177,7 @@ Output will be appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -198,8 +199,10 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -242,6 +245,7 @@ root.render(<App />);
         </div>
 </body>
 </html>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         

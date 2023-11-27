@@ -1,21 +1,19 @@
-
-
 import { getValue } from '@syncfusion/ej2-base';
 import { DataManager, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { IOrders } from './orders';
 import { Row } from './rowTemplate';
 
-
-const SERVICE_URI: string = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders';
+const SERVICE_URI: string = 'https://services.syncfusion.com/react/production/api/Orders';
 
 export default class App extends React.Component<{}, {}>{
     constructor(props: object) {
         super(props);
         this.state = { items: [] };
+        
         new DataManager({ url: SERVICE_URI }).executeQuery(new Query().take(8))
         .then((e: ReturnOption) => {
-            const res = (e.result as IOrders[]).map((row: IOrders, index: number) => (
+            const res = ((e.result as {result: Object[]}).result as IOrders[]).map((row: IOrders, index: number) => (
                 <Row key={row.OrderID} {...row} />
               ));
               this.setState({
