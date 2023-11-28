@@ -15,7 +15,7 @@ function App(){
     };
     function columnMenuOpen (args: ColumnMenuOpenEventArgs) {
         for (const item of args.items) {
-            if (item.text === 'Filter' && (args.column as Column).field === 'TaskName') {
+            if (item.text === 'Filter' && (args.column).field === 'TaskName') {
                 (item as ColumnMenuItemModel).hide = true;
             } else {
                 (item as ColumnMenuItemModel).hide = false;
@@ -28,7 +28,7 @@ function App(){
     };
         return (<div>
         <GanttComponent dataSource={data} taskFields={taskFields} showColumnMenu={true}
-      columnMenuClick={columnMenuClick}  columnMenuOpen={columnMenuOpen} allowFiltering={true} allowSorting={true}
+         columnMenuOpen={columnMenuOpen} allowFiltering={true} allowSorting={true}
         splitterSettings={splitterSettings} height = '450px'>
         <ColumnsDirective>
             <ColumnDirective field='TaskID' width='100' ></ColumnDirective>

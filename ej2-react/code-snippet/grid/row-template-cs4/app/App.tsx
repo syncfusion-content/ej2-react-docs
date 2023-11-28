@@ -21,33 +21,33 @@ function App() {
       <td className="details">
         <table className="CardTable" cellPadding={3} cellSpacing={2}>
           <colgroup>
-            <col style={{ width: "30%" }} />
-            <col style={{ width: "10%" }} />
+            <col style={{width: "30%" }} />
+            <col style={{width: "10%" }}/>
           </colgroup>
           <tbody>
             <tr>
               <td className="CardHeader">First Name </td>
-              <span>:</span>
+              <td>:</td>
               <td>{props.FirstName} </td>
             </tr>
             <tr>
               <td className="CardHeader">Last Name</td>
-              <span>:</span>
+              <td>:</td>
               <td>{props.LastName} </td>
             </tr>
             <tr>
               <td className="CardHeader">Title</td>
-              <span>:</span>
+              <td>:</td>
               <td>{props.Title}</td>
             </tr>
             <tr>
               <td className="CardHeader">Birth Date</td>
-              <span>:</span>
+              <td>:</td>
               <td> {format(props.BirthDate)}</td>
             </tr>
             <tr>
               <td className="CardHeader">Hire Date</td>
-              <span>:</span>
+              <td>:</td>
               <td>{format(props.HireDate)}</td>
             </tr>
           </tbody>

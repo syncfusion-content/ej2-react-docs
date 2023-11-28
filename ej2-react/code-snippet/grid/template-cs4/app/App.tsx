@@ -6,7 +6,7 @@ function App() {
   const conditionTemplate = ((props: any) => {
     return (
       <div>
-        {props.Discontinued ? (<input type="checkbox" checked />) : (<input type="checkbox" />)}
+        {props.Discontinued ? (<input type="checkbox" defaultChecked />) : (<input type="checkbox" />)}
       </div>
     )
   })

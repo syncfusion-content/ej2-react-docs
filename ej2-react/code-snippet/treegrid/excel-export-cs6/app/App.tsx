@@ -8,7 +8,7 @@ function App() {
 
     const toolbarOptions: any = ['ExcelExport'];
 
-    const treegrid = React.useRef(null);
+    let treegrid: TreeGridComponent | null;
 
     const toolbarClick = (args: ClickEventArgs): void =>{
         if (args.item.text === 'Excel Export') {

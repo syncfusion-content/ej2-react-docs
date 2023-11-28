@@ -39,6 +39,7 @@ function App(){
             break;
         }
     }
+    let ganttInstance: any;
     const  taskFields: any = {
         id: 'TaskID',
         name: 'TaskName',

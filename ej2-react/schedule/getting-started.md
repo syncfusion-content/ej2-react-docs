@@ -252,6 +252,7 @@ import {
   ScheduleComponent, Day, Week, WorkWeek, Agenda, Month, Inject,
   ViewsDirective, ViewDirective
 } from '@syncfusion/ej2-react-schedule';
+import './App.css';
 
 const App = () => {
     return (

@@ -6,7 +6,7 @@ function App() {
     const treegridTemplate = (props) => {
         if (getObject('approved', props)) {
             return (<div className="template_checkbox">
-                     <input type="checkbox" checked={true}/>
+                     <input type="checkbox" defaultChecked/>
                  </div>);
         }
         else {

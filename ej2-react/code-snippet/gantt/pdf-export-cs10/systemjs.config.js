@@ -53,7 +53,7 @@ System.config({
 "react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
     },
     packages: {
-        'app': { main: 'index', defaultExtension: 'tsx' },
+        'app': { main: 'index', defaultExtension: 'jsx' },
     }
 
 });

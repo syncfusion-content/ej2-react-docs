@@ -7,7 +7,7 @@ import * as React from 'react';
 function App() {
     const data = new DataManager({
         adaptor: new ODataAdaptor,
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/'
+        url: 'https://services.syncfusion.com/react/production/api/Orders'
     });
     const query = new Query().addParams('ej2grid', 'true');
     return <GridComponent dataSource={data} query={query}>
