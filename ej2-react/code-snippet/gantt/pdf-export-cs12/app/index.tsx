@@ -12,14 +12,15 @@ function App () {
             progress: 'Progress',
             child: 'subtasks'
         };
+        let ganttChart;
         const toolbarOptions = ['PdfExport'];
     toolbarClick(args) {
         if (args.item.text === 'Pdf export') {
         let exportProperties: PdfExportProperties = {
            theme:"Fabric"
         };
-        }
         ganttChart.pdfExport(exportProperties);
+        }
     };
         return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
             <Inject services={[Toolbar, PdfExport, Selection]}/>

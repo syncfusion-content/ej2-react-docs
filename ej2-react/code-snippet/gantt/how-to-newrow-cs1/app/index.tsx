@@ -73,12 +73,12 @@ function  App (){
         }
         }
 
-        return<>
+        return<div>
         <ContextMenuComponent id='contextmenu' ref={(scope) => cMenu = scope} items={menuItems} select={select}/>
         <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
         editSettings={editOptions} toolbar={toolbarOptions} toolbarClick={toolbarClick} height = '450px' ref={gantt => ganttInstance = gantt}>
             <Inject services={[Edit, Selection, Toolbar]} />
-        </GanttComponent></>
+        </GanttComponent></div>
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 
