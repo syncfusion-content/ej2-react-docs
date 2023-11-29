@@ -19,8 +19,8 @@ function App () {
         let exportProperties = {
            theme:"Fabric"
         };
-        }
         ganttChart.pdfExport(exportProperties);
+        }
     };
         return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
             <Inject services={[Toolbar, PdfExport, Selection]}/>
