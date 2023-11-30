@@ -8,6 +8,8 @@ export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = { items: [] };
+    }
+    componentDidMount() {
         new DataManager({ url: SERVICE_URI, adaptor: new SerialNoAdaptor })
             .executeQuery(new Query().take(8))
             .then((e) => {

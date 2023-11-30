@@ -80,28 +80,31 @@ The sample response object should be as follows,
 
 [OData](http://www.odata.org/documentation/odata-version-3-0/) is standardized protocol for creating and consuming data. You can retrieve data from OData service using `DataManager`. The `ODataAdaptor` helps you to interact with OData service. You can refer to the following code example of remote Data binding using OData service.
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/data/get-started-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/data/get-started-cs2/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="orders.jsx" %}
-{% include code-snippet/data/get-started-cs2/app/orders.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="orders.tsx" %}
-{% include code-snippet/data/get-started-cs2/app/orders.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="rowtemplate.jsx" %}
-{% include code-snippet/data/get-started-cs2/app/rowTemplate.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="rowtemplate.tsx" %}
-{% include code-snippet/data/get-started-cs2/app/rowTemplate.tsx %}
-{% endhighlight %}
-{% endtabs %}
+```ts
+import { DataManager, Query, ReturnOption, ODataAdaptor } from '@syncfusion/ej2-data';
 
- {% previewsample "page.domainurl/code-snippet/data/get-started-cs2" %}
+const SERVICE_URI: string = 'https://services.syncfusion.com/react/production/api/Orders';
+
+    new DataManager({
+        adaptor: new ODataAdaptor,
+        url: SERVICE_URI
+    }).executeQuery(new Query().take(8)).then((e: ReturnOption) => {
+        // e.result will contain the records
+    });
+
+```
+
+`ODataAdaptor` expects JSON response from the server and the response object should contain properties `Items` ,`Result` and `Count` whose values are collection of entities and total count of the entities respectively.
+
+The sample response object should look like below.
+
+```
+{
+    Result: [{..}, {..}, {..}, ...],
+    Items: [{..}, {..}, {..}, ...],
+    Count: 830
+}
+```
 
 > By default, `ODataAdaptor` is used by `DataManager`.
 

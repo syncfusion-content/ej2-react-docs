@@ -1,6 +1,3 @@
-
-
-
 import { getValue } from '@syncfusion/ej2-base';
 import { DataManager, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
@@ -14,6 +11,8 @@ export default class App extends React.Component<{}, {}>{
     constructor(props: object) {
         super(props);
         this.state = { items: [] };
+    }
+    componentDidMount() {
         new DataManager({ url: SERVICE_URI, adaptor: new SerialNoAdaptor })
             .executeQuery(new Query().take(8))
             .then((e: ReturnOption) => {

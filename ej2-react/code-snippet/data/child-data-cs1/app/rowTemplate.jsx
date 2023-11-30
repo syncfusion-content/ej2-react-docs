@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ChildRow } from './childTemplate';
 export class Row extends React.Component {
     getRows(data) {
-        const dat = data.map((row) => (<ChildRow {...row}/>));
+        const dat = data.map((row,index) => (<ChildRow key={index} {...row}/>));
         return dat;
     }
     render() {
