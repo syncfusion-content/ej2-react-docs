@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Document editor component | Syncfusion
-description:  Checkout and learn about Getting started with React Document editor component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Document Editor Component | Syncfusion
+description: Checkout and learn about getting started with React Document Editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Document Editor
 
 This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the DocumentEditor component.
 
