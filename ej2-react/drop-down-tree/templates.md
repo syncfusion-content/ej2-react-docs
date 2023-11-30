@@ -14,7 +14,7 @@ The Dropdown Tree provides support to customize each list item, header, and foot
 
 ## Item template
 
-The content of each list item within the Dropdown Tree can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#itemtemplate) property.
+The content of each list item within the Dropdown Tree can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#itemtemplate) property.
 
 In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the **itemTemplate** property.
 

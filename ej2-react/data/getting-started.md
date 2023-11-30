@@ -128,7 +128,7 @@ Add the CSS below to the **app/app.css** file to style the table, then import it
 
  {% previewsample "page.domainurl/code-snippet/data/get-started-cs6" %}
 
-### Binding to OData
+### Binding to ODataV4
 
 [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/)  can be bound to remote data source by assigning service end point URL to the **url** property. Now all `DataManager` operations will address the provided service end point.
 
@@ -158,7 +158,7 @@ Add the CSS below to the **app/app.css** file to style the table, then import it
 {% include code-snippet/data/get-started-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="app.css" %}
-{% include code-snippet/data/get-started-cs6/app/app.css %}
+{% include code-snippet/data/get-started-cs7/app/app.css %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -188,7 +188,7 @@ The data filtering is a trivial operation which will let us to get reduced view 
 {% include code-snippet/data/get-started-cs8/app/rowTemplate.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="app.css" %}
-{% include code-snippet/data/get-started-cs6/app/app.css %}
+{% include code-snippet/data/get-started-cs8/app/app.css %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/data/get-started-cs8/app/datasource.jsx %}
@@ -224,7 +224,7 @@ The data can be ordered either in ascending or descending using [sortBy](https:/
 {% include code-snippet/data/get-started-cs9/app/rowTemplate.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="app.css" %}
-{% include code-snippet/data/get-started-cs6/app/app.css %}
+{% include code-snippet/data/get-started-cs9/app/app.css %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/data/get-started-cs9/app/datasource.jsx %}
@@ -260,7 +260,7 @@ The [page](https://ej2.syncfusion.com/documentation/api/data/query/#page) method
 {% include code-snippet/data/get-started-cs10/app/rowTemplate.tsx %}
 {% endhighlight %}
 {% highlight css tabtitle="app.css" %}
-{% include code-snippet/data/get-started-cs6/app/app.css %}
+{% include code-snippet/data/get-started-cs10/app/app.css %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/data/get-started-cs10/app/datasource.jsx %}
