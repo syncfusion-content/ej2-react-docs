@@ -106,10 +106,10 @@ By including the above CSS code block in the style sheet of the application, the
 
 ## See also
 
-* [Sidebar responsiveness](https://ej2.syncfusion.com/react/documentation/sidebar/auto-close/)
-* [DataGrid responsiveness](https://ej2.syncfusion.com/react/documentation/grid/columns/responsive-columns/)
-* [TreeGrid responsiveness](https://ej2.syncfusion.com/react/documentation/treegrid/scrolling/#responsive-with-parent-container)
-* [Dashboard Layout responsiveness](https://ej2.syncfusion.com/react/documentation/dashboard-layout/responsive-adaptive/)
-* [Kanban responsiveness](https://ej2.syncfusion.com/react/documentation/kanban/responsive-mode/)
-* [Toolbar responsiveness](https://ej2.syncfusion.com/react/documentation/toolbar/responsive-mode/)
-* [Tab responsiveness](https://ej2.syncfusion.com/react/documentation/tab/adaptive/)
+* [Sidebar responsiveness](https://ej2.syncfusion.com/react/documentation/sidebar/auto-close)
+* [DataGrid responsiveness](https://ej2.syncfusion.com/react/documentation/grid/columns/responsive-columns)
+* [TreeGrid responsiveness](https://ej2.syncfusion.com/react/documentation/treegrid/scrolling#responsive-with-parent-container)
+* [Dashboard Layout responsiveness](https://ej2.syncfusion.com/react/documentation/dashboard-layout/responsive-adaptive)
+* [Kanban responsiveness](https://ej2.syncfusion.com/react/documentation/kanban/responsive-mode)
+* [Toolbar responsiveness](https://ej2.syncfusion.com/react/documentation/toolbar/responsive-mode)
+* [Tab responsiveness](https://ej2.syncfusion.com/react/documentation/tab/adaptive)
