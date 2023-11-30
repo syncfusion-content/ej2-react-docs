@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 **Layer** is used to organize related shapes on a diagram control. A layer is a named category of shapes. By assigning shapes to different layers, you can selectively view, remove, and lock different categories of shapes.
 
-In diagram, [Layers](https://ej2.syncfusion.com/react/documentation/api/diagram) provide a way to change the properties of all shapes that have been assigned to that layer. The following properties can be set.
+In diagram, [Layers](https://ej2.syncfusion.com/react/documentation/api/diagram/) provide a way to change the properties of all shapes that have been assigned to that layer. The following properties can be set.
 
 * Visible
 * Lock
@@ -21,7 +21,7 @@ In diagram, [Layers](https://ej2.syncfusion.com/react/documentation/api/diagram)
 
 ## Visible
 
-The layer's [visible](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#visible-boolean) property is used to control the visibility of the elements assigned to the layer.
+The layer's [visible](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#visible-boolean) property is used to control the visibility of the elements assigned to the layer.
 
 ```ts
 
@@ -92,7 +92,7 @@ root.render(<App />);
 
 ## Lock
 
-The layer's [lock](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#lock-boolean) property is used to prevent or allow changes to the elements dimension and position.
+The layer's [lock](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#lock-boolean) property is used to prevent or allow changes to the elements dimension and position.
 
 ```ts
 
@@ -174,7 +174,7 @@ root.render(<App />);
 
 ## Objects
 
-The layer's [objects](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#objects-string[]) property defines the diagram elements to the layer.
+The layer's [objects](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#objects-string[]) property defines the diagram elements to the layer.
 
 ```ts
 
@@ -251,7 +251,7 @@ root.render(<App />);
 
 ## AddInfo
 
-The [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#addinfo-Object) property of layers allow you to maintain additional information to the layers.
+The [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#addinfo-Object) property of layers allow you to maintain additional information to the layers.
 
 The following code illustrates how to add additional information to the layers.
 
@@ -333,9 +333,9 @@ root.render(<App />);
 
 ### Add layer at runtime
 
-Layers can be added at runtime by using the [`addLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#addLayer) public method.
+Layers can be added at runtime by using the [`addLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addLayer) public method.
 
-The layer's [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer#id-string) property defines the ID of the layer, and its further used to find the layer at runtime and do any customization.
+The layer's [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer/#id-string) property defines the ID of the layer, and its further used to find the layer at runtime and do any customization.
 
 The following code illustrates how to add a layer.
 
@@ -386,7 +386,7 @@ root.render(<App />);
 
 ### Remove layer at runtime
 
-Layers can be removed at runtime by using the [`removeLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#removeLayer) public method.
+Layers can be removed at runtime by using the [`removeLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removeLayer) public method.
 
 The following code illustrates how to remove a layer.
 
@@ -420,7 +420,7 @@ root.render(<App />);
 
 ### moveObjects
 
-Objects of the layers can be moved by using the [`moveObjects`](https://ej2.syncfusion.com/react/documentation/api/diagram#moveObjects) public method.
+Objects of the layers can be moved by using the [`moveObjects`](https://ej2.syncfusion.com/react/documentation/api/diagram/#moveObjects) public method.
 
 The following code illustrates how to move objects from one layer to another layer from the diagram.
 
@@ -452,7 +452,7 @@ root.render(<App />);
 
 ### bringLayerForward
 
-Layers can be moved forward at runtime by using the [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringLayerForward) public method.
+Layers can be moved forward at runtime by using the [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#bringLayerForward) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -484,7 +484,7 @@ root.render(<App />);
 
 ### sendLayerBackward
 
-Layers can be moved backward at runtime by using the [`sendLayerBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#sendLayerBackward) public method.
+Layers can be moved backward at runtime by using the [`sendLayerBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sendLayerBackward) public method.
 
 The following code illustrates how to send backward to layer.
 
@@ -516,7 +516,7 @@ root.render(<App />);
 
 ### cloneLayer
 
-Layers can be cloned with its object by using the [`cloneLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#cloneLayer) public method.
+Layers can be cloned with its object by using the [`cloneLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#cloneLayer) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -548,7 +548,7 @@ root.render(<App />);
 
 ### getActiveLayer
 
-To get the active layers back in diagram, use the [`getActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#getActiveLayer) public method.
+To get the active layers back in diagram, use the [`getActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getActiveLayer) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -581,7 +581,7 @@ root.render(<App />);
 
 ### setActiveLayer
 
-Set the active layer by using the [`setActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#setActiveLayer) public method.
+Set the active layer by using the [`setActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram/#setActiveLayer) public method.
 
 The following code illustrates how to bring forward to layer.
 
