@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Gantt component | Syncfusion
-description:  Checkout and learn about Getting started with React Gantt component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Gantt Component | Syncfusion
+description: Checkout and learn about getting started with React Gantt component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting Started React Gantt Component
 
 This section explains you the steps required to create a simple Essential JS 2 Gantt in a React application and demonstrates its basic features.
 
