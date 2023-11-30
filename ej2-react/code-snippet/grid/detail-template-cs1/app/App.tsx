@@ -1,13 +1,13 @@
-
-
-import { ColumnDirective, ColumnsDirective, GridComponent, RowDataBoundEventArgs, DetailRow, Inject } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, DetailRow, Inject } from '@syncfusion/ej2-react-grids';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import { employeeData } from './datasource';
 
 function App() {
-  let grid: GridComponent;
-  const gridTemplate = (props): any => {
+  let grid: GridComponent | null;
+  let textBox:TextBoxComponent|null;
+  const gridTemplate = (props) => {
     const src = props.EmployeeID + ".png";
     return (
       <table className="detailtable" width="100%">
@@ -34,6 +34,7 @@ function App() {
             <td>
               <span style={{ fontWeight: "500" }}> Last Name:</span>
               {props.LastName}
+
             </td>
             <td>
               <span style={{ fontWeight: "500" }}> City:</span>
@@ -65,12 +66,11 @@ function App() {
     );
   }
   const expand = () => {
-    let inputElem: HTMLInputElement = (document.getElementsByClassName('rowindex')[0] as HTMLInputElement);
-    let rowIndex: number = parseInt(inputElem.value, 10);
-    grid.detailRowModule.expand(rowIndex);
+    (grid as GridComponent).detailRowModule.expand((textBox as TextBoxComponent).value);
   }
   return (<div>
-    <ButtonComponent onClick={expand}>Expand</ButtonComponent>
+    <TextBoxComponent ref={t =>textBox =t} placeholder='Enter the row Index' width="250px" floatLabelType='Auto'></TextBoxComponent>
+    <ButtonComponent id='sample' onClick={expand}>Expand</ButtonComponent>
     <GridComponent ref={g => grid = g} dataSource={employeeData} detailTemplate={gridTemplate} height='315'>
       <ColumnsDirective>
         <ColumnDirective field='FirstName' headerText='First Name' width='140' />
@@ -83,5 +83,3 @@ function App() {
   </div>)
 };
 export default App;
-
-

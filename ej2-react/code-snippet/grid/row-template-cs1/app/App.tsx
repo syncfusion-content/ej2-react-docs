@@ -1,11 +1,9 @@
-
-
-import { ColumnDirective, ColumnsDirective, GridComponent, RowDataBoundEventArgs, DetailRow, Inject } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, DetailRow, Inject } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { employeeData } from './datasource';
 
 function App() {
-  const gridTemplate = (props): any => {
+  const gridTemplate = (props) => {
     const src = props.EmployeeID + ".png";
     return (
       <table className="detailtable" width="100%">

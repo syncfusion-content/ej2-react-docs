@@ -166,7 +166,6 @@ Here, the local JSON data is assigned to Scheduler's dataSource.
 
 ```ts
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent } from '@syncfusion/ej2-react-schedule';
 
@@ -188,8 +187,7 @@ const App = () => {
     </ScheduleComponent>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById('schedule'));
-root.render(<App />);
+export default App;
 ```
 
 
@@ -250,7 +248,6 @@ Scheduler displays `week` view by default. To change the current view, define th
 
 ```ts
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import {
   ScheduleComponent, Day, Week, WorkWeek, Agenda, Month, Inject,
   ViewsDirective, ViewDirective
@@ -271,8 +268,7 @@ const App = () => {
       </ScheduleComponent>
     )
 };
-const root = ReactDOM.createRoot(document.getElementById('schedule'));
-root.render(<App />);
+export default App;
 ```
 
 ## Individual view customization

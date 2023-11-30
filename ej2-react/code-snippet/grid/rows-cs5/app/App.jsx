@@ -1,23 +1,61 @@
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, Edit } from '@syncfusion/ej2-react-grids';
+
+
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, Edit, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+
+
 function App() {
+    let grid;
     const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
-    const addRow = () => {
-        let instance = document.getElementById('Grid').ej2_instances[0];
-        instance.addRecord({ OrderID: 3232, CustomerID: 'ALKIT', EmployeeID: 6, Freight: 40, ShipName: 'Belgium' }, 2);
+    const generateOrderId = () => {
+        return Math.floor(10000 + Math.random() * 90000);
     };
-    return (<div><ButtonComponent onClick={addRow}>Add Row</ButtonComponent>
-    <GridComponent id="Grid" dataSource={data} allowPaging={true} editSettings={editOptions}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' width='100' textAlign="Right" isPrimaryKey={true}/>
-            <ColumnDirective field='CustomerID' width='100'/>
-            <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
-            <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"/>
-            <ColumnDirective field='ShipName' width='100'/>
-        </ColumnsDirective>
-        <Inject services={[Page, Edit]}/>
-    </GridComponent></div>);
+
+    const generateCustomerId = () => {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let result = '';
+        for (let i = 0; i < 5; i++) {
+            result += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        return result;
+    };
+
+    const generateShipCity = () => {
+        const cities = ['London', 'Paris', 'New York', 'Tokyo', 'Berlin'];
+        return cities[Math.floor(Math.random() * cities.length)];
+    };
+
+    const generateFreight = () => {
+        return Math.random() * 100;
+    };
+
+    const generateShipName = () => {
+        const names = ['Que Delícia', 'Bueno Foods', 'Island Trading', 'Laughing Bacchus Winecellars'];
+        return names[Math.floor(Math.random() * names.length)];
+    };
+    const addRow = () => {
+        const newRecord = {
+            OrderID: generateOrderId(),
+            CustomerID: generateCustomerId(),
+            ShipCity: generateShipCity(),
+            Freight: generateFreight(),
+            ShipName: generateShipName()
+        };
+        grid.addRecord(newRecord, 0);
+    }
+    return (<div><ButtonComponent id='add' onClick={addRow}>Add New Row</ButtonComponent>
+        <GridComponent dataSource={data} ref={g => grid = g} editSettings={editOptions}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' width='100' textAlign="Right" isPrimaryKey={true} />
+                <ColumnDirective field='CustomerID' width='100' />
+                <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right" />
+                <ColumnDirective field='ShipName' width='100' />
+                <ColumnDirective field='ShipCity' width='100' textAlign="Right" />
+            </ColumnsDirective>
+            <Inject services={[Edit]} />
+        </GridComponent></div>)
+
 }
 export default App;

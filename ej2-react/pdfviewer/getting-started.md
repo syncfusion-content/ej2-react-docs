@@ -105,6 +105,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/ej2
 
 {% tabs %}
 {% highlight js tabtitle="JSX" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -132,8 +133,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="TSX" %}
+{% raw %} 
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -158,6 +161,7 @@ const rootElement = document.getElementById('sample')!;
 const root = ReactDOM.createRoot(rootElement);
 root.render(<App />);
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -173,13 +177,71 @@ Output will be appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/base-cs1-standalone/app/index.jsx %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+export function App() {
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+            style={{ 'height': '640px' }}>
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                   Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/base-cs1-standalone/app/index.tsx %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+export function App() {
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+            style={{ 'height': '640px' }}>
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                   Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/base-cs1-standalone/index.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Syncfusion React PDF Viewer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Essential JS 2 for React Components" />
+    <meta name="author" content="Syncfusion" />
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
+    <script src="systemjs.config.js"></script>
+</head>
+<body>
+        <div id='sample'>
+            <div id='loader'>Loading....</div>
+        </div>
+</body>
+</html>
 {% endhighlight %}
 {% endtabs %}
         

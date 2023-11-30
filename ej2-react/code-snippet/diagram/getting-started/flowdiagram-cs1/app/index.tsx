@@ -94,9 +94,11 @@ export default function App() {
       sourceID: "node3",
       targetID: "node6",
       annotations: [{ content: "No" }],
+      type: 'Orthogonal',
+
       segments: [
-        { length: 30, direction: "Right" },
-        { length: 300, direction: "Bottom" }
+        { type: 'Orthogonal', length: 50, direction: "Right" },
+        { type: 'Orthogonal', length: 300, direction: "Bottom" }
       ]
     },
     {
@@ -108,9 +110,10 @@ export default function App() {
       id: "connector6",
       sourceID: "node5",
       targetID: "node3",
+      type: 'Orthogonal',
       segments: [
-        { length: 30, direction: "Left" },
-        { length: 200, direction: "Top" }
+        { length: 50, type: 'Orthogonal',direction: "Left" },
+        { length: 200, type: 'Orthogonal',direction: "Top" }
       ]
     }
   ];
@@ -129,6 +132,7 @@ export default function App() {
       }}
       getConnectorDefaults={(obj: ConnectorModel): ConnectorModel => {
         obj.type = "Orthogonal";
+        obj.targetDecorator = { shape: 'Arrow', width: 10, height: 10 };
         return obj;
       }}
     />

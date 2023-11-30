@@ -63,8 +63,6 @@ Modify the `serviceUrl` property of the PDF viewer component with the accurate U
 
 {% raw %}
 
-```ts
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -91,7 +89,6 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
 {% endraw %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
@@ -101,8 +98,6 @@ root.render(<App />);
 In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
 
 {% raw %}
-
-```ts
 
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
@@ -138,7 +133,6 @@ return (<div>
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
 {% endraw %}
 
 ## Save PDF file to Database

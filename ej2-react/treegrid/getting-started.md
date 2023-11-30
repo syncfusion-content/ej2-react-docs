@@ -28,7 +28,7 @@ npm install -g create-react-app
 * To setup basic **React** sample use following commands.
 
 ```
-create-react-app quickstart --scripts-version=react-scripts-ts
+create-react-app quickstart --template typescript
 
 cd quickstart
 
