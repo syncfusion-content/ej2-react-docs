@@ -108,4 +108,4 @@ By default, Pager will be rendered at the bottom of the Grid. You can also rende
 
 ## See Also
 
-[Group with Paging](./grouping/grouping/#group-with-paging)
+[Group with Paging](./grouping/grouping#group-with-paging)
