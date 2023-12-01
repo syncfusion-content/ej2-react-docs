@@ -80,7 +80,7 @@ npm install @syncfusion/ej2-layouts –save
 
 You can create cards with a header in a specific structure. For adding header you need to create `div` element and add `e-card-header` class.
 
-* You can include heading inside the card header by adding an `div` element with `e-card-header-caption` class, and also content will be added by adding element with `e-card-content`. For detailed information, refer to the [Header and Content](./header-content).
+* You can include heading inside the card header by adding an `div` element with `e-card-header-caption` class, and also content will be added by adding element with `e-card-content`. For detailed information, refer to the [Header and Content](./header-content/).
 
      ```
        <div class = "e-card">                    --> Root Element
@@ -135,4 +135,4 @@ Output will be as follows:
 
 ## See Also
 
-* [How to add a header and content](./header-content)
+* [How to add a header and content](./header-content/)

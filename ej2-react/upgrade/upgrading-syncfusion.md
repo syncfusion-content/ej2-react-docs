@@ -32,4 +32,4 @@ Uninstall the trial version and install the fully licensed installer from the [L
 
 >Note: Starting with 2022 Volume 1 v20.1.0.47, all Syncfusion customers (evaluators and paid customers) who use Syncfusion installers or npm packages must generate and register the corresponding platform and version license key in your projects.
 
-For more information, please see the [Licensing section](https://ej2.syncfusion.com/react/documentation/licensing/overview).
+For more information, please see the [Licensing section](https://ej2.syncfusion.com/react/documentation/licensing/overview/).

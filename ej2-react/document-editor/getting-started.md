@@ -55,7 +55,7 @@ To know about server-side dependencies, please refer this [page](../document-edi
 
 ## Setup for Local Development
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app/) to setup the applications.
 To install `create-react-app` run the following command.
 
 ``` 
@@ -83,7 +83,7 @@ npm install
 
 ## Adding Syncfusion packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg/) public registry.
 You can choose the component that you want to install.
 
 To install Document Editor component, use the following command
@@ -141,7 +141,7 @@ export default App
 
 #### Run the DocumentEditor application
 
-The [`create-react-app`](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+The [`create-react-app`](https://github.com/facebookincubator/create-react-app/) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
 ```
 npm start
@@ -189,7 +189,7 @@ export default App
 
 #### Run the DocumentEditorContainer application
 
-The [`create-react-app`](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+The [`create-react-app`](https://github.com/facebookincubator/create-react-app/) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
 ```
 npm start

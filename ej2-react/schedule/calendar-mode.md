@@ -35,7 +35,7 @@ To make use of Islamic calendar in Scheduler, import the `Calendar` and `Islamic
 * timeZoneNames.json
 * ca-islamic.json
 
-> To know more information on, how to install the CLDR data, refer the [`Internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization#installing-cldr-data) topic.
+> To know more information on, how to install the CLDR data, refer the [`Internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization/#installing-cldr-data) topic.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

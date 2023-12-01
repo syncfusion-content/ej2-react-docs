@@ -63,6 +63,8 @@ npm start
 
 ```
 
+</div>
+
 ## Adding syncfusion packages
 
 All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.

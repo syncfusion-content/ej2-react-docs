@@ -366,10 +366,10 @@ npm start
 
 ## See Also
 
-* [How to customize treeview as accordion](./how-to/accordion-tree)
+* [How to customize treeview as accordion](./how-to/accordion-tree/)
 
-* [How to set tooltip for treeview nodes](./how-to/set-tool-tip-for-tree-nodes)
+* [How to set tooltip for treeview nodes](./how-to/set-tool-tip-for-tree-nodes/)
 
-* [How to filter nodes in treeview](./how-to/filtering-tree-nodes)
+* [How to filter nodes in treeview](./how-to/filtering-tree-nodes/)
 
-* [How to get all the child nodes through parentID](./how-to/get-all-child-nodes)
+* [How to get all the child nodes through parentID](./how-to/get-all-child-nodes/)

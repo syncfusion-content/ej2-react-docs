@@ -55,4 +55,4 @@ Default [`expandMode`](https://ej2.syncfusion.com/react/documentation/api/accord
 
 ## See Also
 
-* [How to keep single pane open always](./how-to/to-keep-single-pane-open-always)
+* [How to keep single pane open always](./how-to/to-keep-single-pane-open-always/)
