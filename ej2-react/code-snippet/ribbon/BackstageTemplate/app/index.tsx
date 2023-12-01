@@ -6,7 +6,7 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 
 function App() {
     let ribbonEle: HTMLElement | null = null;
-    useEffect(()=>{
+    React.useEffect(()=>{
         ribbonEle = document.getElementById('ribbon') as HTMLElement;
         const backstageButton = document.querySelector('.e-ribbon-backstage') as HTMLElement;
         if (backstageButton) {

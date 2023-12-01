@@ -51,7 +51,7 @@ npm start
 
 To set-up a React application in JavaScript environment, run the following command.
 
-<div class='tsx'>
+<div class='jsx'>
 
 ```
 npx create-react-app my-app
@@ -61,6 +61,9 @@ cd my-app
 npm start
 
 ```
+
+</div>
+
 ## Adding Syncfusion packages
 
 All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.

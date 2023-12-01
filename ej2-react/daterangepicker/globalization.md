@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Globalization is the combination of internalization and localization. You can adapt the component to various languages by parsing and formatting the date or number [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) and also add culture specific customization and translation to the text [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization).
 
-By default, DateRangePicker date format and meridian names are specific to the `American English` culture. It utilizes the [`Essential JavaScript 2 Internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load the culture specific CLDR JSON data. To go with the different culture other than `English`, follow the below steps.
+By default, DateRangePicker date format and meridian names are specific to the `American English` culture. It utilizes the [`Essential JavaScript 2 Internationalization`](http://ej2.syncfusion.com/documentation/common/internationalization/) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load the culture specific CLDR JSON data. To go with the different culture other than `English`, follow the below steps.
 
 * Install the `CLDR-Data` package by using the below command (it installs all the CLDR JSON data). To known about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
@@ -32,7 +32,7 @@ Once the package installed, you can find the culture specific JSON data under th
 
 * Now import the installed CLDR JSON data into the `app.ts` file.
 
-* Now use the [`loadCldr`](https://ej2.syncfusion.com/documentation/common/internationalization#cldr-data-dependencies)
+* Now use the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/internationalization#cldr-data-dependencies)
 method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
 * DateRangePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the DateRangePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
@@ -63,7 +63,7 @@ loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
 
 ```
 
-> The `Localization` library allows you to localize default text content of the DateRangePicker. The DateRangePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#locale) value and translation object.
+> The `Localization` library allows you to localize default text content of the DateRangePicker. The DateRangePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#locale) value and translation object.
 
 Locale keywords |Text
 -----|-----
@@ -192,9 +192,9 @@ The following example demonstrates the DateRangePicker in `German` culture.
 
 ## Right-To-Left
 
-The DateRangePicker supports right-to-left functionality for languages like Arabic, Hebrew, etc. To display the text in the right-to-left direction, use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#enablertl) property.
+The DateRangePicker supports right-to-left functionality for languages like Arabic, Hebrew, etc. To display the text in the right-to-left direction, use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#enablertl) property.
 
-The following code example demonstrates the DateRangePicker component in `Hebrew` culture and also explains how to set the localized text to the placeholder using [`load`](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) method of [L10n](https://ej2.syncfusion.com/documentation/api/base/l10n/) class.
+The following code example demonstrates the DateRangePicker component in `Hebrew` culture and also explains how to set the localized text to the placeholder using [`load`](http://ej2.syncfusion.com/documentation/api/base/l10n#load) method of [L10n](http://ej2.syncfusion.com/documentation/api/base/l10n/) class.
 
 `[Class-component]`
 
@@ -275,11 +275,11 @@ The following code example demonstrates the DateRangePicker component in `Hebrew
 Date format is a way of representing the start date, end date strings in different string format in the textbox.
 
 By default, the DateRangePicker's start and end date string format is based on the culture. You can also set the own
-custom format by using the [`format`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#format) property.
+custom format by using the [`format`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#format) property.
 
 >Once the date format property has been defined it will be common to all the cultures.
 
-To know more about the date format standards, refer to the [Internationalization Date Format](https://ej2.syncfusion.com/documentation/common/internationalization) section.
+To know more about the date format standards, refer to the [Internationalization Date Format](http://ej2.syncfusion.com/documentation/base/internationalization/) section.
 
 The following example demonstrates the DateRangePicker with the custom format (`yyyy-MM-dd`). Also, here the separator of the date values is changed to string "to".
 
