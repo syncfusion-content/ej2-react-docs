@@ -17,8 +17,8 @@ export default class App extends React.Component<{}, {}>{
         this.dm.executeQuery(new Query())
       .then((e: ReturnOption) => {
         this.setState({
-          items: (e.result as object[]).map((row: object) => (
-            <Row key={row.OrderID} {...row} />
+          items: (e.result as object[]).map((row: object,index:number) => (
+            <Row key={index} {...row} />
           ))
         });
       });
@@ -35,8 +35,8 @@ export default class App extends React.Component<{}, {}>{
         this.dm.executeQuery(new Query())
             .then((e: ReturnOption) => {
                 this.setState({
-                    items: (e.result as object[]).map((row: object) => (
-                        <Row key={row.OrderID} {...row} />
+                    items: (e.result as object[]).map((row: object,index:number) => (
+                        <Row key={index} {...row} />
                       ))
                 });
             });

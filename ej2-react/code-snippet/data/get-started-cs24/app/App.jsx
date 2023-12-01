@@ -1,14 +1,16 @@
 import { getValue } from '@syncfusion/ej2-base';
-import { DataManager, ODataAdaptor, Query } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { AggregateRow } from './aggregateTemplate';
 import { Row } from './rowTemplate';
-const SERVICE_URI = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders';
+const SERVICE_URI = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
 export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = { items: [], aggregates: [] };
-        new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor })
+    }
+    componentDidMount() {
+        new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor() })
             .executeQuery(new Query().take(5).requiresCount().aggregate('min', 'EmployeeID'))
             .then((e) => {
                 const agg = { min: e.aggregates['EmployeeID - min'] };

@@ -20,6 +20,8 @@ function App() {
                 "Upload" : "Télécharger",
                 "cancel": "Annuler",
                 "delete": "Supprimer le fichier",
+                "totalFiles": "Total des fichiers",
+                "size": "taille",
                 "dropFilesHint" : "ou Déposer des fichiers ici",
                 "inProgress": "Téléchargement",
                 "invalidFileType" : "Le type de fichier n'est pas autorisé",

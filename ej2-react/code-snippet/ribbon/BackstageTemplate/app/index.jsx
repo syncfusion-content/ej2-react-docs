@@ -6,7 +6,7 @@ import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollect
 
 function App() {
     let ribbonEle = null;
-    useEffect(()=> {
+    React.useEffect(()=> {
         ribbonEle = document.getElementById('ribbon');
         const backstageButton = document.querySelector('.e-ribbon-backstage') ;
         if (backstageButton) {
@@ -67,6 +67,7 @@ function App() {
         </RibbonComponent>
     );
 }
+export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 
 {% endraw %}

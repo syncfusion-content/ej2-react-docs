@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <ul id="skeleton-list" class="e-card">
+      <ul id="skeleton-list" className="e-card">
           <li>
               <div className='cardProfile'>
                   <SkeletonComponent shape="Circle" width="40px" shimmerEffect='Pulse'></SkeletonComponent>

@@ -34,6 +34,8 @@ The following list of keys and its values which are used in the uploader compone
 | remove | To customize tooltip text for remove icon. |
 | cancel | To customize tooltip text for cancel icon. |
 | delete | To customize tooltip text for delete icon. |
+| totalFiles | To customize tooltip text for total files. |
+| size | To customize tooltip text for size. |
 
 `[Class-component]`
 
