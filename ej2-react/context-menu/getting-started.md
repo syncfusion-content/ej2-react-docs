@@ -50,9 +50,11 @@ npm start
 
 ```
 
+</div>
+
 To set-up a React application in JavaScript environment, run the following command.
 
-<div class='tsx'>
+<div class='jsx'>
 
 ```
 npx create-react-app my-app
@@ -62,6 +64,8 @@ cd my-app
 npm start
 
 ```
+
+</div>
 
 ## Adding Syncfusion packages
 
