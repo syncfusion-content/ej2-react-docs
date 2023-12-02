@@ -20,7 +20,7 @@ This article provides a step-by-step introduction to get started with the Syncfu
 
 The following list of dependencies are required to use the `Kanban` component in the application.
 
-```tsx
+```ts
 |-- @syncfusion/ej2-react-kanban
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
