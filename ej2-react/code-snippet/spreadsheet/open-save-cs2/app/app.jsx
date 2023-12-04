@@ -7,7 +7,7 @@ function App() {
     const spreadsheetRef = React.useRef(null);
     React.useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx'); // fetch the remote url
+            const response = await fetch('https://cdn.syncfusion.com/scripts/spreadsheet/Sample.xlsx'); // fetch the remote url
             const fileBlob = await response.blob(); // convert the excel file to blob
             const file = new File([fileBlob], 'Sample.xlsx'); //convert the blob into file
             let spreadsheet = spreadsheetRef.current;

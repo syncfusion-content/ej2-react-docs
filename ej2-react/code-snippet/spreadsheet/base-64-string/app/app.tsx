@@ -40,8 +40,8 @@ function App() {
     }
   return (
     <div className='control-section spreadsheet-control'>
-            <button className="e-btn" onClick={importBtn}>Import Base64</button>
-            <button className="e-btn" onClick={exportBtn}>Export as Base64</button>
+            <button className="e-btn custom-btn" onClick={importBtn}>Import Base64</button>
+            <button className="e-btn custom-btn" onClick={exportBtn}>Export as Base64</button>
                 <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open'  ref={spreadsheetRef} beforeSave={beforeSave} saveComplete={saveComplete} >
                     <SheetsDirective>
                         <SheetDirective name="Car Sales Report">
