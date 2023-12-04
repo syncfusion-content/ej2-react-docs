@@ -32,7 +32,7 @@ function App() {
   };
   return (
     <div>
-      <button className='e-btn' onClick={btnClick}>Insert Sheet</button>
+      <button className='e-btn custom-btn' onClick={btnClick}>Insert Sheet</button>
       <SpreadsheetComponent ref={spreadsheetRef}>
         <SheetsDirective>
           <SheetDirective name="Car Sales Report">
