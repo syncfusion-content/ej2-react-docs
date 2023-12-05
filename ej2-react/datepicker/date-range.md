@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Date range in React Datepicker component
 
-DatePicker provides an option to select a date value within a specified range by using the [`min`](https://ej2.syncfusion.com/react/documentation/api/datepicker#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/datepicker#max) properties. Always the min value has to be lesser than the max value.
+DatePicker provides an option to select a date value within a specified range by using the [`min`](https://ej2.syncfusion.com/react/documentation/api/datepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/datepicker/#max) properties. Always the min value has to be lesser than the max value.
 
 When the min and max properties are configured and the selected date value is out-of-range or invalid, then the model value will be set to `out of range` date value or `null` respectively with highlighted `error` class to indicates the date is out of range or invalid.
 
