@@ -37,33 +37,27 @@ To install `create-react-app` run the following command.
 npm install -g create-react-app
 ```
 
-Start a new project using create-react-app command as follows
-
-<div class='tsx'>
+To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
+npx create-react-app my-app --template typescript
 
-create-react-app quickstart --scripts-version=react-scripts-ts
+cd my-app
 
-cd quickstart
+npm start
 
 ```
 
-</div>
-
-<div class='jsx'>
+To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
+npx create-react-app my-app
 
-create-react-app quickstart
+cd my-app
 
-cd quickstart
+npm start
 
 ```
-
-</div>
-
-> 'react-scripts-ts' is used for creating React app with typescript.
 
 ## Adding Syncfusion packages
 
@@ -136,32 +130,6 @@ function App() {
     );
 }
 export default App;  
-```
-
-```ts
-import { ContextMenuComponent } from '@syncfusion/ej2-react-navigations';
-import * as React from 'react';
-import './App.css';
-function App() {
-    let menuItems = [
-        {
-            text: 'Cut'
-        },
-        {
-            text: 'Copy'
-        },
-        {
-            text: 'Paste'
-        }
-    ];
-    return (
-    // specifies the tag to render the ContextMenu component
-    <div>
-        <div id="target">Right click / Touch hold to open the ContextMenu</div>
-        <ContextMenuComponent target="#target" items={menuItems}/>
-      </div>);
-}
-export default App;
 ```
 
 ## Run the application

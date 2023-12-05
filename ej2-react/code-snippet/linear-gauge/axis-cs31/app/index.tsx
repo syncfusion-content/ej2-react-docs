@@ -8,9 +8,9 @@ import { Annotations, AnnotationsDirective, AnnotationDirective, LinearGaugeComp
 
 export function App(){
     function clickHandler(){
-       gaugeInstance?.setAnnotationValue(0, '50', 50);
+       gaugeInstance.setAnnotationValue(0, '50', 50);
     }
-    let gaugeInstance : LinearGaugeComponent | null;
+    let gaugeInstance : LinearGaugeComponent;
     return (<div>
     <ButtonComponent onClick= { clickHandler }>Click</ButtonComponent>
     <LinearGaugeComponent ref={g => gaugeInstance = g}>

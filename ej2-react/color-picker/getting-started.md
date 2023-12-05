@@ -30,29 +30,31 @@ The following list of dependencies are required to use the ColorPicker component
 You can use [Create-react-app](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-    ```bash
-      npm install -g create-react-app
-    ```
+```bash
+    npm install -g create-react-app
+```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-     <div class='tsx'>
-      ```
-       create-react-app quickstart --scripts-version=react-scripts-ts
-       cd quickstart
-      ```
+```bash
+npx create-react-app my-app --template typescript
 
-     </div>
+cd my-app
 
-     <div class='jsx'>
+npm start
 
-     ```
-     create-react-app quickstart
-     cd quickstart
-     ```
-    </div>
+```
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 
 ## Adding Syncfusion packages
 
@@ -65,29 +67,6 @@ To install ColorPicker component, use the following command
 npm install @syncfusion/ej2-react-inputs –save
 ```
 
-## Adding ColorPicker to the application
-
-Now, you can start adding ColorPicker component to the application. We have added ColorPicker component in `src/App.tsx` file using following code.
-
-
-
-```ts
-import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-
-// initializes ColorPicker component
-ReactDOM.render(<ColorPickerComponent/>);
-
-```
-
-```ts
-import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-// initializes ColorPicker component
-ReactDOM.render(<ColorPickerComponent />);
-```
 
 ## Adding CSS reference
 
@@ -99,6 +78,31 @@ Import the ColorPicker component's required CSS references as follows in `src/Ap
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+```
+
+## Adding ColorPicker to the application
+
+Now, you can start adding ColorPicker component to the application. We have added ColorPicker component in `src/App.tsx` file using following code.
+
+```ts
+import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import './App.css';
+// initializes ColorPicker component
+function App() {
+    return ( <div style={{marginTop: '150px'}}>
+        <div id='container'>
+        <div className='wrap'>
+            <h4>Choose Color</h4>
+            <ColorPickerComponent id='color-picker'/>
+        </div>
+        </div>
+        </div>
+    );
+};
+export default App;
 ```
 
 ## Run the application

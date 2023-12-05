@@ -11,7 +11,7 @@ function App() {
     const show = () => {
         if (grid) {
             /* give X and Y axis */
-            grid.columnChooserModule.openColumnChooser(200, 50);
+            grid.columnChooserModule.openColumnChooser(100, 40);
         }
     }
     return <div>

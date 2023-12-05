@@ -29,7 +29,8 @@ As a backward compatibility to create older format SFDT files, refer the followi
 {% tabs %} 
 {% highlight c# tabtitle="Component Declaration"%}
 <DocumentEditorContainerComponent></DocumentEditorContainerComponent>
-{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 </td>
 <td>
 {% tabs %} 

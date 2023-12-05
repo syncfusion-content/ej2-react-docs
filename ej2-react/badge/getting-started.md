@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-The following section explains how to create a simple badge component using styles and badge’s basic usage.
+The following section explains how to create a simple Badge component using styles and Badge’s basic usage.
 
 ## Dependencies
 
@@ -20,68 +20,81 @@ Install the following required dependent package to render the `Badge` component
 |-- @syncfusion/ej2-notifications
 ```
 
-## Set up your development environment
+## Installation and configuration
 
 You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-    ```bash
-      npm install -g create-react-app
-    ```
+```bash
+npm install -g create-react-app
+```
 
-Start a new project using create-react-app command as follows
-     <div class='tsx'>
+To set-up a React application in TypeScript environment, run the following command.
 
-    ```
-       create-react-app quickstart --scripts-version=react-scripts-ts
-       cd quickstart
-    ```
-     </div>
-     <div class='jsx'>
-    ```
-      create-react-app quickstart
-      cd quickstart
-    ```
-    </div>
+<div class='tsx'>
 
-Install the below required dependency package in order to use the `Badge` component in your application.
+```
+npx create-react-app my-app --template typescript
 
-      ```bash
-         npm install @syncfusion/ej2-notifications --save
-      ```
+cd my-app
 
-* Badge CSS files are available in the `ej2-notifications` package folder. Import the Badge component's required CSS references as follows in `src/App.css`.
+npm start
+```
 
-      ```css
-        @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-        @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-      ```
+</div>
 
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+```
+
+## Adding Syncfusion packages
+
+All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+
+To install `Badge` component, use the following command
+
+```bash
+npm install @syncfusion/ej2-notifications --save
+```
+
+## Adding CSS Reference
+
+Badge CSS files are available in the `ej2-notifications` package folder. Import the Badge component's required CSS references as follows in `src/App.css`.
+
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
+```
 > We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
 
 ## Initialize the Badge Component
 
 Add an HTML span element with `e-badge` class inside any wrapper element (h1) into your return method.
 
-
-
 ```ts
-
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import './App.css';
 
 function App() {
   return (
-      <span>Badge Component <span className="e-badge">New</span></span>
+    <h1>Badge Component <span className="e-badge e-badge-primary">New</span></h1>
   );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById("element"));
 ```
 
+## Run the application
 
-
-* Run the application in the browser using the following command.
+Run the application in the browser using the following command:
 
 ```
 npm start

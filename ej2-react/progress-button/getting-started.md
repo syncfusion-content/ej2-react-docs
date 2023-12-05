@@ -31,26 +31,31 @@ You can use [`create-react-app`](https://github.com/facebookincubator/create-rea
 applications.
 To install `create-react-app` run the following command.
 
-     ```bash
-       npm install -g create-react-app
-     ```
+```bash
+  npm install -g create-react-app
+```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-       <div class='tsx'>
-       ```
-       create-react-app quickstart --scripts-version=react-scripts-ts
-       cd quickstart
-       ```
-      </div>
-     <div class='jsx'>
-     ```
-     create-react-app quickstart
-     cd quickstart
-     ```
-    </div>
+```bash
+npx create-react-app my-app --template typescript
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+cd my-app
+
+npm start
+
+```
+
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 
 ## Adding syncfusion packages
 
@@ -61,48 +66,10 @@ You can choose the component that you want to install.
 To install ProgressButton component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-splitbuttons –save
+npm install @syncfusion/ej2-react-splitbuttons --save
 
 ```
 
-## Adding ProgressButton component
-
-Now, you can start adding ProgressButton component in the application. For getting started, add the
-ProgressButton component in `src/App.tsx` file using following code.
-
-Add the below code in the `src/App.tsx` to initialize the ProgressButton.
-
-
-
-```ts
-import { ProgressButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
-import * as React from 'react';
-import './App.css';
-
-// To render ProgressButton.
-function App() {
-
-  return (
-    <div>
-      <ProgressButtonComponent content='Spin Left' />
-    </div>
-  );
-}
-export default App;
-```
-
-```ts
-import { ProgressButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
-import * as React from 'react';
-import './App.css';
-// To render ProgressButton.
-function App() {
-    return (<div>
-      <ProgressButtonComponent content='Spin Left'/>
-    </div>);
-}
-export default App;
-```
 
 ## Adding CSS reference
 
@@ -117,6 +84,29 @@ Import the ProgressButton component required CSS references as follows in `src/A
 
 ```
 
+## Adding ProgressButton component
+
+Now, you can start adding ProgressButton component in the application. For getting started, add the
+ProgressButton component in `src/App.tsx` file using following code.
+
+Add the below code in the `src/App.tsx` to initialize the ProgressButton.
+
+```ts
+import { ProgressButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
+import * as React from 'react';
+import './App.css';
+
+// To render ProgressButton.
+function App() {
+
+  return (<div style={{marginTop: '150px'}}>
+      <ProgressButtonComponent content='Spin Left'/>
+    </div>
+  );
+}
+export default App;
+```
+
 ## Run the application
 
 After completing the configuration required to render a basic ProgressButton, run the following command to
@@ -125,6 +115,8 @@ display the output in your default browser.
 ```
 npm start
 ```
+
+The following example shows a basic Progress button component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

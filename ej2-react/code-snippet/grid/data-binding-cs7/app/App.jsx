@@ -5,7 +5,7 @@ import { SerialNoAdaptor } from './SerialNoAdaptor';
 function App() {
     const data = new DataManager({
         adaptor: new SerialNoAdaptor,
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/'
+        url: 'https://services.syncfusion.com/react/production/api/Orders'
     });
     return <GridComponent dataSource={data} height={315}>
         <ColumnsDirective>

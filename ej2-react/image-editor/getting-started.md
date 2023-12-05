@@ -40,20 +40,27 @@ You can use [`Create-react-app`](https://github.com/facebook/create-react-app) t
     npm install -g create-react-app
    ```
 
-Start a new project using create-react-app command as follows,
+To set-up a React application in TypeScript environment, run the following command.
 
-   <div class='tsx'>
-    ```
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
-    </div>
-   <div class='jsx'>
-   ```
-    create-react-app quickstart
-    cd quickstart
-   ```
-   </div>
+```bash
+npx create-react-app my-app --template typescript
+
+cd my-app
+
+npm start
+
+```
+
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 
 ## Adding Syncfusion packages
 
@@ -64,33 +71,6 @@ To install Image Editor component, use the following command.
   ```bash
    npm install @syncfusion/ej2-react-image-editor --save
    ```
-
-> 'react-scripts-ts' is used for creating React app with typescript.
-
-## Adding Image Editor component to the Application
-
-To include the Image Editor component in your application import the `ImageEditorComponent` from `ej2-react-image-editor` package in `App.tsx`.
-
-Add the Image Editor component in application as shown in below code example.
-
-
-
-```ts
-import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-
-function App() {
-
-  return (
-      <div id="wrapperDiv">
-          <ImageEditorComponent/>
-      </div>
-  );
-}
-export default App;
-
-```
 
 ## Adding CSS Reference
 
@@ -104,6 +84,33 @@ Import the Image Editor component's required CSS references as follows in `src/A
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
+
+```
+
+## Adding Image Editor component to the Application
+
+To include the Image Editor component in your application import the `ImageEditorComponent` from `ej2-react-image-editor` package in `App.tsx`.
+
+Add the Image Editor component in application as shown in below code example.
+
+```ts
+import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './App.css';
+
+function App() {
+
+  return (
+      <div id="container" style={{ 
+        width:"550px",
+        height:"350px" 
+      }}>
+        <ImageEditorComponent />
+      </div>
+  );
+}
+export default App;
 
 ```
 

@@ -36,31 +36,27 @@ You can use [`Create-react-app`](https://github.com/facebook/create-react-app) t
 npm install -g create-react-app
 ```
 
-Start a new project using create-react-app command as follows,
-
-<div class='tsx'>
+To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
+npx create-react-app my-app --template typescript
 
-create-react-app quickstart --scripts-version=react-scripts-ts
+cd my-app
 
-cd quickstart
+npm start
 
 ```
 
-</div>
-
-<div class='jsx'>
+To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
+npx create-react-app my-app
 
-create-react-app quickstart
+cd my-app
 
-cd quickstart
+npm start
 
 ```
-
-</div>
 
 ## Adding Syncfusion packages
 
@@ -72,7 +68,21 @@ To install Query Builder component, use the following command.
 npm install @syncfusion/ej2-react-querybuilder --save
 ```
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+## Adding CSS Reference
+
+Import the Button component's required CSS references as follows in `src/App.css`.
+
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-querybuilder/styles/material.css";
+```
 
 ## Adding Query Builder component to the Application
 
@@ -81,11 +91,11 @@ To include the Query Builder component in your application import the `QueryBui
 Add the Query Builder component in application as shown in below code example.
 
 
-
 ```ts
 import { ColumnsModel, QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import './App.css';
 
 function App() {
 
@@ -106,38 +116,12 @@ function App() {
 export default App;
 ```
 
-```ts
-import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
-import * as React from 'react';
-function App() {
-    let columnData = [
-        { field: 'EmployeeID', label: 'EmployeeID', type: 'number' },
-        { field: 'FirstName', label: 'FirstName', type: 'string' },
-        { field: 'TitleOfCourtesy', label: 'Title Of Courtesy', type: 'boolean', values: ['Mr.', 'Mrs.'] },
-        { field: 'Title', label: 'Title', type: 'string' },
-        { field: 'HireDate', label: 'HireDate', type: 'date', format: 'dd/MM/yyyy' },
-        { field: 'Country', label: 'Country', type: 'string' },
-        { field: 'City', label: 'City', type: 'string' }
-    ];
-    return (<QueryBuilderComponent width='100%' columns={columnData}/>);
-}
-export default App;
+## Run the application
+
+Run the application in the browser using the following command:
+
 ```
-
-## Adding CSS Reference
-
-Import the Button component's required CSS references as follows in `src/App.css`.
-
-```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-querybuilder/styles/material.css";
+npm start
 ```
 
 The following example shows a basic Query Builder component.

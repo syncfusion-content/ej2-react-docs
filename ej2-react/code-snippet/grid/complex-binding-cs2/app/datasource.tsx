@@ -1,11 +1,13 @@
 export let complexData: Object[] = [{
     'EmployeeID': 1,
     'Name': {
-    'LastName': 'Davolio',
-    'FirstName': 'Nancy'},
+        'LastName': 'Davolio',
+        'FirstName': 'Nancy'
+    },
     'Names': [{
-        'LastName' : 'Davolio',
-        'FirstName': 'Nancy'}],
+        'LastName': 'Davolio',
+        'FirstName': 'Nancy'
+    }],
     'Title': 'Sales Representative',
     'TitleOfCourtesy': 'Ms.',
     'BirthDate': new Date(-664743600000),
@@ -26,12 +28,14 @@ export let complexData: Object[] = [{
 },
 {
     'EmployeeID': 2,
-    'Name':{
-    'LastName': 'Fuller',
-    'FirstName': 'Andrew'},
+    'Name': {
+        'LastName': 'Fuller',
+        'FirstName': 'Andrew'
+    },
     'Names': [{
-    'LastName': 'Fuller',
-    'FirstName': 'Andrew'}],
+        'LastName': 'Fuller',
+        'FirstName': 'Andrew'
+    }],
     'Title': 'Vice President, Sales',
     'TitleOfCourtesy': 'Dr.',
     'BirthDate': new Date(-563828400000),
@@ -54,12 +58,14 @@ export let complexData: Object[] = [{
 },
 {
     'EmployeeID': 3,
-    'Name':{
-    'LastName': 'Leverling',
-    'FirstName': 'Janet'},
+    'Name': {
+        'LastName': 'Leverling',
+        'FirstName': 'Janet'
+    },
     'Names': [{
         'LastName': 'Leverling',
-        'FirstName': 'Janet'}],
+        'FirstName': 'Janet'
+    }],
     'Title': 'Sales Representative',
     'TitleOfCourtesy': 'Ms.',
     'BirthDate': new Date(-200088000000),
@@ -81,12 +87,14 @@ export let complexData: Object[] = [{
 },
 {
     'EmployeeID': 4,
-    'Name':{
-    'LastName': 'Peacock',
-    'FirstName': 'Margaret'},
+    'Name': {
+        'LastName': 'Peacock',
+        'FirstName': 'Margaret'
+    },
     'Names': [{
         'LastName': 'Peacock',
-        'FirstName': 'Margaret'}],
+        'FirstName': 'Margaret'
+    }],
     'Title': 'Sales Representative',
     'TitleOfCourtesy': 'Mrs.',
     'BirthDate': new Date(-1018814400000),
@@ -107,12 +115,14 @@ export let complexData: Object[] = [{
 },
 {
     'EmployeeID': 5,
-    'Name':{
-    'LastName': 'Buchanan',
-    'FirstName': 'Steven'},
+    'Name': {
+        'LastName': 'Buchanan',
+        'FirstName': 'Steven'
+    },
     'Names': [{
         'LastName': 'Buchanan',
-        'FirstName': 'Steven'}],
+        'FirstName': 'Steven'
+    }],
     'Title': 'Sales Manager',
     'TitleOfCourtesy': 'Mr.',
     'BirthDate': new Date(-468010800000),
@@ -135,9 +145,14 @@ export let complexData: Object[] = [{
 },
 {
     'EmployeeID': 6,
-    'Name':{
-    'LastName': 'Suyama',
-    'FirstName': 'Michael'},
+    'Name': {
+        'LastName': 'Suyama',
+        'FirstName': 'Michael'
+    },
+    'Names': [{
+        'LastName': 'Leverling',
+        'FirstName': 'Janet'
+    }],
     'Title': 'Sales Representative',
     'TitleOfCourtesy': 'Mr.',
     'BirthDate': new Date(-205185600000),
@@ -159,9 +174,14 @@ export let complexData: Object[] = [{
 },
 {
     'EmployeeID': 7,
-    'Name':{
-    'LastName': 'King',
-    'FirstName': 'Robert'},
+    'Name': {
+        'LastName': 'King',
+        'FirstName': 'Robert'
+    },
+    'Names': [{
+        'LastName': 'Peacock',
+        'FirstName': 'Margaret'
+    }],
     'Title': 'Sales Representative',
     'TitleOfCourtesy': 'Mr.',
     'BirthDate': new Date(-302731200000),
@@ -184,8 +204,13 @@ export let complexData: Object[] = [{
 {
     'EmployeeID': 8,
     'Name': {
-    'LastName': 'Callahan',
-    'FirstName': 'Laura'},
+        'LastName': 'Callahan',
+        'FirstName': 'Laura'
+    },
+    'Names': [{
+        'LastName': 'Fuller',
+        'FirstName': 'Andrew'
+    }],
     'Title': 'Inside Sales Coordinator',
     'TitleOfCourtesy': 'Ms.',
     'BirthDate': new Date(-377982000000),
@@ -207,8 +232,13 @@ export let complexData: Object[] = [{
 {
     'EmployeeID': 9,
     'Name': {
-    'LastName': 'Dodsworth',
-    'FirstName': 'Anne'},
+        'LastName': 'Dodsworth',
+        'FirstName': 'Anne'
+    },
+    'Names': [{
+        'LastName': 'Fuller',
+        'FirstName': 'Andrew'
+    }],
     'Title': 'Sales Representative',
     'TitleOfCourtesy': 'Ms.',
     'BirthDate': new Date(-123966000000),

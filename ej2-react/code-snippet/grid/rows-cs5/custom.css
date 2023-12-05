@@ -1,15 +1,3 @@
-.below-30 {
-    background-color: orangered;
-  }
-  
-  .below-80 {
-    background-color: yellow;
-  } 
-  
-  .above-80 {
-    background-color: greenyellow
-  }
-  
-  .e-attr {
-    background: #d7f0f4;
-  }
+#add {
+  background-color: aquamarine;
+}

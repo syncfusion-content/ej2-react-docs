@@ -21,52 +21,64 @@ The Avatar Component is pure CSS component so no specific dependencies to render
 You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
-          ```bash
-           npm install -g create-react-app
-          ```
+```bash
+npm install -g create-react-app
+```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-    <div class='tsx'>
+```bash
+npx create-react-app my-app --template typescript
 
-     ```
-     create-react-app quickstart --scripts-version=react-scripts-ts
-     cd quickstart
-    ```
+cd my-app
 
-    <div class='jsx'>
+npm start
+```
 
-    ```
-    create-react-app quickstart
-    cd quickstart
-    ```
+To set-up a React application in JavaScript environment, run the following command.
 
-Install the below required dependency package in order to use the `Avatar` component in your application.
+```bash
+npx create-react-app my-app
 
-      ```bash
-      npm install @syncfusion/ej2-layouts --save
-      ```
+cd my-app
 
-* The Avatar CSS files are available in the `ej2-layouts` package folder. This can be referenced in your application using the following code.
+npm start
+```
 
-`[src/styles/styles.css]`
+## Adding Syncfusion packages
+
+All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+
+To install `Avatar` component, use the following command
+
+```bash
+npm install @syncfusion/ej2-layouts --save
+```
+
+## Adding CSS Reference
+
+The Avatar CSS files are available in the `ej2-layouts` package folder. This can be referenced in your application using the following code.
+
+`src/App.css`
 
 ```css
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 ```
 
 ## Adding a simple Avatar
 
-* Add the HTML `div` element with `e-avatar` class into your `index.html`.
+Add the HTML `div` element with `e-avatar` class into your `App.tsx`.
 
-`[src/index.html]`
-
-```
-  <div className="e-avatar">AJ</div>
+```bash
+<div className="e-avatar">AJ</div>
 ```
 
-```
+## Run the application
+
+Run the application in the browser using the following command:
+
+```bash
 npm start
 ```
 
@@ -81,7 +93,7 @@ Output will be as follows:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/avatar/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/avatar/getting-started-cs1" %}
 
 ## See Also
 

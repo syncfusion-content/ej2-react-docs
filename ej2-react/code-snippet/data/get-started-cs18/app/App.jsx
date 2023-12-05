@@ -1,14 +1,18 @@
 import { getValue } from '@syncfusion/ej2-base';
-import { DataManager, ODataAdaptor, Query } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { Row } from './rowTemplate';
-const SERVICE_URI = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders';
+
+const SERVICE_URI = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders';
+
 export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = { items: [] };
-        new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor })
-        .executeQuery(new Query().take(8))
+    }
+    componentDidMount() {
+        new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor() })
+        .executeQuery(new Query().select(['OrderID', 'CustomerID','EmployeeID']).take(8))
         .then((e) => {
             const res = e.result.map((row) => (
                 <Row key={row.OrderID} {...row} />

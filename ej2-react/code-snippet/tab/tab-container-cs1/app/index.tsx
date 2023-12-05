@@ -24,7 +24,6 @@ const ReactApp = () => {
     </TabComponent>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<ReactApp />);
 
-
+export default ReactApp;
+ReactDOM.render(<ReactApp />, document.getElementById("element"));

@@ -1,10 +1,10 @@
-import { DataManager } from '@syncfusion/ej2-data';
+import { DataManager,ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from "react";
-import './App.css';
-const SERVICE_URI = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/?$top=20';
+
+const SERVICE_URI = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
 export default class App extends React.Component {
-    data = new DataManager({ url: SERVICE_URI });
+    data = new DataManager({ url: SERVICE_URI , adaptor: new ODataV4Adaptor() });
     render() {
         return <GridComponent dataSource={this.data}>
                 <ColumnsDirective>

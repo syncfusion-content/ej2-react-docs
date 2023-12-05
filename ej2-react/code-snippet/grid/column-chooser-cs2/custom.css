@@ -1,0 +1,13 @@
+.e-grid .customcss {
+  background-color: #ecedee;
+}
+
+.e-grid .e-dialog.e-ccdlg {
+  height: 530px;
+  width: 200px;
+}
+
+.e-grid .e-ccdlg .e-cc-contentdiv {
+  height: 200px;
+  width: 230px;
+}

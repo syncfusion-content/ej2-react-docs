@@ -36,7 +36,7 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs2-standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs2" %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs2" %}
@@ -58,7 +58,7 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs2-standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs2" %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs2" %}

@@ -578,10 +578,10 @@ In the server-side application, an **ExpandoObject** type data source is availab
 
   ```
 
-To bind the data source, set its class **PivotExpandoData** to **TValue** of the **PivotEngine** class.
+To bind the data source, set its model type as **ExpandoObject** to **TValue** of the **PivotEngine** class.
 
   ```csharp
-  private PivotEngine<DataSource.PivotExpandoData> PivotEngine = new PivotEngine<DataSource.PivotExpandoData>();
+  private PivotEngine<ExpandoObject> PivotEngine = new PivotEngine<ExpandoObject>();
 
   ```
 

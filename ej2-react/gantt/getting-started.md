@@ -46,8 +46,6 @@ To install create-react-app run the following command.
 
     create-react-app quickstart --scripts-version=react-scripts-ts
 
-    cd quickstart
-
     ```
 
     </div>
@@ -55,8 +53,6 @@ To install create-react-app run the following command.
     <div class='jsx'>
 
     ```
-
-    create-react-app quickstart
 
     cd quickstart
 
@@ -205,7 +201,7 @@ Bind data with the Gantt control by using the [`dataSource`](https://ej2.syncfus
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Essential JS 2 for React Components" />
     <meta name="author" content="Syncfusion" />
-    <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.syncfusion.com/ej2/23.1.44/material.css" rel="stylesheet" type="text/css"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>

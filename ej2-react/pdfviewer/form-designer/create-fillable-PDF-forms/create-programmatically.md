@@ -27,10 +27,105 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/addformfield-cs1/app/index.jsx %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function documentLoaded(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.addFormField("Textbox", { name: "First Name", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Middle Name", bounds: { X: 338, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'Last Name',bounds: { X: 530, Y: 229, Width: 150, Height: 24 },});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 148, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 292, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Month',bounds: { X: 146, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Date',bounds: { X: 193, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Year',bounds: { X: 242, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Agree',bounds: { X: 148, Y: 408, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Do Not Agree',bounds: { X: 148, Y: 466, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Text Message',bounds: { X: 56, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Email',bounds: { X: 242, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Appointment Reminder',bounds: { X: 56, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Request for Customerservice',bounds: { X: 56, Y: 778, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Information Billing',bounds: { X: 290, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Email',bounds: { X: 146, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Phone',bounds: { X: 482, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('SignatureField', {name: 'Sign',bounds: { X: 57, Y: 923, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Month',bounds: { X: 386, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Date',bounds: { X: 434, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Year',bounds: { X: 482, Y: 923, Width: 35, Height: 24 },});
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        documentLoad={documentLoaded}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/addformfield-cs1/app/index.tsx %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields} from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  function documentLoaded(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Textbox", bounds: { X: 146, Y: 229, Width: 150, Height: 24 } });
+    viewer.formDesignerModule.addFormField("Textbox", { name: "First Name", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Middle Name", bounds: { X: 338, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'Last Name',bounds: { X: 530, Y: 229, Width: 150, Height: 24 },});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 148, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 292, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Month',bounds: { X: 146, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Date',bounds: { X: 193, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Year',bounds: { X: 242, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Agree',bounds: { X: 148, Y: 408, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Do Not Agree',bounds: { X: 148, Y: 466, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Text Message',bounds: { X: 56, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Email',bounds: { X: 242, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Appointment Reminder',bounds: { X: 56, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Request for Customerservice',bounds: { X: 56, Y: 778, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Information Billing',bounds: { X: 290, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Email',bounds: { X: 146, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Phone',bounds: { X: 482, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('SignatureField', {name: 'Sign',bounds: { X: 57, Y: 923, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Month',bounds: { X: 386, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Date',bounds: { X: 434, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Year',bounds: { X: 482, Y: 923, Width: 35, Height: 24 },});
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        documentLoad={documentLoaded}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,10 +140,106 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/updateformfield-cs1/app/index.jsx %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  function documentLoaded() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.addFormField("Textbox", { name: "First Name", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Middle Name", bounds: { X: 338, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'Last Name',bounds: { X: 530, Y: 229, Width: 150, Height: 24 },});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 148, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 292, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Month',bounds: { X: 146, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Date',bounds: { X: 193, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Year',bounds: { X: 242, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Agree',bounds: { X: 148, Y: 408, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Do Not Agree',bounds: { X: 148, Y: 466, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Text Message',bounds: { X: 56, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Email',bounds: { X: 242, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Appointment Reminder',bounds: { X: 56, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Request for Customerservice',bounds: { X: 56, Y: 778, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Information Billing',bounds: { X: 290, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Email',bounds: { X: 146, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Phone',bounds: { X: 482, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('SignatureField', {name: 'Sign',bounds: { X: 57, Y: 923, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Month',bounds: { X: 386, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Date',bounds: { X: 434, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Year',bounds: { X: 482, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.updateFormField(viewer.formFieldCollections[0], { backgroundColor: 'red' });
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        documentLoad={documentLoaded}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/updateformfield-cs1/app/index.tsx %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  function documentLoaded() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.addFormField("Textbox", { name: "First Name", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Middle Name", bounds: { X: 338, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'Last Name',bounds: { X: 530, Y: 229, Width: 150, Height: 24 },});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 148, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 292, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Month',bounds: { X: 146, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Date',bounds: { X: 193, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Year',bounds: { X: 242, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Agree',bounds: { X: 148, Y: 408, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Do Not Agree',bounds: { X: 148, Y: 466, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Text Message',bounds: { X: 56, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Email',bounds: { X: 242, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Appointment Reminder',bounds: { X: 56, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Request for Customerservice',bounds: { X: 56, Y: 778, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Information Billing',bounds: { X: 290, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Email',bounds: { X: 146, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Phone',bounds: { X: 482, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('SignatureField', {name: 'Sign',bounds: { X: 57, Y: 923, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Month',bounds: { X: 386, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Date',bounds: { X: 434, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Year',bounds: { X: 482, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.updateFormField(viewer.formFieldCollections[0], { backgroundColor: 'red' });
+  }
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        documentLoad={documentLoaded}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,15 +254,113 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs1/app/index.jsx %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  function documentLoaded(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.addFormField("Textbox", { name: "First Name", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Middle Name", bounds: { X: 338, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'Last Name',bounds: { X: 530, Y: 229, Width: 150, Height: 24 },});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 148, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 292, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Month',bounds: { X: 146, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Date',bounds: { X: 193, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Year',bounds: { X: 242, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Agree',bounds: { X: 148, Y: 408, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Do Not Agree',bounds: { X: 148, Y: 466, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Text Message',bounds: { X: 56, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Email',bounds: { X: 242, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Appointment Reminder',bounds: { X: 56, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Request for Customerservice',bounds: { X: 56, Y: 778, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Information Billing',bounds: { X: 290, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Email',bounds: { X: 146, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Phone',bounds: { X: 482, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('SignatureField', {name: 'Sign',bounds: { X: 57, Y: 923, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Month',bounds: { X: 386, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Date',bounds: { X: 434, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Year',bounds: { X: 482, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.deleteFormField(viewer.formFieldCollections[0]);
+  }
+  return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        documentLoad={documentLoaded}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs1/app/index.tsx %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  function documentLoaded(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.formDesignerModule.addFormField("Textbox", { name: "First Name", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField("Textbox", { name: "Middle Name", bounds: { X: 338, Y: 229, Width: 150, Height: 24 }});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'Last Name',bounds: { X: 530, Y: 229, Width: 150, Height: 24 },});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 148, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 292, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Month',bounds: { X: 146, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Date',bounds: { X: 193, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Year',bounds: { X: 242, Y: 320, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Agree',bounds: { X: 148, Y: 408, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('InitialField', {name: 'Do Not Agree',bounds: { X: 148, Y: 466, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Text Message',bounds: { X: 56, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Email',bounds: { X: 242, Y: 664, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Appointment Reminder',bounds: { X: 56, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Request for Customerservice',bounds: { X: 56, Y: 778, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('CheckBox', {name: 'Information Billing',bounds: { X: 290, Y: 740, Width: 20, Height: 20 },isChecked: false,});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Email',bounds: { X: 146, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'My Phone',bounds: { X: 482, Y: 850, Width: 200, Height: 24 },});
+    viewer.formDesignerModule.addFormField('SignatureField', {name: 'Sign',bounds: { X: 57, Y: 923, Width: 200, Height: 43 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Month',bounds: { X: 386, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Date',bounds: { X: 434, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Year',bounds: { X: 482, Y: 923, Width: 35, Height: 24 },});
+    viewer.formDesignerModule.deleteFormField(viewer.formFieldCollections[0]);
+  }
+  return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        documentLoad={documentLoaded}
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                                  ThumbnailView, Print, TextSelection, TextSearch, FormDesigner, FormFields]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**. 
+
+{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
 
 ## setFormFieldMode programmatically
 
@@ -79,7 +368,7 @@ The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer l
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -109,11 +398,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -144,7 +432,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,7 +446,7 @@ You can invoke download action using following code snippet.,
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -189,11 +477,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -225,7 +512,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -237,8 +524,7 @@ When the print icon is selected on the toolbar, the PDF document will be printed
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -265,12 +551,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -298,7 +582,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -316,7 +600,7 @@ Add the following code snippet to validate the form fields,
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -353,12 +637,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -395,7 +678,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -531,17 +814,27 @@ function importData(){
   //viewer.importFormFields(exportedData, FormFieldDataFormat.Json);
 }
 ```
+## Form field properties
 
-## Signature and initial fields settings
+Form field properties in Syncfusion PDF Viewer allow you to customize and interact with form fields embedded within PDF documents. This documentation provides an overview of the form field properties supported by the Syncfusion PDF Viewer and explains how to use them effectively.
+
+    * Textbox
+    * Password
+    * CheckBox
+    * RadioButton
+    * ListBox
+    * DropDown
+    * SignatureField
+    * InitialField
+
+### Signature and initial fields settings
 
 Using the `updateFormField` method, the form fields can be updated programmatically.
 
 The following code example explains how to update the signature field properties on a button click.
 
-```
-
-<button onclick="updateProperties()">Update Properties</button>
-
+```html
+ <button onClick={updateProperties}>Update Properties</button>
 ```
 
 ```ts
@@ -559,157 +852,1316 @@ function updateProperties(){
     thickness: 4
   });
 }
-
-```
+``` 
 
 The following code example explains how to update the properties of the signature field added to the document from the form designer toolbar.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, DisplayMode, Inject} from '@syncfusion/ej2-react-pdfviewer';
 
-{/* Defines the signature field settings */}
-let signatureFieldSettings = {
-  name: 'Signature', isReadOnly: false, visibility: 'visible', isRequired: false, isPrint: true,
-  tooltip: 'Signature', thickness: 4,
-  // Specify the properties of the signature indicator in the signature field.
-  signatureIndicatorSettings: {
-    opacity: 1, backgroundColor: '#237ba2', height: 50,
-    fontSize: 15,  text: 'Signature Field', color: 'white'
-  },
-  // Specify the properties of the signature Dialog Settings in the intial field.
-  signatureDialogSettings: {
-    displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text, hideSaveSignature: false
-  }
-};
-//   . . .
-//   . . .
- <PdfViewerComponent
-    id="container"
-     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    style={{ height: '640px' }}
-    signatureFieldSettings={signatureFieldSettings}>
+function App() {
+    function documentLoad(){
+        var viewer = document.getElementById('container').ej2_instances[0];
+        {/* Defines the signature field settings */}
+        viewer.signatureFieldSettings = 
+        {
+          // Set the name of the form field element.
+          name: 'Signature',
+          // Specify whether the signature field is in read-only or read-write mode.
+          isReadOnly: false,
+          // Set the visibility of the form field.
+          visibility: 'visible',
+          // Specify whether the field is mandatory or not.
+          isRequired: false,
+          // Specify whether to print the signature field.
+          isPrint: true,
+          // Set the text to be displayed as a tooltip.
+          tooltip: 'Signature',
+          // Set the thickness of the signature field. To hide the borders, set the value to 0 (zero).
+          thickness: 4,
+          // Specify the properties of the signature Dialog Settings in the signature field.
+          signatureDialogSettings: {
+            displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text,
+            hideSaveSignature: false,
+          },
+          // Specify the properties of the signature indicator in the signature field.
+          signatureIndicatorSettings: {
+            opacity: 1,
+            backgroundColor: '#daeaf7ff',
+            height: 50,
+            fontSize: 15,
+            text: 'Signature Field',
+            color: 'white'
+          }
+        };
+    }
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}>
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
-        <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                            Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]}/>
-
- </PdfViewerComponent>
-
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, DisplayMode, Inject} from '@syncfusion/ej2-react-pdfviewer';
 
-{/* Defines the signature field settings */}
-let signatureFieldSettings = {
-  name: 'Signature', isReadOnly: false, visibility: 'visible', isRequired: false, isPrint: true,
-  tooltip: 'Signature', thickness: 4,
-  // Specify the properties of the signature indicator in the signature field.
-  signatureIndicatorSettings: {
-    opacity: 1, backgroundColor: '#237ba2', height: 50,
-    fontSize: 15,  text: 'Signature Field', color: 'white'
-  },
-  // Specify the properties of the signature Dialog Settings in the intial field.
-  signatureDialogSettings: {
-    displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text, hideSaveSignature: false
-  }
-};
-//   . . .
-//   . . .
- <PdfViewerComponent
-    id="container"
-     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
-    style={{ height: '640px' }}
-    signatureFieldSettings={signatureFieldSettings}>
+function App() {
+    function documentLoad(){
+        var viewer = document.getElementById('container').ej2_instances[0];
+        {/* Defines the signature field settings */}
+        viewer.signatureFieldSettings = 
+        {
+          // Set the name of the form field element.
+          name: 'Signature',
+          // Specify whether the signature field is in read-only or read-write mode.
+          isReadOnly: false,
+          // Set the visibility of the form field.
+          visibility: 'visible',
+          // Specify whether the field is mandatory or not.
+          isRequired: false,
+          // Specify whether to print the signature field.
+          isPrint: true,
+          // Set the text to be displayed as a tooltip.
+          tooltip: 'Signature',
+          // Set the thickness of the signature field. To hide the borders, set the value to 0 (zero).
+          thickness: 4,
+          // Specify the properties of the signature Dialog Settings in the signature field.
+          signatureDialogSettings: {
+            displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text,
+            hideSaveSignature: false,
+          },
+          // Specify the properties of the signature indicator in the signature field.
+          signatureIndicatorSettings: {
+            opacity: 1,
+            backgroundColor: '#daeaf7ff',
+            height: 50,
+            fontSize: 15,
+            text: 'Signature Field',
+            color: 'white'
+          }
+        };
+    }
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}>
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
-        <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                            Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]}/>
-
- </PdfViewerComponent>
-
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 ![Signature Field Settings](../../../pdfviewer/images/SignatureField.png)
 
+
 The following code example explains how to update the properties of the initial field added to the document from the form designer toolbar.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
 
-{/* Defines the initial field settings */}
-  let initialFieldSettings = {
-    name: 'Initial', isReadOnly: false, visibility: 'visible',
-    isRequired: false, isPrint: true, tooltip: 'Initial', thickness: 4,
-    // Specify the properties of the initial indicator in the initial field.
-    initialIndicatorSettings: {
-      opacity: 1, backgroundColor: '#237ba2', height: 50, fontSize: 15, text: 'Initial Field',  color: 'white'
-    },
-    // Specify the properties of the initial Dialog Settings in the intial field.
-    initialDialogSettings: {
-      displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text, hideSaveSignature: false
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,DisplayMode, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+    function documentLoad(){
+      var viewer = document.getElementById('container').ej2_instances[0];
+      {/* Defines the initial field settings */}
+      viewer.initialFieldSettings = {
+        name: 'Initial', 
+        isReadOnly: false, 
+        visibility: 'visible',
+        isRequired: false, 
+        isPrint: true, 
+        tooltip: 'Initial', 
+        thickness: 4,
+        // Specify the properties of the initial indicator in the initial field.
+        initialIndicatorSettings: {
+          opacity: 1, 
+          backgroundColor: '#daeaf7ff',
+          height: 50, 
+          fontSize: 15, 
+          text: 'Initial Field',  
+          color: 'white'
+          },
+          // Specify the properties of the initial Dialog Settings in the intial field.
+          initialDialogSettings: {
+            displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text, hideSaveSignature: false
+          }
+      };
     }
-  };
+return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent 
+          id="container" 
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+          style={{ 'height': '640px' }}
+          documentLoad={documentLoad}>
+              {/* Inject the required services */}
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
-//   . . .
-//   . . .
-
-{/* Render the PDF Viewer */}
-<PdfViewerComponent
-  id="container"  
-  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-  style={{ height: '640px' }}
-  initialFieldSettings={initialFieldSettings}>
-
-      <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                          ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]} />
-
-</PdfViewerComponent>
-
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-```ts
+{% raw %} 
 
-{/* Defines the initial field settings */}
-  let initialFieldSettings = {
-    name: 'Initial', isReadOnly: false, visibility: 'visible',
-    isRequired: false, isPrint: true, tooltip: 'Initial', thickness: 4,
-    // Specify the properties of the initial indicator in the initial field.
-    initialIndicatorSettings: {
-      opacity: 1, backgroundColor: '#237ba2', height: 50, fontSize: 15, text: 'Initial Field',  color: 'white'
-    },
-    // Specify the properties of the initial Dialog Settings in the intial field.
-    initialDialogSettings: {
-      displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text, hideSaveSignature: false
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,DisplayMode, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+    function documentLoad(){
+      var viewer = document.getElementById('container').ej2_instances[0];
+      {/* Defines the initial field settings */}
+      viewer.initialFieldSettings = {
+        name: 'Initial', 
+        isReadOnly: false, 
+        visibility: 'visible',
+        isRequired: false, 
+        isPrint: true, 
+        tooltip: 'Initial', 
+        thickness: 4,
+        // Specify the properties of the initial indicator in the initial field.
+        initialIndicatorSettings: {
+          opacity: 1, 
+          backgroundColor: '#daeaf7ff',
+          height: 50, 
+          fontSize: 15, 
+          text: 'Initial Field',  
+          color: 'white'
+          },
+          // Specify the properties of the initial Dialog Settings in the intial field.
+          initialDialogSettings: {
+            displayMode: DisplayMode.Draw | DisplayMode.Upload | DisplayMode.Text, hideSaveSignature: false
+          }
+      };
     }
-  };
+return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent 
+          id="container" 
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+          style={{ 'height': '640px' }}
+          documentLoad={documentLoad}>
+              {/* Inject the required services */}
+              <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
-//   . . .
-//   . . .
-
-{/* Render the PDF Viewer */}
-<PdfViewerComponent
-  id="container"  
-  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-  serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
-  style={{ height: '640px' }}
-  initialFieldSettings={initialFieldSettings}>
-
-      <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                          ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]} />
-
-</PdfViewerComponent>
-
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
+
 ![Initial Field Settings](../../../pdfviewer/images/InitialField.png)
+
+### Textbox field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the Textbox field properties on a button click.
+
+```html
+ <button onClick={updateProperties}>Update Properties</button>
+```
+
+```ts
+  // Event triggers on the Update Properties button click.
+  function updateProperties() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    var formField = viewer.retrieveFormFields();
+    viewer.formDesignerModule.updateFormField(formField[0], {
+      name: 'Textbox',
+      isReadOnly: true,
+      visibility: 'visible',
+      isRequired: false,
+      isPrint: true,
+      tooltip: 'Textbox',
+      thickness: 4,
+      value:'Textbox',
+      fontFamily: 'Courier',
+      fontSize: 10,
+      fontStyle: 'None',
+      color: 'black',
+      borderColor: 'black',
+      backgroundColor: '#daeaf7ff',
+      alignment: 'Left',
+      maxLength: 0,
+      isMultiline: false,
+      bounds: { X: 146, Y: 229, Width: 150, Height: 24 }
+    });
+  }
+```
+
+The following code example explains how to update the properties of the Textbox field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function documentLoad(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    {/* Defines the Textbox field settings */}
+    viewer.textFieldSettings = {
+      // Set the name of the form field element.
+      name: 'Textbox',
+      // Specify whether the Textbox field is in read-only or read-write mode.
+      isReadOnly: false,
+      // Set the visibility of the form field.
+      visibility: 'visible',
+      // Specify whether the field is mandatory or not.
+      isRequired: false,
+      // Specify whether to print the Textbox field.
+      isPrint: true,
+      // Set the text to be displayed as a tooltip.
+      tooltip: 'Textbox',
+      // Set the thickness of the Textbox field. To hide the borders, set the value to 0 (zero).
+      thickness: 4,
+      // Set the value of the form field element.
+      value:'Textbox',
+      // Set the font family of the textbox field.
+      fontFamily: 'Courier',
+      // Set the font size of the textbox field.
+      fontSize: 10,
+      // Specify the font style
+     fontStyle: 'None',
+     // Set the font color of the textbox field.
+     color: 'black',
+     // Set the border color of the textbox field.
+     borderColor: 'black',
+     // Set the background color of the textbox field.
+     backgroundColor: '#daeaf7ff',
+     // Set the alignment of the text.
+     alignment: 'Left',
+     // Set the maximum character length.
+     maxLength: 0,
+     // Allows multiline input in the text field. FALSE, by default.
+     isMultiline: false
+    };
+  }
+
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}>
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function documentLoad(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    {/* Defines the Textbox field settings */}
+    viewer.textFieldSettings = {
+      // Set the name of the form field element.
+      name: 'Textbox',
+      // Specify whether the Textbox field is in read-only or read-write mode.
+      isReadOnly: false,
+      // Set the visibility of the form field.
+      visibility: 'visible',
+      // Specify whether the field is mandatory or not.
+      isRequired: false,
+      // Specify whether to print the Textbox field.
+      isPrint: true,
+      // Set the text to be displayed as a tooltip.
+      tooltip: 'Textbox',
+      // Set the thickness of the Textbox field. To hide the borders, set the value to 0 (zero).
+      thickness: 4,
+      // Set the value of the form field element.
+      value:'Textbox',
+      // Set the font family of the textbox field.
+      fontFamily: 'Courier',
+      // Set the font size of the textbox field.
+      fontSize: 10,
+      // Specify the font style
+     fontStyle: 'None',
+     // Set the font color of the textbox field.
+     color: 'black',
+     // Set the border color of the textbox field.
+     borderColor: 'black',
+     // Set the background color of the textbox field.
+     backgroundColor: '#daeaf7ff',
+     // Set the alignment of the text.
+     alignment: 'Left',
+     // Set the maximum character length.
+     maxLength: 0,
+     // Allows multiline input in the text field. FALSE, by default.
+     isMultiline: false
+    };
+  }
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}>
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+![Textbox Field Settings](../../../pdfviewer/images/Textbox.png)
+
+### Password field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the Password field properties on a button click.
+
+```html
+<button onClick={updateProperties}>Update Properties</button>
+```
+
+```typescript
+  // Event triggers on the Update Properties button click.
+  function updateProperties() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    var formField = viewer.retrieveFormFields();
+    viewer.formDesignerModule.updateFormField(formField[0], {
+      name: 'Password',
+      isReadOnly: true,
+      visibility: 'visible',
+      isRequired: false,
+      isPrint: true,
+      tooltip: 'Password',
+      thickness: 4,
+      value:'Password',
+      fontFamily: 'Courier',
+      fontSize: 10,
+      fontStyle: 'None',
+      color: 'black',
+      borderColor: 'black',
+      backgroundColor: '#daeaf7ff',
+      alignment: 'Left',
+      maxLength: 0,
+      bounds: { X: 148, Y: 229, Width: 150, Height: 24 }
+    });
+  }
+```
+
+The following code example explains how to update the properties of the Password field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function documentLoad(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    {/* Defines the password field settings */}
+    viewer.passwordFieldSettings = {
+      // Set the name of the form field element.
+      name: 'Password',
+      // Specify whether the Password field is in read-only or read-write mode.
+      isReadOnly: false,
+      // Set the visibility of the form field.
+      visibility: 'visible',
+      // Specify whether the field is mandatory or not.
+      isRequired: false,
+      // Specify whether to print the Password field.
+      isPrint: true,
+      // Set the text to be displayed as a tooltip.
+      tooltip: 'Password',
+      // Set the thickness of the Password field. To hide the borders, set the value to 0 (zero).
+      thickness: 4,
+      // Set the value of the form field element.
+      value:'Password',
+      // Set the font family of the Password field.
+      fontFamily: 'Courier',
+      // Set the font size of the Password field.
+      fontSize: 10,
+      // Specify the font style
+      fontStyle: 'None',
+      // Set the font color of the Password field.
+      color: 'black',
+      // Set the border color of the Password field.
+      borderColor: 'black',
+      // Set the background color of the Password field.
+      backgroundColor: '#daeaf7ff',
+      // Set the alignment of the text.
+      alignment: 'Left',
+      // Set the maximum character length.
+      maxLength: 0,
+    }
+  };
+  
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}>
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function documentLoad(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    {/* Defines the password field settings */}
+    viewer.passwordFieldSettings = {
+      // Set the name of the form field element.
+      name: 'Password',
+      // Specify whether the Password field is in read-only or read-write mode.
+      isReadOnly: false,
+      // Set the visibility of the form field.
+      visibility: 'visible',
+      // Specify whether the field is mandatory or not.
+      isRequired: false,
+      // Specify whether to print the Password field.
+      isPrint: true,
+      // Set the text to be displayed as a tooltip.
+      tooltip: 'Password',
+      // Set the thickness of the Password field. To hide the borders, set the value to 0 (zero).
+      thickness: 4,
+      // Set the value of the form field element.
+      value:'Password',
+      // Set the font family of the Password field.
+      fontFamily: 'Courier',
+      // Set the font size of the Password field.
+      fontSize: 10,
+      // Specify the font style
+      fontStyle: 'None',
+      // Set the font color of the Password field.
+      color: 'black',
+      // Set the border color of the Password field.
+      borderColor: 'black',
+      // Set the background color of the Password field.
+      backgroundColor: '#daeaf7ff',
+      // Set the alignment of the text.
+      alignment: 'Left',
+      // Set the maximum character length.
+      maxLength: 0,
+    }
+  };
+  
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}>
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+![Password Field Settings](../../../pdfviewer/images/Password.png)
+
+### CheckBox field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the CheckBox field properties on a button click.
+
+```html
+ <button onClick={updateProperties}>Update Properties</button>
+```
+
+```typescript
+  // Event triggers on the Update Properties button click.
+  function updateProperties() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    var formField = viewer.retrieveFormFields();
+    viewer.formDesignerModule.updateFormField(formField[0], {
+      name: 'CheckBox',
+      isReadOnly: true,
+      visibility: 'visible',
+      isRequired: false,
+      isPrint: true,
+      tooltip: 'CheckBox',
+      thickness: 4,
+      isChecked: true,
+      backgroundColor: '#daeaf7ff',
+      borderColor: 'black',
+      value:'CheckBox'
+    });
+  }
+```
+
+The following code example explains how to update the properties of the CheckBox field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function documentLoad(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    // Properties to customize the RadioButton field settings
+    viewer.checkBoxFieldSettings = {
+      // Set the name of the form field element.
+      name: 'CheckBox',
+      // Specify whether the CheckBox field is in read-only or read-write mode.
+      isReadOnly: false,
+      // Set the visibility of the form field.
+      visibility: 'visible',
+      // Specify whether the field is mandatory or not.
+      isRequired: false,
+      // Specify whether to print the CheckBox field.
+      isPrint: true,
+      // Set the text to be displayed as a tooltip.
+      tooltip: 'CheckBox',
+      // Set the thickness of the CheckBox field. To hide the borders, set the value to 0 (zero).
+      thickness: 4,
+      // Specifies whether the check box is in checked state or not.
+      isChecked: true,
+      // Set the background color of the check box in hexadecimal string format.
+      backgroundColor: '#daeaf7ff',
+      // Set the border color of the check box field.
+      borderColor: 'black',
+      // Set the value of the form field element.
+      value:'CheckBox'
+    };
+  }
+
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}
+            >
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  function documentLoad(){
+    var viewer = document.getElementById('container').ej2_instances[0];
+    // Properties to customize the RadioButton field settings
+    viewer.checkBoxFieldSettings = {
+      // Set the name of the form field element.
+      name: 'CheckBox',
+      // Specify whether the CheckBox field is in read-only or read-write mode.
+      isReadOnly: false,
+      // Set the visibility of the form field.
+      visibility: 'visible',
+      // Specify whether the field is mandatory or not.
+      isRequired: false,
+      // Specify whether to print the CheckBox field.
+      isPrint: true,
+      // Set the text to be displayed as a tooltip.
+      tooltip: 'CheckBox',
+      // Set the thickness of the CheckBox field. To hide the borders, set the value to 0 (zero).
+      thickness: 4,
+      // Specifies whether the check box is in checked state or not.
+      isChecked: true,
+      // Set the background color of the check box in hexadecimal string format.
+      backgroundColor: '#daeaf7ff',
+      // Set the border color of the check box field.
+      borderColor: 'black',
+      // Set the value of the form field element.
+      value:'CheckBox'
+    };
+  }
+
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}
+            >
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+
+![CheckBox Field Settings](../../../pdfviewer/images/Checkbox.png)
+
+### RadioButton field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the RadioButton field properties on a button click.
+
+```html
+ <button onClick={updateProperties}>Update Properties</button>
+```
+
+```typescript
+  // Event triggers on the Update Properties button click.
+  function updateProperties() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    var formField = viewer.retrieveFormFields();
+    viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'RadioButton',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'RadioButton',
+        thickness: 4,
+        isSelected: true,
+        backgroundColor: '#daeaf7ff',
+        borderColor: 'black',
+        value:'RadioButton'
+    });
+  }
+```
+
+The following code example explains how to update the properties of the RadioButton field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+
+    function documentLoad(){
+        var viewer = document.getElementById('container').ej2_instances[0];
+        // Properties to customize the RadioButton field settings
+        viewer.radioButtonFieldSettings = {
+        // Set the name of the form field element.
+        name: 'RadioButton',
+        // Specify whether the RadioButton field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the RadioButton field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'RadioButton',
+        // Set the thickness of the RadioButton field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Specifies whether the radio button is in checked state or not.
+        isSelected: true,
+        // Set the background color of the radio button in hexadecimal string format.
+        backgroundColor: '#daeaf7ff',
+        // Set the border color of the radio button field.
+        borderColor: 'black',
+        // Set the value of the form field element.
+        value:'RadioButton'
+
+        };
+    }
+
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}
+            >
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+
+    function documentLoad(){
+        var viewer = document.getElementById('container').ej2_instances[0];
+        // Properties to customize the RadioButton field settings
+        viewer.radioButtonFieldSettings = {
+        // Set the name of the form field element.
+        name: 'RadioButton',
+        // Specify whether the RadioButton field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the RadioButton field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'RadioButton',
+        // Set the thickness of the RadioButton field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Specifies whether the radio button is in checked state or not.
+        isSelected: true,
+        // Set the background color of the radio button in hexadecimal string format.
+        backgroundColor: '#daeaf7ff',
+        // Set the border color of the radio button field.
+        borderColor: 'black',
+        // Set the value of the form field element.
+        value:'RadioButton'
+
+        };
+    }
+
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}
+            >
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+![RadioButton Field Settings](../../../pdfviewer/images/Radiobutton.png)
+
+### ListBox field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the ListBox field properties on a button click.
+
+```html
+ <button onClick={updateProperties}>Update Properties</button>
+```
+
+```ts
+
+  // Event triggers on the Update Properties button click.
+  var customOptions  = [{itemName:'item1',itemValue:'item1'}, {itemName:'item2',itemValue:'item2'}, {itemName:'item3',itemValue:'item3'}]
+  function updateProperties() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    var formField = viewer.retrieveFormFields();
+    viewer.formDesignerModule.updateFormField(formField[0], {
+      name: 'ListBox',
+      isReadOnly: true,
+      visibility: 'visible',
+      isRequired: false,
+      isPrint: true,
+      tooltip: 'ListBox',
+      thickness: 4,
+      fontFamily: 'Courier',
+      fontSize: 10,
+      fontStyle: 'None',
+      color: 'black',
+      borderColor: 'black',
+      backgroundColor: '#daeaf7ff',
+      alignment: 'Left',
+      options: customOptions,
+    });
+  }
+
+```
+
+The following code example explains how to update the properties of the ListBox field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+    function documentLoad(){
+        var viewer = document.getElementById('container').ej2_instances[0];
+        var customOptions = [{itemName:'item1',itemValue:'item1'}, {itemName:'item2',itemValue:'item2'}, {itemName:'item3',itemValue:'item3'}]
+        // Properties to customize the RadioButton field settings
+        viewer.listBoxFieldSettings = {
+           // Set the name of the form field element.
+           name: 'ListBox',
+           // Specify whether the ListBox field is in read-only or read-write mode.
+           isReadOnly: false,
+           // Set the visibility of the form field.
+           visibility: 'visible',
+           // Specify whether the field is mandatory or not.
+           isRequired: false,
+           // Specify whether to print the ListBox field.
+           isPrint: true,
+           // Set the text to be displayed as a tooltip.
+           tooltip: 'ListBox',
+           // Set the thickness of the ListBox field. To hide the borders, set the value to 0 (zero).
+           thickness: 4,
+           // Set the value of the form field element.
+           value:'ListBox',
+           // Set the font family of the ListBox field.
+           fontFamily: 'Courier',
+           // Set the font size of the ListBox field.
+           fontSize: 10,
+           // Specify the font style
+           fontStyle: 'None',
+           // Set the  font color of the ListBox field.
+           color: 'black',
+           // Set the border color of the ListBox field.
+           borderColor: 'black',
+           // Set the background color of the ListBox field.
+           backgroundColor: '#daeaf7ff',
+           // Set the alignment of the text.
+           alignment: 'Left',
+           // Set the listbox items.
+           options: customOptions
+         };
+    }
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}
+            >
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+    function documentLoad(){
+        var viewer = document.getElementById('container').ej2_instances[0];
+        var customOptions = [{itemName:'item1',itemValue:'item1'}, {itemName:'item2',itemValue:'item2'}, {itemName:'item3',itemValue:'item3'}]
+        // Properties to customize the RadioButton field settings
+        viewer.listBoxFieldSettings = {
+           // Set the name of the form field element.
+           name: 'ListBox',
+           // Specify whether the ListBox field is in read-only or read-write mode.
+           isReadOnly: false,
+           // Set the visibility of the form field.
+           visibility: 'visible',
+           // Specify whether the field is mandatory or not.
+           isRequired: false,
+           // Specify whether to print the ListBox field.
+           isPrint: true,
+           // Set the text to be displayed as a tooltip.
+           tooltip: 'ListBox',
+           // Set the thickness of the ListBox field. To hide the borders, set the value to 0 (zero).
+           thickness: 4,
+           // Set the value of the form field element.
+           value:'ListBox',
+           // Set the font family of the ListBox field.
+           fontFamily: 'Courier',
+           // Set the font size of the ListBox field.
+           fontSize: 10,
+           // Specify the font style
+           fontStyle: 'None',
+           // Set the  font color of the ListBox field.
+           color: 'black',
+           // Set the border color of the ListBox field.
+           borderColor: 'black',
+           // Set the background color of the ListBox field.
+           backgroundColor: '#daeaf7ff',
+           // Set the alignment of the text.
+           alignment: 'Left',
+           // Set the listbox items.
+           options: customOptions
+         };
+    }
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}
+            >
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+![ListBox Field Settings](../../../pdfviewer/images/Listbox.png)
+
+### DropDown field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the DropDown field properties on a button click.
+
+```typescript
+
+  // Event triggers on the Update Properties button click.
+  var customOptions  = [{itemName:'item1',itemValue:'item1'}, {itemName:'item2',itemValue:'item2'}, {itemName:'item3',itemValue:'item3'}]
+  function updateProperties() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    var formField = viewer.retrieveFormFields();
+    viewer.formDesignerModule.updateFormField(formField[0], { 
+        name: 'DropDown',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'DropDown',
+        thickness: 4,
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor: '#daeaf7ff',
+        alignment: 'Left',
+        options: customOptions,
+    });
+  }
+
+```
+
+The following code example explains how to update the properties of the DropDown field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  var customOptions = [{itemName:'item1',itemValue:'item1'}, {itemName:'item2',itemValue:'item2'}, {itemName:'item3',itemValue:'item3'}]
+  function documentLoad() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.DropdownFieldSettings = {
+      // Set the name of the form field element.
+      name: 'DropDown',
+      // Specify whether the DropDown field is in read-only or read-write mode.
+      isReadOnly: false,
+      // Set the visibility of the form field.
+      visibility: 'visible',
+      // Specify whether the field is mandatory or not.
+      isRequired: false,
+      // Specify whether to print the DropDown field.
+      isPrint: true,
+      // Set the text to be displayed as a tooltip.
+      tooltip: 'DropDown',
+      // Set the thickness of the DropDown field. To hide the borders, set the value to 0 (zero).
+      thickness: 4,
+      // Set the value of the form field element.
+      value:'DropDown',
+      // Set the font family of the DropDown field.
+      fontFamily: 'Courier',
+      // Set the font size of the DropDown field.
+      fontSize: 10,
+      // Specify the font style
+      fontStyle: 'None',
+      // Set the  font color of the DropDown field.
+      color: 'black',
+      // Set the border color of the DropDown field.
+      borderColor: 'black',
+      // Set the background color of the DropDown field.
+      backgroundColor: '#daeaf7ff',
+      // Set the alignment of the text.
+      alignment: 'Left',
+      // Set the DropDown items.
+      options: customOptions
+    }
+  }
+
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}
+            >
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, 
+         Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  var customOptions = [{itemName:'item1',itemValue:'item1'}, {itemName:'item2',itemValue:'item2'}, {itemName:'item3',itemValue:'item3'}]
+  function documentLoad() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.DropdownFieldSettings = {
+      // Set the name of the form field element.
+      name: 'DropDown',
+      // Specify whether the DropDown field is in read-only or read-write mode.
+      isReadOnly: false,
+      // Set the visibility of the form field.
+      visibility: 'visible',
+      // Specify whether the field is mandatory or not.
+      isRequired: false,
+      // Specify whether to print the DropDown field.
+      isPrint: true,
+      // Set the text to be displayed as a tooltip.
+      tooltip: 'DropDown',
+      // Set the thickness of the DropDown field. To hide the borders, set the value to 0 (zero).
+      thickness: 4,
+      // Set the value of the form field element.
+      value:'DropDown',
+      // Set the font family of the DropDown field.
+      fontFamily: 'Courier',
+      // Set the font size of the DropDown field.
+      fontSize: 10,
+      // Specify the font style
+      fontStyle: 'None',
+      // Set the  font color of the DropDown field.
+      color: 'black',
+      // Set the border color of the DropDown field.
+      borderColor: 'black',
+      // Set the background color of the DropDown field.
+      backgroundColor: '#daeaf7ff',
+      // Set the alignment of the text.
+      alignment: 'Left',
+      // Set the DropDown items.
+      options: customOptions
+    }
+  }
+
+return (<div>
+    <div className='control-section'>
+        <PdfViewerComponent 
+            id="container" 
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            style={{ 'height': '640px' }}
+            documentLoad={documentLoad}
+            >
+               {/* Inject the required services */}
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, 
+                                   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    </div>
+</div>);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+
+![DropDown Field Settings](../../../pdfviewer/images/Dropdown.png)

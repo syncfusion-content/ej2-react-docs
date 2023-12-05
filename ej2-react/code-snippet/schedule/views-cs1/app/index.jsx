@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, WorkWeek, Week, Month, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { defaultData } from './datasource';
 const App = () => {
@@ -14,5 +13,5 @@ const App = () => {
       <Inject services={[WorkWeek, Week, Month]}/>
     </ScheduleComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('schedule'));
-root.render(<App />);
+export default App;
+ReactDOM.render(<App />, document.getElementById("schedule"));

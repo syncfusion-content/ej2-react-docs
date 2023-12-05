@@ -8,7 +8,7 @@ import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/e
 function App() {
     const query = new Query().select(['OrderID', 'CustomerID', 'ShipName', 'ShipCity', 'ShipCountry', 'Freight']).take(200);
     const data = new DataManager({
-        url: 'https://js.syncfusion.com/demos/ejServices//wcf/Northwind.svc/Orders',
+        url: 'https://services.syncfusion.com/react/production/api/Orders',
         crossDomain: true
     });
 

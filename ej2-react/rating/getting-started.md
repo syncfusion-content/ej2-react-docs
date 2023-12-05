@@ -62,31 +62,16 @@ To include the Rating component in your application import the `RatingComponent
 Add the Rating component in application as shown in below code example.
 
 ```ts
-
-{/* Import the Rating.*/}
-import { RatingComponent } from '@syncfusion/ej2-react-inputs';
-import * as React from 'react';
-import './App.css';
-
-{/* To render Rating. */}
-function App() {
-  
-    return (
-        <RatingComponent id='rating'></RatingComponent>
-    );
-}
-export default App;
-
-```
-
-```ts
 { /* Import the Rating.*/ }
 import { RatingComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import './App.css';
+
 { /* To render Rating. */ }
 function App() {
-    return (<RatingComponent id='rating'></RatingComponent>);
+    return (
+        <RatingComponent id='rating'></RatingComponent>
+    );
 }
 export default App;
 ```

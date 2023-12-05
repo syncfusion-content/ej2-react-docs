@@ -31,22 +31,27 @@ You can use [`Create-react-app`](https://github.com/facebookincubator/create-rea
      npm install -g create-react-app
    ```
 
-Start a new project using create-react-app command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-    <div class='tsx'>
-    ```bash
-      create-react-app quickstart --scripts-version=react-scripts-ts
-      cd quickstart
-    ```
-   </div>
-   <div class='jsx'>
-   ```bash
-     create-react-app quickstart
-     cd quickstart
-   ```
-   </div>
+```bash
+npx create-react-app my-app --template typescript
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+cd my-app
+
+npm start
+
+```
+
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+```
 
 ## Adding Syncfusion packages
 
@@ -58,47 +63,6 @@ To install CheckBox component, use the following command
 npm install @syncfusion/ej2-react-buttons --save
 ```
 
-## Adding CheckBox component to the Application
-
-To include the CheckBox component in your application import the `CheckBoxComponent` from `ej2-react-buttons` package in `App.tsx`.
-
-Add the CheckBox component in application as shown in below code example.
-
-
-
-```ts
-import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-import './App.css';
-// Import the CheckBox.
-
-// To render CheckBox.
-function App() {
-  render() {
-    return (
-      <CheckBoxComponent label="Default" />
-    );
-  }
-}
-export default App;
-
-```
-
-```ts
-import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
-import './App.css';
-// Import the CheckBox.
-// To render CheckBox.
-function App() {
-    render();
-    {
-        return (<CheckBoxComponent label="Default"/>);
-    }
-}
-export default App;
-```
-
 ## Adding CSS Reference
 
 Import the CheckBox component's required CSS references as follows in `src/App.css`.
@@ -108,7 +72,29 @@ Import the CheckBox component's required CSS references as follows in `src/App.c
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 ```
 
-## Running the application
+## Adding CheckBox component to the Application
+
+To include the CheckBox component in your application import the `CheckBoxComponent` from `ej2-react-buttons` package in `App.tsx`.
+
+Add the CheckBox component in application as shown in below code example.
+
+```ts
+import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+import './App.css';
+// Import the CheckBox.
+// To render CheckBox.
+function App() {
+    {
+        return (<div style={{marginTop: '150px'}}>
+          <CheckBoxComponent label="Default"/>
+        </div>);
+    }
+}
+export default App;
+```
+
+## Run the application
 
 Run the application in the browser using the following command:
 

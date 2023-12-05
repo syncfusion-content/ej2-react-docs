@@ -7,7 +7,7 @@ import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 
 function App() {
     let data = new DataManager({
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/',
+        url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
     });
 
     let columnData: ColumnsModel[] = [

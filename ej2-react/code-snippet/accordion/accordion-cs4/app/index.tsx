@@ -1,6 +1,7 @@
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+
 const ReactApp = () => {
   const aspContent = () => {
     return (<div>
@@ -30,5 +31,5 @@ const ReactApp = () => {
     </AccordionComponent>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<ReactApp />);
+export default ReactApp;
+ReactDOM.render(<ReactApp />, document.getElementById("element"));

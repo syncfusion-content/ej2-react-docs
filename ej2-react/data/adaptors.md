@@ -54,7 +54,7 @@ The adaptor can be assigned using the `adaptor` property of the
 ```ts
 import { DataManager, Query, ReturnOption, UrlAdaptor } from '@syncfusion/ej2-data';
 
-const SERVICE_URI: string = 'http://controller.com/actions';
+const SERVICE_URI: string = 'https://ej2services.syncfusion.com/react/development/api/UrlDataSource';
 
     new DataManager({
         adaptor: new UrlAdaptor,
@@ -80,28 +80,31 @@ The sample response object should be as follows,
 
 [OData](http://www.odata.org/documentation/odata-version-3-0/) is standardized protocol for creating and consuming data. You can retrieve data from OData service using `DataManager`. The `ODataAdaptor` helps you to interact with OData service. You can refer to the following code example of remote Data binding using OData service.
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/data/get-started-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/data/get-started-cs2/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="orders.jsx" %}
-{% include code-snippet/data/get-started-cs2/app/orders.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="orders.tsx" %}
-{% include code-snippet/data/get-started-cs2/app/orders.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="rowtemplate.jsx" %}
-{% include code-snippet/data/get-started-cs2/app/rowTemplate.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="rowtemplate.tsx" %}
-{% include code-snippet/data/get-started-cs2/app/rowTemplate.tsx %}
-{% endhighlight %}
-{% endtabs %}
+```ts
+import { DataManager, Query, ReturnOption, ODataAdaptor } from '@syncfusion/ej2-data';
 
- {% previewsample "page.domainurl/code-snippet/data/get-started-cs2" %}
+const SERVICE_URI: string = 'https://services.syncfusion.com/react/production/api/Orders';
+
+    new DataManager({
+        adaptor: new ODataAdaptor,
+        url: SERVICE_URI
+    }).executeQuery(new Query().take(8)).then((e: ReturnOption) => {
+        // e.result will contain the records
+    });
+
+```
+
+`ODataAdaptor` expects JSON response from the server and the response object should contain properties `Items` ,`Result` and `Count` whose values are collection of entities and total count of the entities respectively.
+
+The sample response object should look like below.
+
+```
+{
+    Result: [{..}, {..}, {..}, ...],
+    Items: [{..}, {..}, {..}, ...],
+    Count: 830
+}
+```
 
 > By default, `ODataAdaptor` is used by `DataManager`.
 
@@ -141,7 +144,7 @@ To enable OData query option for Web API, please refer to the [documentation](ht
 ```ts
 import { DataManager, Query, ReturnOption, WebApiAdaptor } from '@syncfusion/ej2-data';
 
-    const SERVICE_URI: string = 'http://controller.com/api';
+    const SERVICE_URI: string = 'https://ej2services.syncfusion.com/react/development/api/Orders';
 
     new DataManager({
         adaptor: new WebApiAdaptor,
@@ -166,7 +169,7 @@ The sample response object should look like below.
 
 The `WebMethodAdaptor` is used to bind data source from remote services and code behind methods. It can be enabled in Grid using Adaptor property of DataManager as `WebMethodAdaptor`.
 
-For every operations, an AJAX post will be send to the specified data service.
+For every operations, an Fetch post will be send to the specified data service.
 
 ```ts
 

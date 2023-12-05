@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Linear gauge component | Syncfusion
-description:  Checkout and learn about Getting started with React Linear gauge component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Linear Gauge component | Syncfusion
+description:  Checkout and learn about Getting started with React Linear Gauge component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -12,7 +12,11 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD013 -->
 
-This section explains you the steps required to create a simple Linear Gauge and demonstrate the basic usage of the Linear Gauge control.
+This section explains the steps required to create a Linear Gauge and demonstrates the basic usage of the Linear Gauge component.
+
+You can explore some useful features in the Linear Gauge component using the following video.
+
+{% youtube "https://www.youtube.com/watch?v=PTBeKSNHp1k" %}
 
 ## Dependencies
 
@@ -37,19 +41,15 @@ To get started with the React application, [create-react-app](https://github.com
 
 To create basic React application, run the following command.
 
-    <div class='jsx'>
+```
+create-react-app quickstart
+```
 
-    ```
-      create-react-app quickstart
-    ```
-   </div>
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-     ```
-     cd quickstart
-     npm install
-   ```
+```
+cd quickstart
+```
 
 > In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
 
@@ -57,19 +57,15 @@ Now, the application is created in the **quickstart** folder. Run the following 
 
 To create React application with TypeScript, use the following command.
 
-    <div class='jsx'>
+```
+create-react-app quickstart --template typescript
+```
 
-    ```
-    create-react-app quickstart --template typescript
-   ```
-   </div>
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm**  packages.
 
-Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm**  packages.
-
-  ```
-   cd quickstart
-   npm install
-  ```
+```
+cd quickstart
+```
 
 ### Adding Syncfusion packages
 
@@ -83,8 +79,6 @@ npm install @syncfusion/ej2-react-lineargauge --save
 
 Now, the Linear Gauge component can be added in the application. To initialize the Linear Gauge control in the React application, import the Linear Gauge control in the **src/App.js** or **src/App.tsx** as per the application. Please use the below code to include the Linear Gauge component in the application.
 
-
-
 ```ts
 
 import React from 'react';
@@ -94,8 +88,7 @@ export function App() {
    return (<LinearGaugeComponent></LinearGaugeComponent>);
 }
 
-const root = ReactDOM.createRoot(document.getElementById('container'));
-root.render(<App />);
+export default App;
 
 ```
 
@@ -109,7 +102,7 @@ npm start
 
 ## Module Injection
 
-Linear gauge component are segregated into individual feature-wise modules. In order to use a particular feature,
+Linear Gauge component are segregated into individual feature-wise modules. In order to use a particular feature,
 inject its feature service in the **AppModule**. Please find the feature service name and description as follows.
 
 * `Annotations` - Inject this module in to `services` to use annotation feature.

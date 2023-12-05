@@ -1,18 +1,20 @@
 
 
 import { getValue } from '@syncfusion/ej2-base';
-import { DataManager, ODataAdaptor, Predicate, Query, ReturnOption } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { IOrders } from './orders';
 import { Row } from './rowTemplate';
 
-const SERVICE_URI: string = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders';
+const SERVICE_URI: string = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/';
 
 export default class App extends React.Component<{}, {}>{
     constructor(props: object) {
         super(props);
         this.state = { items: [] };
-        const dm: DataManager = new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor, offline: true }, new Query().take(8));
+    }
+    componentDidMount() {
+        const dm: DataManager = new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor(), offline: true }, new Query().take(8));
             dm.ready.then((e: ReturnOption) => {
                 const res = (e.result as IOrders[]).map((row: IOrders, index: number) => (
                     <Row key={row.OrderID} {...row} />
@@ -33,5 +35,14 @@ export default class App extends React.Component<{}, {}>{
     }
 
 }
+
+
+
+
+
+
+
+
+
 
 

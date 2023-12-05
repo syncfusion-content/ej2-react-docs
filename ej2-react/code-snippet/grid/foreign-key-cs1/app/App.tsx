@@ -23,7 +23,7 @@ function App() {
       const value: object[] = new DataManager(employeeData).executeLocal(new Query().where('FirstName', 'equal', autoComplete.value));
       return value.length && getValue('EmployeeID', value[0]); // to convert foreign key value to local value.
     },
-    write: (args: { rowData: object, column: Column, foreignKeyData: object, element: HTMLElement }) => { // to show the value for custom component
+    write: (args: { rowData: object, column: Column, foreignKeyData: object, element: HTMLElement }) => { // to show the value for date picker
       autoComplete = new AutoComplete({
         dataSource: new DataManager(employeeData),
         fields: { value: args.column.foreignKeyValue },
