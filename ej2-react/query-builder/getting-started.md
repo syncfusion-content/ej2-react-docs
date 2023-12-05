@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with React Query Builder Component | Syncfusion
-description: Learn here all about getting started with Syncfusion Essential React Query Builder component, it's elements and more.
+description: Checkout and learn about getting started with React Query builder component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
