@@ -35,7 +35,7 @@ The below list of dependencies are required to use the `TimePicker` component in
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
    ```
      npm install -g create-react-app
@@ -149,7 +149,7 @@ The following examples shows the basic TimePicker component.
  {% previewsample "page.domainurl/code-snippet/timepicker/default-cs2" %}
 
 Now, the TimePicker renders with  default culture as `American English`('en-US'). For a different culture, refer to the
-[`Globalization`](./globalization/) section.
+[`Globalization`](./globalization) section.
 
 ## Setting the value, min, and max time
 
@@ -183,9 +183,9 @@ The following example demonstrates how to set the value, min and max time on ini
 
 ## Setting the time format
 
-Time formats is a way of representing the time value in different string format in textbox and popup list. By default, the TimePicker's format is based on the culture. You can also customize the format by using the [`format`](https://ej2.syncfusion.com/react/documentation/api/timepicker#format) property. To know more about the time format standards, refer to the [Date and Time Format](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-formats) section.
+Time formats is a way of representing the time value in different string format in textbox and popup list. By default, the TimePicker's format is based on the culture. You can also customize the format by using the [`format`](https://ej2.syncfusion.com/react/documentation/api/timepicker/#format) property. To know more about the time format standards, refer to the [Date and Time Format](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-formats) section.
 
-The following example demonstrates the TimePicker component in 24 hours format with 60 minutes interval. The time interval is set to 60 minutes by using the [`step`](https://ej2.syncfusion.com/react/documentation/api/timepicker#step) property.
+The following example demonstrates the TimePicker component in 24 hours format with 60 minutes interval. The time interval is set to 60 minutes by using the [`step`](https://ej2.syncfusion.com/react/documentation/api/timepicker/#step) property.
 
 `[Class-component]`
 

@@ -3,8 +3,8 @@ import * as ReactDOM from "react-dom";
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 const App = () => {
-    let calendarId = '5105trob9dasha31vuqek6qgp0@group.calendar.google.com';
-    let publicKey = 'AIzaSyD76zjMDsL_jkenM5AAnNsORypS1Icuqxg';
+    let calendarId = 'en.usa%23holiday@group.v.calendar.google.com';
+    let publicKey = 'AIzaSyBgbX_tgmVanBP4yafDPPXxWr70sjbKAXM';
     const dataManger = new DataManager({
         url: 'https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?key=' + publicKey,
         adaptor: new WebApiAdaptor(),

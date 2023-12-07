@@ -71,7 +71,7 @@ cd my-app
 npm start
 ```
 
-For an introduction and configuration of the common specifications, see [getting started with the Syncfusion React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/).
+For an introduction and configuration of the common specifications, see [getting started with the Syncfusion React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start).
 
 ### Using icons directly in HTML element
 

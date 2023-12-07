@@ -20,6 +20,5 @@ function App() {
       </ColumnsDirective>
       <Inject services={[Search, Toolbar]}/>
   </GridComponent>);
-}
-;
+};
 export default App;

@@ -68,7 +68,7 @@ The following sample demonstrates the option to add the font name and font size 
 
 Rich Text Editor supports to provide custom font and size with existing list.
 
-If you want to add additional font names and font sizes to font drop-down, pass the font information as JSON data to the items field of the [`fontSize`](/rich-text-editor/api-fontSize.html) and the [`fontFamily`](/rich-text-editor/api-fontFamily.html) property.
+If you want to add additional font names and font sizes to font drop-down, pass the font information as JSON data to the items field of the [`fontSize`](/api/rich-text-editor/fontSize/) and the [`fontFamily`](/api/rich-text-editor/fontFamily/) property.
 
 `[Class-component]`
 
@@ -100,9 +100,9 @@ If you want to add additional font names and font sizes to font drop-down, pass 
 
 To apply font color or background color for a selected content of RTE, use font color and background color tools.
 
-Rich Text Editor supports to provide customs font color and background color with existing list through the [colorCode](/rich-text-editor/api-backgroundColor.html#colorcode) field of fontColor and backgroundColor.
+Rich Text Editor supports to provide customs font color and background color with existing list through the [colorCode](/api/rich-text-editor/backgroundColor/#colorcode) field of fontColor and backgroundColor.
 
-The FontColor and the BackgroundColor property has two [mode](/rich-text-editor/api-backgroundColor.html#mode) Picker and Palette. Palette mode has predefined set of colorCode and in the picker mode, more colors has been provided. Through [modeSwitcher](../api/rich-text-editor/backgroundColor/#modeswitcher), you can able to switch between these two options.
+The FontColor and the BackgroundColor property has two [mode](/api/rich-text-editor/backgroundColor/#mode) Picker and Palette. Palette mode has predefined set of colorCode and in the picker mode, more colors has been provided. Through [modeSwitcher](../api/rich-text-editor/backgroundColor/#modeswitcher), you can able to switch between these two options.
 
 `[Class-component]`
 

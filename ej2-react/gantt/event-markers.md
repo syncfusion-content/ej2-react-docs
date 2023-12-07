@@ -28,7 +28,7 @@ To highlight the days, inject the [`DayMarkers`](https://ej2.syncfusion.com/reac
         
 {% previewsample "page.domainurl/code-snippet/gantt/event-markers-cs1" %}
 
-# Managing event marker overlapping in react gantt component
+## Managing event marker overlapping in react gantt component
 
 In the EJ2 Gantt control, it is possible to customize multiple [`eventMarkers`](https://ej2.syncfusion.com/react/documentation/api/gantt/eventMarker/) for the same date. However, by default, in such scenarios, these markers may overlap each other, resulting in visual clutter. To manage this, the following sample code demonstrates how to utilize the Gantt dataBound function to obtain label and arrow classes. It performs a loop action to fulfill the current requirement and to avoid overlapping. For further clarification, the code snippet below illustrates the flow of its implementation.
 

@@ -187,4 +187,4 @@ You can apply custom style to selected points or series with [`selectionStyle`](
 
 ## See Also
 
-* [Display selected data for range selection](./how-to/#display-selected-data-for-range-selection)
+* [Display selected data for range selection](./how-to/selected-data-grid)
