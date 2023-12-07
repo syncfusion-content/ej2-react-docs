@@ -57,7 +57,7 @@ Items| Description
 
 ## Custom context menu items
 
-The custom context menu items can be added by defining the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuitems) as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel).
+The custom context menu items can be added by defining the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuitems) as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/).
 Actions for this customized items can be defined in the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuclick) event.
 
 {% tabs %}
@@ -108,7 +108,7 @@ This is demonstrated in the following sample.
 
 It is possible to enable or disable the default and custom context menu items in the Grid component. This is achieved by using the [enableItems](https://ej2.syncfusion.com/react/documentation/api/context-menu/#enableitems) method of the ContextMenu. To enable or disable menu items, set the `enable` parameter in the `enableItems` method to true, and vice versa.
 
-In the following sample, the Copy item is enabled or disabled based on some condition (as per the needs of the application) in the [rowSelected](https://ej2.syncfusion.com/react/documentation/api/grid#rowselected) event of the Grid.
+In the following sample, the Copy item is enabled or disabled based on some condition (as per the needs of the application) in the [rowSelected](https://ej2.syncfusion.com/react/documentation/api/grid/#rowselected) event of the Grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
