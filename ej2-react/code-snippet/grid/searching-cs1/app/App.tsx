@@ -1,5 +1,3 @@
-
-
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { Inject, Search, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -8,8 +6,7 @@ import { data } from './datasource';
 function App() {
   const toolbarOptions: ToolbarItems[] = ['Search'];
       return (
-        <GridComponent dataSource={data} toolbar={toolbarOptions}
-            height={272}>
+        <GridComponent dataSource={data} toolbar={toolbarOptions} height={272}>
           <ColumnsDirective>
               <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
               <ColumnDirective field='CustomerID' width='100'/>
@@ -21,5 +18,3 @@ function App() {
       </GridComponent>)
 };
 export default App;
-
-

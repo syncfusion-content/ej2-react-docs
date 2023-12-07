@@ -1,7 +1,4 @@
-
-
-
-import {Toolbar, ToolbarItems, Page, GridComponent, SearchSettingsModel, ColumnsDirective,ColumnDirective, Inject, SearchEventArgs} from '@syncfusion/ej2-react-grids';
+import {Toolbar, ToolbarItems, Grid, GridComponent, SearchSettingsModel, ColumnsDirective,ColumnDirective, Inject, SearchEventArgs} from '@syncfusion/ej2-react-grids';
 import { Predicate, Query } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { data } from './datasource';
@@ -14,8 +11,10 @@ function App() {
   let valueAssign = false;
   let grid: Grid | null;
   const searchOptions: SearchSettingsModel = {
-    fields: ['OrderID', 'CustomerID', 'EmployeeID', 'ShipCountry'],
+    fields: ['OrderID', 'CustomerID', 'Freight', 'ShipCountry'],
     key: '',
+    operator:'contains',
+    ignoreCase: true
   };
   const toolbarOptions: ToolbarItems[] = ['Search'];
   const actionBegin = (args: SearchEventArgs): void => {
@@ -42,7 +41,7 @@ function App() {
           refresh = true;
           valueAssign = true;
           removeQuery = true;
-          grid.refresh();
+          grid.refreshColumns();
         }
       }
     }
@@ -60,7 +59,7 @@ function App() {
     ) {
       grid.query = new Query();
       removeQuery = false;
-      grid.refresh();
+      grid.refreshColumns();
     }
   };
     return (<div>
@@ -70,7 +69,7 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right"/>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='100'/>
-            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right"/>
+            <ColumnDirective field='Freight' headerText='Freight' width='100' format ='C' textAlign="Right"/>
             <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100'/>
         </ColumnsDirective>
         <Inject services={[Toolbar]} />
@@ -78,5 +77,3 @@ function App() {
     </div>)
 };
 export default App;
-
-

@@ -27,6 +27,5 @@ function App() {
                   </ColumnsDirective>
                 </GridComponent>
     </div>);
-}
-;
+};
 export default App;
