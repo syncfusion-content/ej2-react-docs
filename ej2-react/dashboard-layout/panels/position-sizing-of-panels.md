@@ -75,4 +75,4 @@ The following sample demonstrates the sizing of panels within the dashboard layo
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/sizing-of-panels-cs1" %}
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to knows how to present and manipulate data.
+> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to knows how to present and manipulate data.
