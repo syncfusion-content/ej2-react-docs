@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in React List box component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React ListBox component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React ListBox component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React List box component
+# Accessibility in React ListBox component
 
-The List box component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The ListBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the List box component is outlined below.
+The accessibility compliance for the ListBox component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,18 +40,18 @@ The accessibility compliance for the List box component is outlined below.
 
 ## WAI-ARIA attributes
 
-The List box component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet the accessibility. The following ARIA attributes are used in the List box component:
+The ListBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet the accessibility. The following ARIA attributes are used in the ListBox component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `listbox` | Used to convey a significant and contextual message to the user. |
+| `role` | Indicates the ListBox component wrapper element as `listbox`, the `UL` element as `presentation`, and its list item as `option`. |
+| `aria-label` | Provides an accessible name for the ListBox component. |
 | `aria-multiselectable` | Applied to the element with the ListBox role, tells assistive technologies that the list supports multiple selection. The default value is true. |
-| `option` | Identifies each selectable element containing the name of an option. |
 | `aria-selected` | Applied to elements with role option that are visually styled as selected to inform assistive technologies that the options are selected. |
 
 ## Keyboard interaction
 
-The List box component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the List box component.
+The ListBox component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ListBox component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -67,9 +67,9 @@ The List box component followed the [keyboard interaction](https://www.w3.org/WA
 
 ## Ensuring accessibility
 
-The List box component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The ListBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the List box component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/list-box.html) in a new window to evaluate the accessibility of the List box component with accessibility tools.
+The accessibility compliance of the ListBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/list-box.html) in a new window to evaluate the accessibility of the ListBox component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/list-box.html" %}
 

@@ -38,14 +38,24 @@ The accessibility compliance for the Signature component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
+## WAI-ARIA attributes
+
+The Signature component followed the [WAI-ARIA] patterns to meet the accessibility. The following ARIA attributes are used in the Signature component:
+
+| Attributes | Purpose |
+| --- | --- |
+| `role` | Indicates the Signature component as `img`. |
+| `aria-label` | Indicates the accessible name for the Signature canvas. |
+
+
 ## Keyboard interaction
 
 The Signature component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Signature component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Ctrl + Z</kbd> | Undo the last user action. |
-| <kbd>Ctrl + Y</kbd> | Redo the last user action. |
+| <kbd>Ctrl + Z</kbd> | Undo the last action. |
+| <kbd>Ctrl + Y</kbd> | Redo the last action. |
 | <kbd>Ctrl + S</kbd> | To save the signature. |
 | <kbd>delete</kbd> | Erases all the signature strokes signed by user. |
 

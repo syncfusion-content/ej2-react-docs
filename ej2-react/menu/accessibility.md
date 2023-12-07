@@ -44,15 +44,12 @@ The Menu component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patte
 
 | Attributes | Purpose |
 | --- | --- |
-| `menubar` | This role will be specified for root menu. |
-| `menu` | This role will be specified for an item that have sub menu. |
-| `menuitem` | This role will be specified for an item that do not have sub menus. |
+| `role` | Indicates Menu component's root menu as `menubar`, popup as `menu`, and the popup items as `menuitem`. |
 | `aria-haspopup` | Indicates the availability and type of interactive popup element. |
 | `aria-expanded` | Indicates whether the subtree can be expanded or collapsed, and indicates whether its current state can be expanded or collapsed. |
 | `aria-orientation` | Indicates whether the orientation is horizontal or vertical. The default orientation is horizontal. |
 | `aria-label` | Indicates the menu item text. |
 | `aria-disabled` | Indicates the state of menu item whether it is disabled. |
-
 
 ## Keyboard interaction
 

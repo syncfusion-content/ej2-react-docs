@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in React Drop down button component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React DropDownButton component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React DropDownButton component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Drop down component
+# Accessibility in React DropDownButton component
 
-The Drop down button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The DropDownButton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Drop down button component is outlined below.
+The accessibility compliance for the DropDownButton component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,19 +40,19 @@ The accessibility compliance for the Drop down button component is outlined belo
 
 ## WAI-ARIA attributes
 
-The Drop down button component followed the [WAI-ARIA] patterns to meet the accessibility. The following ARIA attributes are used in the Drop down button component:
+The DropDownButton component followed the [WAI-ARIA] patterns to meet the accessibility. The following ARIA attributes are used in the DropDownButton component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `menu` | Specified for an DropDownButton element. |
-| `menuItem` | This role will be specified for an action items. |
-| `aria-haspopup` | Indicates the availability and type of interactive splitbutton popup element. |
-| `aria-expanded` | Indicates whether the splitbutton popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
+| `role` | Indicates the DropDownButton component as `button`, DropDownButton popup as `menu`, and the dropdown popup action items as `menuitem`. |
+| `aria-haspopup` | Indicates the availability of the popup element. |
+| `aria-expanded` | Indicates whether the popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
 | `aria-owns` | Identifies an elements in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship. |
+| `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
 
-The Drop down button component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Drop down button component.
+The Dropdown button component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the DropDownButton component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -67,7 +67,7 @@ The Drop down button component followed the [keyboard interaction] guideline, ma
 
 The Drop down component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Drop down button component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-button.html) in a new window to evaluate the accessibility of the Drop down button component with accessibility tools.
+The accessibility compliance of the DropDownButton component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-button.html) in a new window to evaluate the accessibility of the DropDownButton component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-button.html" %}
 

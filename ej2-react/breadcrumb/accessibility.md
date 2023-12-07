@@ -44,7 +44,7 @@ The Breadcrumb component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the type of input element. |
+| `role` | Indicates the type of Breadcrumb component element. |
 | `aria-label` | Indicates the breadcrumb item text. |
 | `aria-disabled` | Indicates the state of breadcrumb item whether it is disabled. |
 
