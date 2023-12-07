@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Multi select component | Syncfusion
-description:  Checkout and learn about Getting started with React Multi select component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React MultiSelect Component | Syncfusion
+description:  Checkout and learn about getting started with Syncfusion Essential React MultiSelect component, it's elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React MultiSelect Component
 
 This section explains how to create a simple **MultiSelect** component and configure its available functionalities in React.
 
@@ -229,4 +229,4 @@ In the following sample, popup list's width and height are configured.
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
+* [How to bind the data](./data-binding)
