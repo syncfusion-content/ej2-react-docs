@@ -20,8 +20,7 @@ function App() {
   
   const onDataBound = () => {
     if (grid) {
-      /** Initially expand first chid Grid. */
-      grid.detailRowModule.expand(0);
+      grid.detailRowModule.expand(2);
     }
   }
     return (<div>

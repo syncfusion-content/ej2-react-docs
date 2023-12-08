@@ -1,4 +1,3 @@
-import { setValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { DetailRow, Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -8,7 +7,7 @@ function App() {
         actionBegin(args) {
             if (args.requestType === "add") {
                 /** parentKeyFieldValue refers to the queryString field value of the parent record. */
-                setValue('EmployeeID', this.parentDetails.parentKeyFieldValue, args.data);
+                args.data['EmployeeID'] = this.parentDetails.parentKeyFieldValue; // 'this' refers to the instance of the child grid.
             }
         },
         columns: [

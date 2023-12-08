@@ -1,5 +1,3 @@
-
-
 import { ColumnDirective, ColumnsDirective, GridComponent, SearchSettingsModel} from '@syncfusion/ej2-react-grids';
 import { Inject, Search, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -27,5 +25,3 @@ function App () {
   </GridComponent>)
 };
 export default App;
-
-
