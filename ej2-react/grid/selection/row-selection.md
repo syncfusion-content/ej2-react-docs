@@ -98,9 +98,9 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 ## Clear selection programmatically
 
-You can clear the Grid selection programmatically by using the [clearSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#clearselection) method.
+You can clear the Grid selection programmatically by using the [clearSelection](https://ej2.syncfusion.com/angular/documentation/api-grid.html#clearSelection) method.
 
-In the demo below, we initially selected the third row using [selectedRowIndex](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#selectrow). You can clear this selection by calling the [clearSelection](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#clearselection) method in the button click event.
+In the demo below, we initially selected the third row using [selectedRowIndex](https://ej2.syncfusion.com/angular/documentation/api-grid.html#selectedrowindex-number). You can clear this selection by calling the [clearSelection](https://ej2.syncfusion.com/angular/documentation/api-grid.html#clearSelection) method in the button click event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -121,11 +121,11 @@ In the demo below, we initially selected the third row using [selectedRowIndex](
 
 ## Get selected records on various pages
 
-Enabling the [selectionSettings](./api/grid/selectionSettings/) property will persist the selection in all Grid operations.
+Enabling the [selectionSettingshttps://ej2.syncfusion.com/angular/documentationpersistSelection](./api-selectionSettings.html#persistselection-boolean) property will persist the selection in all Grid operations.
 
 So the selection will be maintained on every page even after navigating to another page.
 
-You can get the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid/selection/#getselectedrecords) method.
+You can get the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/angular/documentation/api-grid.html#getSelectedRecords) method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -144,4 +144,4 @@ You can get the selected records using the [getSelectedRecords](https://ej2.sync
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-cs12" %}
 
-> To persist the grid selection, it is necessary to define any one of the columns as a primary key using the [columns](./api/grid/column/#isprimarykey) property.
+> To persist the grid selection, it is necessary to define any one of the columns as a primary key using the [columnshttps://ej2.syncfusion.com/angular/documentationisPrimaryKey](./api-column.html#isprimarykey-boolean) property.

@@ -43,7 +43,7 @@ const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
 ```
 
-For more information about diagram constraints, refer to [`DiagramConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints/).
+For more information about diagram constraints, refer to [`DiagramConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints).
 
 ## Node constraints
 
@@ -78,7 +78,7 @@ const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
 ```
 
-For more information about node constraints, refer to [`NodeConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints/).
+For more information about node constraints, refer to [`NodeConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints).
 
 ## Connector constraints
 
@@ -121,7 +121,7 @@ const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 ```
 
-For more information about connector constraints, refer to [`ConnectorConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints/).
+For more information about connector constraints, refer to [`ConnectorConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints).
 
 ## Port constraints
 
@@ -147,7 +147,7 @@ let nodes: NodeModel[] = [
 ];
 ```
 
-For more information about port constraints, refer to [`PortConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/portConstraints/).
+For more information about port constraints, refer to [`PortConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/portConstraints).
 
 ## Annotation constraints
 
@@ -179,7 +179,7 @@ const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
 ```
 
-For more details about annotation constraints, refer to [`AnnotationConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationConstraints#AnnotationConstraints/).
+For more details about annotation constraints, refer to [`AnnotationConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationConstraints#AnnotationConstraints).
 
 ## Selector constraints
 
@@ -211,7 +211,7 @@ root.render(<App />);
 ```
 {% endraw %}
 
-For more information about selector constraints, refer to [`SelectorConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorConstraints/).
+For more information about selector constraints, refer to [`SelectorConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorConstraints).
 
 ## Snap constraints
 
@@ -244,7 +244,7 @@ root.render(<App />);
 ```
 {% endraw %}
 
-For more information about snap constraints, refer to [`SnapConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/snapConstraints/).
+For more information about snap constraints, refer to [`SnapConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/snapConstraints).
 
 ## Boundary constraints
 
@@ -276,7 +276,7 @@ root.render(<App />);
 ```
 {% endraw %}
 
-For more information about selector constraints, refer to [`BoundaryConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/boundaryConstraints/).
+For more information about selector constraints, refer to [`BoundaryConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/boundaryConstraints).
 
 ## Inherit behaviors
 

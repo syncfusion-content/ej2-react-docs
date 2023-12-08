@@ -186,6 +186,6 @@ In the following sample,data with diacritics are bound as dataSource for AutoCom
 
 ## See Also
 
-* [How to achieve autofill while filtering](./how-to/autofill)
-* [How to group the data using header](./grouping)
-* [How to highlight the search data](./how-to/custom-search)
+* [How to achieve autofill while filtering](./how-to/autofill/)
+* [How to group the data using header](./grouping/)
+* [How to highlight the search data](./how-to/custom-search/)

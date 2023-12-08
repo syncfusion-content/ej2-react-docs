@@ -35,7 +35,7 @@ The following list of dependencies are required to use the `DropDownList` compon
 
 ## Installation and configuration
 
-You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
    ```bash
     npm install -g create-react-app
@@ -228,4 +228,4 @@ In the following sample, popup list's width and height are configured.
 
 ## See Also
 
-* [How to bind the data](./data-binding)
+* [How to bind the data](./data-binding/)

@@ -5,9 +5,9 @@ function App() {
     const groupOptions = {
         columns: ['CustomerID', 'ShipCity'],
         showDropArea: false,
-        captionTemplate: '<span class="groupItems" style="color:blue"> ${field} - ${count} Items</span>'
+        captionTemplate: '<span class="groupItems"> ${headerText} - ${key} : ${count} Items </span>'
     };
-    return <GridComponent dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={267}>
+    return <GridComponent dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.
 
-Calendar provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA supports is achieved through the attributes like `aria-label`,`aria-selected`, `aria-disabled`, `aria-activedescendant` applied for navigation buttons, disable and active day cells.
+Calendar provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA supports is achieved through the attributes like `aria-label`,`aria-selected`, `aria-disabled`, `aria-activedescendant` applied for navigation buttons, disable and active day cells.
 
 It helps to provides information about the widget for assistive technology to the disabled person in the screen reader. Calendar component contains grid as role and grid cell for each day cell
 
@@ -30,7 +30,7 @@ It helps to provides information about the widget for assistive technology to th
 
 ## Keyboard Interaction
 
-You can use the following keys to interact with the Calendar. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/)
+You can use the following keys to interact with the Calendar. The component implements the keyboard navigation support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices)
 
 It supports the below list of shortcut keys.
 

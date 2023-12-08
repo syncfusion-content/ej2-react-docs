@@ -211,6 +211,6 @@ In the following sample, when the data fetch request fails, the AutoComplete dis
 
 ## See Also
 
-* [How to achieve filtering](./filtering)
+* [How to achieve filtering](./filtering/)
 * [How to group the data using header](./grouping#grouping)
-* [How to show the list items with icon](./how-to/icon-support)
+* [How to show the list items with icon](./how-to/icon-support/)
