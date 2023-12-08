@@ -346,5 +346,5 @@ Specifies the items to be rendered in the quick toolbar based on the target elem
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs6" %}
- 
+
 > You can refer to our [React Rich Text Editor](https://www.syncfusion.com/react-components/react-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Rich Text Editor example](https://ej2.syncfusion.com/react/demos/#/material/rich-text-editor/rich-text-editor) that shows how to render the rich text editor tools.
