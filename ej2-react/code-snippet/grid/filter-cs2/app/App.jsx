@@ -1,18 +1,20 @@
-import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
-import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, Page } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
 import * as React from 'react';
 import { data } from './datasource';
+
 function App() {
-    return <GridComponent dataSource={data} allowFiltering={true} height={273}>
+    const pageSettings = { pageSize: 5 };
+    const filterSettings = { type: 'FilterBar' };
+    return <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} height={315}>
         <ColumnsDirective>
-            <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' width='100'/>
-            <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
-            <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' width='100'/>
+            <ColumnDirective field='OrderID' headerText='OrderID' width='100' textAlign="Right" />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+            <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='100' textAlign="Right" />
+            <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+            <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
         </ColumnsDirective>
-        <Inject services={[Filter]}/>
-    </GridComponent>;
-}
-;
+        <Inject services={[Filter, Page]} />
+    </GridComponent>
+};
 export default App;

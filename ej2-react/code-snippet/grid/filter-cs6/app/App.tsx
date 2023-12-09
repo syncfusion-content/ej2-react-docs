@@ -1,29 +1,31 @@
-
-
-import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
-import { Filter, FilterSettingsModel, GridComponent, IFilter, Inject } from '@syncfusion/ej2-react-grids'
+import { ColumnDirective, ColumnsDirective, FilterEventArgs, FilterSettingsModel, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  const FilterOptions: FilterSettingsModel = {
-    type: 'Menu'
-  };
-  const FilterType: IFilter = {
-    type: 'CheckBox'
+  let grid: GridComponent | null;
+  const pageSettings: PageSettingsModel = { pageCount: 5 };
+  const filterSettings: FilterSettingsModel = { type: 'Menu' };
+  const formatOptions: Object = { type: 'dateTime', format: 'M/d/y HH:mm' };
+  const actionComplete = (args: FilterEventArgs) => {
+    if (args.requestType === 'filterafteropen') {
+      const columnObj = (grid as GridComponent).getColumnByField(args.columnName);
+      if (columnObj.type === 'datetime') {
+        const dateObj = (document.getElementById('dateui-' + columnObj.uid)as Element)['ej2_instances'][0];
+        dateObj.timeFormat = 'HH:mm';
+      }
+    }
   }
-  return <GridComponent dataSource={data} filterSettings={FilterOptions}
-    allowFiltering={true} height={273}>
-    <ColumnsDirective>
-      <ColumnDirective field='OrderID' width='100' textAlign="Right" />
-      <ColumnDirective field='CustomerID' filter={FilterType} width='100' />
-      <ColumnDirective field='EmployeeID' width='100' textAlign="Right" />
-      <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right" />
-      <ColumnDirective field='ShipCountry' width='100' />
-    </ColumnsDirective>
-    <Inject services={[Filter]} />
-  </GridComponent>
+  return (<div>
+    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} height={315} filterSettings={filterSettings} actionComplete={actionComplete}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='OrderDate' headerText='Order Date' width='100' textAlign="Right" type="datetime" format={formatOptions} />
+        <ColumnDirective field='ShippedDate' headerText='ShippedDate' width='100' textAlign="Right" type="datetime" format={formatOptions} />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Filter, Page]} />
+    </GridComponent></div>)
 };
 export default App;
-
-
