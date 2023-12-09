@@ -120,5 +120,5 @@ ReactDOM.render(<Default />, document.getElementById('sample'));
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module)
+* [Feature modules](../document-editor/feature-module/)
 * [Bookmark dialog](../document-editor/dialog#bookmark-dialog)

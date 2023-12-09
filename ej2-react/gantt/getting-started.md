@@ -714,4 +714,4 @@ Output will be appears as follows.
         
 {% previewsample "page.domainurl/code-snippet/gantt/run-cs1" %}
 
-> You can refer to our [React Gantt Chart]( https://www.syncfusion.com/react-components/react-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Gantt Chart example]( https://ej2.syncfusion.com/react/demos/#/material/gantt/default) that shows how to render the Gantt Chart in React.
+> You can refer to our [React Gantt Chart]( https://www.syncfusion.com/react-ui-components/react-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Gantt Chart example]( https://ej2.syncfusion.com/react/demos/#/material/gantt/default) that shows how to render the Gantt Chart in React.

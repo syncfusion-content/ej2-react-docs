@@ -203,7 +203,7 @@ ticket in our support site or ask your query in StackOverflow with tag `syncfusi
 
 ## See also
 
-* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
-* [Getting Started with Syncfusion React UI Components](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
-* [Project Setup with Visual Studio Code](https://ej2.syncfusion.com/react/documentation/visual-studio-code-integration/create-project)
-* [Project Setup with Visual Studio](https://ej2.syncfusion.com/react/documentation/visual-studio-integration/overview)
+* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
+* [Getting Started with Syncfusion React UI Components](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/)
+* [Project Setup with Visual Studio Code](https://ej2.syncfusion.com/react/documentation/visual-studio-code-integration/create-project/)
+* [Project Setup with Visual Studio](https://ej2.syncfusion.com/react/documentation/visual-studio-integration/overview/)

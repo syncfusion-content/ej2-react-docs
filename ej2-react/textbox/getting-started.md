@@ -45,7 +45,7 @@ To install `create-react-app` run the following command.
       npm install @syncfusion/ej2-react-inputs –save
     ```
 
-* The above package installs [Input dependencies](./getting-started#dependencies) which are required to render the TextBox component in React environment.
+* The above package installs [Input dependencies](./getting-started/#dependencies) which are required to render the TextBox component in React environment.
 
 * The TextBox CSS files are available in the `ej2-react-inputs` package folder. This can be referenced in your application using the following code.
 
@@ -95,7 +95,7 @@ ReactDOM.render(<App />, document.getElementById('input-container'));
 ## Adding icons to the TextBox
 
 You can create a TextBox with icon as a group by creating the parent div element with the class `e-input-group` and
-add the icon element as span with the class `e-input-group-icon`. For detailed information, refer to the [Groups](./groups) section.
+add the icon element as span with the class `e-input-group-icon`. For detailed information, refer to the [Groups](./groups/) section.
 
 `[Class-component]`
 

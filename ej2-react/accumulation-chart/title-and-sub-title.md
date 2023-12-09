@@ -23,7 +23,7 @@ Accumulation Chart can be given a title using [`title`](https://ej2.syncfusion.c
 
  {% previewsample "page.domainurl/code-snippet/chart/chart-title-cs1" %}
 
-## Title Customization
+# Title Customization
 
 Accumulation Chart can be customizing a title using [`titleStyle`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationChartModel/#titlestyle) property.
 

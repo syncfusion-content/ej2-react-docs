@@ -80,7 +80,7 @@ root.render(<App />);
 
 ## Add ports at runtime
 
-Add ports at runtime by using the client-side method [`addPorts`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addPorts). The following code illustrates how to add ports to node at runtime.
+Add ports at runtime by using the client-side method [`addPorts`](https://ej2.syncfusion.com/react/documentation/api/diagram#addPorts). The following code illustrates how to add ports to node at runtime.
 
 The port’s ID property is used to define the unique ID for the port and its further used to find the port at runtime.
 If ID is not set, then default ID is automatically set.
@@ -167,7 +167,7 @@ root.render(<App />);
 
 ## Remove ports at runtime
 
-Remove ports at runtime by using client-side method [`removePorts`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removePorts). Refer to the following example which shows how to remove ports at runtime.
+Remove ports at runtime by using client-side method [`removePorts`](https://ej2.syncfusion.com/react/documentation/api/diagram#removePorts). Refer to the following example which shows how to remove ports at runtime.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -182,7 +182,7 @@ Remove ports at runtime by using client-side method [`removePorts`](https://ej2.
 
 ## Update port at runtime
 
-You can change any port properties at runtime and update it through the client-side method [`dataBind`](https://ej2.syncfusion.com/react/documentation/api/diagram/#dataBind).
+You can change any port properties at runtime and update it through the client-side method [`dataBind`](https://ej2.syncfusion.com/react/documentation/api/diagram#dataBind).
 
 The following code example illustrates how to change the port properties.
 
@@ -246,11 +246,11 @@ root.render(<App />);
 
 * The shape of port can be changed by using its shape property. To explore the different types of port shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape as path and define path using path data property of port.
 
-* The appearance of ports can be customized by using [`strokeColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/port/#strokeColor-string), [`strokeWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/port/#strokeWidth-string), and [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/port/#fill-string) properties of the port.
+* The appearance of ports can be customized by using [`strokeColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#strokeColor-string), [`strokeWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#strokeWidth-string), and [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#fill-string) properties of the port.
 
-* Customize the port size by using the [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/port/#width-number) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/port/#height-number) properties of port.
+* Customize the port size by using the [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#width-number) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#height-number) properties of port.
 
-* The ports [`visibility`](https://ej2.syncfusion.com/react/documentation/api/diagram/port/#visibility-boolean) property allows you to define, when the port should be visible.
+* The ports [`visibility`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#visibility-boolean) property allows you to define, when the port should be visible.
 
 The following code illustrates how to change the appearance of port.
 
@@ -272,4 +272,4 @@ The offset property of port is used to align the port based on fractions. 0 repr
 ## Constraints
 
 The constraints property allows to enable/disable certain behaviors of ports. For more information about port
-constraints, refer to [`Port Constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/port/#constraints-portconstraints).
+constraints, refer to [`Port Constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#constraints-portconstraints).

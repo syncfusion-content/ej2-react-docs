@@ -1,6 +1,3 @@
-
-
-import { setValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import { AddEventArgs, DetailRow, Edit, GridModel, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -11,7 +8,7 @@ function App() {
     actionBegin(args: AddEventArgs) {
       if (args.requestType === "add") {
         /** parentKeyFieldValue refers to the queryString field value of the parent record. */
-        setValue('EmployeeID', (this as any).parentDetails.parentKeyFieldValue, (args.data as object));
+        args.data['EmployeeID'] = this.parentDetails.parentKeyFieldValue; // 'this' refers to the instance of the child grid.
        }
     },
     columns: [
@@ -36,5 +33,3 @@ function App() {
       </GridComponent >)
 };
 export default App;
-
-

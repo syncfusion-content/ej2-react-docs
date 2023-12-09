@@ -106,7 +106,7 @@ this.documenteditor.search.findAll('Some text', 'None');
 
 ## Search results
 
-The [`SearchResults`](https://ej2.syncfusion.com/react/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#searchresultschange) event. This will expose the following APIs:
+The [`SearchResults`](https://ej2.syncfusion.com/react/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor#searchresultschange) event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -223,4 +223,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ## See Also
 
 * [Options pane](../document-editor/dialog#options-pane)
-* [Feature modules](../document-editor/feature-module)
+* [Feature modules](../document-editor/feature-module/)

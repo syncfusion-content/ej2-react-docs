@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Zooming
 
-The zooming feature is used to zoom in and out of Maps to show in-depth information. It is controlled by the [`zoomFactor`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomfactor) property of the [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/) of the Maps. The Map is zoomed in when the [`zoomFactor`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomfactor) is increased. The [`zoomFactor`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomfactor) is increased or decrease dynamically based on zoom in and out interaction.
+The zooming feature is used to zoom in and out of Maps to show in-depth information. It is controlled by the [`zoomFactor`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomfactor) property of the [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel) of the Maps. The Map is zoomed in when the [`zoomFactor`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomfactor) is increased. The [`zoomFactor`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomfactor) is increased or decrease dynamically based on zoom in and out interaction.
 
 <b>Enable zooming</b>
 
@@ -20,7 +20,7 @@ Zooming of Maps is enabled by setting the [`enable`](https://ej2.syncfusion.com/
 
 <b>Enable panning</b>
 
-To enable the panning feature, set the [`enablePanning`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#enablepanning) property of [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/) to **true**.
+To enable the panning feature, set the [`enablePanning`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#enablepanning) property of [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -62,7 +62,7 @@ The following options are available in toolbar.
 
 #### Pinch zooming
 
-To enable or disable the pinch zooming, use the [`pinchZooming`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#pinchzooming) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/).
+To enable or disable the pinch zooming, use the [`pinchZooming`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#pinchzooming) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel).
 
 {% raw %}
 
@@ -91,7 +91,7 @@ root.render(<App />);
 
 #### Single-click zooming
 
-To enable or disable the single-click zooming, use the [`zoomOnClick`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomonclick) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/).
+To enable or disable the single-click zooming, use the [`zoomOnClick`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#zoomonclick) property in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel).
 
 {% raw %}
 
@@ -238,7 +238,7 @@ root.render(<App />);
 
 ### Zooming with animation
 
-To zoom in or zoom out the Maps with animation, use the [`animationDuration`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#animationduration) property in [`layers`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/).
+To zoom in or zoom out the Maps with animation, use the [`animationDuration`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#animationduration) property in [`layers`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel).
 
 {% raw %}
 
@@ -267,7 +267,7 @@ root.render(<App />);
 
 ### Customizing the zoom toolbar
 
-The zoom toolbar can be customized by using the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#toolbarsettings) option in the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/). The following properties can be used to customize the zoom toolbar.
+The zoom toolbar can be customized by using the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#toolbarsettings) option in the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel). The following properties can be used to customize the zoom toolbar.
 
 * [backgroundColor](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarSettingsModel/#backgroundcolor) - It is used to customize the background color of the zoom toolbar.
 * [borderOpacity](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarSettingsModel/#borderopacity) - It is used to customize the opacity of the border of the zoom toolbar.
@@ -291,7 +291,7 @@ The zoom toolbar can be customized by using the [toolbarSettings](https://ej2.sy
 <!-- markdownlint-disable MD036 -->
 **Customizing the buttons in the zoom toolbar**
 
-The appearance of the buttons in the zoom toolbar can be customized by using the [buttonSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarSettingsModel/#buttonsettings) option in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#toolbarsettings) of the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/) property. The following properties can be used to customize the zoom toolbar buttons.
+The appearance of the buttons in the zoom toolbar can be customized by using the [buttonSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarSettingsModel/#buttonsettings) option in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#toolbarsettings) of the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel) property. The following properties can be used to customize the zoom toolbar buttons.
 
 * [fill](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarButtonSettingsModel/#fill) - It is used to set the background color of the buttons.
 * [color](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarButtonSettingsModel/#color) - It is used to customize the color of the icons inside the button.
@@ -319,7 +319,7 @@ The appearance of the buttons in the zoom toolbar can be customized by using the
 <!-- markdownlint-disable MD036 -->
 **Customizing the tooltip of the zoom toolbar**
 
-The appearance of the tooltip of the zoom toolbar can be customized by using the [tooltipSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarSettingsModel/#tooltipsettings) option in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#toolbarsettings) of the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/) property. The following properties are available to customize the zoom toolbar tooltip.
+The appearance of the tooltip of the zoom toolbar can be customized by using the [tooltipSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarSettingsModel/#tooltipsettings) option in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel/#toolbarsettings) of the [zoomSettings](https://ej2.syncfusion.com/react/documentation/api/maps/zoomSettingsModel) property. The following properties are available to customize the zoom toolbar tooltip.
 
 * [visible](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarTooltipSettingsModel/#visible) - Enables or disables the tooltip of the zoom toolbar.
 * [fill](https://ej2.syncfusion.com/react/documentation/api/maps/zoomToolbarTooltipSettingsModel/#fill) - It is used to change the background color of the tooltip of the zoom toolbar.
@@ -346,7 +346,7 @@ The appearance of the tooltip of the zoom toolbar can be customized by using the
 
 ## Selection
 
-Each shape in the Maps can be selected and deselected during interaction with the shapes. Selection is enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/#enable) property of [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/) to **true**.
+Each shape in the Maps can be selected and deselected during interaction with the shapes. Selection is enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/#enable) property of [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel) to **true**.
 
 The following properties are available to customize the selection of Maps elements such as shapes, bubbles, markers and legends.
 
@@ -370,7 +370,7 @@ By tapping on the specific legend, the shapes which are bounded to the selected 
 
 ### Enable selection for bubbles
 
-To enable the selection for bubbles in Maps, set the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/) in [`bubbleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel/) and set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/#enable) property of [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/) as **true**.
+To enable the selection for bubbles in Maps, set the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel) in [`bubbleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel/) and set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/#enable) property of [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel) as **true**.
 
 >To use the bubble feature, the Bubble module must be injected.
 
@@ -387,7 +387,7 @@ To enable the selection for bubbles in Maps, set the [`selectionSettings`](https
 
 ### Enable selection for markers
 
-To enable the selection for markers in Maps, set the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/) in the [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/) and set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/#enable) property of the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/) as **true**.
+To enable the selection for markers in Maps, set the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel) in the [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel) and set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/#enable) property of the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel) as **true**.
 
 >To use the marker feature, the Marker module must be injected.
 
@@ -437,7 +437,7 @@ The shape is initially selected using the [`initialShapeSelection`](https://ej2.
 
 ### Initial marker selection
 
-Using the [`initialMarkerSelection`](https://ej2.syncfusion.com/react/documentation/api/maps/initialMarkerSelectionSettingsModel/), the marker shape can be selected initially. Markers render based on the [`latitude`](https://ej2.syncfusion.com/react/documentation/api/maps/initialMarkerSelectionSettingsModel/#latitude) and [`longitude`](https://ej2.syncfusion.com/react/documentation/api/maps/initialMarkerSelectionSettingsModel/#longitude) values.
+Using the [`initialMarkerSelection`](https://ej2.syncfusion.com/react/documentation/api/maps/initialMarkerSelectionSettingsModel), the marker shape can be selected initially. Markers render based on the [`latitude`](https://ej2.syncfusion.com/react/documentation/api/maps/initialMarkerSelectionSettingsModel/#latitude) and [`longitude`](https://ej2.syncfusion.com/react/documentation/api/maps/initialMarkerSelectionSettingsModel/#longitude) values.
 
 >initialMarkerSelection is an Array property.
 
@@ -454,7 +454,7 @@ Using the [`initialMarkerSelection`](https://ej2.syncfusion.com/react/documentat
 
 ## Highlight
 
-Each shape in the Maps can be highlighted during mouse hover on the Maps elements such as shapes, bubbles, markers and legends. Highlight is enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/#enable) property of [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/) to **true**.
+Each shape in the Maps can be highlighted during mouse hover on the Maps elements such as shapes, bubbles, markers and legends. Highlight is enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/#enable) property of [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel) to **true**.
 
 The following properties are available to customize the highlight of Maps elements such as shapes, bubbles, markers and legends.
 
@@ -477,7 +477,7 @@ Hovering on the specific legend, the shapes which are bounded to the selected le
 
 ### Enable highlight for bubbles
 
-To enable the highlight for bubbles in Maps, set the [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/) in [`bubbleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel/) and set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/#enable) property of [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/) as **true**.
+To enable the highlight for bubbles in Maps, set the [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel) in [`bubbleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel) and set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/#enable) property of [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel) as **true**.
 
 >To use the bubble feature, the Bubble module must be injected.
 
@@ -494,7 +494,7 @@ To enable the highlight for bubbles in Maps, set the [`highlightSettings`](https
 
 ### Enable highlight for markers
 
-To enable the highlight for markers in Maps, set the [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/) in [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/) and set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/#enable) property of [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/) as **true**.
+To enable the highlight for markers in Maps, set the [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel) in [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel) and set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/#enable) property of [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel) as **true**.
 
 >To use the marker feature, the Marker module must be injected.
 
