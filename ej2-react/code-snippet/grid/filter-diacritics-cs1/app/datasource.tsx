@@ -1,4 +1,4 @@
-export let diacriticsData: { [key: string]: Object }[]  =  [
+export let data: { [key: string]: Object }[]  =  [
     {
         'EmployeeID': 1,
         'Name': 'Aeróbics',

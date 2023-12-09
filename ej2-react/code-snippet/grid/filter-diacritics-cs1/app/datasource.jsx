@@ -1,4 +1,4 @@
-export let diacriticsData = [
+export let data = [
     {
         'EmployeeID': 1,
         'Name': 'Aeróbics',
