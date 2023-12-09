@@ -1,20 +1,19 @@
 import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
 import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import { diacriticsData } from './datasource';
+import { data } from './datasource';
 function App() {
-    const FilterOptions = {
+    const filterOptions = {
         ignoreAccent: true
     };
-    return <GridComponent dataSource={diacriticsData} filterSettings={FilterOptions} allowFiltering={true}>
+    return <GridComponent dataSource={data} filterSettings={filterOptions} allowFiltering={true}>
     <ColumnsDirective>
-      <ColumnDirective field='EmployeeID' width='140' textAlign="Right"/>
-      <ColumnDirective field='Name' width='140'/>
-      <ColumnDirective field='ShipName' width='170' textAlign="Right"/>
-      <ColumnDirective field='CustomerID' width='140' textAlign="Right"/>
+      <ColumnDirective field='EmployeeID' headerText='Employee ID' width='140' textAlign="Right" />
+      <ColumnDirective field='Name' headerText='Name' width='140' />
+      <ColumnDirective field='ShipName' headerText='Ship Name' width='170' textAlign="Right" />
+      <ColumnDirective field='CustomerID' headerText='CustomerID' width='140' textAlign="Right" />
     </ColumnsDirective>
     <Inject services={[Filter]}/>
   </GridComponent>;
-}
-;
+};
 export default App;
