@@ -50,7 +50,6 @@ The ListView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/p
 | `role=checkbox` | Indicates checkbox control along with listitem element. |
 | `aria-checked` | Indicates the current checked state of checkbox. |
 | `aria-label` | Provides an accessible name for the ListView Checkbox. |
-| `aria-activedescendant` | Identifies the currently active element when focusing on the ListView via a keyboard action. |
 | `aria-disabled` | Indicates element is perceivable but disabled. |
 
 ## Keyboard interaction

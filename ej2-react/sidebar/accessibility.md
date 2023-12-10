@@ -48,13 +48,7 @@ For optimal accessibility, it is recommended to incorporate a trigger component 
 
 ## Keyboard interaction
 
-The Sidebar component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation.
-
-| Interaction Keys | Description |
-|------|---------|
-| <kbd>Enter</kbd> / <kbd>Space</kbd>  | Closes the sidebar when it has a focusable button inside the sidebar. |
-| <kbd>tab</kbd> | Move the focus to the next focusable element within the sidebar. |
-| <kbd>shift + tab</kbd> | Move the focus to the previous focusable element within the sidebar. |
+The Sidebar component does not have any inbuilt keyboard interaction support. However, you can utilize the keyboard interactions of focusable elements within the Sidebar component.
 
 ## Ensuring accessibility
 
