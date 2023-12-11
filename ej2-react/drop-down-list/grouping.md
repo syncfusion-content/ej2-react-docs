@@ -43,7 +43,7 @@ In the following sample, vegetables are grouped according on its category using 
 
 ## Customization
 
-The grouping header is also provided with customization option. This allows custom designing using the [`groupTemplate`](./templates/#group-template) property for both inline and fixed headers as referred here: [Group Template support to DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/templates#group-template).
+The grouping header is also provided with customization option. This allows custom designing using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#grouptemplate) property for both inline and fixed headers as referred here: [Group Template support to DropDownList](./templates/#group-template).
 
 To get started with grouping, grouping templates and adding icons in React DropDownList, you can check on this video:
 
