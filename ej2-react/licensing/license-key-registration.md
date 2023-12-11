@@ -71,7 +71,7 @@ The following steps show how to register the Syncfusion license key with the lic
 
 * Remove the `.cache` folder from node modules in the application.
 
-* Now run the application. If you are facing a license validation error, refer to this [link](hhttps://ej2.syncfusion.com/react/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequent license registration questions from this [`link`](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot).
+* Now run the application. If you are facing a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequent license registration questions from this [`link`](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot).
 
 >If you don't want to use the license text file in the application, refer to this [link](#register-the-license-key-with-the-environment-variable) to use an environment variable and register the Syncfusion license key.
 
