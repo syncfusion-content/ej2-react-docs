@@ -20,7 +20,7 @@ The accessibility compliance for the Chart component is outlined below.
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
@@ -43,12 +43,12 @@ The accessibility compliance for the Chart component is outlined below.
 
 The Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Chart component:
 
-| Element | Default description |
-| --- | --- |
-| Legend | Reads the series name |
-| Chart Title | Reads the chart's title |
-| Series Points | Reads the Point x :  Point y value |
-| Series Group | Reads the series type with data points |
+* img (role)
+* button (role)
+* region (role)
+* aria-label (attribute)
+* aria-hidden (attribute)
+* aria-pressed (attribute)
 
 ## Keyboard interaction
 
@@ -73,7 +73,7 @@ The Chart component followed the [keyboard interaction](https://www.w3.org/WAI/A
 | <kbd>Down/Up Arrow</kbd> | Pan the chart vertically. |
 | <kbd>Left/Right Arrow</kbd> | Pan the chart horizontally. |
 | <kbd>R</kbd> | Reset the zoomed chart. |
-| <kbd>Ctrl + P</kbd> | Prints the chart. |
+| <kbd>Ctrl + P</kbd> | Prints the Chart. |
 
 ## Ensuring accessibility
 

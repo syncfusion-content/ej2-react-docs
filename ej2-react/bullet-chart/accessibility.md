@@ -47,9 +47,9 @@ The accessibility compliance for the Bullet chart component is outlined below.
 | -- | -- |
 | [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
@@ -72,11 +72,10 @@ The accessibility compliance for the Bullet chart component is outlined below.
 
 The Bullet chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Bullet chart component:
 
-| Element | Default description |
-| --- | --- |
-| Title | Reads the bullet chart's title |
-| Legend | Reads the range name |
-| FeatureMeasure Bar | Reads the target width and value height |
+* img (role)
+* button (role)
+* aria-label (attribute)
+* aria-pressed (attribute)
 
 ## Keyboard interaction
 
@@ -84,6 +83,8 @@ The Bullet chart component followed the [keyboard interaction](https://www.w3.or
 
 | **Press** | **To do this** |
 | --- | --- |
+| <kbd>Tab</kbd> | Moves the focus to the next element in the Bullet chart. |
+| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Bullet chart. |
 | <kbd>Ctrl + P</kbd> | Prints the Bullet chart. |
 
 ## Ensuring accessibility

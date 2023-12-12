@@ -20,9 +20,9 @@ The accessibility compliance for the Stock chart component is outlined below.
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
@@ -43,11 +43,12 @@ The accessibility compliance for the Stock chart component is outlined below.
 
 The Stock chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Stock chart component:
 
-| Element | Default description |
-| --- | --- |
-| Title | Reads the stock chart's title |
-| Legend | Reads the series name |
-| Series Points | Reads the Point x :  Point y value |
+* img (role)
+* button (role)
+* region (role)
+* aria-label (attribute)
+* aria-hidden (attribute)
+* aria-pressed (attribute)
 
 ## Keyboard interaction
 
@@ -55,13 +56,13 @@ The Stock chart component followed the [keyboard interaction](https://www.w3.org
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Alt + J</kbd> | Moves the focus to the stock chart element. |
-| <kbd>Tab</kbd> | Moves the focus to the next element in the stock chart. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the stock chart. |
+| <kbd>Alt + J</kbd> | Moves the focus to the Stock chart element. |
+| <kbd>Tab</kbd> | Moves the focus to the next element in the Stock chart. |
+| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Stock chart. |
 | <kbd>Down Arrow</kbd> | Moves the focus to the data point left side from the selected point. |
 | <kbd>Up Arrow</kbd> | Moves the focus to the data point right side from the selected point. |
 | <kbd>ESC</kbd> | Cancel the tooltip for the data point. |
-| <kbd>Ctrl + P</kbd> | Prints the stock chart. |
+| <kbd>Ctrl + P</kbd> | Prints the Stock chart. |
 
 ## Ensuring accessibility
 

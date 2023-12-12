@@ -18,9 +18,9 @@ The accessibility compliance for the Smith chart component is outlined below.
 | -- | -- |
 | [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
@@ -43,12 +43,10 @@ The accessibility compliance for the Smith chart component is outlined below.
 
 The Smith chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Smith chart component:
 
-| Element | Default description |
-| --- | --- |
-| Title | Reads the smith chart's title |
-| Legend | Reads the series name |
-| Marker | Reads the Location x :  Location y value |
-| Series Points | Reads the Point x :  Point y value |
+* img (role)
+* region (role)
+* aria-label (attribute)
+* aria-hidden (attribute)
 
 ## Keyboard interaction
 
@@ -56,7 +54,9 @@ The Smith chart component followed the [keyboard interaction](https://www.w3.org
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Ctrl + P</kbd> | Prints the smith chart. |
+| <kbd>Tab</kbd> | Moves the focus to the next element in the Smith chart. |
+| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Smith chart. |
+| <kbd>Ctrl + P</kbd> | Prints the Smith chart. |
 
 ## Ensuring accessibility
 

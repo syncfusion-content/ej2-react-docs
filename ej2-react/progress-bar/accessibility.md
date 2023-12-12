@@ -22,7 +22,7 @@ The accessibility compliance for the Progress bar component is outlined below.
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
@@ -43,9 +43,11 @@ The accessibility compliance for the Progress bar component is outlined below.
 
 The Progress bar component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Progress bar component:
 
-| Element | Default description |
-| --- | --- |
-| Progress bar | Reads the progress value |
+* progressbar (role)
+* aria-valuemin (attribute)
+* aria-valuemax (attribute)
+* aria-valuenow (attribute)
+* aria-label (attribute)
 
 ## Keyboard interaction
 
@@ -53,6 +55,7 @@ The Progress bar component followed the [keyboard interaction](https://www.w3.or
 
 | **Press** | **To do this** |
 | --- | --- |
+| <kbd>Tab</kbd> | Moves the focus to the Progress bar element. |
 | <kbd>Ctrl + P</kbd> | Prints the Progress bar. |
 
 ## Ensuring accessibility

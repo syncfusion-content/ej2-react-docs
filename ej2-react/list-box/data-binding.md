@@ -82,7 +82,7 @@ In the following example, `sports.Name` column from complex data have been mappe
 
 ## Remote Data
 
-The ListBox supports retrieval of data from remote data services with the help of [`DataManager`](https://ej2.syncfusion.com/documentation/data/getting-started/) component.
+The ListBox supports retrieval of data from remote data services with the help of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) component.
 
 The following sample displays the employee names from `Employee` table.
 
