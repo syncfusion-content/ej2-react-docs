@@ -123,7 +123,7 @@ The following example shows a basic Button component.
 
  {% previewsample "page.domainurl/code-snippet/button/default-cs1" %}
 
-> You can refer to our [React Button](https://www.syncfusion.com/react-ui-components/react-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Button example]( https://ej2.syncfusion.com/react/demos/#/material/button/default) that shows how to render the Button in React.
+> You can refer to our [React Button](https://www.syncfusion.com/react-components/react-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Button example]( https://ej2.syncfusion.com/react/demos/#/material/button/default) that shows how to render the Button in React.
 
 ## See Also
 

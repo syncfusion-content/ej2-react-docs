@@ -66,7 +66,7 @@ Modify the task details through the edit dialog by setting the edit [`mode`](htt
 
 `Note:` In dialog editing mode, the edit dialog appears when the TreeGrid or Gantt chart sides are double-clicked.
 
-## Sections or tabs in dialog
+### Sections or tabs in dialog
 
 In the Gantt dialog, you can define the required tabs or editing sections using the [`addDialogFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#adddialogfields) and [`editDialogFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editdialogfields) properties. Every tab is defined using the [`type`](https://ej2.syncfusion.com/react/documentation/api/gantt/dialogFieldType/) property.
 
@@ -84,7 +84,7 @@ In the Gantt dialog, you can define the required tabs or editing sections using 
         
 {% previewsample "page.domainurl/code-snippet/gantt/editingdialog-cs1" %}
 
-## Limiting data fields in general tab
+### Limiting data fields in general tab
 
 In the Gantt dialog, you can make only specific data source fields visible for editing by using the [`addDialogFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#adddialogfields) and [`editDialogFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editdialogfields) properties. The data fields are defined with [`type`](https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/#type) and [`fields`] (https://ej2.syncfusion.com/react/documentation/api/gantt/addDialogFieldSettings/#fields) properties.
 
@@ -103,3 +103,64 @@ In the Gantt dialog, you can make only specific data source fields visible for e
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/editingdialog-cs2" %}
+
+## Task dependencies
+
+In the Gantt component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the [`dependency`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#dependency) property.
+
+You can update the task dependencies using the following ways:
+
+* Mouse interactions: Using connector points in the taskbar, you can perform drag and drop action to create task dependency links.
+* Edit dialog: Create or remove the task dependencies using the `Dependency` tab in the edit dialog.
+* Cell editing: Create or remove the task links using cell editing.
+
+The following code example demonstrates how to enable task dependency editing in the Gantt chart using the [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/) property.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/dependencyedit-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/dependencyedit-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/dependencyedit-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/dependencyedit-cs2" %}
+
+![Alt text](images/user-interaction.png)
+
+Updating with mouse interaction action
+
+![Alt text](images/cell-edit.png)
+
+Updating with cell Edit
+
+![Alt text](images/dialog.png)
+
+Updating with Dialog
+
+`Note:` When the edit mode is set to `Auto`, on performing double-click action on TreeGrid side, the cells will be changed to editable mode and on performing double-click action on chart side, the edit dialog will appear for editing the task details.
+
+## Update task values using method
+
+Tasks' value can be dynamically updated by using the [`updateRecordById`](https://ej2.syncfusion.com/react/documentation/api/gantt/#updaterecordbyid) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
+
+>NOTE: Using the [`updateRecordById`](https://ej2.syncfusion.com/react/documentation/api/gantt/#updaterecordbyid) method, you cannot update the task ID value.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/updaterecord-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/updaterecord-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/updaterecord-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/updaterecord-cs1" %}
+
