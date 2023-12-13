@@ -80,4 +80,4 @@ You can prevent auto-hiding of React toast by set timeOut value of timeOut prope
 
 ## See Also
 
-* [Hide the toast on click](./how-to/close-the-toast-with-click-tap/)
+* [Hide the toast on click](./how-to/close-the-toast-with-click-tap)
