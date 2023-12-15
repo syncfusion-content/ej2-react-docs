@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Rating component | Syncfusion
-description:  Checkout and learn about Getting started with React Rating component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Rating Component | Syncfusion
+description: Checkout and learn about getting started with React Rating component of Syncfusion Essential JS 2 and more details.
 control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Rating Control
+# Getting Started with React Rating Component
 
 This section explains how to create a simple Rating and demonstrate the basic usage of the Rating component in an React environment.
 
