@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 
 export default class App extends React.Component<{}, {}> {
   // maps the appropriate column to fields property
-  private fields: object = { text: 'text', value: 'text' };
+  private fields: object = { value: 'text' };
 
   // define the array of string
   private records: { [key: string]: Object }[] = [];

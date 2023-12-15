@@ -19,7 +19,7 @@ export default class App extends React.Component<{}, {}> {
     public render() {
         return (
             // specifies the tag for render the ComboBox component
-            <ComboBoxComponent id="datas" dataSource={this.records} fields={this.fields} placeholder="e.g. Item 1" enableVirtualization={true} allowFiltering={true} popupHeight="200px" >
+            <ComboBoxComponent id="datas" dataSource={this.records} fields={this.fields} placeholder="e.g. Item 1" enableVirtualization={true} allowFiltering={false} popupHeight="200px" >
                 <Inject services={[VirtualScroll]} />
             </ComboBoxComponent>
         );

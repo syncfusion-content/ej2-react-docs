@@ -229,4 +229,4 @@ In the following sample, popup list's width and height are configured.
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
+* [How to bind the data](./data-binding)

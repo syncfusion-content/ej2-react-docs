@@ -100,7 +100,7 @@ class App extends React.Component<{},{}> {
             </RichTextEditorComponent>
             <DialogComponent id='customTbarDlg' ref={(scope) => { this.dialogObj = scope! }}
               buttons={this.dlgButtons} overlayClick={this.dialogOverlay = this.dialogOverlay.bind(this) } header={this.header} visible={false}
-              showCloseIcon={false} target={'#rteSection'} height={this.height} created={this.dialogCreate = this.dialogCreate.bind(this)} isModal={true} />
+              showCloseIcon={false} target={'#rteSection'} height={this.height} created={this.dialogCreate = this.dialogCreate.bind(this)} isModal={true} cssClass={'e-rte-elements'} />
             <div id="customTbarDialog" style={hideDiv}>
               <div id="rteSpecial_char">
                 <div className="char_block" title="&#94;">&#94;</div>

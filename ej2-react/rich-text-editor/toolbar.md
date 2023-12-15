@@ -233,6 +233,8 @@ In the following sample, once Rich Text Editor control is [created](https://ej2.
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs2" %}
 
+> The focus will be lost while rendering the required component for the custom toolbar, causing it to render outside the Rich Text Editor and triggering a blur event. During that time, proper functionality will not be achievable. Therefore, it is recommended to set the cssClass property or class as `e-rte-elements` in the dependency component.
+
 ## Quick inline toolbar
 
 Quick commands are opened as context-menu on clicking the corresponding element. The commands must be passed as string collection to image, text, and link attributes of the [quickToolbarSettings](/rich-text-editor/api-quickToolbarSettings.html) property.

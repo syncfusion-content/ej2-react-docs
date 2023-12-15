@@ -15,7 +15,7 @@ export default class App extends React.Component {
     render() {
         return (
             // specifies the tag for render the DropDownList component
-            <DropDownListComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" enableVirtualization={true} allowFiltering={true} fields={this.fields} popupHeight="200px" >
+            <DropDownListComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" enableVirtualization={true} allowFiltering={false} fields={this.fields} popupHeight="200px" >
                 <Inject services={[VirtualScroll]} />
             </DropDownListComponent>);
     }

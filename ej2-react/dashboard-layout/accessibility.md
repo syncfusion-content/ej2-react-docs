@@ -44,7 +44,10 @@ The Dashboard Layout component followed the [WAI-ARIA](https://www.w3.org/WAI/AR
 
 | **Attributes** | **Purpose** |
 | --- | --- |
-| aria-grabbed | When the panel is chosen for dragging, the aria-grabbed attribute is set to "true." If it's set to "false," the element can be grabbed for drag-and-drop, but it won't be actively held. |
+| `role=list` | Indicates the role as a list for the Dashboard Layout element. |
+| `role=listitem` | Indicates the role as a listitem for the Dashboard panels. |
+| `role=presentation` | Indicates the role as a presentation for the table when the `showGridLines` property is enabled. |
+| `aria-grabbed` | When the panel is chosen for dragging, the aria-grabbed attribute is set to "true." If it's set to "false," the element can be grabbed for drag-and-drop, but it won't be actively held. |
 
 ## Keyboard interaction
 
