@@ -165,7 +165,7 @@ The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com
 ## Formatting the value
 
 User can set the format of the NumericTextBox component using [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#format) property. The value will be displayed in the specified format, when the component is in focused out state. For more information about
-formatting the value, refer to this [link](./formats/).
+formatting the value, refer to this [link](./formats).
 
 The below example demonstrates format the value by using currency format value `c2`.
 
@@ -231,9 +231,9 @@ Else, number of decimals will be restricted while typing in the NumericTextBox.
 
 ## See Also
 
-* [How to perform custom validation using FormValidator](./how-to/perform-custom-validation-using-form-validator/)
-* [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control/)
-* [How to customize the spin button’s up and down arrow](./how-to/customize-the-spin-buttons-up-and-down-arrow/)
-* [How to customize the step value and hide spin buttons](./how-to/customize-the-step-value-and-hide-spin-buttons/)
-* [How to prevent nullable input in NumericTextBox](./how-to/prevent-nullable-input-in-numerictextbox/)
-* [How to maintain trailing zeros in NumericTextBox](./how-to/maintain-trailing-zeros-in-numerictextbox/)
+* [How to perform custom validation using FormValidator](./how-to/perform-custom-validation-using-form-validator)
+* [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control)
+* [How to customize the spin button’s up and down arrow](./how-to/customize-the-spin-buttons-up-and-down-arrow)
+* [How to customize the step value and hide spin buttons](./how-to/customize-the-step-value-and-hide-spin-buttons)
+* [How to prevent nullable input in NumericTextBox](./how-to/prevent-nullable-input-in-numerictextbox)
+* [How to maintain trailing zeros in NumericTextBox](./how-to/maintain-trailing-zeros-in-numerictextbox)

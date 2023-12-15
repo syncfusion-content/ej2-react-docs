@@ -33,7 +33,7 @@ The following list of dependencies are required to use the Spreadsheet component
 
 ## Setup for Local Development
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications and run the following command to install create-react-app.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications and run the following command to install create-react-app.
 
 ```
 npm install -g create-react-app
@@ -92,7 +92,7 @@ export default function App() {
 
 ## Run the application
 
-The [create-react-app](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+The [create-react-app](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
 ```
 
@@ -113,7 +113,7 @@ The following example shows a basic spreadsheet component.
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/getting-started-cs1" %}
 
-> You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) that shows you how to present and manipulate data.
+> You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/spreadsheet/default) that shows you how to present and manipulate data.
 
 ## See Also
 

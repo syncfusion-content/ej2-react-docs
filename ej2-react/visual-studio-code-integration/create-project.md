@@ -64,4 +64,4 @@ We have showcased the Chart, Grid and Schedule component in Syncfusion web appli
 
 ## Upgrading the npm packages
 
-While creating the new Syncfusion web app, it install the npm packages with latest version. If you want to use your existing project in future, you can update the npm packages without uninstalling it. Refer to the [update npm packages](https://ej2.syncfusion.com/react/documentation/common/how-to/update-npm-package/) section for upgrading the package.
+While creating the new Syncfusion web app, it install the npm packages with latest version. If you want to use your existing project in future, you can update the npm packages without uninstalling it. Refer to the [update npm packages](https://ej2.syncfusion.com/react/documentation/common/how-to/update-npm-package) section for upgrading the package.

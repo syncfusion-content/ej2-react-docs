@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Table in React Rich text editor component
 
-Rich Text Editor allows to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the [`tableSettings`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/tableSettingsModel)
+Rich Text Editor allows to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the [`tableSettings`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/tableSettingsModel/)
 
 | Options | Description | Default Value |
 |----------------|---------|-----------------------------|
@@ -127,7 +127,7 @@ Using the quick toolbar, users can change the width, cell padding, and cell spac
 
 The Rich Text Editor allows users to change the appearance of the tables by splitting or merging the table cells.
 
-`TableCell` item should be configured in the Table [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#table) Property to show the merge/split icons while selecting the table cells
+`TableCell` item should be configured in the Table [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quicktoolbarsettings/#table) Property to show the merge/split icons while selecting the table cells
 
 ### Table cell merge
 
