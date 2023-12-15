@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Dialog component
 
-The Dialog characterized with complete ARIA Accessibility support which helps to accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal).
+The Dialog characterized with complete ARIA Accessibility support which helps to accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal).
 
 The Dialog component uses the `Dialog` role and following ARIA properties to its element based on its state.
 
@@ -23,7 +23,7 @@ The Dialog component uses the `Dialog` role and following ARIA properties to its
 
 ## Keyboard interaction
 
-Keyboard interaction of Dialog component has designed based on [WAI-ARIA Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal) described for Dialog. User can use the following shortcut keys to interact with the Dialog.
+Keyboard interaction of Dialog component has designed based on [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal) described for Dialog. User can use the following shortcut keys to interact with the Dialog.
 
 <!-- markdownlint-disable MD033 -->
 <table>

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Npm packages for Syncfusion React UI Components
 
-The Syncfusion React UI components are separately available in individual [npm packages](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react). The npm packages are segregated based on the component usage.
+The Syncfusion React UI components are separately available in individual [npm packages](https://www.npmjs.com/search?q=@syncfusion/ej2-react). The npm packages are segregated based on the component usage.
 
 ## Anatomy of npm packages
 
@@ -327,10 +327,10 @@ The Syncfusion React Word Processor (Document Editor) is a component with editin
 
 ## See also
 
-* [Installation with npm CLI](https://ej2.syncfusion.com/react/documentation/installation/installation/)
+* [Installation with npm CLI](https://ej2.syncfusion.com/react/documentation/installation/installation)
 
-* [Download JavaScript – EJ2 Installer](https://ej2.syncfusion.com/react/documentation/installation/web-installer/download/)
+* [Download JavaScript – EJ2 Installer](https://ej2.syncfusion.com/react/documentation/installation/web-installer/download)
 
-* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
+* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 
-* [Update npm Packages](https://ej2.syncfusion.com/react/documentation/upgrade/update-npm-package/)
+* [Update npm Packages](https://ej2.syncfusion.com/react/documentation/upgrade/update-npm-package)
