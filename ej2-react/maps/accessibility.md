@@ -10,33 +10,43 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Maps component
 
-Maps provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The WAI-ARIA accessibility support is achieved through the attribute like `aria-label` in the SVG element. It helps to provide information about elements in a document for assistive technology. This attribute sets the text label with some default description for the following elements in Maps.
+The Maps component follows commonly used accessibility guidelines and standards, such as the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-<!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td><b>Element</b></td>
-<td><b>Default description</b></td>
-</tr>
-<tr>
-<td>Maps container</td>
-<td>Specifies the Maps component.</td>
-</tr>
-<tr>
-<td>Maps title</td>
-<td>Specifies the title of the Maps.</td>
-</tr>
-<tr>
-<td>Maps subtitle</td>
-<td>Specifies the sub-title of the Maps.</td>
-</tr>
-<tr>
-<td>Legend title</td>
-<td>Specifies the title of legend in the Maps.</td>
-</tr>
-</table>
+The accessibility compliance for the Maps component is outlined below.
 
-To change this default description, use the [`description`](https://ej2.syncfusion.com/react/documentation/api/maps/#description) property available in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/commonTitleSettingsModel/#description), [`titleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/titleSettingsModel/#description), [`subtitleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/subTitleSettingsModel/#description) and [`Maps`](https://ej2.syncfusion.com/react/documentation/api/maps/#description). It helps the screen reader to read for an assistive purpose.
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
+To meet accessibility standards, the Maps component follows to the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns. In the Maps component, the following ARIA attributes are used:
+
+| Attributes | Purpose |
+| --- | --- |
+| `role=region` | It specifies the Maps areas that do not support interactive functions like selection and highlight. |
+| `role=button` | It specifies the Maps areas where interactive functions such as selection and highlight are available. |
+| `aria-label` | Provides an accessible name for the Maps container, title, subtitle and legend title. |
 
 ## Keyboard Navigation
 
@@ -54,3 +64,15 @@ Interaction Keys |Description
 <kbd>Down arrow</kbd> |When zoomed in, the map can be scrolled downward.
 <kbd> R </kbd> |When zooming is enabled, reset operation can be performed.
 <kbd>Enter</kbd> |The page can be navigated to the next and previous states in legend. Similarly, the selection can be made while navigating over the shape.
+
+## Ensuring accessibility
+
+The Maps component's accessibility levels are ensured using an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Maps component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/maps.html) in a new window to evaluate the accessibility of the Maps component with accessibility tools.
+
+{% previewsample "https://ej2.syncfusion.com/accessibility/maps.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion React components](../common/accessibility)

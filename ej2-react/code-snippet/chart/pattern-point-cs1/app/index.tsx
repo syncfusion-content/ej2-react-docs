@@ -1,7 +1,10 @@
+{% raw %}
+
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-  ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, ColumnSeries,
+  ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, ColumnSeries, AxisModel
 } from '@syncfusion/ej2-react-charts';
 function App() {
   const data: any[] = [
@@ -12,11 +15,11 @@ function App() {
     { country: 'France', gold: 50, color: 'url(#rectangle)' },
     { country: 'Germany', gold: 40, color: 'url(#chess)' },
     { country: 'Italy', gold: 40, color: 'url(#line)' },
-    { country: 'Sweden', gold: 30, color: 'url(#cross)' },
+    { country: 'Sweden', gold: 30, color: 'url(#cross)' }
   ];
 
-  const primaryxAxis = { valueType: 'Category', title: 'Countries' };
-  const primaryyAxis = {
+  const primaryxAxis: AxisModel = { valueType: 'Category', title: 'Countries' };
+  const primaryyAxis: AxisModel = {
     minimum: 0,
     maximum: 80,
     interval: 20,
@@ -45,3 +48,6 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('charts'));
+
+
+{% endraw %}

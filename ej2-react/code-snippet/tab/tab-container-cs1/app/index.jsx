@@ -1,6 +1,5 @@
 import { TabComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 const ReactApp = () => {
     return (<TabComponent id='defaultTab'>
@@ -22,6 +21,4 @@ const ReactApp = () => {
       </div>
     </TabComponent>);
 }
-
 export default ReactApp;
-ReactDOM.render(<ReactApp />, document.getElementById("element"));

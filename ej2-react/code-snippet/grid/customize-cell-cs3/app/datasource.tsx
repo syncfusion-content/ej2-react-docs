@@ -74,5 +74,8 @@ export let data: Object[] = [
         ShipName: 'Rattlesnake Canyon Grocery', ShipCity: 'Albuquerque', ShipAddress: '2817 Milton Dr.',
         ShipRegion: 'NM', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
     }];
+<<<<<<<< HEAD:ej2-react/code-snippet/grid/column-cs37/app/datasource.tsx
+========
 
 
+>>>>>>>> remotes/origin/development:ej2-react/code-snippet/grid/customize-cell-cs3/app/datasource.tsx

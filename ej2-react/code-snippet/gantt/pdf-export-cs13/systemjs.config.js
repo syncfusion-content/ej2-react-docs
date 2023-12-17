@@ -48,6 +48,7 @@ System.config({
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "@syncfusion/ej2-react-pdf-export": "syncfusion:ej2-react-pdf-export/dist/ej2-react-pdf-export.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
+        "@syncfusion/ej2-react-pdf-export": "syncfusion:ej2-react-pdf-export/dist/ej2-react-pdf-export.umd.min.js",
         "@syncfusion/ej2-svg-base": "syncfusion:ej2-svg-base/dist/ej2-svg-base.umd.min.js",
         "@syncfusion/ej2-react-svg-base": "syncfusion:ej2-react-svg-base/dist/ej2-react-svg-base.umd.min.js",
 "react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",

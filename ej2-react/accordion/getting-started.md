@@ -96,8 +96,6 @@ The React Accordion can be rendered by defining an array of [`items`](https://ej
 ```ts
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
-import * as ReactDOM from "react-dom";
-import './App.css'
 
 const ReactApp = () => {
   const aspContent = () => {
@@ -128,9 +126,7 @@ const ReactApp = () => {
     </AccordionComponent>
   );
 }
-
-export default ReactApp;
-ReactDOM.render(<ReactApp />, document.getElementById("element"));
+export default ReactApp; 
 
 ```
 

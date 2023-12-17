@@ -18,7 +18,7 @@ function App() {
         let ganttChart:any;
    function toolbarClick(args) {
         if (args.item.text === 'Pdf export') {
-        let exportProperties: PdfExportProperties = {
+        let exportProperties = {
            fontFamily: 1,
             columnHeader: {
                 backgroundColor: new PdfColor(179, 219, 255)
@@ -28,7 +28,7 @@ function App() {
                 taskBorderColor: new PdfColor(240, 128, 128),
                 progressColor: new PdfColor(205, 92, 92),
             },
-            connectorLineColor: new PdfColor(128, 0, 0),
+             connectorLineColor: new PdfColor(128, 0, 0),
             footer: {
                 backgroundColor: new PdfColor(205, 92, 92)
             },
@@ -43,7 +43,7 @@ function App() {
                 backgroundColor: new PdfColor(240, 248, 255),
                 fontColor: new PdfColor(0, 0, 0),
                 borderColor:new PdfColor(179, 219, 255),
-            },
+            }
         };
         ganttChart.pdfExport(exportProperties);
         }

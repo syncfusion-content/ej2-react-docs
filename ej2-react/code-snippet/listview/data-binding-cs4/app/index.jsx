@@ -11,16 +11,17 @@ function App() {
     }, []);
     //bind the DataManager instance to dataSource property
     let data = new DataManager({
-        url: "//js.syncfusion.com/ejServices/Wcf/Northwind.svc/",
+        url: "https://services.syncfusion.com/js/production/api/",
         crossDomain: true
     });
-    //map the appropriate columns to fields property
-    let fields = { id: "ProductID", text: "ProductName" };
+    //Map the appropriate columns to fields property
+    let fields = { id: "EmployeeID", text: "FirstName" };
     let spinnerInstance = null;
-    //bind the Query instance to query property
+
+    //Initialize query with the Query instance to get specified set of data
     let query = new Query()
-        .from("Products")
-        .select("ProductID,ProductName")
+        .from("ListView")
+        .select("EmployeeID,FirstName")
         .take(10);
     function componentDidMount() {
         if (spinnerInstance) {
@@ -35,7 +36,7 @@ function App() {
             spinnerInstance.style.display = "none";
     }
     return (<div>
-      <ListViewComponent id="list" dataSource={data} fields={fields} query={query} showHeader={true} headerTitle="Product Name" actionComplete={onActionComplete.bind(this)}/>
+      <ListViewComponent id="list" dataSource={data} fields={fields} query={query} showHeader={true} headerTitle="Employees" actionComplete={onActionComplete.bind(this)}/>
       <div ref={spinner => {
             spinnerInstance = spinner;
         }} id="spinner"/>

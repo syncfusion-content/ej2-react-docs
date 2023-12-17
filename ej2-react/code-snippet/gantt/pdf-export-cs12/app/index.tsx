@@ -4,6 +4,7 @@ import { GanttComponent, Inject, Toolbar, PdfExport, Selection } from '@syncfusi
 import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import { data } from './datasource';
 function App () {
+    let ganttChart;
         const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
@@ -14,7 +15,7 @@ function App () {
         };
         let ganttChart;
         const toolbarOptions = ['PdfExport'];
-    toolbarClick(args) {
+    function toolbarClick(args) {
         if (args.item.text === 'Pdf export') {
         let exportProperties: PdfExportProperties = {
            theme:"Fabric"

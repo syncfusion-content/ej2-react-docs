@@ -1,51 +1,78 @@
 ---
 layout: post
-title: Accessibility in React File manager component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React File Manager component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React File manager component
+# Accessibility in React File Manager component
 
-The File Manager component has been designed with keeping the `WAI-ARIA` specifications in mind, and applying the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
+The File Manager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-## ARIA attributes
+The accessibility compliance for the File Manager component is outlined below.
 
- The following `ARIA` Attributes denote the state of File Manager.
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
- | **Property** | **Functionalities** |
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
+The File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns) patterns to meet the accessibility. The following ARIA attributes are used in the File Manager component:
+
+| Attributes | Purpose |
 | --- | --- |
-| aria-disabled | Indicates whether the File Manager component is in disabled state.|
-| aria-haspopup | Indicates whether the Toolbar element has a suggestion list. |
-| aria-orientation | Indicates whether the File Manager element is oriented horizontally or vertically. |
-| aria-expanded | Indicates whether the Treeview node has been expanded. |
-| aria-owns | Contains the ID of the suggestion list to indicate popup as a child element. |
-| aria-activedescendent | Holds the ID of the active list item to focus its descendant child element. |
-| aria-level | Specifies the level of the element in Treeview Structure. |
-| aria-selected | Indicates whether a particular node is in selected state. |
-| aria-placeholder | Represents a hint (word or phrase) to the user about what to enter in the text field |
-| aria-label |  Defines a string that labels the current element. |
-| aria-checked | Indicates whether the checkbox is in checked state. |
-| aria-labelledby | Labels the dialog. Often, the value of the aria-labelledby attribute will be the id of the element, which is used to title the dialog |
-| aria-describedby | Describes the contents of the dialog. |
-| aria-modal | Indicates whether an element is a modal when display. |
-| aria-colcount | Specifies the number of columns in full table. |
-| aria-colindexnt | Defines the number of columns within a grid. |
-| aria-rowspan | Defines the number of rows a cell spanned within a grid. |
-| aria-colspan | Defines the number of columns a cell spanned within a grid. |
-| aria-sort | Indicates whether items in the grid or table are sorted in ascending or descending order. |
-| aria-grabbed | This attribute is set to true, and it has been selected for dragging. If this element is set to false, the element can be grabbed for a drag-and-drop operation, but will not currently be selected. |
-| aria-busy | This attribute is set to false when grid content is loaded. |
-| aria-multiselectable | Defines more than one item has been selected. |
+| `role` | Used to convey a significant and contextual message to the user. |
+| `aria-disabled` | Indicates whether the File Manager component is in disabled state.|
+| `aria-haspopup` | Indicates whether the Toolbar element has a popup list or not. |
+| `aria-orientation` | Indicates whether the File Manager element is oriented horizontally or vertically. |
+| `aria-expanded` | Indicates whether the Treeview node has been expanded. |
+| `aria-owns` | Contains the ID of the suggestion list to indicate popup as a child element. |
+| `aria-activedescendent` | Holds the ID of the active list item to focus its descendant child element. |
+| `aria-level` | Specifies the level of the element in Treeview Structure. |
+| `aria-selected` | Indicates whether a particular node is in selected state. |
+| `aria-placeholder` | Represents a hint (word or phrase) to the user about what to enter in the text field. |
+| `aria-label` |  Provides an accessible name for the element. |
+| `aria-checked` | Indicates whether the checkbox is in checked state. |
+| `aria-labelledby` | Provides a label for the dialog. Typically, the "aria-labelledby" attribute will contain the id of the element used as the dialog's title. |
+| `aria-describedby` | This attribute points to the Dialog element describing the one it's set on. |
+| `aria-modal` | Indicates whether an element is a modal when display. |
+| `aria-colcount` | Specifies the number of columns in full table. |
+| `aria-colindexnt` | Defines the number of columns within a grid. |
+| `aria-rowspan` | Defines the number of rows a cell spanned within a grid. |
+| `aria-colspan` | Defines the number of columns a cell spanned within a grid. |
+| `aria-sort` | Indicates whether items in the grid or table are sorted in ascending or descending order. |
+| `aria-grabbed` | When the panel is chosen for dragging, the aria-grabbed attribute is set to "true." If it's set to "false," the element can be grabbed for drag-and-drop, but it won't be actively held. |
+| `aria-busy` | This attribute is set to false when grid content is loaded. |
+| `aria-multiselectable` | Defines more than one item has been selected. |
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the File Manager without interruptions.
+The File Manager component followed the `keyboard interaction` guidelines, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the File Manager component.
 
-| **Keyboard shortcuts** | **Actions** |
+| **Press** | **To do this** |
 | --- | --- |
 | <kbd>Page Down</kbd> | Scrolls down to the next folder or file and selects the first item when files are loaded. |
 | <kbd>Page Up</kbd> | Scrolls up to previous folder and select the first item when files are loaded. |
@@ -74,3 +101,15 @@ You can use the following key shortcuts to access the File Manager without inter
 | <kbd>Ctrl+D</kbd> | Downloads the list of selected file or folder in file manager element. |
 | <kbd>Ctrl+Shift+1</kbd> | Changes the file manager layout to Grid view. |
 | <kbd>Ctrl+Shift+2</kbd> | Changes the file manager layout to Details view. |
+
+## Ensuring accessibility
+
+The File Manager component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the File Manager component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/file-manager.html) in a new window to evaluate the accessibility of the File Manager component with accessibility tools.
+
+{% previewsample "https://ej2.syncfusion.com/accessibility/file-manager.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion React components](../common/accessibility)

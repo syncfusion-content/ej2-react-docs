@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
-import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import { PdfColor } from '@syncfusion/ej2-pdf-export';
 import { PdfPaddings } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
@@ -45,7 +44,7 @@ function App() {
                 borderColor:new PdfColor(179, 219, 255),
             },
         };
-       ganttChart.pdfExport(exportProperties);
+        ganttChart.pdfExport(exportProperties);
         }
     };
 

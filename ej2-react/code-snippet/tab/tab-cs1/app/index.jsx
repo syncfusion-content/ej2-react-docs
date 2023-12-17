@@ -1,6 +1,5 @@
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 const ReactApp = () => {
     let headerText = [{ text: "Twitter" }, { text: "Facebook" }, { text: "WhatsApp" }];
@@ -27,6 +26,4 @@ const ReactApp = () => {
       </TabItemsDirective>
     </TabComponent>);
 }
-
 export default ReactApp;
-ReactDOM.render(<ReactApp />, document.getElementById("element"));

@@ -36,6 +36,7 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -61,8 +62,10 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -88,6 +91,7 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,6 +106,7 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -132,8 +137,10 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -164,6 +171,7 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,6 +188,7 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
@@ -205,8 +214,10 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
@@ -232,6 +243,7 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -244,6 +256,7 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
@@ -273,8 +286,10 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+{% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
@@ -304,6 +319,7 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

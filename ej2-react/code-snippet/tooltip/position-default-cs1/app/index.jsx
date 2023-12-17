@@ -12,9 +12,9 @@ function App() {
                 <div id="tooltip">Show Tooltip</div>
             </TooltipComponent>
             <div className='ddl'>
-                <select id="positions" ref={d => dropElement = d} onChange={change.bind(this)} className="form-control drop-inline">
+                <select id="positions" ref={d => dropElement = d} onChange={change.bind(this)} className="form-control drop-inline" value="TopCenter">
                     <option value="TopLeft">Top Left</option>
-                    <option value="TopCenter" selected>Top Center</option>
+                    <option value="TopCenter">Top Center</option>
                     <option value="TopRight">Top Right</option>
                     <option value="BottomLeft">Bottom Left</option>
                     <option value="BottomCenter">Bottom Center</option>

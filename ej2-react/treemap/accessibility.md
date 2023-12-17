@@ -1,41 +1,61 @@
 ---
 layout: post
-title: Accessibility in React Treemap component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React TreeMap component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React TreeMap component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Treemap component
+# Accessibility in React TreeMap component
 
-The TreeMap control provides built-in compliance with [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA accessibility supports are achieved using attributes such as `aria-label`. It helps to provide information about elements in a document for assistive technology.
+The TreeMap component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-This attribute provides the text label with some default description for the following elements in TreeMap.
+The accessibility compliance for the TreeMap component is outlined below.
 
-<!-- markdownlint-disable MD033 -->
-<table><table>
-<tr>
-<td><b>Element</b></td>
-<td><b>Default description</b></td>
-</tr>
-<tr>
-<td>TreeMap container</td>
-<td>Reads the TreeMap description</td>
-</tr>
-<tr>
-<td>TreeMap Title</td>
-<td>Reads the TreeMap title</td>
-</tr>
-<tr>
-<td>TreeMap Subtitle</td>
-<td>Reads the TreeMap subtitle</td>
-</tr>
-<tr>
-<td>Legend Title</td>
-<td>Reads the legend title</td>
-</tr>
-</table>
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
+| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
-You can change this default description using the description property available in `Legend`, `TitleSettings`, `SubtitleSettings`, and `TreeMap` objects. It helps screen readers to read for assistive purpose.
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
+The TreeMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the TreeMap component:
+
+| Attributes | Purpose |
+| --- | --- |
+| `role=region` | It specifies the TreeMap areas that do not support interactive functions like selection and highlight. |
+| `role=button` | It specifies the TreeMap areas where interactive functions such as selection and highlight are available. |
+| `aria-label` | Provides an accessible name for the TreeMap container, title, subtitle and legend title. |
+
+## Ensuring accessibility
+
+The TreeMap component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the TreeMap component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/treemap.html) in a new window to evaluate the accessibility of the TreeMap component with accessibility tools.
+
+{% previewsample "https://ej2.syncfusion.com/accessibility/treemap.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion React components](../common/accessibility)

@@ -13,20 +13,21 @@ function App() {
   React.useEffect(()=>{
     componentDidMount();
   },[])
-  //bind the DataManager instance to dataSource property
+
+  //Bind the DataManager instance to dataSource property
   let data = new DataManager({
-    url: "//js.syncfusion.com/ejServices/Wcf/Northwind.svc/",
+    url: "https://services.syncfusion.com/js/production/api/",
     crossDomain: true
   });
 
-  //map the appropriate columns to fields property
-  let fields = { id: "ProductID", text: "ProductName" };
+  //Map the appropriate columns to fields property
+  let fields = { id: "EmployeeID", text: "FirstName" };
   let spinnerInstance: HTMLElement | null = null;
 
-  //bind the Query instance to query property
+  //Initialize query with the Query instance to get specified set of data
   let query = new Query()
-    .from("Products")
-    .select("ProductID,ProductName")
+    .from("ListView")
+    .select("EmployeeID,FirstName")
     .take(10);
 
   function componentDidMount(){
@@ -50,7 +51,7 @@ function App() {
         fields={fields}
         query={query}
         showHeader={true}
-        headerTitle="Product Name"
+        headerTitle="Employees"
         actionComplete={onActionComplete.bind(this)}
       />
       <div

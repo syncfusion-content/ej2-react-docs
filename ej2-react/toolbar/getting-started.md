@@ -92,8 +92,6 @@ The Toolbar can be rendered by defining an array of [`items`](https://ej2.syncfu
 ```ts
 import { ItemDirective, ItemsDirective, ToolbarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import './App.css';
 
 const ReactApp = () => {
   return (
@@ -111,7 +109,6 @@ const ReactApp = () => {
   );
 }
 export default ReactApp;
-ReactDOM.render(<ReactApp />, document.getElementById("toolbar"));
 
 ```
 
