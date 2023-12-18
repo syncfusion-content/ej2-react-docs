@@ -14,12 +14,20 @@ function App(){
     child: 'subtasks',
   };
   let ganttInstance;
-  function clickHandler(){
+  const settings = {
+    mode: 'Row',
+    type: 'Multiple'
+};
+  function rowClickHandler(){
      ganttInstance.selectionModule.selectRow(2); // passing the record index to select the row
 }
+  function rowsClickHandler(){
+  ganttInstance.selectionModule.selectRows([1, 2, 3]); // passing the record index as array collection
+}
     return (<div>
-        <ButtonComponent onClick= { clickHandler}>Select Row</ButtonComponent>
-        <GanttComponent dataSource={data} allowSelection={true}  ref={gantt => ganttInstance = gantt}  taskFields={taskFields} height = '450px'>
+        <ButtonComponent onClick= { rowClickHandler}>Select Row</ButtonComponent>
+        <ButtonComponent  onClick= { rowsClickHandler}>Select Multiple Rows</ButtonComponent>
+        <GanttComponent dataSource={data} allowSelection={true}  ref={gantt => ganttInstance = gantt} selectionSettings={settings} taskFields={taskFields} height = '450px'>
         <Inject services={[Selection]} />
         </GanttComponent></div>)
   };

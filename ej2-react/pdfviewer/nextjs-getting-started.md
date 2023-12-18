@@ -1,4 +1,4 @@
-![image](https://github.com/syncfusion-content/ej2-pdfviewer-react-docs/assets/124550063/10466bd6-779b-4154-8498-410e7e1bf6eb)---
+---
 layout: post
 title: React getting started with Next.js | Syncfusion
 description: Check out and learn about how to use Syncfusion React UI components in the Next.js project.
@@ -7,7 +7,6 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
 
 # Creating a Next.js Application Using Syncfusion React Components
 

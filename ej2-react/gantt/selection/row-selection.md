@@ -48,7 +48,7 @@ You can select a row at the time of loading by setting the index of the row to t
 
 ## Selecting a row dynamically
 
-You can also select a row dynamically using the [`selectRow`](https://ej2.syncfusion.com/react/documentation/api/gantt/selection/#selectrow) method. The following code demonstrates how to select a row dynamically by clicking the custom button.
+You can select a single row dynamically using the [`selectRow`](https://ej2.syncfusion.com/react/documentation/api/gantt/selection/#selectrow) method. Similarly, you can use the [`selectRows`](https://ej2.syncfusion.com/react/documentation/api/gantt/selection/#selectrows) method to dynamically select multiple rows. The following code demonstrates how to select a single or multiple rows dynamically by clicking the custom button.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,23 +82,6 @@ You can select multiple rows by setting the [`selectionSettings.type`](https://e
         
 {% previewsample "page.domainurl/code-snippet/gantt/selection-cs8" %}
 
-## Selecting multiple rows dynamically
-
-You can also select rows dynamically using the [`selectRows`](https://ej2.syncfusion.com/react/documentation/api/gantt/selection/#selectrows) method. The following code demonstrates how to select rows dynamically by clicking the custom button.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/selection-cs9/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/selection-cs9/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/selection-cs9/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/selection-cs9" %}
 
 ## Customize row selection action
 

@@ -51,7 +51,6 @@ System.config({
         "@syncfusion/ej2-react-svg-base": "syncfusion:ej2-react-svg-base/dist/ej2-react-svg-base.umd.min.js",
 "react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
 "react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
-    
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },
