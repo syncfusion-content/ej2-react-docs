@@ -7,9 +7,9 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Step Line in React Chart component
+# Step line in React Chart component
 
-## Step Line
+## Step line
 
 To render a step line series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `StepLine` and inject `StepLineSeries` module into the `services`.
 
@@ -22,7 +22,7 @@ To render a step line series, use series [`type`](https://ej2.syncfusion.com/rea
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs7" %}
 
 ## Series customization
 
@@ -32,6 +32,7 @@ The following properties can be used to customize the `step line` series.
 * [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill-string).
 * [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes for series.
 * [width](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#width) – Specifies the width for series.
+* [step](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#step) – Specifies the position of the step for the series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,9 +43,9 @@ The following properties can be used to customize the `step line` series.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/stepline-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/stepline-cs1" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)

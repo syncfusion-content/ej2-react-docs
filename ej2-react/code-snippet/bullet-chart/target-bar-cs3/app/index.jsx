@@ -4,13 +4,13 @@ import { BulletRangeCollectionDirective, BulletRangeDirective } from '@syncfusio
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 function App() {
-    return (<BulletChartComponent id='ranges' animation={{ enable: false }} valueField='value' targetField='target' title='Sales Rate' targetColor='red' targetWidth={15} minimum={0} maximum={100} interval={20} dataSource={[{ value: 55, target: 75 }]}>
-                        <BulletRangeCollectionDirective>
-                            <BulletRangeDirective end={35}></BulletRangeDirective>
-                            <BulletRangeDirective end={50}></BulletRangeDirective>
-                            <BulletRangeDirective end={100}></BulletRangeDirective>
-                        </BulletRangeCollectionDirective>
-            </BulletChartComponent>);
+    return (<BulletChartComponent id='ranges' animation={{ enable: false }} valueField='value' targetField='target' title='Sales Rate' targetColor='color' targetWidth={15} minimum={0} maximum={100} interval={20} dataSource={[{ value: 55, target: 75, color: 'red' }]}>
+        <BulletRangeCollectionDirective>
+            <BulletRangeDirective end={35}></BulletRangeDirective>
+            <BulletRangeDirective end={50}></BulletRangeDirective>
+            <BulletRangeDirective end={100}></BulletRangeDirective>
+        </BulletRangeCollectionDirective>
+    </BulletChartComponent>);
 }
 ;
 export default App;
