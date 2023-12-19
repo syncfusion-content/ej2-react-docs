@@ -110,3 +110,21 @@ Initially, render more than one chart to export, and then add button to export t
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/print-cs5" %}
+
+## Exporting chart using base64 string
+
+The chart can be exported as an image in the form of a base64 string by utilizing HTML canvas. This process involves rendering the chart onto a canvas element and then converting the canvas content to a base64 string.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/print-cs8/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/print-cs8/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/chart/print-cs8/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/print-cs8" %}

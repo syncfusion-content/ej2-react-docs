@@ -73,33 +73,6 @@ export let data = [
         OrderID: 10262, CustomerID: 'RATTC', EmployeeID: 8, OrderDate: new Date(8379738e5),
         ShipName: 'Rattlesnake Canyon Grocery', ShipCity: 'Albuquerque', ShipAddress: '2817 Milton Dr.',
         ShipRegion: 'NM', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
-<<<<<<<< HEAD:ej2-react/code-snippet/grid/filter-cs14/app/datasource.tsx
-    }];
-export let stringOperatorsData: Object[] = [
-    'startsWith',
-    'endsWith',
-    'contains',
-    'isnotempty',
-    'isempty',
-    'isnotnull',
-    'isnull',
-    'notEqual',
-    'equal',
-    'doesnotcontain',
-    'doesnotendwith',
-    'doesnotstartwith',
-];
-export let numericOperatorsData: Object[] = [
-    'equal',
-    'notEqual',
-    'greaterThan',
-    'greaterThanOrEqual',
-    'lessThan',
-    'lessThanOrEqual',
-    'isnull',
-    'isnotnull',
-];
-========
     }
 ];
 export let sdata = [
@@ -144,4 +117,3 @@ export let sdata = [
         ShipRegion: 'CJ', ShipPostalCode: '1204', ShipCountry: 'Switzerland', Freight: 148.33, Verified: !0
     }
 ];
->>>>>>>> remotes/origin/development:ej2-react/code-snippet/grid/row-method-cs1/app/datasource.jsx

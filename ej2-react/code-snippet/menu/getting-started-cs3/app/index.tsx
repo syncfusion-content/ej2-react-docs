@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-const SERVICE_URI: string = 'https://services.odata.org/V4/Northwind/Northwind.svc/';
+const SERVICE_URI: string = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/';
 
 enableRipple(true);
 

@@ -16,7 +16,7 @@ const App = () => {
   );
 }
 
-export default App;
-ReactDOM.render(<App />, document.getElementById("element"));
+const root = ReactDOM.createRoot(document.getElementById('element'));
+root.render(<App />);
 
 

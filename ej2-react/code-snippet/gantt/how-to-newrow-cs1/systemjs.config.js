@@ -45,7 +45,6 @@ System.config({
         "@syncfusion/ej2-react-navigations": "syncfusion:ej2-react-navigations/dist/ej2-react-navigations.umd.min.js",
         "@syncfusion/ej2-react-grids": "syncfusion:ej2-react-grids/dist/ej2-react-grids.umd.min.js",
         "@syncfusion/ej2-react-gantt": "syncfusion:ej2-react-gantt/dist/ej2-react-gantt.umd.min.js",
-        "@syncfusion/ej2-react-navigations": "syncfusion:ej2-react-navigations/dist/ej2-react-navigations.umd.min.js",
         "@syncfusion/ej2-react-treegrid": "syncfusion:ej2-react-treegrid/dist/ej2-react-treegrid.umd.min.js",
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
