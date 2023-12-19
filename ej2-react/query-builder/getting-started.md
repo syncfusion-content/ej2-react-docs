@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Query builder component | Syncfusion
-description:  Checkout and learn about Getting started with React Query builder component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Query Builder Component | Syncfusion
+description: Checkout and learn about getting started with React Query builder component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Query Builder
 
 This section explains how to create and configure a simple [React Query Builder component](https://www.syncfusion.com/react-components/react-query-builder).
 
