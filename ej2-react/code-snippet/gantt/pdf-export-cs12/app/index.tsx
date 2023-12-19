@@ -13,7 +13,6 @@ function App () {
             progress: 'Progress',
             child: 'subtasks'
         };
-        let ganttChart;
         const toolbarOptions = ['PdfExport'];
     function toolbarClick(args) {
         if (args.item.text === 'Pdf export') {

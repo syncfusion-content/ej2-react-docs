@@ -2,7 +2,6 @@ import { AppBarComponent } from "@syncfusion/ej2-react-navigations";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-
 const App = () => {
     return (<div className='control-container'>
       <AppBarComponent colorMode="Primary">
@@ -13,6 +12,5 @@ const App = () => {
       </AppBarComponent>
     </div>);
 }
-
-export default App;
-ReactDOM.render(<App />, document.getElementById("element"));
+const root = ReactDOM.createRoot(document.getElementById('element'));
+root.render(<App />);

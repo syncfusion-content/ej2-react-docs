@@ -38,19 +38,31 @@ To install `create-react-app` run the following command.
 npm install -g create-react-app
 ```
 
-To set-up a React application in TypeScript environment, run the following command.
+Start a new project using create-react-app command as follows
+
+<div class='tsx'>
 
 ```bash
-npx create-react-app my-app --template typescript
-cd my-app
+
+create-react-app quickstart --scripts-version=react-scripts-ts
+
+cd quickstart
+
 ```
 
-To set-up a React application in JavaScript environment, run the following command.
+</div>
 
-```bash
-npx create-react-app my-app
-cd my-app
+<div class='jsx'>
+
 ```
+
+create-react-app quickstart
+
+cd quickstart
+
+```
+
+</div>
 
 ## Adding syncfusion packages
 
@@ -109,15 +121,16 @@ ReactDOM.render(<App />, document.getElementById('root'));
 Import the TreeView component required CSS references as follows in `src/App.css`.
 
 ```css
+
 /* import the TreeView dependency styles */
+
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-
 ```
 
-> Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+>Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Binding data source
 
@@ -347,7 +360,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 After completing the configuration required to render a basic TreeView, run the following command to display the output in your default browser.
 
-```bash
+```
 npm start
 ```
 

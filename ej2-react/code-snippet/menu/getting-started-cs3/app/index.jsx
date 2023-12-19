@@ -4,7 +4,7 @@ import { MenuComponent } from '@syncfusion/ej2-react-navigations';
 import { useState, useEffect } from "react";
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-const SERVICE_URI = 'https://services.odata.org/V4/Northwind/Northwind.svc/';
+const SERVICE_URI = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/';
 enableRipple(true);
 function App() {
     let menuObj;
