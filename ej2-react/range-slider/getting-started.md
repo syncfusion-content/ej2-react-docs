@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 The following section explains the required steps to build the simple Slider component with its basic usage in step by step procedure.
 
+To get start quickly with React Range Slider, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=B0rPxt5tOSE" %}
+
 ## Dependencies
 
 Install the below required dependent packages to render the Slider component.
@@ -34,16 +38,35 @@ applications.
 
 To install `create-react-app` run the following command.
 
-    ```bash
-     npm install -g create-react-app
-    ```
+```bash
+npm install -g create-react-app
+```
 
-Start a new project using `create-react-app` command as follows
+To set-up a React application in TypeScript environment, run the following command.
 
-   ```bash
-    create-react-app quickstart --typescript
-    cd quickstart
-   ```
+<div class='tsx'>
+
+```
+npx create-react-app my-app --template typescript
+
+cd my-app
+
+npm start
+```
+
+</div>
+
+To set-up a React application in JavaScript environment, run the following command.
+
+<div class='tsx'>
+
+```
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+```
 
 ## Adding Syncfusion packages
 
@@ -51,11 +74,24 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 
 To install `Slider` component, use the following command.
 
-   ```bash
-     npm install @syncfusion/ej2-react-inputs --save
-   ```
+```bash
+npm install @syncfusion/ej2-react-inputs --save
+```
 
 The above command installs [Slider dependencies](#dependencies) which are required to render the component in the `React` environment.
+
+## Adding CSS Reference
+
+Import `Slider` component required theme references at the top of `src/App.css`.
+
+```css
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
+```
+
+> We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
 
 ## Adding Slider component
 
@@ -80,26 +116,13 @@ export default App;
 
 ```
 
-## Adding CSS Reference
-
-Import `Slider` component required theme references at the top of `src/App.css`.
-
-   ```css
-   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-   @import "../node_modules/@syncfusion/ej2-react-inputs/styles/material.css";
-  ```
-
-> We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
-
 ## Run the Application
 
 The Essential JS 2 quickstart application project is configured to compile and run the application in browser. Use the following command to run the application.
 
-    ```
-    npm start
-    ```
+```
+npm start
+```
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

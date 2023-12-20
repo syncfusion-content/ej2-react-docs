@@ -1,4 +1,4 @@
-
+{% raw %}
 
 
 import * as React from "react";
@@ -9,18 +9,19 @@ import { AxisModel,Category,ChartComponent, ColumnSeries, Inject, Legend, LineSe
 function App() {
 
   const dataManager = new DataManager({
-    url: 'http://mvc.syncfusion.com/Services/Northwnd.svc/Tasks/'
+    url: 'https://services.syncfusion.com/js/production/api/orders'
   });
   const query = new Query().take(5).where('Estimate', 'lessThan', 3, false);
-  const primaryxAxis: AxisModel = { valueType: 'Category', title: 'Asignee' };
-  const primaryyAxis: AxisModel = { title: 'Estimate', minimum: 0, maximum: 3, interval: 1 };
+  const primaryxAxis: AxisModel = { valueType: 'Category' };
+  const primaryyAxis: AxisModel = { title: 'Freight rate in U.S. dollars' };
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}
-      primaryYAxis={primaryyAxis}>
+      primaryYAxis={primaryyAxis}
+      title="Container freight rate">
       <Inject services={[ColumnSeries, Legend, Category, LineSeries]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={dataManager} xName='Assignee' type='Column' yName='Estimate' name='Sales' query={query} />
+        <SeriesDirective dataSource={dataManager} xName='CustomerID' type='Column' yName='Freight' query={query} />
       </SeriesCollectionDirective>
     </ChartComponent>
 
@@ -29,3 +30,4 @@ export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 
+{% endraw %}

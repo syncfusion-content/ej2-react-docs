@@ -1,9 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
-import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import { PdfColor } from '@syncfusion/ej2-pdf-export';
-import { PdfPaddings } from '@syncfusion/ej2-gantt/src/export/pdf-base/pdf-borders';
+import { PdfPaddings } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function App() {
         const taskFields = {
@@ -45,11 +44,11 @@ function App() {
                 borderColor:new PdfColor(179, 219, 255),
             },
         };
-        }
         ganttChart.pdfExport(exportProperties);
+        }
     };
 
-        return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => this.ganttChart = gantt}>
+        return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
             <Inject services={[Toolbar, PdfExport, Selection]}/>
         </GanttComponent>
 };

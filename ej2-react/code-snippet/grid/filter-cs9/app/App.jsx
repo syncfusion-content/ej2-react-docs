@@ -16,15 +16,14 @@ function App() {
         ]
     };
     return <GridComponent dataSource={data} allowFiltering={true} filterSettings={filterOptions} height={273}>
-    <ColumnsDirective>
-      <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
-      <ColumnDirective field='CustomerID' width='100'/>
-      <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"/>
-      <ColumnDirective field='ShipCity' width='100'/>
-      <ColumnDirective field='ShipName' width='100'/>
-    </ColumnsDirective>
-    <Inject services={[Filter]}/>
-  </GridComponent>;
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+            <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+            <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+        </ColumnsDirective>
+        <Inject services={[Filter]} />
+    </GridComponent>;
 }
 ;
 export default App;

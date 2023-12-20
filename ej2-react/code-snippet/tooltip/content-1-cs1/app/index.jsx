@@ -10,12 +10,12 @@ function App() {
         display: 'inline-block',
         padding: '5px'
     };
-    return (<p>A green home is a type of house designed to be
-          <TooltipComponent width="300px" height="60px" isSticky={true} content={content} style={style}>
+    return (<div>A green home is a type of house designed to be
+          <TooltipComponent  isSticky={true} content={content} style={style}>
           <a><u>environmentally friendly</u></a>
           </TooltipComponent> and sustainable. And also focuses on the efficient use of "energy, water, and building materials." As green homes
           have become more prevalent we have also seen the emergence of green affordable housing.
-      </p>);
+      </div>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('sample'));

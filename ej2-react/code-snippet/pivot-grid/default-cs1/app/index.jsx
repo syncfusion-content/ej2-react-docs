@@ -46,7 +46,7 @@ function App() {
         values: [{ name: 'Sold', caption: 'Unit Sold' }]
     };
     let pivotGridObj;
-    return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={280} width={735} enableVirtualization={true} showGroupingBar={true} maxNodeLimitInEditor={100} dataSource={dataSource}><Inject services={[VirtualScroll, GroupingBar]}/></PivotViewComponent>);
+    return (<PivotViewComponent ref={d => pivotGridObj = d} id='PivotView' height={280} width={735} enableVirtualization={true} showGroupingBar={true} maxNodeLimitInEditor={100} dataSource={dataSource}><Inject services={[VirtualScroll, GroupingBar]}/></PivotViewComponent>);
 }
 ;
 export default App;

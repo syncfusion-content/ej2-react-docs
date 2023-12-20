@@ -28,7 +28,7 @@ function App(){
     };
         return (<div>
         <GanttComponent dataSource={data} taskFields={taskFields} showColumnMenu={true}
-      columnMenuClick={columnMenuClick}  columnMenuOpen={columnMenuOpen} allowFiltering={true} allowSorting={true}
+        columnMenuOpen={columnMenuOpen} allowFiltering={true} allowSorting={true}
         splitterSettings={splitterSettings} height = '450px'>
         <ColumnsDirective>
             <ColumnDirective field='TaskID' width='100' ></ColumnDirective>

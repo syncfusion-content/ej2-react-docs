@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Freeze pane in React Spreadsheet component
 
-Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sheets) property.
+Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sheets) property.
 
 To get start quickly with Freeze Panes in React Spreadsheet, you can check on this video:
 
@@ -75,7 +75,7 @@ Here, we have listed out the limitations with Freeze Panes feature.
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

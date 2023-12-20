@@ -1,4 +1,3 @@
-
 export let data: Object[] = [
     {
         OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),
@@ -75,4 +74,3 @@ export let data: Object[] = [
         ShipName: 'Rattlesnake Canyon Grocery', ShipCity: 'Albuquerque', ShipAddress: '2817 Milton Dr.',
         ShipRegion: 'NM', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
     }];
-

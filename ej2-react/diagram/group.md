@@ -69,6 +69,43 @@ The following code illustrates how a group node is added at runtime.
 
  {% previewsample "page.domainurl/code-snippet/diagram/group/es5groupadd-cs1" %}
 
+
+## Add children To group at runtime
+
+A childNode can be added to the specified Group at runtime by utilizing the client-side method `diagramInstance.addChildToGroup`. 
+
+This functionality is achieved by passing the group and existing children as arguments to the method.
+
+The following code illustrates how a child node and a group node can be passed as arguments to the method and executed at runtime.
+
+```html
+
+diagramInstance.addChildToGroup(groupNode, childNode); 
+
+```
+## Remove children from group at runtime
+
+A specific child from a group node can be removed at runtime by utilizing the client-side method `diagramInstance.removeChildFromGroup `. 
+
+This functionality is achieved by passing the group and its children as arguments to the method.
+
+The following code illustrates how a child node is removed from a group at runtime.
+
+```html
+
+diagramInstance.removeChildFromGroup (groupNode, childNode); 
+
+```
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/group/es5groupchild-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/group/es5groupchild-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/group/es5groupchild-cs1" %}
 ## Container
 
 Containers are used to automatically measure and arrange the size and position of the child elements in a predefined manner.

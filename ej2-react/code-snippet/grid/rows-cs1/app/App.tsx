@@ -1,17 +1,13 @@
-
-
-import { getValue } from '@syncfusion/ej2-base';
-import { Column, ColumnDirective, ColumnsDirective, GridComponent, QueryCellInfoEventArgs } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, QueryCellInfoEventArgs } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
   const customizeCell = (args: QueryCellInfoEventArgs) => {
-    if ((args.column as Column).field === "Freight"
-      && args.data && args.cell) {
-      if (getValue('Freight', args.data) < 30) {
+    if (args.column.field === "Freight") {
+      if (args.data[args.column.field] <= 30) {
         args.cell.classList.add('below-30');
-      } else if (getValue('Freight', args.data) < 80) {
+      } else if (args.data[args.column.field] > 30 && args.data[args.column.field] < 80) {
         args.cell.classList.add('below-80');
       } else {
         args.cell.classList.add('above-80');

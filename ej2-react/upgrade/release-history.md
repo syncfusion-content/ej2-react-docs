@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Release History
 
-Every new release of Syncfusion includes exciting new features. Refer to the Syncfusion React [release notes](https://ej2.syncfusion.com/react/documentation/release-notes/22.1.34/) to know more about the changes in each releases.
+Every new release of Syncfusion includes exciting new features. Refer to the Syncfusion React [release notes](https://ej2.syncfusion.com/react/documentation/release-notes/index/) to know more about the changes in each releases.
 
 See our [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/react-ui-components) for React to learn more about the following.
 

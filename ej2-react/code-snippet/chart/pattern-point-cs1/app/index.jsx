@@ -1,3 +1,4 @@
+{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
@@ -12,7 +13,7 @@ function App() {
     { country: 'France', gold: 50, color: 'url(#rectangle)' },
     { country: 'Germany', gold: 40, color: 'url(#chess)' },
     { country: 'Italy', gold: 40, color: 'url(#line)' },
-    { country: 'Sweden', gold: 30, color: 'url(#cross)' },
+    { country: 'Sweden', gold: 30, color: 'url(#cross)' }
   ];
 
   const primaryxAxis = { valueType: 'Category', title: 'Countries' };
@@ -45,3 +46,4 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('charts'));
+{% endraw %}

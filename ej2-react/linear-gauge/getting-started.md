@@ -41,19 +41,15 @@ To get started with the React application, [create-react-app](https://github.com
 
 To create basic React application, run the following command.
 
-    <div class='jsx'>
+```
+create-react-app quickstart
+```
 
-    ```
-      create-react-app quickstart
-    ```
-   </div>
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
 
-Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-     ```
-     cd quickstart
-     npm install
-   ```
+```
+cd quickstart
+```
 
 > In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
 
@@ -61,19 +57,15 @@ Now, the application is created in the **quickstart** folder. Run the following 
 
 To create React application with TypeScript, use the following command.
 
-    <div class='jsx'>
+```
+create-react-app quickstart --template typescript
+```
 
-    ```
-    create-react-app quickstart --template typescript
-   ```
-   </div>
+Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm**  packages.
 
-Now, the application is created in the **quickstart** folder. Run the following command one-by-one to navigate to the **quickstart** folder, and install the required **npm**  packages.
-
-  ```
-   cd quickstart
-   npm install
-  ```
+```
+cd quickstart
+```
 
 ### Adding Syncfusion packages
 
@@ -87,8 +79,6 @@ npm install @syncfusion/ej2-react-lineargauge --save
 
 Now, the Linear Gauge component can be added in the application. To initialize the Linear Gauge control in the React application, import the Linear Gauge control in the **src/App.js** or **src/App.tsx** as per the application. Please use the below code to include the Linear Gauge component in the application.
 
-
-
 ```ts
 
 import React from 'react';
@@ -98,8 +88,7 @@ export function App() {
    return (<LinearGaugeComponent></LinearGaugeComponent>);
 }
 
-const root = ReactDOM.createRoot(document.getElementById('container'));
-root.render(<App />);
+export default App;
 
 ```
 

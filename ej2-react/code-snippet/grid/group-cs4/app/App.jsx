@@ -1,20 +1,33 @@
-import { ColumnDirective, ColumnsDirective, GridComponent, Group, Inject } from '@syncfusion/ej2-react-grids';
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+
 function App() {
-    const groupOptions = {
-        columns: ['CustomerID', 'ShipCity'],
-        showDropArea: false
-    };
-    return <GridComponent dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={267}>
-    <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
-      <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
-      <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-      <ColumnDirective field='ShipName' headerText='Ship Name' width='150'/>
-    </ColumnsDirective>
-    <Inject services={[Group]}/>
-  </GridComponent>;
-}
-;
+  let grid;
+  const groupOptions = {
+    columns: ['CustomerID', 'ShipCity'],
+    showDropArea: false
+  };
+  const onSwitchChange = (args) => {
+    if (args.checked) {
+      grid.groupSettings.showDropArea = true;
+    }
+    else {
+      grid.groupSettings.showDropArea = false;
+    }
+  }
+  return (
+    <div><label style={{ padding: "10px 10px" }}>Hide or show drop area</label>
+      <SwitchComponent change={onSwitchChange}></SwitchComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
 export default App;

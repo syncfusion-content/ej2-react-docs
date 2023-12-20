@@ -34,7 +34,7 @@ You can use [cssClass](https://ej2.syncfusion.com/react/documentation/api/list-b
 {% include code-snippet/listbox/horizontal-listbox-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
-{% include code-snippet/listbox/horizontal-listbox-cs1/app/index.html %}
+{% include code-snippet/listbox/horizontal-listbox-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

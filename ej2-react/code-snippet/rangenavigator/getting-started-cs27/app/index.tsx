@@ -1,19 +1,18 @@
-
+{% raw %}
 
 
 import {
-     AreaSeries, DateTime, Inject, RangeNavigatorComponent, RangenavigatorSeriesCollectionDirective,
-     RangenavigatorSeriesDirective,RangeTooltip, PeriodSelector,RangeTooltipSettingsModel, PeriodSelectorSettingsModel
+  AreaSeries, DateTime, Inject, RangeNavigatorComponent, RangeTooltip, PeriodSelector, RangeTooltipSettingsModel, PeriodSelectorSettingsModel
 } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { bitCoinData } from 'default_data.ts';
+import { bitCoinData } from 'default-data.ts';
 
-class App extends React.Component<{}, {}> {
+function App() {
 
-  public data: object[] = bitCoinData;
-  public tooltip: RangeTooltipSettingsModel = { enable: true };
-  public periodselector: PeriodSelectorSettingsModel = {
+  const data: object[] = bitCoinData;
+  const tooltip: RangeTooltipSettingsModel = { enable: true };
+  const periodselector: PeriodSelectorSettingsModel = {
     position: 'Top',
     periods: [
       { text: '1M', interval: 1, intervalType: 'Months' },
@@ -24,19 +23,19 @@ class App extends React.Component<{}, {}> {
     ]
   };
 
-  render() {
-    return <RangeNavigatorComponent id='charts'
-      valueType='DateTime' labelFormat='MMM-yy' value={[new Date('2017-09-01'), new Date('2018-02-01')]}
-      dataSource={this.data} xName='x' yName='y'
-      disableRangeSelector={true}
-      tooltip={this.tooltip}
-      periodSelectorSettings={this.periodselector}>
-      <Inject services={[AreaSeries, DateTime, RangeTooltip, PeriodSelector]} />
-    </RangeNavigatorComponent>
-  }
+  return <RangeNavigatorComponent id='charts'
+    valueType='DateTime' labelFormat='MMM-yy' value={[new Date('2017-09-01'), new Date('2018-02-01')]}
+    dataSource={data} xName='x' yName='y'
+    disableRangeSelector={true}
+    tooltip={tooltip}
+    periodSelectorSettings={periodselector}>
+    <Inject services={[AreaSeries, DateTime, RangeTooltip, PeriodSelector]} />
+  </RangeNavigatorComponent>
 
 };
+export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 
 
+{% endraw %}

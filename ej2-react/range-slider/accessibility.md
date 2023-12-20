@@ -1,73 +1,78 @@
 ---
 layout: post
-title: Accessibility in React Range slider component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Range Slider component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Range slider component
+# Accessibility in React Range Slider component
 
-The Slider is characterized with complete ARIA Accessibility support that helps to access by on-screen readers and other assistive technology devices. This component is designed with the reference of guidelines document given in the [WAI ARAI Accessibility Practices](https://www.w3.org/TR/wai-aria-practices/#slider).
+The Range Slider component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The Slider component uses the `Slider` role and the following ARIA properties for its element based on the state.
+The accessibility compliance for the Range Slider component is outlined below.
 
-| **Property** | **Functionalities** |
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
+The Range Slider component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/slider/) patterns to meet the accessibility. The following ARIA attributes are used in the Range Slider component:
+
+| Attributes | Purpose |
 | --- | --- |
-| aria-valuenow | It Indicates the current value of the slider. |
-| aria-valuetext | Returns the current text of the slider. |
-| aria-valuemin | It Indicates the Minimum value of the slider. |
-| aria-valuemax | It Indicates the Maximum value of the slider. |
-| aria-orientation | It Indicates the Slider Orientation. |
-| aria-label | Slider left and right button label text (increment and decrement). |
-| aria-labelledby | It indicates the name of the Slider. |
+| `role=slider` | Used to convey a significant and contextual message to the user. |
+| `aria-valuemin` | Indicates the Minimum value of the slider. |
+| `aria-valuemax` | Indicates the Maximum value of the slider. |
+| `aria-valuenow` | Indicates the current value of the slider. |
+| `aria-valuetext` | Returns the current text of the slider. |
+| `aria-orientation` | Indicates whether the Slider is oriented horizontally or vertically. |
+| `aria-label` | Provides an accessible name for the Slider, serving as label text for the Slider's left and right buttons (for increment and decrement). |
 
 ## Keyboard interaction
 
-The Keyboard interaction of the Slider component is designed based on the [WAI-ARIA Practices](https://www.w3.org/TR/wai-aria-practices/#slider ) described for Slider. Users can use the following shortcut keys to interact with the Slider.
+The Range Slider component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Range Slider component.
 
-<!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td>
-<b>Keyboard shortcuts</b></td><td>
-<b>Actions</b></td></tr>
-<tr>
-<td>
-<kbd>Right Arrow</kbd>&nbsp;&nbsp; &#124;&nbsp;&nbsp; <kbd>Up Arrow</kbd></td><td>
-Increase the Slider value.
-</td></tr>
-<tr>
-<td>
-<kbd>Left Arrow</kbd>&nbsp;&nbsp; &#124;&nbsp;&nbsp; <kbd>Down Arrow</kbd></td><td>
-Decrease the Slider value.</td></tr>
-<tr>
-<td>
-<kbd>Home</kbd></td><td>
-Moves to the start value (for Range Slider when the second thumb is focused and the Home key is pressed, it moves to the first thumb value).</td></tr>
-<tr>
-<td>
-<kbd>End</kbd></td><td>
-Moves to the end value (for Range Slider when the first thumb is focused and the End key is pressed, it moves to the second thumb value).</td></tr>
-<tr>
-<td>
-<kbd>Page Up</kbd></td><td>
-Increases the Slider by `largeStep` value.</td></tr>
-<tr>
-<td>
-<kbd>Page Down</kbd></td><td>
-Decreases the Slider by `largeStep` value.</td></tr>
-</table>
+| **Press** | **To do this** |
+| --- | --- |
+| <kbd>Right Arrow</kbd>/<kbd>Up Arrow</kbd> | Increase the Slider value. |
+| <kbd>Left Arrow</kbd>/<kbd>Down Arrow</kbd> | Decrease the Slider value. |
+| <kbd>Home</kbd> | Moves to the start value (for Range Slider when the second thumb is focused and the Home key is pressed, it moves to the first thumb value). |
+| <kbd>End | Moves to the end value (for Range Slider when the first thumb is focused and the End key is pressed, it moves to the second thumb value). |
+| <kbd>Page Up</kbd> | 	Increases the Slider by `largeStep` value. |
+| <kbd>Page Down</kbd> | Decreases the Slider by `largeStep` value. |
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/slider/getting-started-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/slider/getting-started-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
+## Ensuring accessibility
 
- {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs1" %}
+The Range Slider component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Range Slider component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/slider.html) in a new window to evaluate the accessibility of the Range Slider component with accessibility tools.
+
+{% previewsample "https://ej2.syncfusion.com/accessibility/slider.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion React components](../common/accessibility)

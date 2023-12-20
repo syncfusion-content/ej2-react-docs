@@ -1,11 +1,10 @@
 {% raw %}
 
 
-import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Chart, SplineAreaSeries, LineSeries, DateTime, Zoom, IZoomCompleteEventArgs, Selection, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
 import { synchronizedData } from 'datasource.ts';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Browser } from '@syncfusion/ej2-base';
 
 function App() {
@@ -42,7 +41,7 @@ function App() {
             <div className="col">
                 <ChartComponent
                     id="container1"
-                    ref={chart => chart1 = chart}                   
+                    ref={chart => chart1 = chart}
                     primaryXAxis={{
                         minimum: new Date(2023, 1, 18),
                         maximum: new Date(2023, 7, 18),
@@ -85,7 +84,7 @@ function App() {
             <div className="col">
                 <ChartComponent
                     id="container2"
-                    ref={chart => chart2 = chart}               
+                    ref={chart => chart2 = chart}
                     primaryXAxis={{
                         minimum: new Date(2023, 1, 18),
                         maximum: new Date(2023, 7, 18),

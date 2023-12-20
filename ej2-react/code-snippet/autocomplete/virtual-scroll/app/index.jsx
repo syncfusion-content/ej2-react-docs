@@ -9,7 +9,7 @@ export default class App extends React.Component {
             text: `Item ${i + 1}`,
         }));
     }
-    fields = { text: 'text', value: 'text' };
+    fields = { value: 'text' };
     render() {
         return (
             // specifies the tag for render the AutoComplete component

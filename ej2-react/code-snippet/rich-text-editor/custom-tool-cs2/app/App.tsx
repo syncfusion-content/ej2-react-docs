@@ -99,7 +99,7 @@ function App(){
           </RichTextEditorComponent>
           <DialogComponent id='customTbarDlg' ref={(scope) => { dialogObj = scope! }}
             buttons={dlgButtons} overlayClick={dialogOverlay.bind(this) } header={header} visible={false}
-            showCloseIcon={false} target={'#rteSection'} height={height} created={dialogCreate.bind(this)} isModal={true} />
+            showCloseIcon={false} target={'#rteSection'} height={height} created={dialogCreate.bind(this)} isModal={true} cssClass={'e-rte-elements'}/>
           <div id="customTbarDialog" style={hideDiv}>
             <div id="rteSpecial_char">
               <div className="char_block" title="&#94;">&#94;</div>

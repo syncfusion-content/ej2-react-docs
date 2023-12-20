@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Data binding in React Data component
 
-[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) supports both RESTful JSON data services binding and local JavaScript object array binding.
+[DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) supports both RESTful JSON data services binding and local JavaScript object array binding.
 
 ## Local data binding
 
-[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) can be bound to local data source by assigning the array of JavaScript objects to the `json` property or simply passing them to the constructor while instantiating. Now the JavaScript object array can be queried and manipulated.
+[DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) can be bound to local data source by assigning the array of JavaScript objects to the `json` property or simply passing them to the constructor while instantiating. Now the JavaScript object array can be queried and manipulated.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -41,9 +41,9 @@ domainurl: ##DomainURL##
 
 ## Remote data binding
 
-[`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) can be bound to remote data source by assigning service end point URL to the `url` property. With the provided **url**, the [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) handles all communication with the data server with help of queries.
+[DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) can be bound to remote data source by assigning service end point URL to the `url` property. With the provided **url**, the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) handles all communication with the data server with help of queries.
 
-When querying data, the [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) will convert the query object, [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/) into server request after calling **executeQuery** and waits for the server response(`JSON` format).
+When querying data, the [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) will convert the query object, [Query](https://ej2.syncfusion.com/documentation/api/data/query/) into server request after calling **executeQuery** and waits for the server response(`JSON` format).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

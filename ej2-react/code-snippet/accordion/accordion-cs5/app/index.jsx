@@ -1,6 +1,6 @@
 import { AccordionComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+
 const ReactApp = () => {
     return (<AccordionComponent>
       <div>
@@ -35,5 +35,4 @@ const ReactApp = () => {
       </div>
     </AccordionComponent>);
 }
-const root = ReactDOM.createRoot(document.getElementById('element'));
-root.render(<ReactApp />);
+export default ReactApp;

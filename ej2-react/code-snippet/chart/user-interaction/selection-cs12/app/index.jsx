@@ -14,13 +14,13 @@ function App() {
         { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
     ];
     return (<ChartComponent id='charts' primaryXAxis={{ valueType: 'Category', title: 'Countries' }} primaryYAxis={{ minimum: 0, maximum: 80, interval: 20, title: 'Medals' }} title='Olympic Medals' isMultiSelect={true} selectionMode='Point'>
-    <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Selection, Category]}/>
-    <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='country' yName='gold' name='Gold' type='Column' selectionStyle='chartSelection1'> </SeriesDirective>
-        <SeriesDirective dataSource={data} xName='country' yName='silver' name='Silver' type='Column' selectionStyle='chartSelection2'></SeriesDirective>
-        <SeriesDirective dataSource={data} xName='country' yName='bronze' name='Bronze' type='Column' selectionStyle='chartSelection3'></SeriesDirective>
-    </SeriesCollectionDirective>
-  </ChartComponent>);
+        <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Selection, Category]} />
+        <SeriesCollectionDirective>
+            <SeriesDirective dataSource={data} xName='country' yName='gold' name='Gold' type='Column' selectionStyle='chartSelection1'></SeriesDirective>
+            <SeriesDirective dataSource={data} xName='country' yName='silver' name='Silver' type='Column' selectionStyle='chartSelection2'></SeriesDirective>
+            <SeriesDirective dataSource={data} xName='country' yName='bronze' name='Bronze' type='Column' selectionStyle='chartSelection3'></SeriesDirective>
+        </SeriesCollectionDirective>
+    </ChartComponent>);
 }
 ;
 export default App;

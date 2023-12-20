@@ -1,22 +1,18 @@
-
-
-import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
-import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
+import { ColumnDirective, ColumnsDirective, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject, Page, Sort } from '@syncfusion/ej2-react-grids'
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  return <GridComponent dataSource={data} allowFiltering={true} height={273}>
+  const pageSettings: PageSettingsModel = { pageSize: 6 };
+  return <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} allowSorting={true}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' width='100' textAlign="Right" />
-      <ColumnDirective field='CustomerID' width='100' />
-      <ColumnDirective field='EmployeeID' width='100' textAlign="Right" />
-      <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right" />
-      <ColumnDirective field='ShipCountry' width='100' />
+      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+      <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2" textAlign="Right" />
+      <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='100' />
     </ColumnsDirective>
-    <Inject services={[Filter]} />
+    <Inject services={[Filter, Page, Sort]} />
   </GridComponent>
 }
 export default App;
-
-

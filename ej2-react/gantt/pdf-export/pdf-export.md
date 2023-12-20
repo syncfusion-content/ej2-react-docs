@@ -36,6 +36,25 @@ To get start quickly with PDF exporting and to know its functionalities, you can
         
 {% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs14" %}
 
+## Indicators in PDF exporting 
+
+The PDF export functionality allows users to export Gantt charts enriched with dynamic indicators and accompanying images.
+These indicators, represented by images,can be effortlessly defined using the  [`base64`](https://ej2.syncfusion.com/react/documentation/api/gantt/iIndicator/#base64) encoding value in the data object of datasource.This data object field should be mapped to indiactor property of [`task fields`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#indicators).
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/pdf-export-cs16/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/pdf-export-cs16/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/pdf-export-cs16/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs16" %}
+
 ## Exporting Gantt data as a blob object
 
 In Gantt, you can export the Gantt chart data as a blob object, which allows you to preview or modify the data before exporting it.
@@ -66,6 +85,28 @@ step 2: Then , `pdfExpComplete` return as blob object.
 In Gantt, we have provided support to export the Gantt component where each rows are auto-fit to the PDF document page width by setting [`isFitToWidth`](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/fitToWidthSettings/#isFitToWidth) as true in <code>fitToWidthSettings</code> of <code>PdfExportProperties</code>.
 
 Also, we can customize the chart width and grid width in exported file using [`chartWidth`](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/fitToWidthSettings/isFitToWidth/#chartWidth) and [`gridWidth`](https://ej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/fitToWidthSettings/isFitToWidth/#gridWidth) by defining it as percentage in string.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/single-page/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/single-page/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/single-page/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/single-page" %}
+
+## Exporting with column template
+
+The PDF export functionality allows to export Grid columns that include images, hyperlinks, and custom text to an PDF document using [pdfQueryCellInfo](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfQueryCellInfoEventArgs/) event.
+
+In the following sample, the hyperlinks and images are exported to PDF using [hyperlink](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfQueryCellInfoEventArgs/#hyperlink) and [image](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfQueryCellInfoEventArgs/#image) properties in the [pdfQueryCellInfo](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfQueryCellInfoEventArgs/) event.
+
+>Note: PDF Export supports base64 string to export the images.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

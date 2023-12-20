@@ -1,6 +1,3 @@
-
-
-import { getValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, GridComponent, RowDataBoundEventArgs } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { DataManager, Query } from '@syncfusion/ej2-data';
