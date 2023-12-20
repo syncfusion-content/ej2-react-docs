@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started React Gantt Component
+# Getting Started with React Gantt Component
 
 This section explains you the steps required to create a simple Essential JS 2 Gantt in a React application and demonstrates its basic features.
 
