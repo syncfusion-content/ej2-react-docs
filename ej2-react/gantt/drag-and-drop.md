@@ -52,6 +52,28 @@ Gantt also supports dragging multiple rows at a time and drop them on any rows a
         
 {% previewsample "page.domainurl/code-snippet/gantt/rows-cs5" %}
 
+### Taskbar drag and drop between rows
+
+The Gantt feature empowers users to efficiently reorganize records by seamlessly moving taskbar and rearranging their positions through a simple drag-and-drop action. Using this feature, rows can be dropped at above and below as a sibling or child to the existing rows.
+
+This mode can be enable by setting the [`allowTaskbarDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowtaskbardraganddrop) property to `true`.
+
+To use row drag and drop feature, inject the `RowDD` and `Edit` module in Gantt.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/rows-cs12/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/rows-cs12/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/rows-cs12/index.html %}
+{% endhighlight %}
+{% endtabs %} 
+
+{% previewsample "page.domainurl/code-snippet/gantt/rows-cs12" %}
+
 ### Drag and drop events
 
 We provide various events to customize the row drag and drop action, the following table explains about the available events and its details.
@@ -107,7 +129,7 @@ In the following sample, we have prevented the drop action based on the position
 
 ### Prevent reordering a row as child to another row
 
-You can prevent the default behavior of dropping rows as children to the target by setting the `cancel` property to `true` in [rowDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdrop) event argument. You can also change the drop position after cancelling using [reorderRows](https://ej2.syncfusion.com/react/documentation/api/gantt/#reorderrows) method.
+You can prevent the default behavior of dropping rows as children to the target by setting the `cancel` property to `true` in [`rowDrop`](https://ej2.syncfusion.com/react/documentation/api/gantt/#rowdrop) event argument. You can also change the drop position after cancelling using [`reorderRows`](https://ej2.syncfusion.com/react/documentation/api/gantt/#reorderrows) method.
 
 In the below example drop action is cancelled and dropped above to target row.
 
