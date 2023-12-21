@@ -1,16 +1,14 @@
-import { DataManager, Query, WebApiAdaptor } from '@syncfusion/ej2-data';
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 function App() {
-    let dm = new DataManager({
-        adaptor: new WebApiAdaptor,
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Customers/'
-    }).executeQuery(new Query().take(8)).then((e) => {
-        model.dataSource = e.result.d;
-    });
     let model = {
-        dataSource: [{}],
+        dataSource: new DataManager({
+            url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
+            adaptor: new ODataV4Adaptor
+        }),
         fields: { text: 'ContactName', value: 'CustomerID' },
+        query : new Query().select(['ContactName', 'CustomerID']).take(6),
         placeholder: 'Select a customer'
     };
     return (<div id='container'>
