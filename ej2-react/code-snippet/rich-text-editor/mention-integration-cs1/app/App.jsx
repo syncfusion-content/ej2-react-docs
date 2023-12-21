@@ -37,7 +37,7 @@ class App extends React.Component {
     }
     displayTemplate(data) {
         return (<React.Fragment>
-         <a title={data.EmailId}>@{data.Name}</a>
+         <a href={`mailto:${data.EmailId}`} title={data.EmailId}>@{data.Name}</a>
       </React.Fragment>);
     }
     actionBegineHandler(args) {
@@ -50,7 +50,7 @@ class App extends React.Component {
         <div className='control-section' id="rte">
           <div className='rte-control-section'>
             <RichTextEditorComponent id="mention_integration" placeholder="Type @ and tag the name" actionBegin={this.actionBegineHandler.bind(this)}>
-            <p>Hello <span contentEditable={false} className='e-mention-chip'><a title="maria@gmail.com">@Maria</a></span>&#8203;</p>
+            <p>Hello <span contentEditable={false} className='e-mention-chip'><a href="mailto:maria@gmail.com" title="maria@gmail.com">@Maria</a></span>&#8203;</p>
             <p>Welcome to the mention integration with rich text editor demo. Type <code>@</code> character and tag user from the suggestion list. </p>
               <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]}/>
             </RichTextEditorComponent>
