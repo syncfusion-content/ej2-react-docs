@@ -1,77 +1,32 @@
-
-
-import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent } from '@syncfusion/ej2-react-grids';
-import { Edit, IEditCell, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
-import { NumericTextBox } from '@syncfusion/ej2-inputs';
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { Edit, Inject, Toolbar, EditSettingsModel, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { productData } from './datasource';
-
 function App() {
-  let gridInstance: Grid | null;
-  let priceElem: HTMLElement;
-  let priceObj: NumericTextBox;
-  let stockElem: HTMLElement;
-  let stockObj: NumericTextBox;
+  let grid: GridComponent | null;
   const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
-  const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-  const priceParams: IEditCell = {
-    create: () => {
-      priceElem = document.createElement('input');
-      return priceElem;
-    },
-    read: () => {
-      return priceObj.value;
-    },
-    destroy: () => {
-      priceObj.destroy();
-    },
-    write: args => {
-      priceObj = new NumericTextBox({
-        value: args.rowData[args.column.field],
-        change: function (args) {
-          let formEle = gridInstance.element.querySelector('form').ej2_instances[0];
-          let totalCostFieldEle = formEle.getInputElement('TotalCost');
-          totalCostFieldEle.value = priceObj.value * stockObj.value;
-        }
-      });
-      priceObj.appendTo(priceElem);
-    }
-  };
-  const stockParams: object = {
-    create: () => {
-      stockElem = document.createElement('input');
-      return stockElem;
-    },
-    read: () => {
-      return stockObj.value;
-    },
-    destroy: () => {
-      stockObj.destroy();
-    },
-    write: args => {
-      stockObj = new NumericTextBox({
-        value: args.rowData[args.column.field],
-        change: function (args) {
-          let formEle = gridInstance.element.querySelector('form').ej2_instances[0];
-          let totalCostFieldEle = formEle.getInputElement('TotalCost');
-          totalCostFieldEle.value = priceObj.value * stockObj.value;
-        }
-      });
-      stockObj.appendTo(stockElem);
-    }
-  };
-  return <GridComponent dataSource={productData} ref={grid => gridInstance = grid} editSettings={editOptions}
-    toolbar={toolbarOptions} height={273}>
+  const orderIDRules: object = { required: true };
+  const productNameRules: object = { required: true };
+  const unitIDRules: object = { required: true, min: 1 };
+  const stockIDRules: object = { required: true, min: 1 };
+  const calculateTotalCost = () => {
+    const formEle = (grid as GridComponent).element.querySelector('form').ej2_instances[0];
+    formEle.getInputElement('TotalCost').value = formEle.getInputElement('UnitPrice').value * formEle.getInputElement('UnitsInStock').value;
+  }
+  const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+  const priceParams = { params: { change: calculateTotalCost } };
+  const stockParams = { params: { change: calculateTotalCost } };
+
+  return <GridComponent ref={g => grid = g} dataSource={productData} editSettings={editOptions} toolbar={toolbar} height={265}>
     <ColumnsDirective>
-      <ColumnDirective field="ProductID" headerText="Product ID" textAlign="Right" isPrimaryKey={true} width="100" />
-      <ColumnDirective field="ProductName" headerText="Product Name" width="120" />
-      <ColumnDirective field="UnitPrice" headerText="Unit Price" editType="numericedit" edit={priceParams} width="150" format="C2" textAlign="Right" />
-      <ColumnDirective field="UnitsInStock" headerText="Units In Stock" editType="numericedit" edit={stockParams} width="150" textAlign="Right" />
-      <ColumnDirective field="TotalCost" headerText="Total Cost" width="150" allowEditing={false} format="C2" textAlign="Right" />
+      <ColumnDirective field='ProductID' headerText='ProductID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
+      <ColumnDirective field='ProductName' validationRules={productNameRules} headerText='ProductName' width='120' />
+      <ColumnDirective field='UnitPrice' headerText='UnitPrice' width='120' editType="numericedit" format='C' edit={priceParams} textAlign="Right" validationRules={unitIDRules} />
+      <ColumnDirective field='UnitsInStock' headerText='UnitsInStock' editType='numericedit' validationRules={stockIDRules} edit={stockParams} width='150' />
+      <ColumnDirective field='TotalCost' headerText='TotalCost' width='150' allowEditing={false} format='C' />
     </ColumnsDirective>
     <Inject services={[Edit, Toolbar]} />
-  </GridComponent>
-};
+  </GridComponent>;
+}
+;
 export default App;
-
-

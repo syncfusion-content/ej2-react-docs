@@ -121,6 +121,26 @@ Here is an example of changing the text’s color and its font family using the 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs4" %}
+
+### Add Additional font family
+
+The [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#fontfamily) property in the Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content. The font value will be determined by the 'id' property.
+
+By leveraging the [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#fontfamily) property, you can elevate the scope of customization for text annotations, enriching the user experience within the Image Editor control. This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs38/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs38/app/app.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/image-editor/default-cs38/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs38" %}
         
 ## Freehand drawing
 

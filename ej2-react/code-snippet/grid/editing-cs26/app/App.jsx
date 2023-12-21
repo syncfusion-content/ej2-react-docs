@@ -1,19 +1,33 @@
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+
 function App() {
-    const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true, newRowPosition: 'Bottom' };
-    const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-    return <GridComponent dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} height={265}>
-    <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
-      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
-      <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" editType='numericedit' textAlign="Right"/>
-      <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='150'/>
-    </ColumnsDirective>
-    <Inject services={[Edit, Toolbar]}/>
-  </GridComponent>;
-}
-;
+  let grid;
+  const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+  const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+  const positionData = [
+    { text: 'Top', value: 'Top' },
+    { text: 'Bottom', value: 'Bottom' },
+  ];
+  const orderIDRules = { required: true, number: true };
+  const customerIDRules = { required: true, minLength: 3 };
+  const freightIDRules = { required: true, min: 1, max: 1000 };
+  const changePosition = (args) => {
+    grid.editSettings.newRowPosition = args.value;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}> Select new row position:</label>
+    <DropDownListComponent index={0} width="100" dataSource={positionData} change={changePosition}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbar} height={300}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' validationRules={orderIDRules} width='100' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' validationRules={customerIDRules} headerText='Customer ID' width='120' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C2" editType='numericedit' textAlign="Right" validationRules={freightIDRules} />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Edit, Toolbar]} />
+    </GridComponent></div>)
+};
 export default App;
