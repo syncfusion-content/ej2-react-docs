@@ -7,11 +7,13 @@ import {
   Diagram,
   NodeModel,
   SymbolPalette,
+  DiagramComponent,
   SymbolInfo,
   NodeConstraints,
   SymbolPaletteComponent,
 } from "@syncfusion/ej2-react-diagrams";
 //Initialize the basicshapes for the symbol palette
+let diagramInstance:any;
 export function getUmlShapes(): NodeModel[] {
   let umlShapes: NodeModel[] = [
       {
@@ -70,39 +72,49 @@ export function getUmlShapes(): NodeModel[] {
 //Initializes the symbol palette
 function App() {
   return (
-    <SymbolPaletteComponent
-      id="container"
-      palettes={[
-        {
-          id: 'uml',
-          expanded: true,
-          symbols: getUmlShapes(),
-          title: 'UML Shapes',
-        },
-      ]}
-      symbolHeight={80}
-      symbolWidth={80}
-      //Sets the margin of the dragging helper relative to the mouse cursor
-      symbolMargin={{
-        left: 12,
-        right: 12,
-        top: 12,
-        bottom: 12,
-      }}
-      getNodeDefaults={(symbol: NodeModel): void => {
-        symbol.width = 100;
-        symbol.height = 100;
-      }}
-      getSymbolInfo={(symbol: NodeModel): SymbolInfo => {
-      //Defines the symbol description
-      return { fit: true,description: { text: symbol.id, } };
-    }}
-    />
+      <div style={{ width: '100%' }}>
+        <div id="palette-space" className="sb-mobile-palette">
+        <SymbolPaletteComponent
+            id="container"
+            palettes={[
+            {
+                id: 'uml',
+                expanded: true,
+                symbols: getUmlShapes(),
+                title: 'UML Shapes',
+            },
+            ]}
+            symbolHeight={80}
+            symbolWidth={80}
+            //Sets the margin of the dragging helper relative to the mouse cursor
+            symbolMargin={{
+            left: 12,
+            right: 12,
+            top: 12,
+            bottom: 12,
+            }}
+            getNodeDefaults={(symbol: NodeModel): void => {
+              symbol.width = 100;
+              symbol.height = 100;
+            }}
+            getSymbolInfo={(symbol: NodeModel): SymbolInfo => {
+            //Defines the symbol description
+            return { fit: true,description: { text: symbol.id, } };
+          }}
+        />
+        </div>
+        <div id="diagram-space" className="sb-mobile-diagram">
+        <DiagramComponent
+            id="diagram"
+            ref={(diagram) => (diagramInstance = diagram)}
+            width={'100%'}
+            height={'700px'}
+        ></DiagramComponent>
+        </div>
+      </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
 
 {% endraw %}

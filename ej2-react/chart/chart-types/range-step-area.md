@@ -7,9 +7,9 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Range Step Area Chart in React Chart component
+# Range step area Chart in React Chart component
 
-## Range Step Area
+## Range step area
 
 To render the range step area series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#type) as a `RangeStepArea` and inject the `RangeStepAreaSeries` module using the `Chart.Inject(RangeStepAreaSeries)` method.
 
@@ -22,7 +22,7 @@ To render the range step area series, use the series [`type`](https://ej2.syncfu
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs36" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs36" %}
 
 ## Series customization
 
@@ -31,6 +31,7 @@ The following properties can be used to customize the `range step area` series.
 * [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill) – Specifies the color of the area series.
 * [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill).
 * [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes of series.
+* [step](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#step) – Specifies the position of the step for the series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -41,9 +42,9 @@ The following properties can be used to customize the `range step area` series.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/rangesteparea-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/rangesteparea-cs" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)

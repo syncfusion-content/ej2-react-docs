@@ -7,9 +7,9 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Step Area in React Chart component
+# Step area in React Chart component
 
-## Step Area
+## Step area
 
 To render a step area series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `StepArea` and inject `StepAreaSeries` module into the `services`.
 
@@ -22,7 +22,7 @@ To render a step area series, use series [`type`](https://ej2.syncfusion.com/rea
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs17" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs17" %}
 
 ## Series customization
 
@@ -32,6 +32,7 @@ The following properties can be used to customize the `step area` series.
 * [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill).
 * [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes of series.
 * [border](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#properties) – Specifies the [color](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#color) and [width](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#width) of series border.
+* [step](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#step) – Specifies the position of the step for the series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,9 +43,9 @@ The following properties can be used to customize the `step area` series.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/steparea-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/steparea-cs" %}
 
-## See Also
+## See also
 
 * [Data label](./data-labels/)
 * [Tooltip](./tool-tip/)
