@@ -234,27 +234,61 @@ The following code illustrates how to add methods to UML nodes in the diagram.
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let methods = { name: 'getHistory', style: { color: "red", }, parameters: [{ name: 'Date', style: {} }], type: 'History' };
-diagram.addChildToUmlNode(node, methods, 'Methods');
+diagram.addChildToUmlNode(node, methods, 'Method');
 
 ```
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/umldiagramshapes/es5Method-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/umldiagramshapes/es5Method-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5Method-cs1" %}
 
 The following code illustrates how to add attributes to UML nodes in the diagram.
 
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let attributes = { name: 'accepted', type: 'Date', style: { color: "red", } };
-diagram.addChildToUmlNode(node, attributes, "Attributes");
+diagram.addChildToUmlNode(node, attributes, "Attribute");
 
 ```
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/umldiagramshapes/es5Attribute-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/umldiagramshapes/es5Attribute-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5Attribute-cs1" %}
 
 The following code illustrates how to add members to UML nodes in the diagram.
 
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let members = { name: 'Checking new', style: { color: "red", }, isSeparator: true };
-diagram.addChildToUmlNode(node, members, "Members");
+diagram.addChildToUmlNode(node, members, "Member");
 
 ```
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/umldiagramshapes/es5Member-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/umldiagramshapes/es5Member-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5Member-cs1" %}
+
 
 ### Adding UML child through user interaction
 
@@ -285,7 +319,7 @@ You can edit the name, attributes, and methods of the class diagram shapes just 
 
 The following image illustrates how the text editor looks in an edit mode.
 
-![Editing Class Diagram](images/ClassEdit.png)
+![Editing Class Diagram](images/Editing.gif)
 
 ## UML Activity diagram
 
@@ -332,9 +366,9 @@ The following code illustrates how to create a UmlActivity shapes.
 
  {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5UmlActivity-cs1" %}
 
-### UmlActivity connector
+### Uml Activity connector
 
-To create an UmlActivity connector, define the type as "UmlActivity" and flow as either "Exception" or "Control" or "Object".
+To create an Uml Activity connector, define the type as "UmlActivity" and flow as either "Exception" or "Control" or "Object".
 
 The following code illustrates how to create a UmlActivity connector.
 

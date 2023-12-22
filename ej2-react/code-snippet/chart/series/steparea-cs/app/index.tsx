@@ -18,7 +18,7 @@ function App() {
       <Inject services={[StepAreaSeries, Legend]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={stepAreaData} xName='x' yName='y' type='StepArea' fill= 'yellow'
-          border={{width: 1.5, color:'brown'}} opacity='0.7' dashArray='5'>
+          border={{width: 1.5, color:'brown'}} opacity={0.7} dashArray="5,5" step='Right'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

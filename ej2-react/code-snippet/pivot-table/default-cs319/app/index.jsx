@@ -7,6 +7,8 @@ import {
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './App.css';
+import{ getInstance, select} from '@syncfusion/ej2-base';
+import {DropDownList} from '@syncfusion/ej2-dropdowns';
 import { pivotData } from './datasource';
 
 function App() {
@@ -103,9 +105,33 @@ function App() {
       isInitial = false;
       pivotObj.toolbarModule.action = 'Load';
       /* replace the report name by yours */
-      (pivotObj.toolbarModule).reportList.value = 'Default report';
+      let reportList = getInstance(select('#' + pivotObj.element.id + '_reportlist', pivotObj.element), DropDownList);
+      reportList.value = 'Default report';
       loadReport({ reportName: 'Default report' });
     }
+  }
+  function load(){
+    // Save the desired report that needs to be loaded at initial rendering here.
+    let dataSourceSettings = {
+      dataSource: pivotData,
+      columns: [{ name: 'Year' }],
+      enableSorting: true,
+      allowLabelFilter: true,
+      values: [{ name: 'Sold', caption: 'Units Sold' }],
+      allowValueFilter: true,
+      formatSettings: [{ name: 'Sold', format: 'C0' }],
+      rows: [{ name: 'Country' }],
+    };
+    let displayOption = { view: 'Both' };
+    let gridSettings = {columnWidth: 100};
+    let report = { dataSourceSettings: dataSourceSettings, displayOption: displayOption, gridSettings: gridSettings };
+    let reports = [
+      {
+        report: JSON.stringify(report),
+        reportName: 'Default report',
+      },
+    ];
+  localStorage['pivotviewReports'] = JSON.stringify(reports);
   }
   function newReport() {
     pivotObj.setProperties({ dataSource: { columns: [], rows: [], values: [], filters: [] } }, false);
@@ -124,7 +150,8 @@ function App() {
     allowConditionalFormatting={true} allowNumberFormatting={true} allowPdfExport={true} showToolbar={true}
     allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={toolbarOptions} newReport={newReport.bind(this)}
     renameReport={renameReport.bind(this)} removeReport={removeReport.bind(this)} loadReport={loadReport.bind(this)}
-    fetchReport={fetchReport.bind(this)} saveReport={saveReport.bind(this)} toolbarRender={beforeToolbarRender.bind(this)} dataBound={dataBound.bind(this)}>
+    fetchReport={fetchReport.bind(this)} saveReport={saveReport.bind(this)} toolbarRender={beforeToolbarRender.bind(this)} dataBound={dataBound.bind(this)}
+    load={load.bind(this)}>
     <Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]} />
   </PivotViewComponent>);
 

@@ -9,15 +9,13 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started
+# Getting started
 
-This section explains you the steps required to create a simple 3D chart and demonstrate the basic usage of the chart control.
-
-To get start quickly with React Charts, you can check on this video:
+This section explains you the steps required to create a simple 3D Chart and demonstrate the basic usage of the 3D Chart control.
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the chart component.
+Below is the list of minimum dependencies required to use the 3D Chart component.
 
 ```javascript
 
@@ -61,10 +59,10 @@ To install `create-react-app` run the following command.
     npm install @syncfusion/ej2-react-charts --save
    ```
 
-## Add 3D Chart to the Project
+## Add 3D Chart to the project
 
 Now, you can start adding 3D Chart component in the application.
-For getting started, add the Chart component in `src/App.tsx` file using following code.
+For getting started, add the 3D Chart component in `src/App.tsx` file using following code.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,7 +81,7 @@ export default App;
 import { Chart3DComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
 function App() {
-    return (<Chart3DComponent />);
+  return (<Chart3DComponent />);
 }
 export default App;
 
@@ -96,7 +94,7 @@ Now run the `npm start` command in the console, it will run your application and
 npm start
 ```
 
-The below example shows a basic Chart.
+The below example shows a basic 3D Chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -107,12 +105,13 @@ The below example shows a basic Chart.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/initialize-cs1" %}
+{% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs1" %}
 
-## Module Injection
+## Module injection
 
-3D Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic chart to visualize sales data for a particular year. For this application we are going to use column series, tooltip, data label, category axis and legend feature of the chart. Please find the relevant feature service name and description as follows.
+3D Chart component are segregated into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the AppModule. In the current application, we are going to modify the above basic 3D Chart to visualize sales data for a particular year. For this application we are going to use column series, tooltip, data label, category axis and legend feature of the 3D Chart. Please find the relevant feature service name and description as follows.
 
+* `ColumnSeries3D` - Inject this module in to `services` to use column series.
 * `Legend3D` - Inject this module in to `services` to use legend feature.
 * `Tooltip3D` - Inject this module in to `services` to use tooltip feature.
 * `DataLabel3D` - Inject this module in to `services` to use datalabel feature.
@@ -152,9 +151,9 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 {% endhighlight %}
 {% endtabs %}
 
-## Populate Chart with Data
+## Populate 3D Chart with data
 
-This section explains how to plot below JSON data to the chart.
+This section explains how to plot below JSON data to the 3D Chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -174,22 +173,22 @@ export let data = [
 {% highlight ts tabtitle="index.tsx" %}
 
 export let data: any[] = [
-            { x: 'Tesla', y: 137429 },
-            { x: 'Aion', y: 80308 },
-            { x: 'Wuling', y: 76418 },
-            { x: 'Changan', y: 52849 },
-            { x: 'Geely', y: 47234 },
-            { x: 'Nio', y: 31041 },
-            { x: 'Neta', y: 22449 },
-            { x: 'BMW', y: 18733 }
-      ];
+    { x: 'Tesla', y: 137429 },
+    { x: 'Aion', y: 80308 },
+    { x: 'Wuling', y: 76418 },
+    { x: 'Changan', y: 52849 },
+    { x: 'Geely', y: 47234 },
+    { x: 'Nio', y: 31041 },
+    { x: 'Neta', y: 22449 },
+    { x: 'BMW', y: 18733 }
+];
 
 {% endhighlight %}
 {% endtabs %}
 
- Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/) property. Now map the field names `x` and `y` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property.
+Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/) property. Now map the field names `x` and `y` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#datasource) property.
 
-Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
+Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -200,11 +199,11 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs2" %}
+{% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs2" %}
 
-## Add Chart Title
+## Add 3D Chart title
 
-You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#title) property to the chart to provide quick information to the user about the data plotted in the chart.
+You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#title) property to the 3D Chart to provide quick information to the user about the data plotted in the 3D Chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -215,11 +214,11 @@ You can add a title using [`title`](https://ej2.syncfusion.com/react/documentati
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs3" %}
+{% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs3" %}
 
-## Enable Legend
+## Enable legend
 
-You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#visible) object and by injecting the `Legend3D` module into the `services`.
+You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalLegendSettingsModel/#visible) property to true in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#legendsettings) object and by injecting the `Legend3D` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -230,11 +229,11 @@ You can use legend for the chart by setting the `visible` property to true in [`
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs4" %}
+{% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs4" %}
 
-## Add Data Label
+## Add data label
 
-You can add data labels to improve the readability of the chart. This can be achieved by setting the visible property to true in the `dataLabel` object  and by injecting `DataLabel3D` module into the `services`.
+You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel/#visible) property to true in the [`dataLabel`](https://ej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#datalabel) object and by injecting `DataLabel3D` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -245,11 +244,11 @@ You can add data labels to improve the readability of the chart. This can be ach
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs5" %}
+{% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs5" %}
 
-## Enable Tooltip
+## Enable tooltip
 
-The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel/#enable) object and by injecting `Tooltip3D` module into the `services`.
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalTooltipSettingsModel/#enable) property as true in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#tooltip) object and by injecting `Tooltip3D` module into the `services`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -260,6 +259,6 @@ The tooltip is useful when you cannot display information by using the data labe
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs6" %}
+{% previewsample "page.domainurl/code-snippet/3d-chart/getting-started/getting-started-cs6" %}
 
-> You can refer to our [React Charts](https://www.syncfusion.com/react-ui-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos/#/material/chart/line) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our `React 3D Charts` feature tour page for its groundbreaking feature representations. You can also explore our [React 3D Charts example](https://ej2.syncfusion.com/react/demos/#/material3/three-dimension-chart/column) that shows various 3D Chart types and how to represent time-dependent data, showing trends in data at equal intervals.

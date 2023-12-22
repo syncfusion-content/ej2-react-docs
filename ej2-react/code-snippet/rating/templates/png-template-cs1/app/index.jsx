@@ -5,10 +5,10 @@ import * as ReactDom from 'react-dom';
 // To render Rating.
 function App() {
     function emptyTemplate() {
-        return (<img src="src/rating/images/star-emptytemplate.png" width="25" height="25"/>);
+        return (<img src="star-emptytemplate.png" width="25" height="25"/>);
     }
     function fullTemplate() {
-        return (<img src="src/rating/images/star-fulltemplate.png" width="25" height="25"/>);
+        return (<img src="star-fulltemplate.png" width="25" height="25"/>);
     }
     return (<div className='wrap'>
           <RatingComponent id='rating' value={4} emptyTemplate={emptyTemplate} fullTemplate={fullTemplate}></RatingComponent>
