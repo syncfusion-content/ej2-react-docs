@@ -276,3 +276,26 @@ In the following example, we have used Algeria font to export the grid.
  {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs15" %}
 
 > **PdfTrueTypeFont** accepts base 64 format of the Custom Font.
+
+## Export grid as blob
+
+The Grid offers an option to export the data as a Blob instead of downloading it as a file in the browser. To export the grid as a Blob, set the `isBlob` parameter to **true** in the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfexport) method. The grid returns the promise of a blob in the [pdfExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfexportcomplete) event.
+
+The following example demonstrates how to obtain the blob data of the exported grid by executing the promise in the `pdfExportComplete` event.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/export-grid-as-blob-cs1" %}
