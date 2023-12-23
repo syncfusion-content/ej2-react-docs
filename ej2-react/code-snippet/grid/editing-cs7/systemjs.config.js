@@ -14,7 +14,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/20.3.56/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/24.1.41/"
     },
     map: {
         app: 'app',
@@ -43,8 +43,9 @@ System.config({
         "@syncfusion/ej2-react-calendars": "syncfusion:ej2-react-calendars/dist/ej2-react-calendars.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
         "@syncfusion/ej2-react-inputs": "syncfusion:ej2-react-inputs/dist/ej2-react-inputs.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
-"react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
+        "@syncfusion/ej2-react-popups": "syncfusion:ej2-react-popups/dist/ej2-react-popups.umd.min.js",
+"react-dom":"https://unpkg.com/react-dom@16.8/umd/react-dom.development.js",
+"react":"https://unpkg.com/react@16.8/umd/react.development.js",
         
     },
     packages: {

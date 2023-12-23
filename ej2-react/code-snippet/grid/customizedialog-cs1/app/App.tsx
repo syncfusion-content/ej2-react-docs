@@ -1,9 +1,7 @@
-
-
-import { L10n, getValue } from '@syncfusion/ej2-base';
+import { L10n } from '@syncfusion/ej2-base';
 import { Dialog } from '@syncfusion/ej2-popups';
 import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import { DialogEditEventArgs, Edit, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Edit, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
@@ -19,25 +17,27 @@ L10n.load({
 function App() {
   const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' };
   const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete'];
-  const actionComplete = (args: DialogEditEventArgs): void => {
+  const orderIDRules = { required: true, number: true };
+  const customerIDRules = { required: true, minLength: 3 };
+  const freightIDRules = { required: true, min: 1, max: 1000 };
+  const actionComplete = (args: any) => {
     if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
-      const dialog: Dialog = args.dialog as Dialog;
+      const dialog: Dialog = args.dialog;
       dialog.showCloseIcon = false;
-      dialog.height = 400;
+      dialog.height = 300;
+      dialog.width = 300;
       // change the header of the dialog
       dialog.header = args.requestType === 'beginEdit' ? 'Edit Record of ' + args.rowData['CustomerID'] : 'New Customer';
     }
   }
-  return <GridComponent dataSource={data} actionComplete={actionComplete}
-    editSettings={editOptions} toolbar={toolbarOptions} height={265}>
+  return <GridComponent dataSource={data} actionComplete={actionComplete} editSettings={editOptions} toolbar={toolbarOptions} height={265}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
-      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+      <ColumnDirective field='OrderID' headerText='Order ID' width='120' type="number" textAlign="Right" isPrimaryKey={true} validationRules={orderIDRules} />
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' type="string" validationRules={customerIDRules} />
+      <ColumnDirective field='Freight' headerText='Freight' width='120' editType="numericedit" format="C" textAlign="Right" validationRules={freightIDRules} />
+      <ColumnDirective field='ShipCountry' editType='dropdownedit' headerText='Ship Country' width='150' />
     </ColumnsDirective>
     <Inject services={[Edit, Toolbar]} />
   </GridComponent>
 };
 export default App;
-
-

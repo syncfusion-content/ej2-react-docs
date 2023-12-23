@@ -11,7 +11,7 @@ function App() {
   let priceObj: NumericTextBox;
   let stockElem: HTMLElement;
   let stockObj: NumericTextBox;
-  let gridInstance: Grid | null;
+  let gridInstance: GridComponent | null;
   const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' };
   const toolbarOptions: ToolbarItems[] = ['Add', 'Delete', 'Update', 'Cancel'];
   const priceParams: IEditCell = {

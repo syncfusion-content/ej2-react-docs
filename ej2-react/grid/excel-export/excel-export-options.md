@@ -167,3 +167,26 @@ You can assign the file name for the exported document by defining `fileName` pr
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-export-cs9" %}
+
+ ## Export grid as blob
+
+The Grid offers an option to export the data as a Blob instead of downloading it as a file in the browser. To export the grid as a Blob, set the `isBlob` parameter to **true** in the [excelExport](https://ej2.syncfusion.com/react/documentation/api/grid/#excelexport) method. The grid returns the promise of a blob in the [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#excelexportcomplete) event.
+
+The following example demonstrates how to obtain the blob data of the exported grid by executing the promise in the `excelExportComplete` event.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/export-grid-as-blob-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/export-grid-as-blob-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/export-grid-as-blob-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/export-grid-as-blob-cs2/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/export-grid-as-blob-cs2" %}

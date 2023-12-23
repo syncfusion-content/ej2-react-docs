@@ -16,15 +16,16 @@ let group = {
 let node3 = {
     id: 'node3', width: 100, height: 100, offsetX: 300, offsetY: 300, annotations: [{ content: 'Node3' }]
 };
+document.getElementById('addChild').onclick = function () {
+    diagramInstance.addChildToGroup(group, 'node3');
+};
+document.getElementById('removeChild').onclick = function () {
+    diagramInstance.removeChildFromGroup(group, 'node3');
+};
 function App() {
     return (<DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} width={'1500px'} height={'600px'}
         nodes={[node, node2, node3, group]}
-        created={() => {
-            //To Add child to specifc group at Runtime
-            diagramInstance.addChildToGroup(group, 'node3');
-            //To remove the specific children from group at runtime
-            diagramInstance.removeChildFromGroup(group, 'node3');
-        }} />);
+       />);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

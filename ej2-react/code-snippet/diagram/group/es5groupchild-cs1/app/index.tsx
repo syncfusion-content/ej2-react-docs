@@ -21,6 +21,23 @@ let group: NodeModel = {
 let node3: NodeModel = {
   id: 'node3', width: 100, height: 100, offsetX: 300, offsetY: 300, annotations: [{ content: 'Node3' }]
 };
+
+let addButton:any = document.getElementById('addChild');
+
+if (addButton) {
+    addButton.addEventListener('click', function() {
+      diagramInstance.addChildToGroup(group, 'node3');
+    });
+}
+
+let removeButton:any = document.getElementById('removeChild');
+
+if (removeButton) {
+    addButton.addEventListener('click', function() {
+      diagramInstance.removeChildFromGroup(group, 'node3');
+    });
+}
+
 function App() {
   return (
     <DiagramComponent
@@ -29,12 +46,6 @@ function App() {
       width={'1500px'}
       height={'600px'}
       nodes={[node,node2,node3,group]}
-      created={() => {
-        //To Add child to specifc group at Runtime
-        diagramInstance.addChildToGroup(group, 'node3');
-        //To remove the specific children from group at runtime
-        diagramInstance.removeChildFromGroup(group, 'node3');
-      }}
     />
   );
 }
