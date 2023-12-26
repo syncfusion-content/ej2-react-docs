@@ -42,10 +42,10 @@ This mode can be enable by setting the [enableTimelineVirtualization](https://ej
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/virtual-scroll-cs3/app/index.jsx %}
+{% include code-snippet/gantt/virtualscroll-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/virtual-scroll-cs3/app/index.tsx %}
+{% include code-snippet/gantt/virtualscroll-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/gantt/virtual-scroll-cs3/index.html %}
