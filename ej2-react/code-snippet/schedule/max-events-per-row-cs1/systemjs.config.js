@@ -14,7 +14,7 @@ System.config({
       }
     },
     paths: {
-        "syncfusion:": "//cdn.syncfusion.com/ej2/"},
+        "syncfusion:": "//cdn.syncfusion.com/ej2/24.1.41/"},
     map: {
         app: 'app',
         ts: "https://unpkg.com/plugin-typescript@4.0.10/lib/plugin.js",
@@ -33,6 +33,7 @@ System.config({
         "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
         "@syncfusion/ej2-excel-export": "syncfusion:ej2-excel-export/dist/ej2-excel-export.umd.min.js",
         "@syncfusion/ej2-schedule": "syncfusion:ej2-schedule/dist/ej2-schedule.umd.min.js",
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
 
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-schedule": "syncfusion:ej2-react-schedule/dist/ej2-react-schedule.umd.min.js",
