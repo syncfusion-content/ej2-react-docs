@@ -16,7 +16,7 @@ This section explains the methods used in the Maps component.
 
 ## getMinMaxLatitudeLongitude
 
-The `getMinMaxLatitudeLongitude` method returns the minimum and maximum latitude and longitude values of the Maps visible area. This method returns a `IMinMaxLatitudeLongitude` object that contains the Maps minimum and maximum latitude and longitude coordinates.
+The `getMinMaxLatitudeLongitude` method returns the minimum and maximum latitude and longitude values of the Maps visible area. This method returns a [IMinMaxLatitudeLongitude](https://ej2.syncfusion.com/react/documentation/api/maps/iMinMaxLatitudeLongitude/) object that contains the Maps minimum and maximum latitude and longitude coordinates.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

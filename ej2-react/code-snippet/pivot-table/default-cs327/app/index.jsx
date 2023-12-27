@@ -23,23 +23,10 @@ function App() {
                 height: 130,
                 contents: [
                     {
-                        type: 'Text',
-                        value: "Pivot Table",
-                        position: { x: 0, y: 50 },
-                        style: { textBrushColor: '#000000', fontSize: 13, dashStyle: 'Solid', hAlign: 'Center' }
-                    }
-                ]
-            },
-            footer: {
-                fromBottom: 160,
-                height: 150,
-                contents: [
-                    {
-                        type: 'PageNumber',
-                        pageNumberType: 'Arabic',
-                        format: 'Page {$current} of {$total}',
-                        position: { x: 0, y: 25 },
-                        style: { textBrushColor: '#02007a', fontSize: 15 }
+                        type: 'Image',
+                        src: image,
+                        position: { x: 20, y: 10 },
+                        size: { height: 100, width: 100 },
                     }
                 ]
             }
