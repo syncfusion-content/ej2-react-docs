@@ -45,7 +45,7 @@ This section briefs the Syncfusion assembly [`Syncfusion.Pivot.Engine`](https://
   function App() {
 
     let dataSourceSettings: IDataOptions = {
-      url: 'http://localhost:61379/api/pivot/post',
+      url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
     }
     let pivotObj: PivotViewComponent;
@@ -69,7 +69,7 @@ This section briefs the Syncfusion assembly [`Syncfusion.Pivot.Engine`](https://
   function App() {
 
     let dataSourceSettings: IDataOptions = {
-      url: 'http://localhost:61379/api/pivot/post',
+      url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
         name: 'ProductID', caption: 'Product ID'
@@ -186,7 +186,7 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
   function App() {
 
     let dataSourceSettings: IDataOptions = {
-      url: 'http://localhost:61379/api/pivot/post',
+      url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
         name: 'ProductID', caption: 'Product ID'
@@ -276,7 +276,7 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
   function App() {
 
     let dataSourceSettings: IDataOptions = {
-      url: 'http://localhost:61379/api/pivot/post',
+      url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       type: 'JSON',
       rows: [{
@@ -405,7 +405,7 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
   function App() {
 
     let dataSourceSettings: IDataOptions = {
-      url: 'http://localhost:61379/api/pivot/post',
+      url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       type: 'CSV',
       rows: [{
@@ -519,7 +519,7 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
   function App() {
 
     let dataSourceSettings: IDataOptions = {
-      url: 'http://localhost:61379/api/pivot/post',
+      url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
         name: 'ProductID', caption: 'Product ID'
@@ -613,7 +613,7 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
   function App() {
 
     let dataSourceSettings: IDataOptions = {
-      url: 'http://localhost:61379/api/pivot/post',
+      url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
         name: 'CustomerID', caption: 'Customer ID'
@@ -718,7 +718,7 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
   function App() {
 
     let dataSourceSettings: IDataOptions = {
-      url: 'http://localhost:61379/api/pivot/post',
+      url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
         name: 'CustomerID', caption: 'Customer ID'

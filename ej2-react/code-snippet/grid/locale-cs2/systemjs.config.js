@@ -11,10 +11,11 @@ System.config({
     meta: {
         'typescript': {
             "exports": "ts"
-        }
+        },
+        '*.json': { loader: 'plugin-json' }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/20.3.56/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/24.1.41/"
     },
     map: {
         app: 'app',
@@ -42,6 +43,7 @@ System.config({
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
 "react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
 "react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
+        "plugin-json": "https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-json/0.3.0/json.min.js"
         
     },
     packages: {

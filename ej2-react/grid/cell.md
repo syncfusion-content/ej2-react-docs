@@ -159,7 +159,7 @@ To customize the style of grid cells, define [customAttributes](https://ej2.sync
 Here, setting the customAttributes property of the **ShipCity** column to an object that contains the CSS class 'custom-css'. This CSS class will be applied to all the cells in the **ShipCity** column of the grid.
 
 ```typescript
-    <ColumnDirective field="OrderID" headerText="Order ID" customAttributes={{class: 'custom-css'}} width="100" textAlign="Right" />
+    <ColumnDirective field="OrderID" headerText="Order ID" customAttributes={class: 'custom-css'} width="100" textAlign="Right" />
 ```
 The following example demonstrates how to customize the appearance of the **OrderID** and **ShipCity** columns using custom attributes. 
 
@@ -285,7 +285,7 @@ import { data } from './datasource';
 const customerIDTemplate = (props:any) => {
   return (
     <div className="tooltip-container">
-      <div className="col-md-2" style={{textAlign:"right"}}>
+      <div className="col-md-2" style={textAlign:"right"}>
       <OverlayTrigger
         data-placement="left"
         overlay={<Tooltip id={`tooltip-${props.CustomerID}`}>{props.CustomerID}</Tooltip>}

@@ -25,10 +25,10 @@ function App() {
     wallColor='transparent'
     primaryYAxis={{
         maximum: 150000, interval: 50000
-    }} enableRotation={true} rotation={7} tilt={10} depth={100} tooltip={{ enable: true }}>
+    }} enableRotation={true} rotation={7} tilt={10} depth={100} tooltip={{ enable: true }} legendSettings={{ enableHighlight: true, visible: true }}>
     <Inject services={[ColumnSeries3D, Legend3D, Tooltip3D, DataLabel3D, Category3D, Highlight3D]} />
     <Chart3DSeriesCollectionDirective >
-        <Chart3DSeriesDirective dataSource={data} xName='x' name='Gold' yName='y' type='Column'>
+        <Chart3DSeriesDirective dataSource={data} xName='x' name='Sales' yName='y' type='Column'>
         </Chart3DSeriesDirective>
     </Chart3DSeriesCollectionDirective>
 </Chart3DComponent>
