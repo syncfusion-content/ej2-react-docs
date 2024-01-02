@@ -32,6 +32,7 @@ The TreeGrid row drag and drop allows you to drag and drop TreeGrid rows on the 
 > * Selection feature must be enabled for row drag and drop.
 > * Multiple rows can be selected by clicking and dragging inside the treegrid.
 > * For multiple row selection, the [`type`](https://ej2.syncfusion.com/react/documentation/api/treegrid/selectionSettings/#type) property must be set to `multiple`.
+> * The [`isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) property is necessary to perform row drag and drop operation.
 
 ## Drag and drop to another Tree Grid
 

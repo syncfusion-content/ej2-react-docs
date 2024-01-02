@@ -1,29 +1,78 @@
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import { Edit, Toolbar } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject, KeyboardEventArgs, SelectionSettingsModel, Group } from '@syncfusion/ej2-react-grids';
+import { Edit, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+
 function App() {
-    const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-    const toolbarOptions = ['Add', 'Edit', 'Delete'];
-    const load = () => {
-        let gridElement = document.getElementById('grid').ej2_instances[0];
-        if (gridElement) {
-            gridElement.element.addEventListener('keydown', function (e) {
-                if (gridElement && e.keyCode === 13) {
-                    gridElement.addRecord();
-                }
-            });
+  let grid;
+  const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+  const toolbarOptions = ['Add', 'Edit', 'Delete'];
+  const selectionSettings = { type: 'Multiple' };
+  const keyPressed = (e) => {
+    const key = e.key.toLowerCase();
+    switch (key) {
+      case 'n':
+        e.preventDefault();
+        grid.addRecord();
+        break;
+      case 's':
+        if (e.ctrlKey) {
+          e.preventDefault();
+          grid.endEdit();
         }
-    };
-    return <GridComponent id="grid" dataSource={data} load={load} editSettings={editOptions} toolbar={toolbarOptions} height={265}>
+        break;
+      case 'd':
+        if (e.ctrlKey) {
+          e.preventDefault();
+          grid.deleteRecord();
+        }
+        break;
+      case 'a':
+        if (e.ctrlKey) {
+          e.preventDefault();
+          grid.selectRowsByRange(0);
+        }
+        break;
+      case 'g':
+        if (e.ctrlKey) {
+          e.preventDefault();
+          grid.groupColumn('CustomerID');
+        }
+        break;
+      case 'enter':
+        e.preventDefault();
+        e.cancel = true;
+        grid.refreshColumns();
+        break;
+      case 'insert':
+        e.preventDefault();
+        e.cancel = true;
+        break;
+      case 'delete':
+        e.preventDefault();
+        e.cancel = true;
+        break;
+      case 'f2':
+        e.preventDefault();
+        e.cancel = true;
+        break;
+      case '" "':
+        if (e.ctrlKey) {
+          e.preventDefault();
+          e.cancel = true;
+        }
+        break;
+      // Add more custom shortcuts as needed
+    }
+  }
+  return <GridComponent ref={g => grid = g} dataSource={data} keyPressed={keyPressed} allowGrouping={true}
+    editSettings={editOptions} toolbar={toolbarOptions} height={315} selectionSettings={selectionSettings}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true}/>
-      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
-      <ColumnDirective field='Freight' headerText='Freight' width='80' textAlign="Right" format='C2' editType='numericedit'/>
-      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150'/>
+      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} />
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
     </ColumnsDirective>
-    <Inject services={[Edit, Toolbar]}/>
-  </GridComponent>;
-}
-;
+    <Inject services={[Edit, Toolbar, Group]} />
+  </GridComponent>
+};
 export default App;

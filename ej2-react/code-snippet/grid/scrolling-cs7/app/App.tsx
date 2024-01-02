@@ -1,40 +1,48 @@
-
-
-import { ColumnDirective, ColumnsDirective, Grid, GridComponent, RowSelectEventArgs } from '@syncfusion/ej2-react-grids';
-import { NumericTextBox, NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  let grid: Grid | null;
-  let numeric: NumericTextBox | null;
-  const onChange = () => {
-    if (grid && numeric) {
-      grid.selectionModule.selectRow(parseInt(numeric.getText(), 10));
-    }
+  let grid: GridComponent | null;
+  const dropDownData: { [key: string]: Object; }[] = [
+    { text: 'Select count' },
+    { text: '10', value: '10' },
+    { text: '20', value: '20' },
+    { text: '30', value: '30' },
+    { text: '80', value: '80' },
+    { text: '100', value: '100' },
+    { text: '200', value: '200' },
+    { text: '232', value: '232' },
+    { text: '300', value: '300' },
+    { text: '500', value: '500' },
+    { text: '800', value: '800' },
+    { text: '820', value: '850' },
+    { text: '920', value: '920' },
+    { text: '2020', value: '2020' },
+    { text: '3000', value: '3000' },
+    { text: '4000', value: '4000' },
+    { text: '4999', value: '4999' }
+
+  ];
+  const onChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).selectionModule.selectRow(parseInt((args.value as string), 10));
   }
-  const rowSelected = (args: RowSelectEventArgs) => {
-    if (grid) {
-      const rowHeight: number =
-        grid.getRows()[grid.getSelectedRowIndexes()[0]].scrollHeight;
-      grid.getContent().children[0].scrollTop =
-        rowHeight * grid.getSelectedRowIndexes()[0];
-    }
+  const rowSelected = () => {
+    const rowHeight: number = (grid as GridComponent).getRows()[(grid as GridComponent).getSelectedRowIndexes()[0]].scrollHeight;
+    (grid as GridComponent).getContent().children[0].scrollTop = rowHeight * (grid as GridComponent).getSelectedRowIndexes()[0];
   }
-    return (<div>
-          <NumericTextBoxComponent format={'N'} placeholder='Enter index to select a row'
-            width={200} showSpinButton={false} change={onChange}
-            ref={n=> numeric = n}/>
-          <GridComponent dataSource={data} height="275" width="100%"
-            rowSelected={rowSelected} ref={g => grid = g}>
-            <ColumnsDirective>
-              <ColumnDirective field='OrderID' width='120' textAlign="Right"/>
-              <ColumnDirective field='CustomerID' width='150'/>
-              <ColumnDirective field='EmployeeID' width='120' textAlign="Right"/>
-              <ColumnDirective field='ShipCity' width='150'/>
-            </ColumnsDirective>
-            </GridComponent></div>)
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }} > Select row index :</label>
+    <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    <GridComponent dataSource={data} height="315" width="100%"
+      rowSelected={rowSelected} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
+        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
 };
 export default App;
-
-

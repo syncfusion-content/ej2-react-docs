@@ -20,10 +20,10 @@ Below is the list of minimum dependencies required to use the barcode component.
 
 ```javascript
 
-|-- @syncfusion/ej2-react-barcodegenerator
+|-- @syncfusion/ej2-react-barcode-generator
     |-- @syncfusion/ej2-base
     |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-barcodegenerator
+    |-- @syncfusion/ej2-barcode-generator
     |-- @syncfusion/ej2-react-base
     |-- @syncfusion/ej2-pdf-export
     |-- @syncfusion/ej2-file-utils

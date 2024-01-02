@@ -6,7 +6,7 @@ import * as React from 'react';
 import { data } from './largeData';
 
 function App() {
-  const datas: object[] = data(1000);
+  const datas: object[] = data(5000);
   const pageSettings: PageSettingsModel = { pageSize: 50 };
   const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
   const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];

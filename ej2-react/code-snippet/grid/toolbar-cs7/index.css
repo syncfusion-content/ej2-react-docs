@@ -1,0 +1,14 @@
+.e-grid .custom {
+  background-color: #f48fb1 !important;/* csslint allow: important */
+  color: white;
+}
+
+.e-grid .custom {
+  background-color: #fce4ec;
+  color: white;
+}
+
+.e-grid .e-toolbar .e-tbar-btn .e-icons,
+.e-grid .e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn {
+    background: #add8e6;   
+}

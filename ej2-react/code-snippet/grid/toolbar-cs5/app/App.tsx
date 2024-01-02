@@ -1,55 +1,36 @@
-
-
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
-import { Grid, Group, GroupSettingsModel, Toolbar } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, Toolbar, GroupSettingsModel, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ClickEventArgs } from '@syncfusion/ej2-react-navigations';
 
 function App() {
-  let grid: Grid | null;
-  const toolbarOptions: string[] = ['Expand', 'Collapse'];
-  const groupOptions: GroupSettingsModel = {columns: ['CustomerID']};
-  const clickHandler = (args: any) => {
-    if (grid) {
-      /** Grid_Collapse is component id + '_' + toolbar item name */
-      if (args.item.id === 'Grid_Expand') {
-        grid.groupModule.expandAll();
-      } else if(args.item.id === "Grid_Collapse"){
-        grid.groupModule.collapseAll();
-      }
+  let grid: GridComponent | null;
+  const groupSettings: GroupSettingsModel = { columns: ['CustomerID'] };
+  const toolbar: ToolbarItems[] = ['Expand', 'Collapse'];
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (args.item.id === 'Grid_Collapse') {
+      (grid as GridComponent).groupModule.collapseAll();
     }
-  }
-  const enable = () => {
-    /** Enable toolbar items */
-    if (grid) {
-      grid.toolbarModule.enableItems(['Grid_Collapse','Grid_Expand'],true);
+    if (args.item.id === 'Grid_Expand') {
+      (grid as GridComponent).groupModule.expandAll();
     }
   }
 
-  const disable = () => {
-    /** Disable toolbar items */
-    if (grid) {
-      grid.toolbarModule.enableItems(['Grid_Collapse','Grid_Expand'],false);
-    }
+  const onChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], !args.checked); // Enable or Disable toolbar items.
   }
-    return (<div>
-      <ButtonComponent className='e-flat' onClick= { enable }>Enable</ButtonComponent>
-      <ButtonComponent className='e-flat' onClick= { disable }>Disable</ButtonComponent>
-      <GridComponent id='Grid' dataSource={data} allowGrouping={true}
-          groupSettings ={groupOptions} toolbar={toolbarOptions}
-          toolbarClick={clickHandler} ref={g => grid = g} height={220}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
-            <ColumnDirective field='CustomerID' width='100'/>
-            <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
-            <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"/>
-            <ColumnDirective field='ShipCountry' width='100'/>
-        </ColumnsDirective>
-      <Inject services={[ Toolbar, Group ]} />
-    </GridComponent>
-    </div>)
-}
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}> Enable or disable toolbar items </label>
+    <SwitchComponent change={onChange}></SwitchComponent>
+    <GridComponent id="Grid" dataSource={data} ref={g => grid = g} allowGrouping={true} groupSettings={groupSettings} toolbar={toolbar} toolbarClick={toolbarClick}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='ShipName' headerText='ShipName' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Group, Toolbar]} />
+    </GridComponent></div>)
+};
 export default App;
-
-
