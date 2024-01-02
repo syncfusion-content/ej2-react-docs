@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Badge Component
 
 The following section explains how to create a simple Badge component using styles and Badge’s basic usage.
 
