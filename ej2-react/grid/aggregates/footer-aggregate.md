@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Footer aggregate in React Grid component
 
-Footer aggregate value is calculated for all the rows, and it is displayed in the footer cells. Use the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in footer cells.
+The Syncfusion React Grid component allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#footertemplate) property to render the aggregate value in the footer cells.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -29,11 +29,13 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 
  {% previewsample "page.domainurl/code-snippet/grid/aggregate-cs2" %}
 
-> The aggregate values must be accessed inside the template using their corresponding [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) name.
+> * Use the template reference variable name **#footerTemplate** to specify the footer template.
+> * Inside the template, access the aggregate values using their corresponding [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#type) name. For example, to access the sum aggregate value, use **props.sum**.
 
-## How to format aggregate value
+## Format the aggregate value
 
-You can format the aggregate value result by using the [format](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#format) property.
+To format the aggregate value result in the Syncfusion React Grid component, you can use the [format](https://helpej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#format) property of the[AggregateColumnDirective](https://helpej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/). The `format` property allows you to specify a format string that determines how the aggregate value will be displayed.
+
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -56,7 +58,7 @@ You can format the aggregate value result by using the [format](https://ej2.sync
 
 By default, the aggregated values are placed at the bottom of the footer section. It is possible to place the aggregated values at the top of the header. This is achieved by using the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event, [getHeaderContent](https://ej2.syncfusion.com/react/documentation/api/grid/#getheadercontent), and [getFooterContent](https://ej2.syncfusion.com/react/documentation/api/grid/#getfootercontent) methods of the Grid.
 
-In the following sample, the footer element is appended to the header element using the `getHeaderContent` and `getFooterContent` methods in the `dataBound` event.
+In the following, footer content is appended to the header content using the `dataBound` event of the Grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

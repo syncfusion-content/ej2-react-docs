@@ -3,7 +3,7 @@ import { VirtualScroll, Edit, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './largeData';
 function App() {
-    const datas = data(1000);
+    const datas = data(5000);
     const pageSettings = { pageSize: 50 };
     const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
     const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];

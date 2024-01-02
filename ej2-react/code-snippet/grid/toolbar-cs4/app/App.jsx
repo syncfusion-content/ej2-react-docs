@@ -6,7 +6,7 @@ function App() {
     let gridInstance;
     const toolbarOptions = [
         { text: 'Expand All', tooltipText: 'Expand All', prefixIcon: 'e-expand', id: 'expandall' },
-        { text: 'Collapse All', tooltipText: 'Collapse All', prefixIcon: 'e-collapse', id: 'collapseall', align: 'Right' },
+        { text: 'Collapse All', tooltipText: 'Collapse All', prefixIcon: 'e-collapse-2', id: 'collapseall', align: 'Right' },
         { text: 'Search', align: 'Center' }
     ];
     const groupOptions = {
@@ -22,12 +22,12 @@ function App() {
     };
     return (<GridComponent dataSource={employeeData} allowGrouping={true} groupSettings={groupOptions} toolbar={toolbarOptions} toolbarClick={clickHandler} ref={g => gridInstance = g} height={240}>
         <ColumnsDirective>
-          <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
-          <ColumnDirective field='FirstName' width='100'/>
-          <ColumnDirective field='Country' width='100' textAlign="Right"/>
-          <ColumnDirective field='PostalCode' width='100'/>
+            <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
+            <ColumnDirective field='FirstName' headerText='First Name' width='100' />
+            <ColumnDirective field='Country' headerText='Country' width='100'  />
+            <ColumnDirective field='PostalCode' headerText='Postal Code' width='100' />
         </ColumnsDirective>
-        <Inject services={[Toolbar, Group]}/>
+        <Inject services={[Toolbar, Group]} />
     </GridComponent>);
 }
 export default App;
