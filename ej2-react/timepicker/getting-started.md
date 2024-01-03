@@ -35,7 +35,7 @@ The below list of dependencies are required to use the `TimePicker` component in
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
    ```
      npm install -g create-react-app
@@ -149,7 +149,7 @@ The following examples shows the basic TimePicker component.
  {% previewsample "page.domainurl/code-snippet/timepicker/default-cs2" %}
 
 Now, the TimePicker renders with  default culture as `American English`('en-US'). For a different culture, refer to the
-[`Globalization`](./globalization/) section.
+[`Globalization`](./globalization) section.
 
 ## Setting the value, min, and max time
 
