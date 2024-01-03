@@ -41,4 +41,4 @@ The above command will install the Grid component package and all its dependency
 
 2. Now, open the command prompt and run the `npm install` command line. By default, npm install will install all modules listed as dependencies in [package.json](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
-> Refer the [documentation](https://docs.npmjs.com/files/package.json) for more details about npm package.json
+> Refer the [documentation](https://docs.npmjs.com/cli/v10/configuring-npm/package-json) for more details about npm package.json
