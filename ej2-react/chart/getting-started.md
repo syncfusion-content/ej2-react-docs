@@ -36,7 +36,7 @@ Below is the list of minimum dependencies required to use the chart component.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
    ```
@@ -274,4 +274,4 @@ The tooltip is useful when you cannot display information by using the data labe
 
  {% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs2" %}
 
-> You can refer to our [React Charts](https://www.syncfusion.com/react-ui-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos/#/material/chart/line) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our [React Charts](https://www.syncfusion.com/react-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos/#/material/chart/line) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
