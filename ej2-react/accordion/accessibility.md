@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Accordion component
 
-The Accordion component has been designed keeping in mind the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications, by applying the prompt WAI-ARIA roles, states, and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-labelledby`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and tested in major screen readers.
+The Accordion component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) specifications, by applying the prompt WAI-ARIA roles, states, and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-labelledby`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and tested in major screen readers.
 
 The accessibility compliance for the Accordion component is outlined below.
 
@@ -63,20 +63,6 @@ Keyboard navigation is enabled by default. Possible keys are:
 | <kbd>End</kbd>   | Focus the last Accordion header.                                                |
 | <kbd>Tab</kbd>     | To Move focus through the interactive elements.                 |
 | <kbd>Shift + Tab</kbd> | To Move focus through the interactive elements.             |
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/accordion/accordion-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/accordion/accordion-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/accordion/accordion-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/accordion/accordion-cs1" %}
 
 ## Ensuring accessibility
 
