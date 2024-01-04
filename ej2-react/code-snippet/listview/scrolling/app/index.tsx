@@ -73,7 +73,7 @@ function App() {
   }
   return (
     <div className="grid-container"><div><h3>Chat</h3>
-      <ListViewComponent id='list' dataSource={data.slice(0, itemsRendered)} height= "400px"
+      <ListViewComponent id='list' dataSource={data.slice(0, itemsRendered)} height= "320px"
     width= "400px" template={listTemplate.bind(this) as any} cssClass='e-list-template' scroll={onListScrolled.bind(this) as any} ref={scope => { listviewInstance = scope;}}></ListViewComponent>
     </div></div>
   );
