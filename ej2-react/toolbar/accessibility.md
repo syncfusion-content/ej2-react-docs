@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Toolbar component
 
-The Toolbar component has been designed,  keeping in mind the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications, and applying the WAI-ARIA roles, states, and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, and `aria-orientation`, It provides information about elements in a document for assistive technology.  The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/), and has been tested in major screen readers.
+The Toolbar component has been designed,  keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/) specifications, and applying the WAI-ARIA roles, states, and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, and `aria-orientation`, It provides information about elements in a document for assistive technology.  The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/), and has been tested in major screen readers.
 
 The accessibility compliance for the Toolbar component is outlined below.
 
@@ -68,20 +68,6 @@ Keyboard navigation is enabled by default. Possible keys are
 |  <kbd>End </kbd>   | Moves focus to the last Toolbar. |
 | <kbd>Tab</kbd>     | To Move focus through the interactive elements.                 |
 | <kbd>Shift + Tab</kbd> | To Move focus through the interactive elements.             |
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/toolbar/toolbar-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/toolbar/toolbar-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/toolbar/toolbar-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/toolbar/toolbar-cs1" %}
 
 ## Ensuring accessibility
 

@@ -40,7 +40,7 @@ The accessibility compliance for the Tab component is outlined below.
 
 ## ARIA attributes
 
-Tab component is designed by considering [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#Tabpanel) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices.
+Tab component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices.
 The following list of attributes are added in the Tab.
 
 | **Roles and Attributes** | **Functionalities** |
@@ -72,20 +72,6 @@ By default, keyboard navigation is enabled. This component implements keyboard n
 |  <kbd>Delete</kbd>    | Deletes the Tab, if close button is enabled in Tab header.|
 | <kbd>Tab</kbd>     | To Move focus through the interactive elements.                 |
 | <kbd>Shift + Tab</kbd> | To Move focus through the interactive elements.             |
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/tab/adaptive-scroll-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/tab/adaptive-scroll-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/tab/adaptive-scroll-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/tab/adaptive-scroll-cs1" %}
 
 ## Ensuring accessibility
 
