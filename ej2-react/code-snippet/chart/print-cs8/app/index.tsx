@@ -1,3 +1,5 @@
+{% raw %}
+
 
 
 import * as React from "react";
@@ -11,7 +13,7 @@ function App() {
     { x: 'US', y: 12 }, { x: 'ESP', y: 5.6 }, { x: 'FRA', y: 4.6 }, { x: 'AUS', y: 3.3 },
     { x: 'BEL', y: 3 }, { x: 'UK', y: 2.9 }
   ];
-  const chartInstance: ChartComponent;
+  let chartInstance: ChartComponent;
   function clickHandler() { 
     var svg = document.querySelector("#charts_svg");
         var svgData = new XMLSerializer().serializeToString(svg);
@@ -49,7 +51,7 @@ function App() {
    </SeriesCollectionDirective>
 </ChartComponent>
 
-<button value='Export' onClick={clickHandler.bind(this)}>Export</button> </div>)
+<button value='Export' onClick={clickHandler.bind(this)}>Export</button></div>)
 
 };
 export default App;
@@ -57,3 +59,4 @@ ReactDOM.render(<App />, document.getElementById('charts'));
 
 
 
+{% endraw %}
