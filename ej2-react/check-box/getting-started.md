@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Check box component | Syncfusion
-description:  Checkout and learn about Getting started with React Check box component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Check box Component | Syncfusion
+description: Checkout and learn about Getting started with React Check box component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Checkbox Component
 
 This section explains how to create a simple CheckBox, and configure its available functionalities in React, using React quickstart application.
 
@@ -25,7 +25,7 @@ The following list of dependencies are required to use the CheckBox component in
 
 ## Installation and Configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
    ```bash
      npm install -g create-react-app
