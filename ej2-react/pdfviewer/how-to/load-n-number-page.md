@@ -18,8 +18,7 @@ Using the `initialRenderPages` property judiciously is advisable, especially whe
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```javascript
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -33,6 +32,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}
         initialRenderPages = {10}>
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
@@ -45,11 +45,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-```javascript
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -76,7 +75,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

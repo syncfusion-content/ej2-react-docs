@@ -18,12 +18,12 @@ The PDF Viewer library allows you to add signature in the signature field of the
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```javascript
+{% raw %} 
 
   <PdfViewerComponent
     id="container"
     documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+    resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
     style={{ height: '640px' }}
     formFieldClick={fieldClick}>
     <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
@@ -66,12 +66,10 @@ The PDF Viewer library allows you to add signature in the signature field of the
     }
   }
 
- ```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-
-```javascript
+{% raw %} 
 
   <PdfViewerComponent
     id="container"
@@ -118,8 +116,7 @@ The PDF Viewer library allows you to add signature in the signature field of the
       }
     }
   }
-
- ```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

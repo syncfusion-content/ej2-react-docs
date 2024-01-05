@@ -1,10 +1,6 @@
 
-
-import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import { DataUtil } from '@syncfusion/ej2-data';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { ColumnDirective, ColumnsDirective, FilterSettingsModel } from '@syncfusion/ej2-react-grids';
-import { Filter, Grid, GridComponent, Inject, Sort, Page } from '@syncfusion/ej2-react-grids'
+import { Filter, GridComponent, Inject, Sort, Page } from '@syncfusion/ej2-react-grids'
 import * as React from 'react';
 import { Query, DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 

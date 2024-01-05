@@ -85,7 +85,7 @@ Import the Stepper component's required CSS references as follows in `src/App.cs
 
 To include the Stepper component in your application, import the `StepperComponent` from `ej2-react-navigations` package in the `App.tsx`.
 
-To define each step, you can use the `StepDirective` inside the `StepsDirective` tags as shown in below code example.
+To define each step, you can use the `StepDirective` tag inside the `StepsDirective` tag as shown in below code example.
 
 {% raw %}
 
@@ -99,11 +99,11 @@ function App() {
   return (
         <StepperComponent>
             <StepsDirective>
-                  <StepDirective/>
-                  <StepDirective/>
-                  <StepDirective/>
-                  <StepDirective/>
-                  <StepDirective/>
+                <StepDirective/>
+                <StepDirective/>
+                <StepDirective/>
+                <StepDirective/>
+                <StepDirective/>
             </StepsDirective>
         </StepperComponent>
   );
@@ -137,7 +137,7 @@ The following example shows a basic Stepper component.
 
 ## Configure icon and label
 
-You can define the step icon and label by setting the `iconCss` and `label` properties using the `StepDirective` tag directive.
+You can define the step icon and label by setting the `iconCss` and `label` properties using the `StepDirective` tag.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

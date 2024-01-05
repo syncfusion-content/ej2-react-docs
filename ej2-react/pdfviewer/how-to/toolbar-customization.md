@@ -18,7 +18,8 @@ The PDF Viewer provides API for user interactions options provided in it's built
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-   ```ts
+{% raw %} 
+
      render() {
         function template() {
             return (
@@ -54,6 +55,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
                         documentLoad={this.documentLoaded}
                         pageChange={this.onPageChange}
                         documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
+                        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
                         style={{ 'display': 'block', 'height': '640px' }}>
 
                                 <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -79,11 +81,12 @@ The PDF Viewer provides API for user interactions options provided in it's built
         </div>
         );
       }
-   ```
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-   ```ts
+{% raw %} 
+
      render() {
         function template() {
             return (
@@ -145,7 +148,8 @@ The PDF Viewer provides API for user interactions options provided in it's built
         </div>
         );
       }
-   ```
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -169,7 +173,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
 
 <PdfViewerComponent
 id="container"
@@ -178,17 +182,17 @@ enableToolbar={false}
 documentLoad={this.documentLoaded}
 pageChange={this.onPageChange}
 documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
 style={{ 'display': 'block', 'height': '640px' }}>
 
         <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
                             ThumbnailView, Print, TextSelection, TextSearch]} />
 </PdfViewerComponent>
 
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
-```ts
+{% raw %} 
 
     <PdfViewerComponent
     id="container"
@@ -204,7 +208,7 @@ style={{ 'display': 'block', 'height': '640px' }}>
                                 ThumbnailView, Print, TextSelection, TextSearch]} />
     </PdfViewerComponent>
 
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

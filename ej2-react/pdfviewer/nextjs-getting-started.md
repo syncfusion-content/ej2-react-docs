@@ -132,6 +132,7 @@ Follow the below steps to add the React PDF Viewer componente to the Next.js pro
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
+{% raw %} 
 
 'use client'
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -153,6 +154,7 @@ return (<div>
 }
 export default App;
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

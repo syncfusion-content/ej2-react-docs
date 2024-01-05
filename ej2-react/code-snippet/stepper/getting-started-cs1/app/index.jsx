@@ -6,7 +6,7 @@ import { StepperComponent, StepsDirective, StepDirective } from '@syncfusion/ej2
 
 function App() {
     return (
-        <div ClassName = "default-stepper">
+        <div className="default-stepper">
             <StepperComponent>
                 <StepsDirective>
                     <StepDirective/>

@@ -36,7 +36,7 @@ function App() {
     }
     return (
         // specifies the tag to render the ListView component
-        <ListViewComponent id='ui-list' dataSource={listData} enableVirtualization={true} template={template} height={500} headerTitle="contacts" showHeader={true}>
+        <ListViewComponent id='ui-list' dataSource={listData} enableVirtualization={true} template={template} height={500} cssClass='e-list-template' headerTitle="Contacts" showHeader={true}>
             <Inject services={[Virtualization]} />
         </ListViewComponent>
     );

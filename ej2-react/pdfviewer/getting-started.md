@@ -188,7 +188,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -213,7 +213,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

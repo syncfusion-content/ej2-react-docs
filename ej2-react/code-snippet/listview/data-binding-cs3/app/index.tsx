@@ -9,16 +9,17 @@ import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
 function App() {
   //bind the DataManager instance to dataSource property
-  let data = new DataManager({ url: "//js.syncfusion.com/ejServices/Wcf/Northwind.svc/", crossDomain: true });
+  let data = new DataManager({ url: 'https://services.syncfusion.com/react/production/api/',
+    crossDomain: true });
 
   //bind the Query instance to query property
-  let query = new Query()
-    .from("Products")
-    .select("ProductID,ProductName")
-    .take(6);
+  let query = new Query().from('ListView').select('EmployeeID,FirstName').take(10);
 
   //map the appropriate columns to fields property
-  let fields = { id: "ProductID", text: "ProductName" };
+  let fields = {
+      id: 'EmployeeID',
+      text: 'FirstName'
+  };
 
   return (
     // specifies the tag to render the ListView component
@@ -28,7 +29,7 @@ function App() {
       fields={fields}
       query={query}
       showHeader={true}
-      headerTitle="Product Name"
+      headerTitle="Employees"
     />
   );
 }

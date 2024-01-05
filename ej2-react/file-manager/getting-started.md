@@ -39,19 +39,13 @@ You can use [`create-react-app`](https://github.com/facebook/create-react-app) t
 
 To set-up a React application in TypeScript environment, run the following command.
 
-<div class='tsx'>
-
 ```
 npx create-react-app my-app --template typescript
 
 cd my-app
 ```
 
-</div>
-
 To set-up a React application in JavaScript environment, run the following command.
-
-<div class='tsx'>
 
 ```
 npx create-react-app my-app
