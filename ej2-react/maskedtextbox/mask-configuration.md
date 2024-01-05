@@ -16,7 +16,7 @@ The mask is a combination of standard and custom mask elements, that validates t
 
 ## Standard mask elements
 
-The following table shows the list of mask elements and its behavior based on [MSDN](https://msdn.microsoft.com/en-us/library/system.windows.forms.maskedtextbox.mask.aspx) standard.
+The following table shows the list of mask elements and its behavior based on [MSDN](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.maskedtextbox.mask?view=windowsdesktop-8.0&redirectedfrom=MSDN#System_Windows_Forms_MaskedTextBox_Mask) standard.
 
 The mask can be formed by combining any one or more of these mask elements.
 
