@@ -3,11 +3,12 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { QueryBuilderComponent, ColumnsModel, RuleModel } from '@syncfusion/ej2-react-querybuilder';
-import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
 function App() {
     let data = new DataManager({
-        url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
+        url: 'https://services.odata.org/v4/Northwind/Northwind.svc/Employees/',
+        adaptor: new ODataV4Adaptor()
     });
 
     let columnData: ColumnsModel[] = [
