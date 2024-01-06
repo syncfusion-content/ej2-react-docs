@@ -402,8 +402,7 @@ To enable the selection for markers in Maps, set the [`selectionSettings`](https
 
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs93" %}
 
-
- ### Enable selection for polygons
+### Enable selection for polygons
 
 When the [enable](https://ej2.syncfusion.com/react/documentation/api/maps/selectionSettingsModel/#enable) property of [selectionSettings](https://ej2.syncfusion.com/react/documentation/api/maps/polygonSettingsModel/#selectionsettings) is set to **true**, the polygon shapes can be selected via user interaction. The following properties are available in `selectionSettings` to customize the polygon shape when it is selected.
 
@@ -534,7 +533,7 @@ To enable the highlight for markers in Maps, set the [`highlightSettings`](https
 
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs99" %}
 
- ### Enable highlight for polygons
+### Enable highlight for polygons
 
 The polygon shapes can be highlighted via user interaction if the [enable](https://ej2.syncfusion.com/react/documentation/api/maps/highlightSettingsModel/#enable) property of [highlightSettings](https://ej2.syncfusion.com/react/documentation/api/maps/polygonSettingsModel/#highlightsettings) is set to **true**. The following properties are available in `highlightSettings` to customize the polygon shape when it is highlighted.
 

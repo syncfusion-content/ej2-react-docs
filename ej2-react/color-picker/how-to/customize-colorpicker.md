@@ -108,6 +108,9 @@ The color picker UI can be customized in all possible ways. The following sample
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/colorpicker/position-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight css tabtitle="styles.css" %}
+{% include code-snippet/colorpicker/position-cs1/styles.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/colorpicker/position-cs1" %}

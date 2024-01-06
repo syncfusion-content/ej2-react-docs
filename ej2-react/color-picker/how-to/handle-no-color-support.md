@@ -31,8 +31,7 @@ In the following sample, the first tile of the color palette represents the no c
 
 >If the [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#nocolor) property is enabled, make sure to disable the [`modeswitcher`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#modeswitcher) property.
 
-<!-- markdownlint-disable -->
-<!-- ## Custom no color
+## Custom no color
 
 The following sample show the color palette with custom no color option.
 
@@ -43,6 +42,9 @@ The following sample show the color palette with custom no color option.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/colorpicker/no-color/custom-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight css tabtitle="styles.css" %}
+{% include code-snippet/colorpicker/no-color/custom-cs1/styles.css %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/colorpicker/no-color/custom-cs1" %} -->
+ {% previewsample "page.domainurl/code-snippet/colorpicker/no-color/custom-cs1" %}

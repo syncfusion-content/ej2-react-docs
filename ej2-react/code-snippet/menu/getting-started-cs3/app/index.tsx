@@ -1,21 +1,18 @@
 
 
 import { enableRipple } from '@syncfusion/ej2-base';
-import { DataManager, ODataAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import { FieldSettingsModel, MenuComponent } from '@syncfusion/ej2-react-navigations';
 import { useState, useEffect } from "react";
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-const SERVICE_URI: string = 'https://services.odata.org/V4/Northwind/Northwind.svc/';
+const SERVICE_URI: string = 'https://services.odata.org/v4/Northwind/Northwind.svc/';
 
 enableRipple(true);
 
 function App() {
-    let menuObj: MenuComponent;
-    const [state, setState] = useState({
-        menuItems: []
-    });
+    const [menuItems, setState] = useState([]);
     // Menu fields definition.
     let menuFields: FieldSettingsModel = {
         children: ['Orders'],
@@ -23,7 +20,7 @@ function App() {
     };
 
     useEffect(() => {
-        new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor, crossDomain: true })
+        new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor(), crossDomain: true })
             .executeQuery(
                 new Query().from('Employees').take(5).hierarchy(
                     new Query()
@@ -32,7 +29,7 @@ function App() {
                         select
             ))
             .then((e: ReturnOption) => {
-                setState({ menuItems: e.result as Array<{ [key: string]: any }>} );
+                setState(e.result as any);
         });
     }, []);
 
@@ -43,8 +40,8 @@ function App() {
     return (
         <div>
             {
-                state.menuItems.length  ?
-                <MenuComponent ref={scope => menuObj = scope} items={state.menuItems} fields={menuFields}/> : ''
+                menuItems.length  ?
+                <MenuComponent items={menuItems} fields={menuFields}/> : ''
             }
         </div>
     );

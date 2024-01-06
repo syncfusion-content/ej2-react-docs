@@ -38,8 +38,6 @@ npm install -g create-react-app
 ```
 To set-up a React application in TypeScript environment, run the following command.
 
-<div class='tsx'>
-
 ```
 npx create-react-app my-app --template typescript
 
@@ -48,11 +46,7 @@ cd my-app
 npm start
 ```
 
-</div>
-
 To set-up a React application in JavaScript environment, run the following command.
-
-<div class='tsx'>
 
 ```
 npx create-react-app my-app

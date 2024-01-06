@@ -71,6 +71,9 @@ We can use `template` property to customize list items in UI virtualization.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/virtualization/template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/virtualization/template-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/virtualization/template-cs1" %}

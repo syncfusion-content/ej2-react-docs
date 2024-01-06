@@ -77,12 +77,6 @@ In the provided example, On-Demand Excel filter has been enabled for the React G
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/checkbox-excel-filter/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/checkbox-excel-filter/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/checkbox-excel-filter/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/checkbox-excel-filter" %}
