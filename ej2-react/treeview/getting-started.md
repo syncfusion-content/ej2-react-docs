@@ -40,8 +40,6 @@ npm install -g create-react-app
 
 Start a new project using create-react-app command as follows
 
-<div class='tsx'>
-
 ```bash
 
 create-react-app quickstart --scripts-version=react-scripts-ts
@@ -49,10 +47,6 @@ create-react-app quickstart --scripts-version=react-scripts-ts
 cd quickstart
 
 ```
-
-</div>
-
-<div class='jsx'>
 
 ```
 
@@ -62,7 +56,6 @@ cd quickstart
 
 ```
 
-</div>
 
 ## Adding syncfusion packages
 

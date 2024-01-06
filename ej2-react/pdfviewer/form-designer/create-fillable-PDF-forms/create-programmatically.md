@@ -64,7 +64,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoaded}
         style={{ 'height': '640px' }}>
 
@@ -117,7 +117,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoaded}
         style={{ 'height': '640px' }}>
 
@@ -182,7 +182,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoaded}
         style={{ 'height': '640px' }}>
 
@@ -235,7 +235,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoaded}
         style={{ 'height': '640px' }}>
 
@@ -300,7 +300,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoaded}
         style={{ 'height': '640px' }}>
 
@@ -353,7 +353,7 @@ export function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoaded}
         style={{ 'height': '640px' }}>
 
@@ -381,6 +381,7 @@ The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer l
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
@@ -398,6 +399,7 @@ function App() {
       <PdfViewerComponent 
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -408,10 +410,12 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 {% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
@@ -440,6 +444,7 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -454,7 +459,8 @@ You can invoke download action using following code snippet.,
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-{% raw %} 
+{% raw %}
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -473,6 +479,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
@@ -483,10 +490,12 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 {% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -516,6 +525,7 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -529,6 +539,7 @@ When the print icon is selected on the toolbar, the PDF document will be printed
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -542,6 +553,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+         resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         enablePrint={true}
         style={{ 'height': '640px' }}>
 
@@ -553,10 +565,12 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 {% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
@@ -582,6 +596,7 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -623,6 +638,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoaded}
         enableFormFieldsValidation={true}
         ValidateFormFields= {validateFormFields}
@@ -907,6 +923,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}>
                {/* Inject the required services */}
@@ -1035,6 +1052,7 @@ return (<div>
       <PdfViewerComponent 
           id="container" 
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+          resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
           style={{ 'height': '640px' }}
           documentLoad={documentLoad}>
               {/* Inject the required services */}
@@ -1207,6 +1225,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}>
                {/* Inject the required services */}
@@ -1389,6 +1408,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}>
                {/* Inject the required services */}
@@ -1554,6 +1574,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}
             >
@@ -1716,6 +1737,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}
             >
@@ -1894,6 +1916,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}
             >
@@ -2074,6 +2097,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
+            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}
             documentLoad={documentLoad}
             >

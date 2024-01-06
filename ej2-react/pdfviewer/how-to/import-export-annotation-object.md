@@ -22,7 +22,7 @@ The following steps are used to import and export annotation as object.
 <button onclick="exportAnnotation()">Export Annotation</button>
 <button onclick="importAnnotation()">Import Annotation</button>
 
-  <script>
+<script>
   var exportObject;
   // Export annotation as object.
   function exportAnnotation(){
@@ -37,8 +37,8 @@ The following steps are used to import and export annotation as object.
    var viewer = document.getElementById('container').ej2_instances[0];
    viewer.importAnnotation(JSON.parse(exportObject));
   }
-  </script>
- ```
+</script>
+```
 
 Find the sample [how to import and export annotation as object](https://stackblitz.com/edit/react-wesg2m?file=public%2Findex.html)
 
@@ -50,8 +50,8 @@ The following steps are used to import and export annotation programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```javascript
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css'
@@ -80,6 +80,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         documentLoad={documentLoad}
        style={{ height: '640px' }}>
           <Inject
@@ -198,12 +199,11 @@ function documentLoad(event) {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
  
-```
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```javascript
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css'
@@ -351,22 +351,22 @@ function documentLoad(event) {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
  
-```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 The following code example represents how to export annotation in a button click.
 
-  ```
-   <button onclick="exportAnnotation()">ExportAnnotation</button>
-   <script>
+```
+  <button onclick="exportAnnotation()">ExportAnnotation</button>
+  <script>
     //Event triggers when you click the ExportAnnotation button.
     function exportAnnotation() {
       var viewer = document.getElementById('container').ej2_instances[0];
       //API to export annotation.
       viewer.exportAnnotation();
     }
-   </script>
-  ```
+  </script>
+```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Annotations/Import%20and%20export%20annotations).

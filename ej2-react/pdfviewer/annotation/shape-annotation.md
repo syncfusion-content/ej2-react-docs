@@ -56,6 +56,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -146,7 +147,7 @@ Refer to the following code sample to set the default annotation settings.
 We can edit the annotations programmatically using the **editAnnotation()** method.
 
 Here is an example of how you can use this method to modify an annotation:
-
+```
 <button onclick="editAnnotation()()">Edit Annotation</button>
 
 <script>
@@ -159,13 +160,14 @@ var pdfviewer = document.getElementById('container').ej2_instances[0];
   pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[0]);
 }
 </script>
-
+```
 ### Delete annotation programmatically
 
 We can delete a specific annotation using the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
 
 Here is an example of how you can use this method to delete an annotation:
 
+```
 <button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
 
 <script>
@@ -175,6 +177,7 @@ Here is an example of how you can use this method to delete an annotation:
     viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
   }
 </script>
+```
 
 ## Setting default properties during the control initialization
 
@@ -196,6 +199,7 @@ function App() {
       <PdfViewerComponent  ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         lineSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
         arrowSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
         rectangleSettings={{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'}}

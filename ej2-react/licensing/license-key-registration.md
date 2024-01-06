@@ -32,7 +32,7 @@ import reportWebVitals from './reportWebVitals';
 import { registerLicense } from '@syncfusion/ej2-base';
 
 // Registering Syncfusion license key
-registerLicense('License Key');
+registerLicense('Replace your generated license key here');
 
 ReactDOM.render(
   <React.StrictMode>

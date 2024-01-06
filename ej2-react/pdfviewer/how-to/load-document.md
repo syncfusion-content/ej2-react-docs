@@ -18,31 +18,31 @@ The following steps are used to load the PDF document dynamically.
 
 **Step 2:** Use the following code snippet to load the PDF document using a base64 string.
 
-   ```
-    <button id='load1'>LoadDocumentFromBase64</button>
+```
+  <button id='load1'>LoadDocumentFromBase64</button>
 
-    <script>
+  <script>
     // Load PDF document from Base64 string
-    function load_1(){
+  function load_1(){
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.load('data:application/pdf;base64,'+ AddBase64String, null);
-   }
-    </script>
-   ```
+  }
+  </script>
+```
 
 **Step 3:** Use the following code snippet to the load PDF document the using document name.
 
-  ```
-   <button id='load2'>LoadDocument</button>
+```
+  <button id='load2'>LoadDocument</button>
 
-    <script>
-    // Load PDF document using file name
-   function load_2(){
+  <script>
+  // Load PDF document using file name
+  function load_2(){
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
-   }
-   </script>
- ```
+  }
+  </script>
+```
 
 Find the sample [how to load PDF documents dynamically](https://stackblitz.com/edit/react-qtjtbo?file=public%2Findex.html)
 
@@ -50,7 +50,8 @@ Find the sample [how to load PDF documents dynamically](https://stackblitz.com/e
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```ts
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -63,6 +64,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
         
             <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -73,11 +75,12 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
-{% endhighlight %}
 
+{% endraw %}
+{% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-```ts
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -101,7 +104,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

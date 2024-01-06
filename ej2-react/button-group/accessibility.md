@@ -16,15 +16,15 @@ The accessibility compliance for the ButtonGroup component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -42,12 +42,26 @@ The accessibility compliance for the ButtonGroup component is outlined below.
 
 The ButtonGroup component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ButtonGroup component.
 
+### Normal behavior
+
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab</kbd> | Focuses the next button in the multiple selection type ButtonGroup. |
-| <kbd>Shift + Tab</kbd> | Focuses the previous button in the multiple selection ButtonGroup. |
-| <kbd>Arrow</kbd> | Focuses and activates the next / previous button in the single selection ButtonGroup. |
-| <kbd>Space</kbd> | Activates the focused button in the ButtonGroup. |
+| <kbd>Tab</kbd> | Focuses the next button in the ButtonGroup. |
+| <kbd>Enter/Space</kbd> | Activates the focussed button in the ButtonGroup. |
+
+### Checkbox behavior
+
+| **Press** | **To do this** |
+| --- | --- |
+| <kbd>Tab</kbd> | Focuses the next button in the ButtonGroup. |
+| <kbd>Space</kbd> | Activates the focussed button in the ButtonGroup. |
+
+### Radiobutton behavior
+
+| **Press** | **To do this** |
+| --- | --- |
+| <kbd>Tab</kbd> | Focuses the active button in the ButtonGroup. |
+| <kbd>Right</kbd> | Activates next/previous button in the ButtonGroup. |
 
 ## Ensuring accessibility
 

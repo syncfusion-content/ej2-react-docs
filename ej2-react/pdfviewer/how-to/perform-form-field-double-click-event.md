@@ -18,11 +18,12 @@ The PDF Viewer library allows you to trigger an event when you double click on t
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-```javascript
 <PdfViewerComponent
   id="container"
   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
   formFieldDoubleClick={formFieldDoubleClick}
   style={{ height: '640px' }}>
 </PdfViewerComponent>
@@ -31,12 +32,12 @@ function formFieldDoubleClick(args) {
     //Prints the argument value in the console window
     console.log(args);
   }
-```
+
+{% endraw %}
 {% endhighlight %}
-
 {% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-```javascript
 <PdfViewerComponent
   id="container"
   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
@@ -49,6 +50,7 @@ function formFieldDoubleClick(args) {
     //Prints the argument value in the console window
     console.log(args);
   }
-```
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
