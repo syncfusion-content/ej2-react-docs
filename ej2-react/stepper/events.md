@@ -14,7 +14,7 @@ This section describes the Stepper events that will be triggered when an appropr
 
 ## created
 
-The Stepper control triggers the [created](https://ej2.syncfusion.com/react/documentation/api/stepper#created) event when the control rendering is completed.
+The Stepper component triggers the [created](https://ej2.syncfusion.com/react/documentation/api/stepper#created) event when the control rendering is completed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,7 +32,7 @@ The Stepper control triggers the [created](https://ej2.syncfusion.com/react/docu
 
 ## stepChanged
 
-The Stepper control triggers the [stepChanged](https://ej2.syncfusion.com/react/documentation/api/stepper#stepchanged) event after the active step is changed.
+The Stepper component triggers the [stepChanged](https://ej2.syncfusion.com/react/documentation/api/stepper#stepchanged) event after the active step is changed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +50,7 @@ The Stepper control triggers the [stepChanged](https://ej2.syncfusion.com/react/
 
 ## stepChanging
 
-The Stepper control triggers the [stepChanging](https://ej2.syncfusion.com/react/documentation/api/stepper#stepchanging) event before the active step change.
+The Stepper component triggers the [stepChanging](https://ej2.syncfusion.com/react/documentation/api/stepper#stepchanging) event before the active step change.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,7 +68,7 @@ The Stepper control triggers the [stepChanging](https://ej2.syncfusion.com/react
 
 ## stepClick
 
-The Stepper control triggers the [stepClick](https://ej2.syncfusion.com/react/documentation/api/stepper#stepclick) event when the step is clicked.
+The Stepper component triggers the [stepClick](https://ej2.syncfusion.com/react/documentation/api/stepper#stepclick) event when the step is clicked.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -86,7 +86,7 @@ The Stepper control triggers the [stepClick](https://ej2.syncfusion.com/react/do
 
 ## beforeStepRender
 
-The Stepper control triggers the [beforeStepRender](https://ej2.syncfusion.com/react/documentation/api/stepper#beforesteprender) event before rendering each step.
+The Stepper component triggers the [beforeStepRender](https://ej2.syncfusion.com/react/documentation/api/stepper#beforesteprender) event before rendering each step.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
