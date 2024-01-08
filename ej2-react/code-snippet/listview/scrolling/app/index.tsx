@@ -2,10 +2,11 @@
 
 
 import React from 'react';
+import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 function App() {
   let listviewInstance: ListViewComponent | null = null;
-  let data = [{
+  let data: { text: string; positionClass: string; templateHeight?: string }[] = [{
     text: "Hi Guys, Good morning! \uD83D\uDE0A, I'm very delighted to share with you the news that our team is going to launch a new mobile application",
     positionClass: 'right',
   }, {
@@ -65,7 +66,7 @@ function App() {
       if (itemsRendered < data.length) {
         const startIndex = itemsRendered;
         const endIndex = Math.min(itemsRendered + itemPerScroll, data.length);
-        result = data.slice(startIndex, endIndex);
+        result = data.slice(startIndex, endIndex) as  { text: string; positionClass: string; templateHeight?: string }[];
         listviewInstance?.addItem(result);
         itemsRendered = endIndex;
       }
