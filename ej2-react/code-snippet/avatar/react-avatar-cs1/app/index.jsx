@@ -3,11 +3,11 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 function ReactApp() {
     let dataSource = [
-        { src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-xsmall' },
-        { src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-small' },
-        { src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar' },
-        { src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-large' },
-        { src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-xlarge' }
+        { id: '1', src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-xsmall' },
+        { id: '2', src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-small' },
+        { id: '3', src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar' },
+        { id: '4', src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-large' },
+        { id: '5', src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-xlarge' }
     ];
     return (<div className='control-pane'>
             <div className="sample_container avatar-badge">
@@ -15,7 +15,7 @@ function ReactApp() {
                     <div className="e-card e-avatar-showcase">
                         <div className="e-card-content">
                             {dataSource.map(function (item) {
-            return (<div className={`e-avatar e-avatar-circle ${item.size}`} style={{ backgroundImage: `url(${item.src})` }}></div>);
+            return (<div key={item.id} className={`e-avatar e-avatar-circle ${item.size}`} style={{ backgroundImage: `url(${item.src})` }}></div>);
         })}
                         </div>
                         <div className="e-card-content">
@@ -28,7 +28,7 @@ function ReactApp() {
                     <div className="e-card e-avatar-showcase">
                         <div className="e-card-content">
                             {dataSource.map(function (item) {
-            return (<div className={`e-avatar e-avatar-circle ${item.size}`}>
+            return (<div key={item.id} className={`e-avatar e-avatar-circle ${item.size}`}>
                                     <img src={item.src}/>
                                 </div>);
         })}
