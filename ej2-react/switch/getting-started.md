@@ -25,7 +25,7 @@ The following list of dependencies are required to use Switch component in your 
 
 ## Installation and Configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
 ```bash
   npm install -g create-react-app

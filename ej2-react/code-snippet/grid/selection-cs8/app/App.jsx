@@ -1,25 +1,31 @@
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+import { useState } from 'react';
+
 function App() {
     let grid;
-    const rowSelected = () => {
-        if (grid) {
-            /** Get the selected row indexes */
-            const selectedrowindex = grid.getSelectedRowIndexes();
-            /** Get the selected records. */
-            const selectedrecords = grid.getSelectedRecords();
-            alert(selectedrowindex + " : " + JSON.stringify(selectedrecords));
-        }
-    };
-    return (<GridComponent dataSource={data} height={315} rowSelected={rowSelected} ref={g => grid = g}>
+    const [message, setMessage] = useState(false);
+    const [selectedRowIndexes, setSelectedRowIndexes] = useState < number[] > ([]);
+    const selectionSettings = { type: 'Multiple' };
+    const click = () => {
+        setSelectedRowIndexes(grid.getSelectedRowIndexes());
+        setMessage(selectedRowIndexes.length > 0);
+    }
+    return (<div>
+        <div>
+            <ButtonComponent id='button' onClick={click}>Get selected row indexes</ButtonComponent>
+        </div>
+        {message &&
+            <p id="message" >Selected row indexes: {selectedRowIndexes}</p>}
+        <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings}>
             <ColumnsDirective>
-              <ColumnDirective field='OrderID' width='120' textAlign="Right"/>
-              <ColumnDirective field='CustomerID' width='150'/>
-              <ColumnDirective field='ShipCity' width='100'/>
-              <ColumnDirective field='ShipName' width='150'/>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+                <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
             </ColumnsDirective>
-            </GridComponent>);
-}
-;
+        </GridComponent></div>)
+};
 export default App;

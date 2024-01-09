@@ -5,7 +5,7 @@ import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  const settings: SelectionSettingsModel = { type: 'Multiple', mode: 'Both' };
+  const settings: SelectionSettingsModel = { type: 'Multiple', mode: 'Row' };
     return (<GridComponent dataSource={data} selectedRowIndex={1} selectionSettings={settings}
             height={315}>
             <ColumnsDirective>
