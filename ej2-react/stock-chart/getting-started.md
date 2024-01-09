@@ -44,7 +44,7 @@ Below is the list of minimum dependencies required to use the chart component.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
 ```
@@ -309,4 +309,4 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 
  {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/trackball-cs1" %}
 
-> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-ui-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos/#/material/stock-chart) that shows you how to present and manipulate data.
+> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos/#/material/stock-chart) that shows you how to present and manipulate data.

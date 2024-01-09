@@ -20,7 +20,7 @@ To get started with Syncfusion React UI components, ensure the compatible versio
 
 ## Setup for Local Development
 
-1. Create a new React app [`create-react-app`](https://github.com/facebookincubator/create-react-app) and install it using the following command.
+1. Create a new React app [`create-react-app`](https://github.com/facebook/create-react-app) and install it using the following command.
 
 ```bash
 npm install -g create-react-app
@@ -251,7 +251,7 @@ root.render(<App />);
         
 {% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs1-standalone" %}
 
-> You can refer to our [React PDF Viewer](https://www.syncfusion.com/react-ui-components/react-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/default) to understand how to explains core features of PDF Viewer.
+> You can refer to our [React PDF Viewer](https://www.syncfusion.com/react-components/react-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/default) to understand how to explains core features of PDF Viewer.
 
 ## Limitation over Server-Backed PDF Viewer to Standalone PDF Viewer control
 
