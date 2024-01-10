@@ -26,7 +26,7 @@ To render a stacked bar series, use series [`type`](https://helpej2.syncfusion.c
 
 ## Stacking group
 
-To group the stacked bar, the [`stackingGroup`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#stackinggroup) property can be used. Columns with same group name are stacked on top of each other.
+To group the stacked bar, the [`stackingGroup`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#stackinggroup) property can be used. The columns with same group name are stacked on top of each other.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,7 +59,7 @@ To render a cylindrical stacked bar chart, set the [`columnFacet`](https://helpe
 The following properties can be used to customize the `stacked bar` series.
 
 * [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) – Specifies the color of the series.
-* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill).
+* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -436,4 +436,4 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 ## See Also
 
 * [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization)
-* [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization)
+* [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization/)

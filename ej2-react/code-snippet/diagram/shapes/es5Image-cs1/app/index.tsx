@@ -18,7 +18,7 @@ let node: NodeModel[] = [{
     // sets the type of the shape as image
     shape: {
         type: 'Image',
-        source: '/diagram/images/syncfusion.png'
+        source: 'https://ej2.syncfusion.com/demos/src/diagram/employees/image16.png'
     },
     //Customizes the appearances such as text, font, fill, and stroke.
     style: {

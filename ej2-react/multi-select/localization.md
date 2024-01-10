@@ -52,5 +52,5 @@ In the following sample, French culture is set to the MultiSelect and no data is
 
 ## See Also
 
-* [Accessibility](./accessibility)
-* [How to bind the data to the combobox](./data-binding)
+* [Accessibility](./accessibility/)
+* [How to bind the data to the combobox](./data-binding/)

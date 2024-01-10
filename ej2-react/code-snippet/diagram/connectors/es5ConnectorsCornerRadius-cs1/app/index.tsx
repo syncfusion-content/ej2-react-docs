@@ -63,11 +63,7 @@ function App() {
       nodes={nodes}
       connectors={connectors}
       height={'600px'}
-      // Enables the bridging constraints for the connector
-      constraints={DiagramConstraints.Default | DiagramConstraints.Bridging}
-      connectors={connectors}
     >
-      <Inject services={[ConnectorBridging]} />{' '}
     </DiagramComponent>
   );
 }

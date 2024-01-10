@@ -1,7 +1,7 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent,ConnectorConstraints } from "@syncfusion/ej2-react-diagrams";
 let nodes = [{
         id: 'node',
         width: 100,

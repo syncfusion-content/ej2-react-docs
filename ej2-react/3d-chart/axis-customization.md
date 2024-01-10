@@ -10,8 +10,6 @@ domainurl: ##DomainURL##
 
 # Axis customization in React 3D Chart control
 
-The following topics shows how to customize the axis.
-
 ## Title
 
 The title for the axis can be added by using the [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#title) property. It helps to provide quick information to the user about the data plotted in the axis. Title style can be customized using [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#titlestyle) property of the axis.
@@ -59,7 +57,7 @@ The [`width`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/maj
 
 ## Grid lines customization
 
-The [`width`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/minorGridModel/#width), and [`color`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/minorGridModel/#color) of the minor and major grid lines can be customized by using the [`majorGridLines`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#majorgridlines) and [`minorGridLines`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minorgridlines) properties in the axis.
+The [`width`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/minorGridModel/#width) and [`color`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/minorGridModel/#color) of the minor and major grid lines can be customized by using the [`majorGridLines`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#majorgridlines) and [`minorGridLines`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minorgridlines) properties in the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +70,7 @@ The [`width`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/min
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/axis-customization/axis-cs4" %}
 
-## Multiple Axis
+## Multiple axis
 
 In addition to primary X and Y axis, n number of axis can be added to the chart. Series can be associated with this axis, by mapping with axis's unique name.
 
@@ -87,11 +85,11 @@ In addition to primary X and Y axis, n number of axis can be added to the chart.
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/axis-customization/axis-cs5" %}
 
-## Inversed Axis
+## Inversed axis
 
 <!-- markdownlint-disable MD033 -->
 
-When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner set the [`isInversed`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#isinversed) property to **true**.
+When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner, set the [`isInversed`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#isinversed) property to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,9 +102,9 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/axis-customization/axis-cs6" %}
 
-## Opposed Position
+## Opposed position
 
-To place an axis opposite from its original position, set [`opposedPosition`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#opposedposition) property to **true**.
+To place an axis opposite from its original position, set the [`opposedPosition`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#opposedposition) property to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

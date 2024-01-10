@@ -1,7 +1,7 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Diagram, DiagramComponent, ConnectorEditing, ConnectorConstraints } from "@syncfusion/ej2-react-diagrams";
+import { Diagram, DiagramComponent, ConnectorEditing, ConnectorConstraints,PortVisibility,ControlPointsVisibility } from "@syncfusion/ej2-react-diagrams";
 Diagram.Inject(ConnectorEditing);
 let nodes = [{
         id: 'Start',
@@ -44,7 +44,7 @@ let connectors = [{
         targetPortID: "EndPort",
         type: 'Bezier',
         // Configuring settings for bezier interactions
-        bezierSettings = { controlPointsVisibility: ControlPointsVisibility.Source | ControlPointsVisibility.Target }
+        bezierSettings : { controlPointsVisibility: ControlPointsVisibility.Source | ControlPointsVisibility.Target }
     }];
 function App() {
     return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={nodes} connectors={connectors} getNodeDefaults={(node) => {
