@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with React Timepicker component | Syncfusion
-description:  Checkout and learn about Getting started with React Timepicker component of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about Getting started with React Timepicker component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React Timepicker
 
 This section explains you the steps required to create a simple TimePicker and demonstrate the basic usage of the TimePicker component.
 
