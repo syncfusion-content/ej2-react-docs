@@ -1,13 +1,11 @@
-
-
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, Filter, Selection, Page} from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, Filter, Selection, Page, ToolbarItems, FilterSettingsModel, RowDataBoundEventArgs, EditSettingsModel, SelectionSettingsModel} from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 function App() {
-  const settings: Object = { persistSelection: true };
-  const editSettings: any = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
-  const toolbarOptions: any = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
-  const filterOptions: any = { type: 'CheckBox' };
+  const settings: SelectionSettingsModel = { persistSelection: true, type:'Multiple' };
+  const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+  const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+  const filterOptions: FilterSettingsModel = { type: 'CheckBox' };
   const load = () => {
     for (let i = 0; i < data.length; i++) {
       data[i]['List'] = i + 1;
@@ -16,10 +14,9 @@ function App() {
   const rowDataBound = (args: RowDataBoundEventArgs) => {
     args.isSelectable = args.data.List % 5 === 0;
   }
-    return <GridComponent dataSource={data} height={315} selectionSettings={settings}
-    editSettings={editSettings} toolbar={toolbarOptions} filterSettings={filterOptions}
-    selectionSettings={settings} allowPaging={true} allowFiltering={true} pageSettings={{pageSize : 20}}
-    rowDataBound={rowDataBound}  load={load}>
+    return <GridComponent dataSource={data} selectionSettings={settings}
+    editSettings={editSettings} toolbar={toolbarOptions} filterSettings={filterOptions} allowPaging={true} allowFiltering={true} pageSettings={{pageSize : 5}}
+    rowDataBound={rowDataBound} load={load}>
             <ColumnsDirective>
               <ColumnDirective type='checkbox' width='50'/>
               <ColumnDirective field='List' width='120' headerText="List"/>
@@ -32,5 +29,3 @@ function App() {
             </GridComponent>
 };
 export default App;
-
-

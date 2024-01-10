@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart appearance in React 3D Chart component | Syncfusion
-description: Learn here all about chart appearance in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
+title: Appearance in React 3D Chart component | Syncfusion
+description: Learn here all about appearance in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart appearance in React 3D Chart control
+# Appearance in React 3D Chart control
 
 ## Custom color palette
 
@@ -27,7 +27,7 @@ The default color of series or points can be customized by providing a custom co
 
 ## Data point customization
 
-The color of an individual data point can be customized using the options below.
+The color of an individual data point can be customized using the below options.
 
 ### Point color mapping
 
@@ -67,7 +67,7 @@ The data label and fill color of each data point can be customized using the [`p
 
 **Customize the chart background**
 
-The background color and border of the chart can be customized using the [`background`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#background) and [`border`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#border) properties.
+The background color and border of the 3D chart can be customized using the [`background`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#background) and [`border`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#border) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,7 +82,7 @@ The background color and border of the chart can be customized using the [`backg
 
 **Chart margin**
 
-The chart's margin can be set from its container using the [`margin`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#margin) property.
+The 3D chart's margin can be set from its container using the [`margin`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#margin) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -97,7 +97,7 @@ The chart's margin can be set from its container using the [`margin`](https://he
 
 ## Animation
 
-To customize the animation for a particular series, the [`animation`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#animation) property can be used. It can be enabled or disabled by using [`enable`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#enable) property. The [`duration`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#duration) property specifies the duration of an animation and [`delay`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#delay) property allows us to start the animation at desire time.
+To customize the animation for a particular series, the [`animation`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#animation) property can be used. It can be enabled or disabled by using the [`enable`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#enable) property. The [`duration`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#duration) property specifies the duration of an animation and the [`delay`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/animationModel/#delay) property allows us to start the animation at desire time.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -112,7 +112,7 @@ To customize the animation for a particular series, the [`animation`](https://he
 
 ## Chart rotation
 
-Chart can be rotated by using the [`enableRotation`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#enablerotation) property in the chart.
+The 3D chart can be rotated by using the [`enableRotation`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#enablerotation) property in the chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,9 +125,9 @@ Chart can be rotated by using the [`enableRotation`](https://helpej2.syncfusion.
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/appearance/appearance-cs7" %}
 
-## Chart title
+## Title
 
-Chart can be given a title by using [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#title) property, to show the information about the data plotted.
+The 3D chart can be given a title by using [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#title) property, to show the information about the data plotted.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -142,7 +142,7 @@ Chart can be given a title by using [`title`](https://helpej2.syncfusion.com/rea
 
 ### Title position
 
-By using the [`position`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#position) property in [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#titlestyle), the [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#title) can be positioned at left, right, top or bottom of the chart. The title is positioned at the top of the chart, by default.
+By using the [`position`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#position) property in [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#titlestyle), the [`title`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#title) can be positioned at left, right, top or bottom of the 3D chart. The title is positioned at the top of the 3D chart, by default.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -155,7 +155,7 @@ By using the [`position`](https://helpej2.syncfusion.com/react/documentation/ap
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/appearance/appearance-cs9" %}
 
-The custom option is used to position the title anywhere in the chart using [`x`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#x) and [`y`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#y) coordinates.
+The custom option is used to position the title anywhere in the 3D chart using [`x`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#x) and [`y`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#y) coordinates.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -170,7 +170,7 @@ The custom option is used to position the title anywhere in the chart using [`x`
 
 ### Title alignment
 
-The title can be aligned to the near, far, or center of the chart by using the [`textAlignment`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#textalignment) property.
+The title can be aligned to the near, far, or center of the 3D chart by using the [`textAlignment`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#textalignment) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -185,7 +185,7 @@ The title can be aligned to the near, far, or center of the chart by using the [
 
 ### Title customization
 
-The [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#titlestyle) property of chart title provides options to customize the title by using the following properties.
+The [`titleStyle`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#titlestyle) property of the 3D chart title provides options to customize the title by using the following properties.
 
 * [`size`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#size) - Specifies the size of the title.
 * [`color`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/titleSettingsModel/#color) - Specifies the color for the title. 

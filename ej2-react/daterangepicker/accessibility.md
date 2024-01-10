@@ -43,7 +43,7 @@ The accessibility compliance for the DateRangePicker component is outlined below
 The web accessibility makes web content and web applications more accessible for disabled people. It especially helps in dynamic content change and development of advanced user interface controls  with AJAX, HTML, JavaScript, and related technologies.
 DateRangePicker provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications. WAI-ARIA supports is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
 
-To know about the accessibility of Calendar refer to the [Accessibility](../calendar/accessibility) section of Calendar.
+To know about the accessibility of Calendar refer to the [Accessibility](../calendar/accessibility/) section of Calendar.
 
 It helps disabled persons by providing information about the widget for assistive technology  in the screen readers.
 DateRangePicker component contains grid role and grid cell for each day cell.

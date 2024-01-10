@@ -223,4 +223,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ## See Also
 
 * [Options pane](../document-editor/dialog#options-pane)
-* [Feature modules](../document-editor/feature-module)
+* [Feature modules](../document-editor/feature-module/)

@@ -1,0 +1,9 @@
+.e-grid .customcss {
+  background-color: #ecedee;
+}
+
+#message{
+  color:red;
+  text-align:center;
+  padding-top:10px;
+}

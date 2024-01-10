@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Category Axis in React 3D Chart component | Syncfusion
+title: Category axis in React 3D Chart component | Syncfusion
 description: Learn here all about category axis in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-react
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Category axis in React 3D Chart control
 
-The category axis is the horizontal axis of a chart that shows text values rather than numerical values. Compared to the vertical axis, this axis has fewer labels. The following sample shows to render the 3D chart using category axis.
+The category axis is the horizontal axis of a 3D chart that shows text values rather than numerical values. Compared to the vertical axis, this axis has fewer labels. The following sample shows to render the 3D chart using category axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -23,11 +23,11 @@ The category axis is the horizontal axis of a chart that shows text values rathe
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/category-axis/category-axis-cs1" %}
 
->Note: To use category axis, we need to inject `Category3D` module into the services and set the [`valueType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#valuetype) of axis to Category.
+>Note: To use category axis, we need to inject `Category3D` module into the services and set the [`valueType`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#valuetype) of axis to **Category**.
 
 ## Labels placement
 
-By default, category axis labels are placed between the ticks in an axis, this can also be placed on ticks using [`labelPlacement`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#labelplacement) property.
+By default, category axis labels are placed between ticks in an axis. It can also be placed on ticks using the [`labelPlacement`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#labelplacement) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ By default, category axis labels are placed between the ticks in an axis, this c
 
 ## Range
 
-The range of the category axis can be customized using [`minimum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum), [`maximum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximum) and [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) property of the axis.
+The range of the category axis can be customized using [`minimum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum), [`maximum`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximum) and [`interval`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) properties of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,7 +57,7 @@ The range of the category axis can be customized using [`minimum`](https://helpe
 
 ## Indexed category axis
 
-Category axis also can be rendered based on the index values of data source. This can be achieved by defining the [`isIndexed`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#isindexed) property to **true** in the axis.
+The category axis also can be rendered based on the index values of the data source. This can be achieved by defining the [`isIndexed`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#isindexed) property to **true** in the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

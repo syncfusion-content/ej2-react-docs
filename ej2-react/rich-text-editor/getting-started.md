@@ -37,7 +37,7 @@ The following list of dependencies are required to use the `Rich Text Editor` co
 
 ## Create the React application
 
-To set-up, a React application, choose any of the following ways. The best and easiest way is to use the [Create-react-app](https://github.com/facebook/create-react-app). It sets up the development environment in JavaScript and improvises the application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of the `Create-react-app`
+To set-up, a React application, choose any of the following ways. The best and easiest way is to use the [Create-react-app](https://github.com/facebookincubator/create-react-app). It sets up the development environment in JavaScript and improvises the application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of the `Create-react-app`
 
 ```bash
 npx create-react-app my-app

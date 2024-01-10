@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Numeric Axis in React 3D Chart component | Syncfusion
+title: Numeric axis in React 3D Chart component | Syncfusion
 description: Learn here all about numeric axis in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-react
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 # Numeric axis in React 3D Chart control
 
-The numeric axis can be used to represent numeric values of data in chart. By default, the `valueType` of an axis is `Double`.
+The numeric axis can be used to represent the numeric values of data in 3D chart. By default, the `valueType` of an axis is **Double**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The numeric axis can be used to represent numeric values of data in chart. By de
 
 ## Range
 
-Range of an axis, will be calculated automatically based on the provided data, the range of the axis can also be customized using [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximum) and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) property of the axis.
+The range of an axis, will be calculated automatically based on the provided data, and it can also be customized by using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximum) and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) properties of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,7 +67,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric - Round**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to `Round`, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is 3.5 and the interval is 1, then the minimum will be rounded to 3.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to **Round**, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#minimum) is **3.5** and the [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#interval) is **1**, then the minimum will be rounded to **3**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,7 +82,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric - Additional**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to `Additional`, interval of an axis will be added to the minimum and maximum of the axis.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to **Additional**, interval of an axis will be added to the minimum and maximum of the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -97,7 +97,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric - Normal**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to `Normal`, padding is applied to the axis based on default range calculation.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to **Normal**, padding is applied to the axis based on default range calculation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -112,7 +112,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 **Numeric - Auto**
 
-When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to `Auto`, horizontal numeric axis takes None as padding calculation, while the vertical numeric axis takes Normal as padding calculation.
+When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#rangepadding) is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -127,9 +127,9 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 ## Label format
 
-**Numeric label lormat**
+**Numeric label format**
 
-Numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#labelformat)property. Numeric labels supports all globalize format.
+Numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#labelformat) property. Also, it supports all globalize format.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -148,7 +148,7 @@ The following table describes the result of applying some commonly used label fo
 <table>
 <tr>
 <td><b>Label Value</b></td>
-<td><b>Label Format property value</b></td>
+<td><b>Label Format: Property value</b></td>
 <td><b>Result </b></td>
 <td><b>Description </b></td>
 </tr>
@@ -204,7 +204,7 @@ The following table describes the result of applying some commonly used label fo
 
 ## Grouping separator
 
-To separate groups of thousands, use [`useGroupingSeparator`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#usegroupingseparator) property in chart.
+To separate the y-axis labels to groups of thousands, set the [`useGroupingSeparator`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#usegroupingseparator) property to **true** in the 3D chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -219,7 +219,7 @@ To separate groups of thousands, use [`useGroupingSeparator`](https://ej2.syncfu
 
 ## Custom label format
 
-Axis also supports custom label format using placeholder like {value}°C, in which the value represent the axis label e.g 20°C.
+The axis supports custom label format using placeholder like **{value}°C**, in which the value represent the axis label e.g 20°C.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

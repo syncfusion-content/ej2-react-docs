@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React 3D Chart control
 
-Accessibility is achieved in the chart control through WAI-ARIA standard and keyboard navigation. The chart features can be effectively accessed through assistive technologies such as screen readers.
+Accessibility is achieved in the 3D chart control through WAI-ARIA standard and keyboard navigation. The 3D chart features can be effectively accessed through assistive technologies such as screen readers.
 
 ## WAI-ARIA
 

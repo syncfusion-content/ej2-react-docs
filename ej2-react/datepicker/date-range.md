@@ -14,7 +14,7 @@ DatePicker provides an option to select a date value within a specified range by
 
 When the min and max properties are configured and the selected date value is out-of-range or invalid, then the model value will be set to `out of range` date value or `null` respectively with highlighted `error` class to indicates the date is out of range or invalid.
 
-The value property depends on the min/max with respect to [`strictMode`](./strict-mode) property. The below example allows to select a date within a range from 7th to 27th days in a month.
+The value property depends on the min/max with respect to [`strictMode`](./strict-mode/) property. The below example allows to select a date within a range from 7th to 27th days in a month.
 
 `[Class-component]`
 

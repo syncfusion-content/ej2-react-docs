@@ -259,11 +259,11 @@ DateTimePicker, Slider, Dropdown Tree</td>
 
 Check out the following component's document to learn more about the state persistence.
 
-* [Grid](https://ej2.syncfusion.com/react/documentation/grid/state-persistence/state-persistence)
-* [TreeGrid](https://ej2.syncfusion.com/react/documentation/treegrid/state-persistence/state-persistence)
-* [Pivot Table](https://ej2.syncfusion.com/react/documentation/pivotview/state-persistence)
-* [Gantt](https://ej2.syncfusion.com/react/documentation/gantt/state-persistence)
-* [Kanban](https://ej2.syncfusion.com/react/documentation/kanban/persistence)
-* [Schedule](https://ej2.syncfusion.com/react/documentation/schedule/state-persistence)
-* [QueryBuilder](https://ej2.syncfusion.com/react/documentation/query-builder/how-to/state-persistence)
-* [Tabs](https://ej2.syncfusion.com/react/documentation/tab/how-to/set-state-persistence-of-the-tab-component)
+* [Grid](https://ej2.syncfusion.com/react/documentation/grid/state-persistence/state-persistence/)
+* [TreeGrid](https://ej2.syncfusion.com/react/documentation/treegrid/state-persistence/state-persistence/)
+* [Pivot Table](https://ej2.syncfusion.com/react/documentation/pivotview/state-persistence/)
+* [Gantt](https://ej2.syncfusion.com/react/documentation/gantt/state-persistence/)
+* [Kanban](https://ej2.syncfusion.com/react/documentation/kanban/persistence/)
+* [Schedule](https://ej2.syncfusion.com/react/documentation/schedule/state-persistence/)
+* [QueryBuilder](https://ej2.syncfusion.com/react/documentation/query-builder/how-to/state-persistence/)
+* [Tabs](https://ej2.syncfusion.com/react/documentation/tab/how-to/set-state-persistence-of-the-tab-component/)

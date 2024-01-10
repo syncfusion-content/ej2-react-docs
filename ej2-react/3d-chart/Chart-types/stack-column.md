@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stacked Column chart in React 3D Chart component | Syncfusion
+title: Stacked Column Chart in React 3D Chart component | Syncfusion
 description: Learn here all about stacked column chart in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
 control: 3D Chart
 platform: ej2-react
@@ -27,7 +27,7 @@ To render a stacked column series, use series [`type`](https://helpej2.syncfusio
 
 ## Stacking group
 
-To group the stacked columns, the [`stackingGroup`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#stackinggroup) property can be used. Columns with same group name are stacked on top of each other.
+To group the stacked column, the [`stackingGroup`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#stackinggroup) property can be used. The columns with same group name are stacked on top of each other.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,7 +60,7 @@ To render a cylindrical stacked column chart, set the [`columnFacet`](../../api/
 The following properties can be used to customize the `stacked column` series.
 
 * [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) – Specifies the color of the series.
-* [opacity](../../api/chart3d/series3DModel/#opacity) – Specifies the opacity of [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill).
+* [opacity](../../api/chart3d/series3DModel/#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

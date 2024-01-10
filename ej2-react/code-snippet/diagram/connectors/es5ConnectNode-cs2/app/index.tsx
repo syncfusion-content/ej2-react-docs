@@ -7,7 +7,7 @@ import {
     Diagram,
     DiagramComponent,
     NodeModel,
-    ConnectorModel
+    ConnectorModel,ConnectorConstraints
 } from "@syncfusion/ej2-react-diagrams";
 let nodes: NodeModel[] = [{
        id: 'node',

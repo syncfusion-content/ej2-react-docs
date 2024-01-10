@@ -20,6 +20,7 @@ export function App() {
           background="transparent"
           id="gauge"
           orientation="Horizontal"
+          width="650px" height="400px"
           animationDuration={3000}
         >
           <Inject services={[Annotations]} />

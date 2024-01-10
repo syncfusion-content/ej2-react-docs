@@ -31,7 +31,7 @@ Following is the list of minimum dependencies required to use the Gantt.
 
 ## Setup for Local Development
 
-You can use [create-react-app](https://github.com/facebook/create-react-app) to setup the applications.
+You can use [create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications.
 To install create-react-app run the following command.
 
     ```
@@ -690,7 +690,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 ## Run the application
 
-The [create-react-app](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+The [create-react-app](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
 
     ```
 
@@ -714,4 +714,4 @@ Output will be appears as follows.
         
 {% previewsample "page.domainurl/code-snippet/gantt/run-cs1" %}
 
-> You can refer to our [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Gantt Chart example](https://ej2.syncfusion.com/react/demos/#/material/gantt/default) that shows how to render the Gantt Chart in React.
+> You can refer to our [React Gantt Chart]( https://www.syncfusion.com/react-ui-components/react-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Gantt Chart example]( https://ej2.syncfusion.com/react/demos/#/material/gantt/default) that shows how to render the Gantt Chart in React.

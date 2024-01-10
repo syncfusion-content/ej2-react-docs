@@ -16,7 +16,7 @@ Axis labels are the labels that are positioned adjacent to the y-axis and beneat
 
 When the axis labels overlap with each other, [`labelIntersectAction`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#labelintersectaction) property in the axis can be used to place them smartly.
 
-When setting `labelIntersectAction` as `Hide`
+**Case 1:** When setting `labelIntersectAction` as `Hide`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ When setting `labelIntersectAction` as `Hide`
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/axis-labels/axis-labels-cs1" %}
 
-When setting `labelIntersectAction` as `Rotate45`
+**Case 2:** When setting `labelIntersectAction` as `Rotate45`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ When setting `labelIntersectAction` as `Rotate45`
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/axis-labels/axis-labels-cs2" %}
 
-When setting `labelIntersectAction` as `Rotate90`
+**Case 3:** When setting `labelIntersectAction` as `Rotate90`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,8 +57,8 @@ When setting `labelIntersectAction` as `Rotate90`
 
 ## Edge label placement
 
-Labels with long text at the edges of an axis may appear partially in the chart. To avoid this,
-use [`edgeLabelPlacement`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it.
+Labels with long text at the edges of an axis may appear partially in the 3D chart. To avoid this,
+use the [`edgeLabelPlacement`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -73,7 +73,7 @@ use [`edgeLabelPlacement`](https://helpej2.syncfusion.com/react/documentation/a
 
 ## Maximum labels
 
-The labels will be rendered based on the count in the [`maximumLabels`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximumlabels) property per 100 pixel. If the range (minimum, maximum, interval) and maximumLabels are set, then the priority goes to range. If the range is not set, then it gives priority to maximumLabels property.
+The labels will be rendered based on the count in the [`maximumLabels`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#maximumlabels) property per 100 pixel. If the range (minimum, maximum, interval) and `maximumLabels` are set, then the priority goes to range. If the range is not set, then the priority goes to `maximumLabels` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

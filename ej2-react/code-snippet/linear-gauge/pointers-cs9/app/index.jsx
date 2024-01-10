@@ -11,7 +11,7 @@ import {
   } from '@syncfusion/ej2-react-lineargauge';
 export function App() {
    return(
-    <LinearGaugeComponent id="gauge" orientation="Horizontal">
+    <LinearGaugeComponent id="gauge" orientation="Horizontal" width="650px" height="400px">
           <AxesDirective>
             <AxisDirective
               minorTicks={{ position: 'Outside' }}
