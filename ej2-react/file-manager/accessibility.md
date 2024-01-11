@@ -16,16 +16,15 @@ The accessibility compliance for the File Manager component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 <style>
     .post .post-content img {
         display: inline-block;
@@ -46,7 +45,7 @@ The File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 | --- | --- |
 | `role` | Used to convey a significant and contextual message to the user. |
 | `aria-disabled` | Indicates whether the File Manager component is in disabled state.|
-| `aria-haspopup` | Indicates whether the Toolbar element has a popup list or not. |
+| `aria-haspopup` | Indicates whether the toolbar item has a popup list or not. |
 | `aria-orientation` | Indicates whether the File Manager element is oriented horizontally or vertically. |
 | `aria-expanded` | Indicates whether the Treeview node has been expanded. |
 | `aria-owns` | Contains the ID of the suggestion list to indicate popup as a child element. |
@@ -60,12 +59,12 @@ The File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 | `aria-describedby` | This attribute points to the Dialog element describing the one it's set on. |
 | `aria-modal` | Indicates whether an element is a modal when display. |
 | `aria-colcount` | Specifies the number of columns in full table. |
-| `aria-colindexnt` | Defines the number of columns within a grid. |
-| `aria-rowspan` | Defines the number of rows a cell spanned within a grid. |
-| `aria-colspan` | Defines the number of columns a cell spanned within a grid. |
-| `aria-sort` | Indicates whether items in the grid or table are sorted in ascending or descending order. |
-| `aria-grabbed` | When the panel is chosen for dragging, the aria-grabbed attribute is set to "true." If it's set to "false," the element can be grabbed for drag-and-drop, but it won't be actively held. |
-| `aria-busy` | This attribute is set to false when grid content is loaded. |
+| `aria-colindexnt` | Defines the number of columns within a table in details view. |
+| `aria-rowspan` | Defines the number of rows a cell spanned within a table in details view. |
+| `aria-colspan` | Defines the number of columns a cell spanned within a table in details view. |
+| `aria-sort` | Indicates whether items in the table are sorted in ascending or descending order. |
+| `aria-grabbed` | When the folder/file item is chosen for dragging, the aria-grabbed attribute is set to "true." If it's set to "false," the element can be grabbed for drag-and-drop, but it won't be actively held. |
+| `aria-busy` | This attribute is set to false when table content is loaded. |
 | `aria-multiselectable` | Defines more than one item has been selected. |
 
 ## Keyboard interaction
@@ -81,26 +80,26 @@ The File Manager component followed the `keyboard interaction` guidelines, makin
 | <kbd>Esc(Escape)</kbd> | Closes the image when it is in open state. |
 | <kbd>Alt+N</kbd> | Creates a new folder dialog.|
 | <kbd>F5</kbd> | Refresh the file manager element. |
-| <kbd>Home</kbd> | Navigate through the first element of Details view or Largeicons view. |
-| <kbd>End</kbd> | Navigate through the last element of Details view or Largeicons view. |
-| <kbd>Move Left</kbd> | Scrolls left to previous folder and select the first item when files are loaded |
-| <kbd>Move Right</kbd> | Scrolls right to previous folder and select the first item when files are loaded |
-| <kbd>Alt+Enter</kbd> | Shows the Get Details info for selected folder. |
-| <kbd>Shift+Right</kbd> | Allows multiselection. Selects the file or folder at the right of the previously selected folder. |
-| <kbd>Shift+Left</kbd> | Allows multiselection. Selects the file or folder at the left of the previously selected folder. |
+| <kbd>Home</kbd> | Navigate through the first element of details view or large icons view. |
+| <kbd>End</kbd> | Navigate through the last element of details view or large icons view. |
+| <kbd>Move Left</kbd> | Scrolls left to the previous folder and select the first item when files are loaded |
+| <kbd>Move Right</kbd> | Scrolls right to the previous folder and select the first item when files are loaded |
+| <kbd>Alt+Enter</kbd> | Shows the get details info for selected folder. |
+| <kbd>Shift+Right</kbd> | Allows multiselection. Select the file or folder at the right of the previously selected folder. |
+| <kbd>Shift+Left</kbd> | Allows multiselection. Select the file or folder at the left of the previously selected folder. |
 | <kbd>Shift+Down</kbd> | Allows multiselection. Select the file or folder till the focused index. |
-| <kbd>Shift+Delete</kbd> | Permanently deletes the selected file or folder in file manager element. |
-| <kbd>Delete</kbd> | Deletes the selected file or folder in file manager element. |
+| <kbd>Shift+Delete</kbd> | Permanently deletes the selected file or folder in the file manager element. |
+| <kbd>Delete</kbd> | Deletes the selected file or folder in the file manager element. |
 | <kbd>Shift+Up</kbd> | Allows multiselection. Select the file or folder till the focused index. |
-| <kbd>Ctrl+C</kbd> | Copies the Selected file or folder in file manager element. |
-| <kbd>Ctrl+V</kbd> | Pastes the Copied/Cut file or folder in file manager element. |
-| <kbd>Ctrl+X</kbd> | Cuts the Selected file or folder in file manager element. |
-| <kbd>Ctrl+A</kbd> | Select all the files or folder in Grid view or Largeicons view. |
-| <kbd>F2</kbd> | Creates a rename dialog for selected file or folder in file manager element. |
-| <kbd>Shift+F10</kbd> | Opens the context menu for selected file or folder in file manager element. |
-| <kbd>Ctrl+D</kbd> | Downloads the list of selected file or folder in file manager element. |
-| <kbd>Ctrl+Shift+1</kbd> | Changes the file manager layout to Grid view. |
-| <kbd>Ctrl+Shift+2</kbd> | Changes the file manager layout to Details view. |
+| <kbd>Ctrl+C</kbd> | Copies the selected file or folder in the file manager element. |
+| <kbd>Ctrl+V</kbd> | Pastes the copied/cut file or folder in the file manager element. |
+| <kbd>Ctrl+X</kbd> | Cuts the selected file or folder in the file manager element. |
+| <kbd>Ctrl+A</kbd> | Select all the files or folders in the details view or large icons view. |
+| <kbd>F2</kbd> | Creates a rename dialog for a selected file or folder in the file manager element. |
+| <kbd>Shift+F10</kbd> | Opens the context menu for the selected file or folder in the file manager element. |
+| <kbd>Ctrl+D</kbd> | Downloads the list of selected files or folders in the file manager element. |
+| <kbd>Ctrl+Shift+1</kbd> | Changes the file manager layout to details view. |
+| <kbd>Ctrl+Shift+2</kbd> | Changes the file manager layout to details view. |
 
 ## Ensuring accessibility
 

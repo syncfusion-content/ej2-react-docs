@@ -1,20 +1,19 @@
-
-
-import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Page, PageSettingsModel, SelectionSettingsModel, Inject } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-  const settings: SelectionSettingsModel = { checkboxMode: 'ResetOnRowClick'};
-    return (<GridComponent dataSource={data} height={315} selectionSettings={settings}>
-            <ColumnsDirective>
-              <ColumnDirective field='OrderID' width='120' textAlign="Right"/>
-              <ColumnDirective field='CustomerID' width='150'/>
-              <ColumnDirective field='ShipCity' width='100'/>
-              <ColumnDirective field='ShipName' width='150'/>
-            </ColumnsDirective>
-            </GridComponent>)
+  const selectionSettings: SelectionSettingsModel = { mode: 'Both', allowColumnSelection: true, type: 'Multiple', persistSelection: true };
+  const pageOptions: PageSettingsModel = { pageSize: 5 };
+  return (<div>
+    <GridComponent dataSource={data} selectionSettings={selectionSettings} allowPaging={true} pageSettings={pageOptions}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
 };
 export default App;
-
-

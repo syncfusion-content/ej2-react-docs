@@ -2,7 +2,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 import * as React from 'react';
 import { data } from './datasource';
 function App() {
-    const settings = { type: 'Multiple', mode: 'Both' };
+    const settings = { type: 'Multiple', mode: 'Row' };
     return (<GridComponent dataSource={data} selectedRowIndex={1} selectionSettings={settings} height={315}>
             <ColumnsDirective>
               <ColumnDirective field='OrderID' width='120' textAlign="Right"/>

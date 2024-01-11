@@ -141,14 +141,14 @@ You can define the step icon and label by setting the `iconCss` and `label` prop
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/stepper/iconWithLabel/app/index.jsx %}
+{% include code-snippet/stepper/icon-with-label/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/stepper/iconWithLabel/app/index.tsx %}
+{% include code-snippet/stepper/icon-with-label/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
-{% include code-snippet/stepper/iconWithLabel/index.css %}
+{% include code-snippet/stepper/icon-with-label/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stepper/iconWithLabel" %}
+ {% previewsample "page.domainurl/code-snippet/stepper/icon-with-label" %}

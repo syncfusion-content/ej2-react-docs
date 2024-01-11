@@ -15,16 +15,7 @@ function App() {
         ];
         
         return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
-        primaryXAxis={{
-            valueType: "Category",
-            title: 'Countries',
-            //Axis title text style
-            titleStyle: {
-                size: '16px', color: 'grey',
-                fontFamily : 'Segoe UI', fontWeight : 'bold'
-            }
-        }}
-            wallColor='transparent'
+        primaryXAxis={{ valueType: "Category", titleStyle: { size: '16px', color: 'grey', fontFamily : 'Segoe UI', fontWeight : 'bold' }, title: 'Countries' }} wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DSeriesCollectionDirective >

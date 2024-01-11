@@ -14,7 +14,7 @@ import {
 
 export function App() {
    return(
-    <LinearGaugeComponent orientation="Horizontal">
+    <LinearGaugeComponent orientation="Horizontal" width="650px" height="400px">
       <AxesDirective>
         <AxisDirective
           line={{ width: 5 }}

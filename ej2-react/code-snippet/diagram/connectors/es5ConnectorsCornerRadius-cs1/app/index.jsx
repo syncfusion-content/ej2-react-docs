@@ -49,9 +49,11 @@ function App() {
             node.style.strokeColor = 'white';
             return node;
         }} nodes={nodes} connectors={connectors} height={'600px'} 
-    // Enables the bridging constraints for the connector
-    constraints={DiagramConstraints.Default | DiagramConstraints.Bridging} connectors={connectors}>
-      <Inject services={[ConnectorBridging]}/>{' '}
+        // Enables the bridging constraints for the connector
+        constraints={DiagramConstraints.Default | DiagramConstraints.Bridging}
+        connectors={connectors}
+        >
+        <Inject services={[ConnectorBridging]} />{' '}
     </DiagramComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));

@@ -16,12 +16,7 @@ function App() {
     }
     
     return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
-    primaryXAxis={{
-        title: 'Years',
-        edgeLabelPlacement: 'Shift',
-        majorGridLines: { width: 0 },
-        maximumLabels: 1,
-    }}
+    primaryXAxis = {{ title: 'Years', edgeLabelPlacement: 'Shift', majorGridLines: { width: 0 }, maximumLabels: 1 }}
         wallColor='transparent'
         enableRotation={true} rotation={7} tilt={10} depth={100}>
         <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />

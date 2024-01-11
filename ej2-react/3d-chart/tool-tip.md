@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-3D Chart will display details about the points through tooltip, when the mouse is moved over the specific point.
+The 3D Chart will display details about the points through tooltip, when the mouse is moved over the specific point.
 
 ## Default tooltip
 
-By default, tooltip is not visible. The tooltip can be enabled by setting [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalTooltipSettingsModel/#enable) property to **true** and by injecting `Tooltip3D` module into the services.
+By default, tooltip is not visible. The tooltip can be enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalTooltipSettingsModel/#enable) in `tooltipSettings` to **true** and by injecting the `Tooltip3D` module into the services.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +50,7 @@ By default, tooltip track the mouse movement, but the tooltip can be set in fixe
 
 <!-- markdownlint-disable MD013 -->
 
-By default, tooltip shows information of x and y value in points. In addition to that, more information can be shown in tooltip by using the [`format`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalTooltipSettingsModel/#format) property. For example the format `${series.name} : ${point.y}` shows series name and point x value.
+By default, tooltip shows information of x and y value in points. In addition to that, more information can be shown in tooltip by using the [`format`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalTooltipSettingsModel/#format) property. For example the format `${series.name} : ${point.y}` shows series name and point y value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

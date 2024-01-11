@@ -1,19 +1,20 @@
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Page, SelectionSettingsModel, Inject } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+
 function App() {
-    const settings = {
-        allowColumnSelection: true,
-        type: 'Multiple'
-    };
-    return (<GridComponent dataSource={data} selectionSettings={settings} height={315}>
-            <ColumnsDirective>
-              <ColumnDirective field='OrderID' width='120' textAlign="Right"/>
-              <ColumnDirective field='CustomerID' width='150'/>
-              <ColumnDirective field='ShipCity' width='100'/>
-              <ColumnDirective field='ShipName' width='150'/>
-            </ColumnsDirective>
-            </GridComponent>);
-}
-;
+  const selectionSettings = { allowColumnSelection: true, type: 'Single' };
+  return (<div>
+    <GridComponent dataSource={data} selectionSettings={selectionSettings} allowPaging={true}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='OrderDate' headerText='OrderDate' width='100' format='yMd' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='ShippedDate' headerText='Shipped Date' width='100' format='yMd' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
 export default App;

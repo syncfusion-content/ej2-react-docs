@@ -18,12 +18,10 @@ function App() {
     primaryXAxis={{
             valueType: "Category",
         }}
-        legendSettings={{
+        legendSettings = {{
             visible: true,
-            position:'Custom',
-            location: { x: 200, y: 20 }
-        }}
-            wallColor='transparent'
+            location: { x: 200, y: 20 },
+            position:'Custom' }} wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DSeriesCollectionDirective >

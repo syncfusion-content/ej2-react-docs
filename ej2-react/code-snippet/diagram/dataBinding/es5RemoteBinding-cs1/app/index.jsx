@@ -52,28 +52,28 @@ function App() {
         }} 
     //Configures data source
     dataSourceSettings={{
-            id: 'EmployeeID',
-            parentId: 'ReportsTo',
-            dataManager: new DataManager({
-                url: 'https://mvc.syncfusion.com/Services/Northwnd.svc/',
-                crossDomain: true,
-            }, new Query()
-                .from('Employees')
-                .select('EmployeeID,ReportsTo,FirstName')
-                .take(9)),
-            //binds the external data with node
-            doBinding: (nodeModel, data, diagram) => {
-                nodeModel.annotations = [
-                    {
-                        /* tslint:disable:no-string-literal */
-                        content: data['FirstName'],
-                        style: {
-                            color: 'white',
-                        },
+        id: 'EmployeeID',
+        parentId: 'ReportsTo',
+        dataManager: new DataManager({
+            url: 'https://mvc.syncfusion.com/Services/Northwnd.svc/',
+            crossDomain: true,
+        }, new Query()
+            .from('Employees')
+            .select('EmployeeID,ReportsTo,FirstName')
+            .take(9)),
+        //binds the external data with node
+        doBinding: (nodeModel, data, diagram) => {
+            nodeModel.annotations = [
+                {
+                    /* tslint:disable:no-string-literal */
+                    content: data['FirstName'],
+                    style: {
+                        color: 'white',
                     },
-                ];
-            },
-        }} 
+                },
+            ];
+        },
+    }}
     //Disables all interactions except zoom/pan
     tool={DiagramTools.ZoomPan} snapSettings={{
             constraints: 0,

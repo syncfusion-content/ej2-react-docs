@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 # Selection in React 3D Chart control
 
-Chart provides selection support for the series and its data points on mouse click.
+The 3D chart provides selection support for the series and its data points on mouse click.
 
->When Mouse is clicked on the data points, the corresponding series legend also will be selected.
+>When mouse is clicked on the data points, the corresponding series legend will also be selected.
 
 We have different types of selection mode for selecting a data.
 
@@ -83,9 +83,9 @@ To select multiple points or series, enable the [`isMultiSelect`](https://ej2.sy
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/selection/selection-cs4" %}
 
-## Selection on load
+## Selection during initial loading
 
-To select a point or series programmatically on a chart use [`selectedDataIndexes`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#selecteddataindexes) property.
+In a 3D chart, selecting a point or series during initial loading can only be done programmatically. The  [`selectedDataIndexes`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#selecteddataindexes) property can be used for this.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -98,9 +98,9 @@ To select a point or series programmatically on a chart use [`selectedDataIndexe
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/selection/selection-cs5" %}
 
-## Selection through on legend
+## Selection through legend
 
-To select a point or series through on legend use [`toggleVisibility`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalLegendSettingsModel/#togglevisibility) property. Also, use [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalLegendSettingsModel/#enablehighlight) property for highlighting the series through legend.
+To select a point or series through legend use the [`toggleVisibility`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalLegendSettingsModel/#togglevisibility) property. Also, use [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalLegendSettingsModel/#enablehighlight) property for highlighting the series through legend.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Column chart
 
-To render a [column series](https://www.syncfusion.com/javascript-ui-controls/js-charts/chart-types/column-chart), use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#type) as `Column` and inject `ColumnSeries3D` module into the services,
+To render a column series, use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#type) as `Column` and inject `ColumnSeries3D` module into the services.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ To render a [column series](https://www.syncfusion.com/javascript-ui-controls/js
 
 ## Column space and width
 
-The [`columnSpacing`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#columnspacing) and [`columnWidth`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#columnwidth) properties are used to customize the space between bars.
+The [`columnSpacing`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#columnspacing) and [`columnWidth`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#columnwidth) properties are used to customize the space between columns.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -75,7 +75,7 @@ To render a cylindrical column chart, set the [`columnFacet`](https://helpej2.sy
 The following properties can be used to customize the `column` series.
 
 * [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) – Specifies the color of the series.
-* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill).
+* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -67,7 +67,7 @@ function App() {
       constraints={DiagramConstraints.Default | DiagramConstraints.Bridging}
       connectors={connectors}
     >
-      <Inject services={[ConnectorBridging]} />{' '}
+    <Inject services={[ConnectorBridging]} />{' '}
     </DiagramComponent>
   );
 }

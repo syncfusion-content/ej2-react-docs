@@ -1,43 +1,42 @@
-
-
-import { render } from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { DialogComponent } from '@syncfusion/ej2-react-popups'
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, PageSettingsModel, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, Page, Selection, Inject, PageSettingsModel, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
 import { data } from './datasource';
+import { useState } from 'react';
 
 function App() {
-  const settings = { persistSelection: true };
-  let gridInstance;
-  const pageOptions = {
-    pageSize: 5, pageSizes: true
-  };
-  const clickHandler = () => {
-    let select = gridInstance.getSelectedRecords();
-    alert(select.length);
-  };
-    return (
-      <div className="control-pane">
-        <div className="control-section">
-          <ButtonComponent onClick={clickHandler}>Selected Records</ButtonComponent>
-          <GridComponent dataSource={data} ref={grid => gridInstance = grid} allowSelection={true}allowPaging={true} selectionSettings={settings} pageSettings={pageOptions}>
-            <ColumnsDirective>
-              <ColumnDirective type='checkbox' width='50'/>
-              <ColumnDirective field="OrderID" headerText="Order ID" isPrimaryKey={true} width="120" textAlign="Right">
-              </ColumnDirective>
-              <ColumnDirective field="CustomerID" headerText="Customer ID" width="120">
-              </ColumnDirective>
-              <ColumnDirective field="ShipCountry" headerText="Ship Country" width="120">
-              </ColumnDirective>
-              <ColumnDirective field="Freight" headerText="Freight" format='C2' width="100">
-              </ColumnDirective>
-            </ColumnsDirective>
-            <Inject services={[Page, Selection]} />
-          </GridComponent>
-        </div>
-      </div>
-    );
-}
+  let grid: GridComponent | null;
+  let dialog: DialogComponent | null;
+  let selectedRecord: any[] = [];
+  const [dialogVisible, setDialogVisible] = useState(false);
+  const selectionSettings: SelectionSettingsModel = { type: 'Multiple', persistSelection:true };
+  const pageOptions: PageSettingsModel = { pageSize: 5 };
+  const showSelectedRecord = () => {
+    selectedRecord = (grid as GridComponent).getSelectedRecords();
+    setDialogVisible(true);
+    (dialog as DialogComponent).content='';
+    for (let i = 0; i < selectedRecord.length; i++) {
+      (dialog as DialogComponent).content += `<p><b>Order ID:</b> ${selectedRecord[i].OrderID}</p>`;
+    }
+  }
+  const dialogClose = () => {
+    setDialogVisible(false);
+  }
+  return (<div>
+    <div>
+      <ButtonComponent id='button' onClick={showSelectedRecord}>Show Selected Records</ButtonComponent>
+    </div>
+    <DialogComponent ref={d => dialog = d} header="Selected Records" visible={dialogVisible} showCloseIcon={true} width="350px" close={dialogClose} ></DialogComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings} allowPaging={true} pageSettings={pageOptions}>
+      <ColumnsDirective>
+        <ColumnDirective type='checkbox' width={50} />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
 export default App;
-
-

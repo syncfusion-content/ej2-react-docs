@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Bar chart
 
-To render a [bar series](https://www.syncfusion.com/javascript-ui-controls/js-charts/chart-types/bar-chart), use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#type) as `Bar` and inject `BarSeries3D` module into the services.
+To render a bar series, use series [`type`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#type) as `Bar` and inject `BarSeries3D` module into the services.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -75,7 +75,7 @@ To render a cylindrical bar chart, set the [`columnFacet`](https://helpej2.syncf
 The following properties can be used to customize the `bar` series.
 
 * [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) – Specifies the color of the series.
-* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill).
+* [opacity](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of the [fill](https://helpej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#fill) color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

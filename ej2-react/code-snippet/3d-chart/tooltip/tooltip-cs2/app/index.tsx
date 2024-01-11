@@ -17,10 +17,7 @@ function App() {
     return <Chart3DComponent id='charts' primaryXAxis={{
             valueType: "Category",
         }}
-        tooltip={{ 
-            enable: true,
-            location: {  x: 120, y: 20 }
-         }}
+        tooltip={{ location: {  x: 120, y: 20 }, enable: true }}
             wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
