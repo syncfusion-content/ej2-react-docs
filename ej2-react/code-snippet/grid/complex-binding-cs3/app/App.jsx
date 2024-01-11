@@ -1,12 +1,12 @@
-import { DataManager, ODataAdaptor, Query } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 
 function App() {
   const data = new DataManager({
-    adaptor: new ODataAdaptor(),
+    adaptor: new ODataV4Adaptor(),
     crossDomain: true,
-    url: 'https://services.syncfusion.com/react/production/api/Orders'
+    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/s'
   });
   const query = new Query().expand('Employee');
   return <GridComponent dataSource={data} query={query} height={315} allowPaging={true}>

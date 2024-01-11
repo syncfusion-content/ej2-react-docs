@@ -19,7 +19,7 @@ function App() {
                     <ColumnDirective field='Freight' headerText='Freight' format='C2' textAlign='Right'/>
                     <ColumnDirective field='ShipName' headerText='Ship Name' width='200'/>
                 </ColumnsDirective>
-                <Inject services={[Sort, ColumnMenu, Page, Filter,Group]}/>
+                <Inject services={[Sort, ColumnMenu, Page, Filter, Group]}/>
             </GridComponent>
         </div>);
 }

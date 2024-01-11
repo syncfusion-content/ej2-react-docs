@@ -73,5 +73,67 @@ export let data = [
         OrderID: 10262, CustomerID: 'RATTC', EmployeeID: 8, OrderDate: new Date(8379738e5),
         ShipName: 'Rattlesnake Canyon Grocery', ShipCity: 'Albuquerque', ShipAddress: '2817 Milton Dr.',
         ShipRegion: 'NM', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
-    }
-];
+    }];
+
+export let changedData = [
+    {
+      OrderID: 1001,
+      CustomerID: 'John Doe',
+      ShipCity: 'New York',
+      ShipName: 'John Doe',
+    },
+    {
+      OrderID: 1002,
+      CustomerID: 'Jane Smith',
+      ShipCity: 'Los Angeles',
+      ShipName: 'Jane Smith',
+    },
+    {
+      OrderID: 1003,
+      CustomerID: 'Robert Johnson',
+      ShipCity: 'Chicago',
+      ShipName: 'Robert Johnson',
+    },
+    {
+      OrderID: 1004,
+      CustomerID: 'Maria Garcia',
+      ShipCity: 'Houston',
+      ShipName: 'Maria Garcia',
+    },
+    {
+      OrderID: 1005,
+      CustomerID: 'William Brown',
+      ShipCity: 'Miami',
+      ShipName: 'William Brown',
+    },
+    {
+      OrderID: 1006,
+      CustomerID: 'Linda Wilson',
+      ShipCity: 'San Francisco',
+      ShipName: 'Linda Wilson',
+    },
+    {
+      OrderID: 1007,
+      CustomerID: 'Michael Miller',
+      ShipCity: 'Seattle',
+      ShipName: 'Michael Miller',
+    },
+    {
+      OrderID: 1008,
+      CustomerID: 'Karen Davis',
+      ShipCity: 'Boston',
+      ShipName: 'Karen Davis',
+    },
+    {
+      OrderID: 1009,
+      CustomerID: 'James Anderson',
+      ShipCity: 'Dallas',
+      ShipName: 'James Anderson',
+    },
+    {
+      OrderID: 1010,
+      CustomerID: 'Elizabeth Martinez',
+      ShipCity: 'Atlanta',
+      ShipName: 'Elizabeth Martinez',
+    },
+  ];

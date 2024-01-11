@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
         <div><b>First Grid:</b></div>
-        <GridComponent id='FirstGrid' dataSource={data.slice(0, 5)} toolbar={toolbar}
+        <GridComponent id='FirstGrid' dataSource={data} toolbar={toolbar}
             allowPdfExport={true} toolbarClick={toolbarClick} exportGrids={gridsToExport}
             ref={g => firstGrid = g}>
             <ColumnsDirective>
@@ -34,7 +34,7 @@ function App() {
             <Inject services={[Toolbar, PdfExport]}/>
         </GridComponent>
         <div><b>Second Grid:</b></div>
-        <GridComponent id='SecondGrid' dataSource={employeeData.slice(0, 5)} allowPdfExport={true}
+        <GridComponent id='SecondGrid' dataSource={employeeData} allowPdfExport={true}
             ref={g => secondGrid = g}>
             <ColumnsDirective>
                 <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>

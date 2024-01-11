@@ -8,53 +8,59 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting grid in server in React Grid component
+# Exporting Grid in Server in React Grid Component
 
-The Grid have an option to export the data to PDF in server side using Grid server export library.
+The Grid component provides an option to export grid data to a PDF document on the server side using the Grid server export library. This allows you to perform PDF export operations on the server, providing additional security and flexibility. To enable server-side PDF exporting, you need to configure the server dependencies and implement the necessary server configuration.
 
 ## Server dependencies
 
-The Server side export functionality is shipped in the Syncfusion.EJ2.GridExport package, which is available in Essential Studio and [nuget.org](https://www.nuget.org/).The following list of dependencies is required for Grid server side PDF exporting action.
+To enable server-side PDF exporting in the Syncfusion React Grid component, you need to include the following dependencies:
 
 * Syncfusion.EJ2
 * Syncfusion.EJ2.GridExport
 
+These dependencies are available in the Essential Studio package and can also be obtained from [nuget.org](https://www.nuget.org/).
+
 ## Server configuration
+
+To export the grid data to a PDF document on the server side, you need to perform the following server configuration using an ASP.NET Core Controller Action:
+
+1. Set up the necessary dependencies and imports in your server-side code.
+
+2. Define a controller action that handles the server-side PDF export. This action should receive the Grid properties from the client-side and initiate the PDF export operation on the server.
+
+3. Use the [serverPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#serverpdfexport) method to pass the Grid properties to the server exporting action. This method allows you to specify the server action URL and other export options.
 
 The following code snippet shows server configuration using ASP.NET Core Controller Action.
 
-To Export the Grid in server side, You need to call the [serverPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#serverpdfexport) method for passing the Grid properties to server exporting action.
-
 ```ts
+  public ActionResult PdfExport([FromForm] string gridModel)
+  {
+    GridPdfExport exp = new GridPdfExport();
+    Grid gridProperty = ConvertGridObject(gridModel);
+    return exp.PdfExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
+  }
 
-        public ActionResult PdfExport([FromForm] string gridModel)
-        {
-            GridPdfExport exp = new GridPdfExport();
-            Grid gridProperty = ConvertGridObject(gridModel);
-            return exp.PdfExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
-        }
+  private Grid ConvertGridObject(string gridProperty)
+  {
+    Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
+    GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
+    GridModel.Columns = cols.columns;
+    return GridModel;
+  }
 
-        private Grid ConvertGridObject(string gridProperty)
-        {
-           Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
-           GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
-           GridModel.Columns = cols.columns;
-           return GridModel;
-        }
+  public class GridColumnModel
+  {
+    public List<GridColumn> columns { get; set; }
+  }
 
-        public class GridColumnModel
-        {
-            public List<GridColumn> columns { get; set; }
-        }
-        public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
-        {
-            IEnumerable DataSource = OrdersDetails.GetAllRecords();
-            DataOperations operation = new DataOperations();
-            int count = DataSource.Cast<OrdersDetails>().Count();
-            return dm.RequiresCounts ? Json(new { result = DataSource, count = count }) : Json(DataSource);
-        }
-
-
+  public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
+  {
+    IEnumerable DataSource = OrdersDetails.GetAllRecords();
+    DataOperations operation = new DataOperations();
+    int count = DataSource.Cast<OrdersDetails>().Count();
+    return dm.RequiresCounts ? Json(new { result = DataSource, count = count }) : Json(DataSource);
+  }
 ```
 
 ```ts
@@ -93,8 +99,7 @@ function App() {
 }
 export default App;
 ```
-
->Note: Refer to the GitHub sample for quick implementation and testing from [here](https://github.com/SyncfusionExamples/React-EJ2-Grid-server-side-exporting).
+> Note: Refer to the GitHub sample for quick implementation and testing from [here](https://github.com/SyncfusionExamples/React-EJ2-Grid-server-side-exporting).
 
 ## Export grid as memory stream
 
@@ -241,9 +246,9 @@ public ActionResult PdfExport(string gridModel)
 
 ## Rotate a header text to a certain degree in the exported grid on the server side
 
-The Grid has support to customize the column header styles such as changing text orientation, the font color, and so on in the exported PDF file. To achieve this requirement, define the `BeginCellLayout` event of the `PdfExportProperties` with an event handler to perform the required action.
+1. The [PdfHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid#pdfheaderquerycellinfo) event is triggered when creating a column header for the PDF document to be exported. In this event, you can collect the column header details and handle customizations.
 
-The `PdfHeaderQueryCellInfoEvent` will be triggered when creating a column header for the pdf document to be exported. Collect the column header details in this event and handle the custom in the BeginCellLayout event handler.
+2. In the `BeginCellLayout` event handler, you can use the `Graphics.DrawString` method to rotate the header text to the desired degree, will be triggered when creating a column header for the PDF document to be exported. Collect the column header details in this event and handle the custom in the `BeginCellLayout` event handler.
 
 In the following demo, the `DrawString` method from the `Graphics` is used to rotate the header text of the column header inside the `BeginCellLayout` event handler.
 
@@ -290,6 +295,31 @@ private void PdfHeaderQueryCellInfo(object pdf)
     name.Headers[0].Height = size.Width * 2;
 }
 ```
+
+## Passing additional parameters to the server while exporting
+
+Passing additional parameters to the server when exporting data in the Syncfusion React Grid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+
+You can achieve this by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/grid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event. Within the `query` property, you can invoke the `addParams` method to add parameters to the request.
+
+The following example demonstrates how to pass additional parameters to the server when PDF exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically **recordcount** as **15**, are passed using the addParams method and displayed as a message.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/pdf-export-cs26/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs26/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs26/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs26/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs26" %}
 
 ## Limitations
 

@@ -62,21 +62,6 @@ The data points that uses the `null` or `undefined` as value are considered as e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/3d-chart/working-with-data/working-with-data-cs4/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/3d-chart/working-with-data/working-with-data-cs4/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/3d-chart/working-with-data/working-with-data-cs4" %}
-
-**Customizing empty point**
-
-The specific color for empty point can be set by the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalEmptyPointSettingsModel/#fill) property in [`emptyPointSettings`](https://ej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#emptypointsettings).
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/3d-chart/working-with-data/working-with-data-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
@@ -85,3 +70,18 @@ The specific color for empty point can be set by the [`fill`](https://ej2.syncfu
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/3d-chart/working-with-data/working-with-data-cs5" %}
+
+**Customizing empty point**
+
+The specific color for empty point can be set by the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalEmptyPointSettingsModel/#fill) property in [`emptyPointSettings`](https://ej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#emptypointsettings).
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/3d-chart/working-with-data/working-with-data-cs6/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/3d-chart/working-with-data/working-with-data-cs6/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/3d-chart/working-with-data/working-with-data-cs6" %}

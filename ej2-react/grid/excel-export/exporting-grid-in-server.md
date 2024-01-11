@@ -10,47 +10,59 @@ domainurl: ##DomainURL##
 
 # Exporting grid in server in React Grid component
 
-The Grid have an option to export the data to Excel in server side using Grid server export library.
+The Syncfusion Grid component in React provides a powerful option to export data to Excel on the server side using the Grid server export library. This allows you to perform Excel export operations on the server, providing additional security and flexibility. To enable server-side Excel exporting, you need to configure the server dependencies and implement the necessary server configuration.
 
 ## Server dependencies
 
-The Server side export functionality is shipped in the Syncfusion.EJ2.GridExport package, which is available in Essential Studio and [nuget.org](https://www.nuget.org/).The following list of dependencies is required for Grid server side Excel exporting action.
+To enable the server-side export functionality for the Syncfusion Grid component in React, you need to include the required dependencies for Grid server-side Excel exporting. These dependencies are essential for handling the export process on the server-side.
 
-* Syncfusion.EJ2
-* Syncfusion.EJ2.GridExport
+The server-side export functionality is provided in the **Syncfusion.EJ2.GridExport** package, which is available in Essential Studio and can also be obtained from [nuget.org](https://www.nuget.org/).
+
+The following list of dependencies is required for Grid server-side Excel exporting action:
+
+* **Syncfusion.EJ2**: This is the core package that includes the main components and functionalities of Syncfusion Essential JS 2.
+
+* **Syncfusion.EJ2.GridExport**: This package contains the server-side export functionality specifically for the Grid component. It provides the necessary APIs and tools to handle data export to Excel on the server.
 
 ## Server configuration
 
+To export the grid data to a Excel document on the server side, you need to perform the following server configuration using an ASP.NET Core Controller Action:
+
+1. Set up the necessary dependencies and imports in your server-side code.
+
+2. Define a controller action that handles the server-side Excel export. This action should receive the Grid properties from the client-side and initiate the Excel export operation on the server.
+
+3. Use the [serverExcelExport](https://ej2.syncfusion.com/react/documentation/api/grid/#serverexcelexport) method to pass the Grid properties to the server exporting action. This method allows you to specify the server action URL and other export options.
+
 The following code snippet shows server configuration using ASP.NET Core Controller Action.
 
-To Export the Grid in server side, You need to call the [serverExcelExport](https://ej2.syncfusion.com/react/documentation/api/grid/#serverexcelexport) method for passing the Grid properties to server exporting action.
 
 ```ts
+public ActionResult ExcelExport([FromForm] string gridModel)
+{
+  GridExcelExport exp = new GridExcelExport();
+  Grid gridProperty = ConvertGridObject(gridModel);
+  return exp.ExcelExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
+}
 
-        public ActionResult ExcelExport([FromForm] string gridModel)
-        {
-            GridExcelExport exp = new GridExcelExport();
-            Grid gridProperty = ConvertGridObject(gridModel);
-            return exp.ExcelExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
-        }
-
-        private Grid ConvertGridObject(string gridProperty)
-        {
-           Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
-           GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
-           GridModel.Columns = cols.columns;
-           return GridModel;
-        }
-
-        public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
-        {
-            IEnumerable DataSource = OrdersDetails.GetAllRecords();
-            DataOperations operation = new DataOperations();
-            int count = DataSource.Cast<OrdersDetails>().Count();
-            return dm.RequiresCounts ? Json(new { result = DataSource, count = count }) : Json(DataSource);
-        }
-
-
+private Grid ConvertGridObject(string gridProperty)
+{
+  Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
+  GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
+  GridModel.Columns = cols.columns;
+  return GridModel;
+}
+public class GridColumnModel
+{
+  public List<GridColumn> columns { get; set; }
+}
+public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
+{
+  IEnumerable DataSource = OrdersDetails.GetAllRecords();
+  DataOperations operation = new DataOperations();
+  int count = DataSource.Cast<OrdersDetails>().Count();
+  return dm.RequiresCounts ? Json(new { result = DataSource, count = count }) : Json(DataSource);
+}
 ```
 
 ```ts
@@ -68,17 +80,16 @@ function App() {
   });
   const toolbar: ToolbarItems[] = ['ExcelExport'];
   const toolbarClick = (args: ClickEventArgs) => {
-    if (grid && args.item.id === 'grid_excelexport') {
+    if (grid && args.item.id === 'Grid_excelexport') {
       grid.serverExcelExport('Home/ExcelExport');
     }
   }
   return (
     <div>
-      <GridComponent id='grid' dataSource={dataManager} height={270} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+      <GridComponent id='Grid' dataSource={dataManager} height={270} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
         <ColumnsDirective>
           <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
           <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-          <ColumnDirective field='Freight' format="C2" width='100' textAlign='Right' />
           <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
           <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
         </ColumnsDirective>
@@ -88,42 +99,41 @@ function App() {
   );
 };
 export default App;
-
 ```
 
->Note: Refer to the GitHub sample for quick implementation and testing from [here](https://github.com/SyncfusionExamples/React-EJ2-Grid-server-side-exporting).
+> Note: Refer to the GitHub sample for quick implementation and testing from [here](https://github.com/SyncfusionExamples/React-EJ2-Grid-server-side-exporting).
 
-## CSV export in server side
+## CSV Export in server side
 
-You can export the Grid to CSV format by using the [serverCsvExport](https://ej2.syncfusion.com/react/documentation/api/grid/#servercsvexport) method which will pass the Grid properties to server.
+To perform CSV export on the server-side, you can use the [serverCsvExport](https://ej2.syncfusion.com/react/documentation/api/grid/#servercsvexport) method, which sends the Grid properties to the server for processing and generating the CSV file.
 
-In the below demo, we have invoked the above method inside the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event. In server side, we have deserialized the Grid properties and passed to the `CsvExport` method which will export the properties to CSV format.
+To initiate the CSV export, you can invoke the `serverCsvExport` method within the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event. Upon triggering the event, the server will deserialize the Grid properties and pass them to the `CsvExport` method, which will handle exporting the properties to the CSV format.
+
+Here's an example of how you can accomplish CSV export on the server-side:
 
 ```ts
+public ActionResult CsvGridExport([FromForm] string gridModel)
+{
+  GridExcelExport exp = new GridExcelExport();
+  Grid gridProperty = ConvertGridObject(gridModel);
+  return exp.CsvExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
+}
 
-        public ActionResult CsvGridExport([FromForm] string gridModel)
-        {
-            GridExcelExport exp = new GridExcelExport();
-            Grid gridProperty = ConvertGridObject(gridModel);
-            return exp.CsvExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
-        }
+private Grid ConvertGridObject(string gridProperty)
+{
+  Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
+  GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
+  GridModel.Columns = cols.columns;
+  return GridModel;
+}
 
-        private Grid ConvertGridObject(string gridProperty)
-        {
-           Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
-           GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
-           GridModel.Columns = cols.columns;
-           return GridModel;
-        }
-
-        public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
-        {
-            IEnumerable DataSource = OrdersDetails.GetAllRecords();
-            DataOperations operation = new DataOperations();
-            int count = DataSource.Cast<OrdersDetails>().Count();
-            return dm.RequiresCounts ? Json(new { result = DataSource, count = count }) : Json(DataSource);
-        }
-
+public IActionResult UrlDatasource([FromBody]DataManagerRequest dm)
+{
+  IEnumerable DataSource = OrdersDetails.GetAllRecords();
+  DataOperations operation = new DataOperations();
+  int count = DataSource.Cast<OrdersDetails>().Count();
+  return dm.RequiresCounts ? Json(new { result = DataSource, count = count }) : Json(DataSource);
+}
 ```
 
 ```ts
@@ -151,7 +161,6 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
-            <ColumnDirective field='Freight' format="C2" width='100' textAlign='Right'/>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
             <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
         </ColumnsDirective>
@@ -161,9 +170,7 @@ function App() {
     );
 };
 export default App;
-
 ```
-
 ## Export grid as memory stream
 
 The Grid offers an option to export the data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported grid, set the `AsMemoryStream` parameter to **true** in the [ExcelExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridExcelExport.html#Syncfusion_EJ2_GridExport_GridExcelExport_ExcelExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_ExcelExportProperties_) and [CsvExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridExcelExport.html#Syncfusion_EJ2_GridExport_GridExcelExport_CsvExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_ExcelExportProperties_) methods.
@@ -347,12 +354,11 @@ public ActionResult ExcelExport(string gridModel)
 }
 
 ```
-
 ## Rotate a header text to a certain degree in the exported grid on the server side
 
-The DataGrid has support to customize the column header styles such as changing text orientation, the font color, and so on in the exported Excel file. To achieve this requirement, use the `ServerExcelHeaderQueryCellInfo` event of the Grid.
+The Grid provides support to customize the column header styles, including changing text orientation, font color, and other visual aspects, in the exported Excel file on the server-side. This feature is particularly useful when you want to enhance the appearance of the exported data and create a unique representation of the Grid in the Excel document.
 
-The `ServerExcelHeaderQueryCellInfo` will be triggered when creating a column header for the excel document to be exported in the server side. Customize the column header in this event.
+To achieve this requirement, you can use the [excelHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#excelheaderquerycellinfo) event of the Grid. This event is triggered when creating column headers for the Excel document to be exported on the server-side. In this event, you can collect the column header details and handle customizations.
 
 In the following demo, using the `HeaderCellRotate` method of the `GridExcelExport` class in the `ServerExcelHeaderQueryCellInfo` event, you can rotate the header text of the column header in the excel exported document.
 

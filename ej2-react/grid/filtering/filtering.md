@@ -61,6 +61,56 @@ Here is an example of how to configure the initial filter using the `predicate` 
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs9" %}
 
+### Initial filter with multiple values for same column
+
+In the Syncfusion React Grid, you can establish an initial filter containing multiple values for a particular column, which helps you to preset filter conditions for a specific column using multiple values. This functionality allows you to display a filtered records in the grid right after the grid is initially loaded.
+
+To apply the filter with multiple values for same column at initial rendering, set the filter [predicate](https://ej2.syncfusion.com/react/documentation/api/grid/predicate) object in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel/#columns).
+
+The following example demonstrates, how to perform an initial filter with multiple values for same **CustomerID** column using `filterSettings.columns` and `predicate`.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/filter-cs20/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/filter-cs20/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs20/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs20/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/filter-cs20" %}
+
+### Initial filter with multiple values for different columns 
+
+By applying an initial filter with multiple values for different columns in the Syncfusion React Grid, you have the flexibility to set predefined filter settings for each column. This results in a filtered records of the grid right after the grid is initially loaded.
+
+To apply the filter with multiple values for different column at initial rendering, set the filter [predicate](https://ej2.syncfusion.com/react/documentation/api/grid/predicate) object in [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettingsModel/#columns).
+
+The following example demonstrates how to perform an initial filter with multiple values for different **Order ID** and **Customer ID** columns using `filterSettings.columns` and `predicate`.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/filter-cs21/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/filter-cs21/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs21/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs21/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/filter-cs21" %}
+
 ## Filter operators
 
 The Syncfusion Grid component provides various filter operators that can be used to define filter conditions for columns. The filter operator for a column can be defined using the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/predicateModel/#operator) property in the [filterSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/#columns) object.
@@ -222,6 +272,31 @@ Here's an example that demonstrates how to change the default filter operator co
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs14" %}
+
+## Filter grid programmatically with single and multiple values using method 
+
+Programmatic filtering in the Syncfusion React Grid with single and multiple values allows you to apply filters to specific columns in the grid without relying on interactions through the interface.
+
+This can be achieved by utilizing the [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid/#filterbycolumn) method of the Grid.
+
+The following example demostrates, how to programmatically filter the Grid using single and multiple values for the **OrderID** and **CustomerID** columns. This is accomplished by calling the `filterByColumn` method within an external button click function.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/filter-cs22/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/filter-cs22/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs22/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs22/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/filter-cs22" %}
 
 ## How to get filtered records
 

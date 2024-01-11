@@ -13,10 +13,7 @@ function App() {
     primaryXAxis={{
         valueType: 'Double'
     }}
-    primaryYAxis={{
-        // Custom label format
-        labelFormat: '${value}K'
-    }}
+    primaryYAxis={{ labelFormat: '${value}K' }}
         wallColor='transparent'
         enableRotation={true} rotation={7} tilt={10} depth={100}>
         <Inject services={[ColumnSeries3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />

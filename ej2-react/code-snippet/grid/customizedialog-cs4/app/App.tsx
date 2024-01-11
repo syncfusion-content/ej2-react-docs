@@ -1,5 +1,3 @@
-
-
 import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
 import { Edit, IEditCell, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
@@ -22,11 +20,9 @@ function App() {
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
       <ColumnDirective field='Freight' headerText='Freight' editType='numericedit'
         edit={numericParams} width='150' />
-      <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+      <ColumnDirective field='ShipCity' headerText='Ship City' width='150' editType='dropdownedit' />
     </ColumnsDirective>
     <Inject services={[Edit, Toolbar]} />
   </GridComponent>
 };
 export default App;
-
-

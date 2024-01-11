@@ -1,50 +1,51 @@
-
-
-import { GridComponent, ColumnsDirective, ColumnDirective, IEditCell, Edit, Column, Inject, Toolbar, Page, EditSettingsModel, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { MaskedTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Inject, Toolbar, EditSettingsModel, ToolbarItems, SaveEventArgs, Page } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import { MaskedTextBox } from '@syncfusion/ej2-inputs';
 import { data } from './datasource';
 
+export interface columnDataType {
+  OrderID: number,
+  Freight: number,
+  ShipCity: string,
+  EmployeeID: number,
+  ShipCountry: string,
+  ShipAddress: string,
+  OrderDate: Date,
+  CustomerNumber: string
+}
+
 function App() {
-  let grid: Grid | null;
+  let orderData: Object | any;
   const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
   const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-  let element: HTMLElement;
-  let maskObj: MaskedTextBox;
-  const create = () => {
-    element = document.createElement('input');
-    return element;
+  const orderIDRules: object = { required: true };
+  const customerIDRules: object = { required: true };
+
+  const editTemplate = () => {
+    return (
+      <div>
+        <MaskedTextBoxComponent id='CustomerNumber' name='CustomerNumber' mask={'000-000-0000'} value={orderData.CustomerNumber}></MaskedTextBoxComponent>
+      </div>
+    )
+  }
+  const actionBegin = (args: SaveEventArgs) => {
+    if (args.requestType === 'beginEdit' || args.requestType === 'add') {
+      orderData = Object.assign({}, args.rowData);
+    }
+    if (args.requestType === 'save') {
+      orderData['CustomerNumber'] = (args.data as columnDataType)['CustomerNumber'];
+    }
   };
-  const destroy = () => {
-    maskObj.destroy();
-  };
-  const read = () => {
-    return maskObj.value;
-  };
-  const write = (args: { rowData: Object, column: Column }) => {
-    maskObj = new MaskedTextBox({
-      mask: "0-0-0-0",
-      value: args.rowData.Mask
-    });
-    maskObj.appendTo(element);
-  };
-  const params: IEditCell = {
-    create: create,
-    destroy: destroy,
-    read: read,
-    write: write
-  };
-  return (<GridComponent dataSource={data} allowPaging={true} editSettings={editOptions} toolbar={toolbarOptions} ref={(g) => (grid = g)} height={250}>
+
+  return (<GridComponent dataSource={data} editSettings={editOptions} allowPaging={true} toolbar={toolbarOptions} actionBegin={actionBegin}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' type='number' textAlign="Right" isPrimaryKey={true} width="100" />
-      <ColumnDirective field='CustomerID' headerText='Customer ID' type='string' width="120" />
-      <ColumnDirective field='ShipCountry' headerText='Ship Country' width="120" type='string' />
-      <ColumnDirective field='Mask' headerText='Mask' type='string' width="140" edit={params} />
+      <ColumnDirective field='OrderID' headerText='Order ID' type='number' textAlign="Right" isPrimaryKey={true} validationRules={orderIDRules} width='100' />
+      <ColumnDirective field='CustomerID' headerText='Customer ID' type='string' width='140' validationRules={customerIDRules} />
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='140' />
+      <ColumnDirective field='CustomerNumber' headerText='Customer Number' width='140' editTemplate={editTemplate} />
     </ColumnsDirective>
     <Inject services={[Edit, Toolbar, Page]} />
   </GridComponent>
   );
 };
 export default App;
-
-

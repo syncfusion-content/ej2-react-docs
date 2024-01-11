@@ -38,15 +38,17 @@ Here is an example that demonstrates the usage of the filter menu in the Syncfus
 
 ## Custom component in filter menu
 
-The Syncfusion React Grid component provides the flexibility to integrate custom filter components into specific columns, allowing you to create tailored filter UIs that meet your specific requirements. 
+You can enhance the filtering experience in the Syncfusion React Grid component by customizing the filter menu with custom components. This allows you to replace the default search box with custom components like dropdowns or textboxes. By default, the filter menu provides an autocomplete component for string type columns, a numeric textbox for number type columns, and a dropdown component for boolean type columns, making it easy to search for values.
 
-You can use the [filter.ui](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filter) property to add custom filter components to a specific column in the Grid. To implement a custom filter UI, you need to define the following functions:
+To customize the filter menu, you can make use of the [filter.ui](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filter) property. This property allows you to integrate your desired custom filter component into a specific column of the Grid. To implement a custom filter UI, you need to define the following functions:
 
 * **create**: This function is responsible for creating the custom component for the filter.
 * **write**: The write function is used to wire events for the custom component. This allows you to handle changes in the custom filter UI.
 * **read**: The read function is responsible for reading the filter value from the custom component. This is used to retrieve the selected filter value.
 
-In the following sample, `DropDownList` is used  as custom component in the **OrderID** column.
+For example, you can replace the standard search box in the filter menu with a dropdown component. This enables you to perform filtering operations by selecting values from the dropdown list, rather than manually typing in search queries.
+
+Here is a sample code demonstrating how to render a dropdownlist component for the **CustomerID** column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -64,6 +66,11 @@ In the following sample, `DropDownList` is used  as custom component in the **Or
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs5" %}
+
+**Default filter input for CustomerID column**
+![Default filter input for CustomerID column](../images/filter-menu-auto-complete.gif)
+**Custom dropdown filter for CustomerID column**
+![Custom dropdown filter for CustomerID column](../images/filter-menu-drop-down.gif)
 
 ## Show 24 hours time format in filter dialog
 
@@ -140,6 +147,62 @@ Here is an example that demonstrates how to perform filtering by multiple keywor
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs7" %}
+
+## Customize the default input component of filter menu dialog
+
+You have the flexibility to customize the default settings of input components within the menu filter by utilizing the `params` property within the column definition of [filter](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filter). This allows you to modify the behavior of specific filter components to better suit your needs.
+
+| Column Type | Default component                                                                                 | Customization                            | API Reference                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| String      | [AutoComplete](https://ej2.syncfusion.com/react/documentation/auto-complete/getting-started)    | Eg: { params: { autofill: false }}       | [AutoComplete API](https://ej2.syncfusion.com/react/documentation/api/auto-complete/autoCompleteModel/) |
+| Number      | [NumericTextBox](https://ej2.syncfusion.com/react/documentation/numerictextbox/getting-started) | Eg: { params: { showSpinButton: false }} | [NumericTextBox API](https://ej2.syncfusion.com/react/documentation/api/numerictextbox)                 |
+| Boolean     | [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started)   | Eg: { params: { sortOrder:'Ascending'}}  | [DropDownList API](https://ej2.syncfusion.com/react/documentation/api/drop-down-list)                   |
+| Date        | [DatePicker](https://ej2.syncfusion.com/react/documentation/datepicker/getting-started)         | Eg: { params: { weekNumber: true }}      | [DatePicker API](https://ej2.syncfusion.com/react/documentation/api/datepicker)                         |
+| DateTime    | [DateTimePicker](https://ej2.syncfusion.com/react/documentation/datetimepicker/getting-started) | Eg: { params: { showClearButton: true }} | [DateTimePicker API](https://ej2.syncfusion.com/react/documentation/api/datetimepicker)                 |
+
+> To know more about the feature, refer to the Getting Started documentation and API Reference
+
+In the example provided below, the **OrderID** and **Freight** columns are numeric columns. When you open the filter dialog for these columns, you will notice that a `NumericTextBox` with a spin button is displayed to change or set the filter value. However, using the `params` property, you can hide the spin button specifically for the **OrderID** column.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/filter-cs18/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/filter-cs18/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs18/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs18/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/filter-cs18" %}
+
+### Prevent autofill option in autocomplete of menu filter
+
+By default, the [AutoComplete](https://ej2.syncfusion.com/react/documentation/auto-complete/getting-started) component in the filter menu dialog is set to automatically fill suggestions as you type. However, there might be scenarios where you want to prevent this autofill behavior to provide a more customized and controlled user experience.
+
+You can prevent autofill feature by setting the [autofill](https://ej2.syncfusion.com/react/documentation/api/auto-complete#autofill) parameter to **false** using the `params` property within the column definition of the [filter](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filter). 
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/filter-cs19/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/filter-cs19/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-cs19/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-cs19/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/filter-cs19" %}
 
 ## Filter menu events
 
