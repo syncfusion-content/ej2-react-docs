@@ -1,0 +1,37 @@
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, Toolbar } from '@syncfusion/ej2-react-grids';
+import { Query } from '@syncfusion/ej2-data';
+import * as React from 'react';
+import { data } from './datasource';
+import { useState } from 'react';
+
+function App() {
+  let grid;
+  let queryClone;
+  const [message, setMessage] = useState('');
+  const toolbar = ['PdfExport'];
+  const toolbarClick = (args) => {
+    if (grid && args.item.id === 'Grid_pdfexport') {
+      queryClone = grid.query;
+      grid.pdfExport();
+      grid.query = new Query().addParams('recordcount', '15');
+      setMessage('Key: ' + grid.query.params[0].key + ' and Value: ' + grid.query.params[0].value + ' on ' + args.item.text);
+    }
+  }
+  return (
+    <div>
+      <p style={{ color: 'red' }}>{message}</p>
+      <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+        toolbarClick={toolbarClick} ref={g => grid = g} >
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='130' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='120' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, PdfExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;

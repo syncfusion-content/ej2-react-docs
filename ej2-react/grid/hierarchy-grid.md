@@ -253,6 +253,62 @@ The following example demonstrates how to expand and collapse the hierarchy grid
 
 > The `expandAll` and `collapseAll` methods are not recommended for large datasets due to the considerable time it takes to update the changes in the UI.
 
+## Hide the expand/collapse icon in parent row when no record in child grid
+
+The Syncfusion React Grid allows you to hide the expand/collapse icon in the parent row when there are no records in the child grid. However, in certain scenarios, you may want to hide the expand/collapse icon for parent rows that do not have any child records, providing a cleaner and more intuitive interface by eliminating unnecessary icons in empty parent rows.
+
+To achieve this, you can utilize the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#rowdatabound) event to hide the icon when there are no records in the child grid.
+
+To hide the expand/collapse icon in parent row when no records in child grid, follow the given steps:
+
+1. **Create a CSS Class with Custom Style**: Define a CSS class that overrides the default appearance of the Grid. This class will be used to customize the background color of the parent row when it is selected and when hovering over rows.
+
+```css
+    .e-row[aria-selected="true"] .e-customizedexpandcell {
+        background-color: #e0e0e0;
+    }
+
+    .e-grid.e-gridhover tr[role='row']:hover {
+        background-color: #eee;
+    }
+```
+
+2. **Implement the rowDataBound Event Handler:** This event is triggered for each row in the grid when data is bound, allowing you to customize the row's appearance and behavior. In the provided code, the handler checks if the current row has any child records associated with it. If not, it hides the content of the first element, which contains the expand/collapse icon, and applies a custom CSS class (e-customizedexpandcell) to modify its appearance.
+
+```typescript
+    const rowDataBound = (args: RowDataBoundEventArgs) => {
+        const parentData: number = (args.data as Employee)['EmployeeID'];
+        const childrecord: object[] = new DataManager(childData as JSON[]).
+            executeLocal(new Query().where('EmployeeID', 'equal', parentData, true));
+        if (childrecord.length === 0) {
+            // Here hide which parent row has no child records
+            const rowElement = args.row as HTMLTableRowElement;
+            const cellElement= rowElement.querySelector('td') as HTMLTableCellElement
+            cellElement.innerHTML = ' '; 
+            cellElement.className = 'e-customizedexpandcell';
+        }
+    }
+```
+
+The following example demonstrates how to hide the expand/collapse icon in the row with **EmployeeID** as **1**, which does not have record in child Grid.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/customizedialog-cs7/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/customizedialog-cs7/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/customizedialog-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/customizedialog-cs7/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/customizedialog-cs7" %}
+
 ## Customize the child grid
 
 The Syncfusion React Grid component offers various ways to customize the child grid appearance using both default CSS and custom themes. To access the child grid elements, you can use the **.e-detailcell** class selector, which targets the child grid.

@@ -7,22 +7,22 @@ function App() {
     const [message, setMessage] = useState('');
     const columnDrop = ((args: ColumnDragEventArgs) => {
         setMessage('columnDrop event triggered');
-        if ((args as any).column.allowReordering === true) {
-            (grid as any).getColumnByField((args as any).column.field).customAttributes = {
+        if (grid && args.column.allowReordering === true) {
+            (grid as GridComponent).getColumnByField(args.column.field).customAttributes = {
                 class: 'customcss',
             };
         }
     })
     const columnDragStart = ((args: ColumnDragEventArgs) => {
         setMessage('columnDragStart event triggered');
-        if ((args as any).column.field === 'OrderID') {
-            (grid as any).getColumnByField((args as any).column.field).allowReordering = false;
+        if (args.column.field === 'OrderID') {
+            (grid as GridComponent).getColumnByField(args.column.field).allowReordering = false;
         }
     })
     const columnDrag = ((args: ColumnDragEventArgs) => {
-        var index = (args as any).target.getAttribute('data-colIndex');
+        var index = args.target.getAttribute('data-colIndex');
         if (index) {
-            setMessage('columnDrag event is triggered. ' + (args as any).column.headerText + ' column is dragged to index ' + index);
+            setMessage('columnDrag event is triggered. ' + args.column.headerText + ' column is dragged to index ' + index);
         }
     })
     return (

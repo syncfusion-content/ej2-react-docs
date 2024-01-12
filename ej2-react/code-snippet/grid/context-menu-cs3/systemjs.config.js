@@ -41,8 +41,7 @@ System.config({
         "@syncfusion/ej2-react-grids": "syncfusion:ej2-react-grids/dist/ej2-react-grids.umd.min.js",
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "react-dom":"https://unpkg.com/react-dom@16.8/umd/react-dom.development.js",
-        "react":"https://unpkg.com/react@16.8/umd/react.development.js",
-        
+        "react":"https://unpkg.com/react@16.8/umd/react.development.js",     
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },

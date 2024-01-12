@@ -1,6 +1,6 @@
 import { AggregateColumnDirective, ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
 import { AggregateColumnsDirective, AggregateDirective, AggregatesDirective } from '@syncfusion/ej2-react-grids';
-import { Aggregate, Edit, EditEventArgs, Group, Page, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Aggregate, Edit, EditEventArgs, Page, ToolbarItems, Toolbar } from '@syncfusion/ej2-react-grids';
 import { ChangeEventArgs } from '@syncfusion/ej2-react-inputs';
 import { ItemType } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
@@ -10,7 +10,6 @@ function App() {
   let grid: GridComponent | null;
   const toolbarOptions: ToolbarItems[] = ['Delete', 'Update', 'Cancel'];
   const editOption = { allowEditing: true, allowDeleting: true, mode: 'Normal' };
-  const groupOptions = { columns: ['ShipCountry'] };
   let selectedRecord: object = {};
   const actionBegin = (args: EditEventArgs) => {
     if (args.requestType === 'beginEdit') {
@@ -27,8 +26,7 @@ function App() {
     return (<span>Sum: {props.Sum}</span>)
   }
   return (<GridComponent dataSource={data} ref={g => grid = g} allowPaging={true}
-    allowGrouping={true} groupSettings={groupOptions} actionBegin={actionBegin}
-    toolbar={toolbarOptions} editSettings={editOption} height={268}>
+    actionBegin={actionBegin} toolbar={toolbarOptions} editSettings={editOption} height={268}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='120' textAlign='Right' />
       <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
@@ -45,7 +43,7 @@ function App() {
         </AggregateColumnsDirective>
       </AggregateDirective>
     </AggregatesDirective>
-    <Inject services={[Page, Aggregate, Edit, Group]} />
+    <Inject services={[Page, Aggregate, Edit, Toolbar]} />
   </GridComponent>)
 }
 export default App;

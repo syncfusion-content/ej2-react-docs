@@ -1,5 +1,5 @@
 
-import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Filter, Group, Reorder, Inject, Toolbar, Page } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Filter, Group, Reorder, Inject, Toolbar, Page, Resize } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
@@ -13,7 +13,7 @@ function App() {
       <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' allowSearching={false}/>
       <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2" textAlign="Right" allowFiltering={false}/>
     </ColumnsDirective>
-    <Inject services={[Sort, Filter, Group, Reorder, Toolbar, Page]} />
+    <Inject services={[Sort, Filter, Group, Reorder, Toolbar, Page, Resize]} />
   </GridComponent>
 };
 export default App;

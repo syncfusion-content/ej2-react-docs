@@ -394,4 +394,4 @@ The following example demonstrates how to set the [gridLines](https://ej2.syncfu
 
 ## See Also
 
-* [How to customize the header cell styles using methods](../columns/column-headers#using-method)
+* [How to customize the header cell styles using methods](./columns/column-headers#using-method)

@@ -176,7 +176,7 @@ Here's an example that demonstrates how to hide the filter bar for a template co
 
 The [filterBarTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filterbartemplate) feature in the Syncfusion React Grid allows you to customize the components displayed in the filter bar. Normally, a text box is the default element rendered in the filter bar cell. This flexibility allows you to use various components, such as datepicker, numerictextbox, combobox, and multiselect, within the filter bar based on your specific requirements.
 
-To utilize this feature, you can define a custom template for the filter bar by setting the `filterbarTemplate` property of a column in your React application:
+To utilize this feature, you can define a custom template for the filter bar by setting the `filterBarTemplate` property of a column in your React application:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

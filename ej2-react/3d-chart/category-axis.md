@@ -34,7 +34,7 @@ By default, category axis labels are placed between ticks in an axis. It can als
 {% include code-snippet/3d-chart/category-axis/category-axis-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/3d-chart/category-axis/category-axis-c2/app/index.tsx %}
+{% include code-snippet/3d-chart/category-axis/category-axis-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

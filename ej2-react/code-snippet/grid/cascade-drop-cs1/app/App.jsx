@@ -3,31 +3,34 @@ import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncf
 import { Edit, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { cascadeData } from './datasource';
+
 function App() {
-    const editOptions = { allowAdding: true, allowDeleting: true, allowEditing: true };
-    const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-    const country = [
-        { countryName: 'United States', countryId: '1' },
-        { countryName: 'Australia', countryId: '2' },
-        { countryName: 'India', countryId: '3' }
-    ];
-    const countryParams = {
-        params: {
-            actionComplete: () => false,
-            allowFiltering: true,
-            dataSource: new DataManager(country),
-            fields: { text: "countryName", value: "countryName" },
-            query: new Query()
-        }
-    };
-    return <GridComponent dataSource={cascadeData} editSettings={editOptions} toolbar={toolbarOptions} height={273}>
+  const editOptions = { allowAdding: true, allowDeleting: true, allowEditing: true };
+  const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+  const orderIDRules = { required: true, number: true };
+  const customerIDRules = { required: true };
+  const shipCountryRules = { required: true };
+  const country = [
+    { countryName: 'United States', countryId: '1' },
+    { countryName: 'Australia', countryId: '2' },
+    { countryName: 'India', countryId: '3' }
+  ];
+  const countryParams = {
+    params: {
+      actionComplete: () => false,
+      dataSource: new DataManager(country),
+      fields: { text: "countryName", value: "countryName" },
+      query: new Query()
+    }
+  };
+  return <GridComponent dataSource={cascadeData} editSettings={editOptions}
+    toolbar={toolbarOptions} height={273}>
     <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' isPrimaryKey={true}/>
-      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120'/>
-      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit' edit={countryParams} textAlign='Right'/>
+      <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign='Right' isPrimaryKey={true} validationRules={orderIDRules} />
+      <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' validationRules={customerIDRules} />
+      <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit' edit={countryParams} textAlign='Right' validationRules={shipCountryRules} />
     </ColumnsDirective>
-    <Inject services={[Edit, Toolbar]}/>
-  </GridComponent>;
-}
-;
+    <Inject services={[Edit, Toolbar]} />
+  </GridComponent>
+};
 export default App;

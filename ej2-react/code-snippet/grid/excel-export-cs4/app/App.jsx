@@ -1,29 +1,41 @@
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { ExcelExport, Inject, Page, Toolbar } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, ExcelExport, GridComponent } from '@syncfusion/ej2-react-grids';
+import { Inject, Page, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import { data } from './datasource';
+import { employeeData } from './datasource';
+
 function App() {
     let grid;
+    let dropDown;
+    const dropDownData = [
+        { text: 'CurrentPage', value: 'CurrentPage' },
+        { text: 'AllPages', value: 'AllPages' },
+    ];
     const toolbar = ['ExcelExport'];
+    const pageOptions = { pageSize: 6 };
     const toolbarClick = (args) => {
-        if (grid && args.item.id === 'grid_excelexport') {
-            const excelExportProperties = {
-                exportType: 'CurrentPage'
+        if (grid && args.item.id === 'Grid_excelexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+            const exportProperties = {
+                exportType: dropDown.value
             };
-            grid.excelExport(excelExportProperties);
+            grid.excelExport(exportProperties);
         }
-    };
-    return (<div>
-        <GridComponent id='grid' dataSource={data} height={270} toolbar={toolbar} allowPaging={true} allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
-            <ColumnDirective field='Freight' width='100' textAlign='Right'/>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-            <ColumnDirective field='ShipName' headerText='Ship Name' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Toolbar, Page, ExcelExport]}/>
-      </GridComponent>
-    </div>);
+    }
+    return (
+        <div>
+            <label style={{ padding: "10px 10px 26px 0" }}> Change export type: </label>
+            <DropDownListComponent ref={d => dropDown = d} index={0} width={170} dataSource={dropDownData}></DropDownListComponent>
+            <GridComponent id='Grid' dataSource={employeeData} toolbar={toolbar} allowExcelExport={true}
+                toolbarClick={toolbarClick} ref={g => grid = g} allowPaging={true} pageSettings={pageOptions}>
+                <ColumnsDirective>
+                    <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right' />
+                    <ColumnDirective field='FirstName' headerText='FirstName' width='150' />
+                    <ColumnDirective field='LastName' headerText='LastName' width='150' />
+                    <ColumnDirective field='City' headerText='City' width='150' />
+                </ColumnsDirective>
+                <Inject services={[Toolbar, ExcelExport, Page]} />
+            </GridComponent>
+        </div>
+    );
 }
 export default App;

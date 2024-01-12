@@ -1,61 +1,51 @@
-import { MultiSelect } from '@syncfusion/ej2-react-dropdowns';
-import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Inject, Toolbar, Page } from '@syncfusion/ej2-react-grids';
+import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
-import { purchaseData } from './datasource';
+import { data } from './datasource';
+
 function App() {
-    const createShipCityFn = () => {
-        ddElem = document.createElement('input');
-        return ddElem;
-    };
-    const readShipCityFn = () => {
-        return multiSelectObj.value.join(',');
-    };
-    const destroyShipCityFn = () => {
-        multiSelectObj.destroy();
-    };
-    const writeShipCityFn = (args) => {
-        let multiSelectVal = args.rowData[args.column.field]
-            ? args.rowData[args.column.field].split(',')
-            : [];
-        multiSelectObj = new MultiSelect({
-            value: multiSelectVal,
-            dataSource: multiselectDatasource,
-            fields: { value: 'ShipCity', text: 'ShipCity' },
-            floatLabelType: 'Never',
-            mode: 'Box',
-        });
-        multiSelectObj.appendTo(ddElem);
-    };
-    const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
+    let orderData;
+    const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
     const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
     const orderIDRules = { required: true };
-    const pageOptions = {
-        pageSize: 7, pageSizes: true
-    };
-    let ddElem;
-    let multiSelectObj;
+    const customerIDRules = { required: true, minLength: 5 };
+    const freightRules = { required: true, min: 1, max: 1000 };
     const multiselectDatasource = [
-        { ShipCity: 'Reims', Id: '1' },
-        { ShipCity: 'Münster', Id: '2' },
-        { ShipCity: 'Rio de Janeiro', Id: '3' },
-        { ShipCity: 'Lyon', Id: '4' },
-        { ShipCity: 'Charleroi', Id: '5' },
+        { value: 'Reims', text: 'Reims' },
+        { value: 'Münster', text: 'Münster' },
+        { value: 'Rio de Janeiro', text: 'Rio de Janeiro' },
+        { value: 'Lyon', text: 'Lyon' },
+        { value: 'Charleroi', text: 'Charleroi' }
     ];
-    const ddParams = {
-        create: createShipCityFn,
-        destroy: destroyShipCityFn,
-        read: readShipCityFn,
-        write: writeShipCityFn,
+    const fields = { value: 'value', text: 'text' };
+    const editTemplate = () => {
+        return (
+            <div>
+                <MultiSelectComponent id='ShipCity' dataSource={multiselectDatasource} fields={fields} value={orderData.ShipCity}></MultiSelectComponent>
+            </div>
+        )
+    }
+
+    const actionBegin = (args) => {
+        if (args.requestType === 'beginEdit' || args.requestType === 'add') {
+            orderData = Object.assign({}, args.rowData);
+            orderData['ShipCity'] = orderData['ShipCity'] ? (orderData['ShipCity'].toString()).split(',') : [];
+
+        }
+        if (args.requestType === 'save') {
+            orderData['ShipCity'] = args.data['ShipCity'].join(', ');
+        }
     };
-    return (<GridComponent dataSource={purchaseData} allowPaging={true} pageSettings={pageOptions} editSettings={editOptions} toolbar={toolbarOptions} height={250}>
-    <ColumnsDirective>
-      <ColumnDirective field='OrderID' headerText='Order ID' type='number' textAlign="Right" isPrimaryKey={true} validationRules={orderIDRules} width='100'/>
-      <ColumnDirective field='CustomerID' headerText='Customer ID' type='string' width='140'/>
-      <ColumnDirective field='Freight' headerText='Freight' type='number' format="C2" textAlign="Right" editType='numericedit' width='120'/>
-      <ColumnDirective field='ShipCity' headerText='Ship City' type='string' edit={ddParams} width='180'/>
-    </ColumnsDirective>
-    <Inject services={[Edit, Toolbar, Page]}/>
-  </GridComponent>);
-}
-;
+    return (<GridComponent dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} actionBegin={actionBegin}>
+        <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' textAlign="Right" isPrimaryKey={true} validationRules={orderIDRules} width='100' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' validationRules={customerIDRules} />
+            <ColumnDirective field='Freight' headerText='Freight' format="C2" textAlign="Right" editType='numericedit' width='120' validationRules={freightRules} />
+            <ColumnDirective field='ShipCity' headerText='Ship City' width='140' editTemplate={editTemplate} />
+            <ColumnDirective field='OrderDate' headerText='Order Date' format="yMd" width='150' />
+        </ColumnsDirective>
+        <Inject services={[Edit, Toolbar]} />
+    </GridComponent>
+    );
+};
 export default App;

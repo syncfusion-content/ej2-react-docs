@@ -7,7 +7,7 @@ function App() {
     const [message, setMessage] = useState('');
     const columnDrop = ((args) => {
         setMessage('columnDrop event triggered');
-        if (args.column.allowReordering === true) {
+        if (grid && args.column.allowReordering === true) {
             grid.getColumnByField(args.column.field).customAttributes = {
                 class: 'customcss',
             };

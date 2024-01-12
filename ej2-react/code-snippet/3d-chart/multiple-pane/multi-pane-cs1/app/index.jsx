@@ -13,12 +13,7 @@ function App() {
     return <Chart3DComponent id='charts' style={{ textAlign: "center" }}  primaryXAxis={{
             valueType: "Category",
         }}
-        primaryYAxis={{
-            minimum: 0, maximum: 90, interval: 20,
-            title: 'Temperature (Fahrenheit)',
-            labelFormat: '{value}°F'
-        }}
-            wallColor='transparent'
+        primaryYAxis={{ minimum: 0, maximum: 90, labelFormat: '{value}°F', title: 'Temperature (Fahrenheit)', interval: 20 }} wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DRowsDirective>

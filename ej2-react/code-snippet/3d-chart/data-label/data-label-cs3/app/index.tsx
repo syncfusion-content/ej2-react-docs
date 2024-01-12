@@ -19,10 +19,7 @@ function App() {
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DSeriesCollectionDirective >
                 <Chart3DSeriesDirective dataSource={data} xName='country' yName='gold' type='Column' 
-                dataLabel={{ 
-                    visible: true,
-                    template:'<div style="border: 1px solid black; padding: 3px 3px 3px 3px"><div>${point.x}</div><div>${point.y}</div></div>'
-                }}>
+                dataLabel={{ template:'<div style="border: 1px solid black; padding: 3px 3px 3px 3px"><div>${point.x}</div><div>${point.y}</div></div>', visible: true }}>
                 </Chart3DSeriesDirective>
             </Chart3DSeriesCollectionDirective>
         </Chart3DComponent>;

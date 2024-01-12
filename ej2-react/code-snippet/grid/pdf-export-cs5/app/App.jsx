@@ -8,18 +8,16 @@ function App() {
     let firstGrid;
     let secondGrid;
     const toolbarClick = (args) => {
-        if (firstGrid && args.item.id === 'FirstGrid_pdfexport') {
             if (firstGrid && args.item.id === 'FirstGrid_pdfexport') {
                 const appendPdfExportProperties = {
                   multipleExport: { type: 'NewPage' }
                 };
                   firstGrid.pdfExport(appendPdfExportProperties, true);
               }
-        }
     };
     return (<div>
         <div><b>First Grid:</b></div>
-        <GridComponent id='FirstGrid' dataSource={data.slice(0, 5)} toolbar={toolbar} allowPdfExport={true} toolbarClick={toolbarClick} exportGrids={gridsToExport} ref={g => firstGrid = g}>
+        <GridComponent id='FirstGrid' dataSource={data} toolbar={toolbar} allowPdfExport={true} toolbarClick={toolbarClick} exportGrids={gridsToExport} ref={g => firstGrid = g}>
             <ColumnsDirective>
                 <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
@@ -29,7 +27,7 @@ function App() {
             <Inject services={[Toolbar, PdfExport]}/>
         </GridComponent>
         <div><b>Second Grid:</b></div>
-        <GridComponent id='SecondGrid' dataSource={employeeData.slice(0, 5)} allowPdfExport={true} ref={g => secondGrid = g}>
+        <GridComponent id='SecondGrid' dataSource={employeeData} allowPdfExport={true} ref={g => secondGrid = g}>
             <ColumnsDirective>
                 <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right"/>
                 <ColumnDirective field='FirstName' headerText='First Name' width='120'/>

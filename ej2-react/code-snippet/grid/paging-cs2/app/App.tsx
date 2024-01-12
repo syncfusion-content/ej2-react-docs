@@ -12,7 +12,7 @@ function App() {
     setPageSettings(currentPage);
   }
   return (<div>
-    <label style={{ padding: "30px 17px 0 0" }}>Enter page count:</label>
+    <label style={{ padding: "30px 17px 0 0" }}>Enter current page:</label>
     <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
     <ButtonComponent onClick={click}>Click button</ButtonComponent>
     <GridComponent dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>

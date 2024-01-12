@@ -1,4 +1,4 @@
-import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Column } from '@syncfusion/ej2-react-grids';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import { data } from './datasource';
@@ -6,28 +6,28 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 
 function App() {
-    let grid: Grid | null;
+    let grid: GridComponent | null;
     let dropDown: DropDownListComponent | null;
-    let textBox: any;
+    let textBox: TextBoxComponent | null;
     const field: Object = { text: 'text', value: 'value' };
-    const alignmentData: any = [
+    const alignmentData: Object[] = [
         { text: 'OrderID', value: 'OrderID' },
         { text: 'CustomerID', value: 'CustomerID' },
         { text: 'Freight', value: 'Freight' },
-        { text: 'ShipCountry', value: 'ShipCountry' },
+        { text: 'OrderDate', value: 'OrderDate' },
     ];
 
-    const changeHeaderText = ((args: any) => {
+    const changeHeaderText = (() => {
         if (textBox.element.value.trim() !== '') {
-            const column: any = (grid as any).getColumnByField((dropDown as any).value);
+            const column: Column = (grid as GridComponent).getColumnByField((dropDown as DropDownListComponent).value);
             column.headerText = textBox.element.value;
-            (grid as any).refreshHeader();
+            (grid as GridComponent).refreshHeader();
         }
     })
     return (
         <div>
             <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
-            <DropDownListComponent style={{ padding: "20px 0 0 0" }} dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
+            <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
             <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
             <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
             <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>

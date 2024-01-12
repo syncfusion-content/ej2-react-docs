@@ -1,5 +1,5 @@
 import { ColumnDirective, ColumnMenu, ColumnMenuOpenEventArgs, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { Column, ColumnMenuItemModel, Filter, FilterSettingsModel, Inject, Page, Sort,Group } from '@syncfusion/ej2-react-grids';
+import { Column, ColumnMenuItemModel, Filter, FilterSettingsModel, Inject, Page, Sort, Group } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
@@ -24,7 +24,7 @@ function App() {
                     <ColumnDirective field='Freight' headerText='Freight' format='C2' textAlign='Right' />
                     <ColumnDirective field='ShipName' headerText='Ship Name' width='200' />
                 </ColumnsDirective>
-                <Inject services={[Sort, ColumnMenu, Page, Filter,Group]} />
+                <Inject services={[Sort, ColumnMenu, Page, Filter, Group]} />
             </GridComponent>
         </div>
     );

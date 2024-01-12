@@ -1,16 +1,16 @@
-import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import { data } from './datasource';
 
 function App() {
-    let grid: Grid | null;
-    const alignmentData: any = [
+    let grid: GridComponent | null;
+    const alignmentData: Object[] = [
         { text: 'Normal', value: 'Normal' },
         { text: 'Auto', value: 'Auto' },
     ];
     const changeValue = ((args: any) => {
-        (grid as any).resizeSettings.mode = (args as any).value;
+        (grid as GridComponent).resizeSettings.mode = args.value;
     })
     return (
         <div>
@@ -24,6 +24,7 @@ function App() {
                         <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
                         <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
                     </ColumnsDirective>
+                    <Inject services={[Resize]} />
                 </GridComponent></div></div>)
 }
 export default App;

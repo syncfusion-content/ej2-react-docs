@@ -10,31 +10,16 @@ domainurl: ##DomainURL##
 
 # Accessibility in React HeatMap component
 
-The accessibility compliance for the HeatMap component is outlined below.
+HeatMap has built-in accessibility features like screen reading. Screen reading in the HeatMap component allows all users, regardless of ability or disability, to use the component. The following HeatMap elements will be read aloud with screen reading software like Narrator for Windows.
 
-| Accessibility Criteria | Compatibility |
-| -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-
-<style>
-    .post .post-content img {
-        display: inline-block;
-        margin: 0.5em 0;
-    }
-</style>
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
-
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
-
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+| Elements | Description |
+| --- | --- |
+| Title | Reads the contents of the HeatMap chart's title. |
+| Axis labels | Reads the x and y axis labels of the HeatMap chart. |
+| Multilevel labels | Reads the multilevel labels in the x and y axis of the HeatMap chart. |
+| Cell labels | Reads the labels from the cells in the Heatmap chart. |
+| Legend title | Reads the contents of the legend's title as specified in HeatMap chart. |
+| Legend item label | Reads the label of a legend item in HeatMap chart. |
 
 ## Ensuring accessibility
 

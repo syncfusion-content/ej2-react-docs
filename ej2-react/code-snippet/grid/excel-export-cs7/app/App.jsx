@@ -6,7 +6,7 @@ function App() {
     let grid;
     const toolbar = ['ExcelExport'];
     const toolbarClick = (args) => {
-        if (grid && args.item.id === 'grid_excelexport') {
+        if (grid && args.item.id === 'Grid_excelexport') {
             const excelExportProperties = {
                 enableFilter: true
             };
@@ -14,16 +14,16 @@ function App() {
         }
     };
     return (<div>
-        <GridComponent id='grid' dataSource={data} allowFiltering={true} height={270} toolbar={toolbar} allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
-            <ColumnDirective field='Freight' width='100' textAlign='Right'/>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' visible={false}/>
-            <ColumnDirective field='ShipName' headerText='Ship Name' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Toolbar, ExcelExport, Filter]}/>
-      </GridComponent>
+        <GridComponent id='Grid' dataSource={data} allowFiltering={true} height={270} toolbar={toolbar} allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' visible={false} />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+            </ColumnsDirective>
+            <Inject services={[Toolbar, ExcelExport, Filter]} />
+        </GridComponent>
     </div>);
 }
 export default App;
