@@ -53,8 +53,6 @@ The argument passed to the [actionFailure](https://ej2.syncfusion.com/react/docu
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/data-binding-cs2" %}
-
 > The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the Grid actions.
 
 ## Binding with ajax

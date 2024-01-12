@@ -1,7 +1,7 @@
 {% raw %}
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
-import './App.css';
+
 function App() {
     let rteObj;
     function created() {

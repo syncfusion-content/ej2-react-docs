@@ -1,8 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
-import { PdfColor } from '@syncfusion/ej2-pdf-export';
-import { PdfPaddings } from '@syncfusion/ej2-react-gantt';
+import { PdfColor, PdfPaddings } from '@syncfusion/ej2-pdf-export';
 import { data } from './datasource';
 function App() {
         const taskFields = {
