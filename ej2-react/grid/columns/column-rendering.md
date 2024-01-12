@@ -18,20 +18,20 @@ Here's an example code snippet that demonstrates how to define columns manually 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/paging-cs1/app/App.jsx %}
+{% include code-snippet/grid/column-cs42/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/paging-cs1/app/App.tsx %}
+{% include code-snippet/grid/column-cs42/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/paging-cs1/app/datasource.jsx %}
+{% include code-snippet/grid/column-cs42/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/paging-cs1/app/datasource.tsx %}
+{% include code-snippet/grid/column-cs42/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/paging-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/grid/column-cs42" %}
 
 ## Auto generated columns
 

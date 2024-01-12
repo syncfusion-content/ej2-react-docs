@@ -207,6 +207,68 @@ The following example demonstrates how to perform a group action using the `enab
 
 > Numeric columns can be grouped based on formats such as currency or percentage, while datetime columns can be grouped based on specific date or time formats.
 
+## Show grouped rows based on page size
+
+Showing grouped column rows based on the page size in Syncfusion React Grid is useful when you have grouped data and want to control the number of grouped rows displayed per page. 
+
+The Grid component allows you to display the number of records based on the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings/#pagesize). However, by default, the `pageSize` applies to individual grid rows, not to grouped rows. If you want to show grouped column rows based on the `pageSize`, you can achieve it by using a custom implementation.
+
+Customizing the `generateQuery` method of the **Data prototype** allows you to modify the query used for data retrieval. By doing so, you can achieve the display of grouped rows based on the page size according to your specific requirements. This can be achieved in the below example.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/group-cs11/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/group-cs11/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/group-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/group-cs11/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/group-cs11" %}
+
+## Collapse all grouped rows at initial rendering
+
+The Syncfusion React Grid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. The option is useful when dealing with a large dataset that contains many groups, and there is a need to provide a summarized view by initially hiding the details.
+
+To collapse all grouped rows at the initial rendering of the Grid using the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event along with the [collapseAll](https://ej2.syncfusion.com/react/documentation/api/grid/group/#collapseall) method.
+
+The following example demonstrates how to collapse all grouped rows at the initial rendering.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/group-cs9/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/group-cs9/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/group-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/group-cs9/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/group-cs9" %}
+
+> You can also collapse all the grouped rows at the initial rendering using the [groupCollapseAll](https://ej2.syncfusion.com/react/documentation/api/grid/#groupcollapseall) method inside the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event. This is demonstrated in the below code snippet,
+
+```typescript
+    const dataBound = () => {
+        if (initial === true) {
+            (grid as GridComponent).groupCollapseAll();
+            initial = false;
+        }
+    }
+```
+> The collapse all approach is suggested for a limited number of records since collapsing every grouped record takes some time. If you have a large dataset, it is recommended to use [lazy-load grouping](https://ej2.syncfusion.com/react/documentation/grid/grouping/lazy-load-grouping). This approach is also applicable for the [groupExpandAll](https://ej2.syncfusion.com/react/documentation/api/grid/#groupexpandall) method.
+
 ## Group or ungroup column externally
 
 By default, the Syncfusion Grid supports interaction-oriented column grouping, where users manually group columns by dragging and dropping them into the grouping area of the grid. Grid provides an ability to group and ungroup a column using [groupColumn](https://ej2.syncfusion.com/react/documentation/api/grid/#groupcolumn) and [ungroupColumn](https://ej2.syncfusion.com/react/documentation/api/grid/#ungroupcolumn) methods. These methods provide a programmatic approach to perform column grouping and ungrouping.

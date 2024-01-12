@@ -1,29 +1,34 @@
-import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { ExcelExport, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, ExcelExport, ExcelExportProperties, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Page, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
+
 function App() {
     let grid;
+    let switchData;
     const toolbar = ['ExcelExport'];
     const toolbarClick = (args) => {
-        if (grid && args.item.id === 'grid_excelexport') {
-            const excelExportProperties = {
-                includeHiddenColumn: true
+        if (grid && args.item.id === 'Grid_excelexport') {
+            const exportProperties = {
+                includeHiddenColumn: switchData.checked
             };
-            grid.excelExport(excelExportProperties);
+            grid.excelExport(exportProperties);
         }
-    };
+    }
     return (<div>
-        <GridComponent id='grid' dataSource={data} height={270} toolbar={toolbar} allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g}>
-        <ColumnsDirective>
-            <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right'/>
-            <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
-            <ColumnDirective field='Freight' width='100' textAlign='Right'/>
-            <ColumnDirective field='ShipCity' headerText='Ship City' width='150' visible={false}/>
-            <ColumnDirective field='ShipName' headerText='Ship Name' width='150'/>
-        </ColumnsDirective>
-        <Inject services={[Toolbar, ExcelExport]}/>
-      </GridComponent>
-    </div>);
-}
+        <label style={{ padding: "10px 10px" }}>Include or exclude hidden columns </label>
+        <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+        <GridComponent id='Grid' dataSource={data} allowPaging={true} allowExcelExport={true} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='130' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='120' visible={false} />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+            </ColumnsDirective>
+            <Inject services={[Page, Toolbar, ExcelExport]} />
+        </GridComponent></div>)
+};
 export default App;

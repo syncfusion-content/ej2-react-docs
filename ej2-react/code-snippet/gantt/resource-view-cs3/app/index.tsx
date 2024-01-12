@@ -103,7 +103,7 @@ function App () {
         allowResizing = { true} highlightWeekends = { true} toolbar = { toolbarOptions }
         editSettings = { editSettings } projectStartDate = { projectStartDate } projectEndDate = { projectEndDate }
         resourceFields = { resourceFields } taskFields = {taskFields } labelSettings = { labelSettings }
-        resources = { resourceCollection } showOverAllocation = {true} enableMultiTaskbar = {true} collapseAllTasks = {true}>
+        resources = { resourceCollection } showOverAllocation = {true} enableMultiTaskbar = {true}>
             <ColumnsDirective>
             <ColumnDirective field= 'TaskID' > </ColumnDirective>
             <ColumnDirective field= 'TaskName'  headerText= 'Task Name'  width= '180' > </ColumnDirective>

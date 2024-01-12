@@ -128,7 +128,7 @@ When you `tap` gantt row, tapped row will be selected.
 
 [`Multiple selection`](selection/#multiple-row-selection) : To perform multiple selection, `tap` on the multiple selection popup, and then tap the desired rows or cells.
 
-![Multiple selection](images/multiple-selection.PNG)
+![Multiple selection](../images/multiple-selection.PNG)
 
 ## See Also
 

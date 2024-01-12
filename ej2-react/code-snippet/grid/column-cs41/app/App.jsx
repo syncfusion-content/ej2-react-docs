@@ -14,10 +14,10 @@ function App() {
         { text: 'OrderID', value: 'OrderID' },
         { text: 'CustomerID', value: 'CustomerID' },
         { text: 'Freight', value: 'Freight' },
-        { text: 'ShipCountry', value: 'ShipCountry' },
+        { text: 'OrderDate', value: 'OrderDate' },
     ];
 
-    const changeHeaderText = ((args) => {
+    const changeHeaderText = (() => {
         if (textBox.element.value.trim() !== '') {
             const column = grid.getColumnByField(dropDown.value);
             column.headerText = textBox.element.value;
@@ -27,7 +27,7 @@ function App() {
     return (
         <div>
             <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
-            <DropDownListComponent style={{ padding: "20px 0 0 0" }} dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
+            <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
             <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
             <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
             <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>

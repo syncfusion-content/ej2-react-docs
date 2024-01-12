@@ -1,7 +1,5 @@
-
-
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { ExcelExport, ToolbarItems, ExcelQueryCellInfoEventArgs,  Grid, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import { ExcelExport, ToolbarItems, ExcelQueryCellInfoEventArgs, Grid, Inject, Toolbar, ExcelHeaderQueryCellInfoEventArgs } from '@syncfusion/ej2-react-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-react-navigations';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -11,7 +9,7 @@ function App() {
   let grid: Grid | null;
   const toolbar: ToolbarItems[] = ['ExcelExport'];
   const customAttributes: any = { class: 'orientationcss' };
-  const degree: number[] = [90, 180, 45, 135, 225, -90];
+  const degree: number[] = [90, 180, 45, 135];
   let dropDownListObject: any;
   const setHeaderHeight = () => {
     /** Obtain the width of the headerText content */
@@ -41,8 +39,8 @@ function App() {
     }
   }
 
-  const excelHeaderQueryCellInfo = (args): void => {
-    let textWidth = document.querySelector(".orientationcss > div").scrollWidth;
+  const excelHeaderQueryCellInfo = (args: ExcelHeaderQueryCellInfoEventArgs): void => {
+    let textWidth = (document.querySelector(".orientationcss > div") as HTMLElement).scrollWidth;
     if (args.gridCell.column.field == 'Freight') {
       args.style = { backColor: '#99ffcc', vAlign: 'Bottom' };
     }
@@ -52,12 +50,12 @@ function App() {
     args.cell.cellHeight = textWidth;
   }
   return (<div>
-    <DropDownListComponent placeholder="Select a degree" id="ddlelement" dataSource={degree} ref={(scope) => { dropDownListObject = scope; }}></DropDownListComponent>
+    <label>Select a degree: </label>
+    <DropDownListComponent style={{ marginLeft: "10px" }} placeholder="Select a degree" id="ddlelement" dataSource={degree} ref={(scope) => { dropDownListObject = scope; }} width={150}></DropDownListComponent>
     <GridComponent id='grid' dataSource={data} height={260} created={setHeaderHeight} allowExcelExport={true} excelQueryCellInfo={excelQueryCellInfo} excelHeaderQueryCellInfo={excelHeaderQueryCellInfo} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
         <ColumnDirective field='CustomerID' headerText='Customer ID' customAttributes={customAttributes} width='100' />
-        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
         <ColumnDirective field='Freight' headerText='Freight' width='80' format="C2" textAlign="Center" />
         <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
       </ColumnsDirective>
@@ -66,5 +64,3 @@ function App() {
   </div>)
 };
 export default App;
-
-

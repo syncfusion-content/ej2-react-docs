@@ -1,0 +1,8 @@
+.e-grid .customcss {
+  background-color: #ecedee;
+}
+
+.e-grid .e-excelfilter .e-contextmenu-wrapper 
+{
+    display: none;
+}

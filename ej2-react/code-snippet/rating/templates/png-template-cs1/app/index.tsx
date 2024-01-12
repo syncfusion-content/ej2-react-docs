@@ -8,13 +8,13 @@ function App() {
 
     function emptyTemplate(){
         return(
-            <img src="star-emptytemplate.png" width="25" height="25" />
+            <img src="https://ej2.syncfusion.com/documentation/code-snippet/rating/png-templates-cs2/star-emptytemplate.png" width="25" height="25" />
         );
     }
 
     function fullTemplate(){
         return(
-            <img src="star-fulltemplate.png" width="25" height="25" />
+            <img src="https://ej2.syncfusion.com/documentation/code-snippet/rating/png-templates-cs2/star-fulltemplate.png" width="25" height="25" />
         );
     }
   

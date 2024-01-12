@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, RowSelectEventArgs, Selection, Inject } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, RowSelectEventArgs, Selection, Inject, Toolbar, PrintEventArgs, Print } from '@syncfusion/ej2-react-grids';
 import { customerData, data } from './datasource';
 
 function MasterDetail() {
@@ -7,7 +7,7 @@ function MasterDetail() {
     const names: string[] = ['AROUT', 'BERGS', 'BLONP', 'CHOPS', 'ERNSH'];
     const master: Object = customerData.filter((e:any) => names.indexOf(e.CustomerID) !== -1);;
 
-    function rowselect(args: RowSelectEventArgs): void {
+    const rowselect = (args: RowSelectEventArgs) => {
         let selRecord = args.data;
         let selecteMessage:any = document.getElementsByClassName('e-statustext')[0];
         let message: HTMLElement = selecteMessage.querySelector('b')
@@ -15,17 +15,24 @@ function MasterDetail() {
         (detailGrid as GridComponent).dataSource = data.filter((record: any) => record.CustomerName === selRecord.ContactName).slice(0, 5);
     }
 
+    const beforePrint = (args: PrintEventArgs) => {
+        let customElement = document.createElement('div');
+        customElement.innerHTML = document.getElementsByClassName('e-statustext')[0].innerHTML + (detailGrid).element.innerHTML;
+        customElement.appendChild(document.createElement('br'));
+        args.element.append(customElement);
+    }
+
     return (
         <div className='control-pane'>
             <div className='control-section'>
-                <GridComponent dataSource={master} selectedRowIndex={2} rowSelected={rowselect}>
+                <GridComponent dataSource={master} selectedRowIndex={2} rowSelected={rowselect} toolbar={['Print']} beforePrint={beforePrint}>
                     <ColumnsDirective>
                         <ColumnDirective field='ContactName' headerText='Customer Name' width='150'></ColumnDirective>
                         <ColumnDirective field='CompanyName' headerText='Company Name' width='150'></ColumnDirective>
                         <ColumnDirective field='Address' headerText='Address' width='150' />
                         <ColumnDirective field='Country' headerText='Country' width='130' />
                     </ColumnsDirective>
-                    <Inject services={[Selection]} />
+                    <Inject services={[Selection, Toolbar, Print]} />
                 </GridComponent>
 
                 <div className='e-statustext'> Showing orders of Customer:  <b></b></div>

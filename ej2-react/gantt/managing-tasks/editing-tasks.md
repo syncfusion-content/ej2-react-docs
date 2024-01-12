@@ -104,40 +104,6 @@ In the Gantt dialog, you can make only specific data source fields visible for e
         
 {% previewsample "page.domainurl/code-snippet/gantt/editingdialog-cs2" %}
 
-## Capture the modified records in React Gantt component
-
-In the EJ2 Gantt chart, modified records can be conveniently retrieved after adding, editing, or deleting data by utilizing the [`actionComplete`] (https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/) event.
-
-The following code example serves as a practical illustration of how to effectively capture the modified records within the Gantt control.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/capturerecords-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/capturerecords-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/capturerecords-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/capturerecords-cs1" %}
-
-The following screenshots represent sample add, edit, and delete record actions using the gantt `args`.
-
-The data of the newly added record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `add` and the following screenshot shows that the added record's data is available in [`args.newTaskData`] (../../api/gantt/actionCompleteArgs/#newtaskdata) property.
-
-![Add action](images/add-action.png)
-
-The data of the edited record can be obtained from actionComplete event by requestType of [`args.requestType`] (../../api/gantt/iActionBeginEventArgs/#requesttype) to the action `save` and the following screenshot shows that the edited record's data is available in [`args.modifiedTaskData`] (../../api/gantt/iActionBeginEventArgs/#modifiedtaskdata) property.
-
-![Edit action](images/edit-action.png)
-
-The data of the deleted record can be obtained from actionComplete event by requestType of [`args.requestType`] (../../api/gantt/iActionBeginEventArgs/#requesttype) to the action `delete` and the following screenshot shows that the deleted record's data is available in [`args.modifiedRecords`] (../../api/gantt/iActionBeginEventArgs/#modifiedrecords) property.
-
-![Delete action](images/delete-action.png)
-
 ## Task dependencies
 
 In the Gantt component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the [`dependency`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#dependency) property.
@@ -164,15 +130,15 @@ The following code example demonstrates how to enable task dependency editing in
         
 {% previewsample "page.domainurl/code-snippet/gantt/dependencyedit-cs2" %}
 
-![Alt text](images/user-interaction.png)
+![Alt text](../images/user-interaction.png)
 
 Updating with mouse interaction action
 
-![Alt text](images/cell-edit.png)
+![Alt text](../images/cell-edit.png)
 
 Updating with cell Edit
 
-![Alt text](images/dialog.png)
+![Alt text](../images/dialog.png)
 
 Updating with Dialog
 
@@ -197,3 +163,37 @@ Tasks' value can be dynamically updated by using the [`updateRecordById`](https:
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/updaterecord-cs1" %}
+
+## Capture the modified records in React Gantt component
+
+In the EJ2 Gantt chart, modified records can be conveniently retrieved after adding, editing, or deleting data by utilizing the [`actionComplete`] (https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/) event.
+
+The following code example serves as a practical illustration of how to effectively capture the modified records within the Gantt control.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/capturerecords-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/capturerecords-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/capturerecords-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/capturerecords-cs1" %}
+
+The following screenshots represent sample add, edit, and delete record actions using the gantt `args`.
+
+The data of the newly added record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `add` and the following screenshot shows that the added record's data is available in [`args.newTaskData`] (../../api/gantt/actionCompleteArgs/#newtaskdata) property.
+
+![Add action](../images/add-action.png)
+
+The data of the edited record can be obtained from actionComplete event by requestType of [`args.requestType`] (../../api/gantt/iActionBeginEventArgs/#requesttype) to the action `save` and the following screenshot shows that the edited record's data is available in [`args.modifiedTaskData`] (../../api/gantt/iActionBeginEventArgs/#modifiedtaskdata) property.
+
+![Edit action](../images/edit-action.png)
+
+The data of the deleted record can be obtained from actionComplete event by requestType of [`args.requestType`] (../../api/gantt/iActionBeginEventArgs/#requesttype) to the action `delete` and the following screenshot shows that the deleted record's data is available in [`args.modifiedRecords`] (../../api/gantt/iActionBeginEventArgs/#modifiedrecords) property.
+
+![Delete action](../images/delete-action.png)

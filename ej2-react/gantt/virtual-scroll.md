@@ -52,7 +52,7 @@ This mode can be enable by setting the [enableTimelineVirtualization](https://ej
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/virtual-scroll-cs5" %}
+{% previewsample "page.domainurl/code-snippet/gantt/virtualscroll-cs3" %}
 
 ## Get filtered data when virtual scrolling is enabled
 

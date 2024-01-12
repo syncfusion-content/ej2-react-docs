@@ -1,290 +1,76 @@
-export let purchaseData = [
+export let data = [
     {
-        'OrderID': 10248,
-        'CustomerID': 'VINET',
-        'OrderDate': '1996-07-04T10:10:00.000Z',
-        'ShippedDate': '1996-07-16T12:20:00.000Z',
-        'Freight': 32.38,
-        'ShipName': 'Vins et alcools Chevalier',
-        'ShipAddress': '59 rue de l\'Abbaye',
-        'ShipCity': 'Reims',
-        'ShipRegion': null,
-        'ShipCountry': 'France'
+        OrderID: 10248, CustomerID: 'VINET', Role: 'Admin', EmployeeID: 5, OrderDate: new Date(8364186e5),
+        ShipName: 'Vins et alcools Chevalier', ShipCity: 'Reims', ShipAddress: '59 rue de l Abbaye',
+        ShipRegion: 'CJ', Mask: '1111', ShipPostalCode: '51100', ShipCountry: 'France', Freight: 32.38, Verified: !0
     },
     {
-        'OrderID': 10249,
-        'CustomerID': 'TOMSP',
-        'OrderDate': '1996-07-05T12:20:00.000Z',
-        'ShippedDate': '1996-07-10T13:20:00.000Z',
-        'Freight': 11.61,
-        'ShipName': 'Toms Spezialitäten',
-        'ShipAddress': 'Luisenstr. 48',
-        'ShipCity': 'Münster',
-        'ShipRegion': null,
-        'ShipCountry': 'Germany'
+        OrderID: 10249, CustomerID: 'TOMSP', Role: 'Employee', EmployeeID: 6, OrderDate: new Date(836505e6),
+        ShipName: 'Toms Spezialitäten', ShipCity: 'Münster', ShipAddress: 'Luisenstr. 48',
+        ShipRegion: 'CJ', Mask: '2222', ShipPostalCode: '44087', ShipCountry: 'Germany', Freight: 11.61, Verified: !1
     },
     {
-        'OrderID': 10250,
-        'CustomerID': 'HANAR',
-        'OrderDate': '1996-07-08T08:40:00.000Z',
-        'ShippedDate': '1996-07-12T07:50:00.000Z',
-        'Freight': 65.83,
-        'ShipName': 'Hanari Carnes',
-        'ShipAddress': 'Rua do Paço, 67',
-        'ShipCity': 'Rio de Janeiro',
-        'ShipRegion': 'RJ',
-        'ShipCountry': 'Brazil'
+        OrderID: 10250, CustomerID: 'HANAR', Role: 'Admin', EmployeeID: 4, OrderDate: new Date(8367642e5),
+        ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
+        ShipRegion: 'RJ', Mask: '3333', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 65.83, Verified: !0
     },
     {
-        'OrderID': 10251,
-        'CustomerID': 'VICTE',
-        'OrderDate': '1996-07-08T07:50:00.000Z',
-        'ShippedDate': '1996-07-15T15:50:00.000Z',
-        'Freight': 41.34,
-        'ShipName': 'Victuailles en stock',
-        'ShipAddress': '2, rue du Commerce',
-        'ShipCity': 'Lyon',
-        'ShipRegion': null,
-        'ShipCountry': 'France'
+        OrderID: 10251, CustomerID: 'VICTE', Role: 'Manager', EmployeeID: 3, OrderDate: new Date(8367642e5),
+        ShipName: 'Victuailles en stock', ShipCity: 'Lyon', ShipAddress: '2, rue du Commerce',
+        ShipRegion: 'CJ', Mask: '4444', ShipPostalCode: '69004', ShipCountry: 'France', Freight: 41.34, Verified: !0
     },
     {
-        'OrderID': 10252,
-        'CustomerID': 'SUPRD',
-        'OrderDate': '1996-07-09T12:05:00.000Z',
-        'ShippedDate': '1996-07-11T17:30:00.000Z',
-        'Freight': 51.3,
-        'ShipName': 'Suprêmes délices',
-        'ShipAddress': 'Boulevard Tirou, 255',
-        'ShipCity': 'Charleroi',
-        'ShipRegion': null,
-        'ShipCountry': 'Belgium'
+        OrderID: 10252, CustomerID: 'SUPRD', Role: 'Manager', EmployeeID: 4, OrderDate: new Date(8368506e5),
+        ShipName: 'Suprêmes délices', ShipCity: 'Charleroi', ShipAddress: 'Boulevard Tirou, 255',
+        ShipRegion: 'CJ', Mask: '5555', ShipPostalCode: 'B-6000', ShipCountry: 'Belgium', Freight: 51.3, Verified: !0
     },
     {
-        'OrderID': 10253,
-        'CustomerID': 'HANAR',
-        'OrderDate': '1996-07-10T11:20:00.000Z',
-        'ShippedDate': '1996-07-16T10:10:00.000Z',
-        'Freight': 58.17,
-        'ShipName': 'Hanari Carnes',
-        'ShipAddress': 'Rua do Paço, 67',
-        'ShipCity': 'Rio de Janeiro',
-        'ShipRegion': 'RJ',
-        'ShipCountry': 'Brazil'
+        OrderID: 10253, CustomerID: 'HANAR', Role: 'Admin', EmployeeID: 3, OrderDate: new Date(836937e6),
+        ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
+        ShipRegion: 'RJ', Mask: '6666', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 58.17, Verified: !0
     },
     {
-        'OrderID': 10254,
-        'CustomerID': 'CHOPS',
-        'OrderDate': '1996-07-17T18:30:00.000Z',
-        'ShippedDate': '1996-07-23T20:40:00.000Z',
-        'Freight': 22.98,
-        'ShipName': 'Chop-suey Chinese',
-        'ShipAddress': 'Hauptstr. 31',
-        'ShipCity': 'Bern',
-        'ShipRegion': null,
-        'ShipCountry': 'Switzerland'
+        OrderID: 10254, CustomerID: 'CHOPS', Role: 'Employee', EmployeeID: 5, OrderDate: new Date(8370234e5),
+        ShipName: 'Chop-suey Chinese', ShipCity: 'Bern', ShipAddress: 'Hauptstr. 31',
+        ShipRegion: 'CJ',  Mask: '7777', ShipPostalCode: '3012', ShipCountry: 'Switzerland', Freight: 22.98, Verified: !1
     },
     {
-        'OrderID': 10255,
-        'CustomerID': 'RICSU',
-        'OrderDate': '1996-07-12T10:40:00.000Z',
-        'ShippedDate': '1996-07-15T05:40:00.000Z',
-        'Freight': 148.33,
-        'ShipName': 'Richter Supermarkt',
-        'ShipAddress': 'Starenweg 5',
-        'ShipCity': 'Genève',
-        'ShipRegion': null,
-        'ShipCountry': 'Switzerland'
+        OrderID: 10255, CustomerID: 'RICSU', Role: 'Admin', EmployeeID: 9, OrderDate: new Date(8371098e5),
+        ShipName: 'Richter Supermarkt', ShipCity: 'Genève', ShipAddress: 'Starenweg 5',
+        ShipRegion: 'CJ', Mask: '8888', ShipPostalCode: '1204', ShipCountry: 'Switzerland', Freight: 148.33, Verified: !0
     },
     {
-        'OrderID': 10256,
-        'CustomerID': 'WELLI',
-        'OrderDate': '1996-07-15T20:50:00.000Z',
-        'ShippedDate': '1996-07-17T21:50:00.000Z',
-        'Freight': 13.97,
-        'ShipName': 'Wellington Importadora',
-        'ShipAddress': 'Rua do Mercado, 12',
-        'ShipCity': 'Resende',
-        'ShipRegion': 'SP',
-        'ShipCountry': 'Brazil'
+        OrderID: 10256, CustomerID: 'WELLI', Role: 'Employee', EmployeeID: 3, OrderDate: new Date(837369e6),
+        ShipName: 'Wellington Importadora', ShipCity: 'Resende', ShipAddress: 'Rua do Mercado, 12',
+        ShipRegion: 'SP', Mask: '9999', ShipPostalCode: '08737-363', ShipCountry: 'Brazil', Freight: 13.97, Verified: !1
     },
     {
-        'OrderID': 10257,
-        'CustomerID': 'HILAA',
-        'OrderDate': '1996-07-16T03:20:00.000Z',
-        'ShippedDate': '1996-07-22T14:40:00.000Z',
-        'Freight': 81.91,
-        'ShipName': 'HILARION-Abastos',
-        'ShipAddress': 'Carrera 22 con Ave. Carlos Soublette #8-35',
-        'ShipCity': 'San Cristóbal',
-        'ShipRegion': 'Táchira',
-        'ShipCountry': 'Venezuela'
+        OrderID: 10257, CustomerID: 'HILAA', Role: 'Admin', EmployeeID: 4, OrderDate: new Date(8374554e5),
+        ShipName: 'HILARION-Abastos', ShipCity: 'San Cristóbal', ShipAddress: 'Carrera 22 con Ave. Carlos Soublette #8-35',
+        ShipRegion: 'Táchira', Mask: '1234', ShipPostalCode: '5022', ShipCountry: 'Venezuela', Freight: 81.91, Verified: !0
     },
     {
-        'OrderID': 10258,
-        'CustomerID': 'ERNSH',
-        'OrderDate': '1996-07-17T18:30:00.000Z',
-        'ShippedDate': '1996-07-23T14:50:00.000Z',
-        'Freight': 140.51,
-        'ShipName': 'Ernst Handel',
-        'ShipAddress': 'Kirchgasse 6',
-        'ShipCity': 'Graz',
-        'ShipRegion': null,
-        'ShipCountry': 'Austria'
+        OrderID: 10258, CustomerID: 'ERNSH', Role: 'Manager', EmployeeID: 1, OrderDate: new Date(8375418e5),
+        ShipName: 'Ernst Handel', ShipCity: 'Graz', ShipAddress: 'Kirchgasse 6',
+        ShipRegion: 'CJ', Mask: '2345', ShipPostalCode: '8010', ShipCountry: 'Austria', Freight: 140.51, Verified: !0
     },
     {
-        'OrderID': 10259,
-        'CustomerID': 'CENTC',
-        'OrderDate': '1996-07-18T01:20:00.000Z',
-        'ShippedDate': '1996-07-25T16:20:00.000Z',
-        'Freight': 3.25,
-        'ShipName': 'Centro comercial Moctezuma',
-        'ShipAddress': 'Sierras de Granada 9993',
-        'ShipCity': 'México D.F.',
-        'ShipRegion': null,
-        'ShipCountry': 'Mexico'
+        OrderID: 10259, CustomerID: 'CENTC', Role: 'Admin', EmployeeID: 4, OrderDate: new Date(8376282e5),
+        ShipName: 'Centro comercial Moctezuma', ShipCity: 'México D.F.', ShipAddress: 'Sierras de Granada 9993',
+        ShipRegion: 'CJ', Mask: '3456', ShipPostalCode: '05022', ShipCountry: 'Mexico', Freight: 3.25, Verified: !1
     },
     {
-        'OrderID': 10260,
-        'CustomerID': 'OTTIK',
-        'OrderDate': '1996-07-19T11:20:00.000Z',
-        'ShippedDate': '1996-07-29T03:10:00.000Z',
-        'Freight': 55.09,
-        'ShipName': 'Ottilies Käseladen',
-        'ShipAddress': 'Mehrheimerstr. 369',
-        'ShipCity': 'Köln',
-        'ShipRegion': null,
-        'ShipCountry': 'Germany'
+        OrderID: 10260, CustomerID: 'OTTIK', Role: 'Admin', EmployeeID: 4, OrderDate: new Date(8377146e5),
+        ShipName: 'Ottilies Käseladen', ShipCity: 'Köln', ShipAddress: 'Mehrheimerstr. 369',
+        ShipRegion: 'CJ', Mask: '4567', ShipPostalCode: '50739', ShipCountry: 'Germany', Freight: 55.09, Verified: !0
     },
     {
-        'OrderID': 10261,
-        'CustomerID': 'QUEDE',
-        'OrderDate': '1996-07-19T18:30:00.000Z',
-        'ShippedDate': '1996-07-30T23:10:00.000Z',
-        'Freight': 3.05,
-        'ShipName': 'Que Delícia',
-        'ShipAddress': 'Rua da Panificadora, 12',
-        'ShipCity': 'Rio de Janeiro',
-        'ShipRegion': 'RJ',
-        'ShipCountry': 'Brazil'
+        OrderID: 10261, CustomerID: 'QUEDE', Role: 'Manager', EmployeeID: 4, OrderDate: new Date(8377146e5),
+        ShipName: 'Que Delícia', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua da Panificadora, 12',
+        ShipRegion: 'RJ', Mask: '5678', ShipPostalCode: '02389-673', ShipCountry: 'Brazil', Freight: 3.05, Verified: !1
     },
     {
-        'OrderID': 10262,
-        'CustomerID': 'RATTC',
-        'OrderDate': '1996-07-22T21:40:00.000Z',
-        'ShippedDate': '1996-07-25T19:10:00.000Z',
-        'Freight': 48.29,
-        'ShipName': 'Rattlesnake Canyon Grocery',
-        'ShipAddress': '2817 Milton Dr.',
-        'ShipCity': 'Albuquerque',
-        'ShipRegion': 'NM',
-        'ShipCountry': 'USA'
-    },
-    {
-        'OrderID': 10263,
-        'CustomerID': 'ERNSH',
-        'OrderDate': '1996-07-23T00:10:00.000Z',
-        'ShippedDate': '1996-07-31T22:50:00.000Z',
-        'Freight': 146.06,
-        'ShipName': 'Ernst Handel',
-        'ShipAddress': 'Kirchgasse 6',
-        'ShipCity': 'Graz',
-        'ShipRegion': null,
-        'ShipCountry': 'Austria'
-    },
-    {
-        'OrderID': 10264,
-        'CustomerID': 'FOLKO',
-        'OrderDate': '1996-07-24T20:10:00.000Z',
-        'ShippedDate': '1996-08-23T11:40:00.000Z',
-        'Freight': 3.67,
-        'ShipName': 'Folk och fä HB',
-        'ShipAddress': 'Åkergatan 24',
-        'ShipCity': 'Bräcke',
-        'ShipRegion': null,
-        'ShipCountry': 'Sweden'
-    },
-    {
-        'OrderID': 10265,
-        'CustomerID': 'BLONP',
-        'OrderDate': '1996-07-25T23:50:00.000Z',
-        'ShippedDate': '1996-08-12T02:10:00.000Z',
-        'Freight': 55.28,
-        'ShipName': 'Blondel père et fils',
-        'ShipAddress': '24, place Kléber',
-        'ShipCity': 'Strasbourg',
-        'ShipRegion': null,
-        'ShipCountry': 'France'
-    },
-    {
-        'OrderID': 10266,
-        'CustomerID': 'WARTH',
-        'OrderDate': '1996-07-26T03:10:00.000Z',
-        'ShippedDate': '1996-07-31T01:50:00.000Z',
-        'Freight': 25.73,
-        'ShipName': 'Wartian Herkku',
-        'ShipAddress': 'Torikatu 38',
-        'ShipCity': 'Oulu',
-        'ShipRegion': null,
-        'ShipCountry': 'Finland'
-    },
-    {
-        'OrderID': 10267,
-        'CustomerID': 'FRANK',
-        'OrderDate': '1996-07-29T04:10:00.000Z',
-        'ShippedDate': '1996-08-06T17:20:00.000Z',
-        'Freight': 208.58,
-        'ShipName': 'Frankenversand',
-        'ShipAddress': 'Berliner Platz 43',
-        'ShipCity': 'München',
-        'ShipRegion': null,
-        'ShipCountry': 'Germany'
-    },
-    {
-        'OrderID': 10268,
-        'CustomerID': 'GROSR',
-        'OrderDate': '1996-07-30T01:20:00.000Z',
-        'ShippedDate': '1996-08-02T03:40:00.000Z',
-        'Freight': 66.29,
-        'ShipName': 'GROSELLA-Restaurante',
-        'ShipAddress': '5ª Ave. Los Palos Grandes',
-        'ShipCity': 'Caracas',
-        'ShipRegion': 'DF',
-        'ShipCountry': 'Venezuela'
-    },
-    {
-        'OrderID': 10269,
-        'CustomerID': 'WHITC',
-        'OrderDate': '1996-07-31T05:10:00.000Z',
-        'ShippedDate': '1996-08-09T07:10:00.000Z',
-        'Freight': 4.56,
-        'ShipName': 'White Clover Markets',
-        'ShipAddress': '1029 - 12th Ave. S.',
-        'ShipCity': 'Seattle',
-        'ShipRegion': 'WA',
-        'ShipCountry': 'USA'
-    },
-    {
-        'OrderID': 10270,
-        'CustomerID': 'WARTH',
-        'OrderDate': '1996-08-01T09:10:00.000Z',
-        'ShippedDate': '1996-08-02T11:10:00.000Z',
-        'Freight': 136.54,
-        'ShipName': 'Wartian Herkku',
-        'ShipAddress': 'Torikatu 38',
-        'ShipCity': 'Oulu',
-        'ShipRegion': null,
-        'ShipCountry': 'Finland'
-    },
-    {
-        'OrderID': 10271,
-        'CustomerID': 'SPLIR',
-        'OrderDate': '1996-08-01T13:10:00.000Z',
-        'ShippedDate': '1996-08-30T15:10:00.000Z',
-        'Freight': 4.54,
-        'ShipName': 'Split Rail Beer & Ale',
-        'ShipAddress': 'P.O. Box 555',
-        'ShipCity': 'Lander',
-        'ShipRegion': 'WY',
-        'ShipCountry': 'USA'
-    },
-]
+        OrderID: 10262, CustomerID: 'RATTC', Role: 'Employee', EmployeeID: 8, OrderDate: new Date(8379738e5),
+        ShipName: 'Rattlesnake Canyon Grocery', ShipCity: 'Albuquerque', ShipAddress: '2817 Milton Dr.',
+        ShipRegion: 'NM', Mask: '6789', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
+    }];
