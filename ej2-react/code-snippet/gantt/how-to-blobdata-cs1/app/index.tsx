@@ -5,17 +5,21 @@ import { data } from './datasource';
 function App () {
   let excelExpComplete = (args: ExcelExportCompleteArgs) => {
     //This event will be triggered when excel exporting.
+    if (args.promise) {
         args.promise.then((e: { blobData: Blob }) => {
     //In this `then` function, we can get blob data through the arguments after promise resolved.
             exportBlob(e.blobData);
 });
+}
 };
 let pdfExpComplete= (args: PdfExportCompleteArgs) => {
 //This event will be triggered when pdf exporting.
+if (args.promise) {
     args.promise.then((e: { blobData: Blob }) => {
     //In this `then` function, we can get blob data through the arguments after promise resolved.
     exportBlob(e.blobData);
 });
+}
 };
 
 
@@ -44,7 +48,7 @@ let exportBlob: Function = (blob: Blob) => {
     if (args.item.text === "Pdf export") {
       ganttChart.pdfExport(null,null,null,true);
       }
-      if (args.item.id === 'Excel export') {
+      if (args.item.text === 'Excel export') {
         ganttChart.excelExport(null,null,null,true);
      }
         
