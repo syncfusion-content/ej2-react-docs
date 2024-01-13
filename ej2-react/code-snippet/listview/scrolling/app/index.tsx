@@ -4,6 +4,8 @@
 import React from 'react';
 import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
+import '././index.css';
+
 function App() {
   let listviewInstance: ListViewComponent | null = null;
   let data: { text: string; positionClass: string; templateHeight?: string }[] = [{
@@ -50,9 +52,10 @@ function App() {
   { text: 'Cool thanks! \uD83D\uDC4C', positionClass: 'left' }
   ];
   function listTemplate(data: any): JSX.Element {
+    const wrapperClass = `e-list-wrapper e-list-multi-line${data.positionClass === 'right' ? ' e-list-wrapper-right' : ''}`;
     return (
-      <div className="e-list-wrapper e-list-multi-line" style={{display:"flex", justifyContent: data.positionClass === 'right' ? 'flex-end' : ''}}>
-        <span className="e-list-item-header"style={{display: "block", whiteSpace: "normal", maxWidth: '80%', padding: '10px', backgroundColor: '#e0e0e0', borderRadius: '10px', wordWrap: 'break-word'}}>
+      <div className={ wrapperClass }>
+        <span className="e-list-item-header text-span">
           {data.text }
         </span>
       </div>
