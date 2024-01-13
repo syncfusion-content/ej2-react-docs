@@ -23,6 +23,9 @@ In the given example, new data is seamlessly added while scrolling. When you scr
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/scrolling/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/scrolling/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/scrolling" %}
