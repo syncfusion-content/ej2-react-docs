@@ -1,5 +1,11 @@
+
+
+
 import React from 'react';
+import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
+import '././index.css';
+
 function App() {
   let listviewInstance = null;
   let data = [{
@@ -46,9 +52,10 @@ function App() {
   { text: 'Cool thanks! \uD83D\uDC4C', positionClass: 'left' }
   ];
   function listTemplate(data) {
+    const wrapperClass = `e-list-wrapper e-list-multi-line${data.positionClass === 'right' ? ' e-list-wrapper-right' : ''}`;
     return (
-      <div className="e-list-wrapper e-list-multi-line" style={{display:"flex", justifyContent: data.positionClass === 'right' ? 'flex-end' : ''}}>
-        <span className="e-list-item-header"style={{display: "block", whiteSpace: "normal", maxWidth: '80%', padding: '10px', backgroundColor: '#e0e0e0', borderRadius: '10px', wordWrap: 'break-word'}}>
+      <div className={ wrapperClass }>
+        <span className="e-list-item-header text-span">
           {data.text }
         </span>
       </div>
@@ -56,14 +63,14 @@ function App() {
   }
   let itemsRendered = 7;
   let itemPerScroll = 5;
-   let result = []; // Initialize result variable with an empty array
+  let result= [];
   const onListScrolled = (args) => {
     if (args.scrollDirection === 'Bottom' && args.distanceY < 100) {
       if (itemsRendered < data.length) {
         const startIndex = itemsRendered;
         const endIndex = Math.min(itemsRendered + itemPerScroll, data.length);
         result = data.slice(startIndex, endIndex);
-        listviewInstance.addItem(result);
+        listviewInstance?.addItem(result);
         itemsRendered = endIndex;
       }
     }
@@ -71,7 +78,7 @@ function App() {
   return (
     <div className="grid-container"><div><h3>Chat</h3>
       <ListViewComponent id='list' dataSource={data.slice(0, itemsRendered)} height= "320px"
-    width= "400px" template={listTemplate} cssClass='e-list-template' scroll={onListScrolled} ref={scope => { listviewInstance = scope;}}></ListViewComponent>
+    width= "400px" template={listTemplate.bind(this)} cssClass='e-list-template' scroll={onListScrolled.bind(this)} ref={scope => { listviewInstance = scope;}}></ListViewComponent>
     </div></div>
   );
 }

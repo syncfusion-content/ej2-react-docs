@@ -5,3 +5,35 @@
   border: 1px solid #dddddd;
   border-radius: 3px;
 }
+
+.grid-container{
+   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.grid-container > div {
+   border: 1px solid #ddd;
+   padding: 20px;
+   border-radius: 5px;
+   background-color: #f4f4f4;
+ }
+
+ h3 {
+   margin: 0;
+ }
+
+.e-list-wrapper-right{
+   display: flex;
+   justify-content: flex-end;
+}
+
+.grid-container .e-list-container .text-span {
+   white-space: normal !important;
+   max-width: 80%;
+   padding: 10px !important;
+   background-color: #e0e0e0;
+   border-radius: 10px;
+   word-wrap: break-word;
+}
