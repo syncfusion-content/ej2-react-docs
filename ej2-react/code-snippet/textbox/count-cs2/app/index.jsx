@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 function App() {
     let textareaObj;
     return (<div className="multiline">
-            <TextBoxComponent multiline={true} input={onInput = onInput.bind(this)} placeholder='Enter your address' floatLabelType='Auto' maxlength='25' ref={scope => { textareaObj = scope; }}/>
+            <TextBoxComponent multiline={true} input={onInput = onInput.bind(this)} placeholder='Enter your address' floatLabelType='Auto' maxLength='25' ref={scope => { textareaObj = scope; }}/>
             <span id='numbercount'/>
       </div>);
     function onInput() {

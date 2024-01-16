@@ -59,6 +59,7 @@ class App extends React.Component {
         return (<div id="container">
         <div id="toast_full_width" className='row'>
           <table>
+            <tbody>
             <tr>
               <td>
                 <div>
@@ -78,6 +79,7 @@ class App extends React.Component {
                 </div>
               </td>
             </tr>
+            </tbody>
           </table>
         </div>
         <ButtonComponent cssClass="e-primary" onClick={this.toastShow = this.toastShow.bind(this, 500)}> Show Toast </ButtonComponent>

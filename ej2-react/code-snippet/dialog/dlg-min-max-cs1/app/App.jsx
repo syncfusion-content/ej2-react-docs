@@ -9,7 +9,7 @@ class App extends React.Component {
     minBtn;
     header() {
         return (<div>
-          <span class='title'>Dialog</span><span class='e-icons sf-icon-Maximize' id='max-btn' title='Maximize'></span><span class='e-icons sf-icon-Minimize' id='min-btn' title='Minimize'></span>
+          <span className='title'>Dialog</span><span className='e-icons sf-icon-Maximize' id='max-btn' title='Maximize'></span><span className='e-icons sf-icon-Minimize' id='min-btn' title='Minimize'></span>
       </div>);
     }
     buttons = [{

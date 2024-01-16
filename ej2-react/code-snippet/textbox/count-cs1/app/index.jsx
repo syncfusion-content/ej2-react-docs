@@ -6,7 +6,7 @@ export default class App extends React.Component {
     textareaObj;
     render() {
         return (<div className="multiline">
-            <TextBoxComponent multiline={true} input={this.onInput = this.onInput.bind(this)} placeholder='Enter your address' floatLabelType='Auto' maxlength='25' ref={scope => { this.textareaObj = scope; }}/>
+            <TextBoxComponent multiline={true} input={this.onInput = this.onInput.bind(this)} placeholder='Enter your address' floatLabelType='Auto' maxLength='25' ref={scope => { this.textareaObj = scope; }}/>
             <span id='numbercount'/>
       </div>);
     }

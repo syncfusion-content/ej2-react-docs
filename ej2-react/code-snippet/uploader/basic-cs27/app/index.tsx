@@ -29,7 +29,7 @@ export default class App extends React.Component<{}, {}> {
 }
 public render(): JSX.Element{
     return (
-        <UploaderComponent asyncSettings = {path} selected={onFileSelected = onFileSelected.bind(this)} ref = {upload => {uploadObj = upload !}} />);
+        <UploaderComponent asyncSettings = {this.path} selected={onFileSelected = onFileSelected.bind(this)} ref = {upload => {this.uploadObj = upload !}} />);
   }
 }
 ReactDOM.render(<App />, document.getElementById('fileupload'));
