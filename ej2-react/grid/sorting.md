@@ -368,7 +368,7 @@ The following example demonstrates how to remove sort columns. It utilizes the *
 
 ### Clear sorting 
 
-To clear the sorting on an external button click, you can use the [clearSorting](https://ej2.syncfusion.com/react/documentation/api/grid#clearsorting) method provided by the Grid component. This method clears the sorting applied to all columns in the grid. 
+To clear the sorting on an external button click, you can use the [clearSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#clearsorting) method provided by the Grid component. This method clears the sorting applied to all columns in the grid. 
 
 The following example demonstrates how to clear the sorting using `clearSorting` method in the external button click.
 
