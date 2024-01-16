@@ -9,16 +9,16 @@ function App() {
         { x: 'Jul', y: 65, y1: 33 }, { x: 'Aug', y: 55, y1: 32 }, { x: 'Sep', y: 50, y1: 34 },
         { x: 'Oct', y: 30, y1: 32 }, { x: 'Nov', y: 35, y1: 32 }, { x: 'Dec', y: 35, y1: 31 }
     ];
+
+    const yAxis = { minimum: 0, maximum: 90, interval: 20,
+        title: 'Temperature (Fahrenheit)',
+        labelFormat: '{value}°F' };
         
     return <Chart3DComponent id='charts' primaryXAxis={{
             valueType: "Category",
             span: 2
         }}
-        primaryYAxis={{
-            minimum: 0, maximum: 90, interval: 20,
-            title: 'Temperature (Fahrenheit)',
-            labelFormat: '{value}°F'
-        }}
+        primaryYAxis={yAxis}
             wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />

@@ -17,6 +17,7 @@ class App extends React.Component {
             <h3> Modify Basic Details </h3>
             </div>
             <table>
+            <tbody>
                 <tr>
                     <td>Name</td>
                     <td className='left'>
@@ -35,6 +36,7 @@ class App extends React.Component {
                         <InPlaceEditorComponent id='gender' type="DropDownList" mode='Inline' value='Male' model={this.genderModel}/>
                     </td>
                 </tr>
+                </tbody>
             </table>
         </div>
         </div>

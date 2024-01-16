@@ -12,7 +12,7 @@ export default class App extends React.Component<{}, {}> {
     return (
       <div className="multiline">
             <label className="label">Add maxlength attribute through inline</label>
-             <TextBoxComponent multiline={true} maxlength={'15'} placeholder='Enter your address' floatLabelType='Auto'/>
+             <TextBoxComponent multiline={true} maxLength={'15'} placeholder='Enter your address' floatLabelType='Auto'/>
              <label className="label">Add maxlength attribute through addAttributes method</label>
             <TextBoxComponent multiline={true} ref = {scope => {this.textareaObj = scope }} placeholder='Enter your address' floatLabelType='Auto'/>
             <button className='e-control e-btn' id='targetButton1' role='button' onClick={this.handleClick = this.handleClick.bind(this)} >Add max length</button>

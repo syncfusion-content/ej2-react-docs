@@ -21,6 +21,7 @@ class App extends React.Component<{},{}> {
     return (
     <div id='container'>
         <table className="table-section">
+        <tbody>
             <tr>
                 <td> Disabled: </td>
                 <td>
@@ -33,6 +34,7 @@ class App extends React.Component<{},{}> {
                   <InPlaceEditorComponent ref={(text) => { this.inplaceEditorObj = text! }} id='disableEdit' mode='Inline' value='Andrew' model={this.model} />
                 </td>
             </tr>
+            </tbody>
         </table>
      </div>
     );

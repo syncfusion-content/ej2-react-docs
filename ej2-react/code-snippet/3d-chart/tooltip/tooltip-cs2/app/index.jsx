@@ -13,11 +13,11 @@ function App() {
         { country: "Italy", gold: 40, silver: 35, bronze: 37 },
         { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
     ];
-        
+    const tooltip = { location: { x: 120, y: 20 }, enable: true };
     return <Chart3DComponent id='charts' primaryXAxis={{
             valueType: "Category",
         }}
-        tooltip={{ location: { x: 120, y: 20 }, enable: true }}
+        tooltip={tooltip}
             wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
@@ -25,8 +25,7 @@ function App() {
                 <Chart3DSeriesDirective dataSource={data} xName='country' yName='gold' type='Column'>
                 </Chart3DSeriesDirective>
             </Chart3DSeriesCollectionDirective>
-        </Chart3DComponent>;
-}
+        </Chart3DComponent>;}
 ;
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
