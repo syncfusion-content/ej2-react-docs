@@ -9,11 +9,12 @@ function App() {
         { x: 13, y: 14 }, { x: 14, y: 7 }, { x: 15, y: 5 }, { x: 16, y: 2 }, { x: 17, y: 14 }, { x: 18, y: 7 },
         { x: 19, y: 7 }, { x: 20, y: 10 }
     ];
-    return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
+    const yAxis = { labelFormat: '${value}K' };
+    return <Chart3DComponent id='charts' 
     primaryXAxis={{
         valueType: 'Double'
     }}
-    primaryYAxis={{ labelFormat: '${value}K' }}
+    primaryYAxis={yAxis}
         wallColor='transparent'
         enableRotation={true} rotation={7} tilt={10} depth={100}>
         <Inject services={[ColumnSeries3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />

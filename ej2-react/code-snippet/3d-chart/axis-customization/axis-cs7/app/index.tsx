@@ -19,7 +19,6 @@ function App() {
             valueType: "Category",
         }}
         primaryYAxis={{
-            //Axis position as opposite
             opposedPosition: true
         }}
             wallColor='transparent'

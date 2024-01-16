@@ -24,6 +24,7 @@ public render() {
             Best Employee of the year: <InPlaceEditorComponent id='element' type="DropDownList" mode='Inline' value='Andrew Fuller' name='Employee' url={this.url} primaryKey="Employee" adaptor="UrlAdaptor" model={this.model} actionSuccess={this.actionSuccess} />
        </div>
        <table style={{'margin':'auto','width':'50%'}}>
+       <tbody>
            <tr>
               <td style={{textAlign: 'left'}}>
                  Old Value :
@@ -38,6 +39,7 @@ public render() {
                     Andrew Fuller
                </td>
             </tr>
+            </tbody>
          </table>
    </div>
   );

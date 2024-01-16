@@ -8,12 +8,12 @@ function App() {
         { x: new Date(2004, 3, 6), y: 15 }, { x: new Date(2006, 3, 30), y: 65 },
         { x: new Date(2008, 3, 8), y: 90 }, { x: new Date(2010, 3, 8), y: 85 }
     ];
-
+    const yAxis= { labelFormat: '${value}K' };
     return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
     primaryXAxis={{
         valueType: 'DateTime'
     }}
-    primaryYAxis={{ labelFormat: '${value}K' }}
+    primaryYAxis={yAxis}
         wallColor='transparent'
         enableRotation={true} rotation={7} tilt={10} depth={100}>
         <Inject services={[ColumnSeries3D, DateTime3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />

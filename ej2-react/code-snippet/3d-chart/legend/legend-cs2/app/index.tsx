@@ -13,15 +13,16 @@ function App() {
         { country: "Italy", gold: 40, silver: 35, bronze: 37 },
         { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
     ];
-        
+    const legend = {
+        visible: true,
+        location: { x: 200, y: 20 },
+        position:'Custom'
+    };
     return <Chart3DComponent id='charts'
     primaryXAxis={{
             valueType: "Category",
         }}
-        legendSettings = {{
-            visible: true,
-            location: { x: 200, y: 20 },
-            position:'Custom' }} wallColor='transparent'
+        legendSettings = {legend} wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DSeriesCollectionDirective >

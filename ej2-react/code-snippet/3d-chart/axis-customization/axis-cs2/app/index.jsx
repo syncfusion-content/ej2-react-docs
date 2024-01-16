@@ -13,18 +13,18 @@ function App() {
         { country: "Italy", gold: 40, silver: 35, bronze: 37 },
         { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
         ];
-        
-        return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
-        primaryXAxis={{
-            valueType: "Category",
+    const xAxis = {
+        valueType: "Category",
             title: 'Countries',
             titleRotation: 90,
-            //Axis title text style
             titleStyle: {
                 size: '16px', color: 'grey',
                 fontFamily : 'Segoe UI', fontWeight : 'bold'
             }
-        }}
+    };
+        
+        return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
+        primaryXAxis={xAxis}
             wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />

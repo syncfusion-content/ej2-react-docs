@@ -4,36 +4,35 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     const data = [
-        { x: 'WW', y: 12, y1: 22, y2: 38.3, y3: 50 },
-        { x: 'EU', y: 9.9, y1: 26, y2: 45.2, y3: 63.6 },
-        { x: 'APAC', y: 4.4, y1: 9.3, y2: 18.2, y3: 20.9 },
-        { x: 'LATAM', y: 6.4, y1: 28, y2: 46.7, y3: 65.1 },
-        { x: 'MEA', y: 30, y1: 45.7, y2: 61.5, y3: 73 },
-        { x: 'NA', y: 25.3, y1: 35.9, y2: 64, y3: 81.4 }
+        { country: "USA", gold: 50, silver: 70, bronze: 45 },
+        { country: "China", gold: 40, silver: 60, bronze: 55 },
+        { country: "Japan", gold: 70, silver: 60, bronze: 50 },
+        { country: "Australia", gold: 60, silver: 56, bronze: 40 },
+        { country: "France", gold: 50, silver: 45, bronze: 35 },
+        { country: "Germany", gold: 40, silver: 30, bronze: 22 },
+        { country: "Italy", gold: 40, silver: 35, bronze: 37 },
+        { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
     ];
-        
-    return <Chart3DComponent id='charts'
-    primaryXAxis={{
-            valueType: "Category",
-        }}
-        legendSettings={{
-            padding: 10, shapePadding: 10,
+    const legend = {
+        padding: 10, shapePadding: 10,
         visible: true, border: {
             width: 2, color: 'grey'
         },
         width: '200'
+    };
+    return <Chart3DComponent id='charts'
+    primaryXAxis={{
+            valueType: "Category",
         }}
-            wallColor='transparent'
+        legendSettings = {legend} wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DSeriesCollectionDirective >
-                <Chart3DSeriesDirective dataSource={data} xName='x' yName='y' name="December 2007" type='Column'>
+                <Chart3DSeriesDirective dataSource={data} xName='country' yName='gold' name="Gold" type='Column'>
                 </Chart3DSeriesDirective>
-                <Chart3DSeriesDirective dataSource={data} xName='x' yName='y1' name="December 2008" type='Column'>
+                <Chart3DSeriesDirective dataSource={data} xName='country' yName='silver' name="Silver" type='Column'>
                 </Chart3DSeriesDirective>
-                <Chart3DSeriesDirective dataSource={data} xName='x' yName='y2' name="December 2009" type='Column'>
-                </Chart3DSeriesDirective>
-                <Chart3DSeriesDirective dataSource={data} xName='x' yName='y3' name="December 2010" type='Column'>
+                <Chart3DSeriesDirective dataSource={data} xName='country' yName='bronze' name="Bronze" type='Column'>
                 </Chart3DSeriesDirective>
             </Chart3DSeriesCollectionDirective>
         </Chart3DComponent>;
