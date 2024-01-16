@@ -9,7 +9,9 @@ function App() {
         { country: "Japan", gold: 70, silver: 60, bronze: 50 },
         { country: "Australia", gold: 60, silver: 56, bronze: 40 }
     ];
-        
+    const dataLabel = {
+        template:'<div style="border: 1px solid black; padding: 3px 3px 3px 3px"><div>${point.x}</div><div>${point.y}</div></div>', visible: true
+    }
     return <Chart3DComponent id='charts'
     primaryXAxis={{
             valueType: "Category",
@@ -19,7 +21,7 @@ function App() {
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DSeriesCollectionDirective >
                 <Chart3DSeriesDirective dataSource={data} xName='country' yName='gold' type='Column' 
-                dataLabel={{ template:'<div style="border: 1px solid black; padding: 3px 3px 3px 3px"><div>${point.x}</div><div>${point.y}</div></div>', visible: true }}>
+                dataLabel={dataLabel}>
                 </Chart3DSeriesDirective>
             </Chart3DSeriesCollectionDirective>
         </Chart3DComponent>;

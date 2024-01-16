@@ -12,16 +12,17 @@ function App() {
         { country: "Germany", gold: 40, silver: 30, bronze: 22 },
         { country: "Italy", gold: 40, silver: 35, bronze: 37 },
         { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
-    ];
+        ];
+    const xAxis = {
+        valueType: "Category",
+        majorGridLines : {
+            color : 'blue',
+            width : 1
+        }
+    };
         
-    return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
-        primaryXAxis={{
-            valueType: "Category",
-            majorGridLines : {
-                color : 'blue',
-                width : 1
-            }
-        }}
+        return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
+        primaryXAxis={xAxis}
             wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />

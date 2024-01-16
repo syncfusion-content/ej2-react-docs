@@ -13,7 +13,7 @@ function App() {
     { country: "Italy", gold: 40, silver: 35, bronze: 37 },
     { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
 ];
-return <Chart3DComponent id='charts' style={{ textAlign: "center" }} primaryXAxis={{
+return <Chart3DComponent id='charts' primaryXAxis={{
     valueType: 'Category',
     interval: 2, minimum: 1, maximum: 5
 }}

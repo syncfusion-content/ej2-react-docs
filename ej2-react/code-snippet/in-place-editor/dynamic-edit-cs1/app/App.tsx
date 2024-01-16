@@ -22,6 +22,7 @@ class App extends React.Component<{},{}> {
     return (
     <div id='container'>
         <table className="table-section">
+        <tbody>
             <tr>
                 <td> EnableEditMode: </td>
                 <td>
@@ -34,6 +35,7 @@ class App extends React.Component<{},{}> {
                   <InPlaceEditorComponent ref={(text) => { this.inplaceEditorObj = text! }} id='dynamicEdit' mode='Inline' value='Andrew' enableEditMode={true} actionOnBlur='Ignore' model={this.model} />
                 </td>
             </tr>
+            </tbody>
         </table>
      </div>
     );

@@ -13,9 +13,12 @@ function App() {
         }
         series1.push( { x: i, y: value.toFixed(1) });
     }
+    const xAxis = {
+        title: 'Years', edgeLabelPlacement: 'Shift', majorGridLines: { width: 0 }, maximumLabels: 1
+    }
     
-    return <Chart3DComponent id='charts' style={{ textAlign: "center" }} 
-    primaryXAxis = {{ title: 'Years', edgeLabelPlacement: 'Shift', majorGridLines: { width: 0 }, maximumLabels: 1 }}
+    return <Chart3DComponent id='charts' 
+    primaryXAxis = {xAxis}
         wallColor='transparent'
         enableRotation={true} rotation={7} tilt={10} depth={100}>
         <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />

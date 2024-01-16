@@ -13,25 +13,24 @@ function App() {
         { country: "Italy", gold: 40, silver: 35, bronze: 37 },
         { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
     ];
-        
+    const legend = {
+        visible: true,
+        width: '500', height: '100',
+        border: { width: 1, color: 'pink'}
+    };
     return <Chart3DComponent id='charts'
     primaryXAxis={{
             valueType: "Category",
         }}
-        legendSettings={{
-            visible: true,
-            width: '500', height: '100',
-            border: { width: 1, color: 'pink'}
-        }}
-            wallColor='transparent'
+        legendSettings = {legend} wallColor='transparent'
             enableRotation={true} rotation={7} tilt={10} depth={100}>
             <Inject services={[ColumnSeries3D, Category3D, Legend3D, Tooltip3D, DataLabel3D, Highlight3D]} />
             <Chart3DSeriesCollectionDirective >
-                <Chart3DSeriesDirective dataSource={data} xName='country' yName='gold' legendShape="Circle" name="Gold" type='Column'>
+                <Chart3DSeriesDirective dataSource={data} xName='country' yName='gold' name="Gold" type='Column'>
                 </Chart3DSeriesDirective>
-                <Chart3DSeriesDirective dataSource={data} xName='country' yName='silver' legendShape="Circle" name="Silver" type='Column'>
+                <Chart3DSeriesDirective dataSource={data} xName='country' yName='silver' name="Silver" type='Column'>
                 </Chart3DSeriesDirective>
-                <Chart3DSeriesDirective dataSource={data} xName='country' yName='bronze' legendShape="Circle" name="Bronze" type='Column'>
+                <Chart3DSeriesDirective dataSource={data} xName='country' yName='bronze' name="Bronze" type='Column'>
                 </Chart3DSeriesDirective>
             </Chart3DSeriesCollectionDirective>
         </Chart3DComponent>;

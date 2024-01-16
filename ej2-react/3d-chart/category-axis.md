@@ -49,7 +49,7 @@ The range of the category axis can be customized using [`minimum`](https://helpe
 {% include code-snippet/3d-chart/category-axis/category-axis-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/3d-chart/category-axis/category-axis-c3/app/index.tsx %}
+{% include code-snippet/3d-chart/category-axis/category-axis-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,7 +64,7 @@ The category axis also can be rendered based on the index values of the data sou
 {% include code-snippet/3d-chart/category-axis/category-axis-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/3d-chart/category-axis/category-axis-c4/app/index.tsx %}
+{% include code-snippet/3d-chart/category-axis/category-axis-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
