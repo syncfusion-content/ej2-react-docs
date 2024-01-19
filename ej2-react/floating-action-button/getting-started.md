@@ -29,7 +29,7 @@ The list of dependencies required to use the Floating Action Button component in
 
 ## Installation and Configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup
+You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup
 the applications. To install `create-react-app` run the following command.
 
        ```bash

@@ -107,4 +107,4 @@ Divider used to separate the elements inside the card. You can add divider insid
 
 ## See Also
 
-* [How to customize the card image title position](./how-to/customize-the-card-image-title-position/)
+* [How to customize the card image title position](./how-to/customize-the-card-image-title-position)

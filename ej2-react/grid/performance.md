@@ -5,6 +5,7 @@ description: Checkout and learn here all about how to improve the loading perfor
 platform: ej2-react
 control: DataGrid
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Performance tips for React DataGrid Component
