@@ -105,7 +105,7 @@ Add Document Editor component and its dependent component styles as given below 
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-react-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
 ```
 
 > To know about individual component CSS, please refer to
