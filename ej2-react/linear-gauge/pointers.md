@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pointers in React Linear gauge component | Syncfusion
-description: Learn here all about Pointers in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Pointers in React Linear Gauge Component | Syncfusion
+description: Learn here all about pointers in Syncfusion Essential React Linear Gauge component, its elements and more.
 control: Pointers 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pointers in React Linear gauge component
+# Pointers in React Linear Gauge Component
 
 <!-- markdownlint-disable MD013 -->
 

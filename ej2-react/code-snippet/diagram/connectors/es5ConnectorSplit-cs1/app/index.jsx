@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ConnectorConstraints, } from '@syncfusion/ej2-diagrams';
+import { ConnectorConstraints,DiagramComponent } from '@syncfusion/ej2-diagrams';
 let nodes = [{
         id: 'node1',
         width: 100, height: 100,

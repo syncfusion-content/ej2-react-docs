@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React getting started with Next.js | Syncfusion
+title: React Grid getting started with Next.js | Syncfusion
 description: Check out and learn about how to use Syncfusion React UI components in the Next.js project.
 control: Next.js
 platform: ej2-react
