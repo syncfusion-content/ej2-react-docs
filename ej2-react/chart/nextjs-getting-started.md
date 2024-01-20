@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Chart getting started with Next.js | Syncfusion
-description: Check out and learn about how to use Syncfusion React Chart component in the Next.js project.
+description: Check out and learn about how to use Syncfusion React UI components in the Next.js project.
 control: Next.js
 platform: ej2-react
 documentation: ug
