@@ -40,4 +40,4 @@ You can include action Buttons into toast by adding [`buttons`](https://ej2.sync
 
 ## See Also
 
-* [Configuring options](./config/)
+* [Configuring options](./config)
