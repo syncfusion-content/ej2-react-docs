@@ -1,4 +1,4 @@
-import { Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective, Category3D, Inject, Legend3D, DataLabel3D, Tooltip3D, ColumnSeries3D, Highlight3D } from '@syncfusion/ej2-react-charts';
+import { Chart3DComponent, Chart3DSeriesCollectionDirective, Export3D, Chart3DSeriesDirective, Category3D, Inject, Legend3D, DataLabel3D, Tooltip3D, ColumnSeries3D, Highlight3D } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 

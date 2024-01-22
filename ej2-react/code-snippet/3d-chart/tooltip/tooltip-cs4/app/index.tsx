@@ -14,7 +14,7 @@ function App() {
         { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
     ];
     const tooltip = { enable: true,
-        template: '#Unemployment' };
+        template: "<div id='templateWrap'><table style='width:100%;  border: 1px solid black;'><tr><th colspan='2' bgcolor='#00FFFF'>Unemployment</th></tr><tr><td bgcolor='#00FFFF'>${x}:</td><td bgcolor='#00FFFF'>${y}</td></tr></table></div>" };
     return <Chart3DComponent id='charts' primaryXAxis={{
             valueType: "Category",
         }}
