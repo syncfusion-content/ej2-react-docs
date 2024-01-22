@@ -90,9 +90,9 @@ To bind remote data to the Gantt component, assign service data as an instance o
 
 ### URL Adaptor
 
-In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [`here`](https://ej2.syncfusion.com/javascript/documentation/data/adaptors/?no-cache=1).
+In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data we are using `UrlAdaptor` of DataManager property to call the server method and get back resultant data in JSON format. We can know more about `UrlAdaptor` from [`here`](https://ej2.syncfusion.com/react/documentation/data/adaptors?no-cache=1).
 
-> Please refer the [link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs) to create the `ADO.NET` Entity Data Model in Visual Studio,
+> Please refer the [link](https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs) to create the `ADO.NET` Entity Data Model in Visual Studio,
 
 We can define data source for Gantt as instance of DataManager using `url` property of DataManager. Please Check the below code snippet to assign data source to Gantt.
 
@@ -597,7 +597,7 @@ The following code example describes handling of Load on demand at server end.
 
 ### Sending additional parameters to the server
 
-We can pass additional parameters using `addParams` method of [`Query`](https://ej2.syncfusion.com/react/documentation/api/gantt/#query) class. In server side we have inherited and shown the additional parameter value in Syncfusion DataManager class itself. We pass an additional parameter in load time using [`load`](https://ej2.syncfusion.com/react/documentation/api/gantt#load) event. We can also pass additional parameter to the CRUD model. Please Check the below code snippet to send additional parameter to Gantt.
+We can pass additional parameters using `addParams` method of [`Query`](https://ej2.syncfusion.com/react/documentation/api/gantt/#query) class. In server side we have inherited and shown the additional parameter value in Syncfusion DataManager class itself. We pass an additional parameter in load time using [`load`](https://ej2.syncfusion.com/react/documentation/api/gantt/#load) event. We can also pass additional parameter to the CRUD model. Please Check the below code snippet to send additional parameter to Gantt.
 
 ```ts
 
@@ -690,7 +690,7 @@ You can find the full sample from here.
 
 #### Handling HTTP error
 
-During server interaction from the Gantt, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/gantt#actionfailure) event.
+During server interaction from the Gantt, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionfailure) event.
 
 The argument passed to the `actionFailure` event contains the error details returned from the server.
 
@@ -710,7 +710,7 @@ The argument passed to the `actionFailure` event contains the error details retu
 
 #### Binding with Ajax
 
-You can use Gantt [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt#datasource) property to bind the data source to Gantt from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to `dataSource` property by using `onSuccess` event of the Ajax.
+You can use Gantt [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) property to bind the data source to Gantt from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to `dataSource` property by using `onSuccess` event of the Ajax.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
