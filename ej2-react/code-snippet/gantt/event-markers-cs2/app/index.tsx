@@ -25,7 +25,7 @@ function App (){
   const ganttRef = React.createRef();
   const dataBound = () => {
     updateEventMarker();
-    ganttRef.current.zoomToFit();
+    ganttRef.current.fitToProject();
   };
   const eventMarkerDay1 = new Date('04/01/2019');
   const eventMarkerDay2 = new Date('04/09/2019');

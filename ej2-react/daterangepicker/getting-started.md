@@ -147,7 +147,7 @@ The below examples shows the basic DateRangePicker component.
 
 ## Setting the start and end date in a range
 
-The start and end date in a range can be defined with help of [`startDate`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#startdate) and [`endDate`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#enddate) property.
+The start and end date in a range can be defined with help of [`startDate`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#startdate) and [`endDate`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#enddate) property.
 The following example demonstrates, how to set the start date, end date on initializing the DateRangePicker. To know more about range restriction in DateRangePicker, please refer this [page](./range-selection).
 
 `[Class-component]`

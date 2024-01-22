@@ -27,12 +27,6 @@ In the below sample, we have overridden the default *generateQuery* to display t
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/grid/group-cs11/app/datasource.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="extendData.jsx" %}
-{% include code-snippet/grid/group-cs11/app/extendData.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="extendData.tsx" %}
-{% include code-snippet/grid/group-cs11/app/extendData.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/group-cs11" %}
