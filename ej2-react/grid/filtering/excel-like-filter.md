@@ -209,5 +209,5 @@ In the provided example, On-Demand Excel filter has been enabled for the React G
 
 ## See also
 
-* [How to perform filter by using Wildcard and LIKE operator filter](./filtering/#wildcard-and-like-operator-filter)
+* [How to perform filter by using Wildcard and LIKE operator filter](./filtering#wildcard-and-like-operator-filter)
 * [How to change loading indicator in React Grid](../data-binding/data-binding#loading-animation)
