@@ -8,47 +8,20 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable disable grid and its actions in React Grid component
+# Enable or disable grid and its actions in React Grid component
 
-You can enable/disable the Grid and its actions by applying/removing corresponding CSS styles.
+Enabling or disabling the Syncfusion React Grid and its associated actions is essential for controlling access and interaction with the grid based on specific scenarios. This can help to improve the user experience and application functionality.
 
-To enable/disable the grid and its actions, follow the given steps:
-
-**Step 1**:
-
-Create CSS class with custom style to override the default style of Grid.
+You can enable or disable the grid by applying or removing corresponding CSS styles. In this example, ngClass directive is used to conditionally apply the CSS class `is-disabled` to the <div> containing the grid based on the value of **isDisabled**. You can define your custom CSS styles for the `is-disabled` class to visually enable or disable the grid and its actions as needed.
 
 ```css
-    .disablegrid {
-        pointer-events: none;
-        opacity: 0.4;
-    }
-    .wrapper {
-        cursor: not-allowed;
-    }
-
+.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
 ```
 
-**Step 2**:
-
-Add/Remove the CSS class to the Grid in the click event handler of Button.
-
-```ts
-
-  const btnClick = (): void => {
-    if (grid && grid.element.classList.contains('disablegrid')) {
-      grid.element.classList.remove('disablegrid');
-      (document.getElementById("GridParent") as HTMLElement).classList.remove('wrapper');
-    }
-    else if (grid) {
-      grid.element.classList.add('disablegrid');
-      (document.getElementById("GridParent") as HTMLElement).classList.add('wrapper');
-    }
-  }
-
-```
-
-In the below demo, the button click will enable/disable the Grid and its actions.
+Here's an example demonstrating how to achieve this:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -66,3 +39,5 @@ In the below demo, the button click will enable/disable the Grid and its actions
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/enable-disable-actions-cs1" %}
+
+> To enable or disable specific grid actions, such as editing, sorting, or filtering, please refer to this [section](https://ej2.syncfusion.com/react/documentation/grid/columns/columns#controlling-grid-actions) in the documentation.

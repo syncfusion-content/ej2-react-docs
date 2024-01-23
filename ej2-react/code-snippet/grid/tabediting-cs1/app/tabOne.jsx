@@ -31,7 +31,7 @@ export class TabOneComponent extends React.Component {
         const data = this.state;
         return (<div id='tab1'>
         <div className="form-row">
-            <div className="form-group col-md-6">
+            <div className="form-group">
                 <div className="e-float-input e-control-wrapper">
                     <input id="OrderID" name="OrderID" type="text" disabled={!data.isAdd} value={data.OrderID} onChange={this.onChange}/>
                     <span className="e-float-line"/>
@@ -40,7 +40,7 @@ export class TabOneComponent extends React.Component {
             </div>
         </div>
         <div className="form-row">
-            <div className="form-group col-md-6">
+            <div className="form-group">
                 <div className="e-float-input e-control-wrapper">
                     <input value={data.CustomerID} id="CustomerName" name="CustomerID" type="text" onChange={this.onChange}/>
                     <span className="e-float-line"/>
