@@ -1,6 +1,6 @@
 import { DataUtil } from '@syncfusion/ej2-data';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import { data as orderData } from './datasource';
 export class TabTwoComponent extends React.Component {
@@ -35,13 +35,13 @@ export class TabTwoComponent extends React.Component {
         const data = this.state;
         return (<div id='tab2'>
         <div className="form-row">
-            <div className="form-group col-md-6">
-                <NumericTextBoxComponent id="Freight" format='C2' value={data.Freight} placeholder="Freight" floatLabelType='Always'/>
+            <div className="form-group">
+                <DropDownListComponent id="ShipCountry" value={data.ShipCountry} dataSource={this.shipCountryDistinctData} fields={{ text: 'ShipCountry', value: 'ShipCountry' }} placeholder="Ship Country" popupHeight='300px' floatLabelType='Always'/>
             </div>
         </div>
         <div className="form-row">
-            <div className="form-group col-md-6">
-                <DropDownListComponent id="ShipCountry" value={data.ShipCountry} dataSource={this.shipCountryDistinctData} fields={{ text: 'ShipCountry', value: 'ShipCountry' }} placeholder="Ship Country" popupHeight='300px' floatLabelType='Always'/>
+            <div className="form-group">
+                <CheckBoxComponent name="Verified" id="Verified" label="Verified" checked={data.Verified}/>
             </div>
         </div>
         <div id='footer'>   
