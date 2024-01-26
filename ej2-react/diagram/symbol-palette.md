@@ -14,7 +14,7 @@ The **SymbolPalette** displays a collection of palettes. The palette shows a s
 
 ## Create symbol palette
 
-The [`width`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#height) properties of the symbol palette allows to define the size of the symbol palette.
+The [`width`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#height) properties of the symbol palette allows to define the size of the symbol palette.
 
 ```ts
 import {
@@ -36,11 +36,11 @@ root.render(<App />);
 ## Add palettes to SymbolPalette
 
 A palette allows to display a group of related symbols and it textually annotates the group with its header.
-A [`Palettes`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#palettes) can be added as a collection of symbol groups.
+A [`Palettes`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#palettes) can be added as a collection of symbol groups.
 
-The collection of predefined symbols can be added in palettes using the [`symbols`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#symbolinfo) property.
+The collection of predefined symbols can be added in palettes using the [`symbols`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolinfo) property.
 
-To initialize a palette, define a JSON object with the property [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/palette#id-string) that is unique ID is set to the palettes.
+To initialize a palette, define a JSON object with the property [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/palette/#id-string) that is unique ID is set to the palettes.
 
 The following code example illustrates how to define a palette and how its added to symbol palette.
 
@@ -101,7 +101,7 @@ In the following code example, the basic shapes palette is restricted from getti
 
 ## Stretch the symbols into the palette
 
-The [`fit`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolInfo#fit-boolean) property defines whether the symbol has to be fit inside the size, that is defined by the symbol palette. For example, when you resize the rectangle in the symbol, ratio of the rectangle size has to be maintained rather changing into square shape. The following code example illustrates how to customize the symbol size.
+The [`fit`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolInfo/#fit-boolean) property defines whether the symbol has to be fit inside the size, that is defined by the symbol palette. For example, when you resize the rectangle in the symbol, ratio of the rectangle size has to be maintained rather changing into square shape. The following code example illustrates how to customize the symbol size.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -116,13 +116,13 @@ The [`fit`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolInf
 
 ## Add/Remove symbols to palette at runtime
 
-* Symbols can be added to palette at runtime by using public method, [`addPaletteItem`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#addpaletteitem).
+* Symbols can be added to palette at runtime by using public method, [`addPaletteItem`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#addpaletteitem).
 
-* Symbols can be removed from palette at runtime by using public method, [`removePaletteItem`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#addpaletteitem).
+* Symbols can be removed from palette at runtime by using public method, [`removePaletteItem`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#addpaletteitem).
 
 ## Customize the size of symbols
 
-The size of the individual symbol can be customized. The [`symbolWidth`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#symbolwidth) and [`symbolHeight`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#symbolheight) properties of node enables you to define the size of the symbols. The following code example illustrates how to change the size of a symbol.
+The size of the individual symbol can be customized. The [`symbolWidth`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolwidth) and [`symbolHeight`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolheight) properties of node enables you to define the size of the symbols. The following code example illustrates how to change the size of a symbol.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -135,14 +135,14 @@ The size of the individual symbol can be customized. The [`symbolWidth`](https:/
 
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/es5size-cs1" %}
 
-The [`symbolMargin`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#symbolmargin) property is used to create the space around
+The [`symbolMargin`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolmargin) property is used to create the space around
 elements, outside of any defined borders.
 
 ## Symbol preview
 
-The symbol preview size of the palette items can be customized using [`symbolPreview`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#symbolpreview).
-The [`width`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#height) properties of SymbolPalette enables you to define the preview size to all the symbol palette items.
-The [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview#offset-PointModel) of the dragging helper relative to the mouse cursor.
+The symbol preview size of the palette items can be customized using [`symbolPreview`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolpreview).
+The [`width`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#height) properties of SymbolPalette enables you to define the preview size to all the symbol palette items.
+The [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview/#offset-PointModel) of the dragging helper relative to the mouse cursor.
 
 The following code example illustrates how to change the preview size of a palette item.
 
@@ -159,7 +159,7 @@ The following code example illustrates how to change the preview size of a palet
 
 ## Default settings
 
-While adding more number of symbols such as nodes and connectors to the palette, define the default settings for those objects through the [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getnodedefaults) and the [`getConnectorDefaults`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getconnectordefaults) properties of diagram allows to define the default settings for nodes and connectors.
+While adding more number of symbols such as nodes and connectors to the palette, define the default settings for those objects through the [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#getnodedefaults) and the [`getConnectorDefaults`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#getconnectordefaults) properties of diagram allows to define the default settings for nodes and connectors.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -240,7 +240,7 @@ Here, the code provided below demonstrates how to define tooltip content to symb
 
 Differentiate the tooltips between symbols in the symbol palette and dropped nodes by utilizing the dragEnter event. When a custom tooltip is defined for a symbol, it will be displayed for both the symbol and the dropped node in the diagram canvas. However, to provide distinct tooltips for symbols in the palette and dropped nodes, capture the dragEnter event and assign specific tooltips dynamically.  
 
-When a symbol is dragged from the symbol palette and enters the diagram canvas, the [`DragEnter`] [`IDragEnterEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragEnterEventArgs) event is triggered. Within this event, you can define a new tooltip for the dropped node. By assigning custom tooltip content to the Tooltip property of the node, you can provide a distinct tooltip that is specific to the dropped node.
+When a symbol is dragged from the symbol palette and enters the diagram canvas, the [`DragEnter`] [`IDragEnterEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragEnterEventArgs/) event is triggered. Within this event, you can define a new tooltip for the dropped node. By assigning custom tooltip content to the Tooltip property of the node, you can provide a distinct tooltip that is specific to the dropped node.
 
 The following image illustrates the differentiation of tooltips displayed in the Symbol Palette and the Diagram.
 
@@ -275,15 +275,15 @@ Palette interaction notifies the element enter, leave, and dragging of the symbo
 
 ## DragEnter
 
-[`DragEnter`] [`IDragEnterEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragEnterEventArgs) notifies, when the element enter into the diagram from symbol palette.
+[`DragEnter`] [`IDragEnterEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragEnterEventArgs/) notifies, when the element enter into the diagram from symbol palette.
 
 ## DragLeave
 
-[`DragLeave`] [`IDragLeaveEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragLeaveEventArgs) notifies, when the element leaves from the diagram.
+[`DragLeave`] [`IDragLeaveEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragLeaveEventArgs/) notifies, when the element leaves from the diagram.
 
 ## DragOver
 
-[`DragOver`] [`IDragOverEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragOverEventArgs) notifies, when an element drag over another diagram element.
+[`DragOver`] [`IDragOverEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragOverEventArgs/) notifies, when an element drag over another diagram element.
 
 >Note: The diagram provides support to cancel the drag and drop operation from the symbol palette to the diagram when the ESC key is pressed.
 
