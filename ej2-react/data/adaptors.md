@@ -83,7 +83,7 @@ The sample response object should be as follows,
 ```ts
 import { DataManager, Query, ReturnOption, ODataAdaptor } from '@syncfusion/ej2-data';
 
-const SERVICE_URI: string = 'https://services.syncfusion.com/react/production/api/Orders';
+const SERVICE_URI: string = 'https://services.odata.org/V3/Northwind/Northwind.svc/Orders/';
 
     new DataManager({
         adaptor: new ODataAdaptor,

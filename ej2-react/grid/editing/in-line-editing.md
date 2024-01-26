@@ -286,6 +286,31 @@ Here's an example of how to use the `recordDoubleClick` event to move the focus 
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs27" %}
 
+## Enable editing in single click
+
+Enabling single-click editing in the Syncfusion Grid's **Normal** editing mode is a valuable feature that allows you to make a row editable with just one click.This can be achieved by using the [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#startedit) and [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#endedit) methods.
+
+To implement this feature, you need to bind the `mouseup` event for the Grid and, within the event handler, call the `startEdit` and `endEdit` methods based on the clicked target element. This ensures that the editing mode is triggered when clicking on a specific element within the Grid.
+
+The following sample demonstrates how to enable editing in a single click using the `mouseup` event along with the `load` event:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/editing-cs32/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/editing-cs32/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs32/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs32/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/editing-cs32" %}
+
 ## Disable editing for a particular row
 
 In the Syncfusion Grid component, you can prevent editing of specific rows based on certain conditions. This feature is useful when you want to restrict editing for certain rows , such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.

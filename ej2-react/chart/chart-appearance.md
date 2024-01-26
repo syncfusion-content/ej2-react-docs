@@ -246,4 +246,4 @@ Chart can be given a subtitle using [`subTitle`](https://ej2.syncfusion.com/reac
 
 ## See also
 
-* [Customize the series points using patterns](./how-to/#customize-the-series-points-by-using-patterns)
+* [Customize the series points using patterns](./how-to#customize-the-series-points-by-using-patterns)

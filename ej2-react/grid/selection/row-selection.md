@@ -218,6 +218,29 @@ The following example, demonstrates how to select a range of rows within the Gri
 
  {% previewsample "page.domainurl/code-snippet/grid/selection-row-cs6" %}
 
+## Select grid rows based on certain condition
+
+You can programmatically select specific rows in the React Grid component based on a certain condition. This feature is particularly useful when you need to dynamically highlight or manipulate specific rows in the grid based on custom conditions. This functionality can be achieved using the [selectRows](https://ej2.syncfusion.com/react/documentation/api/grid/#selectrows) method in the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event of Grid.
+
+In the below demo, we have selected the grid rows only when **EmployeeID** column value greater than **3**.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/change-headertext-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/change-headertext-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/change-headertext-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/change-headertext-cs2/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/change-headertext-cs2" %}
+
 ## How to get selected row indexes 
 
 You can retrieve the indexes of the currently selected rows in the Grid component. This feature is particularly useful when you need to perform actions or operations specifically on the selected rows. 

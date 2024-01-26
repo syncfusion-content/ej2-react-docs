@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Image in React Rich text editor component
 
-Rich Text Editor allows to insert images from online sources as well as local computer where you want to insert the image in your content. For inserting the image to the Rich Text Editor, the following list of options have been provided in the [insertImageSettings](/rich-text-editor/api-imageSettingsModel.html).
+Rich Text Editor allows to insert images from online sources as well as local computer where you want to insert the image in your content. For inserting the image to the Rich Text Editor, the following list of options have been provided in the [insertImageSettings](/rich-text-editor/imageSettingsModel/).
 
 | **Options** | **Description** |
 | --- | --- |
@@ -27,7 +27,7 @@ Rich Text Editor allows to insert images from online sources as well as local co
 
 Through the ‘browse’ option, select the image from the local machine and insert into the Rich Text Editor content.
 
-If the path field is not specified in the [insertImageSettings](/rich-text-editor/api-imageSettingsModel.html), the image will be transferred into base 64 and blob url for the image will be created and the generated url will be set to the src property of img tag.
+If the path field is not specified in the [insertImageSettings](/rich-text-editor/imageSettingsModel/), the image will be transferred into base 64 and blob url for the image will be created and the generated url will be set to the src property of img tag.
 
 ```javascript
     <img src="blob:http://http.example.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" >
@@ -112,7 +112,7 @@ To insert an image from the online source like Google, Ping, etc., you should en
 
 ## Dimension
 
-Sets the default width and height of the image when it is inserted in the Rich Text Editor using [width](/rich-text-editor/api-imageSettingsModel.html#width) and [height](/rich-text-editor/api-imageSettingsModel.html#height)  of the insertImageSettings.
+Sets the default width and height of the image when it is inserted in the Rich Text Editor using [width](/rich-text-editor/imageSettingsModel/#width) and [height](/rich-text-editor/imageSettingsModel/#height)  of the insertImageSettings.
 Through the quick toolbar, change the width and height using `Change Size` option. Once you click, the Image Size dialog box will open as follows. In that, you can specify the width and height of the image in pixel.
 
 ![RTE Image dimension](images/image-size.png)
@@ -127,7 +127,7 @@ By clicking the Image Caption, the image will get wrapped in an image element wi
 
 ## Display position
 
-Sets the default display for an image when it is inserted in the Rich Text Editor using [display](/rich-text-editor/api-imageSettingsModel.html#display) field in [insertImageSettings](/rich-text-editor/api-imageSettingsModel.html). It has two possible options: 'inline' and 'block'.
+Sets the default display for an image when it is inserted in the Rich Text Editor using [display](/rich-text-editor/imageSettingsModel/#display) field in [insertImageSettings](/rich-text-editor/imageSettingsModel/). It has two possible options: 'inline' and 'block'.
 
 ```ts
 let defaultRTE: RichTextEditor = new RichTextEditor({

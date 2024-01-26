@@ -5,7 +5,7 @@ import * as React from 'react';
 function App() {
     const data = new DataManager({
         adaptor: new ODataAdaptor,
-        url: 'https://services.syncfusion.com/react/production/api/Orders'
+        url: 'https://services.odata.org/V3/Northwind/Northwind.svc/Orders/'
     });
     return <GridComponent dataSource={data} height={315}>
         <ColumnsDirective>

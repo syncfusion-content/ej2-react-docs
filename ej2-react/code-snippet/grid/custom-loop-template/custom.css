@@ -1,0 +1,16 @@
+.e-grid .customcss {
+  background-color: #ecedee;
+}
+
+.rating .star:before {
+  content: '★';
+}
+
+.rating .star {
+  font-size: 132%;
+  color: lightgrey;
+}
+
+.rating .star.checked {
+  color: #ffa600;
+}

@@ -128,5 +128,5 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSet
 
 ## See also
 
-* [Format the tooltip value](./how-to/#format-the-tooltip-value)
-* [Create a table in tooltip](./how-to/#create-a-table-in-tooltip)
+* [Format the tooltip value](./how-to/tool-tip-format)
+* [Create a table in tooltip](./how-to/tool-tip-table)
