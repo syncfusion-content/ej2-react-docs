@@ -21,7 +21,7 @@ The Rich Text Editor allows you to configure the different types of toolbar usin
 
 ## Expand Toolbar
 
-The default mode of [toolbarSettings.type](/rich-text-editor/api-toolbarSettings.html#type) is Expand to hide the overflowing items in the next row. By clicking the expand arrow, view the overflowing toolbar items.
+The default mode of [toolbarSettings.type](/rich-text-editor/toolbarSettings/#type) is Expand to hide the overflowing items in the next row. By clicking the expand arrow, view the overflowing toolbar items.
 
 `[Class-component]`
 
@@ -51,7 +51,7 @@ The default mode of [toolbarSettings.type](/rich-text-editor/api-toolbarSettings
 
 ## MultiRow toolbar
 
-Set the [`toolbarSettings.type`](/rich-text-editor/api-toolbarSettings.html#type) as MultiRow to hide the overflowing items in the next row. All toolbar items are visible.
+Set the [`toolbarSettings.type`](/rich-text-editor/toolbarSettings/#type) as MultiRow to hide the overflowing items in the next row. All toolbar items are visible.
 
 `[Class-component]`
 
@@ -83,7 +83,7 @@ Set the [`toolbarSettings.type`](/rich-text-editor/api-toolbarSettings.html#type
 
 By default, the toolbar is floating at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using [floatingToolbarOffset](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#floatingtoolbaroffset).
 
-Enable or disable the floating toolbar using [enableFloating](/rich-text-editor/api-toolbarSettings.html#enablefloating) of the toolbarSetting property.
+Enable or disable the floating toolbar using [enableFloating](/rich-text-editor/toolbarSettings/#enablefloating) of the toolbarSetting property.
 
 `[Class-component]`
 
@@ -189,11 +189,11 @@ The tools order can be customized as our application requirement. If you are not
 
 ## Custom tool
 
-The Rich Text Editor allows you to configure your own commands to its toolbar using the [toolbarSettings](/rich-text-editor/api-toolbarSettings.html) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind the action to the command by getting its instance.
+The Rich Text Editor allows you to configure your own commands to its toolbar using the [toolbarSettings](/rich-text-editor/toolbarSettings/) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind the action to the command by getting its instance.
 
 This sample shows how to add your own commands to the toolbar of the Rich Text Editor. The **Ω** command is added to insert special characters in the editor. By clicking the **Ω** command, it will show the special characters list, and then choose the character to be inserted in the editor.
 
-The following code snippet illustrates custom tool with tooltip text which will be included in [items](/rich-text-editor/api-toolbarSettings.html#items) field of the toolbarSettings property.
+The following code snippet illustrates custom tool with tooltip text which will be included in [items](/rich-text-editor/toolbarSettings/#items) field of the toolbarSettings property.
 
 In the following sample, once Rich Text Editor control is [created](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#created), the concern event will be created; the Dialog component can be rendered and target as RTE content.
 
@@ -246,7 +246,7 @@ Quick commands are opened as context-menu on clicking the corresponding element.
 | Text | null <br> (Any toolbar [items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/toolbar#toolbar-items) in the Rich Text Editor can be configured here). |
 | Table | 'TableHeader', 'TableRows', 'TableColumns', 'BackgroundColor', 'TableRemove', 'Alignments', 'TableCellVerticalAlign' and 'Styles' |
 
-Custom tool can be added to the corresponding quick toolbar, using the [quickToolbarSettings](/rich-text-editor/api-quickToolbarSettings.html)  property.
+Custom tool can be added to the corresponding quick toolbar, using the [quickToolbarSettings](/rich-text-editor/quickToolbarSettings/)  property.
 
 The following sample demonstrates the option to insert the image to the Rich Text Editor content as well as option to rotate the image through the quick toolbar. The image rotation functionalities have been achieved through the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarclick) event.
 
