@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React MultiSelect Component | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Essential React MultiSelect component, it's elements and more details.
+title: Getting started with React Multi select component | Syncfusion
+description:  Checkout and learn about Getting started with React Multi select component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React MultiSelect Component
+# Getting Started
 
 This section explains how to create a simple **MultiSelect** component and configure its available functionalities in React.
 
