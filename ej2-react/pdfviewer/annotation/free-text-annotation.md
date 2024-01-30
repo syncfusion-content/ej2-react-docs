@@ -49,6 +49,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -59,7 +60,6 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 
 {% endraw %}
 {% endhighlight %}
@@ -182,6 +182,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         freeTextSettings={{fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}}
         style={{ 'height': '640px' }}>
 
@@ -199,7 +200,6 @@ root.render(<App />);
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
-
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -238,7 +238,6 @@ You can also enable the autofit support for free text annotation by using the en
 {% highlight js tabtitle="Standalone" %}
 {% raw %} 
 
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -251,6 +250,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         freeTextSettings={{enableAutoFit: true}}
         style={{ 'height': '640px' }}>
 
@@ -267,7 +267,6 @@ root.render(<App />);
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
-
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';

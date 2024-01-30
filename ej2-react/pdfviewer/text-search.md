@@ -45,7 +45,6 @@ root.render(<App />);
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
 
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';

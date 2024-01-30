@@ -44,6 +44,7 @@ function App() {
         id="container"
         ref={(scope) => { pdfviewer = scope; }}
         documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         enableFormDesignerToolbar={true}
         style={{ 'height': '640px' }}>
 
@@ -160,6 +161,7 @@ function App() {
       id="container"
       ref={(scope) => { pdfviewer = scope; }}
       documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
       style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

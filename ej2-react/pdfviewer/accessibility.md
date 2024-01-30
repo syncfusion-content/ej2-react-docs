@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Accessibility in React Pdfviewer component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React PDF Viewer component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+control: PDF Viewer 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,116 +10,158 @@ domainurl: ##DomainURL##
 
 # Accessibility in Syncfusion React PDF Viewer components
 
-Accessibility in PDF Viewer component refers to the practice of designing and building user interface elements in a way that makes them accessible to users with disabilities. This can include a variety of things, such as making sure that text is high-contrast and easy to read, providing alternative text for images, and designing controls and interactions that can be used with a keyboard or assistive technology.
+The PDF Viewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-# Accessibility Criteria Description
+The accessibility compliance for the PDF Viewer component is outlined below.
 
-## WCAG 2.2 Support
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
-[WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) - The Web Content Accessibility Guidelines (WCAG) provide guidelines developed by the World Wide Web Consortium (W3C) to ensure web content is accessible to people with disabilities. `WCAG` establishes a framework of accessibility principles and their associated success criteria. The level of accessibility conformance achieved by a web application is determined by the extent to which it meets these success criteria, categorized into three levels: A, AA, and AAA.
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
-| **Criterion Type** | **Description** |
-|---|---|
-| Applicable & Supports    | The success criterion is applicable to the component, but our component meets the requirement.|
-| Applicable & Unsupported  | The success criterion is applicable to the component, but our component fails to meet the requirement.|
-| Not Applicable           | The success criterion is not suitable for the component.  |
-| Fully supported          | All applicable success criteria are supported.             |
-| Partially supported      | Any of the applicable success criteria is not supported.  |
-| Not supported            | None of the applicable success criteria are supported.    |
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
-## Section 508 Support
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-[Section 508](https://www.section508.gov/) - It is a set of guidelines for making electronic and information technology (EIT) accessible to people with disabilities. These standards apply to federal agencies in the United States, and they are based on the Web Content Accessibility Guidelines (WCAG).
+## WAI-ARIA attributes
 
-- WCAG stands for the Web Content Accessibility Guidelines, which are a set of standards authored by the Web Accessibility Initiative (WAI) under the W3C.
-- There are currently three versions of WCAG (1.0, 2.0, 2.1, 2.2) and three conformance levels (A, AA, AAA).
-- Section 508 compliance requires conformance with WCAG 2.0 AA.
-- Reference: [Section 508 Compliance Requirements](https://krisrivenburgh.medium.com/section-508-compliance-website-accessibility-requirements-caf63703cdb8)
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript,and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component
 
-The compatibility is denoted as follows
+| Attributes | Purpose |
+| --- | --- |
+| `aria-disabled`| Indicates whether the PDF Viewer component is in a disabled state or not.|
+| `aria-expanded`| Indicates whether the suggestion list has expanded or not. |
+| `aria-readonly` | Indicates the readonly state of the PDF Viewer element. |
+| `aria-haspopup` | Indicates whether the PDF Viewer input element has a suggestion list or not. |
+| `aria-label` | Indicates the breadcrumb item text. |
+| `aria-labelledby` | Provides a label for the PDF Viewer. Typically, the "aria-labelledby" attribute will contain the id of the element used as the PDF Viewer's title. |
+| `aria-describedby` | This attribute points to the PDF Viewer element describing the one it's set on. |
+| `aria-orientation` | Indicates whether the PDF Viewer element is oriented horizontally or vertically. |
+| `aria-valuetext` | Returns the current text of the PDF Viewer. |
+| `aria-valuemax` | Indicates the Maximum value of the PDF Viewer. |
+| `aria-valuemin` | Indicates the Minimum value of the PDF Viewer. |
+| `aria-valuenow` | Indicates the current value of the PDF Viewer. |
+| `aria-controls` | Attribute is set to the button and it points to the corresponding content. |
 
-| **Criterion Type** | **Description** |
-|---|---|
-|Fully supported|If a component's WCAG 2.0 conformance level is AA or AAA.|
-|Partially supported|  If a component's WCAG 2.0 conformance level is A. |
-|Not supported| If a component's WCAG 2.0 conformance does not meet level A.|
+## Keyboard interaction
 
+The PDF Viewer component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Message component.
 
-## Screen Reader Support
+| **Press (Windows)** |**Press (Macintosh)** | **To do this** |
+| --- | --- | --- |
+|||**Shortcuts for page navigation**|
+| <kbd>Home</kbd> | <kbd>Function + Left arrow</kbd> |Navigate to the first page |
+| <kbd>End</kbd> |<kbd>Function + Right arrow</kbd> |Navigate to the last page |
+|<kbd>Up Arrow</kbd> |<kbd>Up Arrow</kbd> |Navigate to the previous page|
+| <kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Navigate to the next page |
+|||**Shortcuts for Zooming**|
+|<kbd>CONTROL + =</kbd> |<kbd>COMMAND + =</kbd> | Perform zoom-in operation |
+| <kbd>CONTROL + -</kbd> | <kbd>COMMAND + -</kbd> | Perform zoom-out operation |
+|<kbd>CONTROL + 0</kbd> |<kbd>COMMAND + 0</kbd> | Retain the zoom level to 1 |
+|||**Shortcut for Text Search**|
+| <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> |Open the search toolbar|
+|||**Shortcut for Text Selection**|
+|<kbd>CONTROL + C</kbd> |<kbd>CONTROL + C</kbd> | Copy the selected text or annotation or form field |
+| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected text or annotation of the form field|
+|<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Paste the selected text or annotation or form field|
+|||**Shortcuts for the general operation**|
+| <kbd>CONTROL + Z</kbd> | <kbd>CONTROL + Z</kbd> |Undo the action|
+|<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Redo the action|
+| <kbd>CONTROL + P</kbd> | <kbd>CONTROL + P</kbd> |Print the document|
+|<kbd>Delete</kbd> |<kbd>Delete</kbd> |Delete the annotations and form fields|
 
-A screen reader allows people who are blind or visually impaired to use a computer by reading aloud the text that is displayed on the screen. Syncfusion React PDF Viewer components followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/) standards to work properly in the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
 
-## Right-To-Left Support
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import {PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+       ThumbnailView, Print, TextSelection, Annotation, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
 
-Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc. Syncfusion React PDF Viewer components support the Right-to-Left feature. Refer to the [Right-to-Left documentation](https://ej2.syncfusion.com/react/documentation/common/right-to-left) to learn more about this support.
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+        <PdfViewerComponent
 
-The compatibility is denoted as follows
+          ref={(scope) => { pdfviewer = scope; }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+          style={{ 'height': '640px' }}>
 
-| **Criterion Type** | **Description** |
-|---|---|
-|Fully supported| When a component is rendered properly in RTL.|
-|Partially supported| When some features of a component are not rendered properly in RTL.|
-|Not supported| When a component is not rendered properly in RTL.|
+                <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                                    ThumbnailView, Print,TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
-## Color Contrast
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
 
-Syncfusion React PDF Viewer components come equipped with [predefined themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) that guarantee the presence of satisfactory color contrast, benefiting individuals with visual impairments.
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import {PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+       ThumbnailView, Print, TextSelection, Annotation, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
 
-The compatibility is denoted as follows
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+        <PdfViewerComponent
 
-| **Criterion Type** | **Description** |
-|---|---|
-|Fully supported| When no color contrast error is reported on the Accessibility Insights extension for Chrome on the Material 3 theme.|
-|Partially supported|When a few color contrast errors are reported. |
-|Not supported|When a color contrast error occurs on the entire component.|
+          ref={(scope) => { pdfviewer = scope; }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          style={{ 'height': '640px' }}>
 
-## Mobile Device Support
+                <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                                    ThumbnailView, Print,TextSelection, TextSearch]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
-Syncfusion React PDF Viewer components are more user-friendly and accessible to individuals using mobile devices, including those with disabilities. These are designed to be responsive, adaptable to various screen sizes and orientations, and touch-friendly.
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-The compatibility is denoted as follows
+## Ensuring accessibility
 
-| **Criterion Type** | **Description** |
-|---|---|
-|Fully supported|When a component is working properly on mobile devices. |
-|Partially supported|When some of the features are not working properly on mobile devices. |
-|Not supported|When a component is not working properly on mobile devices. |
+The PDF Viewer component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-- Form designer not supported in mobile.
+The accessibility compliance of the PDF Viewer component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/pdf-viewer.html) in a new window to evaluate the accessibility of the PDF Viewer component with accessibility tools.
 
-## Keyboard navigation support
-
-Syncfusion React PDF Viewer components support keyboard navigation, allowing users who rely on alternate methods to effortlessly navigate and interact with the component.
-
-The compatibility is denoted as follows
-
-| **Criterion Type** | **Description** |
-|---|---|
-|Partially supported|When a component is working properly using keyboard interaction. |
-|Not supported|When a component is not working properly using keyboard interaction.|
-
-## Accessibility Checker Validation
-
-Ensuring the accessibility of Syncfusion React PDF Viewer components is crucial for making the product inclusive and user-friendly for individuals with disabilities. This process involves various types of accessibility testing.
-
-This testing is conducted on Jenkins CI.
-
-| **Criterion Type** | **Description** |
-|---|---|
-|Fully supported|When the percentage of accessibility is above 90%. |
-|Partially supported|When the percentage is greater than 85% (94%+). |
-|Not supported|When the percentage is less than 85%.|
-
-## Axe-core Accessibility Validation
-
-This testing is conducted on Jenkins CI. 
-
-| **Criterion Type** | **Description** |
-|---|---|
-|Fully supported|When no violation is reported.|
-|Partially supported|When any of the violations are ignored. |
-|Not supported|When a violation is not resolved. |
+{% previewsample "https://ej2.syncfusion.com/accessibility/pdf-viewer.html" %}
 
 ## See also
 
-* [Keyboard accessibility](./keyboard-accessibility)
+* [Accessibility in Syncfusion React components](../common/accessibility)

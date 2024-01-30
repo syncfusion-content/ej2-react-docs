@@ -68,6 +68,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -83,7 +84,6 @@ root.render(<App />);
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
-
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -162,6 +162,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         stampSettings={{opacity: 0.3, author: 'Guest User'}}
         style={{ 'height': '640px' }}>
 
@@ -178,7 +179,6 @@ root.render(<App />);
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 {% raw %} 
-
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';

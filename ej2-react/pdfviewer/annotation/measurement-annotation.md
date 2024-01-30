@@ -56,6 +56,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container" 
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -161,6 +162,7 @@ export function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         distanceSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
         perimeterSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
         areaSettings={{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'}}
@@ -252,6 +254,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         measurementSettings={{scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'}}
         style={{ 'height': '640px' }}>
 

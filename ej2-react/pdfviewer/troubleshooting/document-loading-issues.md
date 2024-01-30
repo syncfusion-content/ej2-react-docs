@@ -14,6 +14,7 @@ If you're experiencing problems with your document not rendering in the viewer, 
 
 1. **Check for `viewer.dataBind()` Requirement**: Ensure that you have called `viewer.dataBind()` as required in version 23.1 or newer. This explicit call is essential for initializing data binding and document rendering correctly. It is must to call the dataBind() method before load.
 
+{% raw %} 
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -48,6 +49,7 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
 ```
+{% endraw %}
 
 2. **Verify Document Source**: Confirm that the document source or URL you're trying to display is valid and accessible. Incorrect URLs or document paths can lead to loading issues.
 
