@@ -46,7 +46,7 @@ The ComboBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/p
 
 | **Properties** | **Functionalities** |
 | --- | --- |
-| aria-haspopup | Indicates whether the ComboBox input element has a popup list or not. |
+| <kbd>aria-haspopup</kbd> | Indicates whether the ComboBox input element has a popup list or not. |
 | aria-expanded | Indicates whether the popup list has expanded or not. |
 | aria-selected | Indicates the selected option. |
 | aria-readonly | Indicates the readonly state of the ComboBox element. |

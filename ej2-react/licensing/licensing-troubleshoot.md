@@ -72,6 +72,10 @@ Refer to the [KB](https://www.syncfusion.com/kb/11532/definition-of-terms-for-sy
 
 The application registered license key is set priority and used for license validation.
 
+## Reactivating license once after updating the package version while using npx
+
+It is essential to reactivate the license key when upgrading the Syncfusion packages while the license has been registered through the `npx` command.
+
 ## Potential causes of licensing errors in applications.
 
  Below are the possible reasons that could lead to a license error within the application:
@@ -93,6 +97,8 @@ One of the possible cases on experiencing license issues in your application is 
 * It is recommended to update all Syncfusion components in the package.json file to the `same major version`. This ensures consistency and compatibility across the project. For instance, if the updated version being utilized is `v20.4.XX`, it is advised to upgrade all components to the `same version`.
 
 * Run `npm install` Command.
+
+>Note: If you are using React with Next JS, ensure to remove the `.cache` created inside the `.next` folder.
 
 ### Invalid license issue because of Syncfusion packages referred with multiple version
 

@@ -2,7 +2,7 @@ import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 function App() {
-    let model = {
+    model = {
         dataSource: new DataManager({
             url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
             adaptor: new ODataV4Adaptor

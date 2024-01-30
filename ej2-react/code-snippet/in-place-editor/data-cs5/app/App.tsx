@@ -6,7 +6,7 @@ import { InPlaceEditorComponent } from '@syncfusion/ej2-react-inplace-editor';
 import * as React from 'react';
 
 class App extends React.Component {
-  public model: any = {
+  public model = {
     dataSource: new DataManager({
         url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
         adaptor: new ODataV4Adaptor
@@ -14,7 +14,7 @@ class App extends React.Component {
     fields: { text: 'ContactName', value: 'CustomerID' },
     query : new Query().select(['ContactName', 'CustomerID']).take(6),
     placeholder: 'Select a customer'
-  };
+};
 
   public render() {
     return (

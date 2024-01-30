@@ -70,7 +70,7 @@ To use row drag and drop feature, inject the `RowDD` and `Edit` module in Gantt.
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/gantt/rows-cs12/index.html %}
 {% endhighlight %}
-{% endtabs %}
+{% endtabs %} 
 
 {% previewsample "page.domainurl/code-snippet/gantt/rows-cs12" %}
 

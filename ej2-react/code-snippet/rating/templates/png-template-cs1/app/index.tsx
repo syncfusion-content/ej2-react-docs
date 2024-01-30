@@ -20,7 +20,8 @@ function App() {
   
     return (
         <div className='wrap'>
-            <RatingComponent id='rating' value={4} emptyTemplate={emptyTemplate} fullTemplate={fullTemplate} ></RatingComponent>
+            <RatingComponent id='rating' value={4} emptyTemplate={emptyTemplate} fullTemplate={fullTemplate} >
+            </RatingComponent>
         </div>
     );
 }
