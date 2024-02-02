@@ -72,7 +72,7 @@ Column virtualization feature in the Syncfusion Grid that allows you to optimize
 
 To enable column virtualization, you need to set the [enableColumnVirtualization](https://ej2.syncfusion.com/react/documentation/api/grid/#enablecolumnvirtualization) property of the Grid to **true**. This configuration instructs the Grid to only render the columns that are currently visible in the viewport. 
 
-The following example enable/disble using `enableColumnVirtualization` property based on  a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event:
+The following example enable/disble using `enableColumnVirtualization` property based on  a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -233,7 +233,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
 
 ### Solution 2: Using RowHeight property
 
-You can reduce the [row height](https://ej2.syncfusion.com/react/documentation/grid/row/row-height/) using the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid/#rowheight) property of the Grid. It will reduce the overall height to accommodate more rows. But this approach optimizes the limitation, but if the height limit is reached after reducing row height also, you have to opt for the previous solution or use paging.
+You can reduce the [row height](https://ej2.syncfusion.com/react/documentation/grid/row/row-height) using the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid/#rowheight) property of the Grid. It will reduce the overall height to accommodate more rows. But this approach optimizes the limitation, but if the height limit is reached after reducing row height also, you have to opt for the previous solution or use paging.
 
 In the following image, you can see how many records will be scrollable when setting rowHeight to "36px" and "30px".
 
@@ -241,4 +241,4 @@ In the following image, you can see how many records will be scrollable when set
 
 ### Solution 3: Using paging instead of virtual scrolling
 
-Similar to virtual scrolling, the [paging](https://ej2.syncfusion.com/react/documentation/grid/paging/) feature also loads the data in an on-demand concept. Pagination is also compatible with all the other features(Grouping, Editing, etc.) in Grid. So, use the paging feature instead of virtual scrolling to view a large number of records in the Grid without any kind of performance degradation or browser height limitation.
+Similar to virtual scrolling, the [paging](https://ej2.syncfusion.com/react/documentation/grid/paging) feature also loads the data in an on-demand concept. Pagination is also compatible with all the other features(Grouping, Editing, etc.) in Grid. So, use the paging feature instead of virtual scrolling to view a large number of records in the Grid without any kind of performance degradation or browser height limitation.
