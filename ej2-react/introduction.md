@@ -90,6 +90,7 @@ letter-spacing: 0.7px;
         <div><p class="controlcategory">DATA VISUALIZATION</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/accumulation-chart/getting-started">Accumulation Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/chart/getting-started/">Charts</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/3d-chart/getting-started">3D Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/stock-chart/getting-started/">Stock Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/circular-gauge/getting-started/">Circular Gauge</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/linear-gauge/getting-started/">Linear Gauge</a></div>
@@ -159,6 +160,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/toolbar/getting-started/">Toolbar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treeview/getting-started/">TreeView</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/file-manager/getting-started/">File Manager</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/stepper/getting-started">Stepper</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/breadcrumb/getting-started/">Breadcrumb</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/pager/getting-started/">Pager</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/appbar/getting-started/">AppBar</a></div>
