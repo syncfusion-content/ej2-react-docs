@@ -14,9 +14,13 @@ export default class App extends React.Component {
         }
     }
     toolbarUpdating(args) {
-        if (args.toolbarType === 'shapes') {
-            args.toolbarItems = ['strokeColor'];
-        }
+        if (args.toolbarType === 'pen') {
+            args.toolbarItems.forEach(item => {
+                if (item.align === 'Center' && (item.tooltipText === 'Stroke Width' || item.tooltipText === 'Remove' || item.type === 'Separator')) {
+                    item.visible = false;
+                }
+            });
+        }    
     }
     render() {
         return (<div className='e-img-editor-sample'>
