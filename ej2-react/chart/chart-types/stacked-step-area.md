@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 ## Stacked step area
 
-To render the Stacked step area series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#type) as a `StackedStepArea` and inject the `StackedStepAreaSeries` module using the `Chart.Inject(StackedStepAreaSeries)` method.
+To render the Stacked step area series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#type) as a `StackingStepArea` and inject the `StackingStepAreaSeries` module using the `Chart.Inject(StackingStepAreaSeries)` method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
