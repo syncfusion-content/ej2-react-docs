@@ -112,6 +112,26 @@ The [target](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDro
 
 {% previewsample "page.domainurl/code-snippet/ribbon/DropDownTarget" %}
 
+#### Customize Dropdown button item
+
+You can customize the dropdown button item by specifying a custom cssClass using the [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeitemrender) event.
+
+The following sample showcases how to customize a specific dropdown item.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/ribbon/DropDownCustomItem/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/ribbon/DropDownCustomItem/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/ribbon/DropDownCustomItem/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ribbon/DropDownCustomItem" %}
+
 ### Split button items
 
 You can render the built-in splitButton Ribbon item by setting the [type](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#type) property to `SplitButton`. You can also customize the splitButton item through [RibbonSplitButtonSettingsModel](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettingsModel/), which provides options such as `iconCss`, `items`, `target` and more.
