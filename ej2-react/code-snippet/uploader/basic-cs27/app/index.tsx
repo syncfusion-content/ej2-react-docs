@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import {FileInfo, SelectedEventArgs, UploaderComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -29,10 +25,9 @@ export default class App extends React.Component<{}, {}> {
 }
 public render(): JSX.Element{
     return (
-        <UploaderComponent asyncSettings = {this.path} selected={onFileSelected = onFileSelected.bind(this)} ref = {upload => {this.uploadObj = upload !}} />);
+
+        <UploaderComponent asyncSettings = {this.path} selected={this.onFileSelected = this.onFileSelected.bind(this)} ref = {upload => {this.uploadObj = upload !}} />);
+
   }
 }
 ReactDOM.render(<App />, document.getElementById('fileupload'));
-
-
-{% endraw %}

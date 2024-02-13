@@ -24,7 +24,9 @@ export default class App extends React.Component {
         args.isModified = true;
     }
     render() {
-        return (<UploaderComponent asyncSettings={this.path} selected={onFileSelected = onFileSelected.bind(this)} ref={upload => { this.uploadObj = upload; }}/>);
+
+        return (<UploaderComponent asyncSettings={this.path} selected={this.onFileSelected = this.onFileSelected.bind(this)} ref={upload => { this.uploadObj = upload; }}/>);
+
     }
 }
 ReactDOM.render(<App />, document.getElementById('fileupload'));
