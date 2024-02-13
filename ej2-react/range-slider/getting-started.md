@@ -3,7 +3,7 @@ layout: post
 title: Getting started with React Range slider component | Syncfusion
 description:  Checkout and learn about Getting started with React Range slider component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
-platform: ej2-react
+platform: ej2
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -124,7 +124,6 @@ npm start
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/getting-started-cs5/app/index.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs5" %}
@@ -148,11 +147,11 @@ contains two handles that is used to select a range of values and a shadow is co
 {% include code-snippet/slider/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/slider/getting-started-cs6/app/index.tsx %}
+{% include code-snippet/slider/getting-started/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs6" %}
+ {% previewsample "page.domainurl/slider/getting-started-cs6" %}
 
 ## Customization
 
