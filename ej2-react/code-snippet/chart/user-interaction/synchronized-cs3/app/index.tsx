@@ -4,18 +4,18 @@
 import * as ReactDOM from "react-dom";
 import { Chart, SplineAreaSeries, LineSeries, DateTime, Zoom, IZoomCompleteEventArgs, Selection, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
 import { synchronizedData } from 'datasource.ts';
-import React, { useEffect } from 'react';
+import * as React from "react";
 import { Browser } from '@syncfusion/ej2-base';
 
 
 function App() {
 
-    let chart1: ChartComponent;
-    let chart2: ChartComponent;
+    let chart1 = React.useRef<ChartComponent>(null);
+    let chart2 = React.useRef<ChartComponent>(null);
 
     let charts: ChartComponent[] = [];
-    useEffect(() => {
-        charts = [chart1, chart2];
+    React.useEffect(() => {
+        charts = [chart1.current, chart2.current];
     }, []);
     let zoomFactor: number = 0;
     let zoomPosition: number = 0;
@@ -44,7 +44,7 @@ function App() {
             <div className="col">
                 <ChartComponent
                     id="container1"
-                    ref={chart => chart1 = chart}
+                    ref={chart1}
                     primaryXAxis={{
                         minimum: new Date(2023, 1, 18),
                         maximum: new Date(2023, 7, 18),
@@ -87,7 +87,7 @@ function App() {
             <div className="col">
                 <ChartComponent
                     id="container2"
-                    ref={chart => chart2 = chart}
+                    ref={chart2}
                     primaryXAxis={{
                         minimum: new Date(2023, 1, 18),
                         maximum: new Date(2023, 7, 18),
