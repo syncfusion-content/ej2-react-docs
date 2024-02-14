@@ -74,7 +74,7 @@ It is possible to validate the required fields of the editor window from client-
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs10" %}
 
-> Applicable validation rules can be referred from [form validation](http://ej2.syncfusion.com/documentation/form-validator/#validation-rules) documentation.
+> Applicable validation rules can be referred from [form validation](https://ej2.syncfusion.com/documentation/form-validator/validation-rules) documentation.
 
 ### Add additional fields to the default editor
 
