@@ -1,12 +1,9 @@
-
-
-
 import React from 'react';
 import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import '././index.css';
 
-function App() {
+function App(this: any) {
   let listviewInstance: ListViewComponent | null = null;
   let data: { text: string; positionClass: string; templateHeight?: string }[] = [{
     text: "Hi Guys, Good morning! \uD83D\uDE0A, I'm very delighted to share with you the news that our team is going to launch a new mobile application",
@@ -84,5 +81,3 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));
-
-
