@@ -711,6 +711,6 @@ In this example, we have a Grid that displays data with three columns: **Order I
 
  {% previewsample "page.domainurl/code-snippet/grid/column-cs30" %}
 
-## See Also
+## See also
 
 * [Group Column by Format](../grouping#group-by-format)

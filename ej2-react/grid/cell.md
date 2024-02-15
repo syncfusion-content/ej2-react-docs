@@ -392,6 +392,6 @@ The following example demonstrates how to set the [gridLines](https://ej2.syncfu
 
 > By default, the grid renders with **Default** mode.
 
-## See Also
+## See also
 
 * [How to customize the header cell styles using methods](./columns/column-headers#using-method)

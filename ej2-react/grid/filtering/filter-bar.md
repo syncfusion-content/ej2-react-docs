@@ -198,3 +198,4 @@ To utilize this feature, you can define a custom template for the filter bar by 
 ## See also
 
 * [How to perform filter by using Wildcard and LIKE operator filter](./filtering/#wildcard-and-like-operator-filter)
+* [How to change loading indicator in React Grid](../data-binding/data-binding#loading-animation)

@@ -395,7 +395,8 @@ In the given example, the filtering is prevented for **ShipCity** column during 
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs16" %}
 
-## See Also
+## See also
 
 * [Customizing Filter Dialog by using an additional parameter](../how-to/add-params-for-filtering)
 * [Hide sorting options on Excel filter dialog](../how-to/hide-sorting-in-excel-filter)
+* [How to change loading indicator in React Grid](../data-binding/data-binding#loading-animation)
