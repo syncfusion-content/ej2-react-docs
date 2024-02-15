@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provide custom data source and enabling filtering to drop down list in React Treegrid component | Syncfusion
-description: Learn here all about Provide custom data source and enabling filtering to drop down list in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Provide custom data source and enabling filtering to drop down list in Syncfusion React TreeGrid component and more.
 control: Provide custom data source and enabling filtering to drop down list 
 platform: ej2-react
 documentation: ug
