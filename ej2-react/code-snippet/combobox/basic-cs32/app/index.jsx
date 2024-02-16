@@ -30,7 +30,7 @@ export default class App extends React.Component {
     render() {
         return (
         // specifies the tag for render the ComboBox component
-        <ComboBoxComponent id="comboelement" fields={fields} locale="fr-BE" query={query} dataSource={customerData} placeholder="Sélectionnez un client"/>);
+        <ComboBoxComponent id="comboelement" fields={this.fields} locale="fr-BE" query={this.query} dataSource={this.customerData} placeholder="Sélectionnez un client"/>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('sample'));
