@@ -333,7 +333,7 @@ In the following example, the textbox is rendered in the **Freight** column usin
 
 > * If a template column has a corresponding `field` property defined, the value entered in the template column's input field will be stored in the associated edit column of the row's data object.
 
-## See Also
+## See also
 
 * [Cascading DropDownList with Grid Editing](../how-to/cascading-drop-down-list-with-grid-editing)
 * [Tab Inside the Dialog Editing](../how-to/using-tab-inside-the-dialog-editing)

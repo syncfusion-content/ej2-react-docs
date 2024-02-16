@@ -433,7 +433,7 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 
  {% previewsample "page.domainurl/code-snippet/grid/locale-cs2" %}
 
-## See Also
+## See also
 
 * [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization)
 * [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization/)

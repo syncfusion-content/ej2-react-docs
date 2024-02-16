@@ -88,6 +88,6 @@ In some cases, you may want to disable the page-wise aggregates for grouping in 
 
  {% previewsample "page.domainurl/code-snippet/grid/aggregate-group-cs3" %}
 
-## See Also
+## See also
 
 * [How to format aggregate value in React grid](footer-aggregate.md#format-the-aggregate-value)

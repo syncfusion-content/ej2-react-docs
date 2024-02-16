@@ -417,3 +417,7 @@ The following example demonstrates how the [actionBegin](https://ej2.syncfusion.
  {% previewsample "page.domainurl/code-snippet/grid/sort-cs4" %}
 
 > [args.requestType](https://ej2.syncfusion.com/react/documentation/api/grid/sortEventArgs/#requesttype) refers to the current action being performed. For example in sorting, the `args.requestType` value is **sorting**.
+
+## See also
+
+* [How to change loading indicator in React Grid](../data-binding/data-binding#loading-animation)

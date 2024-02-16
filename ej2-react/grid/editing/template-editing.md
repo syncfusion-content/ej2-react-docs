@@ -10,9 +10,17 @@ domainurl: ##DomainURL##
 
 # Template editing in React Grid component
 
-## Inline or Dialog template forms
+The Syncfusion React Grid component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. This feature allows you to use React templates to define the structure and content of the cells within the grid.
 
-[Forms](https://legacy.reactjs.org/docs/forms.html) is a approach to create and manipulate the form controls. You can use form to add and update grid records. To use forms for editing operation, you can take leverage of the template support of dialog or inline edit mode. Setting the [`editSettings.mode`](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as **Normal/Dialog** and **editSettingsTemplate** as template variable to define the grid editors.
+## Inline or dialog template editing 
+
+The Syncfusion Grid provides support for inline and dialog template editing, allowing you to customize the editing using [Forms](https://legacy.reactjs.org/docs/forms.html). These forms can be utilized to add and update grid records.
+
+To enable this feature, you need to set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) property of the Grid to either **Normal** or **Dialog** and define the grid editors using the **editSettingsTemplate** template variable of **template**.
+
+**Using Forms**
+
+Forms is a approach to create and manipulate the form controls. You can use form to add and update grid records. To use forms for editing operation, you can take leverage of the template support of dialog or inline edit mode. Setting the [`editSettings.mode`](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as **Normal/Dialog** and **editSettingsTemplate** as template variable to define the grid editors.
 
 In some cases, you want to add new field editors in the dialog which are not present in the column model. In that situation the dialog template will help us to customize the default edit dialog.
 
@@ -49,25 +57,23 @@ In the following sample, grid enabled with dialog template editing.
 
 > The Dialog/Inline template form editors should have **name** attribute.
 
-## Template context
+## Using template context
 
-While using the edit template, you can access the row information inside the NgTemplate and you can bind the attributes or values or elements based on this row information.
+You can enhance the customization of your grid's edit forms by utilizing template contexts, such as accessing row details inside template, rendering editors as components, getting values from editors, setting focus to editors, and disabling default form validation, and adding custom validation. These features are applicable in both **inline** and **dialog** editing modes.
 
-The following properties will be available at the time of template execution.
+The following template context topics are demonstrated through a practical example in the [Render tab component inside the dialog template](https://ej2.syncfusion.com/react/documentation/grid/editing/template-editing#render-tab-component-inside-the-dialog-template) topic.
+
+### Access row details inside template using template context
+
+When utilizing edit templates in the Grid , you can access crucial row information within an ngTemplate when utilizing edit templates. This enables dynamic binding of attributes, values, or elements based on the specific row being edited. This is particularly useful for conditionally rendering or modifying elements in the edit template based on the row's state.
+
+The following properties will be available at the time of template execution:
 
 | Property Name | Usage |
 |---------------|-------|
-| <kbd>isAdd</kbd> | A Boolean property; it defines whether the current row should be a new record or not. |
+| <kbd>isAdd</kbd> | A Boolean property that defines whether the current row is a new record or not. |
 
-In the following code example, the **OrderID** textbox has been disabled by using the **isAdd** property.
-
-```ts
-// The disabled attributes will be added based on the isAdd property.
-<input id="OrderID" name="OrderID" type="text" disabled={!data.isAdd} value={props.OrderID} onChange={onChange} />
-
-```
-
-The following code example illustrates rendering the **OrderID** textbox, when a new record is added.
+The following code example demonstrates the usage of the `isAdd` property in an edit template to disable the **OrderID** textbox when it's not a new record:
 
 ```ts
 <div className="form-group col-md-6">
@@ -75,52 +81,97 @@ The following code example illustrates rendering the **OrderID** textbox, when a
     <div className="e-float-input e-control-wrapper">
       <input id="OrderID" name="OrderID" type="text" disabled={!data.isAdd} value={props.OrderID} onChange={onChange} />
       <span className="e-float-line"></span>
-      <label className="e-float-text e-label-top" htmlFor="OrderID">Order ID</label>
+      <label className="e-float-text e-label-top">Order ID</label>
     </div>
   )}
 </div>
 ```
 
-## Set focus to editor
+### Render editors as components 
 
-By default, the first input element in the dialog will be focused while opening the dialog. If the first input element is in disabled or hidden state then you need to focused the valid input element in the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event based on **requestType** as **beginEdit**.
+The Syncfusion Grid provides a powerful feature that allows you to dynamically render Syncfusion EJ2 controls as form editors during the editing process. This functionality is particularly useful when you want to provide feature-rich controls for data entry within the edit form.
+
+To achieve this by utilizing the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event of the Grid and specifying `requestType` as **beginEdit** or **add**.
+
+The following code example illustrates rendering the `DropDownList` component in the `actionComplete` event.
 
 ```typescript
 
-    const actionComplete = (args: DialogEditEventArgs) => {
-        // Set initial Focus
-        if (args.requestType === 'beginEdit') {
-            (args.form.elements.namedItem('CustomerID')as HTMLInputElement).focus();
-        }
-    }
+const actionComplete = (args: DialogEditEventArgs) => {
+  if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
+      let countryData: {}[] = DataUtil.distinct(data, 'ShipCountry', true) ;
+      new DropDownList({value: args.rowData.ShipCountry, popupHeight: '200px', floatLabelType: 'Always',
+          dataSource: countryData, fields: {text: 'ShipCountry', value: 'ShipCountry'}, placeholder: 'Ship Country'}, args.form.elements.namedItem('ShipCountry') as HTMLInputElement);
+  }
+}
 
 ```
 
-## Disable form validation
+### Get value from editor
 
-If you need to disable the default validation rules in  the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event.
+The get value from editor feature in the Syncfusion Grid allows you to read, format, and update the current editor value before it is saved. This feature is particularly valuable when you need to perform specific actions on the data, such as formatting or validation, before it is committed to the underlying data source. 
+
+To achieve this feature, you can utilize the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event with the **requestType** set to **save**.
+
+In the following code example, the freight value has been formatted and updated.
+
+```typescript
+    const actionBegin = (args: SaveEventArgs) => {
+        if (args.requestType === 'save') {
+            // cast string to integer value.
+            (args.data as ColumnDataType).Freight = parseFloat(((args as any).form.querySelector('#Freight').ej2_instances[0] as HTMLInputElement).value);
+        }
+    }
+```
+
+### Set focus to particular column editor 
+
+The Syncfusion Grid allows you to control the focus behavior of input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog is opened. However, in scenarios where the first input element is disabled or hidden, you can specify which valid input element should receive focus. This can be achieved using the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event of the Grid,  where the **requestType** is set to **beginEdit**.
+
+In the following code example, the CustomerID column focused.
+
+```typescript
+    const actionComplete = (args: DialogEditEventArgs) => {
+        // Set initail Focus
+        if (args.requestType === 'beginEdit') {
+            ((args.form as HTMLFormElement).elements.namedItem('CustomerID') as HTMLInputElement).focus();
+        }
+    }
+```
+
+## Disable default form validation
+
+The Syncfusion Grid provides built-in support for [react form validation](https://react-bootstrap.netlify.app/docs/forms/validation/) to ensure data integrity and accuracy during editing. However, there might be scenarios where you want to disable the default form validation rules. This can be achieved using the [removeRules](https://helpej2.syncfusion.com/documentation/api/form-validator/#removerules) method within the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event of the Grid.
+
+To disable default form validation rules in the Grid, follow these steps:
 
 ```typescript
 
     const actionComplete = (args: DialogEditEventArgs) => {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
             // Disable the Validation Rules
-            args.form.ej2_instances[0].rules = {};
+            (args.form as HTMLFormElement)['ej2_instances'][0].removeRules();
         }
     }
 
 ```
 
+> You can use this method to disable validation rules: **args.form.ej2_instances[0].rules = {}**.
+
 ## Adding validation rules for custom editors
 
-If you have interested to use our default form validation, the validation rules for the fields which are not present in the column model need to be add in  the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event.
+The Syncfusion Grid provides the ability to add validation rules for fields that are not present in the column model. This feature is particularly useful to prevent erroneous or inconsistent data from being submitted, ultimately enhancing the reliability of your application's data.
+
+To accomplish this, you can utilize the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event along with the [addRules](https://ej2.syncfusion.com/documentation/api/form-validator/#addrules) method.
+
+Here's how you can use the `addRules` method to add validation rules for custom editors in the `actionComplete` event: 
 
 ```typescript
 
     const actionComplete = (args: DialogEditEventArgs) => {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
             // Add Validation Rules
-            args.form.ej2_instances[0].addRules('Freight', {max: 500});
+            (args.form as HTMLFormElement)['ej2_instances'][0].addRules('Freight', { max: 500 });
         }
     }
 
@@ -128,66 +179,11 @@ If you have interested to use our default form validation, the validation rules 
 
 ## Render tab component inside the dialog template
 
-You can use [Tab](../../../tab/index.html) component inside dialog edit UI using dialog template feature. The dialog template feature can be enabled by defining  [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) as `Dialog` and [editSettingsTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#template) as template variable to define the editors.
+You can enhance the editing experience in the Grid by rendering a [Tab](../../../tab/index.html) component inside the dialog template. This feature is especially useful when you want to present multiple editing sections or categories in a tabbed layout, ensuring a more intuitive and easily navigable interface for data editing.
 
-To include tab components in the Dialog, please ensure the following steps:
+To enable this functionality, you need to set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#mode) property of the Grid to **Dialog**. This configures the Grid to use the dialog editing mode. Additionally, you can use the [editSettingsTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#template) property to define a template variable that contains the `Tab` component and its corresponding content.
 
-**Step 1**: To render the Tab component, use the [editSettingsTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings/#template) of the Grid. Inside the content template of the tab items define the input elements.
-
-```ts
-<TabComponent id='defaultTab' ref={t => this.tab = t} selecting={this.selecting}>
-    <TabItemsDirective>
-        <TabItemDirective header= { { 'text': 'Details' } } content={this.tabOne} />
-        <TabItemDirective header= { { 'text': 'Verify' } } content={this.tabTwo}/>
-    </TabItemsDirective>
-</TabComponent>
-```
-
-```ts
-<div id='tab1'>
-  <div className="form-row">
-    <div>
-      <div className="e-float-input e-control-wrapper">
-        <input id="OrderID" name="OrderID" type="text" disabled={!data.isAdd} value={data.OrderID} onChange={this.onChange} />
-        <span className="e-float-line"/>
-        <label className="e-float-text e-label-top"> Order ID</label>
-      </div>
-    </div>
-  </div>
-  <div className="form-row">
-    <div>
-      <div className="e-float-input e-control-wrapper" >
-        <input value={data.CustomerID} id="CustomerName" name="CustomerID" type="text" onChange={this.onChange} />
-        <span className="e-float-line"/>
-        <label className="e-float-text e-label-top">Customer Name</label>
-      </div>
-    </div>
-  </div>
-  <div id='footer'> 
-      <button id="nextBtn" className='e-info e-btn' type="button" style={{float: "right"}} onClick={this.next}>Next</button>
-  </div>
-</div>
-```
-
-```ts
-div id='tab2'>
-  <div className="form-row">
-    <div>
-      <DropDownListComponent id="ShipCountry" value={data.ShipCountry} dataSource={this.shipCountryDistinctData} fields={{ text: 'ShipCountry', value: 'ShipCountry' }} placeholder="Ship Country" popupHeight='300px' floatLabelType='Always'/>
-    </div>
-  </div>
-  <div className="form-row">
-    <div>
-      <CheckBoxComponent name="Verified" id="Verified" label="Verified" checked={data.Verified}/>
-    </div>
-  </div>
-  <div id='footer'>   
-    <button id="submitBtn" className="e-info e-btn" type="button" style={{float: "right"}} onClick={this.submit}>SUBMIT</button>
-  </div>
-</div>
-```
-
-The following example, we have rendered tab control inside the edit dialog. The tab control has two tabs and once you fill the first tab and navigate to second one. The validation for first tab was done before navigate to second.
+The following example renders a tab component inside the edit dialog. The tab component has two tabs, and once you fill in the first tab and navigate to the second one, the validation for the first tab is performed before navigating to the second.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

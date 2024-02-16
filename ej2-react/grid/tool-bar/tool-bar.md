@@ -115,6 +115,6 @@ The following example demonstrates how to change the background color of the `Ad
 
  {% previewsample "page.domainurl/code-snippet/grid/toolbar-cs7" %}
 
-## See Also
+## See also
 
 * [Toolbar Component](https://ej2.syncfusion.com/react/documentation/toolbar/getting-started)

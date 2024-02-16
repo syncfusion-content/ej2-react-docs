@@ -316,6 +316,7 @@ The following example that example demonstrates how to use these events to displ
 
  {% previewsample "page.domainurl/code-snippet/grid/paging-cs7" %}
 
-## See Also
+## See also
 
 * [Group with Paging](./grouping/grouping#group-with-paging)
+* [How to change loading indicator in React Grid](../data-binding/data-binding#loading-animation)

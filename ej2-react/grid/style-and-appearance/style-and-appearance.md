@@ -71,6 +71,6 @@ In the following sample, the font family of grid content is changed to **cursive
 
  {% previewsample "page.domainurl/code-snippet/grid/style-appearance-cs1" %}
 
-## See Also
+## See also
 
 * [Footer template styling in React Grid](https://ej2.syncfusion.com/React/documentation/grid/style-and-appearance/#customizing-the-column-selection-background)
