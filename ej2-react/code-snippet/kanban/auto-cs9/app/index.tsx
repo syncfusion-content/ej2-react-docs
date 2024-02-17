@@ -33,7 +33,7 @@ class App extends React.Component<{}, {}>{
     return <div className='control-wrapper'>
              <table>
                 <tbody>
-                    <td style="width: 200px">
+                    <td style={{ width: '200px' }}>
                          <TextBoxComponent id="search" ref={(kanban) => { this.textBoxObj = kanban; }} showClearButton={true} placeholder="Enter search text" input={this.searchClick.bind(this)}/>
                     </td>
                     <td>
