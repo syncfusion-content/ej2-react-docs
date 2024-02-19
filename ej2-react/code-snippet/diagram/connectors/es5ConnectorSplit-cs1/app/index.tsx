@@ -5,7 +5,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
     Diagram,NodeModel,ConnectorModel,ConnectorConstraints,DiagramComponent
-} from '@syncfusion/ej2-diagrams';
+} from '@syncfusion/ej2-react-diagrams';
 let nodes: NodeModel[] = [{
     id: 'node1',
     width: 100, height: 100,
