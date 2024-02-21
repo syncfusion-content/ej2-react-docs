@@ -92,6 +92,41 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
+## Add the custom headers to XMLHttpRequest
+
+Document editor component provides an an option to add custom headers of XMLHttpRequest using the [`headers`](./api/document-editor-container/documentEditorContainerModel/#headers).
+
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+} from '@syncfusion/ej2-react-documenteditor';
+
+DocumentEditorContainerComponent.Inject(Toolbar);
+function App() {
+  let container: DocumentEditorContainerComponent;
+  // custom headers
+  let customHeaders = [{ 'Authorization': 'Bearer YOUR_ACCESS_TOKEN' }, { 'Content-Type': 'application/json' }];
+  return (
+    <DocumentEditorContainerComponent
+      id="container"
+      ref={(scope) => {
+        container = scope;
+      }}
+      height={'590px'}
+      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+      enableToolbar={true}
+      headers = {customHeaders}
+    />
+  );
+}
+export default App
+ReactDOM.render(<App />, document.getElementById('root'));
+
+```
+
 ## Modify the XMLHttpRequest before request send
 
 Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/#beforexmlhttprequestsend) event and it gets triggered before a server request.
@@ -113,13 +148,12 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container: DocumentEditorContainerComponent;
   function onCreate() {
-    //Here, modifying the request headers
-    container.headers = [{ syncfusion: 'true' }];
     // Below action, cancel all server-side interactions expect spell check
     container.beforeXmlHttpRequestSend = (
       args: XmlHttpRequestEventArgs
     ): void => {
-      args.headers = this.container.headers;
+      //Here, modifying the request headers
+      args.headers = [{ syncfusion: 'true' }];
       args.withCredentials = true;
       switch (args.serverActionType) {
         case 'Import':
