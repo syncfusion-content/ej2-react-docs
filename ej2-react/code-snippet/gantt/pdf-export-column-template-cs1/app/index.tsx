@@ -75,10 +75,10 @@ let ProjectResources: Object[]  = [
       let exportProperties: PdfExportProperties = {
           enableFooter: false
       };
+      ganttChart.pdfExport(exportProperties);
       }
-     ganttChart.pdfExport(exportProperties);
   };
-  function pdfQueryTaskbarInfo(args :PdfQueryCellInfoEventArgs) {
+  function pdfQueryCellInfo(args :PdfQueryCellInfoEventArgs) {
     if (args.column.headerText === 'Resources') {
         {
             args.image = { height:40,width:40, base64: (args as any).data.taskData.resourcesImage };
@@ -105,7 +105,7 @@ let ProjectResources: Object[]  = [
             </div>);
       };
         const template: any = ganttTemplate;
-        return <GanttComponent dataSource={data} rowHeight={60} taskFields={taskFields} pdfQueryTaskbarInfo = {pdfQueryTaskbarInfo} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
+        return <GanttComponent dataSource={data} rowHeight={60} taskFields={taskFields} pdfQueryCellInfo = {pdfQueryCellInfo} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
             splitterSettings={splitterSettings} resourceFields={resourceFields} resources={ProjectResources} height = '450px'>
                 <ColumnsDirective>
                     <ColumnDirective field='TaskID'></ColumnDirective>
