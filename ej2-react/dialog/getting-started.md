@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 The following section explains the required steps to build the Dialog component with its basic usage in step by step procedure.
 
+To get start quickly with React Dialog component, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=upDeXQMYFoc" %}
+
 ## Dependencies
 
 The following list of dependencies are required to use the React Dialog component in your application.
