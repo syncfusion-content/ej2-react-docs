@@ -12,6 +12,8 @@ domainurl: ##DomainURL##
 
 The following example demonstrate about how to preselect the list items in multiple cascading DropDownList.
 
+`[Class-component]`
+
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/dropdownlist/basic-cs34/app/index.jsx %}
@@ -22,3 +24,16 @@ The following example demonstrate about how to preselect the list items in multi
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs34" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/dropdownlist/basic-cs43/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/dropdownlist/basic-cs43/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs43" %}

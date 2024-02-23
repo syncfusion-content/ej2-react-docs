@@ -75,10 +75,10 @@ let ProjectResources  = [
         let exportProperties = {
             enableFooter: false
         };
+        ganttChart.pdfExport(exportProperties);
         }
-       ganttChart.pdfExport(exportProperties);
     };
-    function pdfQueryTaskbarInfo(args) {
+    function pdfQueryCellInfo(args) {
         if (args.column.headerText === 'Resources') {
             {
                 args.image = { height:40,width:40, base64: (args).data.taskData.resourcesImage };
@@ -104,16 +104,8 @@ let ProjectResources  = [
                 <img src={src} style={{height:'42px'}}/>
             </div>);
       };
-      function ganttTemplate1(props) {
-        return (
-            <div className="link">
-                <a href={'mailto:' + props.EmailID}>{props.EmailID}</a>
-            </div>
-        );
-      };
         const template = ganttTemplate;
-        const template1 = ganttTemplate1;
-        return <GanttComponent dataSource={data} rowHeight={60} taskFields={taskFields} toolbar={toolbarOptions} pdfQueryTaskbarInfo = {pdfQueryTaskbarInfo} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
+        return <GanttComponent dataSource={data} rowHeight={60} taskFields={taskFields} toolbar={toolbarOptions} pdfQueryCellInfo = {pdfQueryCellInfo} toolbarClick={toolbarClick} allowPdfExport={true} ref={gantt => ganttChart = gantt}
             splitterSettings={splitterSettings} resourceFields={resourceFields} resources={ProjectResources} height = '450px'>
                 <ColumnsDirective>
                     <ColumnDirective field='TaskID'></ColumnDirective>
