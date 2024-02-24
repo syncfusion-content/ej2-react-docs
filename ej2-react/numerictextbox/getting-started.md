@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 The following section explains the required steps to build the NumericTextBox component with its basic usage in step by step procedure.
 
+To get start quickly with React Numerictextbox component, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=CCcvKHTlydI" %}
+
 ## Dependencies
 
 The following list of dependencies are required to use the NumericTextBox component in your application.

@@ -110,14 +110,14 @@ In the following sample, the hyperlinks and images are exported to PDF using [hy
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/single-page/app/index.jsx %}
+{% include code-snippet/gantt/pdf-export-column-template-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/single-page/app/index.tsx %}
+{% include code-snippet/gantt/pdf-export-column-template-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/single-page/index.html %}
+{% include code-snippet/gantt/pdf-export-column-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/single-page" %}
+{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-column-template-cs1" %}

@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 This section explains how to create and configure the simple uploader component with its basic usage in step by step procedure.
 
+To get start quickly with React Uploader component, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=UBsZgNI99ro" %}
+
 ## Dependencies
 
 The following are the dependencies required to use the uploader component in your application:
