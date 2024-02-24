@@ -6,6 +6,7 @@ import { MentionComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 
 class App extends React.Component<{},{}> {
+  public mentionObj : MentionComponent;
   private data: { [key: string]: Object }[] = [
     { Name: "Selma Rose", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/2.png", EmailId: "selma@gmail.com" },
     { Name: "Maria", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/1.png", EmailId: "maria@gmail.com" },
@@ -51,7 +52,7 @@ class App extends React.Component<{},{}> {
       );
   }
   public actionBegineHandler(args: any): void {
-    if (args.requestType === 'EnterAction') {
+    if (args.requestType === 'EnterAction' && this.mentionObj.element.classList.contains('e-popup-open')) {
       args.cancel = true;
     }
   }
@@ -68,7 +69,7 @@ class App extends React.Component<{},{}> {
           </div>
         </div>
 
-        <MentionComponent id="mentionEditor" target="#mention_integration_rte-edit-view" suggestionCount={8} showMentionChar={false}  allowSpaces={true} dataSource={this.data} fields={this.fieldsData} popupWidth="250px" popupHeight="200px" itemTemplate={this.itemTemplate} displayTemplate={this.displayTemplate}></MentionComponent>
+        <MentionComponent ref={(scope) => { this.mentionObj = scope; }} id="mentionEditor" target="#mention_integration_rte-edit-view" suggestionCount={8} showMentionChar={false}  allowSpaces={true} dataSource={this.data} fields={this.fieldsData} popupWidth="250px" popupHeight="200px" itemTemplate={this.itemTemplate} displayTemplate={this.displayTemplate}></MentionComponent>
       </div>
     );
   }
