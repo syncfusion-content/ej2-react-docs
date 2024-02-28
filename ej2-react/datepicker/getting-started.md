@@ -3,7 +3,7 @@ layout: post
 title: Getting started with React Datepicker component | Syncfusion
 description:  Checkout and learn about Getting started with React Datepicker component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
-platform: ej2-react
+platform: react
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -129,11 +129,11 @@ The below examples shows the basic DatePicker component.
 {% include code-snippet/datepicker/default-cs11/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/datepicker/default-cs11/app/index.tsx %}
+{% include code-snippet/datepicker/default-cs11/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/datepicker/default-cs11" %}
+ {% previewsample "page.domainurl/code-snippet/default-cs11" %}
 
 `[Functional-component]`
 
@@ -186,4 +186,4 @@ Here the DatePicker allows to select a date within a range from 9th to 15th in a
 * [How to change the initial view of the DatePicker](./date-views)
 * [How to achieve dynamic form validation with DatePicker](./how-to/dynamic-form-validation)
 
-N> You can also explore our [React DatePicker example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/datepicker/default) that shows you how to render the DatePicker in React.
+N> You can also explore our [React DatePicker example](https://ej2.syncfusion.com/react/#/bootstrap5/datepicker/default) that shows you how to render the DatePicker in React.

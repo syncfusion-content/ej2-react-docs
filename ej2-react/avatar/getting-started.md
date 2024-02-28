@@ -3,7 +3,7 @@ layout: post
 title: Getting started with React Avatar component | Syncfusion
 description:  Checkout and learn about Getting started with React Avatar component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
-platform: ej2-react
+platform: ej2-rect
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -89,7 +89,7 @@ Output will be as follows:
 {% include code-snippet/avatar/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/avatar/getting-started-cs1/app/index.tsx %}
+{% include code-snippet/avatar/getting-started-cs1/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
