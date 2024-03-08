@@ -1,21 +1,17 @@
 import * as React from 'react';
-import { createRoot } from 'react-dom/client';
+import * as ReactDom from 'react-dom';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import './App.css';
+
 function App() {
-  return (
-    <div id="container">
-      <TooltipComponent
-        position="TopCenter"
-        content="<img src=text onerror=alert (`XSS_Script_Attack`) \/>"
-        enableHtmlSanitizer={true}
+    return (<div id="container">
+      <TooltipComponent position="TopCenter"
+        content='<img src=text onerror=alert("XSS_Script_Attack") \/>'
         target="#target"
-      >
-        <button className="e-btn tooltipElement" id="target">
-          Hover me for a tooltip!
-        </button>
+        enableHtmlSanitizer= {true}>
+        <button className="e-btn tooltipElement" id="target" >Hover me for a tooltip!</button>
       </TooltipComponent>
-    </div>
-  );
+    </div>);
 }
 export default App;
-createRoot(document.getElementById('sample')).render(<App />);
+ReactDom.render(<App />, document.getElementById('sample'));
