@@ -5,7 +5,7 @@ import { inventoryData } from './datasource';
 function App() {
     let grid;
     const dataBound = (() => {
-        grid.autoFitColumns(['Inventor', 'Number of INPADOC patents', 'Main fields of invention'], 1, 3);
+        grid.autoFitColumns(['Inventor', 'Number of INPADOC patents', 'Mainfieldsofinvention'], 1, 3);
     })
     return (
         <div>
