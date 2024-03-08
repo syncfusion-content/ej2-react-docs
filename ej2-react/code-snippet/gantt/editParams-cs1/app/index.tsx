@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, ColumnsDirective, ColumnDirective, Edit } from '@syncfusion/ej2-react-gantt';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { data } from './datasource';
 import { IEditCell } from '@syncfusion/ej2-grids';
 function App () {
@@ -21,7 +21,7 @@ function App () {
             dropdownlistObj.destroy();
         },
         write: (args: Object) => {
-            dropdownlistObj = new DropDownListComponent({
+            dropdownlistObj = new DropDownList({
                 dataSource: ganttInstance.treeGrid.grid.dataSource,
                 fields: { value: 'TaskName' },
                 value: args.rowData[args.column.field],
