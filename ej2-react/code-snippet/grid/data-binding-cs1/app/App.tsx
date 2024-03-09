@@ -1,16 +1,9 @@
-
-
-import { DataManager, ODataAdaptor, Query } from '@syncfusion/ej2-data';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
+import { data } from './datasource';
 
 function App() {
-    const data = new DataManager({
-        adaptor: new ODataAdaptor,
-        url: 'https://services.syncfusion.com/react/production/api/Orders'
-    });
-    const query = new Query().addParams('ej2grid', 'true');
-    return <GridComponent dataSource={data} query={query}>
+    return <GridComponent dataSource={data.slice(0,7)}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
@@ -20,5 +13,3 @@ function App() {
     </GridComponent>
 };
 export default App;
-
-
