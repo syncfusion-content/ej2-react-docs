@@ -42,12 +42,6 @@ The following example demonstrates how to set the `loadingIndicator.indicatorTyp
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/loading-indicator-cs1/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/loading-indicator-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/loading-indicator-cs1/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/loading-indicator-cs1" %}
