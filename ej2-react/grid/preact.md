@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React getting started with Preact | Syncfusion
-description: Check out and learn about how to use Syncfusion React UI components in Preact project.
+title: Getting Started with Preact Framework and React Grid Component | Syncfusion
+description: Check out and learn about getting started with the Preact Framework and React Grid Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Preact Framework with Syncfusion React Components
+# Getting Started with the React Grid Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion React components.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion React Grid component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
@@ -81,7 +81,7 @@ cd my-project
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
 
-## Add Syncfusion React packages
+## Add the Syncfusion React packages
 
 Syncfusion React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion React components in the project, install the corresponding npm package.
 
@@ -121,7 +121,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 > The order of importing CSS styles should be in line with its dependency graph.
 
-## Add Syncfusion React component
+## Add the Syncfusion React component
 
 Follow the below steps to add the React Grid component to the Vite project:
 
@@ -130,7 +130,7 @@ Follow the below steps to add the React Grid component to the Vite project:
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
 
-import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
 {% endhighlight %}
 {% endtabs %}
@@ -190,7 +190,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![preact](../appearance/images/preact.png)
+![preact](./images/preact.png)
 
 ## See also
 

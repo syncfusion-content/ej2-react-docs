@@ -153,6 +153,19 @@ When the legend text exceeds the container, the text can be wrapped by using  [`
 
  {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs19" %}
 
+### Legend text color
+ 
+The text color of the legend can be changed by setting the [color](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel/#color) property to the desired color in the [textStyle](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#textstyle) property of the legendSettings.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/axis/legend-cs5/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/axis/legend-cs5/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
 ### Set the label color based on series color
 
 You can set the legend label color based on series color by using chart's [loaded](https://ej2.syncfusion.com/react/documentation/api/chart/#loaded) event.
