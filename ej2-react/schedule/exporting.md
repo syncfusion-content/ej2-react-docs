@@ -176,6 +176,9 @@ The following code example shows how the Scheduler events are exported to a cale
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/calendar-export-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/calendar-export-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/calendar-export-cs1" %}
@@ -195,6 +198,9 @@ The following example downloads the iCal file with a name `ScheduleEvents.ics`.
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/calendar-export-cs2/index.html %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/calendar-export-cs2/index.css %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -217,6 +223,9 @@ The following example shows how to import an ICS file into Scheduler, using the 
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/calendar-import-cs1/index.html %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/calendar-import-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         

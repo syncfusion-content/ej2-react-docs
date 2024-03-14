@@ -11,9 +11,19 @@ export default class App extends React.Component<{}, {}> {
         this.onFocusIn = this.onFocusIn.bind(this);
         this.onInputEvt = this.onInputEvt.bind(this);
     }
+
+    public componentDidMount() {
+        /* Update the label position based on initial input value */
+        this.updateLabelState(this.textboxInstance.value, this.textboxInstance.parentElement.querySelector('.e-float-text'));
+    }
+    public onFocusOut(args: React.FocusEvent) {
+        /* Update the label position based on Input value */
+        this.updateLabelState((args.target as HTMLInputElement).value, ((args.target as HTMLElement).parentElement as HTMLElement).querySelector('.e-float-text') as HTMLElement);
+
     public onFocusOut(args: React.FocusEvent) {
         /* Update the label position based on Input value */
        this.updateLabelState((args.target as HTMLInputElement).value, ((args.target as HTMLElement).parentElement as HTMLElement).querySelector('.e-float-text') as HTMLElement);
+
     }
 
     public onFocusIn(args: React.FocusEvent) {
@@ -23,7 +33,9 @@ export default class App extends React.Component<{}, {}> {
     }
     public onInputEvt(args: React.FormEvent) {
     /* Update the label position based on Input value */
-    this.updateLabelState((args.target as HTMLInputElement).value, ((args.target as HTMLElement).parentElement as HTMLElement).querySelector('.e-float-text') as HTMLElement);
+
+        this.updateLabelState((args.target as HTMLInputElement).value, ((args.target as HTMLElement).parentElement as HTMLElement).querySelector('.e-float-text') as HTMLElement);
+
     }
 
     /* Update the label position based on Input value */
@@ -46,17 +58,14 @@ export default class App extends React.Component<{}, {}> {
         <div className="inner-container">
             <h4> Floating label without required attribute </h4>
             <div className="e-float-input">
-                <input id='inpt1' type="text" onInput= {onInputEvt}  onFocus={onFocusIn} onBlur={onFocusOut } ref = {e => e.textboxInstance = e!} />
+                <input id='inpt1' type="text" onInput= {this.onInputEvt}  onFocus={this.onFocusIn} onBlur={this.onFocusOut } ref = {e => this.textboxInstance = e!} />
                 <span className="e-float-line"/>
                 <label className="e-float-text">First Name</label>
             </div>
         </div>
     )
     }
-    public componentDidMount() {
-        /* Update the label position based on initial input value */
-        this.updateLabelState(this.textboxInstance.value, this.textboxInstance.parentElement.querySelector('.e-float-text'));
-    }
+
 };
 ReactDOM.render(<App />, document.getElementById('input-container'));
 

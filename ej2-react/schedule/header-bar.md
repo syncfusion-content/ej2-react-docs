@@ -86,6 +86,9 @@ The `dateHeaderTemplate` option is used to customize the date header cells of da
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/date-header-cs1/index.html %}
 {% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/date-header-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/date-header-cs1" %}
@@ -103,6 +106,9 @@ In month view, the date header template is not applicable and therefore the same
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/date-header-cs2/index.html %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/date-header-cs2/index.css %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -123,6 +129,9 @@ The [`dateRangeTemplate`](https://ej2.syncfusion.com/react/documentation/api/sch
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/date-header-cs3/index.html %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/schedule/date-header-cs3/index.css %}
 {% endhighlight %}
 {% endtabs %}
         

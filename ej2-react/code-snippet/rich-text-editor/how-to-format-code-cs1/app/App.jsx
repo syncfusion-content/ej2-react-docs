@@ -1,4 +1,4 @@
-import { HtmlEditor, Inject, Link, RichTextEditorComponent, QuickToolbar, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import { HtmlEditor, Inject, Link,Image, RichTextEditorComponent, QuickToolbar, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 
 class App extends React.Component {

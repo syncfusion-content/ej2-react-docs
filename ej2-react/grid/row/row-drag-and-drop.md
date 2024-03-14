@@ -150,9 +150,9 @@ The Grid component provides a set of events that are triggered during drag and d
 ## Limitations
 
 * Single row is able to drag and drop in same grid without enable the row selection.
-* Row drag and drop feature is not having built in support with row template, detail template, hierarchy grid and grouping features of grid.
+* Row drag and drop feature is not having built in support with row template, detail template and hierarchy grid features of grid.
 
 ## See also
 
-[Sorting data in the Syncfusion Grid](https://help.syncfusion.com/react/grid/sorting)
-[Filtering data in the Syncfusion Grid](https://help.syncfusion.com/react/grid/filtering)
+[Sorting data in the Syncfusion Grid](../sorting)
+[Filtering data in the Syncfusion Grid](../filtering/filtering)

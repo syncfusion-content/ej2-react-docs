@@ -435,6 +435,31 @@ Here’s an example code snippet in React that demonstrates how to auto fit colu
 
  {% previewsample "page.domainurl/code-snippet/grid/autofit-cs2" %}
 
+### AutoFit columns with specific rows
+
+To adjust the column widths of a specific range of rows based on their content, you can use the [autoFitColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#autofitcolumns) method by simply passing the second and third parameters (optional) as the start and end index for the column you want to fit. You can autofit specific columns at initial rendering by invoking the `autoFitColumns` method in [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event.
+
+This feature will calculate the appropriate width based on the maximum content width of the specified range of rows or the header text width. Subsequently, the maximum width of the content of the specified rows or header text will be applied to the entire column of the grid.
+
+Here is an example of how to autofit columns with specific rows. The first parameter is an array containing the specific column field names, such as  **Inventor**, **Number of INPADOC patents** and **Main fields of invention**  is passed to apply the autofit functionality to these columns. After, the second parameter are start index is set to **1** and third parameter are end index is set to **3**. When specifying these start and end index, the autofit operation is applied only to the range of rows from 1 to 3 for column width adjustment.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/autofit-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/autofit-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/autofit-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/autofit-cs3/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/autofit-cs3" %}
+
 ## Lock columns
 
 The Syncfusion Grid allows you to lock columns, which prevents them from being reordered and moves them to the first position. This functionality can be achieved by setting the [lockColumn](https://ej2.syncfusion.com/react/documentation/api/grid/column/#lockcolumn) property to true, which locks the column and moves it to the first position in the grid.
