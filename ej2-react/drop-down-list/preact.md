@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Preact Framework and React DropDownList Component | Syncfusion
+title: Preact Getting Started with React DropDownList Component | Syncfusion
 description: Check out and learn about getting started with the Preact Framework and React DropDownList Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React DropDownList Component in the Preact Framework
+# Getting Started with the React DropDownList Component in the Preact
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion React DropDownList component.
 
@@ -118,7 +118,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 Follow the below steps to add the React DropDownList component to the Vite project:
 
-1\. Before adding the Grid component to your markup, import the DropDownList component in the **src/index.jsx** file.
+1\. Before adding the DropDownList component to your markup, import the DropDownList component in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -128,7 +128,7 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the Grid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/drop-down-list#datasource) property and column definitions. Declare the values for the `dataSource` property.
+2\. Then, define the DropDownList component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/drop-down-list#datasource) property. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -138,7 +138,7 @@ import { render } from 'preact';
 import './style.css';
 function App() {
     // define the array of data
-    const sportsData = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
+    const sportsData = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];
     return (
     // specifies the tag for render the DropDownList component
     <DropDownListComponent id="ddlelement" dataSource={sportsData} placeholder="Select a game"/>);

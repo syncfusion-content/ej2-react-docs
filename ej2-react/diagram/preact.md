@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Preact Framework and React Diagram Component | Syncfusion
+title: Preact Getting Started with React Diagram Component | Syncfusion
 description: Check out and learn about getting started with the Preact Framework and React Diagram Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React Diagram Component in the Preact Framework
+# Getting Started with the Diagram Component in the Preact Framework
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion React Diagram component.
 
@@ -106,41 +106,168 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
 
-@import "../node_modules/@syncfusion/ej2-diagrams/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/material3.css";
 
 {% endhighlight %}
 {% endtabs %}
 
 > The order of importing CSS styles should be in line with its dependency graph.
+
 ## Add the Syncfusion React component
 
 Follow the below steps to add the React Diagram component to the Vite project:
 
-1\. Before adding the Diagram component to your markup, import the Diagram component in the **src/index.jsx** file.
+1\. Before adding the Diagram component to your markup, create a **datasource.jsx** file within the **src** folder and add the Diagram component data.
 
 {% tabs %}
-{% highlight js tabtitle="~/src/index.jsx" %}
+{% highlight js tabtitle="~/src/datasource.jsx" %}
 
-import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
+export let data = [{
+    'Id': 'parent',
+    'Name': 'Maria Anders',
+    'Designation': 'Managing Director',
+    'IsExpand': 'true',
+    'RatingColor': '#C34444'
+},
+{
+    'Id': 1,
+    'Name': 'Ana Trujillo',
+    'Designation': 'Project Manager',
+    'IsExpand': 'false',
+    'RatingColor': '#68C2DE',
+    'ReportingPerson': 'parent'
+},
+{
+    'Id': 2,
+    'Name': 'Anto Moreno',
+    'Designation': 'Project Lead',
+    'IsExpand': 'false',
+    'RatingColor': '#93B85A',
+    'ReportingPerson': 'parent'
+},
+{
+    'Id': 3,
+    'Name': 'Thomas Hardy',
+    'Designation': 'Senior S/w Engg',
+    'IsExpand': 'false',
+    'RatingColor': '#68C2DE',
+    'ReportingPerson': 1
+},
+{
+    'Id': 4,
+    'Name': 'Christina kaff',
+    'Designation': 'S/w Engg',
+    'IsExpand': 'false',
+    'RatingColor': '#93B85A',
+    'ReportingPerson': 2
+},
+{
+    'Id': 5,
+    'Name': 'Hanna Moos',
+    'Designation': 'Project Trainee',
+    'IsExpand': 'true',
+    'RatingColor': '#D46E89',
+    'ReportingPerson': 2
+}];
 
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the Grid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/diagram#datasource) property and column definitions. Declare the values for the `dataSource` property.
+2\. Then, import and define the Diagram component in the **src/index.jsx** file, as shown below:
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
 
-import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
+import { DataManager, Query } from '@syncfusion/ej2-data';
+import { StackPanel, TextElement, DataBinding, HierarchicalTree, DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
+import { data } from './datasource';
 import { render } from 'preact';
-import './style.css';
-function App() {
-    return (<DiagramComponent id="container" width={"100%"} height={"350px"}/>);
+
+export default function App() {
+  let items = new DataManager(data , new Query().take(7));
+
+  return (
+    <>
+      <DiagramComponent id="container" height={'450px'} layout={{
+        type: 'HierarchicalTree',
+        margin: {
+          top: 20,
+        },
+
+      }} dataSourceSettings={{
+        id: 'Id',
+        parentId: 'ReportingPerson',
+        dataManager: items,
+      }} getNodeDefaults={(node) => {
+        node.height = 50;
+        node.style.fill = '#6BA5D7';
+        node.borderColor = 'white';
+        node.style.strokeColor = 'white';
+        return node;
+      }} getConnectorDefaults={(obj) => {
+        obj.style.strokeColor = '#6BA5D7';
+        obj.style.fill = '#6BA5D7';
+        obj.style.strokeWidth = 2;
+        obj.targetDecorator.style.fill = '#6BA5D7';
+        obj.targetDecorator.style.strokeColor = '#6BA5D7';
+        obj.targetDecorator.shape = 'None';
+        obj.type = 'Orthogonal';
+        return obj;
+      }} setNodeTemplate={(obj) => {
+        let content = new StackPanel();
+        content.id = obj.id + '_outerstack';
+        content.style.strokeColor = 'darkgreen';
+        content.style.fill = '#6BA5D7';
+        content.orientation = 'Horizontal';
+        content.padding = {
+          left: 5,
+          right: 10,
+          top: 5,
+          bottom: 5,
+        };
+        let innerStack = new StackPanel();
+        innerStack.style.strokeColor = 'none';
+        innerStack.style.fill = '#6BA5D7';
+        innerStack.margin = {
+          left: 5,
+          right: 0,
+          top: 0,
+          bottom: 0,
+        };
+        innerStack.id = obj.id + '_innerstack';
+        let text = new TextElement();
+        text.content = obj.data['Name'];
+        text.style.color = 'white';
+        text.style.strokeColor = 'none';
+        text.style.fill = 'none';
+        text.id = obj.id + '_text1';
+        let desigText = new TextElement();
+        desigText.margin = {
+          left: 0,
+          right: 0,
+          top: 5,
+          bottom: 0,
+        };
+        desigText.content = obj.data['Designation'];
+        desigText.style.color = 'white';
+        desigText.style.strokeColor = 'none';
+        desigText.style.fill = 'none';
+        desigText.style.textWrapping = 'Wrap';
+        desigText.id = obj.id + '_desig';
+        innerStack.children = [text, desigText];
+        content.children = [innerStack];
+        return content;
+      }} >
+        <Inject services={[DataBinding, HierarchicalTree]} />
+      </DiagramComponent>
+    </>
+  )
 }
+
 render(<App />, document.querySelector('#app'));
 
 {% endhighlight %}

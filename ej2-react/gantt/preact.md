@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Preact Framework and React Gantt Component | Syncfusion
+title: Preact Getting Started with React Gantt Component | Syncfusion
 description: Check out and learn about getting started with the Preact Framework and React Gantt Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
@@ -126,9 +126,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 > The order of importing CSS styles should be in line with its dependency graph.
 ## Add the Syncfusion React component
 
-Follow the below steps to add the React Grid component to the Vite project:
+Follow the below steps to add the React Gantt component to the Vite project:
 
-1\. Before adding the Grid component to your markup, import the Grid component in the **src/index.jsx** file.
+1\. Before adding the Gantt component to your markup, import the Gantt component in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -138,7 +138,7 @@ import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the Gantt component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/gantt#datasource) property and column definitions. Declare the values for the `dataSource` property.
+2\. Then, define the Gantt component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/gantt#datasource) property. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}

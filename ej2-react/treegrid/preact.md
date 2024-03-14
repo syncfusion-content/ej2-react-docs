@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Preact Framework and React TreeGrid Component | Syncfusion
+title: Preact Getting Started with React TreeGrid Component | Syncfusion
 description: Check out and learn about getting started with the Preact Framework and React TreeGrid Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React TreeGrid Component in the Preact Framework
+# Getting Started with the TreeGrid Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion React Grid component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion React TreeGrid component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
@@ -135,7 +135,7 @@ import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the Grid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treegrid#datasource) property and column definitions. Declare the values for the `dataSource` property.
+2\. Then, define the TreeGrid component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treegrid#datasource) property and column definitions. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}

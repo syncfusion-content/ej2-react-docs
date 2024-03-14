@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion React components in the project, install the corresponding npm package.
 
-This article uses the [React TreeView component](https://www.syncfusion.com/react-components/react-treeview) as an example. To use the React Grid component in the project, the `@syncfusion/ej2-react-navigations` package needs to be installed using the following command:
+This article uses the [React TreeView component](https://www.syncfusion.com/react-components/react-treeview) as an example. To use the React TreeView component in the project, the `@syncfusion/ej2-react-navigations` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-navigations --save
@@ -131,7 +131,7 @@ import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the TreeView component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treeview#datasource) property and column definitions. Declare the values for the `dataSource` property.
+2\. Then, define the TreeView component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treeview#datasource) property. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
