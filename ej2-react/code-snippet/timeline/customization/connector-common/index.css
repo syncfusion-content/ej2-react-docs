@@ -1,0 +1,20 @@
+/* Represents the styles for loader */
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.custom-connector .e-timeline-item.e-connector::after {
+  border-color: #f7c867;
+  border-width: 1.4px;
+  animation: progress 2s;
+}
+
+@keyframes progress {
+  from { height: 0%; }
+  to { height: 100%; }
+}

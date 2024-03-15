@@ -1,0 +1,16 @@
+/* Represents the styles for loader */
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.e-dot.custom-image {
+  background-image: url('./dot-image.png');
+}
+.e-dot.custom-text::before {
+  content: 'A';
+}
