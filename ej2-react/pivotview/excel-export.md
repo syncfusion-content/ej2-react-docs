@@ -108,6 +108,10 @@ The Excel export provides an option to change file name of the document before e
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs70" %}
 
+## Limitation when exporting millions of records to Excel format
+
+By default, Microsoft Excel supports only 1,048,576 records in an excel sheet. Hence it is not possible to export millions of records to excel. You can refer the [documentation](https://support.microsoft.com/en-gb/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3) link for more details on Microsoft excel specifications and limits. So suggest to export the data in CSV (Comma-Separated Values) or other formats that can handle large datasets more efficiently than Excel.
+
 ## CSV Export
 
 The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowexcelexport) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) as **true**. Once the API is set, user needs to call the [`csvExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#csvexport) method for exporting on external button click.

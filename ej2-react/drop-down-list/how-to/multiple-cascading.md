@@ -25,7 +25,7 @@ The following example demonstrate about how to preselect the list items in multi
 
  {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs34" %}
 
- `[Functional-component]`
+`[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
