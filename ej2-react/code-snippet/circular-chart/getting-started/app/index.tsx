@@ -1,3 +1,4 @@
+{% raw %}
 
 
 import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D, Inject } from '@syncfusion/ej2-react-charts';
@@ -26,3 +27,4 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 
 
 
+{% endraw %}

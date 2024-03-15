@@ -181,6 +181,7 @@ export let data = [{
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
+{% raw %}
 
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { StackPanel, TextElement, DataBinding, HierarchicalTree, DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
@@ -270,6 +271,7 @@ export default function App() {
 
 render(<App />, document.querySelector('#app'));
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

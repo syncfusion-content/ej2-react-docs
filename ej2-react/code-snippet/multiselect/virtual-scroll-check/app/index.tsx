@@ -23,8 +23,8 @@ export default class App extends React.Component<{}, {}> {
     return (
       // specifies the tag for render the DropDownList component
       <MultiSelectComponent id="datas" dataSource={this.records} mode="CheckBox" placeholder="e.g. Item 1" enableVirtualization={true} allowFiltering={false} fields={this.fields} popupHeight="200px" >
-      <Inject services={[VirtualScroll, CheckBoxSelection]}/>
-  </MultiSelectComponent>
+        <Inject services={[VirtualScroll, CheckBoxSelection]}/>
+      </MultiSelectComponent>
     );
   }
 }
