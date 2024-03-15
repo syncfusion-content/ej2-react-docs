@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in React Appearance component | Syncfusion
-description: Learn here all about Icons in Syncfusion React Appearance component of Syncfusion Essential JS 2 and more.
+title: Icons in React Appearance Component | Syncfusion
+description: Learn here all about icons support in Syncfusion Essential React Appearance component, it's elements and more.
 control: Icons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Icons Library
+# Icons in React Appearance Component
 
 Syncfusion's icon library is a collection of pre-designed icons that can be used to enhance the user interface of an application. This pre-designed icons are set of `base64` formatted font icons. Utilizing this icon library can make it simpler to create a cohesive, visually pleasing design for an application.
 
