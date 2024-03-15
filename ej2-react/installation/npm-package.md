@@ -327,10 +327,10 @@ The Syncfusion React Word Processor (Document Editor) is a component with editin
 
 ## See also
 
-* [Installation with npm CLI](https://ej2.syncfusion.com/react/documentation/installation/installation/)
+* [Installation with npm CLI](https://ej2.syncfusion.com/react/documentation/installation/installation)
 
-* [Download JavaScript – EJ2 Installer](https://ej2.syncfusion.com/react/documentation/installation/web-installer/download/)
+* [Download JavaScript – EJ2 Installer](https://ej2.syncfusion.com/react/documentation/installation/web-installer/download)
 
-* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
+* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 
-* [Update npm Packages](https://ej2.syncfusion.com/react/documentation/upgrade/update-npm-package/)
+* [Update npm Packages](https://ej2.syncfusion.com/react/documentation/upgrade/update-npm-package)
