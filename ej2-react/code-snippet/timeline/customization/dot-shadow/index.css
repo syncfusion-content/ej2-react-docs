@@ -1,0 +1,19 @@
+/* Represents the styles for loader */
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.dot-shadow .e-dot {
+  --dot-outer-space: 3px;
+  --dot-border: 3px;
+  --dot-size: 20px;
+  outline-color: #dee2e6;
+  border-color: #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5) ,
+  2px -2px 4px rgba(255, 255, 255, 0.5) inset;
+}
