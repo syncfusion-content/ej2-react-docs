@@ -48,16 +48,16 @@ function App() {
     };
 
     function cloneGroup(): void {
-        qryBldrObj.cloneGroup("querybuilder_group0", "querybuilder_group1", 1);
+        qryBldrObj.cloneGroup("group0", "group1", 1);
     }
 
     function cloneRule(): void {
-        qryBldrObj.cloneRule("querybuilder_group0_rule0", "querybuilder_group0", 1);
+        qryBldrObj.cloneRule("group0_rule0", "group0", 1);
     }
 
     return (
         <div>
-            <QueryBuilderComponent width='100%' dataSource={employeeData} ref={(scope) => { qryBldrObj = scope as QueryBuilderComponent; }} columns={columnData} rule={importRules} showButtons={{cloneGroup: true, cloneRule: true}}/>
+            <QueryBuilderComponent width='100%' dataSource={employeeData} ref={(scope) => { qryBldrObj = scope as QueryBuilderComponent; }} columns={columnData} rule={importRules} showButtons={{cloneGroup: false, cloneRule: false}}/>
             <div className="e-qb-button">
                 <ButtonComponent id="clonegroup" cssClass='e-primary' content='Clone Group' onClick = {cloneGroup}/>
                 <ButtonComponent id="clonerule" cssClass='e-primary' content='Clone Rule' onClick = {cloneRule}/>

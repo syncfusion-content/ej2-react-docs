@@ -48,7 +48,7 @@ function App() {
 
     return (
         <div>
-            <QueryBuilderComponent width='100%' dataSource={hardwareData} columns={columnData} />
+            <QueryBuilderComponent width='100%' dataSource={hardwareData} columns={columnData} ref={(scope) => { qryBldrObj = scope as QueryBuilderComponent; }}/>
             <div className="e-qb-button">
                 <ButtonComponent id="importSql" cssClass='e-primary' content='Set Parameter SQL Rules' onClick = {importSql}/>
             </div>
