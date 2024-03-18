@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Form validator getting started with Next.js | Syncfusion
-description: Check out and learn about how to use Syncfusion React UI components in the Next.js project.
+description: Check out and learn about how to use Syncfusion React Form Validation components in the Next.js project, it's elements and more.
 control: Next.js
 platform: ej2-react
 documentation: ug
@@ -104,7 +104,7 @@ yarn add @syncfusion/ej2-react-inputs @syncfusion/ej2-react-calendars @syncfusio
 
 ## Import Syncfusion CSS styles
 
-Syncfusion React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/), which are available in the installed packages. It’s easy to adapt the Syncfusion React components to match the style of your application by referring to one of the built-in themes.
+Syncfusion React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion React components to match the style of your application by referring to one of the built-in themes.
 
 Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
 
@@ -156,7 +156,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) section.
+> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 ## Add Syncfusion React component
 
