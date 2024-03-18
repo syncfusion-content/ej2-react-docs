@@ -3,6 +3,7 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { AnimationSettingsModel, DialogComponent } from '@syncfusion/ej2-react-popups';
+QueryBuilderComponent.Inject(QueryLibrary);
 // @ts-ignore
 function App() {
     let qryBldrObj;
@@ -62,12 +63,12 @@ function App() {
          dialog.show();
     }
     return (<div>
-        <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope; }}></DialogComponent>
         <QueryBuilderComponent width='100%' dataSource={hardwareData} columns={columnData} rule={importRules} ref={(scope) => { qryBldrObj = scope; }}/>
         <div className="e-qb-button">
             <ButtonComponent id="exportsql" cssClass='e-primary' content='Get Parameter sql' onClick = {getSql}/>
             <ButtonComponent id="exportrule" cssClass='e-primary' content='Get Rule' onClick = {getRule}/>
         </div>
+        <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope; }}></DialogComponent>
     </div>);
 }
 export default App;

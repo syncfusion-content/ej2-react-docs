@@ -69,12 +69,12 @@ function App() {
 
     return (
         <div>
-            <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope as DialogComponent; }}></DialogComponent>
             <QueryBuilderComponent width='100%' ref={(scope) => { qryBldrObj = scope as QueryBuilderComponent; }} dataSource={hardwareData} columns={columnData} rule={importRules} />
             <div className="e-qb-button">
-                <ButtonComponent id="exportmongo" cssClass='e-primary' content='Get MongoDB' onClick = {getSql}/>
+                <ButtonComponent id="exportmongo" cssClass='e-primary' content='Get Named Parameter Sql' onClick = {getSql}/>
                 <ButtonComponent id="exportmongo" cssClass='e-primary' content='Get Rule' onClick = {getRule}/>
             </div>
+            <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope as DialogComponent; }}></DialogComponent>
         </div>
     );
 }

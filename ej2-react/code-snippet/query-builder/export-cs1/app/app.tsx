@@ -69,12 +69,12 @@ function App() {
     return (
         <div>
             <div>
-            <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope as DialogComponent; }}></DialogComponent>
             <QueryBuilderComponent width='100%' ref={(scope) => { qryBldrObj = scope as QueryBuilderComponent; }} dataSource={hardwareData} columns={columnData} rule={importRules} />
             <div className="e-qb-button">
                 <ButtonComponent id="exportsql" cssClass='e-primary' content='Get Parameter sql' onClick = {getSql}/>
                 <ButtonComponent id="exportrule" cssClass='e-primary' content='Get Rule' onClick = {getRule}/>
             </div>
+            <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope as DialogComponent; }}></DialogComponent>
         </div>
         </div>
     );

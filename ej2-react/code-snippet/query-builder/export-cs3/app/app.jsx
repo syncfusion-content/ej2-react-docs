@@ -64,12 +64,12 @@ function App() {
     }
 
     return (<div>
-        <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope; }}></DialogComponent>
         <QueryBuilderComponent width='100%' dataSource={hardwareData} columns={columnData} rule={importRules} ref={(scope) => { qryBldrObj = scope; }}/>
         <div className="e-qb-button">
             <ButtonComponent id="exportmongo" cssClass='e-primary' content='Get MongoDB' onClick = {getMongo}/>
             <ButtonComponent id="exportrule" cssClass='e-primary' content='Get Rule' onClick = {getRule}/>
         </div>
+        <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope; }}></DialogComponent>
     </div>);
 }
 export default App;
