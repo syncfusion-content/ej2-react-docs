@@ -3,7 +3,7 @@ import { TextAreaComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-// To render Rating.
+// To render TextArea.
 function App() {
   
     return (

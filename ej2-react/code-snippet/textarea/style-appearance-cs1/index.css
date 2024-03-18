@@ -1,0 +1,25 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+#input-container {
+    width: 240px;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+.e-input-group-icon:before {
+font-family: e-icons;
+}
+
+#input-container .e-input-group { /* csslint allow: adjoining-classes */
+margin: 30px 0;
+}
+
+#input-container .e-float-input { /* csslint allow: adjoining-classes */
+margin: 30px 0;
+}

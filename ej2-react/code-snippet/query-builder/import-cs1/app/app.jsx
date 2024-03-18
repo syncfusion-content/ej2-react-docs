@@ -2,6 +2,7 @@ import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+QueryBuilderComponent.Inject(QueryLibrary);
 // @ts-ignore
 function App() {
     let qryBldrObj;

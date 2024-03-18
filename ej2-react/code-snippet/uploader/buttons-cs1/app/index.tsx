@@ -11,8 +11,8 @@ export default class App extends React.Component<{}, {}> {
   public uploadEle: HTMLElement = createElement('span', { className: 'upload e-icons', innerHTML : 'Upload All' });
   public clearEle: HTMLElement = createElement('span', { className: 'remove e-icons', innerHTML : 'Clear All' });
   public path: object = {
-      removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-      saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+      removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+      saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
   }
   private dropAreaRef: HTMLElement;
   public onCreated(): void {

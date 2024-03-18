@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Circular Chart 3D component | Syncfusion
-description:  Checkout and learn about Getting started with React Circular Chart 3D component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React 3D Circular Chart component | Syncfusion
+description:  Checkout and learn about Getting started with React 3D Circular Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Getting started
 
-This section explains you the steps required to create a simple Circular Chart 3D and demonstrate the basic usage of the Circular Chart 3D control.
+This section explains you the steps required to create a simple 3D Circular Chart and demonstrate the basic usage of the 3D Circular Chart control.
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Circular Chart 3D component.
+Below is the list of minimum dependencies required to use the 3D Circular Chart component.
 
 ```javascript
 
@@ -59,10 +59,10 @@ To install `create-react-app` run the following command.
     npm install @syncfusion/ej2-react-charts --save
    ```
 
-## Add Circular Chart 3D to the project
+## Add 3D Circular Chart to the project
 
-Now, you can start adding Circular Chart 3D component in the application.
-For getting started, add the Circular Chart 3D component in `src/App.tsx` file using following code.
+Now, you can start adding 3D Circular Chart component in the application.
+For getting started, add the 3D Circular Chart component in `src/App.tsx` file using following code.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -9,8 +9,8 @@ export default class App extends React.Component<{}, {}> {
 // Uploader component
     public uploadObj: UploaderComponent;
     public path: object = {
-        removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-        saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+        removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+        saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
     }
     private dropAreaRef: HTMLElement;
     public onCreated(): void {

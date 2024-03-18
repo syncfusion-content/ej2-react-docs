@@ -112,7 +112,7 @@ You can set the conditions from MongoDB query through the [`setMongoQuery`](http
 
 Exporting allows you to save or maintain the created conditions through the Query Builder. You can export the defined conditions by the following ways.
 
-## Exporting to JSON
+### Exporting to JSON
 
 You can export the defined conditions to structured JSON object through the [`getRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#getrules) method.
 

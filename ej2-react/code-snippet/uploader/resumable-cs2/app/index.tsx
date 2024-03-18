@@ -8,8 +8,8 @@ function App(){
   const path: object = {
     // set chunk size for enable the chunk upload
     chunkSize: 102400,
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+    removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+    saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
   }
     return (
         <div className="chunkupload">

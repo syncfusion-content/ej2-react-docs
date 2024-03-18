@@ -46,10 +46,10 @@ function App() {
         qryBldrObj.lockRule("querybuilder_group0_rule0");
     }
     return (<div>
-        <QueryBuilderComponent width='100%' dataSource={hardwareData} ref={(scope) => { qryBldrObj = scope; }} rule={importRules} columns={columnData} showButtons={{lockGroup: true, lockRule: true}}/>
+        <QueryBuilderComponent id="querybuilder" width='100%' dataSource={hardwareData} ref={(scope) => { qryBldrObj = scope; }} rule={importRules} columns={columnData} showButtons={{lockGroup: false, lockRule: false}}/>
         <div className="e-qb-button">
-            <ButtonComponent id="lockgroup" cssClass='e-primary' content='set Rules' onClick={lockGroup}/>
-            <ButtonComponent id="lockrule" cssClass='e-primary' content='set Rules' onClick={lockRule}/>
+            <ButtonComponent id="lockgroup" cssClass='e-primary' content='Lock Group' onClick={lockGroup}/>
+            <ButtonComponent id="lockrule" cssClass='e-primary' content='Lock Rule' onClick={lockRule}/>
         </div>
     </div>);
 }

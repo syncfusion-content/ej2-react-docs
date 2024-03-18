@@ -1,0 +1,21 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#input-container {
+    width: 240px;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+/* To add asterick to float label in textarea */ 
+.e-float-input.e-control-wrapper .e-float-text::after {
+    content: '*';
+    color: red;
+}
+ 
