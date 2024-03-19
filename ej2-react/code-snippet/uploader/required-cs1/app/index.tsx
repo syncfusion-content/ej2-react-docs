@@ -12,8 +12,8 @@ export default class App extends React.Component<{}, {}> {
     public uploadObj: UploaderComponent;
     public dialogObj: DialogComponent;
     public path: object = {
-        removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-        saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+        removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+        saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
     }
     public content: string = 'Your details have been updated successfully, Thank you.';
     public width: string = '250px';
@@ -78,7 +78,7 @@ export default class App extends React.Component<{}, {}> {
             <div className="col-lg-12 control-section">
                 <h4 className="form-title">Photo Contest</h4>
             <div className="controls" id ="control_wrapper">
-                <form id="form1" method="post" action='https://ej2.syncfusion.com/services/api/uploadbox/Save'>
+                <form id="form1" method="post" action='https://services.syncfusion.com/react/production/api/FileUploader/Save'>
                     <div id="name-attr" className="form-group" style={{paddingTop: '40px'}}>
                         <div className="e-float-input">
                             <input type="text" id="name" name="name" required={true} data-required-message='* Enter your name' data-msg-containerid="nameError"/>

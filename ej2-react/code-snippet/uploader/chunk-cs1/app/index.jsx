@@ -5,8 +5,8 @@ export default class App extends React.Component {
     path = {
         chunkSize: 102400,
         // set chunk size for enable the chunk upload
-        removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-        saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+        removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+        saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
     };
     render() {
         return (<div className="chunkupload">

@@ -12,8 +12,8 @@ function App() {
   let filesDetails = [];
   let filesList = [];
   let path = {
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove/',
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save/',
+    removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove/',
+    saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save/',
   };
   removeFiles = removeFiles.bind(this);
   function onCreated() {

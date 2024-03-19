@@ -8,8 +8,8 @@ import * as ReactDOM from "react-dom";
 function App() {
   let uploadObj: UploaderComponent;
   const path: object = {
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+    removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+    saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
   }
   function onFileSelected(args : SelectedEventArgs) : void {
     args.filesData.splice(5);
