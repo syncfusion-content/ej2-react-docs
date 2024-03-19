@@ -10,12 +10,12 @@ export default class App extends React.Component<{}, {}> {
     // set chunk size for enable the chunk upload
     chunkSize: 102400,
     // provided the wrong url to showcase the chunk upload failure related properties.
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploader/Remove',
+    removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
     // set time delay for automatic retry when chunk upload failed
     retryAfterDelay: 3000,
     // set count for automatic retry when chunk upload failed
     retryCount: 5,
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploader/Save'
+    saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
 
   }
   public render(): JSX.Element {

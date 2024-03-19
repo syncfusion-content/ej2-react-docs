@@ -11,8 +11,8 @@ export default class App extends React.Component<{}, {}> {
   public dialog: DialogComponent;
   public removeFile: FileInfo[] = [];
   public path: object = {
-      removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-      saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+      removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+      saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
   }
   private buttons: object = [{buttonModel: { content: 'OK', isPrimary:'true' },'click': () => { this.dialog.hide();
     this.uploadObj.remove(this.removeFile[0], false, true); }},

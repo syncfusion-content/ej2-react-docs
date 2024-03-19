@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Olap in React Pivotview component | Syncfusion
-description: Learn here all about Olap in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: Olap in React Pivot Table component | Syncfusion
+description: Learn here all about Olap in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
 control: Olap 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Olap in React Pivotview component
+# Olap in React Pivot Table component
 
 ## Getting started
 
@@ -437,10 +437,10 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module into the
 
 #### Limitations for virtual scrolling
 
-* The [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/#columnwidth) property in [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/) should be in pixels. The percentage value is not accepted.
-* Resizing columns and setting the width of individual columns will affect scrolling and is therefore not recommended.
-* When using OLAP data, subtotals and grandtotals are only displayed when measures are bound at the last position in the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#rows) or [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#columns) axis. Otherwise, the data from the pivot table will be shown without summary totals.
-* When the pivot table's width and height are large, the loading data count in the current, previous, and next view ports (pages) will also increase, affecting performance.
+* In virtual scrolling, the [columnWidth](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/#columnwidth) property in [gridSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/) should be in pixels, and percentage values are not accepted.
+* Resizing columns or setting width to individual columns affects the calculation used to pick the correct page on scrolling.
+* When using OLAP data, subtotals and grand totals are only displayed when measures are bound at the last position in the [rows](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#rows) or [`columns](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#columns) axis. Otherwise, the data from the pivot table will be shown without summary totals.
+* When the pivot table's width and height are large, the loading data count in the current, previous, and next viewports (pages) will also increase, affecting performance.
 
 ### Run the application
 

@@ -8,8 +8,8 @@ import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 function App() {
     let uploadObj: UploaderComponent;
     const path: object = {
-        removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-        saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+        removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+        saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
     }
     let dropAreaRef: HTMLElement;
     function onCreated(): void {

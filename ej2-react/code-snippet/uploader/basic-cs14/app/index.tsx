@@ -7,8 +7,8 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     const path: object = {
-        removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-        saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+        removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+        saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
     }
     function onUploadBegin(args: UploadingEventArgs): void {
         // check whether the file is uploading from paste.

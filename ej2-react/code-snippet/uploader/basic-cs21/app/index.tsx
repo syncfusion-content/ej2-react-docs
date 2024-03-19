@@ -9,8 +9,8 @@ import * as ReactDOM from "react-dom";
 export default class App extends React.Component<{}, {}> {
     public uploadObj: UploaderComponent;
   public path: object = {
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+    removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+    saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
   }
   public componentWillMount(): void {
     L10n.load({
