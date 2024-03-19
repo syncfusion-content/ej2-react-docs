@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open and edit the uploaded files in React Uploader component | Syncfusion
+title: Open and edit the uploaded files in Uploader component | Syncfusion
 description: Learn here all about Open and edit the uploaded files in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
 control: Open and edit the uploaded files 
 platform: ej2-react
@@ -22,8 +22,8 @@ import * as ReactDOM from "react-dom";
 export default class App extends React.Component<{}, {}> {
   public uploadObj: UploaderComponent;
   public path: object = {
-      removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-      saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+      removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+      saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
   }
   private dropAreaRef: HTMLElement;
   public onCreated(): void {

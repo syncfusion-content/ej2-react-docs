@@ -36,3 +36,42 @@ The following example shows how to customize the polygon shape over the geometry
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/maps/polygon-cs1" %}
+
+
+## Tooltip
+
+Tooltip is used to display more information about a polygon shape during a mouse or touch interaction. Tooltip and tooltip template can be enabled by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/polygonTooltipSettingsModel/#visible) property to **true** in the [tooltipSettings](https://ej2.syncfusion.com/react/documentation/api/maps/polygonTooltipSettingsModel/). Additionally, you need to set the desired content as a value to the [tooltipText](https://ej2.syncfusion.com/react/documentation/api/maps/polygonSettingModel/#tooltiptext) property in the `polygons` property to show the tooltip. If you add 'n' numbers of polygon shapes, you can add the `tooltipText` property to each polygon, which will display the tooltip for the associated polygon shape.
+
+### Tooltip customization
+
+The following properties are available in the [tooltipSettings](https://ej2.syncfusion.com/react/documentation/api/maps/polygonTooltipSettingsModel/) to customize the appearance of the tooltip.
+
+* [border](https://ej2.syncfusion.com/react/documentation/api/maps/polygonTooltipSettingsModel/#border) - To change the color, width, and opacity of the border of the tooltip in the polygon shape.
+* [fill](https://ej2.syncfusion.com/react/documentation/api/maps/polygonTooltipSettingsModel/#fill) - Applies the color of the tooltip in the polygon shape.
+* [textStyle](https://ej2.syncfusion.com/react/documentation/api/maps/polygonTooltipSettingsModel/#textstyle) - To change the style of the text in the tooltip of the polygon shape.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/maps/polygon-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/maps/polygon-cs4/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/maps/polygon-cs4" %}
+ 
+### Tooltip template
+
+Any HTML element can be rendered in the tooltip of the polygon shapes using the [tooltipTemplate](https://ej2.syncfusion.com/react/documentation/api/maps/polygonSettingModel/#tooltiptemplate) property of the `polygons`. If you add 'n' numbers of polygon shapes, you can add the `tooltipTemplate` property to each polygon, which will display the tooltip for the associated polygon shape.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/maps/polygon-cs5/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/maps/polygon-cs5/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/maps/polygon-cs5" %}

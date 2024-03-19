@@ -17,7 +17,7 @@ function App() {
             required: [true, '* Please enter valid email'],
             },
             comments: {
-            required: [true, '* Please enter your comments'],
+            required: [true, '* Please enter your comments']
             }
         },
         };
@@ -34,7 +34,7 @@ function App() {
                         <div className="form-group">
                             <div className="e-float-input">
                                 <label>Email</label>
-                                <input type="email" id="email" name="Email" data-email-message="Please enter valid email address."
+                                <input type="email" id="email" name="email" data-email-message="Please enter valid email address."
                                 data-required-message="Required field" required data-msg-containerid="emailError"/>
                                 <span className="e-float-line"></span>
                             </div>
@@ -43,7 +43,7 @@ function App() {
                         <div className="form-group">
                             <div>
                                 <label>Comments</label>
-                                <TextAreaComponent id='default' name="myTextarea" data-msg-containerid="commentError" placeholder='Enter your comments' floatLabelType='Auto' required = {true}></TextAreaComponent>
+                                <TextAreaComponent id='default' name="comments" data-msg-containerid="commentError" placeholder='Enter your comments' floatLabelType='Auto' required = {true}></TextAreaComponent>
                             </div>
                             <div id="commentError"></div>
                         </div>

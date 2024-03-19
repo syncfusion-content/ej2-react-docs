@@ -9,7 +9,7 @@ import { Query, DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 function App(){
   let mentionTarget: string = '#mentionElement';
   let dataSource: DataManager = new DataManager({
-          url: 'https://ej2services.syncfusion.com/production/web-services/api/Employees',
+          url: 'https://services.syncfusion.com/react/production/api/Employees',
           adaptor: new WebApiAdaptor(),
           crossDomain: true
       });

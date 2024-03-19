@@ -24,7 +24,7 @@ By applying these classes, users can easily customize the appearance of the Text
 {% include code-snippet/textarea/style-appearance-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/style-appearance-cs1/app/index.tsx %}
+{% include code-snippet/textarea/style-appearance-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -40,7 +40,7 @@ By adding these classes, users can choose between a filled or outline appearance
 {% include code-snippet/textarea/style-appearance-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/style-appearance-cs2/app/index.tsx %}
+{% include code-snippet/textarea/style-appearance-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,7 +48,7 @@ By adding these classes, users can choose between a filled or outline appearance
 
 >Note: Filled and Outline theme customization are available only with Material themes.
 
-# Custom styling with cssClass API in TextArea
+## Custom styling with cssClass API in TextArea
 
 The `cssClass` Api provides a powerful way to apply custom styling to the TextArea component, allowing users to customize its appearance and layout according to their design requirements.
 
@@ -59,13 +59,13 @@ By utilizing the `cssClass` API, users can apply custom CSS classes to the TextA
 {% include code-snippet/textarea/style-appearance-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/style-appearance-cs3/app/index.tsx %}
+{% include code-snippet/textarea/style-appearance-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/textarea/style-appearance-cs3" %}
 
-# Setting the disabled state in TextArea
+## Setting the disabled state in TextArea
 
 To disable the TextArea, you can utilize the [enabled](https://ej2.syncfusion.com/react/documentation/api/textarea/#enabled) property. When set to `false`, the TextArea becomes disabled, preventing user interaction.
 
@@ -88,7 +88,7 @@ export default App;
 ReactDom.render(<App />,document.getElementById('input-container'));
 ```
 
-# Set the readonly TextArea
+## Set the readonly TextArea
 
 To make the TextArea read-only , you can use the [readonly](https://ej2.syncfusion.com/react/documentation/api/textarea/#readonly) property. When set to `true`, it prevents users from editing the content of the TextArea.
 
@@ -111,21 +111,30 @@ export default App;
 ReactDom.render(<App />,document.getElementById('input-container'));
 ```
 
-# Set the rounded corner in TextArea
+## Set the rounded corner in TextArea
 
 Render the TextArea with `rounded corner` by adding the `e-corner` class to the input parent element.
 
 >This rounded corner is visible only in box model input component
 
-```html
+```ts
+import * as React from 'react';
+import * as ReactDom from 'react-dom';
 
-<div class="e-input-group e-corner">
-    <textarea class="e-input" placeholder="Enter your comments"></textarea>
-</div>
-
+{/* To render TextArea.*/}
+function App() {
+  
+    return (
+        <div class="e-input-group e-corner">
+            <textarea class="e-input" placeholder="Enter your comments"></textarea>
+        </div>
+    );
+}
+export default App;
+ReactDom.render(<App />,document.getElementById('input-container'));
 ```
 
-# Static Clear Button in TextArea
+## Static Clear Button in TextArea
 
 To display a static clear button in the TextArea component, you can add the `e-static-clear` class to the `cssClass` property. This class ensures that the clear button remains visible at all times, providing users with the ability to easily clear the TextArea content without needing to focus on the control.
 
@@ -134,13 +143,13 @@ To display a static clear button in the TextArea component, you can add the `e-s
 {% include code-snippet/textarea/style-appearance-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/style-appearance-cs4/app/index.tsx %}
+{% include code-snippet/textarea/style-appearance-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/textarea/style-appearance-cs4" %}
 
-# Customize the TextArea background color and text color
+## Customize the TextArea background color and text color
 
 You can customize the TextArea styles such as background-color, text-color and border-color by overriding its default styles to achieve the desired appearance for the TextArea.
 
@@ -149,13 +158,13 @@ You can customize the TextArea styles such as background-color, text-color and b
 {% include code-snippet/textarea/style-appearance-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/style-appearance-cs5/app/index.tsx %}
+{% include code-snippet/textarea/style-appearance-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/textarea/style-appearance-cs5" %}
 
-# Change the floating label color of the TextArea
+## Change the floating label color of the TextArea
 
 You can change the floating label color of the TextArea for both `success` and `warning` validation states by applying the following CSS styles.
 
@@ -182,13 +191,13 @@ You can change the floating label color of the TextArea for both `success` and `
 {% include code-snippet/textarea/style-appearance-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/style-appearance-cs6/app/index.tsx %}
+{% include code-snippet/textarea/style-appearance-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/textarea/style-appearance-cs6" %}
 
-# Adding mandatory asterisk to placeholder
+## Adding mandatory asterisk to placeholder
 
 To add a mandatory asterisk (*) to the placeholder in the TextArea component, you can utilize CSS to append the asterisk after the placeholder text.
 
@@ -207,7 +216,7 @@ To add a mandatory asterisk (*) to the placeholder in the TextArea component, yo
 {% include code-snippet/textarea/style-appearance-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/style-appearance-cs7/app/index.tsx %}
+{% include code-snippet/textarea/style-appearance-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

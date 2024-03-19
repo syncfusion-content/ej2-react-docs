@@ -19,13 +19,13 @@ This integration enhances the usability of forms, allowing users to provide deta
 {% include code-snippet/textarea/form-support-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/form-support-cs1/app/index.tsx %}
+{% include code-snippet/textarea/form-support-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/textarea/form-support-cs1" %}
 
-# Integration of React TextArea control with FormValidator component
+## Integration of React TextArea control with FormValidator component
 
 TextArea control seamlessly integrates with the `FormValidator` component, allowing users to incorporate textarea inputs into form validation processes efficiently.
 
@@ -36,7 +36,7 @@ By integrating TextArea controls with the `FormValidator` component, users can e
 {% include code-snippet/textarea/form-support-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/form-support-cs2/app/index.tsx %}
+{% include code-snippet/textarea/form-support-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

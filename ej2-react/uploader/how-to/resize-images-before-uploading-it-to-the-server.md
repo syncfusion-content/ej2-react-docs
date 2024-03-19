@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resize images before uploading it to the server in React Uploader component | Syncfusion
+title: Resize images before upload in React Uploader component | Syncfusion
 description: Learn here all about Resize images before uploading it to the server in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
 control: Resize images before uploading it to the server 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize images before uploading it to the server in React Uploader component
+# Resize images before uploading it to the server in Uploader component
 
 You can customize the dimension of the images before uploading it to the server.
 By using selected event, you can get the selected file information as type of an object. From the obtained image file information, create a new canvas and render an image with the custom dimensions. Refer the corresponding code snippet as follows.
@@ -28,8 +28,8 @@ export default class App extends React.Component<{}, {}> {
   public filesDetails: FileInfo[] = [];
   public filesList: HTMLElement[] = [];
   public path: object = {
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+    removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+    saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save'
   }
   constructor(props: any) {
     super(props);

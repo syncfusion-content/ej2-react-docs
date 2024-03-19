@@ -16,7 +16,7 @@ export default class App extends React.Component {
     render() {
         return (
             // specifies the tag for render the DropDownList component
-            <MultiSelectComponent id="datas" dataSource={this.records} value={this.value} placeholder="e.g. Item 1" objectValueBinding={true} allowFiltering={false} fields={this.fields} popupHeight="200px" >
+            <MultiSelectComponent id="datas" dataSource={this.records} value={this.value} placeholder="e.g. Item 1" allowObjectBinding={true} allowFiltering={false} fields={this.fields} popupHeight="200px" >
             </MultiSelectComponent>);
     }
 }

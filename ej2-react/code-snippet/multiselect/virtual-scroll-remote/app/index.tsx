@@ -10,7 +10,7 @@ export default class App extends React.Component<{}, {}> {
   private customerField: object = { text: 'OrderID', value: 'OrderID' };
    
   private customerData: DataManager = new DataManager({
-    url: 'https://services.syncfusion.com/js/production/api/orders',
+    url: 'https://services.syncfusion.com/react/production/api/Orders',
     adaptor: new WebApiAdaptor,
     crossDomain: true
   });
