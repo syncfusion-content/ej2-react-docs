@@ -21,13 +21,13 @@ function App() {
   ];
   const textRender = function (args) {
     if (args.point.index === 0) {
-        args.text = 'Custom Tooltip';
+      args.text = 'Custom Datalabel';
     }
   };
   return (
     <CircularChart3DComponent
       id="charts"
-      tooltipRender={textRender}
+      textRender={textRender}
       title="Browser Market Shares in November 2023"
       tilt={-45}
     >

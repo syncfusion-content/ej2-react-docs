@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Alignment in React Timeline component
 
-You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the `align` property. The oppositeContent will be displayed parallel to the content when configured in the `ItemDirective`.
+You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [align](https://ej2.syncfusion.com/react/documentation/api/timeline#align) property. The oppositeContent will be displayed parallel to the content when configured in the `ItemDirective`.
 
 ## Before
 
-In `Before` alignment, for `horizontal` orientation the item content is placed at the top and oppositeContent at the bottom whereas in `vertical`, the content to the left and oppositeContent to the right.
+In [Before](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign/) alignment, for `horizontal` orientation the item content is placed at the top and oppositeContent at the bottom whereas in `vertical`, the content to the left and oppositeContent to the right.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ In `Before` alignment, for `horizontal` orientation the item content is placed a
 
 ## After
 
-In `After` alignment, for `horizontal` orientation the item content is placed at the bottom and oppositeContent at the top whereas in `vertical`, the content to the right and oppositeContent to the left.
+In [After](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign/) alignment, for `horizontal` orientation the item content is placed at the bottom and oppositeContent at the top whereas in `vertical`, the content to the right and oppositeContent to the left.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ In `After` alignment, for `horizontal` orientation the item content is placed at
 
 ## Alternate
 
-In `Alternate` alignment, the item content are arranged alternatively regardless of the Timeline orientation.
+In [Alternate](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign/) alignment, the item content are arranged alternatively regardless of the Timeline orientation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,7 +59,7 @@ In `Alternate` alignment, the item content are arranged alternatively regardless
 
 ## Alternate reverse
 
-In `AlternateReverse` alignment, the item content are arranged in reverse alternate regardless of the Timeline orientation.
+In [AlternateReverse](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign/) alignment, the item content are arranged in reverse alternate regardless of the Timeline orientation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

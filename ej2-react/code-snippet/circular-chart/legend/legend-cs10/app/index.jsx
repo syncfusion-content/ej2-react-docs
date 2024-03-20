@@ -27,7 +27,7 @@ function App() {
       legendSettings={{
         visible: true,
         width: '240px',
-        height: '200px',
+        height: '100px',
         enablePages: false,
       }}
     >

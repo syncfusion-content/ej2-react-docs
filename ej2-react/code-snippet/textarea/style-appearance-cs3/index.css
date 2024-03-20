@@ -1,0 +1,21 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+#input-container {
+    width: 240px;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+/* Custom CSS class for TextArea styling */
+#input-container .custom-textarea {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: antiquewhite;
+}
