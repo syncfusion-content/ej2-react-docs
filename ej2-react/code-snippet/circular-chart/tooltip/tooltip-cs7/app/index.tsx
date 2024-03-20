@@ -20,12 +20,18 @@ function App() {
     { x: 'Safari', y: 19.97 },
     { x: 'Others', y: 2.34 },
   ];
+  const textRender = function (args) {
+    if (args.point.index === 0) {
+      args.text = 'Custom Tooltip';
+    }
+  };
   return (
     <CircularChart3DComponent
       id="charts"
       title="Browser Market Shares in November 2023"
       tilt={-45}
-      tooltip={{ enable: true, location: {x: 200, y: 90} }}
+      tooltipRender={textRender}
+      tooltip={{ enable: true }}
     >
       <Inject
         services={[

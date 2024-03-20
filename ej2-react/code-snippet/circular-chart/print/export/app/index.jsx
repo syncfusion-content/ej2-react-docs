@@ -1,6 +1,7 @@
 {% raw %}
+
 import { createRoot } from 'react-dom/client';
-import './index.css';
+
 /**
  * Sample for Chart print
  */
@@ -34,7 +35,7 @@ const Print = () => {
   let chartInstance = useRef(null);
 
   const onClick = (e) => {
-    chartInstance.current.CircularChartExport3D.export('JPEG', 'chart');
+    chartInstance.current.export('JPEG', 'chart');
   };
   return (
     <div className="control-pane">
@@ -45,6 +46,7 @@ const Print = () => {
             ref={chartInstance}
             title="Browser Market Shares in November 2023"
             tilt={-45}
+            enableExport={true}
             legendSettings={{ visible: false, position: 'Right' }}
           >
             <Inject
