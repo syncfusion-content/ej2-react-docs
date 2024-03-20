@@ -1,6 +1,5 @@
 {% raw %}
 import { createRoot } from 'react-dom/client';
-import './index.css';
 /**
  * Sample for Chart print
  */
