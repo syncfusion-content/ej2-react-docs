@@ -2035,3 +2035,377 @@ export default App;
 ReactDom.render(<App />, document.getElementById("element"));
 ```
 {% endraw %}
+
+## Gallery events
+
+### popupOpen
+
+The [popupOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#popupopen) event is triggered when the gallery popup opens.
+
+{% raw %}
+```ts
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, Inject, RibbonGallery, RibbonGallerySettingsModel, GalleryPopupEventArgs } from '@syncfusion/ej2-react-ribbon';
+function App() {
+    
+    const gallerySettings: RibbonGallerySettingsModel = (
+        {
+            groups: [{
+            header: 'Styles',
+            items: [
+                {
+                    content: 'Normal'
+                }, {
+                    content: 'No Spacing'
+                }, {
+                    content: 'Heading 1'
+                }, {
+                    content: 'Heading 2'
+                }
+                ]
+            }],
+            popupOpen: (args: GalleryPopupEventArgs) => {
+                // Your required action here
+            }
+        }
+    );
+
+    return (
+        <div>
+            <RibbonComponent id='ribbon'>
+                <RibbonTabsDirective>
+                    <RibbonTabDirective header='Home'>
+                        <RibbonGroupsDirective>
+                            <RibbonGroupDirective header="Gallery">
+                                <RibbonCollectionsDirective>
+                                    <RibbonCollectionDirective>
+                                        <RibbonItemsDirective>
+                                            <RibbonItemDirective type="Gallery" gallerySettings={gallerySettings} >
+                                            </RibbonItemDirective>
+                                        </RibbonItemsDirective>
+                                    </RibbonCollectionDirective>
+                                </RibbonCollectionsDirective>
+                            </RibbonGroupDirective>
+                        </RibbonGroupsDirective>
+                    </RibbonTabDirective>
+                </RibbonTabsDirective>
+                <Inject services={[RibbonGallery]} />
+            </RibbonComponent>
+        </div>
+    );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+```
+{% endraw %}
+
+### popupClose
+
+The [popupClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#popupclose) event is triggered when the gallery popup closes.
+
+{% raw %}
+```ts
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, Inject, RibbonGallery, RibbonGallerySettingsModel, GalleryPopupEventArgs } from '@syncfusion/ej2-react-ribbon';
+function App() {
+    
+    const gallerySettings: RibbonGallerySettingsModel = (
+        {
+            groups: [{
+            header: 'Styles',
+            items: [
+                {
+                    content: 'Normal'
+                }, {
+                    content: 'No Spacing'
+                }, {
+                    content: 'Heading 1'
+                }, {
+                    content: 'Heading 2'
+                }
+                ]
+            }],
+            popupClose: (args: GalleryPopupEventArgs) => {
+            // Your required action here
+            }
+        }
+    );
+
+    return (
+        <div>
+            <RibbonComponent id='ribbon'>
+                <RibbonTabsDirective>
+                    <RibbonTabDirective header='Home'>
+                        <RibbonGroupsDirective>
+                            <RibbonGroupDirective header="Gallery">
+                                <RibbonCollectionsDirective>
+                                    <RibbonCollectionDirective>
+                                        <RibbonItemsDirective>
+                                            <RibbonItemDirective type="Gallery" gallerySettings={gallerySettings} >
+                                            </RibbonItemDirective>
+                                        </RibbonItemsDirective>
+                                    </RibbonCollectionDirective>
+                                </RibbonCollectionsDirective>
+                            </RibbonGroupDirective>
+                        </RibbonGroupsDirective>
+                    </RibbonTabDirective>
+                </RibbonTabsDirective>
+                <Inject services={[RibbonGallery]} />
+            </RibbonComponent>
+        </div>
+    );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+```
+{% endraw %}
+
+### itemHover
+
+The [itemHover](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hover over the gallery item.
+
+{% raw %}
+```ts
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, Inject, RibbonGallery, RibbonGallerySettingsModel, GalleryHoverEventArgs } from '@syncfusion/ej2-react-ribbon';
+function App() {
+    
+    const gallerySettings: RibbonGallerySettingsModel = (
+        {
+            groups: [{
+            header: 'Styles',
+            items: [
+                {
+                    content: 'Normal'
+                }, {
+                    content: 'No Spacing'
+                }, {
+                    content: 'Heading 1'
+                }, {
+                    content: 'Heading 2'
+                }
+                ]
+            }],
+            itemHover: (args: GalleryHoverEventArgs) => {
+            // Your required action here
+            }
+        }
+    );
+
+    return (
+        <div>
+            <RibbonComponent id='ribbon'>
+                <RibbonTabsDirective>
+                    <RibbonTabDirective header='Home'>
+                        <RibbonGroupsDirective>
+                            <RibbonGroupDirective header="Gallery">
+                                <RibbonCollectionsDirective>
+                                    <RibbonCollectionDirective>
+                                        <RibbonItemsDirective>
+                                            <RibbonItemDirective type="Gallery" gallerySettings={gallerySettings} >
+                                            </RibbonItemDirective>
+                                        </RibbonItemsDirective>
+                                    </RibbonCollectionDirective>
+                                </RibbonCollectionsDirective>
+                            </RibbonGroupDirective>
+                        </RibbonGroupsDirective>
+                    </RibbonTabDirective>
+                </RibbonTabsDirective>
+                <Inject services={[RibbonGallery]} />
+            </RibbonComponent>
+        </div>
+    );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+```
+{% endraw %}
+
+### beforeItemRender
+
+The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#beforeitemrender) event is triggered while rendering each gallery item.
+
+{% raw %}
+```ts
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, Inject, RibbonGallery, RibbonGallerySettingsModel, GalleryItemEventArgs } from '@syncfusion/ej2-react-ribbon';
+function App() {
+    
+    const gallerySettings: RibbonGallerySettingsModel = (
+        {
+            groups: [{
+            header: 'Styles',
+            items: [
+                {
+                    content: 'Normal'
+                }, {
+                    content: 'No Spacing'
+                }, {
+                    content: 'Heading 1'
+                }, {
+                    content: 'Heading 2'
+                }
+                ]
+            }],
+            beforeItemRender: (args: GalleryItemEventArgs) => {
+            // Your required action here
+            }
+        }
+    );
+
+    return (
+        <div>
+            <RibbonComponent id='ribbon'>
+                <RibbonTabsDirective>
+                    <RibbonTabDirective header='Home'>
+                        <RibbonGroupsDirective>
+                            <RibbonGroupDirective header="Gallery">
+                                <RibbonCollectionsDirective>
+                                    <RibbonCollectionDirective>
+                                        <RibbonItemsDirective>
+                                            <RibbonItemDirective type="Gallery" gallerySettings={gallerySettings} >
+                                            </RibbonItemDirective>
+                                        </RibbonItemsDirective>
+                                    </RibbonCollectionDirective>
+                                </RibbonCollectionsDirective>
+                            </RibbonGroupDirective>
+                        </RibbonGroupsDirective>
+                    </RibbonTabDirective>
+                </RibbonTabsDirective>
+                <Inject services={[RibbonGallery]} />
+            </RibbonComponent>
+        </div>
+    );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+```
+{% endraw %}
+
+### beforeSelect
+
+The [beforeSelect](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#beforeselect) event is triggered before selecting an item in the Ribbon gallery.
+
+{% raw %}
+```ts
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, Inject, RibbonGallery, RibbonGallerySettingsModel, GalleryBeforeSelectEventArgs } from '@syncfusion/ej2-react-ribbon';
+function App() {
+    
+    const gallerySettings: RibbonGallerySettingsModel = (
+        {
+            groups: [{
+            header: 'Styles',
+            items: [
+                {
+                    content: 'Normal'
+                }, {
+                    content: 'No Spacing'
+                }, {
+                    content: 'Heading 1'
+                }, {
+                    content: 'Heading 2'
+                }
+                ]
+            }],
+            beforeSelect: (args: GalleryBeforeSelectEventArgs) => {
+            // Your required action here
+            }
+        }
+    );
+
+    return (
+        <div>
+            <RibbonComponent id='ribbon'>
+                <RibbonTabsDirective>
+                    <RibbonTabDirective header='Home'>
+                        <RibbonGroupsDirective>
+                            <RibbonGroupDirective header="Gallery">
+                                <RibbonCollectionsDirective>
+                                    <RibbonCollectionDirective>
+                                        <RibbonItemsDirective>
+                                            <RibbonItemDirective type="Gallery" gallerySettings={gallerySettings} >
+                                            </RibbonItemDirective>
+                                        </RibbonItemsDirective>
+                                    </RibbonCollectionDirective>
+                                </RibbonCollectionsDirective>
+                            </RibbonGroupDirective>
+                        </RibbonGroupsDirective>
+                    </RibbonTabDirective>
+                </RibbonTabsDirective>
+                <Inject services={[RibbonGallery]} />
+            </RibbonComponent>
+        </div>
+    );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+```
+{% endraw %}
+
+### select
+
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#select) event is triggered while selecting an item in the Ribbon Gallery.
+
+{% raw %}
+```ts
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, Inject, RibbonGallery, RibbonGallerySettingsModel, GallerySelectEventArgs } from '@syncfusion/ej2-react-ribbon';
+function App() {
+    
+    const gallerySettings: RibbonGallerySettingsModel = (
+        {
+            groups: [{
+            header: 'Styles',
+            items: [
+                {
+                    content: 'Normal'
+                }, {
+                    content: 'No Spacing'
+                }, {
+                    content: 'Heading 1'
+                }, {
+                    content: 'Heading 2'
+                }
+                ]
+            }],
+            select: (args: GallerySelectEventArgs) => {
+            // Your required action here
+            }
+        }
+    );
+
+    return (
+        <div>
+            <RibbonComponent id='ribbon'>
+                <RibbonTabsDirective>
+                    <RibbonTabDirective header='Home'>
+                        <RibbonGroupsDirective>
+                            <RibbonGroupDirective header="Gallery">
+                                <RibbonCollectionsDirective>
+                                    <RibbonCollectionDirective>
+                                        <RibbonItemsDirective>
+                                            <RibbonItemDirective type="Gallery" gallerySettings={gallerySettings} >
+                                            </RibbonItemDirective>
+                                        </RibbonItemsDirective>
+                                    </RibbonCollectionDirective>
+                                </RibbonCollectionsDirective>
+                            </RibbonGroupDirective>
+                        </RibbonGroupsDirective>
+                    </RibbonTabDirective>
+                </RibbonTabsDirective>
+                <Inject services={[RibbonGallery]} />
+            </RibbonComponent>
+        </div>
+    );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+```
+{% endraw %}

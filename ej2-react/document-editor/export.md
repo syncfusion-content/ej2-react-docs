@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in React Document editor component
 
-Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
 We are providing two types of save APIs  as mentioned below.
 
@@ -64,6 +64,30 @@ The following example shows how to export the document as Word document (.docx).
 >Document Editor features are segregated into individual feature-wise modules. To use word export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
 >
 >To enable word export for a document editor instance, set `enableWordExport` to true.
+
+## Template export
+
+The following example shows how to export the document as Word Template (.dotx).
+
+>Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import/#why-the-document-pagination-differs-from-microsoft-word)
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/document-editor/export-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/document-editor/export-cs4/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/document-editor/export-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/export-cs4" %}
+
+>Document Editor features are segregated into individual feature-wise modules. To use word template export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
+>
+>To enable word template export for a document editor instance, set `enableWordExport` to true.
 
 ## Text export
 
