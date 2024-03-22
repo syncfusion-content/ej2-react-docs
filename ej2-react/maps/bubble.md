@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Bubble in React Maps component
 
+This section shows how to customize the appearance of the bubbles in the Maps component. The below video demonstrates the same.
+
+{% youtube "https://www.youtube.com/watch?v=EHEfv0x6XtU" %}
+
 Bubbles in the Maps component represent the underlying data values of the Maps. It can be scattered throughout the Maps shapes that contain values in the data source. Bubbles are enabled by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel/#visible) property of [`bubbleSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel) to **true**. To add bubbles to the Maps, bind the data source to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel/#datasource) property of [`BubbleDirective`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel) and set the field name, that contains the numerical data, in the data source to the [`valuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/bubbleSettingsModel/#valuepath) property.
 
 ```ts
