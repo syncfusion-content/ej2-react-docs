@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Floating Label in React TextArea control
+# Floating Label in React TextArea Component
 
-The floating label functionality in the TextArea control allows the placeholder text to float above the TextArea while the user interacts with it, providing a more intuitive user experience. This feature can be achieved using the [floatLabelType](https://ej2.syncfusion.com/react/documentation/api/textarea/#floatLabelType) API, which offers various options for defining the floating behavior:
+The floating label functionality in the TextArea component allows the placeholder text to float above the TextArea while the user interacts with it, providing a more intuitive user experience. This feature can be achieved using the [floatLabelType](https://ej2.syncfusion.com/react/documentation/api/textarea/#floatLabelType) API, which offers various options for defining the floating behavior:
 
 | Type  | Description |
 | -- | -- |
@@ -23,7 +23,7 @@ The floating label functionality in the TextArea control allows the placeholder 
 {% include code-snippet/textarea/float-label-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/float-label-cs1/app/index.tsx %}
+{% include code-snippet/textarea/float-label-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,7 +38,7 @@ Localization library allows to localize the placeholder text of the TextArea to 
 {% include code-snippet/textarea/localization-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/localization-cs1/app/index.tsx %}
+{% include code-snippet/textarea/localization-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,7 +52,7 @@ In the below sample, `German` culture is loaded to the TextArea placeholder text
 {% include code-snippet/textarea/localization-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/textbox/localization-cs2/app/index.tsx %}
+{% include code-snippet/textarea/localization-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -6,7 +6,7 @@ import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej
 
 function App() {
     return (
-        <div id='timeline' style={{ height: "350px" }}>
+        <div id='timeline' style={{ height: "330px" }}>
             <TimelineComponent created={() => { /* Your required action here */ }}>
                 <ItemsDirective>
                     <ItemDirective content='Planning' />

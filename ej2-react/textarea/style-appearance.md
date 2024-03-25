@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React TextArea control | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React TextArea control of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React TextArea component | Syncfusion
+description: Learn here all about Style and appearance in Syncfusion React TextArea component of Syncfusion Essential JS 2 and more.
 control: Style and Appearance
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sizing in React TextArea control
+# Sizing in React TextArea Component
 
 you can adjust the size of the TextArea by applying specific classes:
 
@@ -30,7 +30,7 @@ By applying these classes, users can easily customize the appearance of the Text
 
 {% previewsample "page.domainurl/code-snippet/textarea/style-appearance-cs1" %}
 
-## Filled and Outline mode
+## Filled and outline mode
 
 The Filled and Outline modes can be enabled in the TextArea component by adding the `e-outline` or `e-filled` class to the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textarea/#cssClass) API.
 By adding these classes, users can choose between a filled or outline appearance for the TextArea component, aligning with the design aesthetics of their application.
@@ -134,7 +134,7 @@ export default App;
 ReactDom.render(<App />,document.getElementById('input-container'));
 ```
 
-## Static Clear Button in TextArea
+## Static clear button in TextArea
 
 To display a static clear button in the TextArea component, you can add the `e-static-clear` class to the `cssClass` property. This class ensures that the clear button remains visible at all times, providing users with the ability to easily clear the TextArea content without needing to focus on the control.
 
