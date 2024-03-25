@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React TextArea Control
+# Getting Started with React TextArea Component
 
 This section briefly explains how to create a simple TextArea and demonstrate the basic functionalities of the TextArea component in an React environment.
 
@@ -23,7 +23,7 @@ The following list of dependencies are required to use the TextArea component in
     |-- @syncfusion/ej2-base
 ```
 
-## Installation and Configuration
+## Installation and configuration
 
 * You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.

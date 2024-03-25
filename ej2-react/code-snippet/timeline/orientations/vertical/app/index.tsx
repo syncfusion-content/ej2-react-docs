@@ -6,7 +6,7 @@ import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej
 
 function App() {
     return (
-        <div id='timeline' style={{ height: "350px" }}>
+        <div id='timeline' style={{ height: "330px" }}>
             <TimelineComponent orientation='Vertical'>
                 <ItemsDirective>
                     <ItemDirective content='Day 1, 4:00 PM' oppositeContent='Check-in and campsite visit' />

@@ -14,7 +14,7 @@ function App() {
     ];
 
     return (
-        <div id='timeline' style={{ height: "350px" }}>
+        <div id='timeline' style={{ height: "330px" }}>
             <TimelineComponent align='before' reverse={true}>
                 <ItemsDirective>
                     <ItemDirective content='June 2022' oppositeContent = {careerProgress[0]} />
