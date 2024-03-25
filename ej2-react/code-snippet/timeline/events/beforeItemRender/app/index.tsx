@@ -6,7 +6,7 @@ import { TimelineComponent, ItemsDirective, ItemDirective, TimelineRenderingEven
 
 function App() {
     return (
-        <div id='timeline' style={{ height: "350px" }}>
+        <div id='timeline' style={{ height: "330px" }}>
             <TimelineComponent beforeItemRender={(args: TimelineRenderingEventArgs) => { /* Your required action here */ }}>
                 <ItemsDirective>
                     <ItemDirective content='Planning' />

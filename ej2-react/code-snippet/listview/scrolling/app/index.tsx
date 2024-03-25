@@ -1,7 +1,6 @@
-import React from 'react';
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
-import '././index.css';
 
 function App(this: any) {
   let listviewInstance: ListViewComponent | null = null;
@@ -58,7 +57,7 @@ function App(this: any) {
       </div>
     );
   }
-  let itemsRendered = 7;
+  let itemsRendered = 5;
   let itemPerScroll = 5;
   let result: { text: string; positionClass: string; templateHeight?: string }[] = [];
   const onListScrolled = (args:any) => {
@@ -67,7 +66,7 @@ function App(this: any) {
         const startIndex = itemsRendered;
         const endIndex = Math.min(itemsRendered + itemPerScroll, data.length);
         result = data.slice(startIndex, endIndex) as  { text: string; positionClass: string; templateHeight?: string }[];
-        listviewInstance?.addItem(result);
+        listviewInstance.addItem(result);
         itemsRendered = endIndex;
       }
     }
@@ -75,7 +74,7 @@ function App(this: any) {
   return (
     <div className="grid-container"><div><h3>Chat</h3>
       <ListViewComponent id='list' dataSource={data.slice(0, itemsRendered)} height= "320px"
-    width= "400px" template={listTemplate.bind(this) as any} cssClass='e-list-template' scroll={onListScrolled.bind(this) as any} ref={scope => { listviewInstance = scope;}}></ListViewComponent>
+    width= "400px" template={listTemplate as any} cssClass='e-list-template' scroll={onListScrolled as any} ref={scope => { listviewInstance = scope;}}></ListViewComponent>
     </div></div>
   );
 }
