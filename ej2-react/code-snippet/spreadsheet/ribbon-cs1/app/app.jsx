@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { DropDownButton } from '@syncfusion/ej2-splitbuttons/src/drop-down-button/drop-down-button';
+import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
 import { select, createElement } from '@syncfusion/ej2-base';
 import { data } from './datasource';
 

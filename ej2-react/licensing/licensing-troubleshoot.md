@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Licensing FAQ
+# Licensing troubleshoot in React
 
 ## Is an internet connection required for license validation
 
@@ -86,6 +86,8 @@ It is essential to reactivate the license key when upgrading the Syncfusion pack
 
  * Registering the license key of a different version than the referred Syncfusion package version in the application can also cause licensing errors.
 
+ * Inclusion of [non-React](#license-issue-due-to-including-non-react-packages-in-the-dependencies) packages in the dependencies may lead to licensing errors due to the presence of duplicate instances of our packages.
+
 ### License issue due to duplicate Syncfusion packages in the application
 
 One of the possible cases on experiencing license issues in your application is due to duplicate packages exists after upgrading packages to next or latest version. To remove the duplicate packages follow the below steps.
@@ -111,3 +113,15 @@ For example, consider a situation where one component in the project has a versi
 When developing an application with Syncfusion packages, it is important to register the appropriate license key that matches the version of the package installed. Failure to do so may result in license errors within the application. 
 
 For instance, if you are using a component version labeled as `(v20.4.XX)`, it is essential to register the license key generated `specifically` for that version. By doing so, it ensures the smooth functioning of the controls and provides access to all features and functionality without encountering any license validation errors.
+
+### License issue due to including non-React packages in the dependencies
+
+When integrating Syncfusion with your React project, it's essential to include only our React component packages in the dependencies, as shown in the image below.
+
+![Including our React component packages](images/reactpackages.png)
+
+Avoid including our TypeScript packages separately.
+
+![Including NonReact component packages](images/nonreactpackages.png)
+
+These are sub-dependencies of our React component packages and are automatically installed along with them. Including them separately may sometimes result in duplicate instances of packages, which can lead to issues with license validation. Therefore, to ensure proper license validation and avoid conflicts, stick to including our React component packages alone in your project dependencies.
