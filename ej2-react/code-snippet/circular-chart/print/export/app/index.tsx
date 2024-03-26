@@ -87,7 +87,5 @@ const Print = () => {
   );
 };
 export default Print;
-
-const root = createRoot(document.getElementById('charts'));
-root.render(<Print />);
+createRoot(document.getElementById('charts')).render(<Print />);
 {% endraw %}
