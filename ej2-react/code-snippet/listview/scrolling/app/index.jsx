@@ -1,10 +1,9 @@
 
 
 
-import React from 'react';
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
-import '././index.css';
 
 function App() {
   let listviewInstance = null;
@@ -61,7 +60,7 @@ function App() {
       </div>
     );
   }
-  let itemsRendered = 7;
+  let itemsRendered = 5;
   let itemPerScroll = 5;
   let result= [];
   const onListScrolled = (args) => {
@@ -70,7 +69,7 @@ function App() {
         const startIndex = itemsRendered;
         const endIndex = Math.min(itemsRendered + itemPerScroll, data.length);
         result = data.slice(startIndex, endIndex);
-        listviewInstance?.addItem(result);
+        listviewInstance.addItem(result);
         itemsRendered = endIndex;
       }
     }

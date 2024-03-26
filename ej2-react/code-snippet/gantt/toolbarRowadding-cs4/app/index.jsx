@@ -35,15 +35,15 @@ function App(){
         editSettings={editOptions} toolbar={toolbarOptions} height = '450px' resourceFields = {resourceFields} resources ={resourceCollection}>
                      <AddDialogFieldsDirective>
             <AddDialogFieldDirective type='General' headerText='General' ></AddDialogFieldDirective>
-            <AddDialogFieldDirective type='Dependency' additionalParams = {allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}></AddDialogFieldDirective>
-            <AddDialogFieldDirective type='Resources' additionalParams= { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }]}></AddDialogFieldDirective>
-            <AddDialogFieldDirective type='Segments' additionalParams = {columns:[{field:"segmenttask",width:"170px" ,headerText:"Segment Task"}],}></AddDialogFieldDirective>
+            <AddDialogFieldDirective type='Dependency' additionalParams = {{allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}}></AddDialogFieldDirective>
+            <AddDialogFieldDirective type='Resources' additionalParams= {{ allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }]}}></AddDialogFieldDirective>
+            <AddDialogFieldDirective type='Segments' additionalParams = {{columns:[{field:"segmenttask",width:"170px" ,headerText:"Segment Task"}],}}></AddDialogFieldDirective>
         </AddDialogFieldsDirective>
            <EditDialogFieldsDirective>
               <EditDialogFieldDirective type='General' headerText='General' ></EditDialogFieldDirective>
-              <EditDialogFieldDirective type='Dependency'  additionalParams = {allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}></EditDialogFieldDirective>
-              <AddDialogFieldDirective type='Resources' additionalParams= { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }]}></AddDialogFieldDirective>
-              <EditDialogFieldDirective type='Segments' additionalParams = {columns:[{field:"segmenttask",width:"170px" ,headerText:"Segment Task"}],}></EditDialogFieldDirective>
+              <EditDialogFieldDirective type='Dependency'  additionalParams = {{allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}}></EditDialogFieldDirective>
+              <EditDialogFieldDirective type='Resources' additionalParams= {{ allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }]}}></EditDialogFieldDirective>
+              <EditDialogFieldDirective type='Segments' additionalParams = {{columns:[{field:"segmenttask",width:"170px" ,headerText:"Segment Task"}],}}></EditDialogFieldDirective>
             </EditDialogFieldsDirective>
             <Inject services={[Edit, Selection, Toolbar]} />
         </GanttComponent>

@@ -33,18 +33,18 @@ function App(){
   const  toolbarOptions = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
         return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
         editSettings={editOptions} toolbar={toolbarOptions} height = '450px' resourceFields = {resourceFields} resources ={resourceCollection}>
-       <AddDialogFieldsDirective>
+        <AddDialogFieldsDirective>
             <AddDialogFieldDirective type='General'></AddDialogFieldDirective>
             <AddDialogFieldDirective type='Dependency'></AddDialogFieldDirective>
             <AddDialogFieldDirective type='Resources'></AddDialogFieldDirective>
             <AddDialogFieldDirective type='Segments'></AddDialogFieldDirective>
-            <AddDialogFieldDirective type='Note' additionalParams= {inlineMode: { enable: true,onSelection: true }}></AddDialogFieldDirective>
+            <AddDialogFieldDirective type='Notes' additionalParams= {{inlineMode: { enable: true,onSelection: true }}}></AddDialogFieldDirective>
         </AddDialogFieldsDirective>
            <EditDialogFieldsDirective>
               <EditDialogFieldDirective type='General' headerText='General' ></EditDialogFieldDirective>
               <EditDialogFieldDirective type='Dependency' ></EditDialogFieldDirective>
-              <EditDialogFieldDirective type='Note'  additionalParams= {inlineMode: { enable: true,onSelection: true }}></EditDialogFieldDirective>
-              <AddDialogFieldDirective type='Resources' ></AddDialogFieldDirective>
+              <EditDialogFieldDirective type='Notes'  additionalParams= {{inlineMode: { enable: true,onSelection: true }}}></EditDialogFieldDirective>
+              <EditDialogFieldDirective type='Resources' ></EditDialogFieldDirective>
               <EditDialogFieldDirective type='Segments'></EditDialogFieldDirective>
             </EditDialogFieldsDirective>
             <Inject services={[Edit, Selection, Toolbar]} />
