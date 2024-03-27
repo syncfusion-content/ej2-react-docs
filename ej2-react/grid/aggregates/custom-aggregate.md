@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The custom aggregate feature in Syncfusion's React Grid component allows you to calculate aggregate values using your own aggregate function. This feature can be useful in scenarios where the built-in aggregate functions do not meet your specific requirements. To use the custom aggregate option, follow the steps below:
 
-* Set the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#type) property to **Custom** in the [AggregateDirective -> AggregateColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/).
+* Set the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) property to **Custom** in the [AggregateDirective -> AggregateColumnDirective](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/).
 
-* Provide your custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#CustomAggregate) property.
+* Provide your custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#CustomAggregate) property.
 
 The custom aggregate function will be invoked differently for total and group aggregations:
 
@@ -45,7 +45,7 @@ Here's an example that demonstrates how to use the custom aggregate feature in t
 
 ## Show the count of distinct values in aggregate row
 
-You can calculate the count of distinct values in an aggregate row by using custom aggregate functions. By specifying the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#type) as **Custom** and providing a custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#CustomAggregate) property, you can achieve this behavior.
+You can calculate the count of distinct values in an aggregate row by using custom aggregate functions. By specifying the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) as **Custom** and providing a custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#CustomAggregate) property, you can achieve this behavior.
 
 Here's an example that demonstrates how to show the count of distinct values for the **ShipCountry** column using a custom aggregate.
 

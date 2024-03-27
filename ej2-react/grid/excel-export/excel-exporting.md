@@ -97,7 +97,7 @@ The following example demonstrates how to render custom dataSource during Excel 
 
 Exporting grid data with custom aggregates allows you to include additional calculated values in the exported file based on specific requirements. This feature is highly valuable for providing a comprehensive view of the data in the exported file, incorporating specific aggregated information for analysis or reporting purposes.
 
-In order to utilize custom aggregation, you need to specify the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#type) property as **Custom** and provide the custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#customaggregate) property.
+In order to utilize custom aggregation, you need to specify the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) property as **Custom** and provide the custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#customaggregate) property.
 
 Within the **customAggregateFn** function, it takes an input data that contains a result property. The function calculates the count of objects in this data where the **ShipCountry** field value is equal to **Brazil** and returns the count with a descriptive label.
 

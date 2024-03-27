@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { useState } from 'react';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ButtonComponent, CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 function App() {
