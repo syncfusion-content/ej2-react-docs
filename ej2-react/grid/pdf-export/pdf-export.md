@@ -95,7 +95,7 @@ The following example demonstrates how to render custom data source during PDF e
 
 Custom aggregates in the Syncfusion React Grid involves exporting grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
 
-In order to utilize custom aggregation, you need to specify the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#type) property as **Custom** and provide the custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#customaggregate) property. 
+In order to utilize custom aggregation, you need to specify the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) property as **Custom** and provide the custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#customaggregate) property. 
 
 Within the **customAggregateFn** function, it takes an input data that contains a result property. The function calculates the count of objects in this data where the **ShipCountry** field value is equal to **Brazil** and returns the count with a descriptive label.
 

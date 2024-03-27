@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Footer aggregate in React Grid component
 
-The Syncfusion React Grid component allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#footertemplate) property to render the aggregate value in the footer cells.
+The Syncfusion React Grid component allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in the footer cells.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -30,11 +30,11 @@ The Syncfusion React Grid component allows you to calculate and display aggregat
  {% previewsample "page.domainurl/code-snippet/grid/aggregate-cs2" %}
 
 > * Use the template reference variable name **#footerTemplate** to specify the footer template.
-> * Inside the template, access the aggregate values using their corresponding [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#type) name. For example, to access the sum aggregate value, use **props.sum**.
+> * Inside the template, access the aggregate values using their corresponding [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) name. For example, to access the sum aggregate value, use **props.sum**.
 
 ## Format the aggregate value
 
-To format the aggregate value result in the Syncfusion React Grid component, you can use the [format](https://helpej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/#format) property of the[AggregateColumnDirective](https://helpej2.syncfusion.com/react/documentation/api/grid/aggregateColumnDirective/). The `format` property allows you to specify a format string that determines how the aggregate value will be displayed.
+To format the aggregate value result in the Syncfusion React Grid component, you can use the [format](https://helpej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#format) property of the[AggregateColumnDirective](https://helpej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/). The `format` property allows you to specify a format string that determines how the aggregate value will be displayed.
 
 
 {% tabs %}
