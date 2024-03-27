@@ -66,11 +66,14 @@ CSS variables allows you to dynamically change color values in real-time using J
 Here you can find the example for Material 3 customization using Css class.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/common/material3-cs2/app/app.jsx %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/common/material3-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/common/material3-cs2/app/app.tsx %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/common/material3-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/common/material3-cs2/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,11 +94,11 @@ With this CSS variable support, you can effortlessly customize the color variabl
 Syncfusion has implemented the Material 3 theme, offering both Light and Dark variants. In the Material 3 light theme, there are distinct class variables for both light and dark modes, providing flexibility for seamless switching between the two modes within your application.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/common/material3-cs1/app/app.jsx %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/common/material3-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/common/material3-cs1/app/app.tsx %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/common/material3-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
