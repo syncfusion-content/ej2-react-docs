@@ -2,7 +2,7 @@ import { ColumnDirective, ColumnsDirective, EditSettingsModel, GridComponent, In
 import { Edit, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
-import { FocusEventArgs, RichTextEditorComponent, HtmlEditor, Inject as RichTextEditorInject, Toolbar as RichTextEditorToolbar } from '@syncfusion/ej2-react-richtexteditor';
+import { FocusEventArgs, RichTextEditorComponent, HtmlEditor, Inject as RichTextEditorInject, Toolbar as RichTextEditorToolbar, QuickToolbar } from '@syncfusion/ej2-react-richtexteditor';
 
 export interface columnDataType {
   OrderId: number,
@@ -28,7 +28,7 @@ function App() {
       <div>
         {orderData && orderData.ShipAddress !== undefined && (
           <RichTextEditorComponent id='rtEdit' value={orderData.ShipAddress} focus={onFocus} >
-            <RichTextEditorInject services={[HtmlEditor, RichTextEditorToolbar]} />
+            <RichTextEditorInject services={[HtmlEditor, RichTextEditorToolbar, QuickToolbar]} />
           </RichTextEditorComponent>)}
       </div>
     )
