@@ -9,8 +9,8 @@ function App() {
     let ribbonObj = React.useRef<RibbonComponent>(null);
 
     const ribbonCreated = () => {
-      ribbonObj.current?.ribbonKeyTipModule.showKeyTips('H');
-    }
+      ribbonObj.current.ribbonKeyTipModule.showKeyTips('H');
+    };
     const gallerySettings: RibbonGallerySettingsModel = (
       {
         itemCount: 3,
