@@ -11,15 +11,15 @@ function App() {
     let ribbonObj = React.useRef<RibbonComponent>(null);
 
     const ribbonCreated = () => {
-        ribbonObj.current?.ribbonKeyTipModule.showKeyTips('H');
-      }
+        ribbonObj.current.ribbonKeyTipModule.showKeyTips('H');
+    };
      
     const fileOptions: MenuItemModel[] = [
     { text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
     { text: "Rename", iconCss: "e-icons e-rename", id: "rename" },
     { text: "Save as", iconCss: "e-icons e-save", id: "save" }
-    ]
+    ];
     const pasteOptions: ItemModel[] = [{ text: "Keep Source Format" }, { text: "Merge Format" }, { text: "Keep Text Only" }];
     
     return (

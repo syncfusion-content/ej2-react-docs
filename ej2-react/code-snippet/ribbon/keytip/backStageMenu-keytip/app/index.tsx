@@ -10,8 +10,8 @@ function App() {
     let ribbonObj = React.useRef<RibbonComponent>(null);
 
     const ribbonCreated = () => {
-      ribbonObj.current?.ribbonKeyTipModule.showKeyTips('F');
-    }
+      ribbonObj.current.ribbonKeyTipModule.showKeyTips('F');
+    };
     const backstageSettings: BackStageMenuModel = {
       visible: true,
       keyTip: 'F',
@@ -23,7 +23,7 @@ function App() {
       backButton: {
           text: 'Close',
       }
-  }
+  };
   const pasteOptions: ItemModel[] = [{ text: "Keep Source Format" }, { text: "Merge Format" }, { text: "Keep Text Only" }];
   function homeContentTemplate () {
       return "<div id='home-wrapper' style='padding: 20px;'><div id='new-section' class='new-wrapper'><div class='section-title'> New </div><div class='category_container'><div class='doc_category_image'></div><span class='doc_category_text'> New document </span></div></div><div id='block-wrapper'><div class='section-title'> Recent </div><div class='section-content' style='padding: 12px 0px; cursor: pointer'><table><tbody><tr><td> <span class='doc_icon e-icons e-open-link'></span> </td><td><span style='display: block; font-size: 14px'> Ribbon.docx </span><span style='font-size: 12px'> EJ2 >> Components >> Navigations >> Ribbon >> default </span></td></tr></tbody></table></div></div></div>"
