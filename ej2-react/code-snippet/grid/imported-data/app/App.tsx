@@ -10,8 +10,8 @@ import { data } from './datasource';
 function App() {
   let grid: GridComponent | null;
   const path: Object = {
-    saveUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save',
-    removeUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove'
+    saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save',
+    removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove'
   };
   const dropElement: HTMLElement = document.getElementsByClassName('control-fluid')[0] as HTMLElement;
   const parseExcel = (file: any) => {
