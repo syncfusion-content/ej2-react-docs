@@ -161,7 +161,7 @@ export function App() {
                 <PdfViewerComponent
                     id="container"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
                     documentLoad={documentLoad}
                     customContextMenuSelect={customContextMenuSelect}
                     customContextMenuBeforeOpen={customContextMenuBeforeOpen}
