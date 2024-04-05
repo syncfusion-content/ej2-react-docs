@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Legend in React Maps component
 
+This section shows how to add legends in the Maps component. The below video demonstrates the same.
+
+{% youtube "https://www.youtube.com/watch?v=uHmza0G-Z9Y" %}
+
 A Legend is a visual representation of the symbols used on the Maps. It can be represented in various colors, shapes or other identifiers based on the data and provides valuable information for interpreting what the Maps are displaying. It explains what each symbol in the Maps represents. Legends are enabled by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel)  to **true**.
 
 ## Modes of legend

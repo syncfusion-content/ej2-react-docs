@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Markers in React Maps component
 
+This section shows how to add and customize the markers in the Maps component. The below video demonstrates the same.
+
+{% youtube "https://www.youtube.com/watch?v=HW0lim372R0" %}
+
 Markers are notes that are used to leave a message on the Maps. It indicates or marks a specific location with desired symbols on the Maps. It can be enabled by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/#visible) property of the [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/) to **true**".
 
 ## Adding marker

@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject} from '@syncfusion/ej2-react-pdfviewer';
 export function App() {
 return (<div>
     <div className='control-section'>
@@ -12,7 +12,7 @@ return (<div>
             height= '640px'>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                   Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+                                   Print, TextSelection, TextSearch, FormFields, FormDesigner,PageOrganizer]} />
         </PdfViewerComponent>
     </div>
 </div>);
