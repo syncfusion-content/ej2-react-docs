@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Edit in React Grid component | Syncfusion
-description: Learn here all about Edit in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Editing in React Grid component | Syncfusion
+description: Learn here all about Editing in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Edit 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit in React Grid component
+# Editing in React Grid component
 
-The Grid component provides powerful options for dynamically inserting, deleting, and updating records, enabling you to modify data directly within the grid. This feature is useful when you want to enable you to perform CRUD (Create, Read, Update, Delete) operations seamlessly.
+The Grid component provides powerful options for dynamically inserting, deleting, and updating records, enabling you to modify data directly within the grid. This feature is useful when you want to seamlessly perform CRUD (Create, Read, Update, Delete) operations.
 
 To enable editing functionality directly within the grid, you need to configure the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel/#allowediting), [allowAdding](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel/#allowadding), and [allowDeleting](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel/#allowdeleting) properties within the [editSettings](https://ej2.syncfusion.com/react/documentation/api/grid#editsettings)  to **true**.
 
@@ -96,8 +96,8 @@ Here's an example that demonstrates how to disable editing for the column in the
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs18" %}
 
 >* If you have set the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column/#isprimarykey) property to **true** for a column, editing will be automatically disabled for that column.
-> * You can disble the particular row using [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event.please refer this [link](https://ej2.syncfusion.com/react/documentation/grid/editing/in-line-editing#disable-editing-for-a-particular-row).
->* You can disble the particular cell using [cellEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#celledit) event.please refer this [link](https://ej2.syncfusion.com/react/documentation/grid/editing/batch-editing#disable-editing-for-a-particular-cell).
+> * You can disable the particular row using [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) event. Please refer this [link](https://ej2.syncfusion.com/react/documentation/grid/editing/in-line-editing#disable-editing-for-a-particular-row).
+>* You can disable the particular cell using [cellEdit](https://ej2.syncfusion.com/react/documentation/api/grid/#celledit) event. Please refer this [link](https://ej2.syncfusion.com/react/documentation/grid/editing/batch-editing#disable-editing-for-a-particular-cell).
 
 ## Editing template column
 
@@ -202,7 +202,7 @@ In the following example, the `DropDownList` component is rendered within the [e
 
 The edit template for complex column in Grid is used to customize the editing experience when dealing with complex data structures. This capability is particularly useful for handling nested data objects within grid columns. By default, the grid binds complex data to column fields using the dot (.) operator. However, when you render custom elements, such as input fields, in the edit template for a complex column, you must use the (___) underscore operator instead of the dot (.) operator to bind the complex object.
 
-In the following sample, the input element is rendered in the edit template of the FirstName and LastName column. The edited changes can be saved using the `name` property of the input element. Since the complex data is bound to the FirstName  and LastName column, The `name` property should be defined as **Name___FirstName** and **Name___LastName**, respectively, instead of using the dot notation (**Name.FirstName** and **Name.LastName**).
+In the following sample, the input element is rendered in the edit template of the FirstName and LastName column. The edited changes can be saved using the `name` property of the input element. Since the complex data is bound to the FirstName  and LastName column, The `name` property should be defined as **Name___FirstName and Name___LastName**, respectively, instead of using the dot notation (**Name.FirstName and Name.LastName**).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -283,9 +283,9 @@ The following example demonstrates the integration of the Syncfusion Grid with a
 
 Performing the edit operation in a custom external form in the Syncfusion Grid is a valuable feature when you need to customize the edit operation within a separate form rather than the default in-grid editing. 
 
-To enable the use of an external form for editing in Syncfusion Grid, you can make use of the `RowSelected` property. This property specifies whether the edit operation should be triggered when a row is selected.
+To enable the use of an external form for editing in Syncfusion Grid, you can make use of the `rowSelected` property. This property specifies whether the edit operation should be triggered when a row is selected.
 
-In the following example, it demonstrates how to edit the form using an external form by utilizing the `RowSelected` property:
+In the following example, it demonstrates how to edit the form using an external form by utilizing the `rowSelected` property:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
