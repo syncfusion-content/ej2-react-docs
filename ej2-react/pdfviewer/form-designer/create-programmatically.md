@@ -26,7 +26,7 @@ The PDF Viewer control provides the option to add, edit and delete the Form Fiel
 Using addFormField method, the form fields can be added to the PDF document programmatically. We need to pass two parameters in this method. They are Form Field Type and Properties of Form Field Type. To add form field programmatically, Use the following code.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="index.JSX" %}
 {% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -78,7 +78,7 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 {% endraw %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.TSX" %}
 {% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -133,7 +133,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
@@ -143,7 +143,7 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 Using updateFormField method, Form Field can be updated programmatically. We should get the Form Field object/Id from FormFieldCollections property that you would like to edit and pass it as a parameter to updateFormField method. The second parameter should be the properties that you would like to update for Form Field programmatically. We have updated the value and background Color properties of Textbox Form Field.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="index.JSX" %}
 {% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -196,7 +196,7 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 {% endraw %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.TSX" %}
 {% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -251,7 +251,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
@@ -261,7 +261,7 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 Using deleteFormField method, the form field can be deleted programmatically. We should retrieve the Form Field object/Id from FormFieldCollections property that you would like to delete and pass it as a parameter to deleteFormField method. To delete a Form Field programmatically, use the following code.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="index.JSX" %}
 {% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -314,7 +314,7 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 {% endraw %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.TSX" %}
 {% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -369,7 +369,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**. 
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
@@ -453,7 +453,7 @@ root.render(<App />);
 
 When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/saveformfield.gif)
+![Alt text](../../pdfviewer/images/saveformfield.gif)
 
 You can invoke download action using following code snippet.,
 
@@ -534,7 +534,7 @@ root.render(<App />);
 
 When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/printformfield.gif)
+![Alt text](../../pdfviewer/images/printformfield.gif)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -605,7 +605,7 @@ root.render(<App />);
 
 We can open the already saved PDF document contains Form Fields in it by clicking the open icon in the toolbar. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/openexistingpdf.gif)
+![Alt text](../../pdfviewer/images/openexistingpdf.gif)
 
 ## Validate form fields
 
@@ -1005,7 +1005,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Signature Field Settings](../../../pdfviewer/images/SignatureField.png)
+![Signature Field Settings](../../pdfviewer/images/SignatureField.png)
 
 
 The following code example explains how to update the properties of the initial field added to the document from the form designer toolbar.
@@ -1126,7 +1126,7 @@ root.render(<App />);
 {% endtabs %}
 
 
-![Initial Field Settings](../../../pdfviewer/images/InitialField.png)
+![Initial Field Settings](../../pdfviewer/images/InitialField.png)
 
 ### Textbox field settings
 
@@ -1312,7 +1312,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Textbox Field Settings](../../../pdfviewer/images/Textbox.png)
+![Textbox Field Settings](../../pdfviewer/images/Textbox.png)
 
 ### Password field settings
 
@@ -1494,7 +1494,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Password Field Settings](../../../pdfviewer/images/Password.png)
+![Password Field Settings](../../pdfviewer/images/Password.png)
 
 ### CheckBox field settings
 
@@ -1655,7 +1655,7 @@ root.render(<App />);
 {% endtabs %}
 
 
-![CheckBox Field Settings](../../../pdfviewer/images/Checkbox.png)
+![CheckBox Field Settings](../../pdfviewer/images/Checkbox.png)
 
 ### RadioButton field settings
 
@@ -1819,7 +1819,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![RadioButton Field Settings](../../../pdfviewer/images/Radiobutton.png)
+![RadioButton Field Settings](../../pdfviewer/images/Radiobutton.png)
 
 ### ListBox field settings
 
@@ -2004,7 +2004,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![ListBox Field Settings](../../../pdfviewer/images/Listbox.png)
+![ListBox Field Settings](../../pdfviewer/images/Listbox.png)
 
 ### DropDown field settings
 
@@ -2188,4 +2188,4 @@ root.render(<App />);
 {% endtabs %}
 
 
-![DropDown Field Settings](../../../pdfviewer/images/Dropdown.png)
+![DropDown Field Settings](../../pdfviewer/images/Dropdown.png)
