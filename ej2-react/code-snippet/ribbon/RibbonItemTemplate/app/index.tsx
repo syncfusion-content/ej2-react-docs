@@ -8,12 +8,26 @@ function App() {
         const cssClass = "ribbonTemplate " + props.activeSize;
         return (<span className={cssClass}><span className="e-icons e-video"></span><span className="text">Video</span></span>)
     }
+    function customTemplate(props: any) {
+        const customcssClass = "custom-template " + props.activeSize;
+        return (<div className={customcssClass}><label htmlFor="fname">First name:</label><input type="text" id="fname" name="fname"/><br/><br/><label htmlFor="lname">Last name:</label><input type="text" id="lname" name="lname"/></div>)
+    }
     return (
         <RibbonComponent id="ribbon">
             <RibbonTabsDirective>
                 <RibbonTabDirective header="Home">
                     <RibbonGroupsDirective>
-                        <RibbonGroupDirective header="Clipboard">
+                    <RibbonGroupDirective header="Templates" isCollapsible={false}>
+                            <RibbonCollectionsDirective>
+                                <RibbonCollectionDirective>
+                                    <RibbonItemsDirective>
+                                        <RibbonItemDirective type="Template" itemTemplate={customTemplate}>
+                                        </RibbonItemDirective>
+                                    </RibbonItemsDirective>
+                                </RibbonCollectionDirective>
+                            </RibbonCollectionsDirective>
+                        </RibbonGroupDirective>
+                        <RibbonGroupDirective header="Multimedia">
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
