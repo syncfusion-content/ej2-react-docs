@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Datamatrixgenerator in React Barcode component
+# Data matrix generator in React Barcode component
 
 ## Data Matrix
 
