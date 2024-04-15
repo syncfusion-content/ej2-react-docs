@@ -9,6 +9,7 @@ export default class App extends React.Component {
     shapeChanging(args)  {
          if (args.currentShapeSettings.type === 'FreehandDraw') {
             args.currentShapeSettings.strokeColor = 'red';
+            args.currentShapeSettings.strokeWidth = 10;
         }
     }
     imageEditorCreated() {
@@ -21,7 +22,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} shapeChanging={this.shapeChanging.bind(this)} toolbar = {[]}>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} shapeChanging={this.shapeChanging.bind(this)}>
             </ImageEditorComponent>
                 </div>);
     }
