@@ -169,7 +169,6 @@ In your component file (e.g., App.ts), import `DataManager` and `WebApiAdaptor` 
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
-{% raw %}
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-grids';
 
