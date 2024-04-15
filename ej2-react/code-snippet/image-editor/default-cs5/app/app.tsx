@@ -11,7 +11,8 @@ function App() {
     let imgObj: ImageEditorComponent;
     function shapeChanging(args: shapeChanging): void {
         if (args.currentShapeSettings.type === 'FreehandDraw') {
-            args.currentShapeSettings.color = 'red';
+            args.currentShapeSettings.strokeColor = 'red';
+            args.currentShapeSettings.strokeWidth = 10;
         }
     }
     function imageEditorCreated(): void {
@@ -24,7 +25,7 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} shapeChanging={shapeChanging} toolbar = {[]}>
+        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} shapeChanging={shapeChanging}>
         </ImageEditorComponent>
             </div>
     );
