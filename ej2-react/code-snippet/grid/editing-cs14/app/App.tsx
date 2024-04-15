@@ -27,7 +27,7 @@ function App() {
     return (
       <div>
         {orderData && orderData.ShipAddress !== undefined && (
-          <RichTextEditorComponent id='rtEdit' value={orderData.ShipAddress} focus={onFocus} >
+          <RichTextEditorComponent id='ShipAddress' value={orderData.ShipAddress} focus={onFocus} >
             <RichTextEditorInject services={[HtmlEditor, RichTextEditorToolbar, QuickToolbar]} />
           </RichTextEditorComponent>)}
       </div>
