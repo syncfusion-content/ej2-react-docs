@@ -1,5 +1,5 @@
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { ColumnDirective, ColumnsDirective, GridComponent, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, PageSettingsModel, Inject, Page } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 
@@ -25,6 +25,7 @@ function App() {
                 <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
                 <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
             </ColumnsDirective>
+            <Inject services={[Page]} />
         </GridComponent>
     </div>
 };

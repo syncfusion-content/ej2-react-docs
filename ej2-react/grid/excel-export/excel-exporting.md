@@ -99,7 +99,7 @@ Exporting grid data with custom aggregates allows you to include additional calc
 
 In order to utilize custom aggregation, you need to specify the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) property as **Custom** and provide the custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#customaggregate) property.
 
-Within the **customAggregateFn** function, it takes an input data that contains a result property. The function calculates the count of objects in this data where the **ShipCountry** field value is equal to **Brazil** and returns the count with a descriptive label.
+Within the **customAggregate** function, it takes an input data that contains a result property. The function calculates the count of objects in this data where the **ShipCountry** field value is equal to **Brazil** and returns the count with a descriptive label.
 
 The following example shows how to export the grid with a custom aggregate that shows the calculation of the **Brazil** count of the **ShipCountry** column.
 

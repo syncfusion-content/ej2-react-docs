@@ -1,141 +1,125 @@
 
 
-import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, RowDataBoundEventArgs } from '@syncfusion/ej2-react-grids';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import * as React from 'react';
+import React, { useState } from 'react';
 import { data } from './datasource';
+
+interface CustomRowDataBoundEventArgs extends RowDataBoundEventArgs {
+  column: {
+    field: string;
+  };
+  cell: HTMLElement;
+  data: DataType;
+}
+
+interface DataType {
+  OrderID: number;
+  CustomerID: string;
+  Freight: number;
+  ShipName: string;
+  ShipCity: string;
+  isNewlyAdded: boolean;
+}
 
 function App() {
   const pageSettings: object = { pageSize: 50 };
-  let immutableInit: boolean = true;
-  let init: boolean = true;
-  let primaryKey: number = 0;
-  let normalStart: number;
-  let immutableStart: number;
-  let immutableGrid: GridComponent;
-  let normalGrid: GridComponent;
-  let topBtn: ButtonComponent;
-  let bottomBtn: ButtonComponent;
-  let deleteBtn: ButtonComponent;
-  let sortBtn: ButtonComponent;
-  let pageBtn: ButtonComponent;
-  const immutableBeforeDataBound = () => {
-    immutableStart = new Date().getTime();
+  const [rowData, setRowData] = useState<DataType[]>(data)
+  const selectionSettings: object = {type: 'Multiple'};
+  const [message, setMessage] = useState('')
+  let immutableGrid: GridComponent | null;
+  const queryCellInfo = (args: CustomRowDataBoundEventArgs) => {
+    if (args.column.field === 'ShipName' && args.data.ShipName === "Gems Chevalier") {
+      (args.cell as HTMLElement).style.backgroundColor = 'rgb(210, 226, 129)';
+    }
   }
-  const immutableDataBound = () => {
-    let val: number | string = immutableInit ? '' : new Date().getTime() - immutableStart;
-    (document.getElementById("immutableDelete") as HTMLElement).innerHTML =
-      "Immutable rendering Time: " + "<b>" + val + "</b>" + "<b>ms</b>";
-    immutableStart = 0; immutableInit = false;
+  const rowDataBound = (args: RowDataBoundEventArgs) => {
+    (args.row as HTMLElement).style.backgroundColor = (args.data as DataType).isNewlyAdded ? '' : ' rgb(208, 255, 255)';
   }
   const addTopEvent = () => {
-    let addedRecords: object[] = [
-      { 'OrderID': ++primaryKey, 'ProductName': 'Chai', 'ProductID': 'Sasquatch Ale', 'CustomerID': 'QUEDE', 'CustomerName': 'Yoshi Tannamuri' },
-      { 'OrderID': ++primaryKey, 'ProductName': 'Georg Pipps', 'ProductID': 'Valkoinen suklaa', 'CustomerID': 'RATTC', 'CustomerName': 'Martín Sommer' },
-      { 'OrderID': ++primaryKey, 'ProductName': 'Yoshi Tannamuri', 'ProductID': 'Gula Malacca', 'CustomerID': 'COMMI', 'CustomerName': 'Ann Devon' },
-      { 'OrderID': ++primaryKey, 'ProductName': 'Palle Ibsen', 'ProductID': 'Rogede sild', 'CustomerID': 'RATTC', 'CustomerName': 'Paula Wilson' },
-      { 'OrderID': ++primaryKey, 'ProductName': 'Francisco Chang', 'ProductID': 'Mascarpone Fabioli', 'CustomerID': 'ROMEY', 'CustomerName': 'Jose Pavarotti' }
-    ];
-    let aData: object[] = addedRecords.concat(immutableGrid.dataSource as object[]);
-    normalGrid.setProperties({ dataSource: aData });
-    immutableGrid.setProperties({ dataSource: aData });
-  }
-  const addBottomEvent = () => {
-    let addedRecords: object[] = [
-      { 'OrderID': ++primaryKey, 'ProductName': 'Chai', 'ProductID': 'Sasquatch Ale', 'CustomerID': 'QUEDE', 'CustomerName': 'Yoshi Tannamuri' },
-      { 'OrderID': ++primaryKey, 'ProductName': 'Georg Pipps', 'ProductID': 'Valkoinen suklaa', 'CustomerID': 'RATTC', 'CustomerName': 'Martín Sommer' },
-      { 'OrderID': ++primaryKey, 'ProductName': 'Yoshi Tannamuri', 'ProductID': 'Gula Malacca', 'CustomerID': 'COMMI', 'CustomerName': 'Ann Devon' },
-      { 'OrderID': ++primaryKey, 'ProductName': 'Palle Ibsen', 'ProductID': 'Rogede sild', 'CustomerID': 'RATTC', 'CustomerName': 'Paula Wilson' },
-      { 'OrderID': ++primaryKey, 'ProductName': 'Francisco Chang', 'ProductID': 'Mascarpone Fabioli', 'CustomerID': 'ROMEY', 'CustomerName': 'Jose Pavarotti' }
-    ]
-    let aData: object[] = (immutableGrid.dataSource as object[]).concat(addedRecords);
-    normalGrid.setProperties({ dataSource: aData });
-    immutableGrid.setProperties({ dataSource: aData });
+    (immutableGrid as GridComponent).getAllDataRows().forEach(row => {
+      (row as HTMLElement).style.backgroundColor = "rgb(208, 255, 255)";
+    });
+    let count = 0;
+    if (count < 1) {
+      let newRowData: object[] = [];
+      let addedRecords: object = {
+        'OrderID': generateOrderId(),
+        'CustomerID': generateCustomerId(),
+        'ShipCity': generateShipCity(),
+        'Freight': generateFreight(),
+        'ShipName': generateShipName(),
+        'isNewlyAdded': true
+      };
+      newRowData.push(addedRecords);
+      setRowData(([...newRowData, ...rowData as DataType[]] as DataType[]));
+      count++;
+      setMessage(`${count} rows rendered after performing the add action`);
+    }
   }
   const deleteEvent = () => {
-    (immutableGrid.dataSource as object[]).splice(0, 5);
-    normalGrid.setProperties({ dataSource: immutableGrid.dataSource });
-    immutableGrid.setProperties({ dataSource: immutableGrid.dataSource });
+    let count = 0;
+    if (count < 1 && (rowData as DataType[]).length > 0) {
+      setRowData((rowData as DataType[]).slice(1));
+      count++;
+      setMessage(`${count} rows deleted after performing delete action`);
+    }
   }
-  const sortEvent = () => {
-    let aData: object[] = (immutableGrid.dataSource as object[]).reverse();
-    normalGrid.setProperties({ dataSource: aData });
-    immutableGrid.setProperties({ dataSource: aData });
+  const updateEvent =() => {
+    let count = 0;
+    let newRowData = (rowData as any).map((row: any) => {
+      if (row.ShipName === 'Bueno Foods') {
+        count++;
+        return { ...row, 'ShipName': "Gems Chevalier" };
+      } else {
+        return row;
+      }
+    });
+    setRowData(newRowData);
+    setMessage(` ${count} rows updated after performing update action`);
   }
-  const pageEvent = () => {
-    let totalPage: number = (immutableGrid.dataSource as object[]).length / immutableGrid.pageSettings.pageSize;
-    let page: number = Math.floor(Math.random() * totalPage) + 1;
-    normalGrid.setProperties({ pageSettings: { currentPage: page } });
-    immutableGrid.setProperties({ pageSettings: { currentPage: page } });
+
+  const generateOrderId = () => {
+    return Math.floor(10000 + Math.random() * 90000);
   }
-  const beforeDataBound = () => {
-    normalStart = new Date().getTime();
+
+  const generateCustomerId =() => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let result = '';
+    for (let i = 0; i < 5; i++) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
   }
-  const dataBound = () => {
-    let val: number | string = init ? '' : new Date().getTime() - normalStart;
-    (document.getElementById("normalDelete") as HTMLElement).innerHTML =
-      "Normal rendering Time: " + "<b>" + val + "</b>" + "<b>ms</b>";
-    normalStart = 0; init = false;
+
+  const generateShipCity = () => {
+    const cities = ['London', 'Paris', 'New York', 'Tokyo', 'Berlin'];
+    return cities[Math.floor(Math.random() * cities.length)];
+  }
+
+  const generateFreight =() => {
+    const randomValue = Math.random() * 100;
+    return parseFloat(randomValue.toFixed(2));
+  }
+
+  const generateShipName =() => {
+    const names = ['Que Delícia', 'Bueno Foods', 'Island Trading', 'Laughing Bacchus Winecellars'];
+    return names[Math.floor(Math.random() * names.length)];
   }
   return <div>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <span id="immutableDelete"></span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span id="normalDelete"></span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <ButtonComponent ref={topInfo => { topBtn = topInfo }} cssClass='e-info' onClick={addTopEvent}>Add 5 rows at top</ButtonComponent>
-              <ButtonComponent ref={bottomInfo => { bottomBtn = bottomInfo }} cssClass='e-info' onClick={addBottomEvent}>Add 5 rows at bottom</ButtonComponent>
-              <ButtonComponent ref={deleteInfo => { deleteBtn = deleteInfo }} cssClass='e-info' onClick={deleteEvent}>Delete 5 rows</ButtonComponent>
-              <ButtonComponent ref={sortInfo => { sortBtn = sortInfo }} cssClass='e-info' onClick={sortEvent}>Sort Order ID</ButtonComponent>
-              <ButtonComponent ref={pageInfo => { pageBtn = pageInfo }} cssClass='e-info' onClick={pageEvent}>Paging</ButtonComponent>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span><b>Immutable Grid</b></span>
-            <div style={{ paddingTop: "20px" }}>
-              <GridComponent ref={immutable => { immutableGrid = immutable }} dataSource={data} height='250' enableImmutableMode={true} allowPaging={true} pageSettings={pageSettings} beforeDataBound={immutableBeforeDataBound} dataBound={immutableDataBound}>
+              <ButtonComponent cssClass='e-info' onClick={addTopEvent}>Add rows data</ButtonComponent>
+              <ButtonComponent cssClass='e-info' onClick={deleteEvent}>Delete rows</ButtonComponent>
+              <ButtonComponent cssClass='e-info' onClick={updateEvent}>Update Freight Data</ButtonComponent>
+              <div id='message'>{message}</div>
+              <GridComponent ref={immutable => { immutableGrid = immutable }} dataSource={rowData } height='250' enableImmutableMode={true} allowPaging={true} pageSettings={pageSettings} selectionSettings={selectionSettings} rowDataBound={rowDataBound} queryCellInfo={queryCellInfo}>
                 <ColumnsDirective>
-                  <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey="true" width='120' textAlign='Right'></ColumnDirective>
-                  <ColumnDirective field='ProductName' headerText='Product Name' width='160'></ColumnDirective>
-                  <ColumnDirective field='ProductID' headerText='Product ID' width='130' textAlign='Right' />
-                  <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-                  <ColumnDirective field='CustomerName' headerText='Customer Name' width='160'></ColumnDirective>
+                  <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey={true} width='120' textAlign='Right'></ColumnDirective>
+                  <ColumnDirective field='CustomerID' headerText='Customer ID' width='160'></ColumnDirective>
+                  <ColumnDirective field='Freight' headerText='Freight' width='130' textAlign='Right' />
+                  <ColumnDirective field='ShipName' headerText='Ship Name' width='120' />
                 </ColumnsDirective>
                 <Inject services={[Page]} />
               </GridComponent>
             </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span><b>Normal Grid</b></span>
-            <div style={{ paddingTop: "20px" }}>
-              <GridComponent ref={normal => { normalGrid = normal }} dataSource={data} height='250' allowPaging={true} pageSettings={pageSettings} beforeDataBound={beforeDataBound} dataBound={dataBound}>
-                <ColumnsDirective>
-                  <ColumnDirective field='OrderID' headerText='Order ID' isPrimaryKey="true" width='120' textAlign='Right'></ColumnDirective>
-                  <ColumnDirective field='ProductName' headerText='Product Name' width='160'></ColumnDirective>
-                  <ColumnDirective field='ProductID' headerText='Product ID' width='130' textAlign='Right' />
-                  <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
-                  <ColumnDirective field='CustomerName' headerText='Customer Name' width='160'></ColumnDirective>
-                </ColumnsDirective>
-                <Inject services={[Page]} />
-              </GridComponent>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table></div>
 }
-export default App;
+export default App; 
