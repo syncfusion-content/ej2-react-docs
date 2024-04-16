@@ -12,7 +12,7 @@ function App() {
       grid.excelExport();
     }
   }
-  const customAggregateFn = (customData) => {
+  const customAggregate = (customData) => {
     const brazilCount = customData.result ? customData.result.filter((item: object) => item['ShipCountry'] === 'Brazil').length : customData.filter((item: object) => item['ShipCountry'] === 'Brazil').length;
     return `Brazil Count::${brazilCount}`;
   };
@@ -33,7 +33,7 @@ function App() {
         <AggregatesDirective>
           <AggregateDirective>
             <AggregateColumnsDirective>
-              <AggregateColumnDirective columnName='ShipCountry' type='Custom' customAggregate={customAggregateFn} footerTemplate={footerTemplate}></AggregateColumnDirective>
+              <AggregateColumnDirective columnName='ShipCountry' type='Custom' customAggregate={customAggregate} footerTemplate={footerTemplate}></AggregateColumnDirective>
             </AggregateColumnsDirective>
           </AggregateDirective>
         </AggregatesDirective>
