@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert complex JSON and assign to pivot table in component | Syncfusion
+title: Convert complex JSON and assign to pivot table | Syncfusion
 description: Learn here all about how to convert complex JSON to flat JSON and assign it to the pivot table in Syncfusion component and more.
 platform: ej2-react
 control: Convert complex JSON to flat JSON and assign it to the pivot table 
