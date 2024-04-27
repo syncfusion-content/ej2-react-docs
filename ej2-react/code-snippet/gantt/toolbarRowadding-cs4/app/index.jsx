@@ -1,28 +1,28 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Edit, Selection, Toolbar ,AddDialogFieldsDirective, EditDialogFieldsDirective, EditDialogFieldDirective, AddDialogFieldDirective } from '@syncfusion/ej2-react-gantt';
-import { data,resourceCollection } from './datasource';
-function App(){
-    const taskFields = {
-        id: 'TaskID',
-        name: 'TaskName',
-        startDate: 'StartDate',
-        endDate: 'EndDate',
-        duration: 'Duration',
-        progress: 'Progress',
-        dependency: 'Predecessor',
-        resourceInfo: 'resources',
-        work: 'work',
-        child: 'subtasks',
-        segments: 'Segments',
-        notes:"note",
+import { GanttComponent, Inject, Edit, Selection, Toolbar, AddDialogFieldsDirective, EditDialogFieldsDirective, EditDialogFieldDirective, AddDialogFieldDirective } from '@syncfusion/ej2-react-gantt';
+import { data, resourceCollection } from './datasource';
+function App() {
+  const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    endDate: 'EndDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Predecessor',
+    resourceInfo: 'resources',
+    work: 'work',
+    child: 'subtasks',
+    segments: 'Segments',
+    notes: "note",
   };
- const resourceFields = {
+  const resourceFields = {
     id: 'resourceId',
     name: 'resourceName',
     unit: 'resourceUnit',
     group: 'resourceGroup'
-};
+  };
   const editOptions = {
     allowAdding: true,
     allowEditing: true,
@@ -30,22 +30,28 @@ function App(){
     allowTaskbarEditing: true,
     showDeleteConfirmDialog: true
   };
-  const  toolbarOptions = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
-        return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
-        editSettings={editOptions} toolbar={toolbarOptions} height = '450px' resourceFields = {resourceFields} resources ={resourceCollection}>
-                     <AddDialogFieldsDirective>
-            <AddDialogFieldDirective type='General' headerText='General' ></AddDialogFieldDirective>
-            <AddDialogFieldDirective type='Dependency' additionalParams = {{allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}}></AddDialogFieldDirective>
-            <AddDialogFieldDirective type='Resources' additionalParams= {{ allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }]}}></AddDialogFieldDirective>
-            <AddDialogFieldDirective type='Segments' additionalParams = {{columns:[{field:"segmenttask",width:"170px" ,headerText:"Segment Task"}],}}></AddDialogFieldDirective>
-        </AddDialogFieldsDirective>
-           <EditDialogFieldsDirective>
-              <EditDialogFieldDirective type='General' headerText='General' ></EditDialogFieldDirective>
-              <EditDialogFieldDirective type='Dependency'  additionalParams = {{allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}}></EditDialogFieldDirective>
-              <EditDialogFieldDirective type='Resources' additionalParams= {{ allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }]}}></EditDialogFieldDirective>
-              <EditDialogFieldDirective type='Segments' additionalParams = {{columns:[{field:"segmenttask",width:"170px" ,headerText:"Segment Task"}],}}></EditDialogFieldDirective>
-            </EditDialogFieldsDirective>
-            <Inject services={[Edit, Selection, Toolbar]} />
-        </GanttComponent>
+  const addDependencyParams = { allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",] }
+  const addResourcesParams = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }] }
+  const addSegmentsParams = { columns: [{ field: "segmenttask", width: "170px", headerText: "Segment Task" }], }
+  const editDependencyParams = { allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",] }
+  const editResourcesParams = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }] }
+  const editSegmentsParams = { columns: [{ field: "segmenttask", width: "170px", headerText: "Segment Task" }], }
+  const toolbarOptions = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
+  return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
+    editSettings={editOptions} toolbar={toolbarOptions} height='450px' resourceFields={resourceFields} resources={resourceCollection}>
+    <AddDialogFieldsDirective>
+      <AddDialogFieldDirective type='General' headerText='General' ></AddDialogFieldDirective>
+      <AddDialogFieldDirective type='Dependency' additionalParams={addDependencyParams}></AddDialogFieldDirective>
+      <AddDialogFieldDirective type='Resources' additionalParams={addResourcesParams}></AddDialogFieldDirective>
+      <AddDialogFieldDirective type='Segments' additionalParams={addSegmentsParams}></AddDialogFieldDirective>
+    </AddDialogFieldsDirective>
+    <EditDialogFieldsDirective>
+      <EditDialogFieldDirective type='General' headerText='General' ></EditDialogFieldDirective>
+      <EditDialogFieldDirective type='Dependency' additionalParams={editDependencyParams}></EditDialogFieldDirective>
+      <EditDialogFieldDirective type='Resources' additionalParams={editResourcesParams}></EditDialogFieldDirective>
+      <EditDialogFieldDirective type='Segments' additionalParams={editSegmentsParams}></EditDialogFieldDirective>
+    </EditDialogFieldsDirective>
+    <Inject services={[Edit, Selection, Toolbar]} />
+  </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));

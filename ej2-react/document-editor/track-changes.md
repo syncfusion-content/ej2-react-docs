@@ -49,6 +49,45 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
+## Show/Hide Revisions Pane
+ 
+The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+ 
+The following example code illustrates how to show/hide the revisions pane.
+
+```ts
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+} from '@syncfusion/ej2-react-documenteditor';
+
+DocumentEditorContainerComponent.Inject(Toolbar);
+function App() {
+  let containerRef: React.RefObject<DocumentEditorContainerComponent> = React.createRef();
+  containerRef.current.documentEditor.showRevisions = true; // To show revisions pane
+  containerRef.current.documentEditor.showRevisions = false; // To hide revisions pane
+  return (
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={containerRef}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        enableToolbar={true}
+        enableTrackChanges={true}
+      />
+    </div>
+
+  );
+}
+export default App;
+ReactDOM.render(<App />, document.getElementById('sample'));
+
+```
+
 ## Get all tracked revisions
 
 The following example demonstrate how to get all tracked revision from current document.
