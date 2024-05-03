@@ -33,14 +33,16 @@ let pdfviewer;
 
 function App() {
 
-function pageRenderInitiate(args){
-    // This method is called when the page rendering starts
-    console.log('Rendering of pages started' + args); 
-};
-function pageRenderComplete(args){
-  // This method is called when the page rendering completes
- console.log('Rendering of pages completed' + args);
-};
+    function pageRenderInitiate(args){
+        // This method is called when the page rendering starts
+        console.log('Rendering of pages started'); 
+        console.log(args); 
+    };
+    function pageRenderComplete(args){
+      // This method is called when the page rendering completes
+     console.log('Rendering of pages completed');
+     console.log(args); 
+    };
   return (<div>
     <div className='control-section'>
      {/* Render the PDF Viewer */}
@@ -49,7 +51,7 @@ function pageRenderComplete(args){
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
-        pageRenderStart={pageRenderStart}
+        pageRenderInitiate={pageRenderInitiate}
         pageRenderComplete={pageRenderComplete}
         style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
@@ -76,14 +78,16 @@ let pdfviewer;
 
 function App() {
 
-function pageRenderStart(args){
-    // This method is called when the page rendering starts
-    console.log('Rendering of pages started' + args); 
-};
-function pageRenderComplete(args){
-  // This method is called when the page rendering completes
- console.log('Rendering of pages completed' + args);
-};
+    function pageRenderInitiate(args){
+        // This method is called when the page rendering starts
+        console.log('Rendering of pages started'); 
+        console.log(args); 
+    };
+    function pageRenderComplete(args){
+      // This method is called when the page rendering completes
+     console.log('Rendering of pages completed');
+     console.log(args); 
+    };
   return (<div>
     <div className='control-section'>
      {/* Render the PDF Viewer */}
@@ -92,7 +96,7 @@ function pageRenderComplete(args){
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
-        pageRenderStart={pageRenderStart}
+        pageRenderInitiate={pageRenderInitiate}
         pageRenderComplete={pageRenderComplete}
         style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
@@ -111,4 +115,4 @@ root.render(<App />);
 
 The provided code demonstrates how to subscribe to the `pageRenderStart` and `pageRenderComplete` events in the Syncfusion PDF Viewer component. 
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/PageRenderStarted%20and%20PageRenderCompleted%20event)
