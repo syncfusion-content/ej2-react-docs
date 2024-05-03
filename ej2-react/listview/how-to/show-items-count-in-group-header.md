@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show items count in group header in React Listview component | Syncfusion
-description: Learn here all about Show items count in group header in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Show items count in group header in React Listview Component | Syncfusion
+description: Learn here all about Show items count in group header in Syncfusion React Listview component its elements, features and more.
 control: Show items count in group header 
 platform: ej2-react
 documentation: ug
