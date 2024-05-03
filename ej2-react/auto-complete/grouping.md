@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in React Auto complete component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React Auto complete component of Syncfusion Essential JS 2 and more.
+title: Grouping in React Auto complete Component | Syncfusion
+description: Learn here all about Grouping in Syncfusion React Auto complete component its elements, features and more.
 control: Grouping 
 platform: ej2-react
 documentation: ug
