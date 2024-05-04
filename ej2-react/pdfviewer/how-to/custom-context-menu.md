@@ -23,7 +23,7 @@ The following code shows how to add custom option in context menu.
         {
             text: 'Search In Google',
             id: 'search_in_google',
-            iconCss: 'e-icons e-de-ctnr-find'
+            iconCss: 'e-icons e-search'
         },
         {
             text: 'Lock Annotation',
@@ -85,7 +85,7 @@ The PDF Viewer feature enables customization of custom options and the ability t
         {
             text: 'Search In Google',
             id: 'search_in_google',
-            iconCss: 'e-icons e-de-ctnr-find'
+            iconCss: 'e-icons e-search'
         },
         {
             text: 'Lock Annotation',
@@ -147,7 +147,7 @@ export function App() {
         {
             text: 'Search In Google',
             id: 'search_in_google',
-            iconCss: 'e-icons e-de-ctnr-find'
+            iconCss: 'e-icons e-search'
         },
         {
             text: 'Lock Annotation',
@@ -235,29 +235,24 @@ export function App() {
     }
 
     function lockAnnotations(args) {
-        var viewer = document.getElementById('container').ej2_instances[0];
-        var selectedAnnotations = viewer.selectedItems.annotations;
-        for (var i = 0; i < selectedAnnotations.length; i++) {
-            var annotation = selectedAnnotations[i];
-            if (annotation && annotation.annotationSettings) {
-                annotation.annotationSettings.isLock = true;
-                viewer.annotationModule.editAnnotation(annotation);
-                args.cancel = false;
+        for (var i = 0; i < viewer.annotationCollection.length; i++) {
+            if (viewer.annotationCollection[i].uniqueKey === viewer.selectedItems.annotations[0].id) {
+                viewer.annotationCollection[i].annotationSettings.isLock = true;
+                viewer.annotationCollection[i].isCommentLock = true;
+                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
             }
+            args.cancel = false;
         }
     }
 
-
     function unlockAnnotations(args) {
-        var viewer = document.getElementById('container').ej2_instances[0];
-        var selectedAnnotations = viewer.selectedItems.annotations;
-        for (var i = 0; i < selectedAnnotations.length; i++) {
-            var annotation = selectedAnnotations[i];
-            if (annotation && annotation.annotationSettings) {
-                annotation.annotationSettings.isLock = false;
-                viewer.annotationModule.editAnnotation(annotation);
-                args.cancel = false;
+        for (var i = 0; i < viewer.annotationCollection.length; i++) {
+            if (viewer.annotationCollection[i].uniqueKey === viewer.selectedItems.annotations[0].id) {
+                viewer.annotationCollection[i].annotationSettings.isLock = false;
+                viewer.annotationCollection[i].isCommentLock = false;
+                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
             }
+            args.cancel = false;
         }
     }
 
@@ -316,17 +311,19 @@ The following is the output of custom context menu with customization.
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% raw %} 
-{% include code-snippet/pdfviewer/custom-context-menu/index.jsx %}
+{% include code-snippet/pdfviewer/custom-context-menu/app/index.jsx %}
 {% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% raw %} 
-{% include code-snippet/pdfviewer/custom-context-menu/index.tsx %}
+{% include code-snippet/pdfviewer/custom-context-menu/app/index.tsx %}
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**. 
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/custom-context-menu" %}
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu)

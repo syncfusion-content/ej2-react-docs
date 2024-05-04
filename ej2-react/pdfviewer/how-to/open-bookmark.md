@@ -48,4 +48,4 @@ Similarly, to close the Bookmark pane programmatically, employ the following cod
    </script>
 ```
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Open%20and%20Close%20bookmark%20pane)

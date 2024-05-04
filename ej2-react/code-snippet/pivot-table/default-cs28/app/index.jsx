@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 function App() {
     let dataSource = new DataManager({
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/',
+        url: 'https://services.syncfusion.com/js/production/api/Orders',
         adaptor: new ODataAdaptor,
         crossDomain: true
     });
