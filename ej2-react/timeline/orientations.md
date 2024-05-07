@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Orientations in React Timeline component
 
-The Timeline component supports the display of items in both horizontal and vertical direction by using the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation).
+The Timeline component supports the display of items in both horizontal and vertical direction by using the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation) property.
 
 ## Vertical
 

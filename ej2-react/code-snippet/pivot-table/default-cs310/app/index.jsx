@@ -85,7 +85,7 @@ function App() {
         //Getting component instance.
         pivotObj = document.getElementById('PivotView').ej2_instances[0];
         fieldListObj = document.getElementById('PivotFieldList').ej2_instances[0];
-        pivotGridModule = pivotObj;
+        fieldListObj.pivotGridModule = pivotObj;
         //Assigning report to pivot table component.
         pivotObj.dataSourceSettings = fieldListObj.dataSourceSettings;
         //Generating page settings based on pivot table component’s size.

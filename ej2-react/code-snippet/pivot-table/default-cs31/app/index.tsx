@@ -1,21 +1,18 @@
 
 
 import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import { DataManager, ODataAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 function App() {
   let pivotObj: PivotViewComponent;
-  let dataSource: DataManager = new DataManager(
-    {
-      url:
-        'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders',
-      adaptor: new ODataAdaptor(),
-      crossDomain: true
-    },
-    new Query().take(2)
-  );
+  let dataSource: DataManager = new DataManager({
+    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders',
+    adaptor: new ODataV4Adaptor(),
+    crossDomain: true
+  });
+  dataSource.defaultQuery = new Query().take(10);
   let dataSourceSettings: IDataOptions = {
     dataSource: dataSource,
     expandAll: false,

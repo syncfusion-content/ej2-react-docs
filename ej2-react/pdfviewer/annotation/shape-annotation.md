@@ -41,8 +41,9 @@ Refer to the following code sample to switch to the circle annotation mode.
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -59,8 +60,8 @@ function App() {
         resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -75,8 +76,9 @@ root.render(<App />);
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -93,8 +95,373 @@ function App() {
         serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Adding a shape annotation to the PDF document Programmatically
+
+With the PDF Viewer library, you can add a shape annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+
+Here's a example of how you can utilize the **addAnnotation()** method to include a shape annotation programmatically:
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function addLineAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Line", {
+      offset: { x: 200, y: 230 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
+    });
+  }
+  function addArrowAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Arrow", {
+      offset: { x: 200, y: 370 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
+    });
+  }
+  function addRectangleAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Rectangle", {
+      offset: { x: 200, y: 500 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
+    });
+  }
+  function addCircleAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Circle", {
+      offset: { x: 200, y: 630 },
+      pageNumber: 1,
+      width: 90,
+      height: 90
+    });
+  }
+  function addPolygonAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Polygon", {
+      offset: { x: 200, y: 800 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }]
+    });
+  }
+  return (<div>
+    <button onClick={addLineAnnotation}>add Line Annotation programatically</button>
+    <button onClick={addArrowAnnotation}>add Arrow Annotation programatically</button>
+    <button onClick={addRectangleAnnotation}>add Rectangle Annotation programatically</button>
+    <button onClick={addCircleAnnotation}>add Circle Annotation programatically</button>
+    <button onClick={addPolygonAnnotation}>add Polygon Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function addLineAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Line", {
+      offset: { x: 200, y: 230 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
+    });
+  }
+  function addArrowAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Arrow", {
+      offset: { x: 200, y: 370 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
+    });
+  }
+  function addRectangleAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Rectangle", {
+      offset: { x: 200, y: 500 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
+    });
+  }
+  function addCircleAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Circle", {
+      offset: { x: 200, y: 630 },
+      pageNumber: 1,
+      width: 90,
+      height: 90
+    });
+  }
+  function addPolygonAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Polygon", {
+      offset: { x: 200, y: 800 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }]
+    });
+  }
+  return (<div>
+    <button onClick={addLineAnnotation}>add Line Annotation programatically</button>
+    <button onClick={addArrowAnnotation}>add Arrow Annotation programatically</button>
+    <button onClick={addRectangleAnnotation}>add Rectangle Annotation programatically</button>
+    <button onClick={addCircleAnnotation}>add Circle Annotation programatically</button>
+    <button onClick={addPolygonAnnotation}>add Polygon Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Edit the existing shape annotation programmatically
+
+To modify existing shape annotation in the Syncfusion PDF viewer programmatically, you can use the **editAnnotation()** method.
+
+Here is an example of how you can use the **editAnnotation()** method:
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function editLineAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Line") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editArrowAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Arrow") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editRectangleAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Rectangle") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editCircleAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Circle") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editPolygonAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Polygon") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  return (<div>
+    <button onClick={editLineAnnotation}>edit Line Annotation programatically</button>
+    <button onClick={editArrowAnnotation}>edit Arrow Annotation programatically</button>
+    <button onClick={editRectangleAnnotation}>edit Rectangle Annotation programatically</button>
+    <button onClick={editCircleAnnotation}>edit Circle Annotation programatically</button>
+    <button onClick={editPolygonAnnotation}>edit Polygon Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function editLineAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Line") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editArrowAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Arrow") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editRectangleAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Rectangle") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editCircleAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Circle") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editPolygonAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Polygon") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  return (<div>
+    <button onClick={editLineAnnotation}>edit Line Annotation programatically</button>
+    <button onClick={editArrowAnnotation}>edit Arrow Annotation programatically</button>
+    <button onClick={editRectangleAnnotation}>edit Rectangle Annotation programatically</button>
+    <button onClick={editCircleAnnotation}>edit Circle Annotation programatically</button>
+    <button onClick={editPolygonAnnotation}>edit Polygon Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -189,8 +556,9 @@ The properties of the shape annotations can be set before creating the control u
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -207,8 +575,8 @@ function App() {
         polygonSettings={{fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}}
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -223,8 +591,9 @@ root.render(<App />);
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -241,8 +610,8 @@ function App() {
         polygonSettings={{fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}}
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);

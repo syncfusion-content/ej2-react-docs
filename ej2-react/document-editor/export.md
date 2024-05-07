@@ -14,10 +14,10 @@ Document Editor exports the document into various known file formats in client-s
 
 We are providing two types of save APIs  as mentioned below.
 
-|API name|Purpose|
-|--------|---------|
-|save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|
-|saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|
+|API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
+|--------|---------|----------|----------|
+|save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|documenteditor.save('sample', 'Docx')|container.documentEditor.save('sample', 'Docx')|
+|saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|documenteditor.saveAsBlob('Docx')|container.documentEditor.saveAsBlob('Docx')|
 
 ## SFDT export
 
@@ -37,13 +37,27 @@ The following example shows how to export documents in document editor as Syncfu
         
 {% previewsample "page.domainurl/code-snippet/document-editor/export-cs1" %}
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/document-editor/export-container-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/document-editor/export-container-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/document-editor/export-container-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/export-container-cs1" %}
+
 >Document Editor features are segregated into individual feature-wise modules. To use SFDT export, inject the `SfdtExport` module using `DocumentEditor.Inject( SfdtExport)`.
 >
 >To enable SFDT export for a document editor instance, set `enableSfdtExport` to true.
 
 ## Word export
 
-The following example shows how to export the document as Word document (.docx).
+The following example shows how to export the document as Word document (.docx).  
 
 >Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import/#why-the-document-pagination-differs-from-microsoft-word)
 
@@ -60,6 +74,20 @@ The following example shows how to export the document as Word document (.docx).
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/document-editor/export-cs2" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/document-editor/export-container-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/document-editor/export-container-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/document-editor/export-container-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/export-container-cs2" %}
 
 >Document Editor features are segregated into individual feature-wise modules. To use word export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
 >
@@ -85,6 +113,20 @@ The following example shows how to export the document as Word Template (.dotx).
         
 {% previewsample "page.domainurl/code-snippet/document-editor/export-cs4" %}
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/document-editor/export-container-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/document-editor/export-container-cs4/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/document-editor/export-container-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/export-container-cs4" %}
+
 >Document Editor features are segregated into individual feature-wise modules. To use word template export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
 >
 >To enable word template export for a document editor instance, set `enableWordExport` to true.
@@ -106,6 +148,20 @@ The following example shows how to export document as text document (.txt).
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/document-editor/export-cs3" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/document-editor/export-container-cs3/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/document-editor/export-container-cs3/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/document-editor/export-container-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/export-container-cs3" %}
 
 >Document Editor features are segregated into individual feature-wise modules. To use text export, inject the `TextExport` and `SfdtExport` modules using the `DocumentEditor.Inject(TextExport, SfdtExport)`.
 >
@@ -176,7 +232,7 @@ In client-side, you can consume this web service and save the document as Rich T
             formData.append('data', exportedDocument);
             this.saveAsRtf(formData);
         });
-    }
+    } 
 
     saveAsRtf(formData: FormData): void {
         let httpRequest: XMLHttpRequest = new XMLHttpRequest();
