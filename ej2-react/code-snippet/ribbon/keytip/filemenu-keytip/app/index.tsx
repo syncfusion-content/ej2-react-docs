@@ -12,7 +12,7 @@ function App() {
 
     const ribbonCreated = () => {
         ribbonObj.current.ribbonKeyTipModule.showKeyTips();
-    };    
+    };
     const fileOptions: MenuItemModel[] = [
     { text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
