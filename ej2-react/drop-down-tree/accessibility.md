@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in React Dropdown Tree component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Dropdown Tree component of Syncfusion Essential JS 2 and more.
+description: Learn here all about accessibility in Syncfusion React Dropdown Tree control its elements, features and more.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
