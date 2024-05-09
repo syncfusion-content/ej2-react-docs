@@ -33,7 +33,7 @@ Refer to the following code sample to switch to the Free Text annotation mode.
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -49,11 +49,11 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                  Print, TextSelection, TextSearch]} />
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -69,7 +69,7 @@ root.render(<App />);
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -89,7 +89,217 @@ function App() {
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                  Print, TextSelection, TextSearch]} />
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Adding a Free Text annotation to the PDF document Programmatically
+
+With the PDF Viewer library, you can add a Free Text annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+
+Here's a example of how you can utilize the **addAnnotation()** method to include a Free Text annotation programmatically
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function addAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+        viewer.annotation.addAnnotation("FreeText", {
+      offset: { x: 100, y: 150 },
+      fontSize: 16,
+      fontFamily: "Helvetica",
+      pageNumber: 1,
+      width: 200,
+      height: 40,
+      isLock: false,
+      textAlignment : 'Center',
+      borderStyle : 'solid',
+      borderWidth : 2,
+      borderColor : 'red',
+      fillColor : 'blue',
+      fontColor: 'white',
+      defaultText: "Syncfusion"
+    });
+  }
+  return (<div>
+    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function addAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("FreeText", {
+      offset: { x: 100, y: 150 },
+      fontSize: 16,
+      fontFamily: "Helvetica",
+      pageNumber: 1,
+      width: 200,
+      height: 40,
+      isLock: false,
+      textAlignment : 'Center',
+      borderStyle : 'solid',
+      borderWidth : 2,
+      borderColor : 'red',
+      fillColor : 'blue',
+      fontColor: 'white',
+      defaultText: "Syncfusion"
+    });
+  }
+  return (<div>
+    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Change the content of an existing Free text annotation programmatically
+
+To change the content of an existing free text annotation in the Syncfusion PDF viewer programmatically, you can use the **editAnnotation()** method.
+
+Here is an example of how you can use the **editAnnotation()** method to change the content of a free text annotation:
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function editAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) 
+    {
+      if (viewer.annotationCollection[i].subject === "Text Box") {
+        var width = viewer.annotationCollection[i].bounds.width;
+        var height = viewer.annotationCollection[i].bounds.height;
+        viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height }; 
+        viewer.annotationCollection[i].dynamicText = 'syncfusion';
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  return (<div>
+    <button onClick={editAnnotation}>Edit Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function editAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) 
+    {
+      if (viewer.annotationCollection[i].subject === "Text Box") {
+        var width = viewer.annotationCollection[i].bounds.width;
+        var height = viewer.annotationCollection[i].bounds.height;
+        viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height }; 
+        viewer.annotationCollection[i].dynamicText = 'syncfusion';
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  return (<div>
+    <button onClick={editAnnotation}>Edit Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -171,8 +381,8 @@ After editing the default values, they will be changed to the selected values. R
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -182,16 +392,15 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
-        freeTextSettings={{fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}}
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+		freeTextSettings={{fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}}
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                  Print, TextSelection, TextSearch]} />
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
-  </div>
-  );
+  </div>);
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
@@ -203,8 +412,8 @@ root.render(<App />);
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -215,15 +424,14 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
-        freeTextSettings={{fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}}
+		freeTextSettings={{fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}}
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                  Print, TextSelection, TextSearch]} />
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
-  </div>
-  );
+  </div>);
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
@@ -240,22 +448,23 @@ You can also enable the autofit support for free text annotation by using the en
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
   return (<div>
     <div className='control-section'>
-      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
-        freeTextSettings={{enableAutoFit: true}}
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+		freeTextSettings={{enableAutoFit: true}}
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -270,22 +479,24 @@ root.render(<App />);
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
   return (<div>
     <div className='control-section'>
-      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
-        freeTextSettings={{enableAutoFit: true}}
+		freeTextSettings={{enableAutoFit: true}}
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);

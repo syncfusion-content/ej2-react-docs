@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon Items
+# Items in React Ribbon component
 
 Ribbon renders various built-in items by using the `RibbonItemDirective` tag, to specify the [type](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItemType/) property. By default, the type property is set as `Button` which renders the Button.
 
@@ -131,6 +131,21 @@ The following sample showcases how to customize a specific dropdown item.
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/ribbon/DropDownCustomItem" %}
+
+#### Create dropdown popup on demand
+
+You can handle the creation of popups, by using the [createPopupOnClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#createpopuponclick) property. If set to `true`, the popup will only be created upon opening. By default the value is `false`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/ribbon/DropDownPopup/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/ribbon/DropDownPopup/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ribbon/DropDownPopup" %}
 
 ### Split button items
 
