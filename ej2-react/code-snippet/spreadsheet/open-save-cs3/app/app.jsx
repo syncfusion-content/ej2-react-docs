@@ -5,7 +5,10 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
     const beforeOpen = (args) => {
-        args.requestData = { Authorization: 'YOUR TEXT' };
+        args.requestData = {
+            ...args.requestData,
+            headers: { Authorization: 'YOUR TEXT' },
+        };
     };
 
     return (

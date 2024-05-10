@@ -41,8 +41,9 @@ Refer to the following code snippet to switch to distance annotation mode.
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -58,9 +59,9 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
-
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView,Print, TextSelection, TextSearch ]}/>
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
       </PdfViewerComponent>
     </div>
   </div>);
@@ -75,8 +76,9 @@ root.render(<App />);
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -93,8 +95,8 @@ function App() {
         serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView,Print, TextSelection, TextSearch ]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -102,6 +104,372 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Adding a measurement annotation to the PDF document Programmatically
+
+With the PDF Viewer library, you can add a measurement annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+
+Here's a example of how you can utilize the **addAnnotation()** method to include a measurement annotation programmatically:
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function addDistanceAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Distance", {
+      offset: { x: 200, y: 230 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
+    });
+  }
+  function addPerimeterAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Perimeter", {
+      offset: { x: 200, y: 350 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }]
+    });
+  }
+  function addAreaAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Area", {
+      offset: { x: 200, y: 500 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
+    });
+  }
+  function addRadiusAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Radius", {
+      offset: { x: 200, y: 630 },
+      pageNumber: 1,
+      width: 90,
+      height: 90
+    });
+  }
+  function addVolumeAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Volume", {
+      offset: { x: 200, y: 810 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 810 }, { x: 200, y: 919 }, { x: 320, y: 919 }, { x: 320, y: 809 }, { x: 200, y: 810 }]
+    });
+  }
+  return (<div>
+    <button onClick={addDistanceAnnotation}>Add Distance Annotation programatically</button>
+    <button onClick={addPerimeterAnnotation}>Add Perimeter Annotation programatically</button>
+    <button onClick={addAreaAnnotation}>Add Area Annotation programatically</button>
+    <button onClick={addRadiusAnnotation}>Add Radius Annotation programatically</button>
+    <button onClick={addVolumeAnnotation}>Add Volume Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function addDistanceAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Distance", {
+      offset: { x: 200, y: 230 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
+    });
+  }
+  function addPerimeterAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Perimeter", {
+      offset: { x: 200, y: 350 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }]
+    });
+  }
+  function addAreaAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Area", {
+      offset: { x: 200, y: 500 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
+    });
+  }
+  function addRadiusAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Radius", {
+      offset: { x: 200, y: 630 },
+      pageNumber: 1,
+      width: 90,
+      height: 90
+    });
+  }
+  function addVolumeAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Volume", {
+      offset: { x: 200, y: 810 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 810 }, { x: 200, y: 919 }, { x: 320, y: 919 }, { x: 320, y: 809 }, { x: 200, y: 810 }]
+    });
+  }
+  return (<div>
+    <button onClick={addDistanceAnnotation}>Add Distance Annotation programatically</button>
+    <button onClick={addPerimeterAnnotation}>Add Perimeter Annotation programatically</button>
+    <button onClick={addAreaAnnotation}>Add Area Annotation programatically</button>
+    <button onClick={addRadiusAnnotation}>Add Radius Annotation programatically</button>
+    <button onClick={addVolumeAnnotation}>Add Volume Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Edit the existing measurement annotation programmatically
+
+To modify existing measurement annotation in the Syncfusion PDF viewer programmatically, you can use the **editAnnotation()** method.
+
+Here is an example of how you can use the **editAnnotation()** method:
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function editDistanceAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Distance calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editPerimeterAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Perimeter calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editAreaAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Area calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editRadiusAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Radius calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editVolumeAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Volume calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  return (<div>
+    <button onClick={editDistanceAnnotation}>Edit Distance Annotation programatically</button>
+    <button onClick={editPerimeterAnnotation}>Edit Perimeter Annotation programatically</button>
+    <button onClick={editAreaAnnotation}>Edit Area Annotation programatically</button>
+    <button onClick={editRadiusAnnotation}>Edit Radius Annotation programatically</button>
+    <button onClick={editVolumeAnnotation}>Edit Volume Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function editDistanceAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Distance calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editPerimeterAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Perimeter calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editAreaAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Area calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editRadiusAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Radius calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  function editVolumeAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    for (let i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Volume calculation") {
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2 ;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+  return (<div>
+    <button onClick={editDistanceAnnotation}>Edit Distance Annotation programatically</button>
+    <button onClick={editPerimeterAnnotation}>Edit Perimeter Annotation programatically</button>
+    <button onClick={editAreaAnnotation}>Edit Area Annotation programatically</button>
+    <button onClick={editRadiusAnnotation}>Edit Radius Annotation programatically</button>
+    <button onClick={editVolumeAnnotation}>Edit Volume Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -152,8 +520,9 @@ Refer to the following code snippet to set the default annotation settings.
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 export function App() {
@@ -170,8 +539,8 @@ export function App() {
         volumeSettings={{fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}}
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -186,8 +555,9 @@ root.render(<App />);
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-         Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 export function App() {
@@ -204,8 +574,8 @@ export function App() {
         volumeSettings={{fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}}
         style={{ 'height': '640px' }}>
 
-              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                                  ThumbnailView, Print, TextSelection, TextSearch]}/>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -244,8 +614,9 @@ The properties of scale ratio for measurement annotation can be set before creat
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView,Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -259,7 +630,7 @@ function App() {
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                  Print, TextSelection, TextSearch]}/>
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);
@@ -274,8 +645,9 @@ root.render(<App />);
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView,Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 let pdfviewer;
 
 function App() {
@@ -287,9 +659,8 @@ function App() {
         serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
         measurementSettings={{scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'}}
         style={{ 'height': '640px' }}>
-
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                  Print, TextSelection, TextSearch]}/>
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
       </PdfViewerComponent>
     </div>
   </div>);

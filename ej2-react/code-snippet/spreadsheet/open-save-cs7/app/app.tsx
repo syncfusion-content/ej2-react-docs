@@ -17,6 +17,7 @@ function App() {
         formData.append('JSONData', JSON.stringify(response.jsonObject.Workbook));
         formData.append('fileName', 'Sample');
         formData.append('saveType', 'Xlsx');
+        formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' }));
         fetch(
           'https://services.syncfusion.com/react/production/api/spreadsheet/save',
           {
