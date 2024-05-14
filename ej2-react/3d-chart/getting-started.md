@@ -9,9 +9,13 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Getting started
+# Getting started with React 3D Chart component
 
 This section explains you the steps required to create a simple 3D Chart and demonstrate the basic usage of the 3D Chart control.
+
+To get started quickly with React 3D Charts, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=S3SPJYF4Fw8" %}
 
 ## Dependencies
 
@@ -61,8 +65,7 @@ To install `create-react-app` run the following command.
 
 ## Add 3D Chart to the project
 
-Now, you can start adding 3D Chart component in the application.
-For getting started, add the 3D Chart component in `src/App.tsx` file using following code.
+Now, you can start adding 3D Chart component in the application. For getting started, add the 3D Chart component in `src/App` file using following code.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
