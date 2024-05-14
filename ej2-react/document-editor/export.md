@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export in React Document editor component | Syncfusion
-description: Learn here all about Export in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Export in React Document Editor Component | Syncfusion
+description: Learn here all about export in Syncfusion Essential React Document Editor component, it's elements and more.
 control: Export 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in React Document editor component
+# Export in React Document Editor Component
 
 Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
@@ -59,7 +59,7 @@ The following example shows how to export documents in document editor as Syncfu
 
 The following example shows how to export the document as Word document (.docx).  
 
->Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import/#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -97,7 +97,7 @@ The following example shows how to export the document as Word document (.docx).
 
 The following example shows how to export the document as Word Template (.dotx).
 
->Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import/#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -291,5 +291,5 @@ In client-side, you can consume this web service and save the document as Rich T
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [How to export the document as pdf?](../document-editor/how-to/export-document-as-pdf).

@@ -34,6 +34,22 @@ You can define string content for the Timeline items.
 
 {% previewsample "page.domainurl/code-snippet/timeline/items/content/string-based" %}
 
+### Templated content
+
+You can specify the template content for the items, by using the selector for an element in HTML.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/timeline/items/content/template-based/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/timeline/items/content/template-based/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/items/content/template-based/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Adding opposite content
 
 You can add additional information to each Timeline item, by using the [oppositeContent](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem/#oppositecontent) property which is positioned opposite to the item content.
@@ -94,6 +110,6 @@ You can use the [disabled](https://ej2.syncfusion.com/react/documentation/api/ti
 
 {% previewsample "page.domainurl/code-snippet/timeline/items/disabled" %}
 
-## Css class
+## CSS class
 
 You can customize the appearance of the Timeline item by specifying a custom CSS class using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem/#cssclass) property.
