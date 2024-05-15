@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 
 function App() {
   const dataManager = new DataManager({
-    url: 'https://services.syncfusion.com/js/production/api/orders',
+    url: 'https://services.syncfusion.com/react/production/api/orders',
     adaptor: new ODataAdaptor()
   });
   const query = new Query();
