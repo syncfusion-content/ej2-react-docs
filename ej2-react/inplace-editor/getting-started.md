@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 This section briefly explains about how to create a simple In-place Editor and demonstrate the basic usage of the In-place Editor component.
 
+To get start quickly with React Inplace editor, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=hr3JVzTgnRI" %}
+
 ## Dependencies
 
 The following is the list of dependencies required to use the In-place Editor component in your application.
