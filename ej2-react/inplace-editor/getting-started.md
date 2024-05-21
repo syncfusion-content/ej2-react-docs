@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Inplace editor component
 
 This section briefly explains about how to create a simple In-place Editor and demonstrate the basic usage of the In-place Editor component.
 
