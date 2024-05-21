@@ -431,8 +431,8 @@ import * as ReactDOM from "react-dom";
 export default class App extends React.Component<{}, {}> {
   public uploadObj: UploaderComponent;
   public path: object = {
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+        saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',
+        removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
   }
 
   public addHeaders(args: UploadingEventArgs) {
@@ -460,8 +460,8 @@ import * as ReactDOM from "react-dom";
 function App(){
     let uploadObj: UploaderComponent;
     const path: object = {
-      removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',
-      saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save'
+        saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',
+        removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
     }
 
     function addHeaders(args: UploadingEventArgs) {
