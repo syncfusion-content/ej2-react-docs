@@ -124,9 +124,9 @@ namespace WebApiAdaptor.Server.Controllers
 
 **4. Run the Application:**
 
-Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xx**. 
+Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xxxx**. 
 
-After running the application, you can verify that the server-side API controller is successfully returning the order data in the URL(https://localhost:xx/api/Orders). Here **xx** denotes the port number.
+After running the application, you can verify that the server-side API controller is successfully returning the order data in the URL(https://localhost:xxxx/api/Orders). Here **xxxx** denotes the port number.
 
 ![WebApiAdaptor-data](../images/webapi-adaptor-data.png)
 
@@ -165,7 +165,7 @@ Include the necessary CSS files in your `styles.css` file to style the Syncfusio
 
 **Step 3: Adding Syncfusion component**
 
-In your component file (e.g., App.ts), import `DataManager` and `WebApiAdaptor` from `@syncfusion/ej2-data`. Create a `DataManager` instance specifying the URL of your API endpoint(https:localhost:xx/api/Orders) using the `url` property and set the adaptor `WebApiAdaptor`.
+In your component file (e.g., App.ts), import `DataManager` and `WebApiAdaptor` from `@syncfusion/ej2-data`. Create a `DataManager` instance specifying the URL of your API endpoint(https:localhost:xxxx/api/Orders) using the `url` property and set the adaptor `WebApiAdaptor`.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -190,8 +190,8 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> Replace https://localhost:xx/api/Orders with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
-Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xx**.
+> Replace https://localhost:xxxx/api/Orders with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xxxx**.
 
 > Ensure your API service is configured to handle CORS (Cross-Origin Resource Sharing) if necessary.
 
