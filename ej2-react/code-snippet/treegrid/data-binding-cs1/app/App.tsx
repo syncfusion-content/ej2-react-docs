@@ -9,7 +9,7 @@ function App() {
     let treegridInstance: TreeGridComponent | null;
     const handleClick = () => {
         if (treegridInstance) {
-            const fetch = new Fetch("https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData","GET");
+            const fetch = new Fetch("https://services.syncfusion.com/react/production/api/SelfReferenceData","GET");
             treegridInstance.showSpinner();
             const treegrid = treegridInstance;
             fetch.send();
