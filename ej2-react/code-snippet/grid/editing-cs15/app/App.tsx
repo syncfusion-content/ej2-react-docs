@@ -14,8 +14,8 @@ function App() {
   const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
   const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
   const path: object = {
-    saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',
-    removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
+    saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save',
+    removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove'
   };
   const editTemplate = () => {
     return (
