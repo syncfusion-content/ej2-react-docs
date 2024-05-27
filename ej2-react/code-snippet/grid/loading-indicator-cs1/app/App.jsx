@@ -7,7 +7,7 @@ function App() {
   let grid;
   let dropDown;
   const data = new DataManager({
-    url: 'https://ej2services.syncfusion.com/js/development/api/UrlDataSource',
+    url: 'https://services.syncfusion.com/react/production/api/Orders',
     adaptor: new UrlAdaptor
   });
   const pageOptions = { pageSize: 5, pageCount: 5 };

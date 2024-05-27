@@ -6,8 +6,8 @@ import * as React from 'react';
 function App() {
   let grid: GridComponent | null;
   let dropDown: DropDownListComponent | null;
-  const data:DataManager = new DataManager({
-    url: 'https://ej2services.syncfusion.com/js/development/api/UrlDataSource',
+  const data: DataManager = new DataManager({
+    url: 'https://services.syncfusion.com/react/production/api/Orders',
     adaptor: new UrlAdaptor
   });
   const pageOptions: PageSettingsModel = { pageSize: 5, pageCount: 5 };

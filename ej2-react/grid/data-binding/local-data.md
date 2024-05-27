@@ -663,7 +663,7 @@ function App() {
   const created = () => {
     isDataLoading = true;
     const grid = grid;  // Grid instance
-    const ajax = new Ajax('https://ej2services.syncfusion.com/production/web-services/api/Orders','GET');
+    const ajax = new Ajax('https://services.syncfusion.com/react/production/api/Orders','GET');
     ajax.send();
     ajax.onSuccess = (data: string) => {
         (grid as GridComponent).dataSource = JSON.parse(data);
@@ -728,11 +728,11 @@ The following features are not supported in the immutable mode:
 * Infinite scroll
 * Column reorder
 * Rows, column spanning
-* Pdf export, Excel export, Print
+* PDF export, Excel export, Print
 * Column Resize
 * Drag and drop
-* Coulumn template
+* Column template
 * Column chooser
 * Clipboard
 * AutoFit
-* Flitering
+* Filtering
