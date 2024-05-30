@@ -461,7 +461,7 @@ function App(){
     let uploadObj: UploaderComponent;
     const path: object = {
         saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',
-        removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'    
+        removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
     }
 
     function addHeaders(args: UploadingEventArgs) {
