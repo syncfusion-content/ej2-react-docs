@@ -8,7 +8,7 @@ import { TaskIdAdaptor } from './TaskIdAdaptor';
 
 class App extends React.Component<{}, {}>{
    public data = new DataManager({
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Kanban',
+     url: 'https://services.syncfusion.com/react/production/api/Kanban',
         adaptor: new TaskIdAdaptor
     });
     private DialogOpen(args: DialogEventArgs): void {

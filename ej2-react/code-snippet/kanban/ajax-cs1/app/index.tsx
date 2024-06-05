@@ -9,7 +9,7 @@ import { KanbanComponent, ColumnsDirective, ColumnDirective, Kanban } from "@syn
 class App extends React.Component<{}, {}>{
    public kanban: Kanban | null;
    public componentDidMount(){
-    const ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
+     const ajax = new Ajax("https://services.syncfusion.com/react/production/api/Orders", "GET");
       ajax.send();
       ajax.onSuccess = (data: any) => {
         if (this.kanban) {

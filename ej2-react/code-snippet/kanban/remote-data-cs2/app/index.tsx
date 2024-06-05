@@ -8,7 +8,7 @@ import { KanbanComponent, ColumnsDirective, ColumnDirective, DialogEventArgs } f
 
 function App(){
    let data = new DataManager({
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Kanban',
+     url: 'https://services.syncfusion.com/react/production/api/Kanban',
         adaptor: new ODataAdaptor
     });
     function DialogOpen(args: DialogEventArgs): void {
