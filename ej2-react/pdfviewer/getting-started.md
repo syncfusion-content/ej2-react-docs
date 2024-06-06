@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Standalone React PDF Viewer component | Syncfusion
+title: Getting started with Standalone React PDF Viewer component| Syncfusion
 description: Learn here all about Getting started with Standalone React PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: ej2-react
@@ -255,11 +255,7 @@ root.render(<App />);
 
 ## Limitation over Server-Backed PDF Viewer to Standalone PDF Viewer control
 
-When comparing a Standalone PDF Viewer to a Server-Backed PDF Viewer control, it's crucial to understand the limitations that the Standalone PDF Viewer may have in comparison. These limitations are important to consider
-
-### PNG Image Support
-
-The Standalone PDF Viewer does not have the capability to utilize PNG format for adding images to handwritten annotations ,custom stamp ,signature and initial form fields. It's important to be aware that only certain image formats, such as JPEG, are compatible for these purposes.
+When comparing a Standalone PDF Viewer to a Server-Backed PDF Viewer control, it's crucial to understand the limitations that the Standalone PDF Viewer may have in comparison. These limitations are important to consider.
 
 ### Local File Access
 
