@@ -54,7 +54,7 @@ The adaptor can be assigned using the `adaptor` property of the
 ```ts
 import { DataManager, Query, ReturnOption, UrlAdaptor } from '@syncfusion/ej2-data';
 
-const SERVICE_URI: string = 'https://ej2services.syncfusion.com/react/development/api/UrlDataSource';
+const SERVICE_URI: string = 'https://services.syncfusion.com/react/production/api/UrlDataSource';
 
     new DataManager({
         adaptor: new UrlAdaptor,
@@ -144,7 +144,7 @@ To enable OData query option for Web API, please refer to the [documentation](ht
 ```ts
 import { DataManager, Query, ReturnOption, WebApiAdaptor } from '@syncfusion/ej2-data';
 
-    const SERVICE_URI: string = 'https://ej2services.syncfusion.com/react/development/api/Orders';
+    const SERVICE_URI: string = 'https://services.syncfusion.com/react/production/api/orders';
 
     new DataManager({
         adaptor: new WebApiAdaptor,
@@ -311,14 +311,14 @@ export default resolvers;
 
 The query parameters will be send in a string format which contains the below details.
 
-| Parameters | Description |
-|-----|-----|
+| Parameters       | Description                                                                   |
+| ---------------- | ----------------------------------------------------------------------------- |
 | `RequiresCounts` | If it is `true` then the total count of records will be included in response. |
-| `Skip` | Holds the number of records to skip. |
-| `Take` | Holds the number of records to take. |
-| `Sorted` | Contains details about current sorted column and its direction. |
-| `Where` | Contains details about current filter column name and its constraints. |
-| `Group` | Contains details about current Grouped column names. |
+| `Skip`           | Holds the number of records to skip.                                          |
+| `Take`           | Holds the number of records to take.                                          |
+| `Sorted`         | Contains details about current sorted column and its direction.               |
+| `Where`          | Contains details about current filter column name and its constraints.        |
+| `Group`          | Contains details about current Grouped column names.                          |
 
 ### Performing CRUD action with GraphQLAdaptor
 

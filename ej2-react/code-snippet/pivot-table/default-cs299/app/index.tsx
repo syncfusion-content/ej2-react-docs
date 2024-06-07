@@ -1,9 +1,6 @@
-{% raw %}
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
 
 const SAMPLE_CSS = `
@@ -25,46 +22,46 @@ const SAMPLE_CSS = `
 }`;
 
 function App() {
-  let dataSourceSettings: IDataOptions = {
-    columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-    dataSource: pivotData as IDataSet[],
-    filters: [],
-    formatSettings: [{ name: 'Amount', format: 'C0' }],
-    rows: [{ name: 'Country' }, { name: 'Products' }],
-    values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
-  };
-  let pivotObj: PivotViewComponent;
+    let dataSourceSettings: IDataOptions = {
+        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+        dataSource: pivotData as IDataSet[],
+        filters: [],
+        formatSettings: [{ name: 'Amount', format: 'C0' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
+    };
+    let pivotObj: PivotViewComponent;
 
-    function ondataBound(args: any): void {
-        var dataSource = JSON.parse(pivotObj.getPersistData()).dataSourceSettings.dataSource;
-        var a = document.getElementById('save');
-        var mime_type = 'application/octet-stream'; // text/html, image/png, et c
+    function ondataBound(): void {
+        const dataSource = JSON.parse(pivotObj.getPersistData()).dataSourceSettings;
+        const a: HTMLAnchorElement = document.getElementById('save') as HTMLAnchorElement;
+        const mime_type = 'application/octet-stream'; // text/html, image/png, et c
         a.setAttribute('download', 'pivot.JSON');
-        a.href = 'data:'+ mime_type +';base64,'+ btoa(JSON.stringify(dataSource) || '');
-        document.getElementById('files').addEventListener('change', readBlob, false);
+        a.href = 'data:' + mime_type + ';base64,' + btoa(JSON.stringify(dataSource) || '');
+        (document.getElementById('files') as HTMLInputElement).addEventListener('change', readBlob, false);
     }
-    function readBlob(args: any): void {
-        var files = document.getElementById('load').files;
-        var file = files[0];
-        var start = 0;
-        var stop = file.size - 1;
-        var reader = new FileReader();
-        reader.onloadend = function(evt) {
-            if (evt.target.readyState == FileReader.DONE) {
-                pivotObj.dataSource = JSON.parse(evt.target.result);
+
+    function readBlob(): void {
+        const files: FileList = (document.getElementById('files') as HTMLInputElement).files as FileList;
+        const file: File = files[0];
+        const start: number = 0;
+        const stop: number = file.size - 1;
+        const reader: FileReader = new FileReader();
+        reader.onloadend = function (evt: ProgressEvent<FileReader>) {
+            if ((evt.target as FileReader).readyState == FileReader.DONE) {
+                pivotObj.dataSourceSettings = JSON.parse((evt.target as FileReader).result as string);
             }
         };
-        var blob = file.slice(start, stop + 1);
+        const blob: Blob = file.slice(start, stop + 1);
         reader.readAsBinaryString(blob);
+        (document.getElementById('files') as HTMLInputElement).value = '';
     }
 
-    return (<div className='control-pane'>
-               <div><style>{SAMPLE_CSS}</style><PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350} gridSettings={{ columnWidth: 140 }} dataBound={ondataBound.bind(this)}></PivotViewComponent></div><a id="save" class="btn btn-primary">Save</a><div class="fileUpload btn btn-primary"><span>Load</span><input id="files" type="file" class="upload" /></div>
-            </div>);
+    return (<div className='control-pane'><div><style>{SAMPLE_CSS}</style>
+        <PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350}
+            gridSettings={{ columnWidth: 140 }} dataBound={ondataBound.bind(this)}></PivotViewComponent></div>
+        <a id="save" className="btn btn-primary">Save</a><div className="fileUpload btn btn-primary"><span>Load</span><input id="files" type="file" className="upload" /></div>
+    </div>);
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
-
-
-
-{% endraw %}
