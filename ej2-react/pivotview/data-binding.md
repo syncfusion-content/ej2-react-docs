@@ -125,41 +125,60 @@ In-order to bind local CSV data to the pivot table, user needs to convert it as 
 
 In the meantime, the CSV data from the local *.csv file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to string array that can be assigned to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings). The following code example illustrates the same.
 
-```javascript
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+```typescript
+import { PivotViewComponent, FieldList, Inject } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Uploader } from '@syncfusion/ej2-inputs';
 
 function App() {
-    // Step 1: Initiate the file uploader
-    let uploadObj: Uploader = new Uploader({
-    });
-    uploadObj.appendTo('#fileupload');
+  let pivotObj: PivotViewComponent;
+  let input: HTMLInputElement
+  let isInitial = true;
 
-    let input = document.querySelector('input[type="file"]');
-    // Step 2: Add the event listener which fires when the *.CSV file is uploaded.
-    input.addEventListener('change', function (e: Event) {
-      // Step 3: Initiate the file reader
-      let reader: FileReader = new FileReader();
-      reader.onload = function () {
-        // Step 4: Getting the string output which is to be converted as string[][].
-        let result: string[][] = (reader.result as string).split('\n').map(function (line) {
-            return line.split(',');
-        });
+  function ondataBound(): void {
+    if (isInitial) {
+      // Step 1: Initiate the file uploader
+      let uploadObj: Uploader = new Uploader();
+      uploadObj.appendTo('#fileupload');
+      input = document.querySelector('input[type="file"]') as HTMLInputElement;
+      // Step 2: Add the event listener which fires when the *.CSV file is uploaded.
+      input.addEventListener('change', loadCSV, false);
+      isInitial = false;
+    }
+  }
 
-        let dataSourceSettings: IDataOptions = {
+  function loadCSV() {
+    // Step 3: Initiate the file reader
+    const reader: FileReader = new FileReader();
+    reader.onload = function () {
+      const result: string[][] = [];
+      // Step 4: Getting the string output which is to be converted as string[][].
+      let readerResult: string[] = (reader.result as string).split(/\r?\n|\r/);
+      (result as string[][]).push(readerResult[0].split(',').map(function (e) { return e.replace(/ /g, '').replace(/^\"(.+)\"$/, "$1"); }));
+      for (let i: number = 1; i < readerResult.length; i++) {
+        if (readerResult[i as number] !== '') {
+          (result as string[][]).push(readerResult[i as number].split(','));
+        }
+      }
+      pivotObj.dataSourceSettings = {
         // Step 5: The string[][] result to be bound as data source
         dataSource: result,
         type: 'CSV',
         // Step 6: The appropriate report needs to be provided here.
-        }
-        reader.readAsText((input as any).files[0]);
-      }
-    });
-    let pivotObj: PivotViewComponent;
-    return (<PivotViewComponent  ref={d => pivotObj = d} id = 'PivotView' height = { 350} dataSourceSettings = { dataSourceSettings } > </PivotViewComponent>);
-}
+      };
+    }
+    reader.readAsText(((input as HTMLInputElement).files as FileList)[0]);
+    input.value = '';
+    (document.querySelector('.e-upload-files') as HTMLElement).remove();
+  }
+
+  return (<div className='control-pane'><input type="file" id="fileupload" />
+    <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} showFieldList={true} dataBound={ondataBound.bind(this)}>
+      <Inject services={[FieldList]} />
+    </PivotViewComponent></div>
+  );
+};
 
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

@@ -17,7 +17,6 @@ To get started quickly with React 3D Charts, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=S3SPJYF4Fw8" %}
 
-
 ## Dependencies
 
 Below is the list of minimum dependencies required to use the 3D Chart component.
@@ -66,8 +65,7 @@ To install `create-react-app` run the following command.
 
 ## Add 3D Chart to the project
 
-Now, you can start adding 3D Chart component in the application.
-For getting started, add the 3D Chart component in `src/App` file using following code.
+Now, you can start adding 3D Chart component in the application. For getting started, add the 3D Chart component in `src/App` file using following code.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
