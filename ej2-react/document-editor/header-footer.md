@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header footer in React Document editor component | Syncfusion
-description: Learn here all about Header footer in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Header Footer in React Document Editor Component | Syncfusion
+description: Learn here all about header footer in Syncfusion Essential React Document Editor component, it's elements and more.
 control: Header footer 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header footer in React Document editor component
+# Header Footer in React Document Editor Component
 
 Document Editor supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
@@ -87,4 +87,4 @@ documenteditor.selection.closeHeaderFooter()
 
 ## See Also
 
-* [Working with Section Formatting](../document-editor/section-format/)
+* [Working with Section Formatting](../document-editor/section-format)

@@ -5,7 +5,7 @@ import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
 class App extends React.Component {
     data = new DataManager({
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Kanban',
+        url: 'https://services.syncfusion.com/react/production/api/Kanban',
         adaptor: new ODataAdaptor,
         crossDomain: true
     });

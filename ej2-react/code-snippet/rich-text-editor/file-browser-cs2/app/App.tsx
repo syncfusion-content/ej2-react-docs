@@ -12,7 +12,7 @@ function App(){
     enable: true,
     path: '/Pictures/Food',
     ajaxSettings: {
-      url: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations',
+      url: 'https://ej2-aspcore-service.azurewebsites.net/FileManager/FileOperations',
       getImageUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage',
       uploadUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload',
       downloadUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download'

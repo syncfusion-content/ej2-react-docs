@@ -10,7 +10,7 @@ import { KanbanComponent, ColumnsDirective, ColumnDirective, Kanban } from "@syn
 function App(){
   let kanbanObj: KanbanComponent|null;
   React.useEffect(() => {
-   const ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
+    const ajax = new Ajax("https://services.syncfusion.com/react/production/api/Orders", "GET");
      ajax.send();
      ajax.onSuccess = (data: any) => {
        if (kanbanObj) {

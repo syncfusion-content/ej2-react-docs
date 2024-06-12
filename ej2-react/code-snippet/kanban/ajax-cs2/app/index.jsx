@@ -6,7 +6,7 @@ import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/
 function App() {
     let kanban;
     function componentDidMount() {
-        const ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
+        const ajax = new Ajax("https://services.syncfusion.com/react/production/api/Orders", "GET");
         ajax.send();
         ajax.onSuccess = (data) => {
             if (kanban) {

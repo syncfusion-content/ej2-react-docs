@@ -5,7 +5,7 @@ function App() {
     const data = new DataManager({
         adaptor: new WebApiAdaptor,
         crossDomain: true,
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData'
+        url: 'https://services.syncfusion.com/react/production/api/SelfReferenceData'
     });
     const query = new Query().addParams('ej2treegrid', 'true');
     return <TreeGridComponent dataSource={data} hasChildMapping='isParent' treeColumnIndex={1} idMapping='TaskID' parentIdMapping='ParentItem' height='260' query={query}>

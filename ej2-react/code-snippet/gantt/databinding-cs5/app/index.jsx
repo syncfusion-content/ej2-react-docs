@@ -17,7 +17,7 @@ function App (){
   };
   let ganttInstance;
    function clickHandler() {
-        let ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/GanttData","GET");
+        let ajax = new Ajax("https://services.syncfusion.com/react/production/api/GanttData","GET");
         ganttInstance.showSpinner();
         ajax.send();
         ajax.onSuccess = function (data) {

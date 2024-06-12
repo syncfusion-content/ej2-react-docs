@@ -12,7 +12,7 @@ function App (){
     child: 'SubTasks'
   };
  const dataSource: DataManager = new DataManager({
-    url: 'https://ej2services.syncfusion.com/production/web-services/api/GanttData',
+    url: 'https://services.syncfusion.com/react/production/api/GanttData',
     adaptor: new WebApiAdaptor,
     crossDomain: true
   });

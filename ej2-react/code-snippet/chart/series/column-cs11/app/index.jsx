@@ -7,7 +7,7 @@ import { DataManager, Query } from '@syncfusion/ej2-data';
 import { Category, ChartComponent, ColumnSeries, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective } from '@syncfusion/ej2-react-charts';
 function App() {
   const dataManager = new DataManager({
-    url: 'https://services.syncfusion.com/js/production/api/orders'
+    url: 'https://services.syncfusion.com/react/production/api/orders'
   });
   const query = new Query().take(5).where('Estimate', 'lessThan', 3, false);
   const primaryxAxis = { valueType: 'Category' };

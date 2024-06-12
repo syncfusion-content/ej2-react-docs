@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with server-backed PDF Viewer component
 
 This section explains the steps required to create a simple React PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a React application.
 
@@ -216,3 +216,10 @@ N> When configuring the server-backed PDF viewer, it's essential to understand t
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
 
 > You can refer to our [React PDF Viewer](https://www.syncfusion.com/react-components/react-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/default) to understand how to explains core features of PDF Viewer.
+
+N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6). Additionally, for AWS environments, utilize the following packages:
+
+| **Amazon Web Services (AWS)** |**NuGet package name** |
+| --- | --- |
+| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6)|
+| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v2.88.6](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6)|

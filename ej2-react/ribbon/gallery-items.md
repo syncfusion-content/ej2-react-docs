@@ -78,7 +78,7 @@ The following sample showcases how to add title attribute to the gallery item us
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/htmlAttributes" %}
 
-#### Css class
+#### CSS class
 
 You can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#cssclass) property to customize the gallery item.
 
@@ -205,7 +205,7 @@ You can specify the height of the gallery popup by using the [popupHeight](https
 
 ## Setting popup width
 
-you can specify the width of the gallery popup by using the [popupWidth](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#popupwidth) propery.
+you can specify the width of the gallery popup by using the [popupWidth](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#popupwidth) property.
 
 The example demonstrates the customization of popup with `popupHeight` and `popupWidth` properties.
 
@@ -219,5 +219,29 @@ The example demonstrates the customization of popup with `popupHeight` and `popu
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/popupHeightWidth" %}
+
+## Template
+
+You can customize the default appearance and content of Ribbon gallery items by using the [template](../api/ribbon/ribbonGallerySettingsModel/#template) property.
+
+### Popup Template
+
+You can customize the appearance of Ribbon gallery popup by using the [popupTemplate](../api/ribbon/ribbonGallerySettingsModel/#popuptemplate) property.
+
+The below example demonstrates the customization of both the `template` and `popupTemplate` properties:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/ribbon/Gallery/galleryTemplate/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/ribbon/Gallery/galleryTemplate/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/ribbon/Gallery/galleryTemplate/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ribbon/Gallery/galleryTemplate" %}
 
 > To know more about the built-in Ribbon items, please refer to the [Ribbon Items](./items) section.
