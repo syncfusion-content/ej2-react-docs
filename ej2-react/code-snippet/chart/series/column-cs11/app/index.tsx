@@ -9,7 +9,7 @@ import { AxisModel,Category,ChartComponent, ColumnSeries, Inject, Legend, LineSe
 function App() {
 
   const dataManager = new DataManager({
-    url: 'https://services.syncfusion.com/js/production/api/orders'
+    url: 'https://services.syncfusion.com/react/production/api/orders'
   });
   const query = new Query().take(5).where('Estimate', 'lessThan', 3, false);
   const primaryxAxis: AxisModel = { valueType: 'Category' };

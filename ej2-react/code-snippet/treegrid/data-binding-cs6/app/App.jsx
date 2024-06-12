@@ -6,7 +6,7 @@ export default class App extends React.Component {
     data = new DataManager({
         adaptor: new SerialNoAdaptor,
         crossDomain: true,
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData'
+        url: 'https://services.syncfusion.com/react/production/api/SelfReferenceData'
     });
     render() {
         return <TreeGridComponent dataSource={this.data} hasChildMapping='isParent' treeColumnIndex={2} idMapping='TaskID' parentIdMapping='ParentItem' height='260'>

@@ -123,6 +123,53 @@ Using the quick toolbar, users can change the width, cell padding, and cell spac
 
 ![RTE table settings](images/table_properties.png)
 
+## Table row and column selection
+
+The table row and column selection feature in our editor allows for intuitive and efficient table manipulation using both mouse and keyboard interactions.
+
+**Mouse interaction:**
+
+* Click and drag to select multiple rows or columns.
+* Selected cells are highlighted with a distinct background color for better visibility.
+
+**Keyboard interaction:**
+
+* Use <kbd>Shift</kbd> + <kbd>Arrow keys</kbd> to extend the selection of rows or columns.
+* Background color highlights selected cells, making it easy to see the current selection.
+
+**Table selection with backspace and delete keys:**
+
+* Press the <kbd>Backspace</kbd> key immediately after the table to select the entire table.
+* Press the <kbd>Delete</kbd> key immediately before the table to select the entire table.
+
+**Table content text formatting:**
+
+The text formatting feature in tables allows users to apply various styles to selected cells, enhancing the appearance and readability of data. This includes the application of headings, paragraphs, lists, and inline styles such as bold, italic, and strikethrough. Users can efficiently format multiple cells simultaneously by selecting entire rows or columns.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/table-row-and-column-selection/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/table-row-and-column-selection/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/table-row-and-column-selection" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/table-row-and-column-selection-1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/table-row-and-column-selection-1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/table-row-and-column-selection-1" %}
+
 ## Table cell merge and split
 
 The Rich Text Editor allows users to change the appearance of the tables by splitting or merging the table cells.

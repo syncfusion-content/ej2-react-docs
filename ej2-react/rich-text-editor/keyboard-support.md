@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard support in React Rich text editor component | Syncfusion
-description: Learn here all about Keyboard support in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Support in React Rich Text Editor Component | Syncfusion
+description: Learn here all about keyboard support in Syncfusion Essential React Rich Text Editor component, it's elements and more.
 control: Keyboard support 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard support in React Rich text editor component
+# Keyboard Support in React Rich Text Editor Component
 
 The editor has full keyboard accessibility that includes shortcuts to open and other actions with toolbar items, drop-down lists, and dialogs.
 

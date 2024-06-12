@@ -60,7 +60,10 @@ import { MapsComponent, LayersDirective, LayerDirective, Zoom, Maps, Inject } fr
 
 export function App() {
 return(
-            <MapsComponent zoomSettings = { { enable: true, toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']} }>
+            <MapsComponent zoomSettings = { { enable: true, toolbarSettings:{
+                                            buttonSettings: {
+                                            toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+                                        }}} }>
             <Inject services={[Zoom]}/>
                 <LayersDirective>
                     <LayerDirective urlTemplate= "http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" />

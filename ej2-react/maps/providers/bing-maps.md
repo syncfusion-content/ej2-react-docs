@@ -107,7 +107,11 @@ export function App() {
     return(
             <MapsComponent load={load} zoomSettings= {{
                                         enable : true,
-                                        toolbars:[ "Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" ]}}>
+                                        toolbarSettings:{
+                                            buttonSettings: {
+                                            toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+                                        }
+                }}}>
                 <Inject services={[Zoom]} />
                 <LayersDirective>
                     <LayerDirective />

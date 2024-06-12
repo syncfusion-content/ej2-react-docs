@@ -34,6 +34,9 @@ The following code example shows you how to bind the hierarchical local data int
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/treegrid/data-binding-cs2/app/App.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.tsx" %}
+{% include code-snippet/treegrid/data-binding-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs2" %}
@@ -53,6 +56,9 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/treegrid/data-binding-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/treegrid/data-binding-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
