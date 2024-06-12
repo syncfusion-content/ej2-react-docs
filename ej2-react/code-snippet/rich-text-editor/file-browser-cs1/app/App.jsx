@@ -8,10 +8,10 @@ class App extends React.Component {
         enable: true,
         path: '/Pictures/Food',
         ajaxSettings: {
-          url: 'https://services.syncfusion.com/react/production/api/FileManager/FileOperations',
-          getImageUrl: 'https://services.syncfusion.com/react/production/api/FileManager/GetImage',
-          uploadUrl: 'https://services.syncfusion.com/react/production/api/FileManager/Upload',
-          downloadUrl: 'https://services.syncfusion.com/react/production/api/FileManager/Download'
+          url: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations',
+          getImageUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage',
+          uploadUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload',
+          downloadUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download'
         }
     };
     toolbarSettings = {

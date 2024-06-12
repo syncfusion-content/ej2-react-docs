@@ -52,7 +52,13 @@ import { MapsComponent, LayersDirective, LayerDirective, Zoom, Maps, Inject } fr
 
 export function App() {
   return(
-          <MapsComponent zoomSettings = { { enable: true, toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']} }>
+          <MapsComponent zoomSettings = { { enable: true,
+              toolbarSettings:{
+                  buttonSettings: {
+                    toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+                  }
+              }} 
+          }>
           <Inject services={[Zoom]} />
                 <LayersDirective>
                     <LayerDirective urlTemplate='https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY' />

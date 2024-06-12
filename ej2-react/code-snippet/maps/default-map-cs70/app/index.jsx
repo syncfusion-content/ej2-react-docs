@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 import { MapsComponent, LayersDirective, LayerDirective, MarkersDirective, MarkerDirective, Marker, Inject, Zoom } from '@syncfusion/ej2-react-maps';
 export function App() {
     return(
-                <MapsComponent  zoomSettings= {{enable: true, horizontalAlignment:'Near', shouldZoomInitially: true}}>
+                <MapsComponent  zoomSettings= {{enable: true, toolbarSettings: { horizontalAlignment:'Near' }, shouldZoomInitially: true}}>
                 <Inject services={[Marker, Zoom]} />
                     <LayersDirective>
                         <LayerDirective shapeData={world_map}>

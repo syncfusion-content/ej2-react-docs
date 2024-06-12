@@ -23,7 +23,7 @@ export function App() {
                      shapeSelected={shapeSelected}>
         <Inject services={[Highlight, Marker]} />
         <LayersDirective>
-          <LayerDirective shapeData={world_map} layerType="Geometry" shapeDataPath="continent" shapePropertyPath="continent" dataSource={dafaultData}
+          <LayerDirective shapeData={world_map} shapeDataPath="continent" shapePropertyPath="continent" dataSource={dafaultData}
           shapeSettings={{
               colorValuePath: 'drillColor'
             }}>
@@ -36,7 +36,7 @@ export function App() {
                                animationDuration={0}/>
             </MarkersDirective>
           </LayerDirective>
-          <LayerDirective layerType="Geometry" shapeData={africa_continent}
+          <LayerDirective shapeData={africa_continent}
                           shapeSettings={{
                               fill: '#80306A'
                           }}
