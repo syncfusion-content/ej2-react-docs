@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with React OTP Input component | Syncfusion
 description: Checkout and learn about Getting started with React OTP Input component of Syncfusion Essential JS 2 and more details.
-control: Getting started
+control: OTP Input
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

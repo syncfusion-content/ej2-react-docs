@@ -1,7 +1,7 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import {
   DiagramComponent,
   NodeModel,
@@ -41,6 +41,6 @@ export default function App() {
     />
   );
 }
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
+const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);
 root.render(<App />);
 

@@ -4,19 +4,21 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
+import './index.css';
+
 export default class App extends React.Component {
     imgObj;
     imageEditorCreated() {
         if (Browser.isDevice) {
-            this.imgObj.open('flower.png');
+            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         }
         else {
-            this.imgObj.open('bridge.png');
+            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
     btnClick() {
-        let dimension = imgObj.getImageDimension();
-        imgObj.drawText(dimension.x, dimension.y);
+        let dimension = this.imgObj.getImageDimension();
+        this.imgObj.drawText(dimension.x, dimension.y);
     }
     render() {
         return (<div className='e-img-editor-sample'>

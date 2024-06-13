@@ -3,6 +3,8 @@ import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { L10n } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
+import './index.css';
+
 L10n.load({
     'de-DE': {
         'image-editor': {
@@ -48,10 +50,10 @@ export default class App extends React.Component {
     imgObj;
     imageEditorCreated() {
         if (Browser.isDevice) {
-            this.imgObj.open('flower.png');
+            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         }
         else {
-            this.imgObj.open('bridge.png');
+            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
     render() {

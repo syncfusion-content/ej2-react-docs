@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Virtualization in React Drop MultiSelect Dropdown component | Syncfusion
+title: Virtualization in React MultiSelect Dropdown component | Syncfusion
 description: Learn here all about Virtualization in Syncfusion React MultiSelect Dropdown component of Syncfusion Essential JS 2 and more.
 control: Virtualization 
 platform: ej2-react
@@ -39,7 +39,7 @@ In the following example, `id` column and `text` column from complex data have b
 
 ## Binding remote data
 
-The MultiSelect supports retrieval of data from remote data services with the help of `DataManager` component. When using remote data, it initially fetches all the data from the server, triggering the `actionBegin` and `actionComplete` events, and then stores the data locally. During virtual scrolling, additional data is retrieved from the locally stored data, triggering the `actionBegin` and `actionComplete` events at that time as well.
+The MultiSelect supports the retrieval of data from remote data services with the help of the `DataManager` component, triggering the `actionBegin` and `actionComplete` events, and then updating the list data. During virtual scrolling, additional data is retrieved from the server, triggering the `actionBegin` and `actionComplete` events at that time as well.
 
 The following sample displays the OrderId from the `Orders` Data Service.
 
@@ -133,7 +133,7 @@ The following sample shows the example for checkbox with Virtualization.
 
  ## Custom value with virtualization
 
-The MultiSelect component supports custom valie with Virtualization. When the [`allowCustomValue`](../api/multi-select/#allowcustomvalue) property is enabled, the MultiSelect enables users to include a new option not currently available in the component value. Upon selecting this newly added custom value, the MultiSelect triggers the [`customValueSelection`](../api/multi-select/#customvalueselection) event and also custom value will be added to the end of the complete list.
+The MultiSelect component supports custom value with Virtualization. When the [`allowCustomValue`](../api/multi-select/#allowcustomvalue) property is enabled, the MultiSelect enables users to include a new option not currently available in the component value. Upon selecting this newly added custom value, the MultiSelect triggers the [`customValueSelection`](../api/multi-select/#customvalueselection) event and also custom value will be added to the end of the complete list.
 
 The following sample shows the example for custom value with Virtualization.
 

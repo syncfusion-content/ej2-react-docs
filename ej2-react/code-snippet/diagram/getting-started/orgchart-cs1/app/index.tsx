@@ -2,12 +2,11 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
 import {
   Node,
   HierarchicalTree,
-  Diagram,
   NodeModel,
   ConnectorModel,
   Inject,
@@ -70,7 +69,7 @@ export default function App() {
       dataSourceSettings={dataSettings}
       layout={layoutSetting}
       getNodeDefaults={(node: NodeModel): NodeModel => {
-        let codes: Object = {
+        let codes: { [key in EmployeeInfo["Role"]]: string }  = {
           Director: "rgb(0, 139,139)",
           Manager: "rgb(30, 30,113)",
           Lead: "rgb(0, 100,0)"
@@ -80,7 +79,7 @@ export default function App() {
         node.annotations = [
           { content: (node.data as EmployeeInfo).Name, style: { color: "white" } }
         ];
-        node.style.fill = codes[(node.data as EmployeeInfo).Role];
+        (node as Node).style.fill = codes[(node.data as EmployeeInfo).Role];
         return node;
       }}
       getConnectorDefaults={(connector: ConnectorModel): ConnectorModel => {
@@ -93,7 +92,7 @@ export default function App() {
     </DiagramComponent>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
+const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);
 root.render(<App />);
 
 

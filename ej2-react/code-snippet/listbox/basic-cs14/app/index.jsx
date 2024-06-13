@@ -14,8 +14,9 @@ function App() {
         { text: 'McLaren P1', id: 'list-09' },
         { text: 'Ferrari LaFerrari', id: 'list-10' }
     ];
-    let selection = { mode: "multiple" };
-    return (<ListBoxComponent dataSource={data} selectionSettings={selection}/>);
+    let selection = { mode: "multiple", showCheckbox: true };
+    return (<ListBoxComponent dataSource={data} selectionSettings={selection}> <Inject services={[CheckBoxSelection]}/>
+    </ListBoxComponent>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

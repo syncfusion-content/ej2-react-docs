@@ -44,24 +44,24 @@ function App() {
   const chartMouseClick = (args: IMouseEventArgs): void => {
     let isRemoved: boolean = false;
     if (args.axisData) {
-      for (let i: number = 0; i < (chartInstance.current.series[0] as Series).points.length; i++) {
-        const markerWidth: number = (chartInstance.current.series[0] as Series).marker.width / 2;
+      for (let i: number = 0; i < (chartInstance.series[0] as Series).points.length; i++) {
+        const markerWidth: number = (chartInstance.series[0] as Series).marker.width / 2;
         let roundedX: number = Math.round(args.axisData['primaryXAxis']) + markerWidth;
         let roundedY: number = Math.round(args.axisData['primaryYAxis']) + markerWidth;
-        let pointX: number = Math.round((chartInstance.current.series[0] as Series).points[i].x as number) + markerWidth;
-        let pointY: number = Math.round((chartInstance.current.series[0] as Series).points[i].y as number) + markerWidth;
+        let pointX: number = Math.round((chartInstance.series[0] as Series).points[i].x as number) + markerWidth;
+        let pointY: number = Math.round((chartInstance.series[0] as Series).points[i].y as number) + markerWidth;
         if ((roundedX === pointX || roundedX + 1 === pointX || roundedX - 1 === pointX) &&
           (roundedY === pointY || roundedY + 1 === pointY || roundedY - 1 === pointY)) {
-          if ((chartInstance.current.series[0] as Series).points.length > 1) {
-            const points = (chartInstance.current.series[0] as Series).points;
+          if ((chartInstance.series[0] as Series).points.length > 1) {
+            const points = (chartInstance.series[0] as Series).points;
             const duration: number = i === 0 || i === points[points.length - 1].index ? 500 : 0;
-            chartInstance.current.series[0].removePoint(i, duration);
+            chartInstance.series[0].removePoint(i, duration);
           }
           isRemoved = true;
         }
       }
       if (!isRemoved) {
-        chartInstance.current.series[0].addPoint({ x: Math.round(args.axisData['primaryXAxis']), y: Math.round(args.axisData['primaryYAxis']) });
+        chartInstance.series[0].addPoint({ x: Math.round(args.axisData['primaryXAxis']), y: Math.round(args.axisData['primaryYAxis']) });
       }
     }
   };
