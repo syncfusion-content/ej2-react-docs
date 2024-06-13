@@ -8,9 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with react diagram
 
 This section explains the steps required to create a simple diagram and demonstrates the basic usage of the diagram control.
+
+## Prerequisites
+
+[System requirements for Syncfusion React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Dependencies
 
@@ -32,18 +36,45 @@ The following list of dependencies are required to use the `Diagram` component i
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. Run the following command to install `create-react-app` in `JavaScript` environment.
 
-   ```
-    npm install -g create-react-app
-   ```
+{% tabs %}
+{% highlight js tabtitle="npx" %}
+```javascript
+  npx create-react-app my-diagram-app
+  cd my-diagram-app
+  npm start
+```
+{% endhighlight %}
+{% highlight js tabtitle="yarn" %}
+```javascript
+   yarn create react-app my-diagram-app
+   cd my-diagram-app
+   yarn start
+```
+{% endhighlight %}
+{% endtabs %}
 
-* To setup basic `React` sample use following commands.
 
-    ```
-    create-react-app quickstart --scripts-version=react-scripts-ts
-    cd quickstart
-   ```
+To set-up a React application in `TypeScript` environment, run the following command.
+
+
+{% tabs %}
+{% highlight js tabtitle="npx" %}
+```javascript
+  npx create-react-app my-diagram-app --template typescript
+  cd my-diagram-app
+  npm start
+```
+{% endhighlight %}
+{% highlight js tabtitle="yarn" %}
+```javascript
+   yarn create react-app my-diagram-app --template typescript
+   cd my-diagram-app
+   yarn start
+```
+{% endhighlight %}
+{% endtabs %}
 
 ### Adding Syncfusion packages
 
@@ -52,65 +83,26 @@ All the available Essential JS 2 packages are published in [`Node Package Manage
 To install Diagram component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-diagrams –save
+npm install @syncfusion/ej2-react-diagrams --save
 ```
 
 ### Adding Style sheet to the Application
 
-Add Diagram component's styles as given below in `App.css`.
+The following CSS files are available in ../node_modules/@syncfusion package folder. This can be added as reference in `src/App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 ```
+>To refer App.css in the application, import it in the src/App.tsx file.        `import './App.css';`
 
-### Adding Diagram component to the Application
-
-* To include the Diagram component in application import the `DiagramComponent` from `ej2-react-diagrams` package.
-
-* Then add the Diagram component as shown in below code example.
-
-`[src/index.tsx]`
-
-```ts
-import * as React from "react";
-import "./App.css";
-// import the DiagramComponent
-import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
-export default function App() {
-  return (
-    <DiagramComponent id="container" />
-  );
-}
-```
-
-### Run the application
-
-Now run the `npm start` command in the console, it will run your application and open the browser window.
-
-```
-npm start
-```
-
-The below examples shows the basic Diagram component.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/getting-started/initialize-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/getting-started/initialize-cs1/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/diagram/getting-started/initialize-cs1" %}
 
 ## Module Injection
 
-The diagram component is divided into individual feature-wise modules. In order to use a particular feature, inject the required module. The following list describes the module names and their description.
+The diagram component is divided into individual feature-wise modules. In order to use a particular feature, you need to inject its feature service in the App. The following list describes the module names and their description.
 
 * `BpmnDiagrams` - Inject this provider to add built-in BPMN Shapes to diagrams.
 * `ConnectorBridging` - Inject this provider to add bridges to connectors.
@@ -126,12 +118,13 @@ The diagram component is divided into individual feature-wise modules. In order 
 * `Snapping` - Inject this provider to Snap the objects.
 * `SymmetricLayout` - Inject this provider to render layout in symmetrical method.
 * `UndoRedo` - Inject this provider to revert and restore the changes.
+* `Ej1Serialization` - Inject this provider to load ej1 diagram json in ej2 diagram.
 
-These modules should be imported and injected into the Diagram component using `Diagram.Inject` method as follows.
+These modules should be injected into the diagram using the **Inject** directive.
 
 ```javascript
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import {
   DiagramComponent,
   HierarchicalTree,
@@ -147,12 +140,14 @@ import {
   UndoRedo,
   LayoutAnimation,
   DiagramContextMenu,
-  ConnectorEditing
+  ConnectorEditing,
+  Ej1Serialization,
+  Inject
 } from "@syncfusion/ej2-react-diagrams";
 
 export default function App() {
   return (
-    <DiagramComponent id="container">
+    <DiagramComponent id="diagram" width={1000} height={500}>
       <Inject
         services={[
           HierarchicalTree,
@@ -168,7 +163,8 @@ export default function App() {
           UndoRedo,
           LayoutAnimation,
           DiagramContextMenu,
-          ConnectorEditing
+          ConnectorEditing,
+          Ej1Serialization
         ]}
       />
     </DiagramComponent>
@@ -177,6 +173,70 @@ export default function App() {
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
 ```
+
+### Adding Diagram component to the Application
+
+* To include the Diagram component in application import the `DiagramComponent` from `ej2-react-diagrams` package.
+
+* Then add the Diagram component as shown in below code example.
+
+`[src/App.js]`
+
+```ts
+import './App.css';
+import { DiagramComponent } from '@syncfusion/ej2-react-diagrams';
+function App() {
+  return (
+    <div className="App">
+        <DiagramComponent 
+        id="diagram"
+        width={'100%'}
+        height={'500px'}></DiagramComponent>
+    </div>
+  );
+}
+export default App;
+
+```
+
+## Defining Basic Diagram
+
+The below examples shows the basic diagram component which renders an empty diagram.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/getting-started/initialize-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/getting-started/initialize-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/getting-started/initialize-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/getting-started/initialize-cs1" %}
+
+ Now run the `npm start` command in the console, it will run your application and open the browser window.
+
+```
+npm start
+```
+
+## Basic Diagram elements
+
+* `Node`: Visualizes any graphical object using nodes, which can also be arranged and manipulated on a diagram page.
+* `Connector`: Represents the relationship between two nodes. Three types of connectors provided as follows:
+
+```
+
+1) Orthogonal
+2) Bezier
+3) Straight
+
+```
+* `Port`: Acts as the connection points of node or connector and allows you to create connections with only specific points.
+* `Annotation`: Shows additional information by adding text or labels on nodes and connectors.
 
 ## Flow Diagram
 
@@ -191,30 +251,85 @@ Create and add a `node` (JSON data) with specific position, size, label, and sha
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/diagram/getting-started/addnode-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/getting-started/addnode-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/addnode-cs1" %}
 
-### Connect two Nodes with a Connector
+### Apply shape and style to node
 
-Add two node to the diagram as shown in the previous example. Connect these nodes by adding a connector using the `connector` property and refer the source and target end by using the `sourceNode` and `targetNode` properties.
+Syncfusion diagram control provides support to render many built-in shapes in diagram.
+Please refer to [`Shapes`](shapes) to know about built-in Shapes.
+
+The appearance of a node can be customized by changing its [`fill`](../api/diagram/shapeStyleModel#fill-string) color, [`strokeColor`](../api/diagram/shapeStyleModel#strokecolor-string), [`strokeWidth`](../api/diagram/shapeStyleModel#strokewidth-number), [`borderColor`](../api/diagram/node#borderColor-string), [`borderWidth`](../api/diagram/node#borderWidth-number), [`strokeDashArray`](../api/diagram/shapeStyleModel#strokeDashArray-number),  [`opacity`](../api/diagram/shapeStyleModel#opacity-number), and [`shadow`](../api/diagram/shapeStyleModel#shadow-number).
+
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/getting-started/connectnode-cs1/app/index.jsx %}
+{% include code-snippet/diagram/getting-started/apply-style/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/getting-started/connectnode-cs1/app/index.tsx %}
+{% include code-snippet/diagram/getting-started/apply-style/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/getting-started/apply-style/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/getting-started/connectnode-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/getting-started/apply-style" %}
 
-Default values for all `nodes` and `connectors` can be set using the `getNodeDefaults` and `getConnectorDefaults` properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
+### Add other flowchart nodes to the diagram
 
-### Complete Flow Diagram
+You can add multiple nodes with different shapes into diagram.
 
-Similarly we can add required nodes and connectors to form a complete flow diagram.
+```Javascript
+
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
+export default function App() {
+    const nodes = [
+        {
+            id: 'Start', width: 140, height: 70, offsetX: 300, offsetY: 100,
+            annotations: [{
+              id: 'label1',
+              content: 'Start'
+            }],
+            shape: { type: 'Flow', shape: 'Terminator' },
+            style:{fill:'skyblue',strokeColor:'skyblue',},
+        },
+        {
+            id: 'Process', width: 140, height: 70, offsetX: 300, offsetY: 200,
+            annotations: [{
+              id: 'label1',
+              content: 'Process'
+            }],
+            shape: { type: 'Flow', shape: 'Process' },
+            style:{fill:'skyblue',strokeColor:'skyblue',},
+        },
+        {
+            id: 'Decision', width: 140, height: 70, offsetX: 300, offsetY: 300,
+            annotations: [{
+              id: 'label1',
+              content: 'Decision'
+            }],
+            shape: { type: 'Flow', shape: 'Decision' },
+            style:{fill:'skyblue',strokeColor:'skyblue',},
+        }
+    ];
+    return (<DiagramComponent id="container" width={"100%"} height={"350px"} nodes={nodes}/>);
+}
+const root = ReactDOM.createRoot(document.getElementById("diagram"));
+root.render(<App />);
+
+```
+
+### Connect flow chart nodes
+
+Connect these nodes by adding a connector using the [`connectors`](../api/diagram/connectorModel/) property of diagram and refer the source and target end by using the [`sourceID`](../api/diagram/connectorModel/#sourceid) and [`targetID`](../api/diagram/connectorModel/#targetid) properties.
+The required nodes and connectors can be added to form a complete flow diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -223,15 +338,21 @@ Similarly we can add required nodes and connectors to form a complete flow diagr
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/diagram/getting-started/flowdiagram-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/getting-started/flowdiagram-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/flowdiagram-cs1" %}
+ 
+Default values for all [`nodes`](../api/diagram/nodemodel/) and [`connectors`](../api/diagram/connectorModel/) can be set using the [`getNodeDefaults`](../api/diagram/#getnodedefaults) and [`getConnectorDefaults`](../api/diagram/#getconnectordefaults) properties, respectively. For example, if all nodes have the same width and height, such properties can be moved into `getNodeDefaults`.
+
 
 ## Automatic Organization Chart
 
 In ‘Flow Diagram’ section we saw how to create a diagram manually, now let us see how to create and position diagram automatically.
 
-### Business object (Employee information)
+### Create Business object (Employee information)
 
 Define Employee Information as JSON data. The following code example shows an employee array whose, `Name` is used as an unique identifier and `ReportingPerson` is used to identify the person to whom an employee report to, in the organization.
 
@@ -337,9 +458,9 @@ const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
 ```
 
-### Visualize employee
+### Rendering layout with Datasource
 
-Following code examples indicate how to define the default appearance of node and connector using default settings.
+To create an organizational chart, the [`type`](../api/diagram/layout) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -348,8 +469,30 @@ Following code examples indicate how to define the default appearance of node an
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/diagram/getting-started/orgchart-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/getting-started/orgchart-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/orgchart-cs1" %}
+
+
+### Customize employee appearance
+
+The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](../api/diagram/#setnodetemplate) is used to update each node based on employee data.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/getting-started/orgchart-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/getting-started/orgchart-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/getting-started/orgchart-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/getting-started/orgchart-cs2" %}
 
 > You can refer to our [React Diagram](https://www.syncfusion.com/react-components/react-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [React Diagram example](https://ej2.syncfusion.com/react/demos/#/material/diagram/default-functionality) that shows how to render the Diagram in React.

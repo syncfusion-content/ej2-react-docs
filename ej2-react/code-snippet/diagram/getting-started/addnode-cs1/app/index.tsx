@@ -1,7 +1,7 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import { DiagramComponent, NodeModel } from "@syncfusion/ej2-react-diagrams";
 
 export default function App() {
@@ -12,7 +12,6 @@ export default function App() {
               id: 'label1',
               content: 'Start'
             }],
-            shape: { type: 'Flow', shape: 'Terminator' }
     }
   ];
   return (
@@ -24,6 +23,6 @@ export default function App() {
     />
   );
 }
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
+const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);
 root.render(<App />);
 

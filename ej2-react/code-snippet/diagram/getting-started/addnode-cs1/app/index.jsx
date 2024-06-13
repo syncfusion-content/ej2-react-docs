@@ -9,7 +9,6 @@ export default function App() {
               id: 'label1',
               content: 'Start'
             }],
-            shape: { type: 'Flow', shape: 'Terminator' }
         }
     ];
     return (<DiagramComponent id="container" width={"100%"} height={"350px"} nodes={nodes}/>);
