@@ -241,6 +241,32 @@ public IActionResult Save()
 
 ```
 
+### Client-side configuration for saving and returning responses
+
+The following example demonstrates the client-side action for saving files on the server and returning responses in JSON, String, and File formats.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/uploader/basic-cs33/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/uploader/basic-cs33/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/uploader/basic-cs34/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/uploader/basic-cs34/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Remove action
 
 The remove action is optional. Specify the URL to handle remove process from server. The remove handler receives the posted files and handle the remove operation in server.

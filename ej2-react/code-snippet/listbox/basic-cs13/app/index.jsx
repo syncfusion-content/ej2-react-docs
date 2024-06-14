@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ListBoxComponent, Inject, CheckBoxSelection } from '@syncfusion/ej2-react-dropdowns';
 function App() {
     let data = [
         { text: 'Hennessey Venom', id: 'list-01' },
@@ -14,8 +14,9 @@ function App() {
         { text: 'McLaren P1', id: 'list-09' },
         { text: 'Ferrari LaFerrari', id: 'list-10' }
     ];
-    let selection = { mode: "single" };
-    return (<ListBoxComponent dataSource={data} selectionSettings={selection}/>);
+    let selection = { mode: "single", showCheckbox: true };
+    return (<ListBoxComponent dataSource={data} selectionSettings={selection}> <Inject services={[CheckBoxSelection]}/>
+    </ListBoxComponent>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

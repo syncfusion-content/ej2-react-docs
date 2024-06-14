@@ -1,0 +1,14 @@
+/* Represents the styles for loader */
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.e-input-group.e-custom-multi-column {
+  color: #ab3243;
+  background: #32a5ab;
+}

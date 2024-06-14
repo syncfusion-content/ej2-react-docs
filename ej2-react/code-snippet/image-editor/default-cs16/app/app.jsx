@@ -2,14 +2,16 @@
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
+import './index.css';
+
 export default class App extends React.Component {
     toolbar = ['Annotate', "Line", "Rectangle", "Text", 'ZoomIn', 'ZoomOut', { text: 'Custom' }];
     imageEditorCreated() {
         if (Browser.isDevice) {
-            this.imgObj.open('flower.png');
+            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         }
         else {
-            this.imgObj.open('bridge.png');
+            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
     toolbarItemClicked(args) {

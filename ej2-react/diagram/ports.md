@@ -276,7 +276,7 @@ constraints, refer to [`Port Constraints`](https://ej2.syncfusion.com/react/docu
 
 ## Specify connection direction to port
 
-The [connectionDirection] property of a port allows users to specify the direction in which a connector should establish a connection. This can be either to the port (incoming) or from the port (outgoing).
+The [`connectionDirection`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#connectionDirection) property of a port allows users to specify the direction in which a connector should establish a connection. This can be either to the port (incoming) or from the port (outgoing).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

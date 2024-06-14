@@ -5,6 +5,7 @@ import { ImageEditorComponent, ToolbarEventArgs, ClickEventArgs } from '@syncfus
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
+import './index.css';
 
 function App() {
     let imgObj: ImageEditorComponent;

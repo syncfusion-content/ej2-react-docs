@@ -371,7 +371,7 @@ The constraints property of annotation allows you to enable/disable certain anno
 
 ## Annotation rotation
 
-The [rotationReference] property of an annotation allows you to control whether the text should rotate relative to its parent node or the Page. The following code examples illustrate how to configure rotationReference for an annotation.
+The [`rotationReference`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapeAnnotation/#rotationreference)property of an annotation allows you to control whether the text should rotate relative to its parent node or the Page. The following code examples illustrate how to configure rotationReference for an annotation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
