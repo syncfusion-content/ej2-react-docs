@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set different event time duration in React Schedule component
 
-In event window, start/end time duration will be processed based on the `interval` value within the `timeScale` property. By default, `interval` value is 30, therefore in event window start/end time duration will be in 30 mins duration. You can set custom interval range to the start/end time in event window using `popupOpen` event as shown below.
+In event window, start/end time duration will be processed based on the `interval` value within the `timeScale` property. By default, `interval` value is 30, therefore in event window start/end time duration will be in 30 minutes duration. You can set custom interval range to the start/end time in event window using `popupOpen` event as shown below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
