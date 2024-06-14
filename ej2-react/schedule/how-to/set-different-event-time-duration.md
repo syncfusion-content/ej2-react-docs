@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set different event time duration in React Schedule component | Syncfusion
-description: Learn here all about Set different event time duration in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Set Time duration | React Schedule Component | Syncfusion
+description: Learn here all about how to set different event time duration in React Schedule component of Syncfusion Essential JS 2 and more.
 control: Set different event time duration 
 platform: ej2-react
 documentation: ug
