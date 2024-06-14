@@ -273,3 +273,20 @@ The offset property of port is used to align the port based on fractions. 0 repr
 
 The constraints property allows to enable/disable certain behaviors of ports. For more information about port
 constraints, refer to [`Port Constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#constraints-portconstraints).
+
+## Specify connection direction to port
+
+The [connectionDirection] property of a port allows users to specify the direction in which a connector should establish a connection. This can be either to the port (incoming) or from the port (outgoing).
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/ports/es5Connection/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/ports/es5Connection/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/ports/es5Connection" %}
+
+ ![maxSegmentThumb](images\connectionDirection1.png)

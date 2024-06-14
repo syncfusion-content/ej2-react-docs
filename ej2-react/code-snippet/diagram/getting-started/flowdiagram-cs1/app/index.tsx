@@ -2,7 +2,7 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import {
   DiagramComponent,
   NodeModel,
@@ -124,12 +124,21 @@ export default function App() {
       height={"600px"}
       nodes={nodes}
       connectors={connectors}
-      getNodeDefaults={(node: NodeModel): NodeModel => {
+      getNodeDefaults={(node:NodeModel):NodeModel => {
         node.height = 50;
         node.width = 140;
+        if(node.id === "node1" || node.id === "node4"){
+             node.style = { fill: "#357BD2", strokeColor: "white" };
+        }else if(node.id === "node2" || node.id === "node5"){
+             node.style = { fill: "yellow", strokeColor: "white" };
+        }else if(node.id === "node3"){
+             node.style = { fill: "#00FF00", strokeColor: "white" };
+        }else if(node.id === "node6"){
+                node.style = { fill: "red", strokeColor: "white" };
+        }
         node.offsetX = 300;
         return node;
-      }}
+    }}
       getConnectorDefaults={(obj: ConnectorModel): ConnectorModel => {
         obj.type = "Orthogonal";
         obj.targetDecorator = { shape: 'Arrow', width: 10, height: 10 };
@@ -138,7 +147,7 @@ export default function App() {
     />
   );
 }
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
+const root = ReactDOM.createRoot(document.getElementById("diagram") as HTMLElement);
 root.render(<App />);
 
 

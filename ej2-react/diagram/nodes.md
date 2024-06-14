@@ -55,6 +55,23 @@ The following code illustrates how to add a node.
 
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/es5run-cs1" %}
 
+## Add collection of nodes at runtime
+
+* The collection of nodes can be dynamically added using 'addElements' method.Each time an element is added to the diagram canvas, the 'collectionChange' event will be triggered.
+
+The following code illustrates how to add a nodes collection at run time.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/nodes/es5Node-cs8/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/nodes/es5Node-cs8/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+          
+{% previewsample "page.domainurl/code-snippet/diagram/es5Node-cs8" %}
+
 ## Add node from palette
 
 Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information

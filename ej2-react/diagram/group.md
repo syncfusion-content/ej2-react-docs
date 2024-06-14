@@ -69,6 +69,23 @@ The following code illustrates how a group node is added at runtime.
 
  {% previewsample "page.domainurl/code-snippet/diagram/group/es5groupadd-cs1" %}
 
+## Add collection of group nodes at runtime
+
+* The collection of group nodes can be dynamically added using 'addElements' method.Each time an element is added to the diagram canvas, the 'collectionChange' event will be triggered.
+
+The following code illustrates how to add a group nodes collection at runtime.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/group/es5groupaddatruntime-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/group/es5groupaddatruntime-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+         
+{% previewsample "page.domainurl/code-snippet/diagram/group/es5groupaddatruntime-cs1" %}
+
 
 ## Add children To group at runtime
 

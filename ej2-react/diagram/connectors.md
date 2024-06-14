@@ -50,6 +50,23 @@ The following code example illustrates how to add connector at runtime.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5Connectorsatruntime-cs1" %}
 
+## Add collection of connectors at runtime
+
+* The collection of connectors can be dynamically added using 'addElements' method.Each time an element is added to the diagram canvas, the 'collectionChange' event will be triggered.
+
+The following code illustrates how to add a connectors collection at runtime.
+
+{% tabs %}
+{% highlight ts tabtitle="index.jsx" %}
+{% include code-snippet/diagram/connectors/es5ConnectoraddatRunTime-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/connectors/es5ConnectoraddatRunTime-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+          
+{% previewsample "page.domainurl/code-snippet/diagram/es5ConnectoraddatRunTime-cs2" %}
+
 ## Connectors from palette
 
 Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram, when required.
