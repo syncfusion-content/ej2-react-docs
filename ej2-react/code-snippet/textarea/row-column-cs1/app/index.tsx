@@ -9,10 +9,10 @@ function App() {
     return (
         <div className='wrap'>
             <div>
-                <TextAreaComponent id="default1" placeholder="Enter your comments" floatLabelType="Auto" rowsCount="3" columnsCount="35"></TextAreaComponent>
+                <TextAreaComponent id="default1" placeholder="Enter your comments" floatLabelType="Auto" rows="3" cols="35"></TextAreaComponent>
             </div>
             <div>
-                <TextAreaComponent id="default2" placeholder="Enter your comments" floatLabelType="Auto" rowsCount="5" columnsCount="40"></TextAreaComponent>
+                <TextAreaComponent id="default2" placeholder="Enter your comments" floatLabelType="Auto" rows="5" cols="40"></TextAreaComponent>
             </div>
         </div>
     );

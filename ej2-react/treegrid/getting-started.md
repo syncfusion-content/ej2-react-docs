@@ -199,6 +199,44 @@ Output will be appears as follows.
 
 > You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
 
+## Handling errors
+
+Error handling in Tree Grid identifies exceptions and notifies them through the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event. When configuring the Tree Grid or enabling specific features through its API, mistakes can occur. The `actionFailure` event can be used to manage these errors. This event triggers when such mistakes happen. The `actionFailure` event handles various scenarios, including:
+
+* For CRUD operations, row drag and drop, and persisiting the selection, ensure the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) property is mapped to a unique data column. Failure to do so will cause an error.
+* [Paging](https://ej2.syncfusion.com/react/documentation/treegrid/paging) is not supported with [virtualization](https://ej2.syncfusion.com/react/documentation/treegrid/virtual-scroll). Enabling `paging` with `virtualization` will result in an error.
+* To render the Tree Grid, map either the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) or [columns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#columns) property. Failure to do so will result in an error.
+* Freeze columns by mapping either [isFrozen](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#isfrozen) or [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid#frozencolumns). Enabling both properties simultaneously will result in an error.
+* The [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid#detailtemplate) is not supported with `virtualization` and `stacked header`. Enabling them with these features will result in an error.
+* The [frozenRows](https://ej2.syncfusion.com/react/documentation/api/treegrid#frozenrows) and `frozenColumns` are not supported with [rowtemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid#rowtemplate), `detailTemplate`, and [cell editing](https://ej2.syncfusion.com/react/documentation/treegrid/editing/cell-editing). Enabling them with these features will result in an error.
+* In `stacked header`, the [freeze](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#freeze) direction is incompatible with [column reordering](https://ej2.syncfusion.com/react/documentation/treegrid/columns/column-reorder).
+* [Selection](https://ej2.syncfusion.com/react/documentation/treegrid/selection/selection) functionality is not supported when using `rowTemplate`. Enabling both properties simultaneously will result in an error.
+* Set the [treeColumnIndex](https://ej2.syncfusion.com/react/documentation/api/treegrid#treecolumnindex) value to display the tree structure. Make sure the value does not exceed the total column count, or it will result in an error.
+* For `virtualization`, do not specify height and width in percentages. Using percentages will result in an error.
+* When using the default filter ([filterbar](https://ej2.syncfusion.com/react/documentation/treegrid/filtering/filter-bar)) type, do not apply the other [filterType](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterType/) to columns within the same tree grid, as this will result in an error.
+* In Tree Grid, avoid enabling [idMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid#idmapping) and [childMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid#childmapping) simultaneously. Enabling both properties at the same time will result in an error.
+* The [showCheckbox](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#showcheckbox) column should only be defined in the tree column. Defining it elsewhere will result in an error.
+* The [textAlign](https://ej2.syncfusion.com/react/documentation/api/treegrid/treeGridColumn/#textalign) right is not applicable for tree columns in the Tree Grid. Enabling right alignment for tree columns will result in an error.
+
+The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event in the Tree Grid control to display an exception when `isPrimaryKey`are not configured properly in the Tree Grid.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/error-handling/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/error-handling/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="data.jsx" %}
+{% include code-snippet/treegrid/error-handling/app/data.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="data.tsx" %}
+{% include code-snippet/treegrid/error-handling/app/data.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/error-handling" %}
+
 ## See Also
 
 * [Getting Started with Syncfusion JavaScript documentation](https://ej2.syncfusion.com/documentation/treegrid/getting-started)
