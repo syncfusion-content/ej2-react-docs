@@ -289,4 +289,4 @@ The [`connectionDirection`](https://ej2.syncfusion.com/react/documentation/api/d
 
  {% previewsample "page.domainurl/code-snippet/diagram/ports/es5Connection" %}
 
- ![maxSegmentThumb](images\connectionDirection1.png)
+ ![maxSegmentThumb](images/connectionDirection1.png)

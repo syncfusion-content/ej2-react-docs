@@ -7,7 +7,7 @@ import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 
 function App() {
     let data = new DataManager({
-        url: 'https://services.syncfusion.com/js/production/api/orders/',
+        url: 'https://services.syncfusion.com/react/production/api/orders/',
         adaptor: new ODataAdaptor,
         crossDomain: true
     });
