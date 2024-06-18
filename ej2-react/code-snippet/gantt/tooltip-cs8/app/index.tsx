@@ -1,115 +1,11 @@
-export let timelineTemplateData: object[] = [
-  {
-    TaskID: 1,
-    TaskName: 'Product Concept',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-    subtasks: [
-      { TaskID: 2, TaskName: 'Defining the product and its usage', StartDate: new Date('04/02/2019'), Duration: 3, Progress: 30 },
-      { TaskID: 3, TaskName: 'Defining target audience', StartDate: new Date('04/02/2019'), Duration: 3 },
-      { TaskID: 4, TaskName: 'Prepare product sketch and notes', StartDate: new Date('04/02/2019'), Duration: 3, Predecessor: "2", Progress: 30 },
-    ]
-  },
-  { TaskID: 5, TaskName: 'Concept Approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: "3,4" },
-  {
-    TaskID: 6,
-    TaskName: 'Market Research',
-    StartDate: new Date('04/02/2019'),
-    EndDate: new Date('04/21/2019'),
-    subtasks: [
-      {
-        TaskID: 7,
-        TaskName: 'Demand Analysis',
-        StartDate: new Date('04/04/2019'),
-        EndDate: new Date('04/21/2019'),
-        subtasks: [
-          { TaskID: 8, TaskName: 'Customer strength', StartDate: new Date('04/04/2019'), Duration: 4, Predecessor: "5", Progress: 30 },
-          { TaskID: 9, TaskName: 'Market opportunity analysis', StartDate: new Date('04/04/2019'), Duration: 4, Predecessor: "5" }
-        ]
-      },
-      { TaskID: 10, TaskName: 'Competitor Analysis', StartDate: new Date('04/04/2019'), Duration: 4, Predecessor: "7,8", Progress: 30 },
-      { TaskID: 11, TaskName: 'Product strength analysis', StartDate: new Date('04/04/2019'), Duration: 4, Predecessor: "9" },
-      { TaskID: 12, TaskName: 'Research complete', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: "10" }
-    ]
-  },
-  {
-    TaskID: 13,
-    TaskName: 'Product Design and Development',
-    StartDate: new Date('04/04/2019'),
-    EndDate: new Date('04/21/2019'),
-    subtasks: [
-      { TaskID: 14, TaskName: 'Functionality design', StartDate: new Date('04/04/2019'), Duration: 7, Progress: 30 },
-      { TaskID: 15, TaskName: 'Quality design', StartDate: new Date('04/04/2019'), Duration: 5 },
-      { TaskID: 16, TaskName: 'Define Reliability', StartDate: new Date('04/04/2019'), Duration: 5, Progress: 30 },
-      { TaskID: 17, TaskName: 'Identifying raw materials ', StartDate: new Date('04/04/2019'), Duration: 4 },
-      {
-        TaskID: 18,
-        TaskName: 'Define cost plan',
-        StartDate: new Date('04/04/2019'),
-        EndDate: new Date('04/21/2019'),
-        subtasks: [
-          { TaskID: 19, TaskName: 'Manufacturing cost', StartDate: new Date('04/04/2019'), Duration: 1, Progress: 30 },
-          { TaskID: 20, TaskName: 'Selling cost', StartDate: new Date('04/04/2019'), Duration: 1 }
-        ]
-      },
-      {
-        TaskID: 21,
-        TaskName: 'Development of the final design',
-        StartDate: new Date('04/04/2019'),
-        EndDate: new Date('04/21/2019'),
-        subtasks: [
-          { TaskID: 22, TaskName: 'Defining dimensions and package volume', StartDate: new Date('04/04/2019'), Duration: 2, Progress: 30 },
-          { TaskID: 23, TaskName: 'Develop design to meet industry standards', StartDate: new Date('04/04/2019'), Duration: 3 },
-          { TaskID: 24, TaskName: 'Include all the details', StartDate: new Date('04/04/2019'), Duration: 5 }
-        ]
-      },
-      { TaskID: 25, TaskName: 'CAD Computer-aided design', StartDate: new Date('04/04/2019'), Duration: 10, Progress: 30 },
-      { TaskID: 26, TaskName: 'CAM Computer-aided manufacturing', StartDate: new Date('04/04/2019'), Duration: 10 }
-    ]
-  },
-  { TaskID: 27, TaskName: 'Prototype Testing', StartDate: new Date('04/04/2019'), Duration: 12, Progress: 30 },
-  { TaskID: 28, TaskName: 'Include feedback', StartDate: new Date('04/04/2019'), Duration: 5 },
-  { TaskID: 29, TaskName: 'Manufacturing', StartDate: new Date('04/04/2019'), Duration: 9, Progress: 30 },
-  { TaskID: 30, TaskName: 'Assembling materials to finished goods', StartDate: new Date('04/04/2019'), Duration: 12 },
-  {
-    TaskID: 31,
-    TaskName: 'Feedback and Testing',
-    StartDate: new Date('04/04/2019'),
-    EndDate: new Date('04/21/2019'),
-    subtasks: [
-      { TaskID: 32, TaskName: 'Internal testing and feedback', StartDate: new Date('04/04/2019'), Duration: 5, Progress: 30 },
-      { TaskID: 33, TaskName: 'Customer testing and feedback', StartDate: new Date('04/04/2019'), Duration: 7, Progress: 30 }
-    ]
-  },
-  {
-    TaskID: 34,
-    TaskName: 'Product Development',
-    StartDate: new Date('04/04/2019'),
-    EndDate: new Date('04/21/2019'),
-    subtasks: [
-      { TaskID: 35, TaskName: 'Important improvements', StartDate: new Date('04/04/2019'), Duration: 2, Progress: 30 },
-      { TaskID: 36, TaskName: 'Address any unforeseen issues', StartDate: new Date('04/04/2019'), Duration: 2, Progress: 30 }
-    ]
-  },
-  {
-    TaskID: 37,
-    TaskName: 'Final Product',
-    StartDate: new Date('04/04/2019'),
-    EndDate: new Date('04/21/2019'),
-    subtasks: [
-      { TaskID: 38, TaskName: 'Branding product', StartDate: new Date('04/04/2019'), Duration: 5 },
-      { TaskID: 39, TaskName: 'Marketing and pre-sales', StartDate: new Date('04/04/2019'), Duration: 10, Progress: 30 }
-    ]
-  }
-];
 
 import * as React from 'react';
 import { useRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Selection, DayMarkers, ColumnsDirective, ColumnDirective, HolidaysDirective, HolidayDirective } from '@syncfusion/ej2-react-gantt';
-import "./app.css"
+import {timelineTemplateData} from './datasource'
 function App() {
-  let ganttInstance :any = useRef<GanttComponent>(null);
+  let ganttInstance :any ;
   const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
@@ -124,8 +20,8 @@ function App() {
       return "#7BD3EA"
     }
     const parsedDate = new Date(date);
-    for (let i = 0; i < ganttInstance.current.holidays.length; i++) {
-      const holiday = ganttInstance.current.holidays[i];
+    for (let i = 0; i < ganttInstance.holidays.length; i++) {
+      const holiday = ganttInstance.holidays[i];
       const fromDate = new Date(holiday.from);
       const toDate = new Date(holiday.to)
       if (parsedDate >= fromDate && parsedDate <= toDate) {
@@ -142,8 +38,8 @@ function App() {
   const holidayValue = (value: string, date: string): string => {
 
     const parsedDate = new Date(date);
-    for (let i = 0; i < ganttInstance.current.holidays.length; i++) {
-      const holiday = ganttInstance.current.holidays[i];
+    for (let i = 0; i < ganttInstance.holidays.length; i++) {
+      const holiday = ganttInstance.holidays[i];
       const fromDate = new Date(holiday.from);
       const toDate = new Date(holiday.to)
       if (parsedDate >= fromDate && parsedDate <= toDate) {
@@ -171,8 +67,8 @@ function App() {
         <div>{props.value}</div>
         <div
           style={{
-            width: '20px',
-            height: '20px',
+            width: '30px',
+            height: '30px',
             lineHeight: 'normal',
             paddingLeft: '10px',
           }}
@@ -219,13 +115,13 @@ function App() {
   const labelSettings: any = {
     leftLabel: 'TaskName',
   };
-  const projectStartDate = new Date('03/31/2024');
-  const projectEndDate = new Date('04/23/2024');
-  return <GanttComponent id='Timeline' ref={ganttInstance} dataSource={timelineTemplateData}
+  const projectStartDate = new Date('03/31/2019');
+  const projectEndDate = new Date('04/23/2019');
+  return <GanttComponent id='Timeline' ref={g => ganttInstance = g} dataSource={timelineTemplateData} timelineTemplate={timelineTemplate}
     splitterSettings={splitterSettings}
     taskFields={taskFields} height='550px'
     projectStartDate={projectStartDate} projectEndDate={projectEndDate} timelineSettings={timelineSettings}
-    timelineTemplate={timelineTemplate} labelSettings={labelSettings} treeColumnIndex={1}>
+     labelSettings={labelSettings} treeColumnIndex={1}>
     <ColumnsDirective>
       <ColumnDirective field='TaskID' visible={false}></ColumnDirective>
       <ColumnDirective field='TaskName' width={300} ></ColumnDirective>
