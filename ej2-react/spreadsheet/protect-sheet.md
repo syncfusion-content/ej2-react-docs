@@ -149,6 +149,25 @@ You can make the cells read-only in the cell data binding by setting the `isRead
 </SpreadsheetComponent>
 ```
 
+The following example demonstrates how to make rows, columns, and cells read-only without protecting the sheet:
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/readonly-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/readonly-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/readonly-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/readonly-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/readonly-cs1" %}
+
 ## Protect Workbook
 
 Protect workbook feature helps you to protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet. You can use the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#password) property to protect workbook with password. You can use the [`isProtected`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#isprotected) property to protect or unprotect the workbook without the password.

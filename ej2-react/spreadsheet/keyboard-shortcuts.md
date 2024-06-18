@@ -16,6 +16,7 @@ The keyboard shortcuts supported in the spreadsheet are,
 |----------|-------------|
 | Ctrl + O | Displays dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
+| Ctrl + P | Print the active worksheet when the spreadsheet is in focus. |
 | F2 | Enables edit mode. |
 | ESC | Cancel edit mode and discard the changes. |
 | Backspace and SPACE | Clears content of the active cell and enables edit mode. |
@@ -63,6 +64,7 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Alt + Up | Close the list data validation menu and filter menu. |
 | Delete | Remove the contents of the cell. |
 | Shift + F11 | Add a new sheet. |
+| Shift + F2 | Open the dialog box to add or edit notes for the desired cells. Meanwhile, upon pressing the `Esc` key, the dialog box for notes, when in focus, will save and close. |
 | Ctrl + Shift + 9 | Unhide the selected rows. |
 | Ctrl + Shift + 0 | Unhide the selected columns. |
 | Ctrl + D | Fill the cell down. |
