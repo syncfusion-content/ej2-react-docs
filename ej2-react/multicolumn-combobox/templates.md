@@ -48,14 +48,14 @@ You can use the [groupTemplate](https://ej2.syncfusion.com/react/documentation/a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/multicolumn-combobox/groupTemplate/app/index.jsx %}
+{% include code-snippet/multicolumn-combobox/templates/groupTemplate/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/multicolumn-combobox/groupTemplate/app/index.tsx %}
+{% include code-snippet/multicolumn-combobox/templates/groupTemplate/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/multicolumn-combobox/groupTemplate" %}
+{% previewsample "page.domainurl/code-snippet/multicolumn-combobox/templates/groupTemplate" %}
 
 ## Footer template
 
