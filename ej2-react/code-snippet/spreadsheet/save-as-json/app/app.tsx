@@ -19,6 +19,7 @@ function App() {
     options.ignoreChart = (document.getElementById('chart') as HTMLInputElement).checked;
     options.ignoreImage = (document.getElementById('image') as HTMLInputElement).checked;
     options.ignoreNote = (document.getElementById('note') as HTMLInputElement).checked;
+    return options;
   }
 
   const toggleCheckboxes = () => {

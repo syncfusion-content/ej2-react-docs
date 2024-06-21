@@ -237,10 +237,10 @@ In the following sample, popup list's width and height are configured.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/combobox/basic-cs3/app/index.jsx %}
+{% include code-snippet/multicolumn-combobox/basic-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/combobox/basic-cs3/app/index.tsx %}
+{% include code-snippet/multicolumn-combobox/basic-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -250,10 +250,10 @@ In the following sample, popup list's width and height are configured.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/combobox/basic-cs4/app/index.jsx %}
+{% include code-snippet/multicolumn-combobox/basic-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/combobox/basic-cs4/app/index.tsx %}
+{% include code-snippet/multicolumn-combobox/basic-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

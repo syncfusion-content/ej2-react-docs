@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import { DiagramComponent, ImageElement, StackPanel, TextElement } from "@syncfusion/ej2-react-diagrams";
 import {
   HierarchicalTree,
