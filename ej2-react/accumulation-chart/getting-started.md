@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started
+# Getting Started with React Accumulation charts of Syncfusion
 
 In EJ2, accumulation chart is implemented as a separate control to avoid the axis related logics.
 The dependencies for accumulation chart is same as chart control.
@@ -72,7 +72,7 @@ For getting started, add the Accumulation Chart component in `src/App.tsx` file 
 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 
 import {AccumulationChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -85,7 +85,7 @@ function App() {
 export default App;
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 
 import { AccumulationChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -103,10 +103,10 @@ export default App;
 By default, the pie series will be rendered when assigning the JSON data to the series using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel/#datasource) property. Map the field names in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel/#yname) properties of the series.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/chart/series/pie-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/series/pie-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

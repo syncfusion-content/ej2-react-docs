@@ -32,7 +32,7 @@ function App() {
   };
   const imagedate = () => {
     const getImage = Math.floor(Math.random() * 5) + 1;
-    return "./image/" + getImage + ".svg";
+    return getImage + ".svg";
 
   }
   const holidayValue = (value: string, date: string): string => {

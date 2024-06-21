@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started
+# Getting Started with React charts of Syncfusion
 
 This section explains you the steps required to create a simple chart and demonstrate the basic usage of the chart control.
 
@@ -69,7 +69,7 @@ Now, you can start adding Chart component in the application.
 For getting started, add the Chart component in `src/App.tsx` file using following code.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 
 import { ChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -80,7 +80,7 @@ function App() {
 export default App;
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 
 import { ChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -101,10 +101,10 @@ npm start
 The below example shows a basic Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/chart/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +124,7 @@ Chart component are segregated into individual feature-wise modules. In order to
 These modules should be injected to the `services` section as follows,
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 
 import { Category, ChartComponent, DataLabel, LineSeries, Legend, Tooltip, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
@@ -136,10 +136,9 @@ function App() {
   </ChartComponent>;
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 
 import { Category, ChartComponent, DataLabel, LineSeries, Legend, Tooltip, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
@@ -150,7 +149,6 @@ function App() {
   </ChartComponent>;
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
 
 {% endhighlight %}
 {% endtabs %}
@@ -160,7 +158,7 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 This section explains how to plot below JSON data to the chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 
 export let data = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
@@ -172,7 +170,7 @@ export let data = [
 ];
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 
 export let data: any[] = [
             { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
@@ -191,10 +189,10 @@ export let data: any[] = [
 Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/chart/getting-started/datasource-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/datasource-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -204,10 +202,10 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 The sales data are in thousands, so format the vertical axis label by adding `$` as a prefix and `K` as a suffix to each label. This can be achieved by setting the `${value}K` to the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/chart/getting-started/datasource-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/datasource-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -219,10 +217,10 @@ The sales data are in thousands, so format the vertical axis label by adding `$`
 You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#title) property to the chart to provide quick information to the user about the data plotted in the chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/chart/getting-started/tooltip-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -234,10 +232,10 @@ You can add a title using [`title`](https://ej2.syncfusion.com/react/documentati
 You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel/#visible) object and by injecting the `Legend` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/chart/getting-started/legend-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/legend-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -249,10 +247,10 @@ You can use legend for the chart by setting the `visible` property to true in [`
 You can add data labels to improve the readability of the chart. This can be achieved by setting the visible property to true in the `dataLabel` object  and by injecting `DataLabel` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/chart/getting-started/datalabel-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/datalabel-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -264,10 +262,10 @@ You can add data labels to improve the readability of the chart. This can be ach
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel/#enable) object and by injecting `Tooltip` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/chart/getting-started/tooltip-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/tooltip-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
