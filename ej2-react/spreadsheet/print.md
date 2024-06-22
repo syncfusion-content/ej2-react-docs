@@ -30,6 +30,16 @@ The `printOptions` contain three properties, as described below.
 
 > When the `print` method is called without any parameters, the default printing will be performed.
 
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/print-cs2/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/print-cs2/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs2" %}
 
 ## Disable printing
 

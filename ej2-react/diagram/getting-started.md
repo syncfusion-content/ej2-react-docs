@@ -40,18 +40,14 @@ You can use [`create-react-app`](https://github.com/facebookincubator/create-rea
 
 {% tabs %}
 {% highlight js tabtitle="npx" %}
-```javascript
-  npx create-react-app my-diagram-app
-  cd my-diagram-app
-  npm start
-```
+   npx create-react-app my-diagram-app
+   cd my-diagram-app
+   npm start
 {% endhighlight %}
 {% highlight js tabtitle="yarn" %}
-```javascript
    yarn create react-app my-diagram-app
    cd my-diagram-app
    yarn start
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,18 +57,14 @@ To set-up a React application in `TypeScript` environment, run the following com
 
 {% tabs %}
 {% highlight js tabtitle="npx" %}
-```javascript
-  npx create-react-app my-diagram-app --template typescript
-  cd my-diagram-app
-  npm start
-```
+   npx create-react-app my-diagram-app --template typescript
+   cd my-diagram-app
+   npm start
 {% endhighlight %}
 {% highlight js tabtitle="yarn" %}
-```javascript
    yarn create react-app my-diagram-app --template typescript
    cd my-diagram-app
    yarn start
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,7 +89,7 @@ The following CSS files are available in ../node_modules/@syncfusion package fol
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 ```
->To refer App.css in the application, import it in the src/App.tsx file.        `import './App.css';`
+N> To refer App.css in the application, import it in the src/App.tsx file.        `import './App.css';`
 
 
 ## Module Injection
@@ -124,7 +116,7 @@ These modules should be injected into the diagram using the **Inject** directive
 
 ```javascript
 import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import {
   DiagramComponent,
   HierarchicalTree,
@@ -397,7 +389,7 @@ Define Employee Information as JSON data. The following code example shows an em
 
 ### Map data source
 
-You can configure the above "Employee Information" with diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example show how `dataSourceSettings` is used to map ID and parent with property name identifiers for employee information.
+You can configure the above "Employee Information" with diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example demonstrates how to use [`dataSourceSettings`](../api/diagram/datasourcemodel/) to map [`id`](../api/diagram/dataSourceModel/#id) and [`parentId`](../api/diagram/dataSourceModel/#parentid) with the corresponding property names of employee information.
 
 ```ts
 
@@ -460,7 +452,7 @@ root.render(<App />);
 
 ### Rendering layout with Datasource
 
-To create an organizational chart, the [`type`](../api/diagram/layout) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
+To create an organizational chart, the [`type`](../api/diagram/layoutType/) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -495,4 +487,4 @@ The following code examples indicate how to define the default appearance of nod
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/orgchart-cs2" %}
 
-> You can refer to our [React Diagram](https://www.syncfusion.com/react-components/react-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [React Diagram example](https://ej2.syncfusion.com/react/demos/#/material/diagram/default-functionality) that shows how to render the Diagram in React.
+N> You can refer to our [React Diagram](https://www.syncfusion.com/react-components/react-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [React Diagram example](https://ej2.syncfusion.com/react/demos/#/material/diagram/default-functionality) that shows how to render the Diagram in React.
