@@ -36,7 +36,7 @@ The available chart modules are
 | [`StepAreaSeries`](https://ej2.syncfusion.com/react/documentation/api/chart/stepAreaSeries)| Inject this module to use the step area type series in the chart.|
 | [`SplineAreaSeries`](https://ej2.syncfusion.com/react/documentation/api/chart/splineAreaSeries)| Inject this module to use the spline area type series in the chart.|
 | [`MultiColoredAreaSeries`](https://ej2.syncfusion.com/react/documentation/api/chart/multiColoredAreaSeries)| Inject this module to use the multi colored area type series in the chart.|
-| [`ColumnSeries`](https://ej2.syncfusion.com/react/documentation/api/chart/column)| Inject this module to use the column type series in the chart.||
+| [`ColumnSeries`](https://ej2.syncfusion.com/react/documentation/api/chart/column)| Inject this module to use the column type series in the chart.|
 | [`RangeColumnSeries`](https://ej2.syncfusion.com/react/documentation/api/chart/rangeColumnSeries)| Inject this module to use the range column type series in the chart.|
 | [`StackingColumnSeries`](https://ej2.syncfusion.com/react/documentation/api/chart/stackingColumnSeries)| Inject this module to use the stacking column type series in the chart.|
 | [`BarSeries`](https://ej2.syncfusion.com/react/documentation/api/chart/barSeries)| Inject this module to use the bar type series in the chart.|

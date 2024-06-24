@@ -16,7 +16,7 @@ function App() {
     let pivotObj;
     return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings}>
     </PivotViewComponent>);
-}
-;
+};
+
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
+ReactDOM.render(<App />, document.getElementById("root"));
