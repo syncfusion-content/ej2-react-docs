@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { CalculatedField, FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
@@ -22,7 +20,4 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
-
-
-
+ReactDOM.render(<App />, document.getElementById("root"));

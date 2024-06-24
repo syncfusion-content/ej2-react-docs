@@ -53,7 +53,7 @@ function App() {
         document.getElementById('files').value = '';
     }
     return (<div className='control-pane'>
-               <div><style>{SAMPLE_CSS}</style><PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350} gridSettings={{ columnWidth: 140 }} dataBound={ondataBound.bind(this)}></PivotViewComponent></div><a id="save" class="btn btn-primary">Save</a><div class="fileUpload btn btn-primary"><span>Load</span><input id="files" type="file" class="upload"/></div>
+               <div><style>{SAMPLE_CSS}</style><PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350} dataBound={ondataBound.bind(this)}></PivotViewComponent></div><a id="save" class="btn btn-primary">Save</a><div class="fileUpload btn btn-primary"><span>Load</span><input id="files" type="file" class="upload"/></div>
             </div>);
 }
 ;
