@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in React Multi select component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Grouping | React Multi select component | Syncfusion
+description: Learn here all about grouping in Syncfusion Essential React Multi select component, it's elements, and more.
 control: Grouping 
 platform: ej2-react
 documentation: ug
