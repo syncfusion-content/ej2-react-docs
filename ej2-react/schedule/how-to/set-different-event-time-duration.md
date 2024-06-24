@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set different event time duration in React Schedule component | Syncfusion
-description: Learn here all about data binding support in React Gantt component of Syncfusion Essential JS2, its elements, and more.
+title: Set Time duration | React Schedule Component | Syncfusion
+description: Learn here all about data binding support in React Schedule component of Syncfusion Essential JS2, its elements, and more.
 control: Set different event time duration 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set different event time duration in React Schedule component
 
-In event window, start/end time duration will be processed based on the `interval` value within the `timeScale` property. By default, `interval` value is 30, therefore in event window start/end time duration will be in 30 mins duration. You can set custom interval range to the start/end time in event window using `popupOpen` event as shown below.
+In event window, start/end time duration will be processed based on the `interval` value within the `timeScale` property. By default, `interval` value is 30 minutes, therefore in event window start/end time duration will be in 30 mins duration. You can set custom interval range to the start/end time in event window using `popupOpen` event as shown below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
