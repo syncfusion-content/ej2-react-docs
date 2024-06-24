@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows in React Gantt Component | Syncfusion
-description: Learn here all about Rows in React Gantt component of Syncfusion Essential JS 2, its elements, and more.
+description: Learn here all about Rows in React Gantt component of Syncfusion Essential JS2, its elements, and more.
 control: Rows 
 platform: ej2-react
 documentation: ug
