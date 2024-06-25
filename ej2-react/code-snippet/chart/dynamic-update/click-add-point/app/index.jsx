@@ -41,24 +41,24 @@ function App() {
   const chartMouseClick = (args) => {
     let isRemoved = false;
     if (args.axisData) {
-      for (let i = 0; i < (chartInstance.current.series[0]).points.length; i++) {
-        const markerWidth = (chartInstance.current.series[0]).marker.width / 2;
+      for (let i = 0; i < (chartInstance.series[0]).points.length; i++) {
+        const markerWidth = (chartInstance.series[0]).marker.width / 2;
         let roundedX = Math.round(args.axisData['primaryXAxis']) + markerWidth;
         let roundedY = Math.round(args.axisData['primaryYAxis']) + markerWidth;
-        let pointX = Math.round((chartInstance.current.series[0]).points[i].x) + markerWidth;
-        let pointY = Math.round((chartInstance.current.series[0]).points[i].y) + markerWidth;
+        let pointX = Math.round((chartInstance.series[0]).points[i].x) + markerWidth;
+        let pointY = Math.round((chartInstance.series[0]).points[i].y) + markerWidth;
         if ((roundedX === pointX || roundedX + 1 === pointX || roundedX - 1 === pointX) &&
           (roundedY === pointY || roundedY + 1 === pointY || roundedY - 1 === pointY)) {
-          if ((chartInstance.current.series[0]).points.length > 1) {
-            const points = (chartInstance.current.series[0]).points;
+          if ((chartInstance.series[0]).points.length > 1) {
+            const points = (chartInstance.series[0]).points;
             const duration = i === 0 || i === points[points.length - 1].index ? 500 : 0;
-            chartInstance.current.series[0].removePoint(i, duration);
+            chartInstance.series[0].removePoint(i, duration);
           }
           isRemoved = true;
         }
       }
       if (!isRemoved) {
-        chartInstance.current.series[0].addPoint({ x: Math.round(args.axisData['primaryXAxis']), y: Math.round(args.axisData['primaryYAxis']) });
+        chartInstance.series[0].addPoint({ x: Math.round(args.axisData['primaryXAxis']), y: Math.round(args.axisData['primaryYAxis']) });
       }
     }
   };
