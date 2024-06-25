@@ -50,7 +50,7 @@ System.config({
         }
     },
     packages: {
-        'app': { main: 'index', defaultExtension: 'jsx' },
+        'app': { main: 'App', defaultExtension: 'jsx' },
     }
 
 });

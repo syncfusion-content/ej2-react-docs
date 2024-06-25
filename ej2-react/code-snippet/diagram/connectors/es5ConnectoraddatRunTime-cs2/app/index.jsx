@@ -10,7 +10,7 @@ let collectorCollection = [
     { id: 'connector3', type: 'Bezier', sourcePoint: { x: 320, y: 320 }, targetPoint: { x: 400, y: 400 } }
 ];
 function App() {
-    return (<DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} width={'100%'} height={'600px'} created={() => {
+    return (<DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} width={'1500px'} height={'600px'} created={() => {
         //Add collection of connectors
         diagramInstance.addElements(collectorCollection);
         }}/>);

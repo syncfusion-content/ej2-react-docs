@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 # Working with data in React Chart component
 
-Chart can visualise data bound from local or remote data.
+Chart can visualize data bound from local or remote data.
 
-## Local Data
+## Local data
 
 You can bind a simple JSON data to the chart using [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource)property in series. Now map the fields in JSON to [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties.
 
@@ -27,7 +27,7 @@ You can bind a simple JSON data to the chart using [`dataSource`](https://ej2.sy
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs8" %}
 
 ## Lazy loading
 
@@ -42,9 +42,9 @@ Lazy loading allows you to load data for chart on demand. Chart will fire the sc
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs9" %}
 
-### Common Datasource
+### Common datasource
 
 You can also bind a JSON data common to all series using  [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property in chart.
 
@@ -57,9 +57,9 @@ You can also bind a JSON data common to all series using  [`dataSource`](https:/
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs10" %}
 
-## Remote Data
+## Remote data
 
 You can also bind remote data to the chart using `DataManager`. The DataManager requires minimal information like webservice URL, adaptor and crossDomain to interact with service endpoint properly. Assign the instance of DataManager to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property in series and map the fields of data to [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties. You can also use the [`query`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#query) property of the series to filter the data.
 
@@ -72,7 +72,99 @@ You can also bind remote data to the chart using `DataManager`. The DataManager 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs11" %}
+
+## Binding data using ODataAdaptor
+
+[`OData`](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from an OData service using the DataManager. Refer to the following code example for remote data binding using an OData service.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/column-cs14/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/column-cs14/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs14" %}
+
+## Binding data using ODataV4Adaptor
+
+ODataV4 is an improved version of the OData protocols, and the `DataManager` can also retrieve and consume ODataV4 services. For more details on ODataV4 services, refer to the [`odata documentation`](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an ODataV4 service, use the **ODataV4Adaptor**.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/column-cs15/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/column-cs15/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs15" %}
+
+## Web API adaptor
+
+You can use the **WebApiAdaptor** to bind the chart with a Web API created using an OData endpoint.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/column-cs16/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/column-cs16/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs16" %}
+
+The response object should contain the properties **Items** and **Count**, where **Items** represents a collection of entities, and **Count** represents the total number of entities.
+
+The sample response object should appear as follows:
+
+```
+{
+    Items: [{..}, {..}, {..}, ...],
+    Count: 830
+}
+```
+
+## Custom adaptor
+
+You can create your own adaptor by extending the built-in adaptors. The following demonstrates the custom adaptor approach and how to add a serial number to the records by overriding the built-in response processing using the **processResponse** method of the **ODataAdaptor**.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/column-cs17/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/column-cs17/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="serialnoadaptor.jsx" %}
+{% include code-snippet/chart/series/column-cs17/app/serialNoAdaptor.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="serialnoadaptor.tsx" %}
+{% include code-snippet/chart/series/column-cs17/app/serialNoAdaptor.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs17" %}
+
+## Offline mode
+
+When using remote data binding, all chart actions will be processed on the server-side. To avoid postback for every action, configure the chart to load all data upon initialization and handle actions on the client-side. To enable this behavior, utilize the **offline** property of the `DataManager`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/column-cs18/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/column-cs18/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs18" %}
 
 ## Empty points
 
@@ -87,7 +179,7 @@ The Data points that uses the `null` or `undefined` as value are considered as e
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs12" %}
 
 **Empty point color**
 
@@ -102,4 +194,4 @@ Specific color for empty point can be set by `fill` property in `emptyPointSetti
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs13" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs13" %}

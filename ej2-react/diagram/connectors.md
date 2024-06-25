@@ -52,20 +52,20 @@ The following code example illustrates how to add connector at runtime.
 
 ## Add collection of connectors at runtime
 
-* The collection of connectors can be dynamically added using `addElements` method.Each time an element is added to the diagram canvas, the `collectionChange` event will be triggered.
+* The collection of connectors can be dynamically added using [`addElements`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#addelements) method.Each time an element is added to the diagram canvas, the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram#collectionChange--emittypecollectionchangeeventargs) event will be triggered.
 
 The following code illustrates how to add connectors collection at runtime.
 
 {% tabs %}
-{% highlight ts tabtitle="index.jsx" %}
+{% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/connectors/es5ConnectoraddatRunTime-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/diagram/connectors/es5ConnectoraddatRunTime-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/es5ConnectoraddatRunTime-cs2" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectoraddatRunTime-cs2" %}
 
 ## Connectors from palette
 

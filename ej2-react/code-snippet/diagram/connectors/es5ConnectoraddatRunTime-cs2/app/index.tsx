@@ -1,7 +1,7 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {DiagramComponent, ConnectorModel} from "@syncfusion/ej2-react-diagrams";
+import { Diagram,DiagramComponent, ConnectorModel} from "@syncfusion/ej2-react-diagrams";
 let diagramInstance: DiagramComponent;
 //initialize connector collection
 var collectorCollection:ConnectorModel = [
@@ -14,7 +14,7 @@ function App() {
       <DiagramComponent
         id="container"
         ref={(diagram) => (diagramInstance = diagram)}
-        width={'100%'}
+        width={'1500px'}
         height={'600px'}
         created={() => {
         //Add collection of connectors
