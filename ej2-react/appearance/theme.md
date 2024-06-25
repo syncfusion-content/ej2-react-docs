@@ -14,7 +14,6 @@ The Syncfusion React UI can allow you to apply styles for the components. The fo
 
 |Theme  |Style Sheet Name|
 |--------|--------|
-|--------|--------|
 |Fluent 2 | fluent2.css |
 |Fluent 2 Dark | fluent2-dark.css |
 |Material 3 | material3.css |
