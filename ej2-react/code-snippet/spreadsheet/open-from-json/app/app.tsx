@@ -48,7 +48,7 @@ function App() {
   const beforeOpen = (args: BeforeOpenEventArgs) => {
     args.cancel = true;
     let valueOnlyCheckbox: boolean = (document.getElementById("valueOnly") as HTMLInputElement).checked;
-    let options: SerializationOptions = valueOnlyCheckbox ? { onlyValues: true } : createOptions;
+    let options: SerializationOptions = valueOnlyCheckbox ? { onlyValues: true } : createOptions();
     fetch(
       'https://services.syncfusion.com/react/production/api/spreadsheet/open',
       args.requestData

@@ -35,7 +35,7 @@ function App() {
 
   const saveFile = () => {
     let valueOnlyCheckbox: boolean = (document.getElementById("valueOnly") as HTMLInputElement).checked;
-    let options: SerializationOptions = valueOnlyCheckbox ? { onlyValues: true } : createOptions;
+    let options: SerializationOptions = valueOnlyCheckbox ? { onlyValues: true } : createOptions();
     spreadsheetRef.current.saveAsJson(options).then((response) => {
       var formData = new FormData();
       formData.append(
@@ -84,7 +84,7 @@ function App() {
                     <input type="checkbox" id="note"/><label htmlFor="note">Ignore Note</label>
                     <button id="save" className="e-btn" onClick={saveFile}>Save with JSON Serialization</button>
                 </div>
-                <SpreadsheetComponent  ref={spreadsheetRef} >
+                <SpreadsheetComponent  ref={spreadsheetRef} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' allowOpen={true} >
                 </SpreadsheetComponent>
             </div>
         </div>);

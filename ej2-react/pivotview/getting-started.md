@@ -161,7 +161,7 @@ function App() {
 
     const dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-        dataSource: pivotData as IDataSet[],
+        dataSource: pivotData,
         expandAll: false,
         filters: [],
         formatSettings: [{ name: 'Amount', format: 'C0' }],

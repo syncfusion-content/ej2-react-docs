@@ -37,7 +37,7 @@ function App() {
         rules: [
             { label: "First Name", field: "FirstName", type: "string", operator: "startswith", value: "Andre" },
             { label: "Last Name", field: "LastName", type: "string", operator: "in", value: ['Davolio', 'Buchanan'] },
-            { label: "Age", field: "Age", type: "number", operator: "greaterthan", value: 29, condition: "and" },
+            { label: "Age", field: "Age", type: "number", operator: "greaterthan", value: 29 },
             {
                 condition: "or", rules: [
                     { label: "Is Developer", field: "IsDeveloper", type: "boolean", operator: "equal", value: true },
