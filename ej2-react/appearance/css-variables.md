@@ -138,11 +138,11 @@ Example for `Fluent 2` customization using CSS class.
 
 **Default fluent2 primary value**
 
-![default primary value](images/fluent2.PNG)
+![default primary value](images/fluent2.png)
 
 **Customized fluent 2 primary value**
 
-![customized primary value](images/fluent2-customize.PNG)
+![customized primary value](images/fluent2-customize.png)
 
 With this CSS variable support, you can effortlessly customize the color variable values for Syncfusion React Components.
 
