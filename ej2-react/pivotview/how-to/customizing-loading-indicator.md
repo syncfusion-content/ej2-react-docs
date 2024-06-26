@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizing loading indicator in React Pivotview component | Syncfusion
+title: Customizing loading indicator in React | Syncfusion
 description: Learn here all about Customizing loading indicator in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Customizing loading indicator 
 platform: ej2-react
@@ -16,10 +16,16 @@ You can customize the appearance of the loading indicator in the pivot table by 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs163/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs163/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs163/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs163/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs163/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs163/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

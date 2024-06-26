@@ -20,10 +20,10 @@ To set the `width` and `height`, you can provide the pixel values either in numb
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs113/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs113/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs113/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs113/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,10 +43,10 @@ In the below example, the `rowHeight` is set as '60px'.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs114/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs114/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs114/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs114/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,10 +60,10 @@ In the below example, the `columnWidth` is set as '120px'.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs115/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs115/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs115/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs115/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +75,10 @@ Reordering can be done by simple drag and drop of a particular column header fro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs116/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs116/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs116/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs116/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,10 +92,10 @@ Column width can be resized by clicking and dragging the right edge of the colum
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs117/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs117/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs117/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs117/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,10 +109,10 @@ The text wrap allows to wrap the cell content to the next line when it exceeds t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs118/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs118/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs118/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs118/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -136,10 +136,10 @@ Available modes of grid lines are:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs119/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs119/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs119/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs119/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,10 +156,10 @@ The pivot table supports two types of selection that can be set using `selection
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs120/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs120/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs120/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs120/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -176,10 +176,10 @@ The pivot table supports four types of selection mode that can be set using `sel
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs121/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs121/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs121/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs121/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -196,10 +196,10 @@ The pivot table supports two types of cell selection mode that can be set using 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs122/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs122/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs122/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs122/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -219,10 +219,10 @@ The clip mode provides options to display its overflow cell content in the pivot
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs123/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs123/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs123/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs123/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

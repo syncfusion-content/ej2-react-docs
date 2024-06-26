@@ -16,10 +16,16 @@ The Excel export allows Pivot Table data to be exported as Excel document. To en
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs65/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs65/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs65/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs65/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs65/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs65/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +43,16 @@ The Excel export provides support to export multiple pivot tables in same sheet.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs66/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs66/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs66/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs66/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs66/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs66/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +64,16 @@ Excel export provides support to export multiple pivot tables into new sheets. T
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs67/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs67/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs67/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs67/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs67/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs67/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,10 +87,16 @@ The Excel export provides an option to change colors for headers, caption and re
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs68/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs68/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs68/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs68/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs68/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs68/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,10 +108,16 @@ The Excel export provides an option to include header and footer content for the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs69/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs69/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs69/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs69/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs69/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs69/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,10 +129,16 @@ The Excel export provides an option to change file name of the document before e
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs70/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs70/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs70/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs70/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs70/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs70/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,10 +156,16 @@ The Excel export allows pivot table data to be exported in **CSV** file format a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs71/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs71/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs71/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs71/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs71/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs71/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -140,10 +182,16 @@ You can export the pivot table virtual scroll data as Excel/CSV document by usin
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs72/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs72/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs72/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs72/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs72/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs72/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -153,10 +201,16 @@ You can export the pivot table virtual scroll data as Excel/CSV document by usin
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs73/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs73/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs73/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs73/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs73/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs73/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -170,10 +224,16 @@ The pivot engine exports the entire virtual data of the pivot table (i.e. the da
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs74/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs74/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs74/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs74/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs74/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs74/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -192,10 +252,16 @@ The event `excelQueryCellInfo` triggers while framing each row and value cell du
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs75/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs75/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs75/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs75/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs75/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs75/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -210,10 +276,16 @@ The event `excelHeaderQueryCellInfo` triggers on framing each header cell during
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs76/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs76/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs76/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs76/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs76/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs76/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -228,10 +300,16 @@ The event [`exportComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs77/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs77/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs77/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs77/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs77/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs77/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

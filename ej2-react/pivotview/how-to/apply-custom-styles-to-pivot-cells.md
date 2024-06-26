@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apply custom style to pivot cells in React Pivotview component | Syncfusion
+title: Apply custom style to pivot cells in React | Syncfusion
 description: Learn here all about Apply custom style to pivot cells in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Apply custom style to pivot cells 
@@ -16,10 +16,16 @@ In the following example, a custom style has been applied to the column header *
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs312/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs312/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs312/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs312/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs312/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs312/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

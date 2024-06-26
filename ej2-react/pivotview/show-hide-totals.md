@@ -18,10 +18,16 @@ Allows to show or hide grand totals in rows and columns using the [`showGrandTot
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs273/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs273/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs273/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs273/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs273/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs273/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -33,10 +39,16 @@ Allows to show grand totals either at top or bottom in rows and columns using th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs274/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs274/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs274/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs274/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs274/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs274/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +62,16 @@ Allows to show or hide sub-totals in rows and columns using the [`showSubTotals`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs275/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs275/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs275/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs275/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs275/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs275/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -67,10 +85,16 @@ Allows to show or hide sub-totals for specific fields in rows and columns using 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs276/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs276/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs276/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs276/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs276/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs276/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,10 +106,16 @@ It can also be achieved using built-in toolbar options by setting the [`showTool
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs277/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs277/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs277/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs277/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs277/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs277/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

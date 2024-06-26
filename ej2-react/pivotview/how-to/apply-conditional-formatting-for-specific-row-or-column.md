@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apply conditional formatting for specific row or column in React Pivotview component | Syncfusion
+title: Apply conditional formatting for row or column in React | Syncfusion
 description: Learn here all about Apply conditional formatting for specific row or column in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Apply conditional formatting for specific row or column 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Apply conditional formatting for specific row or column in React Pivotview component
+# Apply conditional formatting for specific row or column in React
 
 You can apply conditional formatting for specific row or column using `label` option in the pivot table. It can be configured using the `conditionalFormatSettings` option through code behind, during initial rendering. The required settings are:
 
@@ -22,10 +22,10 @@ To use the conditional formatting feature, You need to inject the `ConditionalFo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs154/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs154/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs154/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs154/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

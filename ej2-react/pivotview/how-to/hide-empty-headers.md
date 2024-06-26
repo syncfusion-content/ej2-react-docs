@@ -18,10 +18,16 @@ For example, if the raw data for the field 'Country' is defined as **"United Kin
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs165/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs165/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs165/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs165/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs165/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs165/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

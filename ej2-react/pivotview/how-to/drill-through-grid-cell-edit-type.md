@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Drill through grid cell edit type in React Pivotview component | Syncfusion
+title: Drill through grid cell edit type in React | Syncfusion
 description: Learn here all about Drill through grid cell edit type in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Drill through grid cell edit type 
 platform: ej2-react
@@ -25,10 +25,16 @@ In the below example, the data type of the `Country` column is set to `DropDownL
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs164/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs164/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs164/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs164/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs164/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs164/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

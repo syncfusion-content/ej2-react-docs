@@ -43,10 +43,16 @@ In normal edit mode, when user starts editing, the state of the currently select
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs55/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs55/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs55/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs55/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs55/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs55/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,10 +66,16 @@ In dialog edit mode, when user starts editing, the currently selected row data w
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs56/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs56/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs56/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs56/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs56/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs56/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +87,16 @@ In batch edit mode, when user double-clicks any data grid cell, the state of tar
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs57/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs57/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs57/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs57/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs57/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs57/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,10 +108,16 @@ An additional column appended in the data grid layout holds the command buttons 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs58/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs58/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs58/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs58/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs58/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs58/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,10 +129,16 @@ Allows editing of a value cell directly without the use of an external edit dial
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs59/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs59/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs59/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs59/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs59/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs59/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,10 +150,16 @@ Users can also add, delete, or update the underlying raw items of any data point
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs60/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs60/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs60/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs60/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs60/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs60/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -145,10 +181,16 @@ The event [`editCompleted`](https://ej2.syncfusion.com/react/documentation/api/p
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs61/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs61/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs61/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs61/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs61/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs61/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -183,10 +225,16 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs62/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs62/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs62/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs62/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs62/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs62/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -211,10 +259,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs63/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs63/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs63/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs63/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs63/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs63/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -237,10 +291,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs64/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs64/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs64/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs64/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs64/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs64/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 

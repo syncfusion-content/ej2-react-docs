@@ -10,7 +10,7 @@ function App() {
     function onCreated() {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
-            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:H1');
         }
     }
 

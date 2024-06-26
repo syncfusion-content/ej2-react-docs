@@ -14,10 +14,16 @@ PDF export allows exporting pivot table data as PDF document. To enable PDF expo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs208/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs208/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs208/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs208/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs208/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs208/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -29,10 +35,16 @@ PDF export provides an option for exporting multiple pivot tables to same file. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs209/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs209/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs209/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs209/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs209/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs209/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,10 +56,16 @@ When the [displayOption](https://ej2.syncfusion.com/react/documentation/api/pivo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs322/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs322/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs322/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs322/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs322/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs322/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -206,10 +224,16 @@ The below code illustrates the PDF export customization options.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs210/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs210/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs210/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs210/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs210/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs210/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,10 +264,16 @@ The below code illustrates the PDF export customization options.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs327/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs327/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs327/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs327/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs327/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs327/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -255,10 +285,16 @@ The PDF export provides an option to change file name of the document before exp
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs211/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs211/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs211/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs211/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs211/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs211/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -270,10 +306,16 @@ The PDF export provides an option to change page orientation of the document bef
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs212/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs212/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs212/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs212/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs212/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs212/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -287,10 +329,16 @@ The PDF export provides an option to change page size of the document before exp
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs213/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs213/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs213/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs213/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs213/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs213/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -304,10 +352,16 @@ Before exporting, you can change the height and width of the PDF document. To ac
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs323/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs323/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs323/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs323/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs323/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs323/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -321,10 +375,16 @@ Before exporting, you can split and export the pivot table columns on each page 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs324/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs324/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs324/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs324/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs324/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs324/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -338,10 +398,16 @@ As shown in the code example below, the **"Unit Sold"** column under **"FY 2015"
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs325/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs325/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs325/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs325/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs325/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs325/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -353,10 +419,16 @@ As shown in the code example below, the **"Mountain Bikes"** row under **"France
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs326/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs326/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs326/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs326/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs326/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs326/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -372,10 +444,16 @@ The PDF export provides an option to change colors for headers, caption and reco
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs214/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs214/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs214/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs214/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs214/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs214/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -397,10 +475,16 @@ The available built-in fonts are,
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs215/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs215/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs215/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs215/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs215/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs215/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -415,10 +499,16 @@ You can export the pivot table virtual scroll data as PDF document by using Pivo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs216/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs216/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs216/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs216/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs216/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs216/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -433,10 +523,16 @@ Repeat row headers on each page can be achieved using PivotEngine export option.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs217/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs217/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs217/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs217/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs217/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs217/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -450,10 +546,16 @@ The pivot engine exports the entire virtual data of the pivot table (i.e. the da
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs218/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs218/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs218/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs218/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs218/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs218/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -472,10 +574,16 @@ The event `pdfQueryCellInfo` triggers on framing each row and value cell during 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs219/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs219/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs219/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs219/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs219/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs219/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -490,10 +598,16 @@ The event `pdfHeaderQueryCellInfo` triggers on framing each column header cell d
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs220/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs220/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs220/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs220/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs220/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs220/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -508,10 +622,16 @@ The event [`exportComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs221/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs221/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs221/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs221/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs221/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs221/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

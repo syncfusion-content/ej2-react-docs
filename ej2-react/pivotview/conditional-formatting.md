@@ -22,10 +22,16 @@ To learn about how to work with conditional formatting options, you can check on
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs16/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs16/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs16/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs16/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs16/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs16/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +56,16 @@ Meanwhile, user can also view conditional formatting dialog in UI by invoking [`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs17/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs17/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs17/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs17/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs17/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs17/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +77,16 @@ Allows end user to apply conditional formatting commonly for all value fields ju
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs18/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs18/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs18/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs18/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs18/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs18/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,10 +98,16 @@ Allows end user to apply conditional formatting to a specific value field by set
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs19/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs19/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs19/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs19/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs19/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs19/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,10 +135,16 @@ The event [`conditionalFormatting`](https://ej2.syncfusion.com/react/documentati
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs20/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs20/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs20/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs20/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs20/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs20/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

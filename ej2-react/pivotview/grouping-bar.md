@@ -27,10 +27,16 @@ Similar to Field List, Grouping Bar UI also comes with basic interactions like,
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs124/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs124/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs124/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs124/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs124/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs124/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,10 +50,16 @@ The fields panel, which is positioned above the grouping bar, displays the field
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs125/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs125/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs125/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs125/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs125/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs125/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,10 +73,16 @@ The Grouping Bar has an option to filter members of particular fields at runtime
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs126/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs126/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs126/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs126/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs126/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs126/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,10 +96,16 @@ In the below sample, the filter icon of "Quarter" and "Products" fields have bee
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs127/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs127/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs127/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs127/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs127/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs127/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,10 +119,16 @@ The Grouping Bar has an option to order members of a particular fields either in
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs128/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs128/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs128/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs128/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs128/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs128/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -112,10 +142,16 @@ In the below sample, the sort icon of "Quarter" and "Country" fields have been h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs129/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs129/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs129/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs129/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs129/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs129/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -129,10 +165,16 @@ The Grouping Bar has an option to remove a particular field at run time. In orde
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs130/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs130/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs130/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs130/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs130/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs130/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,10 +188,16 @@ In the below sample, the remove icon of fields "Year", "Sold" and "Products" hav
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs131/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs131/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs131/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs131/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs131/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs131/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -161,10 +209,16 @@ The Grouping Bar has an option to drag-and-drop fields between row, column, valu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs132/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs132/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs132/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs132/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs132/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs132/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -178,10 +232,16 @@ In the below sample, the drag and drop of the fields "Year" and "Products" have 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs133/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs133/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs133/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs133/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs133/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs133/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -195,10 +255,16 @@ When a report is bound to the pivot table, fields will be automatically populate
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs134/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs134/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs134/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs134/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs134/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs134/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -210,10 +276,16 @@ End user can perform calculations over a group of values using the aggregation o
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs135/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs135/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs135/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs135/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs135/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs135/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -227,10 +299,16 @@ In the below sample, the dropdown icon of field "Sold" is hidden.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs136/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs136/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs136/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs136/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs136/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs136/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -246,10 +324,16 @@ During runtime, the **Values** button in the grouping bar can be moved to a diff
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs137/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs137/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs137/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs137/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs137/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs137/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -265,10 +349,16 @@ It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSetti
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs138/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs138/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs138/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs138/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs138/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs138/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -290,10 +380,16 @@ In the below sample, the drag operation for the fields in row axis alone is rest
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs139/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs139/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs139/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs139/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs139/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs139/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -321,10 +417,16 @@ In the below sample, dropping of any fields in value axis alone is restricted.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs140/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs140/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs140/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs140/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs140/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs140/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -348,10 +450,16 @@ In the below sample, the field "Country" could not be removed from report by any
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs141/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs141/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs141/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs141/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs141/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs141/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -373,10 +481,16 @@ In the below sample, the aggregate types of the field "Amount" has been customiz
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs142/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs142/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs142/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs142/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs142/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs142/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -410,10 +524,16 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs143/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs143/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs143/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs143/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs143/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs143/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -443,10 +563,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs144/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs144/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs144/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs144/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs144/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs144/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -470,10 +596,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs145/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs145/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs145/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs145/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs145/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs145/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 

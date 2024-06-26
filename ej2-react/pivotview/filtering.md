@@ -45,10 +45,16 @@ Meanwhile filtering can also be configured at code behind using the [`filterSett
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs95/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs95/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs95/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs95/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs95/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs95/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,10 +90,10 @@ The data limit can be set using the [`maxNodeLimitInMemberEditor`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs96/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs96/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs96/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs96/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,10 +114,10 @@ This will help to avoid performance lags when opening a member editor whose hier
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs97/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs97/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs97/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs97/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,10 +144,10 @@ Allows user to load the members on the basis of the level number set in the [`le
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs98/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs98/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs98/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs98/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,10 +169,16 @@ The label filtering dialog can be enabled by setting the [`allowLabelFilter`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs99/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs99/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs99/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs99/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs99/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs99/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -217,10 +229,16 @@ For example, in a "Country" field, to show countries names that contains "United
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs100/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs100/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs100/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs100/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs100/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs100/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -236,10 +254,16 @@ For example, in a "Sold" field, to show the values between "90" to "100", set [`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs101/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs101/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs101/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs101/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs101/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs101/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -255,10 +279,16 @@ For example, in a "Delivery Date" field, to show the delivery records of the fir
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs102/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs102/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs102/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs102/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs102/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs102/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -278,10 +308,16 @@ The value filtering dialog can be enabled by setting the [`AllowValueFilter`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs103/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs103/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs103/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs103/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs103/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs103/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -324,10 +360,16 @@ For example, to show the data where total sum of units sold for each country exc
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs104/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs104/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs104/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs104/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs104/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs104/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -351,10 +393,16 @@ The event [`memberFiltering`](https://ej2.syncfusion.com/react/documentation/api
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs105/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs105/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs105/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs105/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs105/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs105/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -374,10 +422,16 @@ In the below sample, the member editor of field "Country" shows only the selecte
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs106/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs106/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs106/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs106/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs106/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs106/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -401,10 +455,16 @@ In the below sample, filter action can be restricted by setting the **args.cance
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs107/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs107/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs107/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs107/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs107/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs107/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -426,10 +486,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs108/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs108/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs108/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs108/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs108/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs108/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -445,10 +511,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs109/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs109/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs109/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs109/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs109/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs109/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

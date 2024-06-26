@@ -52,10 +52,16 @@ For each value field, the aggregation type can be set using the property [`type`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs1/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs1/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -79,10 +85,16 @@ By default, all the aggregation types are displayed in the dropdown menu availab
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs2/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs2/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,10 +106,16 @@ By default, in value axis each field would be displayed by its name and aggregat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs3/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs3/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs3/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,10 +129,16 @@ By default, the icon to set aggregation type is enabled in the grouping bar. To 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs4/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs4/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs4/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs4/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,10 +162,16 @@ The event [`aggregateCellInfo`](https://ej2.syncfusion.com/documentation/api/piv
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs5/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs5/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs5/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -165,10 +195,16 @@ In the following example, action taken during aggregation type selection via dro
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs6/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs6/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs6/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs6/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -188,10 +224,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs7/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs7/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs7/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs7/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -207,10 +249,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs8/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs8/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs8/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs8/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

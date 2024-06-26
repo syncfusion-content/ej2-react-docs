@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add custom aggregation type to the menu in React Pivotview component | Syncfusion
+title: Add custom aggregation type to the menu in React | Syncfusion
 description: Learn here all about how to add custom aggregation type to the menu in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Add custom aggregation type to the menu 
@@ -18,10 +18,16 @@ In the following example, we have added the aggregation types **CustomAggregateT
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs317/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs317/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs317/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs317/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs317/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs317/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

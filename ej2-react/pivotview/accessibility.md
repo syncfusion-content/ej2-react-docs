@@ -235,10 +235,10 @@ The accessibility compliance of the pivot table component is shown in the follow
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/accessibility/app/index.jsx %}
+{% include code-snippet/pivot-table/accessibility/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/accessibility/app/index.tsx %}
+{% include code-snippet/pivot-table/accessibility/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

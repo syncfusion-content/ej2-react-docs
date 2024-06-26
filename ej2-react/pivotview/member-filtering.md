@@ -25,10 +25,10 @@ It can be configured using the `filterSettings` option through code-behind. The 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs181/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs181/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs181/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs181/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,10 +42,10 @@ Users can load members on demand by setting the [`loadOnDemandInMemberEditor`](h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs182/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs182/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs182/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs182/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +65,10 @@ User can load the members based on the level count by using the property [`level
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs183/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs183/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs183/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs183/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -37,10 +37,16 @@ Other properties include:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs184/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs184/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs184/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs184/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs184/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs184/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,10 +74,16 @@ You can add any custom format directly to the [`format`](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs185/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs185/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs185/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs185/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs185/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs185/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -83,10 +95,16 @@ You can enable formatting dialog option in the toolbar by adding `NumberFormatti
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs186/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs186/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs186/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs186/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs186/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs186/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -98,10 +116,16 @@ You can invoke the formatting dialog by clicking an external button using the `S
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs187/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs187/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs187/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs187/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs187/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs187/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,10 +147,16 @@ In the below sample, the customization done in number formatting dialog for the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs188/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs188/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs188/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs188/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs188/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs188/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

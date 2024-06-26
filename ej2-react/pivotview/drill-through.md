@@ -16,10 +16,16 @@ To use the drill through feature, inject the `DrillThrough` module in the pivot 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs51/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs51/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs51/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs51/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs51/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs51/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -29,10 +35,16 @@ Users can also view the underlying raw data though the pivot chart. By clicking 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs52/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs52/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs52/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs52/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs52/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs52/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -121,10 +133,16 @@ The event [`drillThrough`](https://ej2.syncfusion.com/react/documentation/api/pi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs53/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs53/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs53/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs53/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs53/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs53/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,10 +159,16 @@ The event [`beginDrillThrough`](https://ej2.syncfusion.com/react/documentation/a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs54/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs54/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs54/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs54/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs54/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs54/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

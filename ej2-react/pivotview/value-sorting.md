@@ -19,10 +19,10 @@ Value sorting can be configured using the `valueSortSettings` option through cod
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs307/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs307/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs307/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs307/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
