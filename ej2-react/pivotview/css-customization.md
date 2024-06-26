@@ -16,10 +16,10 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs21/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs21/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs21/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs21/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ The alignment of text inside row headers, column headers, value cells and summar
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs22/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs22/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs22/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs22/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,10 +46,10 @@ The elements in pivot table like header cell, value cell and summary cell style 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/background-css-cs1/app/index.jsx %}
+{% include code-snippet/pivot-table/background-css-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/background-css-cs1/app/index.tsx %}
+{% include code-snippet/pivot-table/background-css-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

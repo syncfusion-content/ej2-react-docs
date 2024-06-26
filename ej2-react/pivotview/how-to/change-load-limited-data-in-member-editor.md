@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change load limited data in member editor in React Pivotview component | Syncfusion
+title: Change load limited data in member editor in React | Syncfusion
 description: Learn here all about Change load limited data in member editor in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Change load limited data in member editor 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change load limited data in member editor in React Pivotview component
+# Change load limited data in member editor in React
 
 In the filter dialog, you can set the limit to display the field values while loading large data. Based on this limit, the initial loading will complete quickly without any performance constraint. You can use the search option to refine the field values from the exceeded limit and refine the data further. A message with the remaining data count will be displayed in the member editor. The data limit can be set in the `maxNodeLimitInMemberEditor` property.
 
@@ -20,10 +20,10 @@ In the following example, the limit of data in the member editor is set to 100. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs155/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs155/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs155/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs155/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

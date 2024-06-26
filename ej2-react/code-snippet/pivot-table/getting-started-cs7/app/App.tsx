@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { CalculatedField, FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
@@ -21,8 +19,5 @@ function App() {
 };
 
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
-
-
-

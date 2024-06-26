@@ -34,10 +34,10 @@ The event `cellSelected` fires on every cell/row/column on selected/deselected o
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs166/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs166/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs166/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs166/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

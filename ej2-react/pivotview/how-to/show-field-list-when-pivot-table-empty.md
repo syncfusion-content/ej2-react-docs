@@ -14,10 +14,16 @@ When there are no fields in a pivot table's row, column, value, and filter axes,
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs168/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs168/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs168/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs168/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs168/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs168/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

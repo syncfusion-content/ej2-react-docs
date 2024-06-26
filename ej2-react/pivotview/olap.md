@@ -212,10 +212,10 @@ In this sample, "Product Categories" is added in column, "Customer Geography" in
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs189/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs189/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs189/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs189/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -229,10 +229,10 @@ Formatting defines a way in which values should be displayed in pivot table. For
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs190/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs190/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs190/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs190/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -246,10 +246,10 @@ The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs191/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs191/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs191/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs191/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -263,10 +263,10 @@ The component provides a built-in Field List similar to Microsoft Excel. It allo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs192/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs192/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs192/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs192/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -278,10 +278,10 @@ The filter axis contains collection of [OLAP cube elements](#olap-cube-elements)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs193/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs193/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs193/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs193/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -310,10 +310,10 @@ Also calculated fields can be added at run time through the built-in dialog. The
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs194/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs194/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs194/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs194/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -425,10 +425,10 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module into the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs195/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs195/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs195/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs195/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -452,10 +452,10 @@ npm start
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs196/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs196/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs196/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs196/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -474,10 +474,10 @@ To bind OLAP datasource to the pivot table, you need to specify following proper
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs197/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs197/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs197/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs197/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -491,10 +491,10 @@ By default, the measures are plotted in column axis. To plot those measures in r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs198/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs198/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs198/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs198/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -506,10 +506,10 @@ You can place measures in different position in row or column axis either thorou
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs199/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs199/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs199/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs199/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -523,10 +523,10 @@ You can bind the named sets in the pivot table by setting it's unique name in th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs200/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs200/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs200/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs200/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

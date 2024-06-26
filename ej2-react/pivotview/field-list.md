@@ -32,10 +32,16 @@ To use field list, you need to inject the `FieldList` module in pivot table.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs78/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs78/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs78/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs78/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs78/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs78/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,10 +55,16 @@ The field list can be rendered in a static position, anywhere in web page layout
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs79/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs79/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs79/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs79/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs79/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs79/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,10 +81,16 @@ The below sample code illustrates the field list dialog invoked on an external b
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs80/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs80/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs80/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs80/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs80/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs80/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,10 +106,16 @@ To enable search box in the static field list UI, set the [`enableFieldSearching
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs81/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs81/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs81/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs81/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs81/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs81/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -101,10 +125,16 @@ To enable search box in the pivot table's built-in popup field list UI, set the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs82/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs82/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs82/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs82/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs82/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs82/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,10 +154,16 @@ To display the fields in descending order by default, set the [defaultFieldListO
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs311/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs311/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs311/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs311/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs311/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs311/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,10 +177,16 @@ In the field list UI, you can display fields by grouping them under the desired 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs83/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs83/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs83/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs83/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs83/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs83/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,10 +204,16 @@ When a data source is bound to the component, fields will be automatically popul
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs84/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs84/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs84/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs84/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs84/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs84/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -230,10 +278,16 @@ The sample code below shows the built-in field list dialog using `document.body
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs85/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs85/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs85/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs85/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs85/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs85/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -245,10 +299,16 @@ It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs86/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs86/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs86/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs86/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs86/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs86/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -262,10 +322,16 @@ In the sample, we have set caption to the fields `Year` and `Quarter` dynamicall
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs87/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs87/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs87/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs87/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs87/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs87/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -279,10 +345,16 @@ During runtime, the **Values** button in the field list can be moved to a differ
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs88/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs88/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs88/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs88/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs88/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs88/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -304,10 +376,16 @@ The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs89/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs89/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs89/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs89/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs89/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs89/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -319,10 +397,16 @@ The event [`onFieldDropped`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs90/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs90/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs90/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs90/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs90/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs90/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -336,10 +420,16 @@ For example, if we perform a sort operation within the field list, the field lis
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs91/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs91/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs91/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs91/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs91/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs91/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -373,10 +463,16 @@ In the below sample, opening pop-up field list can be restricted by setting the 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs92/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs92/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs92/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs92/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs92/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs92/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -408,10 +504,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs93/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs93/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs93/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs93/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs93/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs93/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -437,10 +539,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs94/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs94/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs94/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs94/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs94/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs94/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

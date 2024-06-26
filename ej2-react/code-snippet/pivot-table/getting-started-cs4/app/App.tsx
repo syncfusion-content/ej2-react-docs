@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { IDataOptions, IDataSet, Inject, PivotViewComponent, GroupingBar } from '@syncfusion/ej2-react-pivotview';
@@ -20,7 +18,4 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
-
-
-
+ReactDOM.render(<App />, document.getElementById("root"));

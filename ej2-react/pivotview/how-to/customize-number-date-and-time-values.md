@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize number date and time values in React Pivotview component | Syncfusion
+title: Customize number date and time values in React | Syncfusion
 description: Learn here all about Customize number date and time values in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Customize number date and time values 
 platform: ej2-react
@@ -23,10 +23,16 @@ For numbers, the formatting settings required to apply through code behind are:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs161/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs161/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs161/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs161/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs161/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs161/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,10 +50,16 @@ For date and time, the formatting settings required to apply through code behind
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs162/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs162/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs162/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs162/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs162/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs162/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

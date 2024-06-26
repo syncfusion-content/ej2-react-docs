@@ -14,10 +14,16 @@ You can create and display the tooltip for each row and column header(s) in the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs313/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs313/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs313/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs313/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs313/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs313/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

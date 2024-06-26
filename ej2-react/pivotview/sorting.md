@@ -37,10 +37,16 @@ Member sorting can also be configured using the [`sortSettings`](https://ej2.syn
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs278/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs278/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs278/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs278/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs278/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs278/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +58,16 @@ Usually string sorting is applied to field members even if it starts with number
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs279/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs279/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs279/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs279/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs279/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs279/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,10 +83,16 @@ Allows to sort field headers (aka, members) in rows and columns based on user-de
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs280/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs280/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs280/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs280/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs280/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs280/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,10 +112,16 @@ The value sorting can also be configured using the [`valueSortSettings`](https:/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs281/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs281/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs281/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs281/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs281/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs281/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -121,10 +145,16 @@ When sorting is applied, the event [`onHeadersSort`](https://ej2.syncfusion.com/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs282/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs282/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs282/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs282/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs282/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs282/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -153,10 +183,16 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs283/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs283/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs283/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs283/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs283/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs283/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -183,10 +219,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs284/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs284/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs284/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs284/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs284/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs284/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -207,10 +249,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs285/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs285/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs285/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs285/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs285/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs285/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 

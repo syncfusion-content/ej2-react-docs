@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Context menu in React Grid component | Syncfusion
-description: Learn here all about Context menu in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Context Menu in React Grid Component | Syncfusion
+description: Learn here all about context menu support in Syncfusion React Grid component, it's elements, and more.
 control: Context menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in React Grid component
+# Context Menu in React Grid Component
 
 The Syncfusion React Grid component comes equipped with a context menu feature, which is triggered when a user right-clicks anywhere within the grid. This feature serves to enrich the user experience by offering immediate access to a variety of supplementary actions and operations that can be executed on the data displayed in the grid.
 
@@ -81,7 +81,7 @@ The following example demonstrates how to enable context menu feature in the gri
 
 The Syncfusion React Grid empowers you to enhance your user experience by incorporating custom context menu items into the default context menu. These customized options enable you to tailor the context menu to meet the unique requirements of your application.
  
-To incorporate custom context menu items in the Syncfusion React Grid, you can achieve this by specifying the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuitems) property as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel). This allows you to define and customize the appearance and behavior of these additional context menu items according to your requirements.
+To incorporate custom context menu items in the Syncfusion React Grid, you can achieve this by specifying the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuitems) property as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/). This allows you to define and customize the appearance and behavior of these additional context menu items according to your requirements.
  
 Furthermore, you can assign actions to these custom items by utilizing the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/grid/#contextmenuclick) event. This event provides you with the means to handle user interactions with the custom context menu items, enabling you to execute specific actions or operations when these items are clicked.
  

@@ -42,10 +42,16 @@ The following table shows built-in toolbar options and its actions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs294/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs294/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs294/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs294/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs294/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs294/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,10 +63,16 @@ By default, all chart types are displayed in the dropdown menu included in the t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs295/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs295/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs295/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs295/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs295/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs295/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -94,10 +106,16 @@ In addition to the existing built-in toolbar items, new toolbar item(s) may also
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs296/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs296/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs296/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs296/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs296/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs296/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,10 +131,16 @@ Here, the entire toolbar panel can be framed in HTML elements that are appended 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs297/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs297/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs297/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs297/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs297/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs297/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,10 +150,16 @@ Another option allows to frame a custom toolbar item using HTML elements and inc
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs298/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs298/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs298/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs298/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs298/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs298/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -145,10 +175,16 @@ The current pivot report can be saved as a JSON file in the desired path and loa
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs299/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs299/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs299/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs299/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs299/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs299/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -891,10 +927,16 @@ The [`toolbarRender`](https://ej2.syncfusion.com/react/documentation/api/pivotvi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs300/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs300/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs300/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs300/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs300/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs300/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -908,10 +950,16 @@ For example, you can add the header and footer for the pdf document by setting t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs301/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs301/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs301/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs301/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs301/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs301/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -948,10 +996,16 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs302/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs302/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs302/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs302/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs302/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs302/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -985,10 +1039,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs303/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs303/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs303/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs303/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs303/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs303/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -1021,10 +1081,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs304/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs304/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs304/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs304/app/App.tsx %}
+    {% endhighlight %}
+    {% highlight js tabtitle="datasource.jsx" %}
+    {% include code-snippet/pivot-table/default-cs304/app/datasource.jsx %}
+    {% endhighlight %}
+    {% highlight ts tabtitle="datasource.tsx" %}
+    {% include code-snippet/pivot-table/default-cs304/app/datasource.tsx %}
     {% endhighlight %}
     {% endtabs %}
 

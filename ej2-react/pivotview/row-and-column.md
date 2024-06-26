@@ -26,10 +26,16 @@ Allows end user to set the pivot table's height and width by using [`height`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs250/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs250/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs250/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs250/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs250/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs250/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,10 +52,16 @@ In the below code sample, the [`rowHeight`](https://ej2.syncfusion.com/react/doc
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs251/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs251/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs251/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs251/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs251/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs251/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,10 +77,16 @@ In the below example, the [`columnWidth`](https://ej2.syncfusion.com/react/docum
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs252/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs252/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs252/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs252/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs252/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs252/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,10 +98,16 @@ By default, if the component width set in code-behind is more than the width of 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs253/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs253/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs253/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs253/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs253/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs253/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,10 +119,16 @@ Allows end user to reorder a particular column header from one index to another 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs254/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs254/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs254/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs254/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs254/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs254/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,10 +143,16 @@ Allows end user to resize the columns by clicking and dragging the right edge of
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs255/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs255/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs255/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs255/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs255/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs255/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,10 +166,16 @@ Allows end user to wrap the cell content to the next line when it exceeds the bo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs256/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs256/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs256/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs256/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs256/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs256/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -150,10 +192,16 @@ Allows end user to align the content of the pivot table's row and column headers
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs257/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs257/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs257/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs257/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs257/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs257/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -165,10 +213,16 @@ Allows the user to fit the Pivot Table columns as wide as the content of the cel
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs258/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs258/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs258/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs258/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs258/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs258/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -178,10 +232,16 @@ Allows the user to fit the Pivot Table columns as wide as the content of the cel
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs259/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs259/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs259/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs259/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs259/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs259/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -193,10 +253,16 @@ During initial rendering, the parameter `autoFit` in the [`columnRender`](https:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs260/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs260/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs260/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs260/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs260/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs260/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -220,10 +286,16 @@ Available mode of grid lines are:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs261/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs261/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs261/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs261/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs261/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs261/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,10 +312,16 @@ The pivot table supports two types of selection that can be set using [`type`](h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs262/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs262/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs262/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs262/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs262/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs262/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -260,10 +338,16 @@ The pivot table supports four types of selection mode that can be set using [`mo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs263/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs263/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs263/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs263/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs263/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs263/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -278,10 +362,16 @@ The pivot table supports two types of cell selection mode that can be set using 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs264/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs264/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs264/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs264/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs264/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs264/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -295,10 +385,16 @@ The background-color of the selected cell can be changed using built-in CSS name
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/selection-css-cs1/app/index.jsx %}
+{% include code-snippet/pivot-table/selection-css-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/selection-css-cs1/app/index.tsx %}
+{% include code-snippet/pivot-table/selection-css-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/selection-css-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/selection-css-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -312,10 +408,16 @@ The event [`cellSelected`](https://ej2.syncfusion.com/react/documentation/api/pi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs265/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs265/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs265/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs265/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs265/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs265/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -327,10 +429,16 @@ The event `cellSelecting` triggers before cell gets selected gets completed. It 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs266/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs266/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs266/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs266/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs266/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs266/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -348,10 +456,16 @@ The clip mode provides options to display its overflow cell content in the pivot
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs267/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs267/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs267/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs267/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs267/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs267/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -365,10 +479,16 @@ In this demo, the revenue cost for each year is represented with trend icons.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs268/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs268/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs268/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs268/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs268/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs268/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -387,10 +507,16 @@ The event `queryCellInfo` triggers while rendering each row and value cells in t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs269/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs269/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs269/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs269/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs269/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs269/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -404,10 +530,16 @@ The event `headerCellInfo` triggers while rendering each column header cell in t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs270/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs270/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs270/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs270/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs270/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs270/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -424,10 +556,16 @@ The event [`columnRender`](https://ej2.syncfusion.com/react/documentation/api/pi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs271/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs271/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs271/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs271/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs271/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs271/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -442,10 +580,16 @@ The event [`cellClick`](https://ej2.syncfusion.com/react/documentation/api/pivot
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs272/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs272/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs272/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs272/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs272/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs272/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

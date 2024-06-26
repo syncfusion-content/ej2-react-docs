@@ -57,7 +57,7 @@ The following code illustrates how to add a node.
 
 ## Add collection of nodes at runtime
 
-* The collection of nodes can be dynamically added using `addElements` method.Each time an element is added to the diagram canvas, the `collectionChange` event will be triggered.
+* The collection of nodes can be dynamically added using [`addElements`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#addelements) method.Each time an element is added to the diagram canvas, the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram#collectionChange--emittypecollectionchangeeventargs) event will be triggered.
 
 The following code illustrates how to add nodes collection at run time.
 
@@ -70,7 +70,7 @@ The following code illustrates how to add nodes collection at run time.
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/es5Node-cs8" %}
+{% previewsample "page.domainurl/code-snippet/diagram/nodes/es5Node-cs8" %}
 
 ## Add node from palette
 

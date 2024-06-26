@@ -23,10 +23,16 @@ The below sample displays the pivot chart component based on the pivot report bo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs222/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs222/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs222/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs222/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs222/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs222/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,10 +75,16 @@ In the below code sample, the pivot chart type is set as **Bar**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs223/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs223/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs223/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs223/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs223/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs223/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,10 +105,16 @@ In the below code sample, the **Pie** chart is rendered, and the other accumulat
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs224/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs224/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs224/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs224/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs224/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs224/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,10 +131,16 @@ In the accumulation charts, drill down and drill up operations can be performed 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs225/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs225/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs225/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs225/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs225/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs225/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,10 +156,16 @@ If the column has more than one header, then need to mention all the headers sep
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs226/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs226/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs226/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs226/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs226/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs226/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -152,10 +182,16 @@ In the following code sample, the data labels are placed inside.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs227/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs227/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs227/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs227/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs227/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs227/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -165,10 +201,16 @@ The **Connector Line** will be visible when the data label is placed outside the
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs228/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs228/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs228/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs228/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs228/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs228/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,10 +222,16 @@ User can draw pie and doughnut charts within the specified range using the `star
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs229/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs229/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs229/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs229/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs229/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs229/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -194,10 +242,16 @@ Users can get doughnut chart from pie chart and vice-versa using the `innerRadiu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs230/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs230/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs230/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs230/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs230/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs230/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -209,10 +263,16 @@ Exploding can be enabled by setting the `explode` property in [`chartSeries`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs231/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs231/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs231/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs231/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs231/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs231/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -227,10 +287,16 @@ In the following sample, the Popup mode of field list is enabled in the pivot ch
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs232/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs232/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs232/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs232/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs232/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs232/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -244,10 +310,16 @@ User can enable the grouping bar by setting the property [`showGroupingBar`](htt
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs233/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs233/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs233/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs233/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs233/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs233/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -257,10 +329,16 @@ For accumulation charts alone, a drop-down list will be placed in the column axi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs234/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs234/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs234/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs234/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs234/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs234/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -272,10 +350,16 @@ By default, the pivot chart will be drawn with the value field (measure) which i
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs235/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs235/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs235/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs235/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs235/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs235/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -289,10 +373,16 @@ User can draw the pivot chart with multiple value fields by setting the property
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs236/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs236/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs236/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs236/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs236/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs236/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -302,10 +392,16 @@ If the user binds more value fields, the result will be multiple pivot charts, a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs237/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs237/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs237/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs237/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs237/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs237/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -317,10 +413,16 @@ In the following code sample, the pivot chart can be seen as a single chart with
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs238/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs238/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs238/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs238/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs238/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs238/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -334,10 +436,16 @@ Furthermore, with a single click over the legend item, you can show or hide spec
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs239/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs239/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs239/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs239/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs239/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs239/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -349,10 +457,16 @@ User can customize series of the pivot chart using [`chartSeries`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs240/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs240/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs240/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs240/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs240/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs240/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -364,10 +478,16 @@ In the following sample, the even series are hidden in the pivot chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs241/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs241/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs241/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs241/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs241/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs241/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -383,10 +503,16 @@ In the following sample, title of y-axis and x-axis are customized.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs242/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs242/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs242/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs242/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs242/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs242/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -404,10 +530,16 @@ One can also customize multi-level labels of primary x-axis by using the [`multi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs243/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs243/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs243/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs243/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs243/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs243/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -445,10 +577,16 @@ Also user can set the position of the legend in pivot chart using the property [
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs244/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs244/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs244/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs244/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs244/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs244/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -466,10 +604,16 @@ Also user can enable and customize the crosshair tooltip for axes using [`crossh
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs245/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs245/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs245/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs245/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs245/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs245/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -498,10 +642,16 @@ This can be set using the property [`mode`](https://ej2.syncfusion.com/react/doc
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs246/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs246/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs246/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs246/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs246/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs246/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -515,10 +665,16 @@ By default, tooltip for the pivot chart is enabled. User can customize it by usi
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs247/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs247/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs247/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs247/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs247/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs247/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -539,10 +695,16 @@ In the following code sample, exporting can be done using an external button nam
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs248/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs248/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs248/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs248/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs248/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs248/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -556,10 +718,16 @@ In the following code sample, printing can be done using an external button name
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs249/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs249/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs249/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs249/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs249/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs249/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -14,10 +14,16 @@ State persistence allows user to maintain the current state of the component alo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs286/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs286/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs286/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs286/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs286/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs286/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -29,10 +35,16 @@ You can save the current layout of the pivot table by using [`getPersistData`](h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs287/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs287/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs287/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs287/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs287/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs287/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
