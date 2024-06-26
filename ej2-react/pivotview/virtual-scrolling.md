@@ -20,10 +20,16 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module in to th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs308/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs308/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs308/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs308/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs308/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs308/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,10 +45,16 @@ Enabling this property causes the pivot table to render only the rows and column
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/single-page-mode/app/index.jsx %}
+{% include code-snippet/pivot-table/single-page-mode/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/single-page-mode/app/index.tsx %}
+{% include code-snippet/pivot-table/single-page-mode/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/single-page-mode/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/single-page-mode/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,10 +76,16 @@ Virtual scrolling automatically works with "Popup" field list on setting the [en
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs310/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs310/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs310/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs310/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs310/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs310/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

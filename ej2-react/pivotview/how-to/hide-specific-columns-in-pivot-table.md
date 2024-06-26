@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hide specific columns in pivot table in React Pivotview component | Syncfusion
+title: Hide specific columns in pivot table in React | Syncfusion
 description: Learn here all about Hide specific columns in pivot table in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: Hide specific columns in pivot table 
@@ -16,10 +16,16 @@ N> The **dot(.)** character in **FY 2016.Units Sold** is used by default to iden
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs314/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs314/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs314/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs314/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs314/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs314/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

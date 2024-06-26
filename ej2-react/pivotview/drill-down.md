@@ -32,10 +32,16 @@ Allows to either expand or collapse all headers that are displayed in row and co
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs43/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs43/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs43/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs43/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs43/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs43/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,10 +55,16 @@ Allows to expand or collapse all headers for specific fields (only) in row and c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs44/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs44/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs44/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs44/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs44/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs44/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,10 +83,16 @@ In addition to the previous topic, there is an enhancement to expand all headers
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs45/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs45/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs45/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs45/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs45/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs45/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,10 +108,16 @@ End user can also manually expand or collapse specific member(s) in each fields 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs46/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs46/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs46/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs46/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs46/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs46/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,10 +134,16 @@ The event [`drill`](https://ej2.syncfusion.com/react/documentation/api/pivotview
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs47/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs47/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs47/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs47/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs47/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs47/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,10 +168,16 @@ In the below sample, drill down and drill up action can be restricted by setting
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs48/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs48/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs48/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs48/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs48/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs48/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -164,10 +200,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
                 {% tabs %}
                 {% highlight js tabtitle="index.jsx" %}
-                {% include code-snippet/pivot-table/default-cs49/app/index.jsx %}
+                {% include code-snippet/pivot-table/default-cs49/app/App.jsx %}
                 {% endhighlight %}
                 {% highlight ts tabtitle="index.tsx" %}
-                {% include code-snippet/pivot-table/default-cs49/app/index.tsx %}
+                {% include code-snippet/pivot-table/default-cs49/app/App.tsx %}
+                {% endhighlight %}
+                {% highlight js tabtitle="datasource.jsx" %}
+                {% include code-snippet/pivot-table/default-cs49/app/datasource.jsx %}
+                {% endhighlight %}
+                {% highlight ts tabtitle="datasource.tsx" %}
+                {% include code-snippet/pivot-table/default-cs49/app/datasource.tsx %}
                 {% endhighlight %}
                 {% endtabs %}
 
@@ -188,10 +230,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
             {% tabs %}
             {% highlight js tabtitle="index.jsx" %}
-            {% include code-snippet/pivot-table/default-cs50/app/index.jsx %}
+            {% include code-snippet/pivot-table/default-cs50/app/App.jsx %}
             {% endhighlight %}
             {% highlight ts tabtitle="index.tsx" %}
-            {% include code-snippet/pivot-table/default-cs50/app/index.tsx %}
+            {% include code-snippet/pivot-table/default-cs50/app/App.tsx %}
+            {% endhighlight %}
+            {% highlight js tabtitle="datasource.jsx" %}
+            {% include code-snippet/pivot-table/default-cs50/app/datasource.jsx %}
+            {% endhighlight %}
+            {% highlight ts tabtitle="datasource.tsx" %}
+            {% include code-snippet/pivot-table/default-cs50/app/datasource.tsx %}
             {% endhighlight %}
             {% endtabs %}
 

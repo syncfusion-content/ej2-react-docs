@@ -735,17 +735,17 @@ The following code example shows how to use the [actionFailure](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/gantt/run-cs1/app/index.jsx %}
+{% include code-snippet/gantt/exception-handling-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/gantt/run-cs1/app/index.tsx %}
+{% include code-snippet/gantt/exception-handling-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/gantt/run-cs1/index.html %}
+{% include code-snippet/gantt/exception-handling-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/run-cs1" %}
+{% previewsample "page.domainurl/code-snippet/gantt/exception-handling-cs1" %}
 
 The following screenshot represents the Gantt Exception handling in `actionFailure` event.
 

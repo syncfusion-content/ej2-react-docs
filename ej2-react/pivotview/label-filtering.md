@@ -53,10 +53,10 @@ Operators that can be used in label filtering are:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs178/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs178/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs178/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs178/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,10 +91,10 @@ Operators that can be used in date filtering are:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs179/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs179/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs179/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs179/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -129,10 +129,10 @@ Operators that can be used in date filtering are:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs180/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs180/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs180/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs180/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

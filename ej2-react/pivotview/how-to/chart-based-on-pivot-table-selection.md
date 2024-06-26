@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chart based on pivot table selection in React Pivotview component | Syncfusion
+title: Chart based on pivot table selection in React | Syncfusion
 description: Learn here all about Chart based on pivot table selection in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Chart based on pivot table selection 
 platform: ej2-react
@@ -14,10 +14,16 @@ The cell selection support is enabled using the [`allowSelection`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs157/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs157/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs157/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs157/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs157/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs157/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -24,10 +24,10 @@ In the below sample, pivot grid is rendered with a customized pivot button icons
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-grid/icon-customization-cs1/app/index.jsx %}
+{% include code-snippet/pivot-grid/icon-customization-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-grid/icon-customization-cs1/app/index.tsx %}
+{% include code-snippet/pivot-grid/icon-customization-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

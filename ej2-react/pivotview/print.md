@@ -14,10 +14,16 @@ The rendered pivot table can be printed directly from the browser by invoking th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs320/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs320/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs320/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs320/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs320/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs320/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +37,16 @@ Similarly, to print the pivot chart, use the [`print`](https://ej2.syncfusion.co
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs321/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs321/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs321/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs321/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs321/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs321/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -18,10 +18,10 @@ Allows to show or hide grand totals in rows and columns using the [`showGrandTot
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs288/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs288/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs288/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs288/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,10 +35,10 @@ Allows to show or hide sub-totals in rows and columns using the [`showSubTotals`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs289/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs289/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs289/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs289/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,10 +52,10 @@ Allows to show or hide sub-totals for specific fields in rows and columns using 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs290/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs290/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs290/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs290/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,10 +69,10 @@ To show sub-totals at top of the header group in rows and columns, set the [`sub
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs291/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs291/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs291/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs291/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,10 +82,10 @@ To show sub-totals at bottom of the header group in rows and columns, set the [`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs292/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs292/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs292/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs292/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,10 +99,10 @@ The grand totals and sub-totals can be dynamically displayed at the top or botto
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs293/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs293/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs293/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs293/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

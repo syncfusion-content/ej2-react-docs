@@ -23,10 +23,16 @@ To use calculated field option, you need to inject the `CalculatedField` module 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs9/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs9/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs9/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs9/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs9/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,10 +44,16 @@ Meanwhile, user can also view calculated field dialog in UI by invoking [`create
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs10/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs10/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs10/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs10/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,7 +63,7 @@ Meanwhile, user can also view calculated field dialog in UI by invoking [`create
 
 User can also modify the existing calculated field using the built-in edit option available directly in the field list (or) grouping bar. To do so, click the "Edit" icon available in the calculated field button. Now the calculated field dialog is opened and the current calculated field name, formula and format can be changed at runtime.
 
-!["Editing the calculated field](images/calculatdfield-grouping-edit1.png "Editing the calculated field")
+![Editing the calculated field](images/calculatdfield-grouping-edit1.png "Editing the calculated field")
 <br/>
 <br/>
 ![Editing the calculated field formula](images/calculatdfield-grouping-edit2.png "Editing the calculated field formula")
@@ -229,10 +241,16 @@ Below is a list of operators and functions that can be used in the formula to cr
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs11/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs11/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs11/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs11/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -254,10 +272,16 @@ In the below sample, creating a calculated field without setting the format is r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs12/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs12/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs12/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs12/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs12/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -287,10 +311,16 @@ In the below sample, the calculated field button click action, that is, opening 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs13/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs13/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs13/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs13/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -317,10 +347,16 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
         {% tabs %}
         {% highlight js tabtitle="index.jsx" %}
-        {% include code-snippet/pivot-table/default-cs14/app/index.jsx %}
+        {% include code-snippet/pivot-table/default-cs14/app/App.jsx %}
         {% endhighlight %}
         {% highlight ts tabtitle="index.tsx" %}
-        {% include code-snippet/pivot-table/default-cs14/app/index.tsx %}
+        {% include code-snippet/pivot-table/default-cs14/app/App.tsx %}
+        {% endhighlight %}
+        {% highlight js tabtitle="datasource.jsx" %}
+        {% include code-snippet/pivot-table/default-cs14/app/datasource.jsx %}
+        {% endhighlight %}
+        {% highlight ts tabtitle="datasource.tsx" %}
+        {% include code-snippet/pivot-table/default-cs14/app/datasource.tsx %}
         {% endhighlight %}
         {% endtabs %}
 
@@ -342,10 +378,16 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
         {% tabs %}
         {% highlight js tabtitle="index.jsx" %}
-        {% include code-snippet/pivot-table/default-cs15/app/index.jsx %}
+        {% include code-snippet/pivot-table/default-cs15/app/App.jsx %}
         {% endhighlight %}
         {% highlight ts tabtitle="index.tsx" %}
-        {% include code-snippet/pivot-table/default-cs15/app/index.tsx %}
+        {% include code-snippet/pivot-table/default-cs15/app/App.tsx %}
+        {% endhighlight %}
+        {% highlight js tabtitle="datasource.jsx" %}
+        {% include code-snippet/pivot-table/default-cs15/app/datasource.jsx %}
+        {% endhighlight %}
+        {% highlight ts tabtitle="datasource.tsx" %}
+        {% include code-snippet/pivot-table/default-cs15/app/datasource.tsx %}
         {% endhighlight %}
         {% endtabs %}
 

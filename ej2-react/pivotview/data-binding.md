@@ -24,10 +24,16 @@ In-order to bind local JSON data to the pivot table user can assign the local va
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs23/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs23/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs23/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs23/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs23/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs23/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -37,10 +43,16 @@ Using local variable, the JSON data can also be bound to the pivot table using [
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs24/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs24/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs24/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs24/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs24/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs24/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,10 +105,10 @@ In-order to bind remote JSON data, mention the endpoint [`URL`](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs25/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs25/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs25/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs25/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -114,10 +126,10 @@ In-order to bind local CSV data to the pivot table, user needs to convert it as 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs26/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs26/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs26/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs26/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -190,10 +202,10 @@ In-order to bind remote CSV data, mention the endpoint [`URL`](https://ej2.syncf
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs27/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs27/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs27/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs27/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -209,10 +221,10 @@ OData is a standardized protocol for creating and consuming data. User can retri
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs28/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs28/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs28/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs28/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -224,10 +236,10 @@ The OData V4 is an improved version of OData protocols, and the [`DataManager`](
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs29/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs29/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs29/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs29/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -239,10 +251,10 @@ User can use [`WebApiAdaptor`](https://ej2.syncfusion.com/react/documentation/da
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs30/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs30/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs30/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs30/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -254,10 +266,10 @@ By default, the data manager retrieves all the data from the provider which is m
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs31/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs31/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs31/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs31/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -294,10 +306,16 @@ In the below code sample, visibility of the field button icons are configured.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs32/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs32/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs32/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs32/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs32/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs32/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -309,10 +327,16 @@ By default, the value fields are plotted in column axis. To plot those fields in
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs33/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs33/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs33/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs33/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs33/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs33/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -326,10 +350,16 @@ By default, the value fields are placed at the end of the row or column axis. To
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs34/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs34/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs34/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs34/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs34/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs34/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -341,10 +371,10 @@ By default, the pivot table only shows the field item if it has data in its row 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs35/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs35/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs35/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs35/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -356,10 +386,16 @@ To show value header always in pivot table, even if it holds a single value, use
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs36/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs36/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs36/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs36/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs36/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs36/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -371,10 +407,16 @@ User can show custom string in empty value cells using the [`emptyCellsTextConte
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs37/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs37/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs37/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs37/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs37/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs37/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -388,10 +430,16 @@ The event [`load`](https://ej2.syncfusion.com/react/documentation/api/pivotview/
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs38/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs38/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs38/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs38/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs38/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs38/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -403,10 +451,16 @@ The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs39/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs39/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs39/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs39/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs39/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs39/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -418,10 +472,16 @@ The event [`enginePopulating`](https://ej2.syncfusion.com/react/documentation/ap
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs40/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs40/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs40/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs40/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs40/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs40/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

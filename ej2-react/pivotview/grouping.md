@@ -31,10 +31,16 @@ To have a quick glance on how to group row and column field items in the React P
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs146/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs146/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs146/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs146/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs146/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs146/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,10 +52,16 @@ Number grouping allows users to organize data, which is in number format into di
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs147/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs147/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs147/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs147/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs147/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs147/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,10 +94,16 @@ Number grouping can also be configured using the [`groupSettings`](https://ej2.s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs148/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs148/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs148/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs148/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs148/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs148/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,10 +121,16 @@ Date grouping allows users to organize data, which is in date format into differ
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs149/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs149/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs149/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs149/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs149/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs149/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -142,10 +166,16 @@ Date grouping can also be configured using the [`groupSettings`](https://ej2.syn
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs150/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs150/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs150/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs150/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs150/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs150/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -153,7 +183,7 @@ Date grouping can also be configured using the [`groupSettings`](https://ej2.syn
 
 Furthermore, in the field list UI, these date group fields **Years (Date)**, **Quarters (Date)**, **Months (Date)**, etc... will be automatically grouped and displayed under the **Date** folder name.
 
-![Date fields grouped and displayed under the "Date" folder](images/treeview.png "Group fields under a separate folder displayed in the field list UI")
+![Date fields grouped and displayed under the Date folder](images/treeview.png "Group fields under a separate folder displayed in the field list UI")
 
 ### Ungrouping the existing date groups
 
@@ -167,10 +197,16 @@ Custom grouping can group any data type, such as date, time, number and string, 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs151/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs151/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs151/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs151/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs151/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs151/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -214,10 +250,16 @@ The available custom group properties in [`customGroups`](https://ej2.syncfusion
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs152/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs152/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs152/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs152/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs152/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs152/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

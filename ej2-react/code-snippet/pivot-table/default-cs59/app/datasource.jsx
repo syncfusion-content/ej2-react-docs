@@ -1,4 +1,4 @@
-export let pivot_flatdata: { [key: string]: Object }[] = [
+export let pivot_flatdata = [
     { Amount: 2100, Country: "Canada", Date: "FY 2005", Product: "Bike", Quantity: 22, State: "Alberta" },
     { Amount: 1500, Country: "Canada", Date: "FY 2006", Product: "Van", Quantity: 28, State: "Alberta" },
     { Amount: 1060, Country: "Canada", Date: "FY 2007", Product: "Car", Quantity: 26, State: "Alberta" },

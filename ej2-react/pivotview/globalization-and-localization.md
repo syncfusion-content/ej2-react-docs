@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization and localization in React Pivotview component | Syncfusion
+title: Globalization and localization in React | Syncfusion
 description: Learn here all about Globalization and localization in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Globalization and localization 
 platform: ej2-react
@@ -65,10 +65,10 @@ The Internationalization library is used to globalize number, date, and time val
 
     {% tabs %}
     {% highlight js tabtitle="index.jsx" %}
-    {% include code-snippet/pivot-table/default-cs110/app/index.jsx %}
+    {% include code-snippet/pivot-table/default-cs110/app/App.jsx %}
     {% endhighlight %}
     {% highlight ts tabtitle="index.tsx" %}
-    {% include code-snippet/pivot-table/default-cs110/app/index.tsx %}
+    {% include code-snippet/pivot-table/default-cs110/app/App.tsx %}
     {% endhighlight %}
     {% endtabs %}
 
@@ -88,10 +88,16 @@ The following example demonstrates the decimal separators in `Deutsch` culture.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/locale-cs1/app/index.jsx %}
+{% include code-snippet/pivot-table/locale-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/locale-cs1/app/index.tsx %}
+{% include code-snippet/pivot-table/locale-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/locale-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/locale-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -553,10 +559,10 @@ The following example demonstrates the pivot table in `Deutsch` culture.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs111/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs111/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs111/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs111/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -568,10 +574,16 @@ Right-to-left (RTL) provides an option to switch the text direction and layout o
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs112/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs112/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs112/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs112/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs112/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs112/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

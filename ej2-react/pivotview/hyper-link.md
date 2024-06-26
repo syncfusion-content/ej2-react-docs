@@ -30,10 +30,16 @@ The pivot table has an option to show hyperlink option for all cells that are cu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs170/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs170/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs170/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs170/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs170/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs170/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -45,10 +51,16 @@ The pivot table has an option to show hyperlink option for row header cells alon
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs171/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs171/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs171/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs171/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs171/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs171/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,10 +72,16 @@ The pivot table has an option to show hyperlink option for column header cells a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs172/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs172/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs172/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs172/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs172/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs172/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +93,16 @@ The pivot table has an option to show hyperlink option for value cells alone tha
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs173/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs173/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs173/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs173/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs173/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs173/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,10 +114,16 @@ The pivot table has an option to show hyperlink option for summary cells alone t
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs174/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs174/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs174/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs174/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs174/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs174/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,10 +140,16 @@ The pivot table has an option to show hyperlink option to the cells based on spe
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs175/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs175/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs175/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs175/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs175/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs175/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,10 +161,16 @@ The pivot table has an option to show hyperlink in the cells based on specific r
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs176/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs176/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs176/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs176/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs176/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs176/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -142,10 +184,16 @@ It has following parameters - `Cancel` and `CurrentCell`. The parameter `Current
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/default-cs177/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs177/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/default-cs177/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs177/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs177/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs177/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

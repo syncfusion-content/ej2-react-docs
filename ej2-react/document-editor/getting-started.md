@@ -8,13 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Document Editor component
 
 This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the DocumentEditor component.
 
 To get started quickly with DocumentEditor component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=tgJgvbnxdBA" %}
+
+## Prerequisites
+
+[System requirements for Syncfusion Document Editor](../system-requirement)
 
 ## Dependencies
 
@@ -46,7 +50,7 @@ The Document Editor component requires server-side interactions for the followin
 * [Open file formats other than SFDT](../document-editor/import#convert-word-documents-into-sfdt)
 * [Paste with formatting](../document-editor/clipboard#paste-with-formatting)
 * [Restrict editing](../document-editor/document-management)
-* [Spellcheck](../document-editor/spell-check)
+* [Spell check](../document-editor/spell-check)
 * [Save as file formats other than SFDT and DOCX](../document-editor/server-side-export)
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
@@ -55,35 +59,41 @@ To know about server-side dependencies, please refer this [page](../document-edi
 
 ## Setup for Local Development
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
 
-``` 
-npm install -g create-react-app
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
 ```
 
-* To setup basic `React` sample use following commands.
+or
 
-<div class='tsx'>
+```bash
+yarn create react-app my-app
+cd my-app
+yarn start
 ```
-create-react-app quickstart --scripts-version=react-scripts-ts
-cd quickstart
-npm install
-```
-</div>
-<div class='jsx'>
-```
-create-react-app quickstart
-cd quickstart
-npm install
-```
-</div>
 
->Note: Creating react app without mentioning typescript, will create `src/app.js` instead of `src/app.tsx` file. You can also add the below code snippet in `src/app.js` file.<br><br>To create react app using typescript, you can use this **create-react-app quickstart --template typescript** command. This will create `app.tsx` file under `src` folder of project location.
+To set-up a React application in `TypeScript` environment, run the following command.
+
+```bash
+npx create-react-app my-app --template typescript
+cd my-app
+npm start
+```
+
+Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+
+```bash
+npm init react-app my-app
+cd my-app
+npm start
+```
 
 ## Adding Syncfusion packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg/) public registry.
+All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install.
 
 To install Document Editor component, use the following command
@@ -92,9 +102,11 @@ To install Document Editor component, use the following command
 npm install @syncfusion/ej2-react-documenteditor --save
 ```
 
+> The --save will instruct NPM to include the Document Editor package inside of the **dependencies** section of the package.json.
+
 ## Adding CSS reference
 
-Add Document Editor component and its dependent component styles as given below in `src/App.css`.
+Add Document Editor component and its dependent component styles available in **../node_modules/@syncfusion** package folder. This can be added as reference in **src/App.css**.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -117,55 +129,9 @@ You can add `DocumentEditorContainer` Component with  predefined toolbar and pro
 
 >Note: Starting from `v19.3.0.x`, we have optimized the accuracy of text size measurements such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [to disable it and retain the document pagination behavior of older versions](../document-editor/how-to/disable-optimized-text-measuring).
 
-### DocumentEditor component
-
-DocumentEditor Component is used to create , view and edit word documents. In this , you can customize the UI options based on your requirements to modify the document.
-
-#### Adding DocumentEditor component
-
-Now, you can start adding DocumentEditor component in the application. For getting started, add the DocumentEditor component in `src/App.tsx` file using following code.
-
-Add the below code in the `src/App.tsx` to initialize the DocumentEditor.
-
-
-
-```ts
-import * as React from 'react';
-import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-react-documenteditor';
-DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog);
-function App() {
-    return (<DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" isReadOnly={false} enablePrint={true} enableSelection={true} enableEditor={true} enableEditorHistory={true} enableContextMenu={true} enableSearch={true} enableOptionsPane={true} enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true} enablePageSetupDialog={true} enableSfdtExport={true} enableStyleDialog={true} enableTableOfContentsDialog={true} enableTableOptionsDialog={true} enableTablePropertiesDialog={true} enableTextExport={true} enableWordExport={true} />);
-}
-export default App
-```
-
-#### Run the DocumentEditor application
-
-The [`create-react-app`](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
-
-```
-npm start
-```
-
-Document Editor output will be displayed as follows.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/base-cs2/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/base-cs2/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/base-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/document-editor/base-cs2" %}
-
 ### DocumentEditorContainer component
 
-DocumentEditorContainer Component is also used to create, view and edit word document. But here, you can use predefined toolbar and properties pane to view and modify word document.
+DocumentEditorContainer Component is used to create, view, and edit word document. You can use predefined toolbar and properties pane to view and modify word document.
 
 #### Adding DocumentEditorContainer component
 
@@ -180,7 +146,7 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-    return (<DocumentEditorContainerComponent id="container" style={{ 'height': '590px' }} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" enableToolbar={true}/>);
+    return (<DocumentEditorContainerComponent id="container" style={{ 'height': '590px' }} serviceUrl="https://services.syncfusion.com/vue/production/api/documenteditor/" enableToolbar={true}/>);
 }
 export default App
 
@@ -210,6 +176,50 @@ DocumentEditorContainer output will be displayed as follows.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/document-editor/base-cs3" %}
+
+### DocumentEditor component
+
+The DocumentEditor Component is used to create, view, and edit Word documents. But here, you can customize the UI options based on your requirements to modify the document.
+
+#### Adding DocumentEditor component
+
+Now, you can start adding DocumentEditor component in the application. For getting started, add the DocumentEditor component in `src/App.tsx` file using following code.
+
+Add the below code in the `src/App.tsx` to initialize the DocumentEditor.
+
+```ts
+import * as React from 'react';
+import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog);
+function App() {
+    return (<DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://services.syncfusion.com/vue/production/api/documenteditor/" isReadOnly={false} enablePrint={true} enableSelection={true} enableEditor={true} enableEditorHistory={true} enableContextMenu={true} enableSearch={true} enableOptionsPane={true} enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true} enablePageSetupDialog={true} enableSfdtExport={true} enableStyleDialog={true} enableTableOfContentsDialog={true} enableTableOptionsDialog={true} enableTablePropertiesDialog={true} enableTextExport={true} enableWordExport={true} />);
+}
+export default App
+```
+
+#### Run the DocumentEditor application
+
+The [`create-react-app`](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+
+```
+npm start
+```
+
+Document Editor output will be displayed as follows.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/document-editor/base-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/document-editor/base-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/document-editor/base-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/base-cs2" %}
 
 ## Frequently Asked Questions
 

@@ -72,10 +72,16 @@ In the below code sample, we replicate the older theme style.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pivot-table/switch-theme-cs2/app/index.jsx %}
+{% include code-snippet/pivot-table/switch-theme-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pivot-table/switch-theme-cs2/app/index.tsx %}
+{% include code-snippet/pivot-table/switch-theme-cs2/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-tableswitch-theme-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/switch-theme-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
