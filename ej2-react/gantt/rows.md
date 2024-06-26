@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rows in React Gantt component | Syncfusion
-description: Learn here all about Rows in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Rows in React Gantt Component | Syncfusion
+description: Learn here all about Rows in React Gantt component of Syncfusion Essential JS2, its elements, and more.
 control: Rows 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rows in React Gantt component
+# Rows in React Gantt Component 
 
 Row represents a task information from the data source, and it is possible to perform the following actions in Gantt rows.
 

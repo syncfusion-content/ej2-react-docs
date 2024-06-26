@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Gantt component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
+title: Data binding in React Gantt Component | Syncfusion
+description: Learn here all about Data binding in React Gantt component of Syncfusion Essential JS 2,its elements, and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Gantt component
+# Data binding in React Gantt Component
 
 The Gantt component uses `DataManager` for binding the data source, which supports both RESTful JSON data services and local JavaScript object array. The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/gantt/#datasource) property can be assigned either with the instance of DataManager or JavaScript object array collection. The Gantt component supports binding two types of data:
 * Local data
