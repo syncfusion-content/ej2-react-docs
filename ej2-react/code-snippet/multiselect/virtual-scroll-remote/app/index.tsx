@@ -1,6 +1,6 @@
 
 import { MultiSelectComponent, Inject, VirtualScroll } from '@syncfusion/ej2-react-dropdowns';
-import { DataManager, WebApiAdaptor , Query } from '@syncfusion/ej2-data';
+import { DataManager, UrlAdaptor , Query } from '@syncfusion/ej2-data';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -10,8 +10,8 @@ export default class App extends React.Component<{}, {}> {
   private customerField: object = { text: 'OrderID', value: 'OrderID' };
    
   private customerData: DataManager = new DataManager({
-    url: 'https://services.syncfusion.com/react/production/api/Orders',
-    adaptor: new WebApiAdaptor,
+    url: 'https://services.syncfusion.com/react/production/api/VirtualDropdownData',
+    adaptor: new UrlAdaptor,
     crossDomain: true
   });
 

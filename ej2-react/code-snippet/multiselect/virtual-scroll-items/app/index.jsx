@@ -14,10 +14,10 @@ export default class App extends React.Component {
     }
     fields = { text: 'text', value: 'id' };
     // bind the Query instance to query property
-    query = new Query().take(20);
+    query = new Query().take(40);
 
     Begin(args) {
-        args.Query = new Query().take(25);
+        args.Query = new Query().take(45);
       }
 
     render() {

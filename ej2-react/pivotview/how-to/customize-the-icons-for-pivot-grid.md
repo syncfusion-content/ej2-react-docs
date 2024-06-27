@@ -23,10 +23,10 @@ You can customize the pivot button icons in the pivot grid by overriding the cla
 In the below sample, pivot grid is rendered with a customized pivot button icons.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-grid/icon-customization-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-grid/icon-customization-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

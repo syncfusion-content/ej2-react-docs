@@ -11,10 +11,10 @@ export default class App extends React.Component<{}, {}> {
 
    // define the array of string
    private records: { [key: string]: Object }[] = [];
-   private query: Query = new Query().take(20);
+   private query: Query = new Query().take(40);
 
     public Begin(e: any): void {
-      e.query = new Query().take(25);
+      e.query = new Query().take(45);
     }
    // define the array of string
    constructor(props) {

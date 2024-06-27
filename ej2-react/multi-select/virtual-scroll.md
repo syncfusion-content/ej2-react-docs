@@ -56,7 +56,7 @@ The following sample displays the OrderId from the `Orders` Data Service.
 
  {% previewsample "page.domainurl/code-snippet/multiselect/virtual-scroll-remote" %}
 
- ## Customizing items count in virtualization 
+## Customizing items count in virtualization 
 
 When the `enableVirtualization` property is enabled, the `take` property provided by the user within the Query parameter at the initial state or during the `actionBegin` event will be considered. Internally, it calculates the items that fit onto the current page (i.e., probably twice the amount of the popup's height). If the user-provided take value is less than the minimum number of items that fit into the popup, the user-provided take value will not be considered.
 
@@ -112,7 +112,7 @@ The following sample shows the example for Filtering with Virtualization.
 
  {% previewsample "page.domainurl/code-snippet/multiselect/virtual-scroll-filter" %}
 
- ## Checkbox with virtualization
+## Checkbox with virtualization
 
 The MultiSelect component supports CheckBox selection with Virtualization. The MultiSelect comes with integrated functionality that allows for the selection of multiple values using checkboxes when the [`mode`](../api/multi-select/#mode) property is configured to `CheckBox`. In the context of Virtual Scrolling, the checkbox render with each list element. based on the checkbox selection and unselection, component value property updated with respective values.
 
@@ -131,7 +131,7 @@ The following sample shows the example for checkbox with Virtualization.
 
  {% previewsample "page.domainurl/code-snippet/multiselect/virtual-scroll-check" %}
 
- ## Custom value with virtualization
+## Custom value with virtualization
 
 The MultiSelect component supports custom value with Virtualization. When the [`allowCustomValue`](../api/multi-select/#allowcustomvalue) property is enabled, the MultiSelect enables users to include a new option not currently available in the component value. Upon selecting this newly added custom value, the MultiSelect triggers the [`customValueSelection`](../api/multi-select/#customvalueselection) event and also custom value will be added to the end of the complete list.
 
@@ -150,7 +150,7 @@ The following sample shows the example for custom value with Virtualization.
 
  {% previewsample "page.domainurl/code-snippet/multiselect/virtual-scroll-custom" %}
 
- ## Preselect values with virtualization
+## Preselect values with virtualization
 
 The MultiSelect component extends its support for preselected values with Virtualization. When binding values from local or remote data to the MultiSelect component, the corresponding data value is fetched from the server and promptly updated within the component. Moreover, when binding a custom value to the component, the value is updated within the component, and the bound custom value is seamlessly appended to the end of the complete list.
 

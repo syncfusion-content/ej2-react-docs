@@ -15,10 +15,10 @@ You can set the visibility of tooltip using `showTooltip` in the pivot table.
 > By Default, tooltip enabled in the pivot table.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs169/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs169/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

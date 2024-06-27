@@ -1,7 +1,8 @@
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let editSettings = {
         allowAdding: true, allowDeleting: true, allowEditing: true, mode: 'Normal'
@@ -21,7 +22,6 @@ function App() {
         //triggers when a value cell is edited.
     }
     return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} editCompleted={editCompleted.bind(this)} editSettings={editSettings}></PivotViewComponent>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

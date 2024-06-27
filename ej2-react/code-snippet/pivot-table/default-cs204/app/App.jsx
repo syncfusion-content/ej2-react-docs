@@ -2,7 +2,8 @@
 import { PivotViewComponent, Pager, Inject } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css';
+
 function App() {
     let pivotObj;
     let remoteData = new DataManager({
@@ -30,7 +31,6 @@ function App() {
         }} enablePaging={true}>
             <Inject services={[Pager]}/>
         </PivotViewComponent>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

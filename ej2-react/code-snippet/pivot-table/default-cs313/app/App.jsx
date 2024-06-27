@@ -1,10 +1,8 @@
-
-
 import { FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 import { Tooltip } from '@syncfusion/ej2-popups';
+import './App.css';
 
 function App() {
   let headerTooltip;
@@ -75,4 +73,3 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,7 +1,6 @@
 
 import { CalculatedField, PivotFieldListComponent, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 const SAMPLE_CSS = `
 .e-pivotview {
@@ -17,6 +16,8 @@ const SAMPLE_CSS = `
 .e-pivotfieldlist .e-static {
     width: 100% !important;
 }`;
+import './App.css';
+
 function App() {
     React.useEffect(() => {
         renderComplete();
@@ -53,7 +54,6 @@ function App() {
     function renderComplete() {
         fieldlistObj.updateView(pivotObj);
     }
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

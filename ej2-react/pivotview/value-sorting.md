@@ -18,10 +18,10 @@ Value sorting can be configured using the `valueSortSettings` option through cod
 * `sortOrder`: It allows to set the sort direction of the value field.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs307/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs307/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

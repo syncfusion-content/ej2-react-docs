@@ -13,10 +13,10 @@ domainurl: ##DomainURL##
 You can create and display the tooltip for each row and column header(s) in the pivot table by using an external tooltip component via the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#databound) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs313/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs313/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}

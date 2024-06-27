@@ -1,9 +1,7 @@
-
-
 import { IDataOptions, CellEditSettings, IDataSet, Inject, PivotViewComponent, PivotActionCompleteEventArgs } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -23,7 +21,7 @@ function App() {
   }
   let pivotObj: PivotViewComponent;
   
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} actionComplete={actionComplete.bind(this)} editSettings={editSettings} ></PivotViewComponent>);
+  return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} actionComplete={actionComplete.bind(this)} editSettings={editSettings} ></PivotViewComponent>);
   
   function actionComplete(args: PivotActionCompleteEventArgs): void {
     if (args.actionName == 'New record added' || args.actionName == 'Edited records saved') {
@@ -33,7 +31,3 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

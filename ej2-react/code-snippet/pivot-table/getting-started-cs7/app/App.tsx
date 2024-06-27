@@ -1,7 +1,8 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { CalculatedField, FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   const dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Date', caption: 'Date' }, { name: 'Product' }],
@@ -14,10 +15,8 @@ function App() {
     values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Quantity', caption: 'Quantity' }]
   };
   let pivotObj: PivotViewComponent;
-  return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowCalculatedField={true} showFieldList={true}><Inject services={[CalculatedField, FieldList]}/>
+  return (<PivotViewComponent ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowCalculatedField={true} showFieldList={true}><Inject services={[CalculatedField, FieldList]}/>
     </PivotViewComponent>);
 };
 
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);

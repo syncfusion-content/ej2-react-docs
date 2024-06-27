@@ -1,9 +1,7 @@
-
-
 import { FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent, PivotActionBeginEventArgs } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -20,7 +18,7 @@ function App() {
     values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
   }
   let pivotObj: PivotViewComponent;
-    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} actionBegin={actionBegin.bind(this)}  showFieldList={true}><Inject services={[FieldList]} /></PivotViewComponent>);
+    return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} actionBegin={actionBegin.bind(this)}  showFieldList={true}><Inject services={[FieldList]} /></PivotViewComponent>);
 
   function actionBegin(args: PivotActionBeginEventArgs): void {
         if (args.actionName == 'Open field list') {
@@ -30,7 +28,3 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

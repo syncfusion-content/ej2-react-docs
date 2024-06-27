@@ -1,8 +1,9 @@
 
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { PivotViewComponent, Inject, Toolbar } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -15,7 +16,6 @@ function App() {
     let toolbarOptions = ['Grid', 'Chart'];
     let chartTypes = ['Column', 'Bar', 'Line', 'Area'];
     return (<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings} width={'100%'} height={350} showToolbar={true} toolbar={toolbarOptions} displayOption={{ view: 'Both' }} chartTypes={chartTypes}><Inject services={[Toolbar]}/></PivotViewComponent>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

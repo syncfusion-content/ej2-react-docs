@@ -16,10 +16,10 @@ The cellTemplate property accepts either an HTML string or the element's ID, whi
 In this demo, the revenue cost for each year is represented with trend icons.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs159/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs159/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

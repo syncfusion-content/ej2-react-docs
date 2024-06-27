@@ -26,10 +26,10 @@ You can also change the position, visibility, compact view, and template of the 
 > In order to see and use the pager UI, insert the `Pager` module into the pivot table using the `services` tag.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs201/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs201/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -49,10 +49,10 @@ You can display the pager UI at top or bottom of the pivot table by using the [`
 > By default, the pager UI appears at the bottom of the pivot table.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs202/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs202/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -72,10 +72,10 @@ Toggles and displays row and column pager. To show the column pager on the left 
 > By default, the row pager is displayed on the left side of the pager UI, while the column pager is displayed on the right side.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs203/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs203/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -93,10 +93,10 @@ Toggles and displays row and column pager. To show the column pager on the left 
 By hiding all except the previous and next navigation buttons, the pager UI can be displayed with the absolute minimum of paging options. The compact view can be enabled by setting the [`enableCompactView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pagerSettings/#enablecompactview) property in [`pagerSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#pagersettings) to **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs204/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs204/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -116,10 +116,10 @@ By using the [`showRowPager`](https://ej2.syncfusion.com/react/documentation/api
 In the following example, row pager has been disabled by setting the [`showRowPager`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pagerSettings/#showrowpager) property in [`pagerSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#pagersettings) to **false**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs205/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs205/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -137,10 +137,10 @@ In the following example, row pager has been disabled by setting the [`showRowPa
 By using the [`showRowPageSize`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pagerSettings/#showrowpagesize) and [`showColumnPageSize`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pagerSettings/#showcolumnpagesize) properties in [`pagerSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#pagersettings), you can show or hide "Rows per page" and "Columns per page" dropdown menu. The dropdown menu contains a list of pre-defined or user-defined page sizes, which will be displayed in the "Rows per page" and "Columns per page" dropdowns, allowing you to change the page size for the row and column axes at runtime.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs206/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs206/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -162,10 +162,10 @@ By using the [`rowPageSizes`](https://ej2.syncfusion.com/react/documentation/api
 In the following example, the "Rows per page" dropdown is set with user-defined page sizes of **10, 20, 30, 40, and 50** and the "Columns per page" dropdown is set with user-defined page sizes of **5, 10, 15, 20, and 30**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs207/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs207/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -183,10 +183,10 @@ In the following example, the "Rows per page" dropdown is set with user-defined 
 The [`template`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pagerSettings/#template) property allows to change the appearance of the pager UI by displaying user-defined HTML elements instead of built-in HTML elements.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/pagingTemplate-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/pagingTemplate-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}

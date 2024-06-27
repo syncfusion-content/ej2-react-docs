@@ -1,12 +1,10 @@
 
-
-
 import { IDataOptions, IDataSet, PivotViewComponent, Inject, DisplayOption, PivotChart } from '@syncfusion/ej2-react-pivotview';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
+import './App.css';
 
 function App() {
 
@@ -41,10 +39,10 @@ function App() {
         pivotObj.chartSettings.chartSeries.type = args.value;
     }
 
-    return (<div><div className="container" style={{ height: '500px' }}><div id="dropdown-control" style={{marginBottom: '5px'}}><table style={{width: '350px', marginLeft: '50px'}}><tbody><tr  style={{ height: '50px' }} ><td><div><b>Accumulation Chart:</b></div></td><td><div><DropDownListComponent  floatLabelType={'Auto'} fields={fields} change={ddlOnChange.bind(this)} id="charttypes" index={0} enabled={true} dataSource={chartTypes}/></div></td></tr></tbody></table></div><div><PivotViewComponent height={350} ref={d => pivotObj = d} id='PivotView' chartSettings={chartSettings} displayOption={displayOption} dataSourceSettings={dataSourceSettings} ><Inject services={[PivotChart]}/></PivotViewComponent></div></div></div>);
+    return (<div><div className="container" style={{ height: '500px' }}><div id="dropdown-control" style={{marginBottom: '5px'}}><table style={{width: '350px', marginLeft: '50px'}}><tbody><tr  style={{ height: '50px' }} ><td><div><b>Accumulation Chart:</b></div></td><td><div><DropDownListComponent  floatLabelType={'Auto'} fields={fields} change={ddlOnChange.bind(this)} id="charttypes" index={0} enabled={true} dataSource={chartTypes}/></div></td></tr></tbody></table></div><div><PivotViewComponent height={350} ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' chartSettings={chartSettings} displayOption={displayOption} dataSourceSettings={dataSourceSettings} ><Inject services={[PivotChart]}/></PivotViewComponent></div></div></div>);
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+
 
 

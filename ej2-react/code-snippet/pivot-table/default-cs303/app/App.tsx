@@ -1,14 +1,13 @@
 
-
-
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import {
     PivotViewComponent, IDataOptions, Inject, FieldList, CalculatedField,
     Toolbar, PDFExport, ExcelExport, ConditionalFormatting, SaveReportArgs,
     FetchReportArgs, LoadReportArgs, RemoveReportArgs, RenameReportArgs, NumberFormatting, PivotActionCompleteEventArgs
 } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -24,7 +23,7 @@ function App() {
   let toolbarOptions: any = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
         'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'NumberFormatting', 'FieldList'];
   
-    return (<PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowConditionalFormatting={true} allowNumberFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} actionComplete={actionComplete.bind(this)} toolbar={toolbarOptions}><Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]} /></PivotViewComponent>);
+    return (<PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'} height={350} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowConditionalFormatting={true} allowNumberFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} actionComplete={actionComplete.bind(this)} toolbar={toolbarOptions}><Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]} /></PivotViewComponent>);
 
   function actionComplete(args: PivotActionCompleteEventArgs): void {
         if (args.actionName == 'New report added' || args.actionName == 'Report saved') {
@@ -33,7 +32,3 @@ function App() {
     }
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

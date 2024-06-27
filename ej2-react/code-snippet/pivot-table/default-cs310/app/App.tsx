@@ -1,8 +1,5 @@
-
-
 import { CalculatedField, PivotFieldListComponent, IDataOptions, Inject, PivotViewComponent, VirtualScroll } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 const SAMPLE_CSS = `
 .e-pivotview {
@@ -51,6 +48,8 @@ function data(count: number) {
     }
     return result;
 };
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     dataSource: data(1000),
@@ -66,8 +65,8 @@ function App() {
   
     return (<div className="control-section">
     <style>{SAMPLE_CSS}</style>
-    <PivotViewComponent id='PivotView' ref={d => pivotObj = d} enableVirtualization={true} enginePopulated={afterPivotPopulate.bind(this)} width={'99%'} height={'530'}><Inject services={[VirtualScroll]}/></PivotViewComponent>
-    <PivotFieldListComponent id='PivotFieldList' ref={d => fieldListObj = d} load={onLoad} enginePopulated={afterPopulate.bind(this)} dataSourceSettings={dataSourceSettings} renderMode={"Fixed"} allowCalculatedField={true}><Inject services={[CalculatedField]} /></PivotFieldListComponent></div>);
+    <PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } enableVirtualization={true} enginePopulated={afterPivotPopulate.bind(this)} width={'99%'} height={'530'}><Inject services={[VirtualScroll]}/></PivotViewComponent>
+    <PivotFieldListComponent id='PivotFieldList' ref={ (d: PivotFieldListComponent) => fieldListObj = d } load={onLoad} enginePopulated={afterPopulate.bind(this)} dataSourceSettings={dataSourceSettings} renderMode={"Fixed"} allowCalculatedField={true}><Inject services={[CalculatedField]} /></PivotFieldListComponent></div>);
 
   function afterPopulate(): void {
     pivotObj = document.getElementById('PivotView').ej2_instances[0];
@@ -98,7 +97,3 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

@@ -1,10 +1,11 @@
 import { FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { enableRipple } from '@syncfusion/ej2-base';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 
 enableRipple(false);
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         expandAll: false,
@@ -35,7 +36,5 @@ function App() {
         aggregateCellInfo={aggregateCell.bind(this)}>
         <Inject services={[FieldList]} />
     </PivotViewComponent>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

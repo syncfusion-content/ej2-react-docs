@@ -173,7 +173,6 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Adding fields to row, column, value and filter axes

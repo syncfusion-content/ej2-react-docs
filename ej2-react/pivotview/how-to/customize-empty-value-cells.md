@@ -13,10 +13,10 @@ domainurl: ##DomainURL##
 You can customize empty value cells to display with custom text using `emptyCellsTextContent` option under `dataSourceSettings` in the pivot table. It can be configured through code behind, during initial rendering.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs160/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs160/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

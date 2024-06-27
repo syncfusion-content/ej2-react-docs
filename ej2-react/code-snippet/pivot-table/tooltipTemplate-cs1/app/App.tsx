@@ -1,11 +1,9 @@
 
-
-
 import { IDataOptions, IDataSet, Inject, PivotViewComponent, Toolbar } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
+import './App.css';
 
 function App() {
   let toolbarOptions: any = ['Grid', 'Chart'];
@@ -24,11 +22,7 @@ function App() {
   }
   let pivotObj: PivotViewComponent;
   
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} showTooltip={true} dataSourceSettings={dataSourceSettings} chartSettings={chartSettings} displayOption={{ view: 'Both' }} showToolbar={true} tooltipTemplate={"#Template"} toolbar={toolbarOptions}><Inject services={[Toolbar]} /></PivotViewComponent>);
+  return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} showTooltip={true} dataSourceSettings={dataSourceSettings} chartSettings={chartSettings} displayOption={{ view: 'Both' }} showToolbar={true} tooltipTemplate={"#Template"} toolbar={toolbarOptions}><Inject services={[Toolbar]} /></PivotViewComponent>);
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

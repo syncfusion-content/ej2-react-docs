@@ -42,10 +42,10 @@ In normal edit mode, when user starts editing, the state of the currently select
 > The normal edit mode **Normal** is set as the default mode for editing.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs55/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs55/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -65,10 +65,10 @@ In normal edit mode, when user starts editing, the state of the currently select
 In dialog edit mode, when user starts editing, the currently selected row data will be shown in an exclusive dialog. User can change cell values and save it to the data source by clicking "Save" button in the dialog. To enable the dialog edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Dialog**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs56/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs56/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -86,10 +86,10 @@ In dialog edit mode, when user starts editing, the currently selected row data w
 In batch edit mode, when user double-clicks any data grid cell, the state of target cell is changed to edit state. User can perform bulk changes and finally save (added, changed, and deleted data in the single request) to the data source by clicking "Update" toolbar button. To enable the batch edit, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **Batch**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs57/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs57/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -107,10 +107,10 @@ In batch edit mode, when user double-clicks any data grid cell, the state of tar
 An additional column appended in the data grid layout holds the command buttons to perform the CRUD operation. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowcommandcolumns) property in [`cellEditSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs58/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs58/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -128,10 +128,10 @@ An additional column appended in the data grid layout holds the command buttons 
 Allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettings/#allowinlineediting) property in [`editSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#editsettings) to **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs59/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs59/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -149,10 +149,10 @@ Allows editing of a value cell directly without the use of an external edit dial
 Users can also add, delete, or update the underlying raw items of any data point via pivot chart. The raw items will be shown in the data grid in the new window by clicking the appropriate data point. Then you can edit the raw items as mentioned above by any of the edit types (normal, dialog, batch and command column).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs60/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs60/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -180,10 +180,10 @@ The event [`editCompleted`](https://ej2.syncfusion.com/react/documentation/api/p
 * `cancel` - It is a boolean property and if it is set as **true**, the editing won’t be reflected in the pivot table.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs61/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs61/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -224,10 +224,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
     In the below sample, editing actions such as add and save can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs62/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs62/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
@@ -258,10 +258,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 * `actionInfo`: It holds the unique information about the current UI action. For example, if save action is completed, the event argument contains information such as mode of editing and saved records.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs63/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs63/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
@@ -290,10 +290,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 * `errorInfo`: It holds the error information of the current UI action.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs64/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs64/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
