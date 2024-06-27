@@ -4,7 +4,8 @@ import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { Pager as GridPager } from '@syncfusion/ej2-grids';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css';
+
 function App() {
     let pivotObj;
     let remoteData = new DataManager({
@@ -71,7 +72,6 @@ function App() {
         }} enablePaging={true} dataBound={dataBound.bind(this)}>
             <Inject services={[Pager]}/>
         </PivotViewComponent>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

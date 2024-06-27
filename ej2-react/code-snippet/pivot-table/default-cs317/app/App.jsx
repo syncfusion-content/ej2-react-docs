@@ -1,6 +1,5 @@
 import { FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { L10n } from '@syncfusion/ej2-base';
 import { pivotData } from './datasource';
 L10n.load({
@@ -23,6 +22,8 @@ const SummaryType = [
     'CustomAggregateType1',
     'CustomAggregateType2'
 ];
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         expandAll: false,
@@ -55,7 +56,6 @@ function App() {
         aggregateCellInfo={aggregateCell.bind(this)}>
         <Inject services={[FieldList]} />
     </PivotViewComponent>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

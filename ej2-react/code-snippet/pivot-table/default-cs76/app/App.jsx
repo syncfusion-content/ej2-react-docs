@@ -1,8 +1,9 @@
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let gridSettings = {
         columnWidth: 140,
@@ -27,7 +28,6 @@ function App() {
     function btnClick() {
         pivotObj.excelExport();
     }
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

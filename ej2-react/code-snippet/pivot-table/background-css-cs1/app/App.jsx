@@ -1,6 +1,5 @@
 import { CalculatedField, FieldList, Inject, PivotViewComponent, GroupingBar } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 const SAMPLE_CSS = `
   //Value Cells
@@ -22,6 +21,8 @@ const SAMPLE_CSS = `
     /* .e-pivotview .e-gtot  {
     background-color: greenYellow !important;
   }*/`;
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -37,7 +38,6 @@ function App() {
             <style>{SAMPLE_CSS}</style>
             <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowCalculatedField={true} showFieldList={true} showGroupingBar={true}><Inject services={[CalculatedField, FieldList, GroupingBar]}/> </PivotViewComponent>
         </div>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

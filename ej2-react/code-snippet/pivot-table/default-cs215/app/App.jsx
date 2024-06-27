@@ -1,9 +1,10 @@
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData, base64AlgeriaFont } from './datasource';
 import { PdfTrueTypeFont } from '@syncfusion/ej2-pdf-export';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -26,7 +27,6 @@ function App() {
         };
         pivotObj.pdfExport(pdfExportProperties);
     }
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

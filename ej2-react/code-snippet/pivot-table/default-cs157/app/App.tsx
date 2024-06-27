@@ -1,11 +1,10 @@
-
-
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { IDataOptions, IDataSet, Inject, PivotViewComponent, FieldList } from '@syncfusion/ej2-react-pivotview';
 import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
 import { Chart, Category, Legend, Tooltip, ColumnSeries, LineSeries, SeriesModel } from '@syncfusion/ej2-charts';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -108,10 +107,6 @@ function App() {
         }
     }
   
-    return (<div className="control-section"><PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={300} dataSourceSettings={dataSourceSettings} showFieldList={true} gridSettings={gridSettings}><Inject services={[FieldList]}/></PivotViewComponent><br/><div id="Chart"></div></div>);
+    return (<div className="control-section"><PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={300} dataSourceSettings={dataSourceSettings} showFieldList={true} gridSettings={gridSettings}><Inject services={[FieldList]}/></PivotViewComponent><br/><div id="Chart"></div></div>);
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

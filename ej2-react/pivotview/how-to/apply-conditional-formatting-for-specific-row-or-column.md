@@ -21,10 +21,10 @@ You can apply conditional formatting for specific row or column using `label` op
 To use the conditional formatting feature, You need to inject the `ConditionalFormatting` module in pivot table.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs154/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs154/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

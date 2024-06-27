@@ -36,10 +36,10 @@ Member sorting can also be configured using the [`sortSettings`](https://ej2.syn
 > By default the [`order`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#order) property in the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#sortsettings) set as **Ascending**. Meanwhile, we can arrange the field members as its order in data source by setting it as **None** where the sort icons in grouping bar and field list buttons for the corresponding field will be removed.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs278/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs278/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -57,10 +57,10 @@ Member sorting can also be configured using the [`sortSettings`](https://ej2.syn
 Usually string sorting is applied to field members even if it starts with numbers. But this kind of field members can also be sorted on the basis of numbers that are placed at the beginning of the member name. This can be achieved by setting the [`dataType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#datatype) property as **number** to the desired field.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs279/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs279/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -82,10 +82,10 @@ Allows to sort field headers (aka, members) in rows and columns based on user-de
 * [`order`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#order) : It allows to specify whether the array of headers should be sorted ascending or descending.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs280/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs280/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -111,10 +111,10 @@ The value sorting can also be configured using the [`valueSortSettings`](https:/
 > Value fields are set to the column axis by default. In such cases, the value sorting applied will have an effect on the column alone. You need to place the value fields in the row axis to do so in row wise. For more information, please [`refer here`](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding/#values-in-row-axis).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs281/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs281/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -144,10 +144,10 @@ When sorting is applied, the event [`onHeadersSort`](https://ej2.syncfusion.com/
 * `isOrderChanged`: By setting this boolean property to true, it allows to display the modified members order.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs282/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs282/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -182,10 +182,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
     In the below sample, sort action can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs283/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs283/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
@@ -218,10 +218,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 * `actionInfo`: It holds the unique information about the current UI action. For example, if sorting is completed, the event argument contains information such as sort order and the field name.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs284/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs284/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
@@ -248,10 +248,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 * `errorInfo`: It holds the error information of the current UI action.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs285/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs285/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}

@@ -1,6 +1,5 @@
 import { CalculatedField, PivotFieldListComponent, Inject, PivotViewComponent, VirtualScroll } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 const SAMPLE_CSS = `
 .e-pivotview {
     width: 58%;
@@ -48,8 +47,9 @@ function data(count) {
         }
     }
     return result;
-}
-;
+};
+import './App.css';
+
 function App() {
     let pivotGridModule;
     let dataSourceSettings = {
@@ -93,7 +93,6 @@ function App() {
         //Assigning page settings to field list component.
         fieldListObj.pageSettings = pivotObj.pageSettings;
     }
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

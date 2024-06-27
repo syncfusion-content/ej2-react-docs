@@ -1,15 +1,12 @@
-
-
 import {
   FieldList, Inject, PivotViewComponent, CalculatedField, Toolbar,
   ConditionalFormatting, NumberFormatting, PDFExport, ExcelExport
 } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import './App.css';
 import{ getInstance, select} from '@syncfusion/ej2-base';
 import {DropDownList} from '@syncfusion/ej2-dropdowns';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
   let isInitial = true;
@@ -157,4 +154,4 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

@@ -1,11 +1,9 @@
-
-
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { IDataOptions, IDataSet, PivotViewComponent, Inject, DisplayOption, PivotChart } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
+import './App.css';
 
 function App() {
 
@@ -31,11 +29,7 @@ function App() {
   function exportClick(): void {
     pivotObj.chartExport('PNG', 'result');
   }
-    return (<div><div><ButtonComponent cssClass='e-primary' onClick={exportClick.bind(this)}>Export</ButtonComponent></div><div><PivotViewComponent height={350} ref={d => pivotObj = d} id='PivotView' chartSettings={chartSettings} displayOption={displayOption} dataSourceSettings={dataSourceSettings} ><Inject services={[PivotChart]}/></PivotViewComponent></div></div>);
+    return (<div><div><ButtonComponent cssClass='e-primary' onClick={exportClick.bind(this)}>Export</ButtonComponent></div><div><PivotViewComponent height={350} ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' chartSettings={chartSettings} displayOption={displayOption} dataSourceSettings={dataSourceSettings} ><Inject services={[PivotChart]}/></PivotViewComponent></div></div>);
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

@@ -1,6 +1,5 @@
 import { PivotViewComponent, IDataOptions, Inject, VirtualScroll, VirtualScrollSettingsModel } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 function data(count: number) {
     let result: Object[] = [];
@@ -37,6 +36,8 @@ function data(count: number) {
 let virtualScrollSettings: VirtualScrollSettingsModel = {
     allowSinglePage: true
 } as VirtualScrollSettingsModel;
+import './App.css';
+
 function App() {
     let pivotObj: PivotViewComponent;
     let dataSourceSettings: IDataOptions = {
@@ -49,11 +50,10 @@ function App() {
         values: [{ name: 'Price', caption: 'Unit Price' }, { name: 'Sold', caption: 'Unit Sold' }]
     }
     return (
-        <PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings}
+        <PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings}
             virtualScrollSettings={virtualScrollSettings}><Inject services={[VirtualScroll]}/>
         </PivotViewComponent>
     );
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

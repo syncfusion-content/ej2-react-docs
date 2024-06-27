@@ -211,10 +211,10 @@ In-order to define each [OLAP cube element](#olap-cube-elements) in the respecti
 In this sample, "Product Categories" is added in column, "Customer Geography" in row, and "Customer Count" and "Internet Sales Amount" in value axes respectively.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs189/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs189/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -228,10 +228,10 @@ Formatting defines a way in which values should be displayed in pivot table. For
 > Only measures from value axis, which is in the form of numeric data values are applicable for formatting.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs190/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs190/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -245,10 +245,10 @@ The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube
 > If the **GroupingBar** module is not injected, the grouping bar will not be rendered with the pivot table component.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs191/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs191/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -262,10 +262,10 @@ The component provides a built-in Field List similar to Microsoft Excel. It allo
 > If the **FieldList** module is not injected, the Field List will not be rendered with the pivot table component.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs192/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs192/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -277,10 +277,10 @@ The component provides a built-in Field List similar to Microsoft Excel. It allo
 The filter axis contains collection of [OLAP cube elements](#olap-cube-elements) such as hierarchies and calculated members that would act as master filter over the data bound in [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#rows), [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#columns) and [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#values) axes of the pivot table. The [OLAP cube elements](#olap-cube-elements) along with filter members could be set to filter axis either through report via code behind or by dragging and dropping [OLAP cube elements](#olap-cube-elements) from other axes to filter axis via grouping bar or field list at runtime.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs193/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs193/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -309,10 +309,10 @@ Also calculated fields can be added at run time through the built-in dialog. The
 > If the **CalculatedField** module is not injected, the calculated field dialog will not be rendered with the pivot table component. Moreover calculated measure can be added only in value axis.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs194/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs194/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -424,10 +424,10 @@ Allows large amounts of data to be loaded without any performance degradation by
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the pivot table.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs195/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs195/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -451,10 +451,10 @@ npm start
 ```
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs196/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs196/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -473,10 +473,10 @@ To bind OLAP datasource to the pivot table, you need to specify following proper
 | [`catalog`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#catalog "catalog")| Contains the database name (catalog name) to fetch the data.|
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs197/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs197/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -490,10 +490,10 @@ To bind OLAP datasource to the pivot table, you need to specify following proper
 By default, the measures are plotted in column axis. To plot those measures in row axis, place the **Measures** button in the row axis as follows.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs198/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs198/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -505,10 +505,10 @@ By default, the measures are plotted in column axis. To plot those measures in r
 You can place measures in different position in row or column axis either thorough code behind or UI. In this sample, **measures** placed before the dimension in the column axis.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs199/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs199/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -522,10 +522,10 @@ Named set is a multidimensional expression (MDX) that returns a set of dimension
 You can bind the named sets in the pivot table by setting it's unique name in the [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#name) property either in row or column axis and [`isNamedSet`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#isnamedset) boolean property to **true**. In this sample, we have added "Core Product Group" named set in the column axis.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs200/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs200/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

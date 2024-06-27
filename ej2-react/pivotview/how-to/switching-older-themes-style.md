@@ -71,10 +71,10 @@ In current theme, to make the component compact we have reduced the height of ea
 In the below code sample, we replicate the older theme style.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/switch-theme-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/switch-theme-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

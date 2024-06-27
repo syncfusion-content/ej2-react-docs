@@ -1,12 +1,10 @@
 
-
-
 import { IDataOptions, PivotViewComponent, Pager, Inject } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { Pager as GridPager } from '@syncfusion/ej2-grids';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css';
 
 function App() {
     let pivotObj: PivotViewComponent;
@@ -70,7 +68,7 @@ function App() {
         pivotObj.refreshData();
     }
 
-    return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={{ columnWidth: 120 }} pageSettings={{
+    return (<PivotViewComponent ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={{ columnWidth: 120 }} pageSettings={{
             rowPageSize: 10,
             columnPageSize: 5,
             currentColumnPage: 1,
@@ -83,7 +81,3 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

@@ -1,7 +1,8 @@
 import { ConditionalFormatting, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         dataSource: pivotData,
@@ -42,7 +43,6 @@ function App() {
     let pivotObj;
     return (<div><div className="col-md-9"> <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowConditionalFormatting={true}><Inject services={[ConditionalFormatting]}/> </PivotViewComponent></div>
     </div>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

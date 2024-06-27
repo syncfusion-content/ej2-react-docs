@@ -1,6 +1,5 @@
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 const SAMPLE_CSS = `
   .e-pivotview .e-cellselectionbackground,
@@ -9,6 +8,8 @@ const SAMPLE_CSS = `
   .e-pivotview .e-grid .e-columnsheader.e-selectionbackground {
     background-color: greenYellow !important;
   }`;
+import './App.css';
+
 function App() {
     let gridSettings = {
         allowSelection: true,
@@ -28,7 +29,6 @@ function App() {
             <style>{SAMPLE_CSS}</style>
             <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} gridSettings={gridSettings} dataSourceSettings={dataSourceSettings}></PivotViewComponent>
         </div>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

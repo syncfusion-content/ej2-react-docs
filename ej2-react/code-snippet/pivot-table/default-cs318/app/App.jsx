@@ -1,6 +1,6 @@
 import { FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css';
 
 function App() {
 
@@ -184,4 +184,3 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

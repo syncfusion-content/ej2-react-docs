@@ -9,7 +9,7 @@ System.config({
         "jsx": "react"
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/21.1.35/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/26.1.35/"
     },
     map: {
         app: 'app',
@@ -48,10 +48,11 @@ System.config({
         '*.json': { loader: 'plugin-json' },
         'typescript': {
             "exports": "ts"
-        }
+        },
+        '*.css': { loader: 'plugin-css' }
     },
     packages: {
-        'app': { main: 'App', defaultExtension: 'tsx' },
+        'app': { main: 'index', defaultExtension: 'tsx' },
     }
 
 });

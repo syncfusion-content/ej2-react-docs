@@ -1,15 +1,13 @@
-
-
 import {
   FieldList, IDataOptions, Inject, PivotViewComponent, CalculatedField, Toolbar, RemoveReportArgs, ToolbarArgs,
   ConditionalFormatting, IDataSet, RenameReportArgs, SaveReportArgs, FetchReportArgs,
   LoadReportArgs, NumberFormatting, PDFExport, ExcelExport
 } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import{ getInstance, select} from '@syncfusion/ej2-base';
 import {DropDownList} from '@syncfusion/ej2-dropdowns';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
   let isInitial: boolean = true;
@@ -145,7 +143,7 @@ function App() {
     });
   }
 
-  return (<PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'}
+  return (<PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'}
     height={350} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true}
     allowConditionalFormatting={true} allowNumberFormatting={true} allowPdfExport={true} showToolbar={true}
     allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={toolbarOptions} newReport={newReport.bind(this)}
@@ -157,4 +155,3 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,12 +1,11 @@
 
-
-
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import {
     PivotViewComponent, IDataOptions, Inject, Toolbar, ToolbarArgs
 } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -29,10 +28,6 @@ function App() {
         pivotObj.dataSourceSettings.expandAll = !pivotObj.dataSourceSettings.expandAll;
     }
   
-    return (<PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350} gridSettings={{ columnWidth: 140 }} showToolbar={true} displayOption={{ view: 'Both' }} toolbar={toolbarOptions} toolbarRender={beforeToolbarRender.bind(this)}><Inject services={[Toolbar]} /></PivotViewComponent>);
+    return (<PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'} height={350} gridSettings={{ columnWidth: 140 }} showToolbar={true} displayOption={{ view: 'Both' }} toolbar={toolbarOptions} toolbarRender={beforeToolbarRender.bind(this)}><Inject services={[Toolbar]} /></PivotViewComponent>);
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

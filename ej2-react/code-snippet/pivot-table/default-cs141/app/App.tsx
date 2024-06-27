@@ -1,9 +1,7 @@
-
-
 import { GroupingBar, IDataOptions, IDataSet, Inject, PivotViewComponent, FieldRemoveEventArgs } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -17,7 +15,7 @@ function App() {
     values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
   }
   let pivotObj: PivotViewComponent;
-    return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} fieldRemove={fieldRemove.bind(this)} showGroupingBar={true}><Inject services={[GroupingBar]} /></PivotViewComponent>);
+    return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} fieldRemove={fieldRemove.bind(this)} showGroupingBar={true}><Inject services={[GroupingBar]} /></PivotViewComponent>);
 
   function fieldRemove(args: FieldRemoveEventArgs): void  {
     if(args.fieldName === 'Country') {
@@ -27,7 +25,3 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

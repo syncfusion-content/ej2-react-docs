@@ -1,12 +1,10 @@
-
-
 import {
   FieldList, IAxisSet, IDataOptions, IDataSet, Inject, PivotViewComponent
 } from '@syncfusion/ej2-react-pivotview';
 import { Tooltip } from '@syncfusion/ej2-popups';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
   let headerTooltip: Tooltip;
@@ -70,11 +68,10 @@ function App() {
       }
     }
   }
-  return (<PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'}
+  return (<PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'}
     height={350} dataBound={dataBound.bind(this)}>
     <Inject services={[FieldList]} />
   </PivotViewComponent>);
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

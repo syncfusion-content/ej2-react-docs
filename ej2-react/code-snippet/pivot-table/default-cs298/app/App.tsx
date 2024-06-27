@@ -1,12 +1,11 @@
-
-
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import {
     PivotViewComponent, IDataOptions, Inject, Toolbar
 } from '@syncfusion/ej2-react-pivotview';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -19,7 +18,7 @@ function App() {
    let toolbarOptions: any = [{template:'#enablertl'}, {template:'#disablertl'}];
 
   
-    return (<div><div><PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350} showToolbar={true} toolbar={toolbarOptions} ><Inject services={[ Toolbar]} /></PivotViewComponent></div><div><ButtonComponent id='enablertl'  cssClass="e-flat e-primary" onClick={enableRtl.bind(this)}>ENABLE RTL</ButtonComponent></div><div><ButtonComponent id='disablertl'  cssClass="e-flat e-primary" onClick={disableRtl.bind(this)}>DISABLE RTL</ButtonComponent></div></div>);
+    return (<div><div><PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'} height={350} showToolbar={true} toolbar={toolbarOptions} ><Inject services={[ Toolbar]} /></PivotViewComponent></div><div><ButtonComponent id='enablertl'  cssClass="e-flat e-primary" onClick={enableRtl.bind(this)}>ENABLE RTL</ButtonComponent></div><div><ButtonComponent id='disablertl'  cssClass="e-flat e-primary" onClick={disableRtl.bind(this)}>DISABLE RTL</ButtonComponent></div></div>);
 
   function enableRtl() {
         pivotObj.enableRtl=true;
@@ -29,7 +28,3 @@ function App() {
     }
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

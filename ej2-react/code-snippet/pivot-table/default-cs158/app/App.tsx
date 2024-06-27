@@ -1,10 +1,8 @@
-
-
 import { IDataOptions, CellEditSettings, IDataSet, Inject, PivotViewComponent, BeginDrillThroughEventArgs } from '@syncfusion/ej2-react-pivotview';
 import { Grid, Sort, Filter, Group } from '@syncfusion/ej2-grids';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -36,10 +34,10 @@ function App() {
 
   let pivotObj: PivotViewComponent;
   
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} editSettings={editSettings} beginDrillThrough={beginDrillThrough.bind(this)}></PivotViewComponent>);
+  return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} editSettings={editSettings} beginDrillThrough={beginDrillThrough.bind(this)}></PivotViewComponent>);
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+
 
 

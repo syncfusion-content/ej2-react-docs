@@ -1,6 +1,5 @@
 import { PivotViewComponent, VirtualScroll, Inject } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 let date1;
 let date2;
 function data(count) {
@@ -36,8 +35,9 @@ function data(count) {
         }
     }
     return result;
-}
-;
+};
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         dataSource: data(1000),
@@ -50,7 +50,6 @@ function App() {
     };
     let pivotObj;
     return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} enableVirtualization={true} allowDataCompression={true} dataSourceSettings={dataSourceSettings}><Inject services={[VirtualScroll]}/></PivotViewComponent>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

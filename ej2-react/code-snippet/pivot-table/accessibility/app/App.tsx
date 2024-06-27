@@ -5,10 +5,10 @@ import {
   CellEditSettings, Grouping
 } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
 import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
+import './App.css';
 
 function App() {
   let dataSourceSettings: IDataOptions = {
@@ -163,7 +163,7 @@ function App() {
     });
   }
 
-  return (<PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'}
+  return (<PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'}
     height={350} showFieldList={true} gridSettings={gridSettings} allowExcelExport={true}
     allowConditionalFormatting={true} allowNumberFormatting={true} allowPdfExport={true} showToolbar={true}
     allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={toolbarOptions} newReport={newReport.bind(this)}
@@ -177,4 +177,3 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

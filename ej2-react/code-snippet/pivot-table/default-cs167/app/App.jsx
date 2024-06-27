@@ -1,7 +1,8 @@
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { PivotViewComponent, FieldList, Inject } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }],
@@ -29,7 +30,6 @@ function App() {
             { 'Sold': 27, 'Amount': 46008, 'Country': 'France', 'Year': 'FY 2016' }
         ];
     }
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

@@ -1,8 +1,9 @@
 
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { PivotViewComponent, Inject, FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -23,7 +24,6 @@ function App() {
             // Triggers when the toolbar UI actions such as add new report and save current report icon are completed.
         }
     }
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

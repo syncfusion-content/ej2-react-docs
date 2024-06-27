@@ -15,10 +15,10 @@ You can customize the appearance of the loading indicator in the pivot table by 
 > You can also disable the loading indicator by setting [`spinnerTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#spinnertemplate) to empty string.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs163/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs163/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}

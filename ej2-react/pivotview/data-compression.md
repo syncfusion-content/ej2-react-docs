@@ -19,10 +19,10 @@ When binding one million raw data, the pivot table processes all raw data to gen
 > This options will only function when the virtual scrolling is enabled.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs309/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs309/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

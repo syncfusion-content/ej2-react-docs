@@ -64,10 +64,10 @@ The Internationalization library is used to globalize number, date, and time val
 * Set the culture by using the `locale` property.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs110/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs110/app/App.tsx %}
     {% endhighlight %}
     {% endtabs %}
@@ -87,10 +87,10 @@ The decimal separators of pivot table values varies based on the culture applied
 The following example demonstrates the decimal separators in `Deutsch` culture.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/locale-cs1/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/locale-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -558,10 +558,10 @@ To load translation object in an application, use [`load`](https://ej2.syncfusio
 The following example demonstrates the pivot table in `Deutsch` culture.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs111/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs111/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -573,10 +573,10 @@ The following example demonstrates the pivot table in `Deutsch` culture.
 Right-to-left (RTL) provides an option to switch the text direction and layout of the pivot table component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc...). To enable RTL pivot table, set the `enableRtl` property to **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs112/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs112/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
