@@ -683,6 +683,31 @@ function App() {
 export default App;
 ```
 
+## Managing spinner visibility during data loading
+
+Showing a spinner during data loading in the Syncfusion React Grid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
+
+To show or hide a spinner during data loading in the grid, you can utilize the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/#showspinner) and [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/#hidespinner) methods provided by the Grid component.
+
+The following example demonstrates how to show and hide the spinner during data loading using external buttons in a grid:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/show-hide-spinner-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/show-hide-spinner-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/show-hide-spinner-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/show-hide-spinner-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/show-hide-spinner-cs1" %}
+
 ## Immutable mode  
 
 Immutable mode in the Syncfusion Grid is designed to optimize re-rendering performance by utilizing the object reference and [deep compare](https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#4-deep-equality) concept. This mode ensures that when performing Grid actions, only the modified or newly added rows are re-rendered, preventing unnecessary re-rendering of unchanged rows. 

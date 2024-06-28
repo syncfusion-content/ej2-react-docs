@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize the icons for pivot grid in React Pivotview component | Syncfusion
+title: Customize the icons for pivot grid in React Pivotview | Syncfusion
 description: Learn here all about Customize the icons for pivot grid in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Customize the icons for pivot grid 
 platform: ej2-react
@@ -24,11 +24,11 @@ In the below sample, pivot grid is rendered with a customized pivot button icons
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/pivot-grid/icon-customization-cs1/app/App.jsx %}
+{% include code-snippet/pivot-table/icon-customization-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/pivot-grid/icon-customization-cs1/app/App.tsx %}
+{% include code-snippet/pivot-table/icon-customization-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-grid/icon-customization-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/pivot-table/icon-customization-cs1" %}

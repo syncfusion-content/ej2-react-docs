@@ -19,12 +19,6 @@ You can refresh pivot table and field list with new data source dynamically.
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs167/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs167/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs167/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs167" %}

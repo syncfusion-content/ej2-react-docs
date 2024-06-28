@@ -480,12 +480,6 @@ The available built-in fonts are,
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs215/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs215/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs215/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs215" %}

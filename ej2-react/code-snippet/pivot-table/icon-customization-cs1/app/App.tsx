@@ -6,7 +6,6 @@ import './App.css';
 function App() {
 
   let dataSourceSettings: IDataOptions = {
-    columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
     dataSource: pivotData as IDataSet[],
     expandAll: false,
     filters: [],
