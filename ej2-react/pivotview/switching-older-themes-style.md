@@ -78,7 +78,7 @@ In the below code sample, we replicate the older theme style.
 {% include code-snippet/pivot-table/switch-theme-cs2/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-tableswitch-theme-cs2/app/datasource.jsx %}
+{% include code-snippet/pivot-table/switch-theme-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
 {% include code-snippet/pivot-table/switch-theme-cs2/app/datasource.tsx %}

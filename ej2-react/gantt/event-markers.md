@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Event markers in React Gantt component | Syncfusion
+title: Event markers in React Gantt Component | Syncfusion
 description: Learn here all about Event markers in Syncfusion React Gantt component of Syncfusion Essential JS 2 and more.
 control: Event markers 
 platform: ej2-react

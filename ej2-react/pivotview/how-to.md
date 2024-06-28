@@ -24,11 +24,11 @@ In the below example, the data in the member editor limits to 100. So, the membe
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/pivot-grid/default-cs1/app/index.jsx %}
+{% include code-snippet/pivot-table/default-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/pivot-grid/default-cs1/app/index.tsx %}
+{% include code-snippet/pivot-table/default-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs1" %}

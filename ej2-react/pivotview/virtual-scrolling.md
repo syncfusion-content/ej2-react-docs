@@ -25,12 +25,6 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module in to th
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs308/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs308/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs308/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs308" %}
@@ -49,12 +43,6 @@ Enabling this property causes the pivot table to render only the rows and column
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/single-page-mode/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/single-page-mode/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/single-page-mode/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,12 +68,6 @@ Virtual scrolling automatically works with "Popup" field list on setting the [en
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs310/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs310/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs310/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
