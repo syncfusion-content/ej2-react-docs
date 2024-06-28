@@ -36,10 +36,10 @@ Other properties include:
 * [`currency`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettingsModel/#currency): It allows to set the currency code which needs to considered for the currency formatting.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs184/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs184/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -73,10 +73,10 @@ You can add any custom format directly to the [`format`](https://ej2.syncfusion.
 >NOTE: If custom format is defined, certain properties such as [`useGrouping`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettingsModel/#usegrouping) and [`currency`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettingsModel/#currency) will not be considered.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs185/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs185/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -94,10 +94,10 @@ You can add any custom format directly to the [`format`](https://ej2.syncfusion.
 You can enable formatting dialog option in the toolbar by adding `NumberFormatting` in the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbar). After that, you can see the option to invoke the formatting dialog in the toolbar.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs186/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs186/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -115,10 +115,10 @@ You can enable formatting dialog option in the toolbar by adding `NumberFormatti
 You can invoke the formatting dialog by clicking an external button using the `ShowNumberFormattingDialog` method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs187/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs187/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -146,10 +146,10 @@ The event [`numberFormatting`](https://ej2.syncfusion.com/react/documentation/
 In the below sample, the customization done in number formatting dialog for the field "Amount" won’t be applied.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs188/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs188/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}

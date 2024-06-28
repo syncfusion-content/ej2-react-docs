@@ -15,10 +15,10 @@ The Excel export allows Pivot Table data to be exported as Excel document. To en
 > The pivot table component can be exported to Excel format using options available in the toolbar. For more details [`refer`](./tool-bar) here.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs65/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs65/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -42,10 +42,10 @@ The Excel export provides support to export multiple pivot tables in same sheet.
 >By default, `multipleExport.blankRows` value is 5 between pivot tables within the same sheet.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs66/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs66/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -63,10 +63,10 @@ The Excel export provides support to export multiple pivot tables in same sheet.
 Excel export provides support to export multiple pivot tables into new sheets. To export in new sheets, define  `multipleExport.type` as `NewSheet` in `excelExportProperties`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs67/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs67/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -86,10 +86,10 @@ The Excel export provides an option to change colors for headers, caption and re
 > By default, material theme will be applied to the pivot table during Excel exporting.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs68/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs68/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -107,10 +107,10 @@ The Excel export provides an option to change colors for headers, caption and re
 The Excel export provides an option to include header and footer content for the excel document before exporting. In-order to add header and footer, define **header** and **footer** properties in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs69/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs69/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -128,10 +128,10 @@ The Excel export provides an option to include header and footer content for the
 The Excel export provides an option to change file name of the document before exporting. In-order to change the file name, define **fileName** property in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#excelexport) method.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs70/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs70/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -155,10 +155,10 @@ The Excel export allows pivot table data to be exported in **CSV** file format a
 > The pivot table component can be exported to CSV format using options available in the toolbar. For more details [`refer`](./tool-bar) here.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs71/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs71/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -181,10 +181,10 @@ You can export the pivot table virtual scroll data as Excel/CSV document by usin
 ### Virtual Scroll Data Excel Export
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs72/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs72/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -200,10 +200,10 @@ You can export the pivot table virtual scroll data as Excel/CSV document by usin
 ### Virtual Scroll Data CSV Export
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs73/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs73/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -223,10 +223,10 @@ The pivot engine exports the entire virtual data of the pivot table (i.e. the da
 > By default, the pivot engine export will be performed while virtual scrolling is enabled.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs74/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs74/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -251,10 +251,10 @@ The event `excelQueryCellInfo` triggers while framing each row and value cell du
 * `style`  - It holds the style properties for the cell.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs75/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs75/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -275,10 +275,10 @@ The event `excelHeaderQueryCellInfo` triggers on framing each header cell during
 * `style`  -  It holds the style properties for the cell.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs76/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs76/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -299,10 +299,10 @@ The event [`exportComplete`](https://ej2.syncfusion.com/react/documentation/api/
 * `promise` - It holds the promise object for blob data.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs77/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs77/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}

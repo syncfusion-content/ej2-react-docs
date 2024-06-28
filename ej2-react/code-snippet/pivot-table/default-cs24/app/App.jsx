@@ -1,8 +1,9 @@
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, JsonAdaptor } from '@syncfusion/ej2-data';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let pivotObj;
     let dataSource = new DataManager({
@@ -20,7 +21,6 @@ function App() {
         values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
     };
     return <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>;
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

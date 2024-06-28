@@ -1,14 +1,13 @@
 
-
-
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import {
     PivotViewComponent, IDataOptions, Inject, FieldList, CalculatedField,
     Toolbar, PDFExport, ExcelExport, ConditionalFormatting, SaveReportArgs,
     FetchReportArgs, LoadReportArgs, RemoveReportArgs, RenameReportArgs, BeforeExportEventArgs
 } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -137,10 +136,6 @@ function App() {
             };
         }
   
-    return (<PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={toolbarOptions} newReport={newReport.bind(this)} renameReport={renameReport.bind(this)} removeReport={removeReport.bind(this)} loadReport={loadReport.bind(this)} fetchReport={fetchReport.bind(this)} saveReport={saveReport.bind(this)} beforeExport={beforeExport.bind(this)}><Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting]} /></PivotViewComponent>);
+    return (<PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'} height={350} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowConditionalFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={toolbarOptions} newReport={newReport.bind(this)} renameReport={renameReport.bind(this)} removeReport={removeReport.bind(this)} loadReport={loadReport.bind(this)} fetchReport={fetchReport.bind(this)} saveReport={saveReport.bind(this)} beforeExport={beforeExport.bind(this)}><Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting]} /></PivotViewComponent>);
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

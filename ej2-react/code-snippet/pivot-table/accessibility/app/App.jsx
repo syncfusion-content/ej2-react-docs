@@ -5,8 +5,8 @@ import {
   ConditionalFormatting, NumberFormatting, PDFExport, ExcelExport
 } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import * as data from './datasource.json';
+import './App.css';
 
 function App() {
   let pivotData = data.pivotData;
@@ -376,4 +376,4 @@ function App() {
   }
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

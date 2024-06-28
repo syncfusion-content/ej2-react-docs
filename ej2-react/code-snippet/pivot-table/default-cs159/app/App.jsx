@@ -1,7 +1,8 @@
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { renewableEnergy } from './datasource';
+import './App.css';
+
 function App() {
     function cellTemplate(props) {
         return (<span className="tempwrap e-pivot-trend-neutral pv-icons"></span>);
@@ -87,7 +88,6 @@ function App() {
             }
         }
     }
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

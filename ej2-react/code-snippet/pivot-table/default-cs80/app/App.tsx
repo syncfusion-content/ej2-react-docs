@@ -1,11 +1,9 @@
 
-
-
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { CalculatedField, PivotFieldListComponent, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -26,8 +24,8 @@ function App() {
   let fieldlistObj: PivotFieldListComponent;
   
     return (<div><div className="control-section">
-    <PivotViewComponent id='PivotView' ref={d => pivotObj = d} enginePopulated={afterPivotPopulate.bind(this)} height={350} gridSettings={{columnWidth: 140}}></PivotViewComponent>
-    <PivotFieldListComponent id='PivotFieldList' ref={d => fieldlistObj = d} enginePopulated={afterPopulate.bind(this)} dataSourceSettings={dataSourceSettings} target='#PivotFieldList' renderMode={"Popup"} allowCalculatedField={true}><Inject services={[CalculatedField]} /></PivotFieldListComponent></div>
+    <PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } enginePopulated={afterPivotPopulate.bind(this)} height={350} gridSettings={{columnWidth: 140}}></PivotViewComponent>
+    <PivotFieldListComponent id='PivotFieldList' ref={ (d: PivotFieldListComponent) => fieldlistObj = d } enginePopulated={afterPopulate.bind(this)} dataSourceSettings={dataSourceSettings} target='#PivotFieldList' renderMode={"Popup"} allowCalculatedField={true}><Inject services={[CalculatedField]} /></PivotFieldListComponent></div>
     <div className='col-lg-3 property-section'><ButtonComponent cssClass='e-primary' onClick={btnClick.bind(this)}>Field List</ButtonComponent></div></div>);
 
   function btnClick(): void {
@@ -50,7 +48,3 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

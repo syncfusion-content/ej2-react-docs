@@ -1,9 +1,7 @@
-
-
 import { FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent, FieldDroppedEventArgs } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -21,7 +19,7 @@ function App() {
   }
   let pivotObj: PivotViewComponent;
 
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} onFieldDropped={onFieldDropped.bind(this)} showFieldList={true}><Inject services={[FieldList]} /></PivotViewComponent>);
+  return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} onFieldDropped={onFieldDropped.bind(this)} showFieldList={true}><Inject services={[FieldList]} /></PivotViewComponent>);
 
   function onFieldDropped(args: FieldDroppedEventArgs): void  {
       args.droppedField.caption = args.droppedField.name + " --> " + args.droppedAxis;
@@ -29,7 +27,3 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

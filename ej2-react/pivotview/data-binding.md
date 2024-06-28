@@ -23,10 +23,10 @@ For JSON data binding, the `type` property under [`dataSourceSettings`](https://
 In-order to bind local JSON data to the pivot table user can assign the local variable holding the JSON data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs23/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs23/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -42,10 +42,10 @@ In-order to bind local JSON data to the pivot table user can assign the local va
 Using local variable, the JSON data can also be bound to the pivot table using [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/) option with the help of `JsonAdaptor`. Here the instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/) holding JSON data is assigned to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#datasourcesettings). The use of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/) is optional here.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs24/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs24/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -104,10 +104,10 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 In-order to bind remote JSON data, mention the endpoint [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) property. The [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) property supports both direct downloadable file (*.json) and web service URL.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs25/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs25/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -125,10 +125,10 @@ For CSV data binding, the `type` property under [`dataSourceSettings`](https://e
 In-order to bind local CSV data to the pivot table, user needs to convert it as string array and then directly assign it to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs26/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs26/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -201,10 +201,10 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 In-order to bind remote CSV data, mention the endpoint [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings) property. The [`URL`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#url) property supports both direct downloadable file (*.csv) and web service URL.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs27/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs27/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -220,10 +220,10 @@ To interact with remote data source, provide the endpoint `url` within [`DataMan
 OData is a standardized protocol for creating and consuming data. User can retrieve data from OData service using the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/) class. Refer to the following code example for remote data binding using OData service.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs28/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs28/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -235,10 +235,10 @@ OData is a standardized protocol for creating and consuming data. User can retri
 The OData V4 is an improved version of OData protocols, and the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/) class can be used to retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#odatav4-adaptor).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs29/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs29/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -250,10 +250,10 @@ The OData V4 is an improved version of OData protocols, and the [`DataManager`](
 User can use [`WebApiAdaptor`](https://ej2.syncfusion.com/react/documentation/data/adaptors/#web-api-adaptor) to bind pivot table with Web API created using OData endpoint.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs30/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs30/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -265,10 +265,10 @@ User can use [`WebApiAdaptor`](https://ej2.syncfusion.com/react/documentation/da
 By default, the data manager retrieves all the data from the provider which is mapped in it. The data from the provider can be filtered, sorted, paged, etc. by setting the own query in `defaultQuery` property in the data manager instance.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs31/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs31/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -305,10 +305,10 @@ The main purpose of these mapping options is to configure each field that is not
 In the below code sample, visibility of the field button icons are configured.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs32/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs32/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -326,10 +326,10 @@ In the below code sample, visibility of the field button icons are configured.
 By default, the value fields are plotted in column axis. To plot those fields in row axis, use the [`valueAxis`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#valueaxis) property by setting its value as **row**. By default, it holds the value **column**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs33/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs33/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -349,10 +349,10 @@ By default, the value fields are placed at the end of the row or column axis. To
 > This support is only available for relational data sources. Also, enable the [`showValuesButton`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showvaluesbutton) property in the grouping bar and field list UI to **true** to re-arrange the values fields at different positions via user interaction.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs34/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs34/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -370,10 +370,10 @@ By default, the value fields are placed at the end of the row or column axis. To
 By default, the pivot table only shows the field item if it has data in its row or column combination. To show all items that do not have data in row and column combination in the pivot table, use the [`showNoDataItems`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptionsModel/#shownodataitems) property by settings its value to **true** for the desired fields. In the following code sample, rows of the "County" and "State" fields do not have data in all combination with "Date" column field.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs35/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs35/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -385,10 +385,10 @@ By default, the pivot table only shows the field item if it has data in its row 
 To show value header always in pivot table, even if it holds a single value, use the [`alwaysShowValueHeader`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#alwaysshowvalueheader) property by settings its value as **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs36/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs36/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -406,10 +406,10 @@ To show value header always in pivot table, even if it holds a single value, use
 User can show custom string in empty value cells using the [`emptyCellsTextContent`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#emptycellstextcontent) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings). Since the property is of string data type, user can fill empty value cells with any value like "0", "-", "*", "(blank)", etc. Its common for all value fields and can be configured through code behind.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs37/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs37/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -429,10 +429,10 @@ User can show custom string in empty value cells using the [`emptyCellsTextConte
 The event [`load`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#load) fires before initiate rendering of pivot table. It holds following parameters like[`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#datasourcesettings), `fieldsType` and `PivotView`. In this event user can customize data source settings before initiating pivot table render module.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs38/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs38/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -450,10 +450,10 @@ The event [`load`](https://ej2.syncfusion.com/react/documentation/api/pivotview/
 The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enginepopulated) is triggered after engine is populated. It has following parameters - `dataSourceSettings`, `pivotFieldList` and `pivotValues`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs39/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs39/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -471,10 +471,10 @@ The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api
 The event [`enginePopulating`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enginepopulating) triggers  before the pivot engine starts to populate and allows to customize the pivot datasource settings. It has following parameter `dataSourceSettings`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs40/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs40/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}

@@ -1,9 +1,7 @@
-
-
 import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, ODataV4Adaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import './App.css';
 
 function App() {
   let pivotObj: PivotViewComponent;
@@ -21,11 +19,7 @@ function App() {
     values: [{ name: 'Freight' }]
   };
 
-  return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+  return (<PivotViewComponent ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

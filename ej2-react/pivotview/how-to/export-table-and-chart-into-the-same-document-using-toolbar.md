@@ -17,10 +17,10 @@ Even if the [displayOption.view](https://ej2.syncfusion.com/react/documentation/
 In the following example, the built-in export action can be restricted by setting the [`args.cancel`](https://helpej2.syncfusion.com/react/documentation/api/pivotview/pivotActionBeginEventArgs/#cancel) option to **true** in the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#actionbegin) event, and both the table and the chart can be exported by calling the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#pdfexport) method and setting the `exportBothTableAndChart` argument to **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs315/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs315/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}

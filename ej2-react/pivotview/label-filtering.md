@@ -52,10 +52,10 @@ Operators that can be used in label filtering are:
 | NotBetween| Displays the pivot table that does not record between the start and end text.|
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs178/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs178/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,10 +90,10 @@ Operators that can be used in date filtering are:
 > Date filtering option is enabled only when the field has **date** type `formatsettings`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs179/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs179/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -128,10 +128,10 @@ Operators that can be used in date filtering are:
 > Number filtering option is enabled only when the field contains the **number** format.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs180/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs180/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

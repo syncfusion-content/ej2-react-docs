@@ -1,7 +1,8 @@
 import { FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -26,7 +27,6 @@ function App() {
         args.cancel = false;
         args.currentCell.setAttribute("data-url", "https://ej2.syncfusion.com/"); //here we have redirected to EJ2 Syncfusion on hyperlinkcell click
     }
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

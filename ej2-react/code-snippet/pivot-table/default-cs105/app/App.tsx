@@ -1,9 +1,7 @@
-
-
 import { IDataOptions, IDataSet, PivotViewComponent, Inject, FieldList, MemberFilteringEventArgs } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -23,11 +21,7 @@ function App() {
       args.cancel = true;
   }
 
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} memberFiltering={memberFiltering.bind(this)} showFieldList={true}><Inject services={[FieldList]} /></PivotViewComponent>);
+  return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} memberFiltering={memberFiltering.bind(this)} showFieldList={true}><Inject services={[FieldList]} /></PivotViewComponent>);
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

@@ -1,7 +1,8 @@
 import { GroupingBar, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -21,7 +22,6 @@ function App() {
         }
     }
     return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} actionBegin={actionBegin.bind(this)} showGroupingBar={true}><Inject services={[GroupingBar]}/> </PivotViewComponent>);
-}
-;
+};
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+

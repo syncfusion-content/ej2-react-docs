@@ -43,10 +43,10 @@ Operators that can be used in label filtering are:
 | NotBetween| Displays the pivot table that does not record between start and end values.|
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs306/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs306/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

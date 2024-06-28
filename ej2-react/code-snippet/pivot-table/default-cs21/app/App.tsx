@@ -1,8 +1,5 @@
-
-
 import { CalculatedField, FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent, GroupingBar } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 
 const SAMPLE_CSS = `
@@ -56,8 +53,7 @@ const SAMPLE_CSS = `
     /* Hiding filter axis in field list */
     //.e-pivotfieldlist-wrapper .e-field-list-filters {
     //    display: none;
-    //}`;
-
+    //}`;import './App.css';
 
 function App() {
 
@@ -76,13 +72,9 @@ function App() {
   return (
         <div>
             <style>{SAMPLE_CSS}</style>
-            <PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowCalculatedField={true} showFieldList={true} showGroupingBar={true}><Inject services={[CalculatedField, FieldList, GroupingBar]}/> </PivotViewComponent>
+            <PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} allowCalculatedField={true} showFieldList={true} showGroupingBar={true}><Inject services={[CalculatedField, FieldList, GroupingBar]}/> </PivotViewComponent>
         </div>
     );
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

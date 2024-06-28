@@ -1,9 +1,7 @@
-
-
 import { IDataOptions, IDataSet, PivotViewComponent, EnginePopulatingEventArgs } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -25,11 +23,7 @@ function App() {
       args.dataSourceSettings.expandAll = true;
   }
 
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} enginePopulating={enginePopulating.bind(this)} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
+  return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} enginePopulating={enginePopulating.bind(this)} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

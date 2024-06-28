@@ -41,10 +41,10 @@ The following table shows built-in toolbar options and its actions.
 > Report manipulation like save, load, rename, etc.., operations can be performed through events. In the following example, the localStorage (session storage) is used to manipulate the report operation.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs294/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs294/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -62,10 +62,10 @@ The following table shows built-in toolbar options and its actions.
 By default, all chart types are displayed in the dropdown menu included in the toolbar. However, based on the request for an application, we may need to show selective chart types on our own. This can be achieved using the [`chartTypes`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#charttypes) property. To know more about supporting chart types, [`click here`](https://ej2.syncfusion.com/react/documentation/pivotview/pivot-chart/#chart-types).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs295/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs295/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -105,10 +105,10 @@ In addition to the existing built-in toolbar items, new toolbar item(s) may also
 > The new toolbar item(s) can be added to the desired position in the toolbar using the `splice` option.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs296/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs296/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -130,10 +130,10 @@ It allows to customize the toolbar panel by using template option. It allows any
 Here, the entire toolbar panel can be framed in HTML elements that are appended at the top of the pivot table. The **id** of the HTML element needs to be set in the [`toolbarTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbartemplate) property in-order to map it to the pivot table.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs297/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs297/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -149,10 +149,10 @@ Here, the entire toolbar panel can be framed in HTML elements that are appended 
 Another option allows to frame a custom toolbar item using HTML elements and include in the toolbar panel at the desired position. The custom toolbar items can be declared as control **instance** or element **id** in the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbar) property in pivot table. 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs298/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs298/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -174,10 +174,10 @@ Another option allows to frame a custom toolbar item using HTML elements and inc
 The current pivot report can be saved as a JSON file in the desired path and loaded back to the pivot table at any time. 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs299/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs299/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -926,10 +926,10 @@ The event [`saveReport`](https://ej2.syncfusion.com/react/documentation/api/pivo
 The [`toolbarRender`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbarrender) event is triggered when the toolbar is rendered. It has the `customToolbar` parameter. This event helps to customize the built-in toolbar items and to [`include new toolbar item(s)`](https://ej2.syncfusion.com/react/documentation/pivotview/tool-bar/#adding-custom-option-to-the-toolbar).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs300/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs300/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -949,10 +949,10 @@ The pivot table (or) pivot chart can be exported as a pdf, excel, csv etc.,  doc
 For example, you can add the header and footer for the pdf document by setting the `header` and `footer` properties for the `pdfExportProperties` in the [`beforeExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#beforeexport) event.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs301/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs301/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -995,10 +995,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
     In the below sample, toolbar UI actions such as add new report and save current report can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs302/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs302/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
@@ -1038,10 +1038,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 * `actionInfo`: It holds the unique information about the current UI action. For example, while adding new report, the event argument contains information such as report name and the action name.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs303/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs303/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
@@ -1080,10 +1080,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 * `errorInfo`: It holds the error information of the current UI action.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs304/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs304/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}

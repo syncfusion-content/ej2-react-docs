@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
 
@@ -20,6 +19,7 @@ const SAMPLE_CSS = `
     opacity: 0;
     filter: alpha(opacity=0);
 }`;
+import './App.css';
 
 function App() {
     let dataSourceSettings: IDataOptions = {
@@ -58,9 +58,8 @@ function App() {
     }
 
     return (<div className='control-pane'><div><style>{SAMPLE_CSS}</style>
-        <PivotViewComponent id='PivotView' ref={d => pivotObj = d} dataSourceSettings={dataSourceSettings} width={'100%'} height={350} dataBound={ondataBound.bind(this)}></PivotViewComponent></div>
+        <PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'} height={350} dataBound={ondataBound.bind(this)}></PivotViewComponent></div>
         <a id="save" className="btn btn-primary">Save</a><div className="fileUpload btn btn-primary"><span>Load</span><input id="files" type="file" className="upload" /></div>
     </div>);
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

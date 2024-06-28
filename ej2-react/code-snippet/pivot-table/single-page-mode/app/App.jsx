@@ -1,6 +1,5 @@
 import { PivotViewComponent, Inject } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 function data(count) {
     let result = [];
@@ -36,6 +35,7 @@ function data(count) {
     }
     return result;
 };
+import './App.css';
 
 function App() {
     var pivotObj;
@@ -59,4 +59,3 @@ function App() {
 };
 export default App;
 
-ReactDOM.render(<App />, document.getElementById('root'));

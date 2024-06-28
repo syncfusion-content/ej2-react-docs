@@ -26,10 +26,10 @@ Similar to Field List, Grouping Bar UI also comes with basic interactions like,
 * Sorting members of specific fields using sort icon.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs124/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs124/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -49,10 +49,10 @@ The grouping bar provides some additional options to customize it's UI using `gr
 The fields panel, which is positioned above the grouping bar, displays the fields that are available in the data source but are not bound in the report. The fields can be dragged and dropped into the appropriate axis. In addition, any field removed from any axes will be automatically added to the fields panel. The fields panel can be displayed by setting the [`showFieldsPanel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showfieldspanel) property in the [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#groupingbarsettings) to **true**.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs125/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs125/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -72,10 +72,10 @@ The Grouping Bar has an option to filter members of particular fields at runtime
 > By default, the filter icon is enabled in the grouping bar.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs126/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs126/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -95,10 +95,10 @@ To disable the filter icon for a specific field, set the property [`showFilterIc
 In the below sample, the filter icon of "Quarter" and "Products" fields have been hidden.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs127/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs127/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -118,10 +118,10 @@ The Grouping Bar has an option to order members of a particular fields either in
 > By default, the sort icon is enabled in the grouping bar.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs128/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs128/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -141,10 +141,10 @@ To disable the sort icon for a specific button, set the property [`showSortIcon`
 In the below sample, the sort icon of "Quarter" and "Country" fields have been hidden.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs129/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs129/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -164,10 +164,10 @@ The Grouping Bar has an option to remove a particular field at run time. In orde
 > By default, the remove icon is enabled in the grouping bar.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs130/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs130/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -187,10 +187,10 @@ To disable the remove icon for a specific button, set the property [`showRemoveI
 In the below sample, the remove icon of fields "Year", "Sold" and "Products" have been hidden.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs131/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs131/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -208,10 +208,10 @@ In the below sample, the remove icon of fields "Year", "Sold" and "Products" hav
 The Grouping Bar has an option to drag-and-drop fields between row, column, value and filter axes in-order to change report at runtime. By default, all fields are available for drag-and-drop operation in the grouping bar. To disable these fields, set the property [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#allowdraganddrop) in [`groupingBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewGroupingBarSettings.html) to **false**. This will prevent end user from changing the current report.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs132/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs132/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -231,10 +231,10 @@ To disable dragging for a specific button, set the property [`allowDragAndDrop`]
 In the below sample, the drag and drop of the fields "Year" and "Products" have been restricted.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs133/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs133/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -254,10 +254,10 @@ When a report is bound to the pivot table, fields will be automatically populate
 > The `excludeFields` property setting will be reflected in the field list UI as well, and for more information, see this [link](https://ej2.syncfusion.com/react/documentation/pivotview/field-list/#remove-specific-fields-from-displaying).
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs134/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs134/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -275,10 +275,10 @@ When a report is bound to the pivot table, fields will be automatically populate
 End user can perform calculations over a group of values using the aggregation option. The value fields bound to the field list, appears with a dropdown icon, helps to select an appropriate aggregation type at runtime. On selection, the values in the Pivot Table will be changed dynamically. By default, the icon to set aggregation type is enabled in the grouping bar. To disable this icon, set the property [`showValueTypeIcon`](https://ej2.syncfusion.com/react/documentation/api/pivotview/groupingBarSettingsModel/#showvaluetypeicon) in [`groupingBarSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#groupingbarsettings) to **false**. To know more about aggregation, [`refer`](./aggregation) here.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs135/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs135/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -298,10 +298,10 @@ To disable the dropdown icon for a specific button, set the property [`showValue
 In the below sample, the dropdown icon of field "Sold" is hidden.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs136/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs136/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -323,10 +323,10 @@ During runtime, the **Values** button in the grouping bar can be moved to a diff
 > This support is only available for relational data sources.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs137/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs137/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -348,10 +348,10 @@ The event [`onFieldDropped`](https://ej2.syncfusion.com/react/documentation/api/
 It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSettings`. In this sample we have modified the `droppedField` caption based on the `droppedAxis`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs138/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs138/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -379,10 +379,10 @@ The event [`fieldDragStart`](https://ej2.syncfusion.com/react/documentation/ap
 In the below sample, the drag operation for the fields in row axis alone is restricted.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs139/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs139/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -416,10 +416,10 @@ The event [`fieldDrop`](https://ej2.syncfusion.com/react/documentation/api/piv
 In the below sample, dropping of any fields in value axis alone is restricted.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs140/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs140/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -449,10 +449,10 @@ The event [`fieldRemove`](https://ej2.syncfusion.com/react/documentation/api/p
 In the below sample, the field "Country" could not be removed from report by any UI operations.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs141/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs141/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -480,10 +480,10 @@ The event [`aggregateMenuOpen`](https://ej2.syncfusion.com/react/documentation
 In the below sample, the aggregate types of the field "Amount" has been customized in it's dropdown menu.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs142/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs142/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -523,10 +523,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
     In the below sample, grouping bar UI actions such as sorting and filtering can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs143/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs143/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
@@ -562,10 +562,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 * `actionInfo`: It holds the unique information about the current UI action. For example, if sorting is completed, the event argument contains information such as sort order and the field name.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs144/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs144/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}
@@ -595,10 +595,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 * `errorInfo`: It holds the error information of the current UI action.
 
     {% tabs %}
-    {% highlight js tabtitle="index.jsx" %}
+    {% highlight js tabtitle="App.jsx" %}
     {% include code-snippet/pivot-table/default-cs145/app/App.jsx %}
     {% endhighlight %}
-    {% highlight ts tabtitle="index.tsx" %}
+    {% highlight ts tabtitle="App.tsx" %}
     {% include code-snippet/pivot-table/default-cs145/app/App.tsx %}
     {% endhighlight %}
     {% highlight js tabtitle="datasource.jsx" %}

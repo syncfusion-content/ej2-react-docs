@@ -1,9 +1,7 @@
-
-
 import { GroupingBar, FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent, PivotActionBeginEventArgs } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 
@@ -17,7 +15,7 @@ function App() {
   }
   let pivotObj: PivotViewComponent;
 
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} actionBegin={actionBegin.bind(this)} showFieldList={true} showGroupingBar={true}><Inject services={[FieldList, GroupingBar]} /></PivotViewComponent>);
+  return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} actionBegin={actionBegin.bind(this)} showFieldList={true} showGroupingBar={true}><Inject services={[FieldList, GroupingBar]} /></PivotViewComponent>);
   function actionBegin(args: PivotActionBeginEventArgs): void {
     if (args.actionName == 'Sort field' || args.actionName == 'Sort value') {
       args.cancel = true;
@@ -26,7 +24,3 @@ function App() {
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

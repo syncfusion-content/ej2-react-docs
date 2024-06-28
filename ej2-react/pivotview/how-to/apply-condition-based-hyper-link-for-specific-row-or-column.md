@@ -18,10 +18,10 @@ You can apply conditions for specific row or column using `label` option to show
 * `value2`: Specifies the end value.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs153/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs153/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}

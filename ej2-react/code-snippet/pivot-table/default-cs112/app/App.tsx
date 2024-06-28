@@ -1,9 +1,6 @@
-
-
 import { FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent, GroupingBar, CalculatedField } from '@syncfusion/ej2-react-pivotview';
 import { L10n } from '@syncfusion/ej2-base';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { pivotData } from './datasource';
 
 L10n.load({
@@ -45,6 +42,8 @@ L10n.load({
       }
   }
 });
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -57,11 +56,7 @@ function App() {
   }
   let pivotObj: PivotViewComponent;
   
-  return (<PivotViewComponent  ref={d => pivotObj = d} id='PivotView' height={350} enableRtl={true} locale='ar-AE' dataSourceSettings={dataSourceSettings} showFieldList={true} showGroupingBar={true} allowCalculatedField={true}><Inject services={[FieldList, GroupingBar, CalculatedField]} /></PivotViewComponent>);
+  return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} enableRtl={true} locale='ar-AE' dataSourceSettings={dataSourceSettings} showFieldList={true} showGroupingBar={true} allowCalculatedField={true}><Inject services={[FieldList, GroupingBar, CalculatedField]} /></PivotViewComponent>);
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
-

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Restrict editing in React Document editor component | Syncfusion
+title: Restrict editing in React Document Editor Component | Syncfusion
 description: Learn here all about Restrict editing in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Restrict editing 
 platform: ej2-react

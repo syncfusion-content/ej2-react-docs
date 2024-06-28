@@ -13,10 +13,10 @@ domainurl: ##DomainURL##
 The rendered pivot table can be printed directly from the browser by invoking the [`print`](https://ej2.syncfusion.com/react/documentation/api/grid/#print) method from the grid's instance. The below sample code illustrates the print option being invoked by an external button click.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs320/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs320/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -36,10 +36,10 @@ Similarly, to print the pivot chart, use the [`print`](https://ej2.syncfusion.co
 > To display the pivot chart, set the [`displayOption`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#displayoption) property to either **Chart** or **Both**. 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs321/app/App.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs321/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
