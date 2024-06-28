@@ -1,4 +1,4 @@
-export let pivotData: object[] = [
+export let pivotData: = [
     { 'In_Stock': 34, 'Sold': 51, 'Amount': 383, 'Country': 'France', 'Product_Categories': 'Accessories', 'Products': 'Bottles and Cages', 'Order_Source': 'Retail Outlets', 'Year': 'FY 2015', 'Quarter': 'Q1' },
     { 'In_Stock': 4, 'Sold': 423, 'Amount': 3595.5, 'Country': 'France', 'Product_Categories': 'Accessories', 'Products': 'Cleaners', 'Order_Source': 'Sales Person', 'Year': 'FY 2016', 'Quarter': 'Q1' },
     { 'In_Stock': 11, 'Sold': 19, 'Amount': 85.5, 'Country': 'France', 'Product_Categories': 'Bikes', 'Products': 'Touring Bikes', 'Order_Source': 'Retail Outlets', 'Year': 'FY 2017', 'Quarter': 'Q4' },

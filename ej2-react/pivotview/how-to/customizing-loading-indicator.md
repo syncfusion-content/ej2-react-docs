@@ -21,12 +21,6 @@ You can customize the appearance of the loading indicator in the pivot table by 
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs163/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs163/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs163/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs163" %}

@@ -32,12 +32,6 @@ You can also change the position, visibility, compact view, and template of the 
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs201/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs201/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs201/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs201" %}
@@ -54,12 +48,6 @@ You can display the pager UI at top or bottom of the pivot table by using the [`
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs202/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs202/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs202/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,12 +66,6 @@ Toggles and displays row and column pager. To show the column pager on the left 
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs203/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs203/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs203/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs203" %}
@@ -98,12 +80,6 @@ By hiding all except the previous and next navigation buttons, the pager UI can 
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs204/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs204/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs204/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -122,12 +98,6 @@ In the following example, row pager has been disabled by setting the [`showRowPa
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs205/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs205/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs205/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs205" %}
@@ -142,12 +112,6 @@ By using the [`showRowPageSize`](https://ej2.syncfusion.com/react/documentation/
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs206/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs206/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs206/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -168,12 +132,6 @@ In the following example, the "Rows per page" dropdown is set with user-defined 
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/default-cs207/app/App.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/default-cs207/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/default-cs207/app/datasource.tsx %}
-{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs207" %}
@@ -188,12 +146,6 @@ The [`template`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pa
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/pivot-table/pagingTemplate-cs1/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/pivot-table/pagingTemplate-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/pivot-table/pagingTemplate-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
