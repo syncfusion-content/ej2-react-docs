@@ -7,6 +7,7 @@ function App() {
   const [message, setMessage] = useState('');
   const actionBegin = (args: SortEventArgs) => {
     if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
+      setMessage(args.requestType + ' action cancelled for ' + args.columnName + ' column');
       args.cancel = true;
     }
   }

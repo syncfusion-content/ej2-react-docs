@@ -32,16 +32,17 @@ function  App (){
     const  fields = { dataSource: editingResources, id: 'resourceId', text: 'resourceName' };
     const allowDragAndDrop = true;
    function  nodeDragStop(args) {
+        args.cancel = true;
         let chartEle = closest(args.target, '.e-chart-row');
         let gridEle = closest(args.target, '.e-row');
         if(gridEle){
           var index = ganttInstance.treeGrid.getRows().indexOf(gridEle);
           ganttInstance.selectRow(index);
         }
-     if (chartEle) {
-       var index = chartEle.ariaRowIndex;
-       ganttInstance.selectRow(Number(index));
-     }
+        if (chartEle) {
+          var index = chartEle.rowIndex;
+          ganttInstance.selectRow(index);
+        }
         let record = args.draggedNodeData;
         let selectedData = ganttInstance.flatData[ganttInstance.selectedRowIndex];
         let selectedDataResource = selectedData.taskData.resources;
@@ -58,10 +59,6 @@ function  App (){
                 resources: resources
             };
             ganttInstance.updateRecordByID(data);
-            var elements = document.querySelectorAll('.e-drag-item');
-            while (elements.length > 0 && elements[0].parentNode) {
-                elements[0].parentNode.removeChild(elements[0]);
-            }
         }
     };
 
