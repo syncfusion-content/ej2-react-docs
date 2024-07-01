@@ -93,7 +93,7 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs4" %}
 
-### Import an excel document using file uploader
+### Open an excel file using a file uploader
 
 If you explore your machine to select and upload an excel document using the file uploader, you will receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/react/documentation/api/uploader/#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/react/documentation//api/spreadsheet/#open) method to see the appropriate output.
 
@@ -147,7 +147,7 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/open-from-json" %}
 
-### To Open Spreadsheet data as a Base64 string
+### Open an excel file from Base64 string data
 
 In the Syncfusion Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](../api/spreadsheet/#open) method in the spreadsheet.
 
@@ -350,9 +350,9 @@ The following code snippet demonstrates how to configure the serialization optio
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/save-as-json" %}
 
-### To Save Spreadsheet data as a Base64 string
+### To save data as a Base64 string
 
-In the Spreadsheet component, there is currently no direct option to save and open data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`.
+In the Spreadsheet component, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`.
 
 > You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforesave) event.
 

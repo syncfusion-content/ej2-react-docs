@@ -143,7 +143,7 @@ By customizing sort comparer, you can define the sort action as desired.
 
 For custom sort comparer example, refer to the [`Sort a range by custom list`] below.
 
-### Sort a range by using custom list
+### Sort a range by custom list
 
 You can also define the sorting of cell values based on your own customized personal list. In this article, custom list is achieved using `custom sort comparer`.
 
@@ -185,7 +185,6 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-com
 
 ## See Also
 
-* [Sort a range by custom list](./how-to/sort-a-range-by-custom-list)
 * [Hyperlink](../spreadsheet/link)
 * [Filtering](../spreadsheet/filter)
 * [Undo Redo](../spreadsheet/undo-redo)

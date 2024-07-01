@@ -87,8 +87,6 @@ Furthermore, you can assign actions to these custom items by utilizing the [cont
  
 The following example demonstrates how to add custom context menu items in the Grid component.
 
-The following example demonstrates how to add custom context menu items in the Grid component.
-
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/context-menu-cs2/app/App.jsx %}
