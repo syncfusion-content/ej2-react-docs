@@ -141,7 +141,30 @@ By customizing sort comparer, you can define the sort action as desired.
 
 > * The `sortComparer` is an optional property of `sortDescriptor`.
 
-For custom sort comparer example, refer to the [`Sort a range by custom list`](./how-to/sort-a-range-by-custom-list) in the `how-to` section.
+For custom sort comparer example, refer to the [`Sort a range by custom list`] below.
+
+### Sort a range by custom list
+
+You can also define the sorting of cell values based on your own customized personal list. In this article, custom list is achieved using `custom sort comparer`.
+
+In the following demo, the `Trustworthiness` column is sorted based on the custom lists `Perfect`, `Sufficient`, and `Insufficient`.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/custom-sort-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/custom-sort-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/custom-sort-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/custom-sort-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/spreadsheet/custom-sort-cs1" %}
 
 ## Known error validations
 
@@ -162,7 +185,6 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-com
 
 ## See Also
 
-* [Sort a range by custom list](./how-to/sort-a-range-by-custom-list)
 * [Hyperlink](../spreadsheet/link)
 * [Filtering](../spreadsheet/filter)
 * [Undo Redo](../spreadsheet/undo-redo)
