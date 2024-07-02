@@ -48,8 +48,7 @@ System.config({
         '*.json': { loader: 'plugin-json' },
         'typescript': {
             "exports": "ts"
-        },
-        '*.css': { loader: 'plugin-css' }
+        }
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },

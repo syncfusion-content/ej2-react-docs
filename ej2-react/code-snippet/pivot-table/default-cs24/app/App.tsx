@@ -2,7 +2,6 @@ import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-reac
 import { DataManager, JsonAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { pivotData } from './datasource';
-import './App.css';
 
 function App() {
   let pivotObj: PivotViewComponent;

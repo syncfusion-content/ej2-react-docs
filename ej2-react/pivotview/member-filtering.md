@@ -80,3 +80,4 @@ User can load the members based on the level count by using the property [`level
 
 * [Label Filtering](./label-filtering)
 * [Value Filtering](./value-filtering)
+* [How do I filter selected members from search and non-search results in the member filter dialog?](https://support.syncfusion.com/kb/article/14802/how-do-i-filter-selected-members-from-search-and-non-search-results-in-the-member-filter-dialog)

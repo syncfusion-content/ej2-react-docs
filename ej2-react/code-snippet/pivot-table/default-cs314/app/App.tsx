@@ -4,7 +4,6 @@ import {
 import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
 import * as React from 'react';
 import { pivotData } from './datasource';
-import './App.css';
 
 function App() {
 

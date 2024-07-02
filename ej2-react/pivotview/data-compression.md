@@ -40,3 +40,7 @@ When binding one million raw data, the pivot table processes all raw data to gen
 - If you use any of the above aggregations, they will result in the aggregation type **"Sum"**.
 - **"DistinctCount"** will act as **"Count"** aggregation type.
 - In the calculated field, an existing field can be inserted without altering its default aggregation type. Even if changed, it would revert to the default aggregation type for calculation.
+
+## See Also
+
+* [Performance Optimization in React Pivot Table with Data Compression](https://www.syncfusion.com/blogs/post/performance-optimization-in-react-pivot-table)

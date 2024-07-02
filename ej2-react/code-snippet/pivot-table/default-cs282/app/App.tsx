@@ -1,7 +1,6 @@
 import { GroupingBar, IDataOptions, IDataSet, Inject, PivotViewComponent, HeadersSortEventArgs } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { pivotData } from './datasource';
-import './App.css';
 
 function App() {
 

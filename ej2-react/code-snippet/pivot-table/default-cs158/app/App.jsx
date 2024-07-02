@@ -2,8 +2,6 @@ import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { Grid, Sort, Filter, Group } from '@syncfusion/ej2-grids';
 import * as React from 'react';
 import { pivotData } from './datasource';
-import './App.css';
-
 function App() {
     let editSettings = {
         allowAdding: true, allowDeleting: true, allowEditing: true, mode: 'Normal'
