@@ -4,8 +4,6 @@ import * as React from 'react';
 import { pivotData } from './datasource';
 
 enableRipple(false);
-import './App.css';
-
 function App() {
     let dataSourceSettings = {
         expandAll: false,

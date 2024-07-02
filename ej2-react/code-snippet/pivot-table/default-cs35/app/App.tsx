@@ -1,7 +1,6 @@
 import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { noData } from './datasource';
-import './App.css';
 
 function App() {
 

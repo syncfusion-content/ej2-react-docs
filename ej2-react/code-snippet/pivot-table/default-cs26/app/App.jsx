@@ -2,8 +2,6 @@ import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { csvdata } from './datasource';
-import './App.css';
-
 function App() {
     let dataSourceSettings = {
         dataSource: getCSVData(),

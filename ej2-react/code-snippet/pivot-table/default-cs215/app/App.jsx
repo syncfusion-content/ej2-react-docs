@@ -3,8 +3,6 @@ import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { pivotData, base64AlgeriaFont } from './datasource';
 import { PdfTrueTypeFont } from '@syncfusion/ej2-pdf-export';
-import './App.css';
-
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],

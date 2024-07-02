@@ -4,7 +4,6 @@ import * as React from 'react';
 import { pivotData } from './datasource';
 import { PdfExportProperties } from '@syncfusion/ej2-grids';
 import { image } from './image';
-import './App.css';
 
 function App() {
   let dataSourceSettings: IDataOptions = {

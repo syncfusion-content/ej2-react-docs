@@ -263,3 +263,7 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs8" %}
+
+## See Also
+
+* [Excel-like Computation Types in PivotGrid](https://www.syncfusion.com/blogs/post/excel-like-computation-types-in-pivotgrid1)

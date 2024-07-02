@@ -2,7 +2,6 @@ import { FieldList, IDataOptions, Inject, PivotViewComponent } from '@syncfusion
 import { enableRipple } from '@syncfusion/ej2-base';
 import * as React from 'react';
 enableRipple(false);
-import './App.css';
 
 function App() {
 
