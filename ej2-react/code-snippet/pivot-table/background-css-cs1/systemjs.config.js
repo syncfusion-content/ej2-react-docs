@@ -48,7 +48,7 @@ System.config({
         'typescript': {
             "exports": "ts"
         },
-        '*.css': { loader: 'plugin-css' }
+        '*.css': { loader: 'css' }
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },
@@ -57,6 +57,3 @@ System.config({
 });
 
 System.import('app');
-
-
-

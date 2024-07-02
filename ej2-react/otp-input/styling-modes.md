@@ -42,7 +42,7 @@ You can use the filled style by setting the [stylingMode](https://ej2.syncfusion
 
 {% previewsample "page.domainurl/code-snippet/otp-input/styling-modes/filled" %}
 
-## Underline  mode
+## Underline mode
 
 You can use the underline style by setting the [stylingMode](https://ej2.syncfusion.com/react/documentation/api/otp-input/#stylingmode) property to [underlined](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputStyle/).
 
