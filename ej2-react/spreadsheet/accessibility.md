@@ -116,4 +116,4 @@ The accessibility compliance of the Spreadsheet component is shown in the follow
 
 ## See also
 
-* [Accessibility in Syncfusion React components](../common/accessibility)
+* [Accessibility in Syncfusion React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)

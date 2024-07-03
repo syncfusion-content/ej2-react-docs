@@ -247,5 +247,5 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-ui-com
 
 * [Editing](./editing)
 * [Formatting](./formatting)
-* [Open](./open)
-* [Save](./save)
+* [Open](./open-save#open)
+* [Save](./open-save#save)
