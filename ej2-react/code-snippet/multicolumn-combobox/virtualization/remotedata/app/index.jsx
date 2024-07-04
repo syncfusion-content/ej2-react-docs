@@ -1,4 +1,5 @@
 import { MultiColumnComboBoxComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-multicolumn-combobox';
+import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 

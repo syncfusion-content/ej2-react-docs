@@ -33,7 +33,7 @@ function App() {
 
   return (
     // specifies the tag for render the MultiColumn ComboBox component
-    <MultiColumnComboBoxComponent id="multicolumn" dataSource={empData} fields={fields} text={text} disabled={true}>
+    <MultiColumnComboBoxComponent id="multicolumn" dataSource={empData} fields={fields} text={text}>
         <ColumnsDirective>
             <ColumnDirective field='EmpID' header='Employee ID' width={90} displayAsCheckBox={true}></ColumnDirective>
             <ColumnDirective field='Name' header='Name' width={90}></ColumnDirective>

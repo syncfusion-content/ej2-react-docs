@@ -1,6 +1,4 @@
-
-
-import { MultiColumnComboBoxComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-multicolumn-combobox';
+import { MultiColumnComboBoxComponent, ColumnsDirective, ColumnDirective, SortOrder} from '@syncfusion/ej2-react-multicolumn-combobox';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
@@ -48,5 +46,3 @@ function App() {
   );
 }
 ReactDOM.render(<App />, document.getElementById('multicolumn'));
-
-
