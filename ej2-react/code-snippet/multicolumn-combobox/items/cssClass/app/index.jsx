@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 
 function App() {
   // defined the array of object data
-  const empData: { [key: string]: Object }[] = [
+  const empData = [
     { "EmpID": 1001, "Name": "Andrew Fuller", "Designation": "Team Lead", "Country": "England" },
     { "EmpID": 1002, "Name": "Robert", "Designation": "Developer", "Country": "USA" },
     { "EmpID": 1003, "Name": "Michael", "Designation": "HR", "Country": "Russia" },
@@ -27,9 +27,9 @@ function App() {
     { "EmpID": 1020, "Name": "James", "Designation": "Developer", "Country": "China" },
 ];
   // maps the appropriate column to fields property
-  const fields: Object = { text: 'Name', value: 'EmpID' };
+  const fields = { text: 'Name', value: 'EmpID' };
   // set text to multicolumn ComboBox input element
-  const text: string = 'Michael';
+  const text = 'Michael';
 
   return (
     // specifies the tag for render the MultiColumn ComboBox component

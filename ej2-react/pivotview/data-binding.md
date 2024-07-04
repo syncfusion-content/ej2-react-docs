@@ -494,5 +494,3 @@ The event [`enginePopulating`](https://ej2.syncfusion.com/react/documentation/ap
 * [Customize number, date, and time values](./how-to/customize-number-date-and-time-values)
 * [Server Side Engine (Optional)](./server-side-pivot-engine)
 * [How to customize null values in Pivot Table?](https://support.syncfusion.com/kb/article/14432/how-to-customize-null-values-in-pivot-table)
-* [Serializing & Deserializing Pivot Grid for WinForms](https://www.syncfusion.com/blogs/post/serializing-and-deserializing-the-pivot-grid-for-windows-forms)
-* [PivotGrid Supports OLAP & Relational Data Sources](https://www.syncfusion.com/blogs/post/pivotgrid-now-supports-both-olap-and-relational-data-sources-within-the-same-grid)
