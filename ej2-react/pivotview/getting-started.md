@@ -366,6 +366,8 @@ npm start
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/getting-started-cs7" %}
 
+For more information and to access the quick start project, visit: [GitHub Repository](https://github.com/SyncfusionExamples/getting-started-with-the-react-pivot-table-component)
+
 > You can also explore our [React Pivot Table example](https://ej2.syncfusion.com/react/demos/#/material/pivot-table/default) that shows how to rendering of the pivot table with drill-up and drill-down functionality bound to a relational report.
 
 ## See Also
