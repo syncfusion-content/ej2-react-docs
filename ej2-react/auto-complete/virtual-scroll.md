@@ -57,6 +57,23 @@ The following sample displays the OrderId from the `Orders` Data Service.
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/virtual-scroll-remote" %}
 
+## Customizing items count in virtualization 
+
+When the `enableVirtualization` property is enabled, the `take` property provided by the user within the Query parameter at the initial state or during the `actionBegin` event will be considered. Internally, it calculates the items that fit onto the current page (i.e., probably twice the amount of the popup's height). If the user-provided take value is less than the minimum number of items that fit into the popup, the user-provided take value will not be considered.
+
+The following sample shows the example for Customizing items count in virtualization.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/autocomplete/virtual-scroll-items/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/autocomplete/virtual-scroll-items/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Grouping
 
