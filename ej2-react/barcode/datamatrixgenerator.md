@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Datamatrixgenerator in React Barcode component | Syncfusion
-description: Learn here all about Datamatrixgenerator in Syncfusion React Barcode component of Syncfusion Essential JS 2 and more.
+description: Learn here all about datamatrixgenerator in Syncfusion React Barcode component, its elements, and more.
 control: Datamatrixgenerator 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Datamatrixgenerator in React Barcode component
 
-# Data Matrix
+## Data Matrix
 
 DataMatrix Barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumeric. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode reader and mobile phones.
 
