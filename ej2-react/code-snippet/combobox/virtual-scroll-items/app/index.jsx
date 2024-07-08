@@ -1,4 +1,4 @@
-import { MultiSelectComponent, Inject, VirtualScroll } from '@syncfusion/ej2-react-dropdowns';
+import { ComboBoxComponent, Inject, VirtualScroll } from '@syncfusion/ej2-react-dropdowns';
 import { Query } from '@syncfusion/ej2-data';
 
 import * as React from 'react';
@@ -23,9 +23,9 @@ export default class App extends React.Component {
     render() {
         return (
             // specifies the tag for render the DropDownList component
-            <MultiSelectComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" enableVirtualization={true} query={this.query}  allowFiltering={false} actionBegin={this.Begin} fields={this.fields} popupHeight="200px" >
+            <ComboBoxComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" enableVirtualization={true} query={this.query}  allowFiltering={false} actionBegin={this.Begin} fields={this.fields} popupHeight="200px" >
                 <Inject services={[VirtualScroll]} />
-            </MultiSelectComponent>);
+            </ComboBoxComponent>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('sample'));

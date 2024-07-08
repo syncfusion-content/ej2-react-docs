@@ -1,4 +1,4 @@
-import { MultiSelectComponent, Inject, VirtualScroll } from '@syncfusion/ej2-react-dropdowns';
+import { AutoCompleteComponent, Inject, VirtualScroll } from '@syncfusion/ej2-react-dropdowns';
 import { Query } from '@syncfusion/ej2-data';
 
 import * as React from 'react';
@@ -12,7 +12,7 @@ export default class App extends React.Component {
             text: `Item ${i + 1}`,
         }));
     }
-    fields = { text: 'text', value: 'id' };
+    fields = { value: 'text' };
     // bind the Query instance to query property
     query = new Query().take(40);
 
@@ -23,9 +23,9 @@ export default class App extends React.Component {
     render() {
         return (
             // specifies the tag for render the DropDownList component
-            <MultiSelectComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" enableVirtualization={true} query={this.query}  allowFiltering={false} actionBegin={this.Begin} fields={this.fields} popupHeight="200px" >
+            <AutoCompleteComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" enableVirtualization={true} query={this.query} actionBegin={this.Begin} fields={this.fields} popupHeight="200px" >
                 <Inject services={[VirtualScroll]} />
-            </MultiSelectComponent>);
+            </AutoCompleteComponent>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('sample'));

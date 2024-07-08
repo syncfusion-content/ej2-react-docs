@@ -60,6 +60,24 @@ The following sample displays the OrderId from the `Orders` Data Service.
  {% previewsample "page.domainurl/code-snippet/combobox/virtual-scroll-remote" %}
 
 
+## Customizing items count in virtualization 
+
+When the `enableVirtualization` property is enabled, the `take` property provided by the user within the Query parameter at the initial state or during the `actionBegin` event will be considered. Internally, it calculates the items that fit onto the current page (i.e., probably twice the amount of the popup's height). If the user-provided take value is less than the minimum number of items that fit into the popup, the user-provided take value will not be considered.
+
+The following sample shows the example for Customizing items count in virtualization.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/combobox/virtual-scroll-items/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/combobox/virtual-scroll-items/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Grouping
 
 The Combobox component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [groupBy](../api/combo-box/#fields) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding virtualization, enhancing performance and responsiveness.
@@ -79,7 +97,7 @@ The following sample shows the example for Grouping with Virtualization.
 
  {% previewsample "page.domainurl/code-snippet/combobox/virtual-scroll-group" %}
 
- ## Filtering with Virtualization
+## Filtering with Virtualization
 
 The ComboBox component supports Filtering with Virtualization. The ComboBox includes a built-in feature that enables data filtering when the [`allowFiltering`](../api/combo-box/#allowfiltering) option is enabled. In the context of Virtual Scrolling, the filtering process operates in response to the typed characters. Specifically, the DropDownList sends a request to the server, utilizing the full data source, to achieve filtering. Before initiating the request, an action event is triggered. Upon successful retrieval of data from the server, an action complete event is triggered. The initial data is loaded when the popup is opened. Whether the filter list has a selection or not, the popup closes.
 

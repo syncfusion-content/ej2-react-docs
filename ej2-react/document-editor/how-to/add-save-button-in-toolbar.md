@@ -1,24 +1,18 @@
 ---
 layout: post
-title: Customize tool bar in React Document editor component | Syncfusion
-description: Learn here all about Customize tool bar in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Customize tool bar 
+title: Add save button in React Document editor component | Syncfusion
+description: Learn here to add save button in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+control: Add save button tool bar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize tool bar in React Document editor component
+# Add save button in React Document editor toolbar
 
-## How to customize existing toolbar in DocumentEditorContainer
+## To add a save button to the existing toolbar in DocumentEditorContainer
 
-Document Editor Container allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
-
-* Add - New items can defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/#toolbaritems) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
-
-* Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/#toolbaritems) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/document-editor/toolbarItem/).
-
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/toolbar/#enableItems)
+DocumentEditorContainer allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/#toolbaritems) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
 
 {% raw %}
 ```ts
@@ -31,13 +25,16 @@ Document Editor Container allows you to customize(add, show, hide, enable, and d
       render() {
           //Custom toolbar item.
           let toolItem: CustomToolbarItemModel = {
-              prefixIcon: "e-de-ctnr-lock",
-              tooltipText: "Disable Image",
-              text: "Disable Image",
-              id: "Custom"
+            prefixIcon: "e-save icon",
+            tooltipText: "Save the Document",
+            text: "Save",
+            id: "save"
           };
           let items = [
+              "New",
+              "Open",
               toolItem,
+              "Separator",
               "Undo",
               "Redo",
               "Separator",
@@ -82,15 +79,15 @@ Document Editor Container allows you to customize(add, show, hide, enable, and d
       }
       onToolbarClick = (args: ClickEventArgs): void => {
           switch (args.item.id) {
-              case "Custom":
-                  //Disable image toolbar item.
-                  this.container.toolbar.enableItems(4, false);
-                  break;
+              case 'save':
+                //Save the document(Download the document)
+                this.container.documentEditor.save('sample', 'Docx');
+                break;
               default:
                   break;
           }
       };
-  }
+    }
 ```
 {% endraw %}
 
