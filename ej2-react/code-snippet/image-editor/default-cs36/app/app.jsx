@@ -4,7 +4,7 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import './index.css';
+
 export default class App extends React.Component {
     toolbar = [];
     imgObj;

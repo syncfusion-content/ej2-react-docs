@@ -173,7 +173,7 @@ The uploader component allows you to set external target element as drop area us
 
 ### Customize drop area
 
-You can customize the appearance of drop area by overriding the default drop area styles. The class “” and “” is available to handle this customization.
+You can customize the appearance of drop area by overriding the default drop area styles. The class **e-upload-drag-hover** is available to handle this customization.
 
 `[Class-component]`
 

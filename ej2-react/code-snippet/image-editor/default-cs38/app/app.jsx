@@ -3,7 +3,6 @@ import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import './index.css';
 
 export default class App extends React.Component {
     fontFamily = { default: 'Arial', items: [{id: 'arial', text: 'Arial'}, {id: 'brush script mt', text: 'Brush Script MT'},

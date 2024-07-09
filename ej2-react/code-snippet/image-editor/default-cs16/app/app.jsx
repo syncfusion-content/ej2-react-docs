@@ -2,7 +2,6 @@
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import './index.css';
 
 export default class App extends React.Component {
     toolbar = ['Annotate', "Line", "Rectangle", "Text", 'ZoomIn', 'ZoomOut', { text: 'Custom' }];
