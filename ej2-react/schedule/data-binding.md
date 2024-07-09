@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in React Schedule component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Schedule component, its elements, and more.
+description: Learn here all about Data binding in Syncfusion Essential React Schedule component, its elements, and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
