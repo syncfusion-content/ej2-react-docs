@@ -152,7 +152,7 @@ The pre-defined icon size is present in the available classes listed below.
 
 The Syncfusion React icons can be customized with custom color and size by overriding the `e-icons` class. Customizing the icons in the library can be useful for making the icons more visually appealing and fitting to the design of the application. For example, a user can change the color of an icon to match the color scheme of their application, or increase the size of an icon to make it more visible on smaller screens. It may also be useful for creating a consistent look and feel across different parts of the application. Overall, customizing the icons in the library can improve the overall user experience of the application.
 
-In the example below, the icon colour is customized with custom color.
+In the example below, the icon color is customized with custom color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
