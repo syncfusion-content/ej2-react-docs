@@ -3,7 +3,6 @@ import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { L10n } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import './index.css';
 
 L10n.load({
     'de-DE': {
