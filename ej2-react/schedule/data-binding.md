@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in React Schedule component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Data binding in Syncfusion Essential React Schedule component, its elements, and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
@@ -81,7 +81,7 @@ This method greatly improves the component's performance by reducing the data th
 
 The following image represents how the parameters are passed using ODataV4 filter.
 
-![ODataV4 filter](images/odatav4-filter.jpg)
+![ODataV4 filter in React Rich Text](images/odatav4-filter-in-react-rich-text.jpg)
 
 ### Using custom adaptor
 
