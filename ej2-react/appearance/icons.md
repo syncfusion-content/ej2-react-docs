@@ -119,7 +119,7 @@ The following steps explain the direct rendering of the Syncfusion icon in the H
 
 ### Icon size
 
-The `ej2-icons` package offers options to display icons in different size modes. A user can use different icon sizes in their application based on touch or mouse mode. If the user is using touch mode, add `e-large` class to the element to make the icon easily interactable, or add the `e-small` or `e-medium` class in mouse mode.
+The `ej2-icons` package offers options to display icons in different size modes. A user can use different icon sizes in their application based on touch or mouse mode. If the user is using touch mode, add `e-large` class to the element to make more accessible for touch interactions, or add the `e-small` or `e-medium` class in mouse mode.
 
 The pre-defined icon size is present in the available classes listed below.
 * `e-small` - Sets the icon size as `8px`.
