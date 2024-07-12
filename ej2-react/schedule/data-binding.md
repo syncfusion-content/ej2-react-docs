@@ -17,7 +17,7 @@ The Scheduler uses `DataManager`, which supports both RESTful data service bindi
 
 ## Binding local data
 
-To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#datasource) option of the scheduler within the `eventSettings` property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
+To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#datasource) option of the scheduler within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/) property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,11 +35,11 @@ To bind local JSON data to the Scheduler, you can simply assign a JavaScript obj
 
 > By default, `DataManager` uses `JsonAdaptor` for binding local data.
 
-You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
+> You can also bind different field names to the default event fields as well as include additional `custom fields` to the event object collection which can be referred [here](./appointments/#event-fields).
 
 ## Binding remote data
 
-Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#datasource) property within `eventSettings`.
+Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#datasource) property within  [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/).
 
 ### Using ODataV4Adaptor
 
@@ -323,7 +323,7 @@ namespace ScheduleSample.Controllers
 
 ## Configuring Scheduler with Google API service
 
-We have assigned our custom created Google Calendar url to the DataManager and assigned the same to the Scheduler `dataSource`. Since the events data retrieved from the Google Calendar will be in its own object format, therefore it needs to be resolved manually within the Scheduler’s `dataBinding` event. Within this event, the event fields needs to be mapped properly and then assigned to the result.
+We have assigned our custom created Google Calendar url to the DataManager and assigned the same to the Scheduler `dataSource`. Since the events data retrieved from the Google Calendar will be in its own object format, therefore it needs to be resolved manually within the Scheduler’s [`dataBinding`](https://ej2.syncfusion.com/react/documentation/api/schedule#databinding) event. Within this event, the event fields needs to be mapped properly and then assigned to the result.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

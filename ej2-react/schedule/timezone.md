@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Timezone in React Schedule component
 
-The Scheduler makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the `timezone` property needs to be used. Apart from the default action of applying specific timezone to the Scheduler, it is also possible to set different time zone values for each appointments through the properties `startTimezone` and `endTimezone` which can be defined as separate fields within the event fields collection.
+The Scheduler makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/#timezone) property needs to be used. Apart from the default action of applying specific timezone to the Scheduler, it is also possible to set different time zone values for each appointments through the properties `startTimezone` and `endTimezone` which can be defined as separate fields within the event fields collection.
 
 >Note: **timezone** property only applicable for the appointment processing and current time indication.
 
@@ -40,7 +40,7 @@ The following code example displays an appointment from 9.00 AM to 10.00 AM when
 
 ## Scheduler set to specific timezone
 
-When a time zone is set to Scheduler through `timezone` property, the appointments will be displayed exactly based on the Scheduler timezone regardless of its client timezone. In the following code example, appointments will be displayed based on Eastern Time (UTC -05:00).
+When a time zone is set to Scheduler through [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/#timezone) property, the appointments will be displayed exactly based on the Scheduler timezone regardless of its client timezone. In the following code example, appointments will be displayed based on Eastern Time (UTC -05:00).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -58,7 +58,7 @@ When a time zone is set to Scheduler through `timezone` property, the appointmen
 
 ## Display events on same time everywhere with no time difference
 
-Setting `timezone` to UTC for Scheduler will display the appointments on same time as in the database for all the users in different time zone.
+Setting [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/#timezone) to UTC for Scheduler will display the appointments on same time as in the database for all the users in different time zone.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
