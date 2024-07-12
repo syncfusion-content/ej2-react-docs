@@ -28,7 +28,7 @@ In case, if you need to add some other additional fields to the editor window, t
 
 ### Creation using addEvent method
 
-The appointments can be created dynamically by using `addEvent` method. Either you can add a single or a collection of appointment objects using `addEvent` method. The following code example let you know how to use the `addEvent` method to create multiple appointments simultaneously.
+The appointments can be created dynamically by using  [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent) method. Either you can add a single or a collection of appointment objects using [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent) method. The following code example let you know how to use the [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent) method to create multiple appointments simultaneously.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -95,7 +95,7 @@ Additionally, the regex condition has been added to the Location field, so that 
         
 {% previewsample "page.domainurl/code-snippet/schedule/events-cs38" %}
 
-You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the `actionBegin` event.
+You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionbegin) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -126,9 +126,9 @@ You can open the default editor window filled with appointment details by double
 
 ### Updating using saveEvent method
 
-The appointments can be edited and updated manually using the `saveEvent` method. The following code examples shows how to edit the normal and recurring events.
+The appointments can be edited and updated manually using the [`saveEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#saveevent) method. The following code examples shows how to edit the normal and recurring events.
 
-**Normal event** - Here, an event with ID `3` is edited and its subject is changed with a new text. When the modified data object is passed onto the `saveEvent` method, the changes gets reflected onto the original event. The `Id` field is mandatory in this edit process, where the modified event object should hold the valid `Id` value that exists in the Scheduler data source.
+**Normal event** - Here, an event with ID `3` is edited and its subject is changed with a new text. When the modified data object is passed onto the [`saveEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#saveevent) method, the changes gets reflected onto the original event. The [`Id`](https://ej2.syncfusion.com/react/documentation/api/schedule/field/#id) field is mandatory in this edit process, where the modified event object should hold the valid [`Id`](https://ej2.syncfusion.com/react/documentation/api/schedule/field/#id) value that exists in the Scheduler data source.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -144,7 +144,7 @@ The appointments can be edited and updated manually using the `saveEvent` method
         
 {% previewsample "page.domainurl/code-snippet/schedule/app-crud-cs2" %}
 
-**Recurring event** - The following code example shows how to edit a single occurrence of a recurring event. In this case, the modified data should hold an additional field namely `RecurrenceID` mapping to its parent recurring event's Id value. Also, this modified occurrence will be considered as a new event in the Scheduler dataSource, where it is linked with its parent event through the `RecurrenceID` field value. The `saveEvent` method takes 2 arguments, first one accepting the modified event data object and second argument accepting either of the 2 text values - `EditOccurrence` or `EditSeries`.
+**Recurring event** - The following code example shows how to edit a single occurrence of a recurring event. In this case, the modified data should hold an additional field namely `RecurrenceID` mapping to its parent recurring event's Id value. Also, this modified occurrence will be considered as a new event in the Scheduler dataSource, where it is linked with its parent event through the `RecurrenceID` field value. The [`saveEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#saveevent) method takes 2 arguments, first one accepting the modified event data object and second argument accepting either of the 2 text values - `EditOccurrence` or `EditSeries`.
 
 When the second argument is passed as `EditOccurrence`, which means that the passed event data is a single modified occurrence - whereas if the second argument is passed as `EditSeries`, it means that the modified data needs to be edited as a whole series and therefore no new event object will be maintained in the Scheduler dataSource.
 
@@ -305,7 +305,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 ### How to edit from the current and following events of a series
 
-The recurring appointments can be edited from current and following events when enable the property `editFollowingEvents`.
+The recurring appointments can be edited from current and following events when enable the property [`editFollowingEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#editfollowingevents)..
 
 **Editing Following Events** - When you double click on a recurring event, a popup prompts you to choose either to edit the single event or Edit Following Events or entire series. From this, if you choose to select **EDIT FOLLOWING EVENTS** option, a current and following events of the recurring appointment will be edited. The following process takes place while editing a following events,
 
@@ -386,7 +386,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 ### Restricting edit action based on specific criteria
 
-You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the `actionBegin` event.
+You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionbegin) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -418,9 +418,9 @@ When you double click an event, the default editor window will be opened which i
 
 ### Deletion using deleteEvent method
 
-The appointments can be removed manually using the `deleteEvent` method. The following code examples shows how to edit the normal and recurring events.
+The appointments can be removed manually using the [`deleteEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#deleteevent) method. The following code examples shows how to edit the normal and recurring events.
 
-**Normal event** - You can delete the normal appointments of Scheduler by simply passing its `Id` value or the entire event object collection to the `deleteEvent` method.
+**Normal event** - You can delete the normal appointments of Scheduler by simply passing its `Id` value or the entire event object collection to the [`deleteEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#deleteevent) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -544,7 +544,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 ### How to delete only the current and following events of a series
 
-The recurring events can be deleted from current and following events only when enable `editFollowingEvents` property.
+The recurring events can be deleted from current and following events only when enable [`editFollowingEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/#editfollowingevents) property.
 
 **Delete Following Events** - When you attempt to delete the recurring events, a popup prompts you to choose either to delete the single event or Following Events or entire series. From this, if you choose to select **FOLLOWING EVENT** option, a current and following events of the recurring appointment alone will be removed. The following process takes place while removing a single occurrence,
 

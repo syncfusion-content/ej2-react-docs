@@ -8,9 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Chips component
 
 This section explains how to create a simple Chip and to configure the Chip component.
+
+To get start quickly with React Chips, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=KH_Bi3yTOZ4" %}
 
 ## Dependencies
 

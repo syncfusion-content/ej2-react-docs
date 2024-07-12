@@ -16,7 +16,7 @@ The year view of our scheduler displays all the 365 days and their related appoi
 * [`monthsCount`](https://ej2.syncfusion.com/react/documentation/api/schedule/#monthscount)
 * [`monthHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/#monthheadertemplate)
 
-In the following code example, you can see how to render only the last six months of a year in the scheduler. To start with the month of  June, `firstMonthYear` is set to 6 and `monthsCount` is set to 6 to render only 6 months.
+In the following code example, you can see how to render only the last six months of a year in the scheduler. To start with the month of  June, [`firstMonthOfYear`](https://ej2.syncfusion.com/react/documentation/api/schedule/#firstmonthofyear) is set to 6 and [`monthsCount`](https://ej2.syncfusion.com/react/documentation/api/schedule/#monthscount) is set to 6 to render only 6 months.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
