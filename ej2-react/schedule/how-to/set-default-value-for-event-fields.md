@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set default value for event fields in React Schedule component | Syncfusion
+title: Set Default Values for React Schedule Event Fields | Syncfusion
 description: Learn here all about Set default value for event fields in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
 control: Set default value for event fields 
 platform: ej2-react
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set default value for event fields in React Schedule component
 
-Event window default fields name like Title, Location, etc.. can be customized and default value can be set to Subject field using `default` property which will be added if an appointment is created with empty subject.
+Event window default fields name like Title, Location, etc.. can be customized and default value can be set to Subject field using [`default`](https://ej2.syncfusion.com/react/documentation/api/schedule/fieldOptions/#default) property which will be added if an appointment is created with empty subject.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

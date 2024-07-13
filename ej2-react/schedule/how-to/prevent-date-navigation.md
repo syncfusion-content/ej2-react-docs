@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Prevent date navigation in React Schedule component
 
-We can prevent navigation while clicking on the date header by simply removing `e-navigate` class from header cells which can be achieved in the `renderCell` event as shown in the below demo.
+We can prevent navigation while clicking on the date header by simply removing `e-navigate` class from header cells which can be achieved in the [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event as shown in the below demo.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

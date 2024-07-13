@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set different event time duration in React Schedule component | Syncfusion
+title: Set different event duration in React Schedule | Syncfusion
 description: Learn here all about Set different event time duration in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
 control: Set different event time duration 
 platform: ej2-react
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set different event time duration in React Schedule component
 
-In event window, start/end time duration will be processed based on the `interval` value within the `timeScale` property. By default, `interval` value is 30, therefore in event window start/end time duration will be in 30 mins duration. You can set custom interval range to the start/end time in event window using `popupOpen` event as shown below.
+In event window, start/end time duration will be processed based on the [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScaleModel/#interval) value within the [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property. By default, [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScaleModel/#interval) value is 30, therefore in event window start/end time duration will be in 30 mins duration. You can set custom interval range to the start/end time in event window using `popupOpen` event as shown below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
