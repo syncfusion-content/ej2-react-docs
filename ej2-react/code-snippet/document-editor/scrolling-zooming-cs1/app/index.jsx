@@ -1,7 +1,8 @@
 {% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorComponent } from '@syncfusion/ej2-react-documenteditor';
+import { DocumentEditorComponent, Selection, Editor } from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorComponent.Inject(Selection, Editor);
 function App() {
     let documenteditor;
     React.useEffect(() => {
@@ -69,7 +70,7 @@ function App() {
             documenteditor.scrollToPage(2);
         });
     }
-    return (<DocumentEditorComponent id="DocumentEditor" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false}/>);
+    return (<DocumentEditorComponent id="DocumentEditor" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableEditor={true} />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

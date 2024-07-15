@@ -5,7 +5,7 @@ import {  DocumentEditorComponent, Print, Editor, Selection, EditorHistory, Sfdt
 } from '@syncfusion/ej2-react-documenteditor';
 
 DocumentEditorComponent.Inject(Print, Editor, Selection, SfdtExport, EditorHistory);
-let documenteditor: DocumentEditorComponent;
+let documenteditor;
 function App() {
   return (
     <div>

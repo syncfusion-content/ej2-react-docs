@@ -3,8 +3,8 @@
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorComponent, Editor } from '@syncfusion/ej2-react-documenteditor';
-DocumentEditorComponent.Inject(Editor);
+import { DocumentEditorComponent, Editor, Selection } from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorComponent.Inject(Editor, Selection);
 
 
 function App() {
@@ -14,8 +14,7 @@ function App() {
     }, []);
 
     function created() {
-        container.documentEditorSettings.showRuler = true;
-        container.enableAllModules();   
+        container.documentEditorSettings.showRuler = true;  
     }
 
     function componentDidMount() {
@@ -33,7 +32,7 @@ function App() {
         <DocumentEditorComponent id="container" height={'590px'} isReadOnly={false} ref={(scope) => {
             container = scope;
             created();
-        }}
+        }} enableEditor={true} enableSelection={true}
             serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
         />
     </div>
