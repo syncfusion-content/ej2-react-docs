@@ -4,10 +4,10 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-    DocumentEditorComponent, SfdtExport, Selection, RequestNavigateEventArgs
+    DocumentEditorComponent, SfdtExport, Selection, RequestNavigateEventArgs, Editor
 } from '@syncfusion/ej2-react-documenteditor';
 
-DocumentEditorComponent.Inject(Selection, SfdtExport);
+DocumentEditorComponent.Inject(Selection, SfdtExport, Editor);
 function App() {
     let documenteditor: DocumentEditorComponent;
 
@@ -25,7 +25,7 @@ function App() {
     };
 
         return (
-            <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => {documenteditor = scope; }} enableSelection={true} enableSfdtExport={true} requestNavigate={requestNavigate} />
+            <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => {documenteditor = scope; }} enableSelection={true} enableSfdtExport={true} requestNavigate={requestNavigate} enableEditor={true} isReadOnly={false} />
         );
 
 }

@@ -26,7 +26,7 @@ function App() {
             switch (args.id) {
                 case id + 'search_in_google':
                     let searchContent = container.documentEditor.selection.text;
-                    if (!this.container.documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
+                    if (!container.documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
                         window.open('http://google.com/search?q=' + searchContent);
                     }
                     break;
