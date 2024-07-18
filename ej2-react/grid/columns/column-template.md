@@ -175,6 +175,36 @@ In the following code, we rendered the Chips component in the Grid **First Name*
 
  {% previewsample "page.domainurl/code-snippet/grid/template-cs3" %}
 
+### Render ProgressBar component in a column
+
+The Syncfusion Grid component supports rendering the [Progress Bar](https://ej2.syncfusion.com/react/documentation/progress-bar/getting-started) component within a column using the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property. Displaying the `Progress Bar` component in a grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
+
+In the following code, the `Progress Bar` component render in the Grid **Freight** column by defining the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property.
+
+```
+<div>
+    <ProgressBarComponent id={props.OrderID} type='Linear' height='60'
+          value={props.Freight} trackThickness={24} progressThickness='20'></ProgressBarComponent>
+</div>
+```
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-cs8/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-cs8/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-cs8/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs8" %}
+
 ## Using condition template
 
 The conditional column [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) allows you to display template elements based on specific conditions.
@@ -255,3 +285,28 @@ The following example demonstrates how to use a custom helper function inside th
  {% previewsample "page.domainurl/code-snippet/grid/template-cs5" %}
 
 > Custom helpers can only be used inside the template method of a column.
+
+## Dynamically adding template column
+
+The Syncfusion Grid component allows you to dynamically add template columns at runtime. This capability is particularly useful when the structure of the grid needs to be modified based on individual interactions or other dynamic conditions.
+
+Dynamically adding template columns involves creating and inserting columns with custom templates after the grid has been initialized. This approach provides flexibility in presenting data in a highly customizable manner.
+
+The following example demonstrates how to add template column using external button click. In this example, the **ShipCountry** column with a [Dropdownlist](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) is added in column [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template), and an icon is displayed using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column/#headertemplate) for the **ShipCountry** column. 
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-cs9/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-cs9/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-cs9/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/template-cs9" %}
