@@ -10,6 +10,72 @@ domainurl: ##DomainURL##
 
 # Open PDF file from AWS S3
 
+PDF Viewer allows to load PDF file from AWS S3 using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from AWS S3.
+
+## Using Standalone PDF Viewer
+
+To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below.
+
+**Step 1:** Create a Simple PDF Viewer Sample in React
+
+Start by following the steps provided in this [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+
+**Step 2:** Modify the `src/index.js` File in the React Project
+
+1. Import the required namespaces at the top of the file:
+
+```typescript
+import AWS from 'aws-sdk';
+```
+
+2. Configures AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
+
+N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+
+```typescript
+AWS.config.update({
+  region: '**Your Region**', // Update this your region
+  accessKeyId: '*Your Access Key*', // Update this with your access key id
+  secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
+});
+```
+
+3. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then Uses the getObject method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion PDF Viewer then load Base64 string generated into the viewer.load method.
+
+N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
+
+```typescript
+const s3 = new AWS.S3();
+
+loadDocument() {
+  const getObjectParams = {
+    Bucket: '**Your Bucket Name**',
+    Key: '**Your Key**',
+  };
+  s3.getObject(getObjectParams, (err, data) => {
+    if (err) {
+      console.error('Error fetching document:', err);
+    } else {
+      if (data && data.Body) {
+        const bytes = new Uint8Array(data.Body);
+        let binary = '';
+        bytes.forEach((byte) => (binary += String.fromCharCode(byte)));
+        const base64String = window.btoa(binary);
+        setTimeout(() => {
+          viewer.load("data:application/pdf;base64,"+base64String);
+        }, 2000);
+      }
+    }
+  });
+}
+```
+
+N> The **npm install aws-sdk** package must be installed in your application to use the previous code example.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
+
+## Using Server-Backed PDF Viewer
+
 To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
 
 **Step 1:** Create a Simple PDF Viewer Sample in React
@@ -155,4 +221,4 @@ root.render(<App />);
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3)
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Server-Backend)
