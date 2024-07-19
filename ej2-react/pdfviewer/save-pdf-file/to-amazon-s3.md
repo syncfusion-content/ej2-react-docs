@@ -10,6 +10,111 @@ domainurl: ##DomainURL##
 
 # Save PDF file to AWS S3
 
+PDF Viewer allows to save PDF file to AWS S3 using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to save PDF to AWS S3.
+
+## Using Standalone PDF Viewer
+
+To save a PDF file to AWS S3, you can follow the steps below
+
+**Step 1:** Create a PDF Viewer sample in React
+
+Follow the instructions provided in this [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in React. This will set up the basic structure of your PDF Viewer application.
+
+**Step 2:** Modify the `src/index.js` File in the React Project
+
+1. Import the required namespaces at the top of the file:
+
+```typescript
+import * as AWS from 'aws-sdk';
+```
+
+2. Configures AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
+
+N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+
+```typescript
+AWS.config.update({
+  region: '**Your Region**', // Update this your region
+  accessKeyId: '*Your Access Key*', // Update this with your access key id
+  secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
+});
+```
+
+3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+
+```typescript
+var toolItem1 = {
+  prefixIcon: 'e-icons e-pv-download-document-icon',
+  id: 'download_pdf',
+  tooltipText: 'Download file',
+  align: 'right'
+};
+
+function toolbarClick(args){
+  if (args.item && args.item.id === 'download_pdf') {
+    saveDocument();
+  }
+};
+
+return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        ref={(scope) => {
+          viewer = scope;
+        }}
+        created={loadDocument}
+        id="container"
+        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}
+        toolbarSettings={{ showTooltip : true, toolbarItems: [ 'OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', toolItem1, 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']}}
+            toolbarClick={toolbarClick}
+        >
+
+        <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                            ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+      </PdfViewerComponent>
+    </div>
+  </div>);
+```
+
+4. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to AWS S3 using the putObject method of the S3 instance.
+
+N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
+
+```typescript
+private s3 = new AWS.S3();
+
+function saveDocument() {
+  viewer.saveAsBlob().then(function (value) {
+    var reader = new FileReader();
+    reader.onload = () => {
+      const uint8Array = new Uint8Array(reader.result);
+      const putObjectParams = {
+        Bucket: '**Your Bucket Name**', 
+        Key: '**Your Key**',
+        Body: uint8Array,
+        ContentType: 'application/pdf',
+      };
+      s3.putObject(putObjectParams, (err, data) => {
+        if (err) {
+          console.error('Error uploading document:', err);
+        } else {
+          console.log('Document uploaded successfully:', data);
+        }
+      });
+    };
+    reader.readAsArrayBuffer(value);
+  });
+};
+```
+
+N> The **npm install aws-sdk** package must be installed in your application to use the previous code example.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
+
+## Using Server-Backed PDF Viewer
+
 To save a PDF file to AWS S3, you can follow the steps below
 
 **Step 1:** Create a PDF Viewer sample in React
@@ -144,4 +249,4 @@ root.render(<App />);
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3)
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Server-Backend)

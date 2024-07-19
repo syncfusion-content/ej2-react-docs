@@ -1,4 +1,4 @@
-import { ColumnDirective, ColumnMenu, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnMenu, ColumnsDirective, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
 function App() {
@@ -11,7 +11,7 @@ function App() {
                 <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2"/>
                 <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100'/>
             </ColumnsDirective>
-            <Inject services={[ColumnMenu]}/>
+            <Inject services={[ColumnMenu, Resize]}/>
         </GridComponent>
     </div>;
 }
