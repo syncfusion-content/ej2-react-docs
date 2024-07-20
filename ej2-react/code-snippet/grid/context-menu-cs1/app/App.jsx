@@ -1,5 +1,5 @@
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { ContextMenu, Edit, Filter, Group, Inject, Page, Sort } from '@syncfusion/ej2-react-grids';
+import { ContextMenu, Edit, Filter, Group, Inject, Page, Sort, Resize } from '@syncfusion/ej2-react-grids';
 import { ExcelExport, PdfExport } from '@syncfusion/ej2-react-grids';
 import * as React from 'react';
 import { data } from './datasource';
@@ -17,7 +17,7 @@ function App() {
           <ColumnDirective field='Freight' headerText='Freight' format='C2' textAlign='Right' editType='numericedit' width='140'/>
           <ColumnDirective field='ShipName' headerText='Ship Name' width='200'/>
         </ColumnsDirective>
-        <Inject services={[Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport, Group]}/>
+        <Inject services={[Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport, Group, Resize]}/>
       </GridComponent>
     </div>);
 }
