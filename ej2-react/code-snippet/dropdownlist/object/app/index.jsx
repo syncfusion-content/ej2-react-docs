@@ -11,7 +11,7 @@ export default class App extends React.Component {
         }));
     }
     fields = { text: 'text', value: 'id' };
-    value = { text: 'Item 5', value: 'id5'};
+    value = { text: 'Item 1', id: 'id1'};
 
     render() {
         return (
