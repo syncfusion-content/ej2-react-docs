@@ -28,7 +28,7 @@ function App() {
       <div>
           <div id="container">
               <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing}  panels={panels} allowResizing={true}  columns={5} resizableHandles={resize}
-              resizeStart={onResizeStart.bind(this)} resize={onResize.bind(this)} resizeStop={onResizeStop.bind(this)}/>
+              resizeStart={onResizeStart} resize={onResize} resizeStop={onResizeStop}/>
           </div>
       </div>
   );

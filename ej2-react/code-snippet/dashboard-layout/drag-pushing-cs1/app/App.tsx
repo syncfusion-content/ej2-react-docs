@@ -27,7 +27,7 @@ function App() {
     <div>
     <div className="container">
       <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing}  panels={panels} columns={5}
-      dragStart={onDragStart.bind(this)} drag={onDrag.bind(this)} dragStop={onDragStop.bind(this)} />
+      dragStart={onDragStart} drag={onDrag} dragStop={onDragStop} />
     </div>
   </div>
   );
