@@ -3,6 +3,7 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
+import './App.css';
 
 function App() {
   let gridSettings: GridSettings = {

@@ -21,6 +21,8 @@ const SAMPLE_CSS = `
     /* .e-pivotview .e-summary {
          text-align: center !important;
     }*/`;
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],

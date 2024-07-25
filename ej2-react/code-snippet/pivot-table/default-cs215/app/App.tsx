@@ -4,6 +4,7 @@ import * as React from 'react';
 import { pivotData, base64AlgeriaFont } from './datasource';
 import { PdfExportProperties } from '@syncfusion/ej2-grids';
 import { PdfTrueTypeFont } from '@syncfusion/ej2-pdf-export';
+import './App.css';
 
 function App() {
 

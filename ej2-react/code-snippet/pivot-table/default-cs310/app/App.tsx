@@ -48,6 +48,8 @@ function data(count: number) {
     }
     return result;
 };
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     dataSource: data(1000),

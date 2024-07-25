@@ -8,6 +8,7 @@ import * as React from 'react';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
 import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
+import './App.css';
 
 function App() {
   let dataSourceSettings: IDataOptions = {

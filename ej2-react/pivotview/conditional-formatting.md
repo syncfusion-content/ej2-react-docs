@@ -153,5 +153,3 @@ The event [`conditionalFormatting`](https://ej2.syncfusion.com/react/documentati
 ## See Also
 
 * [Apply conditional formatting for specific row or column](./how-to/apply-conditional-formatting-for-specific-row-or-column)
-* [How to restrict conditional formatting applied to subtotals in a React Pivot Table?](https://support.syncfusion.com/kb/article/15647/how-to-restrict-conditional-formatting-applied-to-subtotals-in-a-react-pivot-table)
-* [How to display values in Pivot Table with custom formatting depending on their headers?](https://support.syncfusion.com/kb/article/14473/how-to-display-values-in-pivot-table-with-custom-formatting-depending-on-their-headers)

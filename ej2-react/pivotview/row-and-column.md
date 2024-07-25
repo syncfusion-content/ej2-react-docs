@@ -599,6 +599,3 @@ The event [`cellClick`](https://ej2.syncfusion.com/react/documentation/api/pivot
 
 * [Show/hide tooltip](./how-to/show-hide-tool-tip)
 * [Perform cell selection and get selected cells information](./how-to/perform-cell-selection-and-get-selected-cells-information)
-* [How to position the columns in a React Pivot Table according to the current year and its quarter?](https://support.syncfusion.com/kb/article/15568/how-to-position-the-columns-in-a-react-pivot-table-according-to-the-current-year-and-its-quarter)
-* [How to highlight a specific row in a Pivot Table?](https://support.syncfusion.com/kb/article/14492/how-to-highlight-a-specific-row-in-a-pivot-table)
-* [How to hide specific rows in a Pivot Table?](https://support.syncfusion.com/kb/article/14489/how-to-hide-specific-rows-in-a-pivot-table)

@@ -35,6 +35,7 @@ function data(count) {
     }
     return result;
 };
+import './App.css';
 
 function App() {
     var pivotObj;

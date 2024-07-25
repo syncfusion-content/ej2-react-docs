@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { IDataOptions, IDataSet, PivotViewComponent, Inject, VirtualScroll } from '@syncfusion/ej2-react-pivotview';
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
             catalog: 'Adventure Works DW 2008 SE',

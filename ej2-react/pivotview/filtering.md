@@ -525,7 +525,3 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs109" %}
-
-## See Also
-
-* [How to update the Pivot Table based on data filtered using DataManager in React?](https://support.syncfusion.com/kb/article/14750/how-to-update-the-pivot-table-based-on-data-filtered-using-datamanager-in-react)

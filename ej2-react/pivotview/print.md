@@ -51,7 +51,3 @@ Similarly, to print the pivot chart, use the [`print`](https://ej2.syncfusion.co
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs321" %}
-
-## See Also
-
-* [PivotGrid Printing](https://www.syncfusion.com/blogs/post/pivotgrid-printing)

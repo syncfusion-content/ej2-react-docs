@@ -615,4 +615,3 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 * [Change load limited data in member editor](./how-to/change-load-limited-data-in-member-editor)
 * [Customize the icons for pivot table](./how-to/customize-the-icons-for-pivot-table)
-* [How to apply custom styles to grouping bar buttons in a Pivot Table in React?](https://support.syncfusion.com/kb/article/14639/how-to-apply-custom-styles-to-grouping-bar-buttons-in-a-pivot-table-in-react)

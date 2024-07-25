@@ -318,4 +318,3 @@ The event [`exportComplete`](https://ej2.syncfusion.com/react/documentation/api/
 ## See Also
 
 * [PDF Exporting](./pdf-export)
-* [How to resolve the "We found a problem with some content in Excel" error message when exporting Pivot Table data to an Excel document?](https://support.syncfusion.com/kb/article/14399/how-to-resolve-the-we-found-a-problem-with-some-content-in-excel-error-message-when-exporting-pivot-table-data-to-an-excel-document)

@@ -2,6 +2,7 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { CalculatedField, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 

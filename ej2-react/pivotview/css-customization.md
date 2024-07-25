@@ -54,8 +54,3 @@ The elements in pivot table like header cell, value cell and summary cell style 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/background-css-cs1" %}
-
-## See also
-
-* [How to customize the font styles for the entire contents of a React Pivot Table?](https://support.syncfusion.com/kb/article/15551/how-to-customize-the-font-styles-for-the-entire-contents-of-a-react-pivot-table)
-* [How to apply custom styles to the pivot table headers?](https://support.syncfusion.com/kb/article/14518/how-to-apply-custom-styles-to-the-pivot-table-headers)

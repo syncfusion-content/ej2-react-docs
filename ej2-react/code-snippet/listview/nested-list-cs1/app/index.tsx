@@ -268,6 +268,7 @@ function App() {
   ];
 
   let fields = { tooltip: "text" };
+  let animation: Object = { duration:0 };
   return (
     // specifies the tag to render the ListView component
     <ListViewComponent
@@ -276,6 +277,7 @@ function App() {
       fields={fields}
       showHeader={true}
       headerTitle="Continent"
+      animation={animation}
     />
   );
 }

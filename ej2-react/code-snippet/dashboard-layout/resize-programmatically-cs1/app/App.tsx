@@ -25,7 +25,7 @@ function App() {
       <div>
           <div className="container">
               <DashboardLayoutComponent id='defaultLayout' ref={(scope) => { dashboardObj = scope; }} cellSpacing={cellSpacing}
-              panels={panels} columns={5} created={onCreated.bind(this)} />
+              panels={panels} columns={5} created={onCreated} />
           </div>
       </div>
   );
