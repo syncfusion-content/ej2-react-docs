@@ -22,6 +22,8 @@ const SummaryType = [
     'CustomAggregateType1',
     'CustomAggregateType2'
 ];
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         expandAll: false,

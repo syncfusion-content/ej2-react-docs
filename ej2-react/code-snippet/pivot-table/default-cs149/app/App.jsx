@@ -1,6 +1,8 @@
 import { GroupingBar, Grouping, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { Group_Data } from './datasource';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         dataSource: Group_Data,

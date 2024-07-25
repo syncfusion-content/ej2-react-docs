@@ -53,6 +53,8 @@ const SAMPLE_CSS = `
     //.e-pivotfieldlist-wrapper .e-field-list-filters {
     //    display: none;
     //}`;
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],

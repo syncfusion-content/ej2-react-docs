@@ -2,6 +2,7 @@ import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-reac
 import * as React from 'react';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { csvdata } from './datasource';
+import './App.css';
 
 function App() {
 

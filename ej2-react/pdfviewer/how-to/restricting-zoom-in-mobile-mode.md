@@ -100,3 +100,5 @@ root.render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Restrict%20Zoom%20Percentage%20on%20Mobile%20Devices)

@@ -2,6 +2,7 @@ import { FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-piv
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { Tooltip } from '@syncfusion/ej2-popups';
+import './App.css';
 
 function App() {
   let headerTooltip;

@@ -1,6 +1,7 @@
 import { IDataOptions, CellEditSettings, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { pivot_flatdata } from './datasource';
+import './App.css';
 
 function App() {
 

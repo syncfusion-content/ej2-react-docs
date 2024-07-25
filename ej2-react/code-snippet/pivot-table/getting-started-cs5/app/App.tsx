@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { CalculatedField, FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   const dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Date', caption: 'Date' }, { name: 'Product' }],

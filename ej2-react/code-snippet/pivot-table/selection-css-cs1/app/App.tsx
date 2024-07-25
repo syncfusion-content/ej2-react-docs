@@ -10,7 +10,8 @@ const SAMPLE_CSS = `
   .e-pivotview .e-grid .e-columnsheader.e-selectionbackground {
     background-color: greenYellow !important;
   }`;
-  
+  import './App.css';
+
 function App() {
   let gridSettings: GridSettings = {
     allowSelection: true,

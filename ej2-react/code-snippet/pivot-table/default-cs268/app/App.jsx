@@ -1,6 +1,8 @@
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { renewableEnergy } from './datasource';
+import './App.css';
+
 function App() {
     function cellTemplate(props) {
         return (<span className="tempwrap sb-icon-neutral pv-icons"></span>);

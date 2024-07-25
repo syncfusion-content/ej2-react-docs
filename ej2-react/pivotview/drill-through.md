@@ -173,8 +173,3 @@ The event [`beginDrillThrough`](https://ej2.syncfusion.com/react/documentation/a
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs54" %}
-
-## See Also
-
-* [How to display only the selected value cell information in the drill-through dialog of a React Pivot Table?](https://support.syncfusion.com/kb/article/15752/how-to-display-only-the-selected-value-cell-information-in-the-drill-through-dialog-of-a-react-pivot-table)
-* [How to customize the width and height of the drill-through dialog in a React Pivot Table?](https://support.syncfusion.com/kb/article/15541/how-to-customize-the-width-and-height-of-the-drill-through-dialog-in-a-react-pivot-table)

@@ -19,7 +19,7 @@ Calculated field can also be included in the pivot table through code behind usi
 
 To use calculated field option, you need to inject the `CalculatedField` module in pivot table.
 
-> The calculated field is applicable only for value fields. By default, the calculated fields created through code-behind are only added to the field list and calculated field dialog UI. To display the calculated field in the pivot table UI, it must be added to the [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#values) property, as shown in the code below.
+> The calculated field is applicable only for value fields. Also, calculated field created through code behind will be automatically listed in the UI dialog as well.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

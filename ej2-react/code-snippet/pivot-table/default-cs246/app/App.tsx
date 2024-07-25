@@ -2,6 +2,7 @@ import { IDataOptions, IDataSet, PivotViewComponent, Inject, DisplayOption, Pivo
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
+import './App.css';
 
 function App() {
 

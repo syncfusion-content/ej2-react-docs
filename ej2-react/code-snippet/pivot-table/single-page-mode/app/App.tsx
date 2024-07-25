@@ -36,6 +36,8 @@ function data(count: number) {
 let virtualScrollSettings: VirtualScrollSettingsModel = {
     allowSinglePage: true
 } as VirtualScrollSettingsModel;
+import './App.css';
+
 function App() {
     let pivotObj: PivotViewComponent;
     let dataSourceSettings: IDataOptions = {

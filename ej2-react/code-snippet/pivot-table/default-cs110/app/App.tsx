@@ -46,6 +46,8 @@ L10n.load({
         }
     }
 });
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],

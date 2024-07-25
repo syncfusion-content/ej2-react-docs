@@ -4,6 +4,7 @@ import { PdfExportProperties } from '@syncfusion/ej2-grids';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
 import * as React from 'react';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
 

@@ -7,6 +7,7 @@ import * as React from 'react';
 import{ getInstance, select} from '@syncfusion/ej2-base';
 import {DropDownList} from '@syncfusion/ej2-dropdowns';
 import { pivotData } from './datasource';
+import './App.css';
 
 function App() {
   let isInitial: boolean = true;

@@ -3,6 +3,7 @@ import { enableRipple } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import { pivotData } from './datasource';
 enableRipple(false);
+import './App.css';
 
 function App() {
 

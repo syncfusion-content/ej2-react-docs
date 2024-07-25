@@ -4,6 +4,8 @@ import {
     PivotViewComponent, IDataOptions, Inject, Toolbar, ConditionalFormatting
 } from '@syncfusion/ej2-react-pivotview';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],

@@ -2,6 +2,7 @@ import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-reac
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
+import './App.css';
 
 function App() {
   let dataSourceSettings: IDataOptions = {

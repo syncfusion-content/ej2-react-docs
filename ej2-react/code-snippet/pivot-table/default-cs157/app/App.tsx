@@ -3,6 +3,8 @@ import { IDataOptions, IDataSet, Inject, PivotViewComponent, FieldList } from '@
 import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
 import { Chart, Category, Legend, Tooltip, ColumnSeries, LineSeries, SeriesModel } from '@syncfusion/ej2-charts';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
   let dataSourceSettings: IDataOptions = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],

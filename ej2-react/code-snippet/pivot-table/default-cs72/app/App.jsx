@@ -2,6 +2,8 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { PivotViewComponent, Inject, ExcelExport } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { pivotData } from './datasource';
+import './App.css';
+
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],

@@ -778,7 +778,3 @@ Meanwhile, the memory cache is set to expire after 60 minutes from RAM to free i
 * **GetMembers:** Allows to get the members of a field. This fires when the member editor is opened to do a filtering operation.
 * **GetRawData:** Allows to get raw data of an aggregated value cell. This fires when the drill-through or editing dialog is opened.
 * **GetPivotValues:** Allows to update the stored engine properties in-memory cache and returns the aggregated values to browser to render the Pivot Table. Here, the return value can be modified. The Pivot Table will be rendered browser-based on this.
-
-## See Also
-
-* [How to make an API request to an express server when clicking on value cells within a React Pivot Table?](https://support.syncfusion.com/kb/article/14735/how-to-make-an-api-request-to-an-express-server-when-clicking-on-value-cells-within-a-react-pivot-table)
