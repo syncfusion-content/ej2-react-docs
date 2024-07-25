@@ -42,14 +42,12 @@ System.config({
         "plugin-json": "https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-json/0.3.0/json.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
-        "css": "https://cdn.jsdelivr.net/npm/systemjs-plugin-css@0.1.37/css.js"
     },
     meta: {
         '*.json': { loader: 'plugin-json' },
         'typescript': {
             "exports": "ts"
-        },
-        '*.css': { loader: 'css' }
+        }
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },
