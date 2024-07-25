@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React schedule getting started with Next.js | Syncfusion
-description: Check out and learn about how to use Syncfusion React UI components in the Next.js project.
+description: Checkout and learn about Getting started with React Schedule component of Syncfusion Essential JS 2 in the Next.js project.
 control: Next.js
 platform: ej2-react
 documentation: ug
@@ -21,7 +21,7 @@ This section provides a step-by-step guide for setting up a Next.js application 
 
 Before getting started with the Next.js application, ensure the following prerequisites are met:
 
-* [Node.js 16.8](https://nodejs.org/en) or later.
+* [Node.js 18.17](https://nodejs.org/en) or later.
 
 * The application is compatible with macOS, Windows, and Linux operating systems.
 
