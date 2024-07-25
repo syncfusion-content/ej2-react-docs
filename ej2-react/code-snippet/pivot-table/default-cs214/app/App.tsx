@@ -3,7 +3,6 @@ import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-reac
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { PdfExportProperties } from '@syncfusion/ej2-grids';
-import './App.css';
 
 function App() {
 

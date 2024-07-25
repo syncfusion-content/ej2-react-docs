@@ -3,7 +3,6 @@ import { IDataOptions, IDataSet, Inject, PivotViewComponent, Toolbar } from '@sy
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
-import './App.css';
 
 function App() {
   let toolbarOptions: any = ['Grid', 'Chart'];
