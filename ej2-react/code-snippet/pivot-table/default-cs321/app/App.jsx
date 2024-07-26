@@ -2,7 +2,6 @@ import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import './App.css';
 
 function App() {
 

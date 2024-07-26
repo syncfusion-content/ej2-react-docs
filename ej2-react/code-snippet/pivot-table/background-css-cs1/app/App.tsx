@@ -22,7 +22,6 @@ const SAMPLE_CSS = `
     /* .e-pivotview .e-gtot  {
     background-color: greenYellow !important;
   }*/`;
-import './App.css';
 
 function App() {
 

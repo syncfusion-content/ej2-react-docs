@@ -22,8 +22,6 @@ const SummaryType: string[] = [
   'CustomAggregateType1',
   'CustomAggregateType2'
 ];
-import './App.css';
-
 function App() {
 
   let dataSourceSettings: IDataOptions = {

@@ -6,7 +6,6 @@ import {
 } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import * as data from './datasource.json';
-import './App.css';
 
 function App() {
   let pivotData = data.pivotData;
