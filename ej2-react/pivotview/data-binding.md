@@ -493,3 +493,4 @@ The event [`enginePopulating`](https://ej2.syncfusion.com/react/documentation/ap
 * [Show/Hide Totals](./summary-customization)
 * [Customize number, date, and time values](./how-to/customize-number-date-and-time-values)
 * [Server Side Engine (Optional)](./server-side-pivot-engine)
+* [How to customize null values in Pivot Table?](https://support.syncfusion.com/kb/article/14432/how-to-customize-null-values-in-pivot-table)

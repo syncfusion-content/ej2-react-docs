@@ -3,8 +3,6 @@ import { PivotViewComponent, Inject, PivotChart } from '@syncfusion/ej2-react-pi
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import { pivotData } from './datasource';
-import './App.css';
-
 function App() {
     let displayOption = {
         view: 'Chart'

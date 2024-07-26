@@ -2,7 +2,6 @@ import { DrillThrough, IDataOptions, IDataSet, PivotViewComponent, Inject, Displ
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
-import './App.css';
 
 function App() {
 

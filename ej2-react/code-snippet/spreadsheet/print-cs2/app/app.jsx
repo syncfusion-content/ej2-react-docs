@@ -1,7 +1,7 @@
 {% raw %}
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective} from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { budgetData, salaryData } from './datasource';
 import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';

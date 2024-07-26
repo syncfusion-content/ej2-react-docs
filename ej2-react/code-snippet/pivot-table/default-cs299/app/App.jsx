@@ -18,8 +18,6 @@ const SAMPLE_CSS = `
     opacity: 0;
     filter: alpha(opacity=0);
 }`;
-import './App.css';
-
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
