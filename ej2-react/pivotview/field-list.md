@@ -558,3 +558,4 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 * [Change load limited data in member editor](./how-to/change-load-limited-data-in-member-editor)
 * [Customize the icons for pivot table](./how-to/customize-the-icons-for-pivot-table)
+* [How to limit the number of field selections in the React Pivot Table field list?](https://support.syncfusion.com/kb/article/15561/how-to-limit-the-number-of-field-selections-in-the-react-pivot-table-field-list)

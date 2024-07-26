@@ -16,8 +16,6 @@ const SAMPLE_CSS = `
 .e-pivotfieldlist .e-static {
     width: 100% !important;
 }`;
-import './App.css';
-
 function App() {
     React.useEffect(() => {
         renderComplete();

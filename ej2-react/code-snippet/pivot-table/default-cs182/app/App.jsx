@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { CalculatedField, FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import './App.css';
-
 function App() {
     let dataSourceSettings = {
         catalog: 'Adventure Works DW 2008 SE',

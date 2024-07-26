@@ -1099,3 +1099,4 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 ## See Also
 
 * [Toolbar Component](https://ej2.syncfusion.com/react/documentation/toolbar/getting-started)
+* [How to programmatically save and load a React Pivot Table report using external buttons?](https://support.syncfusion.com/kb/article/15829/how-to-programmatically-save-and-load-a-react-pivot-table-report-using-external-buttons)

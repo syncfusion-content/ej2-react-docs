@@ -2,8 +2,6 @@ import * as React from 'react';
 import { Inject, PivotViewComponent, FieldList } from '@syncfusion/ej2-react-pivotview';
 import { Chart, Category, Legend, Tooltip, ColumnSeries, LineSeries } from '@syncfusion/ej2-charts';
 import { pivotData } from './datasource';
-import './App.css';
-
 function App() {
     let dataSourceSettings = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
