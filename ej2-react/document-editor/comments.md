@@ -23,16 +23,18 @@ Comments can be inserted to the selected text.
 ```ts
 documentEditor.editor.insertComment('Test comment');
 ```
-
 ## Add a New Comment with Date, Author, and Status
 
-Comments can be inserted into the selected text with a specified date, author, and status.
+Comments can be inserted into the selected text with a specified date, author, and status [`insertComment`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#insertcomment).
 
 ```ts
-// In this example, a comment with the text "Nancy Davolio" is added by the author Rachel Green on July 23, 2024, at 2:30 PM. The isResolved status is set to false.
+// In this example, a comment with the text "Hello world"
+// is added by the author Nancy Davolio on July 23, 2024, at 2:30 PM. 
+// The isResolved status is set to false.
 
 // Create a specific date: July 23, 2024, at 2:30:00 PM.
-let specificDate = new Date(2024, 6, 23, 14, 30, 0); // Note: July is represented by 6 (0-based index).
+// Note: July is represented by 6 (0-based index).
+let specificDate = new Date(2024, 6, 23, 14, 30, 0); 
 
 // Define the properties of the comment including author, date, and resolution status.
 let commentProperties: CommentProperties = { 
@@ -43,6 +45,41 @@ let commentProperties: CommentProperties = {
 
 // Insert the comment with the specified properties into the document editor.
 documentEditor.editor.insertComment('Hello world', commentProperties);
+```
+
+## Add a Reply Comment with Date, Author, and Status
+
+Reply comments can be inserted into the parent comment with a specified date, author using [`insertReplyComment`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#insertreplycomment).
+
+```ts
+// In this example, a comment with the text "Hello world"
+// is added by the author Nancy Davolio on July 23, 2024, at 2:30 PM. 
+// The isResolved status is set to false.
+
+// Create a specific date: July 23, 2024, at 2:30:00 PM.
+// Note: July is represented by 6 (0-based index).
+let specificDate = new Date(2024, 6, 23, 14, 30, 0); 
+
+// Define the properties of the comment including author, date, and resolution status.
+let commentProperties: CommentProperties = { 
+    author: 'Nancy Davolio',          // The author of the comment.
+    dateTime: specificDate,           // The date and time when the comment is created.
+    isResolved: false                 // The status of the comment; false indicates it is unresolved.
+};
+
+// Insert the comment with the specified properties into the Document Editor.
+let comment: Comment = documentEditor.editor.insertComment('Hello world', commentProperties);
+// Insert a reply comment with specified properties into the Document Editor
+documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentProperties);
+```
+
+## Get Comments
+
+Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#getcomments).
+
+```ts
+//Get Comments in the document along with the properties author, date, status.
+let commentinfo: CommentInfo[] = container.documentEditor.getComments();
 ```
 
 ## Comment navigation
@@ -59,10 +96,20 @@ documentEditor.selection.navigatePreviousComment();
 
 ## Delete comment
 
-Current comment can be be deleted using the below code snippet.
+Current comment can be deleted using [`deleteComment`](../api/document-editor/editor/#deletecomment).
 
 ```ts
-documentEditor.editor.deleteComment();
+//Delete the current selected comment.
+container.documentEditor.editor.deleteComment();
+
+//Get Comments in the document along with the properties author, date, status.
+let commentinfo: CommentInfo[] = container.documentEditor.getComments();
+
+//Delete the particular parent comments and all of its reply comments
+container.documentEditor.editor.deleteComment(commentinfo[0].id);
+
+//Delete the particular reply comment.
+container.documentEditor.editor.deleteComment(commentinfo[0].replies[0].id);
 ```
 
 ## Delete all comment
