@@ -3,6 +3,8 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import './index.css';
+
 function App() {
     let listviewInstance = null;
     function listTemplate(data) {

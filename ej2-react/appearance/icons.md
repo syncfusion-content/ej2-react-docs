@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Icons Library
+# Predefined Icons Library in Syncfusion React Component
 
 Syncfusion's icon library is a collection of pre-designed icons that can be used to enhance the user interface of an application. This pre-designed icons are set of `base64` formatted font icons. Utilizing this icon library can make it simpler to create a cohesive, visually pleasing design for an application.
 
@@ -119,7 +119,7 @@ The following steps explain the direct rendering of the Syncfusion icon in the H
 
 ### Icon size
 
-The `ej2-icons` package offers options to display icons in different size modes. A user can use different icon sizes in their application based on touch or mouse mode. If the user is using touch mode, add `e-large` class to the element to make the icon easily interactable, or add the `e-small` or `e-medium` class in mouse mode.
+The `ej2-icons` package offers options to display icons in different size modes. A user can use different icon sizes in their application based on touch or mouse mode. If the user is using touch mode, add `e-large` class to the element to make the icon easily interact, or add the `e-small` or `e-medium` class in mouse mode.
 
 The pre-defined icon size is present in the available classes listed below.
 * `e-small` - Sets the icon size as `8px`.
@@ -152,7 +152,7 @@ The pre-defined icon size is present in the available classes listed below.
 
 The Syncfusion React icons can be customized with custom color and size by overriding the `e-icons` class. Customizing the icons in the library can be useful for making the icons more visually appealing and fitting to the design of the application. For example, a user can change the color of an icon to match the color scheme of their application, or increase the size of an icon to make it more visible on smaller screens. It may also be useful for creating a consistent look and feel across different parts of the application. Overall, customizing the icons in the library can improve the overall user experience of the application.
 
-In the example below, the icon colour is customized with custom color.
+In the example below, the icon color is customized with custom color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -173,6 +173,10 @@ In the example below, the icon colour is customized with custom color.
 The complete package of Essential JS 2 icons is listed below. The corresponding icon content can be referred in the content section.
 
 <!-- markdownlint-disable MD033 -->
+
+### Material 3
+
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material3/demo.html" style="height:1000px;width:100%;"></iframe>
 
 ### Material
 
@@ -201,6 +205,10 @@ The complete package of Essential JS 2 icons is listed below. The corresponding 
 ### Tailwind CSS
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind/demo.html" style="height:1000px;width:100%;"></iframe>
+
+### Fluent 2
+
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fluent2/demo.html" style="height:1000px;width:100%;"></iframe>
 
 ### Fluent
 
