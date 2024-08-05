@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open PDF files from Dropbox cloud file storage in React Pdfviewer component | Syncfusion
+title: Open PDF from Dropbox cloud storage in React PdfViewer | Syncfusion
 description: Learn about how to load PDF files from Dropbox cloud file storage in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Open PDF files from Dropbox cloud file storage
 platform: ej2-react
@@ -10,7 +10,61 @@ domainurl: ##DomainURL##
 
 # Open PDF file from Dropbox cloud file storage
 
-To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
+PDF Viewer allows to load PDF file from Drop Box using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Drop Box.
+
+## Using Standalone PDF Viewer
+
+To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below.
+
+**Step 1** Create a Dropbox API
+
+To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+
+**Step 2:** Create a Simple PDF Viewer Sample in React
+
+Start by following the steps provided in this [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+
+**Step 3:** Modify the `src/index.js` File in the Angular Project
+
+1. Import the required namespaces at the top of the file:
+
+```typescript
+import { Dropbox } from 'dropbox';
+```
+
+2. Create an instance of the Dropbox class using an access token for authentication. Next, call the filesDownload method of this Dropbox instance to download the file located at /PDF_Succinctly.pdf. Upon successfully downloading the file, extract the file blob from the response. Convert this file blob to a Base64 string using the blobToBase64 method. Finally, load the Base64 string into a PDF viewer control.
+
+N> Replace **Your Access Token** with the actual Access Token of your Drop Box account.
+
+```typescript
+function loadDocument() {
+  const dbx = new Dropbox({ accessToken: 'Your Access Token' });
+  dbx.filesDownload({ path: '/PDF_Succinctly.pdf' }).then(async (response) => {
+    const blob = await response.result.fileBlob;
+    const base64String = await blobToBase64(blob);
+    setTimeout(() => {
+      viewer.load(base64String, "");
+    }, 2000);
+  });
+}
+
+function blobToBase64(blob){
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+```
+
+N> The **npm install dropbox** package must be installed in your application to use the previous code example.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Standalone)
+
+## Using Server-Backed PDF Viewer
+
+To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below.
 
 **Step 1** Create a Dropbox API
 
@@ -153,4 +207,4 @@ root.render(<App />);
 
 N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage)
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Server-Backed)

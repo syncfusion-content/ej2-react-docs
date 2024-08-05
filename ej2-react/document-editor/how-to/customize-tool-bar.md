@@ -33,7 +33,7 @@ Document Editor Container allows you to customize(add, show, hide, enable, and d
           let toolItem: CustomToolbarItemModel = {
               prefixIcon: "e-de-ctnr-lock",
               tooltipText: "Disable Image",
-              text: "Disable Image",
+              text: onWrapText("Disable Image"),
               id: "Custom"
           };
           let items = [
@@ -90,6 +90,18 @@ Document Editor Container allows you to customize(add, show, hide, enable, and d
                   break;
           }
       };
+      onWrapText = (text: string): string=> {
+        let content: string = '';
+          const index : number = text.lastIndexOf(' ');
+      
+          if (index !== -1) {
+              content = text.slice(0, index) + "<div class='e-de-text-wrap'>" + text.slice(index + 1) + "</div>";
+          } else {
+              content = text;
+          }
+      
+          return content;
+      }
   }
 ```
 {% endraw %}
