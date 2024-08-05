@@ -10,6 +10,98 @@ domainurl: ##DomainURL##
 
 # Save PDF file to Dropbox cloud file storage
 
+PDF Viewer allows to save PDF file to Drop Box using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to save a PDF to Drop Box.
+
+## Using Standalone PDF Viewer
+
+To save a PDF file to Dropbox cloud file storage, you can follow the steps below
+
+**Step 1** Create a Dropbox API
+
+To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+
+**Step 2:** Create a PDF Viewer sample in React
+
+Follow the instructions provided in this [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in React. This will set up the basic structure of your PDF Viewer application.
+
+**Step 3:** Modify the `src/index.js` File in the Angular Project
+
+1. Import the required namespaces at the top of the file:
+
+```typescript
+import { Dropbox } from 'dropbox';
+```
+
+2. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+
+```typescript
+var toolItem1 = {
+  prefixIcon: 'e-icons e-pv-download-document-icon',
+  id: 'download_pdf',
+  tooltipText: 'Download file',
+  align: 'right'
+};
+
+function toolbarClick(args){
+  if (args.item && args.item.id === 'download_pdf') {
+    saveDocument();
+  }
+};
+
+return (<div>
+  <div className='control-section'>
+  {/* Render the PDF Viewer */}
+    <PdfViewerComponent
+      ref={(scope) => {
+        viewer = scope;
+      }}
+      created={loadDocument}
+      id="container"
+      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
+      style={{ 'height': '640px' }}
+      toolbarSettings={{ showTooltip : true, toolbarItems: [ 'OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', toolItem1, 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']}}
+          toolbarClick={toolbarClick}
+      >
+
+      <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                          ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+    </PdfViewerComponent>
+  </div>
+</div>);
+```
+
+3. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to Drop Box using the filesUpload method of the Drop Box instance.
+
+N> Replace **Your Access Token** with the actual Access Token of your Drop Box account.
+
+```typescript
+ function saveDocument() {
+    viewer.saveAsBlob().then(function (value) {
+      var reader = new FileReader();
+      reader.onload = async () => {
+        if (reader.result) {
+          const dbx = new Dropbox({ accessToken: 'Your Access Token' });
+          const uint8Array = new Uint8Array(reader.result);
+          dbx.filesUpload({ path: '/' + viewer.fileName, contents: uint8Array })
+            .then(response => {
+              console.log(response);
+            })
+            .catch(error => {
+              console.error(error);
+            });
+        }
+      };
+      reader.readAsArrayBuffer(value);
+    });
+  };
+```
+
+N> The **npm install dropbox** package must be installed in your application to use the previous code example.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Standalone)
+
+## Using Server-Backed PDF Viewer
+
 To save a PDF file to Dropbox cloud file storage, you can follow the steps below
 
 **Step 1** Create a Dropbox API
@@ -146,4 +238,4 @@ root.render(<App />);
 
 N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage)
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Server-Backed)
