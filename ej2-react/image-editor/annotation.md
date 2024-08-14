@@ -399,3 +399,21 @@ In the following example, you can use the [`drawImage`](https://ej2.syncfusion.c
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs37" %}
+
+### Customize Default Stroke Color for Shapes 
+
+We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`shapeChanging`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapechanging) event. Within this event, users can update the values in the `currentShapeSettings` object to apply their own preferences instead of the defaults. This approach allows conditional updates to the `currentShapeSettings`, ensuring that only the desired defaults are changed while maintaining the other settings.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs54/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs54/app/app.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/image-editor/default-cs54/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs54" %}
