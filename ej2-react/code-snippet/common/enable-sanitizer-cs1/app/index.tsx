@@ -3,7 +3,6 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import './App.css';
 
 function App() {
     return (<div id="container">
