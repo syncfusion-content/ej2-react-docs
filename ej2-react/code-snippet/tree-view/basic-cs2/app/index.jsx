@@ -34,7 +34,7 @@ function App() {
     let field = { dataSource: countries, id: 'id', parentID: 'pid', text: 'name', hasChildren: 'hasChild' };
     let isChecked = true;
     function nodeChecked(args) {
-        alert("The checked node's id: " + checkedNodes); // To alert the checked node's id.
+        alert("The checked node's id: " + args.data[0].id); // To alert the checked node's id.
     }
     return (
     // specifies the tag for render the TreeView component
