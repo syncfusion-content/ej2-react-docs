@@ -17,11 +17,6 @@ Syncfusion React (Essential JS 2) library is a modern UI components library that
 The Syncfusion React UI components are listed below.
 
 <style>
-# table
-{
-border:0 !important;
-line-height: 2!important;
-}
 
 tr
 {
@@ -85,6 +80,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/dashboard-layout/getting-started/">Dashboard</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/card/getting-started/">Card</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/avatar/getting-started/">Avatar</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/timeline/getting-started">Timeline</a></div>
     </td>
     <td>
         <div><p class="controlcategory">DATA VISUALIZATION</p></div>
@@ -126,6 +122,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/timepicker/getting-started/">TimePicker</a></div>
         <div><p class="controlcategory">INPUTS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/textbox/getting-started/">TextBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/textarea/getting-started">TextArea</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maskedtextbox/getting-started/">Input Mask</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/numerictextbox/getting-started/">Numeric TextBox</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/radio-button/getting-started/">RadioButton</a></div>
@@ -136,6 +133,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/switch/getting-started/">Toggle Switch Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/signature/getting-started/">Signature</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/rating/getting-started/">Rating</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/otp-input/getting-started">OTP Input</a></div>
         <div><p class="controlcategory">FORMS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules/">Form Validator</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/query-builder/getting-started/">Query Builder</a></div>
@@ -149,6 +147,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/multi-select/getting-started/">Multiselect DropDown</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/drop-down-tree/getting-started/">DropDown Tree</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/mention/getting-started/">Mention</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/multicolumn-combobox/getting-started">MultiColumn ComboBox</a></div>
         <div><p class="controlcategory">NAVIGATION</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/accordion/getting-started/">Accordion</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/carousel/getting-started/">Carousel</a></div>
