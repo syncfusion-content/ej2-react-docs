@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Stock chart component | Syncfusion
-description:  Checkout and learn about Getting started with React Stock chart component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Stock Chart Component | Syncfusion
+description:  Checkout and learn about getting started with Syncfusion Essentiall React Stock Chart component, it's elements, and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started
+# Getting Started with React Stock Chart
 
 This section explains you the steps required to create a simple Stock Chart and demonstrate the basic usage of the Stock Chart control.
 
@@ -309,4 +309,4 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 
  {% previewsample "page.domainurl/code-snippet/stock-chart/getting-started/trackball-cs1" %}
 
-> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-ui-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos/#/material/stock-chart) that shows you how to present and manipulate data.
+> You can refer to our [React Stock Chart](https://www.syncfusion.com/react-components/react-stock-chart) feature tour page for its groundbreaking feature representations. You can also explore our [React Stock Chart example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/stock-chart/default) that shows you how to present and manipulate data.
