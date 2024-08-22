@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ListBoxComponent, Inject, CheckBoxSelection } from '@syncfusion/ej2-react-dropdowns';
+import { ListBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 
 function App() {
   let data: { [key: string]: Object }[] = [
@@ -20,7 +20,7 @@ function App() {
   ];
   let selection:object = { mode:"multiple", showCheckbox: true }
   return (
-    <ListBoxComponent dataSource={data} selectionSettings={selection}> <Inject services={[CheckBoxSelection]}/>
+    <ListBoxComponent dataSource={data} selectionSettings={selection}>
     </ListBoxComponent>
   );
 }
