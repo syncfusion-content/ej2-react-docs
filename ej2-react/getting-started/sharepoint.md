@@ -68,7 +68,7 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
 
-require ('@syncfusion/ej2-react-grids/styles/material.css');
+require ('@syncfusion/ej2-grids/styles/material.css');
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,7 +133,7 @@ import * as React from 'react';
 import { IAppProps } from './IAppProps';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 
-require('@syncfusion/ej2-react-grids/styles/material.css')
+require('@syncfusion/ej2-grids/styles/material.css');
 
 export default class App extends React.Component<IAppProps, {}> {
   
