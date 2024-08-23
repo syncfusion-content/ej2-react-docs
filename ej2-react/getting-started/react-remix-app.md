@@ -16,15 +16,13 @@ This document helps you to create a simple Remix application with React Framewor
 
 Before getting started with Syncfusion React Components with Remix project, check whether the following are installed in the developer machine.
 
-* Node.js 14 or greater
-
-* npm 7 or greater
+[System requirements for Syncfusion React UI components](../system-requirement)
 
 ## Benefits to using Remix
 
 ### Nested pages
 
-The pages inside `./route` folder is nested in the route where you can embed these components into the parent page. It reduces the loading time of the page.
+The pages inside `./routes` folder is nested in the route where you can embed these components into the parent page. It reduces the loading time of the page.
 
 ### Error boundaries
 
@@ -35,12 +33,6 @@ If you get an error in a nested route or a Remix component, the errors are limit
 Remix automatically handles all loading states, you have to do is tell Remix what to show when the app is loading.
 
 ## Create Remix application
-
-Install [create-remix](https://www.npmjs.com/package/create-remix) by running the following command.
-
-```
-npm install -g create-remix
-```
 
 To setup basic Remix sample, use the following commands.
 
@@ -53,22 +45,20 @@ npx create-remix@latest
 When you run this command, You will be asked the following questions.
 
 ```
-Where would you like to create your app? quick-start
-What type of app do you want to create? Just the basics
-Where do you want to deploy? Choose Remix if you're unsure; it's easy to change deployment targets. Remix App Server
-TypeScript or JavaScript? Typescript
-Do you want me to run `npm install`? Yes
+dir  :: Where should we create your new project?
+        quick-start
+
+        ◼  Using basic template See https://remix.run/guides/templates for more
+        ✔  Template copied
+
+git  :: Initialize a new git repository?
+        No
+
+deps :: Install dependencies with npm?
+        Yes
 ```
 
-* The Remix app is created in **quick-start** folder.
-
-* There are two types of app creation in remix such as A pre-configured stack ready for production and Just the Basics. For this sample **Just the Basics** is chosen.
-
-* There are a number of servers to choose. We use the default, Remix App Server.
-
-* There is also a choice between TypeScript and JavaScript. In this example Typescript is used.
-
-After app created, use the below command to step inside app folder.
+Then run the following command to jump into the project directory:
 
 ```
 cd quick-start
@@ -86,33 +76,58 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Adding CSS reference
 
-Reference themes for Syncfusion components in the `app/route.tsx` as CSS reference.
+Reference themes for Syncfusion components in the `~/app/routes/_index.tsx` as CSS reference.
 
 ```ts
-export let links = () => {
-  return [{ rel: "stylesheet", href: "https://cdn.syncfusion.com/ej2/material.css" }];
-};
+import '@syncfusion/ej2-base/styles/material3.css';
+import '@syncfusion/ej2-buttons/styles/material3.css';
+import '@syncfusion/ej2-calendars/styles/material3.css';
+import '@syncfusion/ej2-dropdowns/styles/material3.css';
+import '@syncfusion/ej2-inputs/styles/material3.css';
+import '@syncfusion/ej2-navigations/styles/material3.css';
+import '@syncfusion/ej2-popups/styles/material3.css';
+import '@syncfusion/ej2-splitbuttons/styles/material3.css';
+import '@syncfusion/ej2-notifications/styles/material3.css';
+import '@syncfusion/ej2-react-grids/styles/material3.css';
+```
+
+## Adding SSR configuration
+
+To use Syncfusion packages in Server-Side Rendering (SSR) with Vite, you'll need to update the `vite.config.ts` file. This ensures that the Syncfusion packages are properly transpiled to be compatible with the server environment.
+
+```ts
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  ...
+  ssr: {
+    noExternal: [/@syncfusion/]
+  },
+  ...
+});
 ```
 
 ## Adding React Grid component
 
-Now, you can add Syncfusion React components in the Remix application. For getting started, add the React Grid component in `app/route/index.tsx` file using following code.
+Now, you can add Syncfusion React components in the Remix application. For getting started, add the React Grid component in `~/app/routes/_index.tsx` file using following code.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="~/app/routes/_index.tsx" %}
+{% raw %}
+
 import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, Sort } from '@syncfusion/ej2-react-grids';
-import * as React from 'react';
 import { data } from '../datasource';
 
 export let meta = () => {
-  return {
+  return [{
     title: "Syncfusion Grid Remix",
     description: "Syncfusion Grid components with Remix",
-  };
+  }];
 };
 
 export default function Index() {
   return (
-    <><GridComponent dataSource={data} allowPaging={true}>
+    <GridComponent dataSource={data} allowPaging={true}>
       <ColumnsDirective>
         <ColumnDirective field="OrderID" width="100" textAlign="Right" />
         <ColumnDirective field="CustomerID" width="100" />
@@ -121,15 +136,17 @@ export default function Index() {
         <ColumnDirective field="ShipCountry" width="100" />
       </ColumnsDirective>
       <Inject services={[Page, Sort]} />
-    </GridComponent></>
+    </GridComponent>
   );
 }
-```
 
-Create a data source file in `app/datasource.tsx` and add the following data for the grid component.
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+Create a data source file in `~/app/datasource.tsx` and add the following data for the grid component.
 
 ```ts
-
 export let data: Object[] = [
     {
         OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),
@@ -205,54 +222,13 @@ export let data: Object[] = [
         OrderID: 10262, CustomerID: 'RATTC', EmployeeID: 8, OrderDate: new Date(8379738e5),
         ShipName: 'Rattlesnake Canyon Grocery', ShipCity: 'Albuquerque', ShipAddress: '2817 Milton Dr.',
         ShipRegion: 'NM', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
-    }];
-
-export let sdata: Object[] = [
-    {
-        OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),
-        ShipName: 'Vins et alcools Chevalier', ShipCity: 'Reims', ShipAddress: '59 rue de l Abbaye',
-        ShipRegion: 'CJ', ShipPostalCode: '51100', ShipCountry: 'Brazil', Freight: 32.38, Verified: !0
-    },
-    {
-        OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, OrderDate: new Date(836505e6),
-        ShipName: 'Toms Spezialitäten', ShipCity: 'Münster', ShipAddress: 'Luisenstr. 48',
-        ShipRegion: 'CJ', ShipPostalCode: '44087', ShipCountry: 'Germany', Freight: 11.61, Verified: !1
-    },
-    {
-        OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, OrderDate: new Date(8367642e5),
-        ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
-        ShipRegion: 'RJ', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 65.83, Verified: !0
-    },
-    {
-        OrderID: 10251, CustomerID: 'VICTE', EmployeeID: 3, OrderDate: new Date(8367642e5),
-        ShipName: 'Victuailles en stock', ShipCity: 'Lyon', ShipAddress: '2, rue du Commerce',
-        ShipRegion: 'CJ', ShipPostalCode: '69004', ShipCountry: 'France', Freight: 41.34, Verified: !0
-    },
-    {
-        OrderID: 10252, CustomerID: 'SUPRD', EmployeeID: 4, OrderDate: new Date(8368506e5),
-        ShipName: 'Suprêmes délices', ShipCity: 'Charleroi', ShipAddress: 'Boulevard Tirou, 255',
-        ShipRegion: 'CJ', ShipPostalCode: 'B-6000', ShipCountry: 'Belgium', Freight: 51.3, Verified: !0
-    },
-    {
-        OrderID: 10253, CustomerID: 'HANAR', EmployeeID: 3, OrderDate: new Date(836937e6),
-        ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
-        ShipRegion: 'RJ', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 58.17, Verified: !0
-    },
-    {
-        OrderID: 10254, CustomerID: 'CHOPS', EmployeeID: 5, OrderDate: new Date(8370234e5),
-        ShipName: 'Chop-suey Chinese', ShipCity: 'Bern', ShipAddress: 'Hauptstr. 31',
-        ShipRegion: 'CJ', ShipPostalCode: '3012', ShipCountry: 'Brazil', Freight: 22.98, Verified: !1
-    },
-    {
-        OrderID: 10255, CustomerID: 'RICSU', EmployeeID: 9, OrderDate: new Date(8371098e5),
-        ShipName: 'Richter Supermarkt', ShipCity: 'Genève', ShipAddress: 'Starenweg 5',
-        ShipRegion: 'CJ', ShipPostalCode: '1204', ShipCountry: 'Switzerland', Freight: 148.33, Verified: !0
-    }];
+    }
+];
 ```
 
 ## Run the application
 
-Run your Remix application in development mode using `run dev` command,
+Run your Remix application in development mode using the following command,
 
 ```
 npm run dev
