@@ -17,7 +17,7 @@ Syncfusion React (Essential JS 2) library is a modern UI components library that
 The Syncfusion React UI components are listed below.
 
 <style>
-## table
+<table>
 {
 border:0 !important;
 line-height: 2!important;
