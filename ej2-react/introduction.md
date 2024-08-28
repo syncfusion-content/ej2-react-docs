@@ -125,7 +125,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/datetimepicker/getting-started">DateTime Picker</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/timepicker/getting-started">TimePicker</a></div>
         <div><p class="controlcategory">INPUTS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maskedtextbox/getting-started">TextBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/textbox/getting-started">TextBox</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maskedtextbox/getting-started">Input Mask</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/numerictextbox/getting-started">Numeric TextBox</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/radio-button/getting-started">RadioButton</a></div>
