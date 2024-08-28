@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React TreeView component
 
 The following section explains the required steps to build the [React TreeView](https://www.syncfusion.com/react-components/react-treeview) component with its basic usage in step by step procedure.
 
@@ -368,7 +368,7 @@ npm start
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs8" %}
 
-> You can also explore our [React TreeView example](https://ej2.syncfusion.com/react/demos/#/material/treeview/default) to knows how to present and manipulate data.
+> You can also explore our [React TreeView example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/treeview/default) to knows how to present and manipulate data.
 
 ## See Also
 
