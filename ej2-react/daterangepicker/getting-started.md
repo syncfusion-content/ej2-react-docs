@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React DateRangePicker component
 
 This section explains you the steps required to create a simple DateRangePicker and demonstrate the basic usage of the DateRangePicker component.
 
@@ -180,3 +180,5 @@ The following example demonstrates, how to set the start date, end date on initi
 
 * [Render DateRangePicker with pre-defined ranges](./customization#preset-ranges)
 * [Render DateRangePicker with specific culture](./globalization)
+
+N> You can refer to our [React DateRangePicker](https://www.syncfusion.com/react-components/react-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [React DateRangePicker example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/daterangepicker/default) that shows how to render the DateRangePicker in React.
