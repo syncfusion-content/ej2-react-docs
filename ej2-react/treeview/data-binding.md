@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data binding in React Treeview component
 
-The TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through `dataSource` property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property. The `dataSource` property supports array of JavaScript objects and **DataManager**. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The React TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through `dataSource` property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property. The `dataSource` property supports array of JavaScript objects and **DataManager**. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded,  loads the child nodes based on the `parentID/child` member.
 
