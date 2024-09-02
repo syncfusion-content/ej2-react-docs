@@ -15,7 +15,7 @@ The Syncfusion React Grid includes a powerful built-in searching feature that al
 To use the searching feature, need to inject **Search** module in the grid and set the [allowSearching](https://ej2.syncfusion.com/react/documentation/api/grid/column/#allowsearching) property to **true** to enable the searching feature in the grid.
 
 To further enhance the search functionality, you can integrate a search text box directly into the grid's toolbar. This allows users to enter search criteria conveniently within the grid interface. To add the search item to the grid's toolbar, use the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbar) property and add **Search** item.
-
+ 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/searching-cs1/app/App.jsx %}
@@ -98,10 +98,88 @@ The following example demonstrates how to set the `searchSettings.operator` prop
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/searching-cs8/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, SearchSettingsModel } from '@syncfusion/ej2-react-grids';
+import { Inject, Search, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dropdowns'
+
+function App() {
+  const [searchOptions, setSearchOptions] = useState({ operator: 'contains' });
+  const toolbarOptions = ['Search'];
+  const ddlData = [
+    { text: 'startswith', value: 'startswith' },
+    { text: 'endswith', value: 'endswith' },
+    { text: 'wildcard', value: 'wildcard' },
+    { text: 'like', value: 'like' },
+    { text: 'equal', value: 'equal' },
+    { text: 'notequal', value: 'notequal' },
+  ];
+
+  const valueChange = (args) => {
+    const searchOperator = { operator: args.value };
+    setSearchOptions(searchOperator);
+  }
+  return (<div>
+    <label style={{ padding: "10px 10px 26px 0" }}>Change the search operators:</label>
+    <DropDownListComponent id="value" index={0} width={100} dataSource={ddlData} change={valueChange}></DropDownListComponent>
+    <GridComponent dataSource={data} toolbar={toolbarOptions} searchSettings={searchOptions}
+      height={272}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' width='100' />
+        <ColumnDirective field='EmployeeID' width='100' textAlign="Right" />
+        <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Search, Toolbar]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/searching-cs8/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, SearchSettingsModel } from '@syncfusion/ej2-react-grids';
+import { Inject, Search, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dropdowns'
+
+function App() {
+  const [searchOptions, setSearchOptions] = useState<SearchSettingsModel>({ operator: 'contains' });
+  const toolbarOptions: ToolbarItems[] = ['Search'];
+  const ddlData: { [key: string]: Object; }[] = [
+    { text: 'startswith', value: 'startswith' },
+    { text: 'endswith', value: 'endswith' },
+    { text: 'wildcard', value: 'wildcard' },
+    { text: 'like', value: 'like' },
+    { text: 'equal', value: 'equal' },
+    { text: 'notequal', value: 'notequal' },
+  ];
+
+  const valueChange = (args: ChangeEventArgs) => {
+    const searchOperator: SearchSettingsModel = { operator: args.value };
+    setSearchOptions(searchOperator);
+  }
+  return (<div>
+    <label style={{ padding: "10px 10px 26px 0" }}>Change the search operators:</label>
+    <DropDownListComponent id="value" index={0} width={100} dataSource={ddlData} change={valueChange}></DropDownListComponent>
+    <GridComponent dataSource={data} toolbar={toolbarOptions} searchSettings={searchOptions}
+      height={272}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' width='100' />
+        <ColumnDirective field='EmployeeID' width='100' textAlign="Right" />
+        <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Search, Toolbar]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/searching-cs8/app/datasource.jsx %}
@@ -249,10 +327,62 @@ The following example demonstrates how to define the `ignoreAccent` property wit
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/searching-cs10/app/App.jsx %}
+{% raw %}
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Search } from '@syncfusion/ej2-react-grids';
+import { Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    let grid;
+    const valueChange = (args) => {
+        grid.searchSettings.ignoreAccent = args.checked;
+    }
+    return (<div>
+        <label style={{ padding: "10px 10px" }}>Enable or disable ignoreAccent property</label>
+        <SwitchComponent id='switch' change={valueChange}></SwitchComponent>
+        <GridComponent ref={g => grid = g} dataSource={data} height={280} toolbar={['Search']} >
+            <ColumnsDirective>
+                <ColumnDirective field='CategoryName' headerText='Category Name' width='100' textAlign="Right" />
+                <ColumnDirective field='ProductName' headerText='Product Name' width='100' />
+                <ColumnDirective field='QuantityPerUnit' headerText='Quantity Per Unit' width='100' textAlign="Right" />
+                <ColumnDirective field='UnitsInStock' headerText='Units In Stock' width='100' />
+            </ColumnsDirective>
+            <Inject services={[Toolbar, Search]} />
+        </GridComponent>
+    </div>);
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/searching-cs10/app/App.tsx %}
+{% raw %}
+import { SwitchComponent, ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Search } from '@syncfusion/ej2-react-grids';
+import { Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+  let grid: GridComponent | null;
+  const valueChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).searchSettings.ignoreAccent = args.checked;
+  }
+  return (<div>
+    <label style={{ padding: "10px 10px" }}>Enable or disable ignoreAccent property:</label>
+    <SwitchComponent id='switch' change={valueChange}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} height={280} toolbar={['Search']} >
+      <ColumnsDirective>
+        <ColumnDirective field='CategoryName' headerText='Category Name' width='100' textAlign="Right" />
+        <ColumnDirective field='ProductName' headerText='Product Name' width='100' />
+        <ColumnDirective field='QuantityPerUnit' headerText='Quantity Per Unit' width='100' textAlign="Right" />
+        <ColumnDirective field='UnitsInStock' headerText='Units In Stock' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Toolbar, Search]} />
+    </GridComponent>
+  </div>);
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/searching-cs10/app/datasource.jsx %}

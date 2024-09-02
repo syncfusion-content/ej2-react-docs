@@ -44,10 +44,92 @@ In this demo, the custom element is rendered for both **CustomerID** and **Order
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/header-template-cs1/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent} from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import React, {useState} from 'react';
+import { data } from './datasource';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+    const dropDownData = ['Freight', 'Shipment', 'Cargo'];
+    const [headerText, setHeaderText] = useState('Order Date');
+    const customerIDTemplate = () => {
+      return (<div>
+        <span className="e-icon-userlogin e-icons employee"></span> Customer ID
+      </div>);
+    }
+    const freightTemplate = () => {
+      return (<div>
+        <DropDownListComponent dataSource={dropDownData} index={0} width="140" />
+      </div>);
+    }
+    const orderDateTemplate = () => {
+        return (<div>
+          <SwitchComponent change={onSwitchToggle} />
+          <label style={{padding: "0px 0px 0px 20px"}}>{headerText}</label>
+        </div>);
+    }
+    const onSwitchToggle = (args) =>{
+        setHeaderText(args.checked ? 'Purchase Date' : 'Order Date');
+    }
+    return <GridComponent dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' headerTemplate={customerIDTemplate} width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' headerTemplate={freightTemplate} />
+        <ColumnDirective field='OrderDate' headerText='Order Date' width='135' headerTemplate={orderDateTemplate} format='yMd' textAlign='Right' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent>
+  
+  };
+  export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/header-template-cs1/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent} from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import React, {useState} from 'react';
+import { data } from './datasource';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+    const dropDownData: string[] = ['Freight', 'Shipment', 'Cargo'];
+    const [headerText, setHeaderText] = useState('Order Date');
+    const customerIDTemplate = () => {
+      return (<div>
+        <span className="e-icon-userlogin e-icons employee"></span> Customer ID
+      </div>);
+    }
+    const freightTemplate = () => {
+      return (<div>
+        <DropDownListComponent dataSource={dropDownData} index={0} width="140" />
+      </div>);
+    }
+    const orderDateTemplate = () => {
+        return (<div>
+          <SwitchComponent change={onSwitchToggle} />
+          <label style={{padding: "0px 0px 0px 20px"}}>{headerText}</label>
+        </div>);
+    }
+    const onSwitchToggle = (args: any) =>{
+        setHeaderText(args.checked ? 'Purchase Date' : 'Order Date');
+    }
+    return <GridComponent dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' headerTemplate={customerIDTemplate} width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' headerTemplate={freightTemplate} />
+        <ColumnDirective field='OrderDate' headerText='Order Date' width='135' headerTemplate={orderDateTemplate} format='yMd' textAlign='Right' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent>
+  
+  };
+  export default App;
+{% endraw %} 
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/header-template-cs1/app/datasource.jsx %}
@@ -98,10 +180,80 @@ Here is an example of using the `headerTextAlign` property to align the text of 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-cs39/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const alignmentData = [
+    { text: 'Left', value: 'Left' },
+    { text: 'Right', value: 'Right' },
+    { text: 'Center', value: 'Center' },
+    { text: 'Justify', value: 'Justify' },
+  ];
+  const changeAlignment = ((args) => {
+    grid.columns.forEach(col => {
+      col.headerTextAlign = args.value;
+    });
+    grid.refreshHeader();
+  })
+  return (
+    <div>
+      <label style={{ padding: '30px 17px 0 0' }}>Align the text for columns :</label>
+      <DropDownListComponent dataSource={alignmentData} index={0} width="100" change={changeAlignment}></DropDownListComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+            <ColumnDirective field='Freight' headerText='Freight' width='100' />
+            <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd'/>
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-cs39/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: Grid | null;
+  const alignmentData: any = [
+    { text: 'Left', value: 'Left' },
+    { text: 'Right', value: 'Right' },
+    { text: 'Center', value: 'Center' },
+    { text: 'Justify', value: 'Justify' },
+  ];
+  const changeAlignment = ((args: any) => {
+    (grid as any).columns.forEach((col: any) => {
+      col.headerTextAlign = (args as any).value;
+    });
+    (grid as any).refreshHeader();
+  })
+  return (
+    <div>
+      <label style={{ padding: '30px 17px 0 0' }}>Align the text for columns :</label>
+      <DropDownListComponent dataSource={alignmentData} index={0} width="100" change={changeAlignment}></DropDownListComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+            <ColumnDirective field='Freight' headerText='Freight' width='100' />
+            <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs39/app/datasource.jsx %}
@@ -135,10 +287,72 @@ Grid provides the below three options for configuring:
 In the example below, the `textWrapSettings.wrapMode` property is set to **Header** only the grid header text is wrap to the next line.
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/autowrap-cs4/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent, TextWrapSettingsModel} from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { inventoryData } from './datasource';
+
+function App() {
+  let grid;
+  const wrapSettings = { wrapMode: 'Header' };
+  const dropDownData = [
+    { text: 'Header', value: 'Header' },
+    { text: 'Both', value: 'Both' },
+  ];
+  const valueChange = ((args) => {
+    grid.textWrapSettings.wrapMode = args.value;
+  })
+  return (
+    <div>
+      <label style={{ padding: '30px 17px 0 0' }}>Autowrap for header column :</label>
+      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
+          <ColumnsDirective>
+            <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
+            <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+            <ColumnDirective field='Country' headerText='Country' width='100' />
+            <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/autowrap-cs4/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent, TextWrapSettingsModel } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { inventoryData } from './datasource';
+
+function App() {
+  let grid: Grid | null;
+  const wrapSettings: TextWrapSettingsModel = { wrapMode: 'Header' };
+  const dropDownData: any = [
+    { text: 'Header', value: 'Header' },
+    { text: 'Both', value: 'Both' },
+  ];
+  const valueChange = ((args: any) => {
+    (grid as any).textWrapSettings.wrapMode = args.value;
+  })
+  return (
+    <div>
+      <label style={{ padding: '30px 17px 0 0' }}>Autowrap for header column :</label>
+      <DropDownListComponent dataSource={dropDownData} index={0} width="100" change={valueChange}></DropDownListComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={inventoryData} height={315} ref={g => grid = g} allowPaging={true} allowTextWrap={true} textWrapSettings={wrapSettings}>
+          <ColumnsDirective>
+            <ColumnDirective field='Inventor' headerText='Inventor' width='100' />
+            <ColumnDirective field='NumberofPatentFamilies' headerText='Number of Patent Families' width='100' />
+            <ColumnDirective field='Country' headerText='Country' width='100' />
+            <ColumnDirective field='Mainfieldsofinvention' headerText='Main fields of invention' width='140' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/autowrap-cs4/app/datasource.jsx %}
@@ -148,7 +362,7 @@ In the example below, the `textWrapSettings.wrapMode` property is set to **Heade
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/autowrap-cs4" %}
+{% previewsample "page.domainurl/code-snippet/grid/autowrap-cs4" %}
 
 ## Change the height of header
 
@@ -228,10 +442,102 @@ Here is an example of how to change the header text of a column using the `getCo
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-cs41/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid;
+    let dropDown;
+    let textBox;
+    const field = { text: 'text', value: 'value' };
+    const alignmentData= [
+        { text: 'OrderID', value: 'OrderID' },
+        { text: 'CustomerID', value: 'CustomerID' },
+        { text: 'Freight', value: 'Freight' },
+        { text: 'OrderDate', value: 'OrderDate' },
+    ];
+
+    const changeHeaderText = (() => {
+        if (textBox.element.value.trim() !== '') {
+            const column = grid.getColumnByField(dropDown.value);
+            column.headerText = textBox.element.value;
+            grid.refreshHeader();
+        }
+    })
+    return (
+        <div>
+            <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
+            <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
+            <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
+            <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
+            <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+            <ButtonComponent id="button" cssClass="e-outline" onClick={changeHeaderText}>Change</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                        <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                    </ColumnsDirective>
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-cs41/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Column } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid: GridComponent | null;
+    let dropDown: DropDownListComponent | null;
+    let textBox: TextBoxComponent | null;
+    const field: Object = { text: 'text', value: 'value' };
+    const alignmentData: Object[] = [
+        { text: 'OrderID', value: 'OrderID' },
+        { text: 'CustomerID', value: 'CustomerID' },
+        { text: 'Freight', value: 'Freight' },
+        { text: 'OrderDate', value: 'OrderDate' },
+    ];
+
+    const changeHeaderText = (() => {
+        if (textBox.element.value.trim() !== '') {
+            const column: Column = (grid as GridComponent).getColumnByField((dropDown as DropDownListComponent).value);
+            column.headerText = textBox.element.value;
+            (grid as GridComponent).refreshHeader();
+        }
+    })
+    return (
+        <div>
+            <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
+            <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
+            <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
+            <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
+            <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+            <ButtonComponent id="button" cssClass="e-outline" onClick={changeHeaderText}>Change</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                        <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                    </ColumnsDirective>
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs41/app/datasource.jsx %}
@@ -262,10 +568,108 @@ Here's an example of how to use the `headerValueAccessor` property to change the
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/change-valueaccessor-cs1/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnModel, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+  let grid;
+  let dropDown;
+  let textBox;
+  const field = { text: 'text', value: 'value' };
+  const alignmentData = [
+    { text: 'OrderID', value: 'OrderID' },
+    { text: 'CustomerID', value: 'CustomerID' },
+    { text: 'Freight', value: 'Freight' },
+    { text: 'OrderDate', value: 'OrderDate' },
+  ];
+
+  const changeHeaderText = ((args) => {
+    grid.refreshHeader();
+  });
+
+  const headerValueAccessor = ((field, columns) => {
+    if (textBox && textBox.value && textBox.value.trim() !== '' && columns.field === dropDown.value) {
+      return columns.headerText = textBox.value;
+    }
+  });
+
+  return (
+    <div>
+      <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
+      <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
+      <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
+      <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
+      <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+      <ButtonComponent id="button" cssClass="e-outline" onClick={changeHeaderText}>Change</ButtonComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+            <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+            <ColumnDirective field='OrderDate' headerText='Order Date' headerValueAccessor={headerValueAccessor} format='yMd' width='120' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/change-valueaccessor-cs1/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnModel, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+  let grid: Grid | null;
+  let dropDown: DropDownListComponent | null;
+  let textBox: any;
+  const field: Object = { text: 'text', value: 'value' };
+  const alignmentData: any = [
+    { text: 'OrderID', value: 'OrderID' },
+    { text: 'CustomerID', value: 'CustomerID' },
+    { text: 'Freight', value: 'Freight' },
+    { text: 'OrderDate', value: 'OrderDate' },
+  ];
+
+  const changeHeaderText = ((args: any) => {
+    (grid as any).refreshHeader();
+  });
+
+  const headerValueAccessor = ((field: string, columns: ColumnModel) => {
+    if (textBox && textBox.value && textBox.value.trim() !== '' && columns.field === (dropDown as any).value) {
+      return columns.headerText = textBox.value;
+    }
+  });
+
+  return (
+    <div>
+      <label style={{ padding: '10px 10px 26px 0' }}>Select column name  :</label>
+      <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br/>
+      <label style={{ padding: '30px 17px 0 0' }}>Enter new header text :</label>
+      <TextBoxComponent ref={t => textBox = t} placeholder="Enter new header text" width='200' />
+      <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+      <ButtonComponent id="button" cssClass="e-outline" onClick={changeHeaderText}>Change</ButtonComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+            <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+            <ColumnDirective field='OrderDate' headerText='Order Date' headerValueAccessor={headerValueAccessor} format='yMd' width='120' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/change-valueaccessor-cs1/app/datasource.jsx %}
@@ -283,10 +687,82 @@ If you want to change the header text of all columns in the grid, you can loop t
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/change-headerText-cs3/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnModel, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  let grid;
+  const headerTextMap = {
+    'OrderID': 'Order ID',
+    'CustomerID': 'Customer ID',
+    'Freight': 'Freight Charge',
+    'ShipCity': 'Ship To City'
+  };
+
+  const changeHeaderText = (() => {
+    grid.columns.forEach((column) => {
+      column.headerText = headerTextMap[column.field];
+    });
+    grid.refreshHeader();
+  });
+
+  return (
+    <div>
+      <ButtonComponent cssClass="e-success" onClick={changeHeaderText}>Change Header Text</ButtonComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+            <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
+            <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+            <ColumnDirective field='ShipCity' headerText='ShipCity' width='120' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/change-headerText-cs3/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnModel, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  let grid: Grid | null;
+  const headerTextMap: { [key: string]: string } = {
+    'OrderID': 'Order ID',
+    'CustomerID': 'Customer ID',
+    'Freight': 'Freight Charge',
+    'ShipCity': 'Ship To City'
+  };
+
+  const changeHeaderText = (() => {
+    (grid as any).columns.forEach((column: ColumnModel | any) => {
+      column.headerText = headerTextMap[column.field as string];
+    });
+    (grid as any).refreshHeader();
+  });
+
+  return (
+    <div>
+      <ButtonComponent cssClass="e-success" onClick={changeHeaderText}>Change Header Text</ButtonComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+            <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
+            <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+            <ColumnDirective field='ShipCity' headerText='ShipCity' width='120' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/change-headerText-cs3/app/datasource.jsx %}
@@ -443,10 +919,45 @@ The following example demonstrates how to customize the appearance of the **Orde
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/header-style-cs2/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnModel, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    return (
+        <div>
+            <GridComponent dataSource={data} height={315}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='OrderID' width='100' customAttributes={{ class: 'customcss' }} />
+                    <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
+                    <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' customAttributes={{ class: 'customcss' }} />
+                    <ColumnDirective field='ShipCity' headerText='ShipCity' width='120' />
+                </ColumnsDirective>
+            </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/header-style-cs2/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    return (
+        <div>
+            <GridComponent dataSource={data} height={315}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='OrderID' width='100' customAttributes={{ class: 'customcss' }} />
+                    <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
+                    <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' customAttributes={{ class: 'customcss' }} />
+                    <ColumnDirective field='ShipCity' headerText='ShipCity' width='120' />
+                </ColumnsDirective>
+            </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/header-style-cs2/app/datasource.jsx %}
@@ -525,10 +1036,66 @@ The following example demonstrates how to use the `refreshHeader` method to upda
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/refresh-header-cs1/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+    let grid;
+    const refreshHeader = ((args) => {
+        const column = grid.getColumnByIndex(1);
+        column.headerText = 'New Header Text'; // update the header text of the column object
+        grid.refreshHeader(); // refresh the grid header
+    });
+
+    return (
+        <div>
+            <ButtonComponent onClick={refreshHeader}>Refresh Header</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent ref={g => grid = g} dataSource={data} height={315} >
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+                        <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
+                        <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                        <ColumnDirective field='ShipCity' headerText='ShipCity' width='120' />
+                    </ColumnsDirective>
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/refresh-header-cs1/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+    let grid: Grid | null;
+    const refreshHeader = ((args: any) => {
+        const column = (grid as any).getColumnByIndex(1);
+        column.headerText = 'New Header Text'; // update the header text of the column object
+        (grid as any).refreshHeader(); // refresh the grid header
+    });
+
+    return (
+        <div>
+            <ButtonComponent onClick={refreshHeader}>Refresh Header</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent ref={g => grid = g} dataSource={data} height={315} >
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='OrderID' width='100' />
+                        <ColumnDirective field='CustomerID' headerText='CustomerID' width='120' />
+                        <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                        <ColumnDirective field='ShipCity' headerText='ShipCity' width='120' />
+                    </ColumnsDirective>
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/refresh-header-cs1/app/datasource.jsx %}

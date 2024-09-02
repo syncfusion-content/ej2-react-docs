@@ -292,10 +292,80 @@ Here is an example of using the `textAlign` property to align the text of a Grid
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-cs27/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const alignmentData = [
+    { text: 'Left', value: 'Left' },
+    { text: 'Right', value: 'Right' },
+    { text: 'Center', value: 'Center' },
+    { text: 'Justify', value: 'Justify' }
+  ];
+  const changeAlignment = ((args) => {
+    grid.columns.forEach((col) => {
+      col.textAlign = args.value;
+    });
+    grid.refreshColumns();
+  })
+  return (
+    <div>
+      <label style={{ padding: '30px 17px 0 0' }}>Align the text for columns :</label>
+      <DropDownListComponent dataSource={alignmentData} index={0} width="100" change={changeAlignment}></DropDownListComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+            <ColumnDirective field='Freight' headerText='Freight' width='100' />
+            <ColumnDirective field='OrderDate' headerText='Order Date' width='140' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-cs27/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: Grid | null;
+  const alignmentData: any = [
+    { text: 'Left', value: 'Left' },
+    { text: 'Right', value: 'Right' },
+    { text: 'Center', value: 'Center' },
+    { text: 'Justify', value: 'Justify' },
+  ];
+  const changeAlignment = ((args: any) => {
+    (grid as any).columns.forEach((col: any) => {
+      col.textAlign = (args as any).value;
+    });
+    (grid as any).refreshColumns();
+  })
+  return (
+    <div>
+      <label style={{ padding: '30px 17px 0 0' }}>Align the text for columns :</label>
+      <DropDownListComponent dataSource={alignmentData} index={0} width="100" change={changeAlignment}></DropDownListComponent>
+      <div style={{ padding: '40px 0 0 0' }}>
+        <GridComponent dataSource={data} height={315} ref={g => grid = g}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+            <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+            <ColumnDirective field='Freight' headerText='Freight' width='100' />
+            <ColumnDirective field='OrderDate' headerText='Order Date' width='140' />
+          </ColumnsDirective>
+        </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs27/app/datasource.jsx %}
@@ -362,7 +432,7 @@ Here is an example of how you can prevent a checkbox from being displayed in a b
 
 The Grid has a feature that allows to automatically adjust column widths based on the maximum content width of each column when you double-click on the resizer symbol located in a specific column header. This feature ensures that all data in the grid rows is displayed without wrapping. To use this feature, you need to inject the **Resize** module and enable the resizer symbol in the column header by setting the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/grid/#allowresizing) property to true in the grid.
 
-### Resizing a column to fit its content using autoFit method
+### Resizing a column to fit its content using AutoFit method
 
 The [autoFitColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#autofitcolumns) method resizes the column to fit the widest cell’s content without wrapping. You can autofit specific columns at initial rendering by invoking the `autoFitColumns` method in [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event.
 
@@ -468,10 +538,50 @@ Here’s an example of how you can use the `lockColumn` property to lock a Colum
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-cs24/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Reorder } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    const customAttributes = { class: 'customcss' };
+    return <GridComponent dataSource={data} allowReordering={true} allowSelection={false} height={315}>
+    <Inject services={[Reorder]}/>
+    <ColumnsDirective>
+      <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
+      <ColumnDirective field='CustomerID' width='100'/>
+      <ColumnDirective field='ShipCity' width='100' lockColumn={true} customAttributes={{ class: 'customcss' }}/>
+      <ColumnDirective field='ShipName' width='100'/>
+      <ColumnDirective field='ShipPostalCode' width='120'/>
+      <ColumnDirective field='ShipRegion' width='140'/>
+    </ColumnsDirective>
+  </GridComponent>;
+}
+;
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-cs24/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Reorder } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  const customAttributes: any = { class: 'customcss' };
+  return <GridComponent dataSource={data} allowReordering={true} allowSelection={false} height={315}>
+    <Inject services={[Reorder]} />
+    <ColumnsDirective>
+      <ColumnDirective field='OrderID' width='100' textAlign="Right" />
+      <ColumnDirective field='CustomerID' width='100' />
+      <ColumnDirective field='ShipCity' width='100' lockColumn={true} customAttributes={{ class: 'customcss' }} />
+      <ColumnDirective field='ShipName' width='100' />
+      <ColumnDirective field='ShipPostalCode' width='120' />
+      <ColumnDirective field='ShipRegion' width='140' />
+    </ColumnsDirective>
+  </GridComponent>
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs24/app/datasource.jsx %}
@@ -526,10 +636,76 @@ Here’s an example of how to show or hide a ColumnDirective based on the `heade
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-cs26/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import {ButtonComponent} from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const show = () => {
+    if (grid) {
+      grid.showColumns('Customer ID', 'headerText'); //show by HeaderText
+    }
+  }
+  const hide = () => {
+    if (grid) {
+      grid.hideColumns('Customer ID', 'headerText'); //hide by HeaderText
+    }
+  }
+  return (<div>
+    <ButtonComponent cssClass='e-info' onClick={show}>Show</ButtonComponent>
+    <ButtonComponent style={{marginLeft:'20px'}} cssClass='e-info' onClick={hide}>Hide</ButtonComponent>
+    <GridComponent dataSource={data} height={295} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
+        <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-cs26/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import {ButtonComponent} from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: Grid | null;
+  const show = () => {
+    if (grid) {
+      grid.showColumns('Customer ID', 'headerText'); //show by HeaderText
+    }
+  }
+  const hide = () => {
+    if (grid) {
+      grid.hideColumns('Customer ID', 'headerText'); //hide by HeaderText
+    }
+  }
+  return (<div>
+    <ButtonComponent cssClass='e-info' onClick={show}>Show</ButtonComponent>
+    <ButtonComponent style={{marginLeft:'20px'}} cssClass='e-info' onClick={hide}>Hide</ButtonComponent>
+    <GridComponent dataSource={data} height={295} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
+        <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs26/app/datasource.jsx %}
@@ -549,10 +725,76 @@ Here’s an example of how to show or hide a ColumnDirective based on the `field
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-field-cs1/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import {ButtonComponent} from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const show = () => {
+    if (grid) {
+      grid.showColumns('CustomerID', 'field'); //show by field
+    }
+  }
+  const hide = () => {
+    if (grid) {
+      grid.hideColumns('CustomerID', 'field'); //hide by field
+    }
+  }
+  return (<div>
+    <ButtonComponent cssClass='e-info' onClick={show}>Show</ButtonComponent>
+    <ButtonComponent style={{marginLeft:'20px'}} cssClass='e-info' onClick={hide}>Hide</ButtonComponent>
+    <GridComponent dataSource={data} height={295} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
+        <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-field-cs1/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import {ButtonComponent} from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: Grid | null;
+  const show = () => {
+    if (grid) {
+      grid.showColumns('CustomerID', 'field'); //show by field
+    }
+  }
+  const hide = () => {
+    if (grid) {
+      grid.hideColumns('CustomerID', 'field'); //hide by field
+    }
+  }
+  return (<div>
+    <ButtonComponent cssClass='e-info' onClick={show}>Show</ButtonComponent>
+    <ButtonComponent style={{marginLeft:'20px'}} cssClass='e-info' onClick={hide}>Hide</ButtonComponent>
+    <GridComponent dataSource={data} height={295} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
+        <ColumnDirective field='Freight' headerText='Freight' width='100' format="C2" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-field-cs1/app/datasource.jsx %}
@@ -643,7 +885,7 @@ let visibleColumns = grid.getVisibleColumns();
 
 * [getForeignKeyColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#getforeignkeycolumns):
 
-This method returns the array of foreignkey columns.
+This method returns the array of foreign key columns.
 
 ```
 let foreignKeyColumns = grid.getForeignKeyColumns();

@@ -16,10 +16,80 @@ In the following example, the [frozenColumns](https://ej2.syncfusion.com/react/d
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/frozen-column-cs1/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid;
+    let textBox;
+    const frozenColumn = (() => {
+        grid.frozenColumns = textBox.value;
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen columns:</label>
+            <NumericTextBoxComponent id='frozencolums' ref={t => textBox = t} min={0} max={3} validateDecimalOnType={true} decimals={0} format='n' value={2} width={100}></NumericTextBoxComponent>
+            <ButtonComponent style={{ marginLeft: '5px' }} onClick={frozenColumn}>UPDATE</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g} frozenColumns={2}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+                        <ColumnDirective field='Freight' headerText='Freight' width='120' />
+                        <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+                        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                        <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+                        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+                        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+                    </ColumnsDirective>
+                    <Inject services={[Freeze]} />
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/frozen-column-cs1/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, Grid, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid: Grid | null;
+    let textBox: NumericTextBoxComponent | null;
+    const frozenColumn = (() => {
+        (grid as any).frozenColumns = (textBox as any).value;
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen columns:</label>
+            <NumericTextBoxComponent id='frozencolums' ref={t => textBox = t} min={0} max={3} validateDecimalOnType={true} decimals={0} format='n' value={2} width={100}></NumericTextBoxComponent>
+            <ButtonComponent style={{ marginLeft: '5px' }} onClick={frozenColumn}>UPDATE</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g} frozenColumns={2}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+                        <ColumnDirective field='Freight' headerText='Freight' width='120' />
+                        <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+                        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                        <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+                        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+                        <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+                    </ColumnsDirective>
+                    <Inject services={[Freeze]} />
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/frozen-column-cs1/app/datasource.jsx %}
@@ -46,10 +116,120 @@ The following example demonstrates how to freeze particular column in grid using
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/frozen-column-cs2/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    const field = { text: 'text', value: 'value' };
+    const ddlData = [
+        { text: 'OrderID', value: 'OrderID' },
+        { text: 'CustomerID', value: 'CustomerID' },
+        { text: 'OrderDate', value: 'OrderDate' },
+        { text: 'ShipName', value: 'ShipName' },
+        { text: 'ShipCity', value: 'ShipCity' },
+        { text: 'ShipCountry', value: 'ShipCountry' },
+        { text: 'ShipRegion', value: 'ShipRegion' },
+        { text: 'ShipAddress', value: 'ShipAddress' },
+        { text: 'Freight', value: 'Freight' },
+    ]
+    const columnChange = ((args) => {
+        const selectedColumn = grid.getColumnByField(args.value);
+        // Iterate through all columns and unfreeze any previously frozen columns
+        grid.columns.forEach((column) => {
+            if (column.isFrozen) {
+                column.isFrozen = false;
+            }
+        });
+        // Freeze the newly selected column, if it exists
+        if (selectedColumn) {
+            selectedColumn.isFrozen = true;
+        }
+        // Refresh the columns
+        grid.refreshColumns();
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen column:</label>
+            <DropDownListComponent id='dropdown' index={0} width={150} fields={field} dataSource={ddlData} change={columnChange}></DropDownListComponent>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='150' isFrozen={true} />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+                    <ColumnDirective field='Freight' headerText='Freight' width='120' />
+                    <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+                    <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+                    <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+                    <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+                </ColumnsDirective>
+                <Inject services={[Freeze]} />
+            </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/frozen-column-cs2/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, Grid, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid: Grid | null;
+    const field: any = { text: 'text', value: 'value' };
+    const ddlData: any = [
+        { text: 'OrderID', value: 'OrderID' },
+        { text: 'CustomerID', value: 'CustomerID' },
+        { text: 'OrderDate', value: 'OrderDate' },
+        { text: 'ShipName', value: 'ShipName' },
+        { text: 'ShipCity', value: 'ShipCity' },
+        { text: 'ShipCountry', value: 'ShipCountry' },
+        { text: 'ShipRegion', value: 'ShipRegion' },
+        { text: 'ShipAddress', value: 'ShipAddress' },
+        { text: 'Freight', value: 'Freight' },
+    ]
+    const columnChange = ((args: ChangeEventArgs) => {
+        const selectedColumn = (grid as any).getColumnByField(args.value as string);
+        // Iterate through all columns and unfreeze any previously frozen columns
+        ((grid as any).columns).forEach((column: any) => {
+            if (column.isFrozen) {
+                column.isFrozen = false;
+            }
+        });
+        // Freeze the newly selected column, if it exists
+        if (selectedColumn) {
+            selectedColumn.isFrozen = true;
+        }
+        // Refresh the columns
+        (grid as any).refreshColumns();
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the frozen column:</label>
+            <DropDownListComponent id='dropdown' index={0} width={150} fields={field} dataSource={ddlData} change={columnChange}></DropDownListComponent>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='150' isFrozen={true} />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+                    <ColumnDirective field='Freight' headerText='Freight' width='120' />
+                    <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+                    <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+                    <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+                    <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+                </ColumnsDirective>
+                <Inject services={[Freeze]} />
+            </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/frozen-column-cs2/app/datasource.jsx %}
@@ -79,10 +259,120 @@ In the following example, the **ShipCountry** column is frozen on the left side,
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/frozen-column-cs3/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  let grid;
+  let columnDropDown;
+  let directionDropDown;
+  const field = { text: 'name', value: 'id' };
+  const columnData = [
+    { id: 'OrderID', name: 'OrderID' },
+    { id: 'CustomerID', name: 'CustomerID' },
+    { id: 'OrderDate', name: 'OrderDate' },
+    { id: 'ShipName', name: 'ShipName' },
+    { id: 'ShipCity', name: 'ShipCity' },
+    { id: 'ShipCountry', name: 'ShipCountry' },
+    { id: 'ShipRegion', name: 'ShipRegion' },
+    { id: 'ShipAddress', name: 'ShipAddress' },
+    { id: 'Freight', name: 'Freight' },
+  ]
+  const directionData = [
+    { id: 'Left', name: 'Left' },
+    { id: 'Right', name: 'Right' },
+    { id: 'Fixed', name: 'Fixed' },
+  ]
+  const freezeColumnfn = (() => {
+    grid.getColumnByField(columnDropDown.value).freeze = directionDropDown.value
+    grid.refreshColumns();
+  })
+  return (
+    <div>
+      <label style={{ padding: '30px 17px 0 0' }}>Change column:</label>
+      <DropDownListComponent id='columnData' ref={c => columnDropDown = c} index={5} width={120} fields={field} dataSource={columnData}></DropDownListComponent>
+      <label style={{ padding: "10px 10px 26px 0", marginLeft: "5px" }}>Change freeze direction:</label>
+      <DropDownListComponent id='directionData' ref={c => directionDropDown = c} index={0} width={100} fields={field} dataSource={directionData}></DropDownListComponent>
+      <ButtonComponent style={{ marginLeft: '5px' }} onClick={freezeColumnfn}>Update</ButtonComponent>
+      <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+          <ColumnDirective field='Freight' headerText='Freight' width='120' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' freeze='Left' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+          <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+          <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+        <Inject services={[Freeze]} />
+      </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/frozen-column-cs3/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, freezeDirection, Grid, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  let grid: Grid | null;
+  let columnDropDown: DropDownListComponent | null;
+  let directionDropDown: DropDownListComponent | null;
+  const field: object = { text: 'name', value: 'id' };
+  const columnData: any = [
+    { id: 'OrderID', name: 'OrderID' },
+    { id: 'CustomerID', name: 'CustomerID' },
+    { id: 'OrderDate', name: 'OrderDate' },
+    { id: 'ShipName', name: 'ShipName' },
+    { id: 'ShipCity', name: 'ShipCity' },
+    { id: 'ShipCountry', name: 'ShipCountry' },
+    { id: 'ShipRegion', name: 'ShipRegion' },
+    { id: 'ShipAddress', name: 'ShipAddress' },
+    { id: 'Freight', name: 'Freight' },
+  ]
+  const directionData: any = [
+    { id: 'Left', name: 'Left' },
+    { id: 'Right', name: 'Right' },
+    { id: 'Fixed', name: 'Fixed' },
+  ]
+  const freezeColumnfn = (() => {
+    (grid as any).getColumnByField((columnDropDown as DropDownListComponent).value as string).freeze = (directionDropDown as DropDownListComponent).value as freezeDirection
+    (grid as any).refreshColumns();
+  })
+  return (
+    <div>
+      <label style={{ padding: '30px 17px 0 0' }}>Change column:</label>
+      <DropDownListComponent id='columnData' ref={c => columnDropDown = c} index={5} width={120} fields={field} dataSource={columnData}></DropDownListComponent>
+      <label style={{ padding: "10px 10px 26px 0", marginLeft: "5px" }}>Change freeze direction:</label>
+      <DropDownListComponent id='directionData' ref={c => directionDropDown = c} index={0} width={100} fields={field} dataSource={directionData}></DropDownListComponent>
+      <ButtonComponent style={{ marginLeft: '5px' }} onClick={freezeColumnfn}>Update</ButtonComponent>
+      <GridComponent dataSource={data} height={315} ref={g => grid = g} >
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='150'/>
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+          <ColumnDirective field='Freight' headerText='Freight' width='120' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' freeze='Left' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+          <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+          <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+        <Inject services={[Freeze]} />
+      </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/frozen-column-cs3/app/datasource.jsx %}

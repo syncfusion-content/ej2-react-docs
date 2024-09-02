@@ -47,10 +47,70 @@ In the following example, it demonstrates how to dynamically enable and change t
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-cs4/app/App.jsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const dropdownData = [
+    { text: 'Default', value: 'Default' },
+    { text: 'ResetOnRowClick', value: 'ResetOnRowClick' },
+
+  ];
+  const valueChange = (args) => {
+    grid.selectionSettings.checkboxMode = args.value;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }} >Choose checkbox selection mode:</label>
+    <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective type='checkbox' width='50' />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-cs4/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const dropdownData: { [key: string]: Object; }[] = [
+    { text: 'Default', value: 'Default' },
+    { text: 'ResetOnRowClick', value: 'ResetOnRowClick' },
+
+  ];
+  const valueChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).selectionSettings.checkboxMode = args.value;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }} >Choose checkbox selection mode:</label>
+    <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective type='checkbox' width='50' />
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs4/app/datasource.jsx %}
@@ -97,10 +157,74 @@ In the following sample, the selection of specific rows has been prevented based
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-cs5/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, Filter, Selection, Page } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    const settings = { persistSelection: true, type: 'Multiple' };
+    const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+    const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+    const filterOptions = { type: 'CheckBox' };
+    const load = () => {
+        for (let i = 0; i < data.length; i++) {
+            data[i]['List'] = i + 1;
+        }
+    }
+    const rowDataBound = (args) => {
+        args.isSelectable = args.data.List % 5 === 0;
+    }
+    return <GridComponent dataSource={data} selectionSettings={settings}
+        editSettings={editSettings} toolbar={toolbarOptions} filterSettings={filterOptions} allowPaging={true} allowFiltering={true} pageSettings={{ pageSize: 5 }}
+        rowDataBound={rowDataBound} load={load}>
+        <ColumnsDirective>
+            <ColumnDirective type='checkbox' width='50' />
+            <ColumnDirective field='List' width='120' headerText="List" />
+            <ColumnDirective field='OrderID' headerText="Order ID" isPrimaryKey="true" width='150' />
+            <ColumnDirective field='CustomerID' headerText="Customer ID" width='150' />
+            <ColumnDirective field='EmployeeID' headerText="Employee ID" width='150' />
+            <ColumnDirective field='ShipCity' headerText="Ship City" width='150' />
+        </ColumnsDirective>
+        <Inject services={[Edit, Toolbar, Filter, Selection, Page]} />
+    </GridComponent>
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-cs5/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Edit, Toolbar, Filter, Selection, Page, ToolbarItems, FilterSettingsModel, RowDataBoundEventArgs, EditSettingsModel, SelectionSettingsModel} from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+  const settings: SelectionSettingsModel = { persistSelection: true, type:'Multiple' };
+  const editSettings: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+  const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
+  const filterOptions: FilterSettingsModel = { type: 'CheckBox' };
+  const load = () => {
+    for (let i = 0; i < data.length; i++) {
+      data[i]['List'] = i + 1;
+    }
+  }
+  const rowDataBound = (args: RowDataBoundEventArgs) => {
+    args.isSelectable = args.data.List % 5 === 0;
+  }
+    return <GridComponent dataSource={data} selectionSettings={settings}
+    editSettings={editSettings} toolbar={toolbarOptions} filterSettings={filterOptions} allowPaging={true} allowFiltering={true} pageSettings={{pageSize : 5}}
+    rowDataBound={rowDataBound} load={load}>
+            <ColumnsDirective>
+              <ColumnDirective type='checkbox' width='50'/>
+              <ColumnDirective field='List' width='120' headerText="List"/>
+              <ColumnDirective field='OrderID' headerText="Order ID" isPrimaryKey="true" width='150'/>
+              <ColumnDirective field='CustomerID' headerText="Customer ID" width='150'/>
+              <ColumnDirective field='EmployeeID' headerText="Employee ID" width='150'/>
+              <ColumnDirective field='ShipCity' headerText="Ship City" width='150'/>
+            </ColumnsDirective>
+            <Inject services={[Edit, Toolbar, Filter, Selection, Page]}/>
+            </GridComponent>
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs5/app/datasource.jsx %}

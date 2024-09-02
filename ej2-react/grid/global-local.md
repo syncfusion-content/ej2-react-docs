@@ -232,7 +232,7 @@ The Syncfusion React Grid component provides a built-in Localization library tha
 
 This feature allows you to specify translation objects for specific cultures, such as **Deutsch** (German), and display the Grid's content in the desired language.
 
-To work with **JSON** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance module interoperation by setting **esModuleInterop** to true as shown below:
+To work with **JSON** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance modules work together more smoothly by setting **esModuleInterop** to true as shown below:
 
 ```ts
 {
@@ -269,7 +269,7 @@ The following example demonstrates how to load a translation object for **Deutsc
 
 The Loading translations feature allows you to specify translation objects for different cultures, such as **Deutsch**, **Arabic**, **French** and display the Grid's content in the desired language.
 
-To work with **JSON** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance module interoperation by setting **esModuleInterop** to true as shown below:
+To work with **JSON** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance modules work together more smoothly by setting **esModuleInterop** to true as shown below:
 
 ```ts
 {
@@ -304,7 +304,7 @@ The following example demonstrates how to load a translation object for **French
 
 ### Switch the different localization
 
-The Synfusion React Grid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. 
+The Syncfusion React Grid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. 
 
 To switch to a different localization, follow these steps:
 
@@ -319,7 +319,7 @@ loadCldr(
     numberingSystems
 );
 ```
-**Step 2:** To import **json** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance module interoperation by setting **esModuleInterop** to true as shown below:
+**Step 2:** To import **json** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance modules work together more smoothly by setting **esModuleInterop** to true as shown below:
 
 ```ts
 {
@@ -336,10 +336,106 @@ To switch to the **French** culture and set the currency code as **EUR**, you ca
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/locale-cs4/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
+import * as React from 'react';
+import frFRLocalization from './locale.json';
+import cagregorian from './ca-gregorian.json';
+import currencies from './currencies.json';
+import numbers from './numbers.json';
+import timeZoneNames from './timeZoneNames.json';
+import numberingSystems from './numberingSystems.json'
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+L10n.load(frFRLocalization);
+
+function App() {
+  setCulture('fr-FR'); // Change the Grid culture
+  setCurrencyCode('EUR');
+  loadCldr(
+    cagregorian,
+    currencies,
+    numbers,
+    timeZoneNames,
+    numberingSystems
+  );
+  const pageOptions = { pageSize: 6 };
+  const changeFrLocale = () => {
+    setCulture('fr-FR'); // Change the Grid culture to French locale
+    setCurrencyCode('EUR'); // Change the currency code based on French culture
+  }
+  const changeEnLocale = () => {
+    setCulture('en-US'); // Change the Grid culture to English locale
+    setCurrencyCode('USD'); // Change the currency code based on Americal English culture
+  }
+  return (<div>
+    <ButtonComponent cssClass='e-outline' id='frButton' onClick={changeFrLocale}>Change FR Locale</ButtonComponent>
+    <ButtonComponent cssClass='e-outline' id='enButton' style={{ marginLeft: "10px" }} onClick={changeEnLocale}>Change EN Locale</ButtonComponent>
+    <GridComponent dataSource={data} allowPaging={true} pageSettings={pageOptions} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/locale-cs4/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
+import * as React from 'react';
+import frFRLocalization from './locale.json';
+import cagregorian from './ca-gregorian.json';
+import currencies from './currencies.json';
+import numbers from './numbers.json';
+import timeZoneNames from './timeZoneNames.json';
+import numberingSystems from './numberingSystems.json'
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+L10n.load(frFRLocalization);
+
+function App() {
+  setCulture('fr-FR'); // Change the Grid culture
+  setCurrencyCode('EUR');
+  loadCldr(
+    cagregorian,
+    currencies,
+    numbers,
+    timeZoneNames,
+    numberingSystems
+  );
+  const pageOptions: PageSettingsModel = { pageSize: 6 };
+  const changeFrLocale = () => {
+    setCulture('fr-FR'); // Change the Grid culture to French locale
+    setCurrencyCode('EUR'); // Change the currency code based on French culture
+  }
+  const changeEnLocale = () => {
+    setCulture('en-US'); // Change the Grid culture to English locale
+    setCurrencyCode('USD'); // Change the currency code based on Americal English culture
+  }
+  return (<div>
+    <ButtonComponent cssClass='e-outline' id='frButton' onClick={changeFrLocale}>Change FR Locale</ButtonComponent>
+    <ButtonComponent cssClass='e-outline' id='enButton' style={{ marginLeft: "10px" }} onClick={changeEnLocale}>Change EN Locale</ButtonComponent>
+    <GridComponent dataSource={data} allowPaging={true} pageSettings={pageOptions} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="locale.json" %}
 {% include code-snippet/grid/locale-cs4/app/locale.json %}
@@ -360,7 +456,7 @@ The Internationalization library in the Syncfusion React Grid provides a localiz
 
 [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library allows you to globalize number, date, and time values using format strings defined in the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format) property.
 
-To work with **JSON** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance module interoperation by setting esModuleInterop to true as shown below:
+To work with **JSON** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance modules work together more smoothly by setting esModuleInterop to true as shown below:
 
 ```ts
 {
@@ -400,7 +496,7 @@ The Right to Left (RTL) feature in the Syncfusion React Grid allows you to switc
 
 To enable RTL in the Grid, you need to set the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/grid/#enablertl) property to **true**. By setting `enableRtl`, the grid component's text direction and layout will be adjusted to support right-to-left languages.
 
-To work with **JSON** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance module interoperation by setting **esModuleInterop** to true as shown below:
+To work with **JSON** files in your application, you can enable JSON module resolution in TypeScript by adding the **resolveJsonModule** to true to your tsconfig.json file. Additionally, you can enhance modules work together more smoothly by setting **esModuleInterop** to true as shown below:
 
 ```ts
 {
@@ -411,14 +507,78 @@ To work with **JSON** files in your application, you can enable JSON module reso
 }
 ```
 
-In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is added to enable or diable the Right to Left (RTL) feature for the **Arabic (ar-AE)** locale. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event is triggered and the `enableRtl` property of the grid is updated accordingly. 
+In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is added to enable or disable the Right to Left (RTL) feature for the **Arabic (ar-AE)** locale. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event is triggered and the `enableRtl` property of the grid is updated accordingly. 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/locale-cs2/app/App.jsx %}
+{% raw %}
+import { ColumnChooser, ColumnDirective, ColumnMenu, ColumnsDirective, Edit, GridComponent, Group, Inject, Page, Sort, Toolbar, Filter, Reorder } from '@syncfusion/ej2-react-grids';
+import { L10n } from '@syncfusion/ej2-base';
+import * as React from 'react';
+import arAELocalization from './locale.json';
+import { data } from './datasource';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+
+L10n.load(arAELocalization);
+function App() {
+  let grid;
+  const editSettings = { allowAdding: true, allowDeleting: true, allowEditing: true, mode: 'Normal' };
+  const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+  const pageOptions = { pageSize: 7 };
+  const changeRTL = (args) => {
+    grid.enableRtl = !args.checked;
+  }
+  return (<div>
+    <label style={{ padding: "10px 10px" }}>Enable or diable RTL mode</label>
+    <SwitchComponent change={changeRTL}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} locale='ar-AE' allowPaging={true} pageSettings={pageOptions} allowGrouping={true} allowSorting={true} allowReordering={true}
+      allowFiltering={true} editSettings={editSettings} toolbar={toolbar} enableRtl={true} showColumnChooser={true} showColumnMenu={true}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Page, Group, Sort, Toolbar, Filter, Edit, ColumnChooser, ColumnMenu, Reorder]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/locale-cs2/app/App.tsx %}
+{% raw %}
+import { ColumnChooser, ColumnDirective, ColumnMenu, ColumnsDirective, Edit, EditSettingsModel, GridComponent, Group, Inject, Page, PageSettingsModel, Sort, ToolbarItems, Toolbar, Filter, Reorder } from '@syncfusion/ej2-react-grids';
+import { L10n } from '@syncfusion/ej2-base';
+import * as React from 'react';
+import arAELocalization from './locale.json';
+import { data } from './datasource';
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+
+L10n.load(arAELocalization);
+function App() {
+  let grid: GridComponent | null;
+  const editSettings: EditSettingsModel = { allowAdding: true, allowDeleting: true, allowEditing: true, mode: 'Normal' };
+  const toolbar: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+  const pageOptions: PageSettingsModel = { pageSize: 7 };
+  const changeRTL = (args: ChangeEventArgs) => {
+    (grid as GridComponent).enableRtl = !args.checked;
+  }
+  return (<div>
+    <label style={{ padding: "10px 10px" }}>Enable or diable RTL mode</label>
+    <SwitchComponent change={changeRTL}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} locale='ar-AE' allowPaging={true} pageSettings={pageOptions} allowGrouping={true} allowSorting={true} allowReordering={true}
+      allowFiltering={true} editSettings={editSettings} toolbar={toolbar} enableRtl={true} showColumnChooser={true} showColumnMenu={true}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Page, Group, Sort, Toolbar, Filter, Edit, ColumnChooser, ColumnMenu, Reorder]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="locale.json" %}
 {% include code-snippet/grid/locale-cs2/app/locale.json %}

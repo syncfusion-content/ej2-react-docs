@@ -90,10 +90,78 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/group-cs4/app/App.jsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const groupOptions = {
+    columns: ['CustomerID', 'ShipCity'],
+    showDropArea: false
+  };
+  const onSwitchChange = (args) => {
+    if (args.checked) {
+      grid.groupSettings.showDropArea = true;
+    }
+    else {
+      grid.groupSettings.showDropArea = false;
+    }
+  }
+  return (
+    <div><label style={{ padding: "10px 10px" }}>Hide or show drop area</label>
+      <SwitchComponent change={onSwitchChange}></SwitchComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/group-cs4/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const groupOptions: GroupSettingsModel = {
+    columns: ['CustomerID', 'ShipCity'],
+    showDropArea: false
+  };
+  const onSwitchChange = (args: ChangeEventArgs) => {
+    if (args.checked) {
+      (grid as GridComponent).groupSettings.showDropArea = true;
+    }
+    else {
+      (grid as GridComponent).groupSettings.showDropArea = false;
+    }
+  }
+  return (
+    <div><label style={{ padding: "10px 10px" }}>Hide or show drop area</label>
+      <SwitchComponent change={onSwitchChange}></SwitchComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/group-cs4/app/datasource.jsx %}
@@ -115,10 +183,79 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/group-cs13/app/App.jsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const groupOptions = {
+    columns: ['CustomerID', 'ShipCity'],
+    showGroupedColumn: true
+  };
+  const onSwitchChange = (args) => {
+    if (args.checked) {
+      grid.groupSettings.showGroupedColumn = false;
+    }
+    else {
+      grid.groupSettings.showGroupedColumn = true;
+    }
+  }
+  return (
+    <div><label style={{ padding: "10px 10px" }}>Hide or show grouped columns</label>
+      <SwitchComponent change={onSwitchChange}></SwitchComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/group-cs13/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const groupOptions: GroupSettingsModel = {
+    columns: ['CustomerID', 'ShipCity'],
+    showGroupedColumn: true
+  };
+  const onSwitchChange = (args: ChangeEventArgs) => {
+    if (args.checked) {
+      (grid as GridComponent).groupSettings.showGroupedColumn = false;
+    }
+    else {
+      (grid as GridComponent).groupSettings.showGroupedColumn = true;
+    }
+  }
+  return (
+    <div><label style={{ padding: "10px 10px" }}>Hide or show grouped column</label>
+      <SwitchComponent change={onSwitchChange}></SwitchComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/group-cs13/app/datasource.jsx %}
@@ -273,14 +410,102 @@ The following example demonstrates how to collapse all grouped rows at the initi
 
 By default, the Syncfusion Grid supports interaction-oriented column grouping, where users manually group columns by dragging and dropping them into the grouping area of the grid. Grid provides an ability to group and ungroup a column using [groupColumn](https://ej2.syncfusion.com/react/documentation/api/grid/#groupcolumn) and [ungroupColumn](https://ej2.syncfusion.com/react/documentation/api/grid/#ungroupcolumn) methods. These methods provide a programmatic approach to perform column grouping and ungrouping.
 
-The following example demonstrates how to group and upgroup the columns in a grid. It utilizes the [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component to select the column. When an external button is clicked, the `groupColumn` and `ungroupColumn` methods are called to group or ungroup the selected column.
+The following example demonstrates how to group and ungroup the columns in a grid. It utilizes the [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component to select the column. When an external button is clicked, the `groupColumn` and `ungroupColumn` methods are called to group or ungroup the selected column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/group-cs14/app/App.jsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let dropColumn;
+  const columns = [
+    { text: 'CustomerID', value: 'CustomerID' },
+    { text: 'OrderID', value: 'OrderID' },
+    { text: 'Ship City', value: 'ShipCity' },
+    { text: 'Ship Name', value: 'ShipName' },
+  ];
+  const field = { text: 'text', value: 'value' };
+  const groupOptions = {
+    columns: ['CustomerID', 'ShipCity'],
+    showDropArea: false
+  };
+  const groupColumn = () => {
+    grid.groupColumn(dropColumn.value);
+  }
+  const unGroupColumn = () => {
+    grid.ungroupColumn(dropColumn.valu);
+  }
+  return (
+    <div>
+      <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
+      <DropDownListComponent ref={drop => dropColumn = drop} index={0} width={120} dataSource={columns} fields={field}></DropDownListComponent><br />
+      <ButtonComponent style={{ marginTop: "10px" }} id="group" cssClass="e-outline" onClick={groupColumn}>GroupColumn</ButtonComponent>
+      <ButtonComponent style={{ marginTop: "10px" }} id="ungroup" cssClass="e-outline" onClick={unGroupColumn}>UnGroupColumn</ButtonComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={267}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/group-cs14/app/App.tsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let dropColumn: DropDownListComponent | null;
+  const columns: { [key: string]: Object; }[] = [
+    { text: 'CustomerID', value: 'CustomerID' },
+    { text: 'OrderID', value: 'OrderID' },
+    { text: 'Ship City', value: 'ShipCity' },
+    { text: 'Ship Name', value: 'ShipName' },
+  ];
+  const field: object = { text: 'text', value: 'value' };
+  const groupOptions: GroupSettingsModel = {
+    columns: ['CustomerID', 'ShipCity'],
+    showDropArea: false
+  };
+  const groupColumn = () => {
+    (grid as GridComponent).groupColumn(((dropColumn as DropDownListComponent).value as string));
+  }
+  const unGroupColumn = () => {
+    (grid as GridComponent).ungroupColumn(((dropColumn as DropDownListComponent).value as string));
+  }
+  return (
+    <div>
+      <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
+      <DropDownListComponent ref={drop => dropColumn = drop} index={0} width={120} dataSource={columns} fields={field}></DropDownListComponent><br />
+      <ButtonComponent style={{ marginTop: "10px" }} id="group" cssClass="e-outline" onClick={groupColumn}>GroupColumn</ButtonComponent>
+      <ButtonComponent style={{ marginTop: "10px" }} id="ungroup" cssClass="e-outline" onClick={unGroupColumn}>UnGroupColumn</ButtonComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={267}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/group-cs14/app/datasource.jsx %}
@@ -304,10 +529,78 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/group-cs7/app/App.jsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const groupOptions = {
+    columns: ['CustomerID', 'ShipCity'],
+    showDropArea: false
+  };
+  const onSwitchChange = (args) => {
+    if (args.checked) {
+      grid.groupCollapseAll();
+    }
+    else {
+      grid.groupExpandAll();
+    }
+  }
+  return (
+    <div><label style={{ padding: "10px 10px" }}>Expand or collapse rows</label>
+      <SwitchComponent change={onSwitchChange}></SwitchComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/group-cs7/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const groupOptions: GroupSettingsModel = {
+    columns: ['CustomerID', 'ShipCity'],
+    showDropArea: false
+  };
+  const onSwitchChange = (args: ChangeEventArgs) => {
+    if (args.checked) {
+      (grid as GridComponent).groupCollapseAll();
+    }
+    else {
+      (grid as GridComponent).groupExpandAll();
+    }
+  }
+  return (
+    <div><label style={{ padding: "10px 10px" }}>Expand or collapse rows</label>
+      <SwitchComponent change={onSwitchChange}></SwitchComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/group-cs7/app/datasource.jsx %}
@@ -337,10 +630,92 @@ The following example demonstrates the function that collapses the selected row 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/group-cs16/app/App.jsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group } from '@syncfusion/ej2-react-grids';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import React, { useState }  from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let textbox;
+  const [message, setMessage] = useState('');
+  const groupOptions = {
+    columns: ['CustomerID'],
+    showDropArea: false
+  };
+  const onExpandCollapseButtonClick = () => {
+    const groupedRows = Array.from(grid.getContentTable().querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse'));
+    const groupedRowIndex = parseInt(textbox.value);
+    if (groupedRows.length >= 0 && groupedRowIndex < groupedRows.length) {
+      setMessage('');
+      const groupCaptionElement = groupedRows[groupedRowIndex];
+      grid.groupModule.expandCollapseRows(groupCaptionElement);
+    } else {
+      setMessage('The entered index exceeds the total number of grouped rows. Please enter a valid grouped index.');
+    }
+  }
+  return (
+    <div><TextBoxComponent ref={t => textbox = t} type='number' placeholder="Enter Grouped Row Index" width={200} ></TextBoxComponent>
+      <ButtonComponent onClick={onExpandCollapseButtonClick}>Collapse or Expand Row</ButtonComponent>
+      <p style={{ color: "red" }}>{message}</p>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/group-cs16/app/App.tsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import * as React from 'react';
+import { useState } from 'react';
+import { data } from './datasource';
+function App() {
+  let grid: GridComponent | null;
+  let textbox: TextBoxComponent | null;
+  const [message, setMessage] = useState('');
+  const groupOptions: GroupSettingsModel = {
+    columns: ['CustomerID'],
+    showDropArea: false
+  };
+  const onExpandCollapseButtonClick = () => {
+    const groupedRows = Array.from((grid as GridComponent).getContentTable().querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse'));
+    const groupedRowIndex: number = parseInt((textbox as TextBoxComponent).value);
+    if (groupedRows.length >= 0 && groupedRowIndex < groupedRows.length) {
+      setMessage('');
+      const groupCaptionElement = groupedRows[groupedRowIndex];
+      (grid as GridComponent).groupModule.expandCollapseRows(groupCaptionElement);
+    } else {
+      setMessage('The entered index exceeds the total number of grouped rows. Please enter a valid grouped index.');
+    }
+  }
+  return (<div>
+      <TextBoxComponent ref={t => textbox = t} type='number' placeholder="Enter Grouped Row Index" width={200}></TextBoxComponent>
+      <ButtonComponent onClick={onExpandCollapseButtonClick}>Collapse or Expand Row</ButtonComponent>
+      <p style={{ color: "red" }}>{message}</p>
+      <GridComponent ref={g => grid = g} dataSource={data} allowGrouping={true} groupSettings={groupOptions} height={315}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Group]} />
+      </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/group-cs16/app/datasource.jsx %}
@@ -389,10 +764,78 @@ The following example demonstrates how the `actionBegin` and `actionComplete` ev
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/group-cs6/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, GroupEventArgs, Inject, Group } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+  const [message, setMessage] = useState('');
+  const actionBegin = (args) => {
+    if (args.requestType === 'grouping' && args.columnName === 'OrderID') {
+      args.cancel = true;
+    }
+  }
+  const actionComplete = (args) => {
+    if (args.requestType === 'grouping') {
+    setMessage(args.requestType + ' action completed for ' + args.columnName + ' column');
+    }
+    else{
+      setMessage('');
+    }
+  }
+  return (<div>
+    <div style={{ marginLeft: "100px" }}><p style={{ color: "red" }} id="message">{message}</p></div>
+    <GridComponent dataSource={data} allowGrouping={true} height={315} actionBegin={actionBegin} actionComplete={actionComplete}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Group]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/group-cs6/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, GroupEventArgs, Inject, Group } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+  const [message, setMessage] = useState('');
+  const actionBegin = (args: GroupEventArgs) => {
+    if (args.requestType === 'grouping' && args.columnName === 'OrderID') {
+      args.cancel = true;
+    }
+  }
+  const actionComplete = (args: GroupEventArgs) => {
+    if (args.requestType === 'grouping') {
+    setMessage(args.requestType + ' action completed for ' + args.columnName + ' column');
+    }
+    else{
+      setMessage('');
+    }
+  }
+  return (<div>
+    <div style={{ marginLeft: "100px" }}><p style={{ color: "red" }} id="message">{message}</p></div>
+    <GridComponent dataSource={data} allowGrouping={true} height={315} actionBegin={actionBegin} actionComplete={actionComplete}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Group]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/group-cs6/app/datasource.jsx %}

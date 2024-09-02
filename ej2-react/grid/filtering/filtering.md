@@ -210,10 +210,76 @@ Below is an example code demonstrating how to enable or disable case sensitivity
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/filter-cs12/app/App.jsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, FilterSettingsModel } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const filterSettings = { enableCaseSensitivity: false };
+  const onToggleCaseSensitive = (args) => {
+    if (args.checked) {
+      grid.filterSettings.enableCaseSensitivity = true;
+    }
+    else {
+    grid.filterSettings.enableCaseSensitivity = false;
+    }
+  }
+  return (<div>
+    <label style={{marginTop:'20px'}}> Enable Case Sensitivity </label>
+    <SwitchComponent change={onToggleCaseSensitive}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} filterSettings={filterSettings} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='100' textAlign="Right" />
+      </ColumnsDirective>
+      <Inject services={[Filter]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/filter-cs12/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, FilterSettingsModel } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const filterSettings: FilterSettingsModel = { enableCaseSensitivity: false };
+  const onToggleCaseSensitive = (args: ChangeEventArgs) => {
+    if (args.checked) {
+      (grid as GridComponent).filterSettings.enableCaseSensitivity = true;
+    }
+    else {
+      (grid as GridComponent).filterSettings.enableCaseSensitivity = false;
+    }
+  }
+  return (<div>
+    <label style={{marginTop:'20px'}}> Enable Case Sensitivity </label>
+    <SwitchComponent change={onToggleCaseSensitive}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} filterSettings={filterSettings} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipRegion' headerText='Ship Region' width='100' textAlign="Right" />
+      </ColumnsDirective>
+      <Inject services={[Filter]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/filter-cs12/app/datasource.jsx %}
@@ -312,10 +378,136 @@ Here's an example of how to get the filtering data in a Syncfusion grid using th
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/filter-cs10/app/App.jsx %}
+{% raw %}
+
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids'
+import { MessageComponent } from '@syncfusion/ej2-react-notifications';
+import React, { useState } from 'react';
+import { data } from './datasource';
+function App() {
+  let grid;
+  let filteredGrid;
+  const pageSettings = { pageSize: 10, pageCount: 5 };
+  let filteredData;
+  let showRecords;
+  let showWarning;
+  const [isFilteredGridVisible, setIsFilteredGridVisible] = useState(false);
+  const [isMsgWarningVisible, setIsMsgWarningVisible] = useState(false);
+  const getFilter = () => {
+    filteredData = grid.getFilteredRecords();
+    showRecords = filteredData.length > 0 ? true : false;
+    showWarning = !showRecords;
+    if (showRecords) {
+      filteredGrid.dataSource = filteredData;
+    }
+    setIsMsgWarningVisible(showWarning);
+    setIsFilteredGridVisible(showRecords);
+  }
+  const clear = () => {
+    grid.clearFiltering();
+    showRecords = false;
+    showWarning = false;
+    setIsMsgWarningVisible(false);
+    setIsFilteredGridVisible(false);
+  }
+  return (<div><div id='msgWarning' style={{ display: isMsgWarningVisible ? 'block' : 'none' }}>
+    <MessageComponent content="No Records" cssClass="e-content-center" severity="Warning"></MessageComponent></div>
+    <ButtonComponent cssClass="e-success" onClick={getFilter}>Get Filtered Data</ButtonComponent>
+    <ButtonComponent cssClass='e-danger' onClick={clear}>Clear</ButtonComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} pageSettings={pageSettings} allowPaging={true}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' format='C' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+      </ColumnsDirective>
+      <Inject services={[Filter, Page]} />
+    </GridComponent>
+    <div id='filteredGrid' style={{ display: isFilteredGridVisible ? 'block' : 'none' }}>
+      <h3>Filtered Records</h3>
+      <GridComponent ref={fg => filteredGrid = fg} allowPaging={true}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='100' textAlign="Right" />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        </ColumnsDirective>
+        <Inject services={[Page]} />
+      </GridComponent>
+    </div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/filter-cs10/app/App.tsx %}
+{% raw %}
+
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids'
+import { MessageComponent } from '@syncfusion/ej2-react-notifications';
+import React, { useState } from 'react';
+import { data } from './datasource';
+function App() {
+  let grid: GridComponent | null;
+  let filteredGrid: GridComponent | null;
+  const pageSettings: PageSettingsModel = { pageSize: 10, pageCount: 5 };
+  let filteredData;
+  let showRecords;
+  let showWarning;
+  const [isFilteredGridVisible, setIsFilteredGridVisible] = useState(false);
+  const [isMsgWarningVisible, setIsMsgWarningVisible] = useState(false);
+  const getFilter = () => {
+    filteredData = (grid as GridComponent).getFilteredRecords();
+    showRecords = filteredData.length > 0 ? true : false;
+    showWarning = !showRecords;
+    if (showRecords) {
+      (filteredGrid as GridComponent).dataSource = filteredData;
+    }
+    setIsMsgWarningVisible(showWarning);
+    setIsFilteredGridVisible(showRecords);
+  }
+  const clear = () => {
+    (grid as GridComponent).clearFiltering();
+    showRecords = false;
+    showWarning = false;
+    setIsMsgWarningVisible(false);
+    setIsFilteredGridVisible(false);
+  }
+  return (<div><div id='msgWarning' style={{ display: isMsgWarningVisible ? 'block' : 'none' }}>
+    <MessageComponent content="No Records" cssClass="e-content-center" severity="Warning"></MessageComponent></div>
+    <ButtonComponent cssClass="e-success" onClick={getFilter}>Get Filtered Data</ButtonComponent>
+    <ButtonComponent cssClass='e-danger' onClick={clear}>Clear</ButtonComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowFiltering={true} pageSettings={pageSettings} allowPaging={true}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' format='C' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+      </ColumnsDirective>
+      <Inject services={[Filter, Page]} />
+    </GridComponent>
+    <div id='filteredGrid' style={{ display: isFilteredGridVisible ? 'block' : 'none' }}>
+      <h3>Filtered Records</h3>
+      <GridComponent ref={fg => filteredGrid = fg} allowPaging={true}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='Freight' headerText='Freight' format='C' width='100' textAlign="Right" />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        </ColumnsDirective>
+        <Inject services={[Page]} />
+      </GridComponent>
+    </div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/filter-cs10/app/datasource.jsx %}

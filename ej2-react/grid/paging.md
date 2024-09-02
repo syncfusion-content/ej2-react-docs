@@ -32,10 +32,72 @@ The following example demonstrates how to change the page size of a Grid using a
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/pager-cs2/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  const [pageSettings, setPageSettings] = useState();
+  let textbox;
+  const click = () => {
+    const pageSize = { pageSize: textbox.value };
+    setPageSettings(pageSize);
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Enter page size:</label>
+    <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
+    <ButtonComponent onClick={click}>Click button</ButtonComponent>
+    <GridComponent dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/pager-cs2/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  const [pageSettings, setPageSettings] = useState<PageSettingsModel>();
+  let textbox: TextBoxComponent | null;
+  const click = () => {
+    const pageSize: PageSettingsModel = { pageSize: (textbox as TextBoxComponent).value };
+    setPageSettings(pageSize);
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Enter page size:</label>
+    <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
+    <ButtonComponent onClick={click}>Click button</ButtonComponent>
+    <GridComponent dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pager-cs2/app/datasource.jsx %}
@@ -57,10 +119,72 @@ The following example demonstrates how to change the page count of a Grid using 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/paging-cs1/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  const [pageSettings, setPageSettings] = useState();
+  let textbox;
+  const click = () => {
+    const pageCount = { pageCount: textbox.value };
+    setPageSettings(pageCount);
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Enter page count:</label>
+    <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
+    <ButtonComponent onClick={click}>Click button</ButtonComponent>
+    <GridComponent dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/paging-cs1/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  const [pageSettings, setPageSettings] = useState<PageSettingsModel>();
+  let textbox: TextBoxComponent | null;
+  const click = () => {
+    const pageCount: PageSettingsModel = { pageCount: (textbox as TextBoxComponent).value };
+    setPageSettings(pageCount);
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Enter page count:</label>
+    <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
+    <ButtonComponent onClick={click}>Click button</ButtonComponent>
+    <GridComponent dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/paging-cs1/app/datasource.jsx %}
@@ -82,10 +206,72 @@ The following example demonstrates how to dynamically change the current page us
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/paging-cs2/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  const [pageSettings, setPageSettings] = useState();
+  let textbox;
+  const click = () => {
+    const currentPage = { currentPage: textbox.value };
+    setPageSettings(currentPage);
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Enter current page:</label>
+    <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
+    <ButtonComponent onClick={click}>Click button</ButtonComponent>
+    <GridComponent dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/paging-cs2/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  const [pageSettings, setPageSettings] = useState<PageSettingsModel>();
+  let textbox: TextBoxComponent | null;
+  const click = () => {
+    const currentPage: PageSettingsModel = { currentPage: (textbox as TextBoxComponent).value };
+    setPageSettings(currentPage);
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Enter current page:</label>
+    <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
+    <ButtonComponent onClick={click}>Click button</ButtonComponent>
+    <GridComponent dataSource={data} height={265} allowPaging={true} pageSettings={pageSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/paging-cs2/app/datasource.jsx %}
@@ -109,10 +295,68 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/paging-cs3/app/App.jsx %}
+{% raw %}
+
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  let grid;
+  const toggleQueryString = (args) => {
+    grid.pageSettings.enableQueryString = args.checked;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Query String</label>
+    <SwitchComponent change={toggleQueryString}></SwitchComponent>
+    <GridComponent dataSource={data} height={265} ref={g => grid = g} allowPaging={true} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/paging-cs3/app/App.tsx %}
+{% raw %}
+
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  let grid: GridComponent | null;
+  const toggleQueryString = (args: ChangeEventArgs) => {
+    (grid as GridComponent).pageSettings.enableQueryString = args.checked;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Query String</label>
+    <SwitchComponent change={toggleQueryString}></SwitchComponent>
+    <GridComponent dataSource={data} height={265} ref={g => grid = g} allowPaging={true} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/paging-cs3/app/datasource.jsx %}
@@ -134,10 +378,88 @@ The following example demonstrates how to render a **NumericTextBox** component 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/pager-cs3/app/App.jsx %}
+{% raw %}
+import { NumericTextBoxComponent } from "@syncfusion/ej2-react-inputs";
+import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
+import { GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    let grid;
+    const change = (args) => {
+        grid.pageSettings.currentPage = args.value;
+    };
+    const template = (pagerData) => {
+        return (<div className="e-pagertemplate">
+        <div className="col-lg-12 control-section">
+            <div className="content-wrapper">
+            <NumericTextBoxComponent min={1} max={3} value={pagerData.currentPage} format='###.##' change={change}></NumericTextBoxComponent>
+          </div>
+        </div>
+        <div id="totalPages" className="e-pagertemplatemessage" style={{ marginTop: 8, marginLeft: 30, border: "none", display: "inline-block" }}>
+          <span className="e-pagenomsg">
+            {pagerData.currentPage} of {pagerData.totalPages} pages ({pagerData.totalRecordsCount} items)
+          </span>
+        </div>
+      </div>);
+    };
+    return (<GridComponent dataSource={data} allowPaging={true} pageSettings={{ template: template, pageSize: 5 }} ref={g => grid = g}>
+              <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='100'/>
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='100'/>
+            </ColumnsDirective>
+            <Inject services={[Page]}/>
+        </GridComponent>);
+}
+;
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/pager-cs3/app/App.tsx %}
+{% raw %}
+
+
+import { NumericTextBoxComponent } from "@syncfusion/ej2-react-inputs";
+import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
+import { GridComponent, Inject, Grid, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids'
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: Grid | null;
+  const change = (args) => {
+         grid.pageSettings.currentPage = args.value;
+  }
+  const template = (pagerData) => {
+    return (
+      <div className="e-pagertemplate">
+        <div className="col-lg-12 control-section">
+            <div className="content-wrapper">
+            <NumericTextBoxComponent min={1} max={3} value={pagerData.currentPage} format='###.##' change={change}></NumericTextBoxComponent>
+          </div>
+        </div>
+        <div
+          id="totalPages"
+          className="e-pagertemplatemessage" style={{ marginTop: 8, marginLeft: 30, border: "none", display: "inline-block"}}>
+          <span className="e-pagenomsg">
+            {pagerData.currentPage} of {pagerData.totalPages} pages ({pagerData.totalRecordsCount} items)
+          </span>
+        </div>
+      </div>
+    );
+  }
+    return (<GridComponent  dataSource={data} allowPaging={true} pageSettings={{ template: template, pageSize: 5 }} ref={g=> grid = g}>
+              <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='100'/>
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='100'/>
+            </ColumnsDirective>
+            <Inject services={[Page]}/>
+        </GridComponent>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pager-cs3/app/datasource.jsx %}
@@ -211,10 +533,71 @@ The following example demonstrates how to dynamically navigate to a particular p
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/paging-cs5/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { NumericTextBoxComponent, TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ButtonComponent, CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
+import { FormsModule } from '@angular/forms';
+function App() {
+    let grid;
+    let textbox;
+    const click = () => {
+        (grid.pagerModule).goToPage(textbox.value);
+    }
+    return (<div>
+        <label style={{ padding: "30px 17px 0 0" }}>Select page index:</label>
+        <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
+        <ButtonComponent onClick={click}>Click button</ButtonComponent>
+        <GridComponent dataSource={data} height={265} ref={g => grid = g} allowPaging={true} >
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+                <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+                <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+            </ColumnsDirective>
+            <Inject services={[Page]} />
+        </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/paging-cs5/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+  let grid: GridComponent | null;
+  let textbox: TextBoxComponent | null;
+  const click = () => {
+    (grid as GridComponent).pagerModule.goToPage((textbox as TextBoxComponent).value);
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Select page index:</label>
+    <TextBoxComponent ref={t => textbox = t} width={120}></TextBoxComponent>
+    <ButtonComponent onClick={click}>Click button</ButtonComponent>
+    <GridComponent dataSource={data} height={265} ref={g => grid = g} allowPaging={true} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/paging-cs5/app/datasource.jsx %}
@@ -246,10 +629,68 @@ The following example demonstrates how to calculate the page size based on eleme
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/paging-cs6/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid;
+    const [pageSize, setPageSize] = useState()
+    const calculatePageSize = ({ value }) => {
+        const newValue = { pageSize: grid.calculatePageSizeByParentHeight(value.toString()) };
+        setPageSize(newValue);
+    }
+    return (<div>
+        <label style={{ padding: "30px 17px 0 0" }}>Select page size:</label>
+        <NumericTextBoxComponent placeholder='select container height' format='####.##' min={150} step={50} width={200} change={calculatePageSize}></NumericTextBoxComponent>
+        <GridComponent dataSource={data} ref={g => grid = g} allowPaging={true} pageSettings={pageSize}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+                <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+                <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+            </ColumnsDirective>
+            <Inject services={[Page]} />
+        </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/paging-cs6/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+import { NumericTextBoxComponent, ChangeEventArgs } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+  let grid: GridComponent | null;
+  const [pageSize, setPageSize] = useState<PageSettingsModel>()
+  const calculatePageSize = ({ value }: ChangeEventArgs) => {
+    const newValue: PageSettingsModel = { pageSize: (grid as GridComponent).calculatePageSizeByParentHeight((value as number).toString()) };
+    setPageSize(newValue);
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Select page size:</label>
+    <NumericTextBoxComponent placeholder='select container height' format='####.##' min={150} step={50} width={200} change={calculatePageSize}></NumericTextBoxComponent>
+    <GridComponent dataSource={data} ref={g => grid = g} allowPaging={true} pageSettings={pageSize}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey={true} />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='140' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format="C" textAlign="Right" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='Verified' headerText='Verified' width='150' displayAsCheckBox={true} />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/paging-cs6/app/datasource.jsx %}

@@ -99,10 +99,134 @@ The following example demonstrates how to select rows in any page based on index
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-row-cs3/app/App.jsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
+import { ColumnDirective, ColumnsDirective, GridComponent, Page, PageSettingsModel, Inject, PageEventArgs } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const pageSettings = { pageSize: 10 }
+  let mod;
+  let value;
+  const ddlData = [
+    { text: 'Select row index' },
+    { text: '1', value: '1' },
+    { text: '2', value: '2' },
+    { text: '30', value: '30' },
+    { text: '80', value: '80' },
+    { text: '110', value: '110' },
+    { text: '120', value: '120' },
+    { text: '210', value: '210' },
+    { text: '310', value: '310' },
+    { text: '410', value: '410' },
+    { text: '230', value: '230' }
+  ]
+  const actionComplete = (args) => {
+    if (args.requestType === "paging") {
+      grid.selectRow(mod);
+    }
+  }
+  const valueChange = (args) => {
+    value = +args.value;
+    mod = (value - 1) % 10;
+    const page = Math.ceil(value / 10);
+
+    if (page === 1) {
+      if (grid.pagerModule.pagerObj.currentPage !== 1) {
+        grid.pagerModule.goToPage(1);
+      }
+      grid.selectRow(mod);
+    }
+    else {
+      grid.pagerModule.goToPage(page);
+      if (grid.pagerModule.pagerObj.currentPage === page) {
+        grid.selectRow(mod);
+      }
+    }
+  }
+
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }} > Select Row :</label>
+    <DropDownListComponent index={0} width={150} dataSource={ddlData} change={valueChange}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} actionComplete={actionComplete} allowPaging={true} pageSettings={pageSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-row-cs3/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns'
+import { ColumnDirective, ColumnsDirective, GridComponent, Page, PageSettingsModel, Inject, PageEventArgs } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const pageSettings: PageSettingsModel = { pageSize: 10 }
+  let mod;
+  let value;
+  const ddlData: { [key: string]: Object; }[] = [
+    { text: 'Select row index' },
+    { text: '1', value: '1' },
+    { text: '2', value: '2' },
+    { text: '30', value: '30' },
+    { text: '80', value: '80' },
+    { text: '110', value: '110' },
+    { text: '120', value: '120' },
+    { text: '210', value: '210' },
+    { text: '310', value: '310' },
+    { text: '410', value: '410' },
+    { text: '230', value: '230' }
+  ]
+  const actionComplete = (args: PageEventArgs) => {
+    if (args.requestType === "paging") {
+      (grid as GridComponent).selectRow(mod);
+    }
+  }
+  const valueChange = (args: ChangeEventArgs) => {
+    value = +args.value;
+    mod = (value - 1) % 10;
+    const page = Math.ceil(value / 10);
+
+    if (page === 1) {
+      if ((grid as GridComponent).pagerModule.pagerObj.currentPage !== 1) {
+        (grid as GridComponent).pagerModule.goToPage(1);
+      }
+      (grid as GridComponent).selectRow(mod);
+    }
+    else {
+      (grid as GridComponent).pagerModule.goToPage(page);
+      if ((grid as GridComponent).pagerModule.pagerObj.currentPage === page) {
+        (grid as GridComponent).selectRow(mod);
+      }
+    }
+  }
+
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }} > Select Row :</label>
+    <DropDownListComponent index={0} width={150} dataSource={ddlData} change={valueChange}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} actionComplete={actionComplete} allowPaging={true} pageSettings={pageSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Page]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-row-cs3/app/datasource.jsx %}
@@ -124,10 +248,62 @@ The following example demonstrates how to enable multiple row selection with a s
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-cs9/app/App.jsx %}
+{% raw %}
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid
+  const selectionSettings = { type: 'Multiple' };
+  const valueChange = (args) => {
+    grid.selectionSettings.enableSimpleMultiRowSelection = args.checked;
+  }
+
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }} > Enable/Disable simple multiple row selection </label>
+    <SwitchComponent change={valueChange}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-cs9/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null
+  const selectionSettings: SelectionSettingsModel = { type: 'Multiple' };
+  const valueChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).selectionSettings.enableSimpleMultiRowSelection = args.checked;
+  }
+
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }} > Enable/Disable simple multiple row selection </label>
+    <SwitchComponent change={valueChange}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='ShipCity' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs9/app/datasource.jsx %}
@@ -153,10 +329,82 @@ The following example demonstrates how to select a single row within the Grid by
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-row-cs5/app/App.jsx %}
+{% raw %}
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs'
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let textBoxRow;
+  let rowIndex;
+  const selectionSettings = { mode: 'Row', type: 'Single' };
+  const click = () => {
+    rowIndex = parseInt(textBoxRow.element.value, 10);
+    if (!isNaN(rowIndex)) {
+      grid.selectRow(rowIndex);
+    }
+  }
+  return (<div>
+    <div>
+      <label style={{ padding: "30px 17px 0 0" }}>Enter the row index: </label>
+      <TextBoxComponent ref={t1 => textBoxRow = t1} width={120} ></TextBoxComponent>
+    </div>
+    <div style={{ padding: "10px 0 0px 5%" }}>
+      <ButtonComponent id='button' onClick={click}>Select Row</ButtonComponent>
+    </div>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-row-cs5/app/App.tsx %}
+{% raw %}
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs'
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let textBoxRow: TextBoxComponent | null;
+  let rowIndex: number;
+  const selectionSettings: SelectionSettingsModel = { mode: 'Row', type: 'Single' };
+  const click = () => {
+    rowIndex = parseInt((textBoxRow as TextBoxComponent).element.value, 10);
+    if (!isNaN(rowIndex)) {
+      (grid as GridComponent).selectRow(rowIndex);
+    }
+  }
+  return (<div>
+    <div>
+      <label style={{ padding: "30px 17px 0 0" }}>Enter the row index: </label>
+      <TextBoxComponent ref={t1 => textBoxRow = t1} width={120} ></TextBoxComponent>
+    </div>
+    <div style={{ padding: "10px 0 0px 5%" }}>
+      <ButtonComponent id='button' onClick={click}>Select Row</ButtonComponent>
+    </div>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-row-cs5/app/datasource.jsx %}
@@ -178,10 +426,84 @@ The following example, demonstrates how to select multiple rows in the Grid by c
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-row-cs4/app/App.jsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const selectionSettings = { mode: 'Row', type: 'Multiple' };
+  const buttonClick = (rowIndexes) => {
+    grid.clearRowSelection();
+    grid.selectRows(rowIndexes);
+  }
+  return (<div>
+    <div style={{ padding: " 0px 0px 20px 0px" }}>
+      <ButtonComponent className='btn' onClick={() => buttonClick([1, 3])}>Select [1, 3]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([0, 2])}>Select [0, 2]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([2, 4])}>Select [2, 4]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([0, 5])}>Select [0, 5]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([1, 6])}>Select [1, 6]</ButtonComponent>
+    </div>
+    <div style={{ padding: " 0px 0px 20px 0px" }}>
+      <ButtonComponent className='btn' onClick={() => buttonClick([0, 7, 8])}>Select [0, 7, 8]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([1, 9, 10])}>Select [1, 9, 10]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([4, 7, 12])}>Select [4, 7, 12]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([2, 5, 6])}>Select [2, 5, 6]</ButtonComponent>
+    </div>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-row-cs4/app/App.tsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const selectionSettings: SelectionSettingsModel = { mode: 'Row', type: 'Multiple' };
+  const buttonClick = (rowIndexes: number[]) => {
+    (grid as GridComponent).clearRowSelection();
+    (grid as GridComponent).selectRows(rowIndexes);
+  }
+  return (<div>
+    <div style={{ padding: " 0px 0px 20px 0px" }}>
+      <ButtonComponent className='btn' onClick={() => buttonClick([1, 3])}>Select [1, 3]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([0, 2])}>Select [0, 2]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([2, 4])}>Select [2, 4]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([0, 5])}>Select [0, 5]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([1, 6])}>Select [1, 6]</ButtonComponent>
+    </div>
+    <div style={{ padding: " 0px 0px 20px 0px" }}>
+      <ButtonComponent className='btn' onClick={() => buttonClick([0, 7, 8])}>Select [0, 7, 8]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([1, 9, 10])}>Select [1, 9, 10]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([4, 7, 12])}>Select [4, 7, 12]</ButtonComponent>
+      <ButtonComponent className='btn' onClick={() => buttonClick([2, 5, 6])}>Select [2, 5, 6]</ButtonComponent>
+    </div>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-row-cs4/app/datasource.jsx %}
@@ -203,10 +525,98 @@ The following example, demonstrates how to select a range of rows within the Gri
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-row-cs6/app/App.jsx %}
+{% raw %}
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs'
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let textBox1;
+  let textBox2;
+  let startRowIndex;
+  let endRowIndex;
+  const selectionSettings = { mode: 'Row', type: 'Multiple' };
+  const click = () => {
+    startRowIndex = parseInt(textBox1.value, 10);
+    endRowIndex = parseInt(textBox2.value, 10);
+    grid.selectionModule.clearRowSelection();
+    if (!isNaN(startRowIndex) && !isNaN(endRowIndex)) {
+      grid.selectRowsByRange(startRowIndex, endRowIndex);
+    }
+  }
+  return (<div>
+    <div>
+      <label style={{ padding: "30px 17px 0 0" }}>Enter the start row index: </label>
+      <TextBoxComponent ref={t1 => textBox1 = t1} width={120} ></TextBoxComponent>
+    </div>
+    <div>
+      <label style={{ padding: "30px 17px 0 0" }}>Enter the end row index: </label>
+      <TextBoxComponent ref={t2 => textBox2 = t2} width={120} ></TextBoxComponent>
+    </div>
+    <div>
+      <ButtonComponent id='button' onClick={click}>Select Rows</ButtonComponent>
+    </div>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-row-cs6/app/App.tsx %}
+{% raw %}
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs'
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let textBox1: TextBoxComponent | null;
+  let textBox2: TextBoxComponent | null;
+  let startRowIndex: number;
+  let endRowIndex: number;
+  const selectionSettings: SelectionSettingsModel = { mode: 'Row', type: 'Multiple' };
+  const click = () => {
+    startRowIndex = parseInt((textBox1 as TextBoxComponent).value, 10);
+    endRowIndex = parseInt((textBox2 as TextBoxComponent).value, 10);
+    (grid as GridComponent).selectionModule.clearRowSelection();
+    if (!isNaN(startRowIndex) && !isNaN(endRowIndex)) {
+      (grid as GridComponent).selectRowsByRange(startRowIndex, endRowIndex);
+    }
+  }
+  return (<div>
+    <div>
+      <label style={{ padding: "30px 17px 0 0" }}>Enter the start row index: </label>
+      <TextBoxComponent ref={t1 => textBox1 = t1} width={120} ></TextBoxComponent>
+    </div>
+    <div>
+      <label style={{ padding: "30px 17px 0 0" }}>Enter the end row index: </label>
+      <TextBoxComponent ref={t2 => textBox2 = t2} width={120} ></TextBoxComponent>
+    </div>
+    <div>
+      <ButtonComponent id='button' onClick={click}>Select Rows</ButtonComponent>
+    </div>
+    <GridComponent ref={g => grid = g} dataSource={data} selectionSettings={selectionSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='150' format='C2' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-row-cs6/app/datasource.jsx %}

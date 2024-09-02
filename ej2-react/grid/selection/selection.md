@@ -25,10 +25,66 @@ To select range of rows or cells or columns, press and hold the SHIFT key and cl
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-cs13/app/App.jsx %}
+{% raw %}
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const dropdownData = [
+    { text: 'Single', value: 'Single' },
+    { text: 'Multiple', value: 'Multiple' }
+  ];
+  const valueChange = (args) => {
+    grid.selectionSettings.type = args.value;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Choose selection type:</label>
+    <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-cs13/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const dropdownData: { [key: string]: Object; }[] = [
+    { text: 'Single', value: 'Single' },
+    { text: 'Multiple', value: 'Multiple' }
+  ];
+  const valueChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).selectionSettings.type = args.value;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Choose selection type:</label>
+    <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs13/app/datasource.jsx %}
@@ -58,10 +114,68 @@ The following example, demonstrates how to dynamically enable and change the `se
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-cs14/app/App.jsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const dropdownData = [
+    { text: 'Row', value: 'Row' },
+    { text: 'Cell', value: 'Cell' },
+    { text: 'Both', value: 'Both' }
+  ];
+  const valueChange = (args) => {
+    grid.selectionSettings.mode = args.value;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Choose selection mode:</label>
+    <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-cs14/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const dropdownData: { [key: string]: Object; }[] = [
+    { text: 'Row', value: 'Row' },
+    { text: 'Cell', value: 'Cell' },
+    { text: 'Both', value: 'Both' }
+  ];
+  const valueChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).selectionSettings.mode = args.value;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Choose selection mode:</label>
+    <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs14/app/datasource.jsx %}
@@ -109,10 +223,82 @@ The following example demonstrates how to enable the toggle selection for both c
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/selection-cs2/app/App.jsx %}
+{% raw %}
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    const selectionSettings = { type: 'Multiple' };
+    const dropdownData = [
+        { text: 'Row', value: 'Row' },
+        { text: 'Cell', value: 'Cell' },
+        { text: 'Both', value: 'Both' }
+    ];
+    const valueChange = (args) => {
+        grid.selectionSettings.mode = args.value;
+    }
+    const toggleColumnSelection = (args) => {
+        grid.selectionSettings.enableToggle = args.checked;
+    }
+    return (<div>
+        <label style={{ padding: "30px 17px 0 0" }}>Choose cell selection mode:</label>
+        <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent><br />
+        <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Toggle selection</label>
+        <SwitchComponent change={toggleColumnSelection}></SwitchComponent>
+        <GridComponent ref={g => grid = g} dataSource={data} height={315} selectionSettings={selectionSettings}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' width='120' textAlign="Right" />
+                <ColumnDirective field='CustomerID' width='150' />
+                <ColumnDirective field='ShipCity' width='100' />
+                <ColumnDirective field='ShipName' width='150' />
+            </ColumnsDirective>
+        </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/selection-cs2/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons'
+import { ColumnDirective, ColumnsDirective, GridComponent, SelectionSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const selectionSettings: SelectionSettingsModel = { type: 'Multiple' };
+  const dropdownData: { [key: string]: Object; }[] = [
+    { text: 'Row', value: 'Row' },
+    { text: 'Cell', value: 'Cell' },
+    { text: 'Both', value: 'Both' }
+  ];
+  const valueChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).selectionSettings.mode = args.value;
+  }
+  const toggleColumnSelection = (args: ChangeEventArgs) => {
+    (grid as GridComponent).selectionSettings.enableToggle = args.checked;
+  }
+  return (<div>
+    <label style={{ padding: "30px 17px 0 0" }}>Choose cell selection mode:</label>
+    <DropDownListComponent index={0} width={150} dataSource={dropdownData} change={valueChange}></DropDownListComponent><br />
+    <label style={{ padding: "30px 17px 0 0" }}>Enable/Disable Toggle selection</label>
+    <SwitchComponent change={toggleColumnSelection}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} height={315} selectionSettings={selectionSettings}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' width='150' />
+        <ColumnDirective field='ShipCity' width='100' />
+        <ColumnDirective field='ShipName' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/selection-cs2/app/datasource.jsx %}
