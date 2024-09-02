@@ -160,7 +160,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treeview/getting-started">TreeView</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/file-manager/getting-started">File Manager</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/stepper/getting-started">Stepper</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/breadcrumb/getting-started/">Breadcrumb</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/breadcrumb/getting-started">Breadcrumb</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/pager/getting-started">Pager</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/appbar/getting-started">AppBar</a></div>
         <div><p class="controlcategory">NOTIFICATION</p></div>
