@@ -51,11 +51,11 @@ To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections
 
  {% previewsample "page.domainurl/code-snippet/listbox/basic-cs14" %}
 
- ### Checkbox selection
+## Checkbox selection
 
 The ListBox supports checkbox in default and grouped list box which is used to select multiple items. CheckBox selection can be enabled by injecting `CheckBoxSelection` module and also [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#showcheckbox) property should be set as `true`.
 
-#### Select All
+### Select All
 
 To select all the items in the list box, [`showSelectAll`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#showselectall) should be set as `true`.
 

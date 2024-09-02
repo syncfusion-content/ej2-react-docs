@@ -18,7 +18,7 @@ function App() {
     { text: 'McLaren P1', id: 'list-09' },
     { text: 'Ferrari LaFerrari', id: 'list-10' }
   ];
-  let selection:object = { mode:"multiple", showCheckbox: true }
+  let selection:object = { mode:"multiple" }
   return (
     <ListBoxComponent dataSource={data} selectionSettings={selection}>
     </ListBoxComponent>
