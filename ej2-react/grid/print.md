@@ -67,10 +67,66 @@ By default, the Syncfusion React Grid prints all the pages of the grid. The [pri
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/print-cs3/app/App.jsx %}
+{% raw %}
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { Inject, Page, Toolbar } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+  const pageOptions = { pageSize: 6 };
+  const [printMode, setPrintMode] = useState();
+  const dropdownlist = ['AllPages', 'CurrentPage'];
+  const onChange = (args) => {
+    setPrintMode(args.value);
+  }
+  return ((<div>
+    <label style={{ padding: "10px 10px 26px 0" }}><b>Select Print Mode </b></label>
+    <DropDownListComponent index={0} width={200} dataSource={dropdownlist} change={onChange}></DropDownListComponent>
+    <GridComponent dataSource={data} printMode={printMode} toolbar={['Print']} allowPaging={true} pageSettings={pageOptions}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Toolbar, Page]} />
+    </GridComponent ></div>))
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/print-cs3/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, PageSettingsModel, PrintMode } from '@syncfusion/ej2-react-grids';
+import { Inject, Page, Toolbar } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+  const pageOptions: PageSettingsModel = { pageSize: 6 };
+  const [printMode, setPrintMode] = useState<PrintMode>();
+  const dropdownlist: string[] = ['AllPages', 'CurrentPage'];
+  const onChange = (args: ChangeEventArgs) => {
+    setPrintMode(args.value);
+  }
+  return ((<div>
+    <label style={{ padding: "10px 10px 26px 0" }}><b>Select Print Mode </b></label>
+    <DropDownListComponent index={0} width={200} dataSource={dropdownlist} change={onChange}></DropDownListComponent>
+    <GridComponent dataSource={data} printMode={printMode} toolbar={['Print']} allowPaging={true} pageSettings={pageOptions}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+      </ColumnsDirective>
+      <Inject services={[Toolbar, Page]} />
+    </GridComponent ></div>))
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/print-cs3/app/datasource.jsx %}
@@ -119,10 +175,88 @@ The `hierarchyPrintMode` property in the React Grid lets you control the printin
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/print-cs4/app/App.jsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, HierarchyGridPrintMode } from '@syncfusion/ej2-react-grids';
+import { DetailRow, GridModel, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data, employeeData } from './datasource';
+
+function App() {
+  const dropdownData = ['All', 'Expanded', 'None'];
+  const [hierarchyPrintMode, setHierarchyPrintMode] = useState('All');
+  const onModeChange = (args) => {
+    setHierarchyPrintMode(args.value);
+  }
+  const childGridOptions = {
+    columns: [
+      { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+      { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+      { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+    ],
+    dataSource: data,
+    queryString: 'EmployeeID'
+  };
+  const toolbaroptions = ['Print'];
+  return (<div>
+    <label style={{ padding: "10px 10px 26px 0" }}><b>Select Mode </b></label>
+    <DropDownListComponent index={0} width={200} dataSource={dropdownData} change={onModeChange}></DropDownListComponent>
+    <GridComponent toolbar={toolbaroptions} hierarchyPrintMode={hierarchyPrintMode} dataSource={employeeData}
+      childGrid={childGridOptions}>
+      <ColumnsDirective>
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" />
+        <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+        <ColumnDirective field='City' headerText='City' width='150' />
+        <ColumnDirective field='Country' headerText='Country' width='150' />
+      </ColumnsDirective>
+      <Inject services={[DetailRow, Toolbar]} />
+    </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/print-cs4/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, HierarchyGridPrintMode } from '@syncfusion/ej2-react-grids';
+import { DetailRow, GridModel, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data, employeeData } from './datasource';
+
+function App() {
+  const dropdownData: string[] = ['All', 'Expanded', 'None'];
+  const [hierarchyPrintMode, setHierarchyPrintMode] = useState<HierarchyGridPrintMode>('All');
+  const onModeChange = (args: ChangeEventArgs) => {
+    setHierarchyPrintMode(args.value);
+  }
+  const childGridOptions: GridModel = {
+    columns: [
+      { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+      { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+      { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+    ],
+    dataSource: data,
+    queryString: 'EmployeeID'
+  };
+  const toolbaroptions: ToolbarItems[] = ['Print'];
+  return (<div>
+    <label style={{ padding: "10px 10px 26px 0" }}><b>Select Mode </b></label>
+    <DropDownListComponent index={0} width={200} dataSource={dropdownData} change={onModeChange}></DropDownListComponent>
+    <GridComponent toolbar={toolbaroptions} hierarchyPrintMode={hierarchyPrintMode} dataSource={employeeData}
+      childGrid={childGridOptions}>
+      <ColumnsDirective>
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" />
+        <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+        <ColumnDirective field='City' headerText='City' width='150' />
+        <ColumnDirective field='Country' headerText='Country' width='150' />
+      </ColumnsDirective>
+      <Inject services={[DetailRow, Toolbar]} />
+    </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/print-cs4/app/datasource.jsx %}
@@ -227,10 +361,140 @@ Here is an example of how to print grid along with chart component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/print-cs9/app/App.jsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, Inject as ChartInject, LineSeries, Legend, DateTime, Tooltip } from '@syncfusion/ej2-react-charts';
+import { ActionEventArgs, ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { Inject, Page, PageSettingsModel, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    let grid;
+    let chart;
+    let chartContainer;
+    const pageOptions = { pageSize: 6 };
+    const dataBound = () => {
+        if (chart) {
+
+            chart.series[0].marker = { visible: true };
+            chart.series[0].xName = 'OrderDate';
+            chart.series[0].yName = 'Freight';
+            chart.series[0].dataSource = grid.getCurrentViewRecords();
+            chart.refresh();
+        }
+    }
+    const printClick = () => {
+        grid.print();
+    }
+    const beforePrint = (args) => {
+        if (chartContainer) {
+            const clonedChartContainer = chartContainer.cloneNode(true);
+            args.element.appendChild(clonedChartContainer);
+        }
+    }
+    const actionComplete = (args) => {
+        if (chart) {
+            if (args.requestType === 'paging') {
+                chart.series[0].dataSource = grid.getCurrentViewRecords();
+                chart.refresh();
+            }
+        }
+    }
+    return (<div>
+        <ButtonComponent className='printbtn' cssClass='e-danger' onClick={printClick}>Print</ButtonComponent>
+        <GridComponent ref={g => grid = g} dataSource={data.slice(0, 20)}
+            allowPaging={true} pageSettings={pageOptions} dataBound={dataBound} beforePrint={beforePrint} actionComplete={actionComplete} >
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+                <ColumnDirective field='OrderDate' headerText='OrderDate' format='yMd' width='150' />
+                <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+            </ColumnsDirective>
+            <Inject services={[Toolbar, Page]} />
+        </GridComponent >
+        <h4>Chart</h4>
+        <div ref={cc => chartContainer = cc}>
+            <ChartComponent ref={c => chart = c} width='60%' title='Chart Title' primaryXAxis={{ valueType: 'DateTime', labelFormat: 'MMM d' }}>
+                <SeriesCollectionDirective>
+                    <SeriesDirective type="Line" width={1} columnWidth={0.4}></SeriesDirective>
+                </SeriesCollectionDirective>
+                <ChartInject services={[LineSeries, Tooltip, Legend, DateTime]} />
+            </ChartComponent>
+        </div>
+    </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/print-cs9/app/App.tsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, Inject as ChartInject, LineSeries, Legend, DateTime, Tooltip, PrintEventArgs } from '@syncfusion/ej2-react-charts';
+import { ActionEventArgs, ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { Inject, Page, PageSettingsModel, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    let grid: GridComponent | null;
+    let chart: ChartComponent | null;
+    let chartContainer;
+    const pageOptions: PageSettingsModel = { pageSize: 6 };
+    const dataBound = () => {
+        if (chart) {
+
+            (chart as ChartComponent).series[0].marker = { visible: true };
+            (chart as ChartComponent).series[0].xName = 'OrderDate';
+            (chart as ChartComponent).series[0].yName = 'Freight';
+            (chart as ChartComponent).series[0].dataSource = (grid as GridComponent).getCurrentViewRecords();
+            (chart as ChartComponent).refresh();
+        }
+    }
+    const printClick = () => {
+        (grid as GridComponent).print();
+    }
+    const beforePrint = (args: PrintEventArgs) => {
+        if (chartContainer) {
+            const clonedChartContainer = chartContainer.cloneNode(true);
+            args.element.appendChild(clonedChartContainer);
+        }
+    }
+    const actionComplete = (args: ActionEventArgs) => {
+        if (chart) {
+            if (args.requestType === 'paging') {
+                (chart as ChartComponent).series[0].dataSource = (grid as GridComponent).getCurrentViewRecords();
+                (chart as ChartComponent).refresh();
+            }
+        }
+    }
+    return (<div>
+        <ButtonComponent className='printbtn' cssClass='e-danger' onClick={printClick}>Print</ButtonComponent>
+        <GridComponent ref={g => grid = g} dataSource={data.slice(0, 20)}
+            allowPaging={true} pageSettings={pageOptions} dataBound={dataBound} beforePrint={beforePrint} actionComplete={actionComplete} >
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+                <ColumnDirective field='OrderDate' headerText='OrderDate' format='yMd' width='150' />
+                <ColumnDirective field='Freight' headerText='Freight' format='C' width='150' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+            </ColumnsDirective>
+            <Inject services={[Toolbar, Page]} />
+        </GridComponent >
+        <h4>Chart</h4>
+        <div ref={cc => chartContainer = cc}>
+            <ChartComponent ref={c => chart = c} width='60%' title='Chart Title' primaryXAxis={{ valueType: 'DateTime', labelFormat: 'MMM d' }}>
+                <SeriesCollectionDirective>
+                    <SeriesDirective type="Line" width={1} columnWidth={0.4}></SeriesDirective>
+                </SeriesCollectionDirective>
+                <ChartInject services={[LineSeries, Tooltip, Legend, DateTime]} />
+            </ChartComponent>
+        </div>
+    </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/print-cs9/app/datasource.jsx %}

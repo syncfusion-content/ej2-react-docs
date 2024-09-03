@@ -126,10 +126,72 @@ The following example demonstrates how to set the [resizeSettings.mode](https://
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/resize-cs2/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    const alignmentData = [
+        { text: 'Normal', value: 'Normal' },
+        { text: 'Auto', value: 'Auto' },
+    ];
+    const changeValue = ((args) => {
+        grid.resizeSettings.mode = args.value;
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the resize mode:</label>
+            <DropDownListComponent style={{ padding: "20px 0 0 0" }} dataSource={alignmentData} index={0} width="100" change={changeValue}></DropDownListComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                        <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                    </ColumnsDirective>
+                    <Inject services={[Resize]} />
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/resize-cs2/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Resize } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid: GridComponent | null;
+    const alignmentData: Object[] = [
+        { text: 'Normal', value: 'Normal' },
+        { text: 'Auto', value: 'Auto' },
+    ];
+    const changeValue = ((args: any) => {
+        (grid as GridComponent).resizeSettings.mode = args.value;
+    })
+    return (
+        <div>
+            <label style={{ padding: '30px 17px 0 0' }}>Change the resize mode:</label>
+            <DropDownListComponent dataSource={alignmentData} index={0} width="100" change={changeValue}></DropDownListComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                        <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                    </ColumnsDirective>
+                    <Inject services={[Resize]} />
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/resize-cs2/app/datasource.jsx %}
@@ -169,10 +231,98 @@ The following example demonstrates how to resize the columns in a grid. This is 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/resize-cs3/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid;
+    let dropDown;
+    let textBox;
+    const field = { text: 'text', value: 'value' };
+    const alignmentData = [
+        { text: 'OrderID', value: 'OrderID' },
+        { text: 'CustomerID', value: 'CustomerID' },
+        { text: 'Freight', value: 'Freight' },
+        { text: 'ShipCountry', value: 'ShipCountry' },
+    ];
+
+    const onExternalResize = (() => {
+        const colsWidth = grid.getColumnByField(dropDown.value);
+        colsWidth.width = textBox.value;
+        grid.refreshColumns();
+    })
+    return (
+        <div>
+            <label style={{ padding: '10px 10px 26px 0' }}>Change the resize mode:</label>
+            <DropDownListComponent style={{ padding: "20px 0 0 0" }} dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br />
+            <label style={{ padding: '30px 17px 0 0' }}>Enter the width:</label>
+            <TextBoxComponent ref={t => textBox = t} placeholder="Enter the width" width='200' />
+            <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+            <ButtonComponent id="button" cssClass="e-outline" onClick={onExternalResize}>Resize</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                        <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                    </ColumnsDirective>
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/resize-cs3/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+    let grid: Grid | null;
+    let dropDown: DropDownListComponent |null;
+    let textBox:any;
+    const field: Object = { text: 'text', value: 'value' };
+    const alignmentData: Object[] = [
+        { text: 'OrderID', value: 'OrderID' },
+        { text: 'CustomerID', value: 'CustomerID' },
+        { text: 'Freight', value: 'Freight' },
+        { text: 'ShipCountry', value: 'ShipCountry' },
+    ];
+
+    const onExternalResize = (() => {
+        const colsWidth:any = (grid as any).getColumnByField((dropDown as any).value);
+        colsWidth.width = textBox.value;
+        (grid as any).refreshColumns();
+    })
+    return (
+        <div>
+            <label style={{ padding: '10px 10px 26px 0' }}>Change the resize mode:</label>
+            <DropDownListComponent dataSource={alignmentData} ref={d => dropDown = d} index={0} width="100" fields={field}></DropDownListComponent><br />
+            <label style={{ padding: '30px 17px 0 0' }}>Enter the width:</label>
+            <TextBoxComponent ref={t => textBox = t} placeholder="Enter the width" width='200' /><br/>
+            <label style={{ padding: '30px 17px 0 0' }}>Click the change button :</label>
+            <ButtonComponent id="button" cssClass="e-outline" onClick={onExternalResize}>Resize</ButtonComponent>
+            <div style={{ padding: '40px 0 0 0' }}>
+                <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true}>
+                    <ColumnsDirective>
+                        <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                        <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                        <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                    </ColumnsDirective>
+                </GridComponent></div></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/resize-cs3/app/datasource.jsx %}
@@ -200,10 +350,94 @@ The following is an example of using the resizing events, the [resizeStart](http
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/column-cs18/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Resize, Inject } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    const [message, setMessage] = useState('');
+    const resizeStart = ((args) => {
+        setMessage('resizeStart event triggered');
+        if (args.column.field === 'OrderID') {
+            args.cancel = true;
+        }
+    })
+    const resizeStop = ((args) => {
+        setMessage('resizeStop event triggered');
+        const headerCell = grid.getColumnHeaderByField(args.column.field);
+        headerCell.classList.add('customcss');
+        const columnCells = grid.getContentTable().querySelectorAll(`[data-colindex="${args.column.index}"]`);
+        for (let i = 0; i < columnCells.length; i++) {
+            const cell = columnCells[i];
+            cell.style.backgroundColor = 'rgb(43, 195, 226)';
+        }
+
+    })
+    const resizing = (() => {
+        setMessage('resizing event triggered');
+    })
+    return (
+        <div>
+            <div style={{ marginLeft: '180px' }}><p style={{ color: 'red' }}>{message}</p></div>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true} enableHover={false} resizeStart={resizeStart} resizeStop={resizeStop} resizing={resizing}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                    <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                </ColumnsDirective>
+                <Inject services={[Resize]} />
+            </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/column-cs18/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Grid, GridComponent, Resize, Inject } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid: Grid | null;
+    const [message, setMessage] = useState('');
+    const resizeStart = ((args: any) => {
+        setMessage('resizeStart event triggered');
+        if (args.column.field === 'OrderID') {
+            args.cancel = true;
+        }
+    })
+    const resizeStop = ((args: any) => {
+        setMessage('resizeStop event triggered');
+        const headerCell = (grid as any).getColumnHeaderByField(args.column.field);
+        headerCell.classList.add('customcss');
+        const columnCells = (grid as any).getContentTable().querySelectorAll(`[data-colindex="${(args as any).column.index}"]`);
+        for (let i = 0; i < columnCells.length; i++) {
+            const cell = columnCells[i] as HTMLElement;
+            cell.style.backgroundColor = 'rgb(43, 195, 226)';
+        }
+
+    })
+    const resizing = ((args: any) => {
+        setMessage('resizing event triggered');
+    })
+    return (
+        <div>
+            <div style={{ marginLeft: '180px' }}><p style={{ color: 'red' }}>{message}</p></div>
+            <GridComponent dataSource={data} height={315} ref={g => grid = g} allowResizing={true} enableHover={false} resizeStart={resizeStart} resizeStop={resizeStop} resizing={resizing}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                    <ColumnDirective field='Freight' headerText='Freight' format='C' width='80' />
+                    <ColumnDirective field='OrderDate' headerText='Order Date' format='yMd' width='120' />
+                </ColumnsDirective>
+                <Inject services={[Resize]} />
+            </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/column-cs18/app/datasource.jsx %}

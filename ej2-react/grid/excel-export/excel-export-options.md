@@ -27,10 +27,95 @@ The following example demonstrates how to export current page to a Excel documen
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/excel-export-cs4/app/App.jsx %}
+{% raw %}
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, ExcelExport, GridComponent } from '@syncfusion/ej2-react-grids';
+import { Inject, Page, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { employeeData } from './datasource';
+
+function App() {
+    let grid;
+    let dropDown;
+    const dropDownData = [
+        { text: 'CurrentPage', value: 'CurrentPage' },
+        { text: 'AllPages', value: 'AllPages' },
+    ];
+    const toolbar = ['ExcelExport'];
+    const pageOptions = { pageSize: 6 };
+    const toolbarClick = (args) => {
+        if (grid && args.item.id === 'Grid_excelexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+            const exportProperties = {
+                exportType: dropDown.value
+            };
+            grid.excelExport(exportProperties);
+        }
+    }
+    return (
+        <div>
+            <label style={{ padding: "10px 10px 26px 0" }}> Change export type: </label>
+            <DropDownListComponent ref={d => dropDown = d} index={0} width={170} dataSource={dropDownData}></DropDownListComponent>
+            <GridComponent id='Grid' dataSource={employeeData} toolbar={toolbar} allowExcelExport={true}
+                toolbarClick={toolbarClick} ref={g => grid = g} allowPaging={true} pageSettings={pageOptions}>
+                <ColumnsDirective>
+                    <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right' />
+                    <ColumnDirective field='FirstName' headerText='FirstName' width='150' />
+                    <ColumnDirective field='LastName' headerText='LastName' width='150' />
+                    <ColumnDirective field='City' headerText='City' width='150' />
+                </ColumnsDirective>
+                <Inject services={[Toolbar, ExcelExport, Page]} />
+            </GridComponent>
+        </div>
+    );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/excel-export-cs4/app/App.tsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-react-navigations';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, ExcelExport, ExcelExportProperties, GridComponent, PageSettingsModel, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, Page, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { employeeData } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let dropDown: DropDownListComponent | null;
+  const dropDownData: { [key: string]: Object; }[] = [
+    { text: 'CurrentPage', value: 'CurrentPage' },
+    { text: 'AllPages', value: 'AllPages' },
+  ];
+  const toolbar: ToolbarItems[] = ['ExcelExport'];
+  const pageOptions: PageSettingsModel = { pageSize: 6 };
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'Grid_excelexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+      const exportProperties: ExcelExportProperties = {
+        exportType: (dropDown as DropDownListComponent).value
+      };
+      grid.excelExport(exportProperties);
+    }
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}> Change export type: </label>
+      <DropDownListComponent ref={d => dropDown = d} index={0} width={170} dataSource={dropDownData}></DropDownListComponent>
+      <GridComponent id='Grid' dataSource={employeeData} toolbar={toolbar} allowExcelExport={true}
+        toolbarClick={toolbarClick} ref={g => grid = g} allowPaging={true} pageSettings={pageOptions}>
+        <ColumnsDirective>
+          <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign='Right' />
+          <ColumnDirective field='FirstName' headerText='FirstName' width='150' />
+          <ColumnDirective field='LastName' headerText='LastName' width='150' />
+          <ColumnDirective field='City' headerText='City' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, ExcelExport, Page]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/excel-export-cs4/app/datasource.jsx %}
@@ -112,10 +197,80 @@ The following example demonstrates how to export hidden columns to a Excel file.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/excel-export-cs5/app/App.jsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, ExcelExport, ExcelExportProperties, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Page, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    let switchData;
+    const toolbar = ['ExcelExport'];
+    const toolbarClick = (args) => {
+        if (grid && args.item.id === 'Grid_excelexport') {
+            const exportProperties = {
+                includeHiddenColumn: switchData.checked
+            };
+            grid.excelExport(exportProperties);
+        }
+    }
+    return (<div>
+        <label style={{ padding: "10px 10px" }}>Include or exclude hidden columns </label>
+        <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+        <GridComponent id='Grid' dataSource={data} allowPaging={true} allowExcelExport={true} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='130' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='120' visible={false} />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+            </ColumnsDirective>
+            <Inject services={[Page, Toolbar, ExcelExport]} />
+        </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/excel-export-cs5/app/App.tsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, ExcelExport, ExcelExportProperties, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Page, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let switchData: SwitchComponent | null;
+  const toolbar: ToolbarItems[] = ['ExcelExport'];
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'Grid_excelexport') {
+      const exportProperties: ExcelExportProperties = {
+        includeHiddenColumn: (switchData as SwitchComponent).checked
+      };
+      grid.excelExport(exportProperties);
+    }
+  }
+  return (<div>
+    <label style={{ padding: "10px 10px" }}>Include or exclude hidden columns </label>
+    <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+    <GridComponent id='Grid' dataSource={data} allowPaging={true} allowExcelExport={true} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='130' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='120' visible={false} />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Page, Toolbar, ExcelExport]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/excel-export-cs5/app/datasource.jsx %}
@@ -195,10 +350,85 @@ The following example demonstrates how to define a file name using `ExcelExportP
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/excel-export-cs9/app/App.jsx %}
+{% raw %}
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { ExcelExport, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    let textBox;
+    const toolbar = ['ExcelExport'];
+    const toolbarClick = (args) => {
+        if (grid && args.item.id === 'Grid_excelexport') {
+            const excelExportProperties = {
+                fileName: textBox.value !== "" ? textBox.value + '.xlsx' : 'new.xlsx'
+            };
+            grid.excelExport(excelExportProperties);
+        }
+    }
+    return (
+        <div>
+            <label style={{ padding: "30px 17px 0 0" }}>Enter file name: </label>
+            <TextBoxComponent ref={t => textBox = t} placeholder="Enter file name" width="120"></TextBoxComponent>
+            <GridComponent id='Grid' dataSource={data} height={270} toolbar={toolbar}
+                allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+                    <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+                </ColumnsDirective>
+                <Inject services={[Toolbar, ExcelExport]} />
+            </GridComponent>
+        </div>
+    );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/excel-export-cs9/app/App.tsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { ExcelExport, ExcelExportProperties, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let textBox: TextBoxComponent | null;
+  const toolbar: ToolbarItems[] = ['ExcelExport'];
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'Grid_excelexport') {
+      const excelExportProperties: ExcelExportProperties = {
+        fileName: (textBox as TextBoxComponent).value !== "" ? (textBox as TextBoxComponent).value + '.xlsx' : 'new.xlsx'
+      };
+      grid.excelExport(excelExportProperties);
+    }
+  }
+  return (
+    <div>
+      <label style={{ padding: "30px 17px 0 0" }}>Enter file name: </label>
+      <TextBoxComponent ref={t => textBox = t} placeholder="Enter file name" width="120"></TextBoxComponent>
+      <GridComponent id='Grid' dataSource={data} height={270} toolbar={toolbar}
+        allowExcelExport={true} toolbarClick={toolbarClick} ref={g => grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, ExcelExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/excel-export-cs9/app/datasource.jsx %}
@@ -309,10 +539,143 @@ In the following demo, using the `rotation` property of the style argument in th
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/header-orientation-cs2/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { ExcelExport, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+    let grid;
+    const toolbar = ['ExcelExport'];
+    const customAttributes = { class: 'orientationcss' };
+    const degree = [90, 180, 45, 135, 225, -90];
+    let dropDownListObject;
+    const setHeaderHeight = () => {
+        /** Obtain the width of the headerText content */
+        const textWidth = document.querySelector(".orientationcss > div").scrollWidth;
+        const headerCell = document.querySelectorAll(".e-headercell");
+        for (let i = 0; i < headerCell.length; i++) {
+            /** Assign the obtained textWidth as the height of the headerCell */
+            (headerCell.item(i)).style.height = textWidth + 'px';
+        }
+    };
+    const toolbarClick = (args) => {
+        if (grid && args.item.id === 'grid_excelexport') {
+            grid.excelExport();
+        }
+    };
+    const excelQueryCellInfo = (args) => {
+        if (args.column.field == 'Freight') {
+            if (args.value < 30) {
+                args.style = { backColor: '#99ffcc' };
+            }
+            else if (args.value < 60) {
+                args.style = { backColor: '#ffffb3' };
+            }
+            else {
+                args.style = { backColor: '#ff704d' };
+            }
+        }
+    };
+    const excelHeaderQueryCellInfo = (args) => {
+        let textWidth = document.querySelector(".orientationcss > div").scrollWidth;
+        if (args.gridCell.column.field == 'Freight') {
+            args.style = { backColor: '#99ffcc', vAlign: 'Bottom' };
+        }
+        else {
+            args.style = { vAlign: 'Center', rotation: dropDownListObject.value };
+        }
+        args.cell.cellHeight = textWidth;
+    };
+    return (<div>
+        <label>Select a degree:</label>
+        <DropDownListComponent style={{ marginLeft: "20px" }} placeholder="Select a degree" id="ddlelement" dataSource={degree} ref={(scope) => { dropDownListObject = scope; }} width={150}></DropDownListComponent>
+        <GridComponent id='grid' dataSource={data} height={260} created={setHeaderHeight} allowExcelExport={true} excelQueryCellInfo={excelQueryCellInfo} excelHeaderQueryCellInfo={excelHeaderQueryCellInfo} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' customAttributes={customAttributes} width='100' />
+                <ColumnDirective field='EmployeeID' headerText='Employee ID' width='100' textAlign="Right" />
+                <ColumnDirective field='Freight' headerText='Freight' width='80' format="C2" textAlign="Center" />
+                <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+            </ColumnsDirective>
+            <Inject services={[Toolbar, ExcelExport]} />
+        </GridComponent>
+    </div>);
+}
+;
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/header-orientation-cs2/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { ExcelExport, ToolbarItems, ExcelQueryCellInfoEventArgs, Grid, Inject, Toolbar, ExcelHeaderQueryCellInfoEventArgs } from '@syncfusion/ej2-react-grids';
+import { ClickEventArgs } from '@syncfusion/ej2-react-navigations';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: Grid | null;
+  const toolbar: ToolbarItems[] = ['ExcelExport'];
+  const customAttributes: any = { class: 'orientationcss' };
+  const degree: number[] = [90, 180, 45, 135];
+  let dropDownListObject: any;
+  const setHeaderHeight = () => {
+    /** Obtain the width of the headerText content */
+    const textWidth: number = (document.querySelector(".orientationcss > div") as HTMLElement).scrollWidth;
+    const headerCell: NodeList = document.querySelectorAll(".e-headercell");
+    for (let i: number = 0; i < headerCell.length; i++) {
+      /** Assign the obtained textWidth as the height of the headerCell */
+      ((headerCell as any).item(i)).style.height = textWidth + 'px';
+    }
+  }
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'grid_excelexport') {
+      grid.excelExport();
+    }
+  }
+  const excelQueryCellInfo = (args: ExcelQueryCellInfoEventArgs): void => {
+    if (args.column.field == 'Freight') {
+      if (args.value < 30) {
+        args.style = { backColor: '#99ffcc' };
+      }
+      else if (args.value < 60) {
+        args.style = { backColor: '#ffffb3' };
+      }
+      else {
+        args.style = { backColor: '#ff704d' };
+      }
+    }
+  }
+
+  const excelHeaderQueryCellInfo = (args: ExcelHeaderQueryCellInfoEventArgs): void => {
+    let textWidth = (document.querySelector(".orientationcss > div") as HTMLElement).scrollWidth;
+    if (args.gridCell.column.field == 'Freight') {
+      args.style = { backColor: '#99ffcc', vAlign: 'Bottom' };
+    }
+    else {
+      args.style = { vAlign: 'Center', rotation: dropDownListObject.value };
+    }
+    args.cell.cellHeight = textWidth;
+  }
+  return (<div>
+    <label>Select a degree: </label>
+    <DropDownListComponent style={{ marginLeft: "10px" }} placeholder="Select a degree" id="ddlelement" dataSource={degree} ref={(scope) => { dropDownListObject = scope; }} width={150}></DropDownListComponent>
+    <GridComponent id='grid' dataSource={data} height={260} created={setHeaderHeight} allowExcelExport={true} excelQueryCellInfo={excelQueryCellInfo} excelHeaderQueryCellInfo={excelHeaderQueryCellInfo} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' customAttributes={customAttributes} width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='80' format="C2" textAlign="Center" />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Toolbar, ExcelExport]} />
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/header-orientation-cs2/app/datasource.jsx %}

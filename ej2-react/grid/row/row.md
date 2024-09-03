@@ -203,10 +203,64 @@ Here is an example that demonstrates how to enable/disable the Row Hover feature
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/row-hover-cs1/app/App.jsx %}
+{% raw %}
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+  const [enableRowHover, setEnableRowHover] = useState(true);
+  const changeValue = (() => {
+    setEnableRowHover(!enableRowHover);
+  });
+  return (
+    <div>
+      <label style={{ padding: "10px 10px" }}>
+        Enable/Disable Row Hover
+      </label>
+      <SwitchComponent id="switch" checked={enableRowHover} change={changeValue}></SwitchComponent>
+      <GridComponent dataSource={data} enableHover={enableRowHover}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='Freight' headerText='Freight' width='100' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+      </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/row-hover-cs1/app/App.tsx %}
+{% raw %}
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+  const [enableRowHover, setEnableRowHover] = useState(true);
+  const changeValue = (() => {
+    setEnableRowHover(!enableRowHover);
+  });
+  return (
+    <div>
+      <label style={{ padding: "10px 10px" }}>
+        Enable/Disable Row Hover
+      </label>
+      <SwitchComponent id="switch" checked={enableRowHover} change={changeValue}></SwitchComponent>
+      <GridComponent dataSource={data} enableHover={enableRowHover}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='Freight' headerText='Freight' width='100' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+      </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/row-hover-cs1/app/datasource.jsx %}
@@ -231,10 +285,98 @@ Here's an example that demonstrates how to use the `rowDataBound` event and `get
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/rows-alt-cs3/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const rowDataBound = ((args) => {
+    args.row.addEventListener('mouseover', (e) => {
+      const rowInformation = grid.getRowInfo(e.target);
+      console.log(rowInformation);
+      document.getElementById('show').innerHTML = `
+              <table style="border-collapse: collapse; width: 600px;">
+                <tr style="border: 2px solid;">
+                  <td style="padding: 2px;"><b>Row Information:</b></td>
+                </tr>
+                <tr style="border: 2px solid; padding: 8px;">
+                  <th style="border: 2px solid; padding: 8px; width: 120px;"><b>Class Name</b>
+                  </th>
+                  <td style="border: 2px solid; padding: 8px;">${rowInformation.row.className}
+                  </td>
+                </tr>
+                <tr style="border: 2px solid;">
+                  <th style="border: 2px solid; padding: 8px;"><b>Row Index</b>
+                  </th>
+                  <td style="border: 2px solid; padding: 8px;">${rowInformation.rowIndex}
+                </td>
+                </tr>
+               </table>`;
+    });
+  });
+  return (
+    <div>
+      <div id='show' style={{ padding: "0px 0px 20px 0px" }} ></div>
+      <GridComponent dataSource={data} ref={g => grid = g} rowDataBound={rowDataBound}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='Freight' headerText='Freight' width='100' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+      </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/rows-alt-cs3/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, RowDataBoundEventArgs } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const rowDataBound = ((args:RowDataBoundEventArgs) => {
+    args.row.addEventListener('mouseover', (e: MouseEvent) => {
+      const rowInformation = (grid as GridComponent).getRowInfo(e.target as HTMLElement);
+      console.log(rowInformation);
+      (document.getElementById('show') as HTMLElement).innerHTML = `
+              <table style="border-collapse: collapse; width: 600px;">
+                <tr style="border: 2px solid;">
+                  <td style="padding: 2px;"><b>Row Information:</b></td>
+                </tr>
+                <tr style="border: 2px solid; padding: 8px;">
+                  <th style="border: 2px solid; padding: 8px; width: 120px;"><b>Class Name</b>
+                  </th>
+                  <td style="border: 2px solid; padding: 8px;">${rowInformation.row.className}
+                  </td>
+                </tr>
+                <tr style="border: 2px solid;">
+                  <th style="border: 2px solid; padding: 8px;"><b>Row Index</b>
+                  </th>
+                  <td style="border: 2px solid; padding: 8px;">${rowInformation.rowIndex}
+                </td>
+                </tr>
+               </table>`;
+    });
+  });
+  return (
+    <div>
+      <div id='show' style={{ padding: "0px 0px 20px 0px" }} ></div>
+      <GridComponent dataSource={data} ref={g => grid = g} rowDataBound={rowDataBound}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='100' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='Freight' headerText='Freight' width='100' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+      </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/rows-alt-cs3/app/datasource.jsx %}
@@ -256,10 +398,78 @@ In the following example, the [frozenRows](https://ej2.syncfusion.com/react/docu
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/frozenrow-cs1/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+  let grid;
+  let textBox;
+  const frozenRows = () => {
+    grid.frozenRows = textBox.value;
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}> Change the frozen rows: </label>
+      <NumericTextBoxComponent ref={t => textBox = t} id='frozenrows' min={0} max={5} validateDecimalOnType={true} decimals={0} value={2} format='n' width='150'></NumericTextBoxComponent>
+      <ButtonComponent style={{ marginLeft: "5px" }} onClick={frozenRows}>UPDATE</ButtonComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} height={315} frozenRows={2}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+          <ColumnDirective field='Freight' headerText='Freight' width='120' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+          <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+          <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+        <Inject services={[Freeze]} />
+      </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/frozenrow-cs1/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, Freeze, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
+function App() {
+  let grid: GridComponent | null;
+  let textBox: NumericTextBoxComponent | null;
+  const frozenRows = () => {
+    (grid as GridComponent).frozenRows = (textBox as NumericTextBoxComponent).value;
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}> Change the frozen rows: </label>
+      <NumericTextBoxComponent ref={t => textBox = t} id='frozenrows' min={0} max={5} validateDecimalOnType={true} decimals={0} value={2} format='n' width='150'></NumericTextBoxComponent>
+      <ButtonComponent style={{ marginLeft: "5px" }} onClick={frozenRows}>UPDATE</ButtonComponent>
+      <GridComponent ref={g => grid = g} dataSource={data} height={315} frozenRows={2}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='150' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='180' />
+          <ColumnDirective field='Freight' headerText='Freight' width='120' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='200' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='180' />
+          <ColumnDirective field='ShipRegion' headerText='Ship Region' width='220' />
+          <ColumnDirective field='ShipAddress' headerText='Ship Address' width='200' />
+          <ColumnDirective field='OrderDate' headerText='Order Date' width='140' format='yMd' />
+        </ColumnsDirective>
+        <Inject services={[Freeze]} />
+      </GridComponent></div>)
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/frozenrow-cs1/app/datasource.jsx %}
