@@ -51,10 +51,46 @@ In the following example, the parent container has explicit height and width set
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/scrolling-cs5/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  return (<div style={{ height: '500px', width: '600px' }}>
+    <GridComponent dataSource={data} height='100%' width='100%'>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
+        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+      </ColumnsDirective>
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/scrolling-cs5/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  return (<div style={{ height: '500px', width: '600px' }}>
+    <GridComponent dataSource={data} height='100%' width='100%'>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
+        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+      </ColumnsDirective>
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/scrolling-cs5/app/datasource.jsx %}
@@ -74,10 +110,60 @@ In the below demo, the Grid headers will be sticky while scrolling the Grid's pa
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/scrolling-cs6/app/App.jsx %}
+{% raw %}
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const onChange = (args) => {
+    grid.enableStickyHeader = args.checked;
+  }
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }}>Enable/Disable Sticky Header </label>
+    <SwitchComponent change={onChange}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
+        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+      </ColumnsDirective>
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/scrolling-cs6/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const onChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).enableStickyHeader = args.checked;
+  }
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }}>Enable/Disable Sticky Header </label>
+    <SwitchComponent change={onChange}></SwitchComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} >
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
+        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+      </ColumnsDirective>
+    </GridComponent>
+  </div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/scrolling-cs6/app/datasource.jsx %}
@@ -97,10 +183,108 @@ The following example that demonstrates how to use the `rowSelected` event to sc
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/scrolling-cs7/app/App.jsx %}
+{% raw %}
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const dropDownData = [
+    { text: 'Select count' },
+    { text: '10', value: '10' },
+    { text: '20', value: '20' },
+    { text: '30', value: '30' },
+    { text: '80', value: '80' },
+    { text: '100', value: '100' },
+    { text: '200', value: '200' },
+    { text: '232', value: '232' },
+    { text: '300', value: '300' },
+    { text: '500', value: '500' },
+    { text: '800', value: '800' },
+    { text: '820', value: '850' },
+    { text: '920', value: '920' },
+    { text: '2020', value: '2020' },
+    { text: '3000', value: '3000' },
+    { text: '4000', value: '4000' },
+    { text: '4999', value: '4999' }
+
+  ];
+  const onChange = (args) => {
+    grid.selectionModule.selectRow(parseInt((args.value), 10));
+  }
+  const rowSelected = () => {
+    const rowHeight = grid.getRows()[grid.getSelectedRowIndexes()[0]].scrollHeight;
+    grid.getContent().children[0].scrollTop = rowHeight * grid.getSelectedRowIndexes()[0];
+  }
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }} > Select row index :</label>
+    <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    <GridComponent dataSource={data} height="315" width="100%"
+      rowSelected={rowSelected} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
+        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/scrolling-cs7/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const dropDownData: { [key: string]: Object; }[] = [
+    { text: 'Select count' },
+    { text: '10', value: '10' },
+    { text: '20', value: '20' },
+    { text: '30', value: '30' },
+    { text: '80', value: '80' },
+    { text: '100', value: '100' },
+    { text: '200', value: '200' },
+    { text: '232', value: '232' },
+    { text: '300', value: '300' },
+    { text: '500', value: '500' },
+    { text: '800', value: '800' },
+    { text: '820', value: '850' },
+    { text: '920', value: '920' },
+    { text: '2020', value: '2020' },
+    { text: '3000', value: '3000' },
+    { text: '4000', value: '4000' },
+    { text: '4999', value: '4999' }
+
+  ];
+  const onChange = (args: ChangeEventArgs) => {
+    (grid as GridComponent).selectionModule.selectRow(parseInt((args.value as string), 10));
+  }
+  const rowSelected = () => {
+    const rowHeight: number = (grid as GridComponent).getRows()[(grid as GridComponent).getSelectedRowIndexes()[0]].scrollHeight;
+    (grid as GridComponent).getContent().children[0].scrollTop = rowHeight * (grid as GridComponent).getSelectedRowIndexes()[0];
+  }
+  return (<div>
+    <label style={{ padding: "30px 20px 0 0" }} > Select row index :</label>
+    <DropDownListComponent index={0} width={200} dataSource={dropDownData} change={onChange}></DropDownListComponent>
+    <GridComponent dataSource={data} height="315" width="100%"
+      rowSelected={rowSelected} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='OrderID' width='120' textAlign='Right' />
+        <ColumnDirective field='CustomerID' headerText='CustomerID' width='150' />
+        <ColumnDirective field='Freight' headerText='Freight' width='120' format='C2' />
+        <ColumnDirective field='ShipAddress' headerText='ShipAddress' width='150' />
+      </ColumnsDirective>
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/scrolling-cs7/app/datasource.jsx %}

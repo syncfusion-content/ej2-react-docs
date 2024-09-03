@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Dashboard layout component | Syncfusion
-description:  Checkout and learn about Getting started with React Dashboard layout component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Dashboard layout Component | Syncfusion
+description: Checkout and learn about getting started with Syncfusion Essential React Dashboard layout component, it's elements, and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Dashboard layout
 
 This section explains how to create a simple **Dashboard Layout** component and its basic usage.
 
@@ -323,4 +323,4 @@ The following example shows a basic Dashboard Layout by using the `panels` prope
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-panel-cs1" %}
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to knows how to present and manipulate data.
+> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/dashboard-layout/default) to knows how to present and manipulate data.

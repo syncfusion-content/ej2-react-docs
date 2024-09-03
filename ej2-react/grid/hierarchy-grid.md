@@ -210,10 +210,87 @@ The following example demonstrates how to obtain parent details in a child grid 
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs9/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
+import { DetailRow, Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data, employeeData } from './datasource';
+
+
+function App() {
+  let childGridOptions = {
+    created() {
+      var parentRowData = this.parentDetails.parentRowData;
+      document.getElementById('message').innerHTML = `EmployeeID: ${parentRowData.EmployeeID}, FirstName: ${parentRowData.FirstName}, Title: ${parentRowData.Title}`;
+    },
+    columns: [
+      { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
+      { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', allowEditing: false, width: 120 },
+      { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+      { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+    ],
+    dataSource: data,
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
+    queryString: 'EmployeeID',
+    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+  };
+  return (<div>
+    <div style={{ marginLeft: "100px" }}>
+      <p style={{ color: "black", fontSize: "large" }} id="message"></p>
+    </div>
+    <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" />
+        <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+        <ColumnDirective field='City' headerText='City' width='150' />
+        <ColumnDirective field='Country' headerText='Country' width='150' />
+      </ColumnsDirective>
+      <Inject services={[DetailRow, Edit, Toolbar]} />
+    </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/hierarchy-grid-cs9/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, ParentDetails } from '@syncfusion/ej2-react-grids';
+import { DetailRow, Edit, GridModel, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data, employeeData, ParentDetailsDataType } from './datasource';
+
+function App() {
+  let childGridOptions: GridModel = {
+    created() {
+      var parentRowData = (this.parentDetails as ParentDetails).parentRowData;
+      (document.getElementById('message') as HTMLElement).innerHTML = `EmployeeID: ${(parentRowData as ParentDetailsDataType).EmployeeID}, FirstName: ${(parentRowData as ParentDetailsDataType).FirstName}, Title: ${(parentRowData as ParentDetailsDataType).Title}`;
+    },
+    columns: [
+      { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
+      { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', allowEditing: false, width: 120 },
+      { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+      { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+    ],
+    dataSource: data,
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
+    queryString: 'EmployeeID',
+    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+  };
+  return (<div>
+    <div style={{ marginLeft: "100px" }}>
+      <p style={{ color: "black", fontSize: "large" }} id="message"></p>
+    </div>
+    <GridComponent dataSource={employeeData} childGrid={childGridOptions} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='EmployeeID' headerText='Employee ID' width='120' textAlign="Right" />
+        <ColumnDirective field='FirstName' headerText='First Name' width='150' />
+        <ColumnDirective field='City' headerText='City' width='150' />
+        <ColumnDirective field='Country' headerText='Country' width='150' />
+      </ColumnsDirective>
+      <Inject services={[DetailRow, Edit, Toolbar]} />
+    </GridComponent ></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/hierarchy-grid-cs9/app/datasource.jsx %}
@@ -319,7 +396,7 @@ You can customize the appearance of the header elements in the child grid using 
 
 **Customizing the child grid header**
 
-To customize the appearance of the chid grid header root element, you can use the following CSS code:
+To customize the appearance of the child grid header root element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-headercontent{

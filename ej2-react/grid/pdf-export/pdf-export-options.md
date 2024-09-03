@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf export options in React Grid Component
+# PDF export options in React Grid Component
 
 The Syncfusion React Grid component allows you to customize the PDF export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
 
@@ -119,10 +119,79 @@ The following example demonstrates how to export hidden columns to a PDF file. I
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/pdf-export-cs10/app/App.jsx %}
+{% raw %}
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { Page, PdfExport, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let switchData;
+  const toolbar = ['PdfExport'];
+  const toolbarClick = (args) => {
+    if (grid && args.item.id === 'grid_pdfexport') {
+      const exportProperties = {
+        includeHiddenColumn: switchData.checked
+      };
+      grid.pdfExport(exportProperties);
+    }
+  }
+  return (<div>
+    <label style={{ padding: "10px 10px" }}>Enable or disable includeHiddenColumn property </label>
+    <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+    <GridComponent id='grid' dataSource={data} allowPaging={true} allowPdfExport={true} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='130' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='120' visible={false} />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Page, Toolbar, PdfExport]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/pdf-export-cs10/app/App.tsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, PdfExportProperties } from '@syncfusion/ej2-react-grids';
+import { Page, PdfExport, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let switchData: SwitchComponent | null;
+  const toolbar: ToolbarItems[] = ['PdfExport'];
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'Grid_pdfexport') {
+      const exportProperties: PdfExportProperties = {
+        includeHiddenColumn: (switchData as SwitchComponent).checked
+      };
+      grid.pdfExport(exportProperties);
+    }
+  }
+  return (<div>
+    <label style={{ padding: "10px 10px" }}>Enable or disable includeHiddenColumn property </label>
+    <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+    <GridComponent id='Grid' dataSource={data} allowPaging={true} allowPdfExport={true} toolbar={toolbar} toolbarClick={toolbarClick} ref={g => grid = g}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='120' />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='130' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='120' visible={false} />
+        <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Page, Toolbar, PdfExport]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs10/app/datasource.jsx %}
@@ -183,10 +252,94 @@ The following example demonstrates how to export the grid into PDF document by s
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/pdf-export-cs12/app/App.jsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, PdfExportProperties, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    let dropDown;
+    const toolbar = ['PdfExport'];
+    const ddlData = [
+        { text: 'Portrait', value: 'Portrait' },
+        { text: 'Landscape', value: 'Landscape' },
+    ];
+    const toolbarClick = (args) => {
+        if (grid && args.item.id === 'Grid_pdfexport') { //'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+            const exportProperties = {
+                pageOrientation: dropDown.value
+            };
+            grid.pdfExport(exportProperties);
+        }
+    }
+    return (
+        <div>
+            <label style={{ padding: "10px 10px 26px 0" }}> Change the page orientation property: </label>
+            <DropDownListComponent ref={d => dropDown = d} index={0} width={200} dataSource={ddlData}></DropDownListComponent>
+            <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+                toolbarClick={toolbarClick} ref={g => grid = g}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+                    <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+                </ColumnsDirective>
+                <Inject services={[Toolbar, PdfExport]} />
+            </GridComponent>
+        </div>
+    );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/pdf-export-cs12/app/App.tsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, PdfExportProperties, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let dropDown: DropDownListComponent | null;
+  const toolbar: ToolbarItems[] = ['PdfExport'];
+  const ddlData: { [key: string]: Object; }[] = [
+    { text: 'Portrait', value: 'Portrait' },
+    { text: 'Landscape', value: 'Landscape' },
+  ];
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'Grid_pdfexport') { //'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+      const exportProperties: PdfExportProperties = {
+        pageOrientation: (dropDown as DropDownListComponent).value
+      };
+      grid.pdfExport(exportProperties);
+    }
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}> Change the page orientation property: </label>
+      <DropDownListComponent ref={d => dropDown = d} index={0} width={200} dataSource={ddlData}></DropDownListComponent>
+      <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+        toolbarClick={toolbarClick} ref={g => grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, PdfExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs12/app/datasource.jsx %}
@@ -238,10 +391,143 @@ The following example demonstrates how to export the grid into PDF document by s
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/pdf-export-cs13/app/App.jsx %}
+{% raw %}
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, PdfExportProperties, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let dropDown;
+  const toolbar = ['PdfExport'];
+  const ddlData = [
+    { text: 'Letter', value: 'Letter' },
+    { text: 'Note', value: 'Note' },
+    { text: 'Legal', value: 'Legal' },
+    { text: 'A0', value: 'A0' },
+    { text: 'A1', value: 'A1' },
+    { text: 'A2', value: 'A2' },
+    { text: 'A3', value: 'A3' },
+    { text: 'A4', value: 'A4' },
+    { text: 'A5', value: 'A5' },
+    { text: 'A6', value: 'A6' },
+    { text: 'A7', value: 'A7' },
+    { text: 'A8', value: 'A8' },
+    { text: 'B0', value: 'B0' },
+    { text: 'B1', value: 'B1' },
+    { text: 'B2', value: 'B2' },
+    { text: 'B3', value: 'B3' },
+    { text: 'B4', value: 'B4' },
+    { text: 'B5', value: 'B5' },
+    { text: 'Archa', value: 'Archa' },
+    { text: 'Archb', value: 'Archb' },
+    { text: 'Archc', value: 'Archc' },
+    { text: 'Archd', value: 'Archd' },
+    { text: 'Arche', value: 'Arche' },
+    { text: 'Flsa', value: 'Flsa' },
+    { text: 'HalfLetter', value: 'HalfLetter' },
+    { text: 'Letter11x17', value: 'Letter11x17' },
+    { text: 'Ledger', value: 'Ledger' },
+  ];
+  const toolbarClick = (args) => {
+    if (grid && args.item.id === 'Grid_pdfexport') { //'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+      const exportProperties = {
+        pageSize: dropDown.value
+      };
+      grid.pdfExport(exportProperties);
+    }
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}> Change the page size property: </label>
+      <DropDownListComponent ref={d => dropDown = d} index={0} width={200} dataSource={ddlData}></DropDownListComponent>
+      <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+        toolbarClick={toolbarClick} ref={g => grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, PdfExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/pdf-export-cs13/app/App.tsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, PdfExportProperties, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let dropDown: DropDownListComponent | null;
+  const toolbar: ToolbarItems[] = ['PdfExport'];
+  const ddlData: { [key: string]: Object; }[] = [
+    { text: 'Letter', value: 'Letter' },
+    { text: 'Note', value: 'Note' },
+    { text: 'Legal', value: 'Legal' },
+    { text: 'A0', value: 'A0' },
+    { text: 'A1', value: 'A1' },
+    { text: 'A2', value: 'A2' },
+    { text: 'A3', value: 'A3' },
+    { text: 'A4', value: 'A4' },
+    { text: 'A5', value: 'A5' },
+    { text: 'A6', value: 'A6' },
+    { text: 'A7', value: 'A7' },
+    { text: 'A8', value: 'A8' },
+    { text: 'B0', value: 'B0' },
+    { text: 'B1', value: 'B1' },
+    { text: 'B2', value: 'B2' },
+    { text: 'B3', value: 'B3' },
+    { text: 'B4', value: 'B4' },
+    { text: 'B5', value: 'B5' },
+    { text: 'Archa', value: 'Archa' },
+    { text: 'Archb', value: 'Archb' },
+    { text: 'Archc', value: 'Archc' },
+    { text: 'Archd', value: 'Archd' },
+    { text: 'Arche', value: 'Arche' },
+    { text: 'Flsa', value: 'Flsa' },
+    { text: 'HalfLetter', value: 'HalfLetter' },
+    { text: 'Letter11x17', value: 'Letter11x17' },
+    { text: 'Ledger', value: 'Ledger' },
+  ];
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'Grid_pdfexport') { //'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+      const exportProperties: PdfExportProperties = {
+        pageSize: (dropDown as DropDownListComponent).value
+      };
+      grid.pdfExport(exportProperties);
+    }
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}> Change the page size property: </label>
+      <DropDownListComponent ref={d => dropDown = d} index={0} width={200} dataSource={ddlData}></DropDownListComponent>
+      <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+        toolbarClick={toolbarClick} ref={g => grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, PdfExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs13/app/datasource.jsx %}
@@ -263,10 +549,102 @@ The following example demonstrates how to define a file name using `pdfExportPro
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/pdf-export-cs14/app/App.jsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, PdfExportProperties, Toolbar } from '@syncfusion/ej2-react-grids';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+    let grid;
+    let textBox;
+    const toolbar = ['PdfExport'];
+    const toolbarClick = (args) => {
+        if (grid && args.item.id === 'Grid_pdfexport') { //'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+            if (textBox.value) {
+                const exportProperties = {
+                    fileName: textBox.value + '.pdf'
+                };
+                grid.pdfExport(exportProperties);
+            } else {
+                const exportProperties = {
+                    fileName: 'new.pdf'
+                };
+                grid.pdfExport(exportProperties);
+            }
+
+        }
+    }
+    return (
+        <div>
+            <label style={{ padding: "10px 10px 26px 0" }}>Enter file name: </label>
+            <TextBoxComponent ref={t => textBox = t} placeholder="Enter file name" width="120"></TextBoxComponent>
+            <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+                toolbarClick={toolbarClick} ref={g => grid = g}>
+                <ColumnsDirective>
+                    <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+                    <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+                    <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+                    <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+                </ColumnsDirective>
+                <Inject services={[Toolbar, PdfExport]} />
+            </GridComponent>
+        </div>
+    );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/pdf-export-cs14/app/App.tsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, PdfExportProperties, Toolbar } from '@syncfusion/ej2-react-grids';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let textBox: TextBoxComponent | null;
+  const toolbar: ToolbarItems[] = ['PdfExport'];
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'Grid_pdfexport') { //'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+      if ((textBox as TextBoxComponent).value) {
+        const exportProperties: PdfExportProperties = {
+          fileName: (textBox as TextBoxComponent).value + '.pdf'
+        };
+        grid.pdfExport(exportProperties);
+      } else {
+        const exportProperties: PdfExportProperties = {
+          fileName: 'new.pdf'
+        };
+        grid.pdfExport(exportProperties);
+      }
+
+    }
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}>Enter file name: </label>
+      <TextBoxComponent ref={t => textBox = t} placeholder="Enter file name" width="120"></TextBoxComponent>
+      <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+        toolbarClick={toolbarClick} ref={g => grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='150' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, PdfExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs14/app/datasource.jsx %}
@@ -288,10 +666,94 @@ In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/pdf-export-cs25/app/App.jsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, PdfExportProperties, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let switchData;
+  const toolbar = ['PdfExport'];
+  const toolbarClick = (args) => {
+    if (grid && args.item.id === 'Grid_pdfexport') { //'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+      const exportProperties = {
+        allowHorizontalOverflow: switchData.value
+      };
+      grid.pdfExport(exportProperties);
+    }
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}>Enable or disable Horizontal Overflow property </label>
+      <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+      <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+        toolbarClick={toolbarClick} ref={g => grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='120' />
+          <ColumnDirective field='ShipAddress' headerText='Ship Address' width='130' />
+          <ColumnDirective field='ShipRegion' headerText='Ship Region' width='90' />
+          <ColumnDirective field='ShipPostalCode' headerText='Ship PostalCode' width='90' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, PdfExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/pdf-export-cs25/app/App.tsx %}
+{% raw %}
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import { Inject, PdfExport, PdfExportProperties, Toolbar } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let switchData: SwitchComponent | null;
+  const toolbar: ToolbarItems[] = ['PdfExport'];
+  const toolbarClick = (args: ClickEventArgs) => {
+    if (grid && args.item.id === 'Grid_pdfexport') { //'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+      const exportProperties: PdfExportProperties = {
+        allowHorizontalOverflow: (switchData as SwitchComponent).value
+      };
+      grid.pdfExport(exportProperties);
+    }
+  }
+  return (
+    <div>
+      <label style={{ padding: "10px 10px 26px 0" }}>Enable or disable Horizontal Overflow property </label>
+      <SwitchComponent ref={s => switchData = s}></SwitchComponent>
+      <GridComponent id='Grid' dataSource={data} toolbar={toolbar} allowPdfExport={true}
+        toolbarClick={toolbarClick} ref={g => grid = g}>
+        <ColumnsDirective>
+          <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign='Right' />
+          <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+          <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
+          <ColumnDirective field='ShipName' headerText='Ship Name' width='120' />
+          <ColumnDirective field='ShipAddress' headerText='Ship Address' width='130' />
+          <ColumnDirective field='ShipRegion' headerText='Ship Region' width='90' />
+          <ColumnDirective field='ShipPostalCode' headerText='Ship PostalCode' width='90' />
+          <ColumnDirective field='ShipCountry' headerText='Ship Country' width='100' />
+        </ColumnsDirective>
+        <Inject services={[Toolbar, PdfExport]} />
+      </GridComponent>
+    </div>
+  );
+}
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/pdf-export-cs25/app/datasource.jsx %}

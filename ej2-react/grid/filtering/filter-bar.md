@@ -86,10 +86,66 @@ To enable the display of filter text within the pager, you should set the [showF
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/filter-bar-cs2/app/App.jsx %}
+{% raw %}
+import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, Page } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
+import React, { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+    const pageSettings = { pageSize: 5 };
+    const [filterSettings, setFilterSettings] = useState();
+    const onChange = (args) => {
+        setFilterSettings({ showFilterBarStatus: args.checked });
+    }
+    return (<div>
+        <label style={{ marginTop: "20px" }}><b> Show filter bar status </b></label>
+        <SwitchComponent checked={true} change={onChange}></SwitchComponent>
+        <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} height={315}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+                <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' textAlign="Right" />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+            </ColumnsDirective>
+            <Inject services={[Filter, Page]} />
+        </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/filter-bar-cs2/app/App.tsx %}
+{% raw %}
+import { ChangeEventArgs, SwitchComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, FilterSettingsModel, Page, PageSettingsModel } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids'
+import React, { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+    const pageSettings: PageSettingsModel = { pageSize: 5 };
+    const [filterSettings, setFilterSettings] = useState<FilterSettingsModel>();
+    const onChange = (args: ChangeEventArgs) => {
+        setFilterSettings({ showFilterBarStatus: args.checked });
+    }
+    return (<div>
+        <label style={{ marginTop: "20px" }}><b> Show filter bar status </b></label>
+        <SwitchComponent checked={true} change={onChange}></SwitchComponent>
+        <GridComponent dataSource={data} allowFiltering={true} allowPaging={true} pageSettings={pageSettings} filterSettings={filterSettings} height={315}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+                <ColumnDirective field='OrderDate' headerText='Order Date' width='100' format='yMd' textAlign="Right" />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+            </ColumnsDirective>
+            <Inject services={[Filter, Page]} />
+        </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/filter-bar-cs2/app/datasource.jsx %}

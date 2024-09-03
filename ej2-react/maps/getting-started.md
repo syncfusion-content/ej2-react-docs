@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Maps Library component
 
 This section explains you the steps required to create a map and demonstrate the basic usage of the maps component.
 
@@ -285,3 +285,5 @@ You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/rea
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/maps/default-map-cs39" %}
+
+N> You can refer to our [React Maps Library](https://www.syncfusion.com/react-components/react-maps-library) feature tour page for its groundbreaking feature representations. You can also explore our [React Maps Library example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/maps/default) that shows you how to configure the Maps Library in React.

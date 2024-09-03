@@ -7,7 +7,7 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
+ 
 # Sorting in React Grid component
 
 The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/grid/#allowsorting) property to **true**.
@@ -328,10 +328,102 @@ The following example demonstrates how to add sort columns to a grid. It utilize
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/sort-cs10/app/App.jsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortDirection, SortSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let dropColumn;
+  let dropdirection;
+  const columns = [
+    { text: 'Order ID', value: 'OrderID' },
+    { text: 'Customer ID', value: 'CustomerID' },
+    { text: 'Freight', value: 'Freight' },
+  ];
+  const direction = [
+    { text: 'Ascending', value: 'Ascending' },
+    { text: 'Descending', value: 'Descending' },
+  ];
+  const field = { text: 'text', value: 'value' };
+  const sortingOptions = {
+    columns: [{ field: 'ShipName', direction: 'Ascending' }]
+  };
+  const addSortColumn = () => {
+    grid.sortColumn(dropColumn.value, dropdirection.value, true);
+  }
+  return (<div>
+    <div>
+      <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
+      <DropDownListComponent ref={dc => dropColumn = dc} index={0} width='120' dataSource={columns} fields={field}></DropDownListComponent></div>
+    <div>
+      <label style={{ padding: "30px 20px 0 0" }}> Sort direction :</label>
+      <DropDownListComponent ref={dd => dropdirection = dd} index={0} width='120' dataSource={direction} fields={field}></DropDownListComponent></div>
+    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={addSortColumn}>Add Sort Column</ButtonComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='100' textAlign="Right" format='C'/>
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Sort]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/sort-cs10/app/App.tsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortDirection, SortSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let dropColumn: DropDownListComponent | null;
+  let dropdirection: DropDownListComponent | null;
+  const columns: { [key: string]: Object; }[] = [
+    { text: 'Order ID', value: 'OrderID' },
+    { text: 'Customer ID', value: 'CustomerID' },
+    { text: 'Freight', value: 'Freight' },
+  ];
+  const direction: { [key: string]: Object; }[] = [
+    { text: 'Ascending', value: 'Ascending' },
+    { text: 'Descending', value: 'Descending' },
+  ];
+  const field: Object = { text: 'text', value: 'value' };
+  const sortingOptions: SortSettingsModel = {
+    columns: [{ field: 'ShipName', direction: 'Ascending' }]
+  };
+  const addSortColumn = () => {
+    (grid as GridComponent).sortColumn(((dropColumn as DropDownListComponent).value as string), ((dropdirection as DropDownListComponent).value as SortDirection), true);
+  }
+  return (<div>
+    <div>
+      <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
+      <DropDownListComponent ref={dc => dropColumn = dc} index={0} width='120' dataSource={columns} fields={field}></DropDownListComponent></div>
+    <div>
+      <label style={{ padding: "30px 20px 0 0" }}> Sort direction :</label>
+      <DropDownListComponent ref={dd => dropdirection = dd} index={0} width='120' dataSource={direction} fields={field}></DropDownListComponent></div>
+    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={addSortColumn}>Add Sort Column</ButtonComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='Freight' headerText='Freight' width='100' format='C' textAlign="Right" />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Sort]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/sort-cs10/app/datasource.jsx %}
@@ -351,10 +443,88 @@ The following example demonstrates how to remove sort columns. It utilizes the *
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/sort-cs11/app/App.jsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  let dropColumn;
+  const columns = [
+    { text: 'Order ID', value: 'OrderID' },
+    { text: 'Customer ID', value: 'CustomerID' },
+    { text: 'ShipCity', value: 'ShipCity' },
+    { text: 'ShipName', value: 'ShipName' }
+  ];
+  const field = { text: 'text', value: 'value' };
+  const sortingOptions = {
+    columns: [{ field: 'CustomerID', direction: 'Ascending' }, { field: 'ShipName', direction: 'Descending' }]
+  };
+  const addSortColumn = () => {
+    grid.removeSortColumn(dropColumn.value);
+  }
+  return (<div>
+    <div>
+      <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
+      <DropDownListComponent ref={dc => dropColumn = dc} index={0} width='120' dataSource={columns} fields={field}></DropDownListComponent></div>
+    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={addSortColumn}>Remove Sort Column</ButtonComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Sort]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/sort-cs11/app/App.tsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  let dropColumn: DropDownListComponent | null;
+  const columns: { [key: string]: Object; }[] = [
+    { text: 'Order ID', value: 'OrderID' },
+    { text: 'Customer ID', value: 'CustomerID' },
+    { text: 'ShipCity', value: 'ShipCity' },
+    { text: 'ShipName', value: 'ShipName' }
+  ];
+  const field: Object = { text: 'text', value: 'value' };
+  const sortingOptions: SortSettingsModel = {
+    columns: [{ field: 'CustomerID', direction: 'Ascending' }, { field: 'ShipName', direction: 'Descending' }]
+  };
+  const removeSortColumn = () => {
+    (grid as GridComponent).removeSortColumn(((dropColumn as DropDownListComponent).value as string));
+  }
+  return (<div>
+    <div>
+      <label style={{ padding: "30px 20px 0 0" }}> Column name :</label>
+      <DropDownListComponent ref={dc => dropColumn = dc} index={0} width='120' dataSource={columns} fields={field}></DropDownListComponent></div>
+    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={removeSortColumn}>Remove Sort Column</ButtonComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Sort]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/sort-cs11/app/datasource.jsx %}
@@ -374,10 +544,64 @@ The following example demonstrates how to clear the sorting using `clearSorting`
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/sort-cs12/app/App.jsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid;
+  const sortingOptions = {
+    columns: [{ field: 'CustomerID', direction: 'Ascending' }, { field: 'ShipName', direction: 'Descending' }]
+  };
+  const clearSorting = () => {
+    grid.clearSorting();
+  }
+  return (<div>
+    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={clearSorting}>Clear Sorting</ButtonComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Sort]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/sort-cs12/app/App.tsx %}
+{% raw %}
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortSettingsModel } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { data } from './datasource';
+
+function App() {
+  let grid: GridComponent | null;
+  const sortingOptions: SortSettingsModel = {
+    columns: [{ field: 'CustomerID', direction: 'Ascending' }, { field: 'ShipName', direction: 'Descending' }]
+  };
+  const clearSorting = () => {
+    (grid as GridComponent).clearSorting();
+  }
+  return (<div>
+    <ButtonComponent style={{ marginTop: "10px" }} cssClass='e-outline' onClick={clearSorting}>Clear Sorting</ButtonComponent>
+    <GridComponent ref={g => grid = g} dataSource={data} allowSorting={true} sortSettings={sortingOptions} height={315}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Sort]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/sort-cs12/app/datasource.jsx %}
@@ -401,10 +625,70 @@ The following example demonstrates how the [actionBegin](https://ej2.syncfusion.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/sort-cs4/app/App.jsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+  const [message, setMessage] = useState('');
+  const actionBegin = (args) => {
+    if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
+      setMessage(args.requestType + ' action cancelled for ' + args.columnName + ' column');
+      args.cancel = true;
+    }
+  }
+  const actionComplete = (args) => {
+    setMessage(args.requestType + ' action completed for ' + args.columnName + ' column');
+  }
+  return (<div>
+    <div style={{ marginLeft: "100px" }}><p style={{ color: "red" }} id="message">{message}</p></div>
+    <GridComponent dataSource={data} allowSorting={true} height={315} actionBegin={actionBegin} actionComplete={actionComplete}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Sort]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/sort-cs4/app/App.tsx %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective, GridComponent, Inject, Sort, SortEventArgs } from '@syncfusion/ej2-react-grids';
+import * as React from 'react';
+import { useState } from 'react';
+import { data } from './datasource';
+
+function App() {
+  const [message, setMessage] = useState('');
+  const actionBegin = (args: SortEventArgs) => {
+    if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
+      setMessage(args.requestType + ' action cancelled for ' + args.columnName + ' column');
+      args.cancel = true;
+    }
+  }
+  const actionComplete = (args: SortEventArgs) => {
+    setMessage(args.requestType + ' action completed for ' + args.columnName + ' column');
+  }
+  return (<div>
+    <div style={{ marginLeft: "100px" }}><p style={{ color: "red" }} id="message">{message}</p></div>
+    <GridComponent dataSource={data} allowSorting={true} height={315} actionBegin={actionBegin} actionComplete={actionComplete}>
+      <ColumnsDirective>
+        <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+        <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+        <ColumnDirective field='ShipCity' headerText='Ship City' width='100' textAlign="Right" />
+        <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+      </ColumnsDirective>
+      <Inject services={[Sort]} />
+    </GridComponent></div>)
+};
+export default App;
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/sort-cs4/app/datasource.jsx %}
