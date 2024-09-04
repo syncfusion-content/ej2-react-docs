@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Uploader component
 
 This section explains how to create and configure the simple uploader component with its basic usage in step by step procedure.
 
@@ -234,12 +234,10 @@ You can handle the success and failure actions using the **success** and **failu
 
  {% previewsample "page.domainurl/code-snippet/uploader/basic-cs20" %}
 
->You can also explore [React File Upload](https://www.syncfusion.com/react-ui-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/material/uploader/default) to understand how to browse the files which you want to upload to the server.
-
 ## See Also
 
 * [How to add additional data on upload](./how-to/add-additional-data-on-upload)
 * [Achieve file upload programmatically](./how-to/achieve-file-upload-programmatically)
 * [Achieve invisible upload](./how-to/achieve-invisible-upload)
 
-> You can also explore [React File Upload](https://www.syncfusion.com/react-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/material/uploader/default) that shows how to render the file upload and browse the files which you want to upload to the server.
+> You can also explore [React File Upload](https://www.syncfusion.com/react-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/uploader/default) that shows how to render the file upload and browse the files which you want to upload to the server.

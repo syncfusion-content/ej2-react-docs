@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Calendar component | Syncfusion
-description:  Checkout and learn about Getting started with React Calendar component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Calendar Component | Syncfusion
+description: Checkout and learn about getting started with Syncfusion Essential React Calendar component, it's elements, and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting Started with React Calendar
 
 This section explains you the steps required to create a simple Calendar and demonstrate the basic usage of the Calendar component.
 
@@ -178,3 +178,5 @@ The following example demonstrates how to set the value,  min and max dates on i
 * [How to change the initial view of the Calendar](./calendar-views)
 * [Render Calendar with week numbers](./how-to/render-the-calendar-with-week-numbers)
 * [Show other month dates](./how-to/show-dates-of-other-months)
+
+N> You can refer to our [React Calendar](https://www.syncfusion.com/react-components/react-calenda) feature tour page for its groundbreaking feature representations. You can also explore our [React Calendar example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/calendar/default) to knows how to present and manipulate data.
