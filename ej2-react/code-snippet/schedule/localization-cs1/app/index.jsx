@@ -3,11 +3,12 @@ import * as ReactDOM from 'react-dom';
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Inject, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { loadCldr } from '@syncfusion/ej2-base';
-import * as numberingSystems from '../numberingSystems.json';
-import * as gregorian from '../ca-gregorian.json';
-import * as numbers from '../numbers.json';
-import * as timeZoneNames from '../timeZoneNames.json';
-loadCldr(numberingSystems, gregorian, numbers, timeZoneNames);
+import frNumberData from '@syncfusion/ej2-cldr-data/main/fr-CH/numbers.json';
+import frtimeZoneData from '@syncfusion/ej2-cldr-data/main/fr-CH/timeZoneNames.json';
+import frGregorian from '@syncfusion/ej2-cldr-data/main/fr-CH/ca-gregorian.json';
+import frNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
+loadCldr(frNumberData, frtimeZoneData, frGregorian, frNumberingSystem);
+
 const App = () => {
   const eventSettings = { dataSource: scheduleData};
     return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} locale='fr-CH' eventSettings={eventSettings}>

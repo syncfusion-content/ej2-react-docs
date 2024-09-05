@@ -8,14 +8,14 @@ import {
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { L10n, loadCldr } from '@syncfusion/ej2-base';
-import * as localeObj from "../locale.json";
-import * as numberingSystems from '../numberingSystems.json';
-import * as gregorian from '../ca-gregorian.json';
-import * as numbers from '../numbers.json';
-import * as timeZoneNames from '../timeZoneNames.json';
-import * as islamic from '../ca-islamic.json';
+import * as localeObj from "./locale.json";
+import arNumberData from '@syncfusion/ej2-cldr-data/main/ar/numbers.json';
+import artimeZoneData from '@syncfusion/ej2-cldr-data/main/ar/timeZoneNames.json';
+import arGregorian from '@syncfusion/ej2-cldr-data/main/ar/ca-gregorian.json';
+import arIslamic from '@syncfusion/ej2-cldr-data/main/ar/ca-islamic.json';
+import arNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
 
-loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, islamic);
+loadCldr(arNumberData, artimeZoneData, arGregorian, arIslamic, arNumberingSystem);
 L10n.load(localeObj);
 
 const App = () => {
