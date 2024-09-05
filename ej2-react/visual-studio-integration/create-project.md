@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create project in React Visual studio integration component | Syncfusion
+title: Create React Project with Visual Studio Integration | Syncfusion
 description: Learn here all about Create project in Syncfusion React Visual studio integration component of Syncfusion Essential JS 2 and more.
 control: Create project 
 platform: ej2-react
@@ -17,7 +17,7 @@ Syncfusion provides the **Visual Studio Project Templates** for creating the Syn
 > The Syncfusion React project templates are available from v17.1.0.47.
 
 The following steps help you to create the Syncfusion React Application through the Visual Studio:
-1. Open the Visual Studio 2017 or later.
+1. Open the Visual Studio 2022.
 2. To create a Syncfusion React project, follow either one of the options below:
 
     **Option 1:**
@@ -30,11 +30,11 @@ The following steps help you to create the Syncfusion React Application through 
 
     **Option 2:**
 
-     Choose **File > New > Project** in Visual Studio. The Create a new project dialog opens. You can get the Syncfusion provided templates by filtering the Project type with Syncfusion or use the **Search option** with the key word of **Syncfusion.**
+     Choose **File -> New -> Project**. Opens a new dialog to create a new project. By filtering the project type with Syncfusion or using the **Syncfusion** keyword in the search option, you can get the templates offered by Syncfusion for ASP.NET Core.
 
-    ![syncfusion template](images/create-new-project.png)
+    ![syncfusion template](images/create-new-project.png)   
 
-    > In Visual Studio 2017, choose **File > New > Project** and navigate to **Syncfusion > .NET Core > Syncfusion ASP.NET Core (Essential JS 2) Web Application** in **Visual Studio**.
+    > In Visual Studio 2017, choose **File > New > Project** and navigate to **Syncfusion > .NET Core > Syncfusion ASP.NET Core Web Application** in **Visual Studio**. 
 
 3. Select the **Syncfusion ASP.NET Core Web Application** and choose the Next button.
 
@@ -44,7 +44,9 @@ The following steps help you to create the Syncfusion React Application through 
 
     ![project configuration](images/react-project-wizard.png)
 
-    Choose the **Syncfusion React.js** template and choose required theme and asset.
+    Choose the **Syncfusion React.js** template and choose required theme, authentication type and asset.
+
+    > Syncfusion React project template available from .NET 6.0 and .NET 7.0
 
 5. Click the Create button, the Syncfusion React application has been created.
 
