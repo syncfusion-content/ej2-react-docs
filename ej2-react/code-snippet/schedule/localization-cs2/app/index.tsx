@@ -6,12 +6,12 @@ import {
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { Ajax, L10n, loadCldr } from '@syncfusion/ej2-base';
-import * as numberingSystems from '../numberingSystems.json';
-import * as gregorian from '../ca-gregorian.json';
-import * as numbers from '../numbers.json';
-import * as detimeZoneNames from '../timeZoneNames.json';
+import frNumberData from '@syncfusion/ej2-cldr-data/main/fr-CH/numbers.json';
+import frtimeZoneData from '@syncfusion/ej2-cldr-data/main/fr-CH/timeZoneNames.json';
+import frGregorian from '@syncfusion/ej2-cldr-data/main/fr-CH/ca-gregorian.json';
+import frNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
+loadCldr(frNumberData, frtimeZoneData, frGregorian, frNumberingSystem);
 
-loadCldr(numberingSystems, gregorian, numbers, detimeZoneNames);
 let localeTexts: string;
 let ajax: Ajax = new Ajax('./locale.json', 'GET', false);
 ajax.onSuccess = (value: string) => {

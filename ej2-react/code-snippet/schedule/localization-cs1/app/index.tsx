@@ -6,11 +6,11 @@ import {
 } from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { loadCldr } from '@syncfusion/ej2-base';
-import * as numberingSystems from '../numberingSystems.json';
-import * as gregorian from '../ca-gregorian.json';
-import * as numbers from '../numbers.json';
-import * as timeZoneNames from '../timeZoneNames.json';
-loadCldr(numberingSystems, gregorian, numbers, timeZoneNames);
+import frNumberData from '@syncfusion/ej2-cldr-data/main/fr-CH/numbers.json';
+import frtimeZoneData from '@syncfusion/ej2-cldr-data/main/fr-CH/timeZoneNames.json';
+import frGregorian from '@syncfusion/ej2-cldr-data/main/fr-CH/ca-gregorian.json';
+import frNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
+loadCldr(frNumberData, frtimeZoneData, frGregorian, frNumberingSystem);
 
 const App = () => {
   const eventSettings: EventSettingsModel = { dataSource: scheduleData};

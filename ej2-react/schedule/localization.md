@@ -20,70 +20,30 @@ The Internationalization library provides support for formatting and parsing the
 
 By default, Scheduler is set to follow the English culture ('en-US'). If you want to go with different culture other than English, follow the below steps.
 
-* Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). For more information about CLDR-Data, refer to this [link](http://cldr.unicode.org/index/cldr-spec/json).
-
-   ```
-   npm install cldr-data --save
-   ```
-
-   Once the package is installed, you can find the culture specific JSON data under the location `/node_modules/cldr-data`.
-
-* Now import the installed CLDR JSON data into the `app.ts` file. To import JSON data, you need to install the JSON plugin loader. Here, we have used the SystemJS JSON plugin loader.
-
-   ```
-   npm install systemjs-plugin-json --save-dev
-   ```
-
-* Once installed, configure the `system.config.js` configuration settings as shown in the following code to map the `systemjs-plugin-json` loader.
-
-  ```ts
-   System.config({
-     paths: {
-         'syncfusion:': 'npm:@syncfusion/'
-     } ,
-     map: {
-        app: 'app',
-
-        //Syncfusion packages mapping
-        "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
-        "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
-        "@syncfusion/ej2-schedule": "syncfusion:ej2-schedule/dist/ej2-schedule.umd.min.js",
-        "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
-        "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
-        "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
-        "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
-        "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
-        "@syncfusion/ej2-popups": "syncfusion:ej2-popups/dist/ej2-popups.umd.min.js",
-        "@syncfusion/ej2-dropdowns": "syncfusion:ej2-dropdowns/dist/ej2-dropdowns.umd.min.js",
-        "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
-        "cldr-data": 'npm:cldr-data',
-        "plugin-json": "npm:systemjs-plugin-json/json.js"
-     },
-      meta: {
-        '*.json': { loader: 'plugin-json' }
-    } ,
-     packages: {
-        'app': { main: 'app', defaultExtension: 'js' },
-        'cldr-data': { main: 'index.js', defaultExtension: 'js' }
-     }
-  });
-
-  System.import('app');
+* Install the `ej2-cldr-data` package using the Syncfusion npm package by running the command below.
 
   ```
+  npm install @syncfusion/ej2-cldr-data --save
+  ```
+
+Once the package is installed, you can find the culture specific JSON data under the location `\node_modules\@syncfusion\ej2-cldr-data`.
 
 * Now import the required cultures from the installed location to `app.ts` file as given in the following code example.
+
+    1. numberingSystems.json
+    2. ca-gregorian.json
+    3. numbers.json
+    4. timeZoneNames.json
 
    ```ts
     //import the loadCldr from ej2-base
     import { loadCldr} from '@syncfusion/ej2-base';
+    import frNumberData from '@syncfusion/ej2-cldr-data/main/fr-CH/numbers.json';
+    import frtimeZoneData from '@syncfusion/ej2-cldr-data/main/fr-CH/timeZoneNames.json';
+    import frGregorian from '@syncfusion/ej2-cldr-data/main/fr-CH/ca-gregorian.json';
+    import frNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
 
-   loadCldr(
-    require('cldr-data/supplemental/numberingSystems.json'),
-    require('cldr-data/main/fr-CH/ca-gregorian.json'),
-    require('cldr-data/main/fr-CH/numbers.json'),
-    require('cldr-data/main/fr-CH/timeZoneNames.json')
-     );
+    loadCldr(frNumberData, frtimeZoneData, frGregorian, frNumberingSystem);
   ```
 
 * Set the culture to Scheduler by using the `locale` property.
@@ -101,6 +61,8 @@ By default, Scheduler is set to follow the English culture ('en-US'). If you wan
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/localization-cs1" %}
+
+Refer [here](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) for common information about globalization.
 
 ## Localizing the static Scheduler text
 
@@ -122,7 +84,7 @@ For example, the following code example lets you to define the French translatio
         
 {% previewsample "page.domainurl/code-snippet/schedule/localization-cs2" %}
 
-The localized words for static text used in Scheduler and Recurrence Editor can be referred from the following code.
+The localized words for static text used in Scheduler and Recurrence Editor can be referred from the following code. You can access the static text for all cultures from [`here`](https://github.com/syncfusion/ej2-locale).
 
 ```ts
 L10n.load({
@@ -210,6 +172,7 @@ L10n.load({
             "endAt": "End At",
             "searchTimezone": "Search Timezone",
             "noRecords": "No records found",
+            "of": "of"
         },
         "recurrenceeditor": {
             "none": "None",

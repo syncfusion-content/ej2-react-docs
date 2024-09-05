@@ -149,12 +149,12 @@ When using the [`quickInfoTemplate`](https://ej2.syncfusion.com/react/documentat
 
 ```ts
 import { loadCldr, L10n } from '@syncfusion/ej2-base';
-import * as numberingSystems from './culture-files/numberingSystems.json';
-import * as gregorian from './culture-files/ca-gregorian.json';
-import * as numbers from './culture-files/numbers.json';
-import * as timeZoneNames from './culture-files/timeZoneNames.json';
+import enNumberData from '@syncfusion/ej2-cldr-data/main/en-GB/numbers.json';
+import entimeZoneData from '@syncfusion/ej2-cldr-data/main/en-GB/timeZoneNames.json';
+import enGregorian from '@syncfusion/ej2-cldr-data/main/en-GB/ca-gregorian.json';
+import enNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
 
-loadCldr(numberingSystems, gregorian, numbers, timeZoneNames);
+loadCldr(enNumberData, entimeZoneData, enGregorian, enNumberingSystem);
 
 L10n.load({
   'en-GB': {

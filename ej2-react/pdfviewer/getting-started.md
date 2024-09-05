@@ -65,6 +65,8 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/ej2
 
 * Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
 
+N> The following changes apply to React version 18 and above.
+
 ## Adding PDF Viewer component and the CSS reference
 
 * Add an HTML div element to act as the PDF Viewer element `public/index.html` using the following code.
@@ -120,7 +122,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
          
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
@@ -149,7 +151,7 @@ return (<div>
      <PdfViewerComponent 
       id="container" 
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" 
-      resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib"
       style={{ 'height': '640px' }}>
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
                              ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
@@ -173,6 +175,13 @@ Use the following command to run the application in browser with the port number
 npm start
 ```
 
+N> When running the sample, if you encounter the **ERR_OSSL_EVP_UNSUPPORTED error** error, you need to run the following command in your terminal to resolve this issue. This error is related to OpenSSL, which is a cryptographic library used by Node.js for secure communication and encryption tasks. This specific error typically occurs when Node.js is trying to use cryptographic algorithms or routines that are not supported by the current version of OpenSSL being used.
+
+```
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
+
 Output will be appears as follows.
 
 {% tabs %}
@@ -188,7 +197,7 @@ return (<div>
         <PdfViewerComponent 
             id="container" 
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+            resourceUrl="https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
