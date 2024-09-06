@@ -54,6 +54,8 @@ To install PDF Viewer component, use the following command
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
 
+N> The following changes applies to React version 18 and above.
+
 ## Adding PDF Viewer component and the CSS reference
 
 * Add an HTML div element to act as the PDF Viewer element `public/index.html` using the following code.
@@ -158,6 +160,12 @@ Use the following command to run the application in browser with the port number
 
 ```
 npm start
+```
+
+N> When running the sample, if you encounter the **ERR_OSSL_EVP_UNSUPPORTED error** error, you need to run the following command in your terminal to resolve this issue. This error is related to OpenSSL, which is a cryptographic library used by Node.js for secure communication and encryption tasks. This specific error typically occurs when Node.js is trying to use cryptographic algorithms or routines that are not supported by the current version of OpenSSL being used.
+
+```
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
 Output will be appears as follows.
