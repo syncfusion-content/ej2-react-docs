@@ -77,3 +77,4 @@ The steps below illustrate how to download and install the Syncfusion ASP.NET Co
      ![SyncfusionMenu](images/SyncfusionMenu.png)
 
      N> In Visual Studio 2017, you can see the Syncfusion menu directly in the Visual Studio menu
+     

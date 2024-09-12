@@ -129,7 +129,7 @@ function App() {
   
   };
   export default App;
-{% endraw %} 
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/header-template-cs1/app/datasource.jsx %}
