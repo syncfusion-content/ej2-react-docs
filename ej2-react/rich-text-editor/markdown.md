@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Markdown in React Rich text editor component | Syncfusion
-description: Learn here all about Markdown in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Markdown in React Rich Text Editor Component | Syncfusion
+description: Learn here all about markdown in Syncfusion Essential React Rich Text Editor component, its elements and more.
 control: Markdown 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Markdown in React Rich text editor component
+# Markdown in React Rich Text Editor Component
 
 When you format the word in Markdown format, you should add Markdown syntax to the word to indicate the words and phrases that looks different from each other.
 
