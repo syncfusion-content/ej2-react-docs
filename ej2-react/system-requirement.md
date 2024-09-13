@@ -1,6 +1,6 @@
 ---
 layout: post
-title: System requirement in React System requirement md component | Syncfusion
+title: System requirement in React component | Syncfusion
 description: Learn here all about System requirement in Syncfusion React System requirement md component of Syncfusion Essential JS 2 and more.
 control: System requirement 
 platform: ej2-react
