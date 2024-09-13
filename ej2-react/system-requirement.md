@@ -24,7 +24,7 @@ node --version
 
 ## Browser support
 
-The Syncfusion React UI components are supported only in modern browsers. Refer to the [browser compatibility](./browser/) section for more information.
+The Syncfusion React UI components are supported only in modern browsers. Refer to the [browser compatibility](./browser) section for more information.
 
 ## React supported versions
 
