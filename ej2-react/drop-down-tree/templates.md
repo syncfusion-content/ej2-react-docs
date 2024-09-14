@@ -31,6 +31,25 @@ The template expression should be provided inside the {...} interpolation syntax
 
  {% previewsample "page.domainurl/code-snippet/dropdowntree/item-template-cs1" %}
 
+## Value template
+
+The currently selected value that is displayed by default on the DropDownTree input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#valuetemplate) property.
+
+In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the DropDownTree input, which is separated by a hyphen.
+
+The template expression should be provided inside the {...} interpolation syntax.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/dropdowntree/value-template-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/dropdowntree/value-template-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/dropdowntree/value-template-cs1" %}
+
 ## Header template
 
 The header element is shown statically at the top of the popup list items within the Dropdown Tree. A custom element can be placed as a header element using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#headertemplate) property.
