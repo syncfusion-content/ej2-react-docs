@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Datepicker component | Syncfusion
-description:  Checkout and learn about Getting started with React Datepicker component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React DatePicker Component | Syncfusion
+description: Checkout and learn about Getting started with React Datepicker component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React DatePicker Component
 
 This section explains you the steps required to create a simple [React DatePicker](https://www.syncfusion.com/react-components/react-datepicker) and demonstrate the basic usage of the DatePicker component.
 
@@ -35,7 +35,7 @@ The below list of dependencies are required to use the `DatePicker` component in
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
     ```
