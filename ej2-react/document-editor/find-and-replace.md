@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Find and replace in React Document editor component | Syncfusion
-description: Learn here all about Find and replace in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Find and replace in React Document Editor Component | Syncfusion
+description: Learn here all about Find and replace in Syncfusion Essential React Document Editor component, it's eleemnts and more details.
 control: Find and replace 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in React Document editor component
+# Find and replace in React Document Editor Component
 
 The document editor component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 
@@ -106,7 +106,7 @@ this.documenteditor.search.findAll('Some text', 'None');
 
 ## Search results
 
-The [`SearchResults`](https://ej2.syncfusion.com/react/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor#searchresultschange) event. This will expose the following APIs:
+The [`SearchResults`](https://ej2.syncfusion.com/react/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#searchresultschange) event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|

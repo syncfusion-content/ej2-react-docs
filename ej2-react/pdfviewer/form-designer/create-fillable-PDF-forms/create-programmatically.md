@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create programmatically in React Pdfviewer component | Syncfusion
-description: Learn here all about Create programmatically in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Create programmatically in React Pdfviewer Component | Syncfusion
+description: Learn here all about create programmatically in Syncfusion Essential React Pdfviewer component, it's elements and more details.
 control: Create programmatically 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create programmatically in React Pdfviewer component
+# Create programmatically in React Pdfviewer Component
 
 The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
 
@@ -440,7 +440,7 @@ root.render(<App />);
 
 When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/saveformfield.gif)
+![Saving the form fields in React Pdfviewer](../../../pdfviewer/images/react-pdfviewer-save-form-field.gif)
 
 You can invoke download action using following code snippet.,
 
@@ -520,7 +520,7 @@ root.render(<App />);
 
 When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/printformfield.gif)
+![Printing the form fields in React Pdfviewer](../../../pdfviewer/images/react-pdfviewer-print-form-field.gif)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -590,7 +590,7 @@ root.render(<App />);
 
 We can open the already saved PDF document contains Form Fields in it by clicking the open icon in the toolbar. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/openexistingpdf.gif)
+![Open the existing PDF document in React Pdfviewer](../../../pdfviewer/images/react-pdfviewer-open-existing-pdf.gif)
 
 ## Validate form fields
 
@@ -988,7 +988,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Signature Field Settings](../../../pdfviewer/images/SignatureField.png)
+![React Pdfviewer Signature Field Settings](../../../pdfviewer/images/react-pdfviewer-signature-field.png)
 
 
 The following code example explains how to update the properties of the initial field added to the document from the form designer toolbar.
@@ -1108,7 +1108,7 @@ root.render(<App />);
 {% endtabs %}
 
 
-![Initial Field Settings](../../../pdfviewer/images/InitialField.png)
+![React Pdfviewer Initial Field Settings](../../../pdfviewer/images/react-pdfviewer-initial--field.png)
 
 ### Textbox field settings
 
@@ -1293,7 +1293,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Textbox Field Settings](../../../pdfviewer/images/Textbox.png)
+![React Pdfviewer Textbox Field Settings](../../../pdfviewer/images/react-pdfviewer-textbox.png)
 
 ### Password field settings
 
@@ -1474,7 +1474,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Password Field Settings](../../../pdfviewer/images/Password.png)
+![React Pdfviewer Password Field Settings](../../../pdfviewer/images/react-pdfviewer-password.png)
 
 ### CheckBox field settings
 
@@ -1634,7 +1634,7 @@ root.render(<App />);
 {% endtabs %}
 
 
-![CheckBox Field Settings](../../../pdfviewer/images/Checkbox.png)
+![React Pdfviewer CheckBox Field Settings](../../../pdfviewer/images/react-pdfviewer-checkbox.png)
 
 ### RadioButton field settings
 
@@ -1797,7 +1797,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![RadioButton Field Settings](../../../pdfviewer/images/Radiobutton.png)
+![React Pdfviewer RadioButton Field Settings](../../../pdfviewer/images/react-pdfviewer-radio-button.png)
 
 ### ListBox field settings
 
@@ -1981,7 +1981,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![ListBox Field Settings](../../../pdfviewer/images/Listbox.png)
+![React Pdfviewer ListBox Field Settings](../../../pdfviewer/images/react-pdfviewer-listbox.png)
 
 ### DropDown field settings
 
@@ -2164,4 +2164,4 @@ root.render(<App />);
 {% endtabs %}
 
 
-![DropDown Field Settings](../../../pdfviewer/images/Dropdown.png)
+![React Pdfviewer DropDown Field Settings](../../../pdfviewer/images/react-pdfviewer-dropdown.png)

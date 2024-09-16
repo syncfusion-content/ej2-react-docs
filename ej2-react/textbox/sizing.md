@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sizing in React Textbox component | Syncfusion
-description: Learn here all about Sizing in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
+title: Sizing in React Textbox Component | Syncfusion
+description: Learn here all about sizing in Syncfusion Essential React Textbox component, it's element and more details.
 control: Sizing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sizing in React Textbox component
+# Sizing in React Textbox Component
 
 You can render the TextBox in two different sizes.
 
