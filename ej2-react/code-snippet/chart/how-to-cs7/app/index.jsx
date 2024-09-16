@@ -1,12 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationDataLabel, AccumulationTooltip, PieSeries } from '@syncfusion/ej2-react-charts';
+import { data } from './datasource';
 function App() {
-    const data = [
-        { 'x': 'Chrome', y: 37 }, { 'x': 'UC Browser', y: 17 },
-        { 'x': 'iPhone', y: 19 }, { 'x': 'Others', y: 4, text: '4' },
-        { 'x': 'Opera', y: 11 }
-    ];
     const datalabel = { visible: true, position: 'Inside', name: 'text' };
     const tooltip = { enable: true };
     const tooltipRender = (args) => {

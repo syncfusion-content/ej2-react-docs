@@ -5,12 +5,12 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries,  Selection, ErrorBar }
 from'@syncfusion/ej2-react-charts';
-import { data } from 'datasource.ts';
+import { data } from './datasource';
 function App() {
 
   const primaryxAxis: AxisModel = { minimum: 2005, maximum: 2012, interval: 1, title: 'Year' };
   const primaryyAxis: AxisModel = { minimum: 3, maximum: 12, interval: 1, title: 'Percentage', labelFormat: '{value}%' };
-  const marker: { visible: true };
+  const marker = { visible: true };
   const errorbar = { visible: true, mode: 'Vertical', direction: 'Minus' };
 
   return <ChartComponent id='charts'

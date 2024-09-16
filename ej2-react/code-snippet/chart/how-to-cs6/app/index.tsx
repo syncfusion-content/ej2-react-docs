@@ -4,17 +4,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AxisModel, Legend,  Category, Tooltip, DataLabel, LineSeries, Marker, IPointRenderEventArgs} from'@syncfusion/ej2-react-charts';
 import { EmitType} from '@syncfusion/ej2-base';
-
+import { data } from './datasource';
 function App() {
-
-  const data: any[] = [
-    { x: 'WW', y: 12, text: 'World Wide' },
-    { x: 'EU', y: 5, text: 'Europe' },
-    { x: 'APAC', y: 15, text: 'Pacific' },
-    { x: 'LATAM', y: 6.4, text: 'Latin' },
-    { x: 'MEA', y: 30, text: 'Africa' },
-    { x: 'NA', y: 25.3, text: 'America' }
-  ];
   const pointRender: EmitType<IPointRenderEventArgs> = (args: IPointRenderEventArgs): void => {
     let shapes: string[] = ['Diamond', 'Circle', 'Rectangle', 'Line', 'Triangle', 'Rectangle'];
     args.shape = shapes[args.point.index];

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Legend, Category } from '@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
+import { chartData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Category', title: 'Countries', interval: 2, minimum: 1, maximum: 5 };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} title='Olympic Medals'>

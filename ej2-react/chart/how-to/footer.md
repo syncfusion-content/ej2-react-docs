@@ -27,6 +27,12 @@ By using the `content` option of the annotation object, you can specify the id o
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/how-to-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/how-to-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/how-to-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/how-to-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/how-to-cs2" %}

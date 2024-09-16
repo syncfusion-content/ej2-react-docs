@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
-import { data } from 'datasource.ts';
+import { data } from './datasource';
 function App() {
     return <ChartComponent id='charts'>
       <Inject services={[LineSeries, Legend, Tooltip, DataLabel, Category]}/>

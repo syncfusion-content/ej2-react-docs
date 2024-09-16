@@ -3,9 +3,8 @@ import { render } from 'react-dom';
 import * as React from "react";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, ColumnSeries, DataLabel } from '@syncfusion/ej2-react-charts';
 import { Browser } from '@syncfusion/ej2-base';
-const data1 = [{ x: 'USA', y: 46 }, { x: 'GBR', y: 27 }, { x: 'CHN', y: 26 }];
-const data2 = [{ x: 'USA', y: 37 }, { x: 'GBR', y: 23 }, { x: 'CHN', y: 18 }];
-const data3 = [{ x: 'USA', y: 38 }, { x: 'GBR', y: 17 }, { x: 'CHN', y: 26 }];
+import { data1, data2, data3 } from './datasource';
+
 const total = [];
 function App() {
     return (<div className='control-pane'>

@@ -5,12 +5,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Browser } from '@syncfusion/ej2-base';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ParetoSeries, ColumnSeries, LineSeries, Legend, Category, Tooltip, DataLabel } from '@syncfusion/ej2-react-charts';
+import { chartData } from './datasource';
 function App() {
-    const chartData = [
-        { x: 'Button Defect', y: 23 }, { x: 'Pocket Defect', y: 16 },
-        { x: 'Collar Defect ', y: 10 }, { x: 'Cuff Defect', y: 7 },
-        { x: 'Sleeve Defect', y: 6 }, { x: 'Other Defect', y: 2 }
-    ];
     const primaryxAxis = { interval: 1, valueType: 'Category', majorGridLines: { width: 0 }, labelIntersectAction: 'Rotate45', minorGridLines: { width: 0 }, majorTickLines: { width: 0 }, minorTickLines: { width: 0 }, lineStyle: { width: 0 } };
     const primaryyAxis = { title: 'Frequency of Occurence', minimum: 0, maximum: 25, interval: 5, lineStyle: { width: 0 }, majorTickLines: { width: 0 }, majorGridLines: { width: 1 }, minorGridLines: { width: 1 }, minorTickLines: { width: 0 } };
     const tooltipsettings = { enable: true, shared: true, format: '${series.name} : <b>${point.y}</b>' };

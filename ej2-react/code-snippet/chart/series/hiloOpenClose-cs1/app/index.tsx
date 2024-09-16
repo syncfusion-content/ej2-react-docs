@@ -6,16 +6,10 @@ import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, 
          Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, HiloOpenCloseSeries, Selection}
 from'@syncfusion/ej2-react-charts';
 import { Browser } from '@syncfusion/ej2-base';
+import { chartData } from './datasource';
 
 function App() {
 
-  const chartData: any[] = [
-    { x: 'Jan', open: 120, high: 160, low: 100, close: 140 },
-    { x: 'Feb', open: 150, high: 190, low: 130, close: 170 },
-    { x: 'Mar', open: 130, high: 170, low: 110, close: 150 },
-    { x: 'Apr', open: 160, high: 180, low: 120, close: 140 },
-    { x: 'May', open: 150, high: 170, low: 110, close: 130 }
-  ];
   const primaryxAxis: AxisModel = { title: 'Date', valueType: 'Category' };
   const primaryyAxis: AxisModel = { title: 'Price in Dollar', minimum: 100, maximum: 200, interval: 20 };
   const style: any = { textAlign: "center" };

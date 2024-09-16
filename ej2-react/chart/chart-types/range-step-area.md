@@ -20,6 +20,12 @@ To render the range step area series, use the series [`type`](https://ej2.syncfu
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs36/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs36/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs36/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs36" %}
@@ -39,6 +45,12 @@ The following properties can be used to customize the `range step area` series.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/rangesteparea-cs/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/rangesteparea-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/rangesteparea-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

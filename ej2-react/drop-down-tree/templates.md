@@ -33,9 +33,9 @@ The template expression should be provided inside the {...} interpolation syntax
 
 ## Value template
 
-The currently selected value that is displayed by default on the DropDownTree input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#valuetemplate) property.
+The currently selected value that is displayed by default on the Dropdown Tree input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#valuetemplate) property.
 
-In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the DropDownTree input, which is separated by a hyphen.
+In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the Dropdown Tree input, which is separated by a hyphen.
 
 The template expression should be provided inside the {...} interpolation syntax.
 

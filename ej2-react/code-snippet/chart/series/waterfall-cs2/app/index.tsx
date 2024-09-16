@@ -6,6 +6,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,TooltipSettingsModel,LegendSettingsModel,
          Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, WaterfallSeries, Selection}
 from'@syncfusion/ej2-react-charts';
+import { data } from './datasource';
 
 function App() {
 
@@ -15,13 +16,6 @@ function App() {
   const connector = { color: '#5F6A6A', width: 2 };
   const tooltip: TooltipSettingsModel = { enable: true, shared: false };
   const legendSettings: LegendSettingsModel = { visible: false };
-  const data: any[] = [
-    { x: 'Income', y: 4711 }, { x: 'Sales', y: -1015 },
-    { x: 'Development', y: -688 },
-    { x: 'Revenue', y: 1030 }, { x: 'Balance' },
-    { x: 'Expense', y: -361 }, { x: 'Tax', y: -695 },
-    { x: 'Net Profit' }
-];
 
   return <ChartComponent id='charts'
       primaryXAxis={{ valueType: 'Category', majorGridLines: { width: 0 }, plotOffset: 20 }}

@@ -20,9 +20,15 @@ You can use numeric axis to represent numeric values of data in chart. By defaul
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs3" %}
 
 ## Range
 
@@ -35,9 +41,15 @@ Range for an axis, will be calculated automatically based on the provided data, 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs4" %}
 
 ## Range Padding
 
@@ -60,9 +72,15 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/ch
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs5" %}
 
 **Numeric - Round**
 
@@ -75,9 +93,15 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/ch
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs6" %}
 
 **Numeric - Additional**
 
@@ -90,9 +114,15 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/ch
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs7/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs7/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs7" %}
 
 **Numeric - Normal**
 
@@ -105,9 +135,15 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/ch
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs8" %}
 
 **Numeric - Auto**
 
@@ -120,9 +156,15 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/ch
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs9" %}
 
 ## Label Format
 
@@ -137,9 +179,15 @@ Numeric labels can be formatted by using the [`labelFormat`](https://ej2.syncfu
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs10" %}
 
 The following table describes the result of applying some commonly used label formats on numeric values.
 
@@ -213,9 +261,15 @@ To separate groups of thousands, use [`useGroupingSeparator`](https://ej2.syncfu
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs11/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs11" %}
 
 ## Custom Label Format
 
@@ -228,6 +282,12 @@ Axis also supports custom label format using placeholder like {value}°C, in w
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs12/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs12/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs12" %}

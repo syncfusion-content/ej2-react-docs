@@ -7,7 +7,7 @@ import {
   Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, StackingBarSeries, Selection
 }
   from '@syncfusion/ej2-react-charts';
-import { cylindricalData } from 'datasource.ts';
+import { cylindricalData } from './datasource';
 
 function App() {
   return <ChartComponent id='charts'>

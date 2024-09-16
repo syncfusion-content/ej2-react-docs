@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Tooltip, Selection, ScatterSeries } from '@syncfusion/ej2-react-charts';
-import { dragData } from 'datasource.ts';
+import { dragData } from './datasource';
 function App() {
     const marker = { width: 12, height: 12 };
     return <ChartComponent id='charts' selectionMode='Lasso' allowMultiSelection={true} title='Height Vs Weight'>

@@ -4,7 +4,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, ColumnSeries } from '@syncfusion/ej2-react-charts';
-import { cylindricalData } from 'datasource.ts';
+import { cylindricalData } from './datasource';
 function App() {
   const primaryxAxis = { valueType: 'Category', title: 'Countries' };
   const primaryyAxis = { minimum: 0, maximum: 80, interval: 20, title: 'Medals' };

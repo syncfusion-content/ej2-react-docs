@@ -20,6 +20,12 @@ To render a step line series, use series [`type`](https://ej2.syncfusion.com/rea
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs7/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs7/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs7" %}
@@ -40,6 +46,12 @@ The following properties can be used to customize the `step line` series.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/stepline-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/stepline-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/stepline-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

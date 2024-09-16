@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, BoxAndWhiskerSeries, Category } from '@syncfusion/ej2-react-charts';
-import { boxData } from 'datasource.ts';
+import { boxData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Category' };
     const primaryyAxis = { minimum: 10, maximum: 60, interval: 10 };

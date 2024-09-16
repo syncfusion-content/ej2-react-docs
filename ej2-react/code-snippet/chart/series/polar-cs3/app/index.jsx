@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, PolarSeries, AreaSeries } from '@syncfusion/ej2-react-charts';
-import { areaData } from 'datasource.ts';
+import { areaData } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Years', minimum: 1900, maximum: 2000, interval: 10 };
     const primaryyAxis = { minimum: 2, maximum: 5, interval: 0.5, title: 'Sales Amount in Millions' };

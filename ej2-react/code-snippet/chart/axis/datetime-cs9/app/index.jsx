@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Legend, DateTime, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
-import { dateTimeData } from 'datasource.ts';
+import { dateTimeData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'DateTime', labelFormat: 'yMd' };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} title='Average Sales Comparison'>

@@ -25,6 +25,12 @@ By using the start and end properties of `striplines` object in vertical axis, y
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/how-to-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/how-to-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/how-to-cs11/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/how-to-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/how-to-cs11" %}

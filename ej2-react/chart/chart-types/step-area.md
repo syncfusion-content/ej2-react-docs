@@ -20,6 +20,12 @@ To render a step area series, use series [`type`](https://ej2.syncfusion.com/rea
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs17/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs17/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs17/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs17" %}
@@ -40,6 +46,12 @@ The following properties can be used to customize the `step area` series.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/steparea-cs/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/steparea-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/steparea-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

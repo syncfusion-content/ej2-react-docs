@@ -20,6 +20,12 @@ To render a 100% stacked bar series, use series [`type`](https://ej2.syncfusion.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs29/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs29/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs29/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs29" %}
@@ -34,6 +40,12 @@ To render a 100% cylindrical stacked bar chart, set the [`columnFacet`](https://
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs43/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs43/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs43/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,6 +66,12 @@ The following properties can be used to customize the `100% stacked bar` series.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/100-stackedbar-cs/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/100-stackedbar-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/100-stackedbar-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

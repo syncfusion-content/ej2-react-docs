@@ -20,9 +20,15 @@ To render a box and whisker chart, use series[`type`](https://ej2.syncfusion.com
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/box-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/box-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/box-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/box-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/box-cs1" %}
 
 ## Box plot
 
@@ -36,9 +42,15 @@ The default boxPlotMode is `exclusive`.The other boxPlotMode available are `incl
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/box-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/box-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/box-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/box-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/box-cs2" %}
 
 ## Show mean
 
@@ -51,9 +63,15 @@ In Box and Whisker series  `showMean` property is used to show the box and whisk
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/box-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/box-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/box-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/box-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/box-cs3" %}
 
 ## See Also
 

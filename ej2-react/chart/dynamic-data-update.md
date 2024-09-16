@@ -24,6 +24,12 @@ The `addPoint` method is used to dynamically add a new data point to the chart s
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/dynamic-update/add-point/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/dynamic-update/add-point/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/dynamic-update/add-point/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/dynamic-update/add-point" %}
@@ -41,6 +47,12 @@ The `removePoint` method is used to dynamically remove a data point from the cha
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/dynamic-update/remove-point/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/dynamic-update/remove-point/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/dynamic-update/remove-point/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,6 +72,12 @@ To replace the existing data source in the chart with a new data source, you can
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/dynamic-update/set-data/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/dynamic-update/set-data/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/dynamic-update/set-data/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/dynamic-update/set-data" %}
@@ -76,6 +94,12 @@ To remove a data point from the existing data source, simply click on the desire
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/dynamic-update/click-add-point/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/dynamic-update/click-add-point/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/dynamic-update/click-add-point/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

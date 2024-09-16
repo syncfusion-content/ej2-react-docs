@@ -6,19 +6,11 @@ import {
   AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
   ColumnSeries, Category, IAxisRangeCalculatedEventArgs
 } from '@syncfusion/ej2-react-charts';
+import { data } from './datasource';
 
 function App() {
   const primaryXAxis: AxisModel = { valueType: 'Category', majorGridLines: { width: 0 }, labelStyle: { size: '12px' }, labelIntersectAction: 'Rotate90' };
   const primaryYAxis: AxisModel = { title: 'Sales (in percentage)', labelFormat: '{value}%', lineStyle: { width: 0 }, majorTickLines: { width: 0 }, interval: 5, minimum: 0, maximum: 100 };
-  const data: any[] = [
-    { x: 'Jewellery', y: 75 },
-    { x: 'Shoes', y: 45 },
-    { x: 'Footwear', y: 73 },
-    { x: 'Pet Services', y: 53 },
-    { x: 'Business Clothing', y: 85 },
-    { x: 'Office Supplies', y: 68 },
-    { x: 'Food', y: 45 }
-  ];
   let chartInstance: ChartComponent;
   function clickHandler() {
     const newData = data.map((item: { x: string, y: number }) => {

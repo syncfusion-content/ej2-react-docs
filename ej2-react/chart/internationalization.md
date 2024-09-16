@@ -34,6 +34,12 @@ In the below example axis, point  and tooltip labels are globalized to EUR.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/double-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/double-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/double-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/double-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/double-cs2" %}

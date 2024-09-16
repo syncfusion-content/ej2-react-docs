@@ -11,7 +11,7 @@ import {
     IndicatorDirective, Category, StripLine, CandleSeries, Tooltip, DateTime, Zoom, Logarithmic, Crosshair,
     AxisModel,ChartAreaModel,CrosshairSettingsModel, TooltipSettingsModel
 } from '@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
+import { chartData } from './datasource';
 
 function App() {
 

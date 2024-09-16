@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          PolarSeries, Category, SplineSeries}
 from'@syncfusion/ej2-react-charts';
-import { splineData } from 'datasource.ts';
+import { splineData } from './datasource';
 
 function App() {
 

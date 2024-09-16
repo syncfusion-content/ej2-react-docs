@@ -5,13 +5,12 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          Legend, Category, Tooltip, DataLabel, ColumnSeries}
 from'@syncfusion/ej2-react-charts';
+import { mapData } from './datasource';
 
 function App() {
 
   const primaryxAxis: AxisModel = { valueType: 'Category' };
   const marker = { dataLabel: { visible: true, name: 'text' } };
-  const mapData: any[] = [{ x: 'Jan', y: 12, text: 'January : 12°C' }, { x: 'Feb', y: 8, text: 'February : 8°C' }, 
-  { x: 'Mar', y: 11, text: 'March : 11°C' }, { x: 'Apr', y: 6, text: 'April : 6°C' }];
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}>

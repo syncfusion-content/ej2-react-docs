@@ -10,7 +10,7 @@ import {
     LineSeries, StochasticIndicator, IndicatorsDirective, IndicatorDirective, Category, ChartTheme,
     AxisModel,ChartAreaModel,CrosshairSettingsModel, TooltipSettingsModel
 } from '@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
+import { chartData } from './datasource';
 
 function App() {
 

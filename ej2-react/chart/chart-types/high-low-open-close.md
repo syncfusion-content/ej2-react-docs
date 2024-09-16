@@ -21,11 +21,18 @@ To render a HiloOpenClose series, use series [`type`](https://ej2.syncfusion.com
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/hiloOpenClose-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/hiloOpenClose-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/hiloOpenClose-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs1" %}
 
 ## Series customization
+
 In HiloOpenClose series, [`bullFillColor`](https://ej2.syncfusion.com/react/documentation/api/chart/series#bullfillcolor) is used to fill the segment when the open value is greater than the close value and [`bearFillColor`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#bearfillcolor) is used to fill the segment when the open value is less than the close value.
 
 {% tabs %}
@@ -35,9 +42,15 @@ In HiloOpenClose series, [`bullFillColor`](https://ej2.syncfusion.com/react/docu
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/hiloOpenClose-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/hiloOpenClose-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/hiloOpenClose-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/hiloOpenClose-cs2" %}
 
 ## See Also
 

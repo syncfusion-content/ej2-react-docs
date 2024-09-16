@@ -30,7 +30,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs1" %}
 
 ## Exponential
 
@@ -47,7 +47,7 @@ To render a exponential trendline, use trendline [`type`](https://ej2.syncfusion
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs2" %}
 
 ## Logarithmic
 
@@ -64,7 +64,7 @@ To render a logarithmic trendline, use trendline [`type`](https://ej2.syncfusion
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs3" %}
 
 ## Polynomial
 
@@ -83,7 +83,7 @@ To render a polynomial trendline, use trendline [`type`](https://ej2.syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs4" %}
 
 ## Power
 
@@ -98,9 +98,15 @@ To render a power trendline, use trendline [`type`](https://ej2.syncfusion.com/r
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/trendlines-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/trendlines-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/trendlines-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs5" %}
 
 ## Moving Average
 
@@ -119,7 +125,7 @@ To render a moving average trendline, use trendline [`type`](https://ej2.syncfus
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs6" %}
 
 **Customization of Trendline**
 
@@ -134,7 +140,7 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs7" %}
 
 ## Forecasting
 
@@ -155,7 +161,7 @@ The value set for forwardForecast is used to determine the distance moving towar
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs8" %}
 
 **Backward Forecasting**
 
@@ -170,7 +176,7 @@ The value set for the backwardForecast is used to determine the past trends.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs9" %}
 
 ## Show or hide a trendline
 
@@ -185,4 +191,4 @@ You can show or hide the trendline by setting trendline `visible` property.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/trendlines-cs10" %}

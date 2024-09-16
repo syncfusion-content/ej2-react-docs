@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, DateTime, Tooltip, DataLabel, LineSeries, Crosshair } from '@syncfusion/ej2-react-charts';
-import { trackData } from 'datasource.ts';
+import { trackData } from './datasource';
 function App() {
     const primaryxAxis = {
         title: 'Years', minimum: new Date(2000, 1, 1),

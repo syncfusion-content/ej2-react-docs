@@ -20,6 +20,12 @@ To render the Stacked step area series, use the series [`type`](https://ej2.sync
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/stackedsteparea-cs/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/stackedsteparea-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/stackedsteparea-cs/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/stackedsteparea-cs" %}
@@ -39,6 +45,12 @@ The following properties can be used to customize the `stacked step area` series
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/stackedsteparea-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/stackedsteparea-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/stackedsteparea-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

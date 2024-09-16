@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Legend, DateTimeCategory, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
-import { dateTimeCategoryData } from 'datasource.ts';
+import { dateTimeCategoryData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'DateTimeCategory', skeleton: 'Ed' };
     const primaryyAxis = { title: 'Sales Amount in millions(USD)' };

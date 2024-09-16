@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, DateTime, Tooltip, DataLabel, StackingAreaSeries } from '@syncfusion/ej2-react-charts';
-import { stackedData } from 'datasource.ts';
+import { stackedData } from './datasource';
 function App() {
     const primaryxAxis = {
         title: 'Years', valueType: 'DateTime', intervalType: 'Years',

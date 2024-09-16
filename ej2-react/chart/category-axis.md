@@ -23,9 +23,15 @@ To get start quickly with React Category Axis, you can check out this video:
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/category-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/category-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/category-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs1" %}
 
 >Note: To use category axis, we need to inject `Category` module into the `services` and
 set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#valuetype) of axis to Category.
@@ -41,9 +47,15 @@ By default, category labels are placed between the ticks in an axis, this can al
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/category-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/category-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/category-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs2" %}
 
 ## Range
 
@@ -56,9 +68,15 @@ Range of the category axis can be customized using [`minimum`](https://ej2.syncf
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/category-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/category-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/category-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs3" %}
 
 ## Indexed category axis
 
@@ -71,6 +89,12 @@ Category axis also can be rendered based on the index values of data source. Thi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs22/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs22/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs22/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs22" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs22" %}

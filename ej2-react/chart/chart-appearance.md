@@ -21,9 +21,15 @@ You can customize the default color of series or points by providing a custom co
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/category-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/category-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/category-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs4" %}
 
 ## Data point customization
 
@@ -40,9 +46,15 @@ You can bind the color for the points from [`dataSource`](https://ej2.syncfusion
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/category-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/category-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/category-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs5" %}
 
 ### Range color mapping
 
@@ -55,9 +67,15 @@ You can differentiate data points based on their y values using [`rangeColorSett
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/category-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/category-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/category-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs6" %}
 
 ## Point level customization
 
@@ -70,9 +88,15 @@ Marker, datalabel and fill color of each data point can be customized with [`poi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs1" %}
 
 <!-- markdownlint-disable MD036 -->
 
@@ -92,9 +116,15 @@ Using [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/ch
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs2" %}
 
 **Chart margin**
 
@@ -107,9 +137,15 @@ You can set margin for chart from its container through [`margin`](https://ej2.s
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs3" %}
 
 **Chart area customization**
 
@@ -122,9 +158,15 @@ Using [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/ch
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs4" %}
 
 ## Animation
 
@@ -137,9 +179,15 @@ You can customize animation for a particular series using [`animation`](https://
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs5" %}
 
 ### Fluid animation
 
@@ -152,9 +200,15 @@ Fluid animation used to animate series with updated dataSource continues animati
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs6" %}
 
 ## Chart title
 
@@ -167,9 +221,15 @@ Chart can be given a title using [`title`](https://ej2.syncfusion.com/react/docu
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/chart-title-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/chart-title-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/chart-title-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/chart-title-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs5" %}
 
 ### Title position
 
@@ -182,9 +242,15 @@ By using the [`position`](https://ej2.syncfusion.com/react/documentation/api/ch
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/chart-title-cs7/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/chart-title-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/chart-title-cs7/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/chart-title-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs7" %}
 
 The custom option helps you to position the title anywhere in the chart using [`x`](https://ej2.syncfusion.com/react/documentation/api/chart/titleSettingsModel/#x) and [`y`](https://ej2.syncfusion.com/react/documentation/api/chart/titleSettingsModel/#y) coordinates.
 
@@ -195,9 +261,15 @@ The custom option helps you to position the title anywhere in the chart using [`
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/chart-title-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/chart-title-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/chart-title-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/chart-title-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs8" %}
 
 ### Title alignment
 
@@ -210,9 +282,15 @@ You can align the title to the near, far, or center of the chart using the [`tex
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/chart-title-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/chart-title-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/chart-title-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/chart-title-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs9" %}
 
 ### Title wrap
 
@@ -225,9 +303,15 @@ The `textStyle` property of chart title provides options to customize the `size`
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs7/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs7/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/column-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs7" %}
 
 ## Chart subTitle
 
@@ -240,9 +324,15 @@ Chart can be given a subtitle using [`subTitle`](https://ej2.syncfusion.com/reac
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/chart-title-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/chart-title-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/chart-title-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/chart-title-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs6" %}
 
 ## See also
 

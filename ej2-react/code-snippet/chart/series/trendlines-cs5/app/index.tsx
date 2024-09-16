@@ -14,13 +14,10 @@ import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { SampleBase } from '../common/sample-base';
 import { PropertyPane } from '../common/property-pane';
 import { EmitType } from '@syncfusion/ej2-base';
+import { powerData } from './datasource';
 
 function App() {
 
-  const powerData: object[] = [
-    { x: 1, y: 10 }, { x: 2, y: 50 }, { x: 3, y: 80 }, { x: 4, y: 110 },
-    { x: 5, y: 180 }, { x: 6, y: 220 }, { x: 7, y: 300 }, { x: 8, y: 370 }, { x: 9, y: 490 }, { x: 10, y: 500 }
-  ];
   const primaryxAxis: AxisModel = { title: 'Months', majorGridLines: { width: 0 } };
   const primaryyAxis: AxisModel = {
     title: 'Rupees against Dollars', interval: 50,

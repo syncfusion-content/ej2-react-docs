@@ -28,6 +28,12 @@ Get the selected data point values and display the values through grid component
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/chart/how-to-cs9/index.html %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/how-to-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/how-to-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/how-to-cs9" %}

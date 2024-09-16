@@ -20,9 +20,15 @@ To render a 100% stacked line series, use series [`type`](https://ej2.syncfusion
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs9" %}
 
 ## Series customization
 
@@ -40,9 +46,15 @@ The following properties can be used to customize the `100% stacked line` series
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/100stackedline-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/100stackedline-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/100stackedline-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/100stackedline-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/100stackedline-cs1" %}
 
 ## See Also
 

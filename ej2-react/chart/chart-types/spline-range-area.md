@@ -22,9 +22,15 @@ To render a spline range area series, use series [`type`](https://ej2.syncfusion
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs14/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs14/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs14/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs14" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs14" %}
 
 ## Series customization
 
@@ -41,6 +47,12 @@ The following properties can be used to customize the `spline range area` series
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/splinerangearea-cs/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/splinerangearea-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/splinerangearea-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

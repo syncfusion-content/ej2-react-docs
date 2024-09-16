@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, BubbleSeries } from '@syncfusion/ej2-react-charts';
-import { bubbleData } from 'datasource.ts';
+import { bubbleData } from './datasource';
 function App() {
     return <ChartComponent id='charts'>
       <Inject services={[BubbleSeries]}/>

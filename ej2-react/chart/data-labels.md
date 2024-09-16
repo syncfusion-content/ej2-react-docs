@@ -19,9 +19,15 @@ Data label can be added to a chart series by enabling the [`visible`](https://e
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs1" %}
 
 >Note: To use data label feature, we need to inject `DataLabel` module into the `services`.
 
@@ -36,9 +42,15 @@ Using [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/data
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel1-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel1-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel1-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel1-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel1-cs1" %}
 
 >Note: The position `Outer` is applicable for column and bar type series.
 
@@ -53,9 +65,15 @@ Label content can be formatted by using the template option. Inside the template
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-template-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-template-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-template-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-template-cs1" %}
 
 ## Text Mapping
 
@@ -68,9 +86,15 @@ Text from the data source can be mapped using `name` property.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs2" %}
 
 ## Format
 
@@ -83,9 +107,15 @@ Data label for the chart can be formatted using [`format`](https://ej2.syncfusio
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs3" %}
 <table>
   <tr>
     <th>Value</th>
@@ -154,9 +184,15 @@ Data label for the chart can be formatted using [`format`](https://ej2.syncfusio
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs4" %}
 
 ## DataLabel Rotation
 
@@ -169,9 +205,15 @@ Using `angle` property, you can rotate the data label by its given angle.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/marker-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/marker-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/marker-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/marker-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/marker-cs1" %}
 
 ## Customization
 
@@ -184,9 +226,15 @@ Using `angle` property, you can rotate the data label by its given angle.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs5" %}
 
 >Note: `rx` and `ry` properties requires `border` values not to be null.
 
@@ -201,9 +249,15 @@ You can also customize the specific marker and label using [`pointRender`](http
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel1-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel1-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel1-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel1-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel1-cs2" %}
 
 ## Show percentage based on each series points
 
@@ -216,9 +270,15 @@ You can calculate the percentage value based on the sum for each series using th
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs6" %}
 
 ## See Also
 
