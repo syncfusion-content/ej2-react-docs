@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Badge customization in React Badge component | Syncfusion
-description: Learn here all about Badge customization in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
+title: Customization in React Badge Component | Syncfusion
+description: Learn here all about customization support in Syncfusion Essential React Badge component, it's elements and more.
 control: Badge customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Badge customization in React Badge component
+# Customization in React Badge Component
 
 ## Colour customization
 

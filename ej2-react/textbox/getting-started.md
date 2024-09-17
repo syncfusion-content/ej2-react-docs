@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Textbox component | Syncfusion
-description:  Checkout and learn about Getting started with React Textbox component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React TextBox Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential React TextBox component, it's elements and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React TextBox
 
 This section briefly explains about how to create a simple TextBox through CSS classes using `Create React App`.
 
@@ -45,7 +45,7 @@ To install `create-react-app` run the following command.
       npm install @syncfusion/ej2-react-inputs –save
     ```
 
-* The above package installs [Input dependencies](./getting-started/#dependencies) which are required to render the TextBox component in React environment.
+* The above package installs [Input dependencies](./getting-started#dependencies) which are required to render the TextBox component in React environment.
 
 * The TextBox CSS files are available in the `ej2-react-inputs` package folder. This can be referenced in your application using the following code.
 
@@ -95,7 +95,7 @@ ReactDOM.render(<App />, document.getElementById('input-container'));
 ## Adding icons to the TextBox
 
 You can create a TextBox with icon as a group by creating the parent div element with the class `e-input-group` and
-add the icon element as span with the class `e-input-group-icon`. For detailed information, refer to the [Groups](./groups/) section.
+add the icon element as span with the class `e-input-group-icon`. For detailed information, refer to the [Groups](./groups) section.
 
 `[Class-component]`
 
@@ -253,9 +253,9 @@ You can create the floating label TextBox by using the `floatLabelType` API.
 
  {% previewsample "page.domainurl/code-snippet/textbox/textbox-component-cs2" %}
 
-> You can refer to our [React TextBox](https://www.syncfusion.com/react-ui-components/react-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [React TextBox example](https://ej2.syncfusion.com/react/demos/#/material/textboxes/default) to know how to render and configure the textbox.
-
 ## See Also
 
 * [How to render TextBox programmatically](./how-to/add-textbox-programmatically)
 * [How to add floating label to TextBox programmatically](./how-to/add-floating-label-to-textbox-programmatically)
+
+N> You can refer to our [React TextBox](https://www.syncfusion.com/react-components/react-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [React TextBox example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/textboxes/default) that shows you how to render and configure the TextBox.

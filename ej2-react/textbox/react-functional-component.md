@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React functional component in React Textbox component | Syncfusion
-description: Learn here all about React functional component in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
+title: Functional in React TextBox Component | Syncfusion
+description: Learn here all about functional support in Syncfusion Essential React TextBox component, it's elements and more.
 control: React functional component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React functional component in React Textbox component
+# Functional in React TextBox Component
 
 This section explains how to render the textbox component in the functional component with react hooks methods. Please find the list of basic hook methods in the following table.
 
