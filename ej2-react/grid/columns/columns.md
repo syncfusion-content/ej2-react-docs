@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in React Grid component | Syncfusion
-description: Learn here all about Columns in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: Columns in React Grid Component | Syncfusion
+description: Learn here all about columns support in Syncfusion Essential React Grid component, it's elements and more.
 control: Columns 
 platform: ej2-react
 documentation: ug
@@ -18,7 +18,7 @@ import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej
 
 ## Column types
 
-The Syncfusion Grid component allows you to specify the type of data that a column binds using the [type](https://ej2.syncfusion.com/react/documentation/api/grid/column/#type) property. The type property is used to determine the appropriate [format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format), such as [number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) or [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime), for displaying the column data.
+The Syncfusion Grid component allows you to specify the type of data that a column binds using the [type](https://ej2.syncfusion.com/react/documentation/api/grid/column/#type) property. The type property is used to determine the appropriate [format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format), such as [number](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#number-formatting) or [date](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization/#manipulating-datetime), for displaying the column data.
 
 Grid supports the following column types:
 
@@ -657,7 +657,7 @@ You can update the column definitions in the Grid using the [columns](https://he
 
 ### Adding/Removing Columns
 
-The Grid component allows you to dynamically add or remove columns to and from the grid using the [columns]https://helpej2.syncfusion.com/react/documentation/api/grid/column/#columns) property, which can be accessed through the instance of the Grid.
+The Grid component allows you to dynamically add or remove columns to and from the grid using the [columns](https://helpej2.syncfusion.com/react/documentation/api/grid/column/#columns) property, which can be accessed through the instance of the Grid.
 
 To add a new column to the Grid, you can directly **push** the new column object to the columns property.To remove a column from the Grid, you can use the **pop** method, which removes the last element from the columns array of the Grid. Alternatively, you can use the splice method to remove a specific column from the columns array.
 
