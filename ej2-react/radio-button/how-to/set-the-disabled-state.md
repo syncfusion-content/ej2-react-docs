@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the disabled state in React Radio button component | Syncfusion
-description: Learn here all about Set the disabled state in Syncfusion React Radio button component of Syncfusion Essential JS 2 and more.
+title: Set the disabled state in React Radio Button Component | Syncfusion
+description: Learn here all about Set the disabled state in Syncfusion Essential React Radio button component, it's elements and more.
 control: Set the disabled state 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the disabled state in React Radio button component
+# Set the disabled state in React Radio Button Component
 
 RadioButton component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#disabled) property. To disable RadioButton component,
 the `disabled` property can be set as `true`.

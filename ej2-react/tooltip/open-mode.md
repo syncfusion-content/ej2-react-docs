@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open mode in React Tooltip component | Syncfusion
-description: Learn here all about Open mode in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Open mode in React Tooltip Component | Syncfusion
+description: Learn here all about Open mode in Syncfusion Essential React Tooltip component, it's elements and more.
 control: Open mode 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open mode in React Tooltip component
+# Open mode in React Tooltip Component
 
 You can decide the mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements.
 
