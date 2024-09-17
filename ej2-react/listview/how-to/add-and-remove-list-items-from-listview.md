@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add and remove list items from listview in React Listview component | Syncfusion
-description: Learn here all about Add and remove list items from listview in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Add and remove list items in React ListView Component | Syncfusion
+description: Learn here all about add and remove list items support in Syncfusion Essential React ListView component, it's elements and more.
 control: Add and remove list items from listview 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add and remove list items from listview in React Listview component
+# Add and remove list items in React ListView Component
 
 You can add or remove list items from the ListView component using the [`addItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#additem) and [`removeItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#removeitem) methods. Refer to the following steps to add or remove a list item.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types and styles in React Button component | Syncfusion
-description: Learn here all about Types and styles in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: Types and styles in React Button Component | Syncfusion
+description: Learn here all about types and styles support in Syncfusion Essential React Button component, it's and more.
 control: Types and styles 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types and styles in React Button component
+# Types and styles in React Button Component
 
 This section explains the different styles and types of Buttons.
 
