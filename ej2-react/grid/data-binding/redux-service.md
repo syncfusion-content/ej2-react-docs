@@ -7,6 +7,10 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
+
+# Redux service in React Grid component
+
 The Syncfusion Grid component provides support for integrating data from a Redux service using the [observable binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding#custom-binding) feature. This allows you to connect the grid component to your [Redux](https://react-redux.js.org/introduction/getting-started) `store` and perform various data operations such as sorting, filtering, paging, and CRUD actions. In this section, we will guide you through the process of enabling and integrating the Redux service with the Syncfusion Grid.
 
 ## The steps below to create a Redux service.
