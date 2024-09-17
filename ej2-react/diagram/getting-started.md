@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Diagram component | Syncfusion
-description:  Checkout and learn about Getting started with React Diagram component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Diagram Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential React Diagram component, it's elements and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting started with React Diagram
 
 This section explains the steps required to create a simple diagram and demonstrates the basic usage of the diagram control.
 
@@ -352,4 +352,4 @@ Following code examples indicate how to define the default appearance of node an
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/orgchart-cs1" %}
 
-> You can refer to our [React Diagram](https://www.syncfusion.com/react-ui-components/react-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [React Diagram example](https://ej2.syncfusion.com/react/demos/#/material/diagram/default-functionality) that shows how to render the Diagram in React.
+> You can refer to our [React Diagram](https://www.syncfusion.com/react-components/react-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [React Diagram example](https://ej2.syncfusion.com/react/demos/#/material/diagram/default-functionality) that shows how to render the Diagram in React.

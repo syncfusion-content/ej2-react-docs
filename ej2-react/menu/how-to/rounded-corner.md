@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rounded corner in React Menu component | Syncfusion
-description: Learn here all about Rounded corner in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: Rounded corner in React Menu Component | Syncfusion
+description: Learn here all about Rounded corner in Syncfusion Essential React Menu component, it's elements and more.
 control: Rounded corner 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rounded corner in React Menu component
+# Rounded corner in React Menu Component
 
 The rounded corner can be achieved by using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/menu/#cssclass) property. Add a custom class to the menu component and customize it using the `border-radius` CSS property. For more information, refer to the `style.css` file mapped under the source tab.
 
