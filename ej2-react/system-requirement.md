@@ -1,7 +1,7 @@
 ---
 layout: post
-title: System requirement in React component | Syncfusion
-description: Learn here all about system requirement in Syncfusion Essential React component, its elements and more.
+title: System requirement in React UI component | Syncfusion
+description: Learn here all about system requirement in Syncfusion Essential React UI component, its elements and more.
 control: System requirement 
 platform: ej2-react
 documentation: ug
