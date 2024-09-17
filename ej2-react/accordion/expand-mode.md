@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Expand mode in React Accordion component | Syncfusion
-description: Learn here all about Expand mode in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: Expand mode in React Accordion Component | Syncfusion
+description: Learn here all about expand mode support in Syncfusion Essential React Accordion component, it's elemets and more.
 control: Expand mode 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Expand mode in React Accordion component
+# Expand mode in React Accordion Component
 
  The Accordion supports the two listed types of expand modes while expanding or collapsing the item.
 
@@ -55,4 +55,4 @@ Default [`expandMode`](https://ej2.syncfusion.com/react/documentation/api/accord
 
 ## See Also
 
-* [How to keep single pane open always](./how-to/to-keep-single-pane-open-always/)
+* [How to keep single pane open always](./how-to/to-keep-single-pane-open-always)

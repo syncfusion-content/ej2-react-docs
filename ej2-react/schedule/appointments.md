@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appointments in React Schedule component | Syncfusion
-description: Learn here all about Appointments in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Appointments in React Schedule Component | Syncfusion
+description: Learn here all about appointments support in Syncfusion Essential React Schedule component, it's elements and more.
 control: Appointments 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appointments in React Schedule component
+# Appointments in React Schedule Component
 
 Appointments can be anything that are scheduled for a specific time period. It can be created on varied time range and each appointments are categorized based on this range. The Scheduler events can be categorized as,
 * Normal events
@@ -1037,4 +1037,4 @@ If your requirement is to simply refresh the appointments instead of refreshing 
 this.scheduleObj.refreshEvents();
 ```
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+N> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/schedule/default) to knows how to present and manipulate data.

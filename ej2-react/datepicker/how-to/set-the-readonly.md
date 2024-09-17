@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the readonly in React Datepicker component | Syncfusion
-description: Learn here all about Set the readonly in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Set the readonly in React DatePicker Component | Syncfusion
+description: Learn here all about set the readonly support in Syncfusion Essential React DatePicker component, it's elements and more.
 control: Set the readonly 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the readonly in React Datepicker component
+# Set the readonly in React DatePicker Component
 
 The following example demonstrates how to set `readonly` in DatePicker component. You can achieve this by using `readonly` property.
 
