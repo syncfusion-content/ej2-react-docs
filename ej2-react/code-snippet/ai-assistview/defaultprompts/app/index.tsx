@@ -1,17 +1,17 @@
-import { AIAssistViewComponent,PromptRequestEventArgs } from '@syncfusion/ej2-react-interactive-chat';
+import { AIAssistViewComponent,PromptRequestEventArgs, PromptModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
 function App() {
 
-    const assistInstance = React.useRef(null);
+    const assistInstance = React.useRef<AIAssistViewComponent>(null);
 
     const promptSuggestions: string[] = [
         "How do I prioritize my tasks?",
         "How can I improve my time management skills?"
     ];
   
-    const prompts = [
+    const prompts: PromptModel[] = [
         {
             prompt: "How do I prioritize my tasks?",
             response: "Prioritize tasks by urgency and impact: tackle high-impact tasks first, delegate when possible, and break large tasks into smaller steps. For more assistance, feel free to ask—I’m here to help!"
@@ -29,7 +29,7 @@ function App() {
   
             assistInstance.current.addPromptResponse(foundPrompt ? foundPrompt.response : defaultResponse);
   
-        }, 2000);
+        }, 1000);
     };
   
     return (

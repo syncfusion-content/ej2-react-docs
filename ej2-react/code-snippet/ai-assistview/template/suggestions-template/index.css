@@ -1,0 +1,33 @@
+/* Represents the styles for loader */
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.e-aiassistview .e-views .e-suggestions .e-suggestion-list li {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  background-color: #686868;
+  color: white;
+  padding: 4px 10px;
+  opacity: 0.8;
+  gap: 5px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.suggestion-item .assist-suggestion-content {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

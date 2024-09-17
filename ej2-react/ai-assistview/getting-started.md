@@ -3,7 +3,7 @@ layout: post
 title: Getting started with React AI AssistView component | Syncfusion
 description:  Checkout and learn about Getting started with React AI AssistView component of Syncfusion Essential JS 2 and more details.
 platform: ej2-react
-control: Getting started 
+control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -28,16 +28,16 @@ The list of dependencies required to use the `AI AssistView` component in your a
 
 You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
-   ```bash
-    npm install -g create-react-app
-   ```
+```bash
+npm install -g create-react-app
+```
 
 Start a new project using create-react-app command as follows
 
-    ```bash
-     create-react-app quickstart --scripts-version=react-scripts-ts
-     cd quickstart
-   ```
+```bash
+  create-react-app quickstart --scripts-version=react-scripts-ts
+  cd quickstart
+```
 
 ## Adding Syncfusion packages
 
