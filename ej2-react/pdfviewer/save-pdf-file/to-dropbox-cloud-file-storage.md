@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save PDF files to Dropbox cloud file storage in React Pdfviewer component | Syncfusion
+title: Save PDF to Dropbox cloud storage in React PdfViewer | Syncfusion
 description: Learn here all about how to save PDF files to Dropbox cloud file storage in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Save PDF files to Dropbox cloud file storage
 platform: ej2-react
