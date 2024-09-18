@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell in React Grid component | Syncfusion
-description: Learn here all about Cell and its customization in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Cell and its customization in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
 control: Cell
 platform: ej2-react
 documentation: ug

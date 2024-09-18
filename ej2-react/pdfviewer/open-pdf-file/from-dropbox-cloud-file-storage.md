@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open PDF files from Dropbox cloud file storage in React Pdfviewer component | Syncfusion
+title: Open PDF from Dropbox cloud storage in React PdfViewer | Syncfusion
 description: Learn about how to load PDF files from Dropbox cloud file storage in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Open PDF files from Dropbox cloud file storage
 platform: ej2-react
