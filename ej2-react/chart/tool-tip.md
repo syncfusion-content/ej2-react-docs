@@ -26,6 +26,12 @@ By default, tooltip is not visible. You can enable the tooltip by setting [`enab
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs1" %}
@@ -41,6 +47,12 @@ By default, tooltip track the mouse movement, but you can set a fixed position f
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs11/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs11" %}
@@ -55,6 +67,12 @@ By default, tooltip shows information of x and y value in points. In addition to
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,6 +93,12 @@ You can format the each series tooltip separately using series [`tooltipFormat`]
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs3" %}
@@ -92,6 +116,12 @@ Any HTML elements can be displayed in the tooltip by using the [`template`](http
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs4" %}
@@ -107,6 +137,12 @@ By default, tooltip shows information of x and y value in points. You can show m
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs5" %}
@@ -121,6 +157,12 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSet
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs6/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs6/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -9,7 +9,7 @@ import {
     LineSeries, SmaIndicator, IndicatorsDirective, IndicatorDirective, ChartTheme, StripLineDirective, StripLine, StripLinesDirective,
     AxisModel,ChartAreaModel,CrosshairSettingsModel, TooltipSettingsModel
 } from '@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
+import { chartData } from './datasource';
 
 function App() {
 

@@ -6,14 +6,11 @@ import {
   AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
   LineSeries, DataLabel, Tooltip, MarkerSettingsModel, IAxisRangeCalculatedEventArgs, Series, TooltipSettingsModel, IMouseEventArgs
 } from '@syncfusion/ej2-react-charts';
+import { data } from './datasource';
 
 function App() {
   const primaryXAxis: AxisModel = { edgeLabelPlacement: 'Shift', rangePadding: 'Additional', majorGridLines: { width: 0 } };
   const primaryYAxis: AxisModel = { title: 'Value', interval: 20, lineStyle: { width: 0 }, majorTickLines: { width: 0 } };
-  const data: any[] = [
-    { x: 20, y: 20 },
-    { x: 80, y: 80 }
-  ];
   const marker: MarkerSettingsModel = {
     visible: true,
     isFilled: true,

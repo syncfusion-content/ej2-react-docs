@@ -1,15 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Export, Legend, Category, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
+import { data } from './datasource';
 function App() {
-    const data = [
-        { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-        { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-        { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-        { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-        { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-        { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-    ];
     const chartInstance;
     function clickHandler() {
         chartInstance.exportModule.export('PNG', 'sample');

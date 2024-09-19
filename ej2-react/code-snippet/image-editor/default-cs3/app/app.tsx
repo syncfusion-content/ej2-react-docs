@@ -18,7 +18,8 @@ function App() {
     }
     function btnClick(): void {
         let dimension: any = imgObj.getImageDimension();
-        imgObj.drawRectangle(dimension.x, dimension.y);
+        imgObj.drawRectangle(dimension.x, dimension.y, 200, 100);
+        imgObj.drawRectangle(dimension.x + 300, dimension.y, 200, 100, null, '', '', null, null, 8);
         imgObj.drawEllipse(dimension.x, dimension.y);
         imgObj.drawLine(dimension.x, dimension.y);
         imgObj.drawArrow(dimension.x, dimension.y+10, dimension.x+50, dimension.y+10, 10);

@@ -20,9 +20,15 @@ To render a 100% stacked area series, use series [`type`](https://ej2.syncfusion
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs16/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs16/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs16/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs16" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs16" %}
 
 ## Series customization
 
@@ -40,9 +46,15 @@ The following properties can be used to customize the `100% stacked area` series
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/100-stackedarea-cs/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/100-stackedarea-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/100-stackedarea-cs/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/100-stackedarea-cs" %}
 
 ## See Also
 

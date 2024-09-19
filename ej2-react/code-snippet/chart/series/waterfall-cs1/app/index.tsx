@@ -5,16 +5,9 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,TooltipSettingsModel,LegendSettingsModel,
          Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, WaterfallSeries, Selection}
 from'@syncfusion/ej2-react-charts';
+import { data } from './datasource';
 
 function App() {
-
-  const data: object[] = [
-    { x: 'Income', y: 4711 }, { x: 'Sales', y: -1015 },
-    { x: 'Development', y: -688 },
-    { x: 'Revenue', y: 1030 }, { x: 'Balance' },
-    { x: 'Expense', y: -361 }, { x: 'Tax', y: -695 },
-    { x: 'Net Profit' }
-  ];
   const primaryxAxis: AxisModel = { valueType: 'Category', majorGridLines: { width: 0 }, plotOffset: 20 };
   const primaryyAxis: AxisModel = { minimum: 0, maximum: 5000, interval: 1000, majorGridLines: { width: 0 }, title: 'Expenditure' };
   const marker = { dataLabel: { visible: true, font: { color: '#ffffff' } } };

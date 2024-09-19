@@ -20,6 +20,12 @@ To render a 100% stacked column series, use series [`type`](https://ej2.syncfusi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs24/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs24/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs24/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs24" %}
@@ -34,6 +40,12 @@ To render a 100% cylindrical stacked column chart, set the [`columnFacet`](https
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs44/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs44/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs44/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,6 +66,12 @@ The following properties can be used to customize the `100% stacked column` seri
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/100-stackedcolumn-cs/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/100-stackedcolumn-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/100-stackedcolumn-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

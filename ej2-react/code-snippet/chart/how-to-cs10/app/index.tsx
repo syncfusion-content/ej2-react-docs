@@ -4,14 +4,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,AnnotationsDirective,AnnotationDirective, Legend,  Category, Tooltip, DataLabel, StackingColumnSeries, IAnnotationRenderEventArgs, ChartAnnotation ,AxisModel} from'@syncfusion/ej2-react-charts';
-
+import { data } from './datasource';
 function App() {
-
-  const data: any[] = [
-    { x: 'Jamesh', y0: 5, y1: 4, y2: 5 },
-    { x: 'Michael', y0: 4, y1: 3, y2: 4 },
-    { x: 'John', y0: 5, y1: 4, y2: 2 }
-  ];
   const primaryxAxis: AxisModel = { valueType: 'Category' };
   const primaryyAxis: AxisModel = { minimum: 0, maximum: 15, interval: 5 };
   const marker1 = { visible: true, dataLabel: { position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } };

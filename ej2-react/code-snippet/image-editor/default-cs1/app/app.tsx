@@ -20,13 +20,22 @@ function App() {
         let dimension: any = imgObj.getImageDimension();
         imgObj.drawText(dimension.x, dimension.y);
     }
-
+    function outlineText(): void {
+        let dimension: any = imgObj.getImageDimension();
+        imgObj.drawText(dimension.x, dimension.y+100, 'Syncfusion', 'Arial', 70, false, false, '', false, null, '', 'green', 8);
+    }
+    function bgColour(): void {
+        let dimension: any = imgObj.getImageDimension();
+        imgObj.drawText(dimension.x, dimension.y+150, 'Syncfusion', 'Arial', 70, false, false, '', false, null, 'red', '', null);
+    }
     return (
         <div className='e-img-editor-sample'>
         <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
         </ImageEditorComponent>
                 <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
+                    <ButtonComponent cssClass='e-primary' content='Add Text' onClick = {btnClick}/>
+                    <ButtonComponent cssClass='e-primary' content='Text Outline' onClick = {outlineText}/>
+                    <ButtonComponent cssClass='e-primary' content='Background Colour' onClick = {bgColour}/>
                 </div>
             </div>
     );

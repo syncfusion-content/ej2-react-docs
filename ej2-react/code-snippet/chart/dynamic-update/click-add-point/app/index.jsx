@@ -3,14 +3,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, LineSeries, DataLabel, Tooltip } from '@syncfusion/ej2-react-charts';
+import { data } from './datasource';
 
 function App() {
   const primaryXAxis = { edgeLabelPlacement: 'Shift', rangePadding: 'Additional', majorGridLines: { width: 0 } };
   const primaryYAxis = { title: 'Value', interval: 20, lineStyle: { width: 0 }, majorTickLines: { width: 0 } };
-  const data = [
-    { x: 20, y: 20 },
-    { x: 80, y: 80 }
-  ];
   const marker = {
     visible: true,
     isFilled: true,

@@ -21,9 +21,15 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/r
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/crosshair-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs1" %}
 
 ## Tooltip for axis
 
@@ -36,9 +42,15 @@ Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfu
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/crosshair-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs2" %}
 
 ## Customization
 
@@ -51,9 +63,15 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairT
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/crosshair-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs3" %}
 
 >Note: To use crosshair feature, we need to inject `Crosshair` module into the `services`.
 
@@ -70,6 +88,12 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/trackball-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/trackball-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/trackball-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/trackball-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/trackball-cs1" %}

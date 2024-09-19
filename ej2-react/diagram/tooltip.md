@@ -85,7 +85,7 @@ The tooltip can be customized for each node and connector. Remove the **InheritT
 
 The tooltip feature has been implemented to support Ports, providing the ability to display information or descriptions when the mouse hovers over them.
 
-To display tooltips on mouseover, set the desired tooltip [`content`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip/#content) by utilizing the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagram#tooltip) property.
+To display tooltips on mouseover, set the desired tooltip [`content`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip/#content) by utilizing the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram#tooltip) property.
 
 Tooltips for Ports can be enabled or disabled using the [`PortConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/port#constraints-portconstraints) Tooltip property.
 
@@ -197,3 +197,20 @@ To animate the tooltip, a set of specific animation effects are available, and i
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/tooltip/es5TooltipAnimation-cs1" %}
+
+ ## Tooltip for Annotation
+
+Tooltips can be added to annotations to display additional information on mouseover. 
+To display tooltips on mouseover, set the desired tooltip text to the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram#tooltip) property of the annotation.
+Tooltips for Annotations can be enabled or disabled by setting the [`AnnotationConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationConstraints#AnnotationConstraints) property as [`ToolTip`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel/#toolTip). 
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tooltip/es5TooltipAnnotation-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tooltip/es5TooltipAnnotation-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/tooltip/es5TooltipAnnotation-cs1" %}

@@ -19,6 +19,12 @@ By setting `zoomFactor` in primaryXAxis and `isZoomed` value as `true` in [`load
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/how-to-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/how-to-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/how-to-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/how-to-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/how-to-cs3" %}

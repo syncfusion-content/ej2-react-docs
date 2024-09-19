@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject, ColumnSeries, Legend, Category, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
-import { PaneData } from 'datasource.ts';
+import { PaneData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Category' };
     const primaryyAxis = {

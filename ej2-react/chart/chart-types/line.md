@@ -22,9 +22,15 @@ To render a line series, use series [`type`](https://ej2.syncfusion.com/react/do
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs6" %}
 
 ## Multicolored Line
 
@@ -37,9 +43,15 @@ To render a multicolored line series, use series [`type`](https://ej2.syncfusion
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs12/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs12/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs12" %}
 
 ## Series customization
 
@@ -57,9 +69,15 @@ The following properties can be used to customize the `line` series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs13/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs13/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs13" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs13" %}
 
 ## See Also
 

@@ -2,7 +2,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, WaterfallSeries } from '@syncfusion/ej2-react-charts';
-import { data } from 'datasource.ts';
+import { data } from './datasource';
 function App() {
     const primaryxAxis = { crossesAt: 15 };
     const primaryyAxis = { crossesAt: 5 };

@@ -32,9 +32,15 @@ By default, tooltip is not visible. Enable the tooltip by setting [`enable`](htt
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs7/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs7/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs7" %}
 
 **Format the Tooltip**
 
@@ -47,9 +53,15 @@ By default, tooltip shows information of x and y value in points. In addition to
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs8" %}
 
 <!-- markdownlint-disable MD013 -->
 
@@ -64,9 +76,15 @@ Any HTML elements can be displayed in the tooltip by using the ‘template’ pr
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs9" %}
 
 **Customize the Appearance of Tooltip**
 
@@ -79,9 +97,15 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSet
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs10" %}
 
 ## Zooming  and Panning
 
@@ -99,7 +123,7 @@ property to true in `zoomSettings`, you can zoom the chart by using the rubber b
 * Pinch - By setting  [`enablePinchZooming`](https://ej2.syncfusion.com/react/documentation/api/chart/zoomSettingsModel/#enablepinchzooming)
 property to true in `zoomSettings`, you can zoom the chart through pinch gesture in touch enabled devices.
 
- >Note: Pinch zooming is supported only in browsers that support multi-touch gestures. Currently IE11, Chrome and Opera browsers support multi-touch in desktop devices.
+>Note: Pinch zooming is supported only in browsers that support multi-touch gestures. Currently IE11, Chrome and Opera browsers support multi-touch in desktop devices.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -108,9 +132,15 @@ property to true in `zoomSettings`, you can zoom the chart through pinch gesture
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/zoom-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs1" %}
 
 After zooming the chart, a zooming toolbar will appear with `zoom`,`zoomin`, `zoomout`, `pan` and `reset` buttons. Selecting the Pan option will allow to pan the chart and selecting the Reset option will reset the zoomed chart.
 
@@ -131,9 +161,15 @@ There are three types of mode.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/zoom-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs2" %}
 
 **Customizing Zooming Toolbar**
 
@@ -146,9 +182,15 @@ By default, zoomin, zoomout, pan and reset buttons will be displayed for zo
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/zoom-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs3" %}
 
 >Note: To use zooming feature, we need to inject `Zoom` module into the `services`.
 
@@ -164,8 +206,6 @@ To get start quickly with React Chart Crosshair, you can check on this video:
 
 Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings/#enable) property in the `crosshair`. Likewise tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltipModel/#enable) property of `crosshairTooltip` in the corresponding axis.
 
-
-
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/chart/user-interaction/crosshair-cs4/app/index.jsx %}
@@ -173,9 +213,15 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/r
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/crosshair-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs4" %}
 
 **Customization**
 
@@ -188,9 +234,15 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairT
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/crosshair-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs5" %}
 
 >Note: To use crosshair feature, we need to inject `Crosshair` module into the `services`.
 
@@ -207,9 +259,15 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/trackball-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/trackball-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/trackball-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/trackball-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/trackball-cs2" %}
 
 ## Selection
 
@@ -229,7 +287,7 @@ We have different type of selection mode for selecting the data. They are,
 
 **Point**
 
- You can select a point, by setting `selectionMode` to point.
+You can select a point, by setting `selectionMode` to point.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -238,13 +296,19 @@ We have different type of selection mode for selecting the data. They are,
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/selection-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs8" %}
 
 **Series**
 
- You can select a series, by setting `selectionMode` to series.
+You can select a series, by setting `selectionMode` to series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -253,9 +317,15 @@ We have different type of selection mode for selecting the data. They are,
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/selection-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs9" %}
 
 **Cluster**
 
@@ -268,9 +338,15 @@ You can select the points that corresponds to the same index in all the series, 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/selection-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs10" %}
 
 **DragXY, DragX and DragY**
 
@@ -289,9 +365,15 @@ The selected data’s are returned as an array collection in the [`dragComplete`
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/drag-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/drag-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/drag-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/drag-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/drag-cs4" %}
 
 **Selection Type**
 
@@ -304,9 +386,15 @@ You can select multiple points or series, by enabling the [`isMultiSelect`](http
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/selection-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs11/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs11" %}
 
 **Customizing Selection Style**
 
@@ -319,9 +407,15 @@ You can apply custom style to selected points or series with [`selectionStyle`](
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/selection-cs12/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs12/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs12" %}
 
 **Selection on Load**
 
@@ -334,9 +428,15 @@ You can able to select a point or series programmatically on a chart using [`sel
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/selection-cs13/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/selection-cs13/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs13" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/selection-cs13" %}
 
 >Note: To use select feature, we need to Inject `Selection` module into the `services`.
 
@@ -351,6 +451,12 @@ We can use the data editing through inject the `DataEditing` module in the chart
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/data-editing-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/data-editing-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/data-editing-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/user-interaction/data-editing-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/data-editing-cs2" %}

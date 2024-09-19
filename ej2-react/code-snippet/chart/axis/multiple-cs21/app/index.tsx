@@ -2,19 +2,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject, IAxisLabelRenderEventArgs,StackingColumnSeries, ColumnSeries, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries, Selection} from'@syncfusion/ej2-react-charts';
-
+import { data1 } from './datasource';
 function App() {
 
-  const data1: any[] = [
-    { x: 'Egg', y: 106 },
-    { x: 'Fish', y: 103 },
-    { x: 'Misc', y: 198 },
-    { x: 'Tea', y: 189 },
-    { x: 'Fruits', y: 250 }
-];
   const primaryxAxis: AxisModel = { valueType: 'Category', interval: 1,tickPosition: 'Inside', labelPosition:'Inside', labelStyle: { color: '#ffffff' } };
   const primaryyAxis: AxisModel ={ minimum: 0, maximum: 300, interval: 50,  labelStyle: { color: 'transparent' } };
-let count: number = 0;
+  let count: number = 0;
   
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}  primaryYAxis={primaryyAxis} title='Trade in Food Groups'

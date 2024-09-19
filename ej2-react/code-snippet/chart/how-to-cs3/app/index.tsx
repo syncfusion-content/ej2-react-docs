@@ -4,25 +4,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Zoom, Legend, DateTime, Tooltip, DataLabel, LineSeries,  ILoadedEventArgs,AxisModel, ZoomSettingsModel, ScrollBar} from'@syncfusion/ej2-react-charts';
 import {  EmitType } from '@syncfusion/ej2-base'
-
+import { data } from './datasource';
  function App() {
   var chart1: ChartComponent;
-  const data: any[] = [
-    { x: new Date(2005, 0, 1), y: 21 },
-    { x: new Date(2006, 0, 1), y: 24 },
-    { x: new Date(2007, 0, 1), y: 36 },
-    { x: new Date(2008, 0, 1), y: 38 },
-    { x: new Date(2009, 0, 1), y: 54 },
-    { x: new Date(2010, 0, 1), y: 21 },
-    { x: new Date(2011, 0, 1), y: 24 },
-    { x: new Date(2012, 0, 1), y: 36 },
-    { x: new Date(2013, 0, 1), y: 38 },
-    { x: new Date(2014, 0, 1), y: 54 },
-    { x: new Date(2015, 0, 1), y: 21 },
-    { x: new Date(2016, 0, 1), y: 24 },
-    { x: new Date(2017, 0, 1), y: 36 },
-    { x: new Date(2018, 0, 1), y: 38 },
-  ];
   const zoomsettings: ZoomSettingsModel = {
     enableMouseWheelZooming: true,
     enablePinchZooming: true,

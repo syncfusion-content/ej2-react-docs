@@ -885,7 +885,7 @@ let visibleColumns = grid.getVisibleColumns();
 
 * [getForeignKeyColumns](https://ej2.syncfusion.com/react/documentation/api/grid/#getforeignkeycolumns):
 
-This method returns the array of foreignkey columns.
+This method returns the array of foreign key columns.
 
 ```
 let foreignKeyColumns = grid.getForeignKeyColumns();

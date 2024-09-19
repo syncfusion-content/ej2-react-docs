@@ -226,3 +226,18 @@ The diagram provides support to show tooltip when the mouse hovers over any fixe
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/interaction/es5ConnectorFixedUserHandle-cs3" %}
+
+### Customizing Fixed User Handles with HTML Templates
+
+Fixed user handles are interactive elements added to nodes and connectors. Their appearance can be customized using HTML templates. To render fixed user handle with HTML templates, we need to create an HTML element inside a `<script>` tag then add the template reference using the [`fixedUserHandleTemplate`](https://ej2.syncfusion.com/react/documentation/api/diagram/userHandle#fixeduserhandletemplate) property in the diagram model.
+
+ {% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/interaction/es5FixedUserHandleTemplate-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/interaction/es5FixedUserHandleTemplate-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/interaction/es5FixedUserHandleTemplate-cs1" %}

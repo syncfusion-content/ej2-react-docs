@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, RadarSeries, LineSeries } from '@syncfusion/ej2-react-charts';
-import { data } from 'datasource.ts';
+import { data } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Month' };
     const primaryyAxis = { minimum: 20, maximum: 40, interval: 5, title: 'Efficiency', labelFormat: '{value}%' };

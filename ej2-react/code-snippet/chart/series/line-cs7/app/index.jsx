@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, StepLineSeries } from '@syncfusion/ej2-react-charts';
-import { steplineData } from 'datasource.ts';
+import { steplineData } from './datasource';
 function App() {
     const marker = { visible: true, width: 10, height: 10, border: { width: 2, color: '#F8AB1D' } };
     return <ChartComponent id='charts'>

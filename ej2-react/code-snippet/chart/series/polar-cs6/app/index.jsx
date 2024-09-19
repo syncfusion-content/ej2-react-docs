@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, PolarSeries, StackingColumnSeries, Category } from '@syncfusion/ej2-react-charts';
-import { stackedColumnData } from 'datasource.ts';
+import { stackedColumnData } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Years', valueType: 'Category' };
     const primaryyAxis = { minimum: 0, maximum: 700, interval: 100, title: 'Spend Billions', labelFormat: '{value}B' };

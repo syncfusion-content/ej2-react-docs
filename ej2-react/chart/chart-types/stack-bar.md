@@ -20,6 +20,12 @@ To render a stacked bar series, use series [`type`](https://ej2.syncfusion.com/r
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs28/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs28/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs28/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs28" %}
@@ -35,6 +41,12 @@ You can use the [`stackingGroup`](https://ej2.syncfusion.com/react/documentation
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs31/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs31/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs31/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs31" %}
@@ -49,6 +61,12 @@ To render a cylindrical stacked bar chart, set the [`columnFacet`](https://ej2.s
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs41/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs41/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs41/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -69,6 +87,12 @@ The following properties can be used to customize the `stacked bar` series.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/stackedbar-cs/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/stackedbar-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/stackedbar-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

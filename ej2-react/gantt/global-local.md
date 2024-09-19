@@ -109,6 +109,10 @@ work | Work
 taskType | Task Type
 unassignedTask | Unassigned Task
 group | Group
+FF | FF
+FS | FS
+SF | SF
+SS | SS
 
 ### Loading translations
 

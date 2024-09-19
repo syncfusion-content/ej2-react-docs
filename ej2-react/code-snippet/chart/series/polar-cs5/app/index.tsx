@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          PolarSeries, Category, ColumnSeries}
 from'@syncfusion/ej2-react-charts';
-import { columnData } from 'datasource.ts';
+import { columnData } from './datasource';
 
 function App() {
 

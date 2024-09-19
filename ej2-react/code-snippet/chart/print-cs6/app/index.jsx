@@ -3,11 +3,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Export, Legend, Category, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
+import { data } from './datasource';
 function App() {
-    const data = [
-      { x: 'John', y: 10000 }, { x: 'Jake', y: 12000 }, { x: 'Peter', y: 18000 },
-      { x: 'James', y: 11000 }, { x: 'Mary', y: 9700 }
-    ];
     let chartInstance;
     function clickHandler() {
       const header = {

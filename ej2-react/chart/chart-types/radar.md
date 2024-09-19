@@ -25,9 +25,15 @@ Similar to Polar drawType, Radar draw type property is used to change the series
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/polar-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/polar-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/polar-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs9" %}
 
 ## Series customization
 
@@ -42,9 +48,15 @@ You can customize the start angle of the polar series using [`startAngle`](https
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/polar-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/polar-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/polar-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs10" %}
 
 ### Radius
 
@@ -57,9 +69,15 @@ You can customize the radius of the polar series using [`coefficient`](https://e
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/polar-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/polar-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/polar-cs11/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs11" %}
 
 ## See Also
 

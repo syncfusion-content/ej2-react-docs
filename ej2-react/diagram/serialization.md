@@ -52,6 +52,36 @@ diagram.loadDiagram(saveData);
 
 >Note: Before loading a new diagram, existing diagram is cleared.
 
+## Loaded Event
+
+The [`Loaded`](https://ej2.syncfusion.com/react/documentation/api/diagram#loaded) event triggers when all diagram elements are loaded using [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram#loadDiagram) method. You can use this event to customize diagram elements during the loading process.
+
+```ts
+  return (
+    loaded={(args) => {
+            //You can use this event to customize diagram elements during the loading process
+        }}/>
+  )
+
+```
+
+
+The event has two arguments such as name, diagram
+
+**name**
+
+Type: String
+
+Description: Returns the event name.
+
+**diagram**
+
+Type: Diagram
+
+Description: Returns the diagram model properties.
+
+Users can perform customizations or modifications to the diagram elements once the loading process is complete.
+
 ## Prevent Default Values
 
 The diagram provides supports to simplifying the saved JSON object without adding the default properties that are presented in the diagram.

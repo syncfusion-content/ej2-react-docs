@@ -24,18 +24,18 @@ By using the grid’s `actionComplete` event and `getCurrentViewRecords` method,
 By using the grid’s `databound` event, you can update the current page records into the chart’s datasource and visualize the grid data in chart.
 
 {% tabs %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/grid-visual-cs2/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.ts" %}
-{% include code-snippet/chart/grid-visual-cs2/app/datasource.ts %}
-{% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/chart/grid-visual-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/grid-visual-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/grid-visual-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/grid-visual-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/grid-visual-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/grid-visual-cs2" %}

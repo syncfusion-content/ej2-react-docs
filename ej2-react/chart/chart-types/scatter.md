@@ -21,9 +21,15 @@ To render a scatter series, use series [`type`](https://ej2.syncfusion.com/react
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs32/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs32/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs32/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs32" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs32" %}
 
 ## Series customization
 
@@ -40,9 +46,15 @@ The following properties can be used to customize the `scatter` series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/scatter-cs/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/scatter-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/scatter-cs/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/scatter-cs" %}
 
 ## See Also
 

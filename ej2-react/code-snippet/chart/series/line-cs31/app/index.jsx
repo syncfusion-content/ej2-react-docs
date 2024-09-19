@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, StackingBarSeries } from '@syncfusion/ej2-react-charts';
-import { groupData } from 'datasource.ts';
+import { groupData } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Year', minimum: 2006, maximum: 2015, interval: 1 };
     const primaryyAxis = { title: 'Sales Percentage(%)' };

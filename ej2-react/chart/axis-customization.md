@@ -21,9 +21,15 @@ An axis can be positioned in the chart area using [`crossesAt`](https://ej2.sync
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs1" %}
 
 ## Title
 
@@ -36,9 +42,15 @@ You can add a title to the axis using [`title`](https://ej2.syncfusion.com/react
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs2" %}
 
 ## Title Rotation
 
@@ -51,9 +63,15 @@ By using the [`titleRotation`](https://ej2.syncfusion.com/react/documentation/ap
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs3" %}
 
 ## Tick Lines Customization
 
@@ -66,9 +84,15 @@ You can customize the  [`width`](https://ej2.syncfusion.com/react/documentatio
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs4" %}
 
 ## Grid Lines Customization
 
@@ -81,9 +105,15 @@ You can customize the [`width`](https://ej2.syncfusion.com/react/documentation/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs1" %}
 
 ## Multiple Axis
 
@@ -96,24 +126,36 @@ In addition to primary X and Y axis, we can add n number of axis to the chart. S
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs5" %}
 
 ## Inversed Axis
 
 When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner set this property [`isInversed`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#isinversed) to true.
 
- {% tabs %}
+{% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/chart/axis/multiple-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs6" %}
 
 ## Opposed Position
 
@@ -126,6 +168,12 @@ To place an axis opposite from its original position, set [`opposedPosition`](ht
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs2" %}

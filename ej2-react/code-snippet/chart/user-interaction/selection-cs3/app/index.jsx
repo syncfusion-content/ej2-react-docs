@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, ColumnSeries, Selection } from '@syncfusion/ej2-react-charts';
-import { selectionData } from 'datasource.ts';
+import { selectionData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Category' };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} title='Olympic Medals' selectionMode='Cluster'>

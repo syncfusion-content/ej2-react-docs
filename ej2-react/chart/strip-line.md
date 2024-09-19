@@ -28,9 +28,15 @@ You can create Horizontal stripline by adding the `stripline` in the vertical ax
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs23/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs23/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs23/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs23" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs23" %}
 
 ## Vertical Striplines
 
@@ -43,9 +49,15 @@ You can create vertical stripline by adding the`stripline` in the horizontal axi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs24/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs24/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs24/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs24" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs24" %}
 
 ## Customize the strip line
 
@@ -58,9 +70,15 @@ Starting value in specific strip line can be customized by `start` property in s
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs25/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs25/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs25/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs25" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs25" %}
 
 ## Customize the stripline text
 
@@ -73,9 +91,15 @@ You can customize the text rendered in stripline by `textStyle` property. Rotati
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs26/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs26/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs26/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs26" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs26" %}
 
 ## Dash Array
 
@@ -88,13 +112,19 @@ You can create dash array stripline by using `dashArray` property. The Stripline
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs27/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs27/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs27/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs27" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs27" %}
 
 ## Recurrence Stripline
 
- The strip lines to be drawn repeatedly at the regular intervals – this will be useful when you want to mark an event that occurs recursively along the timeline of the chart. Following properties are used to configure this feature.
+The strip lines to be drawn repeatedly at the regular intervals – this will be useful when you want to mark an event that occurs recursively along the timeline of the chart. Following properties are used to configure this feature.
 
 * `isRepeat`       - It is used for enable / disable the recurrence strip line.
 * `repeatEvery`    - It is used for mention the stripline interval.
@@ -107,9 +137,15 @@ You can create dash array stripline by using `dashArray` property. The Stripline
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs28/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs28/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs28/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs28" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs28" %}
 
 ## Size Type
 
@@ -131,9 +167,15 @@ The `sizeType` property refers the size of the stripline. They are,
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs29/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs29/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs29/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs29" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs29" %}
 
 ## Segment Stripline
 
@@ -151,9 +193,15 @@ You can create stripline in a particular region with respect to segment. You can
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs30/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs30/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs30/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs30" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs30" %}
 
 ## See Also
 

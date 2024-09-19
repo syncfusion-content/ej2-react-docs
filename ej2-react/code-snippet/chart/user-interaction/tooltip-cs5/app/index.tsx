@@ -5,11 +5,11 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,TooltipSettingsModel,LegendSettingsModel,Category,
          Legend, DateTime, Tooltip, DataLabel, ColumnSeries}
 from'@syncfusion/ej2-react-charts';
-import {chartData} from 'datasource.ts';
+import {chartData} from './datasource';
 
 function App() {
 
-  const primaryxAxis: AxisModel = { valueType: 'Category' };
+  const primaryxAxis: AxisModel = { valueType: 'DateTime' };
   const tooltip: TooltipSettingsModel = {enable: true, format: '${point.tooltip}'};
   const legendSettings: LegendSettingsModel = { visible: false};
 

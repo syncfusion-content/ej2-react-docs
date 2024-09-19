@@ -36,6 +36,12 @@ To show that datalabel template, set the element id to the `template` property i
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/datalabel-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/datalabel-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/datalabel-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/datalabel-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/datalabel-cs1" %}

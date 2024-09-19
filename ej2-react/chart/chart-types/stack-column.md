@@ -20,6 +20,12 @@ To render a stacked column series, use series [`type`](https://ej2.syncfusion.co
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs23/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs23/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs23/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs23" %}
@@ -34,6 +40,12 @@ To render a cylindrical stacked column chart, set the [`columnFacet`](https://ej
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs42/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs42/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs42/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,6 +66,12 @@ The following properties can be used to customize the `stacked column` series.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/stackedcolumn-cs/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/stackedcolumn-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/stackedcolumn-cs/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

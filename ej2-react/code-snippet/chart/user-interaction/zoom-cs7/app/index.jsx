@@ -4,7 +4,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, DateTime, Tooltip, DataLabel, AreaSeries, Zoom, ScrollBar } from '@syncfusion/ej2-react-charts';
-import { zoomData } from 'datasource.ts';
+import { zoomData } from './datasource';
 function App() {
   const primaryxAxis = { valueType: 'DateTime', zoomFactor: 0.2, zoomPosition: 0.6, scrollbarSettings: { enable: true, enableZoom: false, height: 14, trackRadius: 8, scrollbarRadius: 8, gripColor: 'transparent', trackColor: 'yellow', scrollbarColor: 'red' } };
   const legendSettings = { visible: false };

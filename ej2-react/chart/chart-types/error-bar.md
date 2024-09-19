@@ -21,9 +21,15 @@ Error bars are graphical representations of the variability of data and used on 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/errorbar-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/errorbar-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/errorbar-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs1" %}
 
 ## Error Bar Type
 
@@ -36,9 +42,15 @@ To change the error bar rendering type using [`type`](https://ej2.syncfusion.com
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/errorbar-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/errorbar-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/errorbar-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs2" %}
 
 ## Customizing error bar type
 
@@ -51,9 +63,15 @@ To customize the error bar type, set error bar [`type`](https://ej2.syncfusion.c
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/errorbar-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/errorbar-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/errorbar-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs3" %}
 
 ## Error bar mode
 
@@ -66,9 +84,15 @@ Error bar mode is used to define whether the error bar line has to be drawn hori
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/errorbar-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/errorbar-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/errorbar-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs4" %}
 
 ## Error bar direction
 
@@ -81,9 +105,15 @@ To change the error bar direction to plus, minus or both side using [`direction`
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/errorbar-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/errorbar-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/errorbar-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs5" %}
 
 ## Customizing error bar cap
 
@@ -96,13 +126,19 @@ To customize the error bar cap length, width and fill color, you can use [`error
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/errorbar-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/errorbar-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/errorbar-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs6" %}
 
 ## Customizing error bar color
 
-To customize the error bar color for individual errors, use the [`errorBarColorMapping`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#errorbarcolormapping) property. You can also customize the vertical error, horizontal error, horizontal negative and positive error and vertical negative and positive error for an individual point using [`verticalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#verticalerror), [`horizontalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#horizontalerror), [`horizoontalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#horizontalnegativeerror), [`horizontalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#horizontalpositiveerror), [`verticalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#verticalnegativeerror) and [`verticalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#verticalpositiveerror) properties.
+To customize the error bar color for individual errors, use the [`errorBarColorMapping`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#errorbarcolormapping) property. You can also customize the vertical error, horizontal error, horizontal negative and positive error and vertical negative and positive error for an individual point using [`verticalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#verticalerror), [`horizontalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#horizontalerror), [`horizontalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#horizontalnegativeerror), [`horizontalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#horizontalpositiveerror), [`verticalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#verticalnegativeerror) and [`verticalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettingsModel/#verticalpositiveerror) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -110,6 +146,12 @@ To customize the error bar color for individual errors, use the [`errorBarColorM
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/errorbar-cs7/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/errorbar-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/errorbar-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

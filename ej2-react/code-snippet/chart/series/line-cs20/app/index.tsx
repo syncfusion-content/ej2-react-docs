@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, AreaSeries,  Selection}
 from'@syncfusion/ej2-react-charts';
-import { areaData } from 'datasource.ts';
+import { areaData } from './datasource';
 
 function App() {
 

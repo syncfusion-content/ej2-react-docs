@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, DateTime, Tooltip, DataLabel, AreaSeries, Zoom } from '@syncfusion/ej2-react-charts';
-import { zoomData } from 'datasource.ts';
+import { zoomData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'DateTime', zoomFactor: 0.2, zoomPosition: 0.6 };
     const legendSettings = { visible: false };

@@ -23,9 +23,15 @@ You can add annotations to the chart by using the <code>annotations</code> optio
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs3" %}
 
 >Note: To use annotation feature in chart, we need to inject `ChartAnnotation` module into the `services`.
 
@@ -40,9 +46,15 @@ Annotations can be placed either with respect to `Series` or `Chart`. by default
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs4" %}
 
 ## Co-ordinate Units
 
@@ -55,9 +67,15 @@ Specified the coordinates units of the annotation either `Pixel` or `Point`.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs5" %}
 
 * [Show total stacking values in data label](./how-to/#show-the-total-value-for-stacking-series-in-data-label)
 * [Create footer and watermark for chart](./how-to/#create-footer-and-watermark-for-chart)

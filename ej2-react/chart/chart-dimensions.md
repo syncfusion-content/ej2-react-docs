@@ -57,9 +57,15 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/dimensions/style-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/dimensions/style-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/dimensions/style-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/dimensions/style-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/dimensions/style-cs1" %}
 
 ## Size for Chart
 
@@ -79,9 +85,15 @@ You can set the size of chart in pixel as demonstrated below.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/getting-started/datasource-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/getting-started/datasource-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/getting-started/datasource-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs1" %}
 
 **In Percentage**
 
@@ -94,8 +106,14 @@ By setting value in percentage, chart gets its dimension with respect to its co
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/getting-started/datasource-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/getting-started/datasource-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/getting-started/datasource-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs2" %}
 
 > Note:  When you do not specify the size, it takes `450px` as the height and window size as its width.

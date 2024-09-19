@@ -20,9 +20,15 @@ To render a spline series, use series [`type`](https://ej2.syncfusion.com/react/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs10" %}
 
 ## Series customization
 
@@ -40,9 +46,15 @@ The following properties can be used to customize the `spline` series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/spline-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/spline-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/spline-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/spline-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/spline-cs1" %}
 
 ## See Also
 

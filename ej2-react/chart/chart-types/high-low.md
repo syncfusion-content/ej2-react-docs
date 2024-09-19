@@ -21,9 +21,15 @@ To render a Hilo series, use series [`type`](https://ej2.syncfusion.com/react/do
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/hilo-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/hilo-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/hilo-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs1" %}
 
 ## Series customization
 
@@ -39,9 +45,15 @@ The following properties can be used to customize the `hilo` series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/hilo-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/hilo-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/hilo-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/hilo-cs2" %}
 
 ## See Also
 
