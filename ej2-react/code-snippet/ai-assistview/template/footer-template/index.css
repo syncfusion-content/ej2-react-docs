@@ -1,0 +1,28 @@
+/* Represents the styles for loader */
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.custom-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: transparent;
+  }
+  
+  #promptTextArea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+  
+  #sendPrompt {
+    padding: 5px 15px;
+}

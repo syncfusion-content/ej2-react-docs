@@ -1,0 +1,23 @@
+/* Represents the styles for loader */
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.e-aiassistview.e-custom {
+    border-color: #e0e0e0;
+    background-color: #f4f4f4;
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+  
+.e-aiassistview.e-custom .e-view-header .e-toolbar, .e-aiassistview.e-custom .e-view-header .e-toolbar-items {
+    background: #d5d5d5;
+}
+  
+.e-aiassistview.e-custom .e-view-content .e-footer .e-input-group {
+    border: 3px solid #e0e0e0 !important;
+}
