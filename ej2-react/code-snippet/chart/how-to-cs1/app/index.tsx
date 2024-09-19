@@ -8,14 +8,9 @@ AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationS
   AccumulationDataLabelSettingsModel,TooltipSettingsModel
 } from '@syncfusion/ej2-react-charts';
 import{ EmitType } from '@syncfusion/ej2-base';
+import { data } from './datasource';
 
 function App() {
-
-  const data: any[] = [
-     { 'x': 'Chrome', y: 37, text: '37%' }, { 'x': 'UC Browser', y: 17, text: '17%' },
-    { 'x': 'iPhone', y: 19, text: '19%' },{ 'x': 'Others', y: 4, text: '4%' },
-     { 'x': 'Opera', y: 11, text: '11%' }, { 'x': 'Android', y: 12, text: '12%' }
-  ];
   const datalabel: AccumulationDataLabelSettingsModel = { visible: true, position: 'Inside', name: 'text' };
   const pointClick: EmitType<IPointEventArgs> = (args: IPointEventArgs): void => {
       document.getElementById("lbl").innerText = "X : "+ args.point.x + "\nY : "+ args.point.y;

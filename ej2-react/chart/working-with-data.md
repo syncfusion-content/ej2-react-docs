@@ -25,6 +25,12 @@ You can bind a simple JSON data to the chart using [`dataSource`](https://ej2.sy
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs8" %}
@@ -54,6 +60,12 @@ You can also bind a JSON data common to all series using  [`dataSource`](https:/
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs10/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs10/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,6 +189,12 @@ The Data points that uses the `null` or `undefined` as value are considered as e
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs12/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs12/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs12" %}
@@ -191,6 +209,12 @@ Specific color for empty point can be set by `fill` property in `emptyPointSetti
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/column-cs13/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs13/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -27,9 +27,15 @@ Markers can be added to points by enabling the [`visible`](https://ej2.syncfusi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs7/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs7/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs7" %}
 
 ## Shape
 
@@ -42,9 +48,15 @@ Markers can be assigned with different shapes such as Rectangle, Circle, Diamond
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs8" %}
 
 >Note : To know more about the marker shape type refer the [`shape`](https://ej2.syncfusion.com/react/documentation/api/chart/markerSettings/#shape).
 
@@ -59,9 +71,15 @@ Apart from the shapes, you can also add custom images to mark the data point usi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/marker-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/marker-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/marker-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/marker-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/marker-cs2" %}
 
 ## Customization
 
@@ -74,9 +92,15 @@ Marker's color and border can be customized using `fill` and `border` properties
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs9" %}
 
 ## Customizing specific point
 
@@ -89,9 +113,15 @@ You can also customize the specific marker and label using [`pointRender`](https
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs10" %}
 
 ## Fill marker with series color
 
@@ -104,9 +134,15 @@ Marker can be filled with the series color by setting the [`isFilled`](https://e
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/data-marker/datalabel-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/data-marker/datalabel-cs11/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs11" %}
 
 ## See Also
 

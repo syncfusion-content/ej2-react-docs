@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,LegendSettingsModel,ZoomSettingsModel,
          Legend, DateTime, Tooltip, DataLabel, AreaSeries,  Zoom}
 from'@syncfusion/ej2-react-charts';
-import { zoomData } from 'datasource.ts';
+import { zoomData } from './datasource';
 
 function App() {
 

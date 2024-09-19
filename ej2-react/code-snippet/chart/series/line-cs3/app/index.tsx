@@ -4,7 +4,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ChartAnnotation, AnnotationsDirective, AnnotationDirective, Legend, Category, Tooltip, DataLabel, ColumnSeries}from'@syncfusion/ej2-react-charts';
-import { columnData } from 'datasource.ts';
+import { columnData } from './datasource';
 
 function App() {
 

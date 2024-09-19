@@ -31,4 +31,4 @@ Update the data to series using set interval, and shift the data in the series t
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/how-to-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/how-to-cs5" %}

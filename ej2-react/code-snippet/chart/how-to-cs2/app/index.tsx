@@ -3,15 +3,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ChartAnnotation, AnnotationsDirective, AnnotationDirective, Legend, Category, Tooltip, DataLabel, SplineSeries ,AxisModel}from'@syncfusion/ej2-react-charts';
-
+import { data } from './datasource';
 function App() {
-
-  const data: any[] = [
-    { x: 'Sun', y: 15 }, { x: 'Mon', y: 5 },
-    { x: 'Tue', y: 32 }, { x: 'Wed', y: 15 },
-    { x: 'Thu', y: 29 }, { x: 'Fri', y: 24 },
-    { x: 'Sat', y: 18 }
-  ];
   const primaryxAxis: AxisModel = { valueType: 'Category' };
   const primaryyAxis: AxisModel = { minimum: 0, maximum: 60, interval: 20 };
   const marker = { visible: true };

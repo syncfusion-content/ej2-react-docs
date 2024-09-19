@@ -20,9 +20,15 @@ To render a stacked line series, use series [`type`](https://ej2.syncfusion.com/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs8" %}
 
 ## Series customization
 
@@ -40,9 +46,15 @@ The following properties can be used to customize the `stacked line` series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/stackedline-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/stackedline-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/stackedline-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/stackedline-cs1" %}
 
 ## See Also
 

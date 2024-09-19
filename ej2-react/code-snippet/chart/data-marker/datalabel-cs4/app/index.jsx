@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, ColumnSeries } from '@syncfusion/ej2-react-charts';
-import { columnData } from 'datasource.ts';
+import { columnData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Category' };
     const marker = {

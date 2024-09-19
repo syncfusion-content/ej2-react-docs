@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, SplineSeries } from '@syncfusion/ej2-react-charts';
-import { splineData } from 'datasource.ts';
+import { splineData } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Month', valueType: 'Category' };
     const primaryyAxis = {

@@ -20,9 +20,15 @@ To render a bubble series, use series [`type`](https://ej2.syncfusion.com/react/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs33/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs33/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs33/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs33" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs33" %}
 
 ## Size mapping
 
@@ -35,9 +41,15 @@ To render a bubble series, use series [`type`](https://ej2.syncfusion.com/react/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs34/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs34/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs34/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs34" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs34" %}
 
 ## Series customization
 
@@ -53,9 +65,15 @@ The following properties can be used to customize the `bubble` series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/bubble-cs/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/bubble-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/bubble-cs/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/bubble-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/bubble-cs" %}
 
 ## See Also
 

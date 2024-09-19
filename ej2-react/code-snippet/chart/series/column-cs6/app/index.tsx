@@ -5,16 +5,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, ColumnSeries} from'@syncfusion/ej2-react-charts';
-
+import { data } from './datasource';
 function App() {
 
-  const data: any[] = [
-    { x: 'Egg', y: 106 },
-    { x: 'Fish', y: 103 },
-    { x: 'Misc', y: 198 },
-    { x: 'Tea', y: 189 },
-    { x: 'Fruits', y: 250 }
-  ];
   const primaryxAxis: AxisModel = { valueType: 'Category', interval: 1, tickPosition: 'Inside',
                         labelPosition:'Inside', labelStyle: { color: '#ffffff' } };
   const primaryyAxis: AxisModel = { minimum: 0, maximum: 300, interval: 50, labelStyle: { color: 'transparent' } };

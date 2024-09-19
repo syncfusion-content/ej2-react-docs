@@ -109,7 +109,7 @@ The below example shows a basic Chart.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
 
 ## Module Injection
 
@@ -173,18 +173,18 @@ export let data = [
 {% highlight ts tabtitle="App.tsx" %}
 
 export let data: any[] = [
-            { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
-            { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
-            { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
-            { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
-            { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
-            { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-            ];
+    { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
+    { month: 'Mar', sales: 34 }, { month: 'Apr', sales: 32 },
+    { month: 'May', sales: 40 }, { month: 'Jun', sales: 32 },
+    { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
+    { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
+    { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
+];
 
 {% endhighlight %}
 {% endtabs %}
 
- Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property.
+Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/) property. Now map the field names `month` and `sales` in the JSON data to the [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties of the series, then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property.
 
 Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
@@ -195,9 +195,15 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/datasource-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/getting-started/datasource-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/getting-started/datasource-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs3" %}
 
 The sales data are in thousands, so format the vertical axis label by adding `$` as a prefix and `K` as a suffix to each label. This can be achieved by setting the `${value}K` to the [`labelFormat`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
 
@@ -208,9 +214,15 @@ The sales data are in thousands, so format the vertical axis label by adding `$`
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/datasource-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/getting-started/datasource-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/getting-started/datasource-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs4" %}
 
 ## Add Chart Title
 
@@ -223,9 +235,15 @@ You can add a title using [`title`](https://ej2.syncfusion.com/react/documentati
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/getting-started/tooltip-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/getting-started/tooltip-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs1" %}
 
 ## Enable Legend
 
@@ -238,9 +256,15 @@ You can use legend for the chart by setting the `visible` property to true in [`
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/legend-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/getting-started/legend-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/getting-started/legend-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/legend-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/legend-cs1" %}
 
 ## Add Data Label
 
@@ -253,9 +277,15 @@ You can add data labels to improve the readability of the chart. This can be ach
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/datalabel-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/getting-started/datalabel-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/getting-started/datalabel-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/datalabel-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/datalabel-cs1" %}
 
 ## Enable Tooltip
 
@@ -268,8 +298,14 @@ The tooltip is useful when you cannot display information by using the data labe
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/chart/getting-started/tooltip-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/getting-started/tooltip-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/getting-started/tooltip-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/tooltip-cs2" %}
 
 > You can refer to our [React Charts](https://www.syncfusion.com/react-components/react-charts) feature tour page for its groundbreaking feature representations. You can also explore our [React Charts example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/chart/line) that shows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

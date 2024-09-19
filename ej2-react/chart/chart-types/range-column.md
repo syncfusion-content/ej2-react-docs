@@ -21,9 +21,15 @@ To render a range column series, use series [`type`](https://ej2.syncfusion.com/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/rangecolumn-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/rangecolumn-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/rangecolumn-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs1" %}
 
 ## Series customization
 
@@ -41,9 +47,15 @@ The following properties can be used to customize the `range column` series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/rangecolumn-cs/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/rangecolumn-cs/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/rangecolumn-cs/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs" %}
 
 ## See Also
 

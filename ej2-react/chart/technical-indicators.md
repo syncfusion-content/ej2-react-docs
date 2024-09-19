@@ -26,9 +26,15 @@ Accumulation Distribution combines price and volume to show how money may be flo
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs1" %}
 
 ## Average True Range (ATR)
 
@@ -42,9 +48,15 @@ To render a Average True Range (ATR) Indicator, use indicator [`type`](https://e
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs2" %}
 
 ## Bollinger Band
 
@@ -60,9 +72,15 @@ The default values of the Bollinger Band [`period`](https://ej2.syncfusion.com/r
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs3" %}
 
 **Customization of BollingerBand**
 
@@ -75,9 +93,15 @@ The default values of the Bollinger Band [`period`](https://ej2.syncfusion.com/r
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs4" %}
 
 ## Exponential Moving Average (EMA)
 
@@ -90,9 +114,15 @@ Moving average Indicators are used to define the direction of the trend. To rend
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs5" %}
 
 ## Momentum
 
@@ -105,9 +135,15 @@ Momentum shows the speed at which the price of the stock is changing. To render 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs6" %}
 
 **Customization of MomentumIndicator**
 
@@ -120,9 +156,15 @@ Momentum shows the speed at which the price of the stock is changing. To render 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs7/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs7/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs7" %}
 
 ## Moving Average Convergence Divergence (MACD)
 
@@ -135,9 +177,15 @@ MACD is based on the difference between two EMA's. To render a MACD Indicator, u
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs8" %}
 
 **Customization of MACD**
 
@@ -152,9 +200,15 @@ By default `macdType` as 'Both'.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs9" %}
 
 ## Relative Strength Index (RSI)
 
@@ -167,9 +221,15 @@ RSI shows how strongly a stock is moving in its current direction. To render a R
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs10" %}
 
 ## Simple Moving Average (SMA)
 
@@ -182,9 +242,15 @@ Moving average Indicators are used to define the direction of the trend. To rend
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs11/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs11" %}
 
 ## Stochastic
 
@@ -199,9 +265,15 @@ In stochastic indicator the upperBand value and lowerBand value is customized by
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs12/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs12/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs12" %}
 
 **Customization of StochasticIndicator**
 
@@ -214,9 +286,15 @@ In stochastic indicator the upperBand value and lowerBand value is customized by
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs13/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs13/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs13" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs13" %}
 
 ## Triangular Moving Average (TMA)
 
@@ -229,9 +307,15 @@ Moving average Indicators are used to define the direction of the trend. To rend
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs14/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs14/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs14/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs14" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs14" %}
 
 **Customization of Technical Indicators**
 
@@ -244,9 +328,15 @@ Moving average Indicators are used to define the direction of the trend. To rend
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs15/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs15/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs15/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs15" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs15" %}
 
 **Data Source**
 
@@ -261,9 +351,15 @@ Technical indicators can also be added without series using [`dataSource`](https
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/technical-indicators-cs16/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs16/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/technical-indicators-cs16/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs16" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/technical-indicators-cs16" %}
 
 **Module Dependencies**
 To render a Indicator, it is mandatory to inject `LineSeries` module using `Chart.Inject(LineSeries)`.

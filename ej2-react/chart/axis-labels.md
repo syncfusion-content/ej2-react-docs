@@ -27,9 +27,15 @@ When setting `labelIntersectAction` as `Hide`
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs7/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs7/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs7" %}
 
 When setting `labelIntersectAction` as `Rotate45`
 
@@ -40,9 +46,15 @@ When setting `labelIntersectAction` as `Rotate45`
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs8/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs8" %}
 
 When setting `labelIntersectAction` as `Rotate90`
 
@@ -53,9 +65,15 @@ When setting `labelIntersectAction` as `Rotate90`
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs9/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs9/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs9" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs9" %}
 
 ## Axis Labels Positioning
 
@@ -68,9 +86,15 @@ By default, the axis labels can be placed at `outside` the axis line and this al
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs10" %}
 
 ## Multilevel Labels
 
@@ -96,9 +120,15 @@ Using the categories property, you can configure the `start`, `end`, `text`, and
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs11/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs11" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs11" %}
 
 ### Overflow
 
@@ -111,9 +141,15 @@ Using the `overflow` property, you can `trim` or `wrap` the multilevel labels.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs12/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs12/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs12" %}
 
 ### Alignment
 
@@ -126,9 +162,15 @@ The `alignment` property provides option to position the multilevel labels at `f
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs13/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs13/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs13" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs13" %}
 
 ### Text customization
 
@@ -141,9 +183,15 @@ The `textStyle` property of multilevel labels provides options to customize the 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs14/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs14/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs14/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs14" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs14" %}
 
 ### Border customization
 
@@ -156,9 +204,15 @@ Using the `border` property, you can customize the `width`, `color`, and `type`.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs15/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs15/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs15/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs15" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs15" %}
 
 ## Sorting
 
@@ -171,9 +225,15 @@ The chart’s data source can be sorted using the `sort` method of chart. The ar
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs16/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs16/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs16/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs16" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs16" %}
 
 ## Edge Label Placement
 
@@ -186,9 +246,15 @@ Labels with long text at the edges of an axis may appear partially in the chart.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs17/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs17/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs17/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs17" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs17" %}
 
 ## Labels Customization
 
@@ -201,9 +267,15 @@ Border of the axis labels can be customized using `width`, `color` and `type` pr
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs18/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs18/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs18/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs18" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs18" %}
 
 ## Customizing Specific Point
 
@@ -216,9 +288,15 @@ You can customize the specific text in the axis labels using `axisLabelRender` e
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs19/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs19/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs19/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs19" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs19" %}
 
 ## Trim using maximum label width
 
@@ -231,9 +309,15 @@ You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/react/doc
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs20/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs20/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs20/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs20" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs20" %}
 
 ## Line break support
 
@@ -246,6 +330,12 @@ Line break feature used to customize the long axis label text into multiple line
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-cs21/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-cs21/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-cs21/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs21" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs21" %}

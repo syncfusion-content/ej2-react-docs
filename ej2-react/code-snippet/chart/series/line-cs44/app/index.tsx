@@ -7,7 +7,7 @@ import {
   Legend, DateTime, Tooltip, DataLabel, StackingColumnSeries
 }
   from '@syncfusion/ej2-react-charts';
-import { cylindricalData } from 'datasource.ts';
+import { cylindricalData } from './datasource';
 
 function App() {
 

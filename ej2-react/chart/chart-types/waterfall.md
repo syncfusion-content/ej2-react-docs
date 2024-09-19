@@ -21,9 +21,15 @@ To render a waterfall series, use series [`type`](https://ej2.syncfusion.com/rea
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/waterfall-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs1" %}
 
 ## Series customization
 
@@ -38,9 +44,15 @@ By default, the negativeFillColor as ‘#E94649’ and the summaryFillColor as �
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/waterfall-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs2" %}
 
 ## See Also
 

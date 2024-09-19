@@ -5,6 +5,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          Legend, Category, Tooltip, DataLabel, ColumnSeries}
 from'@syncfusion/ej2-react-charts';
+import { columnData } from './datasource';
 
 function App() {
 
@@ -15,16 +16,6 @@ function App() {
       rx: 10, ry: 10
     }
   };
-  const columnData: any[] = [
-    { country: "USA", gold: 50 },
-    { country: "China", gold: 40 },
-    { country: "Japan", gold: 70 },
-    { country: "Australia", gold: 60 },
-    { country: "France", gold: 50 },
-    { country: "Germany", gold: 40 },
-    { country: "Italy", gold: 40 },
-    { country: "Sweden", gold: 30 }
-  ];
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}>

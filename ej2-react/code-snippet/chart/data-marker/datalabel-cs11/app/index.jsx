@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, DateTime, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
-import { data } from 'datasource.ts';
+import { data } from './datasource';
 class App extends React.Component {
     primaryxAxis = { valueType: 'DateTime' };
     marker = { visible: true, height: 10, width: 10, isFilled: true };

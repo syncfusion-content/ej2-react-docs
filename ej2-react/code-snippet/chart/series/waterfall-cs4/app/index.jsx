@@ -1,12 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ParetoSeries, ColumnSeries, LineSeries, Legend, Category, Tooltip, DataLabel } from '@syncfusion/ej2-react-charts';
+import { chartData } from './datasource';
 function App() {
-    const chartData = [
-        { x: 'Traffic', y: 56 }, { x: 'Child Care', y: 44.8 },
-        { x: 'Transport', y: 27.2 }, { x: 'Weather', y: 19.6 },
-        { x: 'Emergency', y: 6.6 }
-    ];
     const primaryxAxis = { title: 'Defects', valueType: 'Category' };
     const primaryyAxis = { title: 'Frequency', minimum: 0, maximum: 150, interval: 30 };
     const tooltipsettings = { enable: true };

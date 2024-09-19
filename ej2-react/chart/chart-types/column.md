@@ -21,6 +21,12 @@ To render a column series, use series [`type`](https://ej2.syncfusion.com/react/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs22/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs22/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs22/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs22" %}
@@ -35,6 +41,12 @@ The [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/s
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs38/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs38/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs38/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -51,6 +63,12 @@ You can use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/group-column-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/group-column-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/group-column-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/group-column-cs1" %}
@@ -65,6 +83,12 @@ To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfu
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs40/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs40/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs40/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,6 +109,12 @@ The following properties can be used to customize the `column` series.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs25/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs25/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs25/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, PolarSeries, Category, ScatterSeries } from '@syncfusion/ej2-react-charts';
-import { scatterData } from 'datasource.ts';
+import { scatterData } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Month', valueType: 'Category' };
     const primaryyAxis = {

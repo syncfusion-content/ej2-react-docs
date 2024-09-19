@@ -6,14 +6,9 @@ import * as ReactDOM from "react-dom";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject,
 ColumnSeries, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries,  Selection} from'@syncfusion/ej2-react-charts';
-
+import { data } from './datasource';
 function App() {
 
-  const data: any[] = [{ x: 'John', y: 10000 },
-  { x: 'Jake', y: 12000 },
-  { x: 'Peter', y: 18000 },
-  { x: 'James', y: 11000 },
-  ];
   var chartInstance: ChartComponent;
   function add() {
     chartInstance.addSeries([{

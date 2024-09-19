@@ -9,7 +9,7 @@ import {AxisModel,ChartComponent, SeriesCollectionDirective, AxesDirective, Axis
     Crosshair, LineSeries, AccumulationDistributionIndicator, IAxisLabelRenderEventArgs,TooltipSettingsModel,
     StripLine, ChartTheme, IndicatorsDirective, IndicatorDirective, StripLinesDirective}
 from'@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
+import { chartData } from './datasource';
 
 function App() {
 

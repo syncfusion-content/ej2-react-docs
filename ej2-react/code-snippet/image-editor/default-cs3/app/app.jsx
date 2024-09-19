@@ -17,7 +17,7 @@ export default class App extends React.Component {
     }
     btnClick() {
         let dimension = this.imgObj.getImageDimension();
-        this.imgObj.drawRectangle(dimension.x, dimension.y);
+        this.imgObj.drawRectangle(dimension.x, dimension.y, 300, 200, null, '', '', null, null, 8);
         this.imgObj.drawEllipse(dimension.x, dimension.y);
         this.imgObj.drawLine(dimension.x, dimension.y);
         this.imgObj.drawArrow(dimension.x, dimension.y+10, dimension.x+50, dimension.y+10, 10);

@@ -31,9 +31,15 @@ The value can be either in percentage or in pixel.*
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-panes-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-panes-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-panes-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs1" %}
 
 For spanning the vertical axis along multiple row, you can use [`span`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#span) property of an axis.
 
@@ -44,9 +50,15 @@ For spanning the vertical axis along multiple row, you can use [`span`](https://
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-panes-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-panes-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-panes-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs2" %}
 
 ## Columns
 
@@ -68,9 +80,15 @@ property. The given width can be either in percentage or in pixel.*
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-panes-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-panes-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-panes-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs3" %}
 
 For spanning the horizontal axis along multiple column, you can use [`span`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#span) property of an axis.
 
@@ -81,6 +99,12 @@ For spanning the horizontal axis along multiple column, you can use [`span`](htt
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/multiple-panes-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/multiple-panes-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/multiple-panes-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs4" %}

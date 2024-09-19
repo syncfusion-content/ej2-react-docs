@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Legend, Category, DataLabel } from '@syncfusion/ej2-react-charts';
-import { inverseData } from 'datasource.ts';
+import { inverseData } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Years', opposedPosition: true };
     const primaryyAxis = { title: 'Exchange rate (INR per USD)' };

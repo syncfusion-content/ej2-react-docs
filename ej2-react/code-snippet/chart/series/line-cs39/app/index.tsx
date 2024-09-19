@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, BarSeries,  Selection}
 from'@syncfusion/ej2-react-charts';
-import { cylindricalData } from 'datasource.ts';
+import { cylindricalData } from './datasource';
 
 function App() {
 

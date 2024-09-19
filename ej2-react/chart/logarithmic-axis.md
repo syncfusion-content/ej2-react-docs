@@ -25,9 +25,15 @@ To get start quickly with React Logarithmic Axis, you can check out this video:
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/log-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/log-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/log-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/log-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/log-cs1" %}
 
 >Note: To use log axis, we need to inject `Logarithmic` module into the `services` and
 set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis/#valuetype) of axis to `Logarithmic`.
@@ -43,9 +49,15 @@ Range of an axis, will be calculated automatically based on the provided data, y
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/log-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/log-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/log-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/log-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/log-cs2" %}
 
 ## Logarithmic Base
 
@@ -58,9 +70,15 @@ Logarithmic base can be customized by using the [`logBase`](https://ej2.syncfus
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/log-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/log-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/log-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/log-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/log-cs3" %}
 
 ## Logarithmic Interval
 
@@ -73,6 +91,12 @@ Logarithmic axis interval can be customized by using the [`interval`](https://ej
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/log-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/log-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/log-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/log-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/log-cs4" %}

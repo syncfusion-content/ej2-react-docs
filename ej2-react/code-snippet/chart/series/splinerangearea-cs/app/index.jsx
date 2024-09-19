@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Category, SplineRangeAreaSeries } from '@syncfusion/ej2-react-charts';
-import { splineRangeData } from 'datasource.ts';
+import { splineRangeData } from './datasource';
 function App() {
     const primaryxAxis = {
         valueType: 'Category',

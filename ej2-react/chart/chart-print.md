@@ -24,6 +24,12 @@ The rendered chart can be printed directly from the browser by calling the publi
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/chart/print-cs3/index.html %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/print-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/print-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/print-cs3" %}
@@ -48,6 +54,12 @@ The optional parameters for this method are,
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/chart/print-cs4/index.html %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/print-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/print-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/print-cs4" %}
@@ -69,6 +81,12 @@ In the export method, specify the following parameters to add a header and foote
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/chart/print-cs6/index.html %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/print-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/print-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/print-cs6" %}
@@ -86,6 +104,12 @@ During PDF export, set the `exportToMultiplePage` parameter to **true** to expor
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/chart/print-cs7/index.html %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/print-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/print-cs7/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -107,6 +131,12 @@ Initially, render more than one chart to export, and then add button to export t
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/chart/print-cs5/index.html %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/print-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/print-cs5/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/print-cs5" %}
@@ -124,6 +154,12 @@ The chart can be exported as an image in the form of a base64 string by utilizin
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/chart/print-cs8/index.html %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/print-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/print-cs8/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
         

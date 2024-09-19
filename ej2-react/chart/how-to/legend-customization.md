@@ -26,6 +26,12 @@ Set the shape value for each legend using `args.shape` in
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/how-to-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/how-to-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/how-to-cs4/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/how-to-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/how-to-cs4" %}

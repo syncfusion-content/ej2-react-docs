@@ -26,6 +26,12 @@ In the `showTooltip` method, specify the following parameters programmatically t
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/synchronized-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/synchronized-cs1" %}
@@ -46,6 +52,12 @@ In the `showCrosshair` method, specify the following parameters programmatically
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/synchronized-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs2/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/synchronized-cs2" %}
@@ -61,6 +73,12 @@ You can maintain constant zoom levels across multiple charts using the [`zoomCom
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/synchronized-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs3/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/synchronized-cs3" %}
@@ -75,6 +93,12 @@ You can select the data across multiple charts using the [`selectionComplete`](h
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/user-interaction/synchronized-cs4/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs4/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 

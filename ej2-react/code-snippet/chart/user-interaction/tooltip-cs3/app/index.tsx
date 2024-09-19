@@ -4,7 +4,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,TooltipSettingsModel, Legend, Category, Tooltip, DataLabel, SplineSeries}
 from'@syncfusion/ej2-react-charts';
-import { data } from 'datasource.ts';
+import { data1, data2, data3 } from './datasource';
 
 function App() {
 
@@ -14,27 +14,6 @@ function App() {
     format: '<b>${point.x} : ${point.y}</b>'
   };
   const marker = { visible: true, width: 10, height: 10 };
-  const data1: object[] = [
-                { x: 'Sun', y: 15 }, { x: 'Mon', y: 22 },
-                { x: 'Tue', y: 32 },
-                { x: 'Wed', y: 31 },
-                { x: 'Thu', y: 29 }, { x: 'Fri', y: 24 },
-                { x: 'Sat', y: 18 },
-            ];
-  const data2: object[] = [
-                { x: 'Sun', y: 10 }, { x: 'Mon', y: 18 },
-                { x: 'Tue', y: 28 },
-                { x: 'Wed', y: 28 },
-                { x: 'Thu', y: 26 }, { x: 'Fri', y: 20 },
-                { x: 'Sat', y: 15 }
-            ];
-  const data3: object[] = [
-                { x: 'Sun', y: 2 }, { x: 'Mon', y: 12 },
-                { x: 'Tue', y: 22 },
-                { x: 'Wed', y: 23 },
-                { x: 'Thu', y: 19 }, { x: 'Fri', y: 13 },
-                { x: 'Sat', y: 8 },
-            ];
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}

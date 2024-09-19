@@ -19,12 +19,22 @@ export default class App extends React.Component {
         let dimension = this.imgObj.getImageDimension();
         this.imgObj.drawText(dimension.x, dimension.y);
     }
+    outlineText() {
+        let dimension = this.imgObj.getImageDimension();
+        this.imgObj.drawText(dimension.x, dimension.y+100, 'Syncfusion', 'Arial', 70, false, false, '', false, null, '', 'green', 8);
+    }
+    bgColour() {
+        let dimension = this.imgObj.getImageDimension();
+        this.imgObj.drawText(dimension.x, dimension.y+150, 'Syncfusion', 'Arial', 70, false, false, '', false, null, 'red', '', null);
+    }
     render() {
         return (<div className='e-img-editor-sample'>
             <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbar = {[]}>
             </ImageEditorComponent>
                     <div>
-                        <ButtonComponent cssClass='e-primary' content='Click' onClick={this.btnClick.bind(this)}/>
+                        <ButtonComponent cssClass='e-primary' content='Add Text' onClick={this.btnClick.bind(this)}/>
+                        <ButtonComponent cssClass='e-primary' content='Text Outline' onClick={this.outlineText.bind(this)}/>
+                        <ButtonComponent cssClass='e-primary' content='Background Colour' onClick={this.bgColour.bind(this)}/>
                     </div>
                 </div>);
     }

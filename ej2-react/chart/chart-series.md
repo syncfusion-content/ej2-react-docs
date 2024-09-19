@@ -21,9 +21,15 @@ You can add multiple series to the chart by using [`series`](https://ej2.syncfus
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/axis/category-cs12/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/axis/category-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/axis/category-cs12/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs12" %}
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs12" %}
 
 ## Combination Series
 
@@ -36,8 +42,14 @@ Combination of different types like Line, column etc, can be rendered in a chart
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/combination-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/combination-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/combination-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/combination-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/combination-cs1" %}
 
 >Note: Bar series cannot be combined with any other series as the axis orientation is different from other series.

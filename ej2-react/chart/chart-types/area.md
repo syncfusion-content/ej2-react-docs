@@ -21,9 +21,15 @@ To render a area series, use series [`type`](https://ej2.syncfusion.com/react/do
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/area-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/area-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/area-cs1/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/area-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/area-cs1" %}
 
 ## Multicolored area
 
@@ -36,9 +42,15 @@ To render a multicolored area series, use the series type as `MultiColoredArea`,
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs19/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs19/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs19/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs19" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs19" %}
 
 ## Series customization
 
@@ -55,9 +67,15 @@ The following properties can be used to customize the `area` series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs20/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs20/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs20/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs20" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs20" %}
 
 ## Area border
 
@@ -73,9 +91,15 @@ The following properties in the [bordermodel](https://ej2.syncfusion.com/react/d
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs21/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs21/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs21/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs21" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs21" %}
 
 ## See Also
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, ColumnSeries, Selection } from '@syncfusion/ej2-react-charts';
-import { selectionData } from 'datasource.ts';
+import { selectionData } from './datasource';
 function App() {
     const selectedData = [{ series: 0, point: 1 }, { series: 2, point: 3 }];
     const primaryxAxis = { valueType: 'Category' };

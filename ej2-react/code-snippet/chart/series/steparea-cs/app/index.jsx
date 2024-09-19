@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, StepAreaSeries } from '@syncfusion/ej2-react-charts';
-import { stepAreaData } from 'datasource.ts';
+import { stepAreaData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Double', title: 'Overs' };
     const primaryyAxis = { title: 'Runs' };

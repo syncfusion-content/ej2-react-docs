@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          PolarSeries, Category, ScatterSeries}
 from'@syncfusion/ej2-react-charts';
-import { scatterData } from 'datasource.ts';
+import { scatterData } from './datasource';
 
 function App() {
 

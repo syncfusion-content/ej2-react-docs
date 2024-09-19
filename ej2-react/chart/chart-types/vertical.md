@@ -21,9 +21,15 @@ In EJ2 chart, you can draw a chart in vertical manner by changing orientation of
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/line-cs35/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs35/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs35/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/line-cs35" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs35" %}
 
 ## See Also
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Legend, Category, Tooltip, DataLabel } from '@syncfusion/ej2-react-charts';
-import { smartAxisData } from 'datasource.ts';
+import { smartAxisData } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Countries', labelIntersectAction: 'Rotate45', valueType: 'Category' };
     const primaryyAxis = { title: 'People(in millions)', minimum: 0, maximum: 80, interval: 10 };

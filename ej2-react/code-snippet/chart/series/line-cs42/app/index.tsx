@@ -7,7 +7,7 @@ import {
   Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, StackingColumnSeries, Selection
 }
   from '@syncfusion/ej2-react-charts';
-import { stackColumndata } from 'datasource.ts';
+import { stackColumndata } from './datasource';
 
 function App() {
 

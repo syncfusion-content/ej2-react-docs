@@ -13,37 +13,8 @@ import {
   ColumnSeries,
   DataLabel }
 from'@syncfusion/ej2-react-charts';
+import { data1, data2, data3, data4, data5, data6 } from './datasource';
 
-const data1 = [
-  { x: '2012', y: 104 },
-  { x: '2016', y: 121 },
-  { x: '2020', y: 113 },
-];
-const data2 = [
-  { x: '2012', y: 46 },
-  { x: '2016', y: 46 },
-  { x: '2020', y: 39 },
-];
-const data3 = [
-  { x: '2012', y: 65 },
-  { x: '2016', y: 67 },
-  { x: '2020', y: 65 },
-];
-const data4 = [
-  { x: '2012', y: 29 },
-  { x: '2016', y: 27 },
-  { x: '2020', y: 22 },
-];
-const data5 = [
-  { x: '2012', y: 91 },
-  { x: '2016', y: 70 },
-  { x: '2020', y: 88 },
-];
-const data6 = [
-  { x: '2012', y: 38 },
-  { x: '2016', y: 26 },
-  { x: '2020', y: 38 },
-];
 function App() {
     return (
       <ChartComponent

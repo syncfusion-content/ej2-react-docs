@@ -116,6 +116,22 @@ The fill color and the text in the data source can be mapped to the chart using 
 
  {% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs3" %}
 
+## Border Radius
+
+You can create rounded corners for each slice using the [`borderRadius`] option, giving the chart a modern and polished look.
+
+{% tabs %}
+{% highlight ts tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/pie-cs39/app/index.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/pie-cs39/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/samples/chart/series/pie-cs39" %}
+
 ## Customization
 
 Individual points can be customized using the `pointRender` event.
@@ -145,6 +161,22 @@ By default, the border will appear in the pie/doughnut chart while mouse hover o
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs5" %}
+
+## Patterns
+
+You can apply different patterns to the pie slices using the [`applyPattern`] property in the series and the [`pointRender`](https://ej2.syncfusion.com/angular/documentation/api/accumulation-chart/iAccPointRenderEventArgs/) event.
+
+{% tabs %}
+{% highlight ts tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/pie-cs40/app/index.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/pie-cs40/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/samples/chart/series/pie-cs40" %}
 
 ## Multi-level pie chart
 

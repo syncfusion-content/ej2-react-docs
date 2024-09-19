@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Browser } from '@syncfusion/ej2-base';
 import { ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject, CandleSeries, Category, Tooltip, DateTime, Logarithmic, Crosshair, LineSeries, AccumulationDistributionIndicator, StripLine, IndicatorsDirective, IndicatorDirective } from '@syncfusion/ej2-react-charts';
-import { chartData } from 'datasource.ts';
+import { chartData } from './datasource';
 function App() {
     const axisLableRender = (args) => {
         if (args.axis.name === 'secondary') {

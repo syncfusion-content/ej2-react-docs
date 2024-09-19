@@ -4,14 +4,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, DateTime, Tooltip, DataLabel, LineSeries,  ITextRenderEventArgs,AxisModel} from'@syncfusion/ej2-react-charts';
 import {  EmitType } from '@syncfusion/ej2-base'
-
+import { data } from './datasource';
  function App() {
-
-  const data: any[] = [
-    { x: new Date(2005, 0, 1), y: 21 }, { x: new Date(2006, 0, 1), y: 24 },
-    { x: new Date(2007, 0, 1), y: 0 }, { x: new Date(2008, 0, 1), y: 38 },
-    { x: new Date(2009, 0, 1), y: 54 }, { x: new Date(2010, 0, 1), y: 57 },
-  ];
   const primaryxAxis: AxisModel = { valueType: 'DateTime' };
   const primaryyAxis: AxisModel = { minimum: 0, maximum: 100, interval: 10 };
   const marker = { visible: true, dataLabel: { visible: true } };

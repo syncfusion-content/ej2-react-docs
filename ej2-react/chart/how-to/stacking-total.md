@@ -27,6 +27,12 @@ stacking series.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/how-to-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/how-to-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/how-to-cs10/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/how-to-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/how-to-cs10" %}

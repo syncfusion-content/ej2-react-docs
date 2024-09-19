@@ -5,14 +5,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category } from '@syncfusion/ej2-react-charts';
-
+import { data } from './datasource';
 function App() {
-
-  const data: any[] = [
-    { x: 'DEU', y: 35.5 }, { x: 'CHN', y: 18.3 }, { x: 'ITA', y: 17.6 }, { x: 'JPN', y: 13.6 },
-    { x: 'US', y: 12 }, { x: 'ESP', y: 5.6 }, { x: 'FRA', y: 4.6 }, { x: 'AUS', y: 3.3 },
-    { x: 'BEL', y: 3 }, { x: 'UK', y: 2.9 }
-  ];
   let chartInstance: ChartComponent;
   function clickHandler() { 
     var svg = document.querySelector("#charts_svg");

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Legend, Category, Tooltip, DataLabel } from '@syncfusion/ej2-react-charts';
-import { categoryData } from 'datasource.ts';
+import { categoryData } from './datasource';
 function App() {
     const axisLabelRender = (args) => {
         if (args.text === 'France') {

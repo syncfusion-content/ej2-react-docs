@@ -26,6 +26,12 @@ Using this event, you can set the `shape` value to the argument.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/how-to-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/how-to-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/how-to-cs6/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/how-to-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/how-to-cs6" %}
