@@ -13,7 +13,7 @@ function App() {
         <AIAssistViewComponent id="aiAssistView" ref={assistInstance}>
             <ViewsDirective>
                 <ViewDirective type='Assist' name='Prompt' viewTemplate={promptViewTemplate}></ViewDirective>
-                <ViewDirective type='Custom' name='Response' iconCss='e-icons e-comment-show' viewTemplate={responseViewTemplate}></ViewDirective>
+                <ViewDirective type='Custom' name='Response' iconCss='e-comment-show' viewTemplate={responseViewTemplate}></ViewDirective>
             </ViewsDirective>
         </AIAssistViewComponent>
     );

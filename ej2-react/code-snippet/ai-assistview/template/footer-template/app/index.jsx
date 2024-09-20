@@ -11,7 +11,7 @@ function App() {
         return (
             <div className="custom-footer">
                 <textarea id="promptTextArea" ref={textAreaRef} className="e-input" rows="2" placeholder="Enter your prompt here..."></textarea>
-                <button id="sendPrompt" onClick={handleSendClick} className="e-btn e-primary">Send</button>
+                <button id="sendPrompt" onClick={handleSendClick} className="e-btn e-primary">Generate</button>
             </div>
         );
     }; 

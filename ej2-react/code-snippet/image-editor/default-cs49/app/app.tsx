@@ -25,7 +25,7 @@ function App() {
     return (
         <div className='e-img-editor-sample'>
             <UploaderComponent selected={selected} ></UploaderComponent>
-            <ImageEditorComponent ref={(img) => { imgObj = img }}>
+            <ImageEditorComponent height='350px' ref={(img) => { imgObj = img }}>
             </ImageEditorComponent>
         </div>
     );

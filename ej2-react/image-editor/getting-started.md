@@ -135,7 +135,7 @@ The following example shows a basic Image Editor component.
 {% include code-snippet/image-editor/default-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+      
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs6" %}
 
 > You can also explore our [React Image Editor example](https://ej2.syncfusion.com/react/demos/#/material/image-editor/getting-started) that shows how to render the Image Editor in React.

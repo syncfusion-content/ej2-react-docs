@@ -20,8 +20,8 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-             <FileManagerComponent id="overview_file" ajaxSettings = {{url: this.hostUrl + "api/FileManager/FileOperations", getImageUrl: hostUrl + "api/FileManager/GetImage", uploadUrl: hostUrl + 'api/FileManager/Upload', downloadUrl: hostUrl + 'api/FileManager/Download'}} fileOpen = {this.fileOpen.bind(this)} ></FileManagerComponent>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }}>
+             <FileManagerComponent id="overview_file" ajaxSettings = {{url: this.hostUrl + "api/FileManager/FileOperations", getImageUrl: this.hostUrl + "api/FileManager/GetImage", uploadUrl: this.hostUrl + 'api/FileManager/Upload', downloadUrl: this.hostUrl + 'api/FileManager/Download'}} fileOpen = {this.fileOpen.bind(this)} ></FileManagerComponent>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px">
             </ImageEditorComponent>
                 </div>);
     }

@@ -22,7 +22,7 @@ export default class App extends React.Component {
     render() {
         return (<div className='e-img-editor-sample'>
             <UploaderComponent selected={this.selected.bind(this)} ></UploaderComponent>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }}>
+            <ImageEditorComponent height='350px' ref={(img) => { this.imgObj = img; }}>
             </ImageEditorComponent>
                 </div>);
     }

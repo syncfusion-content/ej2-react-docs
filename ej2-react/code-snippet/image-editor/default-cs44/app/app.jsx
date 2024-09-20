@@ -7,7 +7,7 @@ import * as ReactDOM from "react-dom";
 
 export default class App extends React.Component {
     imgObj;
-    blobUrl;
+    blobUrl = '';
     imageEditorCreated() {
         if (Browser.isDevice) {
             this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
@@ -17,14 +17,13 @@ export default class App extends React.Component {
         }
     }
     getBlob() {
-        const imageEditor = getComponent(document.getElementById('image-editor'), 'image-editor');
-        let imageData = imageEditor.getImageData();
+        let imageData = this.imgObj.getImageData();
         let canvas = document.createElement('canvas');
         let ctx = canvas.getContext('2d');
         canvas.width = imageData.width;
         canvas.height = imageData.height;
         ctx.putImageData(imageData, 0, 0);
-        canvas.toBlob(function(blob){
+        canvas.toBlob((blob) => {
             this.blobUrl = URL.createObjectURL(blob);// For getting blob.
         });
     }
@@ -33,11 +32,11 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent id="image-editor" ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbar = {[]}>
+            <ImageEditorComponent id="image-editor" ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)}>
             </ImageEditorComponent>
                     <div>
-                        <ButtonComponent cssClass='e-primary' content='Click' onClick={this.getBlob.bind(this)}/>
-                        <ButtonComponent cssClass='e-primary' content='Open' onClick = {this.btnClick.bind(this)}/>
+                        <ButtonComponent cssClass='e-primary' content='Save' onClick={this.getBlob.bind(this)}/>
+                        <ButtonComponent cssClass='e-primary' content='Open Blob' onClick = {this.btnClick.bind(this)}/>
                     </div>
                 </div>);
     }

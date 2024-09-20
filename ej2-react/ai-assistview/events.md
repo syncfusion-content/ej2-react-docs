@@ -14,7 +14,7 @@ This section describes the AI AssistView events that will be triggered when appr
 
 ## created
 
-The AI AssistView component triggers the `created` event when the component rendering is completed.
+The AI AssistView component triggers the [created](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#created) event when the component rendering is completed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The AI AssistView component triggers the `created` event when the component rend
 
 ## promptRequest
 
-The `promptRequest` event is triggered when the prompt request is made in the AI AssistView component.
+The [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#promptrequest) event is triggered when the prompt request is made in the AI AssistView component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,7 +40,7 @@ The `promptRequest` event is triggered when the prompt request is made in the AI
 
 ## promptChanged
 
-The `promptChanged` event is triggered when the prompt text is changed in the AI AssistView component.
+The [promptChanged](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#promptchanged) event is triggered when the prompt text is changed in the AI AssistView component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
