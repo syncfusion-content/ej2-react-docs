@@ -6,7 +6,7 @@ function App() {
     const assistInstance = React.useRef(null);
     
     const toolbarSettings = {
-        items: [ { text: 'Get intelligent responses tailored to your needs', align: 'Center' } ]
+        items: [ { text: 'Welcome User !', align: 'Right' } ]
     };
 
     const onPromptRequest = (args) => {

@@ -7,7 +7,10 @@ function App() {
     const assistInstance = React.useRef<AIAssistViewComponent>(null);
     
     const toolbarSettings: ToolbarSettingsModel = {
-        items: [ { type: 'Button', iconCss: 'e-icons e-refresh', align: 'Right', visible: false } ]
+        items: [
+            { type: 'Button', iconCss: 'e-icons e-refresh', align: 'Right', visible: false },
+            { type: 'Button', iconCss: 'e-icons e-user', align: 'Right' }
+        ]
     };
 
     const onPromptRequest = (args: PromptRequestEventArgs) => {

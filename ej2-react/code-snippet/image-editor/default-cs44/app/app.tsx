@@ -25,8 +25,8 @@ function App() {
         canvas.width = imageData.width;
         canvas.height = imageData.height;
         ctx.putImageData(imageData, 0, 0);
-        canvas.toBlob(function(blob){
-            blobUrl = URL.createObjectURL(blob);// For getting blob.
+        canvas.toBlob((blob) => {
+            blobUrl = URL.createObjectURL(blob as any);// For getting blob.
         });
     }
 
@@ -39,8 +39,8 @@ function App() {
         <ImageEditorComponent id="image-editor" ref={(img) => { imgObj = img }} created={imageEditorCreated}>
         </ImageEditorComponent>
                 <div>
-                    <ButtonComponent cssClass='e-primary' content='Blob' onClick = {getBlob}/>
-                    <ButtonComponent cssClass='e-primary' content='Open' onClick = {btnClick}/>
+                    <ButtonComponent cssClass='e-primary' content='Save' onClick = {getBlob}/>
+                    <ButtonComponent cssClass='e-primary' content='Open Blob' onClick = {btnClick}/>
                 </div>
             </div>
     );

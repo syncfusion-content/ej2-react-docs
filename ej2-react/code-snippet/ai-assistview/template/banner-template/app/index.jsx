@@ -4,8 +4,7 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     const assistInstance = React.useRef(null);
-    
-    const bannerTemplate = '<div class="banner-content"><h3><span class="e-icons e-assistview-icon"></span>AI Assistance</h3></div>';
+    const bannerTemplate = '<div class="banner-content"><div class="e-icons e-assistview-icon"></div><h3>AI Assistance</h3><div>Your everyday AI companion.</div></div>';
 
     const onPromptRequest = (args) => {
         setTimeout(() => {

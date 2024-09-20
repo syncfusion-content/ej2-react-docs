@@ -16,29 +16,20 @@ By using the `ViewsDirective` tag you can define the collection of different ass
 
 #### Setting view type
 
-You can set the type of view by using the `type` property within the `ViewDirective` tag. It accepts two values such as `Assist` and `Custom`.
+You can set the type of view by using the [type](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/assistViewType/) property within the `ViewDirective` tag. It accepts two values such as `Assist` and `Custom`.
 
 {% raw %}
 ```ts
 
-import { AIAssistViewComponent, PromptRequestEventArgs, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-interactive-chat';
+import { AIAssistViewComponent, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
 function App() {
 
-    const assistInstance = React.useRef<AIAssistViewComponent>(null);
-
-    const onPromptRequest = (args: PromptRequestEventArgs) => {
-        setTimeout(() => {
-            let defaultResponse = 'For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
-            assistInstance.current.addPromptResponse(defaultResponse);
-          }, 1000);
-    };
-  
     return (
         // specifies the tag for render the AI AssistView component
-        <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest}>
+        <AIAssistViewComponent id="aiAssistView">
             <ViewsDirective>
                 <ViewDirective type='Assist'></ViewDirective>
                 <ViewDirective type='Custom'></ViewDirective>
@@ -54,29 +45,20 @@ ReactDOM.render(<App />, document.getElementById('container'));
 
 ### Setting name
 
-You can use the `name` property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
+You can use the [name](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/assistViewModel/#name) property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
 
 {% raw %}
 ```ts
 
-import { AIAssistViewComponent, PromptRequestEventArgs, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-interactive-chat';
+import { AIAssistViewComponent, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
 function App() {
-
-    const assistInstance = React.useRef<AIAssistViewComponent>(null);
-
-    const onPromptRequest = (args: PromptRequestEventArgs) => {
-        setTimeout(() => {
-            let defaultResponse = 'For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
-            assistInstance.current.addPromptResponse(defaultResponse);
-          }, 1000);
-    };
   
     return (
         // specifies the tag for render the AI AssistView component
-        <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest}>
+        <AIAssistViewComponent id="aiAssistView">
             <ViewsDirective>
                 <ViewDirective type='Assist' name='Prompt'></ViewDirective>
                 <ViewDirective type='Custom' name='Response'></ViewDirective>
@@ -90,34 +72,25 @@ ReactDOM.render(<App />, document.getElementById('container'));
 ```
 {% endraw %}
 
-### Setting iconCSS
+### Setting iconCss
 
-You can customize the view icons by using the `iconCss` property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
+You can customize the view icons by using the [iconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/assistViewModel/#iconcss) property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
 
 {% raw %}
 ```ts
 
-import { AIAssistViewComponent, PromptRequestEventArgs, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-interactive-chat';
+import { AIAssistViewComponent, ViewsDirective, ViewDirective } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
 function App() {
-
-    const assistInstance = React.useRef<AIAssistViewComponent>(null);
-
-    const onPromptRequest = (args: PromptRequestEventArgs) => {
-        setTimeout(() => {
-            let defaultResponse = 'For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
-            assistInstance.current.addPromptResponse(defaultResponse);
-          }, 1000);
-    };
   
     return (
         // specifies the tag for render the AI AssistView component
-        <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest}>
+        <AIAssistViewComponent id="aiAssistView">
             <ViewsDirective>
-                <ViewDirective type='Assist' name='Prompt'></ViewDirective>
-                <ViewDirective type='Custom' name='Response' iconCss='e-icons e-comment-show'></ViewDirective>
+                <ViewDirective type='Assist' name='Prompt' iconCss='e-assistview-icon'></ViewDirective>
+                <ViewDirective type='Custom' name='Response' iconCss='e-comment-show'></ViewDirective>
             </ViewsDirective>
         </AIAssistViewComponent>
     );
@@ -137,13 +110,16 @@ The following example illustrates how types, name, and iconCss are used in a AI 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/ai-assistview/custom-view/type/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/ai-assistview/custom-view/type/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/custom-view/type" %}
 
 ### Setting view template 
 
-You can use the `viewTemplate` property to add the view content of the multiple views added in the AI AssistView.
+You can use the [viewTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/assistViewModel/#viewtemplate) property to add the view content of the multiple views added in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -161,7 +137,7 @@ You can use the `viewTemplate` property to add the view content of the multiple 
 
 ## Setting active view
 
-You can use the `activeView` property to set the active view in the AI AssistView. By default, the value is `0`.
+You can use the [activeView](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#activeview) property to set the active view in the AI AssistView. By default, the value is `0`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -169,6 +145,9 @@ You can use the `activeView` property to set the active view in the AI AssistVie
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/ai-assistview/custom-view/active-view/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/ai-assistview/custom-view/active-view/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

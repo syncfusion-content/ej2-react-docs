@@ -126,7 +126,7 @@ When selecting an area for cropping, users can typically resize the selection fr
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs41" %}
 
-### Cropping with Custom Ratio Selection
+## Cropping with Custom Ratio Selection
 
 Users can perform cropping either through the toolbar or by using our public methods. While predefined ratio selections are available in the toolbar, users can also crop with custom ratios using our public method, [`select`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#select). Regardless of the ratio type used, the selection will adhere to the specified ratio, even when resizing the selection area.
 

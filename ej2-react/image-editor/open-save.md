@@ -220,17 +220,17 @@ You can utilize the [`fileOpened`](https://helpej2.syncfusion.com/react/document
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/image-editor/default-cs47/app/app.jsx %}
+{% include code-snippet/image-editor/default-cs46/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/image-editor/default-cs47/app/app.tsx %}
+{% include code-snippet/image-editor/default-cs46/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/image-editor/default-cs47/index.html %}
+{% include code-snippet/image-editor/default-cs46/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/image-editor/default-cs47" %}
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs46" %}
 
 ### Remove default Save button and add custom button to save the image to server
 

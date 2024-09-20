@@ -23,7 +23,7 @@ function App() {
   
     return (
         // specifies the tag for render the AI AssistView component
-        <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest} prompts={prompts} responseIconCss='e-icons e-star-filled'></AIAssistViewComponent>
+        <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest} prompts={prompts} responseIconCss='e-icons e-bullet-4'></AIAssistViewComponent>
     );
 }
 
