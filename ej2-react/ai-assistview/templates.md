@@ -14,7 +14,7 @@ The AI AssistView provides several template options to customize the banner, pro
 
 ## Banner template
 
-You can use the `bannerTemplate` property to customize the banner view in the AI AssistView.
+You can use the [bannerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#bannertemplate) property to display additional information, such as a welcome note, and more in the AI AssistView. This banner is positioned at the top of the prompt and response conversation area within the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,7 +32,7 @@ You can use the `bannerTemplate` property to customize the banner view in the AI
 
 ## Prompt item template
 
-You can use the `promptItemTemplate` property to customize the prompt items in the AI AssistView. The template context includes `prompt`, `toolbarItems` and `index` items.
+You can use the [promptItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#promptitemtemplate) property to customize the prompt items in the AI AssistView. The template context includes `prompt`, `toolbarItems` and `index` items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +50,7 @@ You can use the `promptItemTemplate` property to customize the prompt items in t
 
 ## Response item template
 
-You can use the `responseItemTemplate` property to customize response items within the AI AssistView. The template context includes the `prompt`, `response`, `index`, `toolbarItems` and `output` items.
+You can use the [responseItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#responseitemtemplate) property to customize response items within the AI AssistView. The template context includes the `prompt`, `response`, `index`, `toolbarItems` and `output` items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,7 +68,7 @@ You can use the `responseItemTemplate` property to customize response items with
 
 ## Prompt suggestion item template
 
-You can use the `promptSuggestionItemTemplate` property to customize the prompt suggestion items in the AI AssistView. The template context includes the `index` and `promptSuggestion`.
+You can use the [promptSuggestionItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#promptsuggestionitemtemplate) property to customize the prompt suggestion items in the AI AssistView. The template context includes the `index` and `promptSuggestion`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -86,7 +86,7 @@ You can use the `promptSuggestionItemTemplate` property to customize the prompt 
 
 ## Footer template
 
-You can use the `footerTemplate` property to customize the footer items in the AI AssistView.
+You can use the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#footertemplate) property to customize the default footer area and manage prompt request actions in the AI AssistView. This allows users to create unique footers that meet their specific needs.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

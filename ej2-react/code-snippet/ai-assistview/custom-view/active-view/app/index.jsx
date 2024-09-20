@@ -4,6 +4,7 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     const assistInstance = React.useRef(null);
+    const responseViewTemplate = '<div class="view-container"><h5>Response view content</h5></div>';
 
     const onPromptRequest = (args) => {
         setTimeout(() => {
@@ -17,7 +18,7 @@ function App() {
         <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest} activeView={1}>
             <ViewsDirective>
                 <ViewDirective type='Assist' name='Prompt'></ViewDirective>
-                <ViewDirective type='Custom' name='Response' iconCss='e-icons e-comment-show'></ViewDirective>
+                <ViewDirective type='Custom' name='Response' iconCss='e-comment-show' viewTemplate={responseViewTemplate}></ViewDirective>
             </ViewsDirective>
         </AIAssistViewComponent>
     );

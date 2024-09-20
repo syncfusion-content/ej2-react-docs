@@ -26,7 +26,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div id="wrapperDiv">
-            <ImageEditorComponent toolbar={this.toolbar} ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbarItemClicked={this.toolbarItemClicked.bind(this)}/>
+            <ImageEditorComponent toolbar={this.toolbar} ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} toolbarItemClicked={this.toolbarItemClicked.bind(this)}/>
         </div>);
     }
 }

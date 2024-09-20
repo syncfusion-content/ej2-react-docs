@@ -7,7 +7,7 @@ function App() {
     const assistInstance = React.useRef<AIAssistViewComponent>(null);
     
     const toolbarSettings: ToolbarSettingsModel = {
-        items: [ { text: 'Get intelligent responses tailored to your needs', align: 'Center' } ]
+        items: [ { text: 'Welcome User !', align: 'Right' } ]
     };
 
     const onPromptRequest = (args: PromptRequestEventArgs) => {

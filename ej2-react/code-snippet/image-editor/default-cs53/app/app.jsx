@@ -1,7 +1,6 @@
 {% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
-import { Browser, getComponent } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
@@ -38,7 +37,7 @@ export default class App extends React.Component {
             },
         ]}
     ];
-    fields = { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild' };
+    fields = { dataSource: this.data, id: 'nodeId', text: 'nodeText', child: 'nodeChild' };
     clicked(args) {
         let nodeId = args.node.getAttribute('data-uid');
         let nodeData = this.treeView.getTreeData(nodeId)[0];
@@ -48,8 +47,8 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <TreeViewComponent ref={(tree) => { this.treeView = tree }} fields={fields} nodeClicked={this.clicked.bind(this)} />
-            <ImageEditorComponent ref={(img) => { this.imgObj = img }} toolbar = {[]}>
+            <TreeViewComponent ref={(tree) => { this.treeView = tree }} fields={this.fields} nodeClicked={this.clicked.bind(this)} />
+            <ImageEditorComponent ref={(img) => { this.imgObj = img }} height="350px" toolbar = {[]}>
             </ImageEditorComponent>
                 </div>);
     }

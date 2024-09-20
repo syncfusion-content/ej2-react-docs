@@ -32,9 +32,13 @@ Icons can be used from the npm package `ej2-icons`. To use the icons, install th
 
 Refer to the following syntax to use icons in a React application:
 
+`[src/App.css]`
+
 ```css
 @import "../node_modules/@syncfusion/ej2-icons/styles/<theme_name>.css";
 ```
+
+>To refer `App.css` in the application then import it in the `src/App.tsx` file.
 
 **Example:**
 

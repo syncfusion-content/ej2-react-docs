@@ -93,7 +93,7 @@ By default, zoomin, zoomout, pan and reset buttons will be displayed for zoomed 
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs6" %}
 
-## Eanble scrollbar
+## Enable scrollbar
 
 Using the [`enableScrollbar`](https://ej2.syncfusion.com/react/documentation/api/chart/zoomSettingsModel/#enablescrollbar) property, you can add a scrollbar to a zoomed chart. This scrollbar allows you to zoom or pan the chart. The appearance of the scrollbar can be customized using properties in [`scrollbarSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/). For example, you can use [`trackColor`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#trackcolor) and [`trackRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#trackradius) properties to customize the track of the scrollbar, and [`scrollbarRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#scrollbarradius) and [`scrollbarColor`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#scrollbarcolor) properties to customize the scroller. The ability to zoom through the scrollbar can be enabled or disabled using the [`enableZoom`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#enablezoom) property in [`scrollbarSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/). Additionally, you can change the color of the grip and height of the scrollbar using the [`gripColor`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#gripcolor) and [`height`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#height) properties.
 
@@ -113,6 +113,23 @@ Using the [`enableScrollbar`](https://ej2.syncfusion.com/react/documentation/api
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs7" %}
+
+## Enable animation
+
+
+Use the [`enableAnimation`] property to create smooth transitions when zooming in on the chart.
+
+{% tabs %}
+{% highlight ts tabtitle="index.jsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs10/app/index.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs10/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/samples/chart/user-interaction/zoom-cs10" %}
 
 ## Enable pan
 

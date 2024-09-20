@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 export default class App extends React.Component {
     render() {
         return (<div id="wrapperDiv">
-            <ImageEditorComponent />
+            <ImageEditorComponent height="350px" />
         </div>);
     }
 }

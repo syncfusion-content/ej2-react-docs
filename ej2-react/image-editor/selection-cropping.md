@@ -110,7 +110,7 @@ In the image editor, when an image is cropped, it is usually enlarged or scaled 
 
 ## Locking Selection Area During Cropping
 
-When selecting an area for cropping, users can typically resize the selection from all corners and edges. If you want to prevent the [`resizing`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#resizing) of the selection area, you can bind to the resizing event and set cancel to true. This will lock the selection area, preventing any adjustments to its size.
+When selecting an area for cropping, users can typically resize the selection from all corners and edges. If you want to prevent the [`selectionChanging`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#selectionchanging) event. Check if the action is `resize`, and if it is, set `previousSelectionSettings` value to `currentSelectionSettings` value. This will lock the selection area, preventing any adjustments to its size.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -126,7 +126,7 @@ When selecting an area for cropping, users can typically resize the selection fr
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs41" %}
 
-### Cropping with Custom Ratio Selection
+## Cropping with Custom Ratio Selection
 
 Users can perform cropping either through the toolbar or by using our public methods. While predefined ratio selections are available in the toolbar, users can also crop with custom ratios using our public method, [`select`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#select). Regardless of the ratio type used, the selection will adhere to the specified ratio, even when resizing the selection area.
 

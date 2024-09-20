@@ -57,7 +57,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent locale='de-DE' ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)}/>
+            <ImageEditorComponent locale='de-DE' ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)}/>
                 </div>);
     }
 }

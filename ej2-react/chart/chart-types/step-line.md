@@ -57,6 +57,26 @@ The following properties can be used to customize the `step line` series.
 
 {% previewsample "page.domainurl/code-snippet/chart/series/stepline-cs1" %}
 
+**No risers**
+
+The [`noRisers`] feature allows the step line series to appear as a continuous flow, eliminating the vertical lines between points. This approach is useful for highlighting trends without the distraction of risers.
+
+{% tabs %}
+{% highlight ts tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/stepraiser-cs/app/index.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/stepraiser-cs/app/index.tsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="datasource.ts" %}
+{% include code-snippet/chart/series/stepraiser-cs/datasource.ts %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/samples/chart/series/stepraiser-cs" %}
+
 ## See also
 
 * [Data label](./data-labels/)

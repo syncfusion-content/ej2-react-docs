@@ -19,15 +19,14 @@ function App() {
     }
 
     function saveBlob(args: any): void {
-        const imageEditor: any = getComponent(document.getElementById('image-editor'), 'image-editor');
-        let imageData = imageEditor.getImageData();
+        let imageData = imgObj.getImageData();
         let canvas = document.createElement('canvas');
         let ctx: any = canvas.getContext('2d');
         canvas.width = imageData.width;
         canvas.height = imageData.height;
         ctx.putImageData(imageData, 0, 0);
-        canvas.toBlob(function(blob){
-            blobUrl = URL.createObjectURL(blob);// For getting blob.
+        canvas.toBlob((blob) => {
+            blobUrl = URL.createObjectURL(blob as any);// For getting blob.
         });
     }
 

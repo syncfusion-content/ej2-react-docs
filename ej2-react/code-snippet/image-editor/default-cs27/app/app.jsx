@@ -35,7 +35,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbar = {[]}>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} toolbar = {[]}>
             </ImageEditorComponent>
                     <div>
                         <ButtonComponent cssClass='e-primary' content='Chrome' onClick={this.chromeClick.bind(this)}/>

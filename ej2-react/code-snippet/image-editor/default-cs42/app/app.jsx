@@ -28,11 +28,11 @@ export default class App extends React.Component {
         canvas.height = imageData.height;
         const context = canvas.getContext('2d');
         context.putImageData(imageData, 0, 0);
-        base64String = canvas.toDataURL();
+        this.base64String = canvas.toDataURL();
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)}>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)}>
             </ImageEditorComponent>
                     <div>
                         <ButtonComponent cssClass='e-primary' content='Set Image' onClick={this.setImage.bind(this)}/>

@@ -126,7 +126,7 @@ npm start
 
 ## Configure suggestions and responses
 
-You can use the `promptSuggestions` property to add prompt suggestions and the `promptRequest` event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
+You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#promptsuggestions) property to add prompt suggestions and the [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#promptrequest) event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

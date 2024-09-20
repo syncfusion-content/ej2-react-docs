@@ -7,3 +7,10 @@
     top: 45%;
     width: 30%;
 }
+
+#aiAssistView .view-container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
