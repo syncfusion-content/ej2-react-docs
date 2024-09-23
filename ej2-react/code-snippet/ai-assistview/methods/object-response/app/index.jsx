@@ -17,10 +17,10 @@ function App() {
     };
   
     return (
-        <>
+        <div className='aiAssistContainer'>
             <button id="addObjectResponse" onClick={addDynamicResponse}>Add Object Response</button>
             <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest}></AIAssistViewComponent>
-        </>
+        </div>
     );
 }
 
