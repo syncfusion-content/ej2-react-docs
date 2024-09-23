@@ -17,10 +17,10 @@ function App() {
     };
   
     return (
-        <>
+        <div className='aiAssistContainer'>
             <button id="executePrompt" onClick={executePrompt}>Execute Prompt</button>
             <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest}></AIAssistViewComponent>
-        </>
+        </div>
     );
 }
 

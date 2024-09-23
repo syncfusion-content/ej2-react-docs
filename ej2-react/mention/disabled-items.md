@@ -21,7 +21,7 @@ In the following sample, State are grouped according on its category using `disa
 {% include code-snippet/mention/disabled-items-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/mention/disabled-items-1/app/index.tsx %}
+{% include code-snippet/mention/disabled-items-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
