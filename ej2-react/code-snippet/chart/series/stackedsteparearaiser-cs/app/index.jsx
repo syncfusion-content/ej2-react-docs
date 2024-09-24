@@ -14,10 +14,10 @@ function App() {
  }} title = 'Annual Temperature Comparison' >
       <Inject services={[StackingStepAreaSeries, Legend]} />
       <SeriesCollectionDirective>
-        <SeriesDirective  dataSource = {percentData}   type='StackingStepArea' xName='x' yName='y' name='USA' noRisers={true}>
-        </SeriesDirective>
-        <SeriesDirective  dataSource = {percentData}   type='StackingStepArea' xName='x' yName='y1' name='UK' noRisers={true}>
-        </SeriesDirective>
+      <SeriesDirective  dataSource = {percentData}   type='StackingStepArea' xName='x' yName='y' name='Organic' opacity={0.1} border={{ width: 1.5 }} noRisers={true}>
+      </SeriesDirective>
+      <SeriesDirective  dataSource = {percentData}   type='StackingStepArea' xName='x' yName='y2' name='Others' opacity={0.1} border={{ width: 1.5 }} noRisers={true}>
+      </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
 

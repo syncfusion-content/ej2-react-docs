@@ -34,7 +34,7 @@ function App() {
 }} title = 'Monthly Temperature Range' >
       <Inject services={[RangeStepAreaSeries, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective  dataSource = {chartData}  type='RangeStepArea'  xName='x' high='high' low='low' name='India' noRisers={true}>
+        <SeriesDirective  dataSource = {chartData}  type='RangeStepArea'  opacity= {0.1} border= {{width:1.5}} xName='x' high='high' low='low' name='India' noRisers={true}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
