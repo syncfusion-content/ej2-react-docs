@@ -19,7 +19,7 @@ function App() {
     </div>);
   };
 
-  return <div><AccumulationChartComponent id='charts' legendSettings={{visible:true}} >
+  return <div><AccumulationChartComponent id='charts' legendSettings={{visible:false}} >
       <Inject services={[AccumulationAnnotation, AccumulationLegend]} />
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective dataSource={pieData} xName='x' yName='y' legendShape='Rectangle'>

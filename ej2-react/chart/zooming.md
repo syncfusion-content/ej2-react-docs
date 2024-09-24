@@ -117,7 +117,7 @@ Using the [`enableScrollbar`](https://ej2.syncfusion.com/react/documentation/api
 ## Enable animation
 
 
-Use the [`enableAnimation`] property to create smooth transitions when zooming in on the chart.
+Use the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/chart/zoomSettingsModel/#enableanimation) property to create smooth transitions when zooming in on the chart.
 
 {% tabs %}
 {% highlight ts tabtitle="index.jsx" %}

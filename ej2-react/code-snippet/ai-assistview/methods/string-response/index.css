@@ -8,6 +8,10 @@
     width: 30%;
 }
 
+.aiAssistContainer {
+    height: 350px;
+    width: 650px;
+}
 #addStringResponse {
     margin-bottom: 10px;
 }
