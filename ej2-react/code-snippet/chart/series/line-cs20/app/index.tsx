@@ -23,8 +23,7 @@ function App() {
       <Inject services={[AreaSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={areaData} xName='x' yName='y' name='Product A'
-          fill='green' width={2} dashArray='5,5' border={border}
-          opacity={0.6} type='Area'>
+          fill='green' type='Area'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

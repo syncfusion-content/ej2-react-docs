@@ -25,9 +25,9 @@ function App() {
       title='Monthly Temperature Range'>
       <Inject services={[SplineRangeAreaSeries, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={splineRangeData} xName='x' high='high' low='low' name='England' opacity={0.7} fill='yellow' border={{width: 2, color: 'brown'}} dashArray='5.5' type='SplineRangeArea'>
+        <SeriesDirective dataSource={splineRangeData} xName='x' high='high' low='low' name='England' fill='yellow'  type='SplineRangeArea'>
         </SeriesDirective>
-        <SeriesDirective dataSource={splineRangeData} xName='x' high='high1' low='low1' name='India' opacity={0.7} fill='brown' border={{width: 2, color: 'yellow'}} dashArray='5.5' type='SplineRangeArea'>
+        <SeriesDirective dataSource={splineRangeData} xName='x' high='high1' low='low1' name='India'  fill='brown'  type='SplineRangeArea'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

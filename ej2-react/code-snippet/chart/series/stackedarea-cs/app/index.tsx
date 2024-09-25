@@ -22,13 +22,13 @@ function App() {
       title='Trend in Sales of Ethical Produce'>
       <Inject services={[StackingAreaSeries, Legend, Tooltip, DataLabel, DateTime]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={stackedData} xName='x' yName='y' name='Organic' type='StackingArea' fill='grey' dashArray='5.5' border={{width:2.5, color: 'white'}}>
+        <SeriesDirective dataSource={stackedData} xName='x' yName='y' name='Organic' type='StackingArea' fill='grey'>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackedData} xName='x' yName='y1' name='Fair-trade' type='StackingArea' fill='yellow' dashArray='5.5' border={{width:2.5, color: 'white'}}>
+        <SeriesDirective dataSource={stackedData} xName='x' yName='y1' name='Fair-trade' type='StackingArea' fill='yellow'>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackedData} xName='x' yName='y2' name='Veg Alternatives' type='StackingArea' fill='blue' dashArray='5.5' border={{width:2.5, color: 'white'}}>
+        <SeriesDirective dataSource={stackedData} xName='x' yName='y2' name='Veg Alternatives' type='StackingArea' fill='blue'>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackedData} xName='x' yName='y3' name='Others' type='StackingArea' fill='red' dashArray='5.5' border={{width:2.5, color: 'white'}}>
+        <SeriesDirective dataSource={stackedData} xName='x' yName='y3' name='Others' type='StackingArea' fill='red'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
