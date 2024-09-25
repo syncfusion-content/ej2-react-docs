@@ -31,6 +31,7 @@ System.config({
         "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
         "@syncfusion/ej2-image-editor": "syncfusion:ej2-image-editor/dist/ej2-image-editor.umd.min.js",
         "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
+        "@syncfusion/ej2-react-navigations": "syncfusion:ej2-react-navigations/dist/ej2-react-navigations.umd.min.js",
         "@syncfusion/ej2-image-editor": "syncfusion:ej2-image-editor/dist/ej2-image-editor.umd.min.js",
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-image-editor": "syncfusion:ej2-react-image-editor/dist/ej2-react-image-editor.umd.min.js",
