@@ -17,7 +17,7 @@ function App() {
     };
     const btnClick = () => {
         dialogInstance.show();
-        imgObj.open('bridge.png');
+        imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
     };
 
     return (
