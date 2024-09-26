@@ -6,3 +6,7 @@
     top: 45%;
     width: 30%;
 }
+
+#container {
+    margin: 20px auto;
+}

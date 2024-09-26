@@ -8,6 +8,10 @@
     width: 30%;
 }
 
+#container {
+    margin: 20px auto;
+}
+
 .e-aiassistview.custom-container {
     border-color: #e0e0e0;
     background-color: #f4f4f4;

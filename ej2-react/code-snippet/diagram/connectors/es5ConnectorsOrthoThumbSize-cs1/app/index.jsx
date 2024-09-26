@@ -1,7 +1,7 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Diagram } from "@syncfusion/ej2-react-diagrams";
+import { Diagram, DiagramComponent, ConnectorConstraints, ConnectorEditing } from "@syncfusion/ej2-react-diagrams";
 Diagram.Inject(ConnectorEditing);
 let nodes = [
     {

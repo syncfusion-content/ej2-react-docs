@@ -8,6 +8,9 @@
     width: 30%;
 }
 
+#container {
+    margin: 20px auto;
+}
 .aiAssistContainer {
     height: 350px;
     width: 650px;

@@ -8,6 +8,10 @@
     width: 30%;
 }
 
+#container {
+    margin: 20px auto;
+}
+
 .view-container {
     margin: 20px auto;
     width: 80%;
