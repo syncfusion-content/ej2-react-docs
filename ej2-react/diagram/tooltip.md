@@ -198,7 +198,7 @@ To animate the tooltip, a set of specific animation effects are available, and i
 
  {% previewsample "page.domainurl/code-snippet/diagram/tooltip/es5TooltipAnimation-cs1" %}
 
- ## Tooltip for Annotation
+## Tooltip for Annotation
 
 Tooltips can be added to annotations to display additional information on mouseover. 
 To display tooltips on mouseover, set the desired tooltip text to the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram#tooltip) property of the annotation.

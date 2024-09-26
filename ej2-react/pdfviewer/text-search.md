@@ -462,6 +462,8 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/TextSearch)
+
 ## See also
 
 * [Toolbar items](./toolbar)

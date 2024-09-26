@@ -8,6 +8,10 @@
     width: 30%;
 }
 
+#container {
+    margin: 20px auto;
+}
+
 .custom-dropdown.e-dropdown-popup ul {
     min-width: 100px;
 }
