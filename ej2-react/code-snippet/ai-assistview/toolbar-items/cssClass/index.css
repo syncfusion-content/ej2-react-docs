@@ -8,6 +8,10 @@
     width: 30%;
 }
 
+#container {
+    margin: 20px auto;
+}
+
 .custom-btn .e-user::before {
     color: blue;
     font-size: 15px;

@@ -330,4 +330,4 @@ export async function getAzureChatAIRequest(options: any) {
 
 ![smart-paste-button](./images/smart-paste-button.gif)
 
-> [View React Smart Paste Button Sample in GitHub](https://github.com/syncfusion/smart-ai-samples/tree/master/typescript/src/app/smartpaste)
+> [View React Smart Paste Button Sample in GitHub](https://github.com/syncfusion/smart-ai-samples/tree/master/react/src/ai-components/smartpaste)
