@@ -35,6 +35,24 @@ The Syncfusion React UI can allow you to apply styles for the components. The fo
 
 > The Syncfusion React Bootstrap theme is designed based on the `Bootstrap v3`, whereas the Bootstrap 4 theme is designed based on `Bootstrap v4`. In addition to these built-in themes, the [ThemeStudio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/) provides support for the Fusion Theme that can only be downloaded from the [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
 
+## Optimized CSS files
+
+Syncfusion components provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI components.
+
+The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of components.
+
+Below is a comparison of the Button component in normal and bigger size modes:
+
+![bigger-sized-button](./images/bigger-theme-button.png)
+
+Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+
+Refer to the comparison below for the default and optimized theme file sizes:
+
+| Theme Name | Default Theme Size | Optimized Theme Size |
+| -- | -- | -- |
+| Fluent 2 | 3.97 MB | 2.96 MB |
+
 ## Reference themes in the React application
 
 Using the following approaches, the themes can be referenced in the React application,
@@ -105,6 +123,42 @@ Referring to individual component from the `ej2 package`
 @import "ej2/button/material.scss";
 ```
 
+### Referring all components optimized CSS file
+
+To refer to all component's optimized CSS files from the `@syncfusion/ej2` package, follow the below syntax:
+
+```css
+@import "@syncfusion/ej2/<theme_name>-lite.css";
+/* or */
+@import "@syncfusion/ej2/<theme_name>-lite.scss";
+```
+
+**Example:**
+
+```css
+@import "@syncfusion/ej2/fluent2-lite.css";
+/* or */
+@import "@syncfusion/ej2/fluent2-lite.scss";
+```
+
+### Referring individual component optimized CSS file
+
+To refer to individual component's optimized CSS files from an individual packages, follow the below syntax:
+
+```css
+@import "<dependent-package>/styles/<theme_name>-lite.css";
+/* or */
+@import "<dependent-package>/styles/<theme_name>-lite.scss";
+```
+
+**Example:**
+
+```css
+@import "@syncfusion/ej2-buttons/styles/fluent2-lite.css";
+/* or */
+@import "@syncfusion/ej2-buttons/styles/fluent2-lite.scss";
+```
+
 ### Advantages of individual components theme
 
 * Reducing the page load time of application
@@ -122,6 +176,14 @@ Syncfusion React Themes are available in the CDN. Make sure that the version in 
     <link href="https://cdn.syncfusion.com/ej2/<version>/<theme_name>.css" rel="stylesheet"/>
 </head>
 
+```
+
+To refer to optimized CSS files, use the following syntax:
+
+```
+<head>
+    <link href="https://cdn.syncfusion.com/ej2/<version>/<theme_name>-lite.css" rel="stylesheet"/>
+</head>
 ```
 
 | Theme Name | CDN Reference |
