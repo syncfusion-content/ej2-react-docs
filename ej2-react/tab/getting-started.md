@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React Tab component | Syncfusion
+title: Getting Started with React Tab Component | Syncfusion
 description:  Checkout and learn about Getting started with React Tab component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
