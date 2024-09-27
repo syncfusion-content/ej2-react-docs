@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Openstreetmap in React Maps component | Syncfusion
-description: Learn here all about Openstreetmap in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
+description: Learn here all about openstreetmap support in Syncfusion Essential React Maps component, it's elements and more.
 control: Openstreetmap 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Openstreetmap in React Maps component
+# Openstreetmap in React Maps Component
 
 The OpenStreetMap (OSM) is the online Maps provider built by a community of developers; it is free to use under an open license. It allows to view geographical data in a collaborative way from anywhere on the earth. The OSM Maps provides small tile images based on our requests and combines those images into a single image to display the Maps area in the Maps component.
 
@@ -78,7 +78,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the OSM Maps layer for
 
 ## Enabling legend
 
-The legend can be added to the tile Maps by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [legendSettings](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) to **true**.
+The legend can be added to the tile Maps by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [legendSettings](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
