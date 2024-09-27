@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Card component | Syncfusion
-description:  Checkout and learn about Getting started with React Card component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Card Component | Syncfusion
+description:  Checkout and learn about getting started with Syncfusion Essential React Card component, its elements and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Card Component
 
 This section explains how to create a simple **Card** using Styles, and how to configure the structure for the header section, Horizontal, action buttons, content section.
 
@@ -18,7 +18,7 @@ The Card Component is pure CSS component so no specific dependencies to render t
 
 ## Setup for Local Development
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
 ```
 npm install -g create-react-app
@@ -80,7 +80,7 @@ npm install @syncfusion/ej2-layouts –save
 
 You can create cards with a header in a specific structure. For adding header you need to create `div` element and add `e-card-header` class.
 
-* You can include heading inside the card header by adding an `div` element with `e-card-header-caption` class, and also content will be added by adding element with `e-card-content`. For detailed information, refer to the [Header and Content](./header-content/).
+* You can include heading inside the card header by adding an `div` element with `e-card-header-caption` class, and also content will be added by adding element with `e-card-content`. For detailed information, refer to the [Header and Content](./header-content).
 
      ```
        <div class = "e-card">                    --> Root Element
@@ -135,4 +135,4 @@ Output will be as follows:
 
 ## See Also
 
-* [How to add a header and content](./header-content/)
+* [How to add a header and content](./header-content)
