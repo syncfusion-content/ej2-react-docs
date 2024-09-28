@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion React Grid component allows you to customize the PDF export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
 
-The PDF export action can be customized based on your requirements using the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property. By using the `pdfExportProperties` property, you can export the current page records, selected records, or filtered records. Additionally, you can customize the page alignments using the `pdfExportProperties` property.
+The PDF export action can be customized based on your requirements using the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) property. By using the `pdfExportProperties` property, you can export the current page records, selected records, or filtered records. Additionally, you can customize the page alignments using the `pdfExportProperties` property.
 
 ## Export current page records
 
@@ -113,7 +113,7 @@ The following example demonstrates how to export the filtered records to a PDF d
 
 Exporting hidden columns in the Syncfusion React Grid allows you to include hidden columns in the exported PDF document. This feature is useful when you have columns that are hidden in the UI but still need to be included in the exported document.
 
-To export hidden columns of the grid to a PDF file, you need to set the [includeHiddenColumn](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#includehiddencolumn) property as **true** in the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property.
+To export hidden columns of the grid to a PDF file, you need to set the [includeHiddenColumn](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#includehiddencolumn) property as **true** in the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) property.
 
 The following example demonstrates how to export hidden columns to a PDF file. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the PDF document. You can also export the grid by changing the `pdfExportProperties.includeHiddenColumn` property based on the switch toggle using the [checked](https://ej2.syncfusion.com/react/documentation/api/switch/#checked) property of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component.
 
@@ -240,7 +240,7 @@ In the following example, the **CustomerID** is initially a hidden column in the
 
 The Syncfusion React Grid component allows you to change the page orientation of the exported PDF document from the default portrait mode to landscape mode. This feature provides the flexibility to adjust the layout and presentation of the exported PDF according to your needs.
 
-To change the page orientation to landscape for the exported document, you can set the [pageOrientation](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#pageorientation) property of the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property. 
+To change the page orientation to landscape for the exported document, you can set the [pageOrientation](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#pageorientation) property of the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) property. 
 
 The supported `pageOrientation` options are:
 
@@ -248,7 +248,7 @@ The supported `pageOrientation` options are:
 
 2. **Portrait**: Exports the grid with a portrait PDF page orientation.
 
-The following example demonstrates how to export the grid into PDF document by setting the `pdfExportProperties.pageOrientation` property using the [value](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#value) property of the `DropDownList` component.
+The following example demonstrates how to export the grid into PDF document by setting the `pdfExportProperties.pageOrientation` property using the [value](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#value) property of the `DropDownList` component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -355,7 +355,7 @@ export default App;
 
 The Syncfusion React Grid component allows you to customize the page size of the exported PDF document according to your requirements. This feature provides the flexibility to adjust the layout and dimensions of the exported PDF to fit different paper sizes or printing needs. 
 
-To customize the page size for the exported document, you can set the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#pagesize) property of the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property to the desired page size. 
+To customize the page size for the exported document, you can set the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#pagesize) property of the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) property to the desired page size. 
 
 Supported `pdfPageSize` are:
 * Letter
@@ -387,7 +387,7 @@ Supported `pdfPageSize` are:
 * Letter11x17
 * Ledger
 
-The following example demonstrates how to export the grid into PDF document by setting the `pdfExportProperties.pageSize` property by using [value](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#value) property of the `DropDownList` component.
+The following example demonstrates how to export the grid into PDF document by setting the `pdfExportProperties.pageSize` property by using [value](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#value) property of the `DropDownList` component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -543,7 +543,7 @@ export default App;
 
 The Syncfusion React Grid component allows you to specify a custom file name for the exported PDF document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
 
-To assign a custom file name for the exported document, you can set the [fileName](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#filename) property of the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) property to the desired file name.
+To assign a custom file name for the exported document, you can set the [fileName](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#filename) property of the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) property to the desired file name.
 
 The following example demonstrates how to define a file name using `pdfExportProperties.fileName` property when exporting to PDF, based on the entered value as the file name. 
 
