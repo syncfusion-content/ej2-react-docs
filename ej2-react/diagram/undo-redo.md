@@ -69,39 +69,6 @@ The client-side method [`startGroupAction`](https://ej2.syncfusion.com/react/doc
 
  {% previewsample "page.domainurl/code-snippet/diagram/undoredo/groupAction-cs1" %}
 
-### Track custom changes
-
-Diagram provides options to track the changes that are made to custom properties. For example, in case of an employee relationship diagram, track the changes in the employee information. The historyManager of the diagram enables you to track such changes. The following example illustrates how to track such custom property changes.
-
-Before changing the employee information, save the existing information to historyManager by using the client-side method push of historyManager.The historyManager canLog method can be used which takes a history entry as argument and returns whether the specific entry can be added or not.
-
-The following code example illustrates how to save the existing property values.
-
-```ts
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={'100%'}
-      height={'600px'}
-    >
-      <Inject services={[UndoRedo]} />
-    </DiagramComponent>
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
-
-//Creates a custom entry
-let entry: HistoryEntry = {
-    undoObject: diagramInstance.nodes[0];
-};
-// adds that to history list
-diagramInstance.historyManager.push(entry);
-diagramInstance.dataBind();
-```
 
 ## canLog
 
