@@ -182,7 +182,7 @@ You can eliminate the vertical lines between points by using the ['noRisers'](ht
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/chart/series/rangestepraiser-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/rangestepraiser-cs" %}
 
 ## Empty points
 

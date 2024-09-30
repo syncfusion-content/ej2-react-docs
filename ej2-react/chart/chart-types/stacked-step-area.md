@@ -180,7 +180,7 @@ You can eliminate the vertical lines between points by using the ['noRisers'](ht
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/chart/series/stackedsteparearaiser-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/stackedsteparearaiser-cs" %}
 
 ## Empty points
 

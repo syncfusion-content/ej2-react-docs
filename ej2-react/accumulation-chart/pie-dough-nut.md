@@ -130,7 +130,7 @@ You can create rounded corners for each slice using the [`borderRadius`](https:/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/chart/series/pie-cs39" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs39" %}
 
 ## Customization
 
@@ -176,7 +176,7 @@ You can apply different patterns to the pie slices using the [`applyPattern`](ht
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/chart/series/pie-cs40" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs40" %}
 
 ## Multi-level pie chart
 

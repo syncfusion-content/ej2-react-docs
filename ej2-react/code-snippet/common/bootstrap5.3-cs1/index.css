@@ -1,7 +1,3 @@
-:root {
-	--color-sf-primary: #6886a4;
-}
-
 button {
   margin: 25px 5px 20px 20px;
 }
@@ -14,3 +10,9 @@ button {
 	top: 45%;
 	width: 30%;
 }
+.e-checkbox-wrap {
+	margin-top: 18px;
+  }
+  .dark{
+	background-color: black;
+  }
