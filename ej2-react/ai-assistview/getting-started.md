@@ -137,4 +137,4 @@ You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultPrompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
