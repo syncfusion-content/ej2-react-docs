@@ -20,11 +20,12 @@ The Syncfusion React UI can allow you to apply styles for the components. The fo
 |Fluent 2 Dark | fluent2-dark.css |
 |Material 3 | material3.css |
 |Material 3 Dark | material3-dark.css |
-|Bootstrap 5    | bootstrap5.css |
-|Bootstrap 5 Dark   | bootstrap5-dark.css |
-|Bootstrap 4    | bootstrap4.css |
-|Bootstrap 3    | bootstrap.css |
-|Bootstrap 3 Dark   | bootstrap-dark.css |
+|Bootstrap 5 | bootstrap5.css |
+|Bootstrap 5 | bootstrap5.css |
+|Bootstrap 5 Dark | bootstrap5-dark.css |
+|Bootstrap 4 | bootstrap4.css |
+|Bootstrap 3 | bootstrap.css |
+|Bootstrap 3 Dark | bootstrap-dark.css |
 |Google’s Material | material.css |
 |Google’s Material-Dark | material-dark.css |
 |Tailwind CSS | tailwind.css |
@@ -498,7 +499,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
             </td>
         </tr>
         <tr>
-            <td>--color-sf-white:</td>
+            <td>--color-sf-white</td>
             <td>
                 <span class="circle-color-indicator" style="background: #fff"></span> #fff
             </td>
