@@ -4,6 +4,10 @@
   float: left;
 }
 
+.e-select-table {
+  display: none;
+}
+
 .e-pivotfieldlist {
   width: 42%;
   height: 100%;
