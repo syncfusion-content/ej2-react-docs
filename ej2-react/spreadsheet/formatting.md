@@ -122,7 +122,7 @@ Compared to Excel, the date, time, currency, and accounting formats vary across 
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German` culture.
 
-```jsx
+```js
 import { configureLocalizedFormat } from '@syncfusion/ej2-react-spreadsheet';
 
 const deLocaleFormats = [
