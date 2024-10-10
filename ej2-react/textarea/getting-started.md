@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 This section briefly explains how to create a simple TextArea and demonstrate the basic functionalities of the TextArea component in an React environment.
 
+To get start quickly with React TextArea, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=cVT42kWTyEQ" %}
+
 ## Dependencies
 
 The following list of dependencies are required to use the TextArea component in your application.
