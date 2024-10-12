@@ -154,7 +154,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-{% end raw %} 
+{% endraw %} 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 {% raw %}
@@ -195,7 +195,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-{% end raw %} 
+{% endraw %} 
 {% endhighlight %}
 {% endtabs %}
 
@@ -241,7 +241,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-{% end raw %} 
+{% endraw %} 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 {% raw %} 
@@ -282,7 +282,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-{% end raw %} 
+{% endraw %} 
 {% endhighlight %}
 {% endtabs %}
 
@@ -328,7 +328,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-{% end raw %} 
+{% endraw %} 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 {% raw %} 
@@ -370,7 +370,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-{% end raw %} 
+{% endraw %} 
 {% endhighlight %}
 {% endtabs %}
 
@@ -416,7 +416,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-{% end raw %} 
+{% endraw %} 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 {% raw %} 
@@ -458,7 +458,7 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-{% end raw %} 
+{% endraw %} 
 {% endhighlight %}
 {% endtabs %}
 
