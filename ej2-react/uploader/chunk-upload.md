@@ -120,7 +120,7 @@ Allows you to resume an upload operation after a network failure or manually int
 
 ## Cancel upload
 
-The uploader component allows you to cancel the uploading file. This can be achieved by clicking the cancel icon or using the [cancel](https://ej2.syncfusion.com/react/documentation/api/uploader/#cancel) method. The [cancelling](https://ej2.syncfusion.com/react/documentation/api/uploader/#cancelling) event will be fired whenever the file upload request is canceled. While canceling the upload request, the partially uploaded file is removed from the server.
+The uploader component allows you to cancel the uploading file. This can be achieved by clicking the cancel icon or using the [cancel](https://ej2.syncfusion.com/react/documentation/api/uploader/#cancel) method. The [canceling](https://ej2.syncfusion.com/react/documentation/api/uploader/#canceling) event will be fired whenever the file upload request is canceled. While canceling the upload request, the partially uploaded file is removed from the server.
 
 When the request fails, the pause icon is changed to retry icon. By clicking the retry icon, sends the failed chunk request again to the server and upload started from where it is failed. You can retry the canceled upload request again using retry UI or [retry](https://ej2.syncfusion.com/react/documentation/api/uploader/#retry) methods. But, if you retry this, the file upload action again starts from initial.
 

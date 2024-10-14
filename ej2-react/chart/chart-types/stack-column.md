@@ -250,6 +250,27 @@ To render a cylindrical stacked column chart, set the [`columnFacet`](https://ej
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs42" %}
 
+## Stacking group
+
+Use the [`stackingGroup`](../../api/chart/series/#stackinggroup) property to group stacked columns and 100% stacked columns. Columns with the same group name are stacked on top of each other.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/stackedcolumn-cs10/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/stackedcolumn-cs10/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/stackedcolumn-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/stackedcolumn-cs10/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs10" %}
+
 ## Events
 
 ### Series render
