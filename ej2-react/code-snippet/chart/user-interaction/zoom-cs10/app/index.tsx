@@ -6,16 +6,16 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,LegendSettingsModel,ZoomSettingsModel,
          Legend, DateTime, Tooltip, DataLabel, AreaSeries,  Zoom}
 from'@syncfusion/ej2-react-charts';
-import { point1 } from "../datasource";
+import { series1 } from "../datasource";
 
 function App() {
 
   const primaryxAxis: AxisModel = {    valueType: 'DateTime',
   labelFormat: 'yMMM',
   zoomFactor: 0.2, zoomPosition: 0.6,
-  enableAnimation: true };
+ };
   const legendSettings: LegendSettingsModel = { visible: false };
-  const zoomSettings: ZoomSettingsModel = {    enableSelectionZooming: true,
+  const zoomSettings: ZoomSettingsModel = {    enableSelectionZooming: true, enableAnimation: true ,
     enablePan: true };
 
   return <ChartComponent id='charts'
@@ -25,7 +25,7 @@ function App() {
       title='Sales History of Product X'>
       <Inject services={[AreaSeries, Legend, Tooltip, DataLabel, Zoom, DateTime]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={point1}  type='Area' xName='x' yName='y' name='Product X' opacity={0.3} >
+        <SeriesDirective dataSource={series1}  type='Area' xName='x' yName='y' name='Product X' opacity={0.3} >
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

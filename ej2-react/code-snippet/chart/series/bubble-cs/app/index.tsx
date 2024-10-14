@@ -18,7 +18,7 @@ const primaryyAxis: AxisModel= { title: 'GDP growth rate', minimum: -2, maximum:
            title='GDP vs Literacy Rate'>
             <Inject services={[BubbleSeries]}/>
             <SeriesCollectionDirective>
-                <SeriesDirective dataSource ={data}  xName='x' yName='y' size='size' type='Bubble' name='pound' fill='blue' border={{width:2, color: 'black'}}>
+                <SeriesDirective dataSource ={data}  xName='x' yName='y' size='size' type='Bubble' name='pound' fill='blue'>
                 </SeriesDirective>
             </SeriesCollectionDirective>
           </ChartComponent>

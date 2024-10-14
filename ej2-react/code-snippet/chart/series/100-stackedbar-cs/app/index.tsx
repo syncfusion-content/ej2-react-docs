@@ -21,11 +21,11 @@ function App() {
       title='Sales Comparison'>
       <Inject services={[StackingBarSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={stackBarData} xName='x' yName='y' name='Apple' type='StackingBar100' fill='red'  border= {{width: 2, color: 'black'}}>
+        <SeriesDirective dataSource={stackBarData} xName='x' yName='y' name='Apple' type='StackingBar100' fill='red'>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackBarData} xName='x' yName='y1' name='orange' type='StackingBar100' fill='yellow'  border= {{width: 2, color: 'black'}}>
+        <SeriesDirective dataSource={stackBarData} xName='x' yName='y1' name='orange' type='StackingBar100' fill='yellow'>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackBarData} xName='x' yName='y2' name='Wastage' type='StackingBar100' fill='green'  border= {{width: 2, color: 'black'}}>
+        <SeriesDirective dataSource={stackBarData} xName='x' yName='y2' name='Wastage' type='StackingBar100' fill='green'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

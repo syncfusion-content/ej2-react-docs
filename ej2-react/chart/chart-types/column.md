@@ -12,7 +12,11 @@ domainurl: ##DomainURL##
 
 ## Column
 
-To render a column series, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as `Column` and inject `ColumnSeries` module into the `services`.
+To render a [column](https://www.syncfusion.com/javascript-ui-controls/js-charts/chart-types/column-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+
+1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#type) as `Column` in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for visualizing for comparing different categories of data or tracking changes over time.
+
+2. **Inject the ColumnSeries module**: Inject `ColumnSeries` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering column series are available in your chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,9 +35,139 @@ To render a column series, use series [`type`](https://ej2.syncfusion.com/react/
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs22" %}
 
+## Binding data with series
+
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs22/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs22/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs22/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs22/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs22" %}
+
+## Series customization
+
+The following properties can be used to customize the `column` series.
+
+**Fill**
+
+The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill) property determines the color applied to the series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs25/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs25/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs25/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs25/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs25" %}
+
+The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill) property can be used to apply a gradient color to the column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs63/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs63/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs63/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs63/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs63" %}
+
+**Opacity**
+
+The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#opacity) property specifies the transparency level of the fill. Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs64/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs64/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs64/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs64/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs64" %}
+
+**Dash array**
+
+The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#dasharray) property determines the pattern of dashes and gaps in the series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs65/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs65/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs65/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs65/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs65" %}
+
+**Border**
+
+Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#border) property to customize the width and color of the series border.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs66/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs66/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs66/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs66/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs66" %}
+
 ## Column space and width
 
-The [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnspacing) and [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnwidth) properties are used to customize the space between columns.
+### Column space
+
+Use the [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnspacing) property in the series to adjust the space between columns.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -52,9 +186,52 @@ The [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/s
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs38" %}
 
+
+### Column width
+
+Use the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnwidth) property in the series to adjust the width of the columns.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs38A/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs38A/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs38A/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs38A/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs38A" %}
+
+### Column width in pixel
+
+Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnwidthinpixel) property in the series to define the exact width of the columns in pixels. This property ensures that each column maintains the specified width, providing a uniform appearance throughout the chart.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs38B/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs38B/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs38B/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs38B/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs38B" %}
+
 ## Grouped column
 
-You can use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#groupname) property to group the data points in the column type charts. Data points with same group name are grouped together.
+Use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#groupname) property to group the data points in column type charts. Data points with the same group name will be grouped together in the chart, making it easy to compare different sets of data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -75,7 +252,7 @@ You can use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api
 
 ## Cylindrical column chart
 
-To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnfacet) property to `Cylinder` in the chart series.
+To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#columnfacet) property to `Cylinder` in the chart series. This property transforms the regular columns into cylindrical shapes, enhancing the visual representation of the data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -94,31 +271,116 @@ To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfu
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs40" %}
 
-## Series customization
+## Empty points
 
-The following properties can be used to customize the `column` series.
+Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
-* [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill) – Specifies the color of the series.
-* [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#fill).
-* [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes of series.
-* [border](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#properties) – Specifies the [color](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#color) and [width](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#width) of series border.
+**Mode**
+
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel/#mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs25/app/index.jsx %}
+{% include code-snippet/chart/series/line-cs67/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs25/app/index.tsx %}
+{% include code-snippet/chart/series/line-cs67/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs25/app/datasource.jsx %}
+{% include code-snippet/chart/series/line-cs67/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs25/app/datasource.tsx %}
+{% include code-snippet/chart/series/line-cs67/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs25" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs67" %}
+
+**Fill**
+
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel/#fill) property to customize the fill color of empty points in the series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs68/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs68/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs68/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs68/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs68" %}
+
+**Border**
+
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel/#border) property to customize the width and color of the border for empty points.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs69/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs69/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs69/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs69/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs69" %}
+
+## Events
+
+### Series render
+
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs/) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs70/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs70/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs70/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs70/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs70" %}
+
+### Point render
+
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs/) event allows you to customize each data point before it is rendered on the chart.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/line-cs71/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/line-cs71/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/line-cs71/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/line-cs71/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs71" %}
 
 ## See also
 

@@ -96,7 +96,30 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
  {% previewsample "page.domainurl/code-snippet/spreadsheet/selection-cs2" %}
 
-## How to remove selection in the spreadsheet
+## Get selected cell values
+
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#getdata) method.
+
+Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/selected-cell-values/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/selected-cell-values/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/selected-cell-values/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/selected-cell-values/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/selected-cell-values" %}
+
+## Remove selection
 
 The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
 

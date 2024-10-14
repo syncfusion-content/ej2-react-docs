@@ -12,10 +12,34 @@ domainurl: ##DomainURL##
 
 ## Pareto
 
-Pareto charts are used to find the cumulative values of data in different categories. It is a combination of Column and Line series.
-The initial values are represented by column chart and the cumulative values are represented by Line chart.
-To render a pareto chart, use series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#type) as
-`Pareto` and inject `ParetoSeries` `ColumnSeries` and  `LineSeries` module.
+Pareto charts are used to find the cumulative values of data in different categories. It is a combination of `Column` and `Line` series, where the initial values are represented by the column chart and the cumulative values are represented by the line chart.
+
+To render a `pareto` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+
+1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#type) as `Pareto` in your chart configuration. This indicates that the data should be represented as a pareto chart, will use a combination of column and line series.
+
+2. **Inject the necessary modules**: inject `ParetoSeries` `ColumnSeries` and  `LineSeries` module. This step is essential, as it ensures that the necessary functionalities for rendering pareto series are available in your chart.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs4/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs4/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs4/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs4" %}
+
+## Binding data with series
+
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#yname) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +60,9 @@ To render a pareto chart, use series [`type`](https://ej2.syncfusion.com/react/d
 
 ## Pareto customization
 
-The pareto line series can be customized by using the [`marker`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptionsModel/#marker), [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptionsModel/#width), [`dashArray`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions/#dasharray), and [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptionsModel/#fill) properties in the [`paretoOptions`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptionsModel/). The secondary axis for the pareto series can be shown or hidden using the [`showAxis`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptionsModel/#showaxis) property.
+### Fill
+
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions/#fill) property to apply a color to the pareto line. By default, a color based on the theme is used.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -54,6 +80,201 @@ The pareto line series can be customized by using the [`marker`](https://ej2.syn
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs5" %}
+
+### Width
+
+Use the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions/#width) property to control the thickness of the line for the pareto series, which affects its visual weight on the chart.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs8/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs8/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs8/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs8" %}
+
+### Dash array
+
+The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions/#dasharray) property determines the pattern of dashes and gaps in the pareto line series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs9/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs9/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs9/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs9" %}
+
+### Marker
+
+Use the [`marker`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions/#marker) property to display and customize markers for individual points in a pareto line.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs10/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs10/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs10/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs10/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs10" %}
+
+### Show axis
+
+Use the [`showAxis`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions/#showaxis) property to show or hide the secondary axis for the pareto series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs11/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs11/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs11/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs11" %}
+
+## Empty points
+
+Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+
+**Mode**
+
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel/#mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is `Gap`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs12/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs12/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs12/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs12" %}
+
+**Fill**
+
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel/#fill) property to customize the fill color of empty points in the series.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs13/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs13/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs13/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs13" %}
+
+**Border**
+
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel/#border) property to customize the width and color of the border for empty points.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs14/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs14/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs14/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs14/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs14" %}
+
+## Events
+
+### Series render
+
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs/) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs15/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs15/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs15/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs15/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs15" %}
+
+### Point render
+
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs/) event allows you to customize each data point before it is rendered on the chart.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs16/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs16/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/waterfall-cs16/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/waterfall-cs16/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/waterfall-cs16" %}
 
 ## See also
 

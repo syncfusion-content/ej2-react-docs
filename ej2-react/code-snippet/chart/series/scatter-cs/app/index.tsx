@@ -25,10 +25,10 @@ function App() {
       title='Height Vs Weight'>
       <Inject services={[ScatterSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={scatterData} xName='height' yName='male' type='Scatter' fill='red' opacity='0.7'
+        <SeriesDirective dataSource={scatterData} xName='height' yName='male' type='Scatter' fill='red'
           marker={marker1}>
         </SeriesDirective>
-        <SeriesDirective dataSource={scatterData} xName='height' yName='female' type='Scatter' fill='yellow' opacity='0.7'
+        <SeriesDirective dataSource={scatterData} xName='height' yName='female' type='Scatter' fill='yellow'
           marker={marker}>
         </SeriesDirective>
       </SeriesCollectionDirective>

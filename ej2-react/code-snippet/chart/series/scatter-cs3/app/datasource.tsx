@@ -1,0 +1,23 @@
+export let scatterData: Object[] = [
+    { height: 130, male: 35, female: 32 },
+    { height: 132, male: 38, female: 33 },
+    { height: 135, male: 41, female: 38 },
+    { height: 137, male: 43, female: 40 },
+    { height: 140, male: 45, female: 42 },
+    { height: 142, male: 46, female: 42.5 },
+    { height: 145, male: 48, female: 43 },
+    { height: 147, male: 50, female: 44 },
+    { height: 150, male: null, female: 45 },
+    { height: 152, male: 55, female: 45 },
+    { height: 155, male: 58, female: 46 },
+    { height: 157, male: 60, female: 48 },
+    { height: 160, male: 63, female: 51 },
+    { height: 162, male: 70, female: 54 },
+    { height: 165, male: undefined, female: 58 },
+    { height: 167, male: 78, female: 62 },
+    { height: 170, male: 82, female: 68 },
+    { height: 172, male: 87, female: 72 },
+    { height: 175, male: 89, female: 78 },
+    { height: 177, male: 92, female: 82 },
+    { height: 180, male: 95, female: 85 }
+];

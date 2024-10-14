@@ -15,7 +15,7 @@ function App() {
       title = 'England - Run Rate'>
       <Inject services={[StepAreaSeries, Legend]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={stepData} xName='x' yName='y' type='StepArea' name='England' opacity= {0.1} border= {{width:1.5}} noRisers='true'>
+        <SeriesDirective dataSource={stepData} xName='x' yName='y' type='StepArea' name='England' opacity= {0.1} border= {{width:1.5}} noRisers={true}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
