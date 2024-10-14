@@ -10,13 +10,13 @@ function App() {
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Gross Domestic Product Growth'>
       <Inject services={[StackingColumnSeries, Legend, Tooltip, DataLabel, Category]}/>
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={columnperData} xName='x' yName='y' name='UK' type='StackingColumn100' fill='red' border={{width: 1, color: 'black'}}>
+        <SeriesDirective dataSource={columnperData} xName='x' yName='y' name='UK' type='StackingColumn100' fill='red'>
         </SeriesDirective>
-        <SeriesDirective dataSource={columnperData} xName='x' yName='y1' name='Germany' type='StackingColumn100' fill='yellow' border={{width: 1, color: 'black'}}>
+        <SeriesDirective dataSource={columnperData} xName='x' yName='y1' name='Germany' type='StackingColumn100' fill='yellow'>
         </SeriesDirective>
-        <SeriesDirective dataSource={columnperData} xName='x' yName='y2' name='France' type='StackingColumn100' fill='green' border={{width: 1, color: 'black'}}>
+        <SeriesDirective dataSource={columnperData} xName='x' yName='y2' name='France' type='StackingColumn100' fill='green'>
         </SeriesDirective>
-        <SeriesDirective dataSource={columnperData} xName='x' yName='y3' name='Italy' type='StackingColumn100' fill='blue' border={{width: 1, color: 'black'}}>
+        <SeriesDirective dataSource={columnperData} xName='x' yName='y3' name='Italy' type='StackingColumn100' fill='blue'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;

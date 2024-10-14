@@ -9,12 +9,12 @@ import { data } from './datasource';
 
 function App() {
 
-  const marker = { visible: true, width: 10, height: 10, border: { width: 2, color: '#F8AB1D' } };
+  const marker = { visible: true, width: 10, height: 10};
 
   return <ChartComponent id='charts'>
       <Inject services={[SplineSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='x' yName='y' fill='green' width={3} dashArray='5,5'
+        <SeriesDirective dataSource={data} xName='x' yName='y' fill='green'
           name='India' type='Spline'
           marker={marker}>
         </SeriesDirective>

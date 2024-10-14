@@ -8,7 +8,7 @@ function App() {
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='GDP vs Literacy Rate'>
             <Inject services={[BubbleSeries]}/>
             <SeriesCollectionDirective>
-                <SeriesDirective dataSource={data} xName='x' yName='y' size='size' type='Bubble' name='pound' fill='blue' border={{width:2, color: 'black'}}>
+                <SeriesDirective dataSource={data} xName='x' yName='y' size='size' type='Bubble' name='pound' fill='blue'>
                 </SeriesDirective>
             </SeriesCollectionDirective>
           </ChartComponent>;

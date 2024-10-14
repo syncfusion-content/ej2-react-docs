@@ -18,13 +18,13 @@ function App() {
           title='Family Expense for Month'>
           <Inject services={[StackingLineSeries, Legend, Tooltip, DataLabel, Category]} />
           <SeriesCollectionDirective>
-              <SeriesDirective dataSource={chartData} xName='x' yName='y' name='John' width='2' type='StackingLine100' marker= {{visible: true}} dashArray='5,1' fill='blue'>
+          <SeriesDirective dataSource={chartData} xName='x' yName='y' name='John' type='StackingLine100' marker={{ visible: true }} fill='blue'>
               </SeriesDirective>
-              <SeriesDirective dataSource={chartData} xName='x' yName='y1' name='Peter' width='2' type='StackingLine100' marker= {{visible: true}} dashArray='5,1' fill='yellow'>
+              <SeriesDirective dataSource={chartData} xName='x' yName='y1' name='Peter' type='StackingLine100' marker={{ visible: true }} fill='yellow'>
               </SeriesDirective>
-              <SeriesDirective dataSource={chartData} xName='x' yName='y2' name='Steve' width='2' type='StackingLine100' marker= {{visible: true}} dashArray='5,1' fill='red'>
+              <SeriesDirective dataSource={chartData} xName='x' yName='y2' name='Steve' type='StackingLine100' marker={{ visible: true }} fill='red'>
               </SeriesDirective>
-              <SeriesDirective dataSource={chartData} xName='x' yName='y3' name='Charle' width='2' type='StackingLine100' marker= {{visible: true}} dashArray='5,1' fill='grey'>
+              <SeriesDirective dataSource={chartData} xName='x' yName='y3' name='Charle' type='StackingLine100' marker={{ visible: true }} fill='grey'>
               </SeriesDirective>
               </SeriesCollectionDirective>
          </ChartComponent>
