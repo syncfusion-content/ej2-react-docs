@@ -189,9 +189,9 @@ To open this dialog, refer to the following example.
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  DocumentEditorComponent, SfdtExport, Selection, Editor, TableOfContentsDialog
+  DocumentEditorComponent, SfdtExport, Selection, Editor, TableOfContentsDialog, EditorHistory
 } from '@syncfusion/ej2-react-documenteditor';
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, TableOfContentsDialog);
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, TableOfContentsDialog, EditorHistory);
 function App() {
   let documenteditor: DocumentEditorComponent = new DocumentEditorComponent(undefined);
   function ShowTableOfContentsDialog() {
@@ -201,7 +201,7 @@ function App() {
   return (
     <div>
       <button onClick={ShowTableOfContentsDialog}>Dialog</button>
-      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableTableOfContentsDialog={true} />
+      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableTableOfContentsDialog={true} enableEditorHistory={true} />
     </div>
   );
 }
@@ -220,11 +220,11 @@ This dialog allows managing the styles in a document. It will display all the st
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  DocumentEditorComponent, SfdtExport, Selection, Editor, StyleDialog, StylesDialog
+  DocumentEditorComponent, SfdtExport, Selection, Editor, StyleDialog, StylesDialog, EditorHistory
 } from '@syncfusion/ej2-react-documenteditor';
 
 //Inject require modules.
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, StyleDialog, StylesDialog);
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, StyleDialog, StylesDialog, EditorHistory);
 function App() {
   let documenteditor: DocumentEditorComponent;
   function ShowStylesDialog() {
@@ -234,7 +234,7 @@ function App() {
   return (
     <div>
       <button onClick={ShowStylesDialog}>Dialog</button>
-      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableStyleDialog={true} />
+      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableStyleDialog={true} enableEditorHistory={true} />
     </div>
   );
 }
@@ -255,11 +255,11 @@ To open this dialog, refer to the following example.
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  DocumentEditorComponent, SfdtExport, Selection, Editor, StyleDialog
+  DocumentEditorComponent, SfdtExport, Selection, Editor, StyleDialog, StylesDialog, EditorHistory
 } from '@syncfusion/ej2-react-documenteditor';
 
 //Inject require modules.
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, StyleDialog);
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, StyleDialog, StylesDialog, EditorHistory);
 function App() {
   let documenteditor: DocumentEditorComponent;
   function ShowStyleDialog() {
@@ -269,7 +269,7 @@ function App() {
   return (
     <div>
       <button onClick={ShowStyleDialog}>Dialog</button>
-      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableStyleDialog={true} />
+      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableStyleDialog={true} enableEditorHistory={true} />
     </div>
   );
 }
@@ -294,23 +294,21 @@ import {
 
 //Inject require modules.
 DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, ListDialog);
-export class Default extends React.Component<{}, {}> {
-  public documenteditor: DocumentEditorComponent;
-  showListDialog(): void {
+function App() {
+  let documenteditor: DocumentEditorComponent;
+  function showListDialog() {
     //Open list dialog.
-    this.documenteditor.showDialog('List');
+    documenteditor.showDialog('List');
   }
-  render() {
-    return (
-      <div>
-        <button onClick={this.showListDialog.bind(this)}>Dialog</button>
-        <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { this.documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableListDialog={true} />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <button onClick={showListDialog}>Dialog</button>
+      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableListDialog={true} />
+    </div>
+  );
 }
-ReactDOM.render(<Default />, document.getElementById('sample'));
-
+export default App;
+ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Borders and shading dialog
@@ -325,11 +323,11 @@ To open this dialog, refer to the following example.
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  DocumentEditorComponent, SfdtExport, Selection, Editor, BordersAndShadingDialog
+  DocumentEditorComponent, SfdtExport, Selection, Editor, BordersAndShadingDialog, EditorHistory
 } from '@syncfusion/ej2-react-documenteditor';
 
 
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, BordersAndShadingDialog);
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, BordersAndShadingDialog, EditorHistory);
 function App() {
   let documenteditor: DocumentEditorComponent;
   React.useEffect(() => {
@@ -347,7 +345,7 @@ function App() {
   return (
     <div>
       <button onClick={ShowBordersAndShadingDialog}>Dialog</button>
-      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableBordersAndShadingDialog={true} />
+      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableBordersAndShadingDialog={true} enableEditorHistory={true} />
     </div>
   );
 }
@@ -368,11 +366,11 @@ To open this dialog, refer to the following example.
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  DocumentEditorComponent, SfdtExport, Selection, Editor, TableOptionsDialog
+  DocumentEditorComponent, SfdtExport, Selection, Editor, TableOptionsDialog, TablePropertiesDialog, EditorHistory
 } from '@syncfusion/ej2-react-documenteditor';
 
 
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, TableOptionsDialog);
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, TableOptionsDialog, TablePropertiesDialog, EditorHistory);
 function App() {
   let documenteditor: DocumentEditorComponent;
   React.useEffect(() => {
@@ -390,7 +388,7 @@ function App() {
   return (
     <div>
       <button onClick={ShowTableOptionsDialog}>Dialog</button>
-      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableTableOptionsDialog={true} />
+      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableTableOptionsDialog={true} enableTablePropertiesDialog={true} enableEditorHistory={true} />
     </div>
   );
 }
@@ -411,11 +409,11 @@ To open this dialog, refer to the following example.
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  DocumentEditorComponent, SfdtExport, Selection, Editor, TableOptionsDialog, TablePropertiesDialog, BordersAndShadingDialog
+  DocumentEditorComponent, SfdtExport, Selection, Editor, TableOptionsDialog, TablePropertiesDialog, BordersAndShadingDialog, EditorHistory
 } from '@syncfusion/ej2-react-documenteditor';
 
 
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, BordersAndShadingDialog, TableOptionsDialog, TablePropertiesDialog);
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, BordersAndShadingDialog, TableOptionsDialog, TablePropertiesDialog, EditorHistory);
 function App() {
   let documenteditor: DocumentEditorComponent;
   React.useEffect(() => {
@@ -433,7 +431,7 @@ function App() {
   return (
     <div>
       <button onClick={ShowTablePropertiesDialog}>Dialog</button>
-      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableBordersAndShadingDialog={true} enableTableOptionsDialog={true} enableTablePropertiesDialog={true} />
+      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableBordersAndShadingDialog={true} enableTableOptionsDialog={true} enableTablePropertiesDialog={true} enableEditorHistory={true} />
     </div>
   );
 
