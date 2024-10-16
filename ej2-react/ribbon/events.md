@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events
+# Events in React Ribbon component
 
 This section describes the ribbon events that will be triggered when appropriate actions are performed. The following events are available in the ribbon component.
 
@@ -194,6 +194,54 @@ function App() {
                 <RibbonTabDirective header="Home" >
                     <RibbonGroupsDirective>
                         <RibbonGroupDirective header="Clipboard" showLauncherIcon={true}> 
+                            <RibbonCollectionsDirective>
+                                <RibbonCollectionDirective>
+                                    <RibbonItemsDirective>
+                                        <RibbonItemDirective type="Button" buttonSettings={{ iconCss: "e-icons e-cut", content: "Cut" }}>
+                                        </RibbonItemDirective>
+                                    </RibbonItemsDirective>
+                                </RibbonCollectionDirective>
+                            </RibbonCollectionsDirective>
+                        </RibbonGroupDirective>
+                    </RibbonGroupsDirective>
+                </RibbonTabDirective>
+            </RibbonTabsDirective>
+        </RibbonComponent>
+    );
+}
+export default App;
+ReactDom.render(<App />, document.getElementById("element"));
+```
+{% endraw %}
+
+## overflowPopupOpen
+
+The [overflowPopupOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/#overflowpopupopen) event is triggered while opening the overflow popup.
+
+## overflowPopupClose
+
+The [overflowPopupClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/#overflowpopupclose) event is triggered while closing the overflow popup.
+
+The following code example demonstrates the ribbon rendered with `overflowPopupOpen` and `overflowPopupClose` events.
+
+{% raw %}
+```ts
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, OverflowPopupEventArgs } from "@syncfusion/ej2-react-ribbon";
+function App() {
+    function overflowPopupOpen (args: OverflowPopupEventArgs) {
+        // Your required actions here
+    }
+    function overflowPopupClose (args: OverflowPopupEventArgs) {
+        // Your required actions here
+    }
+    return (
+        <RibbonComponent id="ribbon" overflowPopupOpen= { overflowPopupOpen } overflowPopupClose= { overflowPopupClose } activeLayout="Simplified">
+            <RibbonTabsDirective>
+                <RibbonTabDirective header="Home" >
+                    <RibbonGroupsDirective>
+                        <RibbonGroupDirective header="Clipboard"> 
                             <RibbonCollectionsDirective>
                                 <RibbonCollectionDirective>
                                     <RibbonItemsDirective>
@@ -1549,7 +1597,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClick
 
-The [beforeClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before selecting a button from the groupbutton items.
+The [beforeClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before selecting a button from the GroupButton items.
 
 {% raw %}
 ```ts
@@ -1610,7 +1658,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### click
 
-The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when selecting a button from the groupbutton items.
+The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when selecting a button from the GroupButton items.
 
 {% raw %}
 ```ts
