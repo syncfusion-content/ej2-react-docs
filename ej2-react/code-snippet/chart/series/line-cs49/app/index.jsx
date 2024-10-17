@@ -41,6 +41,7 @@ function App() {
           xName="x"
           yName="y"
           name="Product A"
+          marker={{visible: true}}
           dashArray="2,5"
           type="Area"
           emptyPointSettings={emptyPoint}

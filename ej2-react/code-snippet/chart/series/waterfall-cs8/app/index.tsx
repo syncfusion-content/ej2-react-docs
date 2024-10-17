@@ -15,7 +15,7 @@ function App() {
     const tooltipsettings: TooltipSettingsModel={ enable: true };
     const marker={ visible: true, width: 10, height: 10};
     const paretoOptions: object = {
-        fill: 'red'
+        fill: 'red', dashArray: '5'
       };
         return <ChartComponent id='charts'
                 primaryXAxis={ primaryxAxis }

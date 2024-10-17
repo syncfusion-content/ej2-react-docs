@@ -17,10 +17,10 @@ const pointRender: EmitType<IPointRenderEventArgs> = (args: IPointRenderEventArg
   return <ChartComponent id='charts'
            primaryXAxis={ primaryxAxis }
            primaryYAxis={ primaryyAxis }
-           title='GDP vs Literacy Rate'>
+           title='GDP vs Literacy Rate' pointRender={pointRender}>
             <Inject services={[BubbleSeries]}/>
             <SeriesCollectionDirective>
-                <SeriesDirective dataSource ={data}  xName='x' yName='y' size='size' type='Bubble' name='pound' pointRender={pointRender}>
+                <SeriesDirective dataSource ={data}  xName='x' yName='y' size='size' type='Bubble' name='pound'>
                 </SeriesDirective>
             </SeriesCollectionDirective>
           </ChartComponent>

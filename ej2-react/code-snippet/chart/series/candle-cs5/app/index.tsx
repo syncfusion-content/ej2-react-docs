@@ -25,7 +25,7 @@ function App() {
       <Inject services={[CandleSeries, Tooltip, Category, Crosshair, Zoom]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={chartData} xName='x' yName='low' name='SHIRPUR-G' type='Candle' low='low'
-          high='high' open='open' close='close' emptyPointSettings={emptyPoint} bearFillColor='#e56590' bullFillColor='#f8b883'>
+          high='high' open='open' close='close' bearFillColor='#e56590' bullFillColor='#f8b883'>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

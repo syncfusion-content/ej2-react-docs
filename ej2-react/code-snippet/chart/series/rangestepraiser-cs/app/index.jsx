@@ -7,12 +7,12 @@ import { chartData } from "../datasource";
 
 function App() {
   
-  const primaryxAxis: AxisModel = {
+  const primaryxAxis = {
     valueType: 'Category',
     edgeLabelPlacement: 'Shift',
     majorGridLines: { width: 0 }
   };
-  const primaryyAxis: AxisModel = {
+  const primaryyAxis = {
     labelFormat: '{value}˚C',
     lineStyle: { width: 0 },
     minimum: 0, maximum: 40,

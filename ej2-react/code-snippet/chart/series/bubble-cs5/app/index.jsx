@@ -8,10 +8,10 @@ function App() {
     const seriesRender = (args) => {
       args.fill = '#ff6347';
     };
-    return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='GDP vs Literacy Rate'>
+    return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} seriesRender={seriesRender} title='GDP vs Literacy Rate'>
             <Inject services={[BubbleSeries]}/>
             <SeriesCollectionDirective>
-                <SeriesDirective dataSource={data} xName='x' yName='y' size='size' type='Bubble' name='pound' seriesRender={seriesRender}>
+                <SeriesDirective dataSource={data} xName='x' yName='y' size='size' type='Bubble' name='pound'>
                 </SeriesDirective>
             </SeriesCollectionDirective>
           </ChartComponent>;

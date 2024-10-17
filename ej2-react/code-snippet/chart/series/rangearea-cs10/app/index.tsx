@@ -20,7 +20,7 @@ function App() {
   return <ChartComponent id='charts' pointRender={pointRender}>
       <Inject services={[RangeAreaSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='x' high='low' low='high'
+        <SeriesDirective dataSource={data} xName='x' high='low' low='high' marker={{visible: true}}
           type='RangeArea'>
         </SeriesDirective>
       </SeriesCollectionDirective>

@@ -17,9 +17,9 @@ function App() {
                 title='Maximum and minimum Temperature'>
                   <Inject services={[RangeColumnSeries, Legend, Tooltip, DataLabel,  Category]}/>
                   <SeriesCollectionDirective>
-                      <SeriesDirective dataSource ={data}  xName='x' low='low' high='high' type='RangeColumn' fill= 'red'>
+                      <SeriesDirective dataSource ={data}  xName='x' low='low' high='high' type='RangeColumn' fill= 'url(#gradient1)'>
                       </SeriesDirective>
-                      <SeriesDirective dataSource ={data1}  xName='x' low='low' high='high' type='RangeColumn' fill= 'green'>
+                      <SeriesDirective dataSource ={data1}  xName='x' low='low' high='high' type='RangeColumn' fill= 'url(#gradient2)'>
                       </SeriesDirective>
                    </SeriesCollectionDirective>
               </ChartComponent>

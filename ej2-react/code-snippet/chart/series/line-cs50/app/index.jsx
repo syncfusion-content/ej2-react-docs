@@ -27,11 +27,7 @@ function App() {
     title: 'Sales Amount in Millions',
   };
   const pointRender = (args) => {
-    if (args.point.index % 2 !== 0) {
-      args.fill = '#ff6347';
-    } else {
-      args.fill = '#009cb8';
-    }
+    args.fill = '#ff6347';
   };
   return (
     <ChartComponent
@@ -48,6 +44,7 @@ function App() {
           xName="x"
           yName="y"
           name="Product A"
+          marker={{visible: true}}
           type="Area"
         ></SeriesDirective>
       </SeriesCollectionDirective>

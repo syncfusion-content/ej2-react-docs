@@ -15,7 +15,7 @@ function App() {
     labelFormat: '{value}B'
   };
   const emptyPoint: object = { mode: 'Zero'};
-  const emptyPoint1: object = { mode: 'Average'};
+  const emptyPoint1: object = { mode: 'Average', fill: 'red'};
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}
       primaryYAxis={primaryyAxis}
