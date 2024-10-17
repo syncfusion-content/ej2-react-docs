@@ -4,7 +4,7 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Leg
 import { data } from './datasource';
 function App() {
     const marker = { visible: true, width: 10, height: 10, border: { width: 2, color: '#F8AB1D' } };
-    const emptyPoint = { mode: 'Average', color: 'red' };
+    const emptyPoint = { mode: 'Average', fill: 'red' };
     return <ChartComponent id='charts'>
       <Inject services={[StepLineSeries, Legend, Tooltip, DataLabel, Category]}/>
       <SeriesCollectionDirective>

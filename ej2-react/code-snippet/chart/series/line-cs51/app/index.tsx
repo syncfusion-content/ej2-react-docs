@@ -24,11 +24,7 @@ function App() {
     title: 'Sales Amount in Millions',
   };
   const seriesRender: EmitType<ISeriesRenderEventArgs> = (args: ISeriesRenderEventArgs): void => {
-    if (args.point.index % 2 !== 0) {
       args.fill = '#ff6347';
-    } else {
-      args.fill = '#009cb8';
-    }
   };
 
   return <ChartComponent

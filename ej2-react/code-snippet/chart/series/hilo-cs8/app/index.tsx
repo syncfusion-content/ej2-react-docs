@@ -20,7 +20,7 @@ function App() {
   else {
       args.fill = '#009cb8';
   }
-}l
+};
   return <ChartComponent id='charts' style={style}
       primaryXAxis={primaryxAxis}
       primaryYAxis={primaryyAxis}

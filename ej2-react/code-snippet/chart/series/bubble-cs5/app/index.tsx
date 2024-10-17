@@ -18,6 +18,7 @@ const seriesRender: EmitType<ISeriesRenderEventArgs> = (args: ISeriesRenderEvent
            primaryXAxis={ primaryxAxis }
            primaryYAxis={ primaryyAxis }
            title='GDP vs Literacy Rate'>
+            seriesRender={seriesRender}
             <Inject services={[BubbleSeries]}/>
             <SeriesCollectionDirective>
                 <SeriesDirective dataSource ={data}  xName='x' yName='y' size='size' type='Bubble' name='pound' seriesRender={seriesRender}>

@@ -14,11 +14,11 @@ function App() {
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Sales Comparison'>
       <Inject services={[StackingBarSeries, Legend, Tooltip, DataLabel, Category]}/>
       <SeriesCollectionDirective>
-      <SeriesDirective dataSource={stackBarData} xName='x' yName='y' dashArray='5' type='StackingBar' border={border}>
+      <SeriesDirective dataSource={stackBarData} xName='x' yName='y' type='StackingBar' border={border}>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackBarData} xName='x' yName='y1' dashArray='5' type='StackingBar' border={border}>
+        <SeriesDirective dataSource={stackBarData} xName='x' yName='y1' type='StackingBar' border={border}>
         </SeriesDirective>
-        <SeriesDirective dataSource={stackBarData} xName='x' yName='y2' dashArray='5' type='StackingBar' border={border}>
+        <SeriesDirective dataSource={stackBarData} xName='x' yName='y2' type='StackingBar' border={border}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;

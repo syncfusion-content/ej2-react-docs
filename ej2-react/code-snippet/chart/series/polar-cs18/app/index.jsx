@@ -2,16 +2,16 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, RadarSeries, ColumnSeries } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, RadarSeries, LineSeries } from '@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Month' };
-    const primaryyAxis = { minimum: 20, maximum: 40, interval: 5, title: 'Efficiency', labelFormat: '{value}%' };
-    const emptyPoint = { mode: 'Gap' };
+    const primaryyAxis = { title: 'Efficiency', labelFormat: '{value}%' };
+    const emptyPoint = { mode: 'Zero' };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Efficiency of oil-fired power production'>
-      <Inject services={[RadarSeries, ColumnSeries]}/>
+      <Inject services={[RadarSeries, LineSeries]}/>
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='x' yName='y' type='Radar' name='Department' drawType='Column' emptyPointSettings={emptyPoint}>
+        <SeriesDirective dataSource={data} xName='x' yName='y' type='Radar' marker={{visible: true}} name='Department' drawType='Line' emptyPointSettings={emptyPoint}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;

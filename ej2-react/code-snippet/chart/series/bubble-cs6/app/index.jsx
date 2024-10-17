@@ -11,10 +11,10 @@ function App() {
         args.series.bullFillColor = '#009cb8';
       };
     };
-    return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='GDP vs Literacy Rate'>
+    return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='GDP vs Literacy Rate' pointRender={pointRender}>
             <Inject services={[BubbleSeries]}/>
             <SeriesCollectionDirective>
-                <SeriesDirective dataSource={data} xName='x' yName='y' size='size' type='Bubble' name='pound' pointRender={pointRender}>
+                <SeriesDirective dataSource={data} xName='x' yName='y' size='size' type='Bubble' name='pound'>
                 </SeriesDirective>
             </SeriesCollectionDirective>
           </ChartComponent>;
