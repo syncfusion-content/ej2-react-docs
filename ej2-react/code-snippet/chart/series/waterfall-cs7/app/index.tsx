@@ -24,7 +24,11 @@ function App() {
     const tooltipsettings: TooltipSettingsModel={ enable: true };
     const marker={ dataLabel: { visible: true, position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } };
     const pointRender = (args: IPointRenderEventArgs) => {
-        args.fill = '#ff6347';
+        if (args.point.y >= 15) {
+            args.fill = '#ff6347';
+        } else {
+            args.fill = '#009cb8';
+        }
       };
         chartLoad();
         return <ChartComponent id='charts'

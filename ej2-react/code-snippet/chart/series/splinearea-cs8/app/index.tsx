@@ -22,7 +22,7 @@ function App() {
       primaryXAxis={primaryxAxis} pointRender={pointRender}>
       <Inject services={[SplineAreaSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={splineData} xName='x' yName='y' name='London' type='SplineArea' emptyPointSettings={emptyPoint} marker={{ visible: true, width: 10, height: 10 }}>
+        <SeriesDirective dataSource={splineData} xName='x' yName='y' name='London' type='SplineArea' marker={{ visible: true, width: 10, height: 10 }}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>

@@ -8,7 +8,7 @@ function App() {
     const tooltipsettings = { enable: true };
     const marker = { visible: true, width: 10, height: 10 };
     const paretoOptions = {
-        fill: 'red'
+        fill: 'red', dashArray: '5'
       }
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} tooltip={tooltipsettings} title='Defect vs Frequency'>
                     <Inject services={[ColumnSeries, LineSeries, ParetoSeries, Legend, Tooltip, Category, DataLabel]}/>

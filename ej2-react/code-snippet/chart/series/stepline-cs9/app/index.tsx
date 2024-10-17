@@ -10,7 +10,7 @@ import { data } from './datasource';
 function App() {
 
   const marker = { visible: true, width: 10, height: 10, border: { width: 2, color: '#F8AB1D' } };
-  const emptyPoint: object = { mode: 'Gap', color: 'red', border: {width: 2, color: 'green'} };
+  const emptyPoint: object = { mode: 'Average', fill: 'red', border: {width: 2, color: 'green'} };
   return <ChartComponent id='charts'>
       <Inject services={[StepLineSeries, Legend, Tooltip, DataLabel, Category]} />
       <SeriesCollectionDirective>

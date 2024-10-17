@@ -54,7 +54,7 @@ function App() {
     function onCreate(){
         newData = treeObj.fields.dataSource;
         // Selects the first level nodes alone
-        let resultData = new DataManager(treeObj.getTreeData()).executeLocal(new Query().where(treeObj.fields.parentID, 'equal', undefined, false));
+        let resultData = new DataManager(treeObj.getTreeData()).executeLocal(new Query().where(treeObj.fields.parentID, 'equal', null, false));
         let name = [];
         for (let i = 0; i < resultData.length; i++){
             name.push(resultData[i][treeObj.fields.text]);

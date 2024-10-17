@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries,  Selection, ErrorBar, IPointRenderEventArgs }
 from'@syncfusion/ej2-react-charts';
-import { EmitType } '@syncfusion/ej2-base';
+import { EmitType } from '@syncfusion/ej2-base';
 import { data } from './datasource';
 
 function App() {

@@ -17,7 +17,11 @@ function App() {
     const tooltipsettings = { enable: true };
     const marker = { dataLabel: { visible: true, position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } };
     const pointRender = (args) => {
-        args.fill = '#ff6347';
+        if (args.point.y >= 15) {
+            args.fill = '#ff6347';
+        } else {
+            args.fill = '#009cb8';
+        }
       };
     chartLoad();
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} tooltip={tooltipsettings} legendSettings={legendSettings} title='Examination Results' pointRender={pointRender}>

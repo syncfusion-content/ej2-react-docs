@@ -37,6 +37,7 @@ function App() {
       xName="x"
       yName="y"
       name="Product A"
+      marker={{visible: true}}
       type="Area"
       emptyPointSettings={emptyPoint}
     ></SeriesDirective>
