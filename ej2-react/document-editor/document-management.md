@@ -34,7 +34,7 @@ documentEditor.userColor = '#fff000';
 
 You can toggle the highlight the editable region value using the "highlightEditableRanges" property.
 
-The folowing code shows how to toggle the highlight editable region value.
+The following code shows how to toggle the highlight editable region value.
 
 ```ts
 container.documentEditor.documentEditorSettings.highlightEditableRanges = true; 
@@ -68,6 +68,6 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
 ## See Also
 
-* [How to protect the document in form filling mode](../document-editor/form-fields/#protect-the-document-in-form-filling-mode)
-* [How to protect the document in comments only mode](../document-editor/comments/#protect-the-document-in-comments-only-mode)
-* [How to protect the document in track changes only mode](../document-editor/track-changes/#protect-the-document-in-track-changes-only-mode)
+* [How to protect the document in form filling mode](../document-editor/form-fields#protect-the-document-in-form-filling-mode)
+* [How to protect the document in comments only mode](../document-editor/comments#protect-the-document-in-comments-only-mode)
+* [How to protect the document in track changes only mode](../document-editor/track-changes#protect-the-document-in-track-changes-only-mode)

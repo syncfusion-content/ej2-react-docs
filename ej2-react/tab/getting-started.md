@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Tab Component
 
 This section briefly explains about how to create a simple **Tab** component and configuring the Tab header content in React.
 
@@ -145,4 +145,4 @@ You need to follow the below structure of HTML elements to render the Tab,
 
 ## See Also
 
-* [How to load tab with DataSource](./how-to/load-tab-with-data-source/)
+* [How to load tab with DataSource](./how-to/load-tab-with-data-source)
