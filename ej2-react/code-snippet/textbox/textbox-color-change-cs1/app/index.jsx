@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { TextBoxComponent } from "@syncfusion/ej2-react-inputs";
 export default class App extends React.Component {
     constructor(props) {
         super(props);
@@ -14,34 +15,12 @@ export default class App extends React.Component {
             e.target.parentNode.classList.remove('e-error');
         }
     }
-    onInputFocus(args) {
-        if (!args.target.parentElement.classList.contains('e-input-in-wrap')) {
-            args.target.parentElement.classList.add('e-input-focus');
-        }
-        else {
-            args.target.parentElement.parentElement.classList.add('e-input-focus');
-        }
-    }
-    onInputBlur(args) {
-        if (!args.target.parentElement.classList.contains('e-input-in-wrap')) {
-            args.target.parentElement.classList.remove('e-input-focus');
-        }
-        else {
-            args.target.parentElement.parentElement.classList.remove('e-input-focus');
-        }
-    }
     render() {
         return (<div className="wrap">
             <label> Normal Input </label>
-                <div className="e-input-group">
-                    <input className="e-input" id="numericOnly" type="text" placeholder="Enter numeric values" onKeyUp={this.onKeyup} onFocus={this.onInputFocus} onBlur={this.onInputBlur}/>
-                </div>
-                <label> Floating Input </label>
-                <div className="e-float-input e-input-group">
-                    <input type="text" onKeyUp={this.onKeyup} required={true} onFocus={this.onInputFocus} onBlur={this.onInputBlur}/>
-                    <span className="e-float-line"/>
-                    <label className="e-float-text">Enter numeric values</label>
-                </div>
+                <TextBoxComponent  id="numericOnly" placeholder="Enter numeric values" onKeyUp={this.onKeyup}/>
+            <label> Floating Input </label>
+                <TextBoxComponent placeholder="Enter numeric values" floatLabelType="Auto" onKeyUp={this.onKeyup} required = {true}/>
             </div>);
     }
 }

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Textbox component | Syncfusion
-description: Learn here all about Index in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
+title: Index in React TextBox component | Syncfusion
+description: Learn here all about Index in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Textbox component
+# Index in React TextBox component
 
 The **TextBox** is an input element that allows to get input from the user. It allows the user to edit or display the text value.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Validation in React Textbox component | Syncfusion
-description: Learn here all about Validation in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
+title: Validation in React TextBox component | Syncfusion
+description: Learn here all about Validation in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
 control: Validation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in React Textbox component
+# Validation in React TextBox component
 
-The TextBox supports three types of validation styles namely `error`, `warning`, and `success`. These states are enabled by adding corresponding classes `.e-error`, `.e-warning`, or `.e-success` to the input parent element.
+The TextBox supports three types of validation styles namely `error`, `warning`, and `success`. These states are enabled by adding corresponding classes `.e-error`, `.e-warning`, or `.e-success` to the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textbox/#cssclass) property.
 
 `[Class-component]`
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React functional component in React Textbox component | Syncfusion
-description: Learn here all about React functional component in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
+title: React functional component in React TextBox component | Syncfusion
+description: Learn here all about React functional component in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
 control: React functional component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React functional component in React Textbox component
+# React functional component in React TextBox component
 
-This section explains how to render the textbox component in the functional component with react hooks methods. Please find the list of basic hook methods in the following table.
+This section explains how to render the TextBox component in the functional component with react hooks methods. Please find the list of basic hook methods in the following table.
 
 | Hooks | Description |
 | ------------- | ------------- |
@@ -19,7 +19,7 @@ This section explains how to render the textbox component in the functional comp
 | `useRef` | useRef is a Hook function that allows to directly create a reference to the DOM element in the functional component. Here, assigned the name field reference for focusing the field on initial loading. |
 | `useReducer` | useReducer is a Hook function that accepts a reducer function and an initial state as argument. It returns a state value and another function to dispatch an action. Here, dispatched the update action to update the name and email state values. |
 
-The following example shows how to render a simple textbox component with react hooks.
+The following example shows how to render a simple TextBox component with react hooks.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

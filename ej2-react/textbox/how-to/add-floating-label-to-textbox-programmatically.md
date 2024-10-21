@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add floating label to textbox programmatically in React Textbox component | Syncfusion
-description: Learn here all about Add floating label to textbox programmatically in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
-control: Add floating label to textbox programmatically 
+title: Add floating label to TextBox programmatically in React TextBox component | Syncfusion
+description: Learn here all about Add floating label to TextBox programmatically in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+control: Add floating label to TextBox programmatically 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add floating label to textbox programmatically in React Textbox component
+# Add floating label to TextBox programmatically in React TextBox component
 
 The `Floating Label TextBox` floats label above the TextBox after focusing, or entering a value in the TextBox.
 

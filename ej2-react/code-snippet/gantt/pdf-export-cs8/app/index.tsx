@@ -15,18 +15,18 @@ function App() {
         const toolbarOptions = ['PdfExport'];
 
         let ganttChart:any;
-        let grid:any;
         function toolbarClick(args) {
         ganttChart.pdfExport();
     }
 
     function beforePdfExport(): void {
-    if (grid) {
-      (grid.columns[3] as Column).visible = true;
-      (grid.columns[2] as Column).visible = false;
-     }
+        if (ganttChart) {
+            const cols = ganttChart.treeGrid.columns;
+            cols[3].visible = true;
+            cols[2].visible = false;
+        }
     };
-    return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
+    return <GanttComponent id='root' dataSource={data} beforePdfExport={beforePdfExport}  taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
         <ColumnsDirective>
                     <ColumnDirective field='TaskID' width='50'/>
                     <ColumnDirective field='TaskName' headerText='Task Name'/>

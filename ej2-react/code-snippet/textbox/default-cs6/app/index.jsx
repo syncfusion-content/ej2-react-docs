@@ -1,13 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 function App() {
-    return (<div>
-                <textarea className="e-input" placeholder="Address"/>
-                <div className="e-float-input">
-                    <textarea required={true}/>
-                    <span className="e-float-line"/>
-                    <label className="e-float-text"> Address</label>
-                </div>
-            </div>);
+    return (<TextBoxComponent
+        id='default'
+        placeholder="Address"
+        floatLabelType="Auto"
+        multiline="true"
+    />);
 }
 ReactDOM.render(<App />, document.getElementById('input-container'));
