@@ -1,40 +1,24 @@
-
-
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
 export default class Default extends React.Component {
+    public textBoxObj = React.createRef();
 
-public render() {
-   return (
-    <div className="e-input-group">
-        <input className="e-input" name="input" type="text" onFocus = {this.onInputFocus} onBlur = {this.onInputBlur} placeholder="Enter Date"/>
-        <span className="e-icons e-input-group-icon e-input-popup-date" onMouseDown = {this.onIconMouseDown} onMouseUp = {this.onIconMouseUp}/>
-    </div>
-);
+    public oncreate() {  
+        (this.textBoxObj.current as any).addIcon('append', 'e-icons e-input-popup-date');
+    }
+
+    public render() {
+        return (
+            <TextBoxComponent
+                id='default'
+                placeholder="Enter Date"
+                ref={this.textBoxObj}
+                created={this.oncreate}
+            />
+        );
+    }
 }
 
-public onInputFocus(args: React.FocusEvent) {
-    ((args.target as HTMLElement).parentElement as HTMLElement).classList.add('e-input-focus');
-}
-
-public onInputBlur(args: React.FocusEvent) {
-    ((args.target as HTMLElement).parentElement as HTMLElement).classList.remove('e-input-focus');
-}
-
-public onIconMouseDown(args: React.MouseEvent) {
-    args.persist();
-    setTimeout(
-        () => {
-            (args.target as HTMLElement).classList.add('e-input-btn-ripple');
-        },
-    300);
-}
-
-public onIconMouseUp(args: React.MouseEvent) {
-    (args.target as HTMLElement).classList.remove('e-input-btn-ripple');
-}
-}
-
-ReactDOM.render(<Default />, document.getElementById('input-container'));
-
-
+createRoot(document.getElementById('default')).render(<Default />);

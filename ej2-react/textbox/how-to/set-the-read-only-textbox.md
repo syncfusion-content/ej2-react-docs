@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Set the read only textbox in React Textbox component | Syncfusion
-description: Learn here all about Set the read only textbox in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
-control: Set the read only textbox 
+title: Set the read only TextBox in React TextBox component | Syncfusion
+description: Learn here all about Set the read only TextBox in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+control: Set the read only TextBox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the read only textbox in React Textbox component
+# Set the read only TextBox in React TextBox component
 
-You can make the TextBox as `read-only` by setting the `readonly` attribute to the input element.
+You can make the TextBox as `read-only` by setting the [readonly](https://ej2.syncfusion.com/react/documentation/api/textbox/#readonly) property to the TextBoxComponent.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

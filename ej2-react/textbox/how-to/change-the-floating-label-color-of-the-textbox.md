@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change the floating label color of the textbox in React Textbox component | Syncfusion
-description: Learn here all about Change the floating label color of the textbox in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
-control: Change the floating label color of the textbox 
+title: Change the floating label color of the TextBox in React TextBox component | Syncfusion
+description: Learn here all about Change the floating label color of the TextBox in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+control: Change the floating label color of the TextBox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the floating label color of the textbox in React Textbox component
+# Change the floating label color of the TextBox in React TextBox component
 
 You can change the floating label color of the TextBox for both `success` and `warning` validation states by applying the following CSS styles.
 

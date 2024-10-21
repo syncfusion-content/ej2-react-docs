@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Textbox component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
+title: Style appearance in React TextBox component | Syncfusion
+description: Learn here all about Style appearance in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React Textbox component
+# Style appearance in React TextBox component
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 

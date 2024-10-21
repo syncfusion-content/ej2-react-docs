@@ -1,7 +1,6 @@
 /* To change the background-color and text-color for textbox */ 
-.e-input-group,
-.e-float-input,
-.e-float-input.e-input-group { 
+.e-float-input.e-input-group input, .e-float-input.e-input-group.e-control-wrapper input,
+.e-input-group input.e-input, .e-input-group.e-control-wrapper input.e-input { 
   background : lightgray;
   color: green;
 }

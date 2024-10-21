@@ -68,7 +68,7 @@ You can make use of the CSS customization to prevent the display of all-day row 
 
 ## Expand all day appointments view on initial load
 
-When you have larger number of appointments in all-day view, you can show all all-day events using [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/schedule#databound) event on at initial load. So, user don't have to click the toggle to expand all-day events.
+When you have larger number of appointments in all-day view, you can show all all-day events using [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/schedule/#databound) event on at initial load. So, user don't have to click the toggle to expand all-day events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -384,7 +384,7 @@ By default, the scheduler will render the overlapping events based on the start 
 
 ## Drag and drop appointments
 
-Appointments can be rescheduled to any time by dragging and dropping them onto the desired location. To work with drag and drop functionality, it is necessary to inject the module `DragAndDrop` and make sure that [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowdraganddrop) is set to `true` on Scheduler. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
+Appointments can be rescheduled to any time by dragging and dropping them onto the desired location. To work with drag and drop functionality, it is necessary to inject the module `DragAndDrop` and make sure that [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/schedule/#allowdraganddrop) is set to `true` on Scheduler. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
 
 Learn the advanced options of Drag and Resize actions for React Scheduler from this video:
 
@@ -408,7 +408,7 @@ Learn the advanced options of Drag and Resize actions for React Scheduler from t
 
 ### Drag and drop multiple appointments
 
-We can drag and drop multiple appointments by enabling the [`allowMultiDrag`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowmultidrag) property. We can select multiple appointments by holding the CTRL key. Once the events are selected, we can leave the CTRL key and start dragging the event.
+We can drag and drop multiple appointments by enabling the [`allowMultiDrag`](https://ej2.syncfusion.com/react/documentation/api/schedule/#allowmultidrag) property. We can select multiple appointments by holding the CTRL key. Once the events are selected, we can leave the CTRL key and start dragging the event.
 
 We can also drag multiple events from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
 
@@ -430,7 +430,7 @@ We can also drag multiple events from one resource to another resource. In this 
 
 ### Disable the drag action
 
-By default, you can drag and drop the events within any of the applicable scheduler views, and to disable it, set `false` to the [`allowMultiDrag`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowmultidrag) property.
+By default, you can drag and drop the events within any of the applicable scheduler views, and to disable it, set `false` to the [`allowMultiDrag`](https://ej2.syncfusion.com/react/documentation/api/schedule/#allowmultidrag) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -448,7 +448,7 @@ By default, you can drag and drop the events within any of the applicable schedu
 
 ### Preventing drag and drop on specific targets
 
-It is possible to prevent the drag action on particular target, by passing the target to be excluded in the [`excludeSelectors`](https://ej2.syncfusion.com/react/documentation/api/schedule/dragEventArgs/#excludeselectors)  option within [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#dragstart) event. In the following example, we have prevented the drag action on all-day row.
+It is possible to prevent the drag action on particular target, by passing the target to be excluded in the [`excludeSelectors`](https://ej2.syncfusion.com/react/documentation/api/schedule/dragEventArgs/#excludeselectors)  option within [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#dragstart) event. In the following example, we have prevented the drag action on all-day row.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -466,7 +466,7 @@ It is possible to prevent the drag action on particular target, by passing the t
 
 ### Disable scrolling on drag action
 
-By default, while dragging an appointment to the edges, either top or bottom of the Scheduler, scrolling action takes place automatically. To prevent this scrolling, set `false` to the [`scroll`](https://ej2.syncfusion.com/react/documentation/api/schedule/dragEventArgs/#scroll) value within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#dragstart) event arguments.
+By default, while dragging an appointment to the edges, either top or bottom of the Scheduler, scrolling action takes place automatically. To prevent this scrolling, set `false` to the [`scroll`](https://ej2.syncfusion.com/react/documentation/api/schedule/dragEventArgs/#scroll) value within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#dragstart) event arguments.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -484,7 +484,7 @@ By default, while dragging an appointment to the edges, either top or bottom of 
 
 ### Controlling scroll speed while dragging an event
 
-The speed of the scrolling action while dragging an appointment to the Scheduler edges, can be controlled within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#dragstart) event by setting the desired value to the [`scrollBy`](https://ej2.syncfusion.com/react/documentation/api/schedule/scrollOptions/#scrollby) and [`timeDelay`](https://ej2.syncfusion.com/react/documentation/api/schedule/scrollOptions/#timedelay) option whereas its default value is 30 minutes and 100ms.
+The speed of the scrolling action while dragging an appointment to the Scheduler edges, can be controlled within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#dragstart) event by setting the desired value to the [`scrollBy`](https://ej2.syncfusion.com/react/documentation/api/schedule/scrollOptions/#scrollby) and [`timeDelay`](https://ej2.syncfusion.com/react/documentation/api/schedule/scrollOptions/#timedelay) option whereas its default value is 30 minutes and 100ms.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -502,9 +502,9 @@ The speed of the scrolling action while dragging an appointment to the Scheduler
 
 ### Auto navigation of date ranges on dragging an event
 
-When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, you need to set [`navigation`](https://ej2.syncfusion.com/react/documentation/api/schedule/dragEventArgs/#navigation) to true within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#dragstart) event.
+When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, you need to set [`navigation`](https://ej2.syncfusion.com/react/documentation/api/schedule/dragEventArgs/#navigation) to true within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#dragstart) event.
 
-By default, the navigation delay is set to 2000ms. The navigation delay decides how long the user needs to drag and hold the appointments at the extremities. You can also set your own delay value for letting the users to navigate based on it, using the [`timeDelay`](https://ej2.syncfusion.com/react/documentation/api/schedule/scrollOptions/#timedelay) within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#dragstart) event.
+By default, the navigation delay is set to 2000ms. The navigation delay decides how long the user needs to drag and hold the appointments at the extremities. You can also set your own delay value for letting the users to navigate based on it, using the [`timeDelay`](https://ej2.syncfusion.com/react/documentation/api/schedule/scrollOptions/#timedelay) within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#dragstart) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -522,7 +522,7 @@ By default, the navigation delay is set to 2000ms. The navigation delay decides 
 
 ### Setting drag time interval
 
-By default, while dragging an appointment, it moves at an interval of 30 minutes. To change the dragging time interval, pass the appropriate values to the [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/dragEventArgs/#interval) option within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#dragstart) event.
+By default, while dragging an appointment, it moves at an interval of 30 minutes. To change the dragging time interval, pass the appropriate values to the [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/dragEventArgs/#interval) option within the [`dragStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#dragstart) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -540,9 +540,9 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 
 ### Drag and drop items from external source
 
-It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent) method of Scheduler.
+It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule/#addevent) method of Scheduler.
 
-In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodedragstop) event of the TreeView component, where we can form an event object and save it using the [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent) method.
+In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodedragstop) event of the TreeView component, where we can form an event object and save it using the [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule/#addevent) method.
 
 Learn how to drag an external item into the React Scheduler by watching this video:
 
@@ -564,7 +564,7 @@ Learn how to drag an external item into the React Scheduler by watching this vid
 
 ### Opening the editor window on drag stop
 
-There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. On clicking the cancel button should revert these changes. This can be achieved using the [`dragStop`](https://ej2.syncfusion.com/react/documentation/api/schedule#dragstop) event of Scheduler.
+There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. On clicking the cancel button should revert these changes. This can be achieved using the [`dragStop`](https://ej2.syncfusion.com/react/documentation/api/schedule/#dragstop) event of Scheduler.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -590,7 +590,7 @@ To enable the inline edit mode, single click on any of the existing appointmentâ
 
 The inline option can be enabled/disabled on the Scheduler by using the allowInline API, whereas its default value is set to false.
 
-While using the [`allowInline`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowinline) the [`showQuickInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule#showquickinfo)  will be turned off. The `quickPopup` will not show on clicking the work cell or clicking the appointment when the [`allowInline`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowinline) property is set to `true`.
+While using the [`allowInline`](https://ej2.syncfusion.com/react/documentation/api/schedule/#allowinline) the [`showQuickInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule/#showquickinfo)  will be turned off. The `quickPopup` will not show on clicking the work cell or clicking the appointment when the [`allowInline`](https://ej2.syncfusion.com/react/documentation/api/schedule/#allowinline) property is set to `true`.
 In work cells, select multiple cells using keyboard, and then press enter key. The appointment wrapper will be created, and focus will be on the subject field. Also, consider the overlapping scenarios when creating an inline event.
 
 ### Normal Event
@@ -617,7 +617,7 @@ While editing the occurrence from the recurrence series, it is only possible to 
 
 ## Appointment Resizing
 
-Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality, it is necessary to inject the module `Resize` and make sure that [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowresizing) property is set to true.
+Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality, it is necessary to inject the module `Resize` and make sure that [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/schedule/#allowresizing) property is set to true.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -635,7 +635,7 @@ Another way of rescheduling an appointment can be done by resizing it through ei
 
 ### Disable the resize action
 
-By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set `false` to the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowresizing) property.
+By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set `false` to the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/schedule/#allowresizing) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -653,7 +653,7 @@ By default, resizing of events is allowed on all Scheduler views except Agenda a
 
 ### Disable scrolling on resize action
 
-By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set `false` to [scroll](https://ej2.syncfusion.com/react/documentation/api/schedule/resizeEventArgs/#scroll) value within the [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#resizestart) event.
+By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set `false` to [scroll](https://ej2.syncfusion.com/react/documentation/api/schedule/resizeEventArgs/#scroll) value within the [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#resizestart) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -671,7 +671,7 @@ By default, while resizing an appointment, when its handler reaches the extreme 
 
 ### Controlling scroll speed while resizing an event
 
-The speed of the scrolling action while resizing an appointment to the Scheduler edges, can be controlled within the [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#resizestart) event by setting the desired value to the `scrollBy` option.
+The speed of the scrolling action while resizing an appointment to the Scheduler edges, can be controlled within the [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#resizestart) event by setting the desired value to the `scrollBy` option.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -689,7 +689,7 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 
 ### Setting resize time interval
 
-By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/resizeEventArgs/#interval) option within the [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/schedule#resizestart) event.
+By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/resizeEventArgs/#interval) option within the [`resizeStart`](https://ej2.syncfusion.com/react/documentation/api/schedule/#resizestart) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -738,7 +738,7 @@ Learn how easily you can customize the basic look and feel of React Scheduler ap
 
 ### Using eventRendered event
 
-The  [`eventRendered`](https://ej2.syncfusion.com/react/documentation/api/schedule#eventrendered) event triggers before the appointment renders on the Scheduler. Therefore, this client-side event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler.
+The  [`eventRendered`](https://ej2.syncfusion.com/react/documentation/api/schedule/#eventrendered) event triggers before the appointment renders on the Scheduler. Therefore, this client-side event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -756,7 +756,7 @@ The  [`eventRendered`](https://ej2.syncfusion.com/react/documentation/api/schedu
 
 ### Using cssClass
 
-The customization of events can also be achieved using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/schedule#cssclass) property of the Scheduler. In the following example, the background of appointments has been changed using the cssClass.
+The customization of events can also be achieved using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/schedule/#cssclass) property of the Scheduler. In the following example, the background of appointments has been changed using the cssClass.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -774,7 +774,7 @@ The customization of events can also be achieved using [`cssClass`](https://ej2.
 
 ## Setting minimum height
 
-It is possible to set minimal height for appointments on Scheduler using [`eventRendered`](https://ej2.syncfusion.com/react/documentation/api/schedule#eventrendered) event, when its start and end time duration is less than the default duration of a single slot.
+It is possible to set minimal height for appointments on Scheduler using [`eventRendered`](https://ej2.syncfusion.com/react/documentation/api/schedule/#eventrendered) event, when its start and end time duration is less than the default duration of a single slot.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -826,7 +826,7 @@ Block events can also be defined to repeat on several days as shown in the follo
 
 ## Readonly
 
-An interaction with the appointments of Scheduler can be enabled/disabled using the [`readonly`](https://ej2.syncfusion.com/react/documentation/api/schedule#readonly) property. With this property enabled, you can simply navigate between the Scheduler dates, views and can be able to view the appointment details in the quick info window. Most importantly, the users are not allowed to perform any CRUD actions on Scheduler, when this property is set to true. By default, it is set as `false`.
+An interaction with the appointments of Scheduler can be enabled/disabled using the [`readonly`](https://ej2.syncfusion.com/react/documentation/api/schedule/#readonly) property. With this property enabled, you can simply navigate between the Scheduler dates, views and can be able to view the appointment details in the quick info window. Most importantly, the users are not allowed to perform any CRUD actions on Scheduler, when this property is set to true. By default, it is set as `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -864,7 +864,7 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 
 ## Restricting event creation on specific time slots
 
-You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler's public method [`isSlotAvailable`](https://ej2.syncfusion.com/react/documentation/api/schedule#isslotavailable).
+You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler's public method [`isSlotAvailable`](https://ej2.syncfusion.com/react/documentation/api/schedule/#isslotavailable).
 
 >Note: The **isSlotAvailable** is centered around verifying appointments within the present view's date range. Yet, it does not encompass an evaluation of availability for recurrence occurrences that fall beyond this particular date range.
 
@@ -884,7 +884,7 @@ You can restrict the users to create and update more than one appointment on spe
 
 ## Differentiate the past time events
 
-To differentiate the appearance of the appointments based on specific criteria such as displaying the past hour appointments with different colors on Scheduler,  [`eventRendered`](https://ej2.syncfusion.com/react/documentation/api/schedule#eventrendered) event can be used which triggers before the appointment renders on the Scheduler.
+To differentiate the appearance of the appointments based on specific criteria such as displaying the past hour appointments with different colors on Scheduler,  [`eventRendered`](https://ej2.syncfusion.com/react/documentation/api/schedule/#eventrendered) event can be used which triggers before the appointment renders on the Scheduler.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -1000,7 +1000,7 @@ With the options available to select multiple appointments, it is also possible 
 
 ## Retrieve event details from the UI of an event
 
-It is possible to access the information about the event fields of an appointment element displayed on the Scheduler UI. This can be achieved by passing an appointment element as argument to the public method [`getEventDetails`](https://ej2.syncfusion.com/react/documentation/api/schedule#geteventdetails).
+It is possible to access the information about the event fields of an appointment element displayed on the Scheduler UI. This can be achieved by passing an appointment element as argument to the public method [`getEventDetails`](https://ej2.syncfusion.com/react/documentation/api/schedule/#geteventdetails).
 
 In the following example, the subject of the appointment clicked has been displayed.
 
@@ -1020,7 +1020,7 @@ In the following example, the subject of the appointment clicked has been displa
 
 ## Get the current view appointments
 
-To retrieve the appointments present in the current view of the Scheduler, you can make use of the [`getCurrentViewEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule#getcurrentviewevents)  public method. In the following example, the count of current view appointment collection rendered has been traced in [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/schedule#databound) event.
+To retrieve the appointments present in the current view of the Scheduler, you can make use of the [`getCurrentViewEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule/#getcurrentviewevents)  public method. In the following example, the count of current view appointment collection rendered has been traced in [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/schedule/#databound) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -1038,7 +1038,7 @@ To retrieve the appointments present in the current view of the Scheduler, you c
 
 ## Get the entire appointment collections
 
-The entire collection of appointments rendered on the Scheduler can be accessed using the [`getEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule#getevents) public method. In the following example, the count of entire appointment collection rendered on the Scheduler has been traced in [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/schedule#databound) event.
+The entire collection of appointments rendered on the Scheduler can be accessed using the [`getEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule/#getevents) public method. In the following example, the count of entire appointment collection rendered on the Scheduler has been traced in [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/schedule/#databound) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -1056,7 +1056,7 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
 
 ## Refresh appointments
 
-If your requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from your application end, make use of the [`refreshEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule#refreshevents) public method.
+If your requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from your application end, make use of the [`refreshEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule/#refreshevents) public method.
 
 ```ts
 this.scheduleObj.refreshEvents();

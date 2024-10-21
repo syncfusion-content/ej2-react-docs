@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add textbox programmatically in React Textbox component | Syncfusion
-description: Learn here all about Add textbox programmatically in Syncfusion React Textbox component of Syncfusion Essential JS 2 and more.
-control: Add textbox programmatically 
+title: Add TextBox programmatically in React TextBox component | Syncfusion
+description: Learn here all about Add TextBox programmatically in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+control: Add TextBox programmatically 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add textbox programmatically in React Textbox component
+# Add TextBox programmatically in React TextBox component
 
 * Create a TypeScript file and import the `Input` modules from `ej2-inputs` library as shown below.
 

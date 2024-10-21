@@ -31,7 +31,7 @@ The following demo depicts the example for fade animation,
 
 ### Custom animation
 
-In Carousel, you can use customized animation effects for slide transitions using the [`Custom`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselAnimationEffect) option of the [`animationEffect`](https://ej2.syncfusion.com/react/documentation/api/carousel/#animationEffect) property and apply custom animation css via [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/carousel/#cssClass) property.
+In Carousel, you can use customized animation effects for slide transitions using the [`Custom`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselAnimationEffect/) option of the [`animationEffect`](https://ej2.syncfusion.com/react/documentation/api/carousel/#animationEffect) property and apply custom animation css via [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/carousel/#cssClass) property.
 
 The following demo depicts the example for `parallax` custom animation,
 
