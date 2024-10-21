@@ -1,26 +1,24 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
 export default class Default extends React.Component {
+    textBoxObj = React.createRef();
+
+    oncreate = () => {  
+        this.textBoxObj.current.addIcon('append', 'e-icons e-input-popup-date');
+    }
+
     render() {
-        return (<div className="e-input-group">
-        <input className="e-input" name="input" type="text" onFocus={this.onInputFocus} onBlur={this.onInputBlur} placeholder="Enter Date"/>
-        <span className="e-icons e-input-group-icon e-input-popup-date" onMouseDown={this.onIconMouseDown} onMouseUp={this.onIconMouseUp}/>
-    </div>);
-    }
-    onInputFocus(args) {
-        args.target.parentElement.classList.add('e-input-focus');
-    }
-    onInputBlur(args) {
-        args.target.parentElement.classList.remove('e-input-focus');
-    }
-    onIconMouseDown(args) {
-        args.persist();
-        setTimeout(() => {
-            args.target.classList.add('e-input-btn-ripple');
-        }, 300);
-    }
-    onIconMouseUp(args) {
-        args.target.classList.remove('e-input-btn-ripple');
+        return (
+            <TextBoxComponent
+                id='default'
+                placeholder="Enter Date"
+                ref={this.textBoxObj}
+                created={this.oncreate}
+            />
+        );
     }
 }
-ReactDOM.render(<Default />, document.getElementById('input-container'));
+
+createRoot(document.getElementById('default')).render(<Default />);

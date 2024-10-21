@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Textbox component | Syncfusion
-description:  Checkout and learn about Getting started with React Textbox component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React TextBox component | Syncfusion
+description:  Checkout and learn about Getting started with React TextBox component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -61,7 +61,7 @@ To install `create-react-app` run the following command.
 
 ## Adding TextBox to the application
 
-Return the `HTML input` element with `e-input` class within `render` method in `src/App.tsx` file to render the TextBox component as like below code.
+Return the TextBoxComponent within `render` method in `src/App.tsx` file to render the TextBox component as like below code.
 
 `[Class-component]`
 
@@ -72,7 +72,7 @@ export default class App extends React.Component<{}, {}> {
     public render() {
       return (
         // element which is going to render the TextBox
-        <input className="e-input" type="text" placeholder="Enter Name" />
+        <TextBoxComponent placeholder="Enter Name"></TextBoxComponent>
       );
     }
 };
@@ -86,7 +86,7 @@ import './App.css';
 function App() {
     return (
         // element which is going to render the TextBox
-        <input className="e-input" type="text" placeholder="Enter Name" />
+         <TextBoxComponent placeholder="Enter Name"></TextBoxComponent>
     );
 };
 ReactDOM.render(<App />, document.getElementById('input-container'));
@@ -94,97 +94,71 @@ ReactDOM.render(<App />, document.getElementById('input-container'));
 
 ## Adding icons to the TextBox
 
-You can create a TextBox with icon as a group by creating the parent div element with the class `e-input-group` and
-add the icon element as span with the class `e-input-group-icon`. For detailed information, refer to the [Groups](./groups/) section.
+You can create a TextBox with an icon by using the [addIcon](https://ej2.syncfusion.com/react/documentation/api/textbox/#addicon) method within the [created](https://ej2.syncfusion.com/react/documentation/api/textbox/#created) event. For detailed information, refer to the [Groups](./groups/) section.
 
 `[Class-component]`
 
 ```ts
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 
 export default class Default extends React.Component {
+    public textboxObj = React.createRef();
 
-public render() {
-   return (
-    <div className="e-input-group">
-        <input className="e-input" name="input" type="text" onFocus = {this.onInputFocus} onBlur = {this.onInputBlur} placeholder="Enter Date"/>
-        <span className="e-input-group-icon e-input-popup-date" onMouseDown = {this.onIconMouseDown} onMouseUp = {this.onIconMouseUp}/>
-    </div>
-);
+    public oncreate() {  
+        (this.textboxObj.current as any).addIcon('append', 'e-icons e-input-popup-date');
+    }
+
+    public render() {
+        return (
+            <TextBoxComponent
+                id='default'
+                placeholder="Enter Date"
+                ref={this.textboxObj}
+                created={this.oncreate}
+            />
+        );
+    }
 }
 
-public onInputFocus(args: React.FocusEvent) {
-     ((args.target as HTMLElement).parentElement as HTMLElement).classList.add('e-input-focus');
-}
+createRoot(document.getElementById('default')).render(<Default />);
 
-public onInputBlur(args: React.FocusEvent) {
-     ((args.target as HTMLElement).parentElement as HTMLElement).classList.remove('e-input-focus');
-}
-
-
-public onIconMouseDown(args: React.MouseEvent) {
-    args.persist();
-    setTimeout(
-        () => {
-            (args.target as HTMLElement).classList.add('e-input-btn-ripple');
-        },
-    300);
-}
-
-public onIconMouseUp(args: React.MouseEvent) {
-    (args.target as HTMLElement).classList.remove('e-input-btn-ripple');
-}
-}
-
-ReactDOM.render(<Default />, document.getElementById('input-container'));
 ```
 
 `[Functional-component]`
 
 ```ts
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { useRef } from 'react';
 
-function Default() {
-   return (
-    <div className="e-input-group">
-        <input className="e-input" name="input" type="text" onFocus = {onInputFocus} onBlur = {onInputBlur} placeholder="Enter Date"/>
-        <span className="e-input-group-icon e-input-popup-date" onMouseDown = {onIconMouseDown} onMouseUp = {onIconMouseUp}/>
-    </div>
-);
-};
+function Default()  {
+    const textboxObj = useRef(null);
 
-function onInputFocus(args: React.FocusEvent) {
-    ((args.target as HTMLElement).parentElement as HTMLElement).classList.add('e-input-focus');
-}
+    function oncreate() {  
+        textboxObj.current.addIcon('append', 'e-icons e-input-group-icon e-input-popup-date');
+    }
+    return (
+        <TextBoxComponent
+            id='default'
+            placeholder="Enter Date"
+            ref={textboxObj}
+            created={oncreate}
+        />
+    );
+};   
 
-function onInputBlur(args: React.FocusEvent) {
-    ((args.target as HTMLElement).parentElement as HTMLElement).classList.remove('e-input-focus');
-}
-
-function onIconMouseDown(args: React.MouseEvent) {
-    args.persist();
-    setTimeout(
-        () => {
-            (args.target as HTMLElement).classList.add('e-input-btn-ripple');
-        },
-    300);
-}
-
-function onIconMouseUp(args: React.MouseEvent) {
-    (args.target as HTMLElement).classList.remove('e-input-btn-ripple');
-}
-
-ReactDOM.render(<Default />, document.getElementById('input-container'));
+createRoot(document.getElementById('default')).render(<Default />);
 ```
 
 ```
-.e-input-group .e-input-group-icon.e-input-popup-date {
-  font-size:16px;
+.e-input-group .e-icons.e-input-group-icon.e-input-popup-date {
+    font-size:16px;
 }
-.e-input-group-icon.e-input-popup-date:before {
-  content: "\e901";
+.e-input-group .e-icons.e-input-group-icon.e-input-popup-date:before {
+    content: "\e901";
 }
 ```
 
@@ -253,7 +227,7 @@ You can create the floating label TextBox by using the `floatLabelType` API.
 
  {% previewsample "page.domainurl/code-snippet/textbox/textbox-component-cs2" %}
 
-> You can refer to our [React TextBox](https://www.syncfusion.com/react-ui-components/react-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [React TextBox example](https://ej2.syncfusion.com/react/demos/#/material/textboxes/default) to know how to render and configure the textbox.
+> You can refer to our [React TextBox](https://www.syncfusion.com/react-ui-components/react-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [React TextBox example](https://ej2.syncfusion.com/react/demos/#/material/textboxes/default) to know how to render and configure the TextBox.
 
 ## See Also
 
