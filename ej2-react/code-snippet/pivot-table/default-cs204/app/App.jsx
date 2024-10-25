@@ -5,10 +5,9 @@ import * as React from 'react';
 import './App.css';
 
 function App() {
-    let pivotObj;
     let remoteData = new DataManager({
         url: 'https://bi.syncfusion.com/northwindservice/api/orders',
-        adaptor: new WebApiAdaptor,
+        adaptor: new WebApiAdaptor(),
         crossDomain: true
     });
     let dataSourceSettings = {
@@ -21,7 +20,7 @@ function App() {
         values: [{ name: 'Quantity' }, { name: 'UnitPrice', caption: 'Unit Price' }],
         filters: []
     };
-    return (<PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={{ columnWidth: 120 }} pageSettings={{
+    return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={{ columnWidth: 120 }} pageSettings={{
             rowPageSize: 10,
             columnPageSize: 5,
             currentColumnPage: 1,

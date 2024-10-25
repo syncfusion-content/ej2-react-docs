@@ -16,7 +16,7 @@ function App() {
     return (<div><div className="col-md-9"> <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={280} dataSourceSettings={dataSourceSettings} allowPdfExport={true}><Inject services={[PDFExport]}/></PivotViewComponent></div>
     <div className='col-lg-3 property-section'><ButtonComponent cssClass='e-primary' onClick={btnClick.bind(this)}>Export</ButtonComponent></div></div>);
     function btnClick() {
-        pivotObj.pdfExportModule.exportToPDF();
+        pivotObj.pdfExport();
     }
 };
 export default App;
