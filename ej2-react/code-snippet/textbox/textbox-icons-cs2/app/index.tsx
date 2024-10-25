@@ -1,4 +1,5 @@
 import * as React from "react";
+import './index.css';
 import * as ReactDOM from "react-dom";
 import { createRoot } from 'react-dom/client';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
