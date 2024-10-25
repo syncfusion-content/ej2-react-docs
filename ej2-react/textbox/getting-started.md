@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React TextBox component
 
-This section briefly explains about how to create a simple TextBox through CSS classes using `Create React App`.
+This section briefly explains about how to create a simple TextBox using `Create React App`.
 
 ## Dependencies
 
