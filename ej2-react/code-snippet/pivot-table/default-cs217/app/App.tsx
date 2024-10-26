@@ -20,7 +20,7 @@ function App() {
     <div className='col-lg-3 property-section'><ButtonComponent cssClass='e-primary' onClick={btnClick.bind(this)}>Export</ButtonComponent></div></div>);
 
   function btnClick(): void {
-    pivotObj.pdfExportModule.exportToPDF();
+    pivotObj.pdfExport();
   }
 };
 
