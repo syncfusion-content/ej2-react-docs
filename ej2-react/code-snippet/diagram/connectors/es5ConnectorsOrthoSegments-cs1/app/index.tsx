@@ -3,43 +3,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     DiagramComponent,
-    ConnectorModel,
-    OrthogonalSegmentModel
+    ConnectorModel
 } from "@syncfusion/ej2-react-diagrams";
-let connectors: ConnectorModel[] = [{
-        id: "connector1",
-        type: 'Orthogonal',
-        segments: [{
-            type: 'Orthogonal',
-            // Defines the direction for the segment lines
-            direction: 'Right',
-            // Defines the length for the segment lines
-            length: 50
-        }],
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        },
-        sourcePoint: {
-            x: 100,
-            y: 100
-        },
-        targetPoint: {
-            x: 200,
-            y: 200
-        }
-    },
+let connectors: ConnectorModel[] = [
     {
-        id: "connector2",
+        id: "connector1",
         type: 'Orthogonal',
         // Defines multile segemnts for the connectors
         segments: [{
@@ -53,17 +22,6 @@ let connectors: ConnectorModel[] = [{
                 length: 150
             }
         ],
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        },
         sourcePoint: {
             x: 300,
             y: 100

@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
@@ -9,13 +8,19 @@ let node = [{
             orientation: 'Horizontal',
             // Intialize header to swimlane
             header: {
-                annotation: { content: 'SALES PROCESS FLOW CHART', },
-                height: 70, style: { fontSize: 11 }, style: { fill: 'pink' },
+                annotation: { content:'ONLINE PURCHASE STATUS' },
+                height: 70, style: { fontSize: 11 }
             },
             lanes: [
                 {
                     id: 'stackCanvas1',
                     height: 100,
+                    // customization of lane header
+                    header: {
+                        annotation: { content: 'Online Consumer' },
+                        width: 30,
+                        style: { fontSize: 11, fill: 'red' },
+                    },
                 },
             ],
             phases: [
@@ -33,13 +38,19 @@ let node = [{
 // initialize Diagram component
 let diagramInstance;
 function App() {
-    return (<DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} width={'100%'} height={'600px'} nodes={node} created={() => {
-            // Dynamically change the lane header
-            let lane = diagramInstance.nodes[0];
-            lane.shape.lanes[0].header.style.fill = 'blue';
-            diagramInstance.dataBind();
-        }}/>);
+    // Function to update lane header
+    const updateLane = () => {
+        let swimlane = diagramInstance.nodes[0];
+        swimlane.shape.lanes[0].header.style.fill = 'blue';
+        swimlane.shape.lanes[0].header.annotation.style.color = 'white';
+        diagramInstance.dataBind();
+    };
+    return (
+        <div>
+            <button onClick={updateLane}>updateLane</button>
+            <DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} width={'100%'} height={'600px'} nodes={node} 
+        />
+        </div>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

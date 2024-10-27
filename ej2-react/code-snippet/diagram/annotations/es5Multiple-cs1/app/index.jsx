@@ -10,10 +10,6 @@ let node = [{
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the multiple annotation for the node
         annotations: [{
                 content: 'Left',
@@ -38,9 +34,29 @@ let node = [{
             }
         ]
     }];
+    let connector = [{
+        id: 'connector',
+        sourcePoint: { x: 200, y: 200 },
+        targetPoint: { x: 300, y: 300 },
+        // Sets the multiple annotation for the node
+        annotations: [
+          {
+            content: 'connector Top',
+            offset: 0.2,
+          },
+          {
+            content: 'connector Center',
+            offset: 0.5,
+          },
+          {
+            content: 'connector Bottom',
+            offset: 0.8,
+          },
+        ],
+      }];
 // initialize Diagram component
 function App() {
-    return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node}/>);
+    return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node} connectors={connector}/>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

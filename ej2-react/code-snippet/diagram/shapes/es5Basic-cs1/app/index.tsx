@@ -3,9 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     NodeModel,
-    NodeConstraints,
     DiagramComponent
 } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
@@ -22,11 +20,6 @@ let node: NodeModel[] = [{
         shape: 'Rectangle',
         cornerRadius: 10
     },
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
-    // Text(label) added to the node
 }];
 // initialize Diagram component
 function App() {

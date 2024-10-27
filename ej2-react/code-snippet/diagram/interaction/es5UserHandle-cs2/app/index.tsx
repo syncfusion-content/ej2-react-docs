@@ -1,109 +1,57 @@
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    DiagramComponent,
-    NodeModel,
-    ConnectorModel,
-    Diagram,
-    NodeModel,
-    BasicShapeModel,
-    MoveTool,
-    MouseEventArgs,
-    IElement,
-    UserHandleModel,
-    ToolBase,
-    SelectorConstraints,
-    Actions,
-    randomId,
-    cloneObject,
-    Node,
-    Side,
-    SnapConstraints
-    } from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-let shape: BasicShapeModel = {
-    type: 'Basic',
-    shape: 'Rectangle'
-};
+import { DiagramComponent, NodeModel, UserHandleModel, UserHandleEventsArgs } from "@syncfusion/ej2-react-diagrams";
 let node1: NodeModel[] = [{
-    id: 'node',
-    offsetX: 100,
-    offsetY: 100,
-    shape: shape
+    id: 'node1',
+    offsetX: 300,
+    offsetY: 200,
+    height: 100,
+    width: 100,
 }];
-let handles: UserHandleModel[] = [{
+let userHandles: UserHandleModel[] = [{
     name: 'clone',
-    pathData: 'M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3, 0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z',
+    pathData:
+      'M0,3.42 L1.36,3.42 L1.36,12.39 L9.62,12.39 L9.62,13.75 L1.36,13.75 C0.97,13.75,0.65,13.62,0.39,13.36 C0.13,13.1,0,12.78,0,12.39 Z M4.13,0 L12.39,0 C12.78,0,13.1,0.13,13.36,0.39 C13.62,0.65,13.75,0.97,13.75,1.36 L13.75,9.62 C13.75,10.01,13.62,10.33,13.36,10.6 C13.1,10.87,12.78,11.01,12.39,11.01 L4.13,11.01 C3.72,11.01,3.39,10.87,3.13,10.6 C2.87,10.33,2.74,10.01,2.74,9.62 L2.74,1.36 C2.74,0.97,2.87,0.65,3.13,0.39 C3.39,0.13,3.72,0,4.13,0 Z ',
+    offset: 1,
+    //Sets the border width of user handle
+    borderWidth: 5,
+    //Sets the border color of user handle
+    borderColor: '#64Abbb',
+    //Sets the background color of user handle
+    backgroundColor: 'yellow',
+    //Sets the path data color of user handle
+    pathColor: 'green',
+    //Sets the size of user handle
+    size: 40,
+    //Sets the visibility of user handle
     visible: true,
-    offset: 0,
-    side: 'Bottom',
-    pathColor: "white",
-    margin: {
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0
-    }
-}];
-ReactDOM.render(
-    <DiagramComponent id="container"  ref={diagram => (diagramInstance = diagram)}
-    width = {
-        "100%"
-    }
-    height = {
-        "600px"
-    }
-    nodes = {
-        node1
-    }
-    selectedItems = {
-        {
-              constraints: SelectorConstraints.UserHandle,
-              userHandles: handles
+  },];
+let diagramInstance: DiagramComponent;
+function App() {
+    const handleUserHandleMouseDown = (args: UserHandleEventsArgs) => {
+        if (args.element) {
+            //To clone the selected node
+            diagramInstance.copy();
+            diagramInstance.paste();
         }
-    }
-    //set Node default value
-    getNodeDefaults = {
-        (node: NodeModel): NodeModel => {
-            node.height = 100;
-            node.width = 100;
-            node.style.fill = '#6BA5D7';
-            node.style.strokeColor = '#6BA5D7';
-            return node;
-        }
-    }
-    //set CustomTool
-    getCustomTool = {
-        getTool
-    }
-/> , document.getElementById("diagram")
-);
-function getTool(action: string): ToolBase {
-    let tool: ToolBase;
-    if (action === 'clone') {
-        tool = new CloneTool(diagramInstance.commandHandler);
-    }
-    return tool;
+    };
+    return (
+        <DiagramComponent id="container"
+            ref={(diagram) => (diagramInstance = diagram)}
+            width={"100%"}
+            height={"600px"}
+            nodes={node1}
+            selectedItems={{
+                //Define user handles in selectedItems property
+                userHandles: userHandles
+            }}
+            onUserHandleMouseDown={handleUserHandleMouseDown} 
+        />
+    );
 }
-//Defines the clone tool used to copy Node/Connector
-class CloneTool extends MoveTool {
-    public mouseDown(args: MouseEventArgs): void {
-        let newObject: any;
-        if (diagramInstance.selectedItems.nodes.length > 0) {
-            newObject = cloneObject(diagramInstance.selectedItems.nodes[0]) as NodeModel;
-        } else {
-            newObject = cloneObject(diagramInstance.selectedItems.connectors[0]) as ConnectorModel;
-        }
-        newObject.id += randomId();
-        diagramInstance.paste([newObject]);
-        args.source = diagramInstance.nodes[diagramInstance.nodes.length - 1] as IElement;
-        args.sourceWrapper = args.source.wrapper;
-        super.mouseDown(args);
-        this.inAction = true;
-    }
-}
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
+root.render(<App />);
+
 
 
 

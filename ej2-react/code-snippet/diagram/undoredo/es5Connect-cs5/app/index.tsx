@@ -1,13 +1,8 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     DiagramComponent,
     NodeModel,
-    ConnectorModel,
     UndoRedo,
     Inject,
     HistoryEntry
@@ -20,13 +15,9 @@ let nodes: NodeModel[] = [{
     offsetX: 300,
     offsetY: 50,
     annotations: [{
-        id: 'label1',
-        content: 'Start'
+      id: 'label1',
+      content: 'Node'
     }],
-    shape: {
-        type: 'Flow',
-        shape: 'Terminator'
-    }
 }];
 function App() {
   return (
@@ -38,17 +29,10 @@ function App() {
       nodes={nodes}
       created={() => {
         // canLog decide whether the entry add or not in history List
-        diagramInstance.historyList.canLog = function (entry: HistoryEntry) {
+        diagramInstance.historyManager.canLog = function (entry: HistoryEntry) {
           entry.cancel = true;
           return entry;
         };
-      }}
-      getNodeDefaults={(node: NodeModel) => {
-        node.height = 100;
-        node.width = 100;
-        node.style.fill = '#6BA5D7';
-        node.style.strokeColor = 'white';
-        return node;
       }}
     >
       <Inject services={[UndoRedo]} />
@@ -57,7 +41,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
-
-{% endraw %}

@@ -10,10 +10,6 @@ let node = [{
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the annotation for the node
         annotations: [{
                 content: 'Task1'
@@ -26,10 +22,6 @@ let node = [{
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the annotation for the node
         annotations: [{
                 content: 'Task2'
@@ -39,19 +31,18 @@ let connector = [{
         sourceID: 'node1',
         targetID: 'node2',
         type: 'Orthogonal',
-        style: {
-            strokeColor: '#6BA5D7',
-            strokeWidth: 2
-        },
+        targetDecorator: { shape: 'None' },
         // Sets the annotation for the connector
         annotations: [{
                 content: '0',
                 // Sets the offset for the content
-                offset: 0
+                offset: 0,
+                alignment: 'Before',
             }, {
                 content: '1',
                 // Sets the offset for the content
-                offset: 1
+                offset: 1,
+                alignment: 'After',
             }]
     }];
 // initialize Diagram component

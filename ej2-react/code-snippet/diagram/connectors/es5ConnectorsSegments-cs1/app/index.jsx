@@ -8,17 +8,6 @@ let connectors = [{
                 // Defines the segment type of the connector
                 type: 'Straight'
             }],
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        },
         sourcePoint: {
             x: 100,
             y: 100

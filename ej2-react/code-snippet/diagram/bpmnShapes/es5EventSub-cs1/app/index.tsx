@@ -2,18 +2,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    DiagramComponent,
-    Inject,
-    NodeModel,
-    BpmnShape,
-    BpmnSubProcessModel,
-    BpmnDiagrams,
-    BpmnActivityModel,
-    BpmnFlowModel,
-    BpmnGatewayModel
-} from "@syncfusion/ej2-react-diagrams";
+import {DiagramComponent,Inject,NodeModel,BpmnDiagrams,} from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [{
     // Position of the node
@@ -31,12 +20,13 @@ let node: NodeModel[] = [{
             activity: 'SubProcess',
             //Sets the collapsed as true and type as Event
             subProcess: {
-                collapsed: true,
+                collapsed: false,
                 type: 'Event',
                 //Sets event as Start and trigger as Message
                 events: [{
                     event: 'Start',
-                    trigger: 'Message'
+                    trigger: 'Message',
+                    offset: { x: 0.5, y: 0 },
                     }]
                 }
             },

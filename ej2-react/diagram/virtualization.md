@@ -10,15 +10,19 @@ domainurl: ##DomainURL##
 
 # Virtualization in React Diagram component
 
+Virtualization is a technique to optimize the performance of diagrams, especially when working with larger diagrams
+
 ## Virtualization in Diagram
 
-Virtualization is the process of loading the diagramming objects available in the visible area of the Diagram control, that is, only the diagramming objects that lie within the ViewPort of the Scroll Viewer are loaded (remaining objects are loaded only when they come into view).
+Virtualization optimizes the diagram performance by loading only the diagramming objects within the visible area, or ViewPort, of the Scroll Viewer. This means that only the nodes and connectors that are currently in view are loaded, while the remaining objects are loaded dynamically as they come into view.
 
-This feature gives an optimized performance while loading and dragging items to the Diagram that consists of many Nodes and Connectors.
+This feature significantly enhances performance, especially when working with diagrams containing a large number of nodes and connectors. By reducing the number of objects that need to be processed at any given time, virtualization ensures smoother interactions, such as loading and dragging items within the diagram.
+
+To enable virtualization in a diagram, you need to include the virtualization constraint in the diagram's constraints. For more information, refer to the  [`diagram constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/#constraints).
 
 The following code illustrates how to enable Virtualization mode in the diagram.
 
-```ts
+```js
 function App() {
   return (
     <DiagramComponent
@@ -35,3 +39,16 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
 ```
+
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/virtualization/virtualization-cs1/app/index.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/virtualization/virtualization-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/virtualization/virtualization-cs1" %}

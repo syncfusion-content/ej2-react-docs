@@ -1,13 +1,6 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    DiagramComponent,
-    NodeModel
-} from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, NodeModel } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [{
     shape: {
@@ -40,23 +33,26 @@ let node: NodeModel[] = [{
 // initialize Diagram component
 let diagramInstance: DiagramComponent;
 function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={'100%'}
-      height={'600px'}
-      nodes={node}
-      created = { () => {
+  const updateHeaderStyle = () => {
+    if (diagramInstance) {
         // change the swimlane header style dynamically
-       diagramInstance.nodes[0].shape.header.style.fill = 'red'
-       diagramInstance.dataBind();
-      }}
-    />
+        diagramInstance.nodes[0].shape.header.style.fill = 'red';
+        // Refresh the diagram
+        diagramInstance.dataBind(); 
+    }
+  };
+  return (
+    <div>
+      <button onClick={updateHeaderStyle}>updateHeaderStyle</button>
+      <DiagramComponent
+        id="container"
+        ref={(diagram) => (diagramInstance = diagram)}
+        width={'100%'}
+        height={'600px'}
+        nodes={node}
+      />
+    </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
-{% endraw %}

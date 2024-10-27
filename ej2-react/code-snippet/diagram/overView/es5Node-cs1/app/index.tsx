@@ -1,36 +1,10 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    DiagramComponent,
-    ConnectorModel,
-    Overview,
-    OverviewModel,
-    Inject
-} from "@syncfusion/ej2-react-diagrams";
-import {
-    DataManager,
-    Query
-} from '@syncfusion/ej2-data';
-import {
-    TreeInfo,
-    Node,
-    NodeModel,
-    StackPanel,
-    Container,
-    TextElement,
-    DataBinding,
-    OverviewComponent,
-    HierarchicalTree
-} from "@syncfusion/ej2-react-diagrams";
+import { DataManager, Query } from '@syncfusion/ej2-data';
+import { StackPanel, TextElement, DataBinding, OverviewComponent, HierarchicalTree, DiagramTools, DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
 /**
  * Overview
  */
-let diagram: DiagramComponent;
-let overview: OverviewComponent;
 let data: object[] = [{
         'Id': 'parent',
         'Name': 'Maria Anders',
@@ -85,11 +59,16 @@ let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
 function App() {
   return (
     <div>
-      <div style={{ width: '75%', float: 'left' }}>
+      <div style={{ width: '100%', float: 'left' }}>
         <DiagramComponent
           id="container"
           ref={(diagram) => (diagramInstance = diagram)}
-          height={'850px'}
+          height={'499px'}
+          created={() => {
+            //To draw an object once, activate draw once
+            diagramInstance.tool = DiagramTools.ZoomPan;
+            diagramInstance.dataBind();
+          }}
           layout={{
             type: 'HierarchicalTree',
             margin: {
@@ -174,13 +153,10 @@ function App() {
         </DiagramComponent>
       </div>
       <OverviewComponent
-        id="overview"
-        style={{
-          float: 'Right',
-        }}
+        id="overview"  
         sourceID="container"
-        width={'24%'}
-        height={'130px'}
+        width={'100%'}
+        height={'250px'}
       />
     </div>
   );
@@ -188,6 +164,3 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
-
-
-{% endraw %}

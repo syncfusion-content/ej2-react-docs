@@ -1,14 +1,11 @@
-{% raw %}
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
+import { createRoot } from 'react-dom/client';
 import { DataManager, Query } from '@syncfusion/ej2-data';
-import { StackPanel, TextElement, DataBinding, OverviewComponent, HierarchicalTree } from "@syncfusion/ej2-react-diagrams";
+import { StackPanel, TextElement, DataBinding, OverviewComponent, HierarchicalTree, DiagramTools, DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
 /**
  * Overview
  */
-let diagram;
-let overview;
+
 let data = [{
         'Id': 'parent',
         'Name': 'Maria Anders',
@@ -62,8 +59,13 @@ let items = new DataManager(data, new Query().take(7));
 // Initializes the Diagram control
 function App() {
     return (<>
-      <div style={{ width: '75%', float: 'left' }}>
-        <DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} height={'850px'} layout={{
+      <div style={{ width: '100%', float: 'left' }}>
+        <DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} height={'499px'}  created={() => {
+        //To draw an object once, activate draw once
+        diagramInstance.tool = DiagramTools.ZoomPan;
+        diagramInstance.dataBind();
+      }}
+      layout={{
             type: 'HierarchicalTree',
             margin: {
                 top: 20,
@@ -141,11 +143,9 @@ function App() {
           <Inject services={[DataBinding, HierarchicalTree]}/>
         </DiagramComponent>
       </div>
-      <OverviewComponent id="overview" style={{
-            float: 'Right',
-        }} sourceID="container" width={'24%'} height={'130px'}/>
+      <OverviewComponent id="overview"  sourceID="container" width={'100%'} height={'250px'}/>
     </>);
 }
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
+const root = createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}
+

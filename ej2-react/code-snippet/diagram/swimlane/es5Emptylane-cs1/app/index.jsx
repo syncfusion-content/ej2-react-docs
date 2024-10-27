@@ -7,7 +7,7 @@ let node = [{
             type: 'SwimLane',
             orientation: 'Horizontal',
             header: {
-                annotation: { content: 'ONLINE PURCHASE STATUS', style: { fill: 'transparent' } },
+                annotation: { content: 'ONLINE PURCHASE STATUS' },
                 height: 50, style: { fontSize: 11 },
             },
             // initialize the lane of swimlane
@@ -16,8 +16,6 @@ let node = [{
                     id: 'stackCanvas1',
                     // set the lane height
                     height: 100,
-                    // set the lane info
-                    addInfo: { name: 'lane1' }
                 },
             ],
             phases: [

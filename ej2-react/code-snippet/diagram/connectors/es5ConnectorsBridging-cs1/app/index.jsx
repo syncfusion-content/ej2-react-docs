@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, Inject, ConnectorBridging, DiagramConstraints } from "@syncfusion/ej2-react-diagrams";
@@ -56,7 +55,8 @@ let connectors = [{
         targetPoint: {
             x: 400,
             y: 130
-        }
+        },
+        bridgeSpace: 20,
     },
     {
         id: 'connector3',
@@ -87,10 +87,9 @@ function App() {
             return node;
         }} nodes={node1} connectors={connectors} height={'600px'} 
     // Enables the bridging constraints for the connector
-    constraints={DiagramConstraints.Default | DiagramConstraints.Bridging} connectors={connectors}>
+    constraints={DiagramConstraints.Default | DiagramConstraints.Bridging}>
       <Inject services={[ConnectorBridging]}/>{' '}
     </DiagramComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

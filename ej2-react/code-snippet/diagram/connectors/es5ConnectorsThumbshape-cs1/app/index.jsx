@@ -1,7 +1,6 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Diagram } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent,Diagram,ConnectorEditing,ConnectorConstraints  } from "@syncfusion/ej2-react-diagrams";
 Diagram.Inject(ConnectorEditing);
 let connector2 = {};
 connector2.id = 'connector2';
@@ -24,11 +23,12 @@ connector2.segments = [
     }
 ];
 function App() {
-    return (<DiagramComponent id="container" width={'900px'} height={'500px'} connectors={[connector2]} getConnectorDefaults={(connector) => {
+    return (<DiagramComponent id="container" width={'900px'} height={'500px'} connectors={[connector2]} 
+    segmentThumbShape= 'Arrow' 
+    getConnectorDefaults={(connector) => {
             connector.constraints =
                 ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
         }}/>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

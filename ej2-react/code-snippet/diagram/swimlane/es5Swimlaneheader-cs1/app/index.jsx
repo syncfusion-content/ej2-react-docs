@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let node = [{
+        id: 'swimlane',
         shape: {
             // Set the node type as swimlane
             type: 'SwimLane',
@@ -20,7 +21,8 @@ let node = [{
             ],
             phaseSize: 20,
         },
-        offsetX: 300, offsetY: 200,
+        offsetX: 300, 
+        offsetY: 200,
         height: 200,
         width: 350
     }];

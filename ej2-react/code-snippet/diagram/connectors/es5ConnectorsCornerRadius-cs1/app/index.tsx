@@ -1,10 +1,6 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     DiagramComponent,
     NodeModel,
     ConnectorModel
@@ -27,17 +23,6 @@ let nodes: NodeModel[] = [{
 let connectors: ConnectorModel[] = [{
     id: "connector1",
     type: 'Orthogonal',
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     // Sets the radius for the rounded corner
     cornerRadius: 10,
     sourceID: 'node1',
@@ -69,7 +54,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
-
-{% endraw %}

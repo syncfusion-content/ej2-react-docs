@@ -3,10 +3,10 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     NodeModel,
     DiagramComponent
 } from "@syncfusion/ej2-react-diagrams";
+let diagramInstance: DiagramComponent;
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [{
     // Position of the node
@@ -20,12 +20,9 @@ let node: NodeModel[] = [{
         type: 'Text',
         content: 'Text Element'
     },
-    //Customizes the appearances such as text, font, fill, and stroke.
+    //Customizes the appearances such as fill.
     style: {
-        strokeColor: 'none',
         fill: 'none',
-        color: 'black',
-        textAlign: 'Center'
     }
 }];
 // initialize Diagram component
@@ -35,8 +32,12 @@ function App() {
       id="container"
       width={'100%'}
       height={'600px'}
+      ref={(diagram) => (diagramInstance = diagram)}
       // Add node
       nodes={node}
+      created={() => {
+        diagramInstance.select([diagramInstance.nodes[0]]);
+      }}
       // render initialized Diagram
     />
   );

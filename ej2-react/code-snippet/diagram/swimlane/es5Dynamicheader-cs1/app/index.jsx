@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
@@ -33,12 +32,20 @@ let node = [{
 // initialize Diagram component
 let diagramInstance;
 function App() {
-    return (<DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} width={'100%'} height={'600px'} nodes={node} created={() => {
+    const updateHeaderStyle = () => {
+        if (diagramInstance) {
             // change the swimlane header style dynamically
             diagramInstance.nodes[0].shape.header.style.fill = 'red';
-            diagramInstance.dataBind();
-        }}/>);
+            // Refresh the diagram
+            diagramInstance.dataBind(); 
+        }
+    };
+    return ( 
+        <div>
+            <button onClick={updateHeaderStyle}>updateHeaderStyle</button>
+            <DiagramComponent id="container" ref={(diagram) => (diagramInstance = diagram)} width={'100%'} height={'600px'} nodes={node} /> 
+        </div>
+    );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

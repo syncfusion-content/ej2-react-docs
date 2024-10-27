@@ -14,10 +14,6 @@ let node = [{
             type: 'Flow',
             shape: 'Document'
         },
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
     }];
 // initialize Diagram component
 function App() {

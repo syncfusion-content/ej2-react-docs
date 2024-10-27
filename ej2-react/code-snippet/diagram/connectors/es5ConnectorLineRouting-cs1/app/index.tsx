@@ -1,10 +1,6 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     DiagramComponent,
     Inject,
     LineRouting,
@@ -13,13 +9,13 @@ import {
     NodeModel,
 } from "@syncfusion/ej2-react-diagrams";
 //Initializes the nodes for the diagram
-let nodes = [
+let nodes:NodeModel[] = [
   { id: 'shape1', offsetX: 100, offsetY: 100, width: 120, height: 50 },
   { id: 'shape2', offsetX: 300, offsetY: 300, width: 120, height: 50 },
   { id: 'shape3', offsetX: 150, offsetY: 200, width: 120, height: 50 }
 ];
 //Initializes the connector for the diagram
-let connectors = [
+let connectors:ConnectorModel[] = [
   { id: 'connector', sourceID: 'shape1', targetID: 'shape2', type: 'Orthogonal' }
 ];
 function App() {
@@ -42,7 +38,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
-
-{% endraw %}

@@ -1,71 +1,31 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, Inject, DiagramContextMenu } from "@syncfusion/ej2-react-diagrams";
 let diagramInstance;
-//Initializes the connector
+
 let connector = [{
         id: 'connector1',
         sourceID: 'node1',
         targetID: 'node2',
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2,
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        }
-    }];
-//Initializes the nodes
+  
+}];
+
 let node = [{
         id: 'node1',
         width: 100,
         height: 100,
         offsetX: 100,
         offsetY: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-        annotations: [{
-                id: 'label1',
-                content: 'Rectangle1',
-                offset: {
-                    x: 0.5,
-                    y: 0.5
-                },
-                style: {
-                    color: 'white'
-                }
-            }]
+        annotations: [{ id: 'label1', content: 'Rectangle1' }]
     }, {
         id: 'node2',
         width: 100,
         height: 100,
         offsetX: 300,
         offsetY: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-        annotations: [{
-                id: 'label2',
-                content: 'Rectangle2',
-                offset: {
-                    x: 0.5,
-                    y: 0.5
-                },
-                style: {
-                    color: 'white'
-                }
-            }]
-    }];
+        annotations: [{id: 'label2', content: 'Rectangle2'}]
+}];
+
 //Initializes the Diagram component
 function App() {
     return (<DiagramComponent id="diagram_contextmenu" ref={(diagram) => (diagramInstance = diagram)} width={'650px'} height={'350px'} nodes={node} connectors={connector} contextMenuSettings={{
@@ -73,35 +33,32 @@ function App() {
             show: true,
             items: [
                 {
-                    text: 'delete',
-                    id: 'delete',
+                  text: 'menu item 1',
+                  id: 'item1',
                 },
-            ],
+                {
+                  text: 'menu item 2',
+                  id: 'item2',
+                },
+              ],
             // Hides the default context menu items
-            showCustomMenuOnly: false,
-        }} contextMenuOpen={(args) => {
-            //do your custom action here.
-            for (let item of args.items) {
-                if (item.text === 'delete') {
-                    if (!diagramInstance.selectedItems.nodes.length &&
-                        !diagramInstance.selectedItems.connectors.length) {
-                        args.hiddenItems.push(item.id);
-                    }
-                }
-            }
-        }} contextMenuClick={(args) => {
-            //do your custom action here.
-            if (args.item.text === 'delete') {
-                if (diagramInstance.selectedItems.nodes.length +
-                    diagramInstance.selectedItems.connectors.length >
-                    0) {
-                    diagramInstance.cut();
-                }
-            }
-        }}>
-      <Inject services={[DiagramContextMenu]}/>
+            showCustomMenuOnly: true,
+    }} 
+    contextMenuBeforeItemRender={(args) => {
+        //Triggers when the menu is openned
+        console.log('context menu before item render');
+    }}
+    contextMenuOpen={(args) => {
+        //Triggers when the menu is openned
+        console.log('context menu openned');
+    }}
+    contextMenuClick={(args) => {
+       //Triggers when the item is clicked
+       console.log('context menu clicked');
+ 
+    }}>
+    <Inject services={[DiagramContextMenu]}/>
     </DiagramComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

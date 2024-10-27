@@ -1,21 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
+import {DiagramComponent, Diagram, ConnectorEditing } from "@syncfusion/ej2-react-diagrams";
+Diagram.Inject(ConnectorEditing)
 let connectors = [
     {
         id: 'connector3',
         type: 'Bezier',
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        },
         segments: [{
                 type: 'Bezier',
                 // First control point: an absolute position from the page origin
