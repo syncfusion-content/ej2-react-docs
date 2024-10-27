@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent, DiagramConstraints, NodeConstraints } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, DiagramConstraints, NodeConstraints,ConnectorConstraints } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let node = [{
         id: "node1",
@@ -34,11 +34,19 @@ let node = [{
             relativeMode: 'Object'
         },
     }];
+let connector = [{
+    id: 'connector1',
+    sourcePoint: { x: 300, y: 100 },
+    targetPoint: { x: 400, y: 250 },
+    tooltip: { content: 'connector' },
+    constraints: ConnectorConstraints.Default | ConnectorConstraints.Tooltip, 
+}]
 //Initializes the Diagram component
 function App() {
     return (<DiagramComponent id="container" width={'650px'} height={'350px'} constraints={DiagramConstraints.Default | DiagramConstraints.Tooltip} 
     //Defines nodes
-    nodes={node}/>);
+    nodes={node} connectors={connector}
+    />);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

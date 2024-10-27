@@ -39,10 +39,6 @@ let node: NodeModel[] = [{
                 tooltip: {
                     //Sets the content of the Tooltip
                     content: getContent(),
-                    //Sets the position of the Tooltip
-                    position: 'TopLeft',
-                    //Sets the tooltip position relative to the node
-                    relativeMode: 'Object'
                 }
             }];
 

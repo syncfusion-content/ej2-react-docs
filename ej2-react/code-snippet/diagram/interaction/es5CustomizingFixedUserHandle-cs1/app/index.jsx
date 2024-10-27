@@ -1,37 +1,75 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
-let diagramInstance;
 let node = [{
-        offsetX: 150,
-        offsetY: 150,
-        width: 100,
-        height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-        // A fixed user handle is created and stored in fixed user handle collection of Node.
-        fixedUserHandles: [{ offset: { x: 0, y: 0 }, margin: { right: 20 }, padding: { left: 3, right: 3, top: 3, bottom: 3 }, iconStrokeColor: 'white', fill: 'black', height: 20, width: 20, pathData: 'M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z' }]
-    }];
+    id: 'node1',
+    offsetX: 300,
+    offsetY: 300,
+    height: 100,
+    width: 100,
+    style: { strokeColor: '#64Abbb', strokeWidth: 3 },
+    fixedUserHandles: [
+      {
+        id: 'color',
+        pathData:
+          'M31.5,13.5 C31.5,20.95,24.44,27,15.75,27 C7.059999999999999,27,0,20.95,0,13.5 C0,6.050000000000001,7.06,0,15.75,0 C24.44,0,31.5,6.05,31.5,13.5 Z M13.12,4.5 L13.12,11.25 L5.25,11.25 L5.25,15.75 L13.12,15.75 L13.12,22.5 L18.38,22.5 L18.38,15.75 L26.25,15.75 L26.25,11.25 L18.38,11.25 L18.38,4.5 Z ',
+        width: 30,
+        height: 30,
+        offset: { x: 1, y: 0 },
+        margin: { left: 20, bottom: 10 },
+        //Sets the stroke color of fixed user handle
+        handleStrokeColor: 'green',
+        //Sets the stroke width of fixed user handle
+        handleStrokeWidth: 4,
+        //Sets the stroke color of icon
+        iconStrokeColor: '#64Abbb',
+        //Sets the stroke width of icon
+        iconStrokeWidth: 1,
+        //Sets the fill color of the fixed user handle
+        fill: 'yellow',
+        //Sets the corner radius of the fixed user handle
+        cornerRadius: 5,
+      },
+    ],
+  }];
 let connector = [{
-        sourcePoint: {
-            x: 300,
-            y: 100
-        },
-        targetPoint: {
-            x: 400,
-            y: 200
-        },
-        type: 'Orthogonal',
-        style: {
-            strokeColor: '#6BA5D7'
-        },
-        // A fixed user handle is created and stored in fixed user handle collection of Connector.
-        fixedUserHandles: [{ offset: 0.5, width: 20, alignment: 'Before', padding: { left: 3, right: 3, top: 3, bottom: 3 }, iconStrokeColor: 'white', fill: 'black', height: 20, id: 'usercon1', displacement: { x: 10, y: 10 }, pathData: 'M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z' }]
-    }];
+    id: 'connector1',
+    sourcePoint: { x: 100, y: 100 },
+    targetPoint: { x: 300, y: 200 },
+    style: { strokeColor: '#64Abbb', fill: '#64A6', strokeWidth: 3 },
+    fixedUserHandles: [
+      {
+        id: 'stroke',
+        pathData:
+          'M0,13.85 L15.62,13.85 L15.62,20 L25,9.74 L15.62,0 L15.62,6.41 L0,6.41 L0,13.85 Z ',
+        width: 30,
+        height: 25,
+        //Offset of fixed user handle
+        offset: 0.5,
+        //Sets the stroke color of fixed user handle
+        handleStrokeColor: 'green',
+        //Sets the stroke width of fixed user handle
+        handleStrokeWidth: 4,
+        //Sets the stroke color of icon
+        iconStrokeColor: '#64Abbb',
+        //Sets the stroke width of icon
+        iconStrokeWidth: 1,
+        //Sets the fill color of the fixed user handle
+        fill: 'yellow',
+        //Sets the corner radius of the fixed user handle
+        cornerRadius: 5,
+      },
+    ],
+  }];
+let diagramInstance;
 function App() {
-    return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node} connectors={connector}/>);
+    const onFixedUserHandleMouseDown = (args) => {
+        let node = args.element.parentObj;
+        node.style.strokeColor =
+        node.style.strokeColor === '#64A6' ? '#64Abbb' : '#64A6';
+        diagramInstance.dataBind();
+    };
+    return (<DiagramComponent id="container"  ref={(diagram) => (diagramInstance = diagram)} width={'100%'} height={'600px'} nodes={node} connectors={connector} onFixedUserHandleMouseDown={onFixedUserHandleMouseDown}/>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

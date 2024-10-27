@@ -31,9 +31,9 @@ An annotation can be added to a node/connector by defining the annotation object
 
 ## Add annotations at runtime
 
-* Annotations can be added at runtime by using the client-side method [`addLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addLabels). The following code illustrates how to add a annotation to a node.
+Annotations can be added at runtime by using the diagram method [`addLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addLabels). The following code illustrates how to add a annotation to a node.
 
-* The annotation's [`ID`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel#id-string) property is used to define the name of the annotation and its further used to find the annotation at runtime and do any customization.
+The annotation's [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel#id-string) property is used to define the name of the annotation and its further used to find the annotation at runtime and do any customization.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,7 +48,7 @@ An annotation can be added to a node/connector by defining the annotation object
 
 ## Remove annotation
 
-A collection of annotations can be removed from the node by using client-side method [`removeLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removeLabels). The following code illustrates how to remove a annotation to a node.
+A collection of annotations can be removed from the node by using diagram method [`removeLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram/#removeLabels). The following code illustrates how to remove a annotation to a node.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -63,7 +63,7 @@ A collection of annotations can be removed from the node by using client-side me
 
 ## Update annotation at runtime
 
-You can change any annotation properties at runtime and update it through the client-side method [`dataBind`](https://ej2.syncfusion.com/react/documentation/api/diagram/#dataBind).
+You can get the annotation directly from the node’s annotations collection property and you can change any annotation properties at runtime. To reflect the changes immediately, we need to call [`dataBind`](https://ej2.syncfusion.com/react/documentation/api/diagram/#dataBind).
 
 The following code example illustrates how to change the annotation properties.
 
@@ -78,7 +78,7 @@ The following code example illustrates how to change the annotation properties.
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Update-cs2" %}
 
-## Alignment
+<!-- ## Alignment
 
 Annotation can be aligned relative to the node boundaries. It has [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel#margin-marginmodel), [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/textStyleModel), horizontal, and vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignment.
 
@@ -387,4 +387,4 @@ The [`rotationReference`](https://helpej2.syncfusion.com/react/documentation/api
 | Value | Description | Image |
 | -------- | -------- | -------- |
 | Page | When this option is set, the annotation remains fixed in its original orientation even if its parent node is rotated. | ![No_Rotation](images/page_rotationreference.gif) |
-| Parent | In this case, the annotation rotates along with its parent node. | ![Rotation](images/parent_rotationreference.gif)|
+| Parent | In this case, the annotation rotates along with its parent node. | ![Rotation](images/parent_rotationreference.gif)| -->

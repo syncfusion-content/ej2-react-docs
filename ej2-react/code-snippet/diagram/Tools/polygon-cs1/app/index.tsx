@@ -1,13 +1,6 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
-    BasicShapeModel,
-    NodeModel,
-    DiagramTools,
     DiagramComponent
 } from "@syncfusion/ej2-react-diagrams";
 //Sets scroll status
@@ -19,16 +12,17 @@ function App() {
       ref={(diagram) => (diagramInstance = diagram)}
       width={700}
       height={700}
+      rulerSettings={{ showRulers: true }}
       scrollSettings={{
-        horizontalOffset: 100,
-        verticalOffset: 50,
+        scrollLimit: 'Infinity',
+      }}
+      created={() => {
+        diagramInstance.scrollSettings.horizontalOffset = 100;
+        diagramInstance.scrollSettings.verticalOffset = 100;
+        diagramInstance.dataBind();
       }}
     />
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
-
-{% endraw %}

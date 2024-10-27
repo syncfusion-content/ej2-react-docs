@@ -8,7 +8,7 @@ let node = [{
             orientation: 'Horizontal',
             // Intialize header to swimlane
             header: {
-                annotation: { content: 'ONLINE PURCHASE STATUS', style: { fill: 'transparent' } },
+                annotation: { content: 'ONLINE PURCHASE STATUS' },
                 height: 50, style: { fontSize: 11 },
             },
             // Intialize lane to swimlane

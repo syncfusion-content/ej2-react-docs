@@ -5,8 +5,11 @@ let diagramInstance;
 // A node is created and stored in nodes array.
 let node = [{
         id: 'node',
-        offsetX: 300,
+        offsetX: 200,
         offsetY: 200,
+        style: {
+            fill: '#26A0DA',
+          },
         shape: {
             type: 'UmlClassifier',
             enumerationShape: {

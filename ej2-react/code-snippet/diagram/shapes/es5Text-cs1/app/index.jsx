@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
+let diagramInstance;
 // A node is created and stored in nodes array.
 let node = [{
         // Position of the node
@@ -14,19 +15,18 @@ let node = [{
             type: 'Text',
             content: 'Text Element'
         },
-        //Customizes the appearances such as text, font, fill, and stroke.
+        //Customizes the appearances such as fill
         style: {
-            strokeColor: 'none',
             fill: 'none',
-            color: 'black',
-            textAlign: 'Center'
         }
     }];
 // initialize Diagram component
 function App() {
-    return (<DiagramComponent id="container" width={'100%'} height={'600px'} 
+    return (<DiagramComponent id="container" width={'100%'} height={'600px'} ref={(diagram) => (diagramInstance = diagram)}
     // Add node
-    nodes={node}/>);
+    nodes={node} created={() => {
+        diagramInstance.select([diagramInstance.nodes[0]]);
+    }}/>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

@@ -10,30 +10,43 @@ domainurl: ##DomainURL##
 
 # Overview in React Diagram component
 
-Overview control allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and also to navigate, pan, or zoom, on a particular position of the page.
+The Overview control allows you to see a preview or an overall view of the entire content of a diagram. This helps you to grasp the overall picture of a large diagram and navigate, pan, or zoom to a specific position on the page.
 
-When you work on a very large diagram, you may not know the part you are actually working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in a particular area you want to. This solution is not suitable when you need some frequent navigation.
+## Usage scenario
 
-Overview control solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates viewport of the diagram. Navigation becomes easy by dragging this rectangle.
+When working on a very large diagram, it can be challenging to know which part you are actually focusing on or to navigate from one section to another. One solution for navigation is to zoom out to view the entire diagram and locate your position. Then, you can zoom in on the specific area you need. However, this method is not ideal for frequent navigation.
+
+The Overview control addresses these issues by providing a preview, or overall view, of the entire diagram. A rectangle indicates the viewport of the diagram, making navigation easy by dragging this rectangle to the desired section.
 
 ## Create overview
 
-The `sourceID` property of overview should be set with the corresponding diagram ID for the overall view.
+To create an overview, the [`sourceID`](https://ej2.syncfusion.com/react/documentation/api/overview/overviewModel/#sourceid) property of the overview should be set with the corresponding diagram Id for the overall view.
 
-The `width` and `height` properties of the overview allow you to define the size of the overview.
+The [`width`](https://ej2.syncfusion.com/react/documentation/api/overview/overviewModel/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/overview/overviewModel/#height) properties of the overview allow you to define its size.
 
-The following code illustrates how to create overview.
+The following code illustrates how to create an overview:
 
-### Zoom and Pan
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/overView/es5Node-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/overView/es5Node-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-In overview, the view port of the diagram is highlighted with a red colored rectangle. Diagram can be zoomed/panned by interacting with that. You can interact with overview as follows:
+ {% previewsample "page.domainurl/code-snippet/diagram/overView/es5Node-cs2" %}
 
-* Resize the rectangle: Zooms in/out the diagram.
+### Overview interactions
+
+In the overview, the viewport of the diagram is highlighted with a red color rectangle. You can zoom and pan the diagram by interacting with this rectangle.
+
+You can interact with the overview as follows:
+
+* Resize the rectangle: Zooms in/out of the diagram.
 * Drag the rectangle: Pans the diagram.
-* Click at a position: Navigates to the clicked region.
-* Choose a particular region by clicking and dragging: Navigates to the specified region.
-
-The following image shows how the diagram is zoomed/panned with overview.
+* Click on a position: Navigates to the clicked region.
+* Select a specific region by clicking and dragging: Navigates to the specified region.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -45,3 +58,7 @@ The following image shows how the diagram is zoomed/panned with overview.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/overView/es5Node-cs1" %}
+
+The following Gif image displays the interactions with overview.
+
+![Overview-interaction](images/overview-interaction.gif)

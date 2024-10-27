@@ -18,12 +18,13 @@ let node = [{
                 activity: 'SubProcess',
                 //Sets the collapsed as true and type as Event
                 subProcess: {
-                    collapsed: true,
+                    collapsed: false,
                     type: 'Event',
                     //Sets event as Start and trigger as Message
                     events: [{
                             event: 'Start',
-                            trigger: 'Message'
+                            trigger: 'Message',
+                            offset: { x: 0.5, y: 0 },
                         }]
                 }
             },

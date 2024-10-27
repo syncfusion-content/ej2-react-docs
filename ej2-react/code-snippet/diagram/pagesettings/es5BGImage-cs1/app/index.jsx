@@ -1,15 +1,8 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
 function App() {
-    return (<DiagramComponent id="container" width={'100%'} height={'600px'} getNodeDefaults={(node) => {
-            node.height = 100;
-            node.width = 100;
-            node.style.fill = '#6BA5D7';
-            node.style.strokeColor = 'white';
-            return node;
-        }} nodes={node} connectors={connector} 
+    return (<DiagramComponent id="container" width={'100%'} height={'600px'}
     // Defines the pageSettings for the diagram
     pageSettings={{
             orientation: 'Landscape',
@@ -24,13 +17,7 @@ function App() {
             },
             width: 300,
             height: 300,
-            margin: {
-                left: 10,
-                top: 10,
-                bottom: 10
-            },
         }}/>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

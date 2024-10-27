@@ -3,7 +3,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     DiagramComponent,
     ConnectorModel
 } from "@syncfusion/ej2-react-diagrams";

@@ -5,27 +5,39 @@ import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
 let node = [{
         id: 'node1',
         // Position of the node
-        offsetX: 100,
-        offsetY: 100,
+        offsetX: 250,
+        offsetY: 250,
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the annotation for the node
         annotations: [{
-                content: 'Annotation Text',
-                // Sets the style for the text to be displayed
-                style: {
-                    color: 'black',
-                    bold: true,
-                    italic: true,
-                    fontSize: 12,
-                    fontFamily: 'TimesNewRoman'
-                }
-            }]
+            content: 'Annotation visibility true',
+            style: {
+              color: 'blue',
+              bold: true,
+              italic: true,
+              fontSize: 15,
+              fontFamily: 'TimesNewRoman',
+              fill: 'orange',
+              opacity: 0.6,
+            },
+            visibility: true,
+          },
+          {
+            content: 'Annotation visibility false',
+            offset: { x: 0.5, y: 1 },
+            style: {
+              color: 'blue',
+              bold: true,
+              italic: true,
+              fontSize: 15,
+              fontFamily: 'TimesNewRoman',
+              fill: 'orange',
+              opacity: 0.6,
+            },
+            visibility: false,
+          }]
     }];
 // initialize Diagram component
 function App() {

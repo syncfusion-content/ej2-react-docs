@@ -10,10 +10,6 @@ let node = [{
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the annotation for the connector
         annotations: [{
                 content: 'Task1',
@@ -28,10 +24,25 @@ let node = [{
                     y: 1
                 }
             }]
-    }];
+}];
+let connector = [
+    {
+      sourcePoint: { x: 200, y: 100 },
+      targetPoint: { x: 500, y: 300 },
+      type: 'Orthogonal',
+      //Path annotation offset
+      annotations: [
+        {
+          content: 'annotation',
+          offset: 0.2,
+          margin: { left: 40 },
+        },
+      ],
+    },
+  ];
 // initialize Diagram component
 function App() {
-    return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node}/>);
+    return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node} connectors={connector}/>);
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

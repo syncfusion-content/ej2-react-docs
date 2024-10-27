@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
-let diagramInstance;
 // A node is created and stored in nodes array.
 let node = [{
         // Position of the node
@@ -10,10 +9,6 @@ let node = [{
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the Annotation for the Node
         annotations: [{
                 content: 'Annotation',

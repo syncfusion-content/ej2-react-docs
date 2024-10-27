@@ -3,30 +3,37 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
-    BasicShapeModel,
     NodeModel,
-    DiagramTools,
     DiagramComponent
 } from "@syncfusion/ej2-react-diagrams";
 let diagramInstance: DiagramComponent;
+let node: NodeModel[] = [{
+  offsetX: 300,
+  offsetY: 300,
+}];
 function App() {
+  const updateOffset = () => {
+    diagramInstance.scrollSettings.horizontalOffset = 200;
+    diagramInstance.scrollSettings.verticalOffset = 100;
+    diagramInstance.dataBind();
+  }; 
   return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-    />
+    <div>
+      <button id="updateOffset" onClick={updateOffset}>Update Scroller Offset</button>
+      <DiagramComponent
+        id="container"
+        ref={(diagram) => (diagramInstance = diagram)}
+        width={700}
+        height={700}
+        nodes={node}
+        rulerSettings={{ showRulers: true }}
+        scrollSettings={{ scrollLimit: 'Infinity' }}
+      />
+    </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-//Updates scroll settings
-diagramInstance.scrollSettings.horizontalOffset = 200;
-diagramInstance.scrollSettings.verticalOffset = 30;
-diagramInstance.dataBind();
 
 
 

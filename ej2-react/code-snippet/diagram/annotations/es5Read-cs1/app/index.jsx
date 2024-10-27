@@ -10,10 +10,6 @@ let node = [{
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the annotation for the node
         annotations: [{
                 content: 'Annotation Text',

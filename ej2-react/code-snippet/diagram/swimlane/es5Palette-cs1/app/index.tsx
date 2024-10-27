@@ -1,15 +1,6 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    NodeModel,
-    SymbolPalette,
-    SymbolInfo,
-    SymbolPaletteComponent
-} from "@syncfusion/ej2-react-diagrams";
+import { NodeModel, SymbolInfo, SymbolPaletteComponent } from "@syncfusion/ej2-react-diagrams";
 //Initialize the flowshapes for the symbol palette
 export function getswimlaneShapes(): NodeModel[] {
     let swimlaneShapes : NodeModel[]= [
@@ -118,7 +109,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
-
-{% endraw %}

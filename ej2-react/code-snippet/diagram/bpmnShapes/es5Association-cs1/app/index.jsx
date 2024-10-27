@@ -1,8 +1,27 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, Inject, BpmnDiagrams } from "@syncfusion/ej2-react-diagrams";
-// A node is created and stored in nodes array.
+
 let connector = [{
+        // Position of the node
+        sourcePoint: {
+            x: 100,
+            y: 100
+        },
+        targetPoint: {
+            x: 300,
+            y: 100
+        },
+        //Sets type of the connector as Orthogonal
+        type: 'Orthogonal',
+        //Sets type as Bpmn, shape as Association and association as BiDirectional
+        shape: {
+            type: 'Bpmn',
+            flow: 'Association',
+            association: 'BiDirectional'
+        },
+    },
+    {
         // Position of the node
         sourcePoint: {
             x: 100,
@@ -14,11 +33,30 @@ let connector = [{
         },
         //Sets type of the connector as Orthogonal
         type: 'Orthogonal',
-        //Sets type as Bpmn, shape as Association and association as BiDirectional
+        //Sets type as Bpmn, flow as Association and association as Directional
         shape: {
             type: 'Bpmn',
             flow: 'Association',
-            association: 'BiDirectional'
+            association: 'Directional'
+        },
+    },
+    {
+        // Position of the node
+        sourcePoint: {
+            x: 100,
+            y: 300
+        },
+        targetPoint: {
+            x: 300,
+            y: 300
+        },
+        //Sets type of the connector as Orthogonal
+        type: 'Orthogonal',
+        //Sets type as Bpmn, flow as Association and association as Default
+        shape: {
+            type: 'Bpmn',
+            flow: 'Association',
+            association: 'Default'
         },
     }];
 // initialize Diagram component

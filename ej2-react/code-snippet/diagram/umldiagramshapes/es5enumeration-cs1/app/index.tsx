@@ -2,18 +2,16 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    DiagramComponent,
-    NodeModel,
-    UmlClassifierShapeModel
-} from "@syncfusion/ej2-react-diagrams";
+import {DiagramComponent,NodeModel,UmlClassifierShapeModel } from "@syncfusion/ej2-react-diagrams";
 let diagramInstance: DiagramComponent;
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [{
     id: 'node',
-        offsetX: 300,
+        offsetX: 200,
         offsetY: 200,
+        style: {
+            fill: '#26A0DA',
+          },
         shape: {
             type: 'UmlClassifier',
             enumerationShape: {

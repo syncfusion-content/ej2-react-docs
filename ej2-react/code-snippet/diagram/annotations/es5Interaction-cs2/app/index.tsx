@@ -3,20 +3,19 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     DiagramComponent,
     ConnectorModel,
     AnnotationConstraints
 } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let connector: ConnectorModel[] = [{
-   id: 'connector2',
+   id: 'connector',
    type: 'Orthogonal',
-   sourcePoint: { x: 300, y: 300 },
-   targetPoint: { x: 400, y: 400 },
+   sourcePoint: { x: 200, y: 200 },
+   targetPoint: { x: 300, y: 300 },
    annotations: [
       {
-        content: 'connector1', offset:0.5,
+        content: 'connector',
         //Enables drag constraints for a connector.
         constraints:AnnotationConstraints.Interaction | AnnotationConstraints.Drag,
         //Set drag limit for a connector annotation.

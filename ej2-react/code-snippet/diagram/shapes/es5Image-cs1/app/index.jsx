@@ -14,7 +14,7 @@ let node = [{
             type: 'Image',
             source: 'https://ej2.syncfusion.com/demos/src/diagram/employees/image16.png'
         },
-        //Customizes the appearances such as text, font, fill, and stroke.
+        //Customizes the appearances such as fill.
         style: {
             fill: 'none'
         }

@@ -15,7 +15,19 @@ let connector = [{
             //Define type of association
             association: "BiDirectional"
         }
-    }];
+    },
+    {
+        id: 'connector2',
+        //Define connector start and end points
+        sourcePoint: { x: 200, y: 100 },
+        targetPoint: { x: 400, y: 300 },
+        type: 'Straight',
+        shape: {
+          type: 'UmlClassifier',
+          relationship: 'Association',
+          associationType: 'BiDirectional',
+        },
+      }];
 // initialize Diagram component
 function App() {
     return (<DiagramComponent id="container" width={'100%'} height={'600px'} 
