@@ -1,20 +1,8 @@
-{% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
 let connector = [{
         id: 'connector1',
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        },
         sourcePoint: {
             x: 300,
             y: 100
@@ -36,15 +24,15 @@ let node = [{
         height: 130,
         offsetX: 200,
         offsetY: 200,
+    }, {
+        id: 'node3',
+        width: 100,
+        height: 75,
+        offsetX: 300,
+        offsetY: 350,
     }];
 function App() {
-    return (<DiagramComponent id="container" width={'100%'} height={'600px'} getNodeDefaults={(node) => {
-            node.height = 100;
-            node.width = 100;
-            node.style.fill = '#6BA5D7';
-            node.style.strokeColor = 'white';
-            return node;
-        }} nodes={node} connectors={connector} 
+    return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node} connectors={connector} 
     // Defines the pageSettings for the diagram
     pageSettings={{
             // Sets the BoundaryConstraints to page
@@ -59,4 +47,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-{% endraw %}

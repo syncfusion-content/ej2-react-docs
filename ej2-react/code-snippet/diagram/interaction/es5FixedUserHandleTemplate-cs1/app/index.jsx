@@ -9,25 +9,11 @@ let node = [ {
     offsetY: 250,
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     fixedUserHandles: [{ offset: { x: 0, y: 0 }, margin: { right: 20 }, width: 50, height: 20, id: 'usercon1' }]
 }];
 let connector = [{
     id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
+    
     sourcePoint: {
         x: 400,
         y: 200
@@ -38,10 +24,8 @@ let connector = [{
     }, type: 'Orthogonal',
     fixedUserHandles: [{ offset: 0.5, width: 120, alignment: 'Before', height: 20, id: 'usercon2', displacement: { x: 10, y: 10 } }]
 }];
-
-
 function fixedUserHandleTemplate(props) {
-    const { id, width } = props; 
+    const { id } = props; 
     {
         return (
             <div style={{ width: '100%', height: '100%' }}>
@@ -52,7 +36,6 @@ function fixedUserHandleTemplate(props) {
                     type="color" 
                     defaultValue="#008000" 
                     onChange={handleColorChange}
-                    style={{ width:'' }} // Apply width
                 />
             ) : id === 'usercon2' ? (
                 <input 
@@ -64,19 +47,12 @@ function fixedUserHandleTemplate(props) {
             </div>
         );
     }
-
-
-
-
 }
-
 function handleColorChange()
 {
     let currentColor = colorPickerInstance.value;
     diagramInstance.nodes[0].style.fill = currentColor;
-    
 }
-
 function App() {
     return (<DiagramComponent id="container" width={'100%'} height={'600px'} nodes={node} connectors={connector} ref={diagram => (diagramInstance = diagram)}  fixedUserHandleTemplate={fixedUserHandleTemplate.bind(this)}/>);
 }

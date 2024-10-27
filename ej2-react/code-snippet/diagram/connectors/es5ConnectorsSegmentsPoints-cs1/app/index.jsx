@@ -12,17 +12,6 @@ let connectors = [{
                     y: 150
                 }
             }],
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        },
         type: 'Straight',
         sourcePoint: {
             x: 100,

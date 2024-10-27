@@ -5,8 +5,9 @@ import * as ReactDOM from "react-dom";
 import {
     Diagram,
     DiagramComponent,
-    ConnectorModel
+    ConnectorModel,ConnectorEditing
 } from "@syncfusion/ej2-react-diagrams";
+Diagram.Inject(ConnectorEditing)
 let connectors: ConnectorModel[] = [{
     id: 'connector2',
     style: {

@@ -27,6 +27,7 @@ function App() {
       width={'900px'}
       height={'500px'}
       connectors={[connector2]}
+      segmentThumbShape= 'Arrow' 
       getConnectorDefaults={(connector) => {
         connector.constraints =
           ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;

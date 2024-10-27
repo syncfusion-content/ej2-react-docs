@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent, DiagramConstraints, NodeConstraints,PortConstraints,PortVisibility } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent,PortConstraints,PortVisibility } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let node = [{
         id: "node1",
@@ -18,20 +18,12 @@ let node = [{
                 y: 0
             },
             visibility: PortVisibility.Visible,
-            //Set the style for the port
-            style: {
-                fill: '#FFFFFF',
-                strokeWidth: 1,
-                strokeColor: 'black'
-            },
             //Defines mouse over tooltip for a node
             tooltip: {
                 //Sets the content of the Tooltip
                 content: 'Port Tooltip',
-                //Sets the tooltip position relative to the node
-                relativeMode: 'Object'
             },
-            constraints: PortConstraints.Default | PortConstraints.Tooltip
+            constraints: PortConstraints.Default | PortConstraints.ToolTip
         }]
     }];
 //Initializes the Diagram component

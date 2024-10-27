@@ -1,44 +1,49 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
     ConnectorModel,
     NodeModel,
-    BasicShapeModel,
     PointPortModel,
-    Diagram,
     DiagramComponent,
     PortVisibility
 } from "@syncfusion/ej2-react-diagrams";
 let port1: PointPortModel = {
+    id:'port1',
     style: {
         strokeColor: '#366F8C',
         fill: '#366F8C'
+        },
+        shape:'Circle',
+        visibility: PortVisibility.Visible,
+        offset:{
+            x: 1,  y: 0.5
         }
-    };
-    port1.shape = 'Circle';
-    port1.id = 'nodeportnew';
-    port1.visibility = PortVisibility.Visible;
-    port1.id = 'port1';
-    port1.offset = {
-        x: 1,
-        y: 0.5
     };
 let port2: PointPortModel = {
+    id:'port2',
     style: {
         strokeColor: '#366F8C',
         fill: '#366F8C'
+        },
+        shape:'Circle',
+        visibility: PortVisibility.Visible,
+        offset:{
+            x: 0,  y: 0
         }
     };
-    port2.offset = {
-        x: 0,
-        y: 0.5
-    };
-    port2.id = 'port2';
-    port2.visibility = PortVisibility.Visible;
-    port2.shape = 'Circle';
+let port3: PointPortModel = {
+    id:'ports3',
+    style: {
+        strokeColor: '#366F8C',
+        fill: '#366F8C'
+        },
+        shape:'Square',
+        visibility: PortVisibility.Visible,
+        offset:{
+            x: 0,  y: 1
+        }
+    
+};
 let nodes: NodeModel[] = [{
         id: 'node',
         width: 100,
@@ -53,7 +58,7 @@ let nodes: NodeModel[] = [{
         height: 100,
         offsetX: 300,
         offsetY: 100,
-        ports: [port2]
+        ports: [port2,port3]
     },
 ];
 let connectors: ConnectorModel[] = [{
@@ -83,7 +88,3 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
-
-
-
-{% endraw %}

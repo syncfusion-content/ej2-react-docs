@@ -1,12 +1,6 @@
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    DiagramComponent,
-    NodeModel
-} from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, NodeModel } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [{
      shape: {
@@ -14,7 +8,7 @@ let node: NodeModel[] = [{
                 orientation: 'Horizontal',
                  // Intialize header to swimlane
                  header: {
-                     annotation: { content: 'ONLINE PURCHASE STATUS', style: { fill: 'transparent' } },
+                     annotation: { content: 'ONLINE PURCHASE STATUS' },
                      height: 50, style: { fontSize: 11 },
                  },
                  lanes: [

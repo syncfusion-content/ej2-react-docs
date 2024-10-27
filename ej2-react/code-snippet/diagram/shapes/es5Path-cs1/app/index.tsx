@@ -3,9 +3,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     NodeModel,
-    NodeConstraints,
     DiagramComponent
 } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.

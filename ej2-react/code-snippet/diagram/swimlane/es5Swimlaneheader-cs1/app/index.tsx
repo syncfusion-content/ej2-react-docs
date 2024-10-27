@@ -1,14 +1,9 @@
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    DiagramComponent,
-    NodeModel
-} from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, NodeModel } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let node: NodeModel[] = [{
+     id: 'swimlane',
      shape: {
                 // Set the node type as swimlane
                  type: 'SwimLane',
@@ -26,7 +21,8 @@ let node: NodeModel[] = [{
                      ],
                  phaseSize: 20,
              },
-             offsetX: 300, offsetY: 200,
+             offsetX: 300,
+             offsetY: 200,
              height: 200,
              width: 350
 }];

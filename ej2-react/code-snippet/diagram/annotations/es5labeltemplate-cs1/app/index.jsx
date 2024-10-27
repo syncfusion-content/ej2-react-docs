@@ -10,10 +10,6 @@ let node = [{
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the annotation for the Node
         annotations: [{
                 // Set an template for annotation
@@ -36,7 +32,7 @@ let connector = [{
         // Sets the Annotation for the Connector
         annotations: [{
                 // Set an template for annotation
-                height: 60, width: 100, offset: 0.5,
+                height: 60, width: 100, 
                 template: '<div><input type="button" value="Submit"></div>'
             }]
     }];
