@@ -10,344 +10,140 @@ domainurl: ##DomainURL##
 
 # Tools in React Diagram component
 
+The tools in the diagram control can perform various actions such as selecting, panning, and drawing. These tools are explained below.
+
+- `Select`: Allows you to choose specific elements within the diagram.
+- `Pan`: Enables you to move the view of the diagram to different areas without altering the elements.
+- `Draw`: Provides the ability to draw new shapes, connectors, on the diagram surface.
+
+These tools are essential for creating, editing, and navigating complex diagrams efficiently.
+
 ## Drawing tools
 
 Drawing tool allows you to draw any kind of node/connector during runtime by clicking and dragging on the diagram page.
 
-## Shapes
+### Draw nodes
 
-To draw a shape, set the JSON of that shape to the drawType property of the diagram and activate the drawing tool by using the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram) property. The following code example illustrates how to draw a rectangle at runtime.
+To draw a shape, set the JSON of that shape to the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property of the diagram and activate the drawing tool by using the [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#tool) property. The following code example illustrates how to draw a rectangle at runtime.
 
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    BasicShapeModel,
-    NodeModel,
-    DiagramTools,
-    DiagramComponent
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      created={() => {
-        //JSON to create a rectangle
-        let drawingshape: BasicShapeModel = {
-          type: 'Basic',
-          shape: 'Rectangle',
-        };
-        let node: NodeModel = {
-          shape: drawingshape,
-        };
-        diagramInstance.drawingObject = node;
-        //To draw an object once, activate draw once
-        diagramInstance.tool = DiagramTools.DrawOnce;
-        diagramInstance.dataBind();
-      }}
-      //customize the appearance of the shape
-      getNodeDefaults={(obj: NodeModel) => {
-        obj.borderWidth = 1;
-        obj.style = {
-          fill: '#6BA5D7',
-          strokeWidth: 2,
-          strokeColor: '#6BA5D7',
-        };
-        return obj;
-      }}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs1" %}
 
-The following code example illustrates how to draw a path.
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    PathModel,
-    NodeModel,
-    DiagramTools,
-    DiagramComponent
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      created = {
-            () => {
-                //JSON to create a path
-                let node: NodeModel = {
-                    id: "Path",
-                    style: {
-                        fill: "#fbe172"
-                    },
-                    annotations: [{
-                        content: "Path"
-                    }],
-                    shape: {
-                        type: 'Path',
-                        data: 'M13.560 67.524 L 21.941 41.731 L 0.000 25.790 L 27.120 25.790 L 35.501 0.000 L 43.882 25.790 L 71.000 25.790 L 49.061 41.731 L 57.441 67.524 L 35.501 51.583 z'
-                    }
-                    as PathModel
-                };
-                diagramInstance.drawingObject = node;
-                //To draw an object once, activate draw once
-                diagramInstance.tool = DiagramTools.DrawOnce;
-                diagramInstance.dataBind();
-            }
-        }
-      //customize the appearance of the shape
-      getNodeDefaults={(obj, diagramInstance) => {
-        obj.borderWidth = 1;
-        obj.style = {
-          fill: '#6BA5D7',
-          strokeWidth: 2,
-          strokeColor: '#6BA5D7',
-        };
-        return obj;
-      }}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs2" %}
 
-```
+### Text Nodes
 
-## Connectors
+Similarly, you can draw a text node by setting the type of shape as 'Text' in the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property. The [`text`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textModel/) type node contains a property called content, which specifies the text within the node. You can add the content to the text node once you finish drawing the node. Here is how you can draw a text node at runtime:
 
-To draw connectors, set the JSON of the connector to the drawType property. The drawing [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs3/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs3/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    ConnectorModel,
-    NodeModel,
-    DiagramTools,
-    DiagramComponent
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      created = {
-            () => {
-                //JSON to create a Connector
-                let connectors: ConnectorModel = {
-                    id: 'connector1',
-                    type: 'Straight',
-                    segments: [{
-                        type: "polyline"
-                    }]
-                }
-                diagramInstance.drawingObject = connectors;
-                //To draw an object once, activate draw once
-                diagramInstance.tool = DiagramTools.DrawOnce;
-                diagramInstance.dataBind();
-            }
-        }
-      //customize the appearance of the shape
-      getNodeDefaults={(obj, diagramInstance) => {
-        obj.borderWidth = 1;
-        obj.style = {
-          fill: '#6BA5D7',
-          strokeWidth: 2,
-          strokeColor: '#6BA5D7',
-        };
-        return obj;
-      }}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs3" %}
 
-```
+### Draw Connectors
 
-## Text
+To draw connectors, set the JSON of the connector to the drawType property. The drawing [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#tool) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
 
-Diagram allows you to create a textNode, when you click on the diagram page. The following code illustrates how to draw a text.
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs4/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    TextModel,
-    NodeModel,
-    DiagramTools,
-    DiagramComponent
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      created={() => {
-        //JSON to create a text
-        let node: NodeModel = {
-        shape: {
-                type: 'Text',
-            }as TextModel
-        };
-        diagramInstance.drawingObject = node;
-        //To draw an object once, activate draw once
-        diagramInstance.tool = DiagramTools.DrawOnce;
-        diagramInstance.dataBind();
-      }}
-      //customize the appearance of the shape
-      getNodeDefaults={(obj, diagramInstance) => {
-        obj.borderWidth = 1;
-        obj.style = {
-          fill: '#6BA5D7',
-          strokeWidth: 2,
-          strokeColor: '#6BA5D7',
-        };
-        return obj;
-      }}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs4" %}
 
-```
+### Polygon shape
 
-Once you activate the TextTool, perform label editing of a node/connector.
+The diagram allows you to create polygon shapes by clicking and moving the mouse at runtime on the diagram page. This interactive feature enables users to define custom shapes with multiple sides by specifying points directly on the diagram canvas.
 
-**Polygon shape**
-Diagram allows to create the polygon shape by clicking and moving the mouse at runtime on the diagram page.
+To draw a polygon shape, you need to set the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property with the appropriate JSON configuration for a `polygon`. This includes specifying the type as 'Polygon'.
 
-The following code illustrates how to draw a polygon shape.
+The following code illustrates how to draw a polygon shape at runtime:
 
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    BasicShapeModel,
-    NodeModel,
-    DiagramTools,
-    DiagramComponent
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      created = {
-            () => {
-                let drawingshape: BasicShapeModel = {
-                    type: 'Basic',
-                    shape: 'Polygon'
-                };
-                //JSON to create a polygon
-                let node: NodeModel = {
-                    shape: drawingshape
-                };
-                diagramInstance.drawingObject = node;
-                //To draw an object once, activate draw once
-                diagramInstance.tool = DiagramTools.DrawOnce;
-                diagramInstance.dataBind();
-            }
-        }
-      //customize the appearance of the shape
-      getNodeDefaults={(obj, diagramInstance) => {
-        obj.borderWidth = 1;
-        obj.style = {
-          fill: '#6BA5D7',
-          strokeWidth: 2,
-          strokeColor: '#6BA5D7',
-        };
-        return obj;
-      }}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs5/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs5/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs5" %}
+
+![Polygon drawing](images/polygon-drawing.gif)
 
 ## Polyline Connector
 
 Diagram allows to create the polyline segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
 
+To draw a polyline connector, set the type of the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) as '`Polyline`'.
+
 The following code illustrates how to draw a polyline connector.
 
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    ConnectorModel,
-    DiagramTools,
-    DiagramComponent
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      created = {
-            () => {
-                let connector: ConnectorModel = {
-                    id: 'connector1',
-                    type: 'Polyline'
-                };
-                diagramInstance.drawingObject = connector;
-                //To draw an object once, activate draw once
-                diagramInstance.tool = DiagramTools.DrawOnce;
-                diagramInstance.dataBind();
-            }
-        }
-      //customize the appearance of the shape
-      getNodeDefaults={(obj, diagramInstance) => {
-        obj.borderWidth = 1;
-        obj.style = {
-          fill: '#6BA5D7',
-          strokeWidth: 2,
-          strokeColor: '#6BA5D7',
-        };
-        return obj;
-      }}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs6/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs6/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs6" %}
+
+ The segments of a polyline connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](d:\JS restructuring\ej2-diagrams-docs\ej2-javascript\diagram\images\polyline-draw.gif) constraint for the connector.
+
+![Polyline connector drawing](images/polyline-draw.gif)
+
+N> To make the segment thumb visible, inject the [`ConnectorEditing`](../api/diagram/connectorEditing/) module into the diagram.
+
+### Freehand Drawing
+
+The diagram supports free-hand drawing, allowing users to draw anything independently on the diagram page. Free-hand drawing is enabled by setting the type of the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property to '`Freehand`'.
+
+The following code illustrates how to perform freehand drawing:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs7/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs7/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs7" %}
+
+The segments of a freehand connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](d:\JS restructuring\ej2-diagrams-docs\ej2-javascript\diagram\images\polyline-draw.gif) constraint for the connector.
+
+![Freehand connector drawing](images/freehand-draw.gif)
 
 ## Tool selection
 
@@ -369,175 +165,36 @@ When more than one of those tools are applied, a tool is activated based on the 
 |5th|SingleSelect|Allows you to select individual nodes or connectors.|
 |6th|None|Disables all tools.|
 
-Set the desired [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram) to the tool property of the diagram model. The following code illustrates how to enable Zoom pan in the diagram.
+These tools provide flexibility and functionality for creating and interacting with elements within the diagram interface.
 
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    DiagramComponent,
-    ConnectorModel
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-let nodes: NodeModel[] = [{
-       id: 'Start',
-        width: 140,
-        height: 50,
-        offsetX: 300,
-        offsetY: 50,
-        annotations: [{
-            id: 'label1',
-            content: 'Start'
-        }],
-        shape: {
-            type: 'Flow',
-            shape: 'Terminator'
-        }
-        }
-        {
-        id: 'Init',
-        width: 140,
-        height: 50,
-        offsetX: 300,
-        offsetY: 140,
-        annotations: [{
-            id: 'label2',
-            content: 'End'
-        }],
-        shape: {
-            type: 'Flow',
-            shape: 'process'
-        },
-        annotations: [{
-            content: 'var i = 0;'
-        }]
-    }
-];
-let connectors: ConnectorModel[] = [{
-    // Name of the connector
-    id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
-    // ID of the source and target nodes
-    sourceID: "Start",
-    targetID: "Init",
-    connectorSpacing: 7,
-    type: 'Orthogonal'
-}];
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      tool={DiagramTools.DrawOnce | DiagramTools.ZoomPan}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
-```
+### Zoom pan tool
+
+To activate panning mode set the [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#tool) property of the diagram as `ZoomPan`. The following code illustrates how to enable Zoom pan in the diagram
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs8/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs8/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs8" %}
+
+N> Please note that panning the diagram is not possible when 'multiplePage' is set to false if any diagram object (node or connector) is outside the defined page break area.
 
 ## Events
 
-[`elementDraw`](https://ej2.syncfusion.com/react/documentation/api/diagram)  event is triggered when node or connector is drawn using drawing tool.
+[`elementDraw`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#elementdraw)  event is triggered when node or connector is drawn using drawing tool.
 
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    ConnectorModel,
-    NodeModel,
-    DiagramTools,
-    DiagramComponent,
-    IElementDrawEventArgs
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      created={() => {
-        //JSON to create a Connector
-        let connectors = {
-          id: 'connector1',
-          type: 'Straight',
-          segments: [
-            {
-              type: 'Straight',
-            },
-          ],
-        };
-        diagramInstance.drawingObject = connectors;
-        //To draw an object once, activate draw once
-        diagramInstance.tool = DiagramTools.DrawOnce;
-        diagramInstance.dataBind();
-      }}
-      elementDraw={() => {
-        alert('Event Triggered');
-      }}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/tools/tools-cs9/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/tools/tools-cs9/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```
-
-## Freehand Drawing
-
-Diagram has support for free-hand drawing to draw anything on the diagram page independently. Free-hand drawing will be enabled by using the drawingObject property and setting its value to Freehand.
-
-The following code illustrates how to draw a freehand drawing.
-
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    ConnectorModel,
-    NodeModel,
-    DiagramTools,
-    DiagramComponent
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance: DiagramComponent;
-function App() {
-  return (
-    <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
-      width={700}
-      height={700}
-      created={() => {
-        //JSON to create a Connector
-        let connectors: ConnectorModel = {
-          id: 'connector1',
-          type: 'Freehand',
-        };
-        diagramInstance.drawingObject = connectors;
-        //To draw an object once, activate draw once
-        diagramInstance.tool = DiagramTools.DrawOnce;
-        diagramInstance.dataBind();
-      }}
-    />
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
-root.render(<App />);
-
-```
+ {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs9" %}

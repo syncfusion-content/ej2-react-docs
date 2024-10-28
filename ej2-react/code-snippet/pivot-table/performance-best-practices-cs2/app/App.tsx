@@ -1,11 +1,11 @@
 import { GroupingBar, Grouping, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
-import { Group_Data } from './datasource';
+import { gData } from './datasource';
 
 function App() {
 
   let dataSourceSettings: IDataOptions = {
-    dataSource: Group_Data as IDataSet[],
+    dataSource: gData as IDataSet[],
     expandAll: false,
         enableSorting: true,
         columns: [{ name: 'Product_ID', caption: 'Product ID' }],

@@ -1,4 +1,3 @@
-
 import { IDataOptions, PivotViewComponent, Pager, Inject } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
@@ -10,9 +9,10 @@ function App() {
     let pivotObj: PivotViewComponent;
     let remoteData: DataManager = new DataManager({
         url: 'https://bi.syncfusion.com/northwindservice/api/orders',
-        adaptor: new WebApiAdaptor,
+        adaptor: new WebApiAdaptor(),
         crossDomain: true
     });
+
     let dataSourceSettings: IDataOptions = {
         type: 'JSON',
         dataSource: remoteData,
@@ -44,6 +44,7 @@ function App() {
             click: rowPageClick
         });
         rowPager.appendTo('#row-pager');
+
         if (!isNullOrUndefined(columnPager)) {
             columnPager.destroy();
             columnPager = null;
@@ -68,16 +69,36 @@ function App() {
         pivotObj.refreshData();
     }
 
-    return (<PivotViewComponent ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={{ columnWidth: 120 }} pageSettings={{
-            rowPageSize: 10,
-            columnPageSize: 5,
-            currentColumnPage: 1,
-            currentRowPage: 1
-        }} pagerSettings={{
-            template: '#template'
-        }} enablePaging={true} dataBound={dataBound.bind(this)}>
-            <Inject services={[Pager]} />
-        </PivotViewComponent>);
-};
+    return (
+        <div>
+            <PivotViewComponent
+                ref={(d: PivotViewComponent) => (pivotObj = d)}
+                id='PivotView'
+                height={350}
+                dataSourceSettings={dataSourceSettings}
+                gridSettings={{ columnWidth: 120 }}
+                pageSettings={{
+                    rowPageSize: 10,
+                    columnPageSize: 5,
+                    currentColumnPage: 1,
+                    currentRowPage: 1
+                }}
+                pagerSettings={{
+                    template: '#template'
+                }}
+                enablePaging={true}
+                dataBound={dataBound.bind(this)}
+            >
+                <Inject services={[Pager]} />
+            </PivotViewComponent>
+            <script id="template" type="text/x-template">
+                <div className="pager-label">Row Pager: </div>
+                <div id="row-pager" className="e-pagertemplate"></div>
+                <div className="pager-label">Column Pager: </div>
+                <div id="column-pager" className="e-pagertemplate"></div>
+            </script>
+        </div>
+    );
+}
 
 export default App;

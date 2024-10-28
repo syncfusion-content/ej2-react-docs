@@ -10,3 +10,6 @@
 @import url('https://cdn.syncfusion.com/ej2/27.1.48/ej2-popups/styles/material.css');
 @import url('https://cdn.syncfusion.com/ej2/27.1.48/ej2-splitbuttons/styles/material.css');
 @import url('https://cdn.syncfusion.com/ej2/27.1.48/ej2-pivotview/styles/material.css');
+#PivotViewpivot-pager {
+    display: flex !important;
+}
