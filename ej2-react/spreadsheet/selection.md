@@ -119,7 +119,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/selected-cell-values" %}
 
-## How to remove selection in the spreadsheet
+## Remove Selection
 
 The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
 
