@@ -2,7 +2,6 @@
 import { PivotViewComponent, Pager, Inject } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import * as React from 'react';
-import './App.css';
 
 function App() {
     let remoteData = new DataManager({

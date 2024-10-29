@@ -204,6 +204,116 @@ You can prevent autofill feature by setting the [autofill](https://ej2.syncfusio
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-cs19" %}
 
+## Hide default filter icons while perform filtering through method
+
+When performing filtering programmatically using methods in the Syncfusion React Grid component, you may want to hide the default filter icons to provide a simpler interface.
+
+To customize the filter icon in the Grid, use the **display** property of the **filtermenu** as mentioned below
+
+```css
+.e-filtermenudiv.e-icons.e-icon-filter {
+    display: none;
+}
+```
+
+The following example demonstrate how to hide the default filter icons while filtering the **CustomerID** column programmatically using a method.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+  let grid;
+    const FilterOptions = {
+        type: 'Menu'
+    };
+    function btnClick(args) {
+      if(args.currentTarget.id === 'performFilter'){
+        grid.filterByColumn('CustomerID', 'startswith', 'v');
+      }
+      else{
+        grid.clearFiltering()
+      }
+    }
+    return (
+      <div>
+        <div style={{marginBottom: "20px"}}>
+          <ButtonComponent id='performFilter' onClick={btnClick}>Filter Customer ID Column</ButtonComponent>
+          <ButtonComponent  style={{marginLeft: "10px" }} id='clearFilter' onClick={btnClick}>Clear Filter</ButtonComponent>
+        </div>
+        <GridComponent ref={g => grid = g} dataSource={data} filterSettings={FilterOptions} allowFiltering={true} height={273}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
+            <ColumnDirective field='CustomerID' width='100'/>
+            <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
+            <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"/>
+            <ColumnDirective field='ShipCountry' width='100'/>
+          </ColumnsDirective>
+          <Inject services={[Filter]}/> 
+        </GridComponent>;
+      </div>)
+}
+;
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-grids';
+import { Filter, GridComponent, Inject } from '@syncfusion/ej2-react-grids';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import * as React from 'react';
+import { data } from './datasource';
+function App() {
+  let grid;
+    const FilterOptions = {
+        type: 'Menu'
+    };
+    function btnClick(args) {
+      if(args.currentTarget.id === 'performFilter'){
+        grid.filterByColumn('CustomerID', 'startswith', 'v');
+      }
+      else{
+        grid.clearFiltering()
+      }
+    }
+    return (
+      <div>
+        <div style={{marginBottom: "20px"}}>
+          <ButtonComponent id='performFilter' onClick={btnClick}>Filter Customer ID Column</ButtonComponent>
+          <ButtonComponent  style={{marginLeft: "10px" }} id='clearFilter' onClick={btnClick}>Clear Filter</ButtonComponent>
+        </div>
+        <GridComponent ref={g => grid = g} dataSource={data} filterSettings={FilterOptions} allowFiltering={true} height={273}>
+          <ColumnsDirective>
+            <ColumnDirective field='OrderID' width='100' textAlign="Right"/>
+            <ColumnDirective field='CustomerID' width='100'/>
+            <ColumnDirective field='EmployeeID' width='100' textAlign="Right"/>
+            <ColumnDirective field='Freight' width='100' format="C2" textAlign="Right"/>
+            <ColumnDirective field='ShipCountry' width='100'/>
+          </ColumnsDirective>
+          <Inject services={[Filter]}/> 
+        </GridComponent>;
+      </div>)
+}
+;
+export default App;
+
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/filter-method/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/filter-method/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/filter-method" %}
+
 ## Filter menu events
 
 The Syncfusion React Grid offers the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) and [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) events, which provide information about the actions being performed. Within the event handlers, you receive an argument named `requestType`. This argument specifies the [action](https://ej2.syncfusion.com/react/documentation/api/grid/action/) that is being executed, such as `filterbeforeopen`, `filterafteropen`, or `filtering`. By analyzing this action type, you can implement custom logic or showcase messages.
