@@ -143,6 +143,29 @@ The following example demonstrates how to perform export with cell and row spann
 
  {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs22" %}
 
+## Merge duplicate cells in specific column and export in Grid
+
+You can merge duplicate cells (based on their values) in a specific column of the Syncfusion Grid. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event. Additionally, you can merge duplicate cells in the specified column during export by using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfquerycellinfo) event for PDF format. This functionality is useful for improving the readability of your data and providing a clearer visual representation.
+
+Here’s an example demonstrating how to merge duplicate cells in the **OrderID** column in both Grid view and export: 
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/pdf-export-merge/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-merge/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-merge/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-merge/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/pdf-export-merge" %}
+
 ## Exporting with custom date format
 
 The exporting functionality in the Syncfusion React Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values. 

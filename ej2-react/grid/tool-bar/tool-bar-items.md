@@ -85,6 +85,118 @@ This is demonstrated in the following sample:
 
  {% previewsample "page.domainurl/code-snippet/grid/toolbaricon-cs1" %}
 
+### Customize the built-in toolbar items
+
+The Syncfusion React Grid component allows you to customize the built-in toolbar items to meet your specific requirements. This can include adding, removing, or modifying toolbar items, as well as handling custom actions when toolbar buttons are clicked.
+
+To customize the built-in toolbar items, you can use the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event of the grid.
+
+The following example demonstrate how to customize the toolbar by disabling and canceling the **Add** button functionlity and showing a custom message when the **Add** button of toolbar is clicked.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
+{% endraw %}
+import { ColumnDirective, ColumnsDirective, Edit, GridComponent, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { data } from './datasource';
+function App() {
+    let grid;
+    const [message, setMessage] = useState('');
+    function toolbarClick(args) {
+        if (args.item.text === 'Add') { 
+            args.cancel = true;
+            const newRecord = {
+                OrderID: 10247,
+                CustomerID: 'TOMSP',
+                ShipName: 'Hanari Carnes',
+                ShipCity: 'Lyon',
+            };
+            grid.addRecord(newRecord);
+            setMessage('The default adding action is cancelled, and a new record is added using the addRecord method.');
+        }
+        else{
+            setMessage('');
+        }
+    }
+    const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true };
+    const toolbarOptions = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+    return (
+    <div>    
+        <div style={{marginLeft:"180px"}}><p style={{color:"red"}} id="message">{message}</p></div>
+        <GridComponent ref={g=> grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} toolbarClick={toolbarClick} height={270}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+            </ColumnsDirective>
+            <Inject services={[Toolbar, Edit]} />
+        </GridComponent>
+    </div>);
+}
+export default App;
+
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+
+
+import { ColumnDirective, ColumnsDirective, EditSettingsModel, Edit, GridComponent, Inject, Toolbar, ToolbarItems } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+import { data } from './datasource';
+
+function App() {
+    let grid: GridComponent | null;
+    const [message, setMessage] = useState('');
+    const editOptions: EditSettingsModel = { allowEditing: true, allowAdding: true, allowDeleting: true };
+    const toolbarOptions: ToolbarItems[] = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+    function toolbarClick(args:ClickEventArgs) {
+        if (args.item.text === 'Add') { 
+            args.cancel = true;
+            const newRecord = {
+                OrderID: 10247,
+                CustomerID: 'TOMSP',
+                ShipName: 'Hanari Carnes',
+                ShipCity: 'Lyon',
+            };
+            (grid as GridComponent).addRecord(newRecord);
+            setMessage('The default adding action is cancelled, and a new record is added using the addRecord method.');
+        }
+        else{
+            setMessage('');
+        }
+    }
+    return (
+    <div> 
+        <div style={{marginLeft:"180px"}}><p style={{color:"red"}} id="message">{message}</p></div>
+        <GridComponent ref={g=> grid = g} dataSource={data} editSettings={editOptions} toolbar={toolbarOptions} toolbarClick={toolbarClick} height={270}>
+            <ColumnsDirective>
+                <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" />
+                <ColumnDirective field='CustomerID' headerText='Customer ID' width='100' />
+                <ColumnDirective field='ShipCity' headerText='Ship City' width='100' />
+                <ColumnDirective field='ShipName' headerText='Ship Name' width='100' />
+            </ColumnsDirective>
+            <Inject services={[Toolbar, Edit]} />
+        </GridComponent>
+    </div>
+    )
+}
+export default App;
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/toolbar-built/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/toolbar-built/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/toolbar-built" %}
+
 ## Custom toolbar items
 
 Adding custom toolbar items to the Syncfusion React Grid involves incorporating personalized functionality into the toolbar.

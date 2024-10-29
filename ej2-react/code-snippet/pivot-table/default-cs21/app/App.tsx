@@ -53,7 +53,7 @@ const SAMPLE_CSS = `
     /* Hiding filter axis in field list */
     //.e-pivotfieldlist-wrapper .e-field-list-filters {
     //    display: none;
-    //}`;import './App.css';
+    //}`
 
 function App() {
 

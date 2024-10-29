@@ -6,7 +6,6 @@ import {
 } from '@syncfusion/ej2-react-pivotview';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { pivotData } from './datasource';
-import './App.css'
 import { Button } from '@syncfusion/ej2-buttons';
 
 function App() {
@@ -82,5 +81,5 @@ function App() {
         });
         btnDisableRtl.appendTo('#disablertl');
     }
-};
+}
 export default App;

@@ -36,7 +36,6 @@ function data(count) {
     }
     return result;
 };
-import './App.css';
 
 function App() {
     let dataSourceSettings = {

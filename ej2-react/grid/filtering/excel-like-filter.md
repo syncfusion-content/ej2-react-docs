@@ -16,20 +16,20 @@ Here is an example that showcasing how to render the excel like filter within th
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/excel-like-filter-cs1/app/App.jsx %}
+{% include code-snippet/grid/excel-like-filter-hide/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/excel-like-filter-cs1/app/App.tsx %}
+{% include code-snippet/grid/excel-like-filter-hide/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-like-filter-cs1/app/datasource.jsx %}
+{% include code-snippet/grid/excel-like-filter-hide/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-like-filter-cs1/app/datasource.tsx %}
+{% include code-snippet/grid/excel-like-filter-hide/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-hide" %}
 
 >* The Excel-like filter feature supports various filter conditions, including text-based, number-based, date-based, and boolean-based filters.
 >* The filter dialog provides additional options, such as sorting filter values, searching for specific values, and clearing applied filters.
@@ -198,6 +198,37 @@ The following example demonstrates how to dynamically change the remote custom d
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-cs6" %}
+
+## Hide sorting option in filter dialog
+
+The Excel-like filter dialog in the Syncfusion React Grid includes built-in sorting options (ascending and descending) by default. To hide these options, set the **display** property of the following CSS classes to **none**, which will prevent the sorting options from appearing in the filter dialog:
+
+```
+.e-excel-ascending,
+.e-excel-descending,
+.e-separator.e-excel-separator {
+ display: none;
+}
+```
+
+Here is a simple example demonstrating how to hide the sorting options in the Excel filter dialog:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/excel-like-filter-hide/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/excel-like-filter-hide/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-like-filter-hide/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/excel-like-filter-hide/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/excel-like-filter-hide" %}
  
 ## Render checkbox list data in on-demand for excel/checkbox filtering
 
