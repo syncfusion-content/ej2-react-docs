@@ -1,70 +1,74 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DiagramComponent, PortVisibility,PortConnectionDirection } from "@syncfusion/ej2-react-diagrams";
-let port1 = {
-    style: {
-        strokeColor: 'black',
-        fill: 'yellow'
-    }
-};
-port1.shape = 'Square';
-port1.id = 'nodeportnew';
-port1.visibility = PortVisibility.Visible;
-//Specifies the connectionDirection
-port1.connectionDirection='Right';
-port1.id = 'port1';
-port1.offset = {
-    x: 0.5,
-    y: 0.5
-};
-let port2 = {
-    style: {
-        strokeColor: 'black',
-        fill: 'yellow'
-    }
-};
-port2.offset = {
-    x: 0,
-    y: 0
-};
-port2.id = 'port2';
-port2.visibility = PortVisibility.Visible;
-//Specifies the connectionDirection
-port2.connectionDirection='Left';
-port2.shape = 'Square';
-let nodes = [{
-        id: 'node',
-        width: 100,
-        height: 100,
-        offsetX: 600,
-        offsetY: 300,
-        ports: [port1]
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+let diagramInstance;
+
+var nodes = [
+    {
+      id: 'node1',
+      offsetX: 450,
+      offsetY: 200,
+      width: 100,
+      height: 100,
+      ports: [
+        {
+          id: 'port1',
+          offset: { x: 0, y: 0 },
+          visibility: PortVisibility.Visible,
+        },
+      ],
     },
     {
-        id: 'node1',
-        width: 100,
-        height: 100,
-        offsetX: 800,
-        offsetY: 200,
-        ports: [port2]
+      id: 'node2',
+      offsetX: 270,
+      offsetY: 300,
+      width: 100,
+      height: 100,
+      ports: [
+        {
+          id: 'port3',
+          offset: { x: 0.5, y: 0.5 },
+          visibility: PortVisibility.Visible,
+          //Sets the connection direction as Left
+          connectionDirection: 'Left',
+        },
+      ],
     },
-];
-let connectors = [{
-        id: "connector1",
-        sourceID: 'node',
+  ];
+  //initialize the connector to connect the nodes
+let connectors = [
+    {
+        id: 'connector1',
         type: 'Orthogonal',
+        sourceID: 'node2',
         targetID: 'node1',
-        sourcePortID: 'port1',
-        targetPortID: 'port2'
-    }];
+        sourcePortID: 'port3',
+        targetPortID: 'port1',
+}];
+
+// Method to add ports through run time
+const changeConnectionDirection = () => {
+    diagramInstance.nodes[1].ports[0].connectionDirection='Top'
+  }
+
 function App() {
-    return (<DiagramComponent id="container" width={900} height={900} nodes={nodes} connectors={connectors} getNodeDefaults={(node) => {
-            node.height = 100;
-            node.width = 100;
-            node.style.fill = '#6BA5D7';
-            node.style.strokeColor = 'white';
-            return node;
-        }}/>);
+    return (
+        <div>
+          <ButtonComponent content="Change Connection Direction" onClick={changeConnectionDirection} />
+          <DiagramComponent
+            id="container"
+            ref={(diagram) => (diagramInstance = diagram)}
+            width={'100%'}
+            height={'600px'}
+            nodes={nodes}
+            connectors={connectors}
+          // render initialized Diagram
+          />
+        </div>
+      );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
+

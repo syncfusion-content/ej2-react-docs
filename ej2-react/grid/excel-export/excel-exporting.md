@@ -170,6 +170,29 @@ The following example demonstrates how to export the grid with custom date forma
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-export-cs16" %}
 
+## Merge duplicate cells in specific column and export in Grid
+
+You can merge duplicate cells (based on their values) in a specific column of the Syncfusion Grid. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event. Additionally, you can merge duplicate cells in the specified column during export by using the [excelQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#excelquerycellinfo) event for Excel and CSV formats. This functionality is useful for improving the readability of your data and providing a clearer visual representation.
+
+Here’s an example demonstrating how to merge duplicate cells in the OrderID column in both Grid view and export:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/excel-export-merge/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/excel-export-merge/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-merge/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/excel-export-merge/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/excel-export-merge" %}
+
 ## Exporting multiple grids
 
 Exporting multiple grids in the Syncfusion React Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a Excel. Each grid is identified by its unique ID. You can specify which grid to export by listing their IDs in the [exportGrids](https://ej2.syncfusion.com/react/documentation/api/grid/#exportgrids) property.
