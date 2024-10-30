@@ -1,7 +1,6 @@
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 import * as React from 'react';
-import './App.css';
 
 function App() {
     let pivotObj;

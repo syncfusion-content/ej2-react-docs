@@ -21,7 +21,7 @@ const SAMPLE_CSS = `
     //Summary Cells
     /* .e-pivotview .e-summary {
          text-align: center !important;
-    }*/`;import './App.css';
+    }*/`
 
 function App() {
 
