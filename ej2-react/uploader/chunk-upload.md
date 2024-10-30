@@ -161,127 +161,90 @@ The following example explains about chunk upload with cancel support.
 The server-side implementation entirely depends on the application requirements and logic. The following code snippet provides the server-side logic to handle the chunk upload using the uploader components.
 
 ```csharp
-// Server configuration for upload a file.
-public void Save()
-{
-    try
-    {
-        if (HttpContext.Current.Request.Files.AllKeys.Length > 0)
-        {
-            var httpPostedChunkFile = HttpContext.Current.Request.Files["chunkFile"];
-            if (httpPostedChunkFile != null)
-            {
-                var saveFile = HttpContext.Current.Server.MapPath("UploadingFiles");
-                // Save the chunk file in temporery location with .part extension
-                var SaveFilePath = Path.Combine(saveFile, httpPostedChunkFile.FileName + ".part");
-                var chunkIndex = HttpContext.Current.Request.Form["chunk-index"];
-                if (chunkIndex == "0")
-                {
-                    httpPostedChunkFile.SaveAs(SaveFilePath);
-                }
-                else
-                {
-                    // Merge the current chunk file with previous uploaded chunk files
-                    MergeChunkFile(SaveFilePath, httpPostedChunkFile.InputStream);
-                    var totalChunk = HttpContext.Current.Request.Form["total-chunk"];
-                    if (Convert.ToInt32(chunkIndex) == (Convert.ToInt32(totalChunk) - 1))
-                    {
-                        var savedFile = HttpContext.Current.Server.MapPath("UploadedFiles");
-                        var originalFilePath = Path.Combine(savedFile, httpPostedChunkFile.FileName);
-                        // After all the chunk files completely uploaded, remove the .part extension and move this file into save location
-                        System.IO.File.Move(SaveFilePath, originalFilePath);
-                    }
-                }
-                HttpResponse ChunkResponse = HttpContext.Current.Response;
-                ChunkResponse.Clear();
-                ChunkResponse.ContentType = "application/json; charset=utf-8";
-                ChunkResponse.StatusDescription = "File uploaded succesfully";
-                ChunkResponse.End();
-            }
-            var httpPostedFile = HttpContext.Current.Request.Files["UploadFiles"];
+public string uploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploaded Files"); // Set your desired upload directory path
 
-            if (httpPostedFile != null)
-            {
-                var fileSave = HttpContext.Current.Server.MapPath("UploadedFiles");
-                var fileSavePath = Path.Combine(fileSave, httpPostedFile.FileName);
-                if (!File.Exists(fileSavePath))
-                {
-                    httpPostedFile.SaveAs(fileSavePath);
-                    HttpResponse Response = HttpContext.Current.Response;
-                    Response.Clear();
-                    Response.ContentType = "application/json; charset=utf-8";
-                    Response.StatusDescription = "File uploaded succesfully";
-                    Response.End();
-                }
-                else
-                {
-                    HttpResponse Response = HttpContext.Current.Response;
-                    Response.Clear();
-                    Response.Status = "400 File already exists";
-                    Response.StatusCode = 400;
-                    Response.StatusDescription = "File already exists";
-                    Response.End();
-                }
-            }
-        }
-    }
-    catch (Exception e)
-    {
-        HttpResponse Response = HttpContext.Current.Response;
-        Response.Clear();
-        Response.ContentType = "application/json; charset=utf-8";
-        Response.StatusCode = 400;
-        Response.Status = "400 No Content";
-        Response.StatusDescription = e.Message;
-        Response.End();
-    }
-}
-// Server configuration for remove a uploaded file
-public void Remove()
+public async Task<IActionResult> Save(IFormFile UploadFiles)
 {
     try
     {
-        var fileSave = "";
-        if (HttpContext.Current.Request.Form["cancel-uploading"] != null)
+        if (UploadFiles.Length > 0)
         {
-            fileSave = HttpContext.Current.Server.MapPath("UploadingFiles");
-        } else
-        {
-            fileSave = HttpContext.Current.Server.MapPath("UploadedFiles");
+            var fileName = UploadFiles.FileName;
+
+            // Create upload directory if it doesn't exist
+            if (!Directory.Exists(uploads))
+            {
+                Directory.CreateDirectory(uploads);
+            }
+
+            if (UploadFiles.ContentType == "application/octet-stream") //Handle chunk upload
+            {
+                // Fetch chunk-index and total-chunk from form data
+                var chunkIndex = Request.Form["chunk-index"];
+                var totalChunk = Request.Form["total-chunk"];
+
+                // Path to save the chunk files with .part extension
+                var tempFilePath = Path.Combine(uploads, fileName + ".part");
+
+                using (var fileStream = new FileStream(tempFilePath, chunkIndex == "0" ? FileMode.Create : FileMode.Append))
+                {
+                    await UploadFiles.CopyToAsync(fileStream);
+                }
+
+                // If all chunks are uploaded, move the file to the final destination
+                if (Convert.ToInt32(chunkIndex) == Convert.ToInt32(totalChunk) - 1)
+                {
+                    var finalFilePath = Path.Combine(uploads, fileName);
+
+                    // Move the .part file to the final destination without the .part extension
+                    System.IO.File.Move(tempFilePath, finalFilePath);
+
+                    return Ok(new { status = "File uploaded successfully" });
+                }
+
+                return Ok(new { status = "Chunk uploaded successfully" });
+            }
+            else //Handle normal upload
+            {
+                var filePath = Path.Combine(uploads, fileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await UploadFiles.CopyToAsync(fileStream);
+                }
+
+                return Ok(new { status = "File uploaded successfully" });
+            }
         }
-        var fileName = HttpContext.Current.Request.Files["UploadFiles"].FileName;
-        var fileSavePath = Path.Combine(fileSave, fileName);
-        if (File.Exists(fileSavePath))
-        {
-            File.Delete(fileSavePath);
-        }
+
+        return BadRequest(new { status = "No file to upload" });
     }
-    catch (Exception e)
+    catch (Exception ex)
     {
-        HttpResponse Response = HttpContext.Current.Response;
-        Response.Clear();
-        Response.Status = "404 File not found";
-        Response.StatusCode = 404;
-        Response.StatusDescription = "File not found";
-        Response.End();
+        return StatusCode(500, new { status = "Error", message = ex.Message });
     }
 }
-// Merge the current chunk file with previous uploaded chunk files
-public void MergeChunkFile(string fullPath, Stream chunkContent)
+
+// Method to handle file removal (optional if needed)
+public async Task<IActionResult> Remove(string UploadFiles)
 {
     try
     {
-        using (FileStream stream = new FileStream(fullPath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite))
+        var filePath = Path.Combine(uploads, UploadFiles);
+
+        if (System.IO.File.Exists(filePath))
         {
-            using (chunkContent)
-            {
-                chunkContent.CopyTo(stream);
-            }
+            System.IO.File.Delete(filePath);
+            return Ok(new { status = "File deleted successfully" });
+        }
+        else
+        {
+            return NotFound(new { status = "File not found" });
         }
     }
-    catch (IOException ex)
+    catch (Exception ex)
     {
-        throw ex;
+        return StatusCode(500, new { status = "Error", message = ex.Message });
     }
 }
 ```
