@@ -62,7 +62,7 @@ UI virtualization can be enabled in ListView by setting [`enableVirtualization`]
 
  {% previewsample "page.domainurl/code-snippet/listview/virtualization/flat-list-cs1" %}
 
-We can use `template` property to customize list items in UI virtualization.
+We can use [`template`](https://ej2.syncfusion.com/react/documentation/api/list-view/#template) property to customize list items in UI virtualization.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,7 +80,7 @@ We can use `template` property to customize list items in UI virtualization.
 
 ## Conditional rendering
 
-We have also provided following conditional rendering support for template and groupTemplate.
+We have also provided following conditional rendering support for [`template`](https://ej2.syncfusion.com/react/documentation/api/list-view/#template) and [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#grouptemplate).
 
 | Name | Syntax |
 | --- | --- | --- |

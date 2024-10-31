@@ -1,16 +1,7 @@
-{% raw %}
-
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-    Diagram,
-    DiagramComponent,
-    NodeModel,
-    StackPanel,
-    TextElement,
-} from "@syncfusion/ej2-react-diagrams";
-let diagramInstance:DiagramComponent;
+import {useRef} from "react";
+import { Diagram, DiagramComponent, NodeModel, StackPanel, TextElement } from "@syncfusion/ej2-react-diagrams";
 let nodes: NodeModel[] = [{
     id: 'node5',
     width: 100,
@@ -29,7 +20,7 @@ let nodes: NodeModel[] = [{
         verticalAlignment: 'Top'
     }]
 }, ];
-let count: Number = 11;
+let count: number = 11;
 let getTextElement: Function = (text: string) => {
     let textElement: TextElement = new TextElement();
     textElement.id = "text" + count;
@@ -47,10 +38,11 @@ let addRows: Function = (column: StackPanel) => {
 };
 //Intialize Diagram Component
 function App() {
+  const diagramInstance: DiagramComponent = useRef(null);
   return (
     <DiagramComponent
-      id="container"
-      ref={(diagram) => (diagramInstance = diagram)}
+      id="diagram"
+      ref={diagramInstance}
       width={900}
       height={900}
       nodes={nodes}
@@ -83,9 +75,5 @@ function App() {
     />
   );
 }
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
-
-
-
-{% endraw %}

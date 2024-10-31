@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize listview as chat window in React Listview component | Syncfusion
+title: Customize as chat window in React Listview component | Syncfusion
 description: Learn here all about Customize listview as chat window in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
 control: Customize listview as chat window 
 platform: ej2-react
