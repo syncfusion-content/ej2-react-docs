@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Check list in React Listview component
 
-The ListView supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the `showCheckBox` property.
+The ListView supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/list-view/#showcheckbox) property.
 
 The Checkbox will be useful in the scenario where we need to select multiple options. For Example, In Shipping cart we can be able to select or unselect the desired items before checkout and also it will be useful in selecting multiple items that belongs to same category using the group list.
 
@@ -27,7 +27,7 @@ The Checkbox will be useful in the scenario where we need to select multiple opt
 
 ## Checkbox Position
 
-In ListView the checkbox can be positioned into either `Left` or `Right` side of the list-item text. This can be achieved by `checkBoxPositon` property. By default, checkbox will be positioned to `Left` of list-item text.
+In ListView the checkbox can be positioned into either `Left` or `Right` side of the list-item text. This can be achieved by [`checkBoxPosition`](https://ej2.syncfusion.com/react/documentation/api/list-view/#checkboxposition) property. By default, checkbox will be positioned to `Left` of list-item text.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

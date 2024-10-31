@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize listview with dynamic tags in React Listview component | Syncfusion
+title: Customize listview with dynamic tags | Syncfusion
 description: Learn here all about Customize listview with dynamic tags in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
 control: Customize listview with dynamic tags 
 platform: ej2-react
@@ -94,30 +94,6 @@ Refer to the following code sample of actionComplete event.
 * Bind the click event for button icon (+) to update the ListView data source with tags, and open the dialog with this dynamic ListView. Refer to the following code sample.
 
 
-
-   ```ts
-
-     //Method to hide/show the dialog and update the ListView data source
-        function renderDialog(id) {
-          if (document.getElementsByClassName('e-popup-open').length !== 0) {
-           dialogInstance.hide();
-       }
-        else {
-          let listElem: any = document.getElementById('dialog').querySelector("#list");
-          let listIns = document.getElementById('dialog').querySelector("#list") && document.getElementById('dialog').querySelector("#list").ej2_instances && document.getElementById('dialog').querySelector("#list").ej2_instances[0] ? document.getElementById('dialog').querySelector("#list").ej2_instances[0] : undefined;
-        if(listIns){
-        listIns.dataSource = datasource[id];
-        listIns.fields = fields;
-        listIns.addEventListener('select', ()=> { addTag(event);});
-        listIns.dataBind();
-        listIns.appendTo(listElem);
-        dialogInstance.position = { X: document.querySelector('.e-add-icon').getBoundingClientRect().left + 50, Y: document.querySelector('.e-add-icon').getBoundingClientRect().top - 5 };
-        dialogInstance.show();
-        }
-    }
-   }
-
- ```
 
   ```ts
     //Method to hide/show the dialog and update the ListView data source
