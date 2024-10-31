@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data binding in React Listview component
 
-ListView provides the option to load the data either from local data sources or remote data services. This can be done through dataSource property which supports the data type of array or through DataManager.
+ListView provides the option to load the data either from local data sources or remote data services. This can be done through [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) property which supports the data type of array or through DataManager.
 
 ListView supports different kind of data services such as OData, OData V4, Web API and data formats like XML, JSON, JSONP with the help of DataManager Adaptors.
 
@@ -28,7 +28,7 @@ ListView supports different kind of data services such as OData, OData V4, Web A
 | sortBy | string | Specifies sorting field, which is used to sort the listview data. |
 | htmlAttributes | string | Specifies list item html attributes field. |
 
-> When complex data bind to ListView, you should map the fields properly. Otherwise, the ListView properties remain as undefined or null.
+> When complex data bind to ListView, you should map the [`fields`](https://ej2.syncfusion.com/react/documentation/api/list-view/#fields) properly. Otherwise, the ListView properties remain as undefined or null.
 
 ## Bind to local data
 
@@ -71,7 +71,7 @@ The below example illustrates the concept of binding Array of JSON data.
 
 ## Bind to remote data
 
-ListView supports to retrieve the data from remote data services with the help of DataManager component and Query property allows to fetch data and return it to ListView from the database.
+ListView supports to retrieve the data from remote data services with the help of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) component and [`Query`](https://ej2.syncfusion.com/react/documentation/data/querying) property allows to fetch data and return it to ListView from the database.
 
 In the below sample, displayed first 6 Products from Product table of NorthWind data service.
 

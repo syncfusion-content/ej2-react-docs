@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrate paging with listview in React Listview component | Syncfusion
+title: Integrate paging with React Listview component | Syncfusion
 description: Learn here all about Integrate paging with listview in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
 control: Integrate paging with listview 
 platform: ej2-react
@@ -36,4 +36,4 @@ function click(args: any) {
 
 In the above code snippet, the event stores the [`currentPage`](https://ej2.syncfusion.com/documentation/api/pager/#currentpage) value, and the datasource which is to be displayed in the next page is obtained.
 
-Note: When `pageize` isn't mentioned, it defaults to 12 records per page.
+> When `pagesize` isn't mentioned, it defaults to 12 records per page.

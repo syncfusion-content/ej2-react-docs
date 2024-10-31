@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load list items in child list dynamically in React Listview component | Syncfusion
+title: Loading of child list items in React ListView Component | Syncfusion
 description: Learn here all about Load list items in child list dynamically in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
 control: Load list items in child list dynamically 
 platform: ej2-react
@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Load list items in child list dynamically in React Listview component
 
-To load list items in child list dynamically, push the new list item data into the existing [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) using
-the [`select`](https://ej2.syncfusion.com/react/documentation/api/list-view/#select) event.
+To load list items in child list dynamically, push the new list item data into the existing [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) using the [`select`](https://ej2.syncfusion.com/react/documentation/api/list-view/#select) event.
 
 Refer to the following steps to load list item into the child list:
 

@@ -170,7 +170,7 @@ return (<ListViewComponent id='list' dataSource={listData} groupTemplate={groupT
     </ListViewComponent>);
 ```
 
-In the below example, we have grouped Listview based on the category. The category of each list item should be mapped with [`groupBy`] field of the data. We have also displayed grouped list items count in the group list header.
+In the below example, we have grouped Listview based on the category. The category of each list item should be mapped with [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have also displayed grouped list items count in the group list header.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
