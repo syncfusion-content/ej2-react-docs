@@ -90,6 +90,22 @@ function App() {
 ReactDOM.render(<App />, document.getElementById('aiAssistView'));
 ```
 
+## Adding CSS reference
+
+Import the AI AssistView component required CSS references as follows in `src/App.css`.
+
+```css
+
+/* import the AI AssistView dependency styles */
+
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-interactive-chat/styles/material.css";
+
+```
+
 ## Run the application
 
 After completing the configuration required to render a basic AI AssistView, run the following command to display the output in your default browser.
