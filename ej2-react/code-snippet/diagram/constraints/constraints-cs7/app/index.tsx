@@ -1,9 +1,8 @@
+{% raw %}
+
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import {
-  DiagramComponent,
-  NodeModel,
-} from '@syncfusion/ej2-react-diagrams';
+import { DiagramComponent, NodeModel } from '@syncfusion/ej2-react-diagrams';
 // A node is created and stored in nodes array.
 let nodes: NodeModel[] = [
   {
@@ -13,6 +12,13 @@ let nodes: NodeModel[] = [
     annotations: [{ content: 'Node interactions restricted within page' }],
   },
 ];
+let pageSettings: any = {
+  boundaryConstraints: 'Page',
+  width: 500,
+  height: 500,
+  showPageBreaks: true,
+  background: { color: 'grey' }
+};
 // initialize Diagram component
 function App() {
   return (
@@ -22,13 +28,7 @@ function App() {
       height={'600px'}
       // Add node
       nodes={nodes}
-      pageSettings={{
-        boundaryConstraints: 'Page',
-        width: 500,
-        height: 500,
-        showPageBreaks: true,
-        background: { color: 'grey' },
-      }}
+      pageSettings={pageSettings}
       getNodeDefaults={(node) => {
         node.height = 100;
         node.width = 100;
@@ -40,3 +40,5 @@ function App() {
 }
 const root = createRoot(document.getElementById('diagram'));
 root.render(<App />);
+
+{% endraw %}
