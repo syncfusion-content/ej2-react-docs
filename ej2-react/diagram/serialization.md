@@ -100,9 +100,11 @@ The following code illustrates how to enable the preventDefaults property to sim
 
 ```ts
   return (
-    <DiagramComponent
-      serializationSettings = {{ preventDefaults: true }}
-    ></DiagramComponent>
+    <div>
+      <DiagramComponent
+        serializationSettings = {{ preventDefaults: true }}
+      ></DiagramComponent>
+    </div>
   )
 
 ```

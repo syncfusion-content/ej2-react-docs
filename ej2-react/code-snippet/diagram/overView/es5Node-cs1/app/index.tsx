@@ -1,3 +1,5 @@
+{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DataManager, Query } from '@syncfusion/ej2-data';
@@ -55,6 +57,18 @@ let data: object[] = [{
 ];
 let diagramInstance: DiagramComponent;
 let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
+let layout: any = {
+  type: 'HierarchicalTree',
+  margin: {
+    top: 20
+  },
+  getLayoutInfo: (node, tree) => {
+    if (!tree.hasSubTree) {
+      tree.orientation = 'Vertical';
+      tree.type = 'Alternate';
+    }
+  },
+}
 // Initializes the Diagram control
 function App() {
   return (
@@ -69,18 +83,7 @@ function App() {
             diagramInstance.tool = DiagramTools.ZoomPan;
             diagramInstance.dataBind();
           }}
-          layout={{
-            type: 'HierarchicalTree',
-            margin: {
-              top: 20,
-            },
-            getLayoutInfo: (node, tree) => {
-              if (!tree.hasSubTree) {
-                tree.orientation = 'Vertical';
-                tree.type = 'Alternate';
-              }
-            },
-          }}
+          layout={layout}
           dataSourceSettings={{
             id: 'Id',
             parentId: 'ReportingPerson',
@@ -164,3 +167,4 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
+{% endraw %}
