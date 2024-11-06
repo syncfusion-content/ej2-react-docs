@@ -21,7 +21,7 @@ You can simply click on the node to select it and click on diagram canvas to uns
 
 ### To select node programatically
 
-A node can be selected at runtime by using the [`select`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#select) method and the selection can be cleared in the diagram by using the [`clearSelection`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#clearselection) or [`unSelect`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#unselect) method. The following code explains how to select and clear selection in the diagram.
+A node can be selected at runtime by using the [`select`](https://ej2.syncfusion.com/react/documentation/api/diagram/#select) method and the selection can be cleared in the diagram by using the [`clearSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram/#clearselection) or [`unSelect`](https://ej2.syncfusion.com/react/documentation/api/diagram/#unselect) method. The following code explains how to select and clear selection in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,8 +36,8 @@ A node can be selected at runtime by using the [`select`](https://helpej2.syncfu
 
 |Method | Parameter | Description|
 |----|----|----|
-|[`unSelect`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#unselect)| NodeModel/ConnectorModel | The object to remove from the selection.|
-|[`clearSelection`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#clearselection)| - | Clears all the selection in the diagram.|
+|[`unSelect`](https://ej2.syncfusion.com/react/documentation/api/diagram/#unselect)| NodeModel/ConnectorModel | The object to remove from the selection.|
+|[`clearSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram/#clearselection)| - | Clears all the selection in the diagram.|
 
 ## Drag
 
@@ -47,7 +47,7 @@ You can simply mousedown on a node and drag it anywhere on the diagram canvas li
 
 ### To drag node programatically
 
-A node can be dragged at runtime by using the [`drag`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drag) method. The following code explains how to drag the node by using the drag method.
+A node can be dragged at runtime by using the [`drag`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drag) method. The following code explains how to drag the node by using the drag method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,7 +68,7 @@ When we select a node a resize handle will appear on all the sides of the node. 
 
 ### To resize node programatically
 
-A node can be resized at runtime by using the [`scale`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#scale) method. The following code explains how to resize the node by using the scale method.
+A node can be resized at runtime by using the [`scale`](https://ej2.syncfusion.com/react/documentation/api/diagram/#scale) method. The following code explains how to resize the node by using the scale method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -89,7 +89,7 @@ A node can be rotated interactively by clicking and dragging the rotate handle o
 
 ### To rotate node programatically
 
-A node can be rotated at runtime by using the [`rotate`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#rotate) method. The following code explains how to rotate the node by using the rotate method.
+A node can be rotated at runtime by using the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotate) method. The following code explains how to rotate the node by using the rotate method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,18 +104,18 @@ A node can be rotated at runtime by using the [`rotate`](https://helpej2.syncfus
 
 ## Flip
 
-The diagram Provides support to flip the node. [`flip`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#flip) is performed to
+The diagram Provides support to flip the node. [`flip`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#flip) is performed to
 give the mirrored image of the original element.
 The flip types are as follows:
 
 * HorizontalFlip
- [`Horizontal`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to change the element in horizontal direction.
+ [`Horizontal`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to change the element in horizontal direction.
 
 * VerticalFlip
-[`Vertical`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to change the element in vertical direction
+[`Vertical`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) is used to change the element in vertical direction
 
 * Both
-[`Both`](https://helpej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) which involves both vertical and horizontal changes of the element.
+[`Both`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection/) which involves both vertical and horizontal changes of the element.
 
 The following code illustrates how to provide the mirror image of the original element.
 

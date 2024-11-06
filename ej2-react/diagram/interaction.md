@@ -20,7 +20,7 @@ An element can be selected by clicking that element. During single click, all pr
 
 ![Single Selection](images/single-select.gif)
 
-While selecting the diagram elements,  the [`selectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event and [`click`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#click) gets triggered. 
+While selecting the diagram elements,  the [`selectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event and [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram/#click) gets triggered. 
 These events enable you to customize the selected elements as needed.
 
 ## Selecting a group
@@ -44,7 +44,7 @@ In rubber band selection, you can set the selection of items by region using the
 - CompleteIntersect: Selects items that are fully covered within the rectangular selection region.
 - PartialIntersect: Selects items that are partially covered within the rectangular selection region.
 
-This can be configured with the [`rubberBandSelectionMode`](https://helpej2.syncfusion.com/react/documentation/api/diagram/rubberBandSelectionMode/).
+This can be configured with the [`rubberBandSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/diagram/rubberBandSelectionMode/).
 
 ![Multiple Rubberband Selection](images/multiselect_Highlight.gif)
 
@@ -92,7 +92,7 @@ root.render(<App />);
 ```
 ### Get selected items
 
-You can get the current selected items from the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel#connectors-connectormodel[]) collection of the [`selectedItems`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#selecteditems) property of the diagram model.
+You can get the current selected items from the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selecteditems) property of the diagram model.
 
 ```ts
 let diagramInstance: DiagramComponent;
@@ -116,7 +116,7 @@ root.render(<App />);
 
 ### Toggle selection
 
-The [`canToggleSelection`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorModel/#cantoggleselection) property determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false. In the following example, the node can be selected with the first click and unselected with the second click.
+The [`canToggleSelection`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel/#cantoggleselection) property determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false. In the following example, the node can be selected with the first click and unselected with the second click.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -158,7 +158,7 @@ You can also use the CTRL+A keys to select all nodes and connectors in the diagr
 ## Drag
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move every selected element.
-* When you drag the elements in the diagram, the [`positionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#positionchange) event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the [`positionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#positionchange) event gets triggered and to do customization in this event.
 
 ![Drag](images/drag.gif)
 
@@ -166,7 +166,7 @@ You can also use the CTRL+A keys to select all nodes and connectors in the diagr
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, selected items can be resized.
 * When one corner of the selector is dragged, opposite corner is in a static position.
-* When a node is resized, the [`sizeChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#sizechange) event gets triggered.
+* When a node is resized, the [`sizeChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sizechange) event gets triggered.
 
 ![Resize](images/resize.gif)
 
@@ -174,7 +174,7 @@ N>  While dragging and resizing, the objects are snapped towards the nearest obj
 
 ### Aspect ratio
 
-Maintaining aspect ratio in diagram means that when you resize a node, by dragging its corner, both its width and height adjust proportionally. This ensures that the node retains its original shape and proportions. Aspect ratio constraints can be applied by configuring the [`NodeConstraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeconstraints/) property.
+Maintaining aspect ratio in diagram means that when you resize a node, by dragging its corner, both its width and height adjust proportionally. This ensures that the node retains its original shape and proportions. Aspect ratio constraints can be applied by configuring the [`NodeConstraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeconstraints/) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -216,7 +216,7 @@ The appearance such as fill, stroke, and stroke width of the node resize thumb a
 
 ### Customize rotate handle position
 
-The position of the rotate handle can be adjusted by modifying the pivot point of the node using the [`pivot`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeModel/#pivot) property. By default, the pivot point is set to (0.5, 0.5). The following example shows how to render the rotate handle at the left top corner of the node.
+The position of the rotate handle can be adjusted by modifying the pivot point of the node using the [`pivot`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel/#pivot) property. By default, the pivot point is set to (0.5, 0.5). The following example shows how to render the rotate handle at the left top corner of the node.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -235,7 +235,7 @@ The position of the rotate handle can be adjusted by modifying the pivot point o
 
 Each segment of a selected connector is editable with some specific handles/thumbs.
 
->Note: For connector editing, you have to inject the [`ConnectorEditing`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorEditing/) module.
+>Note: For connector editing, you have to inject the [`ConnectorEditing`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorEditing/) module.
 
 ### Drag connector end points
 
@@ -245,9 +245,9 @@ Source and target points of the selected connectors are represented with two han
 
 Dragging the connector end points triggers the following events for customization:
 
-When the connector source point is changed, the [`sourcePointChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#sourcepointchange) event gets triggered.
-When the connector target point is changed, the [`targetPointChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#targetpointchange) event gets triggered.
-When you connect connector with ports/node or disconnect from it, the [`connectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#connectionchange) event gets triggered.
+When the connector source point is changed, the [`sourcePointChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#sourcepointchange) event gets triggered.
+When the connector target point is changed, the [`targetPointChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#targetpointchange) event gets triggered.
+When you connect connector with ports/node or disconnect from it, the [`connectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#connectionchange) event gets triggered.
 
 ## Straight segment editing
 
@@ -278,36 +278,36 @@ Bezier segments are annotated with two thumbs representing the control points. T
 
 ## User handles
 
-User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorModel/#userhandles) collection of the [`selectedItems`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#selecteditems) property. The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
+User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel/#userhandles) collection of the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selecteditems) property. The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
 
 The following events are triggered when interacting with a user handle:
 
-[`click`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#click) - Triggered when the user handle is clicked.
-[`onUserHandleMouseEnter`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemouseenter) - Triggered when the mouse enters the user handle region.
-[`onUserHandleMouseDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemousedown) - Triggered when the mouse is pressed down on the user handle.
-[`onUserHandleMouseUp`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemouseup) - Triggered when the mouse is released on the user handle.
-[`onUserHandleMouseLeave`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemouseleave) - Triggered when the mouse leaves the user handle region.
+[`click`](https://ej2.syncfusion.com/react/documentation/api/diagram/#click) - Triggered when the user handle is clicked.
+[`onUserHandleMouseEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemouseenter) - Triggered when the mouse enters the user handle region.
+[`onUserHandleMouseDown`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemousedown) - Triggered when the mouse is pressed down on the user handle.
+[`onUserHandleMouseUp`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemouseup) - Triggered when the mouse is released on the user handle.
+[`onUserHandleMouseLeave`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemouseleave) - Triggered when the mouse leaves the user handle region.
 
 For more information, refer to the [`user handle events`](./user-handle).
 
 ## Fixed user handle
 
-Fixed user handles are used to perform specific actions when interacted with. Unlike regular user handles, [`fixedUserHandles`](https://helpej2.syncfusion.com/react/documentation/api/diagram/fixedUserHandleClickEventArgs/#fixeduserhandle) are defined within the node/connector object, allowing different fixed user handles to be added to different nodes.
+Fixed user handles are used to perform specific actions when interacted with. Unlike regular user handles, [`fixedUserHandles`](https://ej2.syncfusion.com/react/documentation/api/diagram/fixedUserHandleClickEventArgs/#fixeduserhandle) are defined within the node/connector object, allowing different fixed user handles to be added to different nodes.
 
 The following events are triggered when interacting with a fixed user handle:
 
-* [`click`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#click) - Triggered when the fixed user handle is clicked.
-* [`onFixedUserHandleMouseEnter`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemouseenter) - Triggered when the mouse enters the fixed user handle region.
-* [`onFixedUserHandleMouseDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemousedown) - Triggered when the mouse is pressed down on the fixed user handle.
-* [`onFixedUserHandleMouseUp`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemouseup) - Triggered when the mouse is released on the fixed user handle.
-* [`onFixedUserHandleMouseLeave`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemouseleave) - Triggered when the mouse leaves the fixed user handle region.
-* [`fixedUserHandleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#fixeduserhandleclick) - Triggered when the fixed user handle is clicked.
+* [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram/#click) - Triggered when the fixed user handle is clicked.
+* [`onFixedUserHandleMouseEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemouseenter) - Triggered when the mouse enters the fixed user handle region.
+* [`onFixedUserHandleMouseDown`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemousedown) - Triggered when the mouse is pressed down on the fixed user handle.
+* [`onFixedUserHandleMouseUp`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemouseup) - Triggered when the mouse is released on the fixed user handle.
+* [`onFixedUserHandleMouseLeave`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemouseleave) - Triggered when the mouse leaves the fixed user handle region.
+* [`fixedUserHandleClick`](https://ej2.syncfusion.com/react/documentation/api/diagram/#fixeduserhandleclick) - Triggered when the fixed user handle is clicked.
 
 For more information, refer to the [`fixed user handle events`](./user-handle).
 
 ## Determining Mouse Button Clicks
 
-The diagram component can determine which mouse button was clicked. For example, when the right mouse button is clicked, the click event will specify that the right button was clicked. This is handled through the mouse [`click`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#click) event, which provides details about whether the left or right button was clicked.
+The diagram component can determine which mouse button was clicked. For example, when the right mouse button is clicked, the click event will specify that the right button was clicked. This is handled through the mouse [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram/#click) event, which provides details about whether the left or right button was clicked.
 
 | Notification | Description |
 |----------------|--------------|
@@ -340,11 +340,11 @@ root.render(<App />);
 
 ## Allow drop
 
-The diagram supports dropping a node or connector onto another node or connector. To determine the target where the node or connector is dropped, you need to enable the [`allowDrop`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints/) constraint in the node's or connector's constraints property. This setting enables a highlighter to indicate potential drop targets when dragging any node or connector over another one. Upon dropping the node or connector, the [`drop`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDropEventArgs/) event is triggered to indicate which element was dropped over which other element.
+The diagram supports dropping a node or connector onto another node or connector. To determine the target where the node or connector is dropped, you need to enable the [`allowDrop`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints/) constraint in the node's or connector's constraints property. This setting enables a highlighter to indicate potential drop targets when dragging any node or connector over another one. Upon dropping the node or connector, the [`drop`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDropEventArgs/) event is triggered to indicate which element was dropped over which other element.
 
 ## Zoom pan
 
-When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram. You can zoom in or out on the diagram by using Ctrl + mouse wheel. When the diagram is zoomed or panned, the [`scrollChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#scrollchange) event gets triggered.
+When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram. You can zoom in or out on the diagram by using Ctrl + mouse wheel. When the diagram is zoomed or panned, the [`scrollChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#scrollchange) event gets triggered.
 
 |  Pan Status  | Description|
 |--------------|---------|
