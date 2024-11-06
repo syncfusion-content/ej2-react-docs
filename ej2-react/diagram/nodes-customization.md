@@ -248,14 +248,14 @@ The following code illustrates how to change the `pivot` value.
  
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nPosition-cs1/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nPositioning-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nPosition-cs1/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nPositioning-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nPosition-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nPositioning-cs1" %}
 
  ## Get connected connector from node
 

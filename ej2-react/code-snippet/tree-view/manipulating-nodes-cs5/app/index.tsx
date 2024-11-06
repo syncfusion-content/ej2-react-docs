@@ -4,7 +4,7 @@
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import {TreeViewComponent, NodeEditEventArgs} from '@syncfusion/ej2-react-navigations';
+import {TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
 function App() {

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Events
+# Events of nodes in React Diagram control
 
 Diagram provides some events support for node that triggers when interacting with the node.
 
@@ -18,14 +18,14 @@ Triggers when the node is clicked. The following code example explains how to ge
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs1/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs1/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvents-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs1" %}
 
 ## Selection change event
 
@@ -35,14 +35,14 @@ The following code example explains how to get the [`selectionChange`](https://h
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs2/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs2/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvents-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs2" %}
 
  You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentChangeEventArgs/) to true, as shown in the code snippet below.
 
@@ -64,14 +64,14 @@ The following code example explains how to get the [`positionChange`](https://he
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs3/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs3/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvents-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs3" %}
 
  You can prevent dragging by setting the `cancel` property of [`DraggingEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs/) to true, as shown in the code snippet below.
 
@@ -92,14 +92,14 @@ The following code example explains how to get the [`sizeChange`](https://helpej
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs4/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs4/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvents-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs4" %}
 
  You can prevent resizing by setting the `cancel` property of [`SizeChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/isizechangeeventargs/) to true, as shown in the code snippet below.
 
@@ -120,14 +120,14 @@ The following code example explains how to get the [`rotateChange`](.https://hel
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs5/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs5/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvents-cs5" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs5" %}
 
  You can prevent rotation by setting the `cancel` property of [`RotationEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/irotationeventargs/) to true, as shown in the code snippet below.
 
@@ -147,15 +147,14 @@ Triggers when there is any property change occurred for the node. The following 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs6/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs6/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvents-cs6
- 3265" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs6" %}
 
 ## Collection change event
 
@@ -164,14 +163,14 @@ The following code example explains how to get the [`collectionChange`](https://
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs7/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs7/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvents-cs7" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs7" %}
 
 You can prevent changes to the diagram collection, such as adding or deleting nodes, by setting the `cancel` property of [`CollectionChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/icollectionchangeeventargs/) to true, as shown in the code snippet below.
 
@@ -203,11 +202,11 @@ The following code example shows how to handle these events in the diagram and c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs8/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nEvents-cs8/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nEvent-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
  
- {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvents-cs8" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs8" %}

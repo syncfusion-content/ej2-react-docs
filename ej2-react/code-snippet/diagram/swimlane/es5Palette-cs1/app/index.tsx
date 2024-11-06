@@ -1,3 +1,5 @@
+{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { NodeModel, SymbolInfo, SymbolPaletteComponent } from "@syncfusion/ej2-react-diagrams";
@@ -86,14 +88,14 @@ function App() {
         width: 70,
         offset: {
           x: 0.5,
-          y: 0.5,
+          y: 0.5
         },
       }}
       symbolMargin={{
         left: 12,
         right: 12,
         top: 12,
-        bottom: 12,
+        bottom: 12
       }}
       //Returns the default properties of node
       getNodeDefaults={setPaletteNodeDefaults}
@@ -109,3 +111,5 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
+
+{% endraw %}
