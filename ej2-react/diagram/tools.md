@@ -24,7 +24,7 @@ Drawing tool allows you to draw any kind of node/connector during runtime by cli
 
 ### Draw nodes
 
-To draw a shape, set the JSON of that shape to the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property of the diagram and activate the drawing tool by using the [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#tool) property. The following code example illustrates how to draw a rectangle at runtime.
+To draw a shape, set the JSON of that shape to the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property of the diagram and activate the drawing tool by using the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram/#tool) property. The following code example illustrates how to draw a rectangle at runtime.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +50,7 @@ To draw a shape, set the JSON of that shape to the [`drawingObject`](https://hel
 
 ### Text Nodes
 
-Similarly, you can draw a text node by setting the type of shape as 'Text' in the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property. The [`text`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textModel/) type node contains a property called content, which specifies the text within the node. You can add the content to the text node once you finish drawing the node. Here is how you can draw a text node at runtime:
+Similarly, you can draw a text node by setting the type of shape as 'Text' in the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property. The [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/textModel/) type node contains a property called content, which specifies the text within the node. You can add the content to the text node once you finish drawing the node. Here is how you can draw a text node at runtime:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -65,7 +65,7 @@ Similarly, you can draw a text node by setting the type of shape as 'Text' in th
 
 ### Draw Connectors
 
-To draw connectors, set the JSON of the connector to the drawType property. The drawing [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#tool) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
+To draw connectors, set the JSON of the connector to the drawType property. The drawing [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram/#tool) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,7 +82,7 @@ To draw connectors, set the JSON of the connector to the drawType property. The 
 
 The diagram allows you to create polygon shapes by clicking and moving the mouse at runtime on the diagram page. This interactive feature enables users to define custom shapes with multiple sides by specifying points directly on the diagram canvas.
 
-To draw a polygon shape, you need to set the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property with the appropriate JSON configuration for a `polygon`. This includes specifying the type as 'Polygon'.
+To draw a polygon shape, you need to set the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property with the appropriate JSON configuration for a `polygon`. This includes specifying the type as 'Polygon'.
 
 The following code illustrates how to draw a polygon shape at runtime:
 
@@ -103,7 +103,7 @@ The following code illustrates how to draw a polygon shape at runtime:
 
 Diagram allows to create the polyline segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
 
-To draw a polyline connector, set the type of the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) as '`Polyline`'.
+To draw a polyline connector, set the type of the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) as '`Polyline`'.
 
 The following code illustrates how to draw a polyline connector.
 
@@ -126,7 +126,7 @@ N> To make the segment thumb visible, inject the [`ConnectorEditing`](../api/dia
 
 ### Freehand Drawing
 
-The diagram supports free-hand drawing, allowing users to draw anything independently on the diagram page. Free-hand drawing is enabled by setting the type of the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property to '`Freehand`'.
+The diagram supports free-hand drawing, allowing users to draw anything independently on the diagram page. Free-hand drawing is enabled by setting the type of the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drawingobject) property to '`Freehand`'.
 
 The following code illustrates how to perform freehand drawing:
 
@@ -169,7 +169,7 @@ These tools provide flexibility and functionality for creating and interacting w
 
 ### Zoom pan tool
 
-To activate panning mode set the [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#tool) property of the diagram as `ZoomPan`. The following code illustrates how to enable Zoom pan in the diagram
+To activate panning mode set the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram/#tool) property of the diagram as `ZoomPan`. The following code illustrates how to enable Zoom pan in the diagram
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -186,7 +186,7 @@ N> Please note that panning the diagram is not possible when 'multiplePage' is s
 
 ## Events
 
-[`elementDraw`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#elementdraw)  event is triggered when node or connector is drawn using drawing tool.
+[`elementDraw`](https://ej2.syncfusion.com/react/documentation/api/diagram/#elementdraw)  event is triggered when node or connector is drawn using drawing tool.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

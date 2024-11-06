@@ -16,7 +16,7 @@ To know more about Bitwise operators, refer to [`Bitwise Operations`](#bitwise-o
 
 ## Diagram constraints
 
-[`Diagram constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints/) allows you to enable or disable the following behaviors:
+[`Diagram constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints/) allows you to enable or disable the following behaviors:
 
 The following table displays the list of all diagram constraints.
 
