@@ -37,6 +37,8 @@ To draw a shape, set the JSON of that shape to the [`drawingObject`](https://ej2
 
  {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs1" %}
 
+The following code example illustrates how to draw a path shape.
+
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/tools/tools-cs2/app/index.jsx %}
