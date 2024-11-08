@@ -38,6 +38,9 @@ const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
 ```
+To export the React Diagram elements in various formats, refer to below video link.
+
+{% youtube "https://www.youtube.com/watch?v=IkWXjhRE-o0" %}
 
 ## Exporting options
 

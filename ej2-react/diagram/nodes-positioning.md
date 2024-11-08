@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Positioning a node in React Diagram control
 
+To customize the position of nodes in the React Diagram component, refer to the video link below.
+
+{% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
+
 ## Position
 
 * Position of a node is controlled by using its [`offsetX`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#offsetx) and [`offsetY`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#offsety) properties. By default, these offset properties represent the distance between the origin of the diagram’s page and node’s center point.
