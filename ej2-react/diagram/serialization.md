@@ -14,6 +14,10 @@ domainurl: ##DomainURL##
 
 Serialization involves saving the diagram's state as a JSON string, which can then be stored in a database, file, or other storage medium. When needed, the serialized string can be deserialized to recreate the diagram in its previous state.
 
+To easily save the contents of the diagram as a JSON string or file stream, and load it from the saved file, refer to the video link below.
+
+{% youtube "https://www.youtube.com/watch?v=IkWXjhRE-o0" %}
+
 ## Save
 
 The diagram is serialized as string while saving. The client-side method, [`saveDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/#savediagram), helps to serialize the diagram as a string. This method captures the entire diagram's configuration and content, converting it into a string representation.

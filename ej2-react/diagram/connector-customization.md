@@ -11,6 +11,10 @@ domainurl: ##DomainURL##
 
 Diagram allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
 
+To customize the appearance, padding, and bridging of the connectors in the React Diagram component, refer to the video link below.
+
+{% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
+
 ## Decorator
 
 * Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the [`sourceDecorator`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#sourcedecorator) and [`targetDecorator`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#targetdecorator) properties of the connector.
