@@ -26,7 +26,7 @@ You can check this video to learn about how to use templates for column(based on
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs8" %}
 
- > The [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event is not supported for template columns. Instead, use template function as described in the documentation (https://ej2.syncfusion.com/react/documentation/treegrid/columns/column-template#using-condition-template).
+> The [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event is not supported for template columns. Instead, use template function as described in the documentation (https://ej2.syncfusion.com/react/documentation/treegrid/columns/column-template#using-condition-template).
 
 ## Using condition template
 
