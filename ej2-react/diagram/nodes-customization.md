@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Appearence of a nodes in React Diagram control
 
+To customize the appearance and position of nodes in the React Diagram component, refer to the video link below.
+
+{% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
+
 ## Common values to the node.
 
 The [`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getnodedefaults) property in the EJ2 Diagram control allows you to define default settings for nodes based on specific conditions or requirements.

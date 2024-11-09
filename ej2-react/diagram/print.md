@@ -35,6 +35,10 @@ root.render(<App />);
 
 >Note: To Print diagram you need to inject `PrintAndExport` in the diagram.
 
+To print the React Diagram elements in various formats, refer to the video link below.
+
+{% youtube "https://www.youtube.com/watch?v=IkWXjhRE-o0" %}
+
 ## Print Options
 
 The diagram can be customized while printing using the following properties of [`printOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/iPrintOptions/).

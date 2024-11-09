@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 Page settings allow customization of the appearance, size, and orientation of the diagram page.
 
+To customize the diagram page settings, insert page breaks, display multiple pages, and change the orientation of the canvas in the EJ2 React Diagram, refer to the video link below.
+
+{% youtube "https://www.youtube.com/watch?v=pn02S_rwupw" %}
+
 ## Page size and appearance
 
 The [`width`](https://helpej2.syncfusion.com/react/documentation/api/diagram/pageSettings/#width) and [`height`](https://helpej2.syncfusion.com/react/documentation/api/diagram/pageSettings/#height) properties in page settings determine the size of the page. Additionally, the [`background`](https://helpej2.syncfusion.com/react/documentation/api/diagram/backgroundModel/) property allows customization of the page's appearance. The [`color`](https://helpej2.syncfusion.com/react/documentation/api/diagram/backgroundModel/#color) property of background is used to define the color of the page. The [`margin`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel/) property defines the page margins.
