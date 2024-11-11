@@ -12,9 +12,9 @@ function App() {
     let blobUrl: any;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('flower.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         } else {
-            imgObj.open('bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
 
@@ -26,7 +26,7 @@ function App() {
         canvas.height = imageData.height;
         ctx.putImageData(imageData, 0, 0);
         canvas.toBlob((blob) => {
-            blobUrl = URL.createObjectURL(blob as any);// For getting blob.
+            blobUrl = URL.createObjectURL(blob);// For getting blob.
         });
     }
 

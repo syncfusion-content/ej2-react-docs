@@ -35,7 +35,7 @@ function App() {
       <ListBoxComponent
         id="listbox"
         dataSource={data}
-        ref={(listbox) => { listbox = listbox }}
+        ref={(scope) => listbox = scope}
       />
     </div>
   );

@@ -26,7 +26,7 @@ function App() {
             cols[2].visible = false;
         }
     };
-    return <GanttComponent id='root' dataSource={data} beforePdfExport={beforePdfExport}  taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
+    return <GanttComponent id='root' dataSource={data} beforePdfExport={beforePdfExport} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
         <ColumnsDirective>
                     <ColumnDirective field='TaskID' width='50'/>
                     <ColumnDirective field='TaskName' headerText='Task Name'/>

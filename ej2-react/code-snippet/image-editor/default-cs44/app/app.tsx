@@ -12,13 +12,14 @@ function App() {
     let blobUrl: any;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('flower.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         } else {
-            imgObj.open('bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
     function getBlob(): void {
-        let imageData = imgObj.getImageData();
+        const imageEditor: any = getComponent(document.getElementById('image-editor'), 'image-editor');
+        let imageData = imageEditor.getImageData();
         let canvas = document.createElement('canvas');
         let ctx: any = canvas.getContext('2d');
         canvas.width = imageData.width;

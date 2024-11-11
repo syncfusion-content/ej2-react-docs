@@ -23,8 +23,8 @@ function App() {
     };
     return (
     <div className="e-section-control">
-      <label htmlFor="filter">Enter Text: </label>
-      <input type="text" id="filterTextBox" onInput={handleFilterChange} placeholder="Enter text to filter"/>
+      <label>Enter Text: </label>
+      <input type="text" id="filterTextBox" onInput={handleFilterChange} placeholder="Enter text to filter" />
       <h4>Select your favorite car:</h4>
       <ListBoxComponent
         id="listbox"
