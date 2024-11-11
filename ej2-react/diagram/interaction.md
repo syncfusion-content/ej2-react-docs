@@ -135,8 +135,32 @@ The client-side method [`selectAll`](https://ej2.syncfusion.com/react/documentat
 
 ```ts
 let diagramInstance: DiagramComponent;
-let selectedNodes: NodeModel[] = diagramInstance.selectedItems.nodes;
-let selectedConnector: ConnectorModel[] = diagramInstance.selectedItems.connectors;
+let nodes: NodeModel[] = [
+  {
+    id: 'node1',
+    width: 90,
+    height: 60,
+    offsetX: 100,
+    offsetY: 100,
+    style: {
+      fill: '#6BA5D7',
+      strokeColor: 'white',
+      strokeWidth: 1,
+    },
+  },
+  {
+    id: 'node2',
+    width: 90,
+    height: 60,
+    offsetX: 300,
+    offsetY: 100,
+    style: {
+      fill: '#6BA5D7',
+      strokeColor: 'white',
+      strokeWidth: 1,
+    },
+  },
+];
 // initialize Diagram component
 function App() {
   return (
@@ -145,10 +169,15 @@ function App() {
       ref={(diagram) => (diagramInstance = diagram)}
       width={'100%'}
       height={'600px'}
+      nodes={nodes}
+      created={() => {
+        //Select a specified collection of nodes and connectors in the diagram
+        diagramInstance.selectAll();
+      }}
     />
   );
 }
-const root = ReactDOM.createRoot(document.getElementById('diagram'));
+const root = createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
 ```
