@@ -124,7 +124,7 @@ The following code illustrates how to draw a polyline connector.
 
 ![Polyline connector drawing](images/polyline-draw.gif)
 
-N> To make the segment thumb visible, inject the [`ConnectorEditing`](../api/diagram/connectorEditing/) module into the diagram.
+N> To make the segment thumb visible, inject the [`ConnectorEditing`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorEditing/) module into the diagram.
 
 ### Freehand Drawing
 

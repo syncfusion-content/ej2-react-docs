@@ -25,5 +25,3 @@ function Default() {
 }
 
 ReactDOM.render(<Default />, document.getElementById('input-container'));
-
-
