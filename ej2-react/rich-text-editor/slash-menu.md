@@ -63,7 +63,7 @@ Each custom item object can include the following properties:
 | type        | Groups related items in the Slash Menu.               |
 | iconCss     | Specifies the CSS class for the item's icon.          |
 | description | Provides a short description for the item.            |
- 
+
 
 The following code demonstrates how to set up the Custom Slash Menu item in the Rich Text Editor to insert meeting notes and signature:
 
