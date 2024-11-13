@@ -39,6 +39,6 @@ Using the distributed cache or database all the editing operations are queued in
 
 #### See Also
 
-- [Collaborative editing using Redis cache in ASP.NET Core](../../document-editor/collaborative-editing/using-distributed-cache-asp-net-core)
-- [Collaborative editing using Microsoft SQL server in ASP.NET Core](../../document-editor/collaborative-editing/using-database-in-asp-net-core)
-- [Collaborative editing using Java](../../document-editor/collaborative-editing/using-java)
+- [Collaborative editing using Redis cache in ASP.NET Core](../../document-processing/word/word-processor/asp-net-core/collaborative-editing/overview#distributed-cache-or-database)
+- [Collaborative editing using Microsoft SQL server in ASP.NET Core](../../document-processing/word/word-processor/asp-net-core/collaborative-editing/using-dot-net)
+- [Collaborative editing using Java](../../document-processing/word/word-processor/javascript-es6/collaborative-editing/using-java)
