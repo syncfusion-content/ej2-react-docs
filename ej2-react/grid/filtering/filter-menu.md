@@ -302,7 +302,7 @@ function App() {
 }
 ;
 export default App;
-
+{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
 {% include code-snippet/grid/filter-method/app/datasource.jsx %}
