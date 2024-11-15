@@ -129,7 +129,7 @@ Use the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/chart/user-interaction/zoom-cs10" %}
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs10" %}
 
 ## Enable pan
 

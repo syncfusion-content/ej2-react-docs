@@ -154,3 +154,21 @@ You can use [`opensOnHover`](https://ej2.syncfusion.com/react/documentation/api/
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/speed-dial/styles-cs6" %}
+
+ ## Customized icon
+
+You can use the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#cssclass) property to customize the appearance of the speedDial component in its default primary state. Below example demonstrates the `cssClass` property usage in speedDial.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/speed-dial/styles-cs7/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/speed-dial/styles-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/speed-dial/styles-cs7/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speed-dial/styles-cs7" %}

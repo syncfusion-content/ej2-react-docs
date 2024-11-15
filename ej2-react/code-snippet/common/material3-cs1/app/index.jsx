@@ -8,22 +8,22 @@ function App() {
     const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = (event) => {
-    setIsChecked(event.target.checked);
+    setIsChecked(event.checked);
 
     // Add or remove the classes on the body element based on the checkbox state
     const body = document.body;
 
-    if (event.target.checked) {
+    if (event.checked) {
       body.classList.add('dark');
-      body.classList.add('dark');
+      body.classList.add('e-dark-mode');
     } else {
-      body.classList.remove('e-dark-mode');
+      body.classList.remove('dark');
       body.classList.remove('e-dark-mode');
     }
   };
     return (<div>
           {/* Primary Button - Used to represent a primary action. */}
-          <CheckBoxComponent label="Enable Darkmode" checked={isChecked} onChange={handleCheckboxChange}/><br/>
+          <CheckBoxComponent label="Enable Darkmode" checked={isChecked} change={handleCheckboxChange}/><br/>
           <ButtonComponent cssClass='e-primary'>button</ButtonComponent>
 
           {/* Success Button - Used to represent a positive action. */}

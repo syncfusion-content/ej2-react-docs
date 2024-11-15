@@ -27,7 +27,7 @@ The [`addPoint`](https://ej2.syncfusion.com/react/documentation/api/chart/series
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/chart/series/addpoint-cs" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/addpoint-cs" %}
 
 ## Removing an existing data point
 
@@ -45,7 +45,7 @@ The [`removePoint`](https://ej2.syncfusion.com/react/documentation/api/chart/ser
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/chart/series/addpoint-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/addpoint-cs1" %}
 
 ## Replacing entire data points
 
@@ -63,4 +63,4 @@ To replace the existing data source in the accumulation chart with a new data so
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/chart/series/addpoint-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/addpoint-cs3" %}
