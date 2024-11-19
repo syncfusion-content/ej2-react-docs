@@ -4,7 +4,7 @@ import { ScheduleComponent, TimelineYear, ViewsDirective, ViewDirective, Resourc
 import { resourceData } from './datasource';
 const App = () => {
   const eventSettings = { dataSource: resourceData };
-  const group = { resources: ['Projects', 'Categories'] };
+  const group = { resources: ['Owners'] };
 
   const ownerData = [
     { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
@@ -13,7 +13,7 @@ const App = () => {
   ];
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings}>
     <ViewsDirective>
-      <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true} />
+      <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true} group={group} />
       <ViewDirective option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical' group={group} />
     </ViewsDirective>
     <ResourcesDirective>

@@ -8,7 +8,7 @@ import { resourceData } from './datasource';
 
 const App = () => {
   const eventSettings: EventSettingsModel = { dataSource: resourceData };
-  const group: GroupModel = { resources: ['Projects', 'Categories'] };
+  const group: GroupModel = { resources: ['Owners'] };
 
   const ownerData: Object[] = [
     { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
@@ -17,7 +17,7 @@ const App = () => {
   ];
   return (<ScheduleComponent width='100%' height='550px' selectedDate={new Date(2018, 3, 1)} eventSettings={eventSettings} >
     <ViewsDirective>
-      <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true} />
+      <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true} group={group} />
       <ViewDirective option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical' group={group} />
     </ViewsDirective>
     <ResourcesDirective>
