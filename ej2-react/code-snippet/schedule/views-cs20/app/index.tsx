@@ -13,6 +13,7 @@ const App = () => {
     eventSettings={eventSettings}>
     <ViewsDirective>
       <ViewDirective option='TimelineYear' displayName='Horizontal Timeline Year' isSelected={true} />
+      <ViewDirective option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical'/>
     </ViewsDirective>
     <Inject services={[TimelineYear]} />
   </ScheduleComponent>)
