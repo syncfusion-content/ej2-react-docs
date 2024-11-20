@@ -180,7 +180,9 @@ module.exports = {
 
 * Add the [React](https://reactjs.org/docs/cdn-links.html) and Syncfusion react Grid CDN references in the `src/index.html` file. The order of individual Syncfusion control package loading should be in line with its dependency graph. The CDN of the Dependency Packages should be included manually before the intended individual Syncfusion control package CDN.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -192,33 +194,35 @@ module.exports = {
     <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
 
     <!-- Syncfusion React controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/27.2.2/material.css" />
 
     <!-- Syncfusion React controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/ej2-base/dist/ej2-base.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-data/dist/ej2-data.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-buttons/dist/ej2-buttons.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-splitbuttons/dist/ej2-splitbuttons.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-popups/dist/ej2-popups.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-navigations/dist/ej2-navigations.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-inputs/dist/ej2-inputs.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-dropdowns/dist/ej2-dropdowns.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-calendars/dist/ej2-calendars.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-lists/dist/ej2-lists.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-excel-export/dist/ej2-excel-export.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-pdf-export/dist/ej2-pdf-export.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-file-utils/dist/ej2-file-utils.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-compression/dist/ej2-compression.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-grids/dist/ej2-grids.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-react-base/dist/ej2-react-base.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-react-grids/dist/ej2-react-grids.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-base/dist/ej2-base.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-data/dist/ej2-data.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-buttons/dist/ej2-buttons.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-splitbuttons/dist/ej2-splitbuttons.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-popups/dist/ej2-popups.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-navigations/dist/ej2-navigations.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-inputs/dist/ej2-inputs.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-dropdowns/dist/ej2-dropdowns.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-calendars/dist/ej2-calendars.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-lists/dist/ej2-lists.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-excel-export/dist/ej2-excel-export.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-pdf-export/dist/ej2-pdf-export.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-file-utils/dist/ej2-file-utils.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-compression/dist/ej2-compression.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-grids/dist/ej2-grids.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-react-base/dist/ej2-react-base.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/27.2.2/ej2-react-grids/dist/ej2-react-grids.min.js"></script>
     <title>Document</title>
 </head>
 <body>
   <div id="root"></div>
 </body>
 </html>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Refer to the [Script Dependency](../common/script-dependency) section to discover the correct script reference sequence and its dependencies for a certain Syncfusion React component.
 
