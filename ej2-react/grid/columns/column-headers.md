@@ -794,7 +794,7 @@ To `rotate` the header text, you can create a CSS class with the `transform` pro
 
 Once you have created the CSS class, you can add it to the particular column by using the `customAttributes` property. This property allows you to add any custom attribute to the grid column.
 
-For example, to add the orientationcss class to the Freight column, you can use the following code:
+For example, to add the orientation css class to the Freight column, you can use the following code:
 
 ```typescript
 <ColumnDirective field='Freight' headerText='Freight' textAlign='Center' format='C2' customAttributes={customAttributes} width=80></ColumnDirective>
