@@ -91,7 +91,7 @@ In the following example, it demonstrates how to select a row at initial renderi
 
 The Grid allows you to select rows in any page based on their index value. This feature is useful when you want to perform specific actions on rows, such as highlighting, applying styles, or executing operations, regardless of their location across multiple pages within the grid.
 
-To achieve this, you can utilize the [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid/#selectrow) method and the [goToPage](https://ej2.syncfusion.com/react/documentation/api/grid/#gotopage) method of the Grid control. By handling the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of `DropDownList` component, you can implement the logic to navigate to the desired page and select the row based on the index value. 
+To achieve this, you can utilize the [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid/#selectrow) method and the [goToPage](https://ej2.syncfusion.com/react/documentation/api/grid/#gotopage) method of the Grid control. By handling the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event of `DropDownList` component, you can implement the logic to navigate to the desired page and select the row based on the index value. 
 
 Additionally, by handling the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event of the Grid, you can maintain the selection of the desired row after completing the paging action.
 
