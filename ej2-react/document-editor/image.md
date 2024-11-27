@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Image in React Document editor component
 
-Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](../api/document-editor/editor/#insertimage) method. Refer to the following sample code.
+Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://help.syncfusion.com/document-processing/word/word-processor/react/how-to/insert-text-or-image-in-table-programmatically) method. Refer to the following sample code.
 
 {% raw %}
 
@@ -83,7 +83,7 @@ Image files will be internally converted to base64 string. Whereas, online image
 
 Document Editor provides built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
-![Image](images/image.png)
+![Image](images/react-word-processor-image-resizing.png){:width="623" height="550" loading="lazy"}
 
 ## Changing size
 
