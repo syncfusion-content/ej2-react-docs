@@ -83,7 +83,7 @@ Image files will be internally converted to base64 string. Whereas, online image
 
 Document Editor provides built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
-![Image](images/image.png)
+![Image](images/react-word-processor-image-resizing.png){:width="313" height="304" loading="lazy"}
 
 ## Changing size
 
