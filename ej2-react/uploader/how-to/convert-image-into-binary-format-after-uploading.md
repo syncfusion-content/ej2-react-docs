@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Convert image into binary format in React Uploader | Syncfusion
-description: Learn here all about convert image into binary format after uploading in Syncfusion React Uploader component, it's elements, and more.
+title: Convert Images into Binary Format in React Uploader | Syncfusion
+description: Learn here how to convert images into binary format after uploading them in the Syncfusion React Uploader component.
+  
 control: Convert image into binary format after uploading 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert image into binary format after uploading in React Uploader
+# Convert uploaded images into binary format in the React Uploader
 
 By default, the file upload component saves the uploaded image files in physical directories. Also, you can convert the images into binary format at server-side before saving the uploaded images. To retrieve binary format of image files, convert the posted file’s input stream into binary reader and read as bytes using ReadBytes method.
 
