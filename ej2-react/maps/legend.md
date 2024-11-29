@@ -24,11 +24,11 @@ Legend had two types of mode.
 
 ### Default mode
 
-Default mode legends having symbols with legend labels, used to identify the shape or bubble or marker color. To enable this option by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#mode) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) as **Default**.
+Default mode legends having symbols with legend labels, used to identify the shape or bubble or marker color. To enable this option by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#mode) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) as **Default**.
 
 ### Interactive mode
 
-The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. To enable this type of mode by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#mode) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) as **Interactive**. The [`invertedPointer`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#invertedpointer) property is used to enable or disable the visibility of the inverted pointer in interactive legend in Maps.
+The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. To enable this type of mode by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#mode) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) as **Interactive**. The [`invertedPointer`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#invertedpointer) property is used to enable or disable the visibility of the inverted pointer in interactive legend in Maps.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,18 +50,18 @@ The legend can be positioned in the following two ways:
 
 <b>Absolute position</b>
 
-The legend of the Maps can be positioned using the [`location`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#location) property in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel). For positioning the legend based on co-ordinates corresponding to a Maps, the [`position`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#position) property is set as **Float**.
+The legend of the Maps can be positioned using the [`location`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#location) property in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/). For positioning the legend based on co-ordinates corresponding to a Maps, the [`position`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#position) property is set as **Float**.
 
 <b>Dock position</b>
 
-Legends are positioned in the following locations within the container. The [`position`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#position) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) is used to set these options in Maps.
+Legends are positioned in the following locations within the container. The [`position`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#position) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) is used to set these options in Maps.
 
 * Top
 * Left
 * Bottom
 * Right
 
-The above four positions can be aligned with combination of **Near**, **Center** and **Far** using [`alignment`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#alignment) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel). So, the legend can be aligned to 12 positions.
+The above four positions can be aligned with combination of **Near**, **Center** and **Far** using [`alignment`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#alignment) property in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/). So, the legend can be aligned to 12 positions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -243,7 +243,7 @@ To hide the duplicate legend items in Maps, set the [`removeDuplicateLegend`](ht
 
 ### Toggle option in legend
 
-The toggle option has been provided for legend. If the legend can be toggled, the given color will be changed to the corresponding Maps shape item. To enable the toggle options in Legend, set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/toggleLegendSettingsModel/#enable) property of the [`toggleLegendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/toggleLegendSettingsModel) to **true**.
+The toggle option has been provided for legend. If the legend can be toggled, the given color will be changed to the corresponding Maps shape item. To enable the toggle options in Legend, set the [`enable`](https://ej2.syncfusion.com/react/documentation/api/maps/toggleLegendSettingsModel/#enable) property of the [`toggleLegendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/toggleLegendSettingsModel/) to **true**.
 
 The following properties are available to customize the toggle option in legend.
 
@@ -265,7 +265,7 @@ The following properties are available to customize the toggle option in legend.
 
 ## Enable Legend for bubbles
 
-To enable the legend for the bubble by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) as **true** and [`type`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#type) of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) as **Bubbles**.
+To enable the legend for the bubble by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) as **true** and [`type`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#type) of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) as **Bubbles**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -280,7 +280,7 @@ To enable the legend for the bubble by setting the [`visible`](https://ej2.syncf
 
 ## Enable legend for markers
 
-To enable legend for marker by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) as **true** and [`type`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#type) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) as **Markers**. The [`legendText`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/#legendtext) property in the [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel) can be used to show the legend text based on values provided in the data source.
+To enable legend for marker by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#visible) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) as **true** and [`type`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#type) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) as **Markers**. The [`legendText`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/#legendtext) property in the [`markerSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/markerSettingsModel/) can be used to show the legend text based on values provided in the data source.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -295,7 +295,7 @@ To enable legend for marker by setting the [`visible`](https://ej2.syncfusion.co
 
 ### Imitate/Map marker shape to the legend shape
 
-To imitate or map the marker shape with its legend item shape, set the [`useMarkerShape`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#usemarkershape) property to **true** in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel) property.
+To imitate or map the marker shape with its legend item shape, set the [`useMarkerShape`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/#usemarkershape) property to **true** in the [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/legendSettingsModel/) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
