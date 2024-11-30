@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { SymbolPaletteComponent } from "@syncfusion/ej2-react-diagrams";
 
 //Initialize the basicshapes for the symbol palette
@@ -52,5 +52,5 @@ function App() {
         //Sets the size, appearance and description of a symbol
         getSymbolInfo={getSymbolInfo} />);
 }
-const root = createRoot(document.getElementById('container'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { L10n, setCulture } from '@syncfusion/ej2-base';
-import { SymbolPaletteComponent, PaletteModel, NodeModel[] } from "@syncfusion/ej2-react-diagrams";
+import { SymbolPaletteComponent, PaletteModel, NodeModel } from "@syncfusion/ej2-react-diagrams";
 
 //Initialize the basic shapes for the symbol palette
 export function getBasicShapes(): NodeModel[] {

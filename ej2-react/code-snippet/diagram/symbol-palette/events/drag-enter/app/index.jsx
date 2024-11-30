@@ -41,7 +41,6 @@ function App() {
         console.log(args.element.id);
         //customize
         args.element.style.fill = 'yellow';
-        diagramRef.dataBind();
     }
     return (
         <div>

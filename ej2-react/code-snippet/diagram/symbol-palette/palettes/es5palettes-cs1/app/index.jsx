@@ -1,6 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
-import '../index.css';
+import * as ReactDOM from "react-dom";
 import { SymbolPaletteComponent } from "@syncfusion/ej2-react-diagrams";
 //Initialize the basicshapes for the symbol palette
 export function getBasicShapes() {
@@ -133,50 +132,24 @@ export function getConnectors() {
         {
             id: "Link1",
             type: "Orthogonal",
-            sourcePoint: {
-                x: 0,
-                y: 0,
-            },
-            targetPoint: {
-                x: 40,
-                y: 40,
-            },
-            targetDecorator: {
-                shape: "Arrow",
-            },
+            sourcePoint: { x: 0, y: 0, },
+            targetPoint: { x: 40, y: 40, },
+            targetDecorator: { shape: "Arrow", },
         },
         {
             id: "Link21",
             type: "Straight",
-            sourcePoint: {
-                x: 0,
-                y: 0,
-            },
-            targetPoint: {
-                x: 40,
-                y: 40,
-            },
-            targetDecorator: {
-                shape: "Arrow",
-            },
+            sourcePoint: { x: 0, y: 0, },
+            targetPoint: { x: 40, y: 40, },
+            targetDecorator: { shape: "Arrow", },
         },
         {
             id: "link33",
             type: "Bezier",
-            sourcePoint: {
-                x: 0,
-                y: 0,
-            },
-            targetPoint: {
-                x: 40,
-                y: 40,
-            },
-            style: {
-                strokeWidth: 2,
-            },
-            targetDecorator: {
-                shape: "None",
-            },
+            sourcePoint: { x: 0, y: 0, },
+            targetPoint: { x: 40, y: 40, },
+            style: { strokeWidth: 2, },
+            targetDecorator: { shape: "None", },
         },
     ];
     return connectorSymbols;
@@ -234,5 +207,6 @@ function App() {
         //Specifies the default size to render symbols
         symbolHeight={80} symbolWidth={80} />);
 }
-const root = createRoot(document.getElementById("container"));
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);
