@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import '../index.css';
 import { SymbolPaletteComponent, DiagramComponent } from "@syncfusion/ej2-react-diagrams";
 //Initialize the basic shapes for the symbol palette
 export function getBasicShapes() {

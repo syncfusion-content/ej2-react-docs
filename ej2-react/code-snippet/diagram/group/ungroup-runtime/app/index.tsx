@@ -14,11 +14,9 @@ const nodes: NodeModel[] = [
             strokeColor: '#6BA5D7',
             fill: '#6BA5D7',
         },
-        annotations: [
-            {
-                content: 'rectangle1',
-            },
-        ],
+        annotations: [{
+            content: 'rectangle1',
+        }],
     },
     {
         id: 'rectangle2',
@@ -30,11 +28,9 @@ const nodes: NodeModel[] = [
             strokeColor: '#6BA5D7',
             fill: '#6BA5D7',
         },
-        annotations: [
-            {
-                content: 'rectangle2',
-            },
-        ],
+        annotations: [{
+            content: 'rectangle2',
+        }],
     },
     {
         id: 'group',
@@ -46,8 +42,8 @@ function App() {
     const diagramRef = useRef(null);
     const unGroup = () => {
         //Ungroups the selected nodes and connectors.
-        diagramRef.current.unGroup()
-    } 
+        diagramRef.current.unGroup();
+    }
     return (
         <div>
             <button onClick={unGroup}>UnGroup</button>

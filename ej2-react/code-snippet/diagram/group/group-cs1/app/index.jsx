@@ -13,11 +13,9 @@ const nodes = [
             strokeColor: '#6BA5D7',
             fill: '#6BA5D7',
         },
-        annotations: [
-            {
-                content: 'rectangle1',
-            },
-        ],
+        annotations: [{
+            content: 'rectangle1',
+        }],
     },
     {
         id: 'rectangle2',
@@ -29,11 +27,9 @@ const nodes = [
             strokeColor: '#6BA5D7',
             fill: '#6BA5D7',
         },
-        annotations: [
-            {
-                content: 'rectangle2',
-            },
-        ],
+        annotations: [{
+            content: 'rectangle2',
+        }],
     },
     {
         id: 'group',

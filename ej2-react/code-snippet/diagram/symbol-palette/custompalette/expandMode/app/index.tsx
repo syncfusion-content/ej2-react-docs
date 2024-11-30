@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
 import * as ReactDOM from "react-dom";
-import './index.css';
 import { SymbolPaletteComponent, PaletteModel} from "@syncfusion/ej2-react-diagrams";
 import { ExpandMode } from '@syncfusion/ej2-navigations';
 
