@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import '../index.css';
 import { SymbolPaletteComponent } from "@syncfusion/ej2-react-diagrams";
 
 //Expands only one palette at a time

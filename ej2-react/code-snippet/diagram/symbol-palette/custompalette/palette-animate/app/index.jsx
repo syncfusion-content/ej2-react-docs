@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
-import ReactDOM from "react-dom";
-import '../index.css';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { useRef, useState } from "react";
 import { SymbolPaletteComponent } from "@syncfusion/ej2-react-diagrams";
 
 // Initialize the basic shapes for the symbol palette

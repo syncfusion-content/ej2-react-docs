@@ -1,6 +1,6 @@
 import * as React from "react";
-import { useRef } from 'react';
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
+import { useRef } from "react";
 import { SymbolPaletteComponent, randomId } from '@syncfusion/ej2-react-diagrams';
 
 let symbolPaletteRef;
@@ -122,5 +122,5 @@ function App() {
     );
 };
 
-const root = createRoot(document.getElementById("container"));
+const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);

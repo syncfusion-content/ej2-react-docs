@@ -39,7 +39,6 @@ function App() {
     const drop = (args) => {
         //Dropped symbol
         args.element.style.fill = 'yellow';
-        diagramRef.dataBind();
         //customize
     }
     return (

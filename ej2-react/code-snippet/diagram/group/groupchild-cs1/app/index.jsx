@@ -45,7 +45,7 @@ function App() {
             <button onClick={removeChild}>RemoveChildFromGroup</button>
             <DiagramComponent id="diagram" ref={diagramRef} width="100%" height="600px" nodes={nodes}
                 created={() => {
-                    diagramRef.current.select([diagramRef.current.getObject('group')]);
+                    diagramRef.current.select([diagramRef.current.getObject('group1')]);
                 }}
             />
         </div>

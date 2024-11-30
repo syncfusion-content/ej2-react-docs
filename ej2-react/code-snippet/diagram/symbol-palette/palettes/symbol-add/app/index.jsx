@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
-import ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { useRef } from "react";
 import { SymbolPaletteComponent, randomId } from '@syncfusion/ej2-react-diagrams';
 
 let symbolPaletteRef;
