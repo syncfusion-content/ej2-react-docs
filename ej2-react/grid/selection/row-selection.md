@@ -91,7 +91,7 @@ In the following example, it demonstrates how to select a row at initial renderi
 
 The Grid allows you to select rows in any page based on their index value. This feature is useful when you want to perform specific actions on rows, such as highlighting, applying styles, or executing operations, regardless of their location across multiple pages within the grid.
 
-To achieve this, you can utilize the [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid/#selectrow) method and the [goToPage](https://ej2.syncfusion.com/react/documentation/api/grid/#gotopage) method of the Grid control. By handling the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of `DropDownList` component, you can implement the logic to navigate to the desired page and select the row based on the index value. 
+To achieve this, you can utilize the [selectRow](https://ej2.syncfusion.com/react/documentation/api/grid/#selectrow) method and the [goToPage](https://ej2.syncfusion.com/react/documentation/api/grid/#gotopage) method of the Grid control. By handling the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event of `DropDownList` component, you can implement the logic to navigate to the desired page and select the row based on the index value. 
 
 Additionally, by handling the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#actioncomplete) event of the Grid, you can maintain the selection of the desired row after completing the paging action.
 
@@ -680,7 +680,7 @@ To achieve this, you can leverage the [getSelectedRowIndexes](https://ej2.syncfu
 
 The Grid component allows you to retrieve the selected records even when navigating to different pages. This feature is useful when working with large data sets and allows you to perform actions on the selected records across multiple pages. 
 
-To persist the selection across pages, you need to enable the [persistselection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#persistselection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the `selectionSettings` property of the Grid component.
+To persist the selection across pages, you need to enable the [persist selection](https://ej2.syncfusion.com/react/documentation/api/grid/selectionSettings/#persistselection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the `selectionSettings` property of the Grid component.
 
 To retrieve the selected records from different pages, you can use the  [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api-grid.html#getSelectedRecords) method. This method returns an array of the selected records.
 
