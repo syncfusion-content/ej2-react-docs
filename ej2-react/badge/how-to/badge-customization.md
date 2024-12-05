@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Badge customization in React Badge component
 
-## Colour customization
+## Color customization
 
-Even though badges come with `8 predefined colors`, you can also customize the colour of the badge as desired.
+Even though badges come with `8 predefined colors`, you can also customize the color of the badge as desired.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -23,6 +23,9 @@ Even though badges come with `8 predefined colors`, you can also customize the c
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/color-cs1/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/color-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -43,6 +46,9 @@ Badges are designed to change its size based on the content. To change the size 
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/size-cs1/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/size-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/badge/size-cs1" %}
@@ -60,6 +66,9 @@ Even though the badges support the conventional `top` and `bottom` positions, th
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/custom-position-cs1/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/custom-position-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         

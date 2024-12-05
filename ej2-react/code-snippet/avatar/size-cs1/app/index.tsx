@@ -1,7 +1,7 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDom from "react-dom";
 
 function ReactApp() {
   return (
@@ -15,6 +15,6 @@ function ReactApp() {
   );
 }
 export default ReactApp;
-ReactDOM.render(<ReactApp/>, document.getElementById("element"));
+ReactDom.render(<ReactApp/>, document.getElementById("element"));
 
 

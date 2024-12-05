@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { ChipListComponent, ChipsDirective, ChipDirective } from '@syncfusion/ej2-react-buttons';
+import './index.css';
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 // To render Chip.

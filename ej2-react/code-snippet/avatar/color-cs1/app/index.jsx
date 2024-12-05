@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import "./index.css";
 function ReactApp() {
     return (<div>
         <span className="e-avatar e-avatar-xlarge e-avatar-circle green">AJ</span>

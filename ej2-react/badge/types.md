@@ -37,6 +37,9 @@ The Essential JS 2 Badge has the following predefined styles that can be used wi
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/types-cs1/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/types-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/badge/types-cs1" %}
@@ -67,6 +70,9 @@ The circle badge style can be applied by adding the modifier class `.e-badge-cir
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/circle-cs1/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/circle-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/badge/circle-cs1" %}
@@ -84,6 +90,9 @@ The pill badge style can be applied by adding the modifier class `.e-badge-pill`
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/pill-cs1/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/pill-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -103,6 +112,9 @@ When badge modifier classes are applied to the anchor tag, the badge’s appeara
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/link-cs1/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/link-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/badge/link-cs1" %}
@@ -120,6 +132,9 @@ The notification badge style can be applied by adding the modifier class `.e-bad
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/notification-cs1/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/notification-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -139,6 +154,9 @@ Dot can be applied by adding the modifier class `.e-badge-dot` to the target ele
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/dot-cs1/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/dot-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/badge/dot-cs1" %}
@@ -157,6 +175,9 @@ The overlap badge can be used with `notification` or `dot` badge, which overlaps
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/overlap-cs1/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/overlap-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/badge/overlap-cs1" %}
@@ -174,6 +195,9 @@ The default position of the `notification` or `dot` badge is top. But, the posit
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/position-cs1/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/position-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         
