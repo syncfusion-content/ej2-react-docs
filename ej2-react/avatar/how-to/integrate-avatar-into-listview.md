@@ -19,6 +19,9 @@ Avatar is integrated into the listview to create contacts applications. The `xsm
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/listview-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/listview-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/avatar/listview-cs1" %}

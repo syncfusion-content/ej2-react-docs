@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with React Badge component
 
 The following section explains how to create a simple Badge component using styles and Badge’s basic usage.
 
@@ -105,6 +105,9 @@ Output will be as follows:
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/getting-started-cs1/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/getting-started-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         

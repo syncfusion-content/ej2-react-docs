@@ -2,6 +2,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
+import './index.css';
 function BadgePortable(props) {
     return (<span className={props.BadgeType} style={{ float: 'right', marginTop: '16px', fontSize: '12px' }}>{props.BadgeContent} New
         </span>);

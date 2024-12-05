@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import './index.css';
 function App() {
     return (<div className="badge-block">
         <a href="#" className="e-badge e-badge-primary">Link Badge</a>
