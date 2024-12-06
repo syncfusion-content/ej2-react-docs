@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bpmn Activity in React Diagram component | Syncfusion
-description: Learn here all about Bpmn shapes in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Bpmn Activity in React Diagram component | Syncfusion®
+description: Learn here all about Bpmn shapes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bpmn Activity 
 platform: ej2-react
 documentation: ug

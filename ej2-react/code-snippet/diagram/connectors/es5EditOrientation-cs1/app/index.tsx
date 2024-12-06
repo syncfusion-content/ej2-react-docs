@@ -38,12 +38,6 @@ let nodes: NodeModel[] = [
 
 let connectors: ConnectorModel[] = [ {
     id: 'connector1',
-    style: {
-      strokeColor: '#6BA5D7',
-      fill: '#6BA5D7',
-      strokeWidth: 2,
-    },
-    targetDecorator: { shape: 'None' },
     // ID of the source and target nodes
     sourceID: 'Start',
     sourcePortID: 'StartPort',

@@ -21,7 +21,7 @@ let node: NodeModel[] = [{
         hyperlink: {
             link: 'https://google.com',
             //Set the link to open in the current tab
-            hyperlinkOpenState:'CurrentTab'
+            hyperlinkOpenState:'NewWindow'
         }
     }]
 }];
@@ -35,7 +35,7 @@ let connector: ConnectorModel[] = [
       {
         hyperlink: {
           link: 'https://google.com',
-          hyperlinkOpenState: 'CurrentTab',
+          hyperlinkOpenState: 'NewWindow',
           content: 'Google',
           color: 'orange',
           textDecoration: 'Overline',

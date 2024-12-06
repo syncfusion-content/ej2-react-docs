@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Complex hierarchical layout in React Diagram component | Syncfusion
-description: Learn here all about Automatic layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Complex hierarchical layout in React Diagram component | Syncfusion®
+description: Learn here all about Automatic layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Complex hierarchical tree layout
 platform: ej2-react
 documentation: ug
@@ -21,14 +21,14 @@ The following example demonstrates how to render a complex hierarchical tree lay
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/complexhiertree-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/complexhiertree-cs1" %}
 
 
 ## Complex hierarchical tree layout with DataSource
@@ -38,14 +38,14 @@ The following code example illustrates how to create a complex hierarchical tree
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs2/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs2/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/complexhiertree-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/complexhiertree-cs2" %}
 
 
 ![Complex hierarchical tree layout](images/complex-2.png)
@@ -62,14 +62,14 @@ The following code example illustrates how to create a complex hierarchical tree
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs3/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs3/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/complexhiertree-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/complexhiertree-cs3" %}
 
 
 >Note: If you want to use line distribution in diagram layout, you need to inject  LineDistribution module in the diagram.
@@ -88,14 +88,14 @@ The following code illustrates how to allow a linear arrangement in diagram layo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs4/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs4/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/complexhiertree-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/complexhiertree-cs4" %}
 
 
 
@@ -110,11 +110,11 @@ The following example shows how to activate enableRouting in the layout:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs5/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/complexhiertree-cs5/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/complexhiertree-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/complexhiertree-cs5" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/complexhiertree-cs5" %}

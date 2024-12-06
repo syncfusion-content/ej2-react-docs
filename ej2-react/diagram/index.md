@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Index in React Diagram component | Syncfusion
-description: Learn here all about Index in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Index in React Diagram component | Syncfusion®
+description: Learn here all about Index in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug

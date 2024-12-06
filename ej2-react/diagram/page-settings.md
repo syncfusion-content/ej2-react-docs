@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Page settings in React Diagram component | Syncfusion
-description: Learn here all about Page settings in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Page settings in React Diagram component | Syncfusion®
+description: Learn here all about Page settings in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Page settings 
 platform: ej2-react
 documentation: ug

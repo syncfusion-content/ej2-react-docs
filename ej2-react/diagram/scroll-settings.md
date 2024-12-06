@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scroll settings in React Diagram component | Syncfusion
-description: Learn here all about Scroll settings in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Scroll settings in React Diagram component | Syncfusion®
+description: Learn here all about Scroll settings in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Scroll settings 
 platform: ej2-react
 documentation: ug

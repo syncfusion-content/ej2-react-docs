@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { DiagramComponent, PortVisibility } from "@syncfusion/ej2-react-diagrams";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
@@ -46,6 +46,6 @@ function App() {
         <DiagramComponent id="container" width={'100%'} height={'600px'} ref={(diagram) => (diagramInstance = diagram)} nodes={node}/>
     </div>);
 } 
-const root = createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 

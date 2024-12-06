@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Nodes in React Diagram component | Syncfusion
-description: Learn here all about Nodes in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Nodes in React Diagram component | Syncfusion®
+description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Nodes 
 platform: ej2-react
 documentation: ug

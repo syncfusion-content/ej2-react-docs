@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Radial tree layout in React Diagram component | Syncfusion
-description: Learn here all about Radial tree layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Radial tree layout in React Diagram component | Syncfusion®
+description: Learn here all about Radial tree layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Radial tree layout
 platform: ej2-react
 documentation: ug
@@ -22,15 +22,15 @@ You can create a radial tree layout with DataSource. The following code example 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/radiallayout-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/radiallayout-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/radiallayout-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/radiallayout-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/radiallayout-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/radiallayout-cs1" %}
 
 
 >Note: If you want to convert the data source into layout, you need to inject DataBinding along with RadialTree module in the diagram.
@@ -43,15 +43,15 @@ You can render a radial tree layout without using DataSource. The following code
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/radiallayout-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/radiallayout-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/radiallayout-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/radiallayout-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/radiallayout-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/radiallayout-cs1" %}
  
 
 >Note: If you want to use radial tree layout in diagram, you need to inject RadialTree in the diagram.

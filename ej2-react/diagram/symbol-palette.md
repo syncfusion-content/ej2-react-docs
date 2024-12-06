@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Symbol palette in React Diagram component | Syncfusion
-description: Learn here all about Symbol palette in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Symbol palette in React Diagram component | Syncfusion®
+description: Learn here all about Symbol palette in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Symbol palette 
 platform: ej2-react
 documentation: ug

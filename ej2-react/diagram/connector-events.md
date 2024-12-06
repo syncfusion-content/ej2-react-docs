@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Connector Events in React Diagram component | Syncfusion
-description: Learn here all about Connectors in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Connector Events in React Diagram component | Syncfusion®
+description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Connector Events
 platform: ej2-react
 documentation: ug

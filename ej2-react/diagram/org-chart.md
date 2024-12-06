@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Org-chart layout in React Diagram component | Syncfusion
-description: Learn here all about Org-chart layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Org-chart layout in React Diagram component | Syncfusion®
+description: Learn here all about Org-chart layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Org-chart layout
 platform: ej2-react
 documentation: ug
@@ -20,15 +20,15 @@ The following code example illustrates how to create an organizational chart wit
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/organizationalchart-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/organizationalchart-cs1" %}
 
 
 >Note: If you want to use Organizational chart layout in diagram, you need to inject HierarchicalTree module along with DataBinding module in the diagram.
@@ -40,15 +40,15 @@ You can render an org-chart layout without using DataSource. The following code 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs2/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs2/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs2/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/organizationalchart-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/organizationalchart-cs2" %}
 
 ![Organizational chart](images/org-chart.png)
 
@@ -96,15 +96,15 @@ The following example shows how to utilize the `getLayoutInfo` function to custo
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs3/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs3/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs3/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/organizationalchart-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/organizationalchart-cs3" %}
 
 
 ### SubTree vertical orientation 
@@ -114,15 +114,15 @@ The following code example illustrates how to set the vertical arrangement to th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs4/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs4/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs4/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/organizationalchart-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/organizationalchart-cs4" %}
 
 
 ### Assistant
@@ -134,15 +134,15 @@ The following code example illustrates how to add assistants to layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs5/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs5/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/organizationalchart-cs5/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/organizationalchart-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/organizationalchart-cs5" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/organizationalchart-cs5" %}
 
 
 ![Assistant](images/assistant.png)

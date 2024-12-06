@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flowchart layout in React Diagram component | Syncfusion
-description: Learn here all about Flowchart layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Flowchart layout in React Diagram component | Syncfusion®
+description: Learn here all about Flowchart layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Flowchart layout
 platform: ej2-react
 documentation: ug
@@ -55,14 +55,14 @@ To render `flowchart` layout, you need to set the [`layoutType`](https://ej2.syn
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/flowchart-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/flowchart-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/flowchart-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/flowchart-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/flowchart-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs1" %}
 
 
 ![EJ2 Flowchart layout diagram](./images/flowchart-images/Flowchart_Layout.png)
@@ -122,14 +122,14 @@ The following example demonstrates how to render a flowchart layout using nodes 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/flowchart-cs2/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/flowchart-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/flowchart-cs2/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/flowchart-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/flowchart-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs2" %}
 
 
 ## Customize flowchart layout orientation
@@ -208,14 +208,14 @@ The following example shows flowchart layout with `yesBranchDirection` as `SameA
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/flowchart-cs3/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/flowchart-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/flowchart-cs3/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/flowchart-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/flowchart-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs3" %}
 
 
 The following table will explain the pictorial representation of the behavior:
@@ -244,14 +244,14 @@ The following example shows how to set custom text to the yes branch and no bran
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/flowchart-cs4/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/flowchart-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/flowchart-cs4/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/flowchart-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/flowchart-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs4" %}
 
 
 ![EJ2 Flowchart layout diagram](./images/flowchart-images/Flowchart_CustomYesOrNoBranches.png)
