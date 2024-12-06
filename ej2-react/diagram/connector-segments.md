@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Segments in React Diagram component | Syncfusion
-description: Learn here all about Connectors in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Segments in React Diagram component | Syncfusion®
+description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Segments 
 platform: ej2-react
 documentation: ug

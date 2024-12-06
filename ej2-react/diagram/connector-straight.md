@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Straight Connectors in React Diagram component | Syncfusion
-description: Learn here all about Connectors in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Straight Connectors in React Diagram component | Syncfusion®
+description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Straight 
 platform: ej2-react
 documentation: ug
@@ -40,7 +40,7 @@ The following code example illustrates how to create a default straight segment.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorsSegmentsPoints-cs1" %}
 
- ### Straight segment editing
+### Straight segment editing
 
  End point of each straight segment is represented by a thumb that enables to edit the segment.
 Any number of new segments can be inserted into a straight line by clicking when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).

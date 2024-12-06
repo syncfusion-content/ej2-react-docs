@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bezier control points interaction in React Diagram component | Syncfusion
-description: Learn here all about Connectors in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Bezier control points interaction in React Diagram component | Syncfusion®
+description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bezier control points interaction
 platform: ej2-react
 documentation: ug

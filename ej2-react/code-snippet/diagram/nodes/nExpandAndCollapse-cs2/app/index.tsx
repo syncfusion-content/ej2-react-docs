@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as ReactDOM from 'react-dom';
 import {
   DiagramComponent,
   Inject,
@@ -83,5 +84,5 @@ function App() {
     </div>
   );
 }
-const root = createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

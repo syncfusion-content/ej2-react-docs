@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import {
   DiagramComponent,
   SnapConstraints,
@@ -42,5 +42,5 @@ function App() {
     />
   );
 }
-const root = createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

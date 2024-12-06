@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in React Diagram control | Syncfusion
-description: Check out and learn about getting started with print in React Diagram Component of Syncfusion Essential JS 2 and more details.
+title: Print in React Diagram control | Syncfusion®
+description: Check out and learn about getting started with print in React Diagram Component of Syncfusion Essential® JS 2 and more details.
 control: Print
 platform: ej2-react
 documentation: ug
@@ -148,7 +148,7 @@ The following example shows how to set pageOrientation for the printOptions.
 ## Limitations
 
 
-Currently, printing diagram with native and HTML nodes is not supported. To overcome this limitation, we make use of the Syncfusion Essential PDF library. This library incorporates the Syncfusion Essential HTML converter, which employs the advanced Blink rendering engine. This converter seamlessly transforms HTML content into images. Refer to [`export Html-and-Native node`](https://support.syncfusion.com/kb/article/15530/how-to-print-or-export-the-html-and-native-node-into-image-format-using-react-diagram) kb for more information.
+Currently, printing diagram with native and HTML nodes is not supported. To overcome this limitation, we make use of the Syncfusion Essential® PDF library. This library incorporates the Syncfusion Essential® HTML converter, which employs the advanced Blink rendering engine. This converter seamlessly transforms HTML content into images. Refer to [`export Html-and-Native node`](https://support.syncfusion.com/kb/article/15530/how-to-print-or-export-the-html-and-native-node-into-image-format-using-react-diagram) kb for more information.
 
 ## See Also
 

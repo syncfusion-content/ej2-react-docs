@@ -15,7 +15,7 @@ let node = [{
             hyperlink: {
                 link: 'https://google.com',
                 //Set the link to open in the current tab
-                hyperlinkOpenState: 'CurrentTab'
+                hyperlinkOpenState: 'NewWindow'
             }
         }]
     }];
@@ -29,7 +29,7 @@ let node = [{
             {
               hyperlink: {
                 link: 'https://google.com',
-                hyperlinkOpenState: 'CurrentTab',
+                hyperlinkOpenState: 'NewWindow',
                 content: 'Google',
                 color: 'orange',
                 textDecoration: 'Overline',

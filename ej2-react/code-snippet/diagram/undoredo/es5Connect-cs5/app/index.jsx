@@ -5,10 +5,10 @@ import { DiagramComponent, UndoRedo, Inject } from "@syncfusion/ej2-react-diagra
 let diagramInstance;
 let nodes = [{
         id: 'Start',
-        width: 140,
-        height: 50,
+        width: 100,
+        height: 100,
         offsetX: 300,
-        offsetY: 50,
+        offsetY: 200,
         annotations: [{
             id: 'label1',
             content: 'Node'
@@ -19,7 +19,7 @@ function App() {
         created={() => {
             // canLog decide whether the entry add or not in history List
             diagramInstance.historyManager.canLog = function (entry) {
-                entry.cancel = false;
+                entry.cancel = true;
                 return entry;
             };
         }}

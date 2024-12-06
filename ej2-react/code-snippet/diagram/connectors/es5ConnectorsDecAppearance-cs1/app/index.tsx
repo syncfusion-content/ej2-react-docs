@@ -33,17 +33,6 @@ let nodes:NodeModel[] = [{
 ];
 let connectors:ConnectorModel [] = [{
     id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     // ID of the source and target nodes
     sourceID: "Start",
     targetID: "Init",

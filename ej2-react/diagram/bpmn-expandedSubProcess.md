@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bpmn Expanded subProcess in React Diagram component | Syncfusion
-description: Learn here all about Bpmn shapes in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Bpmn Expanded subProcess in React Diagram component | Syncfusion®
+description: Learn here all about Bpmn shapes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bpmn Expanded subProcess 
 platform: ej2-react
 documentation: ug
@@ -27,7 +27,7 @@ To create expanded subProcess, set shape as [`activity`](https://ej2.syncfusion.
 
  {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5expand-cs1" %}
 
- ### Add BPMN nodes into ExpandedSubProcess
+### Add BPMN nodes into ExpandedSubProcess
 
 [`Processes`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcessModel/#processes) is an array collection that defines the children values for BPMN subprocess.
 

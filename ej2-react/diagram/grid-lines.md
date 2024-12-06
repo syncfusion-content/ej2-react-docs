@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grid lines in React Diagram component | Syncfusion
-description: Learn here all about Grid lines in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Grid lines in React Diagram component | Syncfusion®
+description: Learn here all about Grid lines in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Grid lines 
 platform: ej2-react
 documentation: ug
@@ -192,6 +192,6 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
 
  {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapInterval-cs1" %}
 
- ## Snap constraints
+## Snap constraints
 
 The [`snapConstraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/snapSettings/#constraints) property allows you to enable or disable the certain features of the snapping, for detailed information refer to [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/snapConstraints).

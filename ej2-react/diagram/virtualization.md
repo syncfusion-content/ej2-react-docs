@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in React Diagram component | Syncfusion
-description: Learn here all about Virtualization in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Virtualization in React Diagram component | Syncfusion®
+description: Learn here all about Virtualization in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Virtualization 
 platform: ej2-react
 documentation: ug

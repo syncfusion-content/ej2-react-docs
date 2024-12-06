@@ -18,11 +18,6 @@ let nodes = [{
     }];
 let connectors = [{
         id: "connector1",
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
         segments: [
             {
               type: 'Bezier',

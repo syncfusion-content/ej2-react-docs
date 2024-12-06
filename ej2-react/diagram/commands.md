@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Commands in React Diagram component | Syncfusion
-description: Learn here all about Commands in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Commands in React Diagram component | Syncfusion®
+description: Learn here all about Commands in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Commands 
 platform: ej2-react
 documentation: ug
@@ -29,7 +29,7 @@ The commands in diagram control are used to perform various interactions within 
 
  The alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Refer to [`align`](https://ej2.syncfusion.com/react/documentation/api/diagram#align) commands which shows how to use align methods in the diagram.
 
- ### Alignment Options
+### Alignment Options
 
 The [`Alignment Options`](https://ej2.syncfusion.com/react/documentation/api/diagram/alignmentOptions#AlignmentOptions) defines the alignment position of objects to be aligned.
 
@@ -481,7 +481,7 @@ The following code example illustrates how to disable the default cut and delete
 
  {% previewsample "page.domainurl/code-snippet/diagram/commands/modifyCommand-cs1" %}
 
- ## Undo-redo
+## Undo-redo
 
 Undo/redo commands can be executed through shortcut keys. Shortcut key for undo is **`Ctrl+z`** and shortcut key for redo is **`Ctrl+y`**. For more information refer to the [`undo-redo`](./undo-redo)
 

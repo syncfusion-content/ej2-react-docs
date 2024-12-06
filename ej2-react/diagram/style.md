@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style in React Diagram component | Syncfusion
-description: Learn here all about Style in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Style in React Diagram component | Syncfusion®
+description: Learn here all about Style in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Style 
 platform: ej2-react
 documentation: ug

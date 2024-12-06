@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview in React Diagram component | Syncfusion
-description: Learn here all about Overview in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Overview in React Diagram component | Syncfusion®
+description: Learn here all about Overview in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Overview 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: EJ1 migration in React Diagram component | Syncfusion
-description: Learn here all about EJ1 migration in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: EJ1 migration in React Diagram component | Syncfusion®
+description: Learn here all about EJ1 migration in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: EJ1 Migration 
 platform: ej2-react
 documentation: ug

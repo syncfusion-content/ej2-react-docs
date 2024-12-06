@@ -23,7 +23,7 @@ let node:NodeModel[] = [{
             strokeColor: '#6BA5D7',
             fill: '#6BA5D7'
         },
-        constraints: NodeConstraints.Default | NodeConstraints.Tooltip,
+        constraints: NodeConstraints.Default | NodeConstraints.InheritTooltip,
         //Defines mouse over tooltip for a node
         tooltip: {
             //Sets the content of the Tooltip
@@ -35,7 +35,7 @@ let connector = [{
     sourcePoint: { x: 300, y: 100 },
     targetPoint: { x: 400, y: 250 },
     tooltip: { content: 'connector' },
-    constraints: ConnectorConstraints.Default | ConnectorConstraints.Tooltip, 
+    constraints: ConnectorConstraints.Default | ConnectorConstraints.InheritTooltip, 
 }]
 //Initializes the Diagram component
 function App() {

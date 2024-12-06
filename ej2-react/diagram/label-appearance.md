@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Label Appearance in React Diagram component | Syncfusion
-description: Learn here all about Labels in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Label Appearance in React Diagram component | Syncfusion®
+description: Learn here all about Labels in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Label Appearance
 platform: ej2-react
 documentation: ug
@@ -81,7 +81,7 @@ Diagram provides a support to add a [`hyperlink`](https://helpej2.syncfusion.com
 A User can open the hyperlink in the new window, the same tab and the new tab by using the  [`hyperlinkOpenState`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel/#hyperlinkopenstate) property.
 
 The [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel/#content) property of `hyperlink` is used to display the content of the hyper link display text. The [`color`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel/#color) property of the `hyperlink` is used to display the color of the hyper link.
-The [`textDecoration`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textDecoration/) property is used to decorate the hyper link text with **Underline**, **LineThrough**, **Overline**. The following example illustrates how to define and customize hyper link in both node and connector.
+The [`textDecoration`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel/#textdecoration ) property is used to decorate the hyper link text with **Underline**, **LineThrough**, **Overline**. The following example illustrates how to define and customize hyper link in both node and connector.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

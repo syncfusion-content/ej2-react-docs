@@ -76,23 +76,28 @@ npm install @syncfusion/ej2-react-maps --save
 
 ### Add Map to the Project
 
-Now, the Maps component can be added in the application. To initialize the Maps component in the React application, import the Maps component in the **src/App.js** or **src/App.tsx** as per the application. Please use the below code to include the Maps component in the application.
+Now, the Maps component can be added in the application. To initialize the Maps component in the React application, import the **MapsComponent** into the **src/App.js**. If you are using TypeScript, you can import the **MapsComponent** into the **src/App.tsx**. You can choose the appropriate option based on your application. In the following code, the **MapsComponent** is included in the **src/App.js** file.
 
-   ```ts
-     import { usMap } from './usa-map';
-     import React from 'react';
-     import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
-     export function App() {
-      return (<MapsComponent>
-               <LayersDirective>
-                  <LayerDirective shapeData={usMap}>
-                  </LayerDirective>
-               </LayersDirective>
-         </MapsComponent>);
-      }
+```ts
+    import { world_map } from './world_map.ts';
+    import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-react-maps';
 
+    function App() {
+       return (
+          <div className="App">
+              <MapsComponent id="maps">
+                 <LayersDirective>
+                    <LayerDirective shapeData={world_map}>
+                    </LayerDirective>
+                 </LayersDirective>
+               </MapsComponent>
+           </div>
+     );
+    }
     export default App;
-  ```
+```
+
+> Refer to the data values for [world_map](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map1557035892) here.
 
 ### Run the application
 
