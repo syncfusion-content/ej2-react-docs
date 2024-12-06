@@ -18,14 +18,14 @@ To arrange the nodes in a hierarchical structure, specify the layout [`type`](ht
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/hierarchicallayout-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/hierarchicallayout-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/hierarchicallayout-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs1" %}
 
 >Note: If you want to use hierarchical tree layout in diagram, you need to inject HierarchicalTree in the diagram.
 
@@ -36,14 +36,14 @@ You can create a hierarchical layout with data Source. The following code demons
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/hierarchicallayout-cs2/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/hierarchicallayout-cs2/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/hierarchicallayout-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs2" %}
 
 
 >Note: If you want to convert the data source into layout, you need to inject DataBinding along with HierarchicalTree module in the diagram.

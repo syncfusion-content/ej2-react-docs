@@ -102,7 +102,7 @@ The following example shows how to get these events in diagram.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/ports/ports-int4" %}
+{% previewsample "page.domainurl/code-snippet/diagram/ports/ports-int5" %}
 
 
 

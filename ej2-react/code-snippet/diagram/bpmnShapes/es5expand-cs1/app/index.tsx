@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { DiagramComponent,NodeModel,NodeConstraints, Inject, BpmnDiagrams } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let nodes:NodeModel[]= [ 
@@ -30,5 +30,5 @@ function App() {
     </DiagramComponent>);
 }
 
-const root = createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

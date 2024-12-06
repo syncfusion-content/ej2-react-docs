@@ -31,6 +31,9 @@ The Essential JS 2 Avatar has the following predefined sizes that can be used wi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/size-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/size-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/avatar/size-cs1" %}
@@ -54,6 +57,9 @@ class `.e-avatar` to the target element.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/default-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/default-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/avatar/default-cs1" %}
@@ -68,6 +74,9 @@ The circle avatar style can be applied by adding the modifier class `.e-avatar-c
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/circle-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/circle-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

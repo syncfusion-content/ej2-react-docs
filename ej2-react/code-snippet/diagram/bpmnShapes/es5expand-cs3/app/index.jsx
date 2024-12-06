@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { DiagramComponent, NodeConstraints, Inject, BpmnDiagrams } from "@syncfusion/ej2-react-diagrams";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 let diagramInstance;
@@ -69,5 +69,5 @@ function App() {
     </DiagramComponent></div>);
 }
 
-const root = createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

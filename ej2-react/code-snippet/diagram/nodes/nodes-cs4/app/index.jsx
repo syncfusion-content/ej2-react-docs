@@ -36,6 +36,7 @@ function App() {
          palettes={[
             {
                 id: 'basic',
+                title: 'Basic Shapes',
                 symbols: getBasicShapes(),
             },
         ]} 

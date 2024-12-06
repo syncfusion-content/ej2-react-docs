@@ -12,17 +12,6 @@ let connectors: ConnectorModel[] = [
     {
         id: 'connector3',
         type: 'Bezier',
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        },
         segments: [{
             type: 'Bezier',
             // First control point: an absolute position from the page origin

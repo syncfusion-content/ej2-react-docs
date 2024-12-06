@@ -25,9 +25,6 @@ let connector = [{
             y: 300
         },
         type: 'Orthogonal',
-        style: {
-            strokeColor: '#6BA5D7'
-        },
         // Sets the Annotation for the Connector
         annotations: [{
                 // Sets the text to be displayed

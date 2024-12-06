@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { DiagramComponent,ConnectorModel } from "@syncfusion/ej2-react-diagrams";
 let diagramInstance:DiagramComponent;
 // Define initial connectors
@@ -32,5 +32,5 @@ const App = () => {
     ); 
 };
 // Render the App component
-const root = createRoot(document.getElementById('diagram') );
+const root = ReactDOM.createRoot(document.getElementById('diagram') );
 root.render(<App />);

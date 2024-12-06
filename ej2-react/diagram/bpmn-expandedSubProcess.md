@@ -27,7 +27,7 @@ To create expanded subProcess, set shape as [`activity`](https://ej2.syncfusion.
 
  {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5expand-cs1" %}
 
- ### Add BPMN nodes into ExpandedSubProcess
+### Add BPMN nodes into ExpandedSubProcess
 
 [`Processes`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcessModel/#processes) is an array collection that defines the children values for BPMN subprocess.
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Avatar component
 
 This section explains how to create a simple **Avatar** using Styles in the React Framework
 
@@ -90,6 +90,9 @@ Output will be as follows:
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/getting-started-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/getting-started-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

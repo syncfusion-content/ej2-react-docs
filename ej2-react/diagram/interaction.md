@@ -216,7 +216,7 @@ Maintaining aspect ratio in diagram means that when you resize a node, by draggi
 
  {% previewsample "page.domainurl/code-snippet/diagram/interaction/interaction-cs2" %}
 
-## Customize the resize-thumb
+## Customize the resize-thumb size
 
 You can change the size of the node resize thumb and the connector end point handle by using the `handleSize` property. The appearance such as fill, stroke, and stroke width of the node resize thumb and connector end point handle can be customized by overriding the e-diagram-resize-handle and e-diagram-endpoint-handle classes respectively.
 
@@ -230,8 +230,6 @@ You can change the size of the node resize thumb and the connector end point han
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/interaction/interaction-cs3" %}
-
-![handleSize](images/handleSize.gif)
 
 The appearance such as fill, stroke, and stroke width of the node resize thumb and connector end point handle can be customized by overriding the e-diagram-resize-handle and e-diagram-endpoint-handle classes respectively.
 

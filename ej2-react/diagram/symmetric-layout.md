@@ -22,15 +22,15 @@ The following code illustrates how to arrange the nodes in a radial tree structu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/symmetric-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/symmetric-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/symmetric-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/symmetric-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/symmetric-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/symmetric-cs1" %}
  
 
 >Note: If you want to use symmetric layout in diagram, you need to inject SymmetricLayout in the diagram.

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { DiagramComponent, PortVisibility, PortConstraints, Connector, NodeModel, ConnectorModel, IConnectionChangeEventArgs,IDraggingEventArgs, IElementDrawEventArgs, IClickEventArgs } from "@syncfusion/ej2-react-diagrams";
 
 let nodes: NodeModel[] = [
@@ -94,5 +94,5 @@ function App() {
 
     />);
 }
-const root = createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

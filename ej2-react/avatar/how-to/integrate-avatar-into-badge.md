@@ -20,6 +20,9 @@ The default avatar (.`e-avatar`) and circle avatar (.`e-avatar-circle`) have bee
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/badge-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/badge-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/avatar/badge-cs1" %}

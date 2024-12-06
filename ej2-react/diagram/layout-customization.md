@@ -24,15 +24,15 @@ The following example shows how to align the layout within the given layout boun
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-bounds-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-bounds-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-bounds-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-bounds-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-bounds-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-bounds-cs1" %}
 
 
 For more information about bounds, refer to [`bounds`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#bounds).
@@ -47,15 +47,15 @@ The following code illustrates how to align the layout and how to change layout 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-alignment-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-alignment-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-alignment-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-alignment-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-alignment-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-alignment-cs1" %}
 
 
 ## Layout spacing
@@ -67,15 +67,15 @@ The following code illustrates how to set the initial horizontal and vertical sp
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-spacing-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-spacing-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-spacing-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-spacing-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-spacing-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-spacing-cs1" %}
 
 
 ## Layout margin
@@ -87,15 +87,15 @@ The following code demonstrates how to set the initial layout margin and how to 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-margin-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-margin-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-margin-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-margin-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-margin-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-margin-cs1" %}
 
 
 ## Layout orientation
@@ -118,15 +118,15 @@ The following code demonstrates how to set the initial orientation for the layou
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-orientation-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-orientation-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-orientation-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-orientation-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-orientation-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-orientation-cs1" %}
 
 
 ## Exclude from layout
@@ -138,15 +138,15 @@ The following code example demonstrates how to exclude a node from the layout an
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-exclude-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-exclude-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-exclude-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-exclude-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-exclude-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-exclude-cs1" %}
 
 
 ## Fixed node
@@ -156,15 +156,15 @@ Layout provides support to arrange the nodes with reference to the position of a
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-fixed-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-fixed-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-fixed-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-fixed-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-fixed-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-fixed-cs1" %}
 
 
 ## Expand and collapse
@@ -174,15 +174,15 @@ Diagram allows to expand/collapse the subtrees of a layout. The node’s isExpan
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-expandandcollapse-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-expandandcollapse-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-expandandcollapse-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-expandandcollapse-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-expandandcollapse-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-expandandcollapse-cs1" %}
 
 
 For more details about customizing the expand and collapse icon refer [`expand Collapse`](./nodes-expandAndCollapse)
@@ -196,15 +196,15 @@ In the following example, the enableAnimation property ensures that the layout c
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-animation-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-animation-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-animation-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-animation-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-animation-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-animation-cs1" %}
 
 
 >Note: To enable layout animation, you need to inject LayoutAnimation module in diagram.
@@ -218,15 +218,15 @@ Find the code example to create parent - child relation between source and targe
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-parentChildren-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-parentChildren-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-parentChildren-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-parentChildren-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-parentChildren-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-parentChildren-cs1" %}
 
 
 ![Layout drag and drop](images/drag-drop-layout.gif)
@@ -238,15 +238,15 @@ Find the code example to create parent - child relation between source and targe
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-setNodeTemplete-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-setNodeTemplete-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layout-setNodeTemplete-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layout-setNodeTemplete-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layout-setNodeTemplete-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-setNodeTemplete-cs1" %}
 
 
 ## Refresh layout

@@ -46,7 +46,7 @@ The following code illustrates how to change the `pivot` value.
 
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nPositioning-cs1" %}
 
- ## Minimum and maximum size for nodes.
+## Minimum and maximum size for nodes.
 
 The [`minWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#minwidth) and [`minHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#minheight) properties of node allows you to control the minimum size of the node while resizing. Similarly, the [`maxWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#maxwidth) and [`maxHeight`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#maxheight) properties of node allows you to control the maximum size of the node while resizing.
 

@@ -72,14 +72,7 @@ let connectors = [{
     }];
 // Enables bridging for every connector added in the model
 function App() {
-    return (<DiagramComponent id="container" width={'100%'} getConnectorDefaults={(obj) => {
-            obj.style.strokeColor = '#6BA5D7';
-            obj.style.fill = '#6BA5D7';
-            obj.style.strokeWidth = 2;
-            obj.targetDecorator.style.fill = '#6BA5D7';
-            obj.targetDecorator.style.strokeColor = '#6BA5D7';
-            return obj;
-        }} getNodeDefaults={(node) => {
+    return (<DiagramComponent id="container" width={'100%'}  getNodeDefaults={(node) => {
             node.height = 100;
             node.width = 100;
             node.style.fill = '#6BA5D7';

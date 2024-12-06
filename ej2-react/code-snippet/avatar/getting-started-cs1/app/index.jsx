@@ -1,5 +1,6 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDom from "react-dom";
+import './index.css';
 function ReactApp() {
     return (<div>
       <span className="e-avatar e-avatar-xlarge"></span>
@@ -10,4 +11,4 @@ function ReactApp() {
   </div>);
 }
 export default ReactApp;
-ReactDOM.render(<ReactApp />, document.getElementById("element"));
+ReactDom.render(<ReactApp />, document.getElementById("element"));

@@ -22,15 +22,15 @@ The following code example illustrates how to create an mindmap layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/mindMap-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/mindMap-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/mindMap-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/mindMap-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/mindMap-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/mindMap-cs1" %}
 
 
 The following table outlines the various orientation types available:
@@ -49,14 +49,14 @@ You can also decide the branch for mind map using [`getBranch`](https://ej2.sync
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/mindMap-cs2/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/mindMap-cs2/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/mindMap-cs2/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/mindMap-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/mindMap-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/mindMap-cs2" %}
 
 ![Mind map layout](images/mindmap.png)

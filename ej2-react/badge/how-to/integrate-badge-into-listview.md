@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integrate badge into listview in React Badge component
 
-The badges can be integrated with the `listview` component to indicate new notification with colour based on priority.
+The badges can be integrated with the `listview` component to indicate new notification with color based on priority.
 
 In the following sample, `default` badges are used and there is no need to customize the badge size. The
 component will automatically adjust the size based on the container element.
@@ -24,6 +24,9 @@ component will automatically adjust the size based on the container element.
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/listview-cs1/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="index.css" %}
+{% include code-snippet/badge/listview-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         

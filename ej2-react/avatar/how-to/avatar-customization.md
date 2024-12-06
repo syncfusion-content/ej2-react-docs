@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Avatar customization in React Avatar component
 
-## Colour customization
+## Color customization
 
-The avatar comes with default background colour (grey). This can be easily customized to the desired colour by adding custom class or directly selecting the avatar class from the CSS.
+The avatar comes with default background color (Grey). This can be easily customized to the desired color by adding custom class or directly selecting the avatar class from the CSS.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -20,6 +20,9 @@ The avatar comes with default background colour (grey). This can be easily custo
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/color-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/color-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,6 +39,9 @@ Even though the avatar comes with five predefined sizes, sometimes it's not enou
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/custom-size-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/custom-size-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/avatar/custom-size-cs1" %}
@@ -50,6 +56,9 @@ Avatars can be used with a wide variety of media formats like SVG, font-icons, i
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/media-formats-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/media-formats-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,6 +75,9 @@ using a data-source which contains the image source in different sizes dynamical
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/react-avatar-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/avatar/react-avatar-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

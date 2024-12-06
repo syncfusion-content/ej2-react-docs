@@ -9,10 +9,10 @@ import {
 } from "@syncfusion/ej2-react-diagrams";
 let nodes: NodeModel[] = [{
     id: 'Start',
-    width: 140,
-    height: 50,
+    width: 100,
+    height: 100,
     offsetX: 300,
-    offsetY: 50,
+    offsetY: 200,
     annotations: [{
       id: 'label1',
       content: 'Start'

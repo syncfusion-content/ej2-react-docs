@@ -43,7 +43,7 @@ The following code example illustrates how to create an icon of various shapes.
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nExpandAndCollapse-cs1" %}
 
- ### Appearance and alignment of icon
+### Appearance and alignment of icon
 
 Set the borderColor, borderWidth, and background color for an icon using [`borderColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#bordercolor), [`borderWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#borderwidth), and [`fill`](.https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#fill) properties.
 

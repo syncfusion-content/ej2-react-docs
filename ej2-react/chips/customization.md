@@ -46,6 +46,9 @@ You can add and customize the leading icon of chip using the `leadingIconCss` pr
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/avatar-cs2/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/avatar-cs2/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/chips/avatar-cs2" %}
@@ -61,6 +64,9 @@ You can add and customize the avatar of chip using the `avatarIconCss` property.
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/avatar-cs3/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/avatar-cs3/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/chips/avatar-cs3" %}
@@ -75,6 +81,9 @@ You can add and customize the avatar content of chip using the `avatarText` prop
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/avatar-cs4/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/avatar-cs4/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

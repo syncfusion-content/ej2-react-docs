@@ -51,7 +51,7 @@ The annotation offset can be updated dynamically at runtime. To update the annot
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Update-cs4" %}
 
-N> Call [`dataBind()`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#databind) after property change to reflect the changes instantly.
+N> Call `dataBind()` after property change to reflect the changes instantly.
 
 The following table shows the position of annotation with different offsets.
 

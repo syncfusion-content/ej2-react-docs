@@ -22,7 +22,7 @@ A node can be created and added to the diagram either programmatically or intera
 
 N> Note: There should not be any white-spaces in the ID string while setting the ID.
 
-## Add node through nodes collection
+### Add node through nodes collection
 
 To create a node, define the [`node`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/) object and add that to [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel/) collection of the [`diagram model`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramModel/). The following code example illustrates how to add a node to the diagram.
 
@@ -39,7 +39,7 @@ To create a node, define the [`node`](https://ej2.syncfusion.com/react/documenta
 
 N> Node id should not begin with numbers(should begin with a letter). Node Id should be unique for all the shapes and connectors.
 
-## Add/Remove node at runtime
+### Add/Remove node at runtime
 
 Nodes can be added at runtime by using public method, [`add`](https://ej2.syncfusion.com/react/documentation/api/diagram/#add) and can be removed at runtime by using public method, [`remove`](https://ej2.syncfusion.com/react/documentation/api/diagram/#remove). On adding node at runtime, the nodes collection is changed and the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#collectionchange) event will trigger.
 
@@ -56,7 +56,7 @@ The following code illustrates how to add a node.
 
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs2" %}
 
-## Add collection of nodes at runtime
+### Add collection of nodes at runtime
 
 * The collection of nodes can be dynamically added using [`addElements`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addelements) method.Each time an element is added to the diagram canvas, the [`collectionChange`](https://ej2.syncfusion.com/react/documentation/api/diagram#collectionchange) event will be triggered.
 
@@ -73,23 +73,23 @@ The following code illustrates how to add nodes collection at run time.
           
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs3" %}
 
-## Add node from palette
+### Add node from palette
 
 Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information
 about adding nodes from symbol palette, refer to [`Symbol Palette`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/nodes/nodes-cs8/app/index.jsx %}
+{% include code-snippet/diagram/nodes/nodes-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/nodes/nodes-cs8/app/index.tsx %}
+{% include code-snippet/diagram/nodes/nodes-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs8" %}
+{% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs4" %}
 
-## Create node through data source
+### Create node through data source
 
 Nodes can be generated automatically with the information provided through dataSource property. The default properties for these nodes are fetched from default settings ([`getNodeDefaults`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getnodedefaults)). For more information about data source, refer to  [`DataBinding`](./data-binding).
 
@@ -104,7 +104,7 @@ Nodes can be generated automatically with the information provided through dataS
           
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs5" %}
 
-## Draw nodes
+### Draw nodes
 
 Nodes can be interactively drawn by clicking and dragging the diagram surface.
 

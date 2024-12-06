@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import { DiagramComponent, Inject, BpmnDiagrams, randomId } from "@syncfusion/ej2-react-diagrams";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
@@ -85,5 +85,5 @@ function App() {
             <Inject services={[BpmnDiagrams]} />
         </DiagramComponent></div>);
 }
-const root = createRoot(document.getElementById('diagram'));
+const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);

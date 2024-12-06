@@ -1,5 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import './index.css';
+
 function ReactApp() {
     return (<div>
         <div className="sample_container avatar-badge">

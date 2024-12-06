@@ -28,27 +28,27 @@ To draw a shape, set the JSON of that shape to the [`drawingObject`](https://ej2
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs1/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs1/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs1" %}
 
 The following code example illustrates how to draw a path shape.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs2/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs2/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs2" %}
 
 ### Text Nodes
 
@@ -56,14 +56,14 @@ Similarly, you can draw a text node by setting the type of shape as 'Text' in th
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs3/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs3/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs3" %}
 
 ### Draw Connectors
 
@@ -71,14 +71,14 @@ To draw connectors, set the JSON of the connector to the drawType property. The 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs4/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs4/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs4" %}
 
 ### Polygon shape
 
@@ -90,14 +90,14 @@ The following code illustrates how to draw a polygon shape at runtime:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs5/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs5/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs5/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs5" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs5" %}
 
 ![Polygon drawing](images/polygon-drawing.gif)
 
@@ -111,14 +111,14 @@ The following code illustrates how to draw a polyline connector.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs6/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs6/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs6/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs6" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs6" %}
 
  The segments of a polyline connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](d:\JS restructuring\ej2-diagrams-docs\ej2-javascript\diagram\images\polyline-draw.gif) constraint for the connector.
 
@@ -134,14 +134,14 @@ The following code illustrates how to perform freehand drawing:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs7/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs7/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs7/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs7" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs7" %}
 
 The segments of a freehand connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](d:\JS restructuring\ej2-diagrams-docs\ej2-javascript\diagram\images\polyline-draw.gif) constraint for the connector.
 
@@ -175,14 +175,14 @@ To activate panning mode set the [`tool`](https://ej2.syncfusion.com/react/docum
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs8/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs8/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs8/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs8" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs8" %}
 
 N> Please note that panning the diagram is not possible when 'multiplePage' is set to false if any diagram object (node or connector) is outside the defined page break area.
 
@@ -192,11 +192,11 @@ N> Please note that panning the diagram is not possible when 'multiplePage' is s
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/tools/tools-cs9/app/index.jsx %}
+{% include code-snippet/diagram/Tools/tools-cs9/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/tools/tools-cs9/app/index.tsx %}
+{% include code-snippet/diagram/Tools/tools-cs9/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/tools/tools-cs9" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs9" %}

@@ -52,7 +52,7 @@ The following code illustrates how to customize the appearance of the shape.
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nCustomization-cs2" %}
 
- ## Gradient
+## Gradient
  
 The [`gradient`](https://ej2.syncfusion.com/react/documentation/api/diagram/gradientModel/) property of the node allows you to define and apply the gradient effect to that node.
  
@@ -100,7 +100,7 @@ There are two types of gradients as follows:
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nCustomization-cs4" %}
 
- ## Customize the style of node selector
+## Customize the style of node selector
 
 ### Customize the style of main node selector indicator
 
@@ -172,7 +172,7 @@ The angle, distance, and opacity of the shadow can be customized with the shadow
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nCustomization-cs7" %}
 
- ## Provide additional information to the node
+## Provide additional information to the node
 
 The [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#addinfo) property of the node allows you to maintain additional information to the node. You can specify either object or string value.
 
@@ -261,7 +261,7 @@ The following code illustrates how to change the `pivot` value.
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nPositioning-cs1" %}
 
- ## Get connected connector from node
+## Get connected connector from node
 
 Node has the InEdges and OutEdges read-only property. In this property, you can find what are all the connectors that are connected to the node, and then you can fetch these connectors by using the [`getObject`](https://ej2.syncfusion.com/react/documentation/api/diagram/#getobject) method in the diagram.
 

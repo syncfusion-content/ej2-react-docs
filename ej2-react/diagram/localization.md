@@ -64,14 +64,14 @@ The following code example summarizes the locale settings for the context menu.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Localization/es5localeContextMenu-cs1/app/index.jsx %}
+{% include code-snippet/diagram/localization/es5localeContextMenu-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Localization/es5localeContextMenu-cs1/app/index.tsx %}
+{% include code-snippet/diagram/localization/es5localeContextMenu-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Localization/es5localeContextMenu-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/localization/es5localeContextMenu-cs1" %}
 
 ## Localize Symbol palette
 
@@ -117,14 +117,14 @@ The following code example summarizes the locale settings for the symbol palette
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Localization/es5localeSymbolpalette-cs1/app/index.jsx %}
+{% include code-snippet/diagram/localization/es5localeSymbolpalette-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Localization/es5localeSymbolpalette-cs1/app/index.tsx %}
+{% include code-snippet/diagram/localization/es5localeSymbolpalette-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Localization/es5localeSymbolpalette-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/localization/es5localeSymbolpalette-cs1" %}
 
 Refer [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) for more information.
 

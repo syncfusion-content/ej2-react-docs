@@ -1,6 +1,7 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import './index.css';
 function ReactApp() {
     let dataSource = [
         { id: '1', src: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', size: 'e-avatar-xsmall' },

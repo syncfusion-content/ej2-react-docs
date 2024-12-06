@@ -83,14 +83,6 @@ function App() {
     <DiagramComponent
       id="container"
       width={'100%'}
-      getConnectorDefaults={(obj: ConnectorModel): ConnectorModel => {
-        obj.style.strokeColor = '#6BA5D7';
-        obj.style.fill = '#6BA5D7';
-        obj.style.strokeWidth = 2;
-        obj.targetDecorator.style.fill = '#6BA5D7';
-        obj.targetDecorator.style.strokeColor = '#6BA5D7';
-        return obj;
-      }}
       getNodeDefaults={(node: NodeModel) => {
         node.height = 100;
         node.width = 100;

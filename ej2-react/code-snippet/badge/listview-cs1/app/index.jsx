@@ -2,6 +2,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
+import './index.css';
 function App() {
     // Datasource for listview, badge field is the class data for Badges
     let dataSource = [

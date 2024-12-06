@@ -44,15 +44,15 @@ The following code example explains the `expandStateChange` event in the diagram
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layoutEvent-cs1/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layoutEvent-cs1/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layoutEvent-cs1/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layoutEvent-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layoutEvent-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layoutEvent-cs1" %}
 
 
 ## Animation complete event
@@ -62,12 +62,12 @@ The [`animationComplete`](https://ej2.syncfusion.com/react/documentation/api/dia
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/Automaticlayout/layoutEvent-cs2/app/index.jsx %}
+{% include code-snippet/diagram/AutomaticLayout/layoutEvent-cs2/app/index.jsx %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/Automaticlayout/layoutEvent-cs2/app/index.tsx %}
+{% include code-snippet/diagram/AutomaticLayout/layoutEvent-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/Automaticlayout/layoutEvent-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layoutEvent-cs2" %}
