@@ -1,6 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
+import './index.css';
 function App() {
     //Define an array of JSON data
     let data = [

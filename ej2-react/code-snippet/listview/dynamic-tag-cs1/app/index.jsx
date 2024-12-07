@@ -5,6 +5,8 @@ import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import { EventHandler } from "@syncfusion/ej2-base";
+import './index.css';
+
 function App() {
     //Define an array of JSON data
     let data = [

@@ -3,6 +3,8 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import { Browser } from '@syncfusion/ej2-base';
+import './index.css';
+
 function App() {
     function listTemplate(data) {
         return (<div className="settings">

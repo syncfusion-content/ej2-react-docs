@@ -1,5 +1,6 @@
 import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 import * as React from 'react';
+import './index.css'
 function App() {
     const cellSpacing = [5, 5];
     return (<div>

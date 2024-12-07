@@ -19,6 +19,9 @@ The ListView component supports wrapping list items into a group based on the ca
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/item-count-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/item-count-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/item-count-cs1" %}

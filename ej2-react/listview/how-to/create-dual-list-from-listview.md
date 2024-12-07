@@ -61,6 +61,9 @@ list. This button is enabled only when the data source of the second ListView is
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/dual-list-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/dual-list-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/dual-list-cs1" %}

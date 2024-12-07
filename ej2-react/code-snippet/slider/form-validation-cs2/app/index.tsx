@@ -7,6 +7,7 @@ import * as ReactDOM from "react-dom";
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 import { FormValidator, FormValidatorModel } from '@syncfusion/ej2-inputs';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import './index.css';
 
 function App() {
     React.useEffect(() => {

@@ -95,6 +95,9 @@ The `FormValidator` has following default validation rules, which are used to va
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/form-validation-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/form-validation-cs2/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/slider/form-validation-cs2" %}
