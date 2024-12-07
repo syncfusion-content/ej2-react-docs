@@ -241,6 +241,9 @@ The following example shows a basic Dashboard Layout by adding the panels proper
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/dashboard-layout/getting-started-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-cs1" %}

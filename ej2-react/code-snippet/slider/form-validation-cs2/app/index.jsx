@@ -3,6 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 import { FormValidator } from '@syncfusion/ej2-inputs';
+import './index.css';
 function App() {
     React.useEffect(() => {
         componentDidMount();

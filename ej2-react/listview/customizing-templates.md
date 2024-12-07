@@ -59,6 +59,9 @@ In the below example, we have rendered Listview with customized header which con
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/header-template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/header-template-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/header-template-cs1" %}
@@ -127,6 +130,9 @@ In the below example, we have customized list items like `Contact` app with our 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/avatar-temp-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/avatar-temp-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/avatar-temp-cs1" %}
@@ -178,6 +184,9 @@ In the below example, we have grouped Listview based on the category. The catego
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/item-count-temp-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/item-count-temp-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

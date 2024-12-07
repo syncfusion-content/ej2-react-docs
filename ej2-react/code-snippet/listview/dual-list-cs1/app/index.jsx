@@ -5,6 +5,8 @@ import { DataManager, Query } from '@syncfusion/ej2-data';
 import { enableRipple } from "@syncfusion/ej2-base";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import './index.css';
+
 enableRipple(true);
 function App() {
     React.useEffect(() => {

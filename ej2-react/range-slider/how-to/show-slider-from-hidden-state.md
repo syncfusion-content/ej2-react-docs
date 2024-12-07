@@ -21,6 +21,9 @@ In the sample, by clicking on the button, we can make the Slider visible from hi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/hidden-slider-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/hidden-slider-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/slider/hidden-slider-cs1" %}

@@ -167,6 +167,9 @@ The Slider can be displayed, either in horizontal or vertical orientation. By de
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/orientation-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/orientation-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/slider/orientation-cs1" %}

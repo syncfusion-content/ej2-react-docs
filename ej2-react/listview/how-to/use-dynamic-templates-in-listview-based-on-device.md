@@ -23,6 +23,9 @@ In the ListView component, [`template`](https://ej2.syncfusion.com/react/documen
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/dynamic-template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/dynamic-template-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/dynamic-template-cs1" %}

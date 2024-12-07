@@ -47,6 +47,9 @@ Here, in the sample, the slider thumb has been customized to square, circle, ova
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/thumb-custom-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/thumb-custom-cs2/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/slider/thumb-custom-cs2" %}

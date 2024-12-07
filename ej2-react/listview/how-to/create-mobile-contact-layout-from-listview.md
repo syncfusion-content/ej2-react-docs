@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create mobile contact layout from listview in React Listview component | Syncfusion
+title: Create mobile contact layout in React Listview component | Syncfusion
 description: Learn here all about Create mobile contact layout from listview in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
 control: Create mobile contact layout from listview 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create mobile contact layout from listview in React Listview component
+# Create mobile contact layout in React Listview component
 
 You can customize the ListView using the [template](https://ej2.syncfusion.com/react/documentation/api/list-view/#template) property. Refer to the following steps to customize ListView as mobile contact view with our `ej2-avatar`.
 
@@ -83,6 +83,9 @@ You can customize the ListView using the [template](https://ej2.syncfusion.com/r
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/avatar-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/avatar-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 

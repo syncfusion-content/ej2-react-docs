@@ -2,6 +2,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import { Ajax } from '@syncfusion/ej2-base';
+import './index.css';
 function App() {
     let template;
     let ajax;

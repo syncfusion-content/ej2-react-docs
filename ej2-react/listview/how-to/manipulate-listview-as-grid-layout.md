@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Manipulate listview as grid layout in React Listview component | Syncfusion
+title: Listview as grid layout in React Listview component | Syncfusion
 description: Learn here all about Manipulate listview as grid layout in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
 control: Manipulate listview as grid layout 
 platform: ej2-react
@@ -46,6 +46,9 @@ In the below sample, we have rendered List items in grid layout.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/grid-layout-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/grid-layout-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
