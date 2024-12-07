@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Symmetric layout in React Diagram component | Syncfusion
-description: Learn here all about Symmetric layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Symmetric layout in React Diagram component | Syncfusion®
+description: Learn here all about Symmetric layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Symmetric layout 
 platform: ej2-react
 documentation: ug

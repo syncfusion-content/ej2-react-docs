@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Label Interaction in React Diagram component | Syncfusion
-description: Learn here all about Labels in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Label Interaction in React Diagram component | Syncfusion®
+description: Learn here all about Labels in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Label Interaction
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Preact Getting Started with React Diagram Component | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React Diagram Component of Syncfusion Essential JS 2 and more details.
+title: Preact Getting Started with React Diagram Component | Syncfusion®
+description: Check out and learn about getting started with the Preact Framework and React Diagram Component of Syncfusion Essential® JS 2 and more details.
 control: Preact
 platform: ej2-react
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Diagram Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion React Diagram component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion® React Diagram component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
 ## Prerequisites
 
-[System requirements for Syncfusion React UI components](../system-requirement)
+[System requirements for Syncfusion® React UI components](../system-requirement)
 
 ## Set up the Preact project
 
@@ -79,11 +79,11 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 cd my-project
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion® components to the project.
 
-## Add the Syncfusion React packages
+## Add the Syncfusion® React packages
 
-Syncfusion React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion React components in the project, install the corresponding npm package.
+Syncfusion® React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion® React components in the project, install the corresponding npm package.
 
 This article uses the [React Diagram component](https://www.syncfusion.com/react-components/react-diagram) as an example. To use the React Diagram component in the project, the `@syncfusion/ej2-react-diagrams` package needs to be installed using the following command:
 
@@ -97,9 +97,9 @@ or
 yarn add @syncfusion/ej2-react-diagrams
 ```
 
-## Import Syncfusion CSS styles
+## Import Syncfusion® CSS styles
 
-You can import themes for the Syncfusion React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
+You can import themes for the Syncfusion® React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
 
 In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Diagram component and its dependents were imported into the **src/style.css** file.
 
@@ -117,7 +117,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 > The order of importing CSS styles should be in line with its dependency graph.
 
-## Add the Syncfusion React component
+## Add the Syncfusion® React component
 
 Follow the below steps to add the React Diagram component to the Vite project:
 
@@ -295,4 +295,4 @@ The output will appear as follows:
 
 ## See also
 
-[Getting Started with the Syncfusion React UI Component](../getting-started/quick-start)
+[Getting Started with the Syncfusion® React UI Component](../getting-started/quick-start)

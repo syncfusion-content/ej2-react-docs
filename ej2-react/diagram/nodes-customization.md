@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearence of a nodes in React Diagram component | Syncfusion
-description: Learn here all about Nodes in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Appearence of a nodes in React Diagram component | Syncfusion®
+description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Appearence of nodes 
 platform: ej2-react
 documentation: ug

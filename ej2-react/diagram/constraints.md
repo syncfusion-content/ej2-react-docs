@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Constraints in React Diagram component | Syncfusion
-description: Learn here all about Constraints in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Constraints in React Diagram component | Syncfusion®
+description: Learn here all about Constraints in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Constraints 
 platform: ej2-react
 documentation: ug

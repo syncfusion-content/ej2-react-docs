@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Radial tree layout in React Diagram component | Syncfusion
-description: Learn here all about Radial tree layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Radial tree layout in React Diagram component | Syncfusion®
+description: Learn here all about Radial tree layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Radial tree layout
 platform: ej2-react
 documentation: ug

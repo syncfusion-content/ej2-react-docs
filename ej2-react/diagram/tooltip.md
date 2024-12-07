@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in React Diagram component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Tooltip in React Diagram component | Syncfusion®
+description: Learn here all about Tooltip in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Tooltip 
 platform: ej2-react
 documentation: ug

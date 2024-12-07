@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ports interaction in React Diagram component | Syncfusion
-description: Learn here all about Ports in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Ports interaction in React Diagram component | Syncfusion®
+description: Learn here all about Ports in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Ports 
 platform: ej2-react
 documentation: ug

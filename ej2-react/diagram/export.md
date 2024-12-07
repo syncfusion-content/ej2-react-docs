@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export in React Diagram component | Syncfusion
-description: Learn here all about Export in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Export in React Diagram component | Syncfusion®
+description: Learn here all about Export in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Export 
 platform: ej2-react
 documentation: ug
@@ -256,4 +256,4 @@ root.render(<App />);
 
 ## Limitations
 
-Currently, exporting diagram into image format with native and HTML nodes is not supported. To overcome this limitation, we make use of the Syncfusion Essential PDF library. This library incorporates the Syncfusion Essential HTML converter, which employs the advanced Blink rendering engine. This converter seamlessly transforms HTML content into images. Refer to [`export Html-and-Native node`](https://support.syncfusion.com/kb/article/15530/how-to-print-or-export-the-html-and-native-node-into-image-format-using-react-diagram) kb for more information.
+Currently, exporting diagram into image format with native and HTML nodes is not supported. To overcome this limitation, we make use of the Syncfusion Essential® PDF library. This library incorporates the Syncfusion Essential® HTML converter, which employs the advanced Blink rendering engine. This converter seamlessly transforms HTML content into images. Refer to [`export Html-and-Native node`](https://support.syncfusion.com/kb/article/15530/how-to-print-or-export-the-html-and-native-node-into-image-format-using-react-diagram) kb for more information.

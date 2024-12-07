@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grid lines in React Diagram component | Syncfusion
-description: Learn here all about Grid lines in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Grid lines in React Diagram component | Syncfusion®
+description: Learn here all about Grid lines in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Grid lines 
 platform: ej2-react
 documentation: ug

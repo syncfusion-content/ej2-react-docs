@@ -4,6 +4,7 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
+import './index.css';
 
 function App() {
 

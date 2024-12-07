@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ruler in React Diagram component | Syncfusion
-description: Learn here all about Ruler in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Ruler in React Diagram component | Syncfusion®
+description: Learn here all about Ruler in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Ruler 
 platform: ej2-react
 documentation: ug

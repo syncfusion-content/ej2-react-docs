@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layout events in React Diagram component | Syncfusion
-description: Learn here all about Layout events in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Layout events in React Diagram component | Syncfusion®
+description: Learn here all about Layout events in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Layout events
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mind-map layout in React Diagram component | Syncfusion
-description: Learn here all about Mind-map layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Mind-map layout in React Diagram component | Syncfusion®
+description: Learn here all about Mind-map layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Mind-map layout
 platform: ej2-react
 documentation: ug

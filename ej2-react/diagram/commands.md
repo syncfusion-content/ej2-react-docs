@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Commands in React Diagram component | Syncfusion
-description: Learn here all about Commands in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Commands in React Diagram component | Syncfusion®
+description: Learn here all about Commands in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Commands 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tools in React Diagram component | Syncfusion
-description: Learn here all about Tools in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Tools in React Diagram component | Syncfusion®
+description: Learn here all about Tools in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Tools 
 platform: ej2-react
 documentation: ug

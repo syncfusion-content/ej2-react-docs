@@ -135,6 +135,9 @@ Refer to the following code sample of actionComplete event.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/dynamic-tag-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/dynamic-tag-cs1/index.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/dynamic-tag-cs1" %}

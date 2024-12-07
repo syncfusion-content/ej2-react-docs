@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
+import './index.css';
 function App() {
     return (<div id='container'>
       <div className="col-lg-12 control-section">

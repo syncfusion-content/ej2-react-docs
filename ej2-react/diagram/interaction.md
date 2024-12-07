@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction in React Diagram component | Syncfusion
-description: Learn here all about Interaction in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Interaction in React Diagram component | Syncfusion®
+description: Learn here all about Interaction in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Interaction 
 platform: ej2-react
 documentation: ug

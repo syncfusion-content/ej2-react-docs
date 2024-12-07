@@ -1,7 +1,7 @@
 ---
 layout: post
-title: User handle in React Diagram component | Syncfusion
-description: Learn here all about User handle in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: User handle in React Diagram component | Syncfusion®
+description: Learn here all about User handle in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: User handle 
 platform: ej2-react
 documentation: ug

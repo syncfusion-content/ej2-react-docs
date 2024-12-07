@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Org-chart layout in React Diagram component | Syncfusion
-description: Learn here all about Org-chart layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Org-chart layout in React Diagram component | Syncfusion®
+description: Learn here all about Org-chart layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Org-chart layout
 platform: ej2-react
 documentation: ug

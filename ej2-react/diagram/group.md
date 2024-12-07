@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Group in React Diagram component | Syncfusion
-description: Learn here all about Group in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Group in React Diagram component | Syncfusion®
+description: Learn here all about Group in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Group 
 platform: ej2-react
 documentation: ug

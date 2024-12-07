@@ -1,6 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
+import './index.css';
 function App() {
     //Define an array of number
     let data = [1, 2, 3, 4, 5, 6, 7, 8, 9];

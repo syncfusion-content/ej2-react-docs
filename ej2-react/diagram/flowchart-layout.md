@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flowchart layout in React Diagram component | Syncfusion
-description: Learn here all about Flowchart layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Flowchart layout in React Diagram component | Syncfusion®
+description: Learn here all about Flowchart layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Flowchart layout
 platform: ej2-react
 documentation: ug

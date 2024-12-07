@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multiple segments for connector in React Diagram component | Syncfusion
-description: Learn here all about Connectors in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Multiple segments for connector in React Diagram component | Syncfusion®
+description: Learn here all about Connectors in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Multiple segments 
 platform: ej2-react
 documentation: ug

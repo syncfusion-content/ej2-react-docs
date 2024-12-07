@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
+import './index.css';
 function App() {
     let sliderInstance;
     let min = new Date(2013, 6, 13, 11).getTime();

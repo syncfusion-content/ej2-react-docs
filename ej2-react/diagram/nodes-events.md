@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events of node interaction in React Diagram component | Syncfusion
-description: Learn here all about Nodes in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Events of node interaction in React Diagram component | Syncfusion®
+description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Events of node
 platform: ej2-react
 documentation: ug

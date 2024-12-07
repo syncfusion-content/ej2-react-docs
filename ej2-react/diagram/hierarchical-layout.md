@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hierarchical tree layout in React Diagram component | Syncfusion
-description: Learn here all about Hierarchical tree layout in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Hierarchical tree layout in React Diagram component | Syncfusion®
+description: Learn here all about Hierarchical tree layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Hierarchical tree layout
 platform: ej2-react
 documentation: ug

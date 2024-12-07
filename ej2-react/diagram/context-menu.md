@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Context menu in React Diagram component | Syncfusion
-description: Learn here all about Context menu in Syncfusion React Diagram component of Syncfusion Essential JS 2 and more.
+title: Context menu in React Diagram component | Syncfusion®
+description: Learn here all about Context menu in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Context menu 
 platform: ej2-react
 documentation: ug
