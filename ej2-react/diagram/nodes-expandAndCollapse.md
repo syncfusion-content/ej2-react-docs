@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Expand and collapse of a nodes in React Diagram component | Syncfusion®
+title: Expand and collapse nodes in React Diagram component | Syncfusion®
 description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Expand and collapse of nodes
 platform: ej2-react
@@ -45,7 +45,7 @@ The following code example illustrates how to create an icon of various shapes.
 
 ### Appearance and alignment of icon
 
-Set the borderColor, borderWidth, and background color for an icon using [`borderColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#bordercolor), [`borderWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#borderwidth), and [`fill`](.https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#fill) properties.
+Set the borderColor, borderWidth, and background color for an icon using [`borderColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#bordercolor), [`borderWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#borderwidth), and [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#fill) properties.
 
 The corner radius can be set using the [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel/#cornerradius) property of the icon.
 
@@ -68,7 +68,7 @@ The following code example illustrates the customization of icons.
 
 ## IsExpanded
 
-[`isExpanded`](.https://ej2.syncfusion.com/react/documentation/api/diagram/node/#isexpanded) property is used to defines whether the node is expanded or not. The following example demonstrate node’s `isExpanded` property. The default value of isExpanded property is true.
+[`isExpanded`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#isexpanded) property is used to defines whether the node is expanded or not. The following example demonstrate node’s `isExpanded` property. The default value of isExpanded property is true.
 
 ```ts
 

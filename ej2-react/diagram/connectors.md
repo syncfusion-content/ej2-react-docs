@@ -341,7 +341,7 @@ The following image illustrates how the connector automatically re-routes the se
 
 ![LineRouting GIF](images/lineRouting.GIF.gif)
 
-* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#constraints-ConnectorConstraints) property of the connector like the following code snippet.
+* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#constraints) property of the connector like the following code snippet.
 
  {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
