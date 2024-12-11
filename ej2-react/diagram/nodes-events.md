@@ -44,7 +44,7 @@ The following code example explains how to get the [`selectionChange`](https://e
  
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nEvent-cs2" %}
 
- You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iSegmentChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iSelectionChangeEventArgs/) to true, as shown in the code snippet below.
 
 ```ts
   selectionChange: function (args: ISelectionChangeEventArgs) {
@@ -116,7 +116,7 @@ The following code example explains how to get the [`sizeChange`](https://ej2.sy
 ## Rotate change event
 
 While rotating the node during the interaction, the rotate change event can be used to do the customization.
-The following code example explains how to get the [`rotateChange`](.https://ej2.syncfusion.com/react/documentation/api/diagram/#rotatechange) event in the diagram.
+The following code example explains how to get the [`rotateChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#rotatechange) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -143,7 +143,7 @@ The following code example explains how to get the [`rotateChange`](.https://ej2
 
 ## Property change event
 
-Triggers when there is any property change occurred for the node. The following code example explains how to get the [`propertyChange`](.https://ej2.syncfusion.com/react/documentation/api/diagram/#propertychange) event in the diagram.
+Triggers when there is any property change occurred for the node. The following code example explains how to get the [`propertyChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/#propertychange) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

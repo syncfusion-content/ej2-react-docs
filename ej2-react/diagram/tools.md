@@ -101,7 +101,7 @@ The following code illustrates how to draw a polygon shape at runtime:
 
 ![Polygon drawing](images/polygon-drawing.gif)
 
-## Polyline Connector
+### Polyline Connector
 
 Diagram allows to create the polyline segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
 
@@ -120,7 +120,7 @@ The following code illustrates how to draw a polyline connector.
 
  {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs6" %}
 
- The segments of a polyline connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](d:\JS restructuring\ej2-diagrams-docs\ej2-javascript\diagram\images\polyline-draw.gif) constraint for the connector.
+ The segments of a polyline connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints/) constraint for the connector.
 
 ![Polyline connector drawing](images/polyline-draw.gif)
 
@@ -143,7 +143,7 @@ The following code illustrates how to perform freehand drawing:
 
  {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs7" %}
 
-The segments of a freehand connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](d:\JS restructuring\ej2-diagrams-docs\ej2-javascript\diagram\images\polyline-draw.gif) constraint for the connector.
+The segments of a freehand connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorConstraints/) constraint for the connector.
 
 ![Freehand connector drawing](images/freehand-draw.gif)
 

@@ -21,7 +21,7 @@ To customize the position of nodes in the React Diagram component, refer to the 
 * You may expect this offset values to represent the distance between page origin and node’s top-left corner instead of center. The Pivot property helps to solve this problem. Default value of node’s [`pivot`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#pivot) point is (0.5, 0.5), that means center of the node.
 
 * The size of the node can be controlled by using its [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#width) and
-[`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#height-number) properties.
+[`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#height) properties.
 
 * Rotation of a node is controlled by using its [`rotateAngle`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#rotateangle) property.
 
