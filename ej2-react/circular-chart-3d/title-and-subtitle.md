@@ -15,7 +15,7 @@ domainurl: ##DomainURL##
 The 3D Circular Chart can be given a title by using the `title` property to display information about the plotted data.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlit js tabtitle="index.jsx" %}
 {% include code-snippet/circular-chart/title/title-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
@@ -48,7 +48,7 @@ The 3D Circular Chart can be given a subtitle by using the `subTitle` property t
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/circular-chart/title/title-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle= "index.tsx" %}
 {% include code-snippet/circular-chart/title/title-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +63,7 @@ The subtitle of the 3D Circular Chart can be customized using the `subTitleStyle
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/circular-chart/title/title-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle ="index.tsx" %}
 {% include code-snippet/circular-chart/title/title-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

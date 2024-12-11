@@ -24,7 +24,7 @@ The CheckBox [`checked`](https://ej2.syncfusion.com/react/documentation/api/chec
 The CheckBox indeterminate state can be set through [`indeterminate`](https://ej2.syncfusion.com/react/documentation/api/check-box#indeterminate) property. CheckBox indeterminate state masks the real value of CheckBox visually. The Checkbox cannot be changed to indeterminate state through the user interface, this state can be achieved only through the property.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="app.jsx" }
 {% include code-snippet/check-box/label-and-size-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
