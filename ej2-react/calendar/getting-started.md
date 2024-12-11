@@ -161,7 +161,7 @@ The following example demonstrates how to set the value,  min and max dates on i
 `[Functional-component]`
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="index.jsx" }
 {% include code-snippet/calendar/default-cs16/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
