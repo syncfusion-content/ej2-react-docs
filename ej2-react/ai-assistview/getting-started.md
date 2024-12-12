@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple **AI AssistView** component and configure its available functionalities in React.
 
+To get started quickly with React AI AssistView component, you can check out this video:
+{% youtube "https://www.youtube.com/watch?v=rwXanLEHdFU" %}
+
 ## Dependencies
 
 The list of dependencies required to use the `AI AssistView` component in your application is given as follows:

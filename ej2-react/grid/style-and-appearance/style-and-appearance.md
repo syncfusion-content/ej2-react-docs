@@ -73,4 +73,4 @@ In the following sample, the font family of grid content is changed to **cursive
 
 ## See also
 
-* [Footer template styling in React Grid](https://ej2.syncfusion.com/React/documentation/grid/style-and-appearance/#customizing-the-column-selection-background)
+* [Footer template styling in React Grid](https://ej2.syncfusion.com/react/documentation/grid/style-and-appearance/aggregate#customizing-the-aggregate-cell-elements)

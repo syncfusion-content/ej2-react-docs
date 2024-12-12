@@ -105,7 +105,7 @@ The following table contains various types of BPMN loops.
 
 #### Compensation
 
-[`Compensation`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTask#compensation-boolean) is triggered, when operation is partially failed and enabled it with the compensation property of the `bpmn activity`.
+[`Compensation`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTask#compensation) is triggered, when operation is partially failed and enabled it with the compensation property of the `bpmn activity`.
 By default, the `compensation` is set to false.
 
 {% tabs %}
@@ -121,7 +121,7 @@ By default, the `compensation` is set to false.
 
 #### Call
 
-A [`call`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTask#call-boolean) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
+A [`call`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTask#call) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
 By default, the call property is false.
 
 {% tabs %}
@@ -139,7 +139,7 @@ N> This Property is only applicable for task Type activity.
 
 #### Adhoc
 
-An adhoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`adhoc`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#adhoc-boolean) property of subprocess. By default, the adhoc property is false.
+An adhoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`adhoc`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#adhoc) property of subprocess. By default, the adhoc property is false.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -154,7 +154,7 @@ An adhoc subprocess is a group of tasks that are executed in any order or skippe
 
 ## Boundary
 
-Boundary represents the type of task that is being processed. The [`boundary`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#boundary-bpmnboundary) property of subprocess allows you to define the type of boundary. By default, it is set as **default**.
+Boundary represents the type of task that is being processed. The [`boundary`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#boundary) property of subprocess allows you to define the type of boundary. By default, it is set as **default**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -199,7 +199,7 @@ A subprocess is defined as an event subprocess, when it is triggered by an event
 
 ##### Transaction subprocess
 
-* [`transaction`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#transaction-bpmntransactionsubprocessmodel) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The [`events`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#event-bpmnsubeventmodel) property of subprocess allows to represent these results as an event attached to the subprocess.
+* [`transaction`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#transaction) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The [`events`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#events) property of subprocess allows to represent these results as an event attached to the subprocess.
 
 * The event object allows you to define the type of event by which the subprocess will be triggered. The name of the event can be defined to identify the event at runtime.
 

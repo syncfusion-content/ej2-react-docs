@@ -309,3 +309,23 @@ PDF export provides an option to customize the font for the exported PDF documen
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs15" %}
+
+## Customize Split Taskbar Segment Colors in PDF
+
+The PDF export feature in the Gantt Chart allows you to customize the colors of split taskbar segments using the [`taskSegmentStyles`](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskbarStyle/#taskSegmentStyles) property inside the [`pdfQueryTaskbarInfo`](https://ej2.syncfusion.com/react/documentation/api/gantt/#pdfquerytaskbarinfo) event.
+
+The [`taskSegmentStyles`](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskbarStyle/#taskSegmentStyles) property contains a collection of style properties for task segments. By specifying the index of corresponding segment index in this collection you can customize that segment taskbar color, progress color, and its border color.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/pdf-export-customize-segment-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/pdf-export-customize-segment-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/pdf-export-customize-segment-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-customize-segment-cs1" %}
