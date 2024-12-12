@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Expand and collapse of a nodes in React Diagram component | Syncfusion®
+title: Expand and collapse nodes in React Diagram component | Syncfusion®
 description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
 control: Expand and collapse of nodes
 platform: ej2-react
