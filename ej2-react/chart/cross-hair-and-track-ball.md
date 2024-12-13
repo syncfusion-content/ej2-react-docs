@@ -75,6 +75,27 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairT
 
 >Note: To use crosshair feature, we need to inject `Crosshair` module into the `services`.
 
+**Snap to data**
+
+Enabling the `snapToData` property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs6/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs6/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs6/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs6/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs6" %}
+
 ## Trackball
 
 Trackball is used to track a data point closest to the mouse or touch position. Trackball marker indicates the closest point and trackball tooltip displays the information about the point. To use trackball feature, we need to inject `Crosshair` and `Tooltip` module into the `services`.

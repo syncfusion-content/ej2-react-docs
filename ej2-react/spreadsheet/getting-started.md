@@ -35,18 +35,25 @@ The following list of dependencies are required to use the Spreadsheet component
 
 You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications and run the following command to install create-react-app.
 
-```
-npm install -g create-react-app
-```
-
 Run the following command to setup the basic `React` samples.
 
 ```
-create-react-app quickstart --scripts-version=react-scripts-ts
+npx create-react-app quickstart
 
 cd quickstart
 
-npm install
+npm start
+
+```
+
+To set-up a React application in `TypeScript` environment, run the following command.
+
+```
+npx create-react-app quickstart --template typescript
+
+cd quickstart
+
+npm start
 
 ```
 

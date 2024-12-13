@@ -168,6 +168,27 @@ Using [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/ch
 
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs4" %}
 
+**Chart area margin**
+
+You can customize the space between the chart area from its chart container through `margin` property.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/column-cs19/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/column-cs19/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/series/column-cs19/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/series/column-cs19/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs19" %}
+
 ## Animation
 
 You can customize animation for a particular series using [`animation`](https://ej2.syncfusion.com/react/documentation/api/chart/animationModel/) property. You can enable or disable animation of the series using `enable` property, `duration` specifies the duration of an animation and `delay` allows us to start the animation at desire time.
@@ -313,7 +334,7 @@ The `textStyle` property of chart title provides options to customize the `size`
 
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs7" %}
 
-## Chart subTitle
+## Chart subtitle
 
 Chart can be given a subtitle using [`subTitle`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel/#subtitle) property, to show the information about the data plotted.
 

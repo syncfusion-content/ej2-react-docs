@@ -145,7 +145,7 @@ npm start
 
 ## Configure messages and user
 
-You can use the `messages` property to add messages and the `user` property to configure the current user for the chat.
+You can use the `MessagesDirective` tag to group all the messages and `MessageDirective` tag to define each message and the `user` property to configure the current user for the chat.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

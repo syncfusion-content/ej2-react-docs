@@ -86,4 +86,3 @@ The accessibility compliance of the Chart component is shown in the following sa
 ## See also
 
 * [Accessibility in Syncfusion React components](../common/accessibility)
-

@@ -129,3 +129,18 @@ Using [`tooltipRender`](https://ej2.syncfusion.com/react/documentation/api/accum
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/series/legend-cs19" %}
+
+## Enable highlight
+
+By setting the `enableHighlight` property to **true**, the hovered pie slice is highlighted, while the remaining slices are dimmed, enhancing focus and clarity.
+
+{% tabs %}
+{% highlight ts tabtitle="index.jsx" %}
+{% include code-snippet/chart/series/pie-cs41/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/series/pie-cs41/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs41" %}

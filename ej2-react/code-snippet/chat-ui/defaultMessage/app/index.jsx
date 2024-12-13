@@ -1,4 +1,4 @@
-import { ChatUIComponent } from '@syncfusion/ej2-react-interactive-chat';
+import { ChatUIComponent, MessagesDirective, MessageDirective } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
@@ -13,27 +13,16 @@ function App() {
         user: "Michale Suyama"
     };
 
-    const chatMessages = [
-        {
-            id: "msg1",
-            author: currentUserModel,
-            text: "Hi there! How's it going?"
-        },
-        {
-            id: "msg2",
-            author: michaleUserModel,
-            text: "Hey! I'm doing well, thanks. How about you?"
-        },
-        {
-            id: "msg3",
-            author: currentUserModel,
-            text: "Mostly the usual stuff. I did start a new hobby - painting!"
-        }
-    ];
 
     return (
         // specifies the tag for render the Chat UI component
-        <ChatUIComponent messages={chatMessages} user={currentUserModel}></ChatUIComponent>
+        <ChatUIComponent user={currentUserModel}>
+            <MessagesDirective>
+                <MessageDirective text="Hi Michale, are we on track for the deadline?" author={currentUserModel} ></MessageDirective>
+                <MessageDirective text="Yes, the design phase is complete." author={michaleUserModel} ></MessageDirective>
+                <MessageDirective text="I’ll review it and send feedback by today." author={currentUserModel} ></MessageDirective>
+            </MessagesDirective>
+        </ChatUIComponent>
     );
 }
 
