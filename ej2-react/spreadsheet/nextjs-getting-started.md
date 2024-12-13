@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Spreadsheet getting started with Next.js | Syncfusion
-description: Check out and learn about how to use Syncfusion React UI components in the Next.js project.
+description: Checkout and learn about how to use React Spreadsheet component of Syncfusion Essential JS 2 in the Next.js project.
 control: Next.js
 platform: ej2-react
 documentation: ug
@@ -448,4 +448,4 @@ yarn run dev
 
 To learn more about the functionality of the Spreadsheet component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/spreadsheet/feature-list).
 
-> [View the NEXT.js spreadsheet sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-spreadsheet).
+> [View the NEXT.js Spreadsheet sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-spreadsheet).

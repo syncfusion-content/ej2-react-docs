@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple OTP Input and demonstrate the basic usage of the OTP Input component in an React environment.
 
+To get started quickly with React OTP Input component, you can check out this video:
+{% youtube "https://www.youtube.com/watch?v=MAs2MfwFNhE" %}
+
 ## Dependencies
 
 The list of dependencies required to use the OTP Input component in your application is given below:

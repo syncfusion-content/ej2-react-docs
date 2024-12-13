@@ -229,7 +229,7 @@ The following code illustrates how to render connector based on the stack order.
 
 ## Connector spacing
 
-* The [`connectorSpacing`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#connectorSpacing) property allows you to define the distance between the source node and the connector. It is the minimum distance the connector will re-rout or the new segment will create.
+* The [`connectorSpacing`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector/#connectorspacing) property allows you to define the distance between the source node and the connector. It is the minimum distance the connector will re-rout or the new segment will create.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

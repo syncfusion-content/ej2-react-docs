@@ -14,7 +14,7 @@ User handles are used to add frequently used commands around the selector.
 
 ## Create user handle
 
-To create user handles, define and add them to the [`userHandles`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorModel/#userhandles) collection of the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram#selectAll#selecteditems-selectormodel) property. The [`name`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel/#name) property of userHandles is used to define the name of the user handle, which can then be used at runtime for identification and customization. The [`pathData`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel/#pathdata) property is used to define the path data of userhandle. 
+To create user handles, define and add them to the [`userHandles`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorModel/#userhandles) collection of the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram#selecteditems) property. The [`name`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel/#name) property of userHandles is used to define the name of the user handle, which can then be used at runtime for identification and customization. The [`pathData`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel/#pathdata) property is used to define the path data of userhandle. 
 
 The following example shows how to render user handle.
 
@@ -105,7 +105,7 @@ The diagram provides support to show a tooltip when the mouse hovers over any us
 
  {% previewsample "page.domainurl/code-snippet/diagram/interaction/es5UserHandle-cs6" %}
 
-You can also customize other properties of the tooltip, such as [`position`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel/#position), [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel/#width), [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel/#height), etc. For more information refer to the [`tooltip`](./tooltip.md) section.
+You can also customize other properties of the tooltip, such as [`position`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel/#position), [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel/#width), [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel/#height), etc. For more information refer to the [`tooltip`](./tooltip) section.
 
 ## Appearance
 
@@ -130,7 +130,7 @@ Multiple user handles can be rendered for the selected objects (nodes/connectors
 
 ### Disable Nodes and disable Connectors
 
-User handles are typically defined within the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram#selectAll#selecteditems-selectormodel) property of the diagram, applying them universally to both nodes and connectors. However, in some scenarios, specific user handles may need to be excluded from connectors or nodes selectively. To address this, the disableNodes and disableConnectors properties come into play. These properties allow certain user handles to be disabled based on the type of selected item.
+User handles are typically defined within the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram#selecteditems) property of the diagram, applying them universally to both nodes and connectors. However, in some scenarios, specific user handles may need to be excluded from connectors or nodes selectively. To address this, the disableNodes and disableConnectors properties come into play. These properties allow certain user handles to be disabled based on the type of selected item.
 
 In the example below, multiple user handles are utilized for various functionalities, with some handles hidden selectively for nodes or connectors depending on their intended functionality.
 

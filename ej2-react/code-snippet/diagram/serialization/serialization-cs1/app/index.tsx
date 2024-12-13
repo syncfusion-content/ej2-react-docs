@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import { DiagramComponent, NodeModel } from '@syncfusion/ej2-react-diagrams';
 import { UploaderComponent, FileInfo } from '@syncfusion/ej2-react-inputs';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';

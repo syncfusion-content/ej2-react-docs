@@ -269,7 +269,7 @@ The [`moveForward`](https://ej2.syncfusion.com/react/documentation/api/diagram/#
 
 ### sendBackward command
 
-The [`sendBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#sendBackward) command visually moves the selected element behind the underlying element. The following code illustrates how to execute the `sendBackward` command.
+The [`sendBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#sendbackward) command visually moves the selected element behind the underlying element. The following code illustrates how to execute the `sendBackward` command.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -387,9 +387,9 @@ The following code illustrates how to execute the bringIntoView command:
 
 ## BringToCenter
 
-The [`bringToCenter`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringToCenter) command centers the specified rectangular region of the diagram content within the viewport.
+The [`bringToCenter`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringtocenter) command centers the specified rectangular region of the diagram content within the viewport.
 
-The [`bringToCenter`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringToCenter)  method takes a single parameter, an object that defines the rectangular region to be centered. This object should include properties such as x, y, width, and height to specify the exact region to be brought to the center.
+The [`bringToCenter`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringtocenter)  method takes a single parameter, an object that defines the rectangular region to be centered. This object should include properties such as x, y, width, and height to specify the exact region to be brought to the center.
 
 The following code illustrates how to execute the bringToCenter command.
 
@@ -406,7 +406,7 @@ The following code illustrates how to execute the bringToCenter command.
 
 ## FitToPage
 
-The [`fitToPage`](https://ej2.syncfusion.com/react/documentation/api/diagram#fitToPage)command adjusts the diagram content to fit within the viewport, considering either width, height, or the entire content. The fitToPage method takes one parameter,[`fitOptions`](https://ej2.syncfusion.com/react/documentation/api/diagramiFitOptions/), which specifies the options for fitting the diagram to the page.
+The [`fitToPage`](https://ej2.syncfusion.com/react/documentation/api/diagram#fittopage)command adjusts the diagram content to fit within the viewport, considering either width, height, or the entire content. The fitToPage method takes one parameter,[`fitOptions`](https://ej2.syncfusion.com/react/documentation/api/diagram/FitOptions/), which specifies the options for fitting the diagram to the page.
 
 ### FitOptions
 

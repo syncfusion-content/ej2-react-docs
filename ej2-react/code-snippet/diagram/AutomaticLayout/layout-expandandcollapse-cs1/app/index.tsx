@@ -1,7 +1,7 @@
 {% raw %}
 
 import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import { DiagramComponent, Inject, HierarchicalTree, DataBinding, ConnectorModel,
   NodeModel, SelectorConstraints, DecoratorModel, TreeInfo } from '@syncfusion/ej2-react-diagrams';
 import { DataManager, Query } from '@syncfusion/ej2-data';

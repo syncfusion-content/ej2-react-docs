@@ -1,0 +1,49 @@
+import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel } from '@syncfusion/ej2-react-interactive-chat';
+import * as React from 'react';
+import * as ReactDOM from "react-dom";
+
+function App() {
+    const currentUserModel: UserModel = {
+        id: "user1",
+        user: "Albert"
+    };
+
+    const michaleUserModel: UserModel = {
+        id: "user2",
+        user: "Michale Suyama"
+    };
+
+    const reenaUserModel: UserModel = {
+        id: "user3",
+        user: "Reena"
+    };
+
+    const typingUsers: UserModel[] = [ michaleUserModel, reenaUserModel ];
+
+    const typingUsersTemplate = (context) => {
+        if (!context.users || context.users.length === 0) {
+          return '';
+        }
+      
+        let usersList = context.users.map((user, i) => {
+          let isLastUser = i === context.users.length - 1;
+          return `${isLastUser && i > 0 ? 'and ' : ''}<span class="typing-user">${user.user}</span>`;
+        }).join(' ');
+      
+        return (
+          <div class="typing-wrapper" dangerouslySetInnerHTML={{ __html: `${usersList} are typing...` }} ></div>
+        );
+    };
+    return (
+        // specifies the tag for render the Chat UI component
+        <ChatUIComponent user={currentUserModel} typingUsers={typingUsers} typingUsersTemplate={typingUsersTemplate}>
+            <MessagesDirective>
+                <MessageDirective text="Hi Michale, are we on track for the deadline?" author={currentUserModel} ></MessageDirective>
+                <MessageDirective text="Yes, the design phase is complete." author={michaleUserModel} ></MessageDirective>
+                <MessageDirective text="I’ll review it and send feedback by today." author={currentUserModel} ></MessageDirective>
+            </MessagesDirective>
+        </ChatUIComponent>
+    );
+}
+
+ReactDOM.render(<App />, document.getElementById('container'));

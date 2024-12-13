@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import { DiagramComponent, NodeModel, DiagramConstraints } from "@syncfusion/ej2-react-diagrams";
 
 export default function App() {

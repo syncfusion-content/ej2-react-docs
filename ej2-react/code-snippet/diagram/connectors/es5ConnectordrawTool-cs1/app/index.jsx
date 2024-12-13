@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+import * as ReactDOM from "react-dom";
 import { DiagramComponent, DiagramTools } from "@syncfusion/ej2-react-diagrams";
 
 const drawingObject = { type: 'Orthogonal' };

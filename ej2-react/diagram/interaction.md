@@ -131,7 +131,7 @@ The [`canToggleSelection`](https://ej2.syncfusion.com/react/documentation/api/di
 
 ## Select entire elements in diagram programmatically
 
-The client-side method [`selectAll`](https://ej2.syncfusion.com/react/documentation/api/diagram#selectAll) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [`selectAll`](https://ej2.syncfusion.com/react/documentation/api/diagram#selectall) method on the diagram.
+The client-side method [`selectAll`](https://ej2.syncfusion.com/react/documentation/api/diagram#selectall) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [`selectAll`](https://ej2.syncfusion.com/react/documentation/api/diagram#selectall) method on the diagram.
 
 ```ts
 let diagramInstance: DiagramComponent;
@@ -315,7 +315,7 @@ The following events are triggered when interacting with a user handle:
 [`onUserHandleMouseUp`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemouseup) - Triggered when the mouse is released on the user handle.
 [`onUserHandleMouseLeave`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onuserhandlemouseleave) - Triggered when the mouse leaves the user handle region.
 
-For more information, refer to the [`user handle events`](./user-handle).
+For more information, refer to the [`user handle events`](./user-handle#user-handle-events).
 
 ## Fixed user handle
 
@@ -330,7 +330,7 @@ The following events are triggered when interacting with a fixed user handle:
 * [`onFixedUserHandleMouseLeave`](https://ej2.syncfusion.com/react/documentation/api/diagram/#onfixeduserhandlemouseleave) - Triggered when the mouse leaves the fixed user handle region.
 * [`fixedUserHandleClick`](https://ej2.syncfusion.com/react/documentation/api/diagram/#fixeduserhandleclick) - Triggered when the fixed user handle is clicked.
 
-For more information, refer to the [`fixed user handle events`](./user-handle).
+For more information, refer to the [`fixed user handle events`](./user-handle#fixed-user-handle-events).
 
 ## Determining Mouse Button Clicks
 

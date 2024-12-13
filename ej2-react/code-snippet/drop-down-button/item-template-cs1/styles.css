@@ -1,0 +1,20 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.e-dropdown-popup .e-item {
+  color: #4a4a4a;
+}
+
+.e-dropdown-popup .e-item a {
+  color: blue;
+}

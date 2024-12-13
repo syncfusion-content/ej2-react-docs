@@ -36,7 +36,6 @@ function App() {
         obj.height = 100;
         obj.constraints = NodeConstraints.Default | NodeConstraints.AllowDrop; 
     }}
-    enableConnectorSplit = {true}
     collectionChange={(args)=>{
         if (args.state === 'Changed' && args.element instanceof Connector) {
         let sourceNode = diagramInstance.getObject(args.element.sourceID);
