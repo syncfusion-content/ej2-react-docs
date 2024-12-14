@@ -130,6 +130,9 @@ The following example shows a basic Timeline component.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/getting-started/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/timeline/getting-started/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/getting-started" %}

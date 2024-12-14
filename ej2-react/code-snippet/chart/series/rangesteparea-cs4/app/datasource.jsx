@@ -1,14 +1,14 @@
 export let splineRangeData = [
-    { x: 'Jan', high: 14, low: 7,  high1: 29, low1: 22 },
-    { x: 'Feb', high: 17, low: 7,  high1: 32, low1: 22 },
-    { x: 'Mar', high: 20, low: 10, high1: 35, low1: 25 },
-    { x: 'Apr', high: 22, low: 12, high1: 37, low1: 27 },
-    { x: 'May', high: 20, low: 10, high1: 35, low1: 25 },
-    { x: 'Jun', high: 17, low: 7,  high1: 32, low1: 22 },
-    { x: 'Jul', high: 15, low: 5,  high1: 30, low1: 20 },
-    { x: 'Aug', high: 17, low: 7,  high1: 32, low1: 22 },
-    { x: 'Sep', high: 20, low: 10, high1: 35, low1: 25 },
-    { x: 'Oct', high: 22, low: 12, high1: 37, low1: 27 },
-    { x: 'Nov', high: 20, low: 10, high1: 35, low1: 25 },
-    { x: 'Dec', high: 20, low: 7,  high1: 35, low1: 22 }
+    { x: 'Jan', high: 29, low: 19 },
+    { x: 'Feb', high: 32, low: 22 },
+    { x: 'Mar', high: 35, low: 25 },
+    { x: 'Apr', high: 37, low: 27 },
+    { x: 'May', high: 35, low: 25 },
+    { x: 'Jun', high: 32, low: 22 },
+    { x: 'Jul', high: 30, low: 20 },
+    { x: 'Aug', high: 32, low: 22 },
+    { x: 'Sep', high: 35, low: 25 },
+    { x: 'Oct', high: 37, low: 27 },
+    { x: 'Nov', high: 35, low: 25 },
+    { x: 'Dec', high: 32, low: 22 }
 ];

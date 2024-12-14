@@ -123,30 +123,9 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs3" %}
 
-**Dash array**
-
-The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#dasharray) property determines the pattern of dashes and gaps in the series.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs4/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs4/app/index.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs4/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/rangecolumn-cs4/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/chart/series/rangecolumn-cs4" %}
-
 **Border**
 
-Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#border) property to customize the width and color of the series border.
+Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#border) property to customize the width, color and dasharray of the series border.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

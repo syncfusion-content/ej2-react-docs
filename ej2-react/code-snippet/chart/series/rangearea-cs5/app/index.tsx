@@ -1,25 +1,38 @@
-
+{% raw %}
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-         Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, RangeAreaSeries, Selection}
-from'@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AxisModel, BorderModel, Category, RangeAreaSeries } from '@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 
 function App() {
-  const border: object = { width: 2, color: 'brown' };
-  return <ChartComponent id='charts'>
-      <Inject services={[RangeAreaSeries, Legend, Tooltip, DataLabel, Category]} />
-      <SeriesCollectionDirective>
-        <SeriesDirective dataSource={data} xName='x' high='low' low='high' border={border} dashArray='2,5'
-          type='RangeArea'>
-        </SeriesDirective>
-      </SeriesCollectionDirective>
-    </ChartComponent>
-  
+  const border: BorderModel = { width: 2, color: 'red', dashArray: '5,5' };
+  const primaryXAxis: AxisModel = {
+    valueType: 'Category',
+    title: 'Month',
+    edgeLabelPlacement: 'Shift',
+    majorGridLines: { width: 0 }
+  };
+  const primaryYAxis: AxisModel = {
+    title: 'Temperature',
+    labelFormat: '{value}˚C',
+    lineStyle: { width: 0 },
+    minimum: 0,
+    maximum: 30,
+    majorTickLines: { width: 0 }
+  };
+
+  return <ChartComponent id='charts' primaryXAxis={primaryXAxis} primaryYAxis={primaryYAxis} title='Monthly Temperature Range'>
+    <Inject services={[RangeAreaSeries, Category]} />
+    <SeriesCollectionDirective>
+      <SeriesDirective dataSource={data} xName='x' high='low' low='high' type='RangeArea' border={border}>
+      </SeriesDirective>
+    </SeriesCollectionDirective>
+  </ChartComponent>
+
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 
+{% endraw %}
