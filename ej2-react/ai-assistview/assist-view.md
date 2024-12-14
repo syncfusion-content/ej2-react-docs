@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Setting prompt text
 
-You can use the [prompt](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/#prompt) property to define the prompt text for the AI AssistView component.
+You can use the [prompt](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompt) property to define the prompt text for the AI AssistView component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ You can use the [prompt](https://ej2.syncfusion.com/react/documentation/api/ai-a
 
 ## Setting prompt placeholder
 
-You can use the [promptPlaceholder](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/#promptplaceholder) property to set the placeholder text for the prompt textarea. The default value is `Type prompt for assistance...`.
+You can use the [promptPlaceholder](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptplaceholder) property to set the placeholder text for the prompt textarea. The default value is `Type prompt for assistance...`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ You can use the [promptPlaceholder](https://ej2.syncfusion.com/react/documentati
 
 ## Prompt-response collection
 
-You can use the [prompts](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/#prompts) property to initialize the component with the configured data as a collection of prompts and responses or individual entries.
+You can use the [prompts](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompts) property to initialize the component with the configured data as a collection of prompts and responses or individual entries.
 
 > The `prompts` collection stores all the prompts and responses generated.
 
@@ -59,7 +59,7 @@ You can use the [prompts](https://ej2.syncfusion.com/react/documentation/api/ai-
 
 ## Adding prompt suggestions
 
-You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/#promptsuggestions) property, to add the suggestions in both initial and on-demand which help users to refine their prompts. Additionally, custom header can be set for suggestions further enhancing the user experience.
+You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestions) property, to add the suggestions in both initial and on-demand which help users to refine their prompts. Additionally, custom header can be set for suggestions further enhancing the user experience.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,7 +74,7 @@ You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentati
 
 ### Adding suggestion headers
 
-You can use the [promptSuggestionsHeader](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/#promptsuggestionsheader) property to set the header text for the prompt suggestions in the AI AssistView.
+You can use the [promptSuggestionsHeader](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestionsheader) property to set the header text for the prompt suggestions in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -89,7 +89,7 @@ You can use the [promptSuggestionsHeader](https://ej2.syncfusion.com/react/docum
 
 ## Adding prompt iconCss
 
-You can customize the appearance of the prompter avatar by using the [promptIconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/#prompticoncss) property.
+You can customize the appearance of the prompter avatar by using the [promptIconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompticoncss) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,7 +104,7 @@ You can customize the appearance of the prompter avatar by using the [promptIcon
 
 ## Adding response iconCss
 
-You can use the [responseIconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/#responseiconcss) property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
+You can use the [responseIconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#responseiconcss) property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -119,7 +119,7 @@ You can use the [responseIconCss](https://ej2.syncfusion.com/react/documentation
 
 ## Show or hide clear button
 
-You can use the [showClearButton](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view/#showclearbutton) property to show or hide the clear button. By default, its value is `false`, when the clear button is clicked, the prompt text entered will be cleared.
+You can use the [showClearButton](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#showclearbutton) property to show or hide the clear button. By default, its value is `false`, when the clear button is clicked, the prompt text entered will be cleared.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -158,6 +158,9 @@ The following sample, shows the basic File Manager component.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/file-manager/default-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/default-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/file-manager/default-cs1" %}
@@ -235,6 +238,9 @@ To perform the image preview support in the File Manager component, need to init
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/file-manager/image-preview-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/image-preview-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/file-manager/image-preview-cs1" %}
@@ -255,6 +261,9 @@ By default, the File Manager component not having any extra module.  You can con
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/file-manager/overview-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/overview-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -278,6 +287,9 @@ The initial view of the File Manager can be changed to details or largeicons vie
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/file-manager/switch-view-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/switch-view-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -305,6 +317,9 @@ For every operation in File Manager, ajax request will be sent to the server whi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/file-manager/persistence-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/persistence-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/file-manager/persistence-cs1" %}
@@ -327,6 +342,9 @@ It is possible to render the File Manager in right-to-left direction by setting 
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/file-manager/rtl-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/file-manager/rtl-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

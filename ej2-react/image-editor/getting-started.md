@@ -32,7 +32,7 @@ The list of dependencies required to use the Image Editor component in your appl
     |-- @syncfusion/ej2-splitbuttons
 ```
 
-## Installation and Configuration
+## Installation and configuration
 
 You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
 
@@ -72,7 +72,7 @@ To install Image Editor component, use the following command.
    npm install @syncfusion/ej2-react-image-editor --save
    ```
 
-## Adding CSS Reference
+## Adding CSS reference
 
 Import the Image Editor component's required CSS references as follows in `src/App.css`.
 
@@ -87,7 +87,7 @@ Import the Image Editor component's required CSS references as follows in `src/A
 
 ```
 
-## Adding Image Editor component to the Application
+## Adding Image editor component to the application
 
 To include the Image Editor component in your application import the `ImageEditorComponent` from `ej2-react-image-editor` package in `App.tsx`.
 

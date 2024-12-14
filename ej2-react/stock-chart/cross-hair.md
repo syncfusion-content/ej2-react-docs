@@ -23,7 +23,7 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/r
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stock-chart/cross-hair-cs1" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/cross-hair-cs1" %}
 
 ## Tooltip for axis
 
@@ -38,7 +38,7 @@ Tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfu
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stock-chart/cross-hair-cs2" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/cross-hair-cs2" %}
 
 ## Customization
 
@@ -53,6 +53,21 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairT
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/stock-chart/cross-hair-cs3" %}
+{% previewsample "page.domainurl/code-snippet/stock-chart/cross-hair-cs3" %}
+
+**Snap to data**
+
+Enabling the `snapToData` property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/stock-chart/cross-hair-cs4/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/stock-chart/cross-hair-cs4/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/stock-chart/cross-hair-cs4" %}
 
 >Note: To use crosshair feature, we need to inject `Crosshair` module `<Inject services={[Crosshair]}>` method.

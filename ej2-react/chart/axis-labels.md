@@ -14,7 +14,7 @@ To get start quickly with Axis Labels in React Charts, you can check on this vid
 
 {% youtube "https://www.youtube.com/watch?v=NLrOSKAnxes" %}
 
-## Smart Axis Labels
+## Smart axis labels
 
 When the axis labels overlap with each other, you can use [`labelIntersectAction`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#labelintersectaction) property in the axis, to place them smartly.
 
@@ -75,7 +75,7 @@ When setting `labelIntersectAction` as `Rotate90`
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs9" %}
 
-## Axis Labels Positioning
+## Axis labels positioning
 
 By default, the axis labels can be placed at `outside` the axis line and this also can be placed at `inside` the axis line using the `labelPosition` property.
 
@@ -96,7 +96,7 @@ By default, the axis labels can be placed at `outside` the axis line and this al
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs10" %}
 
-## Multilevel Labels
+## Multilevel labels
 
 Any number of levels of labels can be added to an axis using the `multiLevelLabels` property.
 This property can be configured using the following properties:
@@ -235,9 +235,9 @@ The chart’s data source can be sorted using the `sort` method of chart. The ar
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs16" %}
 
-## Edge Label Placement
+## Edge label placement
 
-Labels with long text at the edges of an axis may appear partially in the chart. To avoid this, use [`edgeLabelPlacement`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it.
+Labels with long text at the edges of an axis may appear partially in the chart. To avoid this, use [`edgeLabelPlacement`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it. By default, the [`edgeLabelPlacement`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel/#edgelabelplacement) property is set to Shift to ensure that labels are shifted inside the chart area, avoiding any overlap or coincidence.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -256,7 +256,7 @@ Labels with long text at the edges of an axis may appear partially in the chart.
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs17" %}
 
-## Labels Customization
+## Labels customization
 
 Border of the axis labels can be customized using `width`, `color` and `type` property of the axis.
 
@@ -277,7 +277,7 @@ Border of the axis labels can be customized using `width`, `color` and `type` pr
 
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-cs18" %}
 
-## Customizing Specific Point
+## Customizing specific point
 
 You can customize the specific text in the axis labels using `axisLabelRender` event.
 

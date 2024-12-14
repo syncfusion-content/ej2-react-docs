@@ -125,6 +125,12 @@ npm start
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/getting-started-cs5/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/getting-started-cs5/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs5" %}
@@ -150,6 +156,12 @@ contains two handles that is used to select a range of values and a shadow is co
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/getting-started-cs6/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/getting-started-cs6/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/slider/getting-started-cs6" %}
@@ -169,6 +181,9 @@ The Slider can be displayed, either in horizontal or vertical orientation. By de
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/slider/orientation-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/orientation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -204,6 +219,12 @@ and not to the button.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/getting-started-cs8/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/getting-started-cs8/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/getting-started-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

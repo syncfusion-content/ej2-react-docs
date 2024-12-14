@@ -2,20 +2,35 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, SplineAreaSeries, Legend, Category, Tooltip, DataLabel } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, SplineAreaSeries, Category } from '@syncfusion/ej2-react-charts';
 import { splineData } from './datasource';
+
 function App() {
-    const primaryxAxis = { title: 'Month', valueType: 'Category' };
-    const border = { width: 1.5, color: 'blue'}
-    return <ChartComponent id='charts' primaryXAxis={primaryxAxis}>
-      <Inject services={[SplineAreaSeries, Legend, Tooltip, DataLabel, Category]}/>
-      <SeriesCollectionDirective>
-      <SeriesDirective dataSource={splineData} xName='x' yName='y' name='London' type='SplineArea' border={border} dashArray='3,5' marker={{ visible: true, width: 10, height: 10 }}>
-        </SeriesDirective>
-      </SeriesCollectionDirective>
-    </ChartComponent>;
-}
-;
+
+  const primaryxAxis = {
+    title: 'Month',
+    valueType: 'Category'
+  };
+  const primaryyAxis = {
+    minimum: -5,
+    maximum: 30,
+    interval: 5,
+    title: 'Temperature in Celsius',
+    labelFormat: '{value}°C'
+  };
+  const border = { width: 2, color: '#FFA500', dashArray: '5,5' };
+  return <ChartComponent id='charts'
+    primaryXAxis={primaryxAxis}
+    primaryYAxis={primaryyAxis}
+    title='Climate Graph-2012'>
+    <Inject services={[SplineAreaSeries, Category]} />
+    <SeriesCollectionDirective>
+      <SeriesDirective dataSource={splineData} xName='x' yName='y' type='SplineArea' border={border}>
+      </SeriesDirective>
+    </SeriesCollectionDirective>
+  </ChartComponent>
+
+};
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 

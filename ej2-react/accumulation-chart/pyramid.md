@@ -62,7 +62,7 @@ The size of the pyramid chart can be customized by using the  `width` and `heigh
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pyramid-cs3" %}
 
-## Gap Between the Segments
+## Gap between the segments
 
 Pyramid chart provides options to customize the space between the segments by using the `gapRatio` property of the series. It ranges from 0 to 1.
 
@@ -116,7 +116,7 @@ Individual points can be customized using the `pointRender` event.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pyramid-cs6" %}
 
-## See Also
+## See also
 
 * [Data label](./data-label/)
 * [Grouping](./grouping/)

@@ -221,6 +221,9 @@ npm start
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/basic-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/basic-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dropdowntree/basic-cs1" %}

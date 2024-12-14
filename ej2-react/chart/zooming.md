@@ -93,6 +93,27 @@ By default, zoomin, zoomout, pan and reset buttons will be displayed for zoomed 
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs6" %}
 
+### Toolbar customization
+
+The zoom toolbar in the chart can be repositioned using the `toolbarPosition` property, allowing flexible alignment and placement. It supports horizontal alignments (**Near**, **Center**, and **Far**) and vertical alignments (**Top**, **Middle**, and **Bottom**), with default values set to **Far** and **Top**, respectively. For precise placement, the `x` and `y` properties can be used to adjust the toolbar's position within the chart area. Additionally, enabling the `draggable` property allows users to freely move the toolbar within the chart area, ensuring optimal usability.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs11/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs11/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs11/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs11" %}
+
 ## Enable scrollbar
 
 Using the [`enableScrollbar`](https://ej2.syncfusion.com/react/documentation/api/chart/zoomSettingsModel/#enablescrollbar) property, you can add a scrollbar to a zoomed chart. This scrollbar allows you to zoom or pan the chart. The appearance of the scrollbar can be customized using properties in [`scrollbarSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/). For example, you can use [`trackColor`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#trackcolor) and [`trackRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#trackradius) properties to customize the track of the scrollbar, and [`scrollbarRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#scrollbarradius) and [`scrollbarColor`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#scrollbarcolor) properties to customize the scroller. The ability to zoom through the scrollbar can be enabled or disabled using the [`enableZoom`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#enablezoom) property in [`scrollbarSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/). Additionally, you can change the color of the grip and height of the scrollbar using the [`gripColor`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#gripcolor) and [`height`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettingsModel/#height) properties.
@@ -115,7 +136,6 @@ Using the [`enableScrollbar`](https://ej2.syncfusion.com/react/documentation/api
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs7" %}
 
 ## Enable animation
-
 
 Use the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/chart/zoomSettingsModel/#enableanimation) property to create smooth transitions when zooming in on the chart.
 

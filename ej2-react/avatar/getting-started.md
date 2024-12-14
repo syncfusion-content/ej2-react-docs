@@ -94,6 +94,9 @@ Output will be as follows:
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/avatar/getting-started-cs1/index.css %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/avatar/getting-started-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/avatar/getting-started-cs1" %}

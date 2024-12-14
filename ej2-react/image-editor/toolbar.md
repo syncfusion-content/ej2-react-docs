@@ -115,7 +115,7 @@ The toolbar of the Image Editor can be replaced with the user specific UI using 
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs17" %}
 
-## Customize Contextual Toolbar
+## Customize contextual toolbar
 
 The [`toolbarUpdating`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#toolbarupdating) event is triggered when inserting or selecting annotations, which opens the contextual toolbar in the Image Editor. Within this event, the [`toolbarItems`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/toolbarEventArgs/#toolbaritems) property in the [`ToolbarEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/toolbarEventArgs/) is utilized to add or remove contextual toolbar items.
 

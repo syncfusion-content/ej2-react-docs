@@ -30,10 +30,12 @@ function App() {
     };
     const footerTemplate = () => {
         return (
-          <div className="custom-footer">
-            <input id="chatTextArea" className="e-input" placeholder="Type your message..."></input>
-            <button id="sendMessage" className="e-btn e-primary e-icons e-send" onClick={sendIconClicked}></button>
-          </div>
+            <div className="custom-footer">
+                <input id="chatTextArea" className="e-input" placeholder="Type your message..."></input>
+                <button id="sendMessage" className="e-btn e-primary" onClick={sendIconClicked}>
+                    <span class="e-icons e-send-1"></span>
+                </button>
+            </div>
         );
     };
     return (
