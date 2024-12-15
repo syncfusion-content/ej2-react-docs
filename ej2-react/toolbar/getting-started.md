@@ -57,6 +57,7 @@ Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-pac
 npm init react-app my-app
 cd my-app
 npm start
+```
 
 ## Adding Syncfusion packages
 
@@ -76,7 +77,6 @@ npm install @syncfusion/ej2-react-navigations --save
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-react-navigations/styles/material.css';
-
 ```
 
 > To refer `App.css` in the application then import it in the `src/App.tsx` file.
@@ -86,8 +86,6 @@ npm install @syncfusion/ej2-react-navigations --save
 The Toolbar can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/toolbar/#items). An item is rendered with text by defining the default item type as a `Button`. For more information about item configuration, refer the [Item Configuration](./item-configuration/) section.
 
 * Import the Toolbar component to your `src/App.tsx` file using following code.
-
-
 
 ```ts
 import { ItemDirective, ItemsDirective, ToolbarComponent } from '@syncfusion/ej2-react-navigations';
@@ -112,11 +110,9 @@ export default ReactApp;
 
 ```
 
-
-
 * Now, run the application in the browser using the following command.
 
-```bash
+```
 npm start
 ```
         

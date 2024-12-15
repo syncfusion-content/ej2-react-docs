@@ -38,7 +38,7 @@ export function App() {
                                 },
                                 shape: 'Image',
                                 height: 40, width: 40,
-                                imageUrl: './cluster-france.svg'
+                                imageUrl: 'https://ej2.syncfusion.com/react/demos/src/maps/images/cluster-france.svg'
                             }}
                             animationDuration={0}
                             dataSource={[
@@ -67,7 +67,7 @@ export function App() {
                                     color: 'white',
                                     size: '10px'
                                 },
-                                imageUrl: './cluster-usa.svg'
+                                imageUrl: 'https://ej2.syncfusion.com/react/demos/src/maps/images/cluster-usa.svg'
                             }}
                             animationDuration={0}
                             dataSource={[
@@ -97,7 +97,7 @@ export function App() {
                                     color: 'white',
                                     size: '10px'
                                 },
-                                imageUrl: './cluster-india.svg'
+                                imageUrl: 'https://ej2.syncfusion.com/react/demos/src/maps/images/cluster-india.svg'
                             }}
                             animationDuration={0}
                             dataSource={[
