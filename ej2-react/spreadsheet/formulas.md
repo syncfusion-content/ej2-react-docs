@@ -144,6 +144,25 @@ In Automatic Mode, formulas are recalculated instantly whenever a dependent cell
 
 For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. You can enable this mode by setting the [`calculationMode`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#calculationmode) property to `Automatic`.
 
+The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/calculation-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/calculation-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/calculation-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/calculation-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/spreadsheet/calculation-cs1" %}
+
 ### Manual Mode
 
 In Manual Mode, formulas are not recalculated automatically when cell values are modified. Instead, recalculations must be triggered explicitly. This mode is ideal for scenarios where performance optimization is a priority, such as working with large datasets or computationally intensive formulas.
@@ -152,6 +171,25 @@ For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`
 
 * `Calculate Sheet`: Recalculates formulas for the active sheet only.
 * `Calculate Workbook`: Recalculates formulas across all sheets in the workbook.
+
+The following code example demonstrates how to set the Manual calculation mode in a Spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/calculation-cs2/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/calculation-cs2/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/calculation-cs2/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/calculation-cs2/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/spreadsheet/calculation-cs2" %}
 
 ## Supported Formulas
 

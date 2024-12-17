@@ -1,6 +1,7 @@
+{% raw %}
 
 import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import { DiagramComponent, Inject, DataBinding, RadialTree } from "@syncfusion/ej2-react-diagrams";
 
 
@@ -162,3 +163,5 @@ export default function App() {
 // Render the App component into the 'diagram' element in the DOM
 const root = ReactDOM.createRoot(document.getElementById("diagram"));
 root.render(<App />);
+
+{% endraw %}

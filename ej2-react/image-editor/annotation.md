@@ -132,7 +132,7 @@ Here is an example of changing the text’s color and its font family using the 
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs4" %}
 
-### Add Additional font family
+### Add additional font family
 
 The [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#fontfamily) property in the Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content. The font value will be determined by the 'id' property.
 
@@ -410,7 +410,7 @@ In the following example, you can use the [`drawImage`](https://ej2.syncfusion.c
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs37" %}
 
-### Customize Default Stroke Color for Shapes 
+### Customize default stroke color for shapes 
 
 We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`shapeChanging`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#shapechanging) event. Within this event, users can update the values in the `currentShapeSettings` object to apply their own preferences instead of the defaults. This approach allows conditional updates to the `currentShapeSettings`, ensuring that only the desired defaults are changed while maintaining the other settings.
 

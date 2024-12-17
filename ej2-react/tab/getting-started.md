@@ -99,6 +99,9 @@ The Tab can be rendered by defining a JSON array. The item is rendered with [`he
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tab/tab-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tab/tab-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 
@@ -138,6 +141,9 @@ You need to follow the below structure of HTML elements to render the Tab,
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tab/tab-container-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tab/tab-container-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

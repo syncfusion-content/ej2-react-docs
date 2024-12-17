@@ -140,6 +140,9 @@ Import the Scheduler component to your `app.tsx` file using following code.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/schedule/local-data-cs11/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/schedule/local-data-cs11/index.html %}
+{% endhighlight %}
 {% endtabs %}
         
 
@@ -223,6 +226,12 @@ Scheduler usually displays the system date as its current date. To change the cu
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/local-data-cs13/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="datasource.tsx" %}
+{% include code-snippet/schedule/local-data-cs13/app/datasource.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="datasource.jsx" %}
+{% include code-snippet/schedule/local-data-cs13/app/datasource.jsx %}
 {% endhighlight %}
 {% endtabs %}
         

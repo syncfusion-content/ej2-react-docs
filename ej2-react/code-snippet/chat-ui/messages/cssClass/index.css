@@ -1,0 +1,18 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+#container {
+    margin: 20px auto;
+}
+
+.e-chat-ui .e-message-icon.custom-user {
+    background-color: #416fbd;
+    color: white;
+    border-radius: 5px;
+}

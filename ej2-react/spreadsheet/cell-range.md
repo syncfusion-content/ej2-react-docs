@@ -165,6 +165,19 @@ You can apply custom data validation using two methods.
 * The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
 * The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
 
+The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/data-validation-cs2/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/data-validation-cs2/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/spreadsheet/data-validation-cs2" %}
+
 ### Limitations of Data validation
 
 The following features have some limitations in Data Validation:

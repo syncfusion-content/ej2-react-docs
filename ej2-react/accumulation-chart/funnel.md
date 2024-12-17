@@ -21,7 +21,7 @@ To render a funnel series, use the series [`type`](https://ej2.syncfusion.com/re
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs1" %}
 
 ## Size
 
@@ -41,7 +41,7 @@ The size of the funnel chart can be customized by using the  `width` and `height
         
 {% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs2" %}
 
-## Neck Size
+## Neck size
 
 The funnel's neck size can be customized by using the `neckWidth` and `neckHeight` properties.
 
@@ -95,7 +95,7 @@ Points can be exploded on mouse click by setting the `explode` property to true.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs5" %}
 
-## Smart Data Label
+## Smart data label
 
 It provides the data label smart arrangement of the funnel and pyramid series. The overlap data label will be placed on left side of the funnel/pyramid series.
 
@@ -131,7 +131,7 @@ Individual points can be customized using the `pointRender` event.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs7" %}
 
-## See Also
+## See also
 
 * [Data label](./data-label/)
 * [Grouping](./grouping/)

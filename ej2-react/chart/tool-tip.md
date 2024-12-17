@@ -126,6 +126,27 @@ Any HTML elements can be displayed in the tooltip by using the [`template`](http
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs4" %}
 
+## Enable highlight
+
+By setting the `enableHighlight` property to **true**, you can highlight all points in the hovered series while dimming points in other series, enhancing focus and clarity.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs12/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs12/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs12/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs12" %}
+
 ## Tooltip mapping name
 
 By default, tooltip shows information of x and y value in points. You can show more information from data source in tooltip by using the [`tooltipMappingName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#tooltipmappingname) property of the tooltip. You can use the `${point.tooltip}` as place holders to display the specified tooltip content.

@@ -123,33 +123,9 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs45" %}
 
-**Dash array**
-
-The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#dasharray) property determines the pattern of dashes and gaps in the series.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/series/line-cs46/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/series/line-cs46/app/index.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/series/line-cs46/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/series/line-cs46/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/chart/series/line-cs46" %}
-
 ## Area border
 
-The following properties in the [bordermodel](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/) can be used to customize the border of the Area Chart.
-
-* [width](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#width) - Specifies the width for the border of the Area Chart.
-* [color](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#color) - Specifies the Color for the border of the Area Chart.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel/#border) property to customize the width, color and dasharray of the series border.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

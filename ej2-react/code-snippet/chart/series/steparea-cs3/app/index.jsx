@@ -1,18 +1,31 @@
+{% raw %}
+
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, StepAreaSeries } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Tooltip, StepAreaSeries } from '@syncfusion/ej2-react-charts';
 import { stepAreaData } from './datasource';
+
 function App() {
-    const primaryxAxis = { valueType: 'Double', title: 'Overs' };
-    const primaryyAxis = { title: 'Runs' };
-    return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Annual Temperature Comparison'>
-      <Inject services={[StepAreaSeries, Legend]}/>
+  const primaryxAxis = { title: 'Overs' };
+  const primaryyAxis = { title: 'Runs' };
+  const tooltip = { enable: true };
+  const border = { width: 2, color: '#FFA500', dashArray: '5,5' };
+
+  return <ChartComponent id='charts'
+      primaryXAxis={primaryxAxis}
+      primaryYAxis={primaryyAxis}
+      tooltip={tooltip}
+      title='England - Run Rate'>
+      <Inject services={[StepAreaSeries, Tooltip]} />
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={stepAreaData} xName='x' yName='y' name='England' type='StepArea' border={{width: 1.5, color: 'red'}} dashArray='4'>
+        <SeriesDirective dataSource={stepAreaData} xName='x' yName='y' type='StepArea' border={border}>
         </SeriesDirective>
       </SeriesCollectionDirective>
-    </ChartComponent>;
-}
-;
+    </ChartComponent>
+
+};
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
+
+
+{% endraw %}

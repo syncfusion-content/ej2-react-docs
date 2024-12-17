@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Pie dough nut in React Accumulation chart component
 
-## Pie Chart
+## Pie chart
 
 To render a pie series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel/#type) as `Pie` and inject the `PieSeries` module into the `services`. If the `PieSeries` module is not injected, this module will be loaded by default.
 
@@ -23,7 +23,7 @@ To render a pie series, use the series [`type`](https://ej2.syncfusion.com/react
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs5" %}
 
 ## Radius customization
 
@@ -39,9 +39,9 @@ You can customize this using [`radius`](https://ej2.syncfusion.com/react/documen
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs6" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs6" %}
 
-## Pie Center
+## Pie center
 
 The center position of the pie can be changed by Center X and Center Y. By default, center value of the pie series x and y is 50%. You can customize this using [`center`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationChartModel/#center)property of the series.
 
@@ -54,9 +54,9 @@ The center position of the pie can be changed by Center X and Center Y. By defau
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs7" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs7" %}
 
-## Various Radius Pie Chart
+## Various radius pie chart
 
 You can use radius mapping to render the slice with different [`radius`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries/#radius) pie and also use [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationChartModel/#border) , fill properties to customize the point. dataLabel is used to represent individual data and its value.
 
@@ -69,9 +69,9 @@ You can use radius mapping to render the slice with different [`radius`](https:/
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs8" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs8" %}
 
-## Doughnut Chart
+## Doughnut chart
 
 To achieve a doughnut in pie series, customize the [`innerRadius`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries/#innerradius) property of the series. By setting value greater than 0%, a doughnut will appear. The `innerRadius` property takes value from 0% to 100% of the pie radius.
 
@@ -84,9 +84,9 @@ To achieve a doughnut in pie series, customize the [`innerRadius`](https://ej2.s
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/doughnut-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/doughnut-cs1" %}
 
-## Start and End angles
+## Start and end angles
 
 You can customize the start and end angle of the pie series using the [`startAngle`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries/#startangle) and [`endAngle`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeries/#endangle) properties. The default value of  `startAngle` is 0 degree, and `endAngle` is 360 degrees. By customizing this, you can achieve a semi pie series.
 
@@ -99,9 +99,9 @@ You can customize the start and end angle of the pie series using the [`startAng
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs2" %}
 
-## Color & Text Mapping
+## Color & text mapping
 
 The fill color and the text in the data source can be mapped to the chart using `pointColorMapping` in series and `name` in datalabel respectively.
 
@@ -114,9 +114,9 @@ The fill color and the text in the data source can be mapped to the chart using 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs3" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs3" %}
 
-## Border Radius
+## Border radius
 
 You can create rounded corners for each slice using the [`borderRadius`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel/#borderradius) option, giving the chart a modern and polished look.
 
@@ -124,7 +124,6 @@ You can create rounded corners for each slice using the [`borderRadius`](https:/
 {% highlight ts tabtitle="index.jsx" %}
 {% include code-snippet/chart/series/pie-cs39/app/index.jsx %}
 {% endhighlight %}
-
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/pie-cs39/app/index.tsx %}
 {% endhighlight %}
@@ -145,7 +144,7 @@ Individual points can be customized using the `pointRender` event.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs4" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs4" %}
 
 ## Hide pie or doughnut border
 
@@ -160,7 +159,7 @@ By default, the border will appear in the pie/doughnut chart while mouse hover o
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs5" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/startangle-cs5" %}
 
 ## Patterns
 
@@ -170,7 +169,6 @@ You can apply different patterns to the pie slices using the [`applyPattern`](ht
 {% highlight ts tabtitle="index.jsx" %}
 {% include code-snippet/chart/series/pie-cs40/app/index.jsx %}
 {% endhighlight %}
-
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/series/pie-cs40/app/index.tsx %}
 {% endhighlight %}
@@ -199,9 +197,9 @@ You can also achieve drill-up (back to the initial state) by using [chartMouseCl
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chart/grid-visual-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/grid-visual-cs1" %}
 
-## See Also
+## See also
 
 * [Data label](./data-label/)
 * [Grouping](./grouping/)

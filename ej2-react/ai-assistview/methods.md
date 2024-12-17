@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Adding prompt response
 
-You can use the [addPromptResponse](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#addpromptresponse) public method to add the prompts and responses to the AI AssistView. You can add the it either as a `string` or `object` collection.
+You can use the [addPromptResponse](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#addpromptresponse) public method to add the prompts and responses to the AI AssistView. You can add the it either as a `string` or `object` collection.
 
 ### Adding responses as string.
 
@@ -52,7 +52,7 @@ You can add object response, by passing the prompt and response as a collection 
 
 ## Executing prompt
 
-You can use the [executePrompt](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#executeprompt) method to execute the prompts dynamically in the AI AssistView. It accepts prompts as string values, which triggers the [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assist-view#promptrequest) event and performs the callback actions.
+You can use the [executePrompt](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#executeprompt) method to execute the prompts dynamically in the AI AssistView. It accepts prompts as string values, which triggers the [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptrequest) event and performs the callback actions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
