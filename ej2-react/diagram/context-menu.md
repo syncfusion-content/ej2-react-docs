@@ -86,6 +86,8 @@ The following example demonstrates how to display different custom menu items fo
 
 The following code example shows the context menu with url for three websites.
 
+{% raw %}
+
 ```Javascript
 
 import * as React from "react";
@@ -147,6 +149,7 @@ const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
 ```
+{% endraw %}
 
 ## Template Support for Context menu
 
