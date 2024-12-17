@@ -34,7 +34,7 @@ The Chat UI can be localized to any culture by defining the text of the Chat UI 
 
 ## RTL
  
-RTL provides an option to switch the text direction and layout of the Chat UI component from right to left by setting the `enableRtl` property to `true`.
+RTL provides an option to switch the text direction and layout of the Chat UI component from right to left by setting the [enableRtl](../api/chat-ui#enablertl) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
