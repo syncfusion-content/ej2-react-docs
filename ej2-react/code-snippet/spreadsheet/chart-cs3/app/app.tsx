@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellDirective, CellsDirective, CellStyleModel, ChartModel } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective, getFormatFromType, Spreadsheet, BeforeChartEventArgs} from '@syncfusion/ej2-react-spreadsheet';
+import { RangeDirective, ColumnsDirective, ColumnDirective, getFormatFromType, BeforeChartEventArgs} from '@syncfusion/ej2-react-spreadsheet';
 import { chartData } from './datasource';
 
 function App() {
