@@ -118,3 +118,19 @@ Outline chip has the border with the background transparent. It can be set using
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/chips/avatar-cs6" %}
+
+ ## Template
+
+The [`template`](https://helpej2.syncfusion.com/react/documentation/api/chips/#template) property of the Chips component allows users to fully customize the layout and design of each chip. By using the `template` property, users can include custom HTML elements, such as links, icons, or additional content.
+
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/chips/avatar-cs7/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/chips/avatar-cs7/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/chips/avatar-cs7" %}
