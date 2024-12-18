@@ -1,8 +1,8 @@
 {% raw %}
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { RangeDirective, ColumnsDirective, ColumnDirective, CellsDirective, CellDirective  } from '@syncfusion/ej2-react-spreadsheet';
 import { data } from './datasource';
 
 function App() {

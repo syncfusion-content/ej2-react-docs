@@ -16,7 +16,7 @@ function App() {
     };
 
     return (
-        <SpreadsheetComponent allowFindAndReplace={false} ref={spreadsheetRef} dataBound={onDataBound}>
+        <SpreadsheetComponent allowFindAndReplace={true} ref={spreadsheetRef} dataBound={onDataBound}>
             <SheetsDirective>
                 <SheetDirective name='Price Details'>
                     <RangesDirective>

@@ -15,8 +15,8 @@ function App() {
 
     const messageTemplate = (context) => {
         return (
-            <div class="message-items e-card">
-                <div class="message-text">{context.message.text}</div>
+            <div className="message-items e-card">
+                <div className="message-text">{context.message.text}</div>
             </div>
         );
     };

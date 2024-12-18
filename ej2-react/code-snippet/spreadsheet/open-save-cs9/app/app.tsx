@@ -19,16 +19,16 @@ function App() {
   };
   return (
     <div>
-      <SpreadsheetComponent
-        ref={spreadsheetRef}
-        openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open"
-      />
       <UploaderComponent
         ref={uploaderRef}
         asyncSettings={asyncSettings}
         success={onSuccess}
         allowedExtensions={allowedExtensions}
       ></UploaderComponent>
+      <SpreadsheetComponent
+        ref={spreadsheetRef}
+        openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open"
+      />
     </div>
   );
 }

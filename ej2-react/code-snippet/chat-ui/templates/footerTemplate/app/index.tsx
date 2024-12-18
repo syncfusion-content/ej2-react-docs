@@ -34,7 +34,7 @@ function App() {
             <div className="custom-footer">
                 <input id="chatTextArea" className="e-input" placeholder="Type your message..."></input>
                 <button id="sendMessage" className="e-btn e-primary" onClick={sendIconClicked}>
-                    <span class="e-icons e-send-1"></span>
+                    <span className="e-icons e-send-1"></span>
                 </button>
             </div>
         );

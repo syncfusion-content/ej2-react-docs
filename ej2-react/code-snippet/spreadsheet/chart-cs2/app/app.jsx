@@ -2,11 +2,11 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellDirective, CellsDirective, CellStyleModel, ChartModel } from '@syncfusion/ej2-react-spreadsheet';
-import { RangeDirective, ColumnsDirective, ColumnDirective, getFormatFromType, Spreadsheet } from '@syncfusion/ej2-react-spreadsheet';
+import { RangeDirective, ColumnsDirective, ColumnDirective, getFormatFromType } from '@syncfusion/ej2-react-spreadsheet';
 import { chartData } from './datasource';
 
 function App() {
-    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+    const spreadsheetRef = React.useRef(null);
     const style = { backgroundColor: '#357cd2', color: '#fff', fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' };
     React.useEffect(() => {
         let spreadsheet = spreadsheetRef.current;
