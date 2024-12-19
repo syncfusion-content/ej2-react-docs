@@ -58,11 +58,11 @@ To access themes provided by Syncfusion, you have two primary options,
 |Package  | [Material 3 Light](https://www.npmjs.com/package/@syncfusion/ej2-material3-theme) | [Material 3 Dark](https://www.npmjs.com/package/@syncfusion/ej2-material3-dark-theme) |
 |  | [Fluent 2 Light](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-theme) | [Fluent 2 Dark](https://www.npmjs.com/package/@syncfusion/ej2-fluent2-dark-theme) |
 |  | [Bootstrap 5.3 Light](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-theme) | [Bootstrap 5.3 Dark](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-dark-theme) |
-|  | Tailwind 3.4 Light | Tailwind 3.4 Dark |
+|  | [Tailwind 3.4 Light](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) | [Tailwind 3.4 Dark](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-dark-theme) |
 | CDN  | [Material 3 Light](https://cdn.syncfusion.com/ej2/27.1.48/material3.css)  |  [Material 3 Dark](https://cdn.syncfusion.com/ej2/27.1.48/material3-dark.css)  |
 |  |  [Fluent 2 light](https://cdn.syncfusion.com/ej2/27.1.48/fluent2.css)  |  [Fluent 2 Dark](https://cdn.syncfusion.com/ej2/27.1.48/fluent2-dark.css)  |
 |  |  [Bootstrap5.3 light](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3.css)  |  [Bootstrap 5.3 Dark](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3-dark.css)  |
-|  | Tailwind 3.4 Light | Tailwind 3.4 Dark |
+|  | [Tailwind 3.4 Light](https://cdn.syncfusion.com/ej2/28.1.33/tailwind3.css) | [Tailwind 3.4 Dark](https://cdn.syncfusion.com/ej2/28.1.33/tailwind3-dark.css) |
 
 ### Color Customization in themes
 
@@ -146,17 +146,17 @@ Example for `Tailwind 3.4` customization using CSS class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/common/Tailwind3.4-cs2/app/index.jsx %}
+{% include code-snippet/common/tailwind3.4-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/common/Tailwind3.4-cs2/app/index.tsx %}
+{% include code-snippet/common/tailwind3.4-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
-{% include code-snippet/common/Tailwind3.4-cs2/index.css %}
+{% include code-snippet/common/tailwind3.4-cs2/index.css %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/common/Tailwind3.4-cs2" %}
+{% previewsample "page.domainurl/code-snippet/common/tailwind3.4-cs2" %}
 
 **Default Tailwind 3.4 primary value**
 
