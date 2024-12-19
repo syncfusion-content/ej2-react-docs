@@ -14,7 +14,7 @@ This section explains how to create a simple **Avatar** using Styles in the Reac
 
 ## Dependencies
 
-The Avatar Component is pure CSS component so no specific dependencies to render the avatar.
+The Avatar Component is a pure CSS component so no specific dependencies to render the avatar.
 
 ## Installation and configuration
 

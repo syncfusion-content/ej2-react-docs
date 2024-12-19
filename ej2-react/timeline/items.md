@@ -30,6 +30,9 @@ You can define string content for the Timeline items.
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/items/content/string-based/index.css %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/items/content/string-based/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/items/content/string-based" %}
@@ -48,7 +51,12 @@ You can specify the template content for the items, by using the selector for an
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/items/content/template-based/index.css %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/items/content/template-based/index.html %}
+{% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/timeline/items/content/template-based" %}
 
 ## Adding opposite content
 
@@ -60,6 +68,12 @@ You can add additional information to each Timeline item, by using the [opposite
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/items/opposite-content/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/items/opposite-content/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/items/opposite-content/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,6 +105,9 @@ You can display text for the Timeline items using the `dotCss` property, by addi
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/items/dot-item/index.css %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/items/dot-item/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/items/dot-item" %}
@@ -105,6 +122,12 @@ You can use the [disabled](https://ej2.syncfusion.com/react/documentation/api/ti
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/items/disabled/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/items/disabled/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/items/disabled/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

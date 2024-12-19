@@ -24,14 +24,14 @@ function App() {
         if (!context.users || context.users.length === 0) {
           return '';
         }
-      
+
         let usersList = context.users.map((user, i) => {
           let isLastUser = i === context.users.length - 1;
           return `${isLastUser && i > 0 ? 'and ' : ''}<span class="typing-user">${user.user}</span>`;
         }).join(' ');
-      
+
         return (
-          <div class="typing-wrapper" dangerouslySetInnerHTML={{ __html: `${usersList} are typing...` }} ></div>
+          <div className="typing-wrapper" dangerouslySetInnerHTML={{ __html: `${usersList} are typing...` }} ></div>
         );
     };
     return (

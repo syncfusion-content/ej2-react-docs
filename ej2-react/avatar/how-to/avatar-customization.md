@@ -21,6 +21,9 @@ The avatar comes with default background color (Grey). This can be easily custom
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/color-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/avatar/color-cs1/index.html %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/avatar/color-cs1/index.css %}
 {% endhighlight %}
@@ -38,6 +41,9 @@ Even though the avatar comes with five predefined sizes, sometimes it's not enou
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/custom-size-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/avatar/custom-size-cs1/index.html %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/avatar/custom-size-cs1/index.css %}
@@ -57,6 +63,9 @@ Avatars can be used with a wide variety of media formats like SVG, font-icons, i
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/media-formats-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/avatar/media-formats-cs1/index.html %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/avatar/media-formats-cs1/index.css %}
 {% endhighlight %}
@@ -66,7 +75,7 @@ Avatars can be used with a wide variety of media formats like SVG, font-icons, i
 
 ## Dynamic avatar rendering from datasource
 
-We can render avatar component dynamically from a data-source. In this sample we have rendered the avatar component
+We can render the avatar component dynamically from a data-source. In this sample we have rendered the avatar component
 using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the avatar using `CSS` property `background-image` and using image tag.
 
 {% tabs %}
@@ -75,6 +84,9 @@ using a data-source which contains the image source in different sizes dynamical
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/react-avatar-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/avatar/react-avatar-cs1/index.html %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/avatar/react-avatar-cs1/index.css %}

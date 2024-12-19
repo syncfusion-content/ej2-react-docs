@@ -28,6 +28,9 @@ You can define the styles applicable to the all the Timeline item connectors.
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/customization/connector-common/index.css %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/customization/connector-common/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/customization/connector-common" %}
@@ -45,6 +48,9 @@ You can also apply unique styles to individual connectors, to differentiate spec
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/customization/connector-individual/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/customization/connector-individual/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,6 +72,9 @@ You can modify the color of the dots to highlight the specific Timeline items.
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/customization/dot-color/index.css %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/customization/dot-color/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/customization/dot-color" %}
@@ -83,6 +92,9 @@ You can adjust the size of the dot to make it larger or smaller by using the `--
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/customization/dot-size/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/customization/dot-size/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,6 +114,9 @@ You can add shadow effects to the Timeline dots to make it feel visually engagin
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/customization/dot-shadow/index.css %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/customization/dot-shadow/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/customization/dot-shadow" %}
@@ -120,6 +135,9 @@ You can achieve the desired dot variant by customizing the border, outline and b
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/customization/dot-variant/index.css %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/customization/dot-variant/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/customization/dot-variant" %}
@@ -137,6 +155,9 @@ By adding the `e-outline` class to the Timeline `cssClass` property, it enables 
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/customization/dot-outline/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/customization/dot-outline/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -170,7 +170,7 @@ Using [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/ch
 
 **Chart area margin**
 
-You can customize the space between the chart area from its chart container through `margin` property.
+You can customize the space between the chart area from its chart container through [`margin`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel/#margin) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

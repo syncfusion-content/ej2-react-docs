@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integrate avatar into listview in React Avatar component
 
-Avatar is integrated into the listview to create contacts applications. The `xsmall` size avatar is used to match the size of the list item. Letters and images are also used as avatar content.
+The Avatar component is integrated into the listview to create contacts applications. The `xsmall` size avatar is used to match the size of the list item. Letters and images are also used as avatar content.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -18,6 +18,9 @@ Avatar is integrated into the listview to create contacts applications. The `xsm
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/listview-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/avatar/listview-cs1/index.html %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/avatar/listview-cs1/index.css %}

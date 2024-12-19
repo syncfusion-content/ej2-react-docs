@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category } from'@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category, Legend } from'@syncfusion/ej2-react-charts';
 import { columnData } from './datasource';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
   };
 
   return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Olympic Medals Comparison by Country' titleStyle={titleStyle} subTitle='Medal Comparison' subTitleStyle={subTitleStyle}>
-            <Inject services={[ColumnSeries, Category]} />
+            <Inject services={[ColumnSeries, Category, Legend]} />
             <SeriesCollectionDirective>
               <SeriesDirective dataSource={columnData} xName='country' yName='gold' type='Column' name='Gold'>
               </SeriesDirective>

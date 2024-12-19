@@ -38,6 +38,12 @@ function App() {
         </SeriesDirective>
         <SeriesDirective dataSource={data} xName='country' yName='bronze' name='Bronze' type='Column'>
         </SeriesDirective>
+        <SeriesDirective dataSource={data} xName='country' yName='gold' name='Ruby' type='Column'>
+        </SeriesDirective>
+        <SeriesDirective dataSource={data} xName='country' yName='silver' name='Platinum' type='Column'>
+        </SeriesDirective>
+        <SeriesDirective dataSource={data} xName='country' yName='bronze' name='Diamond' type='Column'>
+        </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
 

@@ -3,7 +3,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, TrendlineDirective, TrendlinesDirective, Inject, AxisModel, TooltipSettingsModel, ChartAreaModel, AccessibilityModel, Trendlines, ScatterSeries, Tooltip } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, TrendlineDirective, TrendlinesDirective, Inject, AxisModel, TooltipSettingsModel, ChartAreaModel, AccessibilityModel, LegendSettingsModel, Trendlines, ScatterSeries, LineSeries, Tooltip, Legend } from '@syncfusion/ej2-react-charts';
 
 function App() {
 
@@ -26,6 +26,7 @@ function App() {
     accessibilityDescription: 'A linear trendline representing the general trend of the historical Indian Rupee rate against the US Dollar.',
     accessibilityRole: 'line'
   };
+  const legendSettings: LegendSettingsModel = { visible: false };
 
   chartLoad();
   return <ChartComponent id='charts'
@@ -33,8 +34,9 @@ function App() {
       primaryYAxis={primaryyAxis}
       tooltip={tooltip}
       chartArea={chartarea}
+      legendSettings={legendSettings}
       title='Historical Indian Rupee Rate (INR USD)'>
-      <Inject services={[Trendlines, ScatterSeries, Tooltip]} />
+      <Inject services={[Trendlines, ScatterSeries, LineSeries, Tooltip, Legend]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={series1} xName='x' yName='y' name='Apple Inc' type='Scatter' fill='#0066FF'>
           <TrendlinesDirective>

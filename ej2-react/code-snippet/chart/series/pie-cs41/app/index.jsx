@@ -3,7 +3,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationTooltip } from '@syncfusion/ej2-react-charts';
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationTooltip, PieSeries, AccumulationLegend } from '@syncfusion/ej2-react-charts';
 import { data } from '../datasource.ts';
 
 function App() {
@@ -12,10 +12,11 @@ function App() {
     enable: true, 
     enableHighlight: true
   };
+  const legendSettings = { visible: false };
 
   return (
-    <AccumulationChartComponent id="container" tooltip={tooltip}>
-      <Inject services={[AccumulationTooltip]} />
+    <AccumulationChartComponent id="container" tooltip={tooltip} legendSettings={legendSettings}>
+      <Inject services={[AccumulationTooltip, PieSeries, AccumulationLegend]} />
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective dataSource={data} xName='x' yName='y'>
         </AccumulationSeriesDirective>

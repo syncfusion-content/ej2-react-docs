@@ -17,8 +17,8 @@ function App() {
 
     const suggestionTemplate = (context) => {
         return (
-            <div class='suggestion-item active'>
-                <div class="content">{context.suggestion}</div>
+            <div className='suggestion-item active'>
+                <div className="content">{context.suggestion}</div>
             </div>
         );
     };

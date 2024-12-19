@@ -24,7 +24,7 @@ function App() {
         hours = hours % 12 || 12;
         var formattedDate = `${day}/${month}/${year} ${hours}:${minutes} ${ampm}`;
         return (
-          <div class="timebreak-wrapper">{formattedDate}</div>
+          <div className="timebreak-wrapper">{formattedDate}</div>
         );
     };
     return (
