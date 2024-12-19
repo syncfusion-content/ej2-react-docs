@@ -29,6 +29,9 @@ The `template` context receives the following information:
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/timeline/template/index.css %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/template/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/template" %}

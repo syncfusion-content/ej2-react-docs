@@ -19,6 +19,12 @@ You can display the Timeline items in reverse order, for different alignments by
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/reverse/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/reverse/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/reverse/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/reverse" %}

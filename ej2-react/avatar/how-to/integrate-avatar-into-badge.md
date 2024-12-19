@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integrate avatar into badge in React Avatar component
 
-The badge is dependent and supportive component, and it can be used with avatar to create a notification avatar.
+The badge is a dependent and supportive component, and it can be used with an avatar to create a notification avatar.
 The default avatar (.`e-avatar`) and circle avatar (.`e-avatar-circle`) have been used with notification badges (.`e-badge-notification`) in the following sample.
 
 {% tabs %}
@@ -19,6 +19,9 @@ The default avatar (.`e-avatar`) and circle avatar (.`e-avatar-circle`) have bee
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/avatar/badge-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/avatar/badge-cs1/index.html %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/avatar/badge-cs1/index.css %}

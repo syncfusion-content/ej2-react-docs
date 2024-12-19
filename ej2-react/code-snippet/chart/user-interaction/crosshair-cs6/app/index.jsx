@@ -36,12 +36,14 @@ function App() {
     format: '${series.name} : ${point.x} : ${point.y}' 
   };
   const marker = { visible: true };
+  const legendSettings = { visible: false };
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}
       primaryYAxis={primaryyAxis}
       crosshair={crosshair}
       tooltip={tooltip}
+      legendSettings={legendSettings}
       title='Average Sales per Person'>
       <Inject services={[LineSeries, Legend, Tooltip, Crosshair, DateTime]} />
       <SeriesCollectionDirective>

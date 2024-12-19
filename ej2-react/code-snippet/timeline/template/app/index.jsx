@@ -3,6 +3,7 @@
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-layouts';
+import './index.css'
 
 function App() {
 

@@ -3,7 +3,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AxisModel, CrosshairSettingsModel, TooltipSettingsModel, Legend, DateTime, Tooltip, LineSeries, Crosshair } from'@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AxisModel, CrosshairSettingsModel, TooltipSettingsModel, LegendSettingsModel, Legend, DateTime, Tooltip, LineSeries, Crosshair } from'@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 
 function App() {
@@ -36,12 +36,14 @@ function App() {
     format: '${series.name} : ${point.x} : ${point.y}' 
   };
   const marker = { visible: true };
+  const legendSettings: LegendSettingsModel = { visible: false };
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}
       primaryYAxis={primaryyAxis}
       crosshair={crosshair}
       tooltip={tooltip}
+      legendSettings={legendSettings}
       title='Average Sales per Person'>
       <Inject services={[LineSeries, Legend, Tooltip, Crosshair, DateTime]} />
       <SeriesCollectionDirective>
