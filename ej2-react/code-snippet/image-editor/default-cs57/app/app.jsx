@@ -15,7 +15,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" uploadSettings = {uploadSettings}>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" uploadSettings = {this.uploadSettings}>
             </ImageEditorComponent>
                     <div>
                         <ButtonComponent cssClass='e-primary' content='Load Invalid Image' onClick={this.loadInvalidImage.bind(this)}/>
