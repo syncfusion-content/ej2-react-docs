@@ -24,14 +24,18 @@ function App() {
         if (!context.users || context.users.length === 0) {
           return '';
         }
-
-        let usersList = context.users.map((user, i) => {
-          let isLastUser = i === context.users.length - 1;
-          return `${isLastUser && i > 0 ? 'and ' : ''}<span class="typing-user">${user.user}</span>`;
-        }).join(' ');
-
+        const usersList = context.users
+          .map((user, i) => {
+            const isLastUser = i === context.users.length - 1;
+            return `${isLastUser && i > 0 ? 'and ' : ''}<span class="typing-user">${user.user}</span>`;
+          })
+          .join(' ');
+        const userTemplate = `${usersList} are typing...`;
         return (
-          <div className="typing-wrapper" dangerouslySetInnerHTML={{ __html: `${usersList} are typing...` }} ></div>
+          <div
+            className="typing-wrapper"
+            dangerouslySetInnerHTML={{ __html: userTemplate }}
+          ></div>
         );
     };
     return (
