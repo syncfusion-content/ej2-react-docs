@@ -121,7 +121,7 @@ Outline chip has the border with the background transparent. It can be set using
 
 ## Template
 
-The [`template`](https://helpej2.syncfusion.com/react/documentation/api/chips/#template) property of the Chips component control allows users to fully customize the layout and design of each chip. By using the `template` property, users can include custom HTML elements, such as links, icons, or additional content.
+The [`template`](https://helpej2.syncfusion.com/react/documentation/api/chips/#template) property of the Chips component allows users to fully customize the layout and design of each chip. By using the `template` property, users can include custom HTML elements, such as links, icons, or additional content.
 
 
 {% tabs %}

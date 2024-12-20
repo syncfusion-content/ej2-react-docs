@@ -35,29 +35,21 @@ function App() {
       url: 'http://www.syncfusion.com'
     }
   ];
-
+  const template = `
+        <div>
+            <span class='e-menu-icon ${'${iconCss}'}'></span>
+            ${
+                '${url}' 
+                ? `<span class='custom-class'><a href='${'${url}'}' target='_blank' rel='noopener noreferrer'>${'${text}'}</a></span>`
+                : `<span class='custom-class'>${'${text}'}</span>`
+            }
+        </div>
+    `; 
   return (
     <div>
       <DropDownButtonComponent
         items={items}
-        itemTemplate={(data) => {
-          if (data.url) {
-            return (
-              <div>
-                <span className={`e-menu-icon ${data.iconCss}`}></span>
-                <span class="custom-class"><a href={data.url} target="_blank" rel="noopener noreferrer">{data.text}</a></span>
-              </div>
-            );
-          } else {
-            return (
-              <div>
-                <span className={`e-menu-icon ${data.iconCss}`}></span>
-                <span class="custom-class">{data.text}</span>
-              </div>
-            );
-          }
-        }}
-      >
+        itemTemplate = {template}>
         DropDownButton
       </DropDownButtonComponent>
     </div>
