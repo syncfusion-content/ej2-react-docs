@@ -132,7 +132,7 @@ Using [`tooltipRender`](https://ej2.syncfusion.com/react/documentation/api/accum
 
 ## Enable highlight
 
-By setting the `enableHighlight` property to **true**, the hovered pie slice is highlighted, while the remaining slices are dimmed, enhancing focus and clarity.
+By setting the [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/tooltipSettingsModel/#enablehighlight) property to **true**, the hovered pie slice is highlighted, while the remaining slices are dimmed, enhancing focus and clarity.
 
 {% tabs %}
 {% highlight ts tabtitle="index.jsx" %}

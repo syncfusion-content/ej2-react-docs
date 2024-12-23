@@ -3,10 +3,8 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {
-  ChartComponent, SeriesCollectionDirective, SeriesDirective, AxesDirective, AxisDirective, Inject, IndicatorsDirective, IndicatorDirective,
-  LineSeries, DateTime, CandleSeries, AccumulationDistributionIndicator, Tooltip, Crosshair
-} from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, AxesDirective, AxisDirective, Inject, IndicatorsDirective, IndicatorDirective,
+    LineSeries, DateTime, CandleSeries, AccumulationDistributionIndicator, Tooltip, Crosshair, Legend } from '@syncfusion/ej2-react-charts';
 import { chartData } from './datasource';
 
 function App() {
@@ -27,6 +25,7 @@ function App() {
     accessibilityDescription: 'The Accumulation Distribution indicator is used to assess the buying and selling pressure of Apple Inc. stock.',
     accessibilityRole: 'indicator'
   };
+  const legendSettings = { visible: false };
 
   return <ChartComponent id='charts'
     primaryXAxis={primaryxAxis}
@@ -35,8 +34,9 @@ function App() {
     crosshair={crosshair}
     axisLabelRender={axisLableRender.bind(this)}
     chartArea={chartarea}
+    legendSettings={legendSettings}
     title='AAPL - 2016/2017'>
-    <Inject services={[LineSeries, DateTime, CandleSeries, AccumulationDistributionIndicator, Tooltip, Crosshair]} />
+    <Inject services={[LineSeries, DateTime, CandleSeries, AccumulationDistributionIndicator, Tooltip, Crosshair, Legend]} />
     <AxesDirective>
       <AxisDirective name='secondary' opposedPosition={true} majorGridLines={lines} minimum={-7000000000} maximum={5000000000} interval={6000000000}>
       </AxisDirective>
