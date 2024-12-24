@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Position sizing of panels in React Dashboard layout component | Syncfusion
+title: Panel Positioning and Sizing in React Dashboard Layout | Syncfusion
 description: Learn here all about Position sizing of panels in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
 control: Position sizing of panels 
 platform: ej2-react
@@ -48,9 +48,6 @@ The following sample demonstrates the positioning of panels within the dashboard
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/position-of-panels-cs1/app/index.tsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.css" %}
-{% include code-snippet/dashboard-layout/position-of-panels-cs1/App.css %}
-{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/position-of-panels-cs1/index.html %}
 {% endhighlight %}
@@ -76,9 +73,6 @@ The following sample demonstrates the sizing of panels within the dashboard layo
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/sizing-of-panels-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.css" %}
-{% include code-snippet/dashboard-layoutsizing-of-panels-cs1/App.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/sizing-of-panels-cs1/index.html %}

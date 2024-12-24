@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Responsive adaptive in React Dashboard layout component
 
-The component is provided with built-in responsive support, where panels within the layout get adjusted based on their parent element's dimensions to accommodate any resolution which relieves the burden of building responsive dashboards.
+The component is provided with built-in responsive support, where panels within the layout adjust based on their parent element's dimensions. This accommodates any resolution, relieving the burden of building responsive dashboards manually.
 
-The dashboard layout is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one, so that, the panels will be displayed in a vertical column. By default, whenever the screen resolution meets 600 px or lower resolutions this layout transformation occurs. This transformation can be modified for any user defined resolution by defining the for the `mediaQuery` property of the component.
+The dashboard layout is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one, so that, the panels will be displayed in a vertical column. By default, this layout transformation occurs whenever the screen resolution reaches 600 px or lower resolutions this layout transformation occurs. This transformation can be modified for any user-defined resolution by setting the [mediaQuery](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#mediaquery) property of the component.
 
-The following sample demonstrates the usage of the `mediaQuery` property to turn out the layout into a stacked one in user defined resolution. Here, whenever, the window size reaches 700 px or lesser, the layout becomes a stacked layout.
+The following sample demonstrates the usage of the [mediaQuery](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#mediaquery) property to transform the layout into a stacked one at a user-defined resolution. In this example, whenever the window size reaches 700 px or less, the layout becomes a stacked layout.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,8 +29,11 @@ The following sample demonstrates the usage of the `mediaQuery` property to turn
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/responsive-adaptive-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dashboard-layout/responsive-adaptive-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/responsive-adaptive-cs1" %}
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to knows how to present and manipulate data.
+> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to learn how to present and manipulate data.

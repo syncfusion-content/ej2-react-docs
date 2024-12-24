@@ -12,7 +12,7 @@ function App() {
         if (spreadsheet) {
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:D1');
             spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A11:D11');
-            spreadsheet.protectSheet(1, { selectCells: false }, "syncfusion"); // protect sheet with password
+            spreadsheet.protectSheet(1, { selectCells: true }, "syncfusion"); // protect sheet with password
         }
     };
 

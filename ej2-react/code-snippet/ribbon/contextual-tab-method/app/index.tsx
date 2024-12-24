@@ -1,17 +1,15 @@
-{% raw %}
 
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonContextualTab, RibbonContextualTabsDirective, RibbonContextualTabDirective, Inject } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
 import { useRef } from 'react';
 function App() {
     let ribbonObj = useRef<RibbonComponent>(null);
     const showContextualTab = () => {
-        ribbonObj.current?.showTab('ArrangeView', true);
+        ribbonObj.current.showTab('ArrangeView', true);
     }
     const hideContextualTab = () => {
-        ribbonObj.current?.hideTab('ArrangeView', true);
+        ribbonObj.current.hideTab('ArrangeView', true);
     }
     return (
         <div>
@@ -69,5 +67,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
-
-{% endraw %}

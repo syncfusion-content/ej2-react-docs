@@ -1,9 +1,8 @@
-{% raw %}
 
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonItemSize, RibbonContextualTab, RibbonContextualTabsDirective, RibbonContextualTabDirective, Inject } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+
 function App() {
     return (
         <RibbonComponent id='ribbon'>
@@ -81,5 +80,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
-
-{% endraw %}
