@@ -1,8 +1,7 @@
-{% raw %}
 
 import * as React from "react";
 import * as ReactDom from "react-dom";
-import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonContextualTab, RibbonContextualTabsDirective, RibbonContextualTabDirective } from "@syncfusion/ej2-react-ribbon";
+import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonContextualTab, RibbonContextualTabsDirective, RibbonContextualTabDirective, Inject } from "@syncfusion/ej2-react-ribbon";
 
 function App() {
     return (
@@ -57,5 +56,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />, document.getElementById("element"));
-
-{% endraw %}

@@ -33,6 +33,7 @@ System.config({
         "@syncfusion/ej2-ribbon": "syncfusion:ej2-ribbon/dist/ej2-ribbon.umd.min.js",
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-ribbon": "syncfusion:ej2-react-ribbon/dist/ej2-react-ribbon.umd.min.js",
+        "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
     },
