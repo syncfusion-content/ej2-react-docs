@@ -37,7 +37,7 @@ The current locale can be changed for all the Syncfusion React UI Components in 
 import {L10n, setCulture} from '@syncfusion/ej2-base';
 L10n.load({
     'fr-BE': {
-       'grid': {
+       'Grid': {
              'EmptyRecord': 'Aucun enregistrement à afficher',
              'InvalidFilterMessage':'Données de filtrage invalides',
               'UnGroup': 'Cliquez ici pour dégrouper '
