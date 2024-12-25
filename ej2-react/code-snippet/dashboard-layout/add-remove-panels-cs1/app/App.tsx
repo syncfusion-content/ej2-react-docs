@@ -23,7 +23,7 @@ function App() {
     let colsObj:NumericTextBoxComponent;
     let paneObj:DropDownListComponent;
     // Adding new panels for DashboardLayout
-    function onAdd(args) {
+    function onAdd() {
         //let proxy = this;
         let panel = [{
                 'id': count.toString() + '_layout', 'sizeX': sizeXObj.value, 'sizeY': sizeYObj.value, 'row': rowObj.value, 'col': colsObj.value,
@@ -33,8 +33,10 @@ function App() {
         count = count + 1;
     }
     // Removeing selected panels for DashboardLayout
-    function onRemove(args) {
-        (dashboardObj as any).removePanel(paneObj.value.toString());
+    function onRemove() {
+        if (paneObj.value) {
+            (dashboardObj as any).removePanel(paneObj.value.toString());
+        }
     }
         return (<div id='container'>
         <div className="inline" id="control">

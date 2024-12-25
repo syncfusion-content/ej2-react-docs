@@ -38,7 +38,7 @@ function App() {
 
     return (
         <div>
-            <button onClick={updateCollection}>add/remove Class</button>
+            <button className="e-btn" onClick={updateCollection}>add/remove Class</button>
             <SpreadsheetComponent
                 ref={spreadsheetRef} actionComplete={onActionComplete} >
                 <SheetsDirective>

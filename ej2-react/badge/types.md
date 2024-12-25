@@ -14,7 +14,7 @@ This section explains different styles and types of the badges.
 
 ## Badge styles
 
-The Essential JS 2 Badge has the following predefined styles that can be used with `.e-badge` class to change the appearance of a badge.
+The Essential JS 2 Badge component offers the following predefined styles that can be used with the `.e-badge` class to change the appearance of a badge.
 
 | Class Name        | Description
 | :-------------    |:-------------
@@ -46,7 +46,7 @@ The Essential JS 2 Badge has the following predefined styles that can be used wi
 
 ## Badge types
 
-The types of Essential JS 2 badges are as follows:
+The types of Essential JS 2 Badge component are as follows:
 
 * Circle
 * Pill
@@ -100,7 +100,7 @@ The pill badge style can be applied by adding the modifier class `.e-badge-pill`
 
 ### Link
 
-When badge modifier classes are applied to the anchor tag, the badge’s appearance will change from normal state to hover state on mouseover.
+When badge modifier classes are applied to an anchor tag, the badge's appearance will change from its normal state to a hover state on mouseover.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Dashboard Layout component
 
-The Dashboard Layout component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Dashboard Layout component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Dashboard Layout component is outlined below.
 
@@ -40,7 +40,7 @@ The accessibility compliance for the Dashboard Layout component is outlined belo
 
 ## WAI-ARIA attributes
 
-The Dashboard Layout component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) patterns to meet the accessibility. The following ARIA attributes are used in the Dashboard Layout component:
+The Dashboard Layout component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) patterns to meet the accessibility. The following ARIA attributes are used in the Dashboard Layout component:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
@@ -55,9 +55,9 @@ Keyboard support is not applicable for the Dashboard Layout.
 
 ## Ensuring accessibility
 
-The Dashboard Layout component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Dashboard Layout component's accessibility levels are ensured through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Dashboard Layout component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/dashboard-layout.html) in a new window to evaluate the accessibility of the Dashboard Layout component with accessibility tools.
+The accessibility compliance of the Dashboard Layout component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/dashboard-layout.html) in a new window to evaluate the accessibility of the Dashboard Layout component using accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/dashboard-layout.html" %}
 
