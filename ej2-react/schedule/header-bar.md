@@ -30,7 +30,31 @@ By default, the header bar holds the date and view navigation options, through w
         
 {% previewsample "page.domainurl/code-snippet/schedule/timescale-cs1" %}
 
-## Customizing header bar
+## Customizing header bar using template
+
+Apart from the default date navigation and view options available on the header bar, you can add custom items into the Scheduler header bar by making use of the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/schedule/#toolbaritems) property. To display the default items, it's essential to assign a [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/toolbarItem/#name) field to each item. The names of the default items are `Previous`, `Next`, `Today`, `DateRangeText`, `NewEvent`, and `Views`. For custom items you can give the name as `Custom` to the `name` field. Here, the default items such as previous, next, date range text, and today have been used along with dropdownlist as custom items.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/schedule/header-bar-cs3/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/schedule/header-bar-cs3/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/header-bar-cs3/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="datasource.jsx" %}
+{% include code-snippet/schedule/header-bar-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight html tabtitle="datasource.tsx" %}
+{% include code-snippet/schedule/header-bar-cs3/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/schedule/header-bar-cs1" %}
+
+## Customizing header bar using event
 
 Apart from the default date navigation and view options available on the header bar, you can add custom items into the Scheduler header bar by making use of the `actionBegin` event. Here, an employee image is added to the header bar, clicking on which will open the popup showing that person's short profile information.
 

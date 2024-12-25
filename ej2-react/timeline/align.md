@@ -23,6 +23,12 @@ In [Before](https://ej2.syncfusion.com/react/documentation/api/timeline/timeline
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/align/before/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/align/before/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/align/before/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/align/before" %}
@@ -37,6 +43,12 @@ In [After](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineA
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/align/after/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/align/after/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/align/after/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,6 +65,12 @@ In [Alternate](https://ej2.syncfusion.com/react/documentation/api/timeline/timel
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/align/alternate/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/align/alternate/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/align/alternate/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/align/alternate" %}
@@ -67,6 +85,12 @@ In [AlternateReverse](https://ej2.syncfusion.com/react/documentation/api/timelin
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/align/alternate-reverse/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/align/alternate-reverse/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/align/alternate-reverse/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -16,4 +16,4 @@ Avatars are icons or figures representing a particular person, used in popular m
 
 * **[Types](./types#avatar-types)** - Provided 2 types of Avatar.
 
-* **[Sizes](./types#avatar-size)** - Supports different sizes to adapt the various application scenario.
+* **[Sizes](./types#avatar-size)** - Supports different sizes to adapt to various application scenarios.

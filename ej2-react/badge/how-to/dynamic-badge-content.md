@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Dynamic badge content in React Badge component
 
-Badges in real-time needs to be updated dynamically based on the requirements. In this sample, using React `states`
-the badges content will be updated dynamically. Click the increment button to change the badge value.
+In real-time applications, badges often need to be updated dynamically based on requirements. In this sample, the badge content is updated dynamically using React `states`. Click the increment button to increase the badge value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

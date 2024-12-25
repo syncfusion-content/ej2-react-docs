@@ -32,7 +32,7 @@ You can use [`Create-react-app`](https://github.com/facebookincubator/create-rea
 npm install -g create-react-app
 ```
 
-Start a new project using create-react-app command as follows
+Start a new project using the create-react-app command as follows
 
 <div class='tsx'>
 

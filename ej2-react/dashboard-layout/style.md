@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Style in React Dashboard layout component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preferences.
 
-## Customizing the dashboard layout panel header
+## Customizing the Dashboard layout panel header
 
 Use the following CSS to customize the dashboard layout panel header.
 
@@ -24,7 +24,7 @@ Use the following CSS to customize the dashboard layout panel header.
 }
 ```
 
-## Customizing the dashboard layout panel content
+## Customizing the Dashboard layout panel content
 
 Use the following CSS to customize the dashboard layout panel content.
 
@@ -35,7 +35,7 @@ Use the following CSS to customize the dashboard layout panel content.
 }
 ```
 
-## Customizing the dashboard layout panel resize icon
+## Customizing the Dashboard layout panel resize icon
 
 Use the following CSS to customize the dashboard layout resize icon.
 
@@ -48,7 +48,7 @@ Use the following CSS to customize the dashboard layout resize icon.
 }
 ```
 
-## Customizing the dashboard layout panel background
+## Customizing the Dashboard layout panel background
 
 Use the following CSS to customize the dashboard layout panel background.
 
@@ -58,4 +58,4 @@ Use the following CSS to customize the dashboard layout panel background.
 }
 ```
 
-> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to knows how to present and manipulate data.
+> You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-ui-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/material/dashboard-layout/default) to learn how to present and manipulate data.

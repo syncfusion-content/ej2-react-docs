@@ -23,6 +23,12 @@ You can display the items one below the other vertically by setting the [orienta
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/orientations/vertical/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/orientations/vertical/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/orientations/vertical/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/timeline/orientations/vertical" %}
@@ -37,6 +43,12 @@ In horizontal orientation, the items are displayed in a side-by-side manner by s
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/timeline/orientations/horizontal/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/timeline/orientations/horizontal/index.css %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/timeline/orientations/horizontal/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

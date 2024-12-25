@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Color customization
 
-Even though badges come with `8 predefined colors`, you can also customize the color of the badge as desired.
+Even though badges come with `8 pre-defined colors`, you can also customize the color of the badge as desired.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,8 +33,7 @@ Even though badges come with `8 predefined colors`, you can also customize the c
 
 ## Customize badge size
 
-Badges are designed to change its size based on the content. To change the size of a badge, adjust the
-`font size` of the badge.
+Badges are designed to adjust their size based on the content. To change the size of a badge, adjust the `font-size` of the badge.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -55,7 +54,7 @@ Badges are designed to change its size based on the content. To change the size 
 
 ## Custom position
 
-Even though the badges support the conventional `top` and `bottom` positions, the position of the badges can be changed as desired.This can be done by adding a custom class to the badge element to override the default position applied from the source.
+Even though the badges support the conventional `top` and `bottom` positions, the position of the badges can be changed as desired.This can be achieved by adding a custom class to the badge element to override the default position applied from the source.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
