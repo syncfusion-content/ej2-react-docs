@@ -27,6 +27,9 @@ The following sample demonstrates how to save and restore the state of the panel
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/state-maintenance-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/state-maintenance-cs1/App.css %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/state-maintenance-cs1/index.html %}
 {% endhighlight %}

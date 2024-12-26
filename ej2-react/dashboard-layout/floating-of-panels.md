@@ -27,6 +27,12 @@ The following sample demonstrates how to enable or disable the floating of panel
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/floating-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/floating-cs1/App.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dashboard-layout/floating-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/floating-cs1" %}

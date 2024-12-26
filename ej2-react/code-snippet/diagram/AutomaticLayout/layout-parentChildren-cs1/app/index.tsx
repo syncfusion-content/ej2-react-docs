@@ -69,7 +69,7 @@ export default function App() {
 
   return (
     <div>
-      <div style={{ height: "600px", width: "250px", float: "left" }}>
+      <div style={{ height: "600px", width: "30%", float: "left" }}>
         <SymbolPaletteComponent
           id='symbolPalette'
           width={'100%'}
@@ -79,7 +79,7 @@ export default function App() {
 
       <DiagramComponent
         id="container"
-        width={'80%'}
+        width={'70%'}
         height={'550px'}
         ref={(diagram: any) => (diagramInstance = diagram)}
         // Event Triggers when a symbol is dragged and dropped from symbol palette

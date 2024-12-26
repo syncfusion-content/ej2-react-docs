@@ -29,6 +29,9 @@ The following sample demonstrates the usage of the [mediaQuery](https://ej2.sync
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/responsive-adaptive-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/responsive-adaptive-cs1/App.css %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/responsive-adaptive-cs1/index.html %}
 {% endhighlight %}

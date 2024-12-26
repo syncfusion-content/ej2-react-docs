@@ -34,6 +34,9 @@ The following sample demonstrates dragging and pushing of panels. For example, w
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/drag-pushing-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/drag-pushing-cs1/App.css %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/drag-pushing-cs1/index.html %}
 {% endhighlight %}
@@ -60,6 +63,9 @@ The following sample demonstrates customizing the dragging handler of the panels
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/draggable-handler-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/draggable-handler-cs1/App.css %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/draggable-handler-cs1/index.html %}
 {% endhighlight %}
@@ -85,6 +91,9 @@ The following sample demonstrates Dashboard Layout with dragging support disable
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/disable-dragging-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/draggable-handler-cs1/App.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/disable-dragging-cs1/index.html %}
