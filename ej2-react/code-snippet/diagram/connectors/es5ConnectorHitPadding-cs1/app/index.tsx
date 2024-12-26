@@ -3,7 +3,6 @@ import * as ReactDOM from "react-dom";
 import {
     Diagram,
     DiagramComponent,
-    NodeModel,
     ConnectorModel,ConnectorConstraints,ConnectorEditing
 } from "@syncfusion/ej2-react-diagrams";
 Diagram.Inject(ConnectorEditing);

@@ -35,6 +35,9 @@ The following sample demonstrates how to modify cell size using the [columns](ht
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/modifying-cell-size-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/modifying-cell-size-cs1/App.css %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/modifying-cell-size-cs1/index.html %}
 {% endhighlight %}
@@ -60,6 +63,9 @@ The following sample demonstrates the usage of the [cellSpacing](https://ej2.syn
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/setting-cell-spacing-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/setting-cell-spacing-cs1/App.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/setting-cell-spacing-cs1/index.html %}
@@ -87,6 +93,9 @@ In the following sample, the gridlines indicate the cells split-up of the layout
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/graphical-layout-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/graphical-layout-cs1/App.css %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/graphical-layout-cs1/index.html %}
 {% endhighlight %}
@@ -112,6 +121,9 @@ The following sample demonstrates Dashboard Layout in right-to-left direction.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/rtl-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/rtl-cs1/App.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/rtl-cs1/index.html %}

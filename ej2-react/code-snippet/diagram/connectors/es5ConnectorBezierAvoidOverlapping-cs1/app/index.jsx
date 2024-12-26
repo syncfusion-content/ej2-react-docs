@@ -11,7 +11,7 @@ let nodes = [{
     },
     {
         id: 'End',
-        offsetX: 350,
+        offsetX: 450,
         offsetY: 200,
         annotations: [{ content: 'End' }],
     
