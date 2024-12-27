@@ -18,7 +18,7 @@ function App() {
     function valueTemplate(data) {
         return (<div><span className="ename"> {data.name} - </span><span className="ejob"> {data.job} </span></div>);
     }
-    return (<DropDownTreeComponent fields={fields} placeholder="Select an employee" valueTemplate={valueTemplate} popupHeight="270px" cssClass="custom" width="100%"/>);
+    return (<DropDownTreeComponent fields={fields} placeholder="Select an employee" valueTemplate={valueTemplate} popupHeight="270px" cssClass="custom" width="100%" />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

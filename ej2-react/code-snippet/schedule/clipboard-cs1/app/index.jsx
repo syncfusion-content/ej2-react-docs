@@ -17,7 +17,7 @@ const App = () => {
       <div className='control-section'>
         <div className='control-wrapper'>
           <ScheduleComponent height='550px' ref={scheduleObj} selectedDate={new Date(2024, 1, 15)} eventSettings={eventSettings}
-          allowClipboard={true} showQuickInfo={false} >
+            allowClipboard={true} showQuickInfo={false} >
             <ViewsDirective>
               <ViewDirective option='Day' />
               <ViewDirective option='Week' />

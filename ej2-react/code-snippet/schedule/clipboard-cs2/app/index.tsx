@@ -1,10 +1,9 @@
-import { useRef, useState, useMemo, useEffect } from 'react';
+import { useRef } from 'react';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { closest, isNullOrUndefined, remove, removeClass } from '@syncfusion/ej2-base';
-import { Query, DataManager } from '@syncfusion/ej2-data';
+import { closest, isNullOrUndefined, remove } from '@syncfusion/ej2-base';
 import {
-  ScheduleComponent, ViewsDirective, ViewDirective, CellClickEventArgs,
+  ScheduleComponent, ViewsDirective, ViewDirective,
   Day, Week, WorkWeek, Month, Agenda, Inject
 } from '@syncfusion/ej2-react-schedule';
 import { BeforeOpenCloseMenuEventArgs, MenuEventArgs, MenuItemModel, ContextMenuComponent } from '@syncfusion/ej2-react-navigations';
@@ -61,7 +60,6 @@ const App = () => {
         break;
     }
   }
-
 
   return (
     <div className='schedule-control-section'>

@@ -113,6 +113,9 @@ The following example shows a basic Chip component.
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/default-cs2/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/default-cs2/index.css %}
+{% endhighlight %}
 {% highlight js tabtitle="index.html" %}
 {% include code-snippet/chips/default-cs2/index.html %}
 {% endhighlight %}

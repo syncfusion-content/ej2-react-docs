@@ -10,21 +10,18 @@ enableRipple(true);
 
 // To render Chip.
 function App() {
-  function chipClick(e: any) {
-    alert('you have clicked ' + e.target.textContent);
-  }
   return (
-      <ChipListComponent id="chip-avatar" enableDelete={true}>
-          <ChipsDirective>
-              <ChipDirective text="Send a text"></ChipDirective>
-              <ChipDirective text="Set a remainder"></ChipDirective>
-              <ChipDirective text="Read my emails"></ChipDirective>
-              <ChipDirective text="Set alarm"></ChipDirective>
-          </ChipsDirective>
-      </ChipListComponent>
+    <ChipListComponent id="chip-avatar" enableDelete={true}>
+      <ChipsDirective>
+        <ChipDirective text="Send a text"></ChipDirective>
+        <ChipDirective text="Set a remainder"></ChipDirective>
+        <ChipDirective text="Read my emails"></ChipDirective>
+        <ChipDirective text="Set alarm"></ChipDirective>
+      </ChipsDirective>
+    </ChipListComponent>
   );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('chip'));
+ReactDom.render(<App />, document.getElementById('chip'));
 
 

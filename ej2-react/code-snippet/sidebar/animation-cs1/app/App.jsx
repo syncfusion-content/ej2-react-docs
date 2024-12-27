@@ -1,5 +1,6 @@
 {% raw %}
 import * as React from 'react';
+import './index.css';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
 function App() {

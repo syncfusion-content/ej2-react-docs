@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Alignment in React Timeline component
 
-You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [align](https://ej2.syncfusion.com/react/documentation/api/timeline#align) property. The oppositeContent will be displayed parallel to the content when configured in the `ItemDirective`.
+You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [align](https://ej2.syncfusion.com/react/documentation/api/timeline/#align) property. The oppositeContent will be displayed parallel to the content when configured in the `ItemDirective`.
 
 ## Before
 
