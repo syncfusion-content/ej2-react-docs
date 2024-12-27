@@ -34,6 +34,12 @@ The following sample demonstrates how to enable and disable the resizing of pane
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/resizing-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/resizing-cs1/App.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dashboard-layout/resizing-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/resizing-cs1" %}
@@ -66,6 +72,9 @@ The following sample demonstrates how to resize panels programmatically in the D
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/resize-programmatically-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/resize-programmatically-cs1/App.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/resize-programmatically-cs1/index.html %}

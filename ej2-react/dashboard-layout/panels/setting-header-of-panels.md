@@ -27,6 +27,9 @@ The following sample demonstrates how to add content and headers for each panel 
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/header-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/header-cs1/App.css %}
+{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/header-cs1/index.html %}
 {% endhighlight %}
@@ -52,6 +55,9 @@ The following sample demonstrates how to add EJ2 Chart components as the [conten
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dashboard-layout/header-content-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.css" %}
+{% include code-snippet/dashboard-layout/header-content-cs1/App.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/header-content-cs1/index.html %}
