@@ -167,6 +167,12 @@ The following sample, shows the basic Sidebar component.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/default-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/sidebar/default-cs1/style.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/sidebar/default-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/sidebar/default-cs1" %}
@@ -192,6 +198,12 @@ N> To achieve a proper **backdrop**, we suggest that you create a wrapper parent
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/backdrop-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/backdrop-cs1/style.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/sidebar/backdrop-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/sidebar/backdrop-cs1" %}
@@ -212,6 +224,12 @@ Positioning the Sidebar to the right or left of the main content can be achieved
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/types-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/sidebar/types-cs1/style.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/sidebar/types-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -234,6 +252,12 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/animate-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/animate-cs1/style.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/sidebar/animate-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/sidebar/animate-cs1" %}
@@ -255,6 +279,12 @@ Sidebar can be closed on document click by setting [`closeOnDocumentClick`](http
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/document-click-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/document-click-cs1/style.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/sidebar/document-click-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/sidebar/document-click-cs1" %}
@@ -275,6 +305,12 @@ Expand or collapse the Sidebar while swiping in touch devices using `enableGestu
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/gestures-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/gestures-cs1/style.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/sidebar/gestures-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

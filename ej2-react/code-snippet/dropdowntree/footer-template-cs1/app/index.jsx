@@ -15,10 +15,10 @@ function App() {
         { "id": 9, "pid": 1, "name": "Janet Leverling", "job": "HR" }
     ];
     let fields = { dataSource: data, value: 'id', text: 'name', parentValue: "pid", hasChildren: 'hasChild' };
-    function footerTemplate(data) {
-        return (<div class='foot'> Total number of employees: 10 </div>);
+    function footerTemplate() {
+        return (<div className='foot'> Total number of employees: 10 </div>);
     }
-    return (<DropDownTreeComponent fields={fields} placeholder="Select an employee" footerTemplate={footerTemplate} popupHeight="270px" cssClass="custom"/>);
+    return (<DropDownTreeComponent fields={fields} placeholder="Select an employee" footerTemplate={footerTemplate} popupHeight="270px" cssClass="custom" />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

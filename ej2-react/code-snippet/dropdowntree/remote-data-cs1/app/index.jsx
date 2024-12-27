@@ -15,8 +15,8 @@ function App() {
         child: { dataSource: data, query: query1, value: 'OrderID', parentValue: 'EmployeeID', text: 'ShipName' }
     };
     return (
-    // specifies the tag for render the DropDownTree component
-    <DropDownTreeComponent id="dropdowntree" fields={fields}/>);
+        // specifies the tag for render the DropDownTree component
+        <DropDownTreeComponent id="dropdowntree" fields={fields} />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

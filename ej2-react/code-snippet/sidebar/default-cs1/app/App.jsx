@@ -1,6 +1,7 @@
 {% raw %}
 import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
+import './index.css';
 function App() {
     let sidebarObj;
     function onCreate() {

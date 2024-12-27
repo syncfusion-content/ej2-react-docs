@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style in React Chips component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content provides the exact CSS structure that can be used to modify the component's appearance based on user preferences.
 
 ## Customizing the chip text
 
@@ -37,7 +37,7 @@ Use the following CSS to customize the chip icon properties.
 
 ## Customizing the chip delete button
 
-Use the following CSS to customize the chip delete button.
+Use the following CSS to customize the chip delete button appearance.
 
 ```css
 .e-chip-list .e-chip .e-chip-delete.e-dlt-btn {

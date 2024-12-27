@@ -44,6 +44,8 @@ To use these shortcuts, simply click on the appointment and press **Ctrl+C** to 
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/schedule/clipboard-cs1" %}
+
 >Note: For Mac users, use **Cmd** instead of **Ctrl** for copy, cut, and paste operations.
 
 ## Cut, copy, and paste using context menu
@@ -75,6 +77,8 @@ By using these methods, you can programmatically cut, copy, and paste appointmen
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/schedule/clipboard-cs2" %}
+
 ## Modifying Content before pasting
 
 You can modify the content of an appointment before pasting it by using [`beforePaste`](https://ej2.syncfusion.com/react/documentation/api/schedule/#beforepaste) event accessing the appointment details and making necessary changes.
@@ -105,5 +109,6 @@ In this example, the `beforePaste` event can be utilized to intercept the event 
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/schedule/clipboard-cs3" %}
 
 >  You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.

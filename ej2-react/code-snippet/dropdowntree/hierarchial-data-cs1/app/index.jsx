@@ -55,8 +55,8 @@ function App() {
     ];
     let fields = { dataSource: data, value: 'code', text: 'name', child: 'countries' };
     return (
-    // specifies the tag for render the DropDownTree component
-    <DropDownTreeComponent id="dropdowntree" fields={fields}/>);
+        // specifies the tag for render the DropDownTree component
+        <DropDownTreeComponent id="dropdowntree" fields={fields} />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

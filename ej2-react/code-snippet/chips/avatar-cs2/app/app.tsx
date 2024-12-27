@@ -9,18 +9,18 @@ enableRipple(true);
 
 // To render Chip.
 function App() {
-  return (
-      <ChipListComponent id="chip-avatar">
-          <ChipsDirective>
-              <ChipDirective text="Andrew" leadingIconCss='andrew'></ChipDirective>
-              <ChipDirective text="Janet" leadingIconCss='janet'></ChipDirective>
-              <ChipDirective text="Laura" leadingIconCss='laura'></ChipDirective>
-              <ChipDirective text="Margaret" leadingIconCss='margaret'></ChipDirective>
-          </ChipsDirective>
-      </ChipListComponent>
-  );
+    return (
+        <ChipListComponent id="chip-avatar">
+            <ChipsDirective>
+                <ChipDirective text="Andrew" leadingIconCss='andrew'></ChipDirective>
+                <ChipDirective text="Janet" leadingIconCss='janet'></ChipDirective>
+                <ChipDirective text="Laura" leadingIconCss='laura'></ChipDirective>
+                <ChipDirective text="Margaret" leadingIconCss='margaret'></ChipDirective>
+            </ChipsDirective>
+        </ChipListComponent>
+    );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('chip'));
+ReactDom.render(<App />, document.getElementById('chip'));
 
 

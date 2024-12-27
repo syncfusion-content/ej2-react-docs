@@ -30,8 +30,8 @@ function App() {
     ];
     let fields = { dataSource: data, value: 'id', text: 'name', parentValue: "pid", hasChildren: 'hasChild' };
     return (
-    // specifies the tag for render the DropDownTree component
-    <DropDownTreeComponent id="dropdowntree" fields={fields} showCheckBox={true}/>);
+        // specifies the tag for render the DropDownTree component
+        <DropDownTreeComponent id="dropdowntree" fields={fields} showCheckBox={true} />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
