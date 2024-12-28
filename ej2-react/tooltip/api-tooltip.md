@@ -23,7 +23,7 @@ Represents the Tooltip component that displays a piece of information about the 
 
 ## Properties
 
-### animation [`AnimationModel`](https://ej2.syncfusion.com/react/documentation/api-animationModel.html)
+### animation [`AnimationModel`](https://ej2.syncfusion.com/react/documentation/tooltip/api-tooltip#animation-model.html)
 
 We can set the same or different animation option to Tooltip while it is in open or close state. Refer the documentation {@link http://ej2.syncfusion.com/documentation/tooltip/animation.html?lang=typescript here} to know more about this property with demo.
 
