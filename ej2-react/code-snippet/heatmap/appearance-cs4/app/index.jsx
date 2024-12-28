@@ -1,7 +1,7 @@
 {% raw %}
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
-import { HeatMapComponent } from '@syncfusion/ej2-react-heatmap';
+import { HeatMapComponent, Inject, Tooltip } from '@syncfusion/ej2-react-heatmap';
 export function App() {
     var heatmapData = [
        [73, 39, 26, 39, 94, 0],
@@ -48,9 +48,9 @@ export function App() {
         yAxis={{
           labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat']
         }}
-        dataSource={heatmapData}
-      >
-      </HeatMapComponent>
+        dataSource={heatmapData}>
+            <Inject services={[Tooltip]} />
+            </HeatMapComponent> 
     );
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));

@@ -9,19 +9,14 @@ export function App() {
         <MapsComponent >
         <Inject services={[DataLabel]} />
             <LayersDirective>
-                    <LayerDirective shapeData={usa_map} shapePropertyPath="name" shapeDataPath="Name"
-                                    dataSource ={ [
-                                        { "Name": "Iowa", "Population": "29863010" },
-                                        { "Name": "Utah", "Population": "1263010" },
-                                        { "Name": "Texas"," Population": "963010" }
-                                    ] }
+                    <LayerDirective shapeData={usa_map}
                                     shapeSettings= {{
                                         autofill: true
                                     }}
                                     dataLabelSettings={ {
                                         visible: true,
                                         labelPath:'Name',
-                                        template: '<div><div><img src="https://ej2.syncfusion.com/demos/src/maps/images/weather-clear.png" style="width:22px;height:22px"> </div> ${Name}</img></div>'
+                                        template: '<div><div><img src="https://ej2.syncfusion.com/demos/src/maps/images/weather-clear.png" style="width:22px;height:22px"> </div> ${name}</img></div>'
                                     } }>
                     </LayerDirective>
             </LayersDirective>
