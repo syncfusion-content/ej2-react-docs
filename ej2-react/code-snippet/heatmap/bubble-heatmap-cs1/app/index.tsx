@@ -3,7 +3,7 @@
 
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
-import { HeatMapComponent, Inject, Legend, Adaptor } from '@syncfusion/ej2-react-heatmap';
+import { HeatMapComponent, Inject, Legend, Tooltip, Adaptor } from '@syncfusion/ej2-react-heatmap';
 export function App() {
     let heatmapData: any[] = [
         [73, 39, 26, 39, 94, 0],
@@ -56,7 +56,7 @@ export function App() {
             showLabel: false
         }}
         dataSource={heatmapData}>
-        <Inject services={[Legend, Adaptor]} />
+        <Inject services={[Legend, Tooltip, Adaptor]} />
     </HeatMapComponent>);
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));

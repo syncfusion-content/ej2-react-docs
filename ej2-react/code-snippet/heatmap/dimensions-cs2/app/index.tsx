@@ -42,7 +42,8 @@ return ( <HeatMapComponent
             showLabel: true,
         } }
         dataSource={heatmapData}>
-        </HeatMapComponent> );
+            <Inject services={[Tooltip]} />
+            </HeatMapComponent> );
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
 root.render(<App />);

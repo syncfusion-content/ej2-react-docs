@@ -364,6 +364,12 @@ npm start
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs8/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs8/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs8/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs8" %}

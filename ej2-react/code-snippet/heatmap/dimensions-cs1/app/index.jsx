@@ -38,6 +38,7 @@ export function App() {
                 labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
             } }
             dataSource={heatmapData}>
+            <Inject services={[Tooltip]} />
             </HeatMapComponent> );
 }
 const root = ReactDOM.createRoot(document.getElementById('container'));
