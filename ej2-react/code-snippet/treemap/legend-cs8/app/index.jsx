@@ -28,6 +28,10 @@ class App extends React.Component {
                         to: 4000,
                         color: 'green',
                         showLegend: false
+                    },
+                    {
+                        color:'red',
+                        showLegend: true
                     }
                 ]
             }}>
@@ -35,5 +39,7 @@ class App extends React.Component {
     </TreeMapComponent>);
     }
 }
-ReactDOM.render(<App />, document.getElementById('treemap'));
+const root = ReactDOM.createRoot(document.getElementById('container'));
+root.render(<App />);
+
 {% endraw %}
