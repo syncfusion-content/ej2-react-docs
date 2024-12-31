@@ -28,6 +28,7 @@ export default function App() {
     let container = new StackPanel();
     container.width = 200;
     container.height = 60;
+    container.cornerRadius = 10;
     container.style.fill = 'skyblue';
     container.horizontalAlignment = 'Left';
     container.orientation = 'Horizontal';
