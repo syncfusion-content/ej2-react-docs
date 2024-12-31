@@ -126,6 +126,21 @@ let undoStack = diagramInstance.historyManager.undoStack;
 let redoStack = diagramInstance.historyManager.redoStack;
 ```
 
+## canUndo/canRedo 
+
+The [`canUndo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#canundo) property returns true if there are actions in the undo history stack; otherwise, it returns false. This property helps identify whether any actions are present in the undo stack.The [`canRedo`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#canredo) property returns true if there are actions in the redo history stack; otherwise, it returns false. This property helps identify whether any actions are present in the redo stack.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/undoredo/es5Undo-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/undoredo/es5Undo-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/undoredo/es5CurrentEntry-cs1" %}
+
 ## Current entry
 
 While performing interactions with a node or connector, the current history entry is added to the [`currentEntry`](https://helpej2.syncfusion.com/react/documentation/api/diagram/history/#currententry) property of the [`historyManager`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#historymanager).
