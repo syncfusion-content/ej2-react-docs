@@ -18,10 +18,10 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} height="350px" uploadSettings = {this.uploadSettings}>
+        <ImageEditorComponent ref={(img) => { imgObj = img }} height="350px" uploadSettings = {uploadSettings}>
         </ImageEditorComponent>
                 <div>
-                    <ButtonComponent cssClass='e-primary' content='Load Invalid Image' onClick = {this.loadInvalidImage.bind(this)}/>
+                    <ButtonComponent cssClass='e-primary' content='Load Invalid Image' onClick = {loadInvalidImage}/>
                 </div>
             </div>
     );

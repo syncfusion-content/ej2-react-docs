@@ -21,6 +21,23 @@ To enable directory upload, set the `directoryUpload` property to `true` in the 
 
 When set to `true`, this property enables directory upload in the File Manager, allowing users to upload entire folders. If set to `false`, only individual files can be uploaded. 
 
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/upload/directory-upload/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/upload/directory-upload/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/upload/directory-upload/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/upload/directory-upload/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/directory-upload" %}
+
 >Note: When `directoryUpload` is set to `true`, only folders can be uploaded. When it is set to `false`, only individual files can be uploaded. Simultaneous uploading of files and folders is not supported.
 
 To learn more about the folder upload actions, refer to this [link](https://ej2.syncfusion.com/react/documentation/file-manager/file-operations#folder-upload-support)
@@ -35,33 +52,22 @@ By specifying a `chunkSize`, the large file is divided into smaller parts, reduc
 
 In the following example, the chunkSize is set to 5 MB (5,242,880 bytes), and the maxFileSize is set to 70 MB (73,728,000 bytes). This means files that are up to 70 MB will be uploaded in 5 MB chunks.
 
-`[src/App.tsx]`
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/upload/chunk-upload/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/upload/chunk-upload/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/upload/chunk-upload/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/upload/chunk-upload/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-{% raw %}
-
-```ts
-import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
-import * as React from 'react';
-
-function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
-  return (
-    <div className="control-section">
-      <FileManagerComponent id="file" view="LargeIcons" created={onCreated.bind(this)}
-        ajaxSettings={{
-          downloadUrl: hostUrl + 'api/FileManager/Download',
-          getImageUrl: hostUrl + "api/FileManager/GetImage",
-          uploadUrl: hostUrl + 'api/FileManager/Upload',
-          url: hostUrl + "api/FileManager/FileOperations"
-        }} uploadSettings={{ chunkSize: 5242880, maxFileSize: 73728000 }}>
-        <Inject services={[NavigationPane, DetailsView, Toolbar]} />
-      </FileManagerComponent>
-    </div>
-  );
-}
-export default App;
-```
-{% endraw %}
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/chunk-upload" %}
 
 With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
 
@@ -77,33 +83,22 @@ The [autoUpload](https://ej2.syncfusion.com/react/documentation/api/file-manager
 
 The default value is `true`, the File Manager will automatically upload files as soon as they are added to the upload queue. If set to `false`, the files will not be uploaded automatically, giving you the chance to manipulate the files before uploading them to the server.
 
-`[src/App.tsx]`
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/upload/auto-upload/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/upload/auto-upload/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/upload/auto-upload/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/upload/auto-upload/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-{% raw %}
-
-```ts
-import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
-import * as React from 'react';
-
-function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
-  return (
-    <div className="control-section">
-      <FileManagerComponent id="file" view="LargeIcons" created={onCreated.bind(this)}
-        ajaxSettings={{
-          downloadUrl: hostUrl + 'api/FileManager/Download',
-          getImageUrl: hostUrl + "api/FileManager/GetImage",
-          uploadUrl: hostUrl + 'api/FileManager/Upload',
-          url: hostUrl + "api/FileManager/FileOperations"
-        }} uploadSettings={{ autoUpload: false }}>
-        <Inject services={[NavigationPane, DetailsView, Toolbar]} />
-      </FileManagerComponent>
-    </div>
-  );
-}
-export default App;
-```
-{% endraw %}
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/auto-upload" %}
 
 ## Auto Close
 
@@ -111,33 +106,23 @@ The [autoClose](https://ej2.syncfusion.com/react/documentation/api/file-manager/
 
 The default value is set to `false`, the upload dialog remains open even after the upload process is complete. If `autoClose` set to `true`, the upload dialog will automatically close after all the files in the upload queue are uploaded.
 
-`[src/App.tsx]`
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/upload/auto-close/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/upload/auto-close/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/upload/auto-close/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/upload/auto-close/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```ts
-import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
-import * as React from 'react';
-
-function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
-  return (
-    <div className="control-section">
-      <FileManagerComponent id="file" view="LargeIcons" created={onCreated.bind(this)}
-        ajaxSettings={{
-          downloadUrl: hostUrl + 'api/FileManager/Download',
-          getImageUrl: hostUrl + "api/FileManager/GetImage",
-          uploadUrl: hostUrl + 'api/FileManager/Upload',
-          url: hostUrl + "api/FileManager/FileOperations"
-        }} uploadSettings={{ autoClose: false }}>
-        <Inject services={[NavigationPane, DetailsView, Toolbar]} />
-      </FileManagerComponent>
-    </div>
-  );
-}
-export default App;
-```
-{% endraw %}
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/auto-close" %}
 
 ## Prevent upload based on file extensions
 
@@ -149,33 +134,23 @@ By setting the `allowedExtensions` property, you restrict the file types that ca
 
 If you want to allow only image files like .jpg and .png, you would set the property as follows:
 
-`[src/App.tsx]`
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/file-manager/upload/prevent-upload/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/file-manager/upload/prevent-upload/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/file-manager/upload/prevent-upload/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/file-manager/upload/prevent-upload/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-```ts
-import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
-import * as React from 'react';
-
-function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
-  return (
-    <div className="control-section">
-      <FileManagerComponent id="file" view="LargeIcons" created={onCreated.bind(this)}
-        ajaxSettings={{
-          downloadUrl: hostUrl + 'api/FileManager/Download',
-          getImageUrl: hostUrl + "api/FileManager/GetImage",
-          uploadUrl: hostUrl + 'api/FileManager/Upload',
-          url: hostUrl + "api/FileManager/FileOperations"
-        }} uploadSettings={{ allowedExtensions: '.jpg,.png' }}>
-        <Inject services={[NavigationPane, DetailsView, Toolbar]} />
-      </FileManagerComponent>
-    </div>
-  );
-}
-export default App;
-```
-{% endraw %}
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/prevent-upload" %}
 
 ## Restrict drag and drop upload
 
@@ -187,55 +162,22 @@ To completely prevent the external drag-and-drop upload functionality (i.e., dis
 
 The following example demonstrates how to prevent the external drag and drop upload actions for all types of files in the File Manager component.
 
-`[src/App.tsx]`
-
-{% raw %}
-
-```ts
-import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
-import * as React from 'react';
-
-function App() {
-  let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
-  let fileObj: FileManagerComponent;
-  function onCreated(args: any) {
-    fileObj.uploadObj.dropArea = null;  // Restrict file uploads by dragging them from the local file system to the File Manager.
-  }
-  return (
-    <div className="control-section">
-      <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} id="file" view="LargeIcons" created={onCreated.bind(this)}
-        ajaxSettings={{
-          downloadUrl: hostUrl + 'api/FileManager/Download',
-          getImageUrl: hostUrl + "api/FileManager/GetImage",
-          uploadUrl: hostUrl + 'api/FileManager/Upload',
-          url: hostUrl + "api/FileManager/FileOperations"
-        }}>
-        <Inject services={[NavigationPane, DetailsView, Toolbar]} />
-      </FileManagerComponent>
-    </div>
-  );
-}
-export default App;
-```
-{% endraw %}
-
-
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/file-manager/upload-feature-cs1/app/App.jsx %}
+{% include code-snippet/file-manager/upload/upload-feature-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/file-manager/upload-feature-cs1/app/App.tsx %}
+{% include code-snippet/file-manager/upload/upload-feature-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/file-manager/upload-feature-cs1/app/index.jsx %}
+{% include code-snippet/file-manager/upload/upload-feature-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/file-manager/upload-feature-cs1/app/index.tsx %}
+{% include code-snippet/file-manager/upload/upload-feature-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/file-manager/upload-feature-cs1" %}
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/upload-feature-cs1" %}
 
 
 ## See also
