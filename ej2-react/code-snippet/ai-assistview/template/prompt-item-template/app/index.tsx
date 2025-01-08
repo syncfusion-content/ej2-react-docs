@@ -13,7 +13,7 @@ function App() {
                 <div class="prompt-header">You
                     <span class="e-icons e-user"></span>
                 </div>
-                <div class="prompt-content">${prompt}</div>
+                <div class="prompt-content">{prompt}</div>
             </div>
         );
     }; 
