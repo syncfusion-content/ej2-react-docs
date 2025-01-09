@@ -15,10 +15,10 @@ function App() {
         { "id": 9, "pid": 1, "name": "Janet Leverling", "job": "HR" }
     ];
     let fields = { dataSource: data, value: 'id', text: 'name', parentValue: "pid", hasChildren: 'hasChild' };
-    function headerTemplate(data) {
+    function headerTemplate() {
         return (<div className="head"> Employee List </div>);
     }
-    return (<DropDownTreeComponent fields={fields} placeholder="Select an employee" headerTemplate={headerTemplate} popupHeight="270px" cssClass="custom"/>);
+    return (<DropDownTreeComponent fields={fields} placeholder="Select an employee" headerTemplate={headerTemplate} popupHeight="270px" cssClass="custom" />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

@@ -31,8 +31,8 @@ function App() {
     let fields = { dataSource: data, value: 'id', text: 'name', parentValue: "pid", hasChildren: 'hasChild' };
     let treeSettings = { autoCheck: true };
     return (
-    // specifies the tag for render the DropDownTree component
-    <DropDownTreeComponent id="dropdowntree" fields={fields} showCheckBox={true} treeSettings={treeSettings}/>);
+        // specifies the tag for render the DropDownTree component
+        <DropDownTreeComponent id="dropdowntree" fields={fields} showCheckBox={true} treeSettings={treeSettings} />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

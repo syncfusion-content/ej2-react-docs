@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Types in React Chips component
 
-The ChipList control has the following types.
+The ChipList component has the following types.
 
 * Input Chip
 * Choice Chip
@@ -19,7 +19,7 @@ The ChipList control has the following types.
 
 ## Input Chip
 
-Input Chip holds information in compact form. It converts user input into chips.
+Input Chip holds information in compact form. It allows converting user input into chips.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -28,13 +28,19 @@ Input Chip holds information in compact form. It converts user input into chips.
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/default-cs3/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/default-cs3/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/chips/default-cs3/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs3" %}
 
 ## Choice Chip
 
-Choice Chip allows you to select a single chip from the set of ChipList/ChipCollection. It can be enabled by setting the `selection` property to `Single`.
+Choice Chip allows you to select a single chip from a set of ChipList/ChipCollection items. This can be enabled by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection/) property to `Single`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -43,13 +49,19 @@ Choice Chip allows you to select a single chip from the set of ChipList/ChipColl
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/default-cs4/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/default-cs4/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/chips/default-cs4/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs4" %}
 
 ## Filter Chip
 
-Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCollection. It can be enabled by setting the `selection` property to `Multiple`.
+Filter Chip allows you to select multiple chip from a set of ChipList/ChipCollection items. This can be enabled by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection/) property to `Multiple`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -58,13 +70,19 @@ Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCo
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/default-cs5/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/default-cs5/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/chips/default-cs5/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs5" %}
 
 ## Action Chip
 
-The Action Chip triggers the event like click or delete, which helps doing action based on the event.
+The Action Chip triggers events like click or delete, allowing actions to be performed based on these events.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -73,13 +91,19 @@ The Action Chip triggers the event like click or delete, which helps doing actio
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/default-cs6/app/app.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/default-cs6/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/chips/default-cs6/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/chips/default-cs6" %}
 
 ### Deletable Chip
 
-Deletable Chip allows you to delete a chip from ChipList/ChipCollection. It can be enabled by setting the `enableDelete` property to `true`.
+Deletable Chip allows users to delete a chip from ChipList/ChipCollection. This feature can be enabled by setting the [enableDelete](https://ej2.syncfusion.com/react/documentation/api/chips/#enabledelete) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -87,6 +111,12 @@ Deletable Chip allows you to delete a chip from ChipList/ChipCollection. It can 
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/chips/default-cs7/app/app.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/chips/default-cs7/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/chips/default-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

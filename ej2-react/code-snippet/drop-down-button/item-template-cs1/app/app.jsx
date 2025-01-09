@@ -45,13 +45,20 @@ function App() {
             }
         </div>
     `; 
+  const template = `
+        <div>
+            <span class='e-menu-icon ${'${iconCss}'}'></span>
+            ${
+                '${url}' 
+                ? `<span class='custom-class'><a href='${'${url}'}' target='_blank' rel='noopener noreferrer'>${'${text}'}</a></span>`
+                : `<span class='custom-class'>${'${text}'}</span>`
+            }
+        </div>
+    `; 
+
   return (
     <div>
-      <DropDownButtonComponent
-        items={items}
-        itemTemplate = {template}>
-        DropDownButton
-      </DropDownButtonComponent>
+      <DropDownButtonComponent items={items} itemTemplate = {template} >DropDownButton</DropDownButtonComponent>
     </div>
   );
 }

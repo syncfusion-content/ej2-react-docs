@@ -8,9 +8,9 @@ enableRipple(true);
 // To render Chip.
 function App() {
   return (
-      <ChipListComponent id="chip-avatar">
-          <ChipsDirective>
-          <ChipDirective
+    <ChipListComponent id="chip-avatar">
+      <ChipsDirective>
+        <ChipDirective
           leadingIconCss="trendingIcon"
           template='<a href="https://timesofindia.indiatimes.com/news" target="_blank" class="anchorElement">#BreakingNews</a><span class="textElement">125k posts</span>'
         ></ChipDirective>
@@ -22,9 +22,9 @@ function App() {
           leadingIconCss="trendingIcon"
           template='<a href="https://indianexpress.com/section/technology/" target="_blank" class="anchorElement">#TechNews</a><span class="textElement">107k posts</span>'
         ></ChipDirective>
-          </ChipsDirective>
-      </ChipListComponent>
+      </ChipsDirective>
+    </ChipListComponent>
   );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('chip'));
+ReactDom.render(<App />, document.getElementById('chip'));

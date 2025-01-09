@@ -14,10 +14,10 @@ function App() {
         dataSource: data, query: query, value: 'EmployeeID', text: 'FirstName', hasChildren: 'EmployeeID',
         child: { dataSource: data, query: query1, value: 'OrderID', parentValue: 'EmployeeID', text: 'ShipName' }
     };
-    function actionFailureTemplate(data) {
-        return (<div class='action-failure'> Data fetch request fails </div>);
+    function actionFailureTemplate() {
+        return (<div className='action-failure'> Data fetch request fails </div>);
     }
-    return (<DropDownTreeComponent fields={fields} actionFailureTemplate={actionFailureTemplate} placeholder="Select an employee" popupHeight="200px"/>);
+    return (<DropDownTreeComponent fields={fields} actionFailureTemplate={actionFailureTemplate} placeholder="Select an employee" popupHeight="200px" />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

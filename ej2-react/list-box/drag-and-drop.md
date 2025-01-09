@@ -53,3 +53,18 @@ In the following sample, the `allowDragAndDrop` property is set as `true` and `s
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listbox/multiple-listbox-cs1" %}
+
+## Dual ListBox with drag and drop
+
+The toolbar and drag and drop actions between two listboxes can be enabled by setting a listbox unique id and the same [`scope`](https://ej2.syncfusion.com/react/documentation/api/list-box/#scope) property value.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/listbox/dual-drag-listbox-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/listbox/dual-drag-listbox-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/listbox/dual-drag-listbox-cs1" %}

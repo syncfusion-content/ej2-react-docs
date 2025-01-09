@@ -6,13 +6,13 @@ enableRipple(true);
 // To render Chip.
 function App() {
     return (<ChipListComponent id="chip-avatar" enableDelete={true}>
-          <ChipsDirective>
-              <ChipDirective text="Andrew" avatarIconCss="andrew"></ChipDirective>
-              <ChipDirective text="Janet" avatarIconCss="janet"></ChipDirective>
-              <ChipDirective text="Laura" avatarIconCss="laura"></ChipDirective>
-              <ChipDirective text="Margaret" avatarIconCss="margaret"></ChipDirective>
-          </ChipsDirective>
-      </ChipListComponent>);
+        <ChipsDirective>
+            <ChipDirective text="Andrew" avatarIconCss="andrew"></ChipDirective>
+            <ChipDirective text="Janet" avatarIconCss="janet"></ChipDirective>
+            <ChipDirective text="Laura" avatarIconCss="laura"></ChipDirective>
+            <ChipDirective text="Margaret" avatarIconCss="margaret"></ChipDirective>
+        </ChipsDirective>
+    </ChipListComponent>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('chip'));

@@ -6,7 +6,7 @@ function App() {
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
   let fileObj: FileManagerComponent;
   function onCreated(args: any) {
-    // fileObj.uploadObj.dropArea = null;  // Restrict file uploads by dragging them from the local file system to the File Manager.
+    fileObj.uploadObj.dropArea = null;  // Restrict file uploads by dragging them from the local file system to the File Manager.
   }
   return (
     <div className="control-section">

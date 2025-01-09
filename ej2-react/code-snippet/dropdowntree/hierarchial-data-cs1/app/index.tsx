@@ -6,8 +6,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 function App() {
-  // definining the dataSource
-  let data: { [key: string]: Object; }[] = [
+    // definining the dataSource
+    let data: { [key: string]: Object; }[] = [
         {
             code: 'AF', name: 'Africa', countries: [
                 { code: 'NGA', name: 'Nigeria' },
@@ -60,7 +60,7 @@ function App() {
     let fields: Object = { dataSource: data, value: 'code', text: 'name', child: 'countries' };
     return (
         // specifies the tag for render the DropDownTree component
-      <DropDownTreeComponent id="dropdowntree" fields={fields} />
+        <DropDownTreeComponent id="dropdowntree" fields={fields} />
     );
 }
 export default App;

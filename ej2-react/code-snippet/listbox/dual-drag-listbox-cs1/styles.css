@@ -1,0 +1,23 @@
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.listbox1,
+.listbox2 {
+    width: 25%;
+}
+
+.listbox1 {
+    float: left;
+    padding: 0 0 0 145px;
+}
+
+.listbox2 {
+    float: right;
+    padding: 0 292px 0 0;
+}

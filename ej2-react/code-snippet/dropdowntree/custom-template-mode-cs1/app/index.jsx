@@ -18,7 +18,7 @@ function App() {
     let showCheckBox = true;
     let treeSettings = { autoCheck: true };
     let customTemplate = "${value.length} item(s) selected";
-    return (<DropDownTreeComponent fields={fields} treeSettings={treeSettings} customTemplate={customTemplate} showCheckBox={showCheckBox} mode="Custom" placeholder="Select an employee" popupHeight="200px"/>);
+    return (<DropDownTreeComponent fields={fields} treeSettings={treeSettings} customTemplate={customTemplate} showCheckBox={showCheckBox} mode="Custom" placeholder="Select an employee" popupHeight="200px" />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

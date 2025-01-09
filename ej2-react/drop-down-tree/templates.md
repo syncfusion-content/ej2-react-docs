@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Templates in React Drop down tree component
 
-The Dropdown Tree provides support to customize each list item, header, and footer elements.
+The Dropdown Tree provides support for customizing each list item, header, and footer elements.
 
 ## Item template
 
-The content of each list item within the Dropdown Tree can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#itemtemplate) property.
+The content of each list item within the Dropdown Tree can be customized using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#itemtemplate) property.
 
-In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the **itemTemplate** property.
+In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#itemtemplate) property.
 
 The template expression should be provided inside the {...} interpolation syntax.
 
@@ -27,13 +27,19 @@ The template expression should be provided inside the {...} interpolation syntax
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/item-template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/dropdowntree/item-template-cs1/styles.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/item-template-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dropdowntree/item-template-cs1" %}
 
 ## Value template
 
-The currently selected value that is displayed by default on the Dropdown Tree input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#valuetemplate) property.
+The currently selected value displayed by default in the Dropdown Tree input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree#valuetemplate) property.
 
 In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the Dropdown Tree input, which is separated by a hyphen.
 
@@ -46,13 +52,19 @@ The template expression should be provided inside the {...} interpolation syntax
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/value-template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/dropdowntree/value-template-cs1/styles.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/value-template-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/dropdowntree/value-template-cs1" %}
 
 ## Header template
 
-The header element is shown statically at the top of the popup list items within the Dropdown Tree. A custom element can be placed as a header element using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#headertemplate) property.
+The header element is shown statically at the top of the popup list items within the Dropdown Tree. A custom element can be used as a header element using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#headertemplate) property.
 
 In the following sample, the header is customized with the custom element.
 
@@ -62,6 +74,12 @@ In the following sample, the header is customized with the custom element.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/header-template-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/dropdowntree/header-template-cs1/styles.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/header-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,13 +98,19 @@ In the following sample, the footer element displays the total number of employe
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/footer-template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/dropdowntree/footer-template-cs1/styles.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/footer-template-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dropdowntree/footer-template-cs1" %}
 
 ## No records template
 
-The Dropdown Tree is supports to display custom design in the popup list content using the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#norecordstemplate) property when no matches found on search.
+The Dropdown Tree supports displaying custom designs in the popup list content using the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#norecordstemplate) property when no matches found on search.
 
 In the following sample, popup list content displays the notification of no data available.
 
@@ -96,6 +120,9 @@ In the following sample, popup list content displays the notification of no data
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/norecords-template-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/norecords-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -114,15 +141,18 @@ In the following sample, when the data fetch request fails, the Dropdown Tree di
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/actionfailure-template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/actionfailure-template-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dropdowntree/actionfailure-template-cs1" %}
 
 ## Custom template to show selected items in input
 
-In Dropdown Tree, while selecting more than one items via checkbox or multi selection support, all the selected items will be displayed in the input. Instead of displaying all the selected item text, the custom template can be displayed by setting the the [mode](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#mode) property as ***Custom*** and [customTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#customTemplate) property.
+In Dropdown Tree, while selecting more than one items via checkbox or multi selection support, all the selected items will be displayed in the input. Instead of displaying all the selected item text, a custom template can be displayed by setting the the [mode](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#mode) property as ***Custom*** and [customTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#customTemplate) property.
 
-When the **mode** property is set as **Custom**, the Dropdown Tree displays the default template value **(${value.length} item(s) selected)** like **1 item(s) selected or 2 item(s) selected**. The default template can be customized by setting **customTemplate**  property.
+When the **mode** property is set to **Custom**, the Dropdown Tree displays the default template value **(${value.length} item(s) selected)**, such as **1 item(s) selected or 2 item(s) selected**. The default template can be customized by setting **customTemplate**  property.
 
 In the following sample, the Dropdown Tree is rendered with default value of the **customTemplate** property like “**1 item(s) selected or 2 item(s) selected**”.
 
@@ -132,6 +162,9 @@ In the following sample, the Dropdown Tree is rendered with default value of the
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/custom-template-mode-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/custom-template-mode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -145,6 +178,9 @@ In the following sample, the Dropdown Tree is rendered with custom value of the 
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/dropdowntree/custom-template-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/dropdowntree/custom-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
