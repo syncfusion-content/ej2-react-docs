@@ -6,12 +6,12 @@ function App() {
     let tooltip = { isVisible: true };
     let value = [30, 70];
     return (<div id='container'>
-            <div className='wrap'>
-                <div className="sliderwrap">
-                    <SliderComponent value={value} type='Range' min={0} max={100} limits={limits} tooltip={tooltip}/>
-                </div>
+        <div className='wrap'>
+            <div className="sliderwrap">
+                <SliderComponent value={value} type='Range' min={0} max={100} limits={limits} tooltip={tooltip} />
             </div>
-        </div>);
+        </div>
+    </div>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

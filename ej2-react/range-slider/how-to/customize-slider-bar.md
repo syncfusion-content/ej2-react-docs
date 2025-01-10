@@ -10,9 +10,8 @@ domainurl: ##DomainURL##
 
 # Customize slider bar in React Range slider component
 
-Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the slider bar.
-The slider bar can be customized with different themes. By default, slider have class name e-slider-track for bar. The
-class can be overridden with our own color values like the following code snippet.
+The Slider appearance can be customized through CSS. You can customize the slider bar by overriding the slider CSS classes.
+The slider bar can be customized with different themes. By default, the slider has the class name `e-slider-track` for the bar. You can override this class with custom color values as shown in the following code snippet.
 
 ```css
 .e-control.e-slider .e-slider-track .e-range {
@@ -42,7 +41,7 @@ function change(args: SliderChangeEventArgs) {
 }
 ```
 
-You can also apply background color for a certain range depending upon slider values, using change event.
+You can apply different background colors for specific ranges of slider values using the [`change`](https://ej2.syncfusion.com/react/documentation/api/slider/#change) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,6 +49,12 @@ You can also apply background color for a certain range depending upon slider va
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/bar-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/bar-cs2/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/bar-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

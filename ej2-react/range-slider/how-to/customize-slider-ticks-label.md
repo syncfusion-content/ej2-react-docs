@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize slider ticks label in React Range slider component
 
-Slider view can be customized via CSS. By overriding the slider CSS classes, you can customize the ticks. The ticks in slider allows you to easily identify the current value/values of the slider. It contains [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, slider has class `e-tick` for slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
+The Slider view can be customized using CSS. By overriding the slider CSS classes, you can customize the ticks appearance. The ticks in slider allows you to easily identify the current value/values of the slider. It contains [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, slider has the class `e-tick` for slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
@@ -25,7 +25,7 @@ Slider view can be customized via CSS. By overriding the slider CSS classes, you
 }
 ```
 
-Here, the color for rendered ticks has been applied through nth-child(`child_number`). The color is applied to the value of the `child_number` in the slider.
+Here, the color for rendered ticks is applied using the nth-child(`child_number`). The color is applied to the tick corresponding to the `child_number` in the slider.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,6 +33,12 @@ Here, the color for rendered ticks has been applied through nth-child(`child_num
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/ticks-custom-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/ticks-custom-cs2/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/ticks-custom-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

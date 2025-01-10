@@ -6,14 +6,13 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 import { FormValidator, FormValidatorModel } from '@syncfusion/ej2-inputs';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import './index.css';
 
 function App() {
-    React.useEffect(() => {
+  React.useEffect(() => {
     componentDidMount();
   }, []);
-  let ticks: object ={ placement: "Before", largeStep: 20, smallStep: 5, showSmallTicks: true };
+  let ticks: object = { placement: "Before", largeStep: 20, smallStep: 5, showSmallTicks: true };
   let value: number[] = [30, 70];
 
   // sets required property in the FormValidator rules collection
@@ -77,7 +76,7 @@ function App() {
 
   let formCustomObj: FormValidator = null as any;
 
-  function componentDidMount(){
+  function componentDidMount() {
     formMinObj = new FormValidator("#formMinId", minOptions);
     formMaxObj = new FormValidator("#formMaxId", maxOptions);
     formValObj = new FormValidator("#formValId", valOptions);
@@ -85,34 +84,34 @@ function App() {
     formCustomObj = new FormValidator("#formCustomId", customOptions);
   }
 
-  function onMinChanged(args: any): void {
+  function onMinChanged(): void {
     // validate the slider value in the form
     formMinObj.validate();
   }
 
-  function onMaxChanged(args: any): void {
+  function onMaxChanged(): void {
     // validate the slider value in the form
     formMaxObj.validate();
   }
 
-  function onValChanged(args: any): void {
+  function onValChanged(): void {
     // validate the slider value in the form
     formValObj.validate();
   }
 
-  function onRangeChanged(args: any) {
+  function onRangeChanged() {
     // validate the slider value in the form
     formRangeObj.validate();
   }
 
-  function onCustomChanged(args: any) {
+  function onCustomChanged() {
     // validate the slider value in the form
     formCustomObj.validate();
   }
 
   let SliderCustomObj: SliderComponent = null as any;
 
-  function validateRange(args: any) {
+  function validateRange() {
     return (
       (SliderCustomObj.value as number[])[0] >= 40 &&
       (SliderCustomObj.value as number[])[1] <= 80

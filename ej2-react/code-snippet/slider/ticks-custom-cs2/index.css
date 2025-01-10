@@ -85,16 +85,16 @@
 }
 
 #ticks_slider .e-scale .e-custom::before {
-  top: calc(50% + 1px);
+  top: calc(50% + -2px);
   left: calc(50% - 5px);
 }
 
 #slider_wrapper #ticks_slider .e-scale :nth-child(1)::before {
-  top: calc(50% + 1px);
+  top: calc(50% + -2px);
   left: calc(0% - 5px);
 }
 
 #slider_wrapper #ticks_slider .e-scale :nth-child(6)::before {
-  top: calc(50% + 1px);
+  top: calc(50% + -2px);
   left: calc(100% - 6px);
 }

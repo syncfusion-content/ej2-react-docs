@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize slider limits in React Range slider component
 
-Slider appearance can be customized via CSS. By overriding the slider CSS classes, the slider limit bar can be customized.
+The Slider appearance can be customized using CSS. You can customize the slider limit bar by overriding the slider CSS classes.
 
    ```css
     .e-slider-container.e-horizontal .e-limits {
@@ -18,8 +18,8 @@ Slider appearance can be customized via CSS. By overriding the slider CSS classe
    }
   ```
 
-Here, the limit bar is customized with different background color. By default, the slider has class `e-limits` for limits bar.
-You can override the class with our own color values as given in the following code snippet.
+In this example, the limit bar is customized with a different background color. By default, the slider uses the class `e-limits` for the limit bar.
+You can override this class with your own color values as shown in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,6 +27,12 @@ You can override the class with our own color values as given in the following c
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/limits-custom-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/limits-custom-cs2/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/limits-custom-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
