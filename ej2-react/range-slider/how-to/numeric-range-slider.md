@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Numeric range slider in React Range slider component
 
-The numeric values can be formatted into different decimal digits or fixed number of whole numbers or to represent the units. The Numeric processing is demonstrated below.
+Numeric values in the Range Slider can be formatted to display different decimal places, a fixed number of whole numbers, or to represent specific units. The following example demonstrates numeric processing in a Range Slider.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -18,6 +18,12 @@ The numeric values can be formatted into different decimal digits or fixed numbe
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/slider/getting-started-cs13/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/slider/getting-started-cs13/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/getting-started-cs13/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

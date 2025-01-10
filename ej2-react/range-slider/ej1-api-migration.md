@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 
 
-# Ej1 api migration in React Range slider component
+# Ej1 api migration in React Range Slider component
 
-This article describes the API migration process of Slider component from Essential JS 1 to Essential JS 2
+This article describes the API migration process of the Slider component from Essential JS 1 to Essential JS 2.
 
 {% raw %}
 

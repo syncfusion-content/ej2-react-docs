@@ -16,7 +16,7 @@ function App() {
             <div className='wrap'>
                 <div className="sliderwrap">
                     <SliderComponent value={value} type='Range' min={0} max={100} limits={limits}
-                    tooltip={tooltip} />
+                        tooltip={tooltip} />
                 </div>
             </div>
         </div>

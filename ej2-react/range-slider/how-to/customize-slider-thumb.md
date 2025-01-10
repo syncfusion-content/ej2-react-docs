@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize slider thumb in React Range slider component
 
-Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the thumb. By default, slider has unique class `e-handle` for slider thumb. You can override the following class as per your requirement.
+The Slider appearance can be customized using CSS. By overriding the slider CSS classes, you can customize the thumb's appearance. By default, the slider has a unique class `e-handle` for the slider thumb. You can override the following class as per your requirement.
 
 ```css
 .e-control.e-slider .e-handle {
@@ -38,7 +38,7 @@ Slider appearance can be customized through CSS. By overriding the slider CSS cl
 }
 ```
 
-Here, in the sample, the slider thumb has been customized to square, circle, oval shapes, and background image has also been customized.
+In this example, the slider thumb has been customized to square, circle, and oval shapes. Additionally, a custom background image has been applied to one of the sliders.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -49,6 +49,9 @@ Here, in the sample, the slider thumb has been customized to square, circle, ova
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/slider/thumb-custom-cs2/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/slider/thumb-custom-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

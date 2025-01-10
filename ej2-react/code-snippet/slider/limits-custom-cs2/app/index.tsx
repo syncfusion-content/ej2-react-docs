@@ -7,7 +7,6 @@ import { SliderComponent, SliderChangeEventArgs } from '@syncfusion/ej2-react-in
 
 function App() {
 
-  let defaultObj: SliderComponent;
   let value: number[] = [30, 70];
 
   let ticks: object = { placement: 'Before', largeStep: 20, smallStep: 5, showSmallTicks: true };
@@ -21,21 +20,21 @@ function App() {
 
   return (
     <div id='container'>
-    <div className="content-wrapper">
-      <div className='sliderwrap'>
+      <div className="content-wrapper">
+        <div className='sliderwrap'>
           <label className="userselect">MinRange Slider With Limits</label>
           <SliderComponent id='minrange'
             type='MinRange'
-              min={0} max={100} value={30} ticks={ticks} tooltip={tooltip} limits={minLimits} />
-      </div>
+            min={0} max={100} value={30} ticks={ticks} tooltip={tooltip} limits={minLimits} />
+        </div>
 
-      <div className='sliderwrap'>
+        <div className='sliderwrap'>
           <label className="userselect">Range Slider With Limits</label>
           <SliderComponent id='range' type='Range'
-              min={0} max={100} value={value} ticks={ticks} tooltip={tooltip} limits={rangeLimits} />
+            min={0} max={100} value={value} ticks={ticks} tooltip={tooltip} limits={rangeLimits} />
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 export default App;
