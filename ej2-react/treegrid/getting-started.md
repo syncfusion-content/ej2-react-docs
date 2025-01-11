@@ -72,6 +72,7 @@ Place the following treegrid code in the **src/App.tsx**.
 ```ts
 import { ColumnDirective, ColumnsDirective, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import * as React from 'react';
+import './App.css';
 
 import { sortData } from './datasource';
 function App() {
