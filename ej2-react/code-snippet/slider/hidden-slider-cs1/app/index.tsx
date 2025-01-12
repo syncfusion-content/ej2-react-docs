@@ -10,7 +10,6 @@ function App() {
   let max = new Date(2013, 6, 13, 17).getTime();
   let value = new Date(2013, 6, 13, 13).getTime();
   let step = 3600000;
-  let showButtons = true;
 
   // Slider ticks customization
   let ticks: TicksDataModel = { placement: "After", largeStep: 2 * 3600000 };
@@ -27,21 +26,21 @@ function App() {
     let custom = { hour: "2-digit", minute: "2-digit" };
     args.text = new Date(totalMiliSeconds).toLocaleTimeString("en-us", custom);
   }
-  
-  function onClick(){
+
+  function onClick() {
     const slider = document.getElementById("case");
-    if(slider){
-        slider.style.display = "block";
-        sliderInstance.refresh();
+    if (slider) {
+      slider.style.display = "block";
+      sliderInstance.refresh();
     }
   }
 
   return (
     <div id="container">
-    <button onClick={onClick.bind(this)}>Button</button>
+      <button onClick={onClick.bind(this)}>Button</button>
       <div id="case" className="wrap">
         <SliderComponent
-          ref={t=>(sliderInstance = t as SliderComponent)}
+          ref={t => (sliderInstance = t as SliderComponent)}
           min={min}
           max={max}
           value={value}

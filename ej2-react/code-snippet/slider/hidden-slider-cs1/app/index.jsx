@@ -8,7 +8,6 @@ function App() {
     let max = new Date(2013, 6, 13, 17).getTime();
     let value = new Date(2013, 6, 13, 13).getTime();
     let step = 3600000;
-    let showButtons = true;
     // Slider ticks customization
     let ticks = { placement: "After", largeStep: 2 * 3600000 };
     let tooltip = { placement: "Before", isVisible: true };
@@ -30,10 +29,10 @@ function App() {
         }
     }
     return (<div id="container">
-    <button onClick={onClick.bind(this)}>Button</button>
-      <div id="case" className="wrap">
-        <SliderComponent ref={t => (sliderInstance = t)} min={min} max={max} value={value} step={step} tooltip={tooltip} ticks={ticks} showButtons={true} tooltipChange={tooltipChangeHandler.bind(this)} renderingTicks={renderingTicksHandler.bind(this)}/>
-      </div>
+        <button onClick={onClick.bind(this)}>Button</button>
+        <div id="case" className="wrap">
+            <SliderComponent ref={t => (sliderInstance = t)} min={min} max={max} value={value} step={step} tooltip={tooltip} ticks={ticks} showButtons={true} tooltipChange={tooltipChangeHandler.bind(this)} renderingTicks={renderingTicksHandler.bind(this)} />
+        </div>
     </div>);
 }
 export default App;

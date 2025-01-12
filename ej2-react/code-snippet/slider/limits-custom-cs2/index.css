@@ -35,7 +35,8 @@
   padding: 5px;
 }
 
-#range .e-limits, #minrange .e-limits {
+#range .e-limits,
+#minrange .e-limits {
   background-color: #ccc;
   background-color: rgba(69, 100, 233, 0.46);
 }
