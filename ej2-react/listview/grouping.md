@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Grouping in React Listview component
 
-ListView supports to wrap the nested element into a group based on category.
+ListView supports wrapping nested elements into groups based on categories.
 
-The category of each list item can be mapped with [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#groupby) field in the data table, which also supports single-level navigation.
+The category of each list item can be mapped using the [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#groupby) field in the data table, which also supports single-level navigation.
 
-In below sample, Cars are grouped based on its category using groupBy field.
+In the sample below, cars are grouped based on their categories using the `groupBy` field.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -23,10 +23,18 @@ In below sample, Cars are grouped based on its category using groupBy field.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/grouping-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/grouping-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/grouping-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/grouping-cs1" %}
 
 ## Customization
 
-The grouping header can be customized by using [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#grouptemplate) property for both inline and fixed group header.
+The grouping header can be customized using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#grouptemplate) property for both inline and fixed group headers. The complete customization description and explanation, along with an example, are given in the following link.
+
+[`Group Template`](https://ej2.syncfusion.com/react/documentation/listview/customizing-templates#group-template)

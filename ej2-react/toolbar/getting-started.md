@@ -147,6 +147,6 @@ The Toolbar component can be rendered based on the given HTML element using `<To
 
 ## See Also
 
-* [How to add Toggle Button](./how-to/add-toggle-button/)
+* [How to add Toggle Button](./how-to/add-toggle-button)
 
 N> You can refer to our [React Toolbar](https://www.syncfusion.com/react-components/react-toolbar) feature tour page for its groundbreaking feature representations. You can also explore our [React Toolbar Example](https://ej2.syncfusion.com/react/demos/#/fabric/toolbar/default) that shows you how to render the Toolbar in React.

@@ -27,8 +27,8 @@ function App() {
     ];
     let fields = { groupBy: 'category', tooltip: 'text' };
     return (
-    // specifies the tag to render the ListView component
-    <ListViewComponent id='list' dataSource={arts} fields={fields}></ListViewComponent>);
+        // specifies the tag to render the ListView component
+        <ListViewComponent id='list' dataSource={arts} fields={fields}></ListViewComponent>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

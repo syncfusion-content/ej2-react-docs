@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Data binding in React Listview component
 
-ListView provides the option to load the data either from local data sources or remote data services. This can be done through [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) property which supports the data type of array or through DataManager.
+ListView provides the option to load data either from local data sources or remote data services. This can be done through the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) property, which supports array data types or DataManager.
 
-ListView supports different kind of data services such as OData, OData V4, Web API and data formats like XML, JSON, JSONP with the help of DataManager Adaptors.
+ListView supports different kinds of data services such as OData, OData V4, Web API and data formats like XML, JSON, JSONP with the help of DataManager Adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -28,7 +28,7 @@ ListView supports different kind of data services such as OData, OData V4, Web A
 | sortBy | string | Specifies sorting field, which is used to sort the listview data. |
 | htmlAttributes | string | Specifies list item html attributes field. |
 
-> When complex data bind to ListView, you should map the [`fields`](https://ej2.syncfusion.com/react/documentation/api/list-view/#fields) properly. Otherwise, the ListView properties remain as undefined or null.
+> When complex data is bound to ListView, you should map the [`fields`](https://ej2.syncfusion.com/react/documentation/api/list-view/#fields) properly. Otherwise, the ListView properties remain as undefined or null.
 
 ## Bind to local data
 
@@ -39,7 +39,7 @@ Local data represents in two ways, which are described below.
 
 ### Array of simple data
 
-ListView supports to load the array of primitive data like string and numbers. Here, both value and text field act as same.
+ListView supports loading an array of primitive data like string and numbers. Here, both value and text field act as same.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -48,13 +48,19 @@ ListView supports to load the array of primitive data like string and numbers. H
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/data-binding-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/data-binding-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/data-binding-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/data-binding-cs1" %}
 
 ### Array of JSON data
 
-ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to field property.
+ListView can generate its list items from an array of complex data. To make it work properly, you should map the appropriate columns to field property.
 
 The below example illustrates the concept of binding Array of JSON data.
 
@@ -65,15 +71,21 @@ The below example illustrates the concept of binding Array of JSON data.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/data-binding-cs2/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/data-binding-cs2/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/data-binding-cs2/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/data-binding-cs2" %}
 
 ## Bind to remote data
 
-ListView supports to retrieve the data from remote data services with the help of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) component and [`Query`](https://ej2.syncfusion.com/react/documentation/data/querying) property allows to fetch data and return it to ListView from the database.
+ListView supports retrieving data from remote data services with the help of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) component and [`Query`](https://ej2.syncfusion.com/react/documentation/data/querying) property allows fetching data and returning it to ListView from the database.
 
-In the below sample, displayed first 6 Products from Product table of NorthWind data service.
+In the below sample, displays the first 6 Products from Product table of NorthWind data service.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -81,6 +93,12 @@ In the below sample, displayed first 6 Products from Product table of NorthWind 
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/data-binding-cs3/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/data-binding-cs3/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/data-binding-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

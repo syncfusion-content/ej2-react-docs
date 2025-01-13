@@ -10,13 +10,11 @@ domainurl: ##DomainURL##
 
 # Virtualization in React Listview component
 
-UI virtualization loads only viewable list items in a view port which will increase ListView performance on loading large number of data.
+UI virtualization loads only the viewable list items in a viewport, which significantly improves ListView performance when loading a large number of data items.
 
 ## Module injection
 
-In order to use UI Virtualization, we need to inject its `virtualization` service in the App. This modules should be injected into the ListView using the `Inject` directive as like the below code snippet.
-
-
+To use UI Virtualization, we need to inject its `virtualization` service in the App. This modules should be injected into the ListView using the `Inject` directive as like the below code snippet.
 
 ```ts
 
@@ -25,12 +23,12 @@ import { ListViewComponent, Inject, Virtualization } from '@syncfusion/ej2-react
 ....
 ....
 
-      return (
-          // specifies the tag to render the ListView component
-          <ListViewComponent id='ui-list' dataSource={listData} enableVirtualization={true} >
-              <Inject services={[Virtualization]} />
-          </ListViewComponent>
-      );
+return (
+    // specifies the tag to render the ListView component
+    <ListViewComponent id='ui-list' dataSource={listData} enableVirtualization={true} >
+        <Inject services={[Virtualization]} />
+    </ListViewComponent>
+);
 
 ```
 
@@ -45,7 +43,7 @@ export {};
 
 ## Getting started
 
-UI virtualization can be enabled in ListView by setting [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/list-view/#enablevirtualization) property to true. It has two type of scroller
+UI virtualization can be enabled in ListView by setting the [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/list-view/#enablevirtualization) property to true. There are two types of scrollers available:
 
 **Window scroll** - This scroller is used in ListView by default.
 
@@ -57,6 +55,12 @@ UI virtualization can be enabled in ListView by setting [`enableVirtualization`]
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/virtualization/flat-list-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/virtualization/flat-list-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/virtualization/flat-list-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,6 +78,9 @@ We can use [`template`](https://ej2.syncfusion.com/react/documentation/api/list-
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/listview/virtualization/template-cs1/index.css %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/virtualization/template-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/virtualization/template-cs1" %}
@@ -83,10 +90,10 @@ We can use [`template`](https://ej2.syncfusion.com/react/documentation/api/list-
 We have also provided following conditional rendering support for [`template`](https://ej2.syncfusion.com/react/documentation/api/list-view/#template) and [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#grouptemplate).
 
 | Name | Syntax |
-| --- | --- | --- |
-| conditional class | `<div class="${ $id % 2 === 0 ? 'even-list' : 'odd-list'}"></div>`  |
-| conditional attribute | `<div id="${ $id % 2 === 0 ? 'even-list' : 'odd-list'}"></div>`  |
-| conditional text content | `<div>${ $id % 2 === 0 ? 'even-list' : 'odd-list'}</div>`  |
+|------|--------|
+| Conditional class | `<div class="${ $id % 2 === 0 ? 'even-list' : 'odd-list'}"></div>` |
+| Conditional attribute | `<div id="${ $id % 2 === 0 ? 'even-list' : 'odd-list'}"></div>` |
+| Conditional text content | `<div>${ $id % 2 === 0 ? 'even-list' : 'odd-list'}</div>` |
 
 In the below sample, we have applied light blue for even list and light coral for odd list based on the conditional class.
 
@@ -96,6 +103,12 @@ In the below sample, we have applied light blue for even list and light coral fo
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/virtualization/conditional-ui-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/virtualization/conditional-ui-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/virtualization/conditional-ui-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

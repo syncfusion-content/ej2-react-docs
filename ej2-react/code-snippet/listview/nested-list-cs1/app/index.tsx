@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 
 function App() {
-    // define the array of Json
+  // define the array of Json
   let arts: any[] = [
     {
       text: "Asia",
@@ -268,7 +268,7 @@ function App() {
   ];
 
   let fields = { tooltip: "text" };
-  let animation: Object = { duration:0 };
+  let animation: Object = { duration: 0 };
   return (
     // specifies the tag to render the ListView component
     <ListViewComponent

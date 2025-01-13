@@ -31,8 +31,8 @@ function App() {
     ];
     let fields = { text: "Name", tooltip: "Name", id: "id" };
     return (
-    // specifies the tag to render the ListView component
-    <ListViewComponent id="list" dataSource={settings} fields={fields} showHeader={true} headerTitle="Device settings"/>);
+        // specifies the tag to render the ListView component
+        <ListViewComponent id="list" dataSource={settings} fields={fields} showHeader={true} headerTitle="Device settings" />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

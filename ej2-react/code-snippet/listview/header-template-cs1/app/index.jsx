@@ -17,15 +17,15 @@ function App() {
         { text: 'Lemon', id: '9', imgUrl: './lemon.jpg' },
         { text: 'Cherry', id: '10', imgUrl: './cherry.jpg' },
     ];
-    function headerTemplate(data) {
+    function headerTemplate() {
         return (<div className="headerContainer">
-                <span className="fruitHeader">Fruits</span>
-                <ButtonComponent id="search" cssClass="e-small e-round" isPrimary={true} iconCss="e-icons e-search-icon"/>
-                <ButtonComponent id="add" cssClass="e-small e-round" isPrimary={true} iconCss="e-icons e-add-icon"/>
-                <ButtonComponent id="sort" cssClass="e-small e-round" isPrimary={true} iconCss="e-icons e-sort-icon"/>
-            </div>);
+            <span className="fruitHeader">Fruits</span>
+            <ButtonComponent id="search" cssClass="e-small e-round" isPrimary={true} iconCss="e-icons e-search-icon" />
+            <ButtonComponent id="add" cssClass="e-small e-round" isPrimary={true} iconCss="e-icons e-add-icon" />
+            <ButtonComponent id="sort" cssClass="e-small e-round" isPrimary={true} iconCss="e-icons e-sort-icon" />
+        </div>);
     }
-    return (<ListViewComponent id="list" dataSource={fruitsData} showHeader={true} headerTemplate={headerTemplate}/>);
+    return (<ListViewComponent id="list" dataSource={fruitsData} showHeader={true} headerTemplate={headerTemplate} />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

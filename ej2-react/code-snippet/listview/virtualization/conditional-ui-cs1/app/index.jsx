@@ -22,10 +22,10 @@ function App() {
     }
     let template = "<div id=\"list-container\" class=\"${ $id % 2 === 0 ? 'even-list' : 'odd-list' }\" > ${text} </div>";
     return (
-    // specifies the tag to render the ListView component
-    <ListViewComponent id="ui-list" dataSource={listData} enableVirtualization={true} template={template} height={500}>
-      <Inject services={[Virtualization]}/>
-    </ListViewComponent>);
+        // specifies the tag to render the ListView component
+        <ListViewComponent id="ui-list" dataSource={listData} enableVirtualization={true} template={template} height={500}>
+            <Inject services={[Virtualization]} />
+        </ListViewComponent>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

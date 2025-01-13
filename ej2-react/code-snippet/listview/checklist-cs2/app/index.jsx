@@ -17,8 +17,8 @@ function App() {
     ];
     let fields = { text: "text", id: "id" };
     return (
-    // specifies the tag to render the ListView component
-    <ListViewComponent id="list" dataSource={settings} fields={fields} showCheckBox={true} checkBoxPosition="Right"/>);
+        // specifies the tag to render the ListView component
+        <ListViewComponent id="list" dataSource={settings} fields={fields} showCheckBox={true} checkBoxPosition="Right" />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

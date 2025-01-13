@@ -21,7 +21,7 @@ function App() {
         { text: 'Cherry', id: '10', imgUrl: './cherry.jpg' },
     ];
 
-    function headerTemplate(data: any): JSX.Element {
+    function headerTemplate(): JSX.Element {
         return (
             <div className="headerContainer">
                 <span className="fruitHeader">Fruits</span>

@@ -7,20 +7,20 @@
   cursor: pointer;
 }
 
-#list-container{
+#list-container {
   height: inherit;
   width: inherit;
   padding-left: 30px;
 }
 
-#ui-list .e-list-item{
+#ui-list .e-list-item {
   padding: 0;
 }
 
-#ui-list .even-list{
+#ui-list .even-list {
   background-color: #cfd8dc;
 }
 
-#ui-list .odd-list{
+#ui-list .odd-list {
   background-color: #eceff1;
 }

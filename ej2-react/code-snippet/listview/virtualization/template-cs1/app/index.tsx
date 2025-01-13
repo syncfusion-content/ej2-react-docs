@@ -24,7 +24,7 @@ function App() {
         let index: number = parseInt((Math.random() * 10).toString());
         listData.push({ name: listData[index].name, icon: listData[index].icon, imgUrl: listData[index].imgUrl, id: i.toString() });
     }
-       // Set customized list template
+    // Set customized list template
     function template(data: any) {
         return (
             <div className="e-list-wrapper e-list-avatar">
