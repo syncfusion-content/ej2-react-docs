@@ -53,16 +53,16 @@ function App() {
   function listTemplate(data) {
     const wrapperClass = `e-list-wrapper e-list-multi-line${data.positionClass === 'right' ? ' e-list-wrapper-right' : ''}`;
     return (
-      <div className={ wrapperClass }>
+      <div className={wrapperClass}>
         <span className="e-list-item-header text-span">
-          {data.text }
+          {data.text}
         </span>
       </div>
     );
   }
   let itemsRendered = 5;
   let itemPerScroll = 5;
-  let result= [];
+  let result = [];
   const onListScrolled = (args) => {
     if (args.scrollDirection === 'Bottom' && args.distanceY < 100) {
       if (itemsRendered < data.length) {
@@ -76,8 +76,8 @@ function App() {
   }
   return (
     <div className="grid-container"><div><h3>Chat</h3>
-      <ListViewComponent id='list' dataSource={data.slice(0, itemsRendered)} height= "320px"
-    width= "400px" template={listTemplate.bind(this)} cssClass='e-list-template' scroll={onListScrolled.bind(this)} ref={scope => { listviewInstance = scope;}}></ListViewComponent>
+      <ListViewComponent id='list' dataSource={data.slice(0, itemsRendered)} height="320px"
+        width="400px" template={listTemplate.bind(this)} cssClass='e-list-template' scroll={onListScrolled.bind(this)} ref={scope => { listviewInstance = scope; }}></ListViewComponent>
     </div></div>
   );
 }

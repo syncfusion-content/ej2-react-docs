@@ -1,56 +1,57 @@
 #ui-list.e-listview {
-        margin: auto;
-        max-width: 325px;
-        line-height: initial;
-        border: 1px solid lightgray;
-    }
+    margin: auto;
+    max-width: 325px;
+    line-height: initial;
+    border: 1px solid lightgray;
+}
 
-    /* ListView header alignment */
+/* ListView header alignment */
 
-    #ui-list.e-listview .e-list-header {
-        height: 50px
-    }
+#ui-list.e-listview .e-list-header {
+    height: 50px
+}
 
-    #ui-list.e-listview .e-list-header .e-text {
-        line-height: 18px
-    }
+#ui-list.e-listview .e-list-header .e-text {
+    line-height: 18px
+}
 
-    /* ListView template customization */
+/* ListView template customization */
 
-    #ui-list.e-listview .showUI {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-    }
-    #ui-list.e-listview .hideUI {
-        display: none;
-    }
+#ui-list.e-listview .showUI {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
 
-    #ui-list.e-listview .e-list-item {
-        padding: 3px 0;
-    }
+#ui-list.e-listview .hideUI {
+    display: none;
+}
 
-    #ui-list.e-listview .R {
-        background: lightgrey;
-    }
+#ui-list.e-listview .e-list-item {
+    padding: 3px 0;
+}
 
-    #ui-list.e-listview .M {
-        background: pink;
-    }
+#ui-list.e-listview .R {
+    background: lightgrey;
+}
 
-    #ui-list.e-listview .A {
-        background: lightgreen;
-    }
+#ui-list.e-listview .M {
+    background: pink;
+}
 
-    #ui-list.e-listview .S {
-        background: lightskyblue;
-    }
+#ui-list.e-listview .A {
+    background: lightgreen;
+}
 
-    #ui-list.e-listview .J {
-        background: orange;
-    }
+#ui-list.e-listview .S {
+    background: lightskyblue;
+}
 
-    #ui-list.e-listview .N {
-        background: lightblue;
-    }
+#ui-list.e-listview .J {
+    background: orange;
+}
+
+#ui-list.e-listview .N {
+    background: lightblue;
+}

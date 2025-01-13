@@ -261,10 +261,10 @@ function App() {
         }
     ];
     let fields = { tooltip: "text" };
-    let animation = { duration:0 };
+    let animation = { duration: 0 };
     return (
-    // specifies the tag to render the ListView component
-    <ListViewComponent id="list" dataSource={arts} fields={fields} showHeader={true} headerTitle="Continent" animation={animation}/>);
+        // specifies the tag to render the ListView component
+        <ListViewComponent id="list" dataSource={arts} fields={fields} showHeader={true} headerTitle="Continent" animation={animation} />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

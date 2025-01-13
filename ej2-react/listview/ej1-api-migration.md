@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Listview component
 
-This article describes the API migration process of ListView component from Essential JS 1 to Essential JS 2
+This article describes the API migration process for the ListView component from Essential JS 1 to Essential JS 2. It provides a comparison of APIs and their usage between the two versions.
 
 {% raw %}
 

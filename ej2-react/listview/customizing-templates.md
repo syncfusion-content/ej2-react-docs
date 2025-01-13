@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Customizing templates in React Listview component
 
-The ListView component is designed to customize list items, group title and header title.
+The ListView component allows customization of list items, group titles, and header titles through various template options.
 
 ## Header template
 
 The ListView header can be customized with the help of [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#headertemplate) property.
 
-To customize header template in your application, Declare a custom react elements within the function which returns `JSX.Element` and assign it to `headerTemplate` property along with [`showHeader`](https://ej2.syncfusion.com/react/documentation/api/list-view/#showheader) property as `true` to display the ListView header.
+To customize header template in your application, Declare custom React elements within the function which returns `JSX.Element` and assign it to `headerTemplate` property along with [`showHeader`](https://ej2.syncfusion.com/react/documentation/api/list-view/#showheader) property as `true` to display the ListView header.
 
 
 
@@ -62,6 +62,9 @@ In the below example, we have rendered Listview with customized header which con
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/listview/header-template-cs1/index.css %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/header-template-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/header-template-cs1" %}
@@ -70,7 +73,7 @@ In the below example, we have rendered Listview with customized header which con
 
 The ListView items can be customized with the help of [`template`](https://ej2.syncfusion.com/react/documentation/api/list-view/#template) property.
 
-To customize list items in your application, Declare a custom react elements within the function which returns `JSX.Element` and assign it to `template` property.
+To customize list items in your application, Declare custom React elements within the function which returns `JSX.Element` and assign it to `template` property.
 
 
 
@@ -109,17 +112,17 @@ We provided the following built-in CSS classes to customize the list-items. Refe
 | ------------- |-------------|
 | e-list-template, e-list-wrapper | These classes are used to differentiate normal and template rendering, which are mandatory for template rendering. The `e-list-template` class should be added to the root of the ListView element and `e-list-wrapper` class should be added to the template element wrapper <br/><br/>`<ListViewComponent`<br/> `cssClass="e-list-template"`<br/>`template={this.template}>`<br/> `</ListViewComponent>`<br/><br/>`template(data): JSX.Element {`<br/> `return (`<br/>`<div className="e-list-wrapper"></div>`<br/>`)};`
 | e-list-content | This class is used to align list content and it should be added to the content element <br/><br/> `template(data): JSX.Element {`<br/>`return (` <br/>`<div className="e-list-wrapper">`<br/>`<span className="e-list-content">ListItem</span>`<br/>`</div>`<br/>`)};`|
-| e-list-avatar | This class is used for avatar customization. It should be added to the template element wrapper. After adding it, we can customize our element with [Avatar](https://ej2.syncfusion.com/documentation/avatar/getting-started.html?lang=typescript) classes <br/> <br/> `template(data): JSX.Element {`<br/> `return (`<br/> `<div className="e-list-wrapper e-list-avatar">`<br/> `<span className="e-avatar e-avatar-circle">MR</span>`<br/> `<span className="e-list-content">ListItem</span>`<br/> `</div>`<br/> `)};`
-| e-list-avatar-right | This class is used to align avatar to right side of the list item. It should be added to the template element wrapper. After adding it, we can customize our element with [Avatar](https://ej2.syncfusion.com/documentation/avatar/getting-started.html?lang=typescript) classes <br/><br/> `<div className="e-list-wrapper``e-list-avatar-right``">` <br/> `<span className="e-list-content">ListItem</span>`<br/>`<span className="e-avatar e-avatar-circle">MR</span>`<br/> `</div>`|
-| e-list-badge | This class is used for badge customization .It should be added to the template element wrapper. After adding it, we can customize our element with [Badge](https://ej2.syncfusion.com/documentation/badge/getting-started.html?lang=typescript) classes <br/><br/>`template(data): JSX.Element {`<br/> `return (`<br/>`<div className="e-list-wrapper e-list-avatar-right">`<br/>`<span className="e-list-content">ListItem</span>`<br/>`<span className="e-avatar e-avatar-circle">MR</span>`<br/>`</div>`<br/>`)};`|
+| e-list-avatar | This class is used for avatar customization. It should be added to the template element wrapper. After adding it, we can customize our element with [Avatar](https://ej2.syncfusion.com/react/documentation/avatar/getting-started) classes <br/> <br/> `template(data): JSX.Element {`<br/> `return (`<br/> `<div className="e-list-wrapper e-list-avatar">`<br/> `<span className="e-avatar e-avatar-circle">MR</span>`<br/> `<span className="e-list-content">ListItem</span>`<br/> `</div>`<br/> `)};`
+| e-list-avatar-right | This class is used to align avatar to right side of the list item. It should be added to the template element wrapper. After adding it, we can customize our element with [Avatar](https://ej2.syncfusion.com/react/documentation/avatar/getting-started) classes <br/><br/> `<div className="e-list-wrapper``e-list-avatar-right``">` <br/> `<span className="e-list-content">ListItem</span>`<br/>`<span className="e-avatar e-avatar-circle">MR</span>`<br/> `</div>`|
+| e-list-badge | This class is used for badge customization .It should be added to the template element wrapper. After adding it, we can customize our element with [Badge](https://ej2.syncfusion.com/react/documentation/badge/getting-started) classes <br/><br/>`template(data): JSX.Element {`<br/> `return (`<br/>`<div className="e-list-wrapper e-list-avatar-right">`<br/>`<span className="e-list-content">ListItem</span>`<br/>`<span className="e-avatar e-avatar-circle">MR</span>`<br/>`</div>`<br/>`)};`|
 | e-list-multi-line | This class is used for multi-line customization. It should be added to the template element wrapper. After adding it, we can customize List item's header and description <br/><br/>`template(data): JSX.Element {`<br/>`return (`<br/>`<div className="e-list-wrapper e-list-multi-line">`<br/>`<span className="e-list-content">ListItem</span>`<br/>`</div>`<br/>`)};`|
 | e-list-item-header |This class is used to align a list header and it should be added to the header element along with the multi-line class <br/><br/> `template(data): JSX.Element {`<br/> `return (`<br/> `<div className="e-list-wrapper e-list-multi-line">`<br/> `<span className="e-list-item-header">ListItem Header</span>`<br/> `<span className="e-list-content">ListItem</span>`<br/> `</div>`<br/> `)};`
 
-* If you are using `Avatar` in ListView templates, we need to add `Layouts` component's styles as given below in `src/App.css` file
-
-```css
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-```
+> **Note:** If you are using `Avatar` in ListView templates, you need to add `Layouts` component's styles as shown below in your `src/App.css` file:
+>
+> ```css
+> @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+> ```
 
 In the below example, we have customized list items like `Contact` app with our avatar component.
 
@@ -133,6 +136,9 @@ In the below example, we have customized list items like `Contact` app with our 
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/listview/avatar-temp-cs1/index.css %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/avatar-temp-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/avatar-temp-cs1" %}
@@ -141,7 +147,7 @@ In the below example, we have customized list items like `Contact` app with our 
 
 The ListView group header can be customized with the help of [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#grouptemplate) property.
 
-To customize the group template in your application, Declare a custom react elements within the function which returns `JSX.Element` and assign it to `groupTemplate` property.
+To customize the group template in your application, Declare custom React elements within the function which returns `JSX.Element` and assign it to `groupTemplate` property.
 
 
 
@@ -187,6 +193,9 @@ In the below example, we have grouped Listview based on the category. The catego
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/listview/item-count-temp-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/item-count-temp-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
