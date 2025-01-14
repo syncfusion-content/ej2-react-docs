@@ -18,22 +18,22 @@ function App() {
     //Set customized list template
     function listTemplate(data) {
         return (<div className="e-list-wrapper e-list-multi-line e-list-avatar">
-                <img className="e-avatar e-avatar-circle" src={data.image}/>
-                <span className="e-list-item-header">{data.Name}</span>
-                <span className="e-list-content">{data.contact}</span>
-            </div>);
+            <img className="e-avatar e-avatar-circle" src={data.image} />
+            <span className="e-list-item-header">{data.Name}</span>
+            <span className="e-list-content">{data.contact}</span>
+        </div>);
     }
     //Set customized group-header template
     function groupTemplate(data) {
         return (<div>
-                <span className='category'>{data.items[0].category}</span>
-                <span className="count"> {data.items.length} Item(s)</span>
-            </div>);
+            <span className='category'>{data.items[0].category}</span>
+            <span className="count"> {data.items.length} Item(s)</span>
+        </div>);
     }
     return (<div>
-            <ListViewComponent id='list' dataSource={data} fields={fields} template={listTemplate} groupTemplate={groupTemplate} width='350px' cssClass='e-list-template'>
-            </ListViewComponent>
-        </div>);
+        <ListViewComponent id='list' dataSource={data} fields={fields} template={listTemplate} groupTemplate={groupTemplate} width='350px' cssClass='e-list-template'>
+        </ListViewComponent>
+    </div>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

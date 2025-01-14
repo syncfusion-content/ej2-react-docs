@@ -21,10 +21,10 @@ function App() {
         listData.push({ text: listData[index].text, id: i.toString() });
     }
     return (
-    // specifies the tag to render the ListView component
-    <ListViewComponent id="ui-list" dataSource={listData} enableVirtualization={true}>
-      <Inject services={[Virtualization]}/>
-    </ListViewComponent>);
+        // specifies the tag to render the ListView component
+        <ListViewComponent id="ui-list" dataSource={listData} enableVirtualization={true}>
+            <Inject services={[Virtualization]} />
+        </ListViewComponent>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

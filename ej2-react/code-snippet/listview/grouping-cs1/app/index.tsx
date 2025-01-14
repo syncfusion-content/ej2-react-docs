@@ -9,24 +9,24 @@ function App() {
   // define the array of Json
   let arts: { [key: string]: string }[] = [
     {
-        'text': 'Audi A4',
-        'id': '9bdb',
-        'category': 'Audi'
+      'text': 'Audi A4',
+      'id': '9bdb',
+      'category': 'Audi'
     },
     {
-        'text': 'Audi A5',
-        'id': '4589',
-        'category': 'Audi'
+      'text': 'Audi A5',
+      'id': '4589',
+      'category': 'Audi'
     },
     {
-        'text': 'BMW 501',
-        'id': 'f849',
-        'category': 'BMW'
+      'text': 'BMW 501',
+      'id': 'f849',
+      'category': 'BMW'
     },
     {
-        'text': 'BMW 502',
-        'id': '7aff',
-        'category': 'BMW'
+      'text': 'BMW 502',
+      'id': '7aff',
+      'category': 'BMW'
     }
   ];
 

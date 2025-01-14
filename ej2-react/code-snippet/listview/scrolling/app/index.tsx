@@ -50,9 +50,9 @@ function App(this: any) {
   function listTemplate(data: any): JSX.Element {
     const wrapperClass = `e-list-wrapper e-list-multi-line${data.positionClass === 'right' ? ' e-list-wrapper-right' : ''}`;
     return (
-      <div className={ wrapperClass }>
+      <div className={wrapperClass}>
         <span className="e-list-item-header text-span">
-          {data.text }
+          {data.text}
         </span>
       </div>
     );
@@ -60,12 +60,12 @@ function App(this: any) {
   let itemsRendered = 5;
   let itemPerScroll = 5;
   let result: { text: string; positionClass: string; templateHeight?: string }[] = [];
-  const onListScrolled = (args:any) => {
+  const onListScrolled = (args: any) => {
     if (args.scrollDirection === 'Bottom' && args.distanceY < 100) {
       if (itemsRendered < data.length) {
         const startIndex = itemsRendered;
         const endIndex = Math.min(itemsRendered + itemPerScroll, data.length);
-        result = data.slice(startIndex, endIndex) as  { text: string; positionClass: string; templateHeight?: string }[];
+        result = data.slice(startIndex, endIndex) as { text: string; positionClass: string; templateHeight?: string }[];
         listviewInstance.addItem(result);
         itemsRendered = endIndex;
       }
@@ -73,8 +73,8 @@ function App(this: any) {
   }
   return (
     <div className="grid-container"><div><h3>Chat</h3>
-      <ListViewComponent id='list' dataSource={data.slice(0, itemsRendered)} height= "320px"
-    width= "400px" template={listTemplate as any} cssClass='e-list-template' scroll={onListScrolled as any} ref={scope => { listviewInstance = scope;}}></ListViewComponent>
+      <ListViewComponent id='list' dataSource={data.slice(0, itemsRendered)} height="320px"
+        width="400px" template={listTemplate as any} cssClass='e-list-template' scroll={onListScrolled as any} ref={scope => { listviewInstance = scope; }}></ListViewComponent>
     </div></div>
   );
 }

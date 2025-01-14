@@ -11,8 +11,8 @@ function App() {
         { text: 'Play Football with your friends', id: '5' },
     ];
     return (
-    // specifies the tag to render the ListView component
-    <ListViewComponent id='list' dataSource={data} showCheckBox={true} headerTitle='TO DO LIst' showHeader={true}></ListViewComponent>);
+        // specifies the tag to render the ListView component
+        <ListViewComponent id='list' dataSource={data} showCheckBox={true} headerTitle='TO DO LIst' showHeader={true}></ListViewComponent>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));
