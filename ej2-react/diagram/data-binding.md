@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in React Diagram component | Syncfusion®
-description: Learn here all about Data binding in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+description: Learn here about Data binding with Syncfusion Essential Studio React Diagram, its elements, and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
