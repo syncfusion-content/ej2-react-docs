@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export in React Diagram component | Syncfusion®
-description: Learn here about Export with Syncfusion Essential Studio React Diagram, its elements, and more.
+description: Learn here about Export with Syncfusion Essential Studio React Diagram component, its elements, and more.
 control: Export 
 platform: ej2-react
 documentation: ug
