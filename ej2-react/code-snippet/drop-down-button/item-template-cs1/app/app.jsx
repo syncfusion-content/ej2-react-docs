@@ -36,20 +36,31 @@ function App() {
     }
   ];
 
-  const template = `
+  function itemTemplate(data) {
+    if (data.properties.url) {
+      return (
         <div>
-            <span class='e-menu-icon ${'${iconCss}'}'></span>
-            ${
-                '${url}' 
-                ? `<span class='custom-class'><a href='${'${url}'}' target='_blank' rel='noopener noreferrer'>${'${text}'}</a></span>`
-                : `<span class='custom-class'>${'${text}'}</span>`
-            }
+          <span className={`e-menu-icon ${data.properties.iconCss}`}></span>
+          <span className="custom-class">
+            <a href={data.properties.url} target="_blank" rel="noopener noreferrer">
+              {data.properties.text}
+            </a>
+          </span>
         </div>
-    `; 
+      );
+    } else {
+      return (
+        <div>
+          <span className={`e-menu-icon ${data.properties.iconCss}`}></span>
+          <span className="custom-class">{data.properties.text}</span>
+        </div>
+      );
+    }
+  }
 
   return (
     <div>
-      <DropDownButtonComponent items={items} itemTemplate = {template} >DropDownButton</DropDownButtonComponent>
+      <DropDownButtonComponent items={items} itemTemplate={itemTemplate} >DropDownButton</DropDownButtonComponent>
     </div>
   );
 }
