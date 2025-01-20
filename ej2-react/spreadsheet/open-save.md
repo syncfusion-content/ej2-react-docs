@@ -308,21 +308,6 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/open-from-json" %}
 
-### Add custom header during open
-
-You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforeopen) event, the custom header can be added to the request during open action.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/open-save-cs3/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/open-save-cs3/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs3" %}
-
 ### Chunk response processing
 
 When opening large Excel files with many features and data, the server response can become very large. This might cause memory issues or connection problems during data transmission. The `Chunk Response Processing` feature solves this by dividing the server response into smaller parts, called chunks, and sending them to the client in parallel. The client receives these chunks and combines them to load the Excel data smoothly into the spreadsheet.
@@ -393,6 +378,21 @@ The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general
     <SpreadsheetComponent ref={spreadsheetRef} openUrl="https://localhost:{port number}/Home/Open">
     </SpreadsheetComponent>
 ```
+
+### Add custom header during open
+
+You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforeopen) event, the custom header can be added to the request during open action.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/open-save-cs3/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/open-save-cs3/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs3" %}
 
 ### External workbook confirmation dialog
 

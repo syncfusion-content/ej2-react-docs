@@ -9,7 +9,9 @@ function App() {
     let tabObj: TabComponent;
 
     function select(args: any): void {
-      fileObj.refreshLayout();
+      if (fileObj) {
+        fileObj.refreshLayout();
+      }
     }
 
     // Template for Pie Chart
@@ -17,7 +19,7 @@ function App() {
       return(
           <div className="template" >
                   <div className="cnt-text">Overview</div>
-                <div className="content">The file manager component contains a context menu for performing file operations, large-icons view for displaying the files and folders, and a breadcrumb for navigation. However, these basic functionalities can be extended by using the additional feature modules like toolbar, navigation pane, and details view to simplify the navigation and file operations within the file system.</div>
+                <div className="content">The File Manager component contains a context menu for performing file operations, large-icons view for displaying the files and folders, and a breadcrumb for navigation. However, these basic functionalities can be extended by using the additional feature modules like toolbar, navigation pane, and details view to simplify the navigation and file operations within the file system.</div>
           </div>
       );
     }
@@ -26,7 +28,7 @@ function App() {
         return(
           <div className="template" >
               <div className="content-title">
-                   <div className="cnt-text">File manager with default functionalities</div>
+                   <div className="cnt-text">File Manager with default functionalities</div>
               </div>
               <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} id="file" allowDragAndDrop={true}
                   ajaxSettings = {{

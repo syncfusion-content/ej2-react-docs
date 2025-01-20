@@ -65,7 +65,7 @@ let data = [
 ];
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Edit, Selection, Toolbar } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Edit, Selection, Toolbar,RowDD } from '@syncfusion/ej2-react-gantt';
 function App () {
   
         const taskFields = {
@@ -113,7 +113,7 @@ function App () {
             <ColumnDirective field= 'StartDate' > </ColumnDirective>
             <ColumnDirective field= 'Duration' > </ColumnDirective>
             </ColumnsDirective>
-            <Inject services={[ Toolbar, Edit, Selection ]}/>
+            <Inject services={[ Toolbar, Edit, Selection,RowDD ]}/>
             </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));

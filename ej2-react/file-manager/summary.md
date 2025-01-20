@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Summary in React File manager component | Syncfusion
-description: Learn here all about Summary in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Summary in React File Manager component | Syncfusion
+description: Learn here all about Summary in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Summary 
 platform: ej2-react
 documentation: ug
@@ -24,4 +24,4 @@ domainurl: ##DomainURL##
 * [Adding Custom Item To Toolbar](file-manager/how-to/adding-custom-item-to-toolbar.md)
 * [Enable/Disable Toolbar Item](file-manager/how-to/enable-disable-toolbar-item.md)
 * [Customize Custom Thumbnails](file-manager/how-to/customize-custom-thumbnail.md)
-* [Nested Filemanager](file-manager/how-to/nested-items.md)
+* [Nested File Manager](file-manager/how-to/nested-items.md)
