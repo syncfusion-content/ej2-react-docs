@@ -13,10 +13,9 @@ import {
   FileData,
 } from '@syncfusion/ej2-react-filemanager';
 
-/**
- * File Manager flat data sample
- */
-const FlatData = () => {
+
+function App() {
+
   let permission: Permission = {
     copy: false,
     download: false,
@@ -276,75 +275,71 @@ const FlatData = () => {
   let resultData: { [key: string]: Object }[] = [].slice.call(fileData) as {
     [key: string]: Object;
   }[];
+
   return (
-    <div>
-      <div className="control-section">
-        <FileManagerComponent
-          id="flatdata"
-          fileSystemData={resultData}
-          toolbarSettings={{
-            items: [
-              'NewFolder',
-              'Cut',
-              'Copy',
-              'Paste',
-              'Delete',
-              'Rename',
-              'SortBy',
-              'Refresh',
-              'Selection',
-              'View',
-              'Details',
-            ],
-          }}
-          contextMenuSettings={{
-            file: [
-              'Open',
-              '|',
-              'Cut',
-              'Copy',
-              'Paste',
-              'Delete',
-              'Rename',
-              '|',
-              'Details',
-            ],
-            folder: [
-              'Open',
-              '|',
-              'Cut',
-              'Copy',
-              'Paste',
-              '|',
-              'Delete',
-              'Rename',
-              '|',
-              'Details',
-            ],
-            layout: [
-              'SortBy',
-              'View',
-              'Refresh',
-              '|',
-              'Paste',
-              '|',
-              'NewFolder',
-              '|',
-              'Details',
-              '|',
-              'SelectAll',
-            ],
-            visible: true,
-          }}
-        >
-          <Inject services={[NavigationPane, DetailsView, Toolbar]} />
-        </FileManagerComponent>
-      </div>
+    <div className="control-section">
+      <FileManagerComponent
+        id="flatdata"
+        fileSystemData={resultData}
+        toolbarSettings={{
+          items: [
+            'NewFolder',
+            'Cut',
+            'Copy',
+            'Paste',
+            'Delete',
+            'Rename',
+            'SortBy',
+            'Refresh',
+            'Selection',
+            'View',
+            'Details',
+          ],
+        }}
+        contextMenuSettings={{
+          file: [
+            'Open',
+            '|',
+            'Cut',
+            'Copy',
+            'Paste',
+            'Delete',
+            'Rename',
+            '|',
+            'Details',
+          ],
+          folder: [
+            'Open',
+            '|',
+            'Cut',
+            'Copy',
+            'Paste',
+            '|',
+            'Delete',
+            'Rename',
+            '|',
+            'Details',
+          ],
+          layout: [
+            'SortBy',
+            'View',
+            'Refresh',
+            '|',
+            'Paste',
+            '|',
+            'NewFolder',
+            '|',
+            'Details',
+            '|',
+            'SelectAll',
+          ],
+          visible: true,
+        }}
+      >
+        <Inject services={[NavigationPane, DetailsView, Toolbar]} />
+      </FileManagerComponent>
     </div>
   );
-};
-export default FlatData;
-
-const root = createRoot(document.getElementById('root'));
-root.render(<FlatData />);
-export default App;{% endraw %}
+}
+export default App;
+{% endraw %}

@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js Application Using Syncfusion React Components
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion React File manager component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion React File Manager component.
 
 ## What is Next.js?
 
@@ -87,7 +87,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 Syncfusion React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion React components in the project, install the corresponding npm package.
 
-Here, the [React File Manager component](https://www.syncfusion.com/react-components/react-file-manager) is used as an example. To install the React File manager component in the project, use the following command:
+Here, the [React File Manager component](https://www.syncfusion.com/react-components/react-file-manager) is used as an example. To install the React File Manager component in the project, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -119,7 +119,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-File managers/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-filemanager/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-react-filemanager/styles/material.css";
 
 {% endhighlight %}
@@ -129,9 +129,9 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 
 ## Add Syncfusion React component
 
-Follow the below steps to add the React File manager component to the Next.js project:
+Follow the below steps to add the React File Manager component to the Next.js project:
 
-1.Define the File manager component in the **src/app/page.tsx** file, as shown below:
+1.Define the File Manager component in the **src/app/page.tsx** file, as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -176,6 +176,6 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the File manager component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/file-manager/getting-started#module-injection).
+To learn more about the functionality of the File Manager component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/file-manager/getting-started#module-injection).
 
-> [View the NEXT.js File manager sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-filemanager-component-in-nextjs).
+> [View the NEXT.js File Manager sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-filemanager-component-in-nextjs).

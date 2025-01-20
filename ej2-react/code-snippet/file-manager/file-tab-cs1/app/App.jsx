@@ -6,7 +6,9 @@ function App() {
     let fileObj;
     let tabObj;
     function select(args) {
-        fileObj.refreshLayout();
+        if (fileObj) {
+            fileObj.refreshLayout();
+          }
     }
     // Template for Pie Chart
     function template1() {
@@ -19,7 +21,7 @@ function App() {
         let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
         return (<div className="template">
               <div className="content-title">
-                   <div className="cnt-text">File manager with default functionalities</div>
+                   <div className="cnt-text">File Manager with default functionalities</div>
               </div>
               <FileManagerComponent ref={s => (fileObj = s)} id="file" allowDragAndDrop={true} ajaxSettings={{
                 downloadUrl: hostUrl + 'api/FileManager/Download',
