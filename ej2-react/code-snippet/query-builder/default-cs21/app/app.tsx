@@ -8,7 +8,7 @@ import { ColumnsModel, QueryBuilderComponent, RuleModel } from '@syncfusion/ej2-
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { expenseData } from '../datasource.ts';
+import { expenseData } from './datasource.ts';
 
 function App() {
     let qryBldrObj: QueryBuilderComponent;

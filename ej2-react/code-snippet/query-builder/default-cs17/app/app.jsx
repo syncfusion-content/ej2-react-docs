@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
-import { employeeData } from '../datasource.ts';
+import { employeeData } from './datasource.ts';
 function App() {
     let columnData = [
         { field: 'EmployeeID', label: 'EmployeeID', type: 'number' },

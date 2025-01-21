@@ -2,7 +2,7 @@ import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { employeeData } from '../datasource.ts';
+import { employeeData } from './datasource.ts';
 function App() {
     let qryBldrObj;
     let columnData = [
@@ -46,7 +46,7 @@ function App() {
         qryBldrObj.lockRule("querybuilder_group0_rule0");
     }
     return (<div>
-        <QueryBuilderComponent id="querybuilder" width='100%' dataSource={hardwareData} ref={(scope) => { qryBldrObj = scope; }} rule={importRules} columns={columnData} showButtons={{lockGroup: false, lockRule: false}}/>
+        <QueryBuilderComponent id="querybuilder" width='100%' dataSource={employeeData} ref={(scope) => { qryBldrObj = scope; }} rule={importRules} columns={columnData} showButtons={{lockGroup: false, lockRule: false}}/>
         <div className="e-qb-button">
             <ButtonComponent id="lockgroup" cssClass='e-primary' content='Lock Group' onClick={lockGroup}/>
             <ButtonComponent id="lockrule" cssClass='e-primary' content='Lock Rule' onClick={lockRule}/>

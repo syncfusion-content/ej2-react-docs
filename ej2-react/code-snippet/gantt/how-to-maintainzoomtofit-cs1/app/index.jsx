@@ -13,13 +13,13 @@ function App (){
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks'
+    parentID: 'ParentId'
   };
-  const  editSettings = {
+  const editSettings = {
     allowEditing: true,
     allowTaskbarEditing: true
   };
-  const  toolbarOptions = ['Edit','ZoomToFit'];
+  const toolbarOptions = ['Edit','ZoomToFit'];
   function actionComplete(args) {
     if ((args.action === "CellEditing" || args.action === "DialogEditing") && args.requestType === "save") {
         ganttInstance.dataSource = data;
@@ -32,10 +32,20 @@ function App (){
         ganttInstance.fitToProject();
       }
   };
-        return <GanttComponent dataSource={data} taskFields={taskFields}
-        toolbar={toolbarOptions} editSettings={editSettings} actionComplete={actionComplete} taskbarEdited={taskbarEdited} height = '450px' ref={gantt => ganttInstance = gantt}>
+      return (
+          <GanttComponent 
+          dataSource={data} 
+          taskFields={taskFields}
+          toolbar={toolbarOptions} 
+          editSettings={editSettings} 
+          actionComplete={actionComplete} 
+          taskbarEdited={taskbarEdited} 
+          height = '450px' 
+          ref={gantt => ganttInstance = gantt}
+        >
            <Inject services={[Toolbar, Edit, Selection]} />
         </GanttComponent>
+      );
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 

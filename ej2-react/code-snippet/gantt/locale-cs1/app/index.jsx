@@ -8,11 +8,11 @@ setCulture('de-DE');
 L10n.load({
   'de-DE': {
       'gantt': {
-           "id": "Ich würde",
-            "name": "Name",
-            "startDate": "Anfangsdatum",
-            "duration": "Dauer",
-            "progress": "Fortschritt",
+        "id": "Ich würde",
+        "name": "Name",
+        "startDate": "Anfangsdatum",
+        "duration": "Dauer",
+        "progress": "Fortschritt",
      }
   }
 });
@@ -24,9 +24,17 @@ function App () {
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
+        parentID: 'parentId'
     };
-        return <GanttComponent dataSource={data} locale='de-DE' allowSelection={true} taskFields={taskFields}  height = '450px'>
+    return (
+        <GanttComponent 
+            dataSource={data} 
+            locale='de-DE' 
+            allowSelection={true} 
+            taskFields={taskFields}  
+            height = '450px'
+        >
         </GanttComponent>
+    ); 
 };
 ReactDOM.render(<App />, document.getElementById('root'));

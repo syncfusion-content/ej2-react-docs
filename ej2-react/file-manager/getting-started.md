@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React File manager component | Syncfusion
-description:  Checkout and learn about Getting started with React File manager component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React File Manager component | Syncfusion
+description:  Checkout and learn about Getting started with React File Manager component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -14,7 +14,7 @@ This section explains how to create and configure the simple **File Manager** co
 
 To get started quickly with React File Manager, you can check the video below.
 
-{% youtube "https://www.youtube.com/watch?v=9bKaJBgkxs" %}
+{% youtube "https://www.youtube.com/watch?v=_9bKaJBgkxs" %}
 
 ## Dependencies
 
@@ -66,7 +66,7 @@ npm install @syncfusion/ej2-react-filemanager --save
 
 ## Adding Style sheet to the Application
 
-To render the File Manager component, need to import File Manager and its dependent component's styles as given below in `App.css`.
+To render the File Manager component, need to import File Manager and its dependent component's styles as given below in **App.css**.
 
 ```css
 
@@ -89,11 +89,11 @@ To render the File Manager component, need to import File Manager and its depend
 
 File Manager can be initialized using the `<FileManagerComponent>` tag. Now, you can start adding Essential JS 2 File Manager component to the application.
 
-* To include the File Manager component in application import the `FileManagerComponent` from `ej2-react-filemanager` package in `App.tsx`.
+* To include the File Manager component in application import the `FileManagerComponent` from `ej2-react-filemanager` package in **App.tsx**.
 
 * Then add the File Manager component as shown in below code example.
 
-`[src/App.tsx]`
+**src/App.tsx**
 
 {% raw %}
 
@@ -247,7 +247,7 @@ To perform the image preview support in the File Manager component, need to init
 
 ## Injecting services for Overview
 
-By default, the File Manager component not having any extra module.  You can configure  `NavigationPane`, `Toolbar` , `ContextMenu` module using Inject.
+By default, the File Manager component not having any extra module. You can configure `NavigationPane`, `Toolbar` , `ContextMenu` module using Inject.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -324,7 +324,7 @@ For every operation in File Manager, ajax request will be sent to the server whi
 
  {% previewsample "page.domainurl/code-snippet/file-manager/persistence-cs1" %}
 
->**Note:** The files of the current folder opened in the File manager can be refreshed programatically by calling [refreshFiles](https://ej2.syncfusion.com/react/documentation/api/file-manager/#refreshfiles) method.
+>**Note:** The files of the current folder opened in the File Manager can be refreshed programatically by calling [refreshFiles](https://ej2.syncfusion.com/react/documentation/api/file-manager/#refreshfiles) method.
 
 ## Rendering component in right-to-left direction
 

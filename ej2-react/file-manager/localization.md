@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Localization in React File manager component | Syncfusion
-description: Learn here all about Localization in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Localization in React File Manager component | Syncfusion
+description: Learn here all about Localization in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React File manager component
+# Localization in React File Manager component
 
-The file manager can be localized to any culture by defining the texts and messages of the file manager in the corresponding culture. The default locale of the file manager is `en` (English). The following table represents the default texts and messages of the file manager in `en` culture.
+The File Manager can be localized to any culture by defining the texts and messages of the File Manager in the corresponding culture. The default locale of the File Manager is `en` (English). The following table represents the default texts and messages of the File Manager in `en` culture.
 
 |KEY|Text/Message|
 |----|----|

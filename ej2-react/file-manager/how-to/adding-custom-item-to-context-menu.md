@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adding custom item to context menu in React File manager component | Syncfusion
-description: Learn here all about Adding custom item to context menu in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Adding custom item to context menu in React File Manager component | Syncfusion
+description: Learn here all about Adding custom item to context menu in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Adding custom item to context menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding custom item to context menu in React File manager component
+# Adding custom item to context menu in React File Manager component
 
 The context menu can be customized using the [contextMenuSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#contextmenusettings), [menuOpen](https://ej2.syncfusion.com/react/documentation/api/file-manager/#menuopen), and [menuClick](https://ej2.syncfusion.com/react/documentation/api/file-manager/#menuclick) events.
 

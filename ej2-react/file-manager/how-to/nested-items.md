@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Nested items in React File manager component | Syncfusion
-description: Learn here all about Nested items in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Nested items in React File Manager component | Syncfusion
+description: Learn here all about Nested items in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Nested items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Nested items in React File manager component
+# Nested items in React File Manager component
 
-FileManager can be rendered inside the other components like Tab, Dialog, and more.
+File Manager can be rendered inside the other components like Tab, Dialog, and more.
 
-* [Adding file manager inside the dialog](#adding-file-manager-inside-the-dialog)
-* [Adding  file manager inside the tab](#adding-file-manager-inside-the-tab)
+* [Adding File Manager inside the dialog](#adding-file-manager-inside-the-dialog)
+* [Adding  File Manager inside the tab](#adding-file-manager-inside-the-tab)
 
-## Adding file manager inside the dialog
+## Adding File Manager inside the dialog
 
-The following example shows the file manager component rendered inside the dialog. Click the browse button in the Uploader element to open the File Manager inside the Dialog control.
+The following example shows the File Manager component rendered inside the dialog. Click the browse button in the Uploader element to open the File Manager inside the Dialog component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -36,9 +36,9 @@ The following example shows the file manager component rendered inside the dialo
 
  {% previewsample "page.domainurl/code-snippet/file-manager/file-upload-cs1" %}
 
-## Adding file manager inside the tab
+## Adding File Manager inside the tab
 
-The following example demonstrate that the file manager component is placed inside the content area of tab element.
+The following example demonstrate that the File Manager component is placed inside the content area of tab element.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

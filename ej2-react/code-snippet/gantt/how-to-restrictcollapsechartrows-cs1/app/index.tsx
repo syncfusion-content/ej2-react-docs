@@ -6,31 +6,40 @@ import { GanttComponent, Inject, Edit, EditSettingsModel, Selection } from '@syn
 import { data } from './datasource';
 function  App(){
     const taskFields: any = {
-    id: 'TaskID',
-    name: 'TaskName',
-    startDate: 'StartDate',
-    duration: 'Duration',
-    progress: 'Progress',
-    child: 'subtasks'
-  };
-  let ganttInstance:any;
- const  editOptions: EditSettingsModel = {
+        id: 'TaskID',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentId'
+    };
+    let ganttInstance:any;
+    const  editOptions: EditSettingsModel = {
       allowEditing: true,
       allowAdding:true
-  };
-  let gantt;
- function collapsing(args:any) {
-    if (gantt.ganttChartModule.isExpandCollapseFromChart) {
-        args.cancel = true;
-    }
-  };
+    };
+    let gantt;
+    function collapsing(args:any) {
+        if (gantt.ganttChartModule.isExpandCollapseFromChart) {
+            args.cancel = true;
+        }
+    };
     
-        return (<div>
-        <GanttComponent dataSource={data} ref={gantt => ganttInstance = gantt} taskFields={taskFields} collapsing={collapsing} allowSelection={true}
-        editSettings={editOptions} height = '450px'>
-            <Inject services={[Edit, Selection]} />
-        </GanttComponent></div>)
-    
+    return (
+        <div>
+            <GanttComponent 
+                dataSource={data} 
+                ref={gantt => ganttInstance = gantt} 
+                taskFields={taskFields} 
+                collapsing={collapsing} 
+                allowSelection={true}
+                editSettings={editOptions} 
+                height = '450px'
+                >
+                <Inject services={[Edit, Selection]} />
+            </GanttComponent>
+        </div>
+    );
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 

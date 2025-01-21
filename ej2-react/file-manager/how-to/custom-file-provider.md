@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Implement own service provider in React File manager component | Syncfusion
-description: Learn here all about implementation own service provider in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Implement own service provider in React File Manager component | Syncfusion
+description: Learn here all about implementation own service provider in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Implement own service provider
 platform: ej2-react
 documentation: ug
@@ -164,7 +164,7 @@ The following table represents the response parameters of **read** operations.
 |error|[ErrorDetails](../file-operations.md/#delete)|-|Error Details|
 
 <a id="file-manager-directory-content"></a>
-The following table represents the contents of **FileManagerDirectoryContent** in the file manager request and response.
+The following table represents the contents of **FileManagerDirectoryContent** in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|Is required|
 |----|----|----|----|----|

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customization in React File manager component | Syncfusion
-description: Learn here all about Customization in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Customization in React File Manager component | Syncfusion
+description: Learn here all about Customization in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React File manager component
+# Customization in React File Manager component
 
-The file manager component allows customizing its functionalities like, context menu, searching, uploading, toolbar using APIs. Given below are some of the functionalities that can be customized in the File Manager,
+The File Manager component allows customizing its functionalities like, context menu, searching, uploading, toolbar using APIs. Given below are some of the functionalities that can be customized in the File Manager,
 
 * [Context menu customization](#context-menu-customization)
 * [Details view customization](#details-view-customization)
@@ -198,7 +198,7 @@ The upload settings like, minimum and maximum file size and enabling auto upload
 
 ## Tooltip customization
 
-The tooltip value can be customized by adding extra content to the title of the toolbar, navigation pane, details view and large icons of the file manager element.
+The tooltip value can be customized by adding extra content to the title of the toolbar, navigation pane, details view and large icons of the File Manager element.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

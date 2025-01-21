@@ -6,15 +6,15 @@ import { data } from './datasource';
 function App (){
     let ganttInstance: any;
     const taskFields: any = {
-        id: 'TaskID',
+        id: 'TaskId',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
-  };
-  const toolbarOptions: ToolbarItem[] = ['ExcelExport', 'CsvExport'];
- function toolbarClick(args: ClickEventArgs): void {
+        parentID: 'parentId'
+    };
+    const toolbarOptions: ToolbarItem[] = ['ExcelExport', 'CsvExport'];
+    function toolbarClick(args: ClickEventArgs): void {
        if (args.item.id === 'GanttExport_excelexport') {
            const excelExportProperties: ExcelExportProperties = {
                 includeHiddenColumn: true
@@ -27,10 +27,20 @@ function App (){
           ganttInstance.csvExport(excelExportProperties);
         }
     };
-        return <GanttComponent id='GanttExport' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions}
-        toolbarClick={toolbarClick} allowExcelExport={true} height='400px' ref={gantt => ganttInstance = gantt} treeColumnIndex={1}>
+    return (
+        <GanttComponent 
+            id='GanttExport' 
+            dataSource={data} 
+            taskFields={taskFields} 
+            toolbar={toolbarOptions}
+            toolbarClick={toolbarClick} 
+            allowExcelExport={true} 
+            height='400px' 
+            ref={gantt => ganttInstance = gantt} 
+            treeColumnIndex={1}
+            >
             <ColumnsDirective>
-                <ColumnDirective field='TaskID' headerText='Task ID' textAlign='Left' width='100' ></ColumnDirective>
+                <ColumnDirective field='TaskId' headerText='Task ID' textAlign='Left' width='100' ></ColumnDirective>
                 <ColumnDirective field='TaskName' headerText='Task Name' width='150'></ColumnDirective>
                 <ColumnDirective field='StartDate' headerText='StartDate' width='150' visible={false}></ColumnDirective>
                 <ColumnDirective field='Duration' headerText='Duration' width='150' ></ColumnDirective>
@@ -38,5 +48,6 @@ function App (){
             </ColumnsDirective>
             <Inject services={[Toolbar, ExcelExport, Selection]} />
         </GanttComponent>
+    );
 };
 ReactDOM.render(<App />, document.getElementById('root'));

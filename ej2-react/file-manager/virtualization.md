@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in React File manager component | Syncfusion
-description: Learn here all about Virtualization in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Virtualization in React File Manager component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Virtualization 
 platform: ej2-react
 documentation: ug
@@ -14,7 +14,7 @@ File Manager's UI virtualization allows you for the dynamic loading of a large n
 
 ## Module Injection
 
-In order to use UI Virtualization, you need to inject its virtualization service in the App. This modules should be injected into the FileManager using the Inject directive.
+In order to use UI Virtualization, you need to inject its virtualization service in the App. This modules should be injected into the File Manager using the Inject directive.
 
 {% raw %}
 
@@ -25,7 +25,7 @@ import * as React from 'react';
 function App() {
     let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
     return (
-            // specifies the tag to render the FileManager component
+            // specifies the tag to render the File Manager component
             <FileManagerComponent id="filemanager" ajaxSettings={{
                     url: hostUrl + "api/FileManager/FileOperations",
                     getImageUrl: hostUrl + "api/FileManager/GetImage",

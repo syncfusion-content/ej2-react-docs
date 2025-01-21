@@ -2,7 +2,7 @@
 import { L10n } from '@syncfusion/ej2-base';
 import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
-// Load Locale text to FileManager component
+// Load Locale text to File Manager component
 L10n.load({
     'de': {
         'filemanager': {

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Views in React File manager component | Syncfusion
-description: Learn here all about Views in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Views in React File Manager component | Syncfusion
+description: Learn here all about Views in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Views 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Views in React File manager component
+# Views in React File Manager component
 
-View is the section where the files and folders are displayed for the user to browse. The [view](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) API can also be used to change the initial view of the file manager.
+View is the section where the files and folders are displayed for the user to browse. The [view](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) API can also be used to change the initial view of the File Manager.
 
- The file manager has two types of [views](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) to display the files and folders.
+ The File Manager has two types of [views](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) to display the files and folders.
 
 * [LargeIcons View](#largeicons-view)
 * [Details View](#details-view)
@@ -40,7 +40,7 @@ By Default, File Manager is rendered with largeicons view. The following example
 
 ## Details View
 
-Details view is an injectable module in the file manager so, it should be injected before rendering the file manager to avail its functionality. The default appearance of the file manager can be changed from largeicons to details view by using the [view](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) property. The following example demonstrate the file manager with details view.
+Details view is an injectable module in the File Manager so, it should be injected before rendering the File Manager to avail its functionality. The default appearance of the File Manager can be changed from largeicons to details view by using the [view](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) property. The following example demonstrate the File Manager with details view.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

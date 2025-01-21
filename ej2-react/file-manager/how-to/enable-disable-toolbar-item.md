@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable disable toolbar item in React File manager component | Syncfusion
-description: Learn here all about Enable disable toolbar item in Syncfusion React File manager component of Syncfusion Essential JS 2 and more.
+title: Enable disable toolbar item in React File Manager component | Syncfusion
+description: Learn here all about Enable disable toolbar item in Syncfusion React File Manager component of Syncfusion Essential JS 2 and more.
 control: Enable disable toolbar item 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable disable toolbar item in React File manager component
+# Enable disable toolbar item in React File Manager component
 
 The toolbar items can be enabled/disabled by specifying the items in [enableToolbarItems](https://ej2.syncfusion.com/react/documentation/api/file-manager/#enabletoolbaritems) or [disableToolbarItems](https://ej2.syncfusion.com/react/documentation/api/file-manager/#disabletoolbaritems) methods respectively.
 
