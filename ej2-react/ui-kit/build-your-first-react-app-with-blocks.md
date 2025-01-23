@@ -36,7 +36,7 @@ If you choose **Tailwind** theme, follow these steps to configure it.
   
     ![Tailwind Installation](images/tailwind-installation.PNG)
 
-2. In the **tailwind.config.js** file, add the following code to `content`, `darkMode`, and `theme` configurations. When creating the **Next.js** app, if the option **"Would you like your code inside a `src/` directory?"** was set to **Yes**, all the app-related files will be placed inside the **src** folder. Therefore, the `content` configuration should reflect this. If this option was not selected, the `content` configuration will need to be adjusted accordingly. To learn more about this, refer to this [link](https://tailwindcss.com/docs/guides/nextjs).
+2. In the **tailwind.config.js** file, add the following code to `content`, `darkMode`, and `theme` configurations. When creating the **Next.js** app, if the option **"Would you like your code inside a `src/` directory?"** was set to **Yes**, all the app-related files will be placed inside the **src** folder. Therefore, the `content` configuration should reflect this. If this option was not selected, the `content` configuration will need to be adjusted accordingly.
 
     ```js
     module.exports = {
