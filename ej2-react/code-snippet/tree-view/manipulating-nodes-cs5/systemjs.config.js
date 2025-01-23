@@ -31,6 +31,7 @@ System.config({
 
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-navigations": "syncfusion:ej2-react-navigations/dist/ej2-react-navigations.umd.min.js",
+        "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@16.3.1/umd/react.production.min.js",
     },

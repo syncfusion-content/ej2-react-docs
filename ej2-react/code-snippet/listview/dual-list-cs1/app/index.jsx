@@ -230,49 +230,49 @@ function App() {
         }
     }
     return (<div id="container">
-      <div className="col-lg-12 control-section">
-        <div>
-          <h3>Dual List</h3>
-          <div id="text1">
-            <input className="e-input" type="text" id="firstInput" ref={(inputRef) => (firstInput = inputRef)} placeholder="Filter" onKeyUp={firstInputKeyUp.bind(this)} title="Type in a name"/>
-          </div>
-          <ListViewComponent id="list-1" dataSource={firstListData} fields={fields} sortOrder="Ascending" select={onFirstListSelect.bind(this)} ref={scope => {
-            listFirstInstance = scope;
-        }}/>
-          <div id="btn">
-            <ButtonComponent onClick={firstBtnClick.bind(this)} ref={button1 => {
-            firstBtnInstance = button1;
-        }}>
-              {" "}
-              {">>"}
-            </ButtonComponent>
-            <ButtonComponent onClick={secondBtnClick.bind(this)} ref={button2 => {
-            secondBtnInstance = button2;
-        }}>
-              {" "}
-              {">"}
-            </ButtonComponent>
-            <ButtonComponent onClick={thirdBtnClick.bind(this)} ref={button3 => {
-            thirdBtnInstance = button3;
-        }}>
-              {" "}
-              {"<"}{" "}
-            </ButtonComponent>
-            <ButtonComponent onClick={fourthBtnClick.bind(this)} ref={button4 => {
-            fourthBtnInstance = button4;
-        }}>
-              {" "}
-              {"<<"}{" "}
-            </ButtonComponent>
-          </div>
-          <div id="text2">
-            <input className="e-input" type="text" onKeyUp={secondInputKeyUp.bind(this)} id="secondInput" ref={(inputRef) => (secondInput = inputRef)} placeholder="  Filter" title="Type in a name"/>
-          </div>
-          <ListViewComponent id="list-2" dataSource={secondListData} fields={fields} sortOrder="Ascending" select={onSecondListSelect.bind(this)} ref={list => {
-            listSecondInstance = list;
-        }}/>
+        <div className="col-lg-12 control-section">
+            <div>
+                <h3>Dual List</h3>
+                <div id="text1">
+                    <input className="e-input" type="text" id="firstInput" ref={(inputRef) => (firstInput = inputRef)} placeholder="Filter" onKeyUp={firstInputKeyUp.bind(this)} title="Type in a name" />
+                </div>
+                <ListViewComponent id="list-1" dataSource={firstListData} fields={fields} sortOrder="Ascending" select={onFirstListSelect.bind(this)} ref={scope => {
+                    listFirstInstance = scope;
+                }} />
+                <div id="btn">
+                    <ButtonComponent onClick={firstBtnClick.bind(this)} ref={button1 => {
+                        firstBtnInstance = button1;
+                    }}>
+                        {" "}
+                        {">>"}
+                    </ButtonComponent>
+                    <ButtonComponent onClick={secondBtnClick.bind(this)} ref={button2 => {
+                        secondBtnInstance = button2;
+                    }}>
+                        {" "}
+                        {">"}
+                    </ButtonComponent>
+                    <ButtonComponent onClick={thirdBtnClick.bind(this)} ref={button3 => {
+                        thirdBtnInstance = button3;
+                    }}>
+                        {" "}
+                        {"<"}{" "}
+                    </ButtonComponent>
+                    <ButtonComponent onClick={fourthBtnClick.bind(this)} ref={button4 => {
+                        fourthBtnInstance = button4;
+                    }}>
+                        {" "}
+                        {"<<"}{" "}
+                    </ButtonComponent>
+                </div>
+                <div id="text2">
+                    <input className="e-input" type="text" onKeyUp={secondInputKeyUp.bind(this)} id="secondInput" ref={(inputRef) => (secondInput = inputRef)} placeholder="  Filter" title="Type in a name" />
+                </div>
+                <ListViewComponent id="list-2" dataSource={secondListData} fields={fields} sortOrder="Ascending" select={onSecondListSelect.bind(this)} ref={list => {
+                    listSecondInstance = list;
+                }} />
+            </div>
         </div>
-      </div>
     </div>);
 }
 export default App;

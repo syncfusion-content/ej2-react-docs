@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React Tooltip component | Syncfusion
-description:  Checkout and learn about Getting started with React Tooltip component of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about Getting started with React Tooltip component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -141,6 +141,9 @@ The output will be as follows:
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/tooltip/default-cs1/index.html %}
+{% endhighlight %}
+{% highlight css tabtitle="index.css" %}
+{% include code-snippet/tooltip/default-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
         

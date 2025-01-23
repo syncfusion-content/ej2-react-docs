@@ -40,18 +40,12 @@ npm install -g create-react-app
 
 * To setup basic `React` sample use following commands.
 
-<div class='tsx'>
-
 ```
 create-react-app quickstart --scripts-version=react-scripts-ts
 
 cd quickstart
 
 ```
-
-</div>
-
-<div class='jsx'>
 
 ```
 
@@ -60,8 +54,6 @@ create-react-app quickstart
 cd quickstart
 
 ```
-
-</div>
 
 ## Adding Syncfusion packages
 
@@ -75,7 +67,7 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ## Adding Style sheet to the Application
 
-To render the Sidebar component, need to import Sidebar and its dependent component's styles as given below in `App.css`.
+To render the Sidebar component, need to import Sidebar and its dependent component's styles as given below in **App.css**.
 
 ```css
 
@@ -90,12 +82,11 @@ To render the Sidebar component, need to import Sidebar and its dependent compon
 
 Sidebar can be initialized using the `<SidebarComponent>` tag, it's used to render Sidebar as it contains primary content aside from the main content. The immediate sibling element of the Sidebar will be considered as the main content.
 
-* To include the Sidebar component in application import the `SidebarComponent` from `ej2-react-navigations` package in `App.tsx`.
+* To include the Sidebar component in application import the `SidebarComponent` from `ej2-react-navigations` package in **App.tsx**.
 
 * Then add the Sidebar component as shown in below code example.
 
-`[src/App.tsx]`
-
+**src/App.tsx**
 
 
 ```ts
@@ -181,7 +172,7 @@ The following sample, shows the basic Sidebar component.
 
 Enabling the [showBackdrop](https://ej2.syncfusion.com/react/documentation/api/sidebar/#showbackdrop) in the Sidebar component will prevent the main content from user interactions.
 
-Here, DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen. Sidebar can be rendered with specific width by setting `width` property
+Here, DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen. Sidebar can be rendered with specific width by setting [`width`](https://ej2.syncfusion.com/react/documentation/api/sidebar#width) property.
 
 N> To achieve a proper **backdrop**, we suggest that you create a wrapper parent container for the div block in which you intend to enable the backdrop. Set the class name of this parent container as the **target** for the Sidebar. Alternatively, you can place an empty div container after the target container.
 
@@ -210,7 +201,7 @@ N> To achieve a proper **backdrop**, we suggest that you create a wrapper parent
 
 ## Position
 
-Positioning the Sidebar to the right or left of the main content can be achieved by using the [position](https://ej2.syncfusion.com/react/documentation/api/sidebar/#position) property. If the position is not set, the Sidebar will expand from the left to the body element. [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablepersistence) will persist the component's state between page reloads. [`change`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#change) event will be triggered when the state(expand/collapse) of the component is changed.
+Positioning the Sidebar to the right or left of the main content can be achieved by using the [position](https://ej2.syncfusion.com/react/documentation/api/sidebar/#position) property. If the position is not set, the Sidebar will expand from the left to the body element. [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablepersistence) will persist the component's state between page reloads. The [`change`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#change) event will be triggered when the state(expand/collapse) of the component is changed.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -237,7 +228,7 @@ Positioning the Sidebar to the right or left of the main content can be achieved
 
 ## Animate
 
-Animation transitions can be set while expanding or collapsing the Sidebar using the [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property. By default , [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property is set to true. [`enableRTL`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablertl) will display the sidebar in the right-to-left direction.
+Animation transitions can be set while expanding or collapsing the Sidebar using the [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property. By default , [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property is set to true. The [`enableRTL`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablertl) will display the sidebar in the right-to-left direction.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

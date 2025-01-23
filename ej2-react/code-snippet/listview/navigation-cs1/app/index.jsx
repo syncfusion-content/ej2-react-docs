@@ -15,7 +15,7 @@ function App() {
     }
     ;
     return (<ListViewComponent id='list' dataSource={dataSource} headerTitle='Search engines' showHeader={true} template={anchor_template}>
-            </ListViewComponent>);
+    </ListViewComponent>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

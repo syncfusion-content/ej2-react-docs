@@ -17,8 +17,7 @@
     border-radius: 3px;
 }
 
- #display {
-     max-width: 500px;
-     margin: auto;
-     padding: 10px;
+#btn{
+    margin-left: 40%;
+    margin-top: 20px;
 }

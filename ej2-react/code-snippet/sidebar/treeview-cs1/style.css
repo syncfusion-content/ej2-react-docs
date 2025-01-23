@@ -32,23 +32,6 @@
     cursor: pointer;
 }
 
-.sb-content-tab #wrapper {
-    display: none;
-}
-
-.center {
-    text-align: center;
-    display: none;
-    font-size: 13px;
-    font-weight: 400;
-    margin-top: 20px;
-}
-
-.sb-content-tab .center {
-    display: block;
-}
-
-
 #header-section .header-list,
 #sidebar-treeview .e-treeview,
 #sidebar-treeview .e-treeview .e-ul {

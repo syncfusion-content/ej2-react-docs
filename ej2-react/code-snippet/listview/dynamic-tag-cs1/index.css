@@ -41,8 +41,7 @@
 }
 
 .advanced-option .delete {
-  background: url(https://research.isg-one.com/Assets/img/Content/icn/tiny-del.png) right center
-    no-repeat;
+  background: url(https://research.isg-one.com/Assets/img/Content/icn/tiny-del.png) right center no-repeat;
   padding-left: 10px;
   padding-top: 2px;
   right: 0;
@@ -82,11 +81,7 @@
   padding: 11px 16px;
 }
 
-.e-dialog .e-dlg-header-content + .e-dlg-content {
-  margin-top: -18px;
-}
-
-.e-dialog .e-dlg-header-content + .e-dlg-content {
+.e-dialog .e-dlg-header-content+.e-dlg-content {
   margin-top: -18px;
   padding-top: 15px;
 }
@@ -95,6 +90,6 @@
   z-index: 1000;
   position: absolute;
   right: 0;
-  top: -12px;
+  top: -28px;
   background: transparent;
 }

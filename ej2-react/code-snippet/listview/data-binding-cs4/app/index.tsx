@@ -6,13 +6,13 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 //import DataManager related classes
-import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
-import { createSpinner, hideSpinner, showSpinner} from '@syncfusion/ej2-react-popups';
+import { DataManager, Query } from '@syncfusion/ej2-data';
+import { createSpinner, showSpinner } from '@syncfusion/ej2-react-popups';
 
 function App() {
-  React.useEffect(()=>{
+  React.useEffect(() => {
     componentDidMount();
-  },[])
+  }, [])
 
   //Bind the DataManager instance to dataSource property
   let data = new DataManager({
@@ -30,10 +30,10 @@ function App() {
     .select("EmployeeID,FirstName")
     .take(10);
 
-  function componentDidMount(){
+  function componentDidMount() {
     if (spinnerInstance) {
       createSpinner({
-      target: spinnerInstance
+        target: spinnerInstance
       });
       showSpinner(spinnerInstance);
     }

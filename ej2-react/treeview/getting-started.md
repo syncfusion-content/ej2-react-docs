@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Treeview component | Syncfusion
-description:  Checkout and learn about Getting started with React Treeview component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React TreeView component | Syncfusion
+description:  Checkout and learn about Getting started with React TreeView component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -70,10 +70,9 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ## Adding TreeView component
 
-Now, you can start adding TreeView component in the application. For getting started, add the
-TreeView component in `src/App.tsx` file using following code.
+Now, you can start adding TreeView component in the application. For getting started, add the TreeView component in **src/App.tsx** file using following code.
 
-Add the below code in the `src/App.tsx` to initialize the TreeView.
+Add the below code in the **src/App.tsx** to initialize the TreeView.
 
 
 
@@ -111,7 +110,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## Adding CSS reference
 
-Import the TreeView component required CSS references as follows in `src/App.css`.
+Import the TreeView component required CSS references as follows in **src/App.css**.
 
 ```css
 
@@ -378,10 +377,10 @@ npm start
 
 ## See Also
 
-* [How to customize treeview as accordion](./how-to/accordion-tree)
+* [How to customize TreeView as accordion](./how-to/accordion-tree)
 
-* [How to set tooltip for treeview nodes](./how-to/set-tool-tip-for-tree-nodes)
+* [How to set tooltip for TreeView nodes](./how-to/set-tool-tip-for-tree-nodes)
 
-* [How to filter nodes in treeview](./how-to/filtering-tree-nodes)
+* [How to filter nodes in TreeView](./how-to/filtering-tree-nodes)
 
 * [How to get all the child nodes through parentID](./how-to/get-all-child-nodes)

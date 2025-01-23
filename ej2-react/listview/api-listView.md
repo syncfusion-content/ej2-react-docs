@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Api listView in React Listview component | Syncfusion
-description: Learn here all about Api listView in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Api listView in React ListView component | Syncfusion
+description: Learn here all about Api listView in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Api listView 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api listView in React Listview component
+# Api listView in React ListView component
 
-Represents the EJ2 ListView control.
+Represents the EJ2 ListView component.
 ```
 <div id="listview">
 <ul>
@@ -164,11 +164,11 @@ Returns *void*
 
 ### appendTo
 
-Appends the control within the given HTML element
+Appends the component within the given HTML element
 
 | Parameter | Type | Description |
 |------|------|-------------|
-| selector (*optional*) |  `string` &#124;  `HTMLElement` | Target element where control needs to be appended<br> |
+| selector (*optional*) |  `string` &#124;  `HTMLElement` | Target element where component needs to be appended<br> |
 
 Returns *void*
 
@@ -270,7 +270,7 @@ Returns *void*
 
 ### render
 
-It is used to Initialize the control rendering.
+It is used to Initialize the component rendering.
 
 Returns *void*
 

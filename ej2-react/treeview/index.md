@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Treeview component | Syncfusion
-description: Learn here all about Index in Syncfusion React Treeview component of Syncfusion Essential JS 2 and more.
+title: Index in React TreeView component | Syncfusion
+description: Learn here all about Index in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Treeview component
+# Index in React TreeView component
 
 The **TreeView** component is used to represent hierarchical data in a tree like structure with advanced functions to edit, drag and drop, select with CheckBox and more. TreeView can be populated from a data source such as an array of JavaScript objects or from DataManager.
 

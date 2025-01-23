@@ -21,17 +21,17 @@ function App() {
     let allowEditing = true;
     const btnClick1 = () => {
         treeObj.updateNode('4', 'Node updated'); // Update node having id 4 in TreeView
-      };
+    };
     return (<div className='control-pane'>
         <div className='control-section'>
-        <div className='control_wrapper'>
-            {/* Render TreeView */}
-            <TreeViewComponent fields={fields} allowEditing={allowEditing} ref={(tree) => { treeObj = tree; }} />
-            <ButtonComponent id="addtree1" cssClass="e-primary inline-element right" onClick={btnClick1.bind(this)}> Update node </ButtonComponent>
+            <div id='treeparent'>
+                {/* Render TreeView */}
+                <TreeViewComponent fields={fields} allowEditing={allowEditing} ref={(tree) => { treeObj = tree }} /></div>
+            <div id="btn">
+                <ButtonComponent id="addtree1" cssClass="e-primary inline-element right" onClick={btnClick1.bind(this)}> Update node </ButtonComponent>
+            </div>
         </div>
-        <div id="display"></div>
-        </div>
-      </div>);
+    </div>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

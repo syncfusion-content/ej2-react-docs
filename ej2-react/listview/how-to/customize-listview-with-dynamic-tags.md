@@ -1,26 +1,21 @@
 ---
 layout: post
-title: Customize listview with dynamic tags | Syncfusion
-description: Learn here all about Customize listview with dynamic tags in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
-control: Customize listview with dynamic tags 
+title: Customize ListView with dynamic tags | Syncfusion
+description: Learn here all about Customize ListView with dynamic tags in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
+control: Customize ListView with dynamic tags 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize listview with dynamic tags in React Listview component
+# Customize ListView with dynamic tags in React ListView component
 
-You can customize the ListView items using the [`template`](https://ej2.syncfusion.com/react/documentation/api/list-view/#template) property. Here, the dynamic tags are added and removed in the list item from another ListView. Refer to the following steps to achieve this.
+You can customize the ListView items using the [`template`](https://ej2.syncfusion.com/react/documentation/api/list-view/#template) property. In this example, dynamic tags are added to and removed from list items using another ListView. Follow these steps to achieve this:
 
-* Render the ListView with data source, and add button element with each list item of ListView on [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/list-view/#actioncomplete) event.
-Refer to the following code sample of actionComplete event.
-
-
+* Render the ListView with a data source, and add a button element to each list item using the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/list-view/#actioncomplete) event. Refer to the following code sample for the actionComplete event:
 
    ```ts
-
     // The actionComplete event for first ListView to add the button
-
       function addButton(args) {
        let buttonObj = { obj: ButtonComponent, prop: { iconCss: 'e-icons e-add-icon', cssClass: 'e-small e-round' } };
         let ele = document.getElementsByClassName("e-but");
@@ -32,21 +27,7 @@ Refer to the following code sample of actionComplete event.
 
   ```
 
-  ```ts
-    // The actionComplete event for first ListView to add the button
-    function addButton(args) {
-      let buttonObj = { obj: ButtonComponent, prop: { iconCss: 'e-icons e-add-icon', cssClass: 'e-small e-round' } };
-      let ele = document.getElementsByClassName("e-but");
-      for (let i = 0; i < ele.length; i++) {
-         buttonObj.obj = new ButtonComponent(buttonObj.prop);
-         buttonObj.obj.appendTo(ele[i]);
-      }
-    }
-  ```
-
 * Initialize dynamic ListView with required property that holds the tags of parent ListView, and bind the [`select`](https://ej2.syncfusion.com/react/documentation/api/list-view/#select) event (triggers when the list item is selected), in which you can get and add the selected item value as tags into parent ListView. Refer to the following code sample.
-
-
 
    ```ts
 
@@ -69,31 +50,9 @@ Refer to the following code sample of actionComplete event.
       }
   ```
 
-  ```ts
-    //Select the event that is is rendered inside dialog for ListView
-    function addTag(e) {
-       let listTag = document.createElement('span');
-       listTag.className = 'advanced-option';
-       let labelElem = document.createElement('span');
-       labelElem.className = 'label';
-       let deleteElem = document.createElement('span');
-       deleteElem.className = 'delete';
-       deleteElem.onclick = removeTag;
-       labelElem.innerHTML = e.target.textContent;
-       listTag.appendChild(labelElem);
-       listTag.appendChild(deleteElem);
-       let tag = document.createElement('span');
-       tag.className = 'advanced-option-list';
-       tag.appendChild(listTag);
-       listviewInstance.element.querySelector('.e-active').appendChild(tag);
-    }
-  ```
-
 * Render the dialog component with empty content and append the created dynamic ListView object to the dialog on [`created`](https://ej2.syncfusion.com/react/documentation/api/dialog/#created) event.
 
 * Bind the click event for button icon (+) to update the ListView data source with tags, and open the dialog with this dynamic ListView. Refer to the following code sample.
-
-
 
   ```ts
     //Method to hide/show the dialog and update the ListView data source
@@ -137,6 +96,9 @@ Refer to the following code sample of actionComplete event.
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/listview/dynamic-tag-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/dynamic-tag-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

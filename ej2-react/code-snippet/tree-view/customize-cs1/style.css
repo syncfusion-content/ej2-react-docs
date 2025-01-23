@@ -7,7 +7,7 @@
     width: 30%;
 }
 
-#treeparent {
+.control_wrapper {
     display: block;
     max-width: 350px;
     max-height: 350px;

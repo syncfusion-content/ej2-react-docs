@@ -282,8 +282,6 @@ function App() {
 
     let fields: object = { tooltip: 'text' };
 
-    let title = 'Mixed Leaf Checkbox Hidden List ';
-
     let listviewInstance: ListViewComponent;
 
     function onSelect(args: SelectEventArgs) {
@@ -305,7 +303,7 @@ function App() {
 
     return (
         <div id="sample">
-        <ListViewComponent id='folderCheckbox' dataSource={dataSource} fields={fields} headerTitle='Mixed Leaf Checkbox Hidden List' showHeader="true" showCheckBox="true" select={onSelect.bind(this)} ref={(scope) => { listviewInstance = scope; }} ></ListViewComponent>
+            <ListViewComponent id='folderCheckbox' dataSource={dataSource} fields={fields} headerTitle='Mixed Leaf Checkbox Hidden List' showHeader="true" showCheckBox="true" select={onSelect.bind(this)} ref={(scope) => { listviewInstance = scope; }} ></ListViewComponent>
         </div>
     )
 }

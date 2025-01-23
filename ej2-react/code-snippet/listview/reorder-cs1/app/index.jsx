@@ -1,6 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
+import './index.css';
 function App() {
     //Define an array of JSON data
     let data = [
@@ -24,7 +25,7 @@ function App() {
             args.cancel = true;
         }
     }
-    return (<TreeViewComponent id="treeview" allowDragAndDrop={true} nodeDragging={onDragStop.bind(this)} nodeDragStop={onDragStop.bind(this)} fields={field}/>);
+    return (<TreeViewComponent id="treeview" allowDragAndDrop={true} nodeDragging={onDragStop.bind(this)} nodeDragStop={onDragStop.bind(this)} fields={field} />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

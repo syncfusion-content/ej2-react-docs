@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Get all child nodes in React Treeview component | Syncfusion
-description: Learn here all about Get all child nodes in Syncfusion React Treeview component of Syncfusion Essential JS 2 and more.
+title: Get all child nodes in React TreeView component | Syncfusion
+description: Learn here all about Get all child nodes in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
 control: Get all child nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get all child nodes in React Treeview component
+# Get all child nodes in React TreeView component
 
-This section demonstrates how to get the child nodes from corresponding parent ID. Using the `getNode` method, you can get the node details of TreeView. Please refer to the following sample.
+This section demonstrates how to get the child nodes from corresponding parent ID. Using the [`getNode`](https://ej2.syncfusion.com/react/documentation/api/treeview#getnode) method, you can get the node details of TreeView. Please refer to the following sample.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
