@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrolling in React Listview component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Scrolling in React ListView component | Syncfusion
+description: Learn here all about Scrolling in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Scrolling 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling in React Listview component
+# Scrolling in React ListView component
 
 Scrolling is a technique that allows you to load more items as the user scrolls through a list, providing a seamless and dynamic user experience. This document explains how to implement scrolling in the React ListView component.
 

@@ -5,6 +5,7 @@ import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 //import DataManager related classes
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { createSpinner, showSpinner } from '@syncfusion/ej2-react-popups';
+import './index.css';
 function App() {
     React.useEffect(() => {
         componentDidMount();
@@ -36,10 +37,10 @@ function App() {
             spinnerInstance.style.display = "none";
     }
     return (<div>
-      <ListViewComponent id="list" dataSource={data} fields={fields} query={query} showHeader={true} headerTitle="Employees" actionComplete={onActionComplete.bind(this)}/>
-      <div ref={spinner => {
+        <ListViewComponent id="list" dataSource={data} fields={fields} query={query} showHeader={true} headerTitle="Employees" actionComplete={onActionComplete.bind(this)} />
+        <div ref={spinner => {
             spinnerInstance = spinner;
-        }} id="spinner"/>
+        }} id="spinner" />
     </div>);
 }
 export default App;

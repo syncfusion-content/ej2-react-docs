@@ -20,51 +20,51 @@ function App() {
     { text: "Aston Martin One- 77", id: "list-07", isChecked: true },
     { text: "Jaguar XJ220", id: "list-08" }
   ];
-  const [state,SetState] =React.useState({
-      selectedItemsValue: []
+  const [state, SetState] = React.useState({
+    selectedItemsValue: []
   });
   function getSelectedItems(): void {
     if (listobj) {
-        SetState({
-          selectedItemsValue: (listobj.getSelectedItems() as any).data
-          });
+      SetState({
+        selectedItemsValue: (listobj.getSelectedItems() as any).data
+      });
     }
   }
 
-    return (
+  return (
+    <div>
+      <ListViewComponent
+        id="list"
+        dataSource={data}
+        showCheckBox={true}
+        ref={scope => {
+          listobj = scope;
+        }}
+      />
+      <ButtonComponent id="btn" onClick={getSelectedItems.bind(this)}>
+        Get Selected Items
+      </ButtonComponent>
       <div>
-        <ListViewComponent
-          id="list"
-          dataSource={data}
-          showCheckBox={true}
-          ref={scope => {
-            listobj = scope;
-          }}
-        />
-        <ButtonComponent id="btn" onClick={getSelectedItems.bind(this)}>
-          Get Selected Items
-        </ButtonComponent>
-        <div>
-          <table>
-            <tbody>
-              <tr>
-                <th>Text</th>
-                <th>Id</th>
-              </tr>
+        <table>
+          <tbody>
+            <tr>
+              <th>Text</th>
+              <th>Id</th>
+            </tr>
 
-              {state.selectedItemsValue.map((item: any, index: number) => {
-                return (
-                  <tr key={index}>
-                    <td>{item.text}</td>
-                    <td>{item.id}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+            {state.selectedItemsValue.map((item: any, index: number) => {
+              return (
+                <tr key={index}>
+                  <td>{item.text}</td>
+                  <td>{item.id}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
-    );
+    </div>
+  );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

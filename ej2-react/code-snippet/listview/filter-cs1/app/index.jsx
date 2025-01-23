@@ -28,8 +28,8 @@ function App() {
         }
     }
     return (<div id="sample">
-      <input className="e-input" type="text" id="textbox" placeholder="Filter" onKeyUp={onKeyUp.bind(this)} title="Type in a name"/>
-      <ListViewComponent id="list" dataSource={state.listData} fields={fields} sortOrder="Ascending"/>
+        <input className="e-input" type="text" id="textbox" placeholder="Filter" onKeyUp={onKeyUp.bind(this)} title="Type in a name" />
+        <ListViewComponent id="list" dataSource={state.listData} fields={fields} sortOrder="Ascending" />
     </div>);
 }
 export default App;

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtualization in React Listview component | Syncfusion
-description: Learn here all about Virtualization in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Virtualization in React ListView component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Virtualization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtualization in React Listview component
+# Virtualization in React ListView component
 
 UI virtualization loads only the viewable list items in a viewport, which significantly improves ListView performance when loading a large number of data items.
 

@@ -108,14 +108,14 @@ let cssClass: string = 'mytree';
         <div className='control_wrapper'>
             {/* Render TreeView */}
             <TreeViewComponent fields={fields} cssClass={cssClass} />
+        </div>
+        </div>
             <div className="details">
                 <label>Note:</label>
                  <div><b>1. The font-weight "Bold" is applied for all the leaf nodes</b></div>
                  <div><i>2. The font-weight "Italic" is applied for first level nodes</i></div>
                  <div>3. The color "darkmagenta" is applied for second level nodes</div>
             </div>
-        </div>
-        </div>
       </div>
     )
 }

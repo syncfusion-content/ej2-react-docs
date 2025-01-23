@@ -5,7 +5,7 @@ import * as React from 'react';
 import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 
 function App() {
-      //Define an array of JSON data
+    //Define an array of JSON data
     let data: { [key: string]: Object }[] = [
         { id: 's_01', text: 'Robert', avatar: '', pic: 'pic04' },
         { id: 's_02', text: 'Nancy', avatar: 'N', pic: '' },

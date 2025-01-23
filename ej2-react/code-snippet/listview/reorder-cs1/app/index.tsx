@@ -4,7 +4,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
-import {DragAndDropEventArgs } from '@syncfusion/ej2-navigations';
+import { DragAndDropEventArgs } from '@syncfusion/ej2-navigations';
 
 function App() {
   //Define an array of JSON data

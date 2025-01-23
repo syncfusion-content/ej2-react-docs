@@ -1,12 +1,12 @@
 #loader {
-color: #008cff;
-height: 40px;
-width: 30%;
-position: absolute;
-font-family: 'Helvetica Neue','calibiri';
-font-size: 14px;
-top: 45%;
-left: 45%;
+  color: #008cff;
+  height: 40px;
+  width: 30%;
+  position: absolute;
+  font-family: 'Helvetica Neue', 'calibiri';
+  font-size: 14px;
+  top: 45%;
+  left: 45%;
 }
 
 #list {
@@ -22,8 +22,8 @@ left: 45%;
 }
 
 #list .e-list-header {
-    background: rgb(2, 120, 215);
-    color: white;
-    font-size: 19px;
-    font-weight: 500;
+  background: rgb(2, 120, 215);
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
 }

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api animationSettings in React Listview component | Syncfusion
-description: Learn here all about Api animationSettings in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Api animationSettings in React ListView component | Syncfusion
+description: Learn here all about Api animationSettings in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Api animationSettings 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api animationSettings in React Listview component
+# Api animationSettings in React ListView component
 
 Animation configuration settings.
 

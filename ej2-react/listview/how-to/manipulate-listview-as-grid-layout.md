@@ -1,32 +1,29 @@
 ---
 layout: post
-title: Listview as grid layout in React Listview component | Syncfusion
-description: Learn here all about Manipulate listview as grid layout in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
-control: Manipulate listview as grid layout 
+title: ListView as grid layout in React ListView component | Syncfusion
+description: Learn here all about Manipulate ListView as grid layout in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
+control: Manipulate ListView as grid layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manipulate listview as grid layout in React Listview component
+# Manipulating ListView as a grid layout in React ListView component
 
-In Listview, list items can be rendered in grid layout with following data manipulations.
+In ListView, list items can be rendered in a grid layout with the following data manipulations:
 
 * Add Item
-
 * Remove Item
-
 * Sort Items
-
 * Filter Items
 
 ## Grid Layout
 
-In this section, we will discuss about rendering of list items in grid layout.
+In this section, we will discuss the rendering of list items in a grid layout.
 
-* Initialize and render ListView with dataSource which will render list items in list layout.
+* Initialize and render ListView with a dataSource, which will initially render list items in a list layout.
 
-* Now, add the below CSS to list item. This will make list items to render in grid layout
+* Now, add the following CSS to the list items. This will make list items render in a grid layout:
 
 ```css
 
@@ -38,7 +35,7 @@ In this section, we will discuss about rendering of list items in grid layout.
 
 ```
 
-In the below sample, we have rendered List items in grid layout.
+In the sample below, we have rendered List items in a grid layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,17 +47,20 @@ In the below sample, we have rendered List items in grid layout.
 {% highlight ts tabtitle="index.css" %}
 {% include code-snippet/listview/grid-layout-cs1/index.css %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/grid-layout-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/grid-layout-cs1" %}
 
 ## Data manipulation
 
-In this section, we will discuss about ListView data manipulations.
+In this section, we will discuss ListView data manipulations.
 
 ### Add Item
 
-We can add list item using [`addItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#additem) API. This will accept array of data as argument.
+We can add a list item using the [`addItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#additem) API. This will accept an array of data as an argument.
 
 ```ts
 
@@ -72,7 +72,7 @@ In the below sample, you can add new fruit item by clicking add button which wil
 
 ### Remove item
 
-We can remove list item using [`removeItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#removeitem) API. This will accept fields with `id` or list item element as argument.
+We can remove a list item using [`removeItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#removeitem) API. This will accept fields with `id` or list item element as argument.
 
 ```ts
 
@@ -84,7 +84,7 @@ In the below sample, you can remove fruit by hovering the fruit item which will 
 
 ### Sort Items
 
-Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/list-view/#sortorder) as `Ascending` or `Descending`.
+ListView can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/list-view/#sortorder) as `Ascending` or `Descending`.
 
 ```ts
 
@@ -104,7 +104,7 @@ In the below sample, we have sorted fruits in `Ascending` order. To sort it in d
 
 ### Filter Items
 
-Listview data can be filtered with the help of [`dataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started/). After filtering the data, update ListView [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) with filtered data.
+ListView data can be filtered with the help of [`dataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started/). After filtering the data, update ListView [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) with filtered data.
 
 ```ts
 
@@ -117,7 +117,7 @@ listViewInstance.dataSource = filteredData;
 
 ```
 
-In the below sample, we can filter fruit items with the help of search text box. This will filter fruit items based on your input. Here we used [`startswith`](https://ej2.syncfusion.com/react/documentation/data/querying/#filter-operators) of input text to filter data in DataManager.
+In the sample below, you can filter fruit items using the search text box. This will filter fruit items based on your input. Here we used [`startswith`](https://ej2.syncfusion.com/react/documentation/data/querying/#filter-operators) of input text to filter data in DataManager.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,6 +125,12 @@ In the below sample, we can filter fruit items with the help of search text box.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/manipulation-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/manipulation-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/manipulation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -90,7 +90,7 @@ function App() {
         });
     }
     return (<div>
-      <ListViewComponent id="listview" dataSource={data} fields={fields} headerTitle="Folders" showIcon={true} showHeader={true} select={onSelect.bind(this)}/>
+        <ListViewComponent id="listview" dataSource={data} fields={fields} headerTitle="Folders" showIcon={true} showHeader={true} select={onSelect.bind(this)} />
     </div>);
 }
 export default App;

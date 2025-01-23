@@ -7,13 +7,13 @@ import { ListViewComponent } from '@syncfusion/ej2-react-lists';
 import { Ajax } from '@syncfusion/ej2-base';
 
 function App() {
-    let template: any;
-    let ajax: Ajax;
-    ajax = new Ajax("./template.html", "GET", false);
-    ajax.onSuccess = (e: string) => {
-      template = e;
-    };
-    ajax.send();
+  let template: any;
+  let ajax: Ajax;
+  ajax = new Ajax("./template.html", "GET", false);
+  ajax.onSuccess = (e: string) => {
+    template = e;
+  };
+  ajax.send();
   //Define an array of JSON data
   let data: { [key: string]: Object }[] = [
     { name: "Network & Internet", id: "0", description: "Wi-Fi, mobile, data usage, hotspot" },

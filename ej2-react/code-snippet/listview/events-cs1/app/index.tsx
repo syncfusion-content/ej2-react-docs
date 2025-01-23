@@ -21,7 +21,7 @@ function App() {
     { text: "Ferrari LaFerrari", id: "list-10" }
   ];
   const [state, SetState] = React.useState({
-  eventData: [],
+    eventData: [],
   });
   function btnClick() {
     SetState({
@@ -54,50 +54,42 @@ function App() {
     }, 0);
   }
 
-  //Display event log
-  function appendElement(html: string): void {
-    let span: HTMLElement = document.createElement("span");
-    span.innerHTML = html;
-    let log: any = document.getElementById("EventLog");
-    log.insertBefore(span, log.firstChild);
-  }
-
-    return (
-      <div id="sample">
-        <div className="content-wrapper">
-          <ListViewComponent
-            id="listview-def"
-            dataSource={data}
-            width="250"
-            select={onSelect.bind(this) as any}
-            actionBegin={onActionBegin.bind(this) as any}
-            actionComplete={onActionComplete.bind(this) as any}
-          />
-        </div>
-        <div id="list_event">
-          <h4>
-            <b>Event Trace</b>
-          </h4>
-          <div id="evt">
-            <div className="eventarea">
-              {/*Event log element */}
-              <span className="EventLog" id="EventLog">
-                <div />
-                {state.eventData.map((data: string, index: number) => (
-                  <div key={index}>{data}</div>
-                ))}
-              </span>
-            </div>
-            <div className="evtbtn">
-              {/*clear button element */}
-              <ButtonComponent id="clear" onClick={btnClick.bind(this)}>
-                Clear
-              </ButtonComponent>
-            </div>
+  return (
+    <div id="sample">
+      <div className="content-wrapper">
+        <ListViewComponent
+          id="listview-def"
+          dataSource={data}
+          width="250"
+          select={onSelect.bind(this) as any}
+          actionBegin={onActionBegin.bind(this) as any}
+          actionComplete={onActionComplete.bind(this) as any}
+        />
+      </div>
+      <div id="list_event">
+        <h4>
+          <b>Event Trace</b>
+        </h4>
+        <div id="evt">
+          <div className="eventarea">
+            {/*Event log element */}
+            <span className="EventLog" id="EventLog">
+              <div />
+              {state.eventData.map((data: string, index: number) => (
+                <div key={index}>{data}</div>
+              ))}
+            </span>
+          </div>
+          <div className="evtbtn">
+            {/*clear button element */}
+            <ButtonComponent id="clear" onClick={btnClick.bind(this)}>
+              Clear
+            </ButtonComponent>
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

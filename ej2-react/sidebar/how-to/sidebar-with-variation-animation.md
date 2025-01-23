@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sidebar with variation animation in React Sidebar component | Syncfusion
+title: Variation animation in React Sidebar component | Syncfusion
 description: Learn here all about Sidebar with variation animation in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
 control: Sidebar with variation animation 
 platform: ej2-react
@@ -26,6 +26,9 @@ Sidebar will automatically adjust expanding animation to match any custom size s
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/animation-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/animation-cs1/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

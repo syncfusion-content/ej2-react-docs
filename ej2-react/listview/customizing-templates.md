@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customizing templates in React Listview component | Syncfusion
-description: Learn here all about Customizing templates in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Customizing templates in React ListView component | Syncfusion
+description: Learn here all about Customizing templates in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Customizing templates 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing templates in React Listview component
+# Customizing templates in React ListView component
 
 The ListView component allows customization of list items, group titles, and header titles through various template options.
 
@@ -50,7 +50,7 @@ return (<ListViewComponent id='list' dataSource={listData} headerTemplate={heade
     </ListViewComponent>);
 ```
 
-In the below example, we have rendered Listview with customized header which contains search, add and sort buttons.
+In the below example, we have rendered ListView with customized header which contains search, add and sort buttons.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -182,7 +182,7 @@ return (<ListViewComponent id='list' dataSource={listData} groupTemplate={groupT
     </ListViewComponent>);
 ```
 
-In the below example, we have grouped Listview based on the category. The category of each list item should be mapped with [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have also displayed grouped list items count in the group list header.
+In the below example, we have grouped ListView based on the category. The category of each list item should be mapped with [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have also displayed grouped list items count in the group list header.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

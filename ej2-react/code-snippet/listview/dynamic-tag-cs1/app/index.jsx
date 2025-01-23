@@ -112,20 +112,20 @@ function App() {
     }
     function listtemplate(data) {
         return (<div>
-        <span className="templatetext">{data.Name}</span>
-        <span className="designationstyle">
-          <ButtonComponent id={data.Id} className="e-but e-small e-round" iconCss={"e-icons e-add-icon"} onClick={handleClick.bind(this)}/>
-        </span>
-      </div>);
+            <span className="templatetext">{data.Name}</span>
+            <span className="designationstyle">
+                <ButtonComponent id={data.Id} className="e-but e-small e-round" iconCss={"e-icons e-add-icon"} onClick={handleClick.bind(this)} />
+            </span>
+        </div>);
     }
     function dialogContent() {
-        return <ListViewComponent id="list" showHeader={true} headerTitle="Favorite" width={"200px"}/>;
+        return <ListViewComponent id="list" showHeader={true} headerTitle="Favorite" width={"200px"} />;
     }
     return (<div id="sample">
-      <ListViewComponent id="template-list" dataSource={data} fields={fields} template={listtemplate.bind(this)} ref={scope => {
+        <ListViewComponent id="template-list" dataSource={data} fields={fields} template={listtemplate.bind(this)} ref={scope => {
             listviewInstance = scope;
-        }}/>
-      <DialogComponent id="dialog" animationSettings={animation} content={dialogContent} visible={false} ref={dialog => (dialogInstance = dialog)} width={"200px"} showCloseIcon={true} position={position}/>
+        }} />
+        <DialogComponent id="dialog" animationSettings={animation} content={dialogContent} visible={false} ref={dialog => (dialogInstance = dialog)} width={"200px"} showCloseIcon={true} position={position} />
     </div>);
 }
 export default App;

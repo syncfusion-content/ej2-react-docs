@@ -20,7 +20,7 @@ function App() {
         { name: "Sound", id: "4", description: "Volume, vibration, Do Not Disturb" },
         { name: "Storage", id: "5", description: "52% used - 15.48 GB free" }
     ];
-    return (<ListViewComponent id="list" dataSource={data} headerTitle="Settings" showHeader={true} template={template} cssClass="e-list-template"/>);
+    return (<ListViewComponent id="list" dataSource={data} headerTitle="Settings" showHeader={true} template={template} cssClass="e-list-template" />);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));
