@@ -3,7 +3,7 @@ import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { hardwareData } from './datasource.ts';
+import { hardwareData } from './datasource';
 L10n.load({
     'ar-AE': {
         'querybuilder': {

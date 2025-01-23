@@ -10,7 +10,7 @@ function App(){
       duration: 'Duration',
       progress: 'Progress',
       dependency: 'Predecessor',
-      child: 'subtasks'
+      parentID: 'ParentID'
   };
         return <GanttComponent dataSource={projectNewData} taskFields={taskFields} allowRowDragAndDrop={true} height = '450px'>
         <Inject services={[RowDD, Edit, Selection]} />

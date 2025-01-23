@@ -6,7 +6,7 @@ import { ColumnsModel, QueryBuilderComponent, RuleModel, ShowButtonsModel } from
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { employeeData } from './datasource.ts';
+import { employeeData } from './datasource';
 
 function App()  {
     let qryBldrObj: QueryBuilderComponent;

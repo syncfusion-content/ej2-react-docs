@@ -13,8 +13,7 @@ function App() {
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
-    
+    parentID: 'ParentID'    
   };
   
   function onChange(args) {

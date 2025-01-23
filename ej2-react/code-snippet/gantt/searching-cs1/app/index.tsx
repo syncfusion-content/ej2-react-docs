@@ -9,7 +9,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
  const toolbarOptions: ToolbarItem[] = ['Search'];
     return <GanttComponent dataSource={data} taskFields={taskFields}

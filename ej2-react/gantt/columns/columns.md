@@ -97,6 +97,7 @@ Format | Formatted value
 { type:'date', skeleton:'short' } | 7/4/19
 { type: 'dateTime', format: 'dd/MM/yyyy hh:mm a' } | 04/07/2019 12:00 AM
 { type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss a' } | 07/04/2019 12:00:00 AM
+{ type: 'dateTime', format: 'MM/dd/yyyy HH:mm:ss' } | 07/04/2019 17:00:00
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

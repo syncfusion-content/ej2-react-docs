@@ -9,7 +9,7 @@ function  App() {
             startDate: 'StartDate',
             duration: 'Duration',
             progress: 'Progress',
-            child: 'Children',
+            parentID: 'ParentID',
             manual: 'isManual'
         };
         const toolbarOptions = ['Add', 'Edit', 'Delete', 'Cancel', 'Update', 'PrevTimeSpan', 'NextTimeSpan', 'ExpandAll', 'CollapseAll', 'Search'];

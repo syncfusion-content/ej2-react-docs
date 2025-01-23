@@ -19,14 +19,14 @@ function App() {
         let letterAvatar = <span className='e-avatar e-avatar-circle'>{data.avatar}</span>;
         let imageAvatar = <span className={`${data.pic} e-avatar e-avatar-circle`}></span>;
         return (<div className='e-list-wrapper e-list-avatar'>
-                {data.avatar !== "" ? (letterAvatar) : (imageAvatar)}
-                <span className="e-list-content">{data.text}</span>
-            </div>);
+            {data.avatar !== "" ? (letterAvatar) : (imageAvatar)}
+            <span className="e-list-content">{data.text}</span>
+        </div>);
     }
     return (<div>
-            {/* ListView element */}
-            <ListViewComponent id='list' dataSource={data} headerTitle='Contacts' showHeader={true} sortOrder="Ascending" width='350px' template={listTemplate} fields={fields} cssClass='e-list-template'></ListViewComponent>
-        </div>);
+        {/* ListView element */}
+        <ListViewComponent id='list' dataSource={data} headerTitle='Contacts' showHeader={true} sortOrder="Ascending" width='350px' template={listTemplate} fields={fields} cssClass='e-list-template'></ListViewComponent>
+    </div>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));

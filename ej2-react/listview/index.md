@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Listview component | Syncfusion
-description: Learn here all about Index in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Index in React ListView component | Syncfusion
+description: Learn here all about Index in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Listview component
+# Index in React ListView component
 
 ListView component represent data in interactive hierarchical structure interface across different layouts or views, which also has features data-binding, template and grouping.
 

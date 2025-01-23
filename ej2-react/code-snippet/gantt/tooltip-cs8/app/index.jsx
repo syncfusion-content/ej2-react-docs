@@ -12,7 +12,7 @@ function App() {
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   const bgColor = (value, date) => {
     if (value === "S") {

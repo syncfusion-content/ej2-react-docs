@@ -186,14 +186,14 @@ The following code example serves as a practical illustration of how to effectiv
 
 The following screenshots represent sample add, edit, and delete record actions using the gantt `args`.
 
-The data of the newly added record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `add` and the following screenshot shows that the added record's data is available in [`args.newTaskData`] (../../api/gantt/actionCompleteArgs/#newtaskdata) property.
+The data of the newly added record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `add` and the following screenshot shows that the added record's data is available in [`args.newTaskData`] (https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/#newtaskdata) property.
 
 ![Add action](../images/add-action.png)
 
-The data of the edited record can be obtained from actionComplete event by requestType of [`args.requestType`] (../../api/gantt/iActionBeginEventArgs/#requesttype) to the action `save` and the following screenshot shows that the edited record's data is available in [`args.modifiedTaskData`] (../../api/gantt/iActionBeginEventArgs/#modifiedtaskdata) property.
+The data of the edited record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `save` and the following screenshot shows that the edited record's data is available in [`args.modifiedTaskData`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#modifiedtaskdata) property.
 
 ![Edit action](../images/edit-action.png)
 
-The data of the deleted record can be obtained from actionComplete event by requestType of [`args.requestType`] (../../api/gantt/iActionBeginEventArgs/#requesttype) to the action `delete` and the following screenshot shows that the deleted record's data is available in [`args.modifiedRecords`] (../../api/gantt/iActionBeginEventArgs/#modifiedrecords) property.
+The data of the deleted record can be obtained from actionComplete event by requestType of [`args.requestType`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#requesttype) to the action `delete` and the following screenshot shows that the deleted record's data is available in [`args.modifiedRecords`] (https://ej2.syncfusion.com/react/documentation/api/gantt/iActionBeginEventArgs/#modifiedrecords) property.
 
 ![Delete action](../images/delete-action.png)

@@ -11,17 +11,17 @@ function App() {
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    resourceInfo: 'resources',
-    work: 'work',
-    child: 'subtasks',
+    resourceInfo: 'Resources',
+    work: 'Work',
+    parentID: 'ParentID',
     segments: 'Segments',
-    notes: "note",
+    notes:"Note",
   };
   const resourceFields = {
-    id: 'resourceId',
-    name: 'resourceName',
-    unit: 'resourceUnit',
-    group: 'resourceGroup'
+    id: 'ResourceId',
+    name: 'ResourceName',
+    unit: 'ResourceUnit',
+    group: 'ResourceGroup'
   };
   const editOptions: EditSettingsModel = {
     allowAdding: true,

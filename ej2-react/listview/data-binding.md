@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Listview component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Data binding in React ListView component | Syncfusion
+description: Learn here all about Data binding in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Listview component
+# Data binding in React ListView component
 
 ListView provides the option to load data either from local data sources or remote data services. This can be done through the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-view/#datasource) property, which supports array data types or DataManager.
 

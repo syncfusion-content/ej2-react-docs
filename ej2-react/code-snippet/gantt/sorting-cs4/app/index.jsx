@@ -10,7 +10,7 @@ function App(){
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
 function actionHandler (args) {
         alert(args.requestType + ' ' + args.type);

@@ -6,7 +6,7 @@ import { QueryBuilderComponent, ColumnsModel } from '@syncfusion/ej2-react-query
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { hardwareData } from './datasource.ts';
+import { hardwareData } from './datasource';
 
 function App() {
     let qryBldrObj: QueryBuilderComponent;

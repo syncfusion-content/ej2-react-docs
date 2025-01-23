@@ -46,7 +46,7 @@ function App(){
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks',
+        parentID: 'ParentID',
         work1: 'work1',
         work2: 'work2',
     };

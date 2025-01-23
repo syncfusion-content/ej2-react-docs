@@ -8,14 +8,14 @@ function App (){
     name: 'TaskName',
     startDate: 'StartDate',
     duration: 'Duration',
-    progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks',
-    resourceInfo: 'resources'
+    progress: 'Progress',
+    parentID: 'ParentID',
+    resourceInfo: 'Resources'
   };
   const resourceFields:any = {
-    id: 'resourceId',
-    name: 'resourceName'
+    id: 'ResourceId',
+    name: 'ResourceName'
   };
   const editOptions: EditSettingsModel = {
     allowAdding: true,

@@ -94,7 +94,7 @@ function App() {
             (listviewInstance as any).element.querySelector(".e-add-icon").getBoundingClientRect()
               .top - 5
         };
-          dialogInstance.show();
+        dialogInstance.show();
       }
     }
   }

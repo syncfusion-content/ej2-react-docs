@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, Selection, Toolbar, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
+
 function  App() {
         const taskFields = {
             id: 'TaskID',
@@ -9,7 +10,7 @@ function  App() {
             startDate: 'StartDate',
             duration: 'Duration',
             progress: 'Progress',
-            child: 'Children',
+            parentID: 'ParentID',
             manual: 'isManual'
         };
         const toolbarOptions = ['Add', 'Edit', 'Delete', 'Cancel', 'Update', 'PrevTimeSpan', 'NextTimeSpan', 'ExpandAll', 'CollapseAll', 'Search'];

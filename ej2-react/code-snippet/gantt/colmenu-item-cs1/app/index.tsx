@@ -12,7 +12,7 @@ function App(){
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
+        parentID: 'ParentID'
     };
     const columnMenuItems: ColumnMenuItemModel[] =  [{text:'Clear Sorting', id:'ganttclearsorting'}];
     const sortSettings: SortSettingsModel = { columns:[{direction: "Ascending", field: "TaskName"}] };

@@ -10,7 +10,7 @@ function App (){
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   
   const toolbarOptions: ToolbarItem[] = ['ZoomIn','ZoomOut','ZoomToFit'];

@@ -119,7 +119,7 @@ function App() {
     <div>
       <ListViewComponent
         id="List"
-        ref={l=>{list=l;}}
+        ref={l => { list = l; }}
         dataSource={dataSource}
         fields={fields}
         headerTitle="Syncfusion Blog"

@@ -11,7 +11,7 @@ function App (){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
    return <GanttComponent dataSource={data} selectedRowIndex={3} allowSelection={true} taskFields={taskFields} height = '450px'>
         <Inject services={[Selection]} />

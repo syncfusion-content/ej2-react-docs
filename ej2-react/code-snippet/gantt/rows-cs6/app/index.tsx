@@ -10,7 +10,7 @@ function App(){
       duration: 'Duration',
       progress: 'Progress',
       dependency: 'Predecessor',
-      child: 'subtasks'
+      parentID: 'ParentID'
   };
  function rowDragStartHelper(args: any) {
       var record = args.data[0] ? args.data[0] : args.data;

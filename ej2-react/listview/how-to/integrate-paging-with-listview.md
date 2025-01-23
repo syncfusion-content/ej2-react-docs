@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate paging with React Listview component | Syncfusion
-description: Learn here all about Integrate paging with listview in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
-control: Integrate paging with listview 
+title: Integrate paging with React ListView component | Syncfusion
+description: Learn here all about Integrate paging with ListView in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
+control: Integrate paging with ListView 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate paging with listview in React Listview component
+# Integrate paging with ListView in React ListView component
 
 The first and foremost step is to obtain the `Pager` component from `Grid`. Install the ej2-react-grids package using the following command.
 

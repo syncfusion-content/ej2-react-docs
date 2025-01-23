@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ej1 api migration in React Listview component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Ej1 api migration in React ListView component | Syncfusion
+description: Learn here all about Ej1 api migration in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Ej1 api migration in React Listview component
+# Ej1 api migration in React ListView component
 
 This article describes the API migration process for the ListView component from Essential JS 1 to Essential JS 2. It provides a comparison of APIs and their usage between the two versions.
 

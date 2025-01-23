@@ -46,7 +46,7 @@ function App(){
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
    let ganttInstance;
  function dataBound() {

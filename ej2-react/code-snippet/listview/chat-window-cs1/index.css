@@ -23,13 +23,15 @@
 #List .name {
   padding-top: 3px;
   font-weight: 500;
-  padding-left:150px;
+  padding-left: 150px;
   margin-left: 55px;
 }
+
 #List #info {
   float: right;
-  margin-right:10px;
+  margin-right: 10px;
 }
+
 .pic01 {
   background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/1.png");
 }
@@ -57,7 +59,7 @@
   background-color: aliceblue;
   display: inline-block;
   margin: 5px;
-  
+
 }
 
 #List #info1,
@@ -71,44 +73,52 @@
   padding-top: 3px;
   font-weight: 500;
 }
+
 #List #content {
-    margin: 5px;
-    width: 250px;
-    margin-left: 62px;
-    background-color: aliceblue;
-    display:inline-block
+  margin: 5px;
+  width: 250px;
+  margin-left: 62px;
+  background-color: aliceblue;
+  display: inline-block
 }
+
 #image {
-    float: right;
-    /* display: inline-block; */
+  float: right;
 
 }
+
 #image2 {
-    float: left;
-    /* display: inline-block; */
+  float: left;
 
 }
+
 .img1 {
-    margin-right: 10px;
-    margin: 5px;
-    font-size: 13px;
+  margin-right: 10px;
+  margin: 5px;
+  font-size: 13px;
 }
-.e-listview .e-list-header{
+
+.e-listview .e-list-header {
   color: white;
 }
-.e-listview .e-list-header{
+
+.e-listview .e-list-header {
   background: rgb(2, 120, 215);
 }
+
 #List.e-listview .e-hover {
   background-color: transparent;
 }
+
 #inputname {
   width: 275px
 }
+
 .message {
   width: 350px;
   margin: 0 auto;
 }
+
 #btn {
-  float:right
+  float: right
 }

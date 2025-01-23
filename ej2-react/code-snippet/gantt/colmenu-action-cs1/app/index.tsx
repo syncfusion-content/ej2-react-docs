@@ -11,7 +11,7 @@ function App(){
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
+        parentID: 'ParentID'
     };
     function columnMenuOpen (args: ColumnMenuOpenEventArgs) {
         for (const item of args.items) {

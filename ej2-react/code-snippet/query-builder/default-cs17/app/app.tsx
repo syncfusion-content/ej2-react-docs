@@ -3,7 +3,7 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { QueryBuilderComponent, ColumnsModel, RuleModel } from '@syncfusion/ej2-react-querybuilder';
-import { employeeData } from './datasource.ts';
+import { employeeData } from './datasource';
 
 
 function App() {

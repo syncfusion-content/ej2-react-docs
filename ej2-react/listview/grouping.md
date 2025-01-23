@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in React Listview component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Grouping in React ListView component | Syncfusion
+description: Learn here all about Grouping in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Grouping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React Listview component
+# Grouping in React ListView component
 
 ListView supports wrapping nested elements into groups based on categories.
 

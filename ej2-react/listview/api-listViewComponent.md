@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api listViewComponent in React Listview component | Syncfusion
-description: Learn here all about Api listViewComponent in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Api listViewComponent in React ListView component | Syncfusion
+description: Learn here all about Api listViewComponent in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Api listViewComponent 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api listViewComponent in React Listview component
+# Api listViewComponent in React ListView component
 
 Represents ListView component for React
 ```

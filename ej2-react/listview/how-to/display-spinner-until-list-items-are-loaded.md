@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Display spinner until list items are loaded in React Listview component | Syncfusion
-description: Learn here all about Display spinner until list items are loaded in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Display spinner until list items are loaded in React ListView component | Syncfusion
+description: Learn here all about Display spinner until list items are loaded in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Display spinner until list items are loaded 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display spinner until list items are loaded in React Listview component
+# Displaying a spinner until list items are loaded in React ListView component
 
-The features of the ListView component such as remote data-binding take more time to fetch data from corresponding dataSource/remote URL. In this case, you can use EJ2 [Spinner](https://ej2.syncfusion.com/react/documentation/spinner/getting-started/) to enhance the appearance of the UI. This section explains how to load a spinner component to groom the appearance.
+Some features of the ListView component, such as remote data-binding, take more time to fetch data from corresponding dataSource/remote URL. In such cases, you can use the EJ2 [`Spinner`](https://ej2.syncfusion.com/react/documentation/spinner/getting-started/) to enhance the user interface. This section explains how to load a spinner component to improve the appearance.
 
-Refer to the following code sample to render the spinner component.
+Refer to the following code sample to render the spinner component:
 
 ```ts
     function createSpinner({
@@ -21,7 +21,7 @@ Refer to the following code sample to render the spinner component.
     function showSpinner(spinnerInstance);
 ```
 
-Here, the data is fetched from `Northwind` Service URL; it takes a few seconds to load the data. To enhance the UI, the spinner component has been rendered initially. After the data is loaded from remote URL, the spinner component will be hidden in ListView [actionComplete](https://ej2.syncfusion.com/react/documentation/api/list-view/#actioncomplete) event.
+In this example, the data is fetched from the `Northwind` Service URL; it takes a few seconds to load the data. To enhance the user experience, the spinner component is rendered initially. After the data is loaded from the remote URL, the spinner component will be hidden in the ListView's [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/list-view/#actioncomplete) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,6 +30,13 @@ Here, the data is fetched from `Northwind` Service URL; it takes a few seconds t
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/data-binding-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/data-binding-cs4/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/data-binding-cs4/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/listview/data-binding-cs4" %}
+

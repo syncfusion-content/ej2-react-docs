@@ -15,20 +15,20 @@ function App() {
     { text: "McLaren F1", id: "list-06" }
   ];
   let fields: Object = { text: "text", id: "id" };
-  const[state,SetState] =React.useState({ listData: list }) ;
+  const [state, SetState] = React.useState({ listData: list });
   function onKeyUp(e: any) {
     let value = e.target.value;
     let data = new DataManager(state.listData).executeLocal(
       new Query().where("text", "startswith", value, true)
     );
     if (!value) {
-          SetState({
-              listData: list
-          });
+      SetState({
+        listData: list
+      });
     } else {
-          SetState({
-              listData: data
-          });
+      SetState({
+        listData: data
+      });
     }
   }
 

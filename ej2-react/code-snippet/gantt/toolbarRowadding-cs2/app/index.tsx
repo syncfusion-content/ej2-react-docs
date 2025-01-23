@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, EditSettingsModel, Selection, Toolbar, ToolbarItem } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
+
 function App(){
     const taskFields: any = {
     id: 'TaskID',
@@ -9,7 +10,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
    function onActionBegin(args) {
     if (args.requestType == 'beforeOpenAddDialog') {

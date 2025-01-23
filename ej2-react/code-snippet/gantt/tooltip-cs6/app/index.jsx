@@ -9,13 +9,13 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-   child: 'subtasks'
+    parentID: 'ParentID',
   };
   const  editOptions = {
     allowTaskbarEditing: true
   };
   function tooltipTemplate(props) {
-    return (<div>Duration : {props.duration}</div>)
+    return (<div>Duration : {props.Duration}</div>)
   };
   const template = tooltipTemplate;
   const tooltipSettings = {

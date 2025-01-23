@@ -1,31 +1,28 @@
 ---
 layout: post
-title: Drag and drop list items in React Listview component | Syncfusion
-description: Learn here all about Drag and drop list items in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Drag and drop list items in React ListView component | Syncfusion
+description: Learn here all about Drag and drop list items in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Drag and drop list items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop list items in React Listview component
+# Drag and drop list items in React ListView component
 
-In ListView component, we don't have drag and drop support. But we can achieve this requirement using [`TreeView`](https://ej2.syncfusion.com/react/documentation/treeview/getting-started/) component with ListView appearance.
+The ListView component doesn't have built-in drag and drop support. However, we can achieve this functionality using the [`TreeView`](https://ej2.syncfusion.com/react/documentation/treeview/getting-started/) component with ListView appearance.
 
-Drag and Drop in TreeView component was enabled by setting [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowdraganddrop) to `true`.
+Drag and Drop in the TreeView component can be enabled by setting [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowdraganddrop) to `true`.
 
 ```ts
-
-        <TreeViewComponent id='treeview'
-                dataSource={data}
-                allowDragAndDrop = {true}
-                fields= {field} >
-        </TreeViewComponent>
-
+  <TreeViewComponent id='treeview'
+          dataSource={data}
+          allowDragAndDrop = {true}
+          fields= {field} >
+  </TreeViewComponent>
 ```
 
-The TreeView component is used to represent hierarchical data in a tree like structure. So, list items in TreeView can be dropped to child of target element. we can prevent this behaviour by cancelling the [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodedragstop) and [`nodeDragging`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodedragging) events.
-
+The TreeView component is used to represent hierarchical data in a tree-like structure. By default, list items in TreeView can be dropped as children of target elements. We can prevent this behavior by canceling the [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodedragstop) and [`nodeDragging`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodedragging) events.
 
 
 ```ts
@@ -72,6 +69,12 @@ In the below sample, we have rendered draggable list items.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/reorder-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/reorder-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/listview/reorder-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

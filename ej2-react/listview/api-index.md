@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Api index in React Listview component | Syncfusion
-description: Learn here all about Api index in Syncfusion React Listview component of Syncfusion Essential JS 2 and more.
+title: Api index in React ListView component | Syncfusion
+description: Learn here all about Api index in Syncfusion React ListView component of Syncfusion Essential JS 2 and more.
 control: Api index 
 platform: ej2-react
 documentation: ug

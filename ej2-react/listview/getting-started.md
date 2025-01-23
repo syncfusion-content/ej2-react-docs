@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Listview component | Syncfusion
-description:  Checkout and learn about Getting started with React Listview component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React ListView component | Syncfusion
+description:  Checkout and learn about Getting started with React ListView component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug

@@ -5,6 +5,8 @@
   border: 1px solid #dddddd;
   border-radius: 3px;
 }
-#btn, #val {
-  margin-top:30px;
+
+#btn,
+#val {
+  margin-top: 30px;
 }
