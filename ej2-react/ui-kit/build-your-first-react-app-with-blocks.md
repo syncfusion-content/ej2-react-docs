@@ -36,7 +36,7 @@ If you choose **Tailwind** theme, follow these steps to configure it.
   
     ![Tailwind Installation](images/tailwind-installation.PNG)
 
-2. In the **tailwind.config.js** file, add the following code to `content`, `darkMode`, and `theme` configurations. When creating the **Next.js** app, if the option **"Would you like your code inside a `src/` directory?"** was set to **Yes**, all the app-related files will be placed inside the **src** folder. Therefore, the `content` configuration should reflect this. If this option was not selected, the `content` configuration will need to be adjusted accordingly. To learn more about this, refer to this [link](https://tailwindcss.com/docs/guides/nextjs).
+2. In the **tailwind.config.js** file, add the following code to `content`, `darkMode`, and `theme` configurations. When creating the **Next.js** app, if the option **"Would you like your code inside a `src/` directory?"** was set to **Yes**, all the app-related files will be placed inside the **src** folder. Therefore, the `content` configuration should reflect this. If this option was not selected, the `content` configuration will need to be adjusted accordingly.
 
     ```js
     module.exports = {
@@ -109,7 +109,7 @@ If you choose **Tailwind** theme, follow these steps to configure it.
 6. **OPTIONAL**: If you wish to use our font icons prepared for **Tailwind**, you can include the following CDN link:
 
     ```css
-    @import url('https://cdn.syncfusion.com/ej2/angular/ui-kit/font-icons/tailwind-icons.css');
+    @import url('https://cdn.syncfusion.com/ej2/react/ui-kit/font-icons/tailwind-icons.css');
     ```
   
 Now that the **Tailwind** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
@@ -155,7 +155,7 @@ If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
 4. **OPTIONAL**: If you wish to use our font icons prepared for **Bootstrap 5.3**, you can include the following CDN link:
 
     ```html
-    <link href="https://cdn.syncfusion.com/ej2/angular/ui-kit/font-icons/bootstrap5.3-icons.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/react/ui-kit/font-icons/bootstrap5.3-icons.css" rel="stylesheet" />
     ```
 
 You can refer to the consolidated screenshot below for more details.
@@ -170,7 +170,7 @@ Now that **my-app** is set up with the desired theme configuration, the next ste
 
 ### Steps to explore and copy block code snippets from the online demo
 
-1. In the [online demo](https://ej2.syncfusion.com/angular/essential-ui-kit/#/blocks), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
+1. In the [online demo](https://ej2.syncfusion.com/react/essential-ui-kit/blocks), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
 
     ![Navigate to the sign-in block demo](images/navigate-to-the-sign-in-block-demo.png)
 
@@ -214,11 +214,11 @@ Once the necessary packages are added, run the `npm install` command via the ter
 
 ![Install Syncfusion component packages](images/install-syncfusion-component-packages.png)
 
-Finally, again check the [online demo](https://ej2.syncfusion.com/angular/essential-ui-kit/#/blocks) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-angular) and copy the required HTML, TS, and CSS code for the simple sign-in block into your app as outlined in the previous topic.
+Finally, again check the [online demo](https://ej2.syncfusion.com/react/essential-ui-kit/blocks) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-react) and copy the required HTML, TS, and CSS code for the simple sign-in block into your app as outlined in the previous topic.
 
 ## Steps to download and add assets to the app
 
-If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-angular/tree/master/ui-blocks/src), place it inside the **public** folder of **my-app**, and modify the image URLs in the HTML if necessary.
+If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-react/tree/master/ui-blocks/public), place it inside the **public** folder of **my-app**, and modify the image URLs in the HTML if necessary.
 
 ## Steps to run the app
 
