@@ -63,7 +63,7 @@ function App() {
     let width = '290px';
     let target = '.main-content';
     let mediaQuery = '(min-width: 600px)';
-    let dockSize = "44px";
+    let dockSize = "42px";
     let fields = { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild' };
     function onCreate() {
         sidebarobj.element.style.visibility = '';

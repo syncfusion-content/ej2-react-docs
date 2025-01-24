@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize the tree nodes based on levels in React Treeview component | Syncfusion
-description: Learn here all about Customize the tree nodes based on levels in Syncfusion React Treeview component of Syncfusion Essential JS 2 and more.
+title: Customize the tree nodes based on levels in React TreeView component | Syncfusion
+description: Learn here all about Customize the tree nodes based on levels in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
 control: Customize the tree nodes based on levels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the tree nodes based on levels in React Treeview component
+# Customize the tree nodes based on levels in React TreeView component
 
-You can customize the tree nodes level wise by adding custom cssClass to the component and enabling styles.
+You can customize the tree nodes level wise by adding custom [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/treeview/#cssclass) to the component and enabling styles.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

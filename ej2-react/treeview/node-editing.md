@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Node editing in React Treeview component | Syncfusion
-description: Learn here all about Node editing in Syncfusion React Treeview component of Syncfusion Essential JS 2 and more.
+title: Node editing in React TreeView component | Syncfusion
+description: Learn here all about Node editing in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
 control: Node editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node editing in React Treeview component
+# Node editing in React TreeView component
 
 The TreeView allows you to edit nodes by setting the [allowEditing](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowediting) property to **true**.
 To directly edit the nodes in place, **double click** the TreeView node or **select** the node and press **F2** key.

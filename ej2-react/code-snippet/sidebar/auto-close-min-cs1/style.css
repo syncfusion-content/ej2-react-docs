@@ -19,25 +19,8 @@
     padding: 10px;
 }
 
-.center {
-    text-align: center;
-    display: none;
-    font-size: 13px;
-    font-weight: 400;
-    margin-top: 20px;
-}
-
 #wrapper {
     display: block;
-}
-
-#close:hover,#close:active,#close:focus{
-  background:white;
-  color:black;
-}
-
-.right {
-    float: right;
 }
 
 body {
@@ -47,8 +30,4 @@ body {
 #default-sidebar {
     background-color: rgb(25, 118, 210);
     color: #ffffff;
-}
-
-.close-btn:hover {
-    color: #fafafa;
 }
