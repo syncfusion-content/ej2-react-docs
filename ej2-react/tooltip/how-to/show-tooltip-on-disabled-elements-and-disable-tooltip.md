@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # Show tooltip on disabled elements and disable tooltip in React Tooltip component
 
-By default, Tooltips will not be displayed on disabled elements. However, it is possible to enable this behavior by following the steps below.
-1. Add a disabled element like the `button` element into a div whose display style is set to `inline-block`.
-2. Set the pointer event as `none` for the disabled element (button) through CSS.
-3. Now, initialize the Tooltip for outer div element that holds the disabled button element.
+By default, Tooltips are not displayed on disabled elements. However, it is possible to enable this behavior by following the steps below.
+1. Add a disabled element (such as a `button`) into a div element with its display style set to `inline-block`.
+2. Set the `pointer-events` property to `none` for the disabled element (button) through CSS.
+3. Initialize the Tooltip for the outer div element that contains the disabled button element.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -27,6 +27,12 @@ By default, Tooltips will not be displayed on disabled elements. However, it is 
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/disable-tooltip-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/tooltip/disable-tooltip-cs2/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tooltip/disable-tooltip-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

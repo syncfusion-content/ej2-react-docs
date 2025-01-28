@@ -35,11 +35,11 @@ function App() {
         });
     }
     return (<div id='targetContainer'>
-            <TooltipComponent ref={t => tooltipInstance = t} target='#demoSmart' content='Drag me !!!' animation={tooltipAnimation}>
+        <TooltipComponent ref={t => tooltipInstance = t} target='#demoSmart' content='Drag me !!!' animation={tooltipAnimation}>
             <div id='demoSmart'>
             </div>
-            </TooltipComponent>
-        </div>);
+        </TooltipComponent>
+    </div>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('sample'));

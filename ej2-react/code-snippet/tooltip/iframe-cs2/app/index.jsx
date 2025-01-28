@@ -8,13 +8,13 @@ function App() {
     }
     return (<div id='container'>
         <TooltipComponent ref={obj => tooltip = obj} target="#iframeContent" content={iFrame} opensOn='Click' position='BottomCenter'>
-          <div id="tooltipContent">
-              <div className="content">
-                  <button className="e-btn text" id="iframeContent">Embedded Iframe</button>
-              </div>
-          </div>
+            <div id="tooltipContent">
+                <div className="content">
+                    <button className="e-btn text" id="iframeContent">Embedded Iframe</button>
+                </div>
+            </div>
         </TooltipComponent>
-      </div>);
+    </div>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('sample'));

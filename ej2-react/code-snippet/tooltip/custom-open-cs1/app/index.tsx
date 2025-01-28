@@ -16,11 +16,11 @@ function App() {
     };
     return (
         <TooltipComponent className="wrap" ref={t => tooltipInstance = t} opensOn='custom' content='Tooltip from custom mode'>
-        <input id="box" type="button" ref={d => buttonElement = d} onDoubleClick={handleDoubleClick.bind(this)} value="Double click to open tooltip" />
+            <input id="box" type="button" ref={d => buttonElement = d} onDoubleClick={handleDoubleClick.bind(this)} value="Double click to open tooltip" />
         </TooltipComponent>
     );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('sample'));
+ReactDom.render(<App />, document.getElementById('sample'));
 
 

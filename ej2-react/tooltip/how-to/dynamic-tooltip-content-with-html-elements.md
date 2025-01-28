@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Dynamic tooltip content with html elements in React Tooltip component
 
-Tooltip loads HTML pages via HTML tags such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) property, which supports both string and HTML tags.
+Tooltip can display HTML content, including elements such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) property. This property accepts both string and HTML tags.
 
-To load an `iframe` element in tooltip, set the required iframe in the `content` of tooltip while initializing the tooltip component. Refer to the following code.
+To load an `iframe` element in the tooltip, set the required iframe in the [`content`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) of tooltip while initializing the tooltip component. Refer to the following code example.
 
 ```ts
 
@@ -37,6 +37,12 @@ Use the following steps to render `ej2-map` in tooltip:
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/iframe-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/tooltip/iframe-cs2/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tooltip/iframe-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

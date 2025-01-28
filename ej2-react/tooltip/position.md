@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Position in React Tooltip component
 
-Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, you can set the position property with any one of the following values:
+Tooltips can be positioned at 12 static locations around the target. On initializing the Tooltip, you can set the position property with any one of the following values:
 
 * `TopLeft`
 * `TopCenter`
@@ -34,14 +34,20 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/position-default-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/tooltip/position-default-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tooltip/position-default-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tooltip/position-default-cs1" %}
 
 ## Tip pointer positioning
 
-The Tooltip pointer can be attached or detached from the Tooltip by using the `showTipPointer` property.
-Pointer positions can be adjusted using the `tipPointerPosition` property that can be assigned to one of the following values:
+The Tooltip pointer can be attached or detached from the Tooltip by using the [`showTipPointer`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property.
+Pointer positions can be adjusted using the [`tipPointerPosition`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#tippointerposition) property, which can be assigned one of the following values:
 
 * `Auto`
 * `Start`
@@ -57,6 +63,12 @@ The following code example illustrates how to set the pointer to the start posit
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/position-tip-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/tooltip/position-tip-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tooltip/position-tip-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tooltip/position-tip-cs1" %}
@@ -65,7 +77,7 @@ By default, tip pointers are auto adjusted so that the arrow does not point outs
 
 ## Dynamic positioning
 
-The Tooltip and its tip pointer can be positioned dynamically based on the target's location. This can be achieved by using the `refresh` method, which auto adjusts the Tooltip over the target.
+The Tooltip and its tip pointer can be positioned dynamically based on the target's location. This can be achieved by using the [`refresh`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#refresh) method, which auto adjusts the Tooltip over the target.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,13 +86,16 @@ The Tooltip and its tip pointer can be positioned dynamically based on the targe
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/dragabble-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tooltip/dragabble-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tooltip/dragabble-cs1" %}
 
 ## Mouse trailing
 
-Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the `mouseTrail` property.
+Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the [`mouseTrail`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#mousetrail) property.
 By default, it is set to `false`.
 
 {% tabs %}
@@ -89,6 +104,12 @@ By default, it is set to `false`.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/mouse-trail-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/tooltip/mouse-trail-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tooltip/mouse-trail-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,10 +120,10 @@ By default, it is set to `false`.
 
 ## Setting offset values
 
-Offset values are set to specify the distance between the target and tooltip element. `offsetX` and `offsetY` properties are used to specify the offset left and top values.
+Offset values are set to specify the distance between the target and tooltip element. [`offsetX`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsetx) and [`offsetY`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsety) properties are used to specify the offset left and top values.
 
-* `offsetX` specifies the distance between the target and Tooltip element in X axis.
-* `offsetY` specifies the distance between the target and Tooltip element in Y axis.
+* [`offsetX`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsetx) specifies the distance between the target and Tooltip element on the X-axis.
+* [`offsetY`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsety) specifies the distance between the target and Tooltip element on Y axis.
 
 The following code example illustrates how to set offset values.
 
@@ -113,8 +134,14 @@ The following code example illustrates how to set offset values.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/offset-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/tooltip/offset-cs1/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tooltip/offset-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tooltip/offset-cs1" %}
 
-> By default, collision is handled automatically and therefore when collision is detected the Tooltip fits horizontally and flips vertically.
+> By default, collision is handled automatically. When a collision is detected, the Tooltip adjusts horizontally and flips vertically to fit within the visible area.

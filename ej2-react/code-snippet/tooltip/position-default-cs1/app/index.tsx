@@ -7,13 +7,13 @@ import { TooltipComponent, Position } from '@syncfusion/ej2-react-popups';
 function App() {
     let dropElement: HTMLSelectElement;
     let tooltipInstance: TooltipComponent;
-    function  change(): void {
-        tooltipInstance.position =  dropElement.value as Position;
+    function change(): void {
+        tooltipInstance.position = dropElement.value as Position;
     }
 
     return (
         <div id='container'>
-            <TooltipComponent  ref={t => tooltipInstance = t} className="tooltip-box" content='Tooltip Content' target='#tooltip'>
+            <TooltipComponent ref={t => tooltipInstance = t} className="tooltip-box" content='Tooltip Content' target='#tooltip'>
                 <div id="tooltip">Show Tooltip</div>
             </TooltipComponent>
             <div className='ddl'>
@@ -36,7 +36,7 @@ function App() {
     );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('sample'));
+ReactDom.render(<App />, document.getElementById('sample'));
 
 
 

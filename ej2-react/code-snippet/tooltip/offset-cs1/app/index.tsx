@@ -12,7 +12,7 @@ function App() {
     );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('sample'));
+ReactDom.render(<App />, document.getElementById('sample'));
 
 
 

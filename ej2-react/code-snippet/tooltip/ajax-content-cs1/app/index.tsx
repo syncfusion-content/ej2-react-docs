@@ -10,7 +10,7 @@ function App() {
   function onBeforeRender(args: TooltipEventArgs): void {
     tooltipInstance.content = 'Loading...';
     tooltipInstance.dataBind();
-    let fetchApi: Fetch = new Fetch('./tooltipdata.json', 'GET');
+    let fetchApi: Fetch = new Fetch('https://ej2.syncfusion.com/vue/demos/source/tooltip/tooltipdata.json', 'GET');
     fetchApi.send().then(
       (result: any) => {
         for (let i: number = 0; i < result.length; i++) {
