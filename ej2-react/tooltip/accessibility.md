@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Tooltip component
 
-The Tooltip component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Tooltip component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Tooltip component is outlined below.
 
@@ -40,7 +40,7 @@ The accessibility compliance for the Tooltip component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Tooltip component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) patterns to meet the accessibility. The following ARIA attributes are used in the Tooltip component.
+The Tooltip component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) patterns to meet the accessibility. The following ARIA attributes are used in the Tooltip component.
 
 | Attributes | Description |
 | --- | --- |
@@ -50,12 +50,12 @@ The Tooltip component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pa
 
 ## Keyboard interaction
 
-The Tooltip component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Tooltip component.
+The Tooltip component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The Tooltip component supports the following keyboard shortcuts.
 
 |  Keys | Description |
 | --- | --- |
 | Escape | Closes or dismisses the Tooltip. |
-| Tab | A form control receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
+| Tab | A form component receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
 
 > 1. When the Tooltip is being displayed on the target element, focus continues to stay on it.
 > 2. If the Tooltip opens on mouse entering into the target element space, then it should be dismissed only when the mouse leaves that target.

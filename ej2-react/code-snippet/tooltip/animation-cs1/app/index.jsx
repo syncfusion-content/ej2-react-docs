@@ -7,8 +7,8 @@ function App() {
         close: { effect: 'ZoomOut', duration: 500, delay: 0 }
     };
     return (<TooltipComponent className="tooltip-box" content='Tooltip animation effect' animation={TooltipAnimation}>
-            <div id='target'>Show Tooltip</div>
-        </TooltipComponent>);
+        <div id='target'>Show Tooltip</div>
+    </TooltipComponent>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('sample'));

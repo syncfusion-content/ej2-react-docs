@@ -22,45 +22,45 @@ function App() {
         tooltipInstance.animation = TooltipAnimation;
     };
     let c1: Object = {
-    top: '18%',
-    left: '5%'
+        top: '18%',
+        left: '5%'
     };
     let c2: Object = {
-    top: '30%',
-    left: '30%'
+        top: '30%',
+        left: '30%'
     };
     let c3: Object = {
-    top: '80%',
-    left: '80%'
+        top: '80%',
+        left: '80%'
     };
     let c4: Object = {
-    top: '65%',
-    left: '50%'
+        top: '65%',
+        left: '50%'
     };
     let c5: Object = {
-    top: '75%',
-    left: '15%'
+        top: '75%',
+        left: '15%'
     };
     let c6: Object = {
-    top: '30%',
-    left: '70%'
+        top: '30%',
+        left: '70%'
     };
     return (
         <div className='wrap'>
-        <h3> Transition effect </h3>
-        <TooltipComponent className='circle-container' target='.circle-tool' animation={TooltipAnimation} closeDelay={1000} ref={t => tooltipInstance = t} beforeRender={onBeforeRender.bind(this)} afterClose={onAfterClose.bind(this)}>
-            <div className="circle-tool" style={c1} title="This is Turtle !!!"></div>
-            <div className="circle-tool" style={c2} title="This is Snake !!!"></div>
-            <div className="circle-tool" style={c3} title="This is Croc !!!"></div>
-            <div className="circle-tool" style={c4} title="This is String Ray !!!"></div>
-            <div className="circle-tool" style={c5} title="This is Blob Fish !!!"></div>
-            <div className="circle-tool" style={c6} title="This is Mammoth !!!"></div>
-        </TooltipComponent>
+            <h3> Transition effect </h3>
+            <TooltipComponent className='circle-container' target='.circle-tool' animation={TooltipAnimation} closeDelay={1000} ref={t => tooltipInstance = t} beforeRender={onBeforeRender.bind(this)} afterClose={onAfterClose.bind(this)}>
+                <div className="circle-tool" style={c1} title="This is Turtle !!!"></div>
+                <div className="circle-tool" style={c2} title="This is Snake !!!"></div>
+                <div className="circle-tool" style={c3} title="This is Croc !!!"></div>
+                <div className="circle-tool" style={c4} title="This is String Ray !!!"></div>
+                <div className="circle-tool" style={c5} title="This is Blob Fish !!!"></div>
+                <div className="circle-tool" style={c6} title="This is Mammoth !!!"></div>
+            </TooltipComponent>
         </div>
     );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('sample'));
+ReactDom.render(<App />, document.getElementById('sample'));
 
 
 

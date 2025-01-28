@@ -1,11 +1,6 @@
 import * as React from 'react';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Ajax } from '@syncfusion/ej2-base';
-import {
-  ButtonComponent,
-  RadioButtonComponent,
-  ChangeArgs,
-} from '@syncfusion/ej2-react-buttons';
 
 function App() {
   let tooltip: TooltipComponent = null as any;

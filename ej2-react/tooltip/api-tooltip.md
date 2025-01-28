@@ -148,11 +148,11 @@ Returns *void*
 
 ### appendTo
 
-Appends the control within the given HTML element
+Appends the component within the given HTML element
 
 | Parameter | Type | Description |
 |------|------|-------------|
-| selector (*optional*) |  `string` &#124;  `HTMLElement` | Target element where control needs to be appended<br> |
+| selector (*optional*) |  `string` &#124;  `HTMLElement` | Target element where component needs to be appended<br> |
 
 Returns *void*
 
@@ -236,7 +236,7 @@ This event is mainly used for the purpose of refreshing the Tooltip positions dy
 
 ### beforeRender [`EmitType<TooltipEventArgs>`](https://ej2.syncfusion.com/react/documentation/api-tooltipEventArgs.html)
 
-We can trigger `beforeRender` event before the Tooltip and its contents are added to the DOM.
+We can trigger [beforeRender](https://ej2.syncfusion.com/react/documentation/api/tooltip/#beforerender) event before the Tooltip and its contents are added to the DOM.
 When one of its arguments `cancel` is set to true, the Tooltip can be prevented from rendering on the page. This event is mainly used for the purpose of customizing the Tooltip before it shows up on the screen.
 For example, to load the AJAX content or to set new animation effects on the Tooltip, this event can be opted.
 Refer the documentation {@link http://ej2.syncfusion.com/documentation/tooltip/content.html?lang=typescript#dynamic-content-via-ajax here} to know more about this property with demo.

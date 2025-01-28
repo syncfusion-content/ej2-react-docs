@@ -199,7 +199,7 @@ When one of its arguments `cancel` is set to true, the Tooltip display can be pr
 
 ### beforeRender [`EmitType<TooltipEventArgs>`](https://ej2.syncfusion.com/react/documentation/api-tooltipEventArgs.html)
 
-We can trigger `beforeRender` event before the Tooltip and its contents are added to the DOM.
+We can trigger [beforeRender](https://ej2.syncfusion.com/react/documentation/api/tooltip/#beforerender) event before the Tooltip and its contents are added to the DOM.
 When one of its arguments `cancel` is set to true, the Tooltip can be prevented from rendering on the page. This event is mainly used for the purpose of customizing the Tooltip before it shows up on the screen.
 For example, to load the AJAX content or to set new animation effects on the Tooltip, this event can be opted.
 Refer the documentation {@link http://ej2.syncfusion.com/documentation/tooltip/content.html?lang=typescript#dynamic-content-via-ajax here} to know more about this property with demo.

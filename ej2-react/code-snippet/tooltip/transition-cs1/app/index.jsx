@@ -54,7 +54,7 @@ function App() {
             <div className="circle-tool" style={c5} title="This is Blob Fish !!!"></div>
             <div className="circle-tool" style={c6} title="This is Mammoth !!!"></div>
         </TooltipComponent>
-        </div>);
+    </div>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('sample'));

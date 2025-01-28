@@ -6,22 +6,22 @@ function App() {
   let tooltip: TooltipComponent;
 
   function iFrame(): JSX {
-    return(
+    return (
       <iframe src="https://ej2.syncfusion.com/showcase/typescript/expensetracker/#/dashboard"></iframe>
     );
   }
   return (
-      <div id='container'>
-        <TooltipComponent ref={obj => tooltip = obj} target="#iframeContent" content={iFrame} opensOn='Click' position='BottomCenter'>
-          <div id="tooltipContent">
-              <div className="content">
-                  <button className="e-btn text" id="iframeContent">Embedded Iframe</button>
-              </div>
+    <div id='container'>
+      <TooltipComponent ref={obj => tooltip = obj} target="#iframeContent" content={iFrame} opensOn='Click' position='BottomCenter'>
+        <div id="tooltipContent">
+          <div className="content">
+            <button className="e-btn text" id="iframeContent">Embedded Iframe</button>
           </div>
-        </TooltipComponent>
-      </div>
+        </div>
+      </TooltipComponent>
+    </div>
   );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('sample'));
+ReactDom.render(<App />, document.getElementById('sample'));
 
