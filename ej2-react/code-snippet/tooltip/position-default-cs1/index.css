@@ -1,47 +1,47 @@
 #loader {
-    color: #008cff;
-    height: 40px;
-    left: 45%;
-    position: absolute;
-    top: 45%;
-    width: 30%;
-  }
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
 
-  #container {
-    display: inline-flex;
-    position: relative;
-    left: 50%;
-    margin-top: 100px;
-    transform: translateX(-50%);
-  }
+#container {
+  display: inline-flex;
+  position: relative;
+  left: 50%;
+  margin-top: 100px;
+  transform: translateX(-50%);
+}
 
-  #positions {
-    position: relative;
-    top: 50%;
-  }
+#positions {
+  position: relative;
+  top: 50%;
+}
 
-  .tooltip-box {
-    width: 400px;
-    height: 200px;
-  }
+.tooltip-box {
+  width: 400px;
+  height: 200px;
+}
 
-  #tooltip {
-    background-color: #cfd8dc;
-    border: 3px solid #eceff1;
-    box-sizing: border-box;
-    padding: 20px 0;
-    width: 200px;
-    text-align: center;
-    color: #424242;
-    font-size: 20px;
-    user-select: none;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    left: 50%;
-  }
+#tooltip {
+  background-color: #cfd8dc;
+  border: 3px solid #eceff1;
+  box-sizing: border-box;
+  padding: 20px 0;
+  width: 200px;
+  text-align: center;
+  color: #424242;
+  font-size: 20px;
+  user-select: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+}
 
-  .ddl {
-    display: inline-block;
-    margin: 0 30px;
-  }
+.ddl {
+  display: inline-block;
+  margin: 0 30px;
+}

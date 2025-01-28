@@ -12,7 +12,7 @@ function App() {
             tooltipInstance.close(closeAnimation);
         } else {
             let openAnimation: TooltipAnimationSettings = { effect: 'FadeIn', duration: 1000 };
-            tooltipInstance.open(tooltipInstance.element,openAnimation);
+            tooltipInstance.open(tooltipInstance.element, openAnimation);
         }
     };
     return (
@@ -22,7 +22,7 @@ function App() {
     );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('sample'));
+ReactDom.render(<App />, document.getElementById('sample'));
 
 
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tooltip open or display modes in React Tooltip component
 
-The open mode property of tooltip can be defined on a target that is hovering, focusing, or clicking. Tooltip component have the following types of open mode:
+The open mode property of the tooltip defines how it is triggered on a target element, such as by hovering, focusing, or clicking. Tooltip component has the following types of open mode:
 
 * Auto
 * Hover
@@ -20,23 +20,23 @@ The open mode property of tooltip can be defined on a target that is hovering, f
 
 ## Auto
 
-Tooltip appears when you hover over the target or when the target element receives the focus.
+Tooltip appears when you hover over the target element or when the target element receives the focus.
 
 ## Hover
 
-Tooltip appears when you hover over the target.
+Tooltip appears when you hover over the target element.
 
 ## Click
 
-Tooltip appears when you click a target element.
+Tooltip appears when you click the target element.
 
 ## Focus
 
-Tooltip appears when you focus (say through tab key) on a target element.
+Tooltip appears when you focus on a target element (for example, by using the tab key).
 
 ## Custom
 
-Tooltip is not triggered by any default action. So, bind your own events and use either open or close public methods.
+Tooltip is not triggered by any default action. You need to bind your own events and use either the [`open`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#open) or [`close`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#close) public methods.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -50,6 +50,12 @@ Tooltip is not triggered by any default action. So, bind your own events and use
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tooltip/open-property-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/tooltip/open-property-cs2/index.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tooltip/open-property-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

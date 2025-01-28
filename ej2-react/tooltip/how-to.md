@@ -172,7 +172,7 @@ The two `divs`(inner div and outer div) have been added to achieve the bubble ti
 
 These tip arrow customizations have been achieved through CSS changes in the sample level. The tooltip position can be changed by using the radio button click event.
 
-The arrow tip pointer can also be disabled by using the [`showTipPointer`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property in a tooltip.
+The arrow tip pointer can also be disabled by using the [showTipPointer](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property in a tooltip.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

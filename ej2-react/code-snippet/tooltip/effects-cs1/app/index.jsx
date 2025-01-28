@@ -15,8 +15,8 @@ function App() {
     }
     ;
     return (<TooltipComponent className="tooltip-box" content='Tooltip content' opensOn='custom' ref={t => tooltipInstance = t}>
-            <div id='target' onClick={handleClick.bind(this)}>Click Here</div>
-        </TooltipComponent>);
+        <div id='target' onClick={handleClick.bind(this)}>Click Here</div>
+    </TooltipComponent>);
 }
 export default App;
 ReactDom.render(<App />, document.getElementById('sample'));

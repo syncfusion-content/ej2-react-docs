@@ -1,26 +1,26 @@
 [
     {
         "Id": "1",
-       "Name": "Bold"
+        "Name": "Bold"
     },
     {
         "Id": "2",
-       "Name": "Italic"
+        "Name": "Italic"
     },
     {
         "Id": "3",
-       "Name": "Underline"
+        "Name": "Underline"
     },
     {
         "Id": "4",
-       "Name": "Cut"
+        "Name": "Cut"
     },
     {
         "Id": "5",
-       "Name": "Copy"
+        "Name": "Copy"
     },
     {
         "Id": "6",
-       "Name": "Paste"
+        "Name": "Paste"
     }
 ]

@@ -1,16 +1,11 @@
 {% raw %}
 import * as React from 'react';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import {
-  ButtonComponent,
-  RadioButtonComponent,
-  ChangeArgs,
-} from '@syncfusion/ej2-react-buttons';
 
 function App() {
-  React.useEffect(()=>{
+  React.useEffect(() => {
     componentDidMount();
-  },[])
+  }, [])
   let circleRef = null;
   let triRef = null;
   function componentDidMount() {
@@ -121,7 +116,7 @@ function App() {
                   >
                     <canvas
                       id="circle"
-                      ref={(circle) => ((circleRef as any) = circle )}
+                      ref={(circle) => ((circleRef as any) = circle)}
                       className="shape"
                       width="60"
                       height="60"
