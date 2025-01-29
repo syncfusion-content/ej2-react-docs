@@ -132,6 +132,22 @@ The following code illustrates how to provide the mirror image of the original e
 
 >Note: The flip is also applicable for group and BPMN shapes.
 
+### Update flip at runtime
+
+You can dynamically update the flip for a node at runtime using the `^` operator. This operator allows you to apply the same flip direction multiple times, toggling the node's orientation effectively.
+The following example demonstrates how to update the flip for a node dynamically:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/nodes/node-cs4-flip/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/nodes/node-cs4-flip/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/node-cs4-flip" %}
+
 
 ### Flip modes
 

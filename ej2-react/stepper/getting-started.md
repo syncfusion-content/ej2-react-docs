@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Stepper and configure its available functionalities in the React environment.
 
+To get started quickly with React Stepper component, you can check out this video:
+{% youtube "https://www.youtube.com/watch?v=6VFmox3cV0s" %}
+
 ## Dependencies
 
 The following list of dependencies is required to use the Stepper component in your application.

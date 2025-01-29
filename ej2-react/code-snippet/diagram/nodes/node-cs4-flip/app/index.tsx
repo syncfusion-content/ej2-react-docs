@@ -16,7 +16,7 @@ let node: NodeModel[] = [{
     width: 100,
     height: 100,
     // Flip the node in Horizontal Direction
-   flip: FlipDirection.Horizontal,
+   flip:FlipDirection.Horizontal,
    shape: {
         type: 'Basic',
         shape: 'RightTriangle',
@@ -29,18 +29,37 @@ let node: NodeModel[] = [{
 }];
 let diagramInstance: DiagramComponent;
 function App() {
+   const flipHorizontal = () => {
+          diagramInstance.nodes[0].flip ^= FlipDirection.Horizontal;
+          diagramInstance.dataBind();
+      };
+      const flipVertical = () => {
+          diagramInstance.nodes[0].flip ^= FlipDirection.Vertical;
+          diagramInstance.dataBind();
+      };
+      const flipBoth = () => {
+          diagramInstance.nodes[0].flip ^= FlipDirection.Both;
+          diagramInstance.dataBind();
+      };
+      const flipNone = () => {
+          diagramInstance.nodes[0].flip = FlipDirection.None;
+          diagramInstance.dataBind();
+      };
   return (
+    <div>
+    <button onClick={flipHorizontal}>flipHorizontal</button>
+    <button onClick={flipVertical}>flipVertical</button>
+    <button onClick={flipBoth}>flipBoth</button>
+    <button onClick={flipNone}>flipNone</button>
     <DiagramComponent
       id="container"
       ref={(diagram) => (diagramInstance = diagram)}
       width={'100%'}
       height={'600px'}
       nodes={node}
-      created={() => {
-        diagramInstance.select([diagramInstance.nodes[0]]);
-      }}
       // render initialized Diagram
     />
+    </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
