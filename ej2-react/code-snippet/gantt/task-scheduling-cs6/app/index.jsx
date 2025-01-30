@@ -9,7 +9,7 @@ function App() {
             startDate: 'StartDate',
             duration: 'Duration',
             progress: 'Progress',
-            child: 'Children'
+            parentID: 'ParentID'
         };
         const workWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'];
     

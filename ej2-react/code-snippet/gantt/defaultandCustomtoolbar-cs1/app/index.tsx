@@ -10,7 +10,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks',
+    parentID: 'ParentID',
     dependency: 'Predecessor',
   };
   const toolbarOptions: any[] = ['ExpandAll', 'CollapseAll', { text: 'Test', tooltipText: 'Test',id: 'Test' }];

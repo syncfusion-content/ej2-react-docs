@@ -111,14 +111,23 @@ L10n.load({
 
 function App () {
     const taskFields: any = {
-        id: 'TaskID',
+        id: 'TaskId',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
+        parentID: 'parentId'
     };
-        return <GanttComponent dataSource={data} locale='ar-AE' allowSelection={true} taskFields={taskFields} enableRtl= {true} height = '450px'>
+    return (
+        <GanttComponent 
+            dataSource={data} 
+            locale='ar-AE' 
+            allowSelection={true} 
+            taskFields={taskFields} 
+            enableRtl= {true} 
+            height = '450px'
+        >
         </GanttComponent>
+    );
 };
 ReactDOM.render(<App />, document.getElementById('root'));

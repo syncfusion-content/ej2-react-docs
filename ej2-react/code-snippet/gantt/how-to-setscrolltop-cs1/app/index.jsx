@@ -12,7 +12,7 @@ function App(){
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   function clickHandler(){
     ganttInstance.ganttChartModule.scrollObject.setScrollTop(300);

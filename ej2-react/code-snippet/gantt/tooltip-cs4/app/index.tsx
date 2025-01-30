@@ -9,7 +9,7 @@ function  App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
  function tooltipTemplate(props:any) {
     return (<div>TaskID : {props.TaskID}</div>)

@@ -13,7 +13,7 @@ function App(){
         endDate: 'EndDate',
         duration: 'Duration',
         progress: 'Progress',
-        parentID: 'parentID'
+        parentID: 'ParentID'
       };
       const splitterSettings= {
         columnIndex: 2

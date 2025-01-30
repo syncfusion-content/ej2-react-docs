@@ -2,17 +2,17 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, Selection, Toolbar, ContextMenu, Sort, Resize } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
-function App() {
-   
-       const taskFields = {
-            id: 'taskID',
-            name: 'taskName',
-            startDate: 'startDate',
-            duration: 'duration',
-            progress: 'progress',
-            child: 'subtasks'
+
+function App() {   
+       const taskFields: any = {
+            id: 'TaskID',
+            name: 'TaskName',
+            startDate: 'StartDate',
+            duration: 'Duration',
+            progress: 'Progress',
+            parentID: 'ParentID'
         };
-        const editOptions = {
+        const editOptions: any = {
             allowEditing: true,
             allowAdding: true,
             allowDeleting: true,

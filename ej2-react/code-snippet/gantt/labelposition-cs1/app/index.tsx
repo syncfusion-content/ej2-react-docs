@@ -1,10 +1,10 @@
 let resourceCollection: object[] = [
-    { resourceId: 1, resourceName: 'Martin Tamer', resourceGroup: 'Planning Team'},
-    { resourceId: 2, resourceName: 'Rose Fuller', resourceGroup: 'Testing Team' },
-    { resourceId: 3, resourceName: 'Margaret Buchanan', resourceGroup: 'Approval Team' },
-    { resourceId: 4, resourceName: 'Fuller King', resourceGroup: 'Development Team' },
-    { resourceId: 5, resourceName: 'Davolio Fuller', resourceGroup: 'Approval Team' },
-    { resourceId: 6, resourceName: 'Van Jack', resourceGroup: 'Development Team' },
+    { ResourceId: 1, ResourceName: 'Martin Tamer', ResourceGroup: 'Planning Team'},
+    { ResourceId: 2, ResourceName: 'Rose Fuller', ResourceGroup: 'Testing Team' },
+    { ResourceId: 3, ResourceName: 'Margaret Buchanan', ResourceGroup: 'Approval Team' },
+    { ResourceId: 4, ResourceName: 'Fuller King', ResourceGroup: 'Development Team' },
+    { ResourceId: 5, ResourceName: 'Davolio Fuller', ResourceGroup: 'Approval Team' },
+    { ResourceId: 6, ResourceName: 'Van Jack', ResourceGroup: 'Development Team' },
 ];
 let data = [
     {
@@ -12,38 +12,32 @@ let data = [
         TaskName: 'Project initiation',
         StartDate: new Date('03/29/2019'),
         EndDate: new Date('04/21/2019'),
-        subtasks: [
-            {
-                TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('03/29/2019'), Duration: 2,
-                Progress: 30, work: 10, resources: [{ resourceId: 1, resourceUnit: 50 }]
-            },
-            {
-                TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('03/29/2019'), Duration: 4,
-                resources: [{resourceId: 2, resourceUnit: 70}], Progress: 30, work: 20
-            },
-            {
-                TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('03/29/2019'), Duration: 1,
-                resources: [{resourceId: 3, resourceUnit: 25}, { resourceId: 1, resourceUnit: 75 }], Progress: 30, work: 10,
-            },
-        ]
+    }, {
+        TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('03/29/2019'), Duration: 2, ParentID: 1,
+        Progress: 30, work: 10, Resources: [{ ResourceId: 1, Unit: 50 }]
+    },
+    {
+        TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('03/29/2019'), Duration: 4, ParentID: 1,
+        Resources: [{ ResourceId: 2, Unit: 70 }], Progress: 30, work: 20
+    },
+    {
+        TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('03/29/2019'), Duration: 1, ParentID: 1,
+        Resources: [{ ResourceId: 3, Unit: 25 }, { ResourceId: 1, Unit: 75 }], Progress: 30, work: 10,
     },
     {
         TaskID: 5,
         TaskName: 'Project estimation', StartDate: new Date('03/29/2019'), EndDate: new Date('04/21/2019'),
-        subtasks: [
-            {
-                TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('03/29/2019'),
-                Duration: 3, Progress: 30, resources: [{ resourceId: 4, resourceUnit: 50 }, {resourceId: 2, resourceUnit: 70}], work: 30
-            },
-            {
-                TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/01/2019'), Duration: 3,
-                resources: [{resourceId: 6, resourceUnit: 40}], Progress: 30, work: 40
-            },
-            {
-                TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/01/2019'),
-                Duration: 2, resources: [{ resourceId: 5, resourceUnit: 75 }], Progress: 30, work: 60,
-            }
-        ]
+    }, {
+        TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('03/29/2019'),
+        Duration: 3, ParentID: 5, Progress: 30, Resources: [{ ResourceId: 4, Unit: 50 }, { ResourceId: 2, Unit: 70 }], work: 30
+    },
+    {
+        TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/01/2019'), Duration: 3, ParentID: 5,
+        Resources: [{ ResourceId: 6, Unit: 40 }], Progress: 30, work: 40
+    },
+    {
+        TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/01/2019'),
+        Duration: 2, ParentID: 5, Resources: [{ ResourceId: 5, Unit: 75 }], Progress: 30, work: 60,
     },
     {
         TaskID: 9, TaskName: 'Sign contract', StartDate: new Date('04/01/2019'), Duration: 1,
@@ -61,14 +55,14 @@ function App (){
             endDate: 'EndDate',
             duration: 'Duration',
             progress: 'Progress',
-            resourceInfo: 'resources',
-            child: 'subtasks'
+            resourceInfo: 'Resources',
+            parentID: 'ParentID'
         };
         const resourceFields = {
-            id: 'resourceId',
-            name: 'resourceName',
+            id: 'ResourceId',
+            name: 'ResourceName',
             unit: 'Unit',
-            group: 'resourceGroup'
+            group: 'ResourceGroup'
         };
         const editSettings = {
             allowAdding: true,
@@ -79,7 +73,7 @@ function App (){
         };
         const toolbar = ['Add', 'Edit', 'Delete', 'Cancel', 'Update', 'PrevTimeSpan', 'NextTimeSpan', 'ExpandAll', 'CollapseAll', 'Search'];
         const labelSettings = {
-            rightLabel: 'resources',
+            rightLabel: 'Resources',
             leftLabel: 'TaskName',
             taskLabel: '${Progress}%'
         };
@@ -94,7 +88,7 @@ function App (){
             <ColumnDirective field= 'TaskName'  headerText= 'Task Name'  width= '180' > </ColumnDirective>
             <ColumnDirective field= 'work'  headerText= 'Work' > </ColumnDirective>
             <ColumnDirective field= 'Progress' > </ColumnDirective>
-            <ColumnDirective field= 'resourceGroup'  headerText= 'Group' > </ColumnDirective>
+            <ColumnDirective field= 'ResourceGroup'  headerText= 'Group' > </ColumnDirective>
             <ColumnDirective field= 'StartDate' > </ColumnDirective>
             <ColumnDirective field= 'Duration' > </ColumnDirective>
             </ColumnsDirective>

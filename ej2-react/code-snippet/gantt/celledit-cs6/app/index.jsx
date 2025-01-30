@@ -10,12 +10,12 @@ function App (){
     duration: 'Duration',
     dependency: 'Predecessor',
     progress: 'Progress',
-    child: 'subtasks',
-    resourceInfo: 'resources'
+    parentID: 'ParentID',
+    resourceInfo: 'Resources'
   };
   const resourceFields = {
-    id: 'resourceId',
-    name: 'resourceName'
+    id: 'ResourceId',
+    name: 'ResourceName'
   };
   const editOptions = {
     allowAdding: true,

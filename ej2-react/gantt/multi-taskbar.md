@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Resource Multi Taskbar
 
-To visualize multiple tasks assigned to each resource in a row when the records are in the collapsed state. It can be enabled by settings the `enableMultiTaskbar` property value as `true`.
+To visualize multiple tasks assigned to each resource in a row when the records are in the collapsed state. It can be enabled by settings the [`enableMultiTaskbar`](https://ej2.syncfusion.com/react/documentation/api/gantt#enablemultitaskbar) property value as `true`.
 
 The collapse or expand action of a resource record can be achieved only by using the tree grid side arrow icon. Because it will be disabled on chart side action for this support.
 

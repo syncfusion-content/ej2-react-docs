@@ -10,13 +10,12 @@ function App (){
     startDate: 'StartDate',
     progress:'Progress',
     duration:'Duration',
-    child: 'subtasks',
+    parentID: 'ParentID',
     expandState: 'isExpand'
   };
   
         return <GanttComponent dataSource={projectViewMultiTaskData} enableMultiTaskbar={true}
         taskFields={taskFields} height = '400px'>
-
         </GanttComponent>
     
 };

@@ -9,9 +9,9 @@ function App (){
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
+        parentID: 'ParentID'
     };
-  const  editOptions: EditSettingsModel = {
+  const editOptions: EditSettingsModel = {
     allowTaskbarEditing: true
   };
         return <GanttComponent dataSource={data} taskFields={taskFields}

@@ -6,25 +6,36 @@ import { data } from './datasource';
 function App(){
    let ganttInstance: any;
     const taskFields: any = {
-        id: 'TaskID',
+        id: 'TaskId',
         name: 'TaskName',
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
-  };
-  const toolbarOptions: ToolbarItem[] = ['ExcelExport', 'CsvExport'];
-  function toolbarClick(args: ClickEventArgs): void {
+        parentID: 'parentId'
+    };
+    const toolbarOptions: ToolbarItem[] = ['ExcelExport', 'CsvExport'];
+    function toolbarClick(args: ClickEventArgs): void {
        if (args.item.id === 'GanttExport_excelexport') {
            const excelExportProperties: ExcelExportProperties = {
-                dataSource: "data[1]"
+                dataSource: [data[1]]
             };
            ganttInstance.excelExport(excelExportProperties);
         }
     };
-        return <GanttComponent id='GanttExport' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions}
-        toolbarClick={toolbarClick} allowExcelExport={true} height='400px' ref={gantt => ganttInstance = gantt} treeColumnIndex={1}>
+    return (
+        <GanttComponent 
+            id='GanttExport' 
+            dataSource={data} 
+            taskFields={taskFields} 
+            toolbar={toolbarOptions}
+            toolbarClick={toolbarClick} 
+            allowExcelExport={true} 
+            height='400px' 
+            ref={gantt => ganttInstance = gantt} 
+            treeColumnIndex={1}
+        >
             <Inject services={[Toolbar, ExcelExport, Selection]} />
         </GanttComponent>
+    ); 
 };
 ReactDOM.render(<App />, document.getElementById('root'));

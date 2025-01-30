@@ -10,7 +10,7 @@ function App (){
     startDate: 'StartDate',
     progress:'Progress',
     duration:'Duration',
-    child: 'subtasks',
+    parentID: 'ParentID',
     expandState: 'isExpand'
   };
   

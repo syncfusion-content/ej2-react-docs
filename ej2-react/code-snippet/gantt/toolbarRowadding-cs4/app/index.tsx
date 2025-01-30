@@ -11,17 +11,17 @@ function App() {
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    resourceInfo: 'resources',
-    work: 'work',
-    child: 'subtasks',
+    resourceInfo: 'Resources',
+    work: 'Work',
+    parentID: 'ParentID',
     segments: 'Segments',
-    notes: "note",
+    notes:"Note",
   };
   const resourceFields = {
-    id: 'resourceId',
-    name: 'resourceName',
-    unit: 'resourceUnit',
-    group: 'resourceGroup'
+    id: 'ResourceId',
+    name: 'ResourceName',
+    unit: 'ResourceUnit',
+    group: 'ResourceGroup'
   };
   const editOptions: EditSettingsModel = {
     allowAdding: true,
@@ -31,11 +31,11 @@ function App() {
     showDeleteConfirmDialog: true
   };
   const addDependencyParams: AddDialogFieldSettingsModel = { allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",] }
-  const addResourcesParams: AddDialogFieldSettingsModel = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }] }
-  const addSegmentsParams: AddDialogFieldSettingsModel = { columns: [{ field: "segmenttask", width: "170px", headerText: "Segment Task" }], }
+  const addResourcesParams: AddDialogFieldSettingsModel = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "NewData" }] }
+  const addSegmentsParams: AddDialogFieldSettingsModel = { columns: [{ field: "SegmentTask", width: "170px", headerText: "Segment Task" }], }
   const editDependencyParams: EditDialogFieldSettingsModel = { allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",] }
-  const editResourcesParams: EditDialogFieldSettingsModel = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }] }
-  const editSegmentsParams: EditDialogFieldSettingsModel = { columns: [{ field: "segmenttask", width: "170px", headerText: "Segment Task" }], }
+  const editResourcesParams: EditDialogFieldSettingsModel = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "NewData" }] }
+  const editSegmentsParams: EditDialogFieldSettingsModel = { columns: [{ field: "SegmentTask", width: "170px", headerText: "Segment Task" }], }
   const toolbarOptions: ToolbarItem[] = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
   return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
     editSettings={editOptions} toolbar={toolbarOptions} height='450px' resourceFields={resourceFields} resources={resourceCollection}>

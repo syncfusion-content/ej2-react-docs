@@ -11,7 +11,7 @@ class App extends React.Component<{}, {}>{
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   public splitterSettings: any = {
       columnIndex : 4

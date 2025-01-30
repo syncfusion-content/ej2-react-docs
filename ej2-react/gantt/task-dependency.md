@@ -102,7 +102,7 @@ By default, the dependency offsets are automatically updated in the Gantt chart 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/gantt/predecessor-cs2" %}
+{% previewsample "page.domainurl/code-snippet/gantt/predecessor-cs5" %}
 
 ## Validate predecessor links on editing
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview
+# Theme Studio Overview
 
 Theme Studio for Essential JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
 
@@ -84,13 +84,13 @@ You can directly use the customized CSS file in the web application.
 
 ## Import previously changed settings into the theme studio
 
-When you want to change your application theme and UI design in the future, you won’t need to customize the Syncfusion React components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the theme studio application.
+When you want to change your application theme and UI design in the future, you won’t need to customize the Syncfusion React components from scratch in the theme studio. Just import the old `settings.json` or `<theme-name>-tokens.json` file, which is downloaded from Figma using the `Syncfusion Design Tokens` plugin, to review and update your stored settings in the theme studio application.
 
 1. Click the Import icon in the top right corner.
 
     ![import-icon](images/import-icon.png)
 
-2. The Import Theme dialog will open. Click the Browse button and select a `settings.json` file you exported previously.
+2. The Import Theme dialog will open. Click the Browse button and select a `settings.json` or `<theme-name>-tokens.json` file you exported previously.
 
     ![import-dialog](images/import-dialog.png)
 

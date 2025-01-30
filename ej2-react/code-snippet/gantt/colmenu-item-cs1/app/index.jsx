@@ -11,7 +11,7 @@ function App(){
         startDate: 'StartDate',
         duration: 'Duration',
         progress: 'Progress',
-        child: 'subtasks'
+        parentID: 'ParentID'
     };
     const columnMenuItems =  [{text:'Clear Sorting', id:'ganttclearsorting'}];
     const sortSettings = { columns:[{direction: "Ascending", field: "TaskName"}] };

@@ -11,17 +11,17 @@ function App(){
         duration: 'Duration',
         progress: 'Progress',
         dependency: 'Predecessor',
-        resourceInfo: 'resources',
-        work: 'work',
-        child: 'subtasks',
+        resourceInfo: 'Resources',
+        work: 'Work',
+        parentID: 'ParentID',
         segments: 'Segments',
-        notes:"note",
+        notes:"Note",
   };
  const resourceFields = {
-    id: 'resourceId',
-    name: 'resourceName',
-    unit: 'resourceUnit',
-    group: 'resourceGroup'
+    id: 'ResourceId',
+    name: 'ResourceName',
+    unit: 'ResourceUnit',
+    group: 'ResourceGroup'
 };
   const editOptions = {
     allowAdding: true,
@@ -34,7 +34,7 @@ function App(){
         return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
         editSettings={editOptions} toolbar={toolbarOptions} height = '450px' resourceFields = {resourceFields} resources ={resourceCollection}>
           <ColumnsDirective>
-            <ColumnDirective field="TaskID" width="80"></ColumnDirective>
+            <ColumnDirective field="TaskID" width="100"></ColumnDirective>
             <ColumnDirective
               field="TaskName"
               headerText="TaskName"

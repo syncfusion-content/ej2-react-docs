@@ -1,59 +1,52 @@
 export let ProjectResources = [
-    { resourceId: 1, resourceName: 'Martin Tamer' },
-    { resourceId: 2, resourceName: 'Rose Fuller' },
-    { resourceId: 3, resourceName: 'Margaret Buchanan' },
-    { resourceId: 4, resourceName: 'Fuller King' },
-    { resourceId: 5, resourceName: 'Davolio Fuller' },
-    { resourceId: 6, resourceName: 'Van Jack' },
-    { resourceId: 7, resourceName: 'Fuller Buchanan' },
-    { resourceId: 8, resourceName: 'Jack Davolio' },
-    { resourceId: 9, resourceName: 'Tamer Vinet' },
-    { resourceId: 10, resourceName: 'Vinet Fuller' },
-    { resourceId: 11, resourceName: 'Bergs Anton' },
-    { resourceId: 12, resourceName: 'Construction Supervisor' }
+    { ResourceId: 1, ResourceName: 'Martin Tamer' },
+    { ResourceId: 2, ResourceName: 'Rose Fuller' },
+    { ResourceId: 3, ResourceName: 'Margaret Buchanan' },
+    { ResourceId: 4, ResourceName: 'Fuller King' },
+    { ResourceId: 5, ResourceName: 'Davolio Fuller' },
+    { ResourceId: 6, ResourceName: 'Van Jack' },
+    { ResourceId: 7, ResourceName: 'Fuller Buchanan' },
+    { ResourceId: 8, ResourceName: 'Jack Davolio' },
+    { ResourceId: 9, ResourceName: 'Tamer Vinet' },
+    { ResourceId: 10, ResourceName: 'Vinet Fuller' },
+    { ResourceId: 11, ResourceName: 'Bergs Anton' },
+    { ResourceId: 12, ResourceName: 'Construction Supervisor' }
 ];
 let data = [
     {
-        TaskID: 1,
-        TaskName: 'Project initiation',
-        StartDate: new Date('03/29/2019'),
-        EndDate: new Date('04/21/2019'),
-        subtasks: [
-            {
-                TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('03/29/2019'), Duration: 2,
-                Progress: 30, resources: [{ resourceId: 1, Unit: 70 }, 6]
-            },
-            {
-                TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('03/29/2019'), Duration: 4,
-                resources: [2, 3, 5]
-            },
-            {
-                TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('03/29/2019'), Duration: 1,
-                resources: [8, { resourceId: 9, Unit: 50 }], Progress: 30
-            },
-        ]
+        TaskID: 1, TaskName: 'Project initiation', StartDate: new Date('03/29/2019'), EndDate: new Date('04/21/2019'),
+    },
+    {
+        TaskID: 2, TaskName: 'Identify site location', StartDate: new Date('03/29/2019'), Duration: 2,
+        ParentID: 1, Progress: 30, Resources: [{ ResourceId: 1, Unit: 70 }, 6]
+    },
+    {
+        TaskID: 3, TaskName: 'Perform soil test', StartDate: new Date('03/29/2019'), Duration: 4,
+        ParentID: 1, Resources: [2, 3, 5]
+    },
+    {
+        TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('03/29/2019'), Duration: 1,
+        ParentID: 1, Resources: [8, { ResourceId: 9, Unit: 50 }], Progress: 30
     },
     {
         TaskID: 5,
         TaskName: 'Project estimation', StartDate: new Date('03/29/2019'), EndDate: new Date('04/21/2019'),
-        subtasks: [
-            {
-                TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('03/29/2019'),
-                Duration: 3, Progress: 30, resources: [{ resourceId: 4, Unit: 50 }]
-            },
-            {
-                TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/01/2019'), Duration: 3,
-                resources: [4, 8]
-            },
-            {
-                TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/01/2019'),
-                Duration: 2, resources: [12, { resourceId: 5, Unit: 70 }]
-            }
-        ]
+    },
+    {
+        TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('03/29/2019'),
+        Duration: 3, ParentID: 5, Progress: 30, Resources: [{ ResourceId: 4, Unit: 50 }]
+    },
+    {
+        TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/01/2019'), Duration: 3,
+        ParentID: 5, Resources: [4, 8]
+    },
+    {
+        TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/01/2019'),
+        Duration: 2, ParentID: 5, Resources: [12, { ResourceId: 5, Unit: 70 }]
     },
     {
         TaskID: 9, TaskName: 'Sign contract', StartDate: new Date('04/01/2019'), Duration: 1,
-        Progress: 30, resources: [12]
+        Progress: 30, Resources: [12]
     }
 ];
 import * as React from 'react';
@@ -66,22 +59,22 @@ function App(){
             startDate: 'StartDate',
             duration: 'Duration',
             progress: 'Progress',
-            resourceInfo: 'resources',
-            child: 'subtasks'
+            resourceInfo: 'Resources',
+            parentID: 'ParentID'
         };
         const resourceFields = {
-            id: 'resourceId',
-            name: 'resourceName',
+            id: 'ResourceId',
+            name: 'ResourceName',
             unit: 'Unit'
         };
         const labelSettings = {
-            rightLabel: 'resources'
+            rightLabel: 'Resources'
         };
         return <GanttComponent id='root' dataSource={ data } taskFields = { taskFields } resourceFields={resourceFields} labelSettings = {labelSettings } resources = { ProjectResources } height = '450px' >
             <ColumnsDirective>
             <ColumnDirective field= 'TaskID' visible= 'false' > </ColumnDirective>
             < ColumnDirective field= 'TaskName'  headerText= 'Task Name'  width= '180' > </ColumnDirective>
-            < ColumnDirective field= 'resources'  headerText= 'Resources'  width= '160' > </ColumnDirective>
+            < ColumnDirective field= 'Resources'  headerText= 'Resources'  width= '160' > </ColumnDirective>
             < ColumnDirective field= 'Duration'  width= '100' > </ColumnDirective>
             </ColumnsDirective>
         </GanttComponent>;
