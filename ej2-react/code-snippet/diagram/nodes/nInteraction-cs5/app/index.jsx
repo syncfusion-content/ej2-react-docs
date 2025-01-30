@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, FlipDirection } from "@syncfusion/ej2-react-diagrams";
 // A node is created and stored in nodes array.
 let node = [{
         // Position of the node
@@ -10,7 +10,7 @@ let node = [{
         width: 100,
         height: 100,
         // Flip the node in Horizontal Direction
-        flip: 'Horizontal',
+        flip: FlipDirection.Horizontal,
         shape: {
             type: 'Basic',
             shape: 'RightTriangle',
