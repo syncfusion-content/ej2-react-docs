@@ -9,7 +9,7 @@ const taskFields: any = {
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
  const toolbarOptions: ToolbarItem[] = ['Search'];
   const searchSettings: SearchSettingsModel = {

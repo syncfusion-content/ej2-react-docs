@@ -11,7 +11,7 @@ function App(){
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks',
+    parentID: 'ParentID'
   };
   let ganttInstance;
   const sortingOptions = { columns: [{ field: 'TaskID', direction: 'Descending' }] };

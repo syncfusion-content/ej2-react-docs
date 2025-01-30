@@ -12,10 +12,10 @@ function App(){
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   function clickHandler(){
-    ganttInstance.scrollToDate('05/10/2019');
+    ganttInstance.scrollToDate('04/28/2019');
 };
         return (<div>
         <ButtonComponent onClick= {clickHandler}>ScrollToDate</ButtonComponent>

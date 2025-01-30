@@ -10,7 +10,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
     return <GanttComponent dataSource={data} taskFields={taskFields}
          allowFiltering={true} height = '450px' filterSettings={{ type: 'Excel'}}>

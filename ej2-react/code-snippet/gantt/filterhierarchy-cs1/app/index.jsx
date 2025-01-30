@@ -17,7 +17,7 @@ let DropData =  [
       startDate: 'StartDate',
       duration: 'Duration',
       progress: 'Progress',
-      child: 'subtasks'
+      parentID: 'ParentID'
     };
     function onChange(sel) {
           let mode= sel.value.toString();

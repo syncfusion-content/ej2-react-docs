@@ -11,7 +11,7 @@ function App (){
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   const updateEventMarker = () => {
     const label = document.getElementsByClassName('e-span-label')[1] as HTMLElement;

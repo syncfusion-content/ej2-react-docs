@@ -8,16 +8,16 @@ import { DataManager } from '@syncfusion/ej2-data';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 function App () {
    
-        taskFields = {
+      const taskFields = {
             id: 'TaskID',
             name: 'TaskName',
             startDate: 'StartDate',
             duration: 'Duration',
             progress: 'Progress',
-            child: 'subtasks',
-            parentID: 'ParentId'
+            parentID: 'ParentID'
         };
-       Filter = {
+        let dropInstance;
+       const Filters = {
             ui: {
                 create: (args) => {
                     const flValInput = createElement('input', { className: 'flm-input' });
@@ -43,7 +43,7 @@ function App () {
         return <GanttComponent dataSource={data} taskFields={taskFields} allowFiltering={true} height='450px'>
 <ColumnsDirective>
           <ColumnDirective field="TaskID"></ColumnDirective>
-          <ColumnDirective field="TaskName" headerText="Job Name" filter={Filter}></ColumnDirective>
+          <ColumnDirective field="TaskName" headerText="Job Name" filter={Filters}></ColumnDirective>
           <ColumnDirective field="StartDate"></ColumnDirective>
           <ColumnDirective field="Duration"></ColumnDirective>
           <ColumnDirective field="Progress"></ColumnDirective>

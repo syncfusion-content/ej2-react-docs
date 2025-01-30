@@ -10,7 +10,7 @@ function App (){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   const eventMarkerDay = new Date('4/10/2019');
         return <GanttComponent dataSource={data} taskFields={taskFields} height = '450px'>

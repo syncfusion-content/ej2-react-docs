@@ -1,6 +1,3 @@
-
-
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Filter } from '@syncfusion/ej2-react-gantt';
@@ -12,7 +9,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
     return <GanttComponent dataSource={data} taskFields={taskFields}
          allowFiltering={true} height = '450px' filterSettings={{ type: 'Excel'}}>
@@ -20,5 +17,3 @@ function App(){
         </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

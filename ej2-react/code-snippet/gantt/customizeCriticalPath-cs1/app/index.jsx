@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent, Inject, Edit, Toolbar, CriticalPath } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
+
 function App(){
     const taskFields = {
     id: 'TaskID',
@@ -9,7 +10,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID',
   };
   const editOptions = {
       allowAdding: true,

@@ -11,7 +11,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID:'ParentId',
     };
     return <GanttComponent dataSource={data} taskFields={taskFields}
          allowFiltering={true} height = '400px'>

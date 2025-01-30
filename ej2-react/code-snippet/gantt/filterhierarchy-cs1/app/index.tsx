@@ -17,7 +17,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   function onChange(sel: ChangeEventArgs): void {
         let mode:any = sel.value.toString();

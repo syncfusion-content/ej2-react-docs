@@ -9,7 +9,7 @@ function App(){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   const sortingOptions = { columns: [{ field: 'TaskID', direction: 'Descending' }] };
    return <GanttComponent dataSource={data} taskFields={taskFields} sortSettings={sortingOptions} allowSorting={true} height='450px'>

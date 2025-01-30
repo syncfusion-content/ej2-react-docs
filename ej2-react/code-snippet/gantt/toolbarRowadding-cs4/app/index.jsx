@@ -11,17 +11,17 @@ function App() {
     duration: 'Duration',
     progress: 'Progress',
     dependency: 'Predecessor',
-    resourceInfo: 'resources',
-    work: 'work',
-    child: 'subtasks',
+    resourceInfo: 'Resources',
+    work: 'Work',
+    parentID: 'ParentID',
     segments: 'Segments',
-    notes: "note",
+    notes:"Note",
   };
   const resourceFields = {
-    id: 'resourceId',
-    name: 'resourceName',
-    unit: 'resourceUnit',
-    group: 'resourceGroup'
+    id: 'ResourceId',
+    name: 'ResourceName',
+    unit: 'ResourceUnit',
+    group: 'ResourceGroup'
   };
   const editOptions = {
     allowAdding: true,
@@ -31,11 +31,11 @@ function App() {
     showDeleteConfirmDialog: true
   };
   const addDependencyParams = { allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",] }
-  const addResourcesParams = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }] }
-  const addSegmentsParams = { columns: [{ field: "segmenttask", width: "170px", headerText: "Segment Task" }], }
+  const addResourcesParams = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "NewData" }] }
+  const addSegmentsParams = { columns: [{ field: "SegmentTask", width: "170px", headerText: "Segment Task" }], }
   const editDependencyParams = { allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",] }
-  const editResourcesParams = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }] }
-  const editSegmentsParams = { columns: [{ field: "segmenttask", width: "170px", headerText: "Segment Task" }], }
+  const editResourcesParams = { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "NewData" }] }
+  const editSegmentsParams = { columns: [{ field: "SegmentTask", width: "170px", headerText: "Segment Task" }], }
   const toolbarOptions = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
   return <GanttComponent dataSource={data} taskFields={taskFields} allowSelection={true}
     editSettings={editOptions} toolbar={toolbarOptions} height='450px' resourceFields={resourceFields} resources={resourceCollection}>

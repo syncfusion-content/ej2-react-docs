@@ -1,5 +1,3 @@
-
-
 import { GanttComponent, Inject, Sort } from '@syncfusion/ej2-react-gantt';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -11,7 +9,7 @@ function App () {
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
     };
    return <GanttComponent dataSource={data} taskFields={taskFields}
           allowSorting={true} height='400px'>
@@ -19,5 +17,3 @@ function App () {
         </GanttComponent>
     };
 ReactDOM.render(<App />, document.getElementById('root'));
-
-

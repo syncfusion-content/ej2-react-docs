@@ -14,9 +14,7 @@ function  App (){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks',
-    parentID: 'ParentId'
-
+    parentID: 'ParentID'
   };
   let dropInstance:any;
 const Filters : IFilter = {

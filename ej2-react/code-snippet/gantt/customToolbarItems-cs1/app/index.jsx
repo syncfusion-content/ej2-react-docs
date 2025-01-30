@@ -10,7 +10,7 @@ function App (){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   const toolbarOptions = [ { type: 'Input',template:new NumericTextBox({ format: 'c2', value:1 })} ];
         return <GanttComponent dataSource={data} taskFields={taskFields}  

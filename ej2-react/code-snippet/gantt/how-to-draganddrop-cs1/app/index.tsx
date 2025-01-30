@@ -17,21 +17,21 @@ function  App (){
       progress: 'Progress',
       dependency: 'Predecessor',
       resourceInfo: 'resources',
-      child: 'subtasks'
+      parentID: 'ParentId'
     };
     const resourceFields = {
         id: 'resourceId',
         name: 'resourceName'
     };
-    const  editSettings = {
+    const editSettings = {
       allowEditing: true
     };
-   const labelSettings = {
+    const labelSettings = {
       rightLabel: 'resources'
     };
     const  fields = { dataSource: editingResources, id: 'resourceId', text: 'resourceName' };
     const allowDragAndDrop = true;
-   function  nodeDragStop(args: DragAndDropEventArgs): void {
+    function  nodeDragStop(args: DragAndDropEventArgs): void {
         args.cancel = true;
         let chartEle: any = closest(args.target, '.e-chart-row');
         let gridEle: any = closest(args.target, '.e-row');
@@ -62,13 +62,27 @@ function  App (){
         }
     };
 
-        return <div><GanttComponent dataSource={editingData} taskFields={taskFields} resources={editingResources} editSettings={editSettings}
-         height='450px' resourceFields={resourceFields}  labelSettings={labelSettings} ref={gantt => ganttInstance = gantt}>
-           <Inject services={[ Edit, Selection]} />
-        </GanttComponent>
-        <TreeViewComponent fields={fields} allowDragAndDrop={allowDragAndDrop} nodeDragStop={nodeDragStop}/>
+        return (
+          <div>
+            <GanttComponent 
+              dataSource={editingData} 
+              taskFields={taskFields} 
+              resources={editingResources} 
+              editSettings={editSettings}
+              height='450px' 
+              resourceFields={resourceFields}  
+              labelSettings={labelSettings} 
+              ref={gantt => ganttInstance = gantt}
+              >
+              <Inject services={[ Edit, Selection]} />
+            </GanttComponent>
+            <TreeViewComponent 
+              fields={fields} 
+              allowDragAndDrop={allowDragAndDrop} 
+              nodeDragStop={nodeDragStop}
+            />
         </div>
-    
+        );
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 

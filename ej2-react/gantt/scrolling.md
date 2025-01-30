@@ -23,15 +23,18 @@ The scrollbar will be displayed in the gantt when content exceeds the element `w
 We can even set pixel values to width and height of gantt container using [width](https://ej2.syncfusion.com/react/documentation/api/gantt/#width) and [height](https://ej2.syncfusion.com/react/documentation/api/gantt/#height) properties.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/gantt/scrolling-cs1/app/App.jsx %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/scrolling-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/gantt/scrolling-cs1/app/App.tsx %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/scrolling-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/scrolling-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/gantt/scrolling-cs1" %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/scrolling-cs1" %}
 
 ## Responsive with the parent container
 
@@ -39,15 +42,18 @@ Specify the [width](https://ej2.syncfusion.com/react/documentation/api/gantt/#wi
 Setting the `height` to `100%` requires the gantt parent element to have explicit height. Also, the component will be responsive when the parent container is resized.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/gantt/responsive-scrolling-cs1/app/App.jsx %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/responsive-scrolling-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/gantt/responsive-scrolling-cs1/app/App.tsx %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/responsive-scrolling-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/responsive-scrolling-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/gantt/responsive-scrolling-cs1" %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/responsive-scrolling-cs1" %}
 
 ## Scroll To Date method
 

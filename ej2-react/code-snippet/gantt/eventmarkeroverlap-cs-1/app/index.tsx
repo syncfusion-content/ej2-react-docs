@@ -10,7 +10,7 @@ function App (){
     startDate: 'StartDate',
     duration: 'Duration',
     progress: 'Progress',
-    child: 'subtasks'
+    parentID: 'ParentID'
   };
   function dataBound() {
     let labeltop = 100;
