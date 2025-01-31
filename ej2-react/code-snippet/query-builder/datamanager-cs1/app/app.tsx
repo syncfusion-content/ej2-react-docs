@@ -8,7 +8,7 @@ import * as React from 'react';
 import { useState } from "react";
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { hardwareData } from '../datasource.ts';
+import { hardwareData } from './datasource.ts';
 
 function App() {
     let qryBldrObj: QueryBuilderComponent;

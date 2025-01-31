@@ -1,4 +1,4 @@
-import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
+import { QueryBuilderComponent, QueryLibrary } from '@syncfusion/ej2-react-querybuilder';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
@@ -68,7 +68,7 @@ function App() {
             <ButtonComponent id="exportsql" cssClass='e-primary' content='Get Parameter sql' onClick = {getSql}/>
             <ButtonComponent id="exportrule" cssClass='e-primary' content='Get Rule' onClick = {getRule}/>
         </div>
-        <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope; }}></DialogComponent>
+        <DialogComponent id='dialog' width='50%' header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope; }}></DialogComponent>
     </div>);
 }
 export default App;

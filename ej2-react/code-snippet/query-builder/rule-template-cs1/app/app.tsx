@@ -8,7 +8,7 @@ import { QueryBuilderComponent, ColumnsDirective, ColumnDirective, RuleModel, Ac
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { employeeData } from '../datasource.ts';
+import { employeeData } from './datasource';
 import { AgeTemplate } from './template';
 
 function App() {
