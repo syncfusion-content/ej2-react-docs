@@ -5,7 +5,7 @@ import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { expenseData } from '../datasource.ts';
+import { expenseData } from './datasource';
 function App() {
     let qryBldrObj;
     let elem;

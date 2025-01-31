@@ -2,9 +2,9 @@ import { QueryBuilderComponent, QueryLibrary } from '@syncfusion/ej2-react-query
 import { AnimationSettingsModel, DialogComponent } from '@syncfusion/ej2-react-popups';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 QueryBuilderComponent.Inject(QueryLibrary);
 // @ts-ignore
-import { employeeData } from '../datasource.ts';
 function App() {
     let qryBldrObj;
     let dialog;

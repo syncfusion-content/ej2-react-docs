@@ -24,4 +24,3 @@ Display options allow you to view the Query Builder in Vertically or Horizontall
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs11" %}
 
 > The default view the query builder component is Horizontal.
-> The default view the query builder component in Vertical.

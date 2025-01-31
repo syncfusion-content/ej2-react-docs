@@ -2,6 +2,8 @@ import { QueryBuilderComponent, QueryLibrary } from '@syncfusion/ej2-react-query
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { AnimationSettingsModel, DialogComponent } from '@syncfusion/ej2-react-popups';
+
 QueryBuilderComponent.Inject(QueryLibrary);
 // @ts-ignore
 function App() {
@@ -68,7 +70,7 @@ function App() {
             <ButtonComponent id="exportmongo" cssClass='e-primary' content='Get Parameter Named sql' onClick = {getSql}/>
             <ButtonComponent id="exportrule" cssClass='e-primary' content='Get Rule' onClick = {getRule}/>
         </div>
-        <DialogComponent id='dialog' width='50%' animationSettings={animationSettings} header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope; }}></DialogComponent>
+        <DialogComponent id='dialog' width='50%' header={"Query Builder"} visible={false} closeOnEscape={false} showCloseIcon={true} ref={(scope) => { dialog = scope; }}></DialogComponent>
     </div>);
 }
 export default App;

@@ -2,7 +2,7 @@
 /**
  * QueryBuilder datasource
  */
-export let employeeData: Array<{[key: string]: any}> = [
+export let employeeData = [
 	{
 		'Address': '507 - 20th Ave. E.\r\nApt. 2A',
 		'City': 'Seattle',
@@ -121,7 +121,7 @@ export let employeeData: Array<{[key: string]: any}> = [
 		'TitleOfCourtesy': 'Ms.'
 	}
 ];
-export let expenseData: Array<{[key: string]: any}>  = [
+export let expenseData  = [
 	{
 		'Amount': '7',
 		'Category': 'Food',
@@ -200,7 +200,7 @@ export let expenseData: Array<{[key: string]: any}>  = [
 		'UniqueId': 'T101284'
 	}
 ];
-export let hardwareData: Array<{[key: string]: any}>  = [
+export let hardwareData = [
 	{
 		'AssignedTo': 'John Doe',
 		'Category': 'Laptop',
