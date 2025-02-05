@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import {
   DiagramComponent,
   PortVisibility,
+  FlipDirection,
+  NodeModel
 } from '@syncfusion/ej2-react-diagrams';
 // A node is created and stored in nodes array.
 var nodes : NodeModel[] = [
@@ -21,9 +23,9 @@ var nodes : NodeModel[] = [
         visibility: PortVisibility.Visible,
       },
     ],
-    annotations: [{ content: 'FlipMode as Label' }],
+    annotations: [{ content: 'FlipMode as Label', offset: { x: 0, y: 0.8 }  }],
     // Flip the node in Horizontal Direction
-    flip: 'Horizontal',
+    flip: FlipDirection.Horizontal,
     //FlipMode as Label
     flipMode: 'Label',
     shape: {
@@ -37,14 +39,14 @@ var nodes : NodeModel[] = [
   {
     id: 'node2',
     // Position of the node
-    offsetX: 300,
+    offsetX: 400,
     offsetY: 100,
     // Size of the node
     width: 100,
     height: 100,
-    annotations: [{ content: 'FlipMode as Port' }],
+    annotations: [{ content: 'FlipMode as Port', offset: { x: 0, y: 0.8 }  }],
     // Flip the node in Horizontal Direction
-    flip: 'Horizontal',
+    flip: FlipDirection.Horizontal,
     ports: [
       {
         id: 'left',
@@ -70,9 +72,9 @@ var nodes : NodeModel[] = [
     // Size of the node
     width: 100,
     height: 100,
-    annotations: [{ content: 'FlipMode as All' }],
+    annotations: [{ content: 'FlipMode as All', offset: { x: 0, y: 0.8 }  }],
     // Flip the node in Horizontal Direction
-    flip: 'Horizontal',
+    flip: FlipDirection.Horizontal,
     ports: [
       {
         id: 'left',
@@ -93,14 +95,14 @@ var nodes : NodeModel[] = [
   {
     id: 'node4',
     // Position of the node
-    offsetX: 300,
+    offsetX: 400,
     offsetY: 300,
     // Size of the node
     width: 100,
     height: 100,
-    annotations: [{ content: 'FlipMode as None' }],
+    annotations: [{ content: 'FlipMode as None', offset: { x: 0, y: 0.8 }  }],
     // Flip the node in Horizontal Direction
-    flip: 'Horizontal',
+    flip: FlipDirection.Horizontal,
     ports: [
       {
         id: 'left',

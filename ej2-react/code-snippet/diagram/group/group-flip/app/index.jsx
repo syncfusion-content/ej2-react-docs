@@ -40,6 +40,9 @@ const nodes = [
         padding: { left: 20, right: 20, top: 20, bottom: 20 },
         //Sets the flip as Horizontal
         flip: FlipDirection.Horizontal,
+        style: {
+          fill: 'white', strokeColor:'black'
+        },
       }
 ];
 
