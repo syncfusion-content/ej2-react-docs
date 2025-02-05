@@ -166,7 +166,7 @@ The following code illustrates how to add Padding to the node group.
 
  {% previewsample "page.domainurl/code-snippet/diagram/group/group-padding" %}
 
- ## Group flip
+## Group flip
 
 The flip functionality for a group node works similarly to that of normal nodes. However, when flipping a group node, the flip of its child nodes is combined with the group's flip. This combination ensures that the child nodes inherit the group’s flip while retaining their own individual flips.
 
