@@ -82,7 +82,7 @@ The arrow tip pointer can also be disabled using the [`showTipPointer`](https://
 {% include code-snippet/tooltip/custom-arrow-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
-{% include code-snippet/tooltip/custom-arrow-cs22/index.css %}
+{% include code-snippet/tooltip/custom-arrow-cs2/index.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/tooltip/custom-arrow-cs2/index.html %}

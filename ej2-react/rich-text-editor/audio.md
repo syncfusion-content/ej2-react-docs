@@ -8,24 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Audio in React Rich text editor component
+# Audio in React Rich text editor Component
 
 The Rich Text Editor allows you to insert audio from online sources and local computers and then insert them into your content. You can insert the audio with the following list of options in the [insertAudioSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertaudiosettings) property.
 
-| Options | Description |
-|----------------|---------|
-| allowedTypes | Specifies the extensions of the audio types allowed to insert on bowering and passing the extensions with comma separators. For example, pass allowedTypes as `.mp3`, `.wav`, `.m4a` and `.wma`. |
-| layoutOption | Sets the default display for audio when it is inserted into the Rich Text Editor. Possible options are `Inline` and `Break`.|
-| saveFormat | Sets the default save format of the audio element when inserted. Possible options are: `Blob` and `Base64`.|
-| saveUrl | Provides URL to map the action result method to save the audio.|
-| removeUrl | Provides URL to map the action result method to remove the audio.|
-| path | Specifies the location to store the audio.|
+## Configure Audio Tool in the Toolbar
 
-## Configure audio tool in the toolbar
+You can add an `Audio` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
-You can add an `audio` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
-
-> Rich Text Editor features are segregated into individual feature-wise modules. To use audio, inject the `Audio` module in `services`.
+> To use Audio feature, inject `AudioService` in the provider section.
 
 To configure the `Audio` toolbar item, refer to the below code.
 
@@ -55,108 +46,42 @@ To configure the `Audio` toolbar item, refer to the below code.
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/audio-cs2" %}
 
-## Insert audio from the web
+
+### Audio save format
+
+The audio files can be saved as `Blob` or `Base64` URL by using the [insertAudioSettings.saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#saveformat) property, which is of enum type, and the generated URL will be set to the `src` attribute of the `<source>` tag.
+
+> The default `saveFormat` property is set to `Blob` format.
+
+```ts
+
+<audio>
+    <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="audio/mp3" >
+</audio>
+
+<audio>
+    <source src="data:audio/mp3;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="audio/mp3" >
+</audio>
+
+```
+
+## Insert Audio from the Web
 
 You can insert audio from either the hosted link or the local machine, by clicking the audio button in the editor's toolbar. On clicking the audio button, a dialog opens, which allows you to insert audio from the web URL.
 
-### Insert from web URL
+### Inserting Audio from Web URLs
 
 By default, the audio tool opens the audio dialog, allowing you to insert audio from an online source. Inserting the URL will be added to the `src` attribute of the `<source>` tag.
 
 ![React Rich Text Editor Audio insert](./images/react-richtexteditor-audio-web.png)
 
-## Insert audio from local machine
+## Uploading Audio from Local Machine
 
 You can use the `browse` option on the audio dialog, to select the audio from the local machine and insert it into the Rich Text Editor content.
 
 If the path field is not specified in the [insertAudioSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertaudiosettings), the audio will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
 
-### Restrict audio upload based on size
-
-You can restrict the audio uploaded from the local machine when the uploaded audio file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event.
-
-> The file size in the argument will be returned in `bytes`.
-
-In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
-
-`[Class-component]`
-
-```ts
-
-import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
-import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
-
-class App extends React.Component<{},{}> {
-  private toolbarSettings: object = {
-    items: ['Audio']
-  }
-  private insertAudioSettings: object = {
-    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
-    path: "../Files/"
-  }
-  private onFileUpload (args: UploadingEventArgs): void {
-    alert("RTE")
-    let sizeInBytes: number = args.fileData.size;
-    let fileSize: number = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-}
-  public render() {
-    return (
-      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertAudioSettings={
-        this.insertAudioSettings} fileUploading={this.onFileUpload}>
-
-        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-  }
-}
-
-export default App;
-
-```
-
-`[Functional-component]`
-
-```ts
-
-import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
-import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
-
-function App() {
-    let toolbarSettings: object = {
-      items: ['Audio']
-    }
-    let insertAudioSettings: object = {
-      saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
-      path: "../Files/"
-    }
-    function onFileUpload (args: UploadingEventArgs): void {
-      alert("RTE")
-      let sizeInBytes: number = args.fileData.size;
-      let fileSize: number = 500000;
-      if (fileSize < sizeInBytes) {
-          args.cancel = true;
-      }
-    }
-
-    return (
-      <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertAudioSettings={insertAudioSettings} fileUploading={onFileUpload}>
-
-        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-
-}
-
-export default App;
-
-```
-
-### Server-side action
+### Server-Side Action
 
 The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [insertAudioSettings.saveUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#saveurl) and provide the required destination path through [insertAudioSettings.path](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#path) properties.
 
@@ -296,88 +221,15 @@ namespace FileUpload.Controllers
 
 ```
 
-### Audio save format
+## Saving Audio to the Server 
 
-The audio files can be saved as `Blob` or `Base64` url by using the [insertAudioSettings.saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#saveformat) property, which is of enum type and the generated url will be set to the `src` attribute of the `<source>` tag.
+[saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettings/#saveformat) Sets the default save format of the audio element when inserted. Possible options are: `Blob` and `Base64`.
 
-> By default, the files are saved in the `Blob` format.
+[saveUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettings/#saveurl) provides URL to map the action result method to save the audio.
 
-```ts
+[removeUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettings/#removeurl) provides URL to map the action result method to remove the audio.
 
-<audio>
-    <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="audio/mp3" >
-</audio>
-
-<audio>
-    <source src="data:audio/mp3;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="audio/mp3" >
-</audio>
-
-```
-
-## Replacing audio
-
-Once an audio file has been inserted, you can change it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `audioReplace` option. You can replace the audio file using the web URL or the browse option in the audio dialog.
-
-![React Rich Text Editor Audio replace](./images/react-richtexteditor-audio-replace.png)
-
-## Delete audio
-
-To remove audio from the Rich Text Editor content, select the audio and click the `audioRemove` button from the quick toolbar. It will delete the audio from the Rich Text Editor content as well as from the service location if the [insertAudioSettings.removeUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#removeurl) is given.
-
-Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
-
-![React Rich Text Editor Audio delete](./images/react-richtexteditor-audio-del.png)
-
-## Display position
-
-Sets the default display property for audio when it is inserted in the Rich Text Editor using the [insertAudioSettings.layoutOption](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#layoutOption) property. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the audio elements’ layout position.
-
-> The default `layoutOption` property is set to `Inline`.
-
-`[Class-component]`
-
-```ts
-
-import * as React from 'react';
-import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-
-class App extends React.Component<{},{}> {
-  private insertAudioSettings: object = {
-    layoutOption: 'Inline',
-  }
-  public render() {
-    return (
-      <RichTextEditorComponent height={450} insertAudioSettings = {this.insertAudioSettings} >
-         <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-  }
-}
-
-```
-
-`[Functional-component]`
-
-```ts
-
-import * as React from 'react';
-import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-
-function App() {
-  let insertAudioSettings: object = {
-    layoutOption: 'Inline',
-  }
-
-  return (
-    <RichTextEditorComponent height={450} insertAudioSettings = {insertAudioSettings} >
-        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
-    </RichTextEditorComponent>
-  );
-}
-
-```
-
-## Rename audio before inserting
+### Renaming Audio Before Inserting
 
 You can use the [insertAudioSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertaudiosettings) property, to specify the server handler to upload the selected audio. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
 
@@ -509,7 +361,92 @@ public void Rename()
 
 ```
 
-## Upload audio with authentication
+### Restricting Audio by Size
+
+You can restrict the audio uploaded from the local machine when the uploaded audio file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event.
+
+> The file size in the argument will be returned in `bytes`.
+
+In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
+
+`[Class-component]`
+
+```ts
+
+import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
+
+class App extends React.Component<{},{}> {
+  private toolbarSettings: object = {
+    items: ['Audio']
+  }
+  private insertAudioSettings: object = {
+    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
+    path: "../Files/"
+  }
+  private onFileUpload (args: UploadingEventArgs): void {
+    alert("RTE")
+    let sizeInBytes: number = args.fileData.size;
+    let fileSize: number = 500000;
+    if (fileSize < sizeInBytes) {
+        args.cancel = true;
+    }
+}
+  public render() {
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertAudioSettings={
+        this.insertAudioSettings} fileUploading={this.onFileUpload}>
+
+        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
+      </RichTextEditorComponent>
+    );
+  }
+}
+
+export default App;
+
+```
+
+`[Functional-component]`
+
+```ts
+
+import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
+
+function App() {
+    let toolbarSettings: object = {
+      items: ['Audio']
+    }
+    let insertAudioSettings: object = {
+      saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
+      path: "../Files/"
+    }
+    function onFileUpload (args: UploadingEventArgs): void {
+      alert("RTE")
+      let sizeInBytes: number = args.fileData.size;
+      let fileSize: number = 500000;
+      if (fileSize < sizeInBytes) {
+          args.cancel = true;
+      }
+    }
+
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertAudioSettings={insertAudioSettings} fileUploading={onFileUpload}>
+
+        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
+      </RichTextEditorComponent>
+    );
+
+}
+
+export default App;
+
+```
+
+## Uploading Audio with Authentication
 
 You can add additional data with the audio uploaded from the Rich Text Editor on the client side, which can even be received on the server side by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
 
@@ -587,6 +524,124 @@ function App() {
 public void SaveFiles(IList<IFormFile> UploadFiles)
 {
     string currentPath = Request.Form["Authorization"].ToString();
+}
+
+```
+
+## Audio Replacement Functionality
+
+Once an audio file has been inserted, you can change it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `audioReplace` option. You can replace the audio file using the web URL or the browse option in the audio dialog.
+
+![React Rich Text Editor Audio replace](./images/react-richtexteditor-audio-replace.png)
+
+## Deleting Audios
+
+To remove audio from the Rich Text Editor content, select the audio and click the `audioRemove` button from the quick toolbar. It will delete the audio from the Rich Text Editor content as well as from the service location if the [insertAudioSettings.removeUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#removeurl) is given.
+
+Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
+
+![React Rich Text Editor Audio delete](./images/react-richtexteditor-audio-del.png)
+
+## Configuring Audio Display Position
+
+Sets the default display property for audio when it is inserted in the Rich Text Editor using the [insertAudioSettings.layoutOption](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#layoutOption) property. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the audio elements’ layout position.
+
+> The default `layoutOption` property is set to `Inline`.
+
+`[Class-component]`
+
+```ts
+
+import * as React from 'react';
+import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+
+class App extends React.Component<{},{}> {
+  private insertAudioSettings: object = {
+    layoutOption: 'Inline',
+  }
+  public render() {
+    return (
+      <RichTextEditorComponent height={450} insertAudioSettings = {this.insertAudioSettings} >
+         <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
+      </RichTextEditorComponent>
+    );
+  }
+}
+
+```
+
+`[Functional-component]`
+
+```ts
+
+import * as React from 'react';
+import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+
+function App() {
+  let insertAudioSettings: object = {
+    layoutOption: 'Inline',
+  }
+
+  return (
+    <RichTextEditorComponent height={450} insertAudioSettings = {insertAudioSettings} >
+        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
+    </RichTextEditorComponent>
+  );
+}
+
+```
+
+## Customizing the Audio Quick Toolbar
+
+The Rich Text Editor enables customization of the audio quick toolbar, allowing you to tailor its functionality with essential tools such as AudioReplace, Remove, and AudioLayoutOption.
+
+By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you enhance the editor's capabilities, facilitating seamless management and editing of audio directly within your content. This customization ensures a user-friendly experience for manipulating audio elements efficiently.
+
+`[Class-component]`
+
+```ts
+
+import * as React from 'react';
+import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+
+class App extends React.Component<{},{}> {
+  private toolbarSettings: object = {
+    items: ['Audio'],
+  };
+  private quickToolbarSettings: object = {
+     audio: ['AudioReplace', 'Remove', 'AudioLayoutOption']
+  }
+  public render() {
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} quickToolbarSettings={this.quickToolbarSettings}>
+         <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
+      </RichTextEditorComponent>
+    );
+  }
+}
+
+```
+
+`[Functional-component]`
+
+```ts
+
+import * as React from 'react';
+import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+
+function App() {
+  let toolbarSettings: object = {
+    items: ['Audio'],
+  }
+  let quickToolbarSettings: object = {
+    audio: ['AudioReplace', 'Remove', 'AudioLayoutOption']
+  }
+
+  return (
+    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} quickToolbarSettings={quickToolbarSettings}>
+        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
+    </RichTextEditorComponent>
+  );
 }
 
 ```

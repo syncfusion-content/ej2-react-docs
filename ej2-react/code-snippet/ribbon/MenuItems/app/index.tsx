@@ -4,7 +4,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
 import { RibbonFileMenu, RibbonColorPicker, Inject } from "@syncfusion/ej2-react-ribbon";
-import { MenuItemModel } from '@syncfusion/ej2-react-navigations';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 function App() {
     const fileOptions: MenuItemModel[] = [{ text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
