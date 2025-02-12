@@ -10,6 +10,223 @@ domainurl: ##DomainURL##
 
 # Toolbar in React Rich text editor component
 
+The Syncfusion React Rich Text Editor component provides a versatile and powerful toolbar to enhance your text editing experience. The toolbar contains a variety of formatting, styling, and editing tools, allowing users to create and modify content efficiently.
+
+## Tools
+
+### Default Toolbar Items
+
+By default, the Angular Rich Text Editor displays the following toolbar items:
+
+> `Bold` , `Italic` , `Underline` , `|` , `Formats` , `Alignments` , `Blockquote`, `OrderedList` , `UnorderedList` , `|` , `CreateLink` , `Image` , `|` , `SourceCode` , `Undo` , `Redo`
+
+These default items cover essential text editing features, such as text formatting, lists, alignment, and linking.
+
+### Available Toolbar Items
+
+The following table shows the list of available tools in the Rich Text Editor's toolbar.
+
+The order of items in the toolbar can be customized to meet your application's requirements. If no specific order is set, the editor will render the above default toolbar items. Below is a list of all available toolbar items in the Rich Text Editor.
+
+#### Text formatting
+
+It provides tools for applying text styles such as bold, italic, underline, strike-through, and more to modify the appearance of the text.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| Bold  | ![Bold icon](./images/bold.png) | Text that is thicker and darker than usual. | toolbarSettings: { items: ['Bold']} |
+| Italic | ![Italic icon](./images/italic.png) | Shows a text that is leaned to the right. | toolbarSettings: { items: ['Italic']} |
+| Underline | ![Underline icon](./images/under-line.png) | The underline is added to the selected text. | toolbarSettings: { items: ['Underline']} |
+| StrikeThrough | ![StrikeThrough icon](./images/strikethrough.png) | Apply double line strike through formatting for the selected text. |toolbarSettings: { items: ['StrikeThrough']}|
+| ClearFormat | ![ClearFormat icon](./images/clear-format.png) | The clear format tool is useful to remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. As a result, all the text formatting will be cleared and return to its default formatting styles.|toolbarSettings: { items: ['ClearFormat']}|
+| Blockquote | ![Blockquote icon](./images/blockquote.png) | Blockquotes visually highlight important text within an editor, emphasizing key information or quotations. | toobarSettings: { items: ['Blockquote']}|
+| SubScript | ![SubScript icon](./images/sub-script.png) | Makes the selected text as subscript (lower).|toolbarSettings: { items: ['SubScript']}|
+| SuperScript | ![SuperScript icon](./images/super-script.png) | Makes the selected text as superscript (higher).|toolbarSettings: { items: ['SuperScript']}|
+| LowerCase | ![LowerCase icon](./images/lower-case.png) | Change the case of selected text to lower in the content. |toolbarSettings: { items: ['LowerCase']}|
+| UpperCase | ![UpperCase icon](./images/upper-case.png) | Change the case of selected text to upper  in the content.|toolbarSettings: { items: ['UpperCase’']}|
+
+#### Font & styling
+
+Tools in this section allow users to customize font properties such as font family, size, color, background color, and paragraph formatting.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| FontName | ![FontName icon](./images/font-name.png) | Defines the fonts that appear under the Font Family DropDownList from the Rich Text Editor's toolbar. |toolbarSettings: { items: ['FontName']}|
+| FontSize | ![FontSize icon](./images/font-size.png) | Defines the font sizes that appear under the Font Size DropDownList from the Rich Text Editor's toolbar.|toolbarSettings: { items: ['FontSize']}|
+| FontColor | ![FontColor icon](./images/font-color.png) | Specifies an array of colors can be used in the colors popup for font color.|toolbarSettings: { items: ['FontColor']}|
+| BackgroundColor | ![BackgroundColor icon](./images/background-color.png) | Specifies an array of colors can be used in the colors popup for background color.|toolbarSettings: { items: ['BackgroundColor']}|
+| Formats (Paragraph, Headings) | ![Format icon](./images/formats.png) | An Object with the options that will appear in the Paragraph Format dropdown from the toolbar. |toolbarSettings: { items: ['Formats']}|
+
+#### Alignment
+
+This section provides alignment options for the text or content, allowing users to justify text or align it to the left, center, or right.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| Alignment | ![Alignment icon](./images/alignments.png) | Align the content with left, center, and right margin.|toolbarSettings: { items: ['Alignments']}|
+| JustifyLeft | ![JustifyLeft icon](./images/align-left.png) | Allows each line to begin at the same distance from the editor’s left-hand side. | toolbarSettings: { items: ['JustifyLeft']} |
+| JustifyCenter | ![JustifyCenter icon](./images/align-center.png) | There is an even space on each side of each line since the text is not aligned to the left or right margins. | toolbarSettings: { items: ['JustifyCenter']} |
+| JustifyRight | ![JustifyRight icon](./images/align-right.png) | Allows each line to end at the same distance from the editor’s right-hand side. | toolbarSettings: { items: ['JustifyRight']} |
+| JustifyFull | ![JustifyFull icon](./images/align-justify.png) | The text is aligned with both right and left margins. | toolbarSettings: { items: ['JustifyFull']} |
+
+#### Lists & indentation
+
+Tools here allow users to create ordered and unordered lists, change the list style, and adjust indentation levels for improved document structure.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| OrderedList | ![OrderedList icon](./images/order-list.png) | Create a new list item(numbered). |toolbarSettings: { items: ['OrderedList']}|
+| UnorderedList | ![UnorderedList icon](./images/unorder-list.png) | Create a new list item(bulleted). |toolbarSettings: { items: ['UnorderedList']}|
+| NumberFormatList | ![NumberFormatList icon](./images/number-format.png) | Allows to create list items with various list style types(numbered).|toolbarSettings: { items: ['NumberFormatList']}|
+| BulletFormatList | ![BulletFormatList icon](./images/bullet-format.png) | Allows to create list items with various list style types(bulleted).|toolbarSettings: { items: ['BulletFormatList']}|
+| Indent | ![Indent icon](./images/increase-indent.png) | Allows to increase the indent level of the content.|toolbarSettings: { items: ['Indent']}|
+| Outdent | ![Outdent icon](./images/decrease-indent.png) | Allows to decrease the indent level of the content.|toolbarSettings: { items: ['Outdent']}|
+
+#### Hyperlinks
+
+This section provides tools for inserting and managing hyperlinks within the content. Users can create new links or modify existing ones to enhance document navigation and interactivity.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| Hyperlink | ![Hyperlink icon](./images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content.|toolbarSettings: { items: ['CreateLink']}|
+| InsertLink | ![InsertLink icon](./images/create-link.png) |Allows users to add a link to a particular item. | toolbarSettings: { items: ['InsertLink']} |
+
+##### Link quicktoolbar items
+
+The link quicktoolbar provides tools to manage hyperlinks in the Rich Text Editor, allowing users to add, edit, or remove links from selected text or images directly within the editor.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| OpenLink | ![OpenLink icon](./images/open-link.png) | To open the URL link that is  attached to the selected text. | quickToolbarSettings: { link: ['OpenLink']} |
+| EditLink | ![EditLink icon](./images/edit-link.png) | Allows you to change the URL that has been attached to a specific item. | quickToolbarSettings: { link: ['EditLink']} |
+| RemoveLink | ![RemoveLink icon](./images/remove-link.png) | Allows you to remove the applied link from the selected item. | quickToolbarSettings: { link: ['RemoveLink']} |
+
+#### Images
+
+This section contains the primary tool for inserting images into the editor.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| Insert Image | ![Images icon](./images/insert-image.png) | Inserts an image from an online source or local computer. |toolbarSettings: { items: ['Image']}|
+
+##### Image quicktoolbar items
+
+The image quicktoolbar offers a set of tools to edit images inserted in the Rich Text Editor. It allows users to modify image properties, including alignment, size, alternate text, and links, enhancing image management in the content.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| Replace Image  | ![Replace icon](./images/image-replace.png) | Replace the selected image with another image. | quickToolbarSettings: { image: ['Replace']} |
+| Align Image | ![Alignment icon](./images/alignments.png) | The image can be aligned to the right, left, or center. | quickToolbarSettings: { image: ['Align']} |
+| Remove Image | ![Remove icon](./images/table-remove.png) | Allows to remove the selected image from the editor. | quickToolbarSettings: { image: ['Remove']} |
+| OpenImageLink | ![OpenImageLink icon](./images/open-link.png) | Opens the link that is attached to the selected image. | quickToolbarSettings: { image: ['OpenImageLink']} |
+| EditImageLink | ![EditImageLink icon](./images/edit-link.png) | Allows to edit the link that is attached to the selected image. | quickToolbarSettings: { image: ['EditImageLink']} |
+| RemoveImageLink | ![RemoveImageLink icon](./images/remove-link.png) | Removes the link that is attached to the selected image. | quickToolbarSettings: { image: ['RemoveImageLink']} |
+| Display | ![Display icon](./images/display.png) | Allows you to choose whether an image should be shown inline or as a block. | quickToolbarSettings: { image: ['Display']} |
+| AltText | ![AltText icon](./images/alt-text.png) | To display image description when an image on a Web page cannot be displayed. | quickToolbarSettings: { image: ['AltText']} |
+| Dimension | ![Dimension icon](./images/dimension.png) | Allows you to customize the image’s height and width. | quickToolbarSettings: { image: ['Dimension']} |
+
+#### Tables
+
+This section offers the main tool for creating tables within the content.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| CreateTable | ![CreateTable icon](./images/create-table.png) | Create a table with defined columns and rows. | toolbarSettings: { items: ['CreateTable']} |
+
+##### Table quicktoolbar items
+
+The table quicktoolbar provides options for table editing within the Rich Text Editor. Users can insert or remove rows and columns, merge or split cells, and access table properties for easier table management and customization.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| RemoveTable | ![RemoveTable icon](./images/table-remove.png) | Removes the selected table and its contents. | quickToolbarSettings: { table: ['TableRemove']} |
+| TableHeader | ![TableHeader icon](./images/table-headers.png) | Allows you to add a table header. | quickToolbarSettings: { table: ['TableHeader']} |
+| TableColumns | ![TableColumns icon](./images/table-columns.png) | Shows the dropdown to insert a column or delete the selected column. | quickToolbarSettings: { table: ['TableColumns']} |
+| TableRows | ![TableRows icon](./images/table-row.png) | Shows the dropdown to insert a row ors delete the selected row. | quickToolbarSettings: { table: ['TableRows']} |
+| TableCellHorizontalAlign | ![TableCellHorizontalAlign icon](./images/alignments.png) | Allows the table cell content to be aligned horizontally. | quickToolbarSettings: { table: ['TableCellHorizontalAlign']} |
+| TableCellVerticalAlign | ![TableCellVerticalAlign icon](./images/vertical-align.png) | Allows the table cell content to be aligned vertically. | quickToolbarSettings: { table: ['TableCellVerticalAlign']} |
+| TableEditProperties | ![TableEditProperties icon](./images/table-edit.png) | Allows you to change the table width, padding, and cell spacing styles. | quickToolbarSettings: { table: ['TableEditProperties']} |
+
+#### Undo & redo
+
+These tools allow users to easily undo or redo any changes made within the editor to restore or repeat previous actions.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| Undo | ![Undo icon](./images/undo.png) | Allows to undo the actions.|toolbarSettings: { items: ['Undo']} |
+| Redo | ![Redo icon](./images/redo.png) | Allows to redo the actions.|toolbarSettings: { items: ['Redo']}|
+
+#### Other tools
+
+This section contains miscellaneous tools such as full-screen mode, print, preview, source code editing, and clearing all styles from text.
+
+| Name | Icons | Summary | Initialization |
+|----------------|---------|---------|------------------------------------------|
+| FullScreen | ![FullScreen icon](./images/maximize.png) | Stretches the editor to the maximum width and height of the browser window.|toolbarSettings: { items: ['FullScreen']}|
+| Maximize | ![Maximize icon](./images/maximize.png) | Stretches the editor to the maximum width and height of the browser window. | toolbarSettings: { items: ['Maximize']} |
+| Minimize | ![Minimize icon](./images/minimize.png) | Shrinks the editor to the default width and height. | toolbarSettings: { items: ['Minimize']} |
+| Preview | ![Preview icon](./images/preview.png) | Allows to see how the editor’s content looks in a browser. | toolbarSettings: { items: ['Preview']} |
+| InsertCode | ![InsertCode icon](./images/insert-code.png) | Represents preformatted text which is to be presented exactly as written in the HTML file. | toolbarSettings: { items: ['InsertCode']} |
+| Print | ![Print icon](./images/print.png) | Allows to print the editor content. |toolbarSettings: { items: ['Print']}|
+| ClearAll | ![ClearAll icon](./images/clear-all.png) | Removes all styles that have been applied to the selected text.| toolbarSettings: { items: ['ClearAll']} |
+| SourceCode | ![SourceCode icon](./images/code-view.png)  | Rich Text Editor includes the ability for users to directly edit HTML code via “Source View”. If you made any modification in Source view directly, synchronize with Design view.|toolbarSettings: { items: ['SourceCode']}|
+
+### Custom Toolbar Items
+
+The Rich Text Editor allows you to configure your own commands to its toolbar using the [toolbarSettings](/rich-text-editor/toolbarSettings/) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind the action to the command by getting its instance.
+
+This sample shows how to add your own commands to the toolbar of the Rich Text Editor. The **Ω** command is added to insert special characters in the editor. By clicking the **Ω** command, it will show the special characters list, and then choose the character to be inserted in the editor.
+
+The following code snippet illustrates custom tool with tooltip text which will be included in [items](/rich-text-editor/toolbarSettings/#items) field of the toolbarSettings property.
+
+In the following sample, once Rich Text Editor control is [created](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#created), the concern event will be created; the Dialog component can be rendered and target as RTE content.
+
+```javascript
+    {
+      template: '<button class="e-tbar-btn e-btn" tabindex="-1" id="custom_tbar"  style="width:100%"><div class="e-tbar-btn-text" style="font-weight: 500;"> &#937;</div></button>',
+      undo: true,
+      click: this.onClick.bind(this),
+      tooltipText: 'Insert Symbol'
+    }
+
+```
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/custom-tool-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/custom-tool-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/custom-tool-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/custom-tool-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs2" %}
+
+> The focus will be lost while rendering the required component for the custom toolbar, causing it to render outside the Rich Text Editor and triggering a blur event. During that time, proper functionality will not be achievable. Therefore, it is recommended to set the cssClass property or class as `e-rte-elements` in the dependency component.
+
+### Enabling and Disabling Toolbar Items
+
+You can use the [enableToolbarItem](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#enabletoolbaritem) and [1disableToolbarItem](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#disabletoolbaritem) methods to control the state of toolbar items. This methods takes a single item or an array of [items](#available-toolbar-items) as parameter.
+
+>You can add the command name `Custom` to disable the custom toolbar items on source code view and other quicktoolbar operations.
+
+## How to Enable the Toolbar
+
 The Rich Text Editor toolbar contains a collection of tools such as bold, italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.
 
 To create Rich Text Editor with Markdown editing feature, inject the toolbar module to the RTE using the `RichTextEditor.Inject(Toolbar)` method.
@@ -110,132 +327,6 @@ Enable or disable the floating toolbar using [enableFloating](/rich-text-editor/
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs75" %}
-
-## Toolbar items
-
-The following table lists the tools available in the toolbar.
-
-| **Name** | **Icons** | **Summary** | **Initialization** |
-| --- | --- | --- | --- |
-| Undo | ![Undo icon](./images/undo.png) | Allows to undo the actions. | toolbarSettings: { <br /> items: ['Undo'] <br /> } |
-| Redo | ![Redo icon](./images/redo.png) | Allows to redo the actions. | toolbarSettings: { <br /> items: ['Redo'] <br /> } |
-| Alignment | ![Alignment icon](./images/alignments.png) | Align the content with left, center, and right margin. | toolbarSettings: { <br /> items: ['Alignments'] <br /> } |
-| OrderedList | ![OrderedList icon](./images/order-list.png) | Create a new list item (numbered). | toolbarSettings: { <br /> items: ['OrderedList'] <br /> } |
-| UnorderedList | ![UnorderedList icon](./images/unorder-list.png) | Create a new list item (bulleted). | toolbarSettings: { <br /> items: ['UnorderedList'] <br /> } |
-| Indent | ![Indent icon](./images/increase-indent.png) | Allows to increase the indent level of the content. | toolbarSettings: { <br /> items: ['Indent'] <br /> } |
-| Outdent | ![Outdent icon](./images/decrease-indent.png) | Allows to decrease the indent level of the content. | toolbarSettings: { <br /> items: ['Outdent'] <br /> } |
-| Hyperlink | ![Hyperlink icon](./images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content. | toolbarSettings: { <br /> items: ['CreateLink'] <br /> } |
-| Images | ![Images icon](./images/insert-image.png) | Inserts an image from an online source or local computer. | toolbarSettings: { <br /> items: ['Image'] <br /> } |
-| LowerCase | ![LowerCase icon](./images/lower-case.png) | Change the case of selected text to lower in the content. | toolbarSettings: { <br /> items: ['LowerCase'] <br /> } |
-| UpperCase | ![UpperCase icon](./images/upper-case.png) | Change the case of selected text to upper in the content. | toolbarSettings: { <br /> items: ['UpperCase'] <br /> } |
-| SubScript | ![SubScript icon](./images/sub-script.png) | Makes the selected text as subscript (lower). | toolbarSettings: { <br /> items: ['SubScript'] <br /> } |
-| SuperScript | ![SuperScript icon](./images/super-script.png) | Makes the selected text as superscript (higher). | toolbarSettings: { <br /> items: ['SuperScript'] <br /> } |
-| Print  | ![Print icon](./images/print.png) | Allows to print the editor content. | toolbarSettings: { <br /> items: ['Print'] <br /> } |
-| FontName | ![FontName icon](./images/font-name.png) | Defines the fonts that appear under the Font Family DropDownList from the Rich Text Editor's toolbar. | toolbarSettings: { <br /> items: ['FontName'] <br /> } |
-| FontSize | ![FontSize icon](./images/font-size.png) | Defines the font sizes that appear under the Font Size DropDownList from the Rich Text Editor's toolbar. | toolbarSettings: { <br /> items: ['FontSize'] <br /> } |
-| FontColor | ![FontColor icon](./images/font-color.png) | Specifies an array of colors can be used in the colors pop-up for font color. | toolbarSettings: { <br /> items: ['FontColor'] <br /> } |
-| BackgroundColor | ![BackgroundColor icon](./images/background-color.png) | Specifies an array of colors can be used in the colors pop-up for background color. | toolbarSettings: { <br /> items: ['BackgroundColor'] <br /> } |
-| Format | ![Format icon](./images/formats.png) | An object with the options that will appear in the paragraph format drop-down from the toolbar. | toolbarSettings: { <br /> items: ['Formats'] <br /> } |
-| Blockquote | ![Blockquote icon](./images/blockquote.png) | Blockquotes visually highlight important text within an editor, emphasizing key information or quotations. | toobarSettings: { items: ['Blockquote']}|
-| StrikeThrough | ![StrikeThrough icon](./images/strikethrough.png) | Apply double line strike through formatting for the selected text. | toolbarSettings: { <br /> items: ['StrikeThrough'] <br /> } |
-| InlineCode | ![InlineCode icon](./images/insert-code.png) | Adds code-specific styling to selected text by highlighting it with a background color and using a monospace font for easy readability. | toolbarSettings: { <br /> items: ['InlineCode'] <br /> }|
-| ClearFormat | ![ClearFormat icon](./images/clear-format.png) | The clear format tool is used to remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. As a result, all the formatting text will be cleared and return to its default formatting styles. | toolbarSettings: { <br /> items: ['ClearFormat'] <br /> } |
-| FullScreen | ![FullScreen icon](./images/maximize.png) | Stretches the editor to the maximum width and height of the browser window. | toolbarSettings: { <br /> items: ['FullScreen'] <br /> } |
-| SourceCode | ![SourceCode icon](./images/code-view.png)  | The RichTextBox includes the ability for users to directly edit the HTML code via Source View. If you made any modification in source view directly, synchronize with design view. | toolbarSettings: { <br /> items: ['SourceCode'] <br /> } |
-| NumberFormatList | ![NumberFormatList icon](./images/number-format.png) | Allows to create list items with various list style types(numbered).|toolbarSettings: { <br /> items: ['NumberFormatList'] <br /> } |
-| BulletFormatList | ![BulletFormatList icon](./images/bullet-format.png) | Allows to create list items with various list style types(bulleted).|toolbarSettings: { <br /> items: ['BulletFormatList'] <br /> } |
-| JustifyLeft | ![JustifyLeft icon](./images/align-left.png) | Allows each line to begin at the same distance from the editor’s left-hand side. | toolbarSettings: { <br /> items: ['JustifyLeft'] <br /> } |
-| JustifyCenter | ![JustifyCenter icon](./images/align-center.png) | There is an even space on each side of each line since the text is not aligned to the left or right margins. | toolbarSettings: { <br /> items: ['JustifyCenter'] <br /> } |
-| JustifyRight | ![JustifyRight icon](./images/align-right.png) | Allows each line to end at the same distance from the editor’s right-hand side. | toolbarSettings: { <br /> items: ['JustifyRight'] <br /> } |
-| JustifyFull | ![JustifyFull icon](./images/align-justify.png) | The text is aligned with both right and left margins. | toolbarSettings: { <br /> items: ['JustifyFull'] <br /> } |
-| Bold  | ![Bold icon](./images/bold.png) | Text that is thicker and darker than usual. | toolbarSettings: { <br /> items: ['Bold'] <br /> } |
-| Italic | ![Italic icon](./images/italic.png) | Shows a text that is leaned to the right. | toolbarSettings: { <br /> items: ['Italic'] <br /> } |
-| Underline | ![Underline icon](./images/under-line.png) | The underline is added to the selected text. | toolbarSettings: { <br /> items: ['Underline'] <br /> } |
-| ClearAll | ![ClearAll icon](./images/clear-all.png) | Removes all styles that have been applied to the selected text.| toolbarSettings: { <br /> items: ['ClearAll'] <br /> } |
-| Cut | ![Cut icon](./images/cut.png) | Removes the text from its current location and places it into the clipboard. | toolbarSettings: { <br /> items: ['Cut'] <br /> } |
-| Copy | ![Copy icon](./images/copy.png) | The selected item is copied and pasted into the clipboard. | toolbarSettings: { <br /> items: ['Copy'] <br /> } |
-| Paste | ![Paste icon](./images/paste.png) | Allows you to insert a clipboard item into a specific location. | toolbarSettings: { <br /> items: ['Paste'] <br /> } |
-| OpenLink | ![OpenLink icon](./images/open-link.png) | To open the URL link that is  attached to the selected text. | toolbarSettings: { <br /> items: ['OpenLink'] <br /> } |
-| EditLink | ![EditLink icon](./images/edit-link.png) | Allows you to change the URL that has been attached to a specific item. | toolbarSettings: { <br /> items: ['EditLink'] <br /> } |
-| CreateTable | ![CreateTable icon](./images/create-table.png) | Create a table with defined columns and rows. | toolbarSettings: { <br /> items: ['CreateTable'] <br /> } |
-| RemoveTable | ![RemoveTable icon](./images/table-remove.png) | Removes the selected table and its contents. | toolbarSettings: { <br /> items: ['TableRemove'] <br /> } |
-| Replace | ![Replace icon](./images/image-replace.png) | Replace the selected image with another image. | toolbarSettings: { <br /> items: ['Replace'] <br /> } |
-| Align | ![Alignment icon](./images/alignments.png) | The image can be aligned to the right, left, or center. | toolbarSettings: { <br /> items: ['Align'] <br /> } |
-| Remove | ![Remove icon](./images/table-remove.png) | Allows to remove the selected image from the editor. | toolbarSettings: { <br /> items: ['Remove'] <br /> } |
-| OpenImageLink | ![OpenImageLink icon](./images/open-link.png) | Opens the link that is attached to the selected image. | toolbarSettings: { <br /> items: ['OpenImageLink'] <br /> } |
-| EditImageLink | ![EditImageLink icon](./images/edit-link.png) | Allows to edit the link that is attached to the selected image. | toolbarSettings: { <br /> items: ['EditImageLink'] <br /> } |
-| RemoveImageLink | ![RemoveImageLink icon](./images/remove-link.png) | Removes the link that is attached to the selected image. | toolbarSettings: { <br /> items: ['RemoveImageLink'] <br /> } |
-| InsertLink | ![InsertLink icon](./images/create-link.png) |Allows users to add a link to a particular item. | toolbarSettings: { <br /> items: ['InsertLink'] <br /> } |
-| Display | ![Display icon](./images/display.png) | Allows you to choose whether an image should be shown inline or as a block. | toolbarSettings: { <br /> items: ['Display'] <br /> } |
-| AltText | ![AltText icon](./images/alt-text.png) | To display image description when an image on a Web page cannot be displayed. | toolbarSettings: { <br /> items: ['AltText'] <br /> } |
-| Dimension | ![Dimension icon](./images/dimension.png) | Allows you to customize the image’s height and width. | toolbarSettings: { <br /> items: ['Dimension'] <br /> } |
-| Maximize | ![Maximize icon](./images/maximize.png) | Stretches the editor to the maximum width and height of the browser window. | toolbarSettings: { <br /> items: ['Maximize'] <br /> } |
-| Minimize | ![Minimize icon](./images/minimize.png) | Shrinks the editor to the default width and height. | toolbarSettings: { <br /> items: ['Minimize'] <br /> } |
-| Preview | ![Preview icon](./images/preview.png) | Allows to see how the editor’s content looks in a browser. | toolbarSettings: { <br /> items: ['Preview'] <br /> } |
-| InsertCode | ![InsertCode icon](./images/insert-code.png) | Represents preformatted text which is to be presented exactly as written in the HTML file. | toolbarSettings: { <br /> items: ['InsertCode'] <br /> } |
-| RemoveLink | ![RemoveLink icon](./images/remove-link.png) | Allows you to remove the applied link from the selected item. | toolbarSettings: { <br /> items: ['RemoveLink'] <br /> } |
-| TableHeader | ![TableHeader icon](./images/table-headers.png) | Allows you to add a table header. | toolbarSettings: { <br /> items: ['TableHeader'] <br /> } |
-| TableColumns | ![TableColumns icon](./images/table-columns.png) | Shows the dropdown to insert a column or delete the selected column. | toolbarSettings: { <br /> items: ['TableColumns'] <br /> } |
-| TableRows | ![TableRows icon](./images/table-row.png) | Shows the dropdown to insert a row ors delete the selected row. | toolbarSettings: { <br /> items: ['TableRows'] <br /> } |
-| TableCellHorizontalAlign | ![TableCellHorizontalAlign icon](./images/alignments.png) | Allows the table cell content to be aligned horizontally. | toolbarSettings: { <br /> items: ['TableCellHorizontalAlign'] <br /> } |
-| TableCellVerticalAlign | ![TableCellVerticalAlign icon](./images/vertical-align.png) | Allows the table cell content to be aligned vertically. | toolbarSettings: { <br /> items: ['TableCellVerticalAlign'] <br /> } |
-| TableEditProperties | ![TableEditProperties icon](./images/table-edit.png) | Allows you to change the table width, padding, and cell spacing styles. | toolbarSettings: { <br /> items: ['TableEditProperties'] <br /> } |
-
-By default, tools will be arranged in the following order.
-
-``` javascript
-  items: ['Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode', 'Undo', 'Redo']
-```
-
-The tools order can be customized as our application requirement. If you are not specifying any tools order, the editor will create the toolbar with default items.
-
-## Custom tool
-
-The Rich Text Editor allows you to configure your own commands to its toolbar using the [toolbarSettings](/rich-text-editor/toolbarSettings/) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind the action to the command by getting its instance.
-
-This sample shows how to add your own commands to the toolbar of the Rich Text Editor. The **Ω** command is added to insert special characters in the editor. By clicking the **Ω** command, it will show the special characters list, and then choose the character to be inserted in the editor.
-
-The following code snippet illustrates custom tool with tooltip text which will be included in [items](/rich-text-editor/toolbarSettings/#items) field of the toolbarSettings property.
-
-In the following sample, once Rich Text Editor control is [created](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#created), the concern event will be created; the Dialog component can be rendered and target as RTE content.
-
-```javascript
-    {
-      template: '<button class="e-tbar-btn e-btn" tabindex="-1" id="custom_tbar"  style="width:100%"><div class="e-tbar-btn-text" style="font-weight: 500;"> &#937;</div></button>',
-      undo: true,
-      click: this.onClick.bind(this),
-      tooltipText: 'Insert Symbol'
-    }
-
-```
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/custom-tool-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/custom-tool-cs1/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs1" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/custom-tool-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/custom-tool-cs2/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs2" %}
-
-> The focus will be lost while rendering the required component for the custom toolbar, causing it to render outside the Rich Text Editor and triggering a blur event. During that time, proper functionality will not be achievable. Therefore, it is recommended to set the cssClass property or class as `e-rte-elements` in the dependency component.
 
 ## Quick inline toolbar
 
