@@ -16,7 +16,7 @@ The Rich Text Editor allows you to insert audio from online sources and local co
 
 You can add an `Audio` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
-> To use Audio feature, inject `AudioService` in the provider section.
+> To use Audio feature, inject audio module using the `<Inject services={[Audio]} />`.
 
 To configure the `Audio` toolbar item, refer to the below code.
 
