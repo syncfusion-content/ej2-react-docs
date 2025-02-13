@@ -27,19 +27,38 @@ The list of dependencies required to use the `AI AssistView` component in your a
     |-- @syncfusion/ej2-inputs
 ```
 
-## Installation and configuration
+## Setup for Local Development
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
 
 ```bash
-npm install -g create-react-app
+npx create-react-app my-app
+cd my-app
+npm start
 ```
 
-Start a new project using create-react-app command as follows
+or
 
 ```bash
-  create-react-app quickstart --scripts-version=react-scripts-ts
-  cd quickstart
+yarn create react-app my-app
+cd my-app
+yarn start
+```
+
+To set-up a React application in `TypeScript` environment, run the following command.
+
+```bash
+npx create-react-app my-app --template typescript
+cd my-app
+npm start
+```
+
+Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+
+```bash
+npm init react-app my-app
+cd my-app
+npm start
 ```
 
 ## Adding Syncfusion packages
@@ -49,7 +68,7 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 To install AI AssistView component, use the following command
 
 ```bash
-npm install @syncfusion/ej2-react-interactive-chat
+npm install @syncfusion/ej2-react-interactive-chat --save
 ```
 
 ## Adding AI AssistView component

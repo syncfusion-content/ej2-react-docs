@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const pasteOptions: ItemModel[] = [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }];
     return (

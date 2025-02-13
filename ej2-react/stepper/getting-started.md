@@ -28,41 +28,39 @@ The following list of dependencies is required to use the Stepper component in y
 
 ```
 
-## Installation and Configuration
+## Setup your development environment
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
-
-```bash
-npm install -g create-react-app
-```
-
-Start a new project using create-react-app command as follows
-
-<div class='tsx'>
+To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
 
 ```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
+npx create-react-app my-app
+cd my-app
+npm start
 ```
 
-</div>
-
-<div class='jsx'>
+or
 
 ```bash
-
-create-react-app quickstart
-
-cd quickstart
-
+yarn create react-app my-app
+cd my-app
+yarn start
 ```
 
-</div>
+To set-up a React application in `TypeScript` environment, run the following command.
 
-> 'react-scripts-ts' is used for creating React app with typescript.
+```bash
+npx create-react-app my-app --template typescript
+cd my-app
+npm start
+```
+
+Besides using the [npm](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
+
+```bash
+npm init react-app my-app
+cd my-app
+npm start
+```
 
 ## Adding Syncfusion packages
 

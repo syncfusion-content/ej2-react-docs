@@ -31,7 +31,7 @@ The following list of dependencies are required to use the Ribbon component in y
     |-- @syncfusion/ej2-ribbon
 ```
 
-## Setup your development environment
+## Setup for Local Development
 
 To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
 

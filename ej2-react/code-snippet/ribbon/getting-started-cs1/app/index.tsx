@@ -4,8 +4,8 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective, RibbonColorPicker, DisplayMode } from "@syncfusion/ej2-react-ribbon";
 import { RibbonFileMenu, RibbonItemSize, Inject } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
-import { MenuItemModel } from "@syncfusion/ej2-react-navigations";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
+import { MenuItemModel } from "@syncfusion/ej2-navigations";
 
 function App() {
 
