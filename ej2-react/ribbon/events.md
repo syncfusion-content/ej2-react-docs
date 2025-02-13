@@ -985,7 +985,7 @@ The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribb
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
     return (
@@ -1026,7 +1026,7 @@ The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbo
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
     return (
@@ -1067,7 +1067,7 @@ The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
     return (
@@ -1108,7 +1108,7 @@ The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropD
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
     return (
@@ -1149,7 +1149,7 @@ The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDrop
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
     return (
@@ -1190,7 +1190,7 @@ The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDr
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
     return (
@@ -1231,7 +1231,7 @@ The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDro
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const tableOptions: ItemModel[] = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
     return (
@@ -1274,7 +1274,7 @@ The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribb
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
     return (
@@ -1315,7 +1315,7 @@ The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbo
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
     return (
@@ -1356,7 +1356,7 @@ The [beforeItemRender](../api/ribbon/ribbonSplitButtonSettings/#beforeitemrender
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
     return (
@@ -1397,7 +1397,7 @@ The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplit
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
     return (
@@ -1438,7 +1438,7 @@ The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSpli
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
     return (
@@ -1479,7 +1479,7 @@ The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSp
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
     return (
@@ -1520,7 +1520,7 @@ The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSpl
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
     return (
@@ -1561,7 +1561,7 @@ The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSpli
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective } from "@syncfusion/ej2-react-ribbon";
-import { ItemModel } from "@syncfusion/ej2-react-splitbuttons";
+import { ItemModel } from "@syncfusion/ej2-splitbuttons";
 function App() {
     const selectOptions: ItemModel[] = [{ text: "Select All" }, { text: "Select Objects" }];
     return (
@@ -1726,7 +1726,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective,FileMenuSettingsModel } from "@syncfusion/ej2-react-ribbon";
 import { RibbonFileMenu, Inject } from "@syncfusion/ej2-react-ribbon";
-import { MenuItemModel } from '@syncfusion/ej2-react-navigations';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 function App() {
     const fileOptions: MenuItemModel[] = [{ text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
@@ -1778,7 +1778,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective,FileMenuSettingsModel } from "@syncfusion/ej2-react-ribbon";
 import { RibbonFileMenu, Inject } from "@syncfusion/ej2-react-ribbon";
-import { MenuItemModel } from '@syncfusion/ej2-react-navigations';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 function App() {
     const fileOptions: MenuItemModel[] = [{ text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
@@ -1830,7 +1830,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective,FileMenuSettingsModel } from "@syncfusion/ej2-react-ribbon";
 import { RibbonFileMenu, Inject } from "@syncfusion/ej2-react-ribbon";
-import { MenuItemModel } from '@syncfusion/ej2-react-navigations';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 function App() {
     const fileOptions: MenuItemModel[] = [{ text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
@@ -1882,7 +1882,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective,FileMenuSettingsModel } from "@syncfusion/ej2-react-ribbon";
 import { RibbonFileMenu, Inject } from "@syncfusion/ej2-react-ribbon";
-import { MenuItemModel } from '@syncfusion/ej2-react-navigations';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 function App() {
     const fileOptions: MenuItemModel[] = [{ text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
@@ -1934,7 +1934,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective,FileMenuSettingsModel } from "@syncfusion/ej2-react-ribbon";
 import { RibbonFileMenu, Inject } from "@syncfusion/ej2-react-ribbon";
-import { MenuItemModel } from '@syncfusion/ej2-react-navigations';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 function App() {
     const fileOptions: MenuItemModel[] = [{ text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
@@ -1986,7 +1986,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import { RibbonComponent, RibbonTabsDirective, RibbonTabDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonGroupsDirective, RibbonGroupDirective, RibbonItemsDirective, RibbonItemDirective,FileMenuSettingsModel } from "@syncfusion/ej2-react-ribbon";
 import { RibbonFileMenu, Inject } from "@syncfusion/ej2-react-ribbon";
-import { MenuItemModel } from '@syncfusion/ej2-react-navigations';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 function App() {
     const fileOptions: MenuItemModel[] = [{ text: "New", iconCss: "e-icons e-file-new", id: "new" },
     { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
