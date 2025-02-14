@@ -125,31 +125,7 @@ To undo and redo operations, do one of the following:
 
 Customize the undo/redo step count using the [undoRedoSteps](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#undoredosteps) property. By default, undo/redo actions take 300ms time interval for store the action to the undoRedoManager. The time interval can be customized by using the [undoRedoTimer](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#undoredotimer).
 
-`[Class-component]`
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs50/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs50/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs50" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs51/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs51/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs51" %}
 
 ## Prevention of cross-site scripting (XSS)
 
@@ -216,70 +192,6 @@ The following sample demonstrate how to filter `script` tag from value.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs55" %}
-
-## Resizable support
-
-This feature allows the editor to be resized dynamically. The users can enable or disable this feature using the `enableResize` property in the Rich Text Editor. If `enableResize` is set to true, the Rich Text Editor component creates grip at the bottom right corner, which allows resizing the component in the diagonal direction. The following sample demonstrates the resizable feature.
-
-### Enabling the resizable support
-
-To render the Rich Text Editor in the resizable mode, set the `enableResize` property to true. The above feature is built as module and hence the `Resize` module needs to be included in your application.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs56/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs56/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs56" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs57/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs57/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs57" %}
-
-### Specifying the Minimum and Maximum width and height for Resize
-
-To have a restricted resizable area for the RichTextEditor, you need to specify the min-width, max-width, min-height, and max-height CSS properties for the control's wrapper element. By default, the control is capable of resizing upto the current viewport. The `e-richtexteditor` CSS class will be available in the component's wrapper and can be used for applying the above mentioned styles.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/resizable-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/resizable-cs1/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/resizable-cs1" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/resizable-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/resizable-cs2/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/resizable-cs2" %}
 
 ## Number and Bullet Format Lists
 

@@ -1,6 +1,3 @@
-
-
-
 /**
  * Rich Text Editor - Expand Toolbar Sample
  */
