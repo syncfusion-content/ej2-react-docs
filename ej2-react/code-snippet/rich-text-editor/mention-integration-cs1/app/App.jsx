@@ -1,6 +1,7 @@
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import { MentionComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
+
 class App extends React.Component {
     data = [
         { Name: "Selma Rose", Status: "active", EmployeeImage: "2.png", EmailId: "selma@gmail.com" },
@@ -45,13 +46,13 @@ class App extends React.Component {
             args.cancel = true;
         }
     }
+    rteValue = "<p>Hello <span contenteditable=\"false\" class=\"e-mention-chip\"><a href=\"mailto:maria@gmail.com\" title=\"maria@gmail.com\">&#64;Maria</a></span>&#8203;</p><p>Welcome to the mention integration with rich text editor demo. Type <code>&#64;</code> character and tag user from the suggestion list.</p>";
+    
     render() {
         return (<div className='control-pane'>
         <div className='control-section' id="rte">
           <div className='rte-control-section'>
-            <RichTextEditorComponent id="mention_integration" placeholder="Type @ and tag the name" actionBegin={this.actionBegineHandler.bind(this)}>
-            <p>Hello <span contentEditable={false} className='e-mention-chip'><a href="mailto:maria@gmail.com" title="maria@gmail.com">@Maria</a></span>&#8203;</p>
-            <p>Welcome to the mention integration with rich text editor demo. Type <code>@</code> character and tag user from the suggestion list. </p>
+            <RichTextEditorComponent id="mention_integration" value={this.rteValue} placeholder="Type @ and tag the name" actionBegin={this.actionBegineHandler.bind(this)}>
               <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]}/>
             </RichTextEditorComponent>
           </div>

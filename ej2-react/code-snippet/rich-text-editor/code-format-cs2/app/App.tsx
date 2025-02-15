@@ -9,7 +9,7 @@ function App() {
   };
   
   return (
-    <RichTextEditorComponent  height={450} readonly={true} value={rteValue} toolbarSettings={tools}>
+    <RichTextEditorComponent  height={450} value={rteValue} toolbarSettings={tools}>
       <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
     </RichTextEditorComponent>
   );
