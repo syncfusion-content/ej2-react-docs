@@ -1,13 +1,8 @@
-{% raw %}
-
-
-
 /**
  * Rich Text Editor - Enter Key Customization Sample
  */
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar  } from '@syncfusion/ej2-react-richtexteditor';
 import { DropDownListComponent, FieldSettingsModel } from '@syncfusion/ej2-react-dropdowns';
-import { createElement } from '@syncfusion/ej2-base';
 import * as React from 'react';
 
 class App extends React.Component<{},{}> {
@@ -65,7 +60,3 @@ class App extends React.Component<{},{}> {
 }
 
 export default App;
-
-
-
-{% endraw %}

@@ -6,14 +6,89 @@ import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, Quic
 import { ToolbarSettingsModel, ExportWordModel, ExportPdfModel } from '@syncfusion/ej2-react-richtexteditor';
 
 class App extends React.Component<{},{}> {
-  private hostUrl: string = 'https://services.syncfusion.com/react/production/';
 
-    // Rich Text Editor items list
+    private editorObj: RichTextEditorComponent;
+    private hostUrl: string  = 'https://services.syncfusion.com/react/production/';
+ 
     private items: any = [
-        'Undo', 'Redo', '|', 'ExportWord', 'ExportPdf', '|', 'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-        'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-        'Formats', 'Alignments', 'Blockquote', '|', 'NumberFormatList',
-        'BulletFormatList', '|', 'CreateLink', 'Image', 'CreateTable', '|', 'ClearFormat', 'SourceCode'];
+        {
+          tooltipText: 'Export to Word',
+          template:
+            "<button class='e-tbar-btn e-control e-btn e-lib e-icon-btn' tabindex='-1' id='custom_tbarbtn_2 style='width:100%'><span class='e-icons e-rte-export-doc e-btn-icon'></span></button>",
+          click: this.exportContentToWord.bind(this),
+        },
+        {
+          tooltipText: 'Export to PDF',
+          template:
+            "<button class='e-tbar-btn e-control e-btn e-lib e-icon-btn' tabindex='-1' id='custom_tbarbtn_3 style='width:100%'><span class='e-icons e-rte-export-pdf e-btn-icon'></span></button>",
+          click: this.exportContentToPDF.bind(this),
+        },
+    ];
+
+    private exportContentToWord():void {
+        const editorHtmlData = this.editorObj.getHtml();
+        const html = `<html><head></head><body>${editorHtmlData}</body></html>`;
+        fetch(this.hostUrl + 'api/RichTextEditor/ExportToDocx', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ html: html }), // Wrap HTML in a JSON object
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const filename: string = 'Result.docx';
+            // Create a Blob from the response and initiate the download
+            return response.blob().then((blob) => ({ blob, filename }));
+          })
+          .then(({ blob, filename }) => {
+            const url = window.URL.createObjectURL(blob); // Create a Blob URL from the response and initiate the download
+            const a = document.createElement('a'); // Create an anchor element
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a); // Append the anchor element to the document
+            a.click(); // Trigger a click on the anchor element to initiate the download
+            document.body.removeChild(a); // Remove the anchor element from the document
+            window.URL.revokeObjectURL(url); // Revoke the object URL to free up resources
+          })
+          .catch((error) => {
+            console.error('Fetch error:', error);
+          });
+    }
+    
+    private exportContentToPDF():void {
+        const editorHtmlData = this.editorObj.getHtml();
+        const html = `<html><head></head><body>${editorHtmlData}</body></html>`;
+        fetch(this.hostUrl + 'api/RichTextEditor/ExportToPdf', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ html: html }), // Wrap HTML in a JSON object
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.blob();
+          })
+          .then((blob) => {
+            const url: string = window.URL.createObjectURL(blob); // Create a Blob URL from the response and initiate the download
+            const a: HTMLAnchorElement = document.createElement('a'); // Create an anchor element
+            a.href = url;
+            a.download = 'Sample.pdf';
+            document.body.appendChild(a); // Append the anchor element to the document
+            a.click(); // Trigger a click on the anchor element to initiate the download
+            document.body.removeChild(a); // Remove the anchor element from the document
+            window.URL.revokeObjectURL(url); // Revoke the object URL to free up resources
+          })
+          .catch((error) => {
+            console.error('Fetch error:', error);
+          });
+    }
+    
     private rteValue: string = `<h2 style="text-align: center;">Invitation to Microsoft Webinar Meet-Up</h2><p>
                     Dear Guest,
                 </p><p>
@@ -48,39 +123,9 @@ class App extends React.Component<{},{}> {
                     We're looking forward to your participation and to exploring the exciting world of Microsoft technology together. Should you have any questions or require further information, please don't hesitate to contact us at <a href="mailto:webinar@company.com">webinar@company.com</a>.</p><p>
                 <br></p><p>Warm regards,</p><p>John Doe<br>Event Coordinator<br>ABC Company</p>`;
 
-    private insertImageSettings: any = {
-        saveUrl: this.hostUrl + 'api/RichTextEditor/SaveFile',
-        removeUrl: this.hostUrl + 'api/RichTextEditor/DeleteFile',
-        path: this.hostUrl + 'RichTextEditor/'
-    }
-
     //Rich Text Editor ToolbarSettings
     private toolbarSettings: ToolbarSettingsModel = {
         items: this.items
-    };
-
-    private exportWord: ExportWordModel = {
-        serviceUrl: this.hostUrl + 'api/RichTextEditor/ExportToDocx',
-        fileName: 'RichTextEditor.docx',
-        stylesheet: `
-        .e-rte-content {
-            font-size: 1em;
-            font-weight: 400;
-            margin: 0;
-        }
-    `
-    };
-
-    private exportPdf: ExportPdfModel = {
-        serviceUrl: this.hostUrl + 'api/RichTextEditor/ExportToPdf',
-        fileName: 'RichTextEditor.pdf',
-        stylesheet: `
-        .e-rte-content{
-            font-size: 1em;
-            font-weight: 400;
-            margin: 0;
-        }
-    `
     };
 
     render() {
@@ -88,7 +133,7 @@ class App extends React.Component<{},{}> {
             <div className='control-pane'>
                 <div className='control-section' id="rteTools">
                     <div className='rte-control-section'>
-                        <RichTextEditorComponent id="exportDocument" exportPdf={this.exportPdf} exportWord={this.exportWord} value={this.rteValue} toolbarSettings={this.toolbarSettings} enableXhtml={true} insertImageSettings={this.insertImageSettings}>
+                        <RichTextEditorComponent id="exportDocument" ref={(richtexteditor) => {this.editorObj = richtexteditor;}} value={this.rteValue} toolbarSettings={this.toolbarSettings} enableXhtml={true}>
                             <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport]} />
                         </RichTextEditorComponent>
                     </div>

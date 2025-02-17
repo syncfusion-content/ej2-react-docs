@@ -1,21 +1,21 @@
 ---
 layout: post
-title: File attachment in React Rich text editor component | Syncfusion
-description: Learn here all about File attachment in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
-control: File attachment 
+title: Managing File Attachments | Syncfusion
+description: Learn here all about Managing File Attachments in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+control: Managing File Attachments
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File attachment in React Rich text editor component
+# Managing File Attachments in React Rich Text Editor Component
 
 The Rich Text Editor allows you to attach a file based on the file upload. You can attach your files using the file upload or drag-and-drop from your local path. When the file upload gets success, the attachment link inserts into the content.
 
 In the below sample, configure the saveUrl and path properties to achieve file attachments.
 
-        1.saveUrl: Provides service URL to save the files.
-        2.path: Specifies the location to store the image.
+        1. saveUrl: Specifies the service URL where files will be saved.
+        2. path: Defines the location where uploaded files will be stored.
 
 The following sample illustrates how to attach a file in the Rich Text Editor.
 

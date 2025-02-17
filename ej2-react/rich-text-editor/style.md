@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Style in React Rich text editor component | Syncfusion
-description: Learn here all about Style in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Style in React Rich Text Editor component | Syncfusion
+description: Learn here all about Style in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Rich text editor component
+# Style Appearance Customization in the React Rich Text Editor component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The content below outlines the CSS structure you can use to customize the appearance of the control according to your preferences.
 
-## Customizing the Rich Text Editor's content
+## Customizing Rich Text Editor Content
 
-Use the following CSS to customize the default Rich Text Editor's content properties like font-family, font-size and color.
+Use the following CSS to modify the default style of the Rich Text Editor's content area, including font properties, background, and text color.
 
-```css
+```CSS
 /* To change font family and font size */
 .e-richtexteditor .e-rte-content .e-content,
 .e-richtexteditor .e-source-content .e-content {
@@ -32,11 +32,11 @@ Use the following CSS to customize the default Rich Text Editor's content proper
 }
 ```
 
-## Customizing the Rich Text Editor's toolbar
+## Customizing Rich Text Editor Toolbar
 
 Use the following CSS to customize the default color in the Rich Text Editor's toolbar icon.
 
-```css
+```CSS
 /* To change font color for toolbar icon */
 .e-richtexteditor .e-rte-toolbar .e-toolbar-item .e-icons,
 .e-richtexteditor .e-rte-toolbar .e-toolbar-item .e-icons:active {
@@ -62,11 +62,11 @@ Use the following CSS to customize the default color in the Rich Text Editor's t
 }
 ```
 
-## Customizing the Rich Text Editor's character count
+## Customizing Character Count Display
 
 Use the following CSS to customize the default color in the Rich Text Editor's character count.
 
-```css
+```CSS
 /* To change font color, font family, font size and opacity  */
 .e-richtexteditor .e-rte-character-count {
     color: red;
@@ -76,4 +76,30 @@ Use the following CSS to customize the default color in the Rich Text Editor's c
     padding-bottom: 2px;
     padding-right: 14px;
 }
+```
+
+## Customizing Placeholder Text
+
+Use the following CSS to customize the default color in the Rich Text Editor's placeholder.
+
+```CSS
+
+.e-richtexteditor .e-rte-placeholder {
+    color: blue;
+    font-family: monospace;
+}
+
+```
+
+## Customizing Border Color
+
+Use the following CSS to customize the border color in the Rich Text Editor's container.
+
+```CSS
+
+.e-richtexteditor .e-rte-container{
+    border: 2px solid #454bc1;
+    border-radius: 4px;
+}
+
 ```
