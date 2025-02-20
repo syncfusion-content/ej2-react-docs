@@ -18,15 +18,25 @@ In the Image Editor, the [`toolbar`](https://ej2.syncfusion.com/react/documentat
 
 Specifies the toolbar items to perform UI interactions. Refer to the built-in toolbar items for the default value.
 
-* Crop
-* Transform
-* Annotate
+* Open
+* Undo
+* Redo
 * ZoomIn
 * ZoomOut
-* Open
+* Crop
+* RotateLeft
+* RotateRight
+* HorizontalFlip
+* VerticalFlip
+* Straightening
+* Annotate
+* Finetune
+* Filter
+* Frame
+* Resize
+* Redact
 * Reset
 * Save
-* Pan
 
 ## Add a custom toolbar items
 
@@ -94,6 +104,20 @@ The [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor/
 
 Here is an example of disabling the custom toolbar item using [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#toolbar) property.
 
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs61/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs61/app/app.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/image-editor/default-cs61/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs61" %}
+
 ## Toolbar template
 
 The [`toolbarTemplate`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#toolbartemplate) property in the Image Editor provides the capability to fully customize the toolbar by supplying a custom template. This feature is valuable when you want to create a distinct and personalized image editing experience that goes beyond the default toolbar or the customizable toolbar options offered by the Image Editor. By defining a custom template for the toolbar, you have complete control over its layout, appearance, and functionality. This empowers you to design a unique and tailored toolbar that aligns perfectly with your specific requirements and desired user experience. 
@@ -119,7 +143,7 @@ The toolbar of the Image Editor can be replaced with the user specific UI using 
 
 The [`toolbarUpdating`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#toolbarupdating) event is triggered when inserting or selecting annotations, which opens the contextual toolbar in the Image Editor. Within this event, the [`toolbarItems`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/toolbarEventArgs/#toolbaritems) property in the [`ToolbarEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/toolbarEventArgs/) is utilized to add or remove contextual toolbar items.
 
-In the following example, the contextual toolbar for rectangle will be rendered with only stroke color by excluding fill color and stroke width using [`toolbarUpdating`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#toolbarupdating) event.
+In the following example, the contextual toolbar for freehand drawing will be rendered with only the stroke color, while the stroke width, remove, and separator options are excluded using the [`toolbarUpdating`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#toolbarupdating) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

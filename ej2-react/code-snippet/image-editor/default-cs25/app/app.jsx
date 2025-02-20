@@ -7,14 +7,12 @@ import * as ReactDOM from "react-dom";
 
 export default class App extends React.Component {
     imgObj;
-    toolbar = ['Annotate', "Line", "Rectangle", "Circle", "Ellipse", "Arrow", "Path"];
-    shapeChanging(args)  {
-        if (args.action === 'select') {
-            id = args.currentShapeSettings.id;
-        }
+    drawShape() {
+        let dimension = this.imgObj.getImageDimension();
+        this.imgObj.drawEllipse(dimension.x + 100, dimension.y + 100);
     }
-    btnClick() {
-        imgObj.deleteShape(id);
+    deleteShape() {
+        this.imgObj.deleteShape('shape_1');
     }
     imageEditorCreated() {
         if (Browser.isDevice) {
@@ -26,7 +24,11 @@ export default class App extends React.Component {
     }
     render() {
         return (<div id="wrapperDiv">
-            <ImageEditorComponent toolbar={this.toolbar} ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} toolbarItemClicked={this.toolbarItemClicked.bind(this)}/>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} toolbar={[]}/>
+            <div>
+                <ButtonComponent cssClass="e-primary" content="Draw Shape" onClick={this.drawShape.bind(this)} />
+                <ButtonComponent cssClass="e-primary" content="Delete Shape" onClick={this.deleteShape.bind(this)} />
+            </div>
         </div>);
     }
 }

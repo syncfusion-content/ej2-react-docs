@@ -8,7 +8,7 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     let imgObj: ImageEditorComponent;
-    let toolbar = ['Annotate' , 'Finetune' , 'Filter' , 'Confirm' , 'Reset' , 'Save', 'ZoomIn', 'ZoomOut'];
+    let toolbar = [];
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
             imgObj.open('flower.png');

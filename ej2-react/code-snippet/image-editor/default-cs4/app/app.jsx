@@ -7,14 +7,15 @@ import * as ReactDOM from "react-dom";
 
 export default class App extends React.Component {
     imgObj;
-    shapeChanging(args)  {
+    shapeChanging(args) {
         if (args.currentShapeSettings.type === 'Text') {
             args.currentShapeSettings.color = 'red';
+            args.currentShapeSettings.fontFamily = 'italic';
         }
     }
-    btnClick() {
+    customizeText() {
         let dimension = this.imgObj.getImageDimension();
-        this.imgObj.drawText(dimension.x, dimension.y, 'Enter\nText');
+        this.imgObj.drawText(dimension.x, dimension.y, 'Syncfusion');
     }
     imageEditorCreated() {
         if (Browser.isDevice) {
@@ -26,12 +27,11 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} shapeChanging={this.shapeChanging.bind(this)} toolbar = {[]}>
-            </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} shapeChanging={this.shapeChanging.bind(this)} toolbar={[]}></ImageEditorComponent>
             <div>
-                        <ButtonComponent cssClass='e-primary' content='Click' onClick={this.btnClick.bind(this)}/>
-                    </div>
-                </div>);
+                <ButtonComponent cssClass='e-primary' content='Customize Text' onClick={this.customizeText.bind(this)} />
+            </div>
+        </div>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));

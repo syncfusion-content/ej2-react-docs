@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 /**
  * Rich Text Editor - Custom Tool Sample
  */
@@ -155,7 +151,3 @@ function App(){
 }
 
 export default App;
-
-
-
-{% endraw %}

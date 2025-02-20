@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editor value in React Rich text editor component | Syncfusion
-description: Learn here all about Editor value in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Editor value in React Rich Text Editor component | Syncfusion
+description: Learn here all about Editor value in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Editor value
 platform: ej2-react
 documentation: ug
@@ -393,3 +393,7 @@ By default, the content styles of the Rich Text Editor are not included when ret
 }
 
 ```
+
+## See Also
+
+* [Implementing Prevention of cross-site scripting (XSS)](https://ej2.syncfusion.com/react/documentation/rich-text-editor/prevent-cross-site-scripting)

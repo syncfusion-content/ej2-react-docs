@@ -2,6 +2,7 @@
 
 
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -15,10 +16,15 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-
+    function straightenImage(): void {
+        imgObj.straightenImage(45);
+    }
     return (
         <div className='e-img-editor-sample'>
             <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Straighten Image' onClick={straightenImage} />
+            </div>
         </div>
     );
 }

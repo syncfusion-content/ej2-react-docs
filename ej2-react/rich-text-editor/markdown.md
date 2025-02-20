@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Markdown in React Rich text editor component | Syncfusion
-description: Learn here all about Markdown in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Markdown in React Rich Text Editor component | Syncfusion
+description: Learn here all about Markdown in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Markdown 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
 
 # Markdown in the React Rich Text Editor component
 
@@ -234,7 +233,8 @@ This example demonstrates how to preview Markdown changes in the Rich Text Edito
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs4" %}
 
-## See also
+## See Also
 
+* [How to render the toolbar in inline mode](./inline-editing)
 * [How to render the iframe](./iframe)
 * [How to add the Rich Text Editor component](./getting-started/#adding-rich-text-editor-component)

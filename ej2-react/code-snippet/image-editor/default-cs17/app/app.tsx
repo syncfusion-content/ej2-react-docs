@@ -16,16 +16,19 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-    function buttonTemplate(data) {
-        return (<ButtonComponent cssClass='e-primary' content='Click'  onClick = {btnClick}/>);
+    function buttonTemplate() {
+        return (
+            <div className="e-toolbar">
+                <ButtonComponent cssClass='e-primary' content='Enable FreeHandDraw' onClick={enableFreeHandDraw} />
+            </div>
+        );
     }
-
-    function btnClick(): void {
+    function enableFreeHandDraw(): void {
         imgObj.freeHandDraw(true);
     }
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent toolbarTemplate={buttonTemplate} ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}/>
+            <ImageEditorComponent toolbarTemplate={buttonTemplate} ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={[]} />
         </div>
     );
 }

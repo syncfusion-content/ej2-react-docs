@@ -19,9 +19,8 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} cropping={this.preventScalling.bind(this)}>
-            </ImageEditorComponent>
-                </div>);
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} cropping={this.preventScalling.bind(this)}></ImageEditorComponent>
+        </div>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));

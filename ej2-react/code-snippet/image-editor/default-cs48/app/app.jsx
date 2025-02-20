@@ -15,17 +15,15 @@ export default class App extends React.Component {
             this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
-
-    btnClick() {
+    clearImage() {
         this.imgObj.clearImage();
     }
 
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)}>
-            </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)}></ImageEditorComponent>
             <div>
-                <ButtonComponent cssClass='e-primary' content='Click' onClick={this.btnClick.bind(this)} />
+                <ButtonComponent cssClass='e-primary' content='Clear Image' onClick={this.clearImage.bind(this)} />
             </div>
         </div>);
     }

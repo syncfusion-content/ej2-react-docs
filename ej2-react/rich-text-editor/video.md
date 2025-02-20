@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Videos in React Rich text editor component | Syncfusion
-description: Learn here all about Videos in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Videos in React Rich Text Editor component | Syncfusion
+description: Learn here all about Videos in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Videos 
 platform: ej2-react
 documentation: ug

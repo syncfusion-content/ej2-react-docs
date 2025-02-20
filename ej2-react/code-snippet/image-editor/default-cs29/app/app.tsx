@@ -1,7 +1,7 @@
 {% raw %}
 
 
-import { ImageEditorComponent, ImageFinetuneOption } from '@syncfusion/ej2-react-image-editor';
+import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -21,7 +21,7 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} quickAccessToolbarOpen= {quickAccessToolbarOpen} ></ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} quickAccessToolbarOpen={quickAccessToolbarOpen} ></ImageEditorComponent>
         </div>
     );
 }

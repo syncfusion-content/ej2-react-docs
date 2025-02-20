@@ -1,30 +1,70 @@
 {% raw %}
+
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
-import { FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
-import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
-import { Browser, getComponent } from '@syncfusion/ej2-base';
+import { FileManagerComponent, FileData } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
 export default class App extends React.Component {
     imgObj;
-    hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    resultData = [
+        {
+            dateCreated: new Date("2023-11-15T19:02:02.3419426+05:30"),
+            dateModified: new Date("2024-01-08T16:55:20.9464164+05:30"),
+            filterPath: "\\",
+            hasChild: true,
+            id: "0",
+            isFile: false,
+            name: "Pictures",
+            parentId: "0",
+            size: 228465,
+            type: "folder"
+        },
+        {
+            dateCreated: new Date("2023-11-15T19:02:02.3419426+05:30"),
+            dateModified: new Date("2024-01-08T16:55:20.9464164+05:30"),
+            filterPath: "\\Pictures\\",
+            hasChild: false,
+            id: '1',
+            isFile: true,
+            name: "Flower",
+            parentId: '0',
+            size: 69632,
+            type: ".png",
+            imageUrl: "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        },
+        {
+            dateCreated: new Date("2023-11-15T19:02:02.3419426+05:30"),
+            dateModified: new Date("2024-01-08T16:55:20.9464164+05:30"),
+            filterPath: "\\Pictures\\",
+            hasChild: false,
+            id: '2',
+            isFile: true,
+            name: "Bridge",
+            parentId: '0',
+            size: 48951,
+            type: ".png",
+            imageUrl: "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png"
+        }
+    ];
     fileOpen(args) {
-        let file = (args).fileDetails;
-        if (file.isFile) {
+        const file = args.fileDetails;
+        if (file.isFile && file.imageUrl) {
             args.cancel = true;
-            if (file.size <= 0 ) { file.size = 10000; }
-            let imagePath = (args.fileDetails)._fm_imageUrl;
-            this.imgObj.open(imagePath);
+            this.imgObj?.open(file.imageUrl);
         }
     }
+
     render() {
-        return (<div className='e-img-editor-sample'>
-             <FileManagerComponent id="overview_file" ajaxSettings = {{url: this.hostUrl + "api/FileManager/FileOperations", getImageUrl: this.hostUrl + "api/FileManager/GetImage", uploadUrl: this.hostUrl + 'api/FileManager/Upload', downloadUrl: this.hostUrl + 'api/FileManager/Download'}} fileOpen = {this.fileOpen.bind(this)} ></FileManagerComponent>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px">
-            </ImageEditorComponent>
-                </div>);
+        return (
+            <div className="e-img-editor-sample">
+                <FileManagerComponent id="overview_file" fileSystemData={this.resultData} fileOpen={this.fileOpen.bind(this)} />
+                <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" />
+            </div>
+        );
     }
 }
+
 ReactDOM.render(<App />, document.getElementById('image-editor'));
+
 {% endraw %}

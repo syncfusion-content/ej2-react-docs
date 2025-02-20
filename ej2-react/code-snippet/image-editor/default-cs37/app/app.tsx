@@ -17,16 +17,16 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-    function btnClick(): void {
+    function addImage(): void {
         let dimension: any = imgObj.getImageDimension();
         imgObj.drawImage('flower.png', dimension.x, dimension.y, 100, 80, true, 0);
     }
 
     return (
         <div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {toolbar}></ImageEditorComponent> 
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={toolbar}></ImageEditorComponent>
             <div>
-            <ButtonComponent cssClass='e-primary' content='Add Image' onClick = {btnClick}/>
+                <ButtonComponent cssClass='e-primary' content='Add Image' onClick={addImage} />
             </div>
         </div>
     );

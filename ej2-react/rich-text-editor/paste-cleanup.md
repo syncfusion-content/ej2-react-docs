@@ -21,7 +21,7 @@ The Rich Text Editor simplifies the conversion of Microsoft Word content to HTML
 | [deniedAttrs](#denied-attributes) |  Filters out specified attributes from the pasted content| null | string[] |
 | [allowedStyleProps](#allowed-style-properties) |  Accepts specified style attributes and removes others from the pasted content| ['background', 'background-color', 'border', 'border-bottom', 'border-left', 'border-radius', 'border-right', 'border-style', 'border-top', 'border-width', 'clear', 'color', 'cursor', 'direction', 'display', 'float', 'font', 'font-family', 'font-size', 'font-weight', 'font-style', 'height', 'left', 'line-height', 'margin', 'margin-top', 'margin-left', 'margin-right', 'margin-bottom', 'max-height', 'max-width', 'min-height', 'min-width', 'overflow', 'overflow-x', 'overflow-y', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top', 'position', 'right', 'table-layout', 'text-align', 'text-decoration', 'text-indent', 'top', 'vertical-align', 'visibility', 'white-space', 'width'] | string[] |
 
-> Rich Text Editor features are segregated into individual feature-wise modules. To enable paste cleanup, include the `PasteCleanupService` in the providers section.
+> To use PasteCleanup feature, inject link module using the `<Inject services{[PasteCleanup]} />`.
 
 ## Understanding Paste Options in the Prompt Dialog
 
@@ -36,7 +36,7 @@ When `prompt` is set to true, pasting the content in the editor will open a dial
 
 Setting `plainText` to true converts the copied content to plain text by removing all HTML tags and styles. Only the plain text is pasted into the editor.
 
->When `plainText` is set to true, set `prompt` to false. The `keepFormat` property will not be considered.
+> When `plainText` is set to true, set `prompt` to false. The `keepFormat` property will not be considered.
 
 ## Maintaining Formatting with Keep Format Option
 

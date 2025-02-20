@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exec command in React Rich text editor component | Syncfusion
+title: Exec command in React Rich Text Editor component | Syncfusion
 description: Learn here all about Exec command in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
 control: Exec command 
 platform: ej2-react

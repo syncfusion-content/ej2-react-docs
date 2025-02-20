@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Remove Formatting in React Rich text editor component | Syncfusion
-description: Learn here all about Remove Formatting in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Remove Formatting in React Rich Text Editor component | Syncfusion
+description: Learn here all about Remove Formatting in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Remove Formatting
 platform: ej2-react
 documentation: ug

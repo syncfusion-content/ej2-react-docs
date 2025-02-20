@@ -16,22 +16,21 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-    function btnClick(): void {
+    function startFreeHandDraw(): void {
         imgObj.freeHandDraw(true);
     }
-    function applyBtnClick(): void {
+    function stopFreeHandDraw(): void {
         imgObj.freeHandDraw(false);
     }
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
-        </ImageEditorComponent>
-                <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
-                        <ButtonComponent cssClass='e-primary' content='Apply' onClick = {applyBtnClick}/>
-                </div>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={[]}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Start Drawing' onClick={startFreeHandDraw} />
+                <ButtonComponent cssClass='e-primary' content='Stop Drawing' onClick={stopFreeHandDraw} />
             </div>
+        </div>
     );
 }
 export default App;

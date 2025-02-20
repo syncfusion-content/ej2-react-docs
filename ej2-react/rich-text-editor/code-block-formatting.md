@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Code Block Formatting in React Rich text editor component | Syncfusion
-description: Learn here all about Code Block Formatting in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Code Block Formatting in React Rich Text Editor component | Syncfusion
+description: Learn here all about Code Block Formatting in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Code Block Formatting
 platform: ej2-react
 documentation: ug
@@ -77,3 +77,7 @@ To make your code blocks more visually appealing, you can add custom styling. He
 ```
 
 This styling adds a light gray background, sets a monospace font, and includes padding and borders for better visual separation.
+
+## See Also
+
+* [How to customize the format dropdown items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/headings#customizing-format-dropdown-items)

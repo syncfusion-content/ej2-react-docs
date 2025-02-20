@@ -16,9 +16,9 @@ To save an edited image in the Image Editor component, use the toBlob method to 
 
 ## Supported image formats
 
-The Image Editor control supports four common image formats: PNG, JPEG, SVG and WEBP. These formats allow you to work with a wide range of image files within the Image Editor.
+The Image Editor control supports four common image formats: PNG, JPEG, SVG, and WEBP. These formats allow you to work with a wide range of image files within the Image Editor.
 
-When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG, SVG or WEBP, based on your specific requirements or preferences.
+When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG, SVG, or WEBP, based on your specific requirements or preferences.
 
 ## Open an Image
 
@@ -62,7 +62,7 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
 
 User can easily open images in the Image Editor from Blob storage. This method allows you to load images directly from Blob storage, ensuring seamless integration and flexibility in your application. Simply retrieve the image Blob from storage and pass it to the open method, and the image will be loaded into the editor.
 
-**Note:**: You can obtain the Base64 representation of an image from the Image Editor using the [`getImageData`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#getimagedata) method. This process will be explained in the upcoming section.
+**Note:**: You can obtain the Blob URL representation of an image from the Image Editor using the [`getImageData`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#getimagedata) method. This process will be explained in the upcoming section.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -84,7 +84,7 @@ User can easily open images in the Image Editor using a file uploader. This meth
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/image-editor/default-cs44/app/app.jsx %}
+{% include code-snippet/image-editor/default-cs49/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/image-editor/default-cs49/app/app.tsx %}
@@ -96,7 +96,7 @@ User can easily open images in the Image Editor using a file uploader. This meth
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs49" %}
 
-### Open and image from file manager
+### Open an image from file manager
 
 User can easily open images in the Image Editor using the File Manager. This method allows you to browse and select an image file directly from the File Manager and load it into the editor. Once the image is selected, pass the file to the open method, and the image will be seamlessly loaded into the editor.
 
@@ -154,7 +154,7 @@ You can utilize the [`fileOpened`](https://helpej2.syncfusion.com/react/document
 
 The [`export`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#export) method in the Image Editor component enables you to save the modified image as a file on the local device. This method accepts two parameters: the file name and the file type. 
 
-By providing a file name, you can specify the desired name for the saved image file. Additionally, you can also specify the file type to determine the format in which the image should be saved. This allows you to save the image according to your specific requirements or preferences, such as PNG, JPEG, SVG and WEBP. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
+By providing a file name, you can specify the desired name for the saved image file. Additionally, you can also specify the file type to determine the format in which the image should be saved. This allows you to save the image according to your specific requirements or preferences, such as PNG, JPEG, SVG, and WEBP. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
 
 By utilizing the [`export`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#export) method with the appropriate file name and file type, you can conveniently save the modified image as a file on the local device, ensuring that it is easily accessible and shareable.
 
@@ -180,21 +180,35 @@ To save an image as a base64 format, use the [`getImageData`](https://helpej2.sy
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/image-editor/default-cs51/app/app.jsx %}
+{% include code-snippet/image-editor/default-cs50/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/image-editor/default-cs51/app/app.tsx %}
+{% include code-snippet/image-editor/default-cs50/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/image-editor/default-cs51/index.html %}
+{% include code-snippet/image-editor/default-cs50/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/image-editor/default-cs51" %}
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs50" %}
 
 ### Save the image as byte[]
 
 To save an image as a byte array, use the [`getImageData`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#getimagedata) method of the editor to retrieve the image data and convert it into a byte array. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/image-editor/default-cs59/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/image-editor/default-cs59/app/app.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/image-editor/default-cs59/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs59" %}
 
 ### Save the image as blob
 
@@ -246,7 +260,7 @@ The [`fileOpened`](https://helpej2.syncfusion.com/react/documentation/api/image-
 
 * FileName: This argument is a string that contains the file name of the opened image. It represents the name of the file that was selected or provided when loading the image into the Image Editor. 
 
-* FileType: This argument is a string that contains the type of the opened image. It specifies the format or file type of the image that was loaded, such as PNG, JPEG, or SVG. 
+* FileType: This argument is a string that contains the type of the opened image. It specifies the format or file type of the image that was loaded, such as PNG, JPEG, SVG, or WEBP. 
 
 By accessing these arguments within the [`fileOpened`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#fileopened) event handler, you can retrieve information about the loaded image, such as its file name and file type. This can be useful for performing additional actions or implementing logic based on the specific image that was opened in the Image Editor component.
 
@@ -256,7 +270,7 @@ The [`saving`](https://helpej2.syncfusion.com/react/documentation/api/image-edit
 
 * FileName: This argument is a string that holds the file name of the saved image. It represents the name of the file that will be used when saving the image to the local disk. 
 
-* FileType: This argument is a string indicating the type or format of the saved image. It specifies the desired file type in which the image will be saved, such as PNG, JPEG, or SVG. 
+* FileType: This argument is a string indicating the type or format of the saved image. It specifies the desired file type in which the image will be saved, such as PNG, JPEG, SVG, or WEBP. 
 
 * Cancel: This argument is a boolean value that can be set to true in order to cancel the saving action. By default, it is set to false, allowing the saving process to proceed. However, if you want to prevent the saving action from occurring, you can set Cancel to true within the event handler. 
 

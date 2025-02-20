@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text Alignments in React Rich text editor component | Syncfusion
-description: Learn here all about Text Alignments in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Text Alignments in React Rich Text Editor component | Syncfusion
+description: Learn here all about Text Alignments in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Text Alignments 
 platform: ej2-react
 documentation: ug

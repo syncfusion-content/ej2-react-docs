@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Character count in React Rich text editor component | Syncfusion
-description: Learn here all about Character count in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Character count in React Rich Text Editor component | Syncfusion
+description: Learn here all about Character count in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Character count
 platform: ej2-react
 documentation: ug
@@ -72,4 +72,4 @@ You can programmatically get the current character count in the editor using the
 
 ## See Also
 
-* [How to Customize Character Count and Styles in Rich Text Editor](https://ej2.syncfusion.com/angular/documentation/rich-text-editor/style#customizing-the-rich-text-editors-character-count)
+* [How to Customize Character Count and Styles in Rich Text Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/style#customizing-character-count-display)

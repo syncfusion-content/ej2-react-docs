@@ -107,3 +107,7 @@ You can use the following shortcut keys to copy and paste the format in the Rich
 > The format painter retains the formatting after application making it possible to apply the same formatting multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
 
 Additionally, You can perform the format painter actions programmatically using the [executeCommand](../exec-command/) public method.
+
+## See Also
+
+[Remove Text Formatting](https://ej2.syncfusion.com/react/documentation/rich-text-editor/remove-formatting)

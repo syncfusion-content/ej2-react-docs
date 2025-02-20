@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Font Family, Size and Color in React Rich text editor component | Syncfusion
-description: Learn all about Font Family, Size and Color in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Font Family, Size and Color in React Rich Text Editor component | Syncfusion
+description: Learn all about Font Family, Size and Color in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Font Family, Size and Color
 platform: ej2-react
 documentation: ug
@@ -259,3 +259,8 @@ Both the `FontColor` and `BackgroundColor` properties offer two modes: `Picker` 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs65" %}
+
+## See Also
+
+* [Applying Basic Text Formatting in Rich Text Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/basic-text-styling)
+* [Implementing Headings and Text Hierarchy in Rich Text Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/headings)

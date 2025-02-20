@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spell & Grammar Check in React Rich text editor component | Syncfusion
-description: Learn here all about Spell & Grammar Check in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Spell & Grammar Check in React Rich Text Editor component | Syncfusion
+description: Learn here all about Spell & Grammar Check in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Spell & Grammar Check
 platform: ej2-react
 documentation: ug

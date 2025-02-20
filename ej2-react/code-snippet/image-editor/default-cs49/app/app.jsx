@@ -9,10 +9,8 @@ export default class App extends React.Component {
 
     selected(args) {
         if (args.filesData.length > 0) {
-            // Read the file as a Data URL
             const reader = new FileReader();
             reader.onload = () => {
-               // Load the image into the Image Editor
                this.imgObj.open(reader.result);
             };
             reader.readAsDataURL(args.filesData[0].rawFile);
@@ -21,7 +19,7 @@ export default class App extends React.Component {
     
     render() {
         return (<div className='e-img-editor-sample'>
-            <UploaderComponent selected={this.selected.bind(this)} ></UploaderComponent>
+            <UploaderComponent selected={this.selected.bind(this)} showFileList={false}></UploaderComponent>
             <ImageEditorComponent height='350px' ref={(img) => { this.imgObj = img; }}>
             </ImageEditorComponent>
                 </div>);

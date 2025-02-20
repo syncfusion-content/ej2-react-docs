@@ -44,5 +44,3 @@ The parameter available in the [`ImageFilterEventArgs`](https://helpej2.syncfusi
 ImageFilterEventArgs.filter - The type of filtering as ImageFilterOption to be applied in the image editor. 
 
 ImageFilterEventArgs.cancel – Specifies to cancel the filtering action. 
-
-> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.

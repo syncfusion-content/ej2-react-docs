@@ -16,19 +16,18 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-    function btnClick(): void {
-        imgObj.select("Square");
+    function circleCrop(): void {
+        imgObj.select("Circle");
         imgObj.crop();
     }
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
-        </ImageEditorComponent>
-                <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
-                </div>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={[]}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Circle Crop' onClick={circleCrop} />
             </div>
+        </div>
     );
 }
 export default App;

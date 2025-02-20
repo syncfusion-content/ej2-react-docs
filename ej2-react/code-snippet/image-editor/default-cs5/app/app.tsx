@@ -12,7 +12,7 @@ function App() {
     function shapeChanging(args: shapeChanging): void {
         if (args.currentShapeSettings.type === 'FreehandDraw') {
             args.currentShapeSettings.strokeColor = 'red';
-            args.currentShapeSettings.strokeWidth = 10;
+            args.currentShapeSettings.strokeWidth = 5;
         }
     }
     function imageEditorCreated(): void {
@@ -25,9 +25,8 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} shapeChanging={shapeChanging}>
-        </ImageEditorComponent>
-            </div>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} shapeChanging={shapeChanging}></ImageEditorComponent>
+        </div>
     );
 }
 export default App;

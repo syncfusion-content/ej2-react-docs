@@ -26,8 +26,7 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} selectionChanging={selectionChanging}>
-            </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} selectionChanging={selectionChanging}></ImageEditorComponent>
         </div>
     );
 }

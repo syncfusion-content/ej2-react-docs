@@ -16,7 +16,7 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-    function btnClick(): void {
+    function multilineText(): void {
         let dimension: any = imgObj.getImageDimension();
         imgObj.drawText(dimension.x, dimension.y,'Enter\nText');
     }
@@ -26,7 +26,7 @@ function App() {
         <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
         </ImageEditorComponent>
                 <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
+                    <ButtonComponent cssClass='e-primary' content='Multiline Text' onClick = {multilineText}/>
                 </div>
             </div>
     );

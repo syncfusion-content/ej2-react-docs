@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Undo redo in React Rich text editor component | Syncfusion
-description: Learn here all about Undo redo in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Undo redo in React Rich Text Editor component | Syncfusion
+description: Learn here all about Undo redo in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Undo redo 
 platform: ej2-react
 documentation: ug

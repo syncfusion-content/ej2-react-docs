@@ -18,8 +18,7 @@ function App() {
         }
     }
     function getBlob(): void {
-        const imageEditor: any = getComponent(document.getElementById('image-editor'), 'image-editor');
-        let imageData = imageEditor.getImageData();
+        let imageData = imgObj.getImageData();
         let canvas = document.createElement('canvas');
         let ctx: any = canvas.getContext('2d');
         canvas.width = imageData.width;

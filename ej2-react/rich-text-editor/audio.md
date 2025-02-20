@@ -107,7 +107,6 @@ class App extends React.Component<{},{}> {
   public render() {
     return (
       <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertAudioSettings={this.insertAudioSettings}>
-
         <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
       </RichTextEditorComponent>
     );
@@ -136,7 +135,6 @@ function App(){
 
   return (
     <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertAudioSettings={insertAudioSettings}>
-
       <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
     </RichTextEditorComponent>
   );
@@ -648,5 +646,6 @@ function App() {
 
 ## See Also
 
-* [How to edit the quick toolbar settings](./toolbar/#quick-inline-toolbar)
-* [How to use the link editing option in the toolbar items](./link/)
+* [Quick Toolbars in the Toolbar](https://ej2.syncfusion.com/react/documentation/rich-text-editor/toolbar#quick-inline-toolbar)
+* [How to Use the Video Editing Option in Toolbar Items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/video)
+* [How to Use the Image Editing Option in Toolbar Items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/insert-images)

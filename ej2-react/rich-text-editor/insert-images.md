@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Images in React Rich text editor component | Syncfusion
-description: Learn here all about Images in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Images in React Rich Text Editor component | Syncfusion
+description: Learn here all about Images in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Images 
 platform: ej2-react
 documentation: ug
@@ -350,7 +350,7 @@ By configuring these options in the [quickToolbarSettings](https://ej2.syncfusio
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/customize-image-2/app/App.jsx %}
+{% include code-snippet/rich-text-editor/customize-image-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rich-text-editor/customize-image-cs2/app/App.tsx %}

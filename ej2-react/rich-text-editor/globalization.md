@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in React Rich text editor component | Syncfusion
-description: Learn here all about Globalization in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Globalization in React Rich Text Editor component | Syncfusion
+description: Learn here all about Globalization in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Globalization 
 platform: ej2-react
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The Rich Text Editor provides an option to localize its strings; it is used to adapting the editor to a particular local language. By default, the editor will use the US English (en-US) as its language. Please find the table with a list of keys and their corresponding values for the default language (en-US).
+The Rich Text Editor offers an option to localize its strings using the locale API, allowing adaptation to a specific local language. By default, the editor uses US English (en-US). Below is a table listing the keys and their corresponding values for the default language (en-US).
 
 ``` javascript
     'en-US': {

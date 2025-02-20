@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Placeholder Text in React Rich text editor component | Syncfusion
-description: Learn here all about Placeholder Text in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Placeholder Text in React Rich Text Editor component | Syncfusion
+description: Learn here all about Placeholder Text in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Placeholder Text
 platform: ej2-react
 documentation: ug

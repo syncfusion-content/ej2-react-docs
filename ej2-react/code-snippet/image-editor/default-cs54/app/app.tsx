@@ -2,7 +2,7 @@
 
 
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
-import { Browser, getComponent } from '@syncfusion/ej2-base';
+import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
@@ -25,8 +25,7 @@ function App() {
     }
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} shapeChanging={shapeChanging} >
-        </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} height="350px" created={imageEditorCreated} shapeChanging={shapeChanging} ></ImageEditorComponent>
         </div>
     );
 }

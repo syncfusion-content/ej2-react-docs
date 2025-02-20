@@ -15,28 +15,27 @@ export default class App extends React.Component {
             this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
-    btnClick() {
+    addText() {
         let dimension = this.imgObj.getImageDimension();
-        this.imgObj.drawText(dimension.x, dimension.y);
+        this.imgObj.drawText(dimension.x, dimension.y, 'Syncfusion');
     }
     outlineText() {
         let dimension = this.imgObj.getImageDimension();
-        this.imgObj.drawText(dimension.x, dimension.y+100, 'Syncfusion', 'Arial', 70, false, false, '', false, null, '', 'green', 8);
+        this.imgObj.drawText(dimension.x + 50, dimension.y + 50, 'Syncfusion', 'Arial', 30, false, false, '', false, 0, '', 'green', 8);
     }
     bgColour() {
         let dimension = this.imgObj.getImageDimension();
-        this.imgObj.drawText(dimension.x, dimension.y+150, 'Syncfusion', 'Arial', 70, false, false, '', false, null, 'red', '', null);
+        this.imgObj.drawText(dimension.x + 100, dimension.y + 100, 'Syncfusion', 'Arial', 30, false, false, '', false, 0, 'red', '', 0);
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} toolbar = {[]}>
-            </ImageEditorComponent>
-                    <div>
-                        <ButtonComponent cssClass='e-primary' content='Add Text' onClick={this.btnClick.bind(this)}/>
-                        <ButtonComponent cssClass='e-primary' content='Text Outline' onClick={this.outlineText.bind(this)}/>
-                        <ButtonComponent cssClass='e-primary' content='Background Colour' onClick={this.bgColour.bind(this)}/>
-                    </div>
-                </div>);
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} toolbar={[]}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Add Text' onClick={this.addText.bind(this)} />
+                <ButtonComponent cssClass='e-primary' content='Text Outline' onClick={this.outlineText.bind(this)} />
+                <ButtonComponent cssClass='e-primary' content='Background Colour' onClick={this.bgColour.bind(this)} />
+            </div>
+        </div>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));

@@ -21,8 +21,7 @@ function App() {
     }
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} cropping={preventScalling} >
-        </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} cropping={preventScalling} ></ImageEditorComponent>
         </div>
     );
 }

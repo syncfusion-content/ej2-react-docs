@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preventing Cross-Site Scripting (XSS) | Syncfusion
-description: Learn here all about Preventing Cross-Site Scripting (XSS) in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Preventing Cross-Site Scripting (XSS) in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Preventing Cross-Site Scripting (XSS)
 platform: ej2-react
 documentation: ug

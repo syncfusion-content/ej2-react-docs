@@ -20,7 +20,7 @@ export default class App extends React.Component {
         }
     }
     contentTemplate = () => {
-        return (<ImageEditorComponent ref={(img) => { this.imgObj = img; }}></ImageEditorComponent>);
+        return (<ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px"></ImageEditorComponent>);
     };
     btnClick() {
         this.dialogInstance.show();
@@ -28,7 +28,7 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <DialogComponent id="profile-dialog" isModal= {true} showCloseIcon={true} animationSettings={this.animationSettings} closeOnEscape={true} visible={false} width={"340px"} height={"420px"} ref={(dialogInstance) => { this.dialogInstance = dialogInstance; }} header="Edit Profile Image" content={this.contentTemplate.bind(this)} position={{ X: "center", Y: 100 }}></DialogComponent>
+            <DialogComponent id="profile-dialog" isModal= {true} showCloseIcon={true} animationSettings={this.animationSettings} closeOnEscape={true} visible={false} width={"340px"} height={"420px"} ref={(dialogInstance) => { this.dialogInstance = dialogInstance; }} content={this.contentTemplate.bind(this)} position={{ X: "center", Y: 100 }}></DialogComponent>
             <div>
                 <ButtonComponent cssClass='e-primary' content='Click' onClick={this.btnClick.bind(this)}/>
             </div>

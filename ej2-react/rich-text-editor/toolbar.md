@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar in React Rich text editor component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Toolbar in React Rich Text Editor component | Syncfusion
+description: Learn here all about Toolbar in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Toolbar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in React Rich text editor component
+# Toolbar in React Rich Text Editor component
 
 The Syncfusion React Rich Text Editor component provides a versatile and powerful toolbar to enhance your text editing experience. The toolbar contains a variety of formatting, styling, and editing tools, allowing users to create and modify content efficiently.
 
@@ -173,13 +173,15 @@ This section contains miscellaneous tools such as full-screen mode, print, previ
 
 ### Custom Toolbar Items
 
-The Rich Text Editor allows you to configure your own commands to its toolbar using the [toolbarSettings](/rich-text-editor/toolbarSettings/) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind the action to the command by getting its instance.
+The Rich Text Editor allows you to configure your own commands to its toolbar using the  [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarSettings) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind action to the command by getting its instance.
 
-This sample shows how to add your own commands to the toolbar of the Rich Text Editor. The **Ω** command is added to insert special characters in the editor. By clicking the **Ω** command, it will show the special characters list, and then choose the character to be inserted in the editor.
+This sample shows how to add your own commands to the toolbar of the Rich Text Editor. The “Ω” command is added to insert special characters in the editor. By clicking the “Ω” command, it will show the special characters list, and then choose the character to be inserted in the editor.
 
-The following code snippet illustrates custom tool with tooltip text which will be included in [items](/rich-text-editor/toolbarSettings/#items) field of the toolbarSettings property.
+The following code snippet illustrates custom tool with tooltip text which will be included in [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) field of the toolbarSettings property.
 
-In the following sample, once Rich Text Editor control is [created](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#created), the concern event will be created; the Dialog component can be rendered and target as RTE content.
+The Rich Text Editor provides options to customize tool functionalities. Use the [undo](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarStatusEventArgs/) property to enable or disable the react function for specific tools. Additionally, the [`click`](https://helpej2.syncfusion.com/angular/documentation/api/rich-text-editor/toolbarClickEventArgs/) property lets you configure and bind the onclick event of a tool to a specific method.
+
+This sample demonstrates how to add a custom "Ω" icon to the toolbar. Clicking on this icon opens a dialog where you can insert special characters into the editor. It also shows how to enable undo and redo functionalities.
 
 ```javascript
     {
@@ -217,7 +219,7 @@ In the following sample, once Rich Text Editor control is [created](https://ej2.
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs2" %}
 
-> The focus will be lost while rendering the required component for the custom toolbar, causing it to render outside the Rich Text Editor and triggering a blur event. During that time, proper functionality will not be achievable. Therefore, it is recommended to set the cssClass property or class as `e-rte-elements` in the dependency component.
+> When rendering any component for the custom toolbar, like a dropdown, the focus may be lost, causing it to render outside the Rich Text Editor and triggering a blur event. This can interfere with proper functionalities like cursor focus. To prevent this issue, it is recommended to assign the `e-rte-element`s class to the component rendered in the custom toolbar.
 
 ### Enabling and Disabling Toolbar Items
 
@@ -229,16 +231,17 @@ You can use the [enableToolbarItem](https://ej2.syncfusion.com/react/documentati
 
 The Rich Text Editor toolbar contains a collection of tools such as bold, italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.
 
-To create Rich Text Editor with Markdown editing feature, inject the toolbar module to the RTE using the `RichTextEditor.Inject(Toolbar)` method.
+> To create Rich Text Editor with Toolbar feature, inject the toolbar module to the Rich Text Editor using the `RichTextEditor.Inject(Toolbar)` method.
 
-The Rich Text Editor allows you to configure the different types of toolbar using the toolbarSettings.type property. The types of toolbar are:
+The Rich Text Editor allows you to configure different types of toolbar using [toolbarSettings.type](https://ej2.syncfusion.com/areactngular/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
 
 * Expand
 * MultiRow
+* Scrollable
 
-## Expand Toolbar
+## Expanding the Toolbar
 
-The default mode of [toolbarSettings.type](/rich-text-editor/toolbarSettings/#type) is Expand to hide the overflowing items in the next row. By clicking the expand arrow, view the overflowing toolbar items.
+Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
 
 `[Class-component]`
 
@@ -266,9 +269,9 @@ The default mode of [toolbarSettings.type](/rich-text-editor/toolbarSettings/#ty
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs71" %}
 
-## MultiRow toolbar
+## Configuring a Multi-row Toolbar
 
-Set the [`toolbarSettings.type`](/rich-text-editor/toolbarSettings/#type) as MultiRow to hide the overflowing items in the next row. All toolbar items are visible.
+Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
 
 `[Class-component]`
 
@@ -296,11 +299,41 @@ Set the [`toolbarSettings.type`](/rich-text-editor/toolbarSettings/#type) as Mul
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs73" %}
 
-## Floating toolbar
+## Implementing a Scrollable Toolbar
 
-By default, the toolbar is floating at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using [floatingToolbarOffset](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#floatingtoolbaroffset).
+Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will display the toolbar items in a single line, enabling horizontal scrolling in the toolbar.
 
-Enable or disable the floating toolbar using [enableFloating](/rich-text-editor/toolbarSettings/#enablefloating) of the toolbarSetting property.
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/scrollable-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/scrollable-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs1" %}
+
+`[functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/scrollable-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/scrollable-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs2" %}
+
+## Creating a Sticky Toolbar
+
+By default, the toolbar remains fixed at the top of the Rich Text Editor when scrolling. You can customize the position of this sticky toolbar by setting the [floatingToolbarOffset](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#floatingtoolbaroffset) to adjust its offset from the top of the document.
+
+Additionally, you can enable or disable the floating toolbar using the [enableFloating](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#enablefloating) property.
 
 `[Class-component]`
 
@@ -369,4 +402,10 @@ The following sample demonstrates the option to insert the image to the Rich Tex
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs77" %}
 
-> Rich Text Editor features are segregated into individual feature-wise modules. To use quick toolbar, inject the quick toolbar module using the `RichTextEditor.Inject(image, link)`.
+> Rich Text Editor features are segregated into individual feature-wise modules. To use quick toolbar, inject the quick toolbar module using the `RichTextEditor.Inject(QuickToolbar)`.
+
+## See Also
+
+* [Customizing Rich Text Editor Toolbar Styles](https://ej2.syncfusion.com/angular/documentation/rich-text-editor/style#customizing-the-rich-text-editors-toolbar)
+* [Implementing Inline Editing](https://ej2.syncfusion.com/angular/documentation/rich-text-editor/inline-editing)
+* [Customizing Accessibility Shortcut Keys](https://ej2.syncfusion.com/angular/documentation/rich-text-editor/accessibility#keyboard-interaction)

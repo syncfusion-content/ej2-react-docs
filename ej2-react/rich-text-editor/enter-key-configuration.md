@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enter key in React Rich text editor component | Syncfusion
+title: Enter key in React Rich Text Editor component | Syncfusion
 description: Learn here all about Enter key in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
 control: Enter key 
 platform: ej2-react

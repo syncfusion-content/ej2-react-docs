@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Basic Text Styling in React Rich text editor component | Syncfusion
-description: Learn here all about Basic Text Styling in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Basic Text Styling in React Rich Text Editor component | Syncfusion
+description: Learn here all about Basic Text Styling in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Basic Text Styling
 platform: ej2-react
 documentation: ug
@@ -55,3 +55,7 @@ Please refer to the sample below to add these basic text styling options in the 
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-text-styling-cs2" %}
+
+## See Also
+
+[Customizing Font Family, Size, and Color in Rich Text Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/font-styling)

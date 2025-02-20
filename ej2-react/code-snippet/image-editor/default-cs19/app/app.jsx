@@ -15,7 +15,7 @@ export default class App extends React.Component {
             this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
-    btnClick() {
+    rotateImage() {
         this.imgObj.rotate(90);
     }
     render() {
@@ -23,7 +23,7 @@ export default class App extends React.Component {
                 <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} height="350px" toolbar = {[]}>
                 </ImageEditorComponent>
                 <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick={this.btnClick.bind(this)}/>
+                    <ButtonComponent cssClass='e-primary' content='Rotate' onClick={this.rotateImage.bind(this)}/>
                 </div>
             </div>);
     }

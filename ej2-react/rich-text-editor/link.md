@@ -20,6 +20,8 @@ To insert a hyperlink:
 2. Click the "Insert HyperLink" tool on the toolbar.
 3. In the Insert Link Dialog that appears, fill in the following options.
 
+> To use Link feature, inject link module using the `<Inject services={[Link]} />`.
+
 | Options | Description |
 |----------------|--------------------------------------|
 | Web Address | Enter or paste the destination URL for your link |
@@ -108,3 +110,9 @@ The following example demonstrates how to customize the link quick toolbar using
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs45" %}
+
+## See Also
+
+* [Quick Toolbars in Toolbar](https://ej2.syncfusion.com/react/documentation/rich-text-editor/toolbar#quick-inline-toolbar)
+* [Image with links](https://ej2.syncfusion.com/react/documentation/rich-text-editor/images#hyperlinking-images)
+* [Insert File Attachments](./how-to/file-attachments)

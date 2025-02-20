@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Headings in React Rich text editor component | Syncfusion
-description: Learn here all about Headings in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Headings in React Rich Text Editor component | Syncfusion
+description: Learn here all about Headings in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Headings 
 platform: ej2-react
 documentation: ug
@@ -92,6 +92,7 @@ Below are examples demonstrating how to customize the format dropdown.
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/headings-cs4" %}
 
 ## See Also
+
 * [Block Quote Formatting](https://ej2.syncfusion.com/react/documentation/rich-text-editor/quotation-formatting)
 * [Bullet and Numbered Lists](https://ej2.syncfusion.com/react/documentation/rich-text-editor/list-formatting)
 * [Code Block Insertion and Styling](https://ej2.syncfusion.com/react/documentation/rich-text-editor/code-block-formatting)

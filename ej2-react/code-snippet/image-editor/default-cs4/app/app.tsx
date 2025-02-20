@@ -12,11 +12,12 @@ function App() {
     function shapeChanging(args: shapeChanging): void {
         if (args.currentShapeSettings.type === 'Text') {
             args.currentShapeSettings.color = 'red';
+            args.currentShapeSettings.fontFamily = 'italic';
         }
     }
-    function btnClick(): void {
+    function customizeText(): void {
         let dimension: any = imgObj.getImageDimension();
-        imgObj.drawText(dimension.x, dimension.y, 'Enter\nText');
+        imgObj.drawText(dimension.x, dimension.y, 'Syncfusion');
     }
 
     function imageEditorCreated(): void {
@@ -29,12 +30,11 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} shapeChanging={shapeChanging} toolbar = {[]}>
-        </ImageEditorComponent>
-        <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
-                </div>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} shapeChanging={shapeChanging} toolbar={[]}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Customize Text' onClick={customizeText} />
             </div>
+        </div>
     );
 }
 export default App;

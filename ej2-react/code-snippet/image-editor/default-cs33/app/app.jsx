@@ -6,7 +6,7 @@ import * as ReactDOM from "react-dom";
 
 export default class App extends React.Component {
     imgObj;
-    toolbar = ['Annotate', 'Finetune' , 'Filter' , 'Confirm' , 'Reset' , 'Save', 'ZoomIn', 'ZoomOut'];
+    toolbar = [];
     imageEditorCreated() {
         if (Browser.isDevice) {
             this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');

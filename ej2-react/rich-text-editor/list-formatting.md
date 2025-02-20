@@ -1,7 +1,7 @@
 ---
 layout: post
-title: List formatting in React Rich text editor component | Syncfusion
-description: Learn here all about List formatting in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: List formatting in React Rich Text Editor component | Syncfusion
+description: Learn here all about List formatting in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: List formatting 
 platform: ej2-react
 documentation: ug
@@ -142,3 +142,7 @@ The Tab key provides a quick way to adjust list indentation:
 - Pressing Shift + Tab will decrease the indent of the selected list item, moving it to the previous level.
 
 This behavior allows for efficient creation and management of multi-level lists without the need to use the toolbar buttons.
+
+## See Also
+
+[Increase and Decrease Indent Levels](./indent-and-outdent) 

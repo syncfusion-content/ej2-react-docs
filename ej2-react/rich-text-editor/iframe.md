@@ -110,4 +110,5 @@ Likewise, add the external script file to the `< iframe >` element using the [`s
 
 ## See also
 
+* [Implementing Inline Editing](https://ej2.syncfusion.com/react/documentation/rich-text-editor/inline-editing)
 * [Using the Markdown Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/markdown)

@@ -16,18 +16,17 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-    function btnClick(): void {
+    function selectSquareShape(): void {
         imgObj.select("Square");
     }
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
-        </ImageEditorComponent>
-                <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
-                </div>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={[]}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Select Square' onClick={selectSquareShape} />
             </div>
+        </div>
     );
 }
 export default App;

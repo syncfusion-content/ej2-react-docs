@@ -14,7 +14,8 @@ The Image Editor provides a range of transformation options for manipulating bot
 
 ## Rotate an image
 
-The Image Editor allows to rotate the image and its annotations by a specific number of degrees clockwise or anti-clockwise using [`rotate`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#rotate) method. This method takes a single parameter: the angle of rotation in degrees. A positive value will rotate the image clockwise, while a negative value will rotate it anti-clockwise. 
+The Image Editor allows to rotate the image and its annotations by a specific number of degrees clockwise or anti-clockwise using [`rotate`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#rotate) method. This method takes a single parameter: the angle of rotation in degrees. A positive value will rotate the image clockwise, while a negative value will rotate it anti-clockwise.
+Note: It is recommended to pass values in multiples of 90° (e.g., 90, 180, -90) for proper rotation alignment.
 
 Here is an example of rotating an image in a button click event.
 
@@ -86,35 +87,19 @@ The Image Editor allows to magnify an image using the [`zoom`](https://ej2.syncf
 
 * zoomFactor - Specifies a value to controlling the level of magnification applied to the image. 
 
-* zoomPoint - Specifies x and y coordinates of a point as ImageEditorPoint on image to perform zooming. 
+* zoomPoint - Specifies x and y coordinates of a point as ImageEditorPoint on image to perform zooming.
 
-Here is an example of zooming an image in a button click event.
+### Minimum and Maximum zoom level 
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/image-editor/default-cs21/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/image-editor/default-cs21/app/app.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/image-editor/default-cs21/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/image-editor/default-cs21" %}
+The [`minZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#minzoomfactor) property allows you to specify the minimum level of zoom that is allowed for an image. By setting this property, you can prevent the image from being zoomed out beyond a certain point, ensuring that it remains visible and usable even at the smallest zoom level. 
 
-### Maximum and Minimum zoom level 
+By default, the [`minZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#minzoomfactor) value is set to 0.1, meaning that the image can be zoomed out up to 10 times its original size. 
 
 The [`maxZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#maxzoomfactor) property is a useful feature in the Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
 
-By default, the [`minZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#minzoomfactor) value is set to 10, meaning that the image can be zoomed in up to 10 times its original size. This ensures that the zooming functionality remains within reasonable bounds and maintains the integrity of the image. 
+By default, the [`maxZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#maxzoomfactor) value is set to 10, meaning that the image can be zoomed in up to 10 times its original size. This ensures that the zooming functionality remains within reasonable bounds and maintains the integrity of the image. 
 
-The [`maxZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#maxzoomfactor) property allows you to specify the minimum level of zoom that is allowed for an image. By setting this property, you can prevent the image from being zoomed out beyond a certain point, ensuring that it remains visible and usable even at the smallest zoom level. 
-
-By default, the [`maxZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#maxzoomfactor) value is set to 0.1, meaning that the image can be zoomed out up to 10 times its original size. 
-
-Here is an example of specifying [`minZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#minzoomfactor) and [`maxZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel/#maxzoomfactor) property in [`zoomSettings`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettings/) options in an image editor.
+Here’s an example of zooming in and out in the Image Editor by setting the `minZoomFactor` and `maxZoomFactor` properties within the [zoomSettings](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettings) options.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -138,17 +123,17 @@ Here is an example of Panning an image in a button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/image-editor/default-cs21/app/app.jsx %}
+{% include code-snippet/image-editor/default-cs60/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/image-editor/default-cs21/app/app.tsx %}
+{% include code-snippet/image-editor/default-cs60/app/app.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/image-editor/default-cs21/index.html %}
+{% include code-snippet/image-editor/default-cs60/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/image-editor/default-cs21" %}
+{% previewsample "page.domainurl/code-snippet/image-editor/default-cs60" %}
 
 ### Panning event 
 

@@ -16,23 +16,22 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-    function btnClick(): void {
+    function addText(): void {
         let dimension: any = imgObj.getImageDimension();
-        imgObj.drawText(dimension.x, dimension.y,'Enter\nText');
+        imgObj.drawText(dimension.x, dimension.y);
     }
-    function delClick(): void {
+    function deleteText(): void {
         imgObj.deleteShape('shape_1');
     }
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
-        </ImageEditorComponent>
-                <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
-                    <ButtonComponent cssClass='e-primary' content='Delete Text' onClick = {delClick}/>
-                </div>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={[]}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Add Text' onClick={addText} />
+                <ButtonComponent cssClass='e-primary' content='Delete Text' onClick={deleteText} />
             </div>
+        </div>
     );
 }
 export default App;

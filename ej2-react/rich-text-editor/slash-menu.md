@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Slash Menu  in React Rich text editor component | Syncfusion
-description: Learn here all about Slash Menu in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Slash Menu  in React Rich Text Editor component | Syncfusion
+description: Learn here all about Slash Menu in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Slash Menu 
 platform: ej2-react
 documentation: ug
@@ -16,11 +16,11 @@ The Slash Menu in the Rich Text Editor provides users with an efficient way to a
 
 To use the Slash Menu feature, inject Slash Menu module into the services.
 
-To enable the Slash Menu, set the `enable` property within [`slashMenuSettings`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#slashmenusettings) to `true`. By default, this feature is disabled. Once enabled, the Slash Menu will appear when the user types the "/" character in the editor.
+To enable the Slash Menu, set the `enable` property within [slashMenuSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#slashmenusettings) to `true`. By default, this feature is disabled. Once enabled, the Slash Menu will appear when the user types the "/" character in the editor.
 
 ## Configuring the Slash Menu Items
 
-The slashMenuSettings property allows customization of the `items` displayed in the Slash Menu. By defining the [`items`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#items) property, a list of available commands can be provided for users to choose from when they type a slash (/) in the Rich Text Editor.
+The slashMenuSettings property allows customization of the `items` displayed in the Slash Menu. By defining the [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#items) property, a list of available commands can be provided for users to choose from when they type a slash (/) in the Rich Text Editor.
 
 This list can include various formatting options such as paragraph and heading levels. Here’s an code snippet of configuring the Slash Menu items:
 
@@ -35,7 +35,7 @@ private slashMenuSettings: SlashMenuSettingsModel = {
 
 ## Customizing the Popup Width and Height
 
-The size of the Slash Menu popup can be customized using the [`popupWidth`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#popupwidth) and [`popupHeight`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#popupheight) properties within slashMenuSettings. Adjusting these values allows for control over the dimensions of the menu. 
+The size of the Slash Menu popup can be customized using the [popupWidth](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#popupwidth) and [popupHeight](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#popupheight) properties within slashMenuSettings. Adjusting these values allows for control over the dimensions of the menu. 
 
 Below is an code snippet showing how to customize both the width and height of the popup:
 

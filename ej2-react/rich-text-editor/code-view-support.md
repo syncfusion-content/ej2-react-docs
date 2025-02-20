@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Code View in React Rich text editor component | Syncfusion
-description: Learn here all about Code View in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Code View in React Rich Text Editor component | Syncfusion
+description: Learn here all about Code View in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Code View 
 platform: ej2-react
 documentation: ug

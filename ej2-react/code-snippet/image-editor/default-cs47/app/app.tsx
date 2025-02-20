@@ -13,7 +13,7 @@ function App() {
     let animationSettings = { effect: "None" };
     let dialogInstance: DialogComponent;
     const contentTemplate = () => {
-        return (<ImageEditorComponent ref={(img) => { imgObj = img }}></ImageEditorComponent>);
+        return (<ImageEditorComponent ref={(img) => { imgObj = img }} height="350px"></ImageEditorComponent>);
     };
     const btnClick = () => {
         dialogInstance.show();
@@ -22,7 +22,7 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-        <DialogComponent id="profile-dialog" isModal= {true} showCloseIcon={true} animationSettings={animationSettings} closeOnEscape={true} visible={false} width={"340px"} height={"420px"} ref={dialogInstance} header="Edit Profile Image" content={contentTemplate} position={{ X: "center", Y: 100 }}></DialogComponent>
+        <DialogComponent id="profile-dialog" isModal= {true} showCloseIcon={true} animationSettings={animationSettings} closeOnEscape={true} visible={false} width={"340px"} height={"420px"} ref={dialogInstance} content={contentTemplate} position={{ X: "center", Y: 100 }}></DialogComponent>
             <div>
                 <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
             </div>

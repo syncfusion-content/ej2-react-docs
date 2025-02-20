@@ -16,7 +16,7 @@ function App() {
             imgObj.open('bridge.png');
         }
     }
-    function btnClick(): void {
+    function flipImageHorizontal(): void {
         imgObj.flip("Horizontal"); // Horizontal flip
     }
 
@@ -25,7 +25,7 @@ function App() {
         <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
         </ImageEditorComponent>
             <div>
-                <ButtonComponent cssClass='e-primary' content='Click' onClick = {btnClick}/>
+                <ButtonComponent cssClass='e-primary' content='Flip Horizontally' onClick = {flipImageHorizontal}/>
             </div>
         </div>
     );

@@ -21,29 +21,28 @@ function App() {
     }
 
     function blurClick(): void {
-        imgObj.finetuneImage(ImageFinetuneOption.Blur,10);
+        imgObj.finetuneImage(ImageFinetuneOption.Blur, 20);
     }
     function exposureClick(): void {
-        imgObj.finetuneImage(ImageFinetuneOption.Exposure,10);
+        imgObj.finetuneImage(ImageFinetuneOption.Exposure, 20);
     }
     function hueClick(): void {
-        imgObj.finetuneImage(ImageFinetuneOption.Hue,10);
+        imgObj.finetuneImage(ImageFinetuneOption.Hue, 20);
     }
     function opacityClick(): void {
-        imgObj.finetuneImage(ImageFinetuneOption.Opacity,10);
+        imgObj.finetuneImage(ImageFinetuneOption.Opacity, 70);
     }
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
-        </ImageEditorComponent>
-                <div>
-                    <ButtonComponent cssClass='e-primary' content='Blur' onClick = {blurClick}/>
-                    <ButtonComponent cssClass='e-primary' content='Exposure' onClick = {exposureClick}/>
-                    <ButtonComponent cssClass='e-primary' content='Hue' onClick = {hueClick}/>
-                    <ButtonComponent cssClass='e-primary' content='Opacity' onClick = {opacityClick}/>
-                </div>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={[]}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Blur' onClick={blurClick} />
+                <ButtonComponent cssClass='e-primary' content='Exposure' onClick={exposureClick} />
+                <ButtonComponent cssClass='e-primary' content='Hue' onClick={hueClick} />
+                <ButtonComponent cssClass='e-primary' content='Opacity' onClick={opacityClick} />
             </div>
+        </div>
     );
 }
 export default App;
