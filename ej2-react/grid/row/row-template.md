@@ -312,7 +312,32 @@ Here is an example that demonstrates rendering Syncfusion controls within a row 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/row-template-cs5" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-cs5" %}
+
+## Render Syncfusion Chart in row template
+
+The Syncfusion Grid component provides the flexibility to include custom controls, such as Chart, within the rows of the Grid. This feature enhances Grid interactivity by allowing you to display graphical representations of data instead of plain text.
+
+To render a Syncfusion Chart within a row template of the Grid, you can utilize the [rowTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/#rowtemplate) property. This property accepts a custom HTML template that specifies the layout for each row, allowing for rich data visualization.
+
+Here is an example that demonstrates rendering Syncfusion Chart within a row template:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/row-template-chart/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/row-template-chart/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-template-chart/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/row-template-chart/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/row-template-chart" %}
 
 ## Limitations
 
