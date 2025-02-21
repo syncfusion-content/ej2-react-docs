@@ -18,7 +18,7 @@ class App extends React.Component<{},{}> {
       { text: '42', value: '42pt' }
     ],
     width: '40px',
-    default: '10'
+    default: '10pt'
   }
 
   public render() {

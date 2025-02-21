@@ -1,7 +1,3 @@
-{% raw %}
-/**
- * Rich Text Editor Smart Suggestion sample
- */
 import * as React from 'react';
 import { HtmlEditor, Image, Audio, Video, Table, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, EmojiPicker, PasteCleanup, FormatPainter, SlashMenu } from '@syncfusion/ej2-react-richtexteditor';
 class App extends React.Component {
@@ -57,5 +53,3 @@ class App extends React.Component {
     }
 }
 export default App;
-
-{% endraw %}

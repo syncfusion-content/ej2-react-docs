@@ -1,6 +1,6 @@
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar  } from '@syncfusion/ej2-react-richtexteditor';
-import { DropDownListComponent, FieldSettingsModel } from '@syncfusion/ej2-react-dropdowns';
-import React, { useState, useRef, useEffect } from 'react';
+import * as React from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 function App() {
     const [editorValue, setEditorValue] = useState<string>('');

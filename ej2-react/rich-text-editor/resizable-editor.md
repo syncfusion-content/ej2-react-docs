@@ -42,7 +42,7 @@ The following sample demonstrates the resizable feature.
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs57" %}
 
- ## Setting Editor Resize Limits
+## Setting Editor Resize Limits
 
 To restrict the resizable area of the Rich Text Editor, set the `min-width`, `max-width`, `min-height`, and `max-height` CSS properties for the component's wrapper element. 
 

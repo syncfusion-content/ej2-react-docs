@@ -6,7 +6,7 @@ class App extends React.Component {
       items: ['ClearFormat']
     };
     render() {
-        return (<RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings}>
+        return (<RichTextEditorComponent toolbarSettings={this.toolbarSettings}>
         <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
       </RichTextEditorComponent>);
     }

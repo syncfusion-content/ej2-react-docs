@@ -18,7 +18,7 @@ To integrate an `ImportWord` option into the Rich Text Editor toolbar, you can a
 
 The following example illustrates how to set up the `ImportWord` in the Rich Text Editor to facilitate content importation from Word documents:
 
-[Class-component]`
+`[Class-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

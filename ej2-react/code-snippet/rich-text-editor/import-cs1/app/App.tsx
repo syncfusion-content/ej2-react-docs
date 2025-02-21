@@ -1,47 +1,11 @@
-/**
- * Rich Text Editor import-word sample
- */
 import * as React from 'react';
 import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from '@syncfusion/ej2-react-richtexteditor';
-import { ToolbarSettingsModel } from '@syncfusion/ej2-react-richtexteditor';
-import { UploaderComponent, SuccessEventArgs  } from '@syncfusion/ej2-react-inputs';
+import { ToolbarSettingsModel, ImportWordModel } from '@syncfusion/ej2-react-richtexteditor';
 
 class App extends React.Component<{},{}> {
-
-    private rteObj: RichTextEditorComponent;
-    private uploaderObj: UploaderComponent;
-
     private hostUrl: string = 'https://services.syncfusion.com/react/production/';
+    private items: any = ['ImportWord']
 
-    private importContentFromWord(): void {
-        this.uploaderObj.element.click();
-    }
-    
-    private items: any = [
-        {
-          template:
-            "<button class='e-tbar-btn e-control e-btn e-lib e-icon-btn' tabindex='-1' id='custom_tbarbtn_1' style='width:100%'><span class='e-icons e-rte-import-doc e-btn-icon'></span></button>",
-          undo: true,
-          click: this.importContentFromWord.bind(this),
-        },
-    ];
-
-    private asyncSettings: object  = {
-        saveUrl: this.hostUrl + 'api/RichTextEditor/ImportFromWord',
-    };
-
-    private onUploadSuccess (args: SuccessEventArgs): void {
-        this.rteObj.executeCommand('insertHTML', args.e.currentTarget.response, {
-          undo: true,
-        });
-    };
-
-    componentDidMount() {
-        if (this.uploaderObj) {
-            (this.uploaderObj as any).element.parentElement.style.display = "none";
-        }
-    }
-    
     private rteValue: string = `<h2 style="text-align: center;">Invitation to Microsoft Webinar Meet-Up</h2><p>
                     Dear Guest,
                 </p><p>
@@ -75,9 +39,16 @@ class App extends React.Component<{},{}> {
                 </p><p>
                     We're looking forward to your participation and to exploring the exciting world of Microsoft technology together. Should you have any questions or require further information, please don't hesitate to contact us at <a href="mailto:webinar@company.com">webinar@company.com</a>.</p><p>
                 <br></p><p>Warm regards,</p><p>John Doe<br>Event Coordinator<br>ABC Company</p>`;
-    
+    private insertImageSettings: any = {
+        saveUrl: this.hostUrl + 'api/RichTextEditor/SaveFile',
+        removeUrl: this.hostUrl + 'api/RichTextEditor/DeleteFile',
+        path: this.hostUrl + 'RichTextEditor/'
+    }
     private toolbarSettings: ToolbarSettingsModel = {
         items: this.items
+    };
+    private importWord: ImportWordModel = {
+        serviceUrl: this.hostUrl + 'api/RichTextEditor/ImportFromWord',
     };
     
     render() {
@@ -85,13 +56,11 @@ class App extends React.Component<{},{}> {
             <div className='control-pane'>
                 <div className='control-section' id="rteTools">
                     <div className='rte-control-section'>
-                        <RichTextEditorComponent id="importDocument" ref={(richtexteditor) => {this.rteObj = richtexteditor;}} toolbarSettings={this.toolbarSettings} value={this.rteValue}>
+                        <RichTextEditorComponent id="importDocument" importWord={this.importWord} toolbarSettings={this.toolbarSettings} insertImageSettings={this.insertImageSettings} value={this.rteValue} enableXhtml={true}>
                             <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport]} />
                         </RichTextEditorComponent>
-                        <UploaderComponent ref={(uploader) => {this.uploaderObj = uploader;}} id="editorCustomWordUpload" allowedExtensions={'.docx,.doc,.rtf'} asyncSettings={this.asyncSettings} success={this.onUploadSuccess} style={{ display: 'none' }}/>
                     </div>
                 </div>
-
             </div>
         );
     }

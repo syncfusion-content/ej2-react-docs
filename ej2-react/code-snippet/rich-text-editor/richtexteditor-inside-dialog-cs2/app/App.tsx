@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import {HtmlEditor,Image,Inject,Link,QuickToolbar,RichTextEditorComponent,Toolbar,Table,PasteCleanup} from '@syncfusion/ej2-react-richtexteditor';
 
-
 function App() {
     const dialogRef = useRef<DialogComponent>(null);
     const editorRef = useRef<RichTextEditorComponent>(null);
@@ -42,14 +41,14 @@ function App() {
     };
   
     const openDialog = () => {
-      if (this.dialogRef.current) {
-        this.dialogRef.current.show();
+      if (dialogRef.current) {
+        dialogRef.current.show();
       }
     };
   
     const onDialogOpen = () => {
-      if (this.editorRef.current) {
-        this.editorRef.current.refreshUI();
+      if (editorRef.current) {
+        editorRef.current.refreshUI();
       }
     };
   

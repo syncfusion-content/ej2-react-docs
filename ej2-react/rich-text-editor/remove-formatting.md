@@ -39,8 +39,6 @@ Here's an example of how to configure the Clear Format feature:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/remove-formatting-cs1" %}
-
 `[Functional-component]`
 
 {% tabs %}
@@ -51,8 +49,6 @@ Here's an example of how to configure the Clear Format feature:
 {% include code-snippet/rich-text-editor/remove-formatting-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/remove-formatting-cs2" %}
 
 ## Using Clear Format
 

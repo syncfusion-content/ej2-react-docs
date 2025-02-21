@@ -18,7 +18,7 @@ class App extends React.Component {
             { text: '42', value: '42pt' }
         ],
         width: '40px',
-        default: '10',
+        default: '10pt',
     };
     render() {
         return (<RichTextEditorComponent height={450} value={this.rteValue} toolbarSettings={this.toolbarSettings} fontSize={this.fontSize}>

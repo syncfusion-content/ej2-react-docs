@@ -1,6 +1,3 @@
-/**
- * Rich Text Editor - Enter Key Customization Sample
- */
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, ActionBeginEventArgs  } from '@syncfusion/ej2-react-richtexteditor';
 import { DropDownListComponent, FieldSettingsModel } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';

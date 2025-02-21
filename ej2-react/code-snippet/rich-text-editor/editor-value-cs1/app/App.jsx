@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { RichTextEditorComponent, Inject, Toolbar, HtmlEditor, Image, QuickToolbar, Link, EmojiPicker } from '@syncfusion/ej2-react-richtexteditor';
+import React, { Component } from 'react';
+import { RichTextEditorComponent, Inject, Toolbar, HtmlEditor, Image, QuickToolbar, Link } from '@syncfusion/ej2-react-richtexteditor';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.editorRef = React.createRef();
@@ -46,9 +46,9 @@ class App extends React.Component {
 
   render() {
       return ( <div>
+        <h1>Rich Text Editor</h1>
         <RichTextEditorComponent
           ref={this.editorRef}
-          height={450}
           toolbarSettings={this.toolbarSettings}
         >
           <Inject services={[Toolbar, HtmlEditor, Image, QuickToolbar, Link]} />

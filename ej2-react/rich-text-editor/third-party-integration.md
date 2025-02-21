@@ -57,12 +57,42 @@ Add a custom icon for HTML source editor in the toolbar of Rich Text Editor usin
 {% endhighlight %}
 {% endtabs %}
 
-## Embed.ly Integration
+## Embedly Integration
 
-Rich Text Editor easily integrate with embed.ly which is probably the best service when it comes to embed the rich content such as Twitter, Facebook, Instagram, and lots of other publishing platform embeds.
+This can be achieved by binding the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#actioncomplete) event to the toolbar items in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarsettings) property. In the event handler, create an element and add the appropriate class. The below script is have to add in the sample to embed the content,
 
-   ``` javascript
-     <script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-   ```
+Include `embedly` javascript.
 
-In the following sample, the Embed.ly class `embedly-card` has been added to `a` tag in the [actionComplete](/rich-text-editor/api-richTextEditor.html#actioncomplete) event.
+```ts
+
+<script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+```
+
+The above script is added to the page.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/embedly-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/embedly-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/embedly-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/embedly-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/embedly-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/embedly-cs2" %}

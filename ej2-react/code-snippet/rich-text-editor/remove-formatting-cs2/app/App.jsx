@@ -5,7 +5,7 @@ function App() {
     let toolbarSettings = {
       items: ['ClearFormat']
     };
-    return (<RichTextEditorComponent height={450} toolbarSettings={toolbarSettings}>
+    return (<RichTextEditorComponent toolbarSettings={toolbarSettings}>
       <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
     </RichTextEditorComponent>);
 }

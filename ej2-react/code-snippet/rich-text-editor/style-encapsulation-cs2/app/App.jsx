@@ -25,11 +25,13 @@ function App() {
     return (
       <div class="control-section">
         <div class="editor">
+        <h6 class="header">With style encapsulation</h6>
           <RichTextEditorComponent height={450}  iframeSettings={iframeSettings} value={this.rteValue}>
               <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
           </RichTextEditorComponent>
         </div>
         <div class="editor">
+        <h6 class="header">Without style encapsulation</h6>
           <RichTextEditorComponent height={450}  id='iframeRTE' value={rteValue}>
               <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
           </RichTextEditorComponent>

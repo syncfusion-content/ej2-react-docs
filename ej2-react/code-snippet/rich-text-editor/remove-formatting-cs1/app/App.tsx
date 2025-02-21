@@ -8,7 +8,7 @@ class App extends React.Component<{},{}> {
 
   public render() {
     return (
-      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings}>
+      <RichTextEditorComponent toolbarSettings={this.toolbarSettings}>
         <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
       </RichTextEditorComponent>
     );

@@ -17,7 +17,8 @@ function App(){
       { text: '14', value: '14pt' },
       { text: '42', value: '42pt' }
     ],
-    width: '40px'
+    width: '40px',
+    default: '10pt',
   }
 
   return (

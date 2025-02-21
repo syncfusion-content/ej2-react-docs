@@ -1,5 +1,6 @@
 import {TabComponent,TabItemDirective,TabItemsDirective} from '@syncfusion/ej2-react-navigations';
 import {HtmlEditor,Image,Inject,Link,QuickToolbar,RichTextEditorComponent,Toolbar,Table,PasteCleanup} from '@syncfusion/ej2-react-richtexteditor';
+import React from 'react';
 
 class App extends React.Component {
   constructor(props) {

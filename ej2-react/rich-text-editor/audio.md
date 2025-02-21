@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Audio in React Rich text editor component | Syncfusion
-description: Learn here all about Audio in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
-control: Audio 
+title: Audios in React Rich text editor component | Syncfusion
+description: Learn here all about Audios in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+control: Audios 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Audio in React Rich text editor Component
+# Audios in React Rich text editor Component
 
 The Rich Text Editor allows you to insert audio from online sources and local computers and then insert them into your content. You can insert the audio with the following list of options in the [insertAudioSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertaudiosettings) property.
 
@@ -609,9 +609,12 @@ class App extends React.Component<{},{}> {
   private quickToolbarSettings: object = {
      audio: ['AudioReplace', 'Remove', 'AudioLayoutOption']
   }
+  private rteValue:string = `<p><b>Get started with Quick Toolbar to click on an audio</b></p>
+                        <p>Using the quick toolbar, users can replace, display, and delete the selected audio.</p>
+                        <p><audio controls><source src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Audio.wav" type="audio/mp3" /></audio></p>`;
   public render() {
     return (
-      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} quickToolbarSettings={this.quickToolbarSettings}>
+      <RichTextEditorComponent height={450} value={this.rtevalue} toolbarSettings={this.toolbarSettings} quickToolbarSettings={this.quickToolbarSettings}>
          <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
       </RichTextEditorComponent>
     );
@@ -634,9 +637,12 @@ function App() {
   let quickToolbarSettings: object = {
     audio: ['AudioReplace', 'Remove', 'AudioLayoutOption']
   }
+  let rteValue = `<p><b>Get started with Quick Toolbar to click on an audio</b></p>
+                        <p>Using the quick toolbar, users can replace, display, and delete the selected audio.</p>
+                        <p><audio controls><source src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Audio.wav" type="audio/mp3" /></audio></p>`;
 
   return (
-    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} quickToolbarSettings={quickToolbarSettings}>
+    <RichTextEditorComponent height={450} value={rtevalue} toolbarSettings={toolbarSettings} quickToolbarSettings={quickToolbarSettings}>
         <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
     </RichTextEditorComponent>
   );

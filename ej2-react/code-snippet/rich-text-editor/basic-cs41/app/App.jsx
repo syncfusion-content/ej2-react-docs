@@ -1,7 +1,3 @@
-{% raw %}
-/**
- * Rich Text Editor - Custom KeyConfig Sample
- */
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 function App() {
@@ -16,9 +12,9 @@ function App() {
             'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
     };
     let keyConfig = {
-        'copy': 'ctrl+1',
-        'cut': 'ctrl+2',
-        'paste': 'ctrl+3'
+      bold: 'ctrl+alt+b',
+      italic: 'ctrl+alt+i',
+      underline: 'ctrl+alt+u',
     };
     function docKeyUp(e) {
         if (e.altKey && e.keyCode === 84) { /* t */
@@ -68,4 +64,3 @@ function App() {
       </RichTextEditorComponent>);
 }
 export default App;
-{% endraw %}

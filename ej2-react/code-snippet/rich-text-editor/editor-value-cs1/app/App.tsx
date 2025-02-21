@@ -1,11 +1,11 @@
-import React, { Component, createRef, RefObject } from 'react';
+import React, { Component, RefObject } from 'react';
 import { RichTextEditorComponent, Inject, Toolbar, HtmlEditor, Image, QuickToolbar, Link } from '@syncfusion/ej2-react-richtexteditor';
 
 interface AppState {
   editorValue: string;
 }
 
-class App extends React.Component<{},{}> {
+class App extends Component<{}, AppState> {
   private editorRef: RefObject<RichTextEditorComponent>;
 
   private toolbarSettings: object = {
@@ -52,9 +52,9 @@ class App extends React.Component<{},{}> {
   public render() {
     return (
        <div>
+        <h1>Rich Text Editor</h1>
           <RichTextEditorComponent
             ref={this.editorRef}
-            height={450}
             toolbarSettings={this.toolbarSettings}
           >
             <Inject services={[Toolbar, HtmlEditor, Image, QuickToolbar, Link]} />

@@ -57,8 +57,6 @@ Below is an example code snippet to integrate WProofreader with the Syncfusion R
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/wproofreader-cs1" %}
-
 `[Functional-component]`
 
 {% tabs %}
@@ -69,8 +67,6 @@ Below is an example code snippet to integrate WProofreader with the Syncfusion R
 {% include code-snippet/rich-text-editor/wproofreader-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/wproofreader-cs2" %}
 
 Below is a GIF demonstrating how to integrate WProofreader with the Syncfusion React Rich Text Editor
 
