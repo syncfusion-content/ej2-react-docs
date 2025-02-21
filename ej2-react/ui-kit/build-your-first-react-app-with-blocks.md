@@ -30,8 +30,8 @@ If you choose **Tailwind** theme, follow these steps to configure it.
 1. In the Visual Studio Code terminal, run the following commands to install the **Tailwind** packages and create the **tailwind.config.js** file.
 
     ```bash
-    npm install -D tailwindcss postcss autoprefixer
-    npx tailwindcss init -p
+    npm install -D tailwindcss@3 postcss autoprefixer
+    npx tailwindcss init
     ```
   
     ![Tailwind Installation](images/tailwind-installation.PNG)

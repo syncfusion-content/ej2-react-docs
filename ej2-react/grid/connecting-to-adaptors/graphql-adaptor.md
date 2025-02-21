@@ -16,7 +16,7 @@ Syncfusion's Grid component seamlessly integrates with GraphQL servers using the
 
 This section describes a step-by-step process for retrieving data from GraphQL service using `GraphQLAdaptor`, then binding it to the React Grid component to facilitate data and CRUD operations.
 
-### Configure GraphQL Server
+## Configure GraphQL Server
 
 To configure a GraphQL server for use with Syncfusion React Grid, you need to follow several steps:
 
