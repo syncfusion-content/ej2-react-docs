@@ -35,21 +35,23 @@ export function getFlowShapes() {
     ];
     return flowShapes;
 }
-export function rmvBasicShape() {
-    const id = symbolPaletteRef.current.palettes[0].symbols[0]?.id;
-    /**
-     * parameter 1 - The ID of the palette where the shape to be removed.
-     * parameter 2 - ID of the shape to be removed
-     */
-    symbolPaletteRef.current.removePaletteItem('basic', id);
+function removeShape(paletteIndex, paletteType) {
+    const symbol = symbolPaletteRef.current.palettes[paletteIndex] && symbolPaletteRef.current.palettes[paletteIndex].symbols[0] ? symbolPaletteRef.current.palettes[paletteIndex].symbols[0] : null;
+    if (symbol) {
+        const id = symbol.id;
+        /**
+         * parameter 1 - The ID of the palette where the shape to be removed.
+         * parameter 2 - ID of the shape to be removed
+         */
+        symbolPaletteRef.current.removePaletteItem(paletteType, id);
+    }
 }
+export function rmvBasicShape() {
+    removeShape(0, 'basic');
+}
+
 export function rmvFlowShape() {
-    const id = symbolPaletteRef.current.palettes[1].symbols[0]?.id;
-    /**
-     * parameter 1 - The ID of the palette where the shape to be removed.
-     * parameter 2 - ID of the shape to be removed
-     */
-    symbolPaletteRef.current.removePaletteItem('flow', id);
+    removeShape(1, 'flow');
 }
 const palettes = [
     {
