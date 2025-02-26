@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React File manager component | Syncfusion
-description:  Checkout and learn about Getting started with React File manager component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React File Manager Component | Syncfusion
+description: Checkout and learn about getting started with React File Manager component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React File Manager
 
 This section explains how to create and configure the simple **File Manager** component.
 
@@ -378,4 +378,4 @@ export default App;
 ```
 {% endraw %}
 
->Note: You can refer to our [React File Manager](https://www.syncfusion.com/react-ui-components/react-file-manager) feature tour page for its groundbreaking feature representations. You can also explore our [React File Manager example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/file-manager/overview) that shows you how to render the File Manager in React.
+>Note: You can refer to our [React File Manager](https://www.syncfusion.com/react-components/react-file-manager) feature tour page for its groundbreaking feature representations. You can also explore our [React File Manager example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/file-manager/overview) that shows you how to render the File Manager in React.
