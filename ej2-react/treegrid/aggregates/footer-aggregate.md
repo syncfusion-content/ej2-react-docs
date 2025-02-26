@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Footer aggregate in React Treegrid component | Syncfusion
-description: Learn here all about Footer aggregate in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Footer aggregate | React Treegrid component | Syncfusion
+description: Learn here all about footer aggregate in Syncfusion React Treegrid component, it's elements, and more.
 control: Footer aggregate 
 platform: ej2-react
 documentation: ug
