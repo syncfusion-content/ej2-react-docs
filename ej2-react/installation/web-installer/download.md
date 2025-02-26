@@ -54,7 +54,7 @@ You should initiate an evaluation if you have already obtained our components th
 
     >Note: If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
 
-4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/start-trials) page to get the latest version trial installer. You can generate the [unlock](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) key and [license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation/) here at any time before the trial period expires. (See the screenshot below). You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/start-trials) page.
+4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/downloads) page to get the latest version trial installer. You can generate the [unlock](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) key and [license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation) here at any time before the trial period expires. (See the screenshot below). You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/downloads) page.
 
     ![start trial download installer](images/start-trial-download-installer.png)
 
