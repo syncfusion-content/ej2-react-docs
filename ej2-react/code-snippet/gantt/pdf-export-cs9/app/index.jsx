@@ -1,36 +1,36 @@
 import * as React from 'react';
-import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, Inject, Toolbar, PdfExport, Selection, ColumnDirective, ColumnsDirective, PdfQueryCellInfoEventArgs } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, Inject, Toolbar, PdfExport, Selection, ColumnDirective, ColumnsDirective} from '@syncfusion/ej2-react-gantt';
+import { PdfColor } from '@syncfusion/ej2-pdf-export';
 import { data } from './datasource';
 function App() {
         const taskFields = {
-            id: 'TaskID',
+            id: 'TaskId',
             name: 'TaskName',
             startDate: 'StartDate',
             duration: 'Duration',
             progress: 'Progress',
-            child: 'subtasks'
+            parentID:'ParentId'
         };
         const toolbarOptions = ['PdfExport'];
     let ganttChart;
   function  toolbarClick(args) {
-        if (args.item.text === 'Pdf export') {
+        if (args.item.text === 'PDF export') {
             ganttChart.pdfExport();
         }
     };
    function pdfQueryCellInfo(args) {
         if(args.column.field == 'Progress'){
             if(args.value < 50) {
-                args.style = {backgroundColor: '#F08080'};
+                args.style.backgroundColor = new PdfColor(240, 128, 128);
             } else {
-                args.style = {backgroundColor: '#A569BD'};
+                args.style.backgroundColor = new PdfColor(165, 105, 189);
             }
         }
       }
         return <GanttComponent id='root' dataSource={data} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} pdfQueryCellInfo = {pdfQueryCellInfo} allowPdfExport={true} height='400px' ref={gantt =>ganttChart = gantt}>
         <ColumnsDirective>
-            <ColumnDirective field='TaskID' width='50'/>
+            <ColumnDirective field='TaskId'/>
             <ColumnDirective field='TaskName' headerText='Task Name' visible={false}/>
             <ColumnDirective field='StartDate'/>
             <ColumnDirective field='Duration'/>
