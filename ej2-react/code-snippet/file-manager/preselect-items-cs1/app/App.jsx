@@ -16,7 +16,7 @@ function App() {
     }
     return (<div>
       <div className="control-section">
-          <FileManagerComponent ref={s => (fileObj = s)} id="file" view="Details" ajaxSettings={{
+          <FileManagerComponent ref={s => (fileObj = s)} id="file" height="375px" view="Details" ajaxSettings={{
             downloadUrl: hostUrl + 'api/FileManager/Download',
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',

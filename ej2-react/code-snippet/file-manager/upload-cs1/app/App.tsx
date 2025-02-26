@@ -7,13 +7,15 @@ function App() {
   
   return (
     <div className="control-section">
-        <FileManagerComponent id="file" view="LargeIcons" ajaxSettings = {{
+        <FileManagerComponent id="file" view="LargeIcons" height="375px" 
+          ajaxSettings = {{
             downloadUrl: hostUrl + 'api/FileManager/Download',
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',
             url: hostUrl + "api/FileManager/FileOperations"
-          }} uploadSettings={{ maxFileSize: 233332, minFileSize: 120, autoUpload: true}}>
-            <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
+          }} 
+          uploadSettings={{ maxFileSize: 233332, minFileSize: 120, autoUpload: true}}>
+          <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
         </FileManagerComponent>
     </div>
   );

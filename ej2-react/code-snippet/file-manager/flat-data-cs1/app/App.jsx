@@ -263,9 +263,10 @@ const FlatData = () => {
         }
     ];
     let resultData = [].slice.call(fileData);
+    
     return (<div>
             <div className="control-section">
-                <FileManagerComponent id="flatdata" fileSystemData={resultData} toolbarSettings={{ items: ['NewFolder', 'Cut', 'Copy', 'Paste', 'Delete', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'] }} contextMenuSettings={{
+                <FileManagerComponent id="flatdata" height="375px" fileSystemData={resultData} toolbarSettings={{ items: ['NewFolder', 'Cut', 'Copy', 'Paste', 'Delete', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'] }} contextMenuSettings={{
             file: ["Open", "|", "Cut", "Copy", "Paste", "Delete", "Rename", "|", "Details"], folder: ["Open", "|", "Cut", "Copy", "Paste", "|", "Delete", "Rename", "|", "Details"], layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"], visible: true
         }}>
                     <Inject services={[NavigationPane, DetailsView, Toolbar]}/>

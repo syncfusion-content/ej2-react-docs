@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="control-section">
-        <FileManagerComponent id="file" enableRtl={true} ajaxSettings = {{
+        <FileManagerComponent id="file" enableRtl={true} height="375px" ajaxSettings = {{
             downloadUrl: hostUrl + 'api/FileManager/Download',
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',

@@ -9,6 +9,7 @@ function App() {
     let fmObj;
     let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
     let items = [{ text: 'Folder' }, { text: 'Files' }];
+
     function onCreated(args) {
         document.getElementById('file_tb_upload').onclick = (e) => {
             e.stopPropagation();
@@ -31,12 +32,12 @@ function App() {
     }
     return (<div>
           <div className="control-section">
-              <FileManagerComponent id="file" ref={(scope) => { fmObj = scope; }} ajaxSettings={{
+              <FileManagerComponent id="file" ref={(scope) => { fmObj = scope; }} height="375px" ajaxSettings={{
             url: hostUrl + "api/FileManager/FileOperations",
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',
             downloadUrl: hostUrl + 'api/FileManager/Download'
-        }} created={onCreated.bind(this)}>
+        }} height={{ height }} created={onCreated.bind(this)}>
           <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
               </FileManagerComponent>
 

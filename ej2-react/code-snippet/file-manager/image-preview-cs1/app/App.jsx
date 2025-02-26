@@ -3,8 +3,9 @@ import { DetailsView, FileManagerComponent, NavigationPane, Toolbar, Inject } fr
 import * as React from 'react';
 function App() {
     let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
+    
     return (<div className="control-section">
-        <FileManagerComponent id="file" view="LargeIcons" ajaxSettings={{
+        <FileManagerComponent id="file" view="LargeIcons" height="375px" ajaxSettings={{
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             url: hostUrl + "api/FileManager/FileOperations"
         }}>

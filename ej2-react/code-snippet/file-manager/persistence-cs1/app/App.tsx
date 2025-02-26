@@ -4,6 +4,7 @@ import * as React from 'react';
 
 function App() {
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
+
   function onSuccess(args: SuccessEventArgs) {
     console.log("Ajax request successful");
   }
@@ -12,7 +13,7 @@ function App() {
   }
   return (
     <div className="control-section">
-        <FileManagerComponent id="file" view="LargeIcons" enablePersistence={true} ajaxSettings = {{
+        <FileManagerComponent id="file" view="LargeIcons" height="375px" enablePersistence={true} ajaxSettings = {{
             downloadUrl: hostUrl + 'api/FileManager/Download',
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',

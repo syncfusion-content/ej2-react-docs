@@ -10,6 +10,7 @@ function App() {
   let fmObj: FileManagerComponent;
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
   let items: ItemModel[] = [{ text: 'Folder' }, { text: 'Files' }];
+
   function onCreated(args) {
       (document.getElementById('file_tb_upload') as HTMLElement).onclick = (e) => {
         e.stopPropagation();
@@ -34,7 +35,7 @@ function App() {
   return(
       <div>
           <div className="control-section">
-              <FileManagerComponent id="file" ref={(scope) => { fmObj = scope; }} ajaxSettings = {{
+              <FileManagerComponent id="file" height={{ height }} ref={(scope) => { fmObj = scope; }} height="375px" ajaxSettings = {{
                   url: hostUrl + "api/FileManager/FileOperations",
                   getImageUrl: hostUrl + "api/FileManager/GetImage",
                   uploadUrl: hostUrl + 'api/FileManager/Upload',

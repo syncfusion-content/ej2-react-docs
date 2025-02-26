@@ -19,7 +19,7 @@ View is the section where the files and folders are displayed for the user to br
 
 ## LargeIcons View
 
-By Default, File Manager is rendered with largeicons view. The following example demonstrate this.
+By default, File Manager is rendered with **largeicons** view. The following example demonstrate this.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -40,7 +40,7 @@ By Default, File Manager is rendered with largeicons view. The following example
 
 ## Details View
 
-Details view is an injectable module in the File Manager so, it should be injected before rendering the File Manager to avail its functionality. The default appearance of the File Manager can be changed from largeicons to details view by using the [view](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) property. The following example demonstrate the File Manager with details view.
+**Details view** is an injectable module in the File Manager so, it should be injected before rendering the File Manager to avail its functionality. The default appearance of the File Manager can be changed from largeicons to details view by using the [view](https://ej2.syncfusion.com/react/documentation/api/file-manager/#view) property. The following example demonstrate the File Manager with details view.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
