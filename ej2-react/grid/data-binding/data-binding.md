@@ -277,3 +277,26 @@ The following code demonstrates, how to use the `changeDataSource` method to bin
 
 >* The Grid state persistence feature does not support the  `changeDataSource` method.
 >* In this document, the above sample uses the local data for `changeDataSource` method. For those using a remote data source, refer to the [FlexibleData](https://ej2.syncfusion.com/react/demos/#/bootstrap5/grid/flexible-data) resource.
+
+## How to set custom headers using a custom adaptor in Syncfusion Grid
+
+Custom headers allow you to send extra information along with your HTTP requests. This information can include authentication tokens, API keys, or any other data required by the server to process the request correctly. By adding custom headers, you can enhance the security and functionality of your application's data communication process.
+
+This section explains how to integrate custom headers into Syncfusion Grid using the `beforeSend` method of the `WebApiAdaptor`.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/custom-headers-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/custom-headers-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="CustomAdaptor.jsx" %}
+{% include code-snippet/grid/custom-headers-cs1/app/CustomAdaptor.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="CustomAdaptor.tsx" %}
+{% include code-snippet/grid/custom-headers-cs1/app/CustomAdaptor.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/custom-headers-cs1" %}
