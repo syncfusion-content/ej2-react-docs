@@ -5,7 +5,7 @@ import * as React from 'react';
 function App() {
   let hostUrl : string = "https://ej2-aspcore-service.azurewebsites.net/";
   return (<div className="control-section">
-    <FileManagerComponent id="file" ajaxSettings={{
+    <FileManagerComponent id="file" height="375px" ajaxSettings={{
       downloadUrl: hostUrl + 'api/NaturalSorting/Download',
       getImageUrl: hostUrl + "api/NaturalSorting/GetImage",
       uploadUrl: hostUrl + 'api/NaturalSorting/Upload',

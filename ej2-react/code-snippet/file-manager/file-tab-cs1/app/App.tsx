@@ -30,14 +30,15 @@ function App() {
               <div className="content-title">
                    <div className="cnt-text">File Manager with default functionalities</div>
               </div>
-              <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} id="file" allowDragAndDrop={true}
-                  ajaxSettings = {{
-                    downloadUrl: hostUrl + 'api/FileManager/Download',
-                    getImageUrl: hostUrl + "api/FileManager/GetImage",
-                    uploadUrl: hostUrl + 'api/FileManager/Upload',
-                    url: hostUrl + "api/FileManager/FileOperations"
-                  }} >
-                  <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
+              <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} id="file" 
+                allowDragAndDrop={true}
+                ajaxSettings = {{
+                  downloadUrl: hostUrl + 'api/FileManager/Download',
+                  getImageUrl: hostUrl + "api/FileManager/GetImage",
+                  uploadUrl: hostUrl + 'api/FileManager/Upload',
+                  url: hostUrl + "api/FileManager/FileOperations"
+                }} >
+                <Inject services={[ NavigationPane, DetailsView, Toolbar]} />
               </FileManagerComponent>
             </div>
         );

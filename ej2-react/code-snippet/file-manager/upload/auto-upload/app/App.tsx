@@ -5,12 +5,10 @@ import * as React from 'react';
 function App() {
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
   let fileObj: FileManagerComponent;
-  function onCreated(args: any) {
-    // fileObj.uploadObj.dropArea = null;  // Restrict file uploads by dragging them from the local file system to the File Manager.
-  }
+  
   return (
     <div className="control-section">
-      <FileManagerComponent ref={s => (fileObj = s as FileManagerComponent)} id="file" view="LargeIcons" created={onCreated.bind(this)}
+      <FileManagerComponent ref={s => (fileObj = s as FileManagerComponent)} id="file" height="375px" view="LargeIcons"
         ajaxSettings={{
           downloadUrl: hostUrl + 'api/FileManager/Download',
           getImageUrl: hostUrl + "api/FileManager/GetImage",

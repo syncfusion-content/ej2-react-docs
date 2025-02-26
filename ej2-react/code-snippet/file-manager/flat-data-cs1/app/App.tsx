@@ -280,6 +280,7 @@ function App() {
     <div className="control-section">
       <FileManagerComponent
         id="flatdata"
+        height="375px"
         fileSystemData={resultData}
         toolbarSettings={{
           items: [

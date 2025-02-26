@@ -11,7 +11,7 @@ function App() {
             getImageUrl: hostUrl + 'api/FileManagerAccess/GetImage',
             uploadUrl: hostUrl + 'api/FileManagerAccess/Upload',
             url: hostUrl + 'api/FileManagerAccess/FileOperations'
-        }} view={"Details"}>
+        }} view={"Details"} height="375px" >
               <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
           </FileManagerComponent>
       </div>

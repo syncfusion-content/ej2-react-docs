@@ -5,11 +5,11 @@ import * as React from 'react';
 function App() {
   let fileObj: FileManagerComponent;
   let hostUrl: string = "https://ej2-aspcore-service.azurewebsites.net/";
-
+  
   return (
   <div>
       <div className="control-section">
-          <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} id="file" 
+          <FileManagerComponent ref={ s => (fileObj = s as FileManagerComponent)} id="file" height="375px"
               ajaxSettings = {{
                 downloadUrl: hostUrl + 'api/FileManager/Download',
                 getImageUrl: hostUrl + "api/FileManager/GetImage",
