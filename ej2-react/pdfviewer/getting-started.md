@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Standalone React PDF Viewer component | Syncfusion
-description: Learn here all about Getting started with Standalone React PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React PDF Viewer | Syncfusion
+description: Learn here all about getting started with React PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Standalone PDF Viewer component
+# Getting Started with React PDF Viewer Component
 
 This section explains the steps required to create a simple Standalone React PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a React application.
 
