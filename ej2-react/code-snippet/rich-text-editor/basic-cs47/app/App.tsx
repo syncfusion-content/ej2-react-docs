@@ -1,6 +1,3 @@
-
-
-
 /**
  * Rich Text Editor - Placeholder Sample
  */
@@ -16,6 +13,3 @@ function App() {
 }
 
 export default App;
-
-
-

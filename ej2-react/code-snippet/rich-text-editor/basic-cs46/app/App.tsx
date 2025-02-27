@@ -1,6 +1,3 @@
-
-
-
 /**
  * Rich Text Editor - Placeholder Sample
  */
@@ -18,6 +15,3 @@ class App extends React.Component<{},{}> {
 }
 
 export default App;
-
-
-

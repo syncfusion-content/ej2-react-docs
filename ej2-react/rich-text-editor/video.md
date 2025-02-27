@@ -1,37 +1,20 @@
 ---
 layout: post
-title: Video in React Rich text editor component | Syncfusion
-description: Learn here all about Video in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
-control: Video 
+title: Videos in React Rich Text Editor component | Syncfusion
+description: Learn here all about Videos in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: Videos 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Video in React Rich text editor component
+# Videos in the React Rich Text Editor Component
 
-The Rich Text Editor allows you to insert videos from online sources and local computers and then insert them into your content. You can insert the video with the following list of options in the [insertVideoSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertvideosettings) property.
+The Rich Text Editor allows you to insert videos from online sources and local computers into your content.  You can insert the video with the following list of options in the [insertVideoSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertvideosettings) property.
 
-| Options | Description |
-|----------------|---------|
-| allowedTypes | Specifies the extensions of the video types allowed to insert on bowering and passing the extensions with comma separators. For example, pass allowedTypes as `.mp4`, `.mov`, `.wmv` and `.avi`.|
-| layoutOption | Sets the default display for a video when it is inserted into the Rich Text Editor. Possible options are: `Inline` and `Break`.|
-| saveFormat | Sets the default save format of the video element when inserted. Possible options are: `Blob` and `Base64`.|
-| width | Sets the default width of the video when it is inserted in the Rich Text Editor.|
-| minWidth | Sets the minWidth of the video element when it is inserted in the Rich Text Editor.|
-| maxWidth | Sets the maxWidth of the video element when it is inserted in the Rich Text Editor.|
-| height | Sets the default height of the video when it is inserted in the Rich Text Editor.|
-| minHeight | Sets the minHeight of the video element when it is inserted in the Rich Text Editor.|
-| maxHeight | Sets the maxHeight of the video element when it is inserted in the Rich Text Editor.|
-| saveUrl | Provides URL to map the action result method to save the video.|
-| removeUrl | Provides URL to map the action result method to remove the video.|
-| path | Specifies the location to store the video.|
-| resize | Sets the resizing action for the video element.|
-| resizeByPercent | Sets the percentage values for the video element with the resizing action.|
+## Configuring the Video Tool in the Toolbar
 
-## Configure the video tool in the toolbar
-
-You can add the `video` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+You can add the `Video` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
 > Rich Text Editor features are segregated into individual feature-wise modules. To use audio, inject the `Video` module in `services`.
 
@@ -63,118 +46,58 @@ To configure the `Video` toolbar item, refer to the below code.
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/video-cs2" %}
 
-## Insert a video from the web
+## Video Save Formats
 
-You can insert a video from either the hosted link or the local machine by clicking the video button in the editor's toolbar. On Clicking the Video button, a dialog opens which allows you to insert video from the Embedded URL or web URL.
+The video files can be saved as `Blob` or `Base64` URLs by using the [insertVideoSettings.saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#saveformat) property, which is of enum type, and the generated URL will be set to the `src` attribute of the `<source>` tag.
 
-### Insert from embed URL
+> The default `saveFormat` property is set to `Blob` format.
 
-The insert video dialog opens with the `Embed URL` option as default which allows you to insert an embedded URL.
+```HTML
+
+<video>
+    <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="video/mp4" >
+</video>
+
+<video>
+    <source src="data:video/mp4;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="video/mp4" >
+</video>
+
+```
+
+## Inserting Video from Web
+
+You can insert a video from either a hosted link or your local machine by clicking the video button in the editor's toolbar. When you click the video button, a dialog opens, allowing you to insert a video using an Embedded code or Web URL.
+
+### Inserting Video via Embed URL
+
+The insert video dialog opens with the `Embedded code` option selected by default. This allows you to insert a video using embedded code.
 
 ![React Rich Text Editor Embed URL Video insert](./images/react-richtexteditor-video-embed.png)
 
-### Insert from web URL
+### Inserting Video via Web URL
 
-You can switch to `Web URL` by selecting the web URL check box. Inserting with the web URL option will add the video URL as the `src` attribute of the `<source>` tag.
+You can switch to the `Web URL` option by selecting the Web URL checkbox. Inserting a video using the Web URL option will add the video URL as the `src` attribute of the `<source>` tag.
 
 ![React Rich Text Editor Video insert](./images/react-richtexteditor-video-web.png)
 
-## Insert video from local machine
+## Uploading Video from Local Machine
 
-You can use the `browse` option on the video dialog, to select the video from the local machine and insert it into the Rich Text Editor content.
+You can use the `browse` option on the video dialog to select the video from the local machine and insert it into the Rich Text Editor content.
 
 If the path field is not specified in the [insertVideoSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertvideosettings), the video will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
 
-### Restrict video upload based on size
+## Saving Video to the Server
 
-You can restrict the video uploaded from the local machine when the uploaded video file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event.
+Upload the selected video to a specified destination using the controller action specified in [insertVideoSettings.saveUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#saveurl). Ensure to map this method name appropriately and provide the required destination path through the [insertVideoSettings.path](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#path) properties.
 
-> The file size in the argument will be returned in `bytes`.
+Configure [insertVideoSettings.removeUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#removeurl) to point to the endpoint responsible for deleting video files.
 
-In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
+Set the [insertVideoSettings.saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#saveformat) property to determine whether the video should be saved as Blob or Base64, aligning with your application's requirements.
 
-`[Class-component]`
+> If you want to insert lower-sized video files in the editor and don’t require a specific physical location for saving the video, you can save the format as `Base64`.
 
-```ts
+In the following React code block, the video module has been injected and can insert video files saved in the specified path:
 
-import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
-import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
-
-class App extends React.Component<{},{}> {
-  private toolbarSettings: object = {
-    items: ['Video']
-  }
-  private insertVideoSettings: object = {
-    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
-    path: "../Files/"
-  }
-  private onFileUpload (args: UploadingEventArgs): void {
-    alert("RTE")
-    let sizeInBytes: number = args.fileData.size;
-    let fileSize: number = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-}
-  public render() {
-    return (
-      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertVideoSettings={
-        this.insertVideoSettings} fileUploading={this.onFileUpload}>
-
-        <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-  }
-}
-
-export default App;
-
-```
-
-`[Functional-component]`
-
-```ts
-
-import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
-import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
-
-function App() {
-  let toolbarSettings: object = {
-    items: ['Video']
-  }
-  let insertVideoSettings: object = {
-    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
-    path: "../Files/"
-  }
-  function onFileUpload (args: UploadingEventArgs): void {
-    alert("RTE")
-    let sizeInBytes: number = args.fileData.size;
-    let fileSize: number = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-  }
-  return (
-    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertVideoSettings={insertVideoSettings} fileUploading={onFileUpload}>
-
-      <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
-    </RichTextEditorComponent>
-  );
-}
-
-export default App;
-
-```
-
-### Server-side action
-
-The selected video can be uploaded to the required destination using the controller action below. Map this method name in [insertVideoSettings.saveUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#saveurl) and provide the required destination path through [insertVideoSettings.path](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#path) properties.
-
-> If you want to insert lower-sized video files in the editor and don't want a specific physical location for saving the video, you can save the format as `Base64`.
-
-In the following code blocks, the video module has been injected and can insert the video files saved in the specified path.
 
 `[Class-component]`
 
@@ -194,7 +117,6 @@ class App extends React.Component<{},{}> {
   public render() {
     return (
       <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertVideoSettings={this.insertVideoSettings}>
-
         <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
       </RichTextEditorComponent>
     );
@@ -306,110 +228,10 @@ namespace FileUpload.Controllers
 
 ```
 
-### Video save format
+### Renaming Video Before Inserting
 
-The video files can be saved as `Blob` or `Base64` URL by using the [insertVideoSettings.saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#saveformat) property, which is of enum type, and the generated URL will be set to the `src` attribute of the `<source>` tag.
+You can use the [insertVideoSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertvideosettings) property to specify the server handler to upload the selected video. Then, by binding the [fileUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert video dialog.
 
-> The default `saveFormat` property is set to `Blob` format.
-
-```html
-
-<video>
-    <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="video/mp4" >
-</video>
-
-<video>
-    <source src="data:video/mp4;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="video/mp4" >
-</video>
-
-```
-
-## Replacing video
-
-Once a video file has been inserted, you can replace it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `videoReplace` option. You can replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
-
-![React Rich Text Editor Embed Video replace](./images/react-richtexteditor-video-replace-embed.png)
-
-![React Rich Text Editor Web Video replace](./images/react-richtexteditor-video-replace-web.png)
-
-## Delete video
-
-To remove a video from the Rich Text Editor content, select the video and click the `videoRemove` button from the quick toolbar. It will delete the video from the Rich Text Editor content as well as from the service location if the [insertVideoSettings.removeUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#removeurl) is given.
-
-Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the cross icon.
-
-![React Rich Text Editor Video delete](./images/react-richtexteditor-video-del.png)
-
-## Dimension
-
-Set the default width, minWidth, height, and minHeight of the video element, when it is inserted in the Rich Text Editor using the [width](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#width), [minWidth](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minwidth), [height](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#height), [minHeight](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minheight) properties.
-
-Through the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings), also you can change the width and height using  the `Change Size` button. Once you click on the button, the video size dialog will open as below. In that, specify the width and height of the video in pixels.
-
-![React Rich Text Editor Video dimension](./images/react-richtexteditor-video-size.png)
-
-## Display position
-
-Sets the default display property for the video when it is inserted in the Rich Text Editor using the [insertVideoSettings.layoutOption](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#layoutOption) property. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
-
-> The default `layoutOption` property is set to `Inline`.
-
-`[Class-component]`
-
-```ts
-
-import * as React from 'react';
-import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-
-class App extends React.Component<{},{}> {
-  private insertVideoSettings: object = {
-    layoutOption: 'Inline',
-  }
-  public render() {
-    return (
-      <RichTextEditorComponent height={450} insertVideoSettings = {this.insertVideoSettings} >
-         <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-  }
-}
-
-```
-
-`[Functional-component]`
-
-```ts
-
-import * as React from 'react';
-import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-
-function App(){
-  let insertVideoSettings: object = {
-    layoutOption: 'Inline',
-  }
-
-  return (
-    <RichTextEditorComponent height={450} insertVideoSettings = {insertVideoSettings} >
-        <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
-    </RichTextEditorComponent>
-  );
-}
-
-```
-
-## Resize video
-
-The Rich Text Editor has built-in video resizing support, which is enabled for the video elements added. The resize points will appear on each corner of the video when focusing so users can easily resize the video using mouse points or thumb through the resize points. Also, the resize calculation will be done based on the aspect ratio.
-
-You can disable the resize action by configuring `false` for the [insertVideoSettings.resize](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#resize) property.
-
-> If the [minWidth](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minwidth) and [minHeight](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minheight) properties are configured, the video resizing does not shrink below the specified values.
-
-![React Rich Text Editor video resize](./images/react-richtexteditor-video-resize.png)
-
-## Rename video before inserting
-
-You can use the [insertVideoSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertvideosettings) property, to specify the server handler to upload the selected video. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert video dialog.
 
 `[Class-component]`
 
@@ -439,7 +261,6 @@ class App extends React.Component<{},{}> {
     return (
       <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} fileUploadSuccess={this.onFileUploadSuccess} insertVideoSettings={this.insertVideoSettings} >
         <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
-        <p>The Rich Text Editor is WYSIWYG ("what you see is what you get") editor useful to create and edit content, and return the valid <a href="https://ej2.syncfusion.com/home/" target="_blank">HTML markup</a> or <a href="https://ej2.syncfusion.com/home/" target="_blank">markdown</a> of the content</p>
       </RichTextEditorComponent>
     );
   }
@@ -477,7 +298,6 @@ function App(){
   return (
     <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} fileUploadSuccess={onFileUploadSuccess} insertVideoSettings={insertVideoSettings} >
       <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
-      <p>The Rich Text Editor is WYSIWYG ("what you see is what you get") editor useful to create and edit content, and return the valid <a href="https://ej2.syncfusion.com/home/" target="_blank">HTML markup</a> or <a href="https://ej2.syncfusion.com/home/" target="_blank">markdown</a> of the content</p>
     </RichTextEditorComponent>
   );
 }
@@ -539,9 +359,91 @@ public void Rename()
 
 ```
 
-## Upload video with authentication
+### Restricting Video by Size
 
-You can add additional data with the video uploaded from the Rich Text Editor on the client side, which can even be received on the server side by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
+You can restrict the video uploaded from the local machine when the uploaded video file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event.
+
+> The file size in the argument will be returned in `bytes`.
+
+In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
+
+`[Class-component]`
+
+```ts
+
+import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
+
+class App extends React.Component<{},{}> {
+  private toolbarSettings: object = {
+    items: ['Video']
+  }
+  private insertVideoSettings: object = {
+    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
+    path: "../Files/"
+  }
+  private onFileUpload (args: UploadingEventArgs): void {
+    alert("RTE")
+    let sizeInBytes: number = args.fileData.size;
+    let fileSize: number = 500000;
+    if (fileSize < sizeInBytes) {
+        args.cancel = true;
+    }
+  }
+  public render() {
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertVideoSettings={
+        this.insertVideoSettings} fileUploading={this.onFileUpload}>
+
+        <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
+      </RichTextEditorComponent>
+    );
+  }
+}
+
+export default App;
+
+```
+
+`[Functional-component]`
+
+```ts
+
+import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
+
+function App() {
+  let toolbarSettings: object = {
+    items: ['Video']
+  }
+  let insertVideoSettings: object = {
+    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
+    path: "../Files/"
+  }
+  function onFileUpload (args: UploadingEventArgs): void {
+    alert("RTE")
+    let sizeInBytes: number = args.fileData.size;
+    let fileSize: number = 500000;
+    if (fileSize < sizeInBytes) {
+        args.cancel = true;
+    }
+  }
+  return (
+    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertVideoSettings={insertVideoSettings} fileUploading={onFileUpload}>
+      <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
+    </RichTextEditorComponent>
+  );
+}
+
+export default App;
+
+```
+
+### Uploading Video with Authentication
+
+You can add additional data with the video uploaded from the Rich Text Editor on the client side, which can even be received on the server side. By using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
 
 > By default, it doesn't support the `UseDefaultCredentials` property, you can manually append the default credentials with the upload request.
 
@@ -620,7 +522,123 @@ public void SaveFiles(IList<IFormFile> UploadFiles)
 
 ```
 
+## Video Replacement Functionality
+
+Once a video file has been inserted, you can replace it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `videoReplace` option. You can replace the video file either by using the embedded code or the web URL and the browse option in the video dialog.
+
+![React Rich Text Editor Embed Video Replace](./images/react-richtexteditor-video-replace-embed.png)
+
+![React Rich Text Editor Web Video Replace](./images/react-richtexteditor-video-replace-web.png)
+
+## Deleting Video
+
+To remove a video from the Rich Text Editor content, select the video and click the `videoRemove` button from the quick toolbar. It will delete the video from the Rich Text Editor content as well as from the service location if the [insertVideoSettings.removeUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#removeurl) is given.
+
+Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the cross icon.
+
+![React Rich Text Editor Video delete](./images/react-richtexteditor-video-del.png)
+
+## Adjusting Video Dimensions
+
+Set the default width, minWidth, height, and minHeight of the video element when it is inserted in the Rich Text Editor using the [width](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#width), [minWidth](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minwidth), [height](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#height), [minHeight](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minheight) properties.
+
+Through the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings), you can also change the width and height using the `Change Size` button. Once you click on the button, the video size dialog will open as below. In that, specify the width and height of the video in pixels.
+
+![React Rich Text Editor Video dimension](./images/react-richtexteditor-video-size.png)
+
+## Configuring Video Display Position
+
+Sets the default display property for the video when it is inserted in the Rich Text Editor using the [insertVideoSettings.layoutOption](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#layoutOption) property. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
+
+> The default `layoutOption` property is set to `Inline`.
+
+`[Class-component]`
+
+```ts
+
+import * as React from 'react';
+import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+
+class App extends React.Component<{},{}> {
+  private insertVideoSettings: object = {
+    layoutOption: 'Inline',
+  }
+  public render() {
+    return (
+      <RichTextEditorComponent height={450} insertVideoSettings = {this.insertVideoSettings} >
+         <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
+      </RichTextEditorComponent>
+    );
+  }
+}
+
+```
+
+`[Functional-component]`
+
+```ts
+
+import * as React from 'react';
+import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+
+function App(){
+  let insertVideoSettings: object = {
+    layoutOption: 'Inline',
+  }
+
+  return (
+    <RichTextEditorComponent height={450} insertVideoSettings = {insertVideoSettings} >
+        <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
+    </RichTextEditorComponent>
+  );
+}
+
+```
+
+## Video Resizing Tools
+
+The Rich Text Editor has built-in video resizing support, which is enabled for the video elements added. The resize points will appear on each corner of the video when focusing, so users can easily resize the video using mouse points or thumb through the resize points. Also, the resize calculation will be done based on the aspect ratio.
+
+You can disable the resize action by configuring `false` for the [insertVideoSettings.resize](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#resize) property.
+
+> If the [minWidth](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minwidth) and [minHeight](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minheight) properties are configured, the video resizing does not shrink below the specified values.
+
+![React Rich Text Editor video resize](./images/react-richtexteditor-video-resize.png)
+
+## Customizing the Video Quick Toolbar
+
+The Rich Text Editor enables customization of the video quick toolbar, allowing you to tailor its functionality with essential tools such as VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, and VideoDimension.
+
+By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you enhance the editor's capabilities, facilitating seamless management and editing of embedded videos directly within your content. This customization ensures a user-friendly experience for manipulating video elements efficiently.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/customize-video-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/customize-video-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/customize-video-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/customize-video-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/customize-video-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/customize-video-cs2" %}
+
 ## See Also
 
-* [How to edit the quick toolbar settings](./toolbar/#quick-inline-toolbar)
-* [How to use the link editing option in the toolbar items](./link/)
+* [Quick Toolbars in the Toolbar](./toolbar.md/#quick-toolbars)
+* [How to Use the Audio Editing Option in Toolbar Items](./audio)
+* [How to Use the Audio Editing Option in Toolbar Items](./insert-images)

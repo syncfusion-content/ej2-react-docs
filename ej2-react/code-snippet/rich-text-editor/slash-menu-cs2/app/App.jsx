@@ -1,7 +1,3 @@
-{% raw %}
-/**
- * Rich Text Editor Slash Menu sample
- */
 import * as React from 'react';
 import { HtmlEditor, Image, Audio, Video, Table, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, EmojiPicker, PasteCleanup, FormatPainter, SlashMenu } from '@syncfusion/ej2-react-richtexteditor';
 function App() {
@@ -55,5 +51,3 @@ function App() {
     </div>);
 }
 export default App;
-
-{% endraw %}

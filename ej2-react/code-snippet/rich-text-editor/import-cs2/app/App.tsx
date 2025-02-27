@@ -1,18 +1,10 @@
-/**
- * Rich Text Editor import-word sample
- */
 import * as React from 'react';
 import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from '@syncfusion/ej2-react-richtexteditor';
 import { ToolbarSettingsModel, ImportWordModel } from '@syncfusion/ej2-react-richtexteditor';
 
 function App() {
     const hostUrl: string = 'https://services.syncfusion.com/react/production/';
-    const items: any = [
-        'Undo', 'Redo', '|', 'ImportWord', '|',
-        'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-        'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-        'Formats', 'Alignments', 'Blockquote', '|', 'NumberFormatList', 'BulletFormatList',
-        '|', 'CreateLink', 'Image', 'CreateTable', '|', 'ClearFormat', 'SourceCode']
+    const items: any = ['ImportWord']
 
     const rteValue: string = `<h2 style="text-align: center;">Invitation to Microsoft Webinar Meet-Up</h2><p>
                     Dear Guest,
@@ -68,7 +60,6 @@ function App() {
                     </RichTextEditorComponent>
                 </div>
             </div>
-
         </div>
     );
 }

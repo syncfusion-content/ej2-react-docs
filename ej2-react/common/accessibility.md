@@ -76,156 +76,558 @@ Ensuring the accessibility of Syncfusion React components is crucial for making 
 
 Syncfusion React components will keep improving when there is anything required. It also involves client feedback to make the component more accessible.
 
+## Voluntary Product Accessibility Template
+
+The [Voluntary Product Accessibility Template (VPAT)](https://www.itic.org/policy/accessibility/vpat) provides a structured format to document how information and communication technology (ICT) products and services comply with accessibility standards. This template helps organizations clearly and effectively communicate their conformance with standards such as **Section 508**, **WCAG 2.2**, and **EN 301 549**.
+
+[Download the Latest VPAT Document](https://www.itic.org/dotAsset/0d397438-611d-47da-861a-be9ee508da51.docx)
+
+To review the accessibility conformance of Syncfusion products, you can download the latest version of the **Syncfusion VPAT document** here: [VPAT Document](https://ej2.syncfusion.com/accessibility/Syncfusion-VPAT2.5.docx)
+
+This document provides detailed information on how Syncfusion products meet accessibility requirements, ensuring they are inclusive and usable for all individuals, including those with disabilities.
+
 ## Accessibility support for specific components
 
-Consult the component-specific documents below for detailed information about how Syncfusion React components ensure compliance with accessibility standards, encompassing Section 508, WAI-ARIA, WCAG 2.2, keyboard navigation, and more.
+Syncfusion React components are designed to ensure compliance with key accessibility standards, including **Section 508**, **WAI-ARIA**, **WCAG 2.2**, and **keyboard navigation**. Below, you’ll find control-specific documentation that provides detailed guidance on how each control meets these standards.
 
 <style>
-# table
+#table
 {
-border:0 !important;
-line-height: 2!important;
+width: 100%;
+line-height: 2 !important;
 }
 
-tr
-{
-border:0 !important;
+#table th {
+    border-bottom:1px solid #dedede !important;
+    font-weight: bold;
 }
 
-td
+#table tr
+{
+border:1px solid #dedede !important;
+}
+
+#table td
 {
 border:0 !important;
 vertical-align: top;
 }
-
-.controlanchorlink
-{
-text-decoration: none !important;
-font-size: 14px !important;
-text-align: left !important;
-padding: 5px 0px;
-letter-spacing: 1px;
-}
-.controlcategory
-{
-font-size: 14px !important;
-text-align: left !important;
-font-weight: bold !important;
-letter-spacing: 0.7px;
-}
-}
 </style>
 
-<table id="table" style="border: 0px;">
+<table id="table">
+    <thead>
+        <tr>
+            <th>Component</th>
+            <th>Section 508</th>
+            <th>WCAG 2.2</th>
+            <th>Keyboard Navigation</th>
+            <th>Accessibility Documentation</th>
+        </tr>
+    </thead>
 <tbody>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
+    <tr>
+        <td>DataGrid</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/grid/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Pivot Table</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/pivotview/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Tree Grid</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treegrid/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Spreadsheet</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/spreadsheet/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>In-place Editor</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/inplace-editor/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>PDF Viewer</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/pdfviewer/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>RichTextEditor</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/rich-text-editor/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Word Processor</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/document-editor/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Image Editor</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/image-editor/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Dialog</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/dialog/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>ListView</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/listview/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Tooltip</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/tooltip/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Splitter</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/splitter/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Dashboard Layout</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>NA</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/dashboard-layout/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Accumulation Chart</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/accumulation-chart/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Charts</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/chart/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Stock Chart</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/stock-chart/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Circular Gauge</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>NA</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/circular-gauge/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Diagram</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/diagram/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>HeatMap Chart</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>NA</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/heatmap-chart/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Linear Gauge</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>NA</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/linear-gauge/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Maps</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maps/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Range Selector</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/range-navigator/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Smith Chart</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/smithchart/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Sparkline Charts</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/sparkline/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>TreeMap</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>NA</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treemap/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Bullet Chart</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/bullet-chart/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Kanban</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/kanban/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Button</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/button/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Button Group</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/button-group/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Dropdown Menu</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/drop-down-button/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Progress Button</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/progress-button/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Split Button</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/split-button/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Chips</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/chips/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>FAB</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/floating-action-button/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Speed Dial</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/speed-dial/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Calendar</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/calendar/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>DatePicker</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/datepicker/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>DateRangePicker</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/daterangepicker/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>DateTime Picker</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/datetimepicker/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>TimePicker</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/timepicker/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Gantt Chart</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/gantt/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>TextBox</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/textbox/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Input Mask</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maskedtextbox/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Masked TextBox</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maskedtextbox/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Numeric TextBox</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/numerictextbox/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Radio Button</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/radio-button/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>CheckBox</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/check-box/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Color Picker</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/color-picker/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>File Upload</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/uploader/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Range Slider</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/range-slider/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Toggle Switch Button</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/switch/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Signature</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/signature/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Rating</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/rating/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Query Builder</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/query-builder/accessibility">Documentation</a></td>
+    </tr> 
+    <tr>
+        <td>Accordion</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/accordion/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>AppBar</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/appbar/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Breadcrumb</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/breadcrumb/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Carousel</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/carousel/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Context Menu</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/context-menu/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Menu Bar</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/menu/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Sidebar</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/sidebar/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Tabs</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/tab/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Toolbar</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/toolbar/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Ribbon</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/ribbon/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>TreeView</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treeview/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>File Manager</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/file-manager/accessibility">Documentation</a></td>
+    </tr> 
+    <tr>
+        <td>Stepper</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/stepper/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/message/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Toast</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>NA</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/toast/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Progress Bar</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/progress-bar/accessibility">Documentation</a></td>
+    </tr>
+    <tr>
+        <td>Skeleton</td>
+        <td>Yes</td>
+        <td>AA</td>
+        <td>Yes</td>
+        <td><a target="_self" href="https://ej2.syncfusion.com/react/documentation/skeleton/accessibility">Documentation</a></td>
+    </tr>
 </tbody>
-<tr>
-    <td>
-        <div><p class="controlcategory">GRIDS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/grid/accessibility">DataGrid</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/pivotview/accessibility">Pivot Table</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treegrid/accessibility">Tree Grid</a></div>
-         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/spreadsheet/accessibility">Spreadsheet</a></div>
-        <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/inplace-editor/accessibility">In-place Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/pdfviewer/accessibility">PDF Viewer</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/rich-text-editor/accessibility">RichTextEditor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/document-editor/accessibility">Word Processor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/image-editor/accessibility">Image Editor</a></div>
-        <div><p class="controlcategory">LAYOUT</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/dialog/accessibility">Dialog</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/listview/accessibility">ListView</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/tooltip/accessibility">Tooltip</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/splitter/accessibility">Splitter</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/dashboard-layout/accessibility">Dashboard Layout</a></div>
-    </td>
-    <td>
-        <div><p class="controlcategory">DATA VISUALIZATION</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/accumulation-chart/accessibility">Accumulation Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/chart/accessibility">Charts</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/3d-chart/accessibility">3D Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/stock-chart/accessibility">Stock Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/circular-gauge/accessibility">Circular Gauge</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/diagram/accessibility">Diagram</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/heatmap-chart/accessibility">HeatMap Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/linear-gauge/accessibility">Linear Gauge</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maps/accessibility">Maps</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/range-navigator/accessibility">Range Selector</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/smithchart/accessibility">Smith Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/sparkline/accessibility">Sparkline Charts</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treemap/accessibility">TreeMap</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/bullet-chart/accessibility">Bullet Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/kanban/accessibility">Kanban</a></div>
-        <div><p class="controlcategory">BUTTONS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/button/accessibility">Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/button-group/accessibility">Button Group</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/drop-down-button/accessibility">Dropdown Menu</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/progress-button/accessibility">Progress Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/split-button/accessibility">Split Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/chips/accessibility">Chips</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/floating-action-button/accessibility">FAB</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/speed-dial/accessibility">Speed Dial</a></div>
-    </td>
-    <td>
-        <div><p class="controlcategory">CALENDARS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/schedule/accessibility">Scheduler</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/calendar/accessibility">Calendar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/datepicker/accessibility">DatePicker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/daterangepicker/accessibility">DateRangePicker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/datetimepicker/accessibility">DateTime Picker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/timepicker/accessibility">TimePicker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/gantt/accessibility">Gantt Chart</a></div>
-        <div><p class="controlcategory">INPUTS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/textbox/accessibility">TextBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maskedtextbox/accessibility">Input Mask</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/maskedtextbox/accessibility">Masked TextBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/numerictextbox/accessibility">Numeric TextBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/radio-button/accessibility">Radio Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/check-box/accessibility">CheckBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/color-picker/accessibility">Color Picker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/uploader/accessibility">File Upload</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/range-slider/accessibility">Range Slider</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/switch/accessibility">Toggle Switch Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/signature/accessibility">Signature</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/rating/accessibility">Rating</a></div>
-        <div><p class="controlcategory">FORMS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/query-builder/accessibility">Query Builder</a></div>
-    </td>
-    <td>
-        <div><p class="controlcategory">DROPDOWNS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/auto-complete/accessibility">AutoComplete</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/combo-box/accessibility">ComboBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/drop-down-list/accessibility">Dropdown List</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/drop-down-tree/accessibility">DropDown Tree</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/multi-select/accessibility">Multiselect DropDown</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/mention/accessibility">Mention</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/list-box/accessibility">ListBox</a></div>
-        <div><p class="controlcategory">NAVIGATION</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/accordion/accessibility">Accordion</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/appbar/accessibility">AppBar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/breadcrumb/accessibility">Breadcrumb</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/carousel/accessibility">Carousel</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/context-menu/accessibility">Context Menu</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/menu/accessibility">Menu Bar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/sidebar/accessibility">Sidebar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/tab/accessibility">Tabs</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/toolbar/accessibility">Toolbar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/ribbon/accessibility">Ribbon</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/treeview/accessibility">TreeView</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/file-manager/accessibility">File Manager</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/pager/accessibility">Pager</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/stepper/accessibility">Stepper</a></div>
-        <div><p class="controlcategory">NOTIFICATION</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/message/accessibility">Message</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/toast/accessibility">Toast</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/progress-bar/accessibility">Progress Bar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/skeleton/accessibility">Skeleton</a></div>
-    </td>
-</tr>
 </table>

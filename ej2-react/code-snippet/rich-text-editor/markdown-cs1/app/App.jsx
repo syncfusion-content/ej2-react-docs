@@ -1,7 +1,3 @@
-{% raw %}
-/**
- * Rich Text Editor - MarkdownEditor Sample
- */
 import { createElement } from '@syncfusion/ej2-base';
 import { Image, Inject, Link, MarkdownEditor, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as Marked from 'marked';
@@ -88,4 +84,3 @@ class App extends React.Component {
     }
 }
 export default App;
-{% endraw %}

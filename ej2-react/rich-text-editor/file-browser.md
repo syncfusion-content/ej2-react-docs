@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File browser in React Rich text editor component | Syncfusion
+title: File browser in React Rich Text Editor component | Syncfusion
 description: Learn here all about File browser in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
 control: File browser 
 platform: ej2-react
