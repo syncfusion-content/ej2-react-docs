@@ -1,16 +1,17 @@
-{% raw %}
 /**
  * Rich Text Editor - Markdown - Custom Format Sample
  */
 import { createElement } from '@syncfusion/ej2-base';
 import { Image, Inject, Link, MarkdownEditor, MarkdownFormatter, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
+import * as Marked from 'marked';
+
 class App extends React.Component {
     rteObj;
     mdSource;
     mdSplit;
     htmlPreview;
-    defaultRTE;
+    rteObj;
     textArea;
     // set the value to Rich Text Editor
     template = `The sample is configured with customized markdown syntax using the __formatter__ property. Type the content and click the toolbar item to view customized markdown syntax. For unordered list, you need to add a plus sign before the word (e.g., + list1). Or To make a phrase bold, you need to add two underscores before and after the phrase (e.g., __this text is bold__).`;
@@ -40,12 +41,12 @@ class App extends React.Component {
         if (this.mdsource.classList.contains('e-active')) {
             const id = this.rteObj.getID() + 'html-view';
             const htmlPreview = this.rteObj.element.querySelector('#' + id);
-            htmlPreview.innerHTML = marked((this.rteObj.contentModule.getEditPanel()).value);
+            htmlPreview.innerHTML = Marked.marked((this.rteObj.contentModule.getEditPanel()).value);
         }
     }
     fullPreview(e) {
-        const id = this.defaultRTE.getID() + 'html-preview';
-        this.htmlPreview = this.defaultRTE.element.querySelector('#' + id);
+        const id = this.rteObj.getID() + 'html-preview';
+        this.htmlPreview = this.rteObj.element.querySelector('#' + id);
         if ((this.mdSource.classList.contains('e-active') || this.mdSplit.classList.contains('e-active')) && e.mode) {
             this.mdSource.classList.remove('e-active');
             this.mdSplit.classList.remove('e-active');
@@ -73,7 +74,7 @@ class App extends React.Component {
                 this.htmlPreview.style.width = '50%';
             }
             this.htmlPreview.style.display = 'block';
-            this.htmlPreview.innerHTML = marked((this.defaultRTE.contentModule.getEditPanel()).value);
+            this.htmlPreview.innerHTML = Marked.marked((this.rteObj.contentModule.getEditPanel()).value);
             this.mdSource.parentElement.title = 'Code View';
         }
     }
@@ -84,4 +85,3 @@ class App extends React.Component {
     }
 }
 export default App;
-{% endraw %}

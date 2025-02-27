@@ -1,19 +1,11 @@
-/**
- * Rich Text Editor export-word sample
- */
 import * as React from 'react';
 import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from '@syncfusion/ej2-react-richtexteditor';
 import { ToolbarSettingsModel, ExportWordModel, ExportPdfModel } from '@syncfusion/ej2-react-richtexteditor';
+
 function App() {
-
     const hostUrl: string = 'https://services.syncfusion.com/react/production/';
-
     // Rich Text Editor items list
-    const items: any = [
-        'Undo', 'Redo', '|', 'ExportWord', 'ExportPdf', '|', 'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-        'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-        'Formats', 'Alignments', 'Blockquote', '|', 'NumberFormatList',
-        'BulletFormatList', '|', 'CreateLink', 'Image', 'CreateTable', '|', 'ClearFormat', 'SourceCode'];
+    const items: any = ['ExportWord', 'ExportPdf'];
     const rteValue: string = `<h2 style="text-align: center;">Invitation to Microsoft Webinar Meet-Up</h2><p>
                     Dear Guest,
                 </p><p>
@@ -66,20 +58,18 @@ function App() {
             font-size: 1em;
             font-weight: 400;
             margin: 0;
-        }
-    `
+        }`
     };
 
     const exportPdf: ExportPdfModel = {
-        serviceUrl: hostUrl + 'api/RichTextEditor/ExportToPdf',
+        serviceUrl: 'https://ej2services.syncfusion.com/react/development/api/RichTextEditor/ExportToPdf',
         fileName: 'RichTextEditor.pdf',
         stylesheet: `
         .e-rte-content{
             font-size: 1em;
             font-weight: 400;
             margin: 0;
-        }
-    `
+        }`
     };
 
     return (
@@ -91,7 +81,6 @@ function App() {
                     </RichTextEditorComponent>
                 </div>
             </div>
-
         </div>
     );
 }

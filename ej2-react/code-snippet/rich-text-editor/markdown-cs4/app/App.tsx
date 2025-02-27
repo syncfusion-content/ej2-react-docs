@@ -1,6 +1,3 @@
-
-
-
 /**
  * Rich Text Editor - Markdown to HTML Sample
  */
@@ -156,6 +153,3 @@ function App() {
 }
 
 export default App;
-
-
-

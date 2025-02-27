@@ -1,4 +1,3 @@
-{% raw %}
 /**
  * Rich Text Editor - Custom Tool Sample
  */
@@ -137,4 +136,3 @@ class App extends React.Component {
     }
 }
 export default App;
-{% endraw %}

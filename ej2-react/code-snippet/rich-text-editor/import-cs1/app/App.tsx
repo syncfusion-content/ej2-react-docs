@@ -1,18 +1,10 @@
-/**
- * Rich Text Editor import-word sample
- */
 import * as React from 'react';
 import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from '@syncfusion/ej2-react-richtexteditor';
 import { ToolbarSettingsModel, ImportWordModel } from '@syncfusion/ej2-react-richtexteditor';
 
 class App extends React.Component<{},{}> {
-  private hostUrl: string = 'https://services.syncfusion.com/react/production/';
-    private items: any = [
-        'Undo', 'Redo', '|', 'ImportWord', '|',
-        'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-        'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-        'Formats', 'Alignments', 'Blockquote', '|', 'NumberFormatList', 'BulletFormatList',
-        '|', 'CreateLink', 'Image', 'CreateTable', '|', 'ClearFormat', 'SourceCode']
+    private hostUrl: string = 'https://services.syncfusion.com/react/production/';
+    private items: any = ['ImportWord']
 
     private rteValue: string = `<h2 style="text-align: center;">Invitation to Microsoft Webinar Meet-Up</h2><p>
                     Dear Guest,
@@ -58,6 +50,7 @@ class App extends React.Component<{},{}> {
     private importWord: ImportWordModel = {
         serviceUrl: this.hostUrl + 'api/RichTextEditor/ImportFromWord',
     };
+    
     render() {
         return (
             <div className='control-pane'>
@@ -68,7 +61,6 @@ class App extends React.Component<{},{}> {
                         </RichTextEditorComponent>
                     </div>
                 </div>
-
             </div>
         );
     }

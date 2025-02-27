@@ -1,13 +1,8 @@
-{% raw %}
-
-
-
 /**
  * Rich Text Editor - Shift Enter Key Customization Sample
  */
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar  } from '@syncfusion/ej2-react-richtexteditor';
 import { DropDownListComponent, FieldSettingsModel } from '@syncfusion/ej2-react-dropdowns';
-import { createElement } from '@syncfusion/ej2-base';
 import * as React from 'react';
 
 function App() {
@@ -61,7 +56,3 @@ function App() {
 }
 
 export default App;
-
-
-
-{% endraw %}

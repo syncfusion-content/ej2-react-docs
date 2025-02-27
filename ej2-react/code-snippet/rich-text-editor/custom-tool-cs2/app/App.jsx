@@ -1,10 +1,10 @@
-{% raw %}
 /**
  * Rich Text Editor - Custom Tool Sample
  */
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import { HtmlEditor, Image, Inject, Link, NodeSelection, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
+
 function App() {
     let rteObj;
     // set the value to Rich Text Editor
@@ -135,4 +135,3 @@ function App() {
     </div>);
 }
 export default App;
-{% endraw %}

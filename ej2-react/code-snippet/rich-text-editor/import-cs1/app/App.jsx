@@ -1,17 +1,9 @@
-/**
- * Rich Text Editor import-word sample
- */
 import * as React from 'react';
 import { RichTextEditorComponent, Toolbar, Inject, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from '@syncfusion/ej2-react-richtexteditor';
+
 class App extends React.Component {
     hostUrl = 'https://services.syncfusion.com/react/production/';
-    items = [
-        'Undo', 'Redo', '|', 'ImportWord', '|',
-        'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-        'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-        'Formats', 'Alignments', 'Blockquote', '|', 'NumberFormatList', 'BulletFormatList',
-        '|', 'CreateLink', 'Image', 'CreateTable', '|', 'ClearFormat', 'SourceCode'
-    ];
+    items = [ 'ImportWord'];
     rteValue = `<h2 style="text-align: center;">Invitation to Microsoft Webinar Meet-Up</h2><p>
                     Dear Guest,
                 </p><p>
@@ -56,6 +48,7 @@ class App extends React.Component {
     importWord = {
         serviceUrl: this.hostUrl + 'api/RichTextEditor/ImportFromWord',
     };
+    
     render() {
         return (<div className='control-pane'>
                 <div className='control-section' id="rteTools">
@@ -65,7 +58,6 @@ class App extends React.Component {
                         </RichTextEditorComponent>
                     </div>
                 </div>
-
             </div>);
     }
 }

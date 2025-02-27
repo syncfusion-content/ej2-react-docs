@@ -1,33 +1,23 @@
-{% raw %}
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 
 function App() {
     let rteObj;
+
+    let rteValue = "<p>The Syncfudion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul><li><p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes.</p></li><li><p>Bulleted and numbered lists.</p></li><li><p>Handles images, hyperlinks, videos, hyperlinks, uploads, etc.</p></li><li><p>Contains undo/redo manager. </p></li></ul><div style='display: inline-block; width: 60%; vertical-align: top; cursor: auto;'><img alt='Sky with sun' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png' width='309' style='min-width: 10px; min-height: 10px; width: 309px; height: 174px;' class='e-rte-image e-imginline e-rte-drag-image' height='174' /></div>";
+
     function created() {
         const instance = rteObj;
         rteObj.contentModule.getDocument().addEventListener("keydown", (e) => {
             if (e.key === 's' && e.ctrlKey === true) {
                 e.preventDefault(); // to prevent default ctrl+s action
                 instance.updateValue(); // to update the value after editing
-                // const value: any= instance.value; // you can get the RTE content to save in the desired database
+                const value = instance.value; // you can get the RTE content to save in the desired database
             }
         });
     }
-    return (<RichTextEditorComponent ref={(richtexteditor) => { rteObj = richtexteditor; }} created={created.bind(this)}>
-      <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content.
-        Users can format their content using standard toolbar commands.</p>
-      <p><b>Key features:</b></p>
-      <ul>
-        <li>
-          <p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes</p>
-        </li>
-        <li>
-          <p>Capable of handling markdown editing.</p>
-        </li>
-      </ul>
+    return (<RichTextEditorComponent ref={(richtexteditor) => { rteObj = richtexteditor; }} value={rteValue}  created={created.bind(this)}>
       <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
     </RichTextEditorComponent>);
 }
 export default App;
-{% endraw %}

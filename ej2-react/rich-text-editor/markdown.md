@@ -1,24 +1,26 @@
 ---
 layout: post
-title: Markdown in React Rich text editor component | Syncfusion
-description: Learn here all about Markdown in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Markdown in React Rich Text Editor component | Syncfusion
+description: Learn here all about Markdown in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Markdown 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Markdown in React Rich text editor component
+# Markdown in the React Rich Text Editor component
 
-When you format the word in Markdown format, you should add Markdown syntax to the word to indicate the words and phrases that looks different from each other.
+When you format the word in Markdown format, you should add Markdown syntax to the word to indicate the words and phrases that look different from each other.
 
-Rich Text Editor supports markdown editing when the [editorMode](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#editormode) set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
+The Rich Text Editor supports Markdown editing when the [editorMode](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#editormode) is set to markdown. You can apply formatting to text using both keyboard interactions and toolbar actions.
 
-> To create Rich Text Editor with Markdown editing feature, inject the MarkdownEditor module to the RTE using the `RichTextEditor.Inject(MarkdownEditor)` method.
+> To enable the quick Markdown editing feature, inject the MarkdownEditor module to the RTE using the `RichTextEditor.Inject(MarkdownEditor)` method.
 
-## Supported Commands
+Refer to the video below for guidance on building a Markdown editor with the React Rich Text Editor.
 
-The React Markdown editor supports the following commands to format the markdown content:
+## Markdown Basic Formatting
+
+The React Markdown editor supports various commands to format markdown content. Below are the supported commands and their usage:
 
 |Commands|Syntax| Description |
 |--------|------------------------------------------|------------|
@@ -39,59 +41,23 @@ The React Markdown editor supports the following commands to format the markdown
 | Subscript | `<sub>`Subscript text`</sub>` | For subscript, add `<sub>` to the front and `</sub>` to the back of the text. |
 | Superscript | `<sup>`Superscript text`</sup>` | For superscript, add `<sup>` to the front and `</sup>` to the back of the text. |
 | Ordered List | `1.` First<br>`1.` Second | For ordered list, preceding one or more lines of text with `1.` |
-| Unordered List | `*` First<br>`*` second | For unordered list, preceding one or more lines of text with `*`. |
-| Links | **Link text without title text**<br>`[` Link text `](`URL`)`<br> **Link text with title text**<br>`[` Link text `](`URL , “title text”`)` | Create an inline link by wrapping link text in brackets `[ ]`, and then wrapping the URL as first parameter and title as second parameter in the parentheses `()`.<br>**Note:** The title text is optional, if needed it can be given manually.|
-| Table | `|` Heading 1 `|` Heading 2 `|`<br>`|---------|---------|`<br>`|` Col A1 `|` Col A2 `|`<br>`|` Col B1 `|` Col B2 `|` | Create a table using the pipes and underscores as given in the syntax to create 2 x 2 table. |
+| Unordered List | `*` First<br> `*` second | For unordered list, preceding one or more lines of text with `*`. |
+| Links | **Link text without title text**<br>`[` Link text `](`URL`)`<br> **Link text with title text**<br>`[` Link text `](`URL , "title text"`)` | Create an inline link by wrapping link text in brackets `[ ]`, and then wrapping the URL as first parameter and title as second parameter in the parentheses `()`.<br>**Note:** The title text is optional, if needed it can be given manually.|
+| Table | `| Heading 1 | Heading 2 |<br>|---------|---------|<br>| Col A1 | Col A2 |<br>| Col B1 | Col B2 |` | Create a table using the pipes and underscores as given in the syntax to create 2 x 2 table. |
 | Horizontal Line | `***` (three asterix in new line)<br>(or)<br>`___` (three underscores in new line) | For horizontal line, add `***` or `___` to the start of the new line. |
-| Image | `![](`URL path`)` | Create an image by wrapping the image source in parentheses `()`. |
-| Image with alternate text | `![` alternate text `](`URL path`)` | Create an image with alternate text by wrapping an alternative text in brackets `[]`, and then link of the image source in parentheses `()`.<br>**Note:** When inserting the image using toolbar, the alternate text cannot be provided that needs to be given manually. |
+| Image | `![alt text](`URL path`)` | Create an image by wrapping the image source in parentheses `()`. |
+| Image with alternate text | `![alt text](`URL path`)` | Create an image with alternate text by wrapping an alternative text in brackets `[]`, and then link of the image source in parentheses `()`.<br>**Note:** When inserting the image using toolbar, the alternate text cannot be provided that needs to be given manually. |
 | Escape tick marks supported | Sample text content with `**`bold and `**`not bold`**` text can be in the same line.`**` | In the syntax, the whole content is made as bold where the content `not bold` can be made as normal text by adding the bold syntax to the start and end of the respective text. Likewise you can do the same for various inline commands. |
 | Escape Character | `\(`any syntax`)` | Escape any markdown syntax by prefix `\` to the syntax.<br>Example:<br>`\**`Bold text`**`|
 | HTML Entities | Copyright: &copy; - `&copy;` <br>Trade mark: &trade; - `&trade;`<br>Registered: &reg; - `&reg;`<br>Ampersand: &amp; - `&amp;`<br>Less than: &lt; - `&lt;`<br>Greater than: &gt; - `&gt;` | For HTML entities, add & and ; to the front and back of the respective entities. |
 
-> The above listed commands alone are supported in Syncfusion Markdown editor. For other unsupported commands, you can achieve using the HTML tags in Markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
+> The above listed commands are the only ones supported in the Syncfusion Markdown editor. For other commands, use HTML tags within the Markdown editor. Additionally, footnotes, definitions, math, and checklist Markdown syntax are not supported.
 
-## Markdown to HTML
+## Insert table
 
-The Rich Text Editor allows you to preview markdown changes immediately using preview. In this sample, the third-party library [Marked](https://marked.js.org/#/README.md#README.md) is used to convert markdown into HTML content.
+Add the `CreateTable` item to the toolbar items to use the table tool.
 
-This sample demonstrates how to preview markdown changes in Rich Text Editor. Type or edit the display text, and apply format to view the preview of markdown. The [actionComplete](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#actioncomplete) event can be used to convert Markdown to HTML.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/markdown-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/markdown-cs3/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs3" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/markdown-cs4/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/markdown-cs4/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs4" %}
-
-## Table
-
-Rich Text Editor allows to insert Markdown table in edit panel with 2 X 2 rows and columns along with the heading.
-To use table tool, add the `CreateTable` item in toolbar items.
-
-### Insert table
-
-To insert the table in Rich Text Editor, click the `table` toolbar option to insert the table into Rich Text Editor content and this is the default way in all the devices.
-Please refer the below sample and code snippets to add the table in Markdown editor
+To insert a table in the Markdown editor, click the `insert table` icon in the toolbar. By default, the inserted Markdown table includes 2 rows and 2 columns, along with a heading.
 
 `[Class-component]`
 
@@ -119,43 +85,93 @@ Please refer the below sample and code snippets to add the table in Markdown edi
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs6" %}
 
-### Changing table constants
 
-The Markdown table constants can be changed for the table heading and the column names.
+## Insert image
+
+Add the `Image` item to the toolbar to enable the image tool.
+
+To insert an image in the Markdown editor, follow these steps:
+
+  1. Click the `Insert Image` icon in the toolbar.
+  2. Browse and select an image from your local machine by clicking the browse button, or enter an image link from an online source.
+  3. Click the Insert button in the image dialog.
+The selected image will be added to the editor area.
+
+Please refer to the sample and code snippets below to add the image in the Markdown editor.
+
 
 `[Class-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/markdown-cs7/app/App.jsx %}
+{% include code-snippet/rich-text-editor/markdown-insert-image-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/markdown-cs7/app/App.tsx %}
+{% include code-snippet/rich-text-editor/markdown-insert-image-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs7" %}
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-insert-image-cs1" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/markdown-cs8/app/App.jsx %}
+{% include code-snippet/rich-text-editor/markdown-insert-image-cs2/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/markdown-cs8/app/App.tsx %}
+{% include code-snippet/rich-text-editor/markdown-insert-image-cs2/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs8" %}
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-insert-image-cs2" %}
+
+## Insert link
+
+To use a link, add the `CreateLink` item to the toolbar items. 
+
+To create a link for a text or an image in the Markdown editor, follow these steps:
+
+  1. Click the `Insert` icon in the link dialog.
+  2. Enter the link and other relevant information.
+  3. Click the **Insert** button to add the link to the editor area.
+The link will be added to the editor area.
+
+Please refer to the sample and code snippets below to add the link in the Markdown editor.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/markdown-insert-link-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/markdown-insert-link-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-insert-link-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/markdown-insert-link-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/markdown-insert-link-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-insert-link-cs2" %}
 
 ## Custom format
 
-The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using the [formatter](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#formatter) property.
+The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using the [formatter](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#formatter)property.
 
-This sample demonstrates how to customize tags of markdown formatting.
+This example demonstrates how to customize tags in Markdown formatting.
 
-For example, apply `+` to Unordered list, apply `1., 2., 3.` to Ordered list, for bold, `__`, and for italic `_`.
+For example, use '+' for unordered lists, '1., 2., 3.' for ordered lists, '__ 'for bold text, and '_' for italic text.
 
 `[Class-component]`
 
@@ -182,3 +198,43 @@ For example, apply `+` to Unordered list, apply `1., 2., 3.` to Ordered list, fo
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs10" %}
+
+
+## Markdown to HTML
+
+The Rich Text Editor provides an instant preview of Markdown changes. Type or edit the text and apply formatting to view the Markdown preview.
+
+This example demonstrates how to preview Markdown changes in the Rich Text Editor. The third-party library [Marked](https://marked.js.org/) is used to convert Markdown into HTML content.
+
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/markdown-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/markdown-cs3/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs3" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/markdown-cs4/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/markdown-cs4/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs4" %}
+
+## See Also
+
+* [How to render the toolbar in inline mode](./inline-editing)
+* [How to render the iframe](./iframe)
+* [How to add the Rich Text Editor component](./getting-started/#adding-rich-text-editor-component)
