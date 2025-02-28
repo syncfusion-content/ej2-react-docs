@@ -104,7 +104,7 @@ L10n.load({
 function App() {
     let hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
     return (<div className="control-section">
-        <FileManagerComponent id="file" view="Details" locale='de' ajaxSettings={{
+        <FileManagerComponent id="file" view="Details" locale='de' height="375px" ajaxSettings={{
             downloadUrl: hostUrl + 'api/FileManager/Download',
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',

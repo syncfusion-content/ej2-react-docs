@@ -38,7 +38,7 @@ Our 30-day trial can be downloaded in two ways.
 
 6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio JavaScript - EJ2 Offline trial installer which is available in DMG  format.
 
-   ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.PNG)
+   ![License and downloads of Syncfusion Essential Studio](images/mac-installer.PNG)
 
 ### Start trials if using components through [npm](https://www.npmjs.com/~syncfusionorg)
 
@@ -70,6 +70,6 @@ You should initiate an evaluation if you have already obtained our components th
 4. Unlock key is not required to install the Syncfusion JavaScript - EJ2 Mac trial installer.
 5. For Mac OS, DMG formats is available for download.
 
-   ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.PNG)
+   ![License and downloads of Syncfusion Essential Studio](images/mac-installer.PNG)
 
 You can also refer to the [**JavaScript - EJ2 Mac installer**](https://ej2.syncfusion.com/react/documentation/installation/mac-installer/installation-using-mac-installer) links for step-by-step installation guidelines.

@@ -16,7 +16,7 @@ The format painter tool enables users to replicate formatting from one text segm
 
 You can add the `FormatPainter` tool in the Rich Text Editor using the `toolbarSettings` [items](../api/rich-text-editor/toolbarSettings/#items) property.
 
->To use the Format Painter feature, we need to import and configure the `FormatPainterService` in the provider section.
+> To use Format Painter feature, inject Format Painter module using the `<Inject services={[FormatPainter]} />`.
 
 By double-clicking the format painter toolbar button, `sticky mode` will be enabled. In sticky mode, the format painter will be disabled when the user clicks the `Escape` key again.
 

@@ -153,9 +153,6 @@ You can add additional data with the image uploaded from the Rich Text Editor on
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/authentication-cs2" %}
-
-
 ```csharp
 
 public void SaveFiles(IList<IFormFile> UploadFiles)

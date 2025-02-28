@@ -7,10 +7,11 @@ function App() {
 
   return (
     <div className="control-section">
-        <FileManagerComponent id="file" ajaxSettings = {{
+        <FileManagerComponent id="file" height="375px" ajaxSettings = {{
           url: hostUrl + "api/FileManager/FileOperations"
         }} />
     </div>
   );
 }
-export default App;{% endraw %}
+export default App;
+{% endraw %}

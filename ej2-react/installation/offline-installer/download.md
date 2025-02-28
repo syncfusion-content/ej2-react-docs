@@ -36,6 +36,8 @@ Our 30-day trial can be downloaded in two ways.
 
 5. Before the trial expires, you can download the trial installer at any time from your registered account’s Trials & Downloads page (See the screenshot below.)
 
+    ![trail installer dashboard](images/dashboard.png)
+
 6. Click the Download (element 1 in the screenshot below) button to get the Syncfusion Essential Studio JavaScript – EJ2 web installer.
 
     ![start trial download installer](images/start-trial-download-installer.png)

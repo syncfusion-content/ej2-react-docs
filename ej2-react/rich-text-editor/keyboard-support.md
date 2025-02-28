@@ -271,8 +271,6 @@ These shortcuts provide additional functionalities like fullscreen mode.
 
 Customize the key config for the keyboard interaction of Rich Text Editor, using the [`keyConfig`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#keyconfig) property.
 
-In the following sample, customize the cut, copy, paste toolbar action with ctrl+1, ctrl+2, ctrl+3, respectively.
-
 In the below sample, you have customize the bold, italic, underline toolbar action with ctrl+alt+b, ctrl+alt+i and ctrl+alt+u respectively.
 
 `[Class-component]`

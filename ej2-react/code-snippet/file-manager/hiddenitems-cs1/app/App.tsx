@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="control-section">
-        <FileManagerComponent id="file" view="LargeIcons" showHiddenItems={true} ajaxSettings = {{
+        <FileManagerComponent id="file" view="LargeIcons" height="375px" showHiddenItems={true} ajaxSettings = {{
           downloadUrl: hostUrl + 'api/FileManager/Download',
           getImageUrl: hostUrl + "api/FileManager/GetImage",
           uploadUrl: hostUrl + 'api/FileManager/Upload',

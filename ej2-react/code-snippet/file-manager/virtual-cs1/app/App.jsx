@@ -19,13 +19,19 @@ function App() {
     }
     return (<div>
             <div className="control-section">
-                <FileManagerComponent id="filemanager" ajaxSettings={{
-            url: hostUrl + "api/FileManager/FileOperations",
-            getImageUrl: hostUrl + "api/FileManager/GetImage",
-            uploadUrl: hostUrl + 'api/FileManager/Upload',
-            downloadUrl: hostUrl + 'api/FileManager/Download'
-        }} view={"Details"} enableVirtualization={true} beforeSend={onBeforeSend.bind(this)} beforeImageLoad={beforeImageLoad.bind(this)} beforeDownload={beforeDownload.bind(this)}>
-                <Inject services={[NavigationPane, DetailsView, Toolbar, Virtualization]}/>
+                <FileManagerComponent id="filemanager" height="375px" 
+                    ajaxSettings={{
+                        url: hostUrl + "api/Virtualization/FileOperations",
+                        getImageUrl: hostUrl + "api/Virtualization/GetImage",
+                        uploadUrl: hostUrl + 'api/Virtualization/Upload',
+                        downloadUrl: hostUrl + 'api/Virtualization/Download'
+                    }} 
+                    view={"Details"} 
+                    enableVirtualization={true} 
+                    beforeSend={onBeforeSend.bind(this)} 
+                    beforeImageLoad={beforeImageLoad.bind(this)} 
+                    beforeDownload={beforeDownload.bind(this)}>
+                    <Inject services={[NavigationPane, DetailsView, Toolbar, Virtualization]}/>
                 </FileManagerComponent>
             </div>
         </div>);

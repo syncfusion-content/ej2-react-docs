@@ -12,7 +12,7 @@ class App extends React.Component<{},{}> {
   }
   public render() {
     return (
-      <RichTextEditorComponent height={450} value={rteValue} toolbarSettings={this.toolbarSettings} insertAudioSettings = {this.insertAudioSettings} >
+      <RichTextEditorComponent height={450} value={this.rteValue} toolbarSettings={this.toolbarSettings} insertAudioSettings = {this.insertAudioSettings} >
         <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
       </RichTextEditorComponent>
     );

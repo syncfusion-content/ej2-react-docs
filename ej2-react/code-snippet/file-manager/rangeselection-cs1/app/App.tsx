@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="control-section">
-        <FileManagerComponent id="file" view="Details" allowMultiSelection={true} enableRangeSelection={true} ajaxSettings = {{
+        <FileManagerComponent id="file" view="Details" height="375px" allowMultiSelection={true} enableRangeSelection={true} ajaxSettings = {{
               downloadUrl: hostUrl + 'api/FileManager/Download',
               getImageUrl: hostUrl + "api/FileManager/GetImage",
               uploadUrl: hostUrl + 'api/FileManager/Upload',

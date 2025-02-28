@@ -20,6 +20,7 @@ System.config({
         app: 'app',
         ts: "https://unpkg.com/plugin-typescript@4.0.10/lib/plugin.js",
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
+        "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
         "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
         "@syncfusion/ej2-popups": "syncfusion:ej2-popups/dist/ej2-popups.umd.min.js",

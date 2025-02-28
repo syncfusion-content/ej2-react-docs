@@ -1,4 +1,4 @@
-import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, EmojiPicker, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
     return (
       <RichTextEditorComponent  height={450} toolbarSettings={toolbarSettings} value={rteValue}>
-        <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
+        <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, EmojiPicker]} />
       </RichTextEditorComponent>
     );
 }

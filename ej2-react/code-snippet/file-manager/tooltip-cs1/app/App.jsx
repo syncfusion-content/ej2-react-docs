@@ -76,7 +76,7 @@ function App() {
     return (<TooltipComponent id="template-tootip" ref={s => (tooltipObj = s)} target="#file_toolbar [title]" beforeRender={onTooltipBeforeRender}>
             <div className="filemanager-container">
             {/* File Manager element */}
-                <FileManagerComponent ref={s => (fileObj = s)} id="file" ajaxSettings={{
+                <FileManagerComponent ref={s => (fileObj = s)} height="375px" id="file" ajaxSettings={{
             downloadUrl: hostUrl + 'api/FileManager/Download',
             getImageUrl: hostUrl + 'api/FileManager/GetImage',
             uploadUrl: hostUrl + 'api/FileManager/Upload',

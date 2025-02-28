@@ -140,9 +140,7 @@ The following code example shows how to add the emoji picker tool in the Rich Te
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/emoji-picker-cs2" %}
 
-
-> Rich Text Editor features are segregated into individual feature-wise modules. To use emojis, inject the `EmojiPicker` module in `services`.
-
+> To use Emoji Picker feature, inject Emoji Picker module using the `<Inject services={[EmojiPicker]} />`.
 
 ## Using Shortcut Keys to Open the Emoji Picker
 

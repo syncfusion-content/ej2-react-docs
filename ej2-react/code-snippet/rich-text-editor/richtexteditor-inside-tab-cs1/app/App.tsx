@@ -29,7 +29,7 @@ class App extends React.Component<{},{}> {
     };
   }
 
-  private content1 = (): JSX.Element => {
+  private content1 = () => {
     return (
       <RichTextEditorComponent ref={this.editorRef1} toolbarSettings={this.tools}>
         <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup]} />
@@ -37,7 +37,7 @@ class App extends React.Component<{},{}> {
     );
   }
 
-  private content2 = (): JSX.Element => {
+  private content2 = () => {
     return (
       <RichTextEditorComponent ref={this.editorRef2} toolbarSettings={this.tools}>
         <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup]} />
@@ -45,7 +45,7 @@ class App extends React.Component<{},{}> {
     );
   }
 
-  private content3 = (): JSX.Element => {
+  private content3 = ()=> {
     return (
       <RichTextEditorComponent ref={this.editorRef3} toolbarSettings={this.tools}>
         <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup]} />

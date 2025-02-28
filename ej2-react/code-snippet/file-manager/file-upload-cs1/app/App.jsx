@@ -46,12 +46,16 @@ function App() {
           <div id='target' className="control-section">
               <DialogComponent width='850px' id='dialog' target={'#target'} ref={(scope) => { dialogObj = scope; }} header="Select a file" showCloseIcon={true} visible={false} open={dialogOpen.bind(this)} close={dialogClose.bind(this)} animationSettings={animationSettings}>
                   <FileManagerComponent id="filemanager" ref={(scope) => { filemanagerObj = scope; }} ajaxSettings={{
-            url: hostUrl + "api/FileManager/FileOperations",
-            getImageUrl: hostUrl + "api/FileManager/GetImage",
-            uploadUrl: hostUrl + 'api/FileManager/Upload',
-            downloadUrl: hostUrl + 'api/FileManager/Download'
-        }} allowMultiSelection={false} toolbarSettings={{ items: ['NewFolder', 'Upload', 'Delete', 'Cut', 'Copy', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'] }} contextMenuSettings={{ file: contextmenuItems, folder: contextmenuItems }} fileOpen={onFileOpen.bind(this)}>
-                  <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
+                        url: hostUrl + "api/FileManager/FileOperations",
+                        getImageUrl: hostUrl + "api/FileManager/GetImage",
+                        uploadUrl: hostUrl + 'api/FileManager/Upload',
+                        downloadUrl: hostUrl + 'api/FileManager/Download'
+                    }} 
+                    allowMultiSelection={false} 
+                    toolbarSettings={{ items: ['NewFolder', 'Upload', 'Delete', 'Cut', 'Copy', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'] }} 
+                    contextMenuSettings={{ file: contextmenuItems, folder: contextmenuItems }} 
+                    fileOpen={onFileOpen.bind(this)}>
+                    <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
                   </FileManagerComponent>
               </DialogComponent>
           </div>

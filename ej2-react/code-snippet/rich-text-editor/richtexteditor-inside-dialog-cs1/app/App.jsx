@@ -16,9 +16,7 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.editorRef1 = React.createRef();
-    this.editorRef2 = React.createRef();
-    this.editorRef3 = React.createRef();
+    this.editorRef = React.createRef();
     this.dialogRef = React.createRef();
     this.tools = {
       items: [
@@ -53,75 +51,6 @@ class App extends React.Component {
       ],
     };
   }
-
-  content1 = () => {
-    return (
-      <div>
-        <RichTextEditorComponent
-          ref={this.editorRef1}
-          toolbarSettings={this.tools}
-        >
-          <Inject
-            services={[
-              Toolbar,
-              Link,
-              Image,
-              HtmlEditor,
-              QuickToolbar,
-              Table,
-              PasteCleanup,
-            ]}
-          />
-        </RichTextEditorComponent>
-      </div>
-    );
-  };
-
-  content2 = () => {
-    return (
-      <div>
-        <RichTextEditorComponent
-          ref={this.editorRef2}
-          toolbarSettings={this.tools}
-        >
-          <Inject
-            services={[
-              Toolbar,
-              Link,
-              Image,
-              HtmlEditor,
-              QuickToolbar,
-              Table,
-              PasteCleanup,
-            ]}
-          />
-        </RichTextEditorComponent>
-      </div>
-    );
-  };
-
-  content3 = () => {
-    return (
-      <div>
-        <RichTextEditorComponent
-          ref={this.editorRef3}
-          toolbarSettings={this.tools}
-        >
-          <Inject
-            services={[
-              Toolbar,
-              Link,
-              Image,
-              HtmlEditor,
-              QuickToolbar,
-              Table,
-              PasteCleanup,
-            ]}
-          />
-        </RichTextEditorComponent>
-      </div>
-    );
-  };
 
   openDialog = () => {
     if (this.dialogRef.current) {

@@ -6,14 +6,9 @@ class App extends React.Component<{},{}> {
   private toolbarSettings: object = {
     items: [ 'FontSize']
   }
-
-  private fontSize: object = {
-    width: '40px'
-  }
-
   public render() {
     return (
-      <RichTextEditorComponent height={450} value={this.rteValue} toolbarSettings={this.toolbarSettings} fontSize={this.fontSize}>
+      <RichTextEditorComponent height={450} value={this.rteValue} toolbarSettings={this.toolbarSettings}>
         <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
       </RichTextEditorComponent>
     );

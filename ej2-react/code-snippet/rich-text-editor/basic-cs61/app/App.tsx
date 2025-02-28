@@ -7,12 +7,8 @@ function App() {
     items: ['FontSize']
   }
 
-  let fontSize: object = {
-    width: '40px'
-  }
-  
   return (
-    <RichTextEditorComponent height={450} value={rteValue} toolbarSettings={toolbarSettings} fontSize={fontSize}>
+    <RichTextEditorComponent height={450} value={rteValue} toolbarSettings={toolbarSettings}>
       <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
     </RichTextEditorComponent>
   );

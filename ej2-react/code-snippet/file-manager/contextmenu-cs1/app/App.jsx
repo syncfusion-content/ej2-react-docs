@@ -23,7 +23,7 @@ function App() {
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',
             url: hostUrl + "api/FileManager/FileOperations"
-        }} contextMenuSettings={{
+        }} height="375px" contextMenuSettings={{
             file: ['Open', '|', 'Delete', 'Rename', '|', 'Details', 'Custom'],
             folder: ['Open', '|', 'Delete', 'Rename', '|', 'Details', 'Custom'],
             layout: ['SortBy', 'View', 'Refresh', '|', 'NewFolder', 'Upload', '|', 'Details', '|', 'SelectAll', 'Custom'],

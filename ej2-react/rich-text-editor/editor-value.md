@@ -18,9 +18,9 @@ You can set the initial content of the Rich Text Editor using the `value` proper
 
 * Using the [value](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#value) property directly.
 
-* Using `ng-template` as the [valuetemplate](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#valuetemplate) property allows you to customize the content of the Rich Text Editor.
+* Using the [valuetemplate](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#valuetemplate) property allows you to customize the content of the Rich Text Editor.
 
-**Reterieving Values**
+**Retrieving Values**
 
 To retrieve the editor contents, use the value property of Rich Text Editor.
 
@@ -122,7 +122,7 @@ In the following example, the `saveInterval={500}` property ensures content is s
 
 ## Programmatic Content Access 
 
- You can use the [getHtml](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#gethtml) public method to retrieve the Rich Text Editor content.
+You can use the [getHtml](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#gethtml) public method to retrieve the Rich Text Editor content.
 
 ```typescript
 

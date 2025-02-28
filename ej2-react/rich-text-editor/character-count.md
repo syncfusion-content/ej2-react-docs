@@ -18,7 +18,7 @@ To enable the character count feature, set the [showCharCount](https://ej2.syncf
 
 When enabled, the character count is displayed at the bottom right corner of the editor.
 
->To use quick `Character Count` feature, configure `CountService` in the provider section.
+> To use Count feature, inject Count module using the `<Inject services={[Count]} />`.
 
 ## Understanding Character Count Color Indicators
 
