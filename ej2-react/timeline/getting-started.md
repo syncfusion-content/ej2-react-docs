@@ -34,29 +34,17 @@ npm install -g create-react-app
 
 Start a new project using the create-react-app command as follows
 
-<div class='tsx'>
-
 ```bash
-
 create-react-app quickstart --scripts-version=react-scripts-ts
 
 cd quickstart
-
 ```
 
-</div>
-
-<div class='jsx'>
-
 ```bash
-
 create-react-app quickstart
 
 cd quickstart
-
 ```
-
-</div>
 
 > 'react-scripts-ts' is used for creating React app with typescript.
 
@@ -75,8 +63,8 @@ npm install @syncfusion/ej2-react-layouts --save
 Import the Timeline component's required CSS references as follows in `src/App.css`.
 
 ```css
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
 ```
 
 ## Adding Timeline component to the application

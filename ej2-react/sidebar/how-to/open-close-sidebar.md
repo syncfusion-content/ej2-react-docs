@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open close sidebar in React Sidebar component | Syncfusion
-description: Learn here all about Open close sidebar in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
-control: Open close sidebar 
+title: Open close Sidebar in React Sidebar component | Syncfusion
+description: Learn here all about Open close Sidebar in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+control: Open close Sidebar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open close sidebar in React Sidebar component
+# Open close Sidebar in React Sidebar component
 
 Opening and closing the Sidebar can be achieved with built-in public methods.
 
@@ -24,6 +24,15 @@ In the following sample, toggle method has been used to show or hide the Sidebar
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/sidebar/open-close-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/sidebar/open-close-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/sidebar/open-close-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/open-close-cs1/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

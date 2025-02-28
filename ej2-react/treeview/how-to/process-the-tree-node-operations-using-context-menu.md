@@ -21,6 +21,12 @@ The following sample demonstrates the above cases which are used to manipulate T
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/context-menu-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/context-menu-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/context-menu-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/context-menu-cs1" %}

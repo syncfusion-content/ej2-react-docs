@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Style in React Dashboard layout component | Syncfusion
-description: Learn here all about Style in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Style in React Dashboard Layout  component | Syncfusion
+description: Learn here all about Style in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Dashboard layout component
+# Style in React Dashboard Layout  component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preferences.
 
-## Customizing the Dashboard layout panel header
+## Customizing the Dashboard Layout  panel header
 
-Use the following CSS to customize the dashboard layout panel header.
+Use the following CSS to customize the Dashboard Layout  panel header.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
@@ -24,9 +24,9 @@ Use the following CSS to customize the dashboard layout panel header.
 }
 ```
 
-## Customizing the Dashboard layout panel content
+## Customizing the Dashboard Layout  panel content
 
-Use the following CSS to customize the dashboard layout panel content.
+Use the following CSS to customize the Dashboard Layout  panel content.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-content {
@@ -35,9 +35,9 @@ Use the following CSS to customize the dashboard layout panel content.
 }
 ```
 
-## Customizing the Dashboard layout panel resize icon
+## Customizing the Dashboard Layout  panel resize icon
 
-Use the following CSS to customize the dashboard layout resize icon.
+Use the following CSS to customize the Dashboard Layout  resize icon.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-resize.e-double{
@@ -48,9 +48,9 @@ Use the following CSS to customize the dashboard layout resize icon.
 }
 ```
 
-## Customizing the Dashboard layout panel background
+## Customizing the Dashboard Layout  panel background
 
-Use the following CSS to customize the dashboard layout panel background.
+Use the following CSS to customize the Dashboard Layout  panel background.
 
 ```css
 .e-dashboardlayout.e-control.e-responsive {

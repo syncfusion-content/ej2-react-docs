@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tooltip open or display modes in React Tooltip component
 
-The open mode property of the tooltip defines how it is triggered on a target element, such as by hovering, focusing, or clicking. Tooltip component has the following types of open mode:
+The open mode property of the Tooltip defines how it is triggered on a target element, such as by hovering, focusing, or clicking. Tooltip component has the following types of open mode:
 
 * Auto
 * Hover

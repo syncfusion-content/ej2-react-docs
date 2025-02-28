@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ej1 api migration in React Range slider component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
+title: Ej1 api migration in React Range Slider component | Syncfusion
+description: Learn here all about Ej1 api migration in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
@@ -24,7 +24,7 @@ This article describes the API migration process of the Slider component from Es
 | Tooltip | **Property:**  *showTooltip*  <br  /> `<SliderComponent id='slider' value={30} showTooltip={true} />`| **Property:**  *tooltip*  <br  /> `public tooltip = { placement: ‘Before’, isVisible: true, showOn: ‘Always’ };` <br/><br/> `<SliderComponent id='slider' tooltip={this.tooltip} />` |
 | RTL | **Property:**  *enableRTL*  <br  /> `<SliderComponent id='slider' value={30} enableRTL={true} />` | **Property:**  *enableRtl*  <br  /> `<SliderComponent id='slider' enableRtl={false} />` |
 | Custom values | **Not Applicable** | **Property:**  *customValues*  <br  /> `public customValues = [‘Mon’, ‘Tue’, ‘Wed’];` <br/><br/> `<SliderComponent id='slider' customValues={this.customValues} />` |
-| Limit the slider movement | **Not Applicable** | **Property:**  *limits*  <br  /> `public limits = { enabled: true, minStart: 10, minEnd: 40 };` <br/><br/> `<SliderComponent id='slider' type='MinRange' limits={this.limits} />`|
+| Limit the Slider movement | **Not Applicable** | **Property:**  *limits*  <br  /> `public limits = { enabled: true, minStart: 10, minEnd: 40 };` <br/><br/> `<SliderComponent id='slider' type='MinRange' limits={this.limits} />`|
 | Disable | **Method:**  *disable*  <br  /> `<SliderComponent id='slider' value={30}  />` <br/> <br/> `public sliderObj = ${"#slider"}.ejSlider("instance");` <br/> `sliderObj.disable();` | **Property:**  *enabled*  <br  /> `<SliderComponent id='slider' enable={false} value={50} />` |
 | Enable | **Method:**  *enable*  <br  /> `<SliderComponent id='slider' value={30}  />` <br/> <br/> `public sliderObj = ${"#slider"}.ejSlider("instance");` <br/> `sliderObj.enable();` | **Property:**  *enabled*  <br  /> `<SliderComponent id='slider' enable={true} value={50} />`|
 | Set Value | **Method:**  *setValue(value ,[enableAnimation])*  <br  /> `<SliderComponent id='slider' value={30}  />` <br/> <br/> `public sliderObj = ${"#slider"}.ejSlider("instance");` <br/> `sliderObj.setValue(50);` | **Property:**  *value*  <br  /> `<SliderComponent id='slider' value={this.state.value} />` <br/><br/> `this.setState({value: 100});` |

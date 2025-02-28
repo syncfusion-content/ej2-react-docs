@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Sidebar with variation animation in React Sidebar component
 
-In the following example, the sidebar is rendered with custom animation effects. Click the buttons available in the main content area to check how the custom animations works with sidebar.
+In the following example, the Sidebar is rendered with custom animation effects. Click the buttons available in the main content area to check how the custom animations works with sidebar.
 
 Sidebar will automatically adjust expanding animation to match any custom size specified in `CSS` styles.
 

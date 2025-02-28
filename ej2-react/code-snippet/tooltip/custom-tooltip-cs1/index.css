@@ -24,9 +24,6 @@
     user-select: none;
 }
 
-
-/* csslint ignore:start */
-
 .customtooltip.e-tooltip-wrap .e-tip-content {
     line-height: 20px;
 }
@@ -102,5 +99,3 @@
     color: #fff;
     font-size: 25.9px;
 }
-
-/* csslint ignore:end */

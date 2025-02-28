@@ -38,48 +38,48 @@ function App() {
     }
     return (<div id='container'>
         <div className="inline" id="control">
-        <DashboardLayoutComponent id='dashboard_layout' ref={s => (dashboardObj = s)} cellSpacing={cellSpacing} panels={panels} allowResizing={true} columns={5} resizableHandles={resize}/>
+            <DashboardLayoutComponent id='dashboard_layout' ref={s => (dashboardObj = s)} cellSpacing={cellSpacing} panels={panels} allowResizing={true} columns={5} resizableHandles={resize}/>
         </div>
         <div className="inline" id="properties">
             <table>
-            <tbody>
-                <tr>
-                    <td>SizeX</td>
-                    <td> <NumericTextBoxComponent ref={s => (sizeXObj = s)} className="col-sm-4" placeholder={"Ex: 10"} value={1} min={1} max={5} floatLabelType="Never" id="sizeX"/></td>
-                </tr>
-                <tr>
-                    <td>SizeY</td>
-                    <td> <NumericTextBoxComponent ref={s => (sizeYObj = s)} className="col-sm-4" placeholder={"Ex: 10"} value={1} min={1} max={5} floatLabelType="Never" id="sizeY"/></td>
-                </tr>
-                <tr>
-                    <td>Row</td>
-                    <td> <NumericTextBoxComponent ref={s => (rowObj = s)} className="col-sm-4" placeholder={"Ex: 10"} value={0} min={0} max={5} floatLabelType="Never" id="row"/></td>
-                </tr>
-                <tr>
-                    <td>Column</td>
-                    <td> <NumericTextBoxComponent ref={s => (colsObj = s)} className="col-sm-4" placeholder={"Ex: 10"} value={0} min={0} max={4} floatLabelType="Never" id="column"/></td>
-                </tr>
-                <tr>
-                    <td />
-                    <td>
-                        <button onClick={onAdd}>Add Panel</button>
-                    </td>
-                </tr>
-            </tbody>
+                <tbody>
+                    <tr>
+                        <td>SizeX</td>
+                        <td> <NumericTextBoxComponent ref={s => (sizeXObj = s)} className="col-sm-4" placeholder={"Ex: 10"} value={1} min={1} max={5} floatLabelType="Never" id="sizeX"/></td>
+                    </tr>
+                    <tr>
+                        <td>SizeY</td>
+                        <td> <NumericTextBoxComponent ref={s => (sizeYObj = s)} className="col-sm-4" placeholder={"Ex: 10"} value={1} min={1} max={5} floatLabelType="Never" id="sizeY"/></td>
+                    </tr>
+                    <tr>
+                        <td>Row</td>
+                        <td> <NumericTextBoxComponent ref={s => (rowObj = s)} className="col-sm-4" placeholder={"Ex: 10"} value={0} min={0} max={5} floatLabelType="Never" id="row"/></td>
+                    </tr>
+                    <tr>
+                        <td>Column</td>
+                        <td> <NumericTextBoxComponent ref={s => (colsObj = s)} className="col-sm-4" placeholder={"Ex: 10"} value={0} min={0} max={4} floatLabelType="Never" id="column"/></td>
+                    </tr>
+                    <tr>
+                        <td />
+                        <td>
+                            <button onClick={onAdd}>Add Panel</button>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
             <table>
-            <tbody>
-                <tr>
-                    <td>Id</td>
-                    <td> <DropDownListComponent ref={s => (paneObj = s)} className="col-sm-4" placeholder={"panel id"} dataSource={data} floatLabelType="Never" id="panel_id"/></td>
-                </tr>
-                <tr>
-                    <td />
-                    <td>
-                        <button onClick={onRemove}>Remove Panel</button>
-                    </td>
-                </tr>
-            </tbody>
+                <tbody>
+                    <tr>
+                        <td>Id</td>
+                        <td> <DropDownListComponent ref={s => (paneObj = s)} className="col-sm-4" placeholder={"panel id"} dataSource={data} floatLabelType="Never" id="panel_id"/></td>
+                    </tr>
+                    <tr>
+                        <td />
+                        <td>
+                            <button onClick={onRemove}>Remove Panel</button>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>);

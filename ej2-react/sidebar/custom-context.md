@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 By default, Sidebar initializes target to the body element. Using the [target](https://ej2.syncfusion.com/react/documentation/api/sidebar/#target) property, set target element to initialize the Sidebar inside any HTML element apart from the body element.
 
-> If required , `zIndex` can be set when sidebar act as overlay type.
+> If required , [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#zindex) can be set when Sidebar act as overlay type.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -26,6 +26,12 @@ By default, Sidebar initializes target to the body element. Using the [target](h
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/contextTo-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/sidebar/contextTo-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/contextTo-cs1/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

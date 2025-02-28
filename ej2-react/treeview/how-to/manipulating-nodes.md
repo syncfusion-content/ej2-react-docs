@@ -31,6 +31,12 @@ The [`addNodes`](https://ej2.syncfusion.com/react/documentation/api/treeview/#ad
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/manipulating-nodes-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/manipulating-nodes-cs1" %}
@@ -45,6 +51,12 @@ The TreeView [`removeNodes`](https://ej2.syncfusion.com/react/documentation/api/
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/manipulating-nodes-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs2/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs2/style.css %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,6 +73,12 @@ The TreeView component has the [`updateNode`](https://ej2.syncfusion.com/react/d
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/manipulating-nodes-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs3/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs3/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/manipulating-nodes-cs3" %}
@@ -76,6 +94,12 @@ The [`refreshNode`](https://ej2.syncfusion.com/react/documentation/api/treeview/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/manipulating-nodes-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs4/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs4/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/manipulating-nodes-cs4" %}
@@ -90,6 +114,12 @@ The [`moveNodes`](https://ej2.syncfusion.com/react/documentation/api/treeview/#m
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/manipulating-nodes-cs5/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs5/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/manipulating-nodes-cs5/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,7 +22,6 @@
 
 .e-add-icon::before {
     content: "\e109";
-    color: white;
     font-size: 13px;
     font-family: 'e-listview-icons';
 }

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Summary in React Dashboard layout component | Syncfusion
-description: Learn here all about Summary in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Summary in React Dashboard Layout  component | Syncfusion
+description: Learn here all about Summary in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
 control: Summary 
 platform: ej2-react
 documentation: ug

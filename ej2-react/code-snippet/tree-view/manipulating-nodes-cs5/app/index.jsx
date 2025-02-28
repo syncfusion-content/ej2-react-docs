@@ -17,7 +17,7 @@ function App() {
         { id: 9, pid: 7, name: 'Child 2' },
         { id: 10, pid: 7, name: 'Child 3' },
     ];
-    let fields = { dataSource: localData, id: 'id', text: 'name', child: 'subChild' };
+    let fields = { dataSource: localData, id: 'id', text: 'name', parentID: 'pid', hasChildren: 'hasChild' };
     const btnClick1 = () => {
         treeObj.moveNodes(['2'], '3', 1); // Move the node with id 2 to the target node with id 3 to the index of 1.
       };

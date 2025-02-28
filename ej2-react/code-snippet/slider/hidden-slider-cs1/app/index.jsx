@@ -22,7 +22,7 @@ function App() {
         args.text = new Date(totalMiliSeconds).toLocaleTimeString("en-us", custom);
     }
     function onClick() {
-        const slider = document.getElementById("case");
+        const Slider = document.getElementById("case");
         if (slider) {
             slider.style.display = "block";
             sliderInstance.refresh();

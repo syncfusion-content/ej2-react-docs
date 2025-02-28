@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Setting size of cells in React Dashboard layout component | Syncfusion
-description: Learn here all about Setting size of cells in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Setting cell size in React Dashboard Layout  component | Syncfusion
+description: Learn here all about Setting size of cells in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
 control: Setting size of cells 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Setting size of cells in React Dashboard layout component
+# Setting size of cells in React Dashboard Layout  component
 
 The entire layout dimensions are assigned based on the height and width of the parent element. Thus, a responsive or static layout can be created by assigning a percentage or static dimension values to the parent element. The layout adapts to mobile resolutions by transforming the entire layout into a stacked orientation, so that, the panels will be displayed in a vertical column.
 

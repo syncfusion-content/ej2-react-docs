@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Color customization
 
-The avatar comes with default background color (Grey). This can be easily customized to the desired color by adding custom class or directly selecting the avatar class from the CSS.
+The Avatar comes with default background color (Grey). This can be easily customized to the desired color by adding custom class or directly selecting the Avatar class from the CSS.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,9 +31,9 @@ The avatar comes with default background color (Grey). This can be easily custom
 
  {% previewsample "page.domainurl/code-snippet/avatar/color-cs1" %}
 
-## Customize avatar sizes
+## Customize Avatar sizes
 
-Even though the avatar comes with five predefined sizes, sometimes it's not enough. So, the avatar is designed in such a way that the width and height will be relative to font-size. By changing the `font-size` of the avatar element, you can change the width and height automatically.
+Even though the Avatar comes with five predefined sizes, sometimes it's not enough. So, the Avatar is designed in such a way that the width and height will be relative to font-size. By changing the `font-size` of the Avatar element, you can change the width and height automatically.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -73,10 +73,10 @@ Avatars can be used with a wide variety of media formats like SVG, font-icons, i
 
  {% previewsample "page.domainurl/code-snippet/avatar/media-formats-cs1" %}
 
-## Dynamic avatar rendering from datasource
+## Dynamic Avatar rendering from datasource
 
-We can render the avatar component dynamically from a data-source. In this sample we have rendered the avatar component
-using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the avatar using `CSS` property `background-image` and using image tag.
+We can render the Avatar component dynamically from a data-source. In this sample we have rendered the Avatar component
+using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the Avatar using `CSS` property `background-image` and using image tag.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

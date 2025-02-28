@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ticks in React Range slider component | Syncfusion
-description: Learn here all about Ticks in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
+title: Ticks in React Range Slider component | Syncfusion
+description: Learn here all about Ticks in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
 control: Ticks 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ticks in React Range slider component
+# Ticks in React Range Slider component
 
 The Ticks in Slider help you to easily identify the current value/values of the Slider. It includes [`smallStep`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#largestep). The value of the major ticks alone will be displayed in the slider. To enable or disable the small ticks, use the [`showSmallTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#showsmallticks) property.
 
@@ -52,7 +52,7 @@ When the Slider is moved, it increases or decreases the value based on the step 
 
 ## Min and Max
 
-Sets the minimum (starting) and maximum (ending) values of the Slider, by using the [`min`](https://ej2.syncfusion.com/react/documentation/api/slider/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/slider/#max) property. By default, the minimum value is 1 and the maximum value is 100. In the following example, the slider is rendered with the min value as 100 and max value as 1000.
+Sets the minimum (starting) and maximum (ending) values of the Slider, by using the [`min`](https://ej2.syncfusion.com/react/documentation/api/slider/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/slider/#max) property. By default, the minimum value is 1 and the maximum value is 100. In the following example, the Slider is rendered with the min value as 100 and max value as 1000.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Check uncheck the checkbox on clicking the tree node text in React TreeView component | Syncfusion
+title: Toggle checkbox on text click in React TreeView component | Syncfusion
 description: Learn here all about Check uncheck the checkbox on clicking the tree node text in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
 control: Check uncheck the checkbox on clicking the tree node text 
 platform: ej2-react
@@ -18,6 +18,12 @@ You can check and uncheck the checkboxes of tree view by clicking the tree node 
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/treeview-check-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/treeview-check-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/treeview-check-cs1/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

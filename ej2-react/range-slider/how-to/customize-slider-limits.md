@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize slider limits in React Range slider component | Syncfusion
-description: Learn here all about Customize slider limits in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
-control: Customize slider limits 
+title: Customize Slider limits in React Range Slider component | Syncfusion
+description: Learn here all about Customize Slider limits in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+control: Customize Slider limits 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize slider limits in React Range slider component
+# Customize Slider limits in React Range Slider component
 
-The Slider appearance can be customized using CSS. You can customize the slider limit bar by overriding the slider CSS classes.
+The Slider appearance can be customized using CSS. You can customize the Slider limit bar by overriding the Slider CSS classes.
 
    ```css
     .e-slider-container.e-horizontal .e-limits {
@@ -18,7 +18,7 @@ The Slider appearance can be customized using CSS. You can customize the slider 
    }
   ```
 
-In this example, the limit bar is customized with a different background color. By default, the slider uses the class `e-limits` for the limit bar.
+In this example, the limit bar is customized with a different background color. By default, the Slider uses the class `e-limits` for the limit bar.
 You can override this class with your own color values as shown in the following example.
 
 {% tabs %}

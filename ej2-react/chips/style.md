@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on user preferences.
 
-## Customizing the chip text
+## Customizing the Chip text
 
-Use the following CSS to customize the chip text properties.
+Use the following CSS to customize the Chip text properties.
 
 ```css
 .e-chip .e-chip-text {
@@ -24,9 +24,9 @@ Use the following CSS to customize the chip text properties.
 }
 ```
 
-## Customizing the chip icon
+## Customizing the Chip icon
 
-Use the following CSS to customize the chip icon properties.
+Use the following CSS to customize the Chip icon properties.
 
 ```css
 .e-chip .e-icon {
@@ -35,9 +35,9 @@ Use the following CSS to customize the chip icon properties.
 }
 ```
 
-## Customizing the chip delete button
+## Customizing the Chip delete button
 
-Use the following CSS to customize the chip delete button appearance.
+Use the following CSS to customize the Chip delete button appearance.
 
 ```css
 .e-chip-list .e-chip .e-chip-delete.e-dlt-btn {
@@ -46,9 +46,9 @@ Use the following CSS to customize the chip delete button appearance.
 }
 ```
 
-## Customizing the chip outline
+## Customizing the Chip outline
 
-Use the following CSS to customize the chip outline.
+Use the following CSS to customize the Chip outline.
 
 ```css
 .e-chip-list .e-chip.e-outline {
@@ -57,27 +57,27 @@ Use the following CSS to customize the chip outline.
 }
 ```
 
-## Customizing the chip on selection
+## Customizing the Chip on selection
 
-Use the following CSS to customize the chip on selection.
+Use the following CSS to customize the Chip on selection.
 
 ```css
-/* To customize single chip on selection */
+/* To customize single Chip on selection */
 .e-chip-list.e-selection .e-chip.e-active {
     background-color: #ffca1c;
     color: #e3165b;
 }
 
-/* To customize multiple chip on selection */
+/* To customize multiple Chip on selection */
 .e-chip-list .e-chip.e-active {
     background-color: #e3165b;
     color: white;
 }
 ```
 
-## Customizing the chip avatar text
+## Customizing the Chip avatar text
 
-Use the following CSS to customize the chip avatar text properties.
+Use the following CSS to customize the Chip avatar text properties.
 
 ```css
 .e-chip-list .e-chip .e-chip-avatar {

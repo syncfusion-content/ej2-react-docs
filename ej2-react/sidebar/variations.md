@@ -16,7 +16,7 @@ The Sidebar component's expand behavior can be modified based on the purpose of 
 
 ## Expanding types of Sidebar
 
-Sidebar can be set to initialize based on four different types that are consistent with the main component as explained below. When `dataBind` is invoked, this applies the pending property changes immediately to the component.
+Sidebar can be set to initialize based on four different types that are consistent with the main component as explained below. When [`dataBind`](https://ej2.syncfusion.com/documentation/api/sidebar#databind) is invoked, this applies the pending property changes immediately to the component.
 
  | Item | Description |
 |-----|-----|
@@ -42,11 +42,17 @@ In the following sample, the types of Sidebar are demonstrated.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/sidebar/variations-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/sidebar/variations-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/variations-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/sidebar/variations-cs1" %}
 
 ## See Also
 
-* [How to add sidebar with custom animation](./how-to/sidebar-with-variation-animation)
+* [How to add Sidebar with custom animation](./how-to/sidebar-with-variation-animation)
 * [How to add multiple sidebar](./how-to/multiple-sidebar)

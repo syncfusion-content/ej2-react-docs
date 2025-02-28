@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple sidebar in React Sidebar component | Syncfusion
-description: Learn here all about Multiple sidebar in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
-control: Multiple sidebar 
+title: Multiple Sidebar in React Sidebar component | Syncfusion
+description: Learn here all about Multiple Sidebar in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+control: Multiple Sidebar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple sidebar in React Sidebar component
+# Multiple Sidebar in React Sidebar component
 
 Two Sidebars can be initialized in a web page with same main content. Sidebars can be initialized on right side or left side of the main content using [position](https://ej2.syncfusion.com/react/documentation/api/sidebar/#position) property.
 
@@ -21,6 +21,15 @@ Sidebars will behave as side content to this main content area.
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/sidebar/multiple-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/sidebar/multiple-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/sidebar/multiple-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/sidebar/multiple-cs1/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

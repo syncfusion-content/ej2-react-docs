@@ -57,9 +57,7 @@ npm install @syncfusion/ej2-layouts --save
 
 ## Adding CSS Reference
 
-The Avatar CSS files are available in the `ej2-layouts` package folder. This can be referenced in your application using the following code.
-
-`src/App.css`
+The Avatar CSS files are available in the `ej2-layouts` package folder. This can be referenced in your application using the following code in `src/App.css`.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
