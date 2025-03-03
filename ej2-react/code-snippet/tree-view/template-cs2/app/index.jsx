@@ -39,8 +39,14 @@ function App() {
   }
   return (
     <div>
-      <TreeViewComponent cssClass={cssClass} fields={fields} nodeTemplate={nodeTemplate} nodeSelected={(args) => setSlectedItem(args.nodeData)} statelessTemplates={['nodeTemplate']} />
-      <pre>Node name: {selectedItem?.text}</pre>
+      <TreeViewComponent 
+        cssClass={cssClass} 
+        fields={fields} 
+        nodeTemplate={nodeTemplate} 
+        nodeSelected={(args) => setSlectedItem(args.nodeData)} 
+        statelessTemplates={['nodeTemplate']} 
+      />
+        <pre>Node name: {selectedItem?.name}</pre>
     </div>
   );
 }

@@ -19,8 +19,11 @@ By enabling the [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/remove-parent-checkbox-cs1/app/index.tsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.css" %}
+{% highlight ts tabtitle="style.css" %}
 {% include code-snippet/tree-view/remove-parent-checkbox-cs1/style.css %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tree-view/remove-parent-checkbox-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

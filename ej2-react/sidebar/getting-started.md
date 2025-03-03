@@ -228,7 +228,7 @@ Positioning the Sidebar to the right or left of the main content can be achieved
 
 ## Animate
 
-Animation transitions can be set while expanding or collapsing the Sidebar using the [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property. By default , [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property is set to true. The [`enableRTL`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablertl) will display the sidebar in the right-to-left direction.
+Animation transitions can be set while expanding or collapsing the Sidebar using the [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property. By default , [`animate`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#animate) property is set to true. The [`enableRTL`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablertl) will display the Sidebar in the right-to-left direction.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -282,7 +282,7 @@ Sidebar can be closed on document click by setting [`closeOnDocumentClick`](http
 
 ## Enable gestures
 
-Expand or collapse the Sidebar while swiping in touch devices using `enableGestures` property. By default, `enableGestures` is set to true.
+Expand or collapse the Sidebar while swiping in touch devices using [`enableGestures`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enablegestures) property. By default, `enableGestures` is set to true.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

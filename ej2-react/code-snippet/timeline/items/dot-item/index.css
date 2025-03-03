@@ -9,8 +9,9 @@
 }
 
 .e-dot.custom-image {
-  background-image: url('./dot-image.png');
+  background-image: url(https://ej2.syncfusion.com/demos/src/listview/images/margaret.png);
 }
+
 .e-dot.custom-text::before {
   content: 'A';
 }

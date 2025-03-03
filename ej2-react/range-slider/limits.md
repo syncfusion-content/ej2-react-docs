@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Limits in React Range slider component | Syncfusion
-description: Learn here all about Limits in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
+title: Limits in React Range Slider component | Syncfusion
+description: Learn here all about Limits in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
 control: Limits 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Limits in React Range slider component
+# Limits in React Range Slider component
 
-The slider limits restrict the slider thumb between a particular range. This is used if higher or lower value affect the process or product where the slider is being used.
+The Slider limits restrict the Slider thumb between a particular range. This is used if higher or lower value affect the process or product where the Slider is being used.
 
 The following are the six options in the slider's limits object. Each API in the limits object is optional.
 
-*[`enabled`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#enabled): Enables the limits in the Slider.
+* [`enabled`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#enabled): Enables the limits in the Slider.
 * [`minStart`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#minstart): Sets the minimum limit for the first handle.
 * [`minEnd`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#minend): Sets the maximum limit for the first handle.
 * [`maxStart`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#maxstart): Sets the minimum limit for the second handle.
@@ -88,8 +88,8 @@ In the range slider, both handles can be restricted and locked from the limit's 
 
 ## Handle lock
 
-The movement of slider handles can be locked by enabling the [`startHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#starthandlefixed) and [`endHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#endhandlefixed) properties in the limits object.
-In this example, the movements of both slider handles have been locked.
+The movement of Slider handles can be locked by enabling the [`startHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#starthandlefixed) and [`endHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#endhandlefixed) properties in the limits object.
+In this example, the movements of both Slider handles have been locked.
 
 ```ts
 

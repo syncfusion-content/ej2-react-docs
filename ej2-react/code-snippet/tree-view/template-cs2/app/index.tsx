@@ -1,10 +1,10 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { useState } from 'react';
+import * as ReactDOM from 'react-dom';
 import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 
 function App() {
-  const [selectedItem, setSlectedItem] = useState();
+  const [selectedItem, setSelectedItem] = React.useState<any>(undefined);
   let templateData: { [key: string]: Object }[] = [
     { id: 1, name: "Favorites", hasChild: true },
     { id: 2, pid: 1, name: "Sales Reports", count: "4" },
@@ -41,8 +41,14 @@ function App() {
   }
   return (
     <div>
-      <TreeViewComponent cssClass={cssClass} fields={fields} nodeTemplate={nodeTemplate} nodeSelected={(args: any) => setSlectedItem(args.nodeData)} statelessTemplates={['nodeTemplate']} />
-      <pre>Node name: {selectedItem?.text}</pre>
+      <TreeViewComponent 
+        cssClass={cssClass} 
+        fields={fields} 
+        nodeTemplate={nodeTemplate} 
+        nodeSelected={(args: any) => setSelectedItem(args.nodeData)} 
+        statelessTemplates={['nodeTemplate']} 
+      />
+      <pre>Node name: {selectedItem?.name}</pre>
     </div>
 
   );

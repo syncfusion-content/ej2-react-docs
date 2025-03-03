@@ -27,6 +27,12 @@ In the following example, the `allowMultiSelection` property is enabled.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs10/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs10/index.hmtl %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs10/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs10" %}
@@ -47,6 +53,12 @@ In the following example, **New South Wales** and **Western Australia** nodes ar
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs11/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs11/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs11/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

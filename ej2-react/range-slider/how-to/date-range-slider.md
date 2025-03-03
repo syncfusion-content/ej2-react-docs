@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date range slider in React Range slider component | Syncfusion
-description: Learn here all about Date range slider in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
-control: Date range slider 
+title: Date range Slider in React Range Slider component | Syncfusion
+description: Learn here all about Date range Slider in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+control: Date range Slider 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date range slider in React Range slider component
+# Date range Slider in React Range Slider component
 
 Date formatting can be achieved in [`ticks`](https://ej2.syncfusion.com/react/documentation/api/slider/#ticks) and [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltip) using [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltipchange) events respectively. The process of formatting is demonstrated in the example below.
 

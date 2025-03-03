@@ -151,7 +151,7 @@ The output will be as follows:
 
 ## Initialize Tooltip within a container
 
-You can create Tooltips on multiple targets within a container. To do so, you have to define specific target elements to the `target` property so that the Tooltip is initialized only on matched targets within a container. In this case, the Tooltip content is assigned from the `title` attribute of the target element.
+You can create Tooltips on multiple targets within a container. To do so, you have to define specific target elements to the [`target`](https://helpej2.syncfusion.com/react/documentation/api/tooltip#target) property so that the Tooltip is initialized only on matched targets within a container. In this case, the Tooltip content is assigned from the `title` attribute of the target element.
 
 Refer to the following code example to create a Tooltip on multiple targets within a container.
 

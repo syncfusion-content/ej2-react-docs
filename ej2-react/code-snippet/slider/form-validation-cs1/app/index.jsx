@@ -63,23 +63,23 @@ function App() {
     formRangeObj = new FormValidator("#formRangeId", rangeOptions);
     formCustomObj = new FormValidator("#formCustomId", customOptions);
     function onMinChanged(args) {
-        // validate the slider value in the form
+        // validate the Slider value in the form
         formMinObj.validate();
     }
     function onMaxChanged(args) {
-        // validate the slider value in the form
+        // validate the Slider value in the form
         formMaxObj.validate();
     }
     function onValChanged(args) {
-        // validate the slider value in the form
+        // validate the Slider value in the form
         formValObj.validate();
     }
     function onRangeChanged(args) {
-        // validate the slider value in the form
+        // validate the Slider value in the form
         formRangeObj.validate();
     }
     function onCustomChanged(args) {
-        // validate the slider value in the form
+        // validate the Slider value in the form
         formCustomObj.validate();
     }
     let SliderCustomObj;

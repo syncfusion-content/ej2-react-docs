@@ -35,7 +35,7 @@ function App() {
         </TooltipComponent>
       </div>
       <div style={position}>
-        <TooltipComponent content='Tooltip Content' target='#tooltip' style={inline} ref={d => tooltip = d} >
+        <TooltipComponent content='Tooltip Content' target='#tooltip' style={inline} ref={d =>tooltip = d} >
           <button className="e-btn" id="tooltip" style={margin}>Show Tooltip</button>
         </TooltipComponent>
         <div className="switchContainer">

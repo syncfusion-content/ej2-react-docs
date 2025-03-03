@@ -1,16 +1,16 @@
 ---
 layout: post
-title: State maintenance in React Dashboard layout component | Syncfusion
-description: Learn here all about State maintenance in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: State maintenance in React Dashboard Layout  component | Syncfusion
+description: Learn here all about State maintenance in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
 control: State maintenance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State maintenance in React Dashboard layout component
+# State maintenance in React Dashboard Layout  component
 
-The current layout structure of the Dashboard Layout component can be obtained and saved to construct another dashboard with the same panel structure using the [serialize](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#serialize) public method of the component. This method returns the component's current panel settings which can be used to construct a dashboard with the same layout settings.
+The current layout structure of the Dashboard Layout component can be obtained and saved to construct another Dashboard with the same panel structure using the [serialize](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#serialize) public method of the component. This method returns the component's current panel settings which can be used to construct a Dashboard with the same layout settings.
 
 The following sample demonstrates how to save and restore the state of the panels using the serialize method. Click Save to store the panel's settings and click Restore to restore the previously saved panel settings.
 

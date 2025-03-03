@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Drag and Move Panels in React Dashboard Layout | Syncfusion
-description: Learn here all about Dragging moving of panels in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Dragging moving of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
 control: Dragging moving of panels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dragging moving of panels in React Dashboard layout component
+# Dragging moving of panels in React Dashboard Layout  component
 
 The Dashboard Layout component provides dragging functionality to drag and reorder panels within the layout. While dragging a panel, a holder will be highlighted below the panel indicating the panel placement on panel drop. This helps the user to decide whether to place the panel in the current position or revert to previous position without disturbing the layout.
 
 If one or more panels collide while dragging, then the colliding panels will be pushed towards the left or right or top or bottom direction where an adaptive space for the collided panel is available. The position changes of these collided panels will be updated dynamically during dragging of a panel, so the user can conclude whether to place the panel in the current position or not.
 
-While dragging a panel in Dashboard layout the following dragging events will be triggered,
+While dragging a panel in Dashboard Layout  the following dragging events will be triggered,
 * [dragStart](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#dragstart) - Triggers when panel dragging starts
 * [drag](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#drag) - Triggers when panel is being dragged
 * [dragStop](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#dragstop) - Triggers when panel drag stops
@@ -93,7 +93,7 @@ The following sample demonstrates Dashboard Layout with dragging support disable
 {% include code-snippet/dashboard-layout/disable-dragging-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.css" %}
-{% include code-snippet/dashboard-layout/draggable-handler-cs1/App.css %}
+{% include code-snippet/dashboard-layout/disable-dragging-cs1/App.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/dashboard-layout/disable-dragging-cs1/index.html %}

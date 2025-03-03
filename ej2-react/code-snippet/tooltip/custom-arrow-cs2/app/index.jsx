@@ -20,9 +20,9 @@ function App() {
     bubble.dataBind();
   }
   return (<div id="container">
-    <TooltipComponent cssClass="curvetips e-tooltip-css" content="Tooltip arrow customized" target="#target" ref={d => tooltip = d}>
+    <TooltipComponent cssClass="curvetips e-tooltip-css" content="Tooltip arrow customized" target="#target" ref={d =>tooltip = d}>
       <TooltipComponent cssClass="bubbletip e-tooltip-css" content="Tooltip arrow customized as balloon tip" target="#bubbletip" position="TopRight" ref={d => bubble = d}>
-        <TooltipComponent cssClass="pointertip e-tooltip-css" mouseTrail={true} target="#tooltip" content="Disabled tooltip pointer" showTipPointer={false}>
+        <TooltipComponent cssClass="pointertip e-tooltip-css" mouseTrail={true} target="#tooltip" content="Disabled Tooltip pointer" showTipPointer={false}>
           <div id="customization" className="customTipContainer">
             <button className="e-btn" id="target">
               Customized Tip Arrow

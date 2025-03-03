@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Fancy tooltip customization in React Tooltip component | Syncfusion
-description: Learn here all about Fancy tooltip customization in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Fancy tooltip customization 
+title: Fancy Tooltip customization in React Tooltip component | Syncfusion
+description: Learn here all about Fancy Tooltip customization in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: Fancy Tooltip customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fancy tooltip customization in React Tooltip component
+# Fancy Tooltip customization in React Tooltip component
 
-The arrow of the tooltip can be customized as needed by customizing CSS on the sample side.
+The arrow of the Tooltip can be customized as needed by customizing CSS on the sample side.
 
-The React Tooltip component is styled using CSS3 and positions the tip arrow according to the tooltip positions such as `TopCenter`, `BottomLeft`, `RightTop`, and more.
+The React Tooltip component is styled using CSS3 and positions the tip arrow according to the Tooltip positions such as `TopCenter`, `BottomLeft`, `RightTop`, and more.
 
-Here, the tip arrow is customized as Curved tooltip and Bubble tooltip.
+Here, the tip arrow is customized as Curved Tooltip and Bubble tooltip.
 
 ## Curved tip
 
@@ -64,7 +64,7 @@ The two `divs` (inner div and outer div) have been added to achieve the bubble t
     }
 ```
 
-These tip arrow customizations are achieved through CSS changes at the sample level. The tooltip position can be changed using the radio button click event.
+These tip arrow customizations are achieved through CSS changes at the sample level. The Tooltip position can be changed using the radio button click event.
 
 The arrow tip pointer can also be disabled using the [`showTipPointer`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property of the tooltip.
 

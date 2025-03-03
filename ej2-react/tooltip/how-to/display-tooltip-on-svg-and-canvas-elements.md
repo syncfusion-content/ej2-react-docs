@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Display tooltip on svg and canvas elements in React Tooltip component | Syncfusion
-description: Learn here all about Display tooltip on svg and canvas elements in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Display tooltip on svg and canvas elements 
+title: Display Tooltip on svg and canvas elements in React Tooltip component | Syncfusion
+description: Learn here all about Display Tooltip on svg and canvas elements in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: Display Tooltip on svg and canvas elements 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display tooltip on svg and canvas elements in React Tooltip component
+# Display Tooltip on svg and canvas elements in React Tooltip component
 
 Tooltip can be displayed on both SVG and Canvas elements. You can attach tooltips directly to `<svg>` or `<canvas>` elements to display them on data visualization elements.
 
 ## SVG
 
-To render a tooltip on an SVG square, first create the SVG square element, then use the following code snippet.
+To render a Tooltip on an SVG square, first create the SVG square element, then use the following code snippet.
 
 ```ts
   <TooltipComponent content='SVG Square' cssClass='e-tooltip-css' target= '#square'>
@@ -23,7 +23,7 @@ To render a tooltip on an SVG square, first create the SVG square element, then 
 
 ## Canvas
 
-To render a tooltip on a Canvas circle, first create the canvas circle element, then use the following code snippet.
+To render a Tooltip on a Canvas circle, first create the canvas circle element, then use the following code snippet.
 
 ```ts
 <TooltipComponent content='Canvas Circle' cssClass='e-tooltip-css' target= '#circle'>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Range slider component | Syncfusion
-description:  Checkout and learn about Getting started with React Range slider component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Range Slider component | Syncfusion
+description:  Checkout and learn about Getting started with React Range Slider component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -170,7 +170,7 @@ contains two handles that is used to select a range of values and a shadow is co
 
 ### Orientation
 
-The Slider can be displayed, either in horizontal or vertical orientation. By default, the Slider renders in horizontal orientation.
+The Slider can be displayed, either in horizontal or vertical orientation using [`orientation`](https://helpej2.syncfusion.com/react/documentation/api/slider#orientation) property. By default, the Slider renders in horizontal orientation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -191,7 +191,7 @@ The Slider can be displayed, either in horizontal or vertical orientation. By de
 
 ### Tooltip
 
-The Slider displays the tooltip to indicate the current value by clicking the Slider bar or drag the Slider handle. The Tooltip position can be customized by using the `placement` property.
+The Slider displays the tooltip to indicate the current value by clicking the Slider bar or drag the Slider handle. The Tooltip position can be customized by using the [`placement`](https://helpej2.syncfusion.com/react/documentation/api/slider/tooltipDataModel/#placement) property.
 Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or clicking on the Slider handle and it always remains/displays on the page.
 
 {% tabs %}
@@ -208,9 +208,9 @@ Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or
 
 ### Buttons
 
-The Slider value can be changed by using the Increase and Decrease buttons. In Range Slider, by default the first handle value will be changed while clicking the button. Change the handle focus and press the button to change the last focused handle value.
+The Slider value can be changed by using the [`showButtons`](https://helpej2.syncfusion.com/react/documentation/api/slider#showbuttons) property to Increase and Decrease the values. In Range Slider, by default the first handle value will be changed while clicking the button. Change the handle focus and press the button to change the last focused handle value.
 
-> After enabling the slider buttons if the 'Tab' key is pressed, the focus goes to the handle
+> After enabling the Slider buttons if the 'Tab' key is pressed, the focus goes to the handle
 and not to the button.
 
 {% tabs %}

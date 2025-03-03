@@ -93,7 +93,7 @@ You can include images for the Timeline items using the `dotCss` property, by se
 
 ### Adding text
 
-You can display text for the Timeline items using the `dotCss` property, by adding text to the CSS `content` property.
+You can display text for the Timeline items using the `dotCss` property, by adding text to the CSS [`content`](https://helpej2.syncfusion.com/react/documentation/api/timeline/timelineItemModel/#content) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

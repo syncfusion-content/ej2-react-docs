@@ -43,7 +43,7 @@ function App() {
             cssClass="pointertip e-tooltip-css"
             mouseTrail={true}
             target="#tooltip"
-            content="Disabled tooltip pointer"
+            content="Disabled Tooltip pointer"
             showTipPointer={false}
           >
             <div id="customization" className="customTipContainer">

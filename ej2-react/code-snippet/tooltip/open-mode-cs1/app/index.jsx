@@ -44,7 +44,7 @@ function App() {
                     </td>
                     <td>
                         <TooltipComponent className="wrap" ref={t => tooltipInstance = t} opensOn='custom' content='Tooltip from custom mode'>
-                            <input id="box" type="button" className="e-btn" ref={d => buttonElement = d} onClick={handleClick.bind(this)} value="Click to open tooltip manually" />
+                            <input id="box" type="button" className="e-btn" ref={d => buttonElement = d} onClick={handleClick.bind(this)} value="Click to open Tooltip manually" />
                         </TooltipComponent>
                     </td>
                 </tr>

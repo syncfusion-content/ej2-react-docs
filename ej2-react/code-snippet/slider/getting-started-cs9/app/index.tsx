@@ -36,7 +36,7 @@ function App() {
       <div id='container'>
         <div className='wrap'>
           <SliderComponent id='slider' min={min} max={max} value={value} step={step}
-          tooltip={tooltip} ticks={ticks} showButtons={true} ref={(slider) => { defaultObj = slider }}
+          tooltip={tooltip} ticks={ticks} showButtons={true} ref={(slider) => { defaultObj = Slider }}
           tooltipChange={tooltipChangeHandler.bind(this)} renderingTicks={renderingTicksHandler.bind(this)} />
         </div>
     </div>

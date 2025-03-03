@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Resizing of panels in React Dashboard layout component | Syncfusion
-description: Learn here all about Resizing of panels in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Resizing of panels in React Dashboard Layout  component | Syncfusion
+description: Learn here all about Resizing of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
 control: Resizing of panels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing of panels in React Dashboard layout component
+# Resizing of panels in React Dashboard Layout  component
 
 The Dashboard Layout component is also provided with the panel resizing functionality which can be enabled or disabled by setting the [allowResizing](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#allowresizing) property. This functionality allows you to resize the panels dynamically through UI interactions using the resizing handlers which controls the panel resizing in various directions.
 
 By default, panels can be resized only in the south-east direction. However, panels can also be resized in east, west, north, south, and south-west directions by specifying the required directions with the [resizableHandles](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#resizablehandles) property.
 
-On resizing a panel in the Dashboard layout, the following events will be triggered,
+On resizing a panel in the Dashboard Layout , the following events will be triggered,
 * [resizeStart](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#resizestart) - Triggers when panel resize starts
 * [resize](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#resize) - Triggers when panel is being resized
 * [resizeStop](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#resizestop) - Triggers when panel resize stops
@@ -54,9 +54,9 @@ resizePanel(id, sizeX, sizeY)
 ```
 
 Where,
-* id - ID of the panel which needs to be resized.
-* sizeX - New panel width in cells count for resizing the panel.
-* sizeY - New panel height in cells count for resizing the panel.
+* [**id**](https://helpej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#id) - ID of the panel which needs to be resized.
+* [**sizeX**](https://helpej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#sizex) - New panel width in cells count for resizing the panel.
+* [**sizeY**](https://helpej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#sizey) - New panel height in cells count for resizing the panel.
 
 The following sample demonstrates how to resize panels programmatically in the Dashboard Layout's [created](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/#created) event.
 

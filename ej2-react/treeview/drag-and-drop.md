@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Drag and drop in React TreeView component
 
-The TreeView component allows you to drag and drop any node by setting [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowdraganddrop) &nbsp;to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
+The TreeView component allows you to drag and drop any node by setting [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowdraganddrop) to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
 
 The dragged nodes can be dropped at any level by indicator lines with **plus**, **minus/restrict**, and **in between** icons. It represents the exact position where the node is to be dropped as sibling or child.
 
@@ -37,13 +37,19 @@ In the following sample, the [allowDragAndDrop](https://ej2.syncfusion.com/react
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs6/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs6/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs6/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs6" %}
 
 ## Multiple-node drag and drop
 
-To drag and drop more than one node, you should enable the [allowMultiSelection](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowmultiselection) property along with the `allowDragAndDrop` property.
+To drag and drop more than one node, you should enable the [allowMultiSelection](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowmultiselection) property along with the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowdraganddrop) property.
 
 To perform multi-selection, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
 
@@ -55,6 +61,12 @@ In the following sample,  the `allowMultiSelection` property is  enabled along w
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs7/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs7/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs7/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

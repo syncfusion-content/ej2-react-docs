@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Panel Positioning and Sizing in React Dashboard Layout | Syncfusion
-description: Learn here all about Position sizing of panels in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Position sizing of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
 control: Position sizing of panels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position sizing of panels in React Dashboard layout component
+# Position sizing of panels in React Dashboard Layout  component
 
-Panels are the basic building blocks of the dashboard layout component. They act as a container for the data to be visualized or presented. These panels can be positioned or resized for an effective presentation of the data.
+Panels are the basic building blocks of the Dashboard Layout  component. They act as a container for the data to be visualized or presented. These panels can be positioned or resized for an effective presentation of the data.
 
 The following table represents all the available panel properties and the corresponding functionalities.
 
@@ -33,7 +33,7 @@ The following table represents all the available panel properties and the corres
 
 The panels within the layout can be easily positioned or ordered using the [row](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#row) and [col](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#col) properties of the panels. Positioning of panels is beneficial for representing data in any desired order.
 
-The following sample demonstrates the positioning of panels within the dashboard layout using the row and column properties of the panels.
+The following sample demonstrates the positioning of panels within the Dashboard Layout  using the row and column properties of the panels.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -62,7 +62,7 @@ The following sample demonstrates the positioning of panels within the dashboard
 
 A panel's size can be easily adjusted by defining the [sizeX](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#sizex) and [sizeY](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#sizey) properties. The `sizeX` property defines the width and the `sizeY` property defines the height of a panel in cell count. These properties are helpful in designing a dashboard, where the content of each panel may vary in size.
 
-The following sample demonstrates the sizing of panels within the dashboard layout using the sizeX and sizeY properties of the panels.
+The following sample demonstrates the sizing of panels within the Dashboard Layout  using the sizeX and sizeY properties of the panels.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

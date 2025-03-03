@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Data binding in React TreeView component
 
-The React TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through `dataSource` property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property. The `dataSource` property supports array of JavaScript objects and **DataManager**. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The React TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property. The `dataSource` property supports array of JavaScript objects and [**DataManager**](https://ej2.syncfusion.com/react/documentation/data/getting-started). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded,  loads the child nodes based on the `parentID/child` member.
 
-By default, the `loadOnDemand` is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself.
+By default, the [`loadOnDemand`](https://ej2.syncfusion.com/react/documentation/api/treeview#loadondemand) is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself.
 
 You can use the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/treeview/#databound) event to perform actions. This event will be triggered once the data source is populated in the TreeView.
 
 ## Local data
 
-To bind local data to the TreeView, you can assign a JavaScript object array to the `dataSource` property. The TreeView component requires three  fields (ID, text, and parentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`.
+To bind local data to the TreeView, you can assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property. The TreeView component requires three  fields (ID, text, and parentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started).
 It supports two kinds of local data binding methods.
 
 * Hierarchical data
@@ -29,7 +29,7 @@ It supports two kinds of local data binding methods.
 
 ### Hierarchical data
 
-TreeView can be populated with hierarchical data source that contains nested array of JSON objects. You can directly assign hierarchical data to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property, and map all the field members with corresponding keys from the hierarchical data to `fields` property.
+TreeView can be populated with hierarchical data source that contains nested array of JSON objects. You can directly assign hierarchical data to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property, and map all the field members with corresponding keys from the hierarchical data to [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property.
 
 In the following example, **code**, **name**, and **countries** columns from hierarchical data have been mapped to **id**, **child**, and **text** fields, respectively.
 
@@ -40,15 +40,21 @@ In the following example, **code**, **name**, and **countries** columns from hie
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs3/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs3/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs3/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs3" %}
 
 ### Self-referential data
 
-TreeView can be populated from self-referential data structure that contains array of JSON objects with `parentID` mapping.
+TreeView can be populated from self-referential data structure that contains array of JSON objects with [`parentID`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#parentid) mapping.
 
-You can directly assign self-referential data to the `dataSource` property, and map all the field members with corresponding keys from self-referential data to [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property.
+You can directly assign self-referential data to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property, and map all the field members with corresponding keys from self-referential data to [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property.
 
 To render the root level nodes, specify the parentID as null or no need to specify the parentID in `dataSource`.
 
@@ -61,18 +67,24 @@ In the following example, **ID**, **pid**, **hasChild**, and **name** columns fr
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs4/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs4/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs4/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs4" %}
 
 ## Remote data
 
-TreeView can also be populated from a remote data service with the help of `DataManager` component and
-`Query` property.
+TreeView can also be populated from a remote data service with the help of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) component and
+[`Query`](https://ej2.syncfusion.com/react/documentation/data/querying) property.
 
 It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
-You can assign service data as an instance of `DataManager` to the `dataSource` property. To interact with remote data source, you have to provide the endpoint `url`.
+You can assign service data as an instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property. To interact with remote data source, you have to provide the endpoint `url`.
 
 The `DataManager` that acts as an interface between the service endpoint and the TreeView requires the following information to interact with service endpoint properly.
 
@@ -102,6 +114,12 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs5/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs4/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs4/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

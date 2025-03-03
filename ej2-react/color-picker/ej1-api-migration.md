@@ -31,7 +31,7 @@ This article describes the API migration process of ColorPicker component from E
 | Show / hide the mode (picker / palette) switcher | **property**: *showSwitcher* <br/><br/> `<EJ.ColorPicker id="colorpicker" showSwitcher={false}></EJ.ColorPicker>` | **property:** *modeSwitcher* <br/><br/> `<ColorPickerComponent id="colorpicker" modeSwitcher={false}></ColorPickerComponent>` |
 | To show / hide the preview area | **property**: *showPreview* <br/><br/> `<EJ.ColorPicker id="colorpicker" showPreview={false}></EJ.ColorPicker>` | Not Applicable |
 | To show / hide the recent selected color list | **property**: *showRecentColors* <br/><br/> `<EJ.ColorPicker id="colorpicker" showRecentColors={true}></EJ.ColorPicker>` | Not Applicable |
-| To show / hide the color picker slider tooltip | **property**: *showTooltip* <br/><br/> `<EJ.ColorPicker id="colorpicker" showTooltip={false}></EJ.ColorPicker>` | Not Applicable |
+| To show / hide the color picker Slider tooltip | **property**: *showTooltip* <br/><br/> `<EJ.ColorPicker id="colorpicker" showTooltip={false}></EJ.ColorPicker>` | Not Applicable |
 | Custom icon in dropdown control color area | **property**: *toolIcon* <br/><br/> `<EJ.ColorPicker id="colorpicker" toolIcon="e-font-icon"></EJ.ColorPicker>` | Not Applicable |
 | ColorPicker mode |**property**: *modelType* <br/><br/> `<EJ.ColorPicker id="colorpicker" modelType="Picker"></EJ.ColorPicker>` | **property:** *mode* <br/><br/> `<ColorPickerComponent id="colorpicker" mode="Palette"></ColorPickerComponent>` |
 | Opacity value | **property**: *opacityValue* <br/><br/> `<EJ.ColorPicker id="colorpicker" opacityValue={80}></EJ.ColorPicker>` | Not Applicable |

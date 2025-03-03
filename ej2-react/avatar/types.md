@@ -43,15 +43,14 @@ The Essential JS 2 Avatar has the following predefined sizes that can be used wi
 
 ## Avatar types
 
-The types of Essential JS 2 avatar are:
+The types of Essential JS 2 Avatar are:
 
 * Default
 * Circle
 
 ### Default
 
-The default style of the avatar is rectangular shape with rounded corners, which can be applied from adding the modifier
-class `.e-avatar` to the target element.
+The default style of the Avatar is rectangular shape with rounded corners, which can be applied from adding the modifier class `.e-avatar` to the target element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +71,7 @@ class `.e-avatar` to the target element.
 
 ### Circle
 
-The circle avatar style can be applied by adding the modifier class `.e-avatar-circle` to the target element.
+The circle Avatar style can be applied by adding the modifier class `.e-avatar-circle` to the target element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -5,7 +5,7 @@ import { L10n } from '@syncfusion/ej2-base';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import * as React from "react";
 
-// Load French culture for Dialog close button tooltip text
+// Load French culture for Dialog close button Tooltip text
 L10n.load({
   'fr-BE': {
      'dialog': {

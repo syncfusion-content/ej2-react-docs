@@ -35,11 +35,11 @@ function App() {
                 </div>
                 <div className="title">Menu</div>
                 <div className='listdiv'>
-                    {/* Initializing the Listview inside the sidebar component */}
+                    {/* Initializing the Listview inside the Sidebar component */}
                     <ListViewComponent id="listview" dataSource={data} onClick={closeClick}/>
                 </div>
                 <div className="center-align">
-                    * ListView component is placed inside the sidebar content area.
+                    * ListView component is placed inside the Sidebar content area.
                 </div>
             </SidebarComponent>
             <div>

@@ -38,7 +38,7 @@ By default, Tooltips will not be displayed on disabled elements. However, it is 
 
 Tooltip loads HTML pages via HTML tags such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) property, which supports both string and HTML tags.
 
-To load an `iframe` element in tooltip, set the required iframe in the `content` of tooltip while initializing the tooltip component. Refer to the following code.
+To load an `iframe` element in tooltip, set the required iframe in the `content` of Tooltip while initializing the Tooltip component. Refer to the following code.
 
 ```ts
 
@@ -49,7 +49,7 @@ content: '<iframe src="https://www.syncfusion.com/products/essential-js2"></ifra
 Use the following steps to render `ej2-map` in tooltip:
 
 1. Initialize the map component and create an element. After initialization, append the map object to the element.
-2. Set the rendered map element to the content of tooltip component. Refer to the following sample.
+2. Set the rendered map element to the content of Tooltip component. Refer to the following sample.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -68,9 +68,9 @@ Use the following steps to render `ej2-map` in tooltip:
 
  {% previewsample "page.domainurl/code-snippet/tooltip/iframe-cs1" %}
 
-## Define tooltip open mode property
+## Define Tooltip open mode property
 
-The open mode property of tooltip can be defined on a target that is hovering, focusing, or clicking.
+The open mode property of Tooltip can be defined on a target that is hovering, focusing, or clicking.
 Tooltip component have the following types of open mode:
     * Auto
     * Hover
@@ -117,10 +117,10 @@ Tooltip is not triggered by any default action. So, bind your own events and use
 
 ## Customize tooltip
 
-The arrow of the tooltip can be customized as needed by customizing CSS in the sample-side.
-The EJ2 tooltip component is achieved through CSS3 format and positioned the tip arrow according to the tooltip positions like `TopCenter`, `BottomLeft`, `RightTop`, and more.
+The arrow of the Tooltip can be customized as needed by customizing CSS in the sample-side.
+The EJ2 Tooltip component is achieved through CSS3 format and positioned the tip arrow according to the Tooltip positions like `TopCenter`, `BottomLeft`, `RightTop`, and more.
 
-Here, the tip arrow is customized as Curved tooltip and Bubble tooltip.
+Here, the tip arrow is customized as Curved Tooltip and Bubble tooltip.
 
 ** Curved tip **
 
@@ -170,7 +170,7 @@ The two `divs`(inner div and outer div) have been added to achieve the bubble ti
     }
 ```
 
-These tip arrow customizations have been achieved through CSS changes in the sample level. The tooltip position can be changed by using the radio button click event.
+These tip arrow customizations have been achieved through CSS changes in the sample level. The Tooltip position can be changed by using the radio button click event.
 
 The arrow tip pointer can also be disabled by using the [showTipPointer](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property in a tooltip.
 
@@ -191,13 +191,13 @@ The arrow tip pointer can also be disabled by using the [showTipPointer](https:/
 
  {% previewsample "page.domainurl/code-snippet/tooltip/custom-arrow-cs1" %}
 
-## Display tooltip on SVG and canvas elements
+## Display Tooltip on SVG and canvas elements
 
 Tooltip can be displayed on both SVG and Canvas elements. You can directly attach the `<svg>` or `<canvas>` elements to show tooltips on data visualization elements.
 
 ** SVG **
 
-Create the SVG square element and refer to the following code snippet to render the tooltip on SVG square.
+Create the SVG square element and refer to the following code snippet to render the Tooltip on SVG square.
 
 ```ts
   <TooltipComponent content='SVG Square' cssClass='e-tooltip-css' target= '#square'>
@@ -206,7 +206,7 @@ Create the SVG square element and refer to the following code snippet to render 
 
 ** Canvas **
 
-Create the canvas circle element and refer to the following code snippet to render the tooltip on Canvas circle.
+Create the canvas circle element and refer to the following code snippet to render the Tooltip on Canvas circle.
 
 ```ts
 <TooltipComponent content='Canvas Circle' cssClass='e-tooltip-css' target= '#circle'>
@@ -230,9 +230,9 @@ Create the canvas circle element and refer to the following code snippet to rend
 
  {% previewsample "page.domainurl/code-snippet/tooltip/svg-canvas-cs1" %}
 
-## Create and show tooltip on multiple targets
+## Create and show Tooltip on multiple targets
 
-Tooltip can be created and shown on multiple targets within a container by defining the specific target elements to the target property. So, the tooltip is initialized only on matched targets within a container.
+Tooltip can be created and shown on multiple targets within a container by defining the specific target elements to the target property. So, the Tooltip is initialized only on matched targets within a container.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

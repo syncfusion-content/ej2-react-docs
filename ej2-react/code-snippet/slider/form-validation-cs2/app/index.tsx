@@ -1,12 +1,9 @@
 {% raw %}
 
-
-
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 import { FormValidator, FormValidatorModel } from '@syncfusion/ej2-inputs';
-import './index.css';
 
 function App() {
   React.useEffect(() => {
@@ -85,27 +82,27 @@ function App() {
   }
 
   function onMinChanged(): void {
-    // validate the slider value in the form
+    // validate the Slider value in the form
     formMinObj.validate();
   }
 
   function onMaxChanged(): void {
-    // validate the slider value in the form
+    // validate the Slider value in the form
     formMaxObj.validate();
   }
 
   function onValChanged(): void {
-    // validate the slider value in the form
+    // validate the Slider value in the form
     formValObj.validate();
   }
 
   function onRangeChanged() {
-    // validate the slider value in the form
+    // validate the Slider value in the form
     formRangeObj.validate();
   }
 
   function onCustomChanged() {
-    // validate the slider value in the form
+    // validate the Slider value in the form
     formCustomObj.validate();
   }
 
@@ -204,7 +201,7 @@ function App() {
                   ticks={ticks}
                   changed={onCustomChanged.bind(this)}
                   ref={slider => {
-                    SliderCustomObj = slider as any;
+                    SliderCustomObj = Slider as any;
                   }}
                 />
               </div>
