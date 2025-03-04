@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Qrcodegenerator in React Barcode component | Syncfusion
-description: Learn here all about Qrcodegenerator in Syncfusion React Barcode component of Syncfusion Essential JS 2 and more.
+title: Qrcodegenerator in React Barcode component | Syncfusion®
+description: Learn here all about Qrcodegenerator in Syncfusion® React Barcode component of Syncfusion Essential® JS 2 and more.
 control: Qrcodegenerator 
 platform: ej2-react
 documentation: ug
