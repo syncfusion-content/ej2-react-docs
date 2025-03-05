@@ -108,7 +108,7 @@ function App() {
     wintemplate = listTemplate;
   }
   return (<div>
-    <ListViewComponent id="List" ref={l => { list = l; }} dataSource={dataSource} fields={fields} headerTitle="Syncfusion Blog" showHeader={true} template={wintemplate} />
+    <ListViewComponent id="list" ref={l => { list = l; }} dataSource={dataSource} fields={fields} headerTitle="Syncfusion Blog" showHeader={true} template={wintemplate} />
   </div>);
 }
 export default App;

@@ -118,7 +118,7 @@ function App() {
   return (
     <div>
       <ListViewComponent
-        id="List"
+        id="list"
         ref={l => { list = l; }}
         dataSource={dataSource}
         fields={fields}

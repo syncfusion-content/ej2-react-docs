@@ -7,8 +7,7 @@ function App() {
     let data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     function listtemplate() {
         return (<img id="listImage" src="https://ej2.syncfusion.com/documentation/code-snippet/listview/grid-layout-cs1/apple.png" alt="apple" />);
-    }
-    ;
+    };
     return (<ListViewComponent id='list' dataSource={data} template={listtemplate}>
     </ListViewComponent>);
 }

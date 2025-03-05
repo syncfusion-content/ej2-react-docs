@@ -20,9 +20,10 @@ function App() {
         let index = parseInt((Math.random() * 10).toString());
         listData.push({ text: listData[index].text, id: i.toString() });
     }
+    let height="370px";
     return (
         // specifies the tag to render the ListView component
-        <ListViewComponent id="ui-list" dataSource={listData} enableVirtualization={true}>
+        <ListViewComponent id="ui-list" dataSource={listData} height={height} enableVirtualization={true}>
             <Inject services={[Virtualization]} />
         </ListViewComponent>);
 }

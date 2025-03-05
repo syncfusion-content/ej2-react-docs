@@ -47,10 +47,8 @@
 }
 
 .headerContainer .e-search-icon::before {
-    content: '\e961';
-    color: lightslategray;
+    content: '\e993';
 }
-
 
 .headerContainer .e-add-icon::before {
     content: '\e823';

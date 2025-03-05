@@ -53,8 +53,8 @@ function App() {
     //Here we are adding list item
     function dlgButtonClick() {
         if (listviewInstance && dialogInstance) {
-            let name = name.value;
-            let url = imgURL.value;
+            let name = document.getElementById('name').value;
+            let url = document.getElementById('imgurl').value;
             let id = Math.random() * 10000;
             listviewInstance.addItem([{ text: name, id: id, imgUrl: url }]);
             fruitsdata.push({ text: name, id: id, imgUrl: url });
@@ -64,20 +64,13 @@ function App() {
     //Here we are sorting list item
     function sortItems() {
         if (listviewInstance && sort) {
-            let ele = sort.firstElementChild;
-            let des = ele.classList.contains(desClass) ? true : false;
-            if (des) {
-                ele.classList.remove(desClass);
-                ele.classList.add(ascClass);
-                listviewInstance.sortOrder = "Ascending";
-            }
-            else {
-                ele.classList.remove(ascClass);
-                ele.classList.add(desClass);
-                listviewInstance.sortOrder = "Descending";
-            }
-            listviewInstance.dataBind();
-        }
+        let ele = sort.firstElementChild;
+        let isDescending = ele.classList.toggle(desClass);
+        ele.classList.toggle(ascClass, !isDescending);
+        
+        listviewInstance.sortOrder = isDescending ? "Descending" : "Ascending";
+        listviewInstance.dataBind();
+      }
     }
     //Here, the list items are filtered using the DataManager instance.
     function onKeyUp() {

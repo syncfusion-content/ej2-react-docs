@@ -39,7 +39,7 @@ Local data represents in two ways, which are described below.
 
 ### Array of simple data
 
-ListView supports loading an array of primitive data like string and numbers. Here, both value and text field act as same.
+ListView supports loading an array of primitive data like string and numbers. Here, both value and [`text`](https://helpej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#text) field act as same.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,7 +60,7 @@ ListView supports loading an array of primitive data like string and numbers. He
 
 ### Array of JSON data
 
-ListView can generate its list items from an array of complex data. To make it work properly, you should map the appropriate columns to field property.
+ListView can generate its list items from an array of complex data. To make it work properly, you should map the appropriate columns to [fields](https://helpej2.syncfusion.com/react/documentation/api/list-view#fields) property.
 
 The below example illustrates the concept of binding Array of JSON data.
 
