@@ -16,8 +16,7 @@ You can add or remove list items in the ListView component using the [`addItem`]
 
 * Render the Add Item button and bind its click event. In the click event handler, pass data with a random id to the [`addItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#additem) method to add a new list item when the Add Item button is clicked.
 
-* Bind the click handler to the delete icon created in step 1. Within the click event, remove the list item by passing the
-delete icon list item to [`removeItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#removeitem) method.
+* Bind the click handler to the delete icon created in step 1. Within the click event, remove the list item by passing the delete icon list item to [`removeItem`](https://ej2.syncfusion.com/react/documentation/api/list-view/#removeitem) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

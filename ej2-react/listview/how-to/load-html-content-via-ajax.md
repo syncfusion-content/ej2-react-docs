@@ -14,7 +14,7 @@ We can set external `HTML` page content as [`template`](https://ej2.syncfusion.c
 
 ```ts
 
-      ajax = new Ajax('./template.html', 'GET', false);
+      ajax = new Ajax('https://helpej2.syncfusion.com/react/documentation/code-snippet/listview/ajax-cs1/template', 'GET', false);
       ajax.onSuccess = (e: string) => {
           template = e;
       };

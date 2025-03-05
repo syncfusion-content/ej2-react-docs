@@ -9,7 +9,7 @@ import { Ajax } from '@syncfusion/ej2-base';
 function App() {
   let template: any;
   let ajax: Ajax;
-  ajax = new Ajax("./template.html", "GET", false);
+  ajax = new Ajax('https://helpej2.syncfusion.com/react/documentation/code-snippet/listview/ajax-cs1/template', 'GET', false);
   ajax.onSuccess = (e: string) => {
     template = e;
   };

@@ -25,8 +25,7 @@ function App() {
     listData.push({ text: listData[index].text, id: i.toString() });
   }
 
-  let template: string =
-    "<div id=\"list-container\" class=\"${ $id % 2 === 0 ? 'even-list' : 'odd-list' }\" > ${text} </div>";
+  let template: string = "<div id=\"list-container\" class=\"class-${parseInt(id) % 2}\" > ${text} </div>";
 
   return (
     // specifies the tag to render the ListView component

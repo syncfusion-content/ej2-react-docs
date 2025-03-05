@@ -115,7 +115,7 @@ If you are using `CheckList` behavior in ListView, we need to add `Button` compo
 
 ## Bind dataSource
 
-Populate the data in ListView using `dataSource` property. Here, an array of JSON values passed to `ListView` component.
+Populate the data in ListView using [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/list-view#datasource) property. Here, an array of JSON values passed to `ListView` component.
 
 
 
@@ -177,6 +177,9 @@ npm start
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/listview/getting-started-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/listview/getting-started-cs1/index.css %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/listview/getting-started-cs1/index.html %}
