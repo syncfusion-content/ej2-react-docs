@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Create and show tooltip on multiple targets in React Tooltip component | Syncfusion
-description: Learn here all about Create and show tooltip on multiple targets in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
-control: Create and show tooltip on multiple targets 
+title: Create and show Tooltip on multiple targets in React Tooltip component | Syncfusion
+description: Learn here all about Create and show Tooltip on multiple targets in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+control: Create and show Tooltip on multiple targets 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create and show tooltip on multiple targets in React Tooltip component
+# Create and show Tooltip on multiple targets in React Tooltip component
 
-You can create and show tooltips on multiple targets within a container by defining the specific target elements in the target property. This way, the tooltip is initialized only on the specified targets within the container.
+You can create and show tooltips on multiple targets within a container by defining the specific target elements in the target property. This way, the Tooltip is initialized only on the specified targets within the container.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

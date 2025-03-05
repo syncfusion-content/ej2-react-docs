@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Integrate badge into listview in React Badge component | Syncfusion
-description: Learn here all about Integrate badge into listview in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
-control: Integrate badge into listview 
+title: Integrate badge into ListView in React Badge component | Syncfusion
+description: Learn here all about Integrate badge into ListView in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
+control: Integrate badge into ListView 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate badge into listview in React Badge component
+# Integrate badge into ListView in React Badge component
 
-The badges can be integrated with the `listview` component to indicate new notification with color based on priority.
+The badges can be integrated with the `ListView` component to indicate new notification with color based on priority.
 
 In the following sample, `default` badges are used, and there is no need to customize the badge size. The badge
 component will automatically adjust the size based on the container element.

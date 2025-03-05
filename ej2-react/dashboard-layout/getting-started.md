@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Dashboard layout Component | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Essential React Dashboard layout component, it's elements, and more.
+title: Getting Started with React Dashboard Layout  Component | Syncfusion
+description: Checkout and learn about getting started with Syncfusion Essential React Dashboard Layout  component, it's elements, and more.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Dashboard layout
+# Getting Started with React Dashboard Layout 
 
 This section explains how to create a simple **Dashboard Layout** component and its basic usage.
 

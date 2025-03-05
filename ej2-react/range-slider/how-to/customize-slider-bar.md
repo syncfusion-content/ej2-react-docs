@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Customize slider bar in React Range slider component | Syncfusion
-description: Learn here all about Customize slider bar in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
-control: Customize slider bar 
+title: Customize Slider bar in React Range Slider component | Syncfusion
+description: Learn here all about Customize Slider bar in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+control: Customize Slider bar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize slider bar in React Range slider component
+# Customize Slider bar in React Range Slider component
 
-The Slider appearance can be customized through CSS. You can customize the slider bar by overriding the slider CSS classes.
-The slider bar can be customized with different themes. By default, the slider has the class name `e-slider-track` for the bar. You can override this class with custom color values as shown in the following code snippet.
+The Slider appearance can be customized through CSS. You can customize the Slider bar by overriding the Slider CSS classes.
+The Slider bar can be customized with different themes. By default, the Slider has the class name `e-slider-track` for the bar. You can override this class with custom color values as shown in the following code snippet.
 
 ```css
 .e-control.e-slider .e-slider-track .e-range {
@@ -41,7 +41,7 @@ function change(args: SliderChangeEventArgs) {
 }
 ```
 
-You can apply different background colors for specific ranges of slider values using the [`change`](https://ej2.syncfusion.com/react/documentation/api/slider/#change) event.
+You can apply different background colors for specific ranges of Slider values using the [`change`](https://ej2.syncfusion.com/react/documentation/api/slider/#change) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

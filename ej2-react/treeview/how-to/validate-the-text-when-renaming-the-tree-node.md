@@ -19,6 +19,12 @@ You can validate the tree node text while editing using [`nodeEdited`](https://e
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/validation-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/validation-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/validation-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/validation-cs1" %}

@@ -18,4 +18,4 @@ CSS Class | Purpose of Class
 |.color-picker.e-dropdown-popup ul .e-container|To customize the Color Picker container
 |.color-picker.e-dropdown-popup ul .e-item.e-palette-item|To customize the Color Picker pallete item
 |.color-picker.e-dropdown-popup .e-container .e-switch|To customize the Color Picker switch control
-|.color-picker.e-dropdown-popup .e-container .e-slider-preview|To customize the Color Picker slider control
+|.color-picker.e-dropdown-popup .e-container .e-slider-preview|To customize the Color Picker Slider control

@@ -33,7 +33,7 @@ function App() {
           </div>
           <div className="inline" id="properties">
               <button className="e-btn e-primary" onClick={onSave}>Save</button>
-              <button className="e-btn e-flat e-outline" id="Restore" onClick={onRestore}>Restore</button>
+              <button className="e-btn e-flat e-outline" id="restore" onClick={onRestore}>Restore</button>
           </div>
       </div>
   </div>);

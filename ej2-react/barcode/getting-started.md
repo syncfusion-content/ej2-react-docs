@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with React Barcode component | Syncfusion
-description:  Checkout and learn about Getting started with React Barcode component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React Barcode component | Syncfusion®
+description:  Checkout and learn about Getting started with React Barcode component of Syncfusion Essential® JS 2 and more details.
 control: Getting started 
 platform: ej2-react
 documentation: ug
@@ -67,7 +67,7 @@ cd quickstart
 
 </div>
 
-* Install Syncfusion packages using below command.
+* Install Syncfusion® packages using below command.
 
 ```
 npm install @syncfusion/ej2-react-barcodegenerator --save
@@ -75,7 +75,7 @@ npm install @syncfusion/ej2-react-barcodegenerator --save
 
 ## Adding Barcode Generator control
 
-You can start adding Essential JS 2 barcode-generator component to the application. To get started, add the barcode component in `app.ts` and `index.html` files using the following code.
+You can start adding Essential® JS 2 barcode-generator component to the application. To get started, add the barcode component in `app.ts` and `index.html` files using the following code.
 
 Place the following barcode-generator  code in the `app.ts`.
 

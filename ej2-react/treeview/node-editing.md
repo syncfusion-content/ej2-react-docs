@@ -29,6 +29,12 @@ In the following example, the first level node’s text cannot be changed, but a
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs12/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs12/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs12/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs12" %}

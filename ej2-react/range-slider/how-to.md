@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to in React Range slider component | Syncfusion
-description: Learn here all about How to in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
+title: How to in React Range Slider component | Syncfusion
+description: Learn here all about How to in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
 control: How to 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to in React Range slider component
+# How to in React Range Slider component
 
 ## Value formatting using slider
 
@@ -59,8 +59,8 @@ The numeric values can be formatted into different decimal digits or fixed numbe
 
 ### Customize the bar
 
-Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the slider bar.
-The slider bar can be customized with different themes. By default, slider have class name e-slider-track for bar. The
+Slider appearance can be customized through CSS. By overriding the Slider CSS classes, you can customize the Slider bar.
+The Slider bar can be customized with different themes. By default, Slider have class name e-slider-track for bar. The
 class can be overridden with our own color values like the following code snippet.
 
 ```css
@@ -91,7 +91,7 @@ function change(args: SliderChangeEventArgs) {
 }
 ```
 
-You can also apply background color for a certain range depending upon slider values, using change event.
+You can also apply background color for a certain range depending upon Slider values, using change event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -106,7 +106,7 @@ You can also apply background color for a certain range depending upon slider va
 
 ## Customize the limits
 
-Slider appearance can be customized via CSS. By overriding the slider CSS classes, the slider limit bar can be customized.
+Slider appearance can be customized via CSS. By overriding the Slider CSS classes, the Slider limit bar can be customized.
 
 ```css
 .e-slider-container.e-horizontal .e-limits {
@@ -114,7 +114,7 @@ Slider appearance can be customized via CSS. By overriding the slider CSS classe
 }
 ```
 
-Here, the limit bar is customized with different background color. By default, the slider has class `e-limits` for limits bar.
+Here, the limit bar is customized with different background color. By default, the Slider has class `e-limits` for limits bar.
 You can override the class with our own color values as given in the following code snippet.
 
 {% tabs %}
@@ -130,7 +130,7 @@ You can override the class with our own color values as given in the following c
 
 ## Customize the ticks
 
-Slider view can be customized via CSS. By overriding the slider CSS classes, you can customize the ticks. The ticks in slider allows you to easily identify the current value/values of the slider. It contains [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript#largestep). By default, slider has class `e-tick` for slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
+Slider view can be customized via CSS. By overriding the Slider CSS classes, you can customize the ticks. The ticks in Slider allows you to easily identify the current value/values of the slider. It contains [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript#largestep). By default, Slider has class `e-tick` for Slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
@@ -160,7 +160,7 @@ Here, the color for rendered ticks has been applied through nth-child(`child_num
 
 ## Customize the thumb
 
-Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the thumb. By default, slider has unique class `e-handle` for slider thumb. You can override the following class as per your requirement.
+Slider appearance can be customized through CSS. By overriding the Slider CSS classes, you can customize the thumb. By default, Slider has unique class `e-handle` for Slider thumb. You can override the following class as per your requirement.
 
 ```css
 .e-control.e-slider .e-handle {
@@ -188,7 +188,7 @@ Slider appearance can be customized through CSS. By overriding the slider CSS cl
 }
 ```
 
-Here, in the sample, the slider thumb has been customized to square, circle, oval shapes, and background image has also been customized.
+Here, in the sample, the Slider thumb has been customized to square, circle, oval shapes, and background image has also been customized.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -201,12 +201,12 @@ Here, in the sample, the slider thumb has been customized to square, circle, ova
 
  {% previewsample "page.domainurl/code-snippet/slider/thumb-custom-cs1" %}
 
-## Validate the slider using FormValidator
+## Validate the Slider using FormValidator
 
-The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through slider validation.
+The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through Slider validation.
 
-* Render slider component inside a form.
-* Bind [changed](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html/#changed) event in the slider component to validate the slider value when the value changes.
+* Render Slider component inside a form.
+* Bind [changed](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html/#changed) event in the Slider component to validate the Slider value when the value changes.
 * Initialize and render FormValidator for the form using form ID.
 
 ```ts
@@ -217,7 +217,7 @@ formObj = new FormValidator("#formId", options);
 
 ```
 
-* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript/#rules) collection. Here, the [min](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html/#min) property of slider that sets the minimum value in the slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
+* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript/#rules) collection. Here, the [min](https://ej2.syncfusion.com/react/documentation/slider/api-sliderComponent.html/#min) property of Slider that sets the minimum value in the Slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
 
 ```ts
 
@@ -236,9 +236,9 @@ let options: FormValidatorModel = {
 
 ```
 
-> Form validation is done either by ID or name value of the slider component. Above ID of the slider is used to validate it.
+> Form validation is done either by ID or name value of the Slider component. Above ID of the Slider is used to validate it.
 
-Using slider name: Render slider with name attribute. In the following code snippet, name attribute value of slider is used for form validation.
+Using Slider name: Render Slider with name attribute. In the following code snippet, name attribute value of Slider is used for form validation.
 
 ```ts
 
@@ -257,7 +257,7 @@ let options: FormValidatorModel = {
 
 ```
 
-* Validate the form using [validate](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript/#validate) method, and it validates the slider value with the defined rules collection and returns the result. If user selects the value less than the minimum value, form will not submit.
+* Validate the form using [validate](https://ej2.syncfusion.com/documentation/form-validator/api-formValidator.html?lang=typescript/#validate) method, and it validates the Slider value with the defined rules collection and returns the result. If user selects the value less than the minimum value, form will not submit.
 
 ```ts
 

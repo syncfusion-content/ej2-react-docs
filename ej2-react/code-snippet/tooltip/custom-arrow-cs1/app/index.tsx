@@ -30,7 +30,7 @@ function App() {
         cssClass="curvetips e-tooltip-css"
         content="Tooltip arrow customized"
         target="#target"
-        ref={d => tooltip = d}
+        ref={d =>tooltip = d}
       >
         <TooltipComponent
           cssClass="bubbletip e-tooltip-css"
@@ -43,7 +43,7 @@ function App() {
             cssClass="pointertip e-tooltip-css"
             mouseTrail={true}
             target="#tooltip"
-            content="Disabled tooltip pointer"
+            content="Disabled Tooltip pointer"
             showTipPointer={false}
           >
             <div id="customization" className="customTipContainer">

@@ -17,7 +17,7 @@ function App() {
         { id: 9, pid: 7, name: 'Child 2' },
         { id: 10, pid: 7, name: 'Child 3' },
     ];
-    let fields = { dataSource: localData, id: 'id', text: 'name', child: 'subChild' };
+    let fields = { dataSource: localData, id: 'id', text: 'name', parentID: 'pid', hasChildren: 'hasChild' };
     const btnClick1 = () => {
         var nodeData = treeObj.getTreeData('4');
         //Update the name text from backend.

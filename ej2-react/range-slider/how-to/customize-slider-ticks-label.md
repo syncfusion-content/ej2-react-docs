@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize slider ticks label in React Range slider component | Syncfusion
-description: Learn here all about Customize slider ticks label in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
-control: Customize slider ticks label 
+title: Customize ticks label in React Range Slider component | Syncfusion
+description: Learn here all about Customize Slider ticks label in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+control: Customize Slider ticks label 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize slider ticks label in React Range slider component
+# Customize Slider ticks label in React Range Slider component
 
-The Slider view can be customized using CSS. By overriding the slider CSS classes, you can customize the ticks appearance. The ticks in slider allows you to easily identify the current value/values of the slider. It contains [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, slider has the class `e-tick` for slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
+The Slider view can be customized using CSS. By overriding the Slider CSS classes, you can customize the ticks appearance. The ticks in Slider allows you to easily identify the current value/values of the slider. It contains [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, Slider has the class `e-tick` for Slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {

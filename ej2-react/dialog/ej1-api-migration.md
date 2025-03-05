@@ -119,7 +119,7 @@ This article describes the API migration process of Dialog component from Essent
 <!-- markdownlint-disable MD033 -->
 | **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
 | ------------ | ------------------------- | ------------------------- |
-| Sets the tooltip for dialog buttons | **Property** : tooltip<br/><br/> `<EJ.Dialog tooltip={this.tooltip}></EJ.Dialog>`<br/><br/>`tooltip: object { close: 'Exit' }`<br/> | No Separate Property for tooltip. It renders based on locale text. |
+| Sets the Tooltip for dialog buttons | **Property** : tooltip<br/><br/> `<EJ.Dialog tooltip={this.tooltip}></EJ.Dialog>`<br/><br/>`tooltip: object { close: 'Exit' }`<br/> | No Separate Property for tooltip. It renders based on locale text. |
 
 ## Control State
 

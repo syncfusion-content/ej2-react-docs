@@ -19,6 +19,12 @@ TreeView allows both single and multiple selections. If your application needs t
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/select-one-child-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/select-one-child-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/select-one-child-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/select-one-child-cs1" %}

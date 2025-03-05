@@ -33,6 +33,12 @@ In the following example, the `showCheckBox` property is enabled.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs1" %}
@@ -49,6 +55,12 @@ In the following example, the **New South Wales** and **Western Australia** node
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/basic-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/basic-cs2/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/basic-cs2/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

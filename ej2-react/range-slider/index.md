@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Index in React Range slider component | Syncfusion
-description: Learn here all about Index in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
+title: Index in React Range Slider component | Syncfusion
+description: Learn here all about Index in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Range slider component
+# Index in React Range Slider component
 
-The Slider component allows the user to select a value or range of values in-between the min and max range, by dragging the handle over the slider bar.
+The Slider component allows the user to select a value or range of values in-between the min and max range, by dragging the handle over the Slider bar.
 
 There are three types of Slider:
-* Default - Shows a default slider to select a single value.
+* Default - Shows a default Slider to select a single value.
 * MinRange - Displays fill color from the start value to the current selected value.
 * Range - Select a range of values.
 
@@ -29,7 +29,7 @@ There are three types of Slider:
 
 * **[Ticks](./ticks)**: Displays a scale with small and big ticks.
 
-* **[Format](./format)**: Customize the slider values into various format.
+* **[Format](./format)**: Customize the Slider values into various format.
 
 * **[Limits](./limits)**: Slider thumb movement restriction and interval dragging.
 

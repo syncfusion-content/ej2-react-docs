@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Datamatrixgenerator in React Barcode component | Syncfusion
-description: Learn here all about Datamatrixgenerator in Syncfusion React Barcode component of Syncfusion Essential JS 2 and more.
+title: Datamatrixgenerator in React Barcode component | Syncfusion®
+description: Learn here all about Datamatrixgenerator in Syncfusion® React Barcode component of Syncfusion Essential® JS 2 and more.
 control: Datamatrixgenerator 
 platform: ej2-react
 documentation: ug

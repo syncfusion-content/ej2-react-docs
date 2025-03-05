@@ -19,6 +19,12 @@ This section demonstrates how to get the child nodes from corresponding parent I
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/get-child-nodes-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/get-child-nodes-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/get-child-nodes-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/get-child-nodes-cs1" %}

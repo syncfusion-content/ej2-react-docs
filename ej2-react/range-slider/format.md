@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Format in React Range slider component | Syncfusion
-description: Learn here all about Format in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
+title: Format in React Range Slider component | Syncfusion
+description: Learn here all about Format in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
 control: Format 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Format in React Range slider component
+# Format in React Range Slider component
 
 The [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) feature is used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways to achieve formatting in the slider.
 
-* Use the [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) API of the slider which utilizes our `Internationalization` to format values.
+* Use the [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) API of the Slider which utilizes our `Internationalization` to format values.
 
 * Customize using events namely [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltipchange).
 
@@ -56,7 +56,7 @@ In this method, we have different predefined formatting styles like Numeric (N),
 
 ## Using Events
 
-In this method, we retrieve the values from the slider events then process them to the desired formatted values.
+In this method, we retrieve the values from the Slider events then process them to the desired formatted values.
 In this sample, we have customized the [`ticks`](https://ej2.syncfusion.com/react/documentation/api/slider/#ticks) values into weekdays as one formatting and [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltip) values into day of the week as another formatting.
 
 {% tabs %}

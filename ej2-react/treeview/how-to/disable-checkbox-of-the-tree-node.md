@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Disable checkbox of the tree node in React TreeView component | Syncfusion
+title: Disabling Checkboxes in React TreeView component | Syncfusion
 description: Learn here all about Disable checkbox of the tree node in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
 control: Disable checkbox of the tree node 
 platform: ej2-react
@@ -18,6 +18,12 @@ You can disable the check box alone in TreeView instead of disabling the whole n
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/disable-checkbox-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/disable-checkbox-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/disable-checkbox-cs1/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

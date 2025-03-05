@@ -19,6 +19,12 @@ In TreeView component, you can get the original bound data using the [`getTreeDa
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/icon-css-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="index.html" %}
+{% include code-snippet/tree-view/icon-css-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/icon-css-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/icon-css-cs1" %}

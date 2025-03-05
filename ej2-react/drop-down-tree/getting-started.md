@@ -118,7 +118,7 @@ Import the Dropdown Tree component required CSS references as follows in `src/Ap
 
 ## Binding data source
 
-The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the `dataSource` property that is a member of the `fields` property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
+The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsModel/#datasource) property that is a member of the [`fields`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree#fields) property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
 
 
 

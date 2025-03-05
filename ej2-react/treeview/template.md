@@ -23,6 +23,12 @@ The template expression should be provided inside the `${...}` interpolation syn
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/template-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/tree-view/template-cs1/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/template-cs1/style.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/tree-view/template-cs1" %}

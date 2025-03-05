@@ -115,12 +115,11 @@ By default, it is set to `false`.
 
  {% previewsample "page.domainurl/code-snippet/tooltip/mouse-trail-cs1" %}
 
-> When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and
-> other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
+> When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
 
 ## Setting offset values
 
-Offset values are set to specify the distance between the target and tooltip element. [`offsetX`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsetx) and [`offsetY`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsety) properties are used to specify the offset left and top values.
+Offset values are set to specify the distance between the target and Tooltip element. [`offsetX`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsetx) and [`offsetY`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsety) properties are used to specify the offset left and top values.
 
 * [`offsetX`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsetx) specifies the distance between the target and Tooltip element on the X-axis.
 * [`offsetY`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#offsety) specifies the distance between the target and Tooltip element on Y axis.

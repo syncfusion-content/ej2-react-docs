@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Style in React Range slider component | Syncfusion
-description: Learn here all about Style in Syncfusion React Range slider component of Syncfusion Essential JS 2 and more.
+title: Style in React Range Slider component | Syncfusion
+description: Learn here all about Style in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Range slider component
+# Style in React Range Slider component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the slider track
+## Customizing the Slider track
 
-Use the following CSS to customize the slider track.
+Use the following CSS to customize the Slider track.
 
 ```css
 .e-control-wrapper.e-slider-container.e-horizontal .e-slider-track {
@@ -23,9 +23,9 @@ Use the following CSS to customize the slider track.
 }
 ```
 
-## Customizing the slider handle
+## Customizing the Slider handle
 
-Use the following CSS to customize the slider handle properties.
+Use the following CSS to customize the Slider handle properties.
 
 ```css
 .e-control-wrapper.e-slider-container .e-slider .e-handle {
@@ -35,9 +35,9 @@ Use the following CSS to customize the slider handle properties.
 }
 ```
 
-## Customizing the slider limits
+## Customizing the Slider limits
 
-Use the following CSS to customize the slider limits.
+Use the following CSS to customize the Slider limits.
 
 ```css
 .e-control-wrapper.e-slider-container.e-horizontal .e-limits {
@@ -45,9 +45,9 @@ Use the following CSS to customize the slider limits.
 }
 ```
 
-## Customizing the slider ticks
+## Customizing the Slider ticks
 
-Use the following CSS to customize the slider ticks.
+Use the following CSS to customize the Slider ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
@@ -56,9 +56,9 @@ Use the following CSS to customize the slider ticks.
 }
 ```
 
-## Customizing the slider buttons
+## Customizing the Slider buttons
 
-Use the following CSS to customize the slider buttons.
+Use the following CSS to customize the Slider buttons.
 
 ```css
 .e-control-wrapper.e-slider-container .e-slider-button {

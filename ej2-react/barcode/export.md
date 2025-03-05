@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export in React Barcode component | Syncfusion
-description: Learn here all about Export in Syncfusion React Barcode component of Syncfusion Essential JS 2 and more.
+title: Export in React Barcode component | Syncfusion®
+description: Learn here all about Export in Syncfusion® React Barcode component of Syncfusion Essential® JS 2 and more.
 control: Export 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in React Barcode component
 
-Export barcode as an image and base64 string is common for barcode,QRcode and datamatrix. The following code samples explain how to export the barcode as an image and base64 string.
+Export barcode as an image and base64 string is common for barcode,QRCode and datamatrix. The following code samples explain how to export the barcode as an image and base64 string.
 
 ## Export
 

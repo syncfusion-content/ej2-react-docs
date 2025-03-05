@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Integrate avatar into badge in React Avatar component | Syncfusion
-description: Learn here all about Integrate avatar into badge in Syncfusion React Avatar component of Syncfusion Essential JS 2 and more.
-control: Integrate avatar into badge 
+title: Integrate Avatar into Badge in React Avatar component | Syncfusion
+description: Learn here all about Integrate Avatar into Badge in Syncfusion React Avatar component of Syncfusion Essential JS 2 and more.
+control: Integrate Avatar into Badge 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate avatar into badge in React Avatar component
+# Integrate Avatar into Badge in React Avatar component
 
-The badge is a dependent and supportive component, and it can be used with an avatar to create a notification avatar.
-The default avatar (.`e-avatar`) and circle avatar (.`e-avatar-circle`) have been used with notification badges (.`e-badge-notification`) in the following sample.
+The Badge is a dependent and supportive component, and it can be used with an Avatar to create a notification avatar.
+The default Avatar (.`e-avatar`) and circle Avatar (.`e-avatar-circle`) have been used with notification badges (.`e-badge-notification`) in the following sample.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

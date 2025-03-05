@@ -30,8 +30,7 @@ The following list of dependencies are required to use the `TreeView` component 
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the
-applications.
+You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
 To install `create-react-app` run the following command.
 
 ```bash
@@ -126,7 +125,7 @@ Import the TreeView component required CSS references as follows in **src/App.cs
 
 ## Binding data source
 
-TreeView can load data either from local data sources or remote data services. This can be done using the `dataSource` property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property. The dataSource property supports array of JavaScript objects and `DataManager`. Here, an array of JSON values is passed to the TreeView component.
+TreeView can load data either from local data sources or remote data services. This can be done using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property. The dataSource property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started). Here, an array of JSON values is passed to the TreeView component.
 
 
 

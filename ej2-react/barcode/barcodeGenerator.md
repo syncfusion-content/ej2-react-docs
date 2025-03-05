@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BarcodeGenerator in React Barcode component | Syncfusion
-description: Learn here all about BarcodeGenerator in Syncfusion React Barcode component of Syncfusion Essential JS 2 and more.
+title: BarcodeGenerator in React Barcode component | Syncfusion®
+description: Learn here all about BarcodeGenerator in Syncfusion® React Barcode component of Syncfusion Essential® JS 2 and more.
 control: BarcodeGenerator 
 platform: ej2-react
 documentation: ug

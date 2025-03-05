@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Set Panel Headers in React Dashboard Layout | Syncfusion
-description: Learn here all about Setting header of panels in Syncfusion React Dashboard layout component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Setting header of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
 control: Setting header of panels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Setting header of panels in React Dashboard layout component
+# Setting header of panels in React Dashboard Layout  component
 
-The dashboard layout component is primarily used to represent data for monitoring or managing processes. This data or any HTML template can be placed as the content of a panel using the content property. Additionally, a word or phrase that summarizes the panel's content can be added as a header at the top of each panel using the [header](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#header) property.
+The Dashboard Layout  component is primarily used to represent data for monitoring or managing processes. This data or any HTML template can be placed as the content of a panel using the content property. Additionally, a word or phrase that summarizes the panel's content can be added as a header at the top of each panel using the [header](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#header) property.
 
 The following sample demonstrates how to add content and headers for each panel using the [content](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#content) and [header](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#header) properties of the panels.
 
@@ -41,7 +41,7 @@ The following sample demonstrates how to add content and headers for each panel 
 
 In a dashboard, components such as charts, grids, maps, gauges, and more can be used to present complex data. These components can be placed as panel content by assigning the corresponding component element to the [content](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#content) property of the panel.
 
-The following sample demonstrates how to add EJ2 Chart components as the [content](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#content) for each panel in the dashboard layout component.
+The following sample demonstrates how to add EJ2 Chart components as the [content](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel/#content) for each panel in the Dashboard Layout  component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

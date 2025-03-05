@@ -23,10 +23,6 @@
     font-size: 20px;
     user-select: none;
 }
-
-
-/* csslint ignore:start */
-
 .customtip.e-tooltip-wrap {
     padding: 4px;
 }
@@ -74,6 +70,3 @@
     border-left: 20px solid #616161;
     border-top: 6px solid transparent;
 }
-
-
-/* csslint ignore:end */
