@@ -35,15 +35,19 @@ The Essential UI Kit for React comprises over 160 responsive, ready-to-use, easy
     <td>Layouts</td>
     <td>
       <ul>
+        <li>Header</li>
         <li>Navigation Bar</li>
         <li>Sidebar</li>
-        <li>Floating Menu</li>
         <li>Search</li>
         <li>Grid</li>
         <li>List View</li>
-        <li>Tile View</li>
-        <li>Calendar</li>
+        <li>Statistics</li>
         <li>Cards</li>
+        <li>Filter Panel</li>
+        <li>Tile View</li>
+        <li>Modals</li>
+        <li>Floating Menu</li>
+        <li>Calendar</li>
         <li>Pagination</li>
         <li>Footer</li>
       </ul>
