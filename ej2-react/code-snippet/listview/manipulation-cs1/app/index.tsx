@@ -58,8 +58,8 @@ function App() {
   //Here we are adding list item
   function dlgButtonClick() {
     if (listviewInstance && dialogInstance) {
-      let name: string = (name as any).value;
-      let url: string = (imgURL as any).value;
+      let name: string = (document.getElementById('name') as any).value;
+      let url: string = (document.getElementById('imgurl') as any).value;
       let id: number = Math.random() * 10000;
       listviewInstance.addItem([{ text: name, id: id, imgUrl: url }]);
       fruitsdata.push({ text: name, id: id, imgUrl: url });
@@ -71,16 +71,10 @@ function App() {
   function sortItems() {
     if (listviewInstance && sort) {
       let ele = sort.firstElementChild as HTMLElement;
-      let des = ele.classList.contains(desClass) ? true : false;
-      if (des) {
-        ele.classList.remove(desClass);
-        ele.classList.add(ascClass);
-        listviewInstance.sortOrder = "Ascending";
-      } else {
-        ele.classList.remove(ascClass);
-        ele.classList.add(desClass);
-        listviewInstance.sortOrder = "Descending";
-      }
+      let isDescending = ele.classList.toggle(desClass);
+      ele.classList.toggle(ascClass, !isDescending);
+      
+      listviewInstance.sortOrder = isDescending ? "Descending" : "Ascending";
       listviewInstance.dataBind();
     }
   }
@@ -220,7 +214,5 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('element'));
-
-
 
 {% endraw %}

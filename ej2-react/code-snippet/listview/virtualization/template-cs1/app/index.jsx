@@ -31,7 +31,7 @@ function App() {
     );
   } return (
     // specifies the tag to render the ListView component
-    <ListViewComponent id='ui-list' dataSource={listData} enableVirtualization={true} template={template} cssClass='e-list-template' height={500} headerTitle="Contacts" showHeader={true}>
+    <ListViewComponent id='ui-list' dataSource={listData} enableVirtualization={true} template={template} cssClass='e-list-template' height={380} headerTitle="Contacts" showHeader={true}>
       <Inject services={[Virtualization]} />
     </ListViewComponent>);
 }

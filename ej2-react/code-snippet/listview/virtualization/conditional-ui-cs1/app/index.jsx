@@ -20,7 +20,7 @@ function App() {
         let index = parseInt((Math.random() * 10).toString());
         listData.push({ text: listData[index].text, id: i.toString() });
     }
-    let template = "<div id=\"list-container\" class=\"${ $id % 2 === 0 ? 'even-list' : 'odd-list' }\" > ${text} </div>";
+    let template = "<div id=\"list-container\" class=\"class-${parseInt(id) % 2}\" > ${text} </div>";
     return (
         // specifies the tag to render the ListView component
         <ListViewComponent id="ui-list" dataSource={listData} enableVirtualization={true} template={template} height={500}>

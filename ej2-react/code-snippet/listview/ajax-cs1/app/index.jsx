@@ -6,7 +6,7 @@ import './index.css';
 function App() {
     let template;
     let ajax;
-    ajax = new Ajax("./template.html", "GET", false);
+    ajax = new Ajax('https://helpej2.syncfusion.com/react/documentation/code-snippet/listview/ajax-cs1/template', 'GET', false);
     ajax.onSuccess = (e) => {
         template = e;
     };
