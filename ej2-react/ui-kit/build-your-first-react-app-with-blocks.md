@@ -13,8 +13,8 @@ domainurl: ##DomainURL##
 ## Create a new React app
 A **Next.js** app is used for this example. To create a new app, refer to the official setup guide [here](https://nextjs.org/docs/app/getting-started/installation). This tutorial then walks through the step-by-step process of adding a simple sign-in block to the newly created app, named **my-app**.
 
-> When prompted with the question **"Would you like to use Tailwind CSS?"** during **Next.js** app setup, select **No** to avoid automatically integrating **Tailwind CSS** into your app.
-
+> * When prompted with the question **"Would you like to use Tailwind CSS?"** during **Next.js** app setup, select **No** to avoid automatically integrating **Tailwind CSS** into your app.
+> * When prompted with the question **"Would you like your code inside a `src/` directory?"** during **Next.js** app setup, select **Yes** to maintain consistency with the following steps.
 ![New React App](images/new-react-app.png)
 
 ## Setting up Tailwind or Bootstrap 5.3 theme in the app
@@ -31,7 +31,7 @@ If you choose **Tailwind** theme, follow these steps to configure it.
 
     ```bash
     npm install -D tailwindcss@3 postcss autoprefixer
-    npx tailwindcss init
+    npx tailwindcss init -p
     ```
   
     ![Tailwind Installation](images/tailwind-installation.PNG)
