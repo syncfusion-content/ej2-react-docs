@@ -9,12 +9,12 @@ function App() {
   });
     return <div>
         <GridComponent dataSource={data} height={280}>
-           <ColumnsDirective>
-              <ColumnDirective field="CustomerID" headerText="Customer ID" width="150"/>
-              <ColumnDirective field="ShipCity" headerText="Ship City" width="150"/>
-              <ColumnDirective field="ShipName" headerText="Ship Name" width="150"/>
-            </ColumnsDirective>
-            <Inject services={[Page]} />
+          <ColumnsDirective>
+            <ColumnDirective field="CustomerID" headerText="Customer ID" width="150"/>
+            <ColumnDirective field="ShipCity" headerText="Ship City" width="150"/>
+            <ColumnDirective field="ShipName" headerText="Ship Name" width="150"/>
+          </ColumnsDirective>
+          <Inject services={[Page]} />
         </GridComponent>
     </div>
 };

@@ -1,4 +1,3 @@
-
 export interface IOrderModel {
     OrderID?: number;
     CustomerID?: string;
