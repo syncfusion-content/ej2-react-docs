@@ -35,7 +35,7 @@ function App() {
   return(
       <div>
           <div className="control-section">
-              <FileManagerComponent id="file" height={{ height }} ref={(scope) => { fmObj = scope; }} height="375px" ajaxSettings = {{
+              <FileManagerComponent id="file" ref={(scope) => { fmObj = scope; }} height="375px" ajaxSettings = {{
                   url: hostUrl + "api/FileManager/FileOperations",
                   getImageUrl: hostUrl + "api/FileManager/GetImage",
                   uploadUrl: hostUrl + 'api/FileManager/Upload',

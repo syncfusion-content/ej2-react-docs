@@ -5,19 +5,23 @@ import * as ReactDom from 'react-dom';
 import { TooltipComponent, Position } from '@syncfusion/ej2-react-popups';
 
 function App() {
-  const [position, setPosition] = React.useState<string>("TopCenter");
+  let tooltipInstance: TooltipComponent = null as any;
 
-  const change = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setPosition(event.target.value);
-  };
+  function change(event: React.ChangeEvent<HTMLSelectElement>) {
+    if (tooltipInstance) {
+      tooltipInstance.position = event.target.value as TooltipComponent["position"];
+      tooltipInstance.refresh();
+    }
+  }
 
   return (
     <div id="container">
       <TooltipComponent
+        ref={(t) => (tooltipInstance = t)}
         className="tooltip-box"
         content="Tooltip Content"
         target="#tooltip"
-        position={position} // Dynamically set position
+        position="TopCenter"
       >
         <div id="tooltip">Show Tooltip</div>
       </TooltipComponent>
@@ -26,7 +30,7 @@ function App() {
           id="positions"
           onChange={change}
           className="form-control drop-inline"
-          value={position} // Bind state variable
+          defaultValue="TopCenter"
         >
           <option value="TopLeft">Top Left</option>
           <option value="TopCenter">Top Center</option>

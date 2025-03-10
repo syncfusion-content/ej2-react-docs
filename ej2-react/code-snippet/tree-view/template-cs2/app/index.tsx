@@ -48,7 +48,7 @@ function App() {
         nodeSelected={(args: any) => setSelectedItem(args.nodeData)} 
         statelessTemplates={['nodeTemplate']} 
       />
-      <pre>Node name: {selectedItem?.name}</pre>
+      <pre>Node name: {selectedItem?.text}</pre>
     </div>
 
   );

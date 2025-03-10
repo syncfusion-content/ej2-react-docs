@@ -75,8 +75,7 @@ Avatars can be used with a wide variety of media formats like SVG, font-icons, i
 
 ## Dynamic Avatar rendering from datasource
 
-We can render the Avatar component dynamically from a data-source. In this sample we have rendered the Avatar component
-using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the Avatar using `CSS` property `background-image` and using image tag.
+We can render the Avatar component dynamically from a data-source. In this sample we have rendered the Avatar component using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the Avatar using `CSS` property `background-image` and using image tag.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

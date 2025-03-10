@@ -62,9 +62,9 @@ cd my-app
 npm start
 ```
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. Now, we are going to render `Slider` component from these packages.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. Now, we are going to render `Slider` component from these packages.
 
 To install `Slider` component, use the following command.
 
@@ -112,7 +112,7 @@ export default App;
 
 ## Run the Application
 
-The Essential JS 2 quickstart application project is configured to compile and run the application in browser. Use the following command to run the application.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 quickstart application project is configured to compile and run the application in browser. Use the following command to run the application.
 
 ```
 npm start

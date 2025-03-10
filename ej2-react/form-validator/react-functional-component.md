@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React functional component in React Form validator component | Syncfusion
+title: Functional component in React Form validator component | Syncfusion
 description: Learn here all about React functional component in Syncfusion React Form validator component of Syncfusion Essential JS 2 and more.
 control: React functional component 
 platform: ej2-react
@@ -21,11 +21,11 @@ The following is a list of React Hooks methods to utilize while performing form 
 | `useRef` | The useRef is a Hook function that allows the functional component to create a direct reference to the DOM element. |
 | `useReducer` | The useReducer is a Hook function that accepts a reducer function and an initial state as arguments. It returns a state value and another function to dispatch an action. |
 
-## Create a React form with Syncfusion form components
+## Create a React form with Syncfusion<sup style="font-size:70%">&reg;</sup> form components
 
-To create a React application with Syncfusion components, refer to the [`Getting Started`](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/#create-the-react-application) section. Once the application is set up, replace the components with React form and Syncfusion form components to create a simple form.
+To create a React application with Syncfusion<sup style="font-size:70%">&reg;</sup> components, refer to the [`Getting Started`](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/#create-the-react-application) section. Once the application is set up, replace the components with React form and Syncfusion<sup style="font-size:70%">&reg;</sup> form components to create a simple form.
 
-In the following example, a login form is created with Syncfusion components such as TextBox, DatePicker, and Button. This form is validated using the React FormValidator component.
+In the following example, a login form is created with Syncfusion<sup style="font-size:70%">&reg;</sup> components such as TextBox, DatePicker, and Button. This form is validated using the React FormValidator component.
 
 * [`TextBox`](https://ej2.syncfusion.com/react/documentation/textbox/getting-started/) - To get the user's email and password
 * [`DatePicker`](https://ej2.syncfusion.com/react/documentation/datepicker/getting-started/) - To get the user's date of birth
