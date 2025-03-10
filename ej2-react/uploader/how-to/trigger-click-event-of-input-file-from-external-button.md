@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 # Trigger click event of input file from external button in React Uploader component
 
 Click event of input file from the external button can be triggered using the `click` event of button.
-In the following sample, you can find the triggered click event of input file from `Essential JavaScript 2 Button`.
+In the following sample, you can find the triggered click event of input file from **Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Button**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

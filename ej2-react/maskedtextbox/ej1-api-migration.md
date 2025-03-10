@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Maskedtextbox component
 
-This article describes the API migration process of MaskEdit component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of MaskEdit component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Common
 
 {% raw %}
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Adding custom class | **Property:** *cssClass* <br /><br />`<EJ.MaskEdit id="mask" maskFormat="9999" cssClass="custom"></EJ.MaskEdit>` | **Property:** *cssClass*<br /><br />`<MaskedTextBoxComponent id="mask" mask='9999' cssClass = "custom"></MaskedTextBoxComponent>` |
 | Destroy editor | Not Applicable | **Method:** *destroy*<br /><br />`<MaskedTextBoxComponent id="mask" mask='00-000'></MaskedTextBoxComponent>`<br />`var mask = document.getElementById('mask').ej2_instances[0];`<br />`mask.destroy();` |
@@ -43,7 +43,7 @@ This article describes the API migration process of MaskEdit component from Esse
 ## Mask Configuration
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Triggers on value change | **Event** *change*<br /><br />`<EJ.MaskEdit id="mask" maskFormat="00-00" change={this.onChange}></EJ.MaskEdit>`<br /><br />**script**<br />`onChange: function() {}` | **Event:** *change*<br /><br />`<MaskedTextBoxComponent id="mask" mask='00-00' change={this.onChange.bind(this)}></MaskedTextBoxComponent>`<br /><br />`public onChange() {}` |
 | Clears maskedit text/value | **Method:** *clear*<br /><br />`<EJ.MaskEdit id="mask" maskFormat="0000" value={1234}></EJ.MaskEdit>`<br />`var maskObj = $(“#mask”).data(“ejMaskEdit”);`<br />`maskObj.clear();` | **Can be achieved using**<br/>`<MaskedTextBoxComponent id="mask" mask='00-000' value="1234"></MaskedTextBoxComponent>`<br />`var mask = document.getElementById('mask').ej2_instances[0];`<br />`mask.value= "";`  |
@@ -65,7 +65,7 @@ This article describes the API migration process of MaskEdit component from Esse
 ## Validation
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Displays error until correct value is entered | **Property:** *showError*<br /><br />`<EJ.MaskEdit id="mask" maskFormat="99-999" showError={true}></EJ.MaskEdit>` | **MaskedTextBox by default shows error until the correct value is entered**<br/>`<MaskedTextBoxComponent id="mask" mask='0000' value="1234"></MaskedTextBoxComponent>` |
 | Validation message | **Property:** *validationMessage*<br /><br />`<EJ.MaskEdit id="mask" maskFormat="0000" validationRules= {validationRules} validationMessage= {validationMessage}></EJ.MaskEdit>`<br /><br />`var validationRules = {required: {true}};`<br />`var validationMessage = {required: "Required value"};` | **Validation can be performed using Form Validation**<br/>`<MaskedTextBoxComponent  id="mask" name="mask_value" placeholder="Mobile Number" mask= "000-000-0000" floatLabelType='Always' />`<br/>`let options: FormValidatorModel = {`<br/>`rules: {`<br/>`'mask_value': { numberValue: [required, 'Enter valid mobile number'] }`<br/>`},`<br/>`customPlacement: (inputElement: HTMLElement, errorElement: HTMLElement) => {`<br/>`document.querySelector("#masktextbox").appendChild(errorElement);`<br/>`}`<br/>`};`<br/>`let formObject: FormValidator = new FormValidator('#form-element', options);`<br />**HTML**<br/>`<form id="form-element" class="form-horizontal">`<br/>`<div id='masktextbox'></div>`<br/>`</form>` |

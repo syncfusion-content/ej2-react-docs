@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Uploader component
 
-This article describes the API migration process of File Upload component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of File Upload component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Accessibility
 
 {% raw %}
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior**           | **Property in Essential JS 1**     |        **Property in Essential JS 2**       |
+| **Behavior**           | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1**     |        **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2**       |
 | -----------------------| -----------------------------------| ------------------------------------------- |
 | Localization           | **Property** : locale <br/> <br/>`<EJ.Uploadbox id="UploadDefault" locale= 'es-ES'></EJ.Uploadbox>` | **Property** : locale <br/> <br/>`<UploaderComponent id='fileUpload' locale='es-ES' />` |
 | Right to left | **Property:** enableRTL <br/> <br/>`<EJ.Uploadbox id="UploadDefault" enableRTL= {true}></EJ.Uploadbox>`  | **Property:** enableRTL <br/> <br/>`<UploaderComponent id='fileUpload' enableRtl= {true} />`
@@ -25,7 +25,7 @@ This article describes the API migration process of File Upload component from E
 ## File List
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------------ | ------------------------------ |
 | Show/Hide the selected files | **Property** : showFileDetails <br/> <br/>`<EJ.Uploadbox id="UploadDefault" showFileDetails= {false}></EJ.Uploadbox>`  | **Property** :  showFileList <br/> <br/>`<UploaderComponent id='fileUpload' showFileList= {false} />`  |
 | Customizing the file list | Not Applicable  | **Property** : template <br/> <br/>`<UploaderComponent id='fileUpload' template='#templateid' />`  |
@@ -36,7 +36,7 @@ This article describes the API migration process of File Upload component from E
 ## File selection
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------------ | ------------------------------ |
 | Select multiple files to upload | **Property** : multipleFilesSelection <br/><br/>`<EJ.Uploadbox id="UploadDefault" multipleFilesSelection= {true}></EJ.Uploadbox>`  | **Property** : multiple <br/><br/>`<UploaderComponent id='fileUpload' multiple= {true} />` |
 | Set minimum file size to upload | **Not Applicable** | **Property** : minFileSize <br /><br /> `<UploaderComponent id='fileUpload' minFileSize ={this.minFileSize} />`<br/><br/>`constructor(props: {}) { this.minFileSize= 1024;`<br/> `}` |
@@ -57,7 +57,7 @@ This article describes the API migration process of File Upload component from E
 ## Upload action
 
 <!-- markdownlint-disable MD038 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------------ | ------------------------------ |
 | Save URL | **Property** : saveUrl <br/><br/>`<EJ.Uploadbox id="UploadDefault" saveUrl= {savefiles}></EJ.Uploadbox>` | **Property** : saveUrl<br/><br/>`<UploaderComponent id='fileUpload' asyncSettings = {this.asyncSettings} />`<br/><br/>`constructor(props: {}) {`<br/>`this.asyncSettings = {`<br/>`saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',`<br/>`};}`  |
 | Remove URL | **Property** : removeUrl<br/> <br/>`<EJ.Uploadbox id="UploadDefault" removeUrl= {removefiles}></EJ.Uploadbox>` | **Property** : removeUrl<br/> <br/>`<UploaderComponent id='fileUpload' asyncSettings = {this.asyncSettings} />`<br/><br/>`constructor(props: {}) {`<br/>`this.asyncSettings = {`<br/>`removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',`<br/>`};}`  |
@@ -76,7 +76,7 @@ This article describes the API migration process of File Upload component from E
 ## Chunk Upload
 
 <!-- markdownlint-disable MD038 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------------ | ------------------------------ |
 | Enabling the chunk upload | Not Applicable | **Property:** chunkSize<br/><br/>`<UploaderComponent id='fileUpload' asyncSettings = {this.asyncSettings} />`<br/><br/>`constructor(props: {}) { this.asyncSettings = { saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',chunkSize: 500000 };}`<br/>  |
 | Retry the upload automatically when it's get failed | Not Applicable | **Property:** retryCount, retryAfterDelay<br/> <br/>`<UploaderComponent id='fileUpload' asyncSettings = {this.asyncSettings} />`<br/><br/>`constructor(props: {}) { this.asyncSettings = { saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save', removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove', chunkSize: 500000, retryCount: 3, retryAfterDelay: 1000 };}`<br/>  |
@@ -93,7 +93,7 @@ This article describes the API migration process of File Upload component from E
 ## Remove action
 
 <!-- markdownlint-disable MD038 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------------ | ------------------------------ |
 | Remove the uploaded file | Not Applicable | **Method:** remove<br/> <br/>`<UploaderComponent id='fileUpload' ref = {(scope) => {this.uploadObj = scope}} asyncSettings = {this.asyncSettings} />`<br/><br/>`constructor(props: {}) {`<br/>`this.asyncSettings = {`<br/>`saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',`<br/>`removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove',`<br/>`this.uploadObj.remove = filesData;`<br/>`}`<br/> |
 | Event triggers when the file removing succeed | **Event:** remove<br/> <br/>`<EJ.Uploadbox id="UploadDefault" remove= {this.onRemove}></EJ.Uploadbox>`<br/><br/>`onRemove() { };`<br/> | **Event:** success<br/> <br/>`<UploaderComponent id='fileUpload' success= { this.onSuccess.bind(this) } />`<br/> <br/>`private onSuccess(): void  { }`<br/> |
@@ -102,14 +102,14 @@ This article describes the API migration process of File Upload component from E
 ## Buttons
 
 <!-- markdownlint-disable MD038 -->
-| **Behavior** | **Property in essential JS 1** | **Property in essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------------ | ------------------------------ |
 | Customize button text | **Property** : buttonText<br/> <br/>`<EJ.Uploadbox buttonText.browse='browse' buttonText.upload='upload' buttonText.cancel='cancel'></EJ.Uploadbox>`<br/><br/>`let browse: string = 'Choose File'`<br/>`let upload: string= 'Upload File'`<br/>`let cancel: string= 'Cancel Upload'`<br/> | **Property** : buttons<br/> <br/>`<UploaderComponent buttons={this.dlgbuttons}></ejs-uploader>`<br/><br/>`constructor(props: {}) {`<br/>`this.dlgbuttons {`<br/>`browse: 'Choose File'`<br/>`clear: 'Clear Files'`<br/>`upload: 'upload Files'`<br/>`}`<br/> |
 
 ## Drag and Drop
 
 <!-- markdownlint-disable MD038 -->
-| **Behavior** | **Property in Essential JS  1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS  1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | --------------------------------| ------------------------------ |
 | Enable drag and drop upload | **Property** : allowDragAndDrop<br/> <br/>`<EJ.Uploadbox id="UploadDefault" allowDragAndDrop= {true}></EJ.Uploadbox>` | No separate Property to disabling drag and drop |
 | Set custom drop area | **Not Applicable** | **Property** :  dropArea<br/> <br/> `<UploaderComponent id='fileUpload' ref = {(scope) => {this.uploadObj = scope}} />`<br/><br/>`rendereComplete(): void {`<br/>`this.uploadObj.dropArea = this.dropContainerEle;`<br/>`}`  |
@@ -117,7 +117,7 @@ This article describes the API migration process of File Upload component from E
 ## Common
 
 <!-- markdownlint-disable MD038 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------------ | ------------------------------ |
 | Adding custom class to wrapper element | **Property** : cssClass<br/> <br/>`<EJ.Uploadbox id="UploadDefault" cssClass= 'Custom-Class'></EJ.Uploadbox>` | Not Applicable |
 | Enable/Disable the control | **Property** : enabled<br/> <br/>`<EJ.Uploadbox id="UploadDefault" enabled= {false}></EJ.Uploadbox>`  **Method** : enable(), disable()<br/> | **Property:** enabled<br/><br/> `<UploaderComponent id='fileUpload' enabled= {false} />` |

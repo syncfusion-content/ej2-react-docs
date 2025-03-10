@@ -43,9 +43,9 @@ Start a new project using create-react-app command as follows
       cd quickstart
    ```
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install. For this application, we are going to use NumericTextBox component.
 
 To install NumericTextBox component, use the following command

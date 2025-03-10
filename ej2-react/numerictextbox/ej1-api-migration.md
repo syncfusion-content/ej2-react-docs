@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Numerictextbox component
 
-This article describes the API migration process of NumericTextBox component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of NumericTextBox component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Common
 
 {% raw %}
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Triggers on creation | **Event** *create*<br /><br />`<EJ.NumericTextbox id="numeric" value={120} create={this.onCreate}></EJ.NumericTextbox >`<br /><br />**script**<br />`onCreate: function() {}` | **Event:** *created*<br /><br />`<NumericTextBoxComponent id="numeric" value='120' created={this.onCreated.bind(this)}></NumericTextBoxComponent>`<br /><br />`public onCreated() {}` |
 | Adding custom classes | **Property** *cssClass*<br /><br />`<EJ.NumericTextbox id="numeric" value={120} cssClass="custom"></EJ.NumericTextbox >` | **Property:** *cssClass*<br /><br />`<NumericTextBoxComponent id="numeric" value='120' cssClass="custom"></NumericTextBoxComponent>` |
@@ -38,20 +38,20 @@ This article describes the API migration process of NumericTextBox component fro
 
 ## Globalization
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Localization culture | **Property** *locale*<br /><br />`<EJ.NumericTextbox id="numeric" value={80} locale="de-DE"></EJ.NumericTextbox>` | **Property:** *locale*<br /><br />`<NumericTextBoxComponent id="numeric" value='80' locale="de-DE"></NumericTextBoxComponent>` |
 
 ## Group
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Group digits in editor | **Property** *groupSize*<br /><br />`<EJ.NumericTextbox id="numeric" value={100} groupSize={2}></EJ.NumericTextbox>` | Not Applicable |
 | Group Separator | **Property** *groupSeparator*<br /><br />`<EJ.NumericTextbox id="numeric" value={100} groupSeparator="-"></EJ.NumericTextbox>` | Not Applicable |
 
 ## Numeric configuration
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Triggers on value change | **Event** *change*<br /><br />`<EJ.NumericTextbox id="numeric" value={120} change={this.onChange}></EJ.NumericTextbox >`<br /><br />**script**<br />`onChange: function() {}` | **Event:** *change*<br /><br />`<NumericTextBoxComponent id="numeric" value='120' change={this.onChange.bind(this)}></NumericTextBoxComponent>`<br /><br />`public onChange() {}` |
 | Sets digits allowed after decimal point | **Property** *decimalPlaces*<br /><br />`<EJ.NumericTextbox id="numeric" value={100} decimalPlaces={2}></EJ.NumericTextbox>` | **Property:** *decimals*<br /><br />`<NumericTextBoxComponent id="numeric" value='100' format="n2" decimals="2"></NumericTextBoxComponent>` |
@@ -71,14 +71,14 @@ This article describes the API migration process of NumericTextBox component fro
 
 ## Number Formats
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Set Currency symbol | **Property** *currencySymbol*<br /><br />`<EJ.CurrencyTextbox id="currency" value={100} currencySymbol="EUR"></EJ.CurrencyTextbox>` | **Property:** *currency*<br /><br />`<NumericTextBoxComponent id="currency" value='100' format="c2" currency="EUR"></NumericTextBoxComponent>` |
 | Number Format | Not Applicable | **Property:** *format*<br /><br />`<NumericTextBoxComponent id="numeric" value='200' format="n2"></NumericTextBoxComponent>` |
 
 ## Validation
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Strict Mode | **Property** *enableStrictMode*<br /><br />`<EJ.NumericTextbox id="numeric" value={80} enableStrictMode={true}></EJ.NumericTextbox>` | **Property:** *strictMode*<br /><br />`<NumericTextBoxComponent id="numeric" value='80' strictMode=true></NumericTextBoxComponent>` |
 | Validation on typing | **Property** *validateOnType*<br /><br />`<EJ.NumericTextbox id="numeric" value={80} validateOnType={true}></EJ.NumericTextbox>` | **Property:** *validateDecimalOnType*<br /><br />`<NumericTextBoxComponent id="numeric" value='100' validateDecimalOnType=true></NumericTextBoxComponent>` |

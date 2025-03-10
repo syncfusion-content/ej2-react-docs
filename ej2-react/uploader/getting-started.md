@@ -44,9 +44,9 @@ Start a new project using create-react-app command as follows
      cd quickstart
    ```
 
-## Adding Syncfusion Packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
 
-All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 
 To install uploader component, use the following command
 

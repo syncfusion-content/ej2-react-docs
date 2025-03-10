@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Range Slider component
 
-This article describes the API migration process of the Slider component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of the Slider component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 {% raw %}
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Max value | **Property:**  *maxValue*  <br  /> `<EJ.Slider maxValue={60} />` | **Property:**  *max*  <br  /> `<SliderComponent id='slider' max={100} />` |
 | Min value | **Property:**  *minValue*  <br  /> `<EJ.Slider minValue={60} />`| **Property:**  *min*  <br  />`<SliderComponent id='slider' min={100} />` |
