@@ -64,7 +64,7 @@ The OTP Input component's accessibility levels are ensured through an [accessibi
 
 ## See also
 
-* [Accessibility in Syncfusion React controls](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React controls](../common/accessibility)
 
 ## HtmlAttributes
 

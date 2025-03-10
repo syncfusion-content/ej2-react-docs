@@ -37,7 +37,7 @@ function App() {
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',
             downloadUrl: hostUrl + 'api/FileManager/Download'
-        }} height={{ height }} created={onCreated.bind(this)}>
+        }} created={onCreated.bind(this)}>
           <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
               </FileManagerComponent>
 

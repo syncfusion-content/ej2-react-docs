@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Inherited Features from TextArea
 
-The Syncfusion React Smart TextArea component fully inherits all the properties, features, and styling options of the Syncfusion React TextArea component. This means that you can leverage the existing features of the Syncfusion React TextArea while benefiting from the enhanced functionality of the Smart TextArea.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Smart TextArea component fully inherits all the properties, features, and styling options of the Syncfusion<sup style="font-size:70%">&reg;</sup> React TextArea component. This means that you can leverage the existing features of the Syncfusion<sup style="font-size:70%">&reg;</sup> React TextArea while benefiting from the enhanced functionality of the Smart TextArea.
 
 * [Form Support](https://ej2.syncfusion.com/react/documentation/textarea/form-support)
 * [Floating Labels](https://ej2.syncfusion.com/react/documentation/textarea/floating-label)
@@ -21,4 +21,4 @@ The Syncfusion React Smart TextArea component fully inherits all the properties,
 
 ## See also
 
-* [Getting Started with Syncfusion React Smart TextArea](./getting-started)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Smart TextArea](./getting-started)

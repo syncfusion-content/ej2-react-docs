@@ -28,7 +28,7 @@ function App() {
   }
 
   function onClick() {
-    const Slider = document.getElementById("case");
+    const slider = document.getElementById("case");
     if (slider) {
       slider.style.display = "block";
       sliderInstance.refresh();

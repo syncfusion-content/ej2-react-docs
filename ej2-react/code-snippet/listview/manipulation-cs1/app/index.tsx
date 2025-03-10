@@ -159,7 +159,7 @@ function App() {
             onKeyUp={onKeyUp.bind(this)}
             placeholder="Search fruits"
           />
-          <span className="e-input-group-icon e-input-search" />
+          <span className="e-input-group-icon e-icons e-input-search" />
         </div>
 
         <button

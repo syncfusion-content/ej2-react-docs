@@ -63,4 +63,4 @@ The accessibility compliance of the MaskedTextBox component is shown in the foll
 
 ## See also
 
-* [Accessibility in Syncfusion React components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)

@@ -62,56 +62,56 @@ To achieve the directory upload in the physical file service provider, use the b
 
 ```ts
 [Route("Upload")]
-        public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
+public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
+{
+    try
+    {
+        FileManagerResponse uploadResponse;
+        foreach (var file in uploadFiles)
         {
-            try
+            var folders = (file.FileName).Split('/');
+            // checking the folder upload
+            if (folders.Length > 1)
             {
-                FileManagerResponse uploadResponse;
-                foreach (var file in uploadFiles)
+                for (var i = 0; i < folders.Length - 1; i++)
                 {
-                    var folders = (file.FileName).Split('/');
-                    // checking the folder upload
-                    if (folders.Length > 1)
+                    string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
+                    // checking the directory traversal
+                    if (Path.GetFullPath(newDirectoryPath) != (Path.GetDirectoryName(newDirectoryPath) + Path.DirectorySeparatorChar + folders[i]))
                     {
-                        for (var i = 0; i < folders.Length - 1; i++)
-                        {
-                            string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
-                            // checking the directory traversal
-                            if (Path.GetFullPath(newDirectoryPath) != (Path.GetDirectoryName(newDirectoryPath) + Path.DirectorySeparatorChar + folders[i]))
-                            {
-                                throw new UnauthorizedAccessException("Access denied for Directory-traversal");
-                            }
-                            if (!Directory.Exists(newDirectoryPath))
-                            {
-                                this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
-                            }
-                            path += folders[i] + "/";
-                        }
+                        throw new UnauthorizedAccessException("Access denied for Directory-traversal");
                     }
-                }
-                uploadResponse = operation.Upload(path, uploadFiles, action, size, null);
-                if (uploadResponse.Error != null)
-                {
-                    Response.Clear();
-                    Response.ContentType = "application/json; charset=utf-8";
-                    Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
-                    Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+                    if (!Directory.Exists(newDirectoryPath))
+                    {
+                        this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
+                    }
+                    path += folders[i] + "/";
                 }
             }
-            catch (Exception e)
-            {
-                ErrorDetails er = new ErrorDetails();
-                er.Message = e.Message.ToString();
-                er.Code = "417";
-                er.Message = "Access denied for Directory-traversal";
-                Response.Clear();
-                Response.ContentType = "application/json; charset=utf-8";
-                Response.StatusCode = Convert.ToInt32(er.Code);
-                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = er.Message;
-                return Content("");
-            }
-            return Content("");
         }
+        uploadResponse = operation.Upload(path, uploadFiles, action, size, null);
+        if (uploadResponse.Error != null)
+        {
+            Response.Clear();
+            Response.ContentType = "application/json; charset=utf-8";
+            Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
+            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+        }
+    }
+    catch (Exception e)
+    {
+        ErrorDetails er = new ErrorDetails();
+        er.Message = e.Message.ToString();
+        er.Code = "417";
+        er.Message = "Access denied for Directory-traversal";
+        Response.Clear();
+        Response.ContentType = "application/json; charset=utf-8";
+        Response.StatusCode = Convert.ToInt32(er.Code);
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = er.Message;
+        return Content("");
+    }
+    return Content("");
+}
 ```
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Controllers/FileManagerController.cs#L76) for more details
@@ -188,21 +188,21 @@ To perform the directory upload in the Amazon file service provider, use the bel
 
 ```ts
 foreach (var file in uploadFiles)
+{
+    var folders = (file.FileName).Split('/');
+    // checking the folder upload
+    if (folders.Length > 1)
+    {
+        for (var i = 0; i < folders.Length - 1; i++)
+        {
+            if (!this.operation.checkFileExist(path, folders[i]))
             {
-                var folders = (file.FileName).Split('/');
-                // checking the folder upload
-                if (folders.Length > 1)
-                {
-                    for (var i = 0; i < folders.Length - 1; i++)
-                    {
-                        if (!this.operation.checkFileExist(path, folders[i]))
-                        {
-                            this.operation.ToCamelCase(this.operation.Create(path, folders[i], dataObject));
-                        }
-                        path += folders[i] + "/";
-                    }
-                }
+                this.operation.ToCamelCase(this.operation.Create(path, folders[i], dataObject));
             }
+            path += folders[i] + "/";
+        }
+    }
+}
 ```
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs#L83) for more details.
@@ -916,75 +916,62 @@ The toolbar can be divided into two sections as right and left. Whenever the too
 The following table provides the toolbar buttons that appear based on the selection.
 
 <!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td> <b>Selected Items Count</b> </td>
-<td> <b>Left section </b></td>
-<td> <b>Right section </b></td>
-</tr>
-
-<tr>
-<td>
-
-`0` (none of the item )
-</td>
-<td>
-
-* SortBy
-* Refresh
-* NewFolder
-* Upload
-
-</td>
-<td>
-
-* View
-* Details
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`1` (single item selected)
-</td>
-<td>
-
-* Delete
-* Download
-* Rename
-
-</td>
-<td>
-
-* Selected items count
-* View
-* Details
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`>1` (multiple selection)
-</td>
-<td>
-
-* Delete
-* Download
-
-</td>
-<td>
-
-* Selected items count
-* View
-* Details
-
-</td>
-</tr>
-
+<table border="1">
+    <tr>
+        <th>Selected Items Count</th>
+        <th>Left section</th>
+        <th>Right section</th>
+    </tr>
+    <tr>
+        <td>`0` (none of the items)</td>
+        <td>
+            <ul>
+                <li>SortBy</li>
+                <li>Refresh</li>
+                <li>NewFolder</li>
+                <li>Upload</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>View</li>
+                <li>Details</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>`1` (single item selected)</td>
+        <td>
+            <ul>
+                <li>Delete</li>
+                <li>Download</li>
+                <li>Rename</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Selected items count</li>
+                <li>View</li>
+                <li>Details</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>`>1` (multiple selection)</td>
+        <td>
+            <ul>
+                <li>Delete</li>
+                <li>Download</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Selected items count</li>
+                <li>View</li>
+                <li>Details</li>
+            </ul>
+        </td>
+    </tr>
 </table>
 
 ### Context menu
@@ -992,68 +979,64 @@ The following table provides the toolbar buttons that appear based on the select
 The following table provides the default context menu item and the corresponding target areas.
 
 <!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td> <b>Menu Name</b> </td>
-<td> <b>Menu Items </b></td>
-<td> <b>Target </b></td>
-</tr>
-
-<tr>
-<td>Layout</td>
-<td>
-
-* SortBy
-* View
-* Refresh
-* NewFolder
-* Upload
-* Details
-* Select all
-
-</td>
-<td>
-
-* Empty space in the view section (details view and large icon view area).
-* Empty folder content.
-
-</td>
-</tr>
-
-<tr>
-<td>Folders</td>
-<td>
-
-* Open
-* Delete
-* Rename
-* Downloads
-* Details
-
-</td>
-<td>
-
-* Folders in treeview, details view, and large icon view.
-
-</td>
-</tr>
-
-<tr>
-<td>Files</td>
-<td>
-
-* Open
-* Delete
-* Rename
-* Downloads
-* Details
-
-</td>
-<td>
-
-* Files in details view and large icon view.
-
-</td>
-</tr>
-
+<table border="1">
+    <tr>
+        <th>Menu Name</th>
+        <th>Menu Items</th>
+        <th>Target</th>
+    </tr>
+    <tr>
+        <td>Layout</td>
+        <td>
+            <ul>
+                <li>SortBy</li>
+                <li>View</li>
+                <li>Refresh</li>
+                <li>NewFolder</li>
+                <li>Upload</li>
+                <li>Details</li>
+                <li>Select all</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Empty space in the view section (details view and large icon view area).</li>
+                <li>Empty folder content.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Folders</td>
+        <td>
+            <ul>
+                <li>Open</li>
+                <li>Delete</li>
+                <li>Rename</li>
+                <li>Downloads</li>
+                <li>Details</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Folders in treeview, details view, and large icon view.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Files</td>
+        <td>
+            <ul>
+                <li>Open</li>
+                <li>Delete</li>
+                <li>Rename</li>
+                <li>Downloads</li>
+                <li>Details</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Files in details view and large icon view.</li>
+            </ul>
+        </td>
+    </tr>
 </table>

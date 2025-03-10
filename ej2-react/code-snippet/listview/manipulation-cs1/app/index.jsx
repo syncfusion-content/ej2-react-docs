@@ -119,7 +119,7 @@ function App() {
           <input id="search" ref={scope => {
             search = scope;
         }} className="e-input" type="text" onKeyUp={onKeyUp.bind(this)} placeholder="Search fruits"/>
-          <span className="e-input-group-icon e-input-search"/>
+          <span className="e-input-group-icon e-icons e-input-search"/>
         </div>
 
         <button id="sort" className="e-control e-btn e-small e-round e-primary e-icon-btn" ref={scope => {
