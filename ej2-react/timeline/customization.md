@@ -37,7 +37,7 @@ You can define the styles applicable to the all the Timeline item connectors.
 
 ### Individual styling
 
-You can also apply unique styles to individual connectors, to differentiate specific items within the timeline.
+You can also apply unique styles to individual connectors, to differentiate specific items within the Timeline.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
