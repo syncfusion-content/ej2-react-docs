@@ -7,8 +7,8 @@ import * as ReactDom from 'react-dom';
 function App() {
   
     const buttonSettings = {
-        content: 'Speak',
-        stopContent: 'Start Listening'
+        content: 'Start Listening',
+        stopContent: 'Stop Listening'
     }
   
     return (

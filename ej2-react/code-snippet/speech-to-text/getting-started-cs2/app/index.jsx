@@ -6,8 +6,8 @@ import * as React from 'react';
 function App() {
 
     const buttonSettings = {
-        content: 'Speak',
-        stopContent: 'Start Listening'
+        content: 'Start Listening',
+        stopContent: 'Stop Listening'
     }
   
     return (
