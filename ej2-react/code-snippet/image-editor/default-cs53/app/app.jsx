@@ -1,4 +1,3 @@
-{% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
@@ -54,4 +53,3 @@ export default class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

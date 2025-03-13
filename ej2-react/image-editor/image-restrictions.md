@@ -20,7 +20,7 @@ The Image Editor allows users to specify acceptable file extensions for uploaded
 
 `Note:` To specify allowed extensions in the upload settings, use the format '.png, .svg', listing the permitted file types as a comma-separated string.
 
-Here is an example of configuring image restrictions using the [`uploadSettings`] property.
+Here is an example of configuring image restrictions using the `uploadSettings` property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -42,7 +42,7 @@ The Image Editor allows users to specify the minimum and maximum size limits for
 
 `Note:` Users can also upload images as base64 strings, in which case file extension validation is bypassed, but file size restrictions still apply.
 
-Here is an example of configuring image restrictions using the [`uploadSettings`] property.
+Here is an example of configuring image restrictions using the `uploadSettings` property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

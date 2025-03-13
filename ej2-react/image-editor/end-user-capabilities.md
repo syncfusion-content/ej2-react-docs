@@ -51,7 +51,7 @@ To zoom in or out the image in the image editor, do the following steps.
 
 * Zoom in and out controlled by touch gestures. 
 
-### Using Mouse wheel 
+### Using mouse wheel 
 
 To zoom in or out the image in the image editor, do the following steps. 
 
@@ -67,7 +67,7 @@ To zoom in or out the image in the image editor, do the following steps.
 
 * Press the ctrl key with ‘-’ button from the keyboard to zoom out an image.
 
-![Zoom an image](images/zoom.gif)
+![Zoom an image](images/zoom.jpg)
 
 ## Panning 
 
@@ -99,7 +99,7 @@ To crop an image in the image editor, do the following steps.
 
 * Once the cropping region is finalized in the image click the tick icon at the top right of the toolbar to crop the image.
 
-![Crop transform an image](images/crop-transform.gif)
+![Crop transform an image](images/crop.jpg)
 
 ## Annotations
 
@@ -115,7 +115,7 @@ To add annotations to an image in the image editor, do the following steps.
 
 * When annotations are selected in the Image Editor, the quick access toolbar becomes active, providing convenient access to various actions such as duplicating, deleting, or editing text associated with the selected annotation. This toolbar enables users to perform these common operations quickly and efficiently, streamlining their workflow and enhancing the overall editing experience.
 
-![Image annotation](images/annotation.gif)
+![Image annotation](images/annotation.jpg)
 
 ## Filtering and fine-tune 
 
@@ -127,6 +127,8 @@ To perform fine-tuning on an image in the image editor, do the following steps.
 
 * Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications. 
 
+![Filter and Finetune](images/finetune.jpg)
+
 To apply filters on an image in the image editor, do the following steps. 
 
 * Click the filter button which displays the list of filters available in the image editor. 
@@ -135,7 +137,7 @@ To apply filters on an image in the image editor, do the following steps.
 
 * Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications. 
 
-![Filter and Finetune](images/filter-finetune.gif)
+![Filter and Finetune](images/filter.jpg)
 
 ## Undo and redo the operations 
 
@@ -159,17 +161,12 @@ To revert all the changes done in an image editor, do the following steps.
 
 * This will revert all the changes performed in the image editor.
 
-![Reset an image](images/reset.gif)
-
 ## Export an image 
 
 To save the modified image in the Image Editor, follow these steps:
 
 * Click the Save Button
     * Locate the Save button on the right side of the toolbar and click it.
-
-* Use Keyboard Shortcut (Ctrl + S)
-    * Press Ctrl + S to quickly open the export dialog and save the image.
 
 * Select the File Format
     * In the export popup, choose your preferred file format (PNG, JPEG, SVG, or WEBP) to save the image with all 
@@ -181,4 +178,7 @@ applied modifications.
 * Download the Image
     * Click Download to save the modified image to your device.
 
-![Export an image](images/save.gif)
+* Use Keyboard Shortcut (Ctrl + S)
+    * Press Ctrl + S to download the image in the same format as the loaded image without opening the Save dialog. For example, if the loaded image is PNG, it will be saved as PNG.
+
+![Export an image](images/save.jpg)

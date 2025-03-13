@@ -1,4 +1,3 @@
-{% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
@@ -26,4 +25,3 @@ export default class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

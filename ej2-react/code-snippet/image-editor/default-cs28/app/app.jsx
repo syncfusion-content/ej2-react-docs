@@ -1,5 +1,3 @@
-{% raw %}
-
 import { ImageEditorComponent, ImageFinetuneOption } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
@@ -41,5 +39,3 @@ export default class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-
-{% endraw %}

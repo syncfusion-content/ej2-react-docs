@@ -1,5 +1,3 @@
-{% raw %}
-
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { FileManagerComponent, FileData } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
@@ -66,5 +64,3 @@ export default class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-
-{% endraw %}

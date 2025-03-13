@@ -17,9 +17,9 @@ Filters are pre-defined effects that can be applied to an image to alter its app
 
 The [`applyImageFilter`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#applyimagefilter) method is utilized to apply filters to an image. By passing the desired filter type as the first parameter of the method, specified as [`ImageFilterOption`](https://ej2.syncfusion.com/react/documentation/api/image-editor/imageFilterOption/) the method applies the corresponding filter to the image. This allows for easy and convenient application of various filters to enhance or modify the image based on the chosen filter type.
 
-The [`applyImageFilter`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#applyimagefilter) method is used to perform filtering by specifying the type of filter as ImageFilterOption and send it a first parameter of the method. 
+* filterOption - Specifies the filter options to the image.
 
-Here is an example of filtering using the [`applyImageFilter`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#applyimagefilter) method.
+In the following example, you can using the `applyImageFilter` method in the button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -35,12 +35,12 @@ Here is an example of filtering using the [`applyImageFilter`](https://helpej2.s
         
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs27" %}
 
-### Image filtering event 
+## Image filtering event 
 
 The [`imageFiltering`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/#imagefiltering) event is triggered when applying filtering on the image. This event is passed an object that contains information about the filtering event, such as the type of filtering. 
 
 The parameter available in the [`ImageFilterEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/imageFilterEventArgs/) event is, 
 
-ImageFilterEventArgs.filter - The type of filtering as ImageFilterOption to be applied in the image editor. 
+ImageFilterEventArgs.filter - The type of filtering as [`ImageFilterOption`](https://ej2.syncfusion.com/react/documentation/api/image-editor/imageFilterOption/) to be applied in the image editor. 
 
 ImageFilterEventArgs.cancel – Specifies to cancel the filtering action. 
