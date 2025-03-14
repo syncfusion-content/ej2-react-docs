@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Exec command in React Rich Text Editor component | Syncfusion
-description: Learn here all about Exec command in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
-control: Exec command 
+title: Execute command in React Rich Text Editor component | Syncfusion
+description: Learn here all about Execute command in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+control: Execute command 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exec command in React Rich text editor component
+# Execute command in React Rich text editor component
 
-In Rich Text Editor, execCommand used to perform commands for the modification of content in editable area.
-The execCommand will perform the following commands.
+In Rich Text Editor, executeCommand used to perform commands for the modification of content in editable area.
+The executeCommand will perform the following commands.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|
@@ -46,5 +46,7 @@ The execCommand will perform the following commands.
 | copyFormatPainter | Copy the format of selected text and apply it to another text. | `rteObj.executeCommand('copyFormatPainter', formatPainterSettings);`|
 | applyFormatPainter | Apply the copied format to the selected text. | `rteObj.executeCommand('applyFormatPainter');`|
 | escapeFormatPainter | Remove the previously copied format and disable the sticky mode | `rteObj.executeCommand('escapeFormatPainter');`|
+| insertVideo | Insert a video to the current cursor position. | `rteObj.executeCommand('insertVideo', { url: 'https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Ocean-Waves.mp4', cssClass: 'e-rte-video'});` |
+| insertAudio | Insert a audio to the current cursor position. | `rteObj.executeCommand('insertAudio', { url: 'https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Audio.wav', cssClass: 'e-rte-audio'});` |
 
 >Note: The ‘ExecuteCommand’ public method is not supported in Syncfusion Markdown Editor

@@ -639,6 +639,106 @@ The following example demonstrates how to bind custom data to handle grid action
 > * While working with grid edit operation, defining the `isPrimaryKey` property of column is a mandatory step. In case the primary key column is not defined, the edit or delete action will take place on the first row of the grid.
 > * Need to maintain the same instance for all grid actions.
 
+## Export all records in client side
+
+Export all records is especially beneficial when dealing with large datasets that need to be exported for offline analysis or sharing.
+
+By default, the Syncfusion React Grid component exports only the records on the current page. However, the Grid component allows you to export all records, including those from multiple pages, by configuring the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties).
+
+To export all records, including those from multiple pages, configure the [pdfExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#datasource) for PDF exporting and [excelExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties#datasource) for Excel exporting within the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event handler. Inside this event, set the `dataSource` property of `pdfExportProperties` and `excelExportProperties` for PDF and Excel exporting to include all records.
+
+**Excel Exporting**
+
+To export the complete Grid data to Excel document, utilize the `excelExportProperties.dataSource` when initiating the Excel export. Use the following code snippet to export all records within the Grid:
+
+{% tabs %}
+{% highlight tsx tabtitle="App.tsx" %}
+{% raw %}
+ const toolbarClick = async (args: ClickEventArgs) => {
+    const exportState = { skip: 0, take: gridInstance.current.pageSettings.totalRecordsCount};
+    await dispatch(fetchData(exportState));
+    const updatedState = store.getState();
+    const exportData = updatedState.data.result; 
+    if (args.item.text === "Excel Export") {
+      const excelExportProps: ExcelExportProperties = {
+        dataSource: exportData, 
+      };
+      gridInstance.current.excelExport(excelExportProps);
+    }
+  };
+{% endraw %}
+{% endhighlight %}
+{% highlight jsx tabtitle="App.jsx" %}
+{% raw %}
+ const toolbarClick = async (args) => {
+    const exportState = { skip: 0, take: gridInstance.current.pageSettings.totalRecordsCount};
+    await dispatch(fetchData(exportState));
+    const updatedState = store.getState();
+    const exportData = updatedState.data.result; 
+    if (args.item.text === "Excel Export") {
+      const excelExportProps = {
+        dataSource: exportData, 
+      };
+      gridInstance.current.excelExport(excelExportProps);
+    }
+  };
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+**PDF Exporting**
+
+To export the complete Grid data to PDF document, utilize the `pdfExportProperties.dataSource` when initiating the PDF export. Use the following code snippet to export all records within the Grid:
+
+```ts
+
+  const toolbarClick = async (args: ClickEventArgs) => {
+    const exportState = { skip: 0, take: gridInstance.current.pageSettings.totalRecordsCount};
+    await dispatch(fetchData(exportState));
+    const updatedState = store.getState();
+    const exportData = updatedState.data.result; 
+    if (args.item.text === "PDF Export") {
+      const pdfExportProps: PdfExportProperties = {
+        dataSource: exportData, 
+      };
+      gridInstance.current.pdfExport(pdfExportProps); 
+    }
+  };
+
+
+```
+
+> For further customization on Grid export, refer to the respective documentation for [PDF exporting](https://ej2.syncfusion.com/react/documentation/grid/pdf-export/pdf-export-options) and [Excel exporting](https://ej2.syncfusion.com/react/documentation/grid/excel-export/excel-export-options)
+
+The following code example shows how to export all records in client side:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/custom-binding-export/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/custom-binding-export/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="Reducer.jsx" %}
+{% include code-snippet/grid/custom-binding-export/app/reducer/reducer.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="Reducer.tsx" %}
+{% include code-snippet/grid/custom-binding-export/app/reducer/reducer.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="Action.jsx" %}
+{% include code-snippet/grid/custom-binding-export/app/reducer/action.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="Action.tsx" %}
+{% include code-snippet/grid/custom-binding-export/app/reducer/action.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/custom-binding-export/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/custom-binding-export/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Sending additional parameters to the server
 
 The Syncfusion Grid component allows you to include custom parameters in data requests. This feature is particularly useful when you need to provide additional information to the server enhanced processing.
