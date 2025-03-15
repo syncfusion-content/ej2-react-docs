@@ -450,6 +450,31 @@ In the following example, the [toolbarClick](https://ej2.syncfusion.com/react/do
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-export-cs18" %}
 
+## Passing additional parameters to the server when exporting
+
+Passing additional parameters to the server when exporting data in the Syncfusion React Grid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+
+You can achieve this by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/grid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event. Within the `query` property, you can invoke the `addParams` method to add parameters to the request.
+
+The following example demonstrates how to pass additional parameters to the server when Excel exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically **recordcount** as **15**, are passed using the `addParams` method and displayed as a message.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/additonal-parameter-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/additonal-parameter-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/additonal-parameter-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/additonal-parameter-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/additonal-parameter-cs1" %}
+
 ## Limitations
 
 * A CSV is a plain text format that does not support features such as cell rotation, font and color customization, column and row spanning, or adding formulas. CSV files store raw data without any formatting or styling.
