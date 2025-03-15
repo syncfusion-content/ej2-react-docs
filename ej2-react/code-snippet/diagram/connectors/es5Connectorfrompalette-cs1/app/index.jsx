@@ -35,7 +35,7 @@ let connectorSymbols = [
 // App component
 let App = () => {
   return (
-    <>
+    <div>
       <SymbolPaletteComponent
         id="symbolpalette"
         expandMode="Multiple"
@@ -53,7 +53,7 @@ let App = () => {
         width="100%"
         height="700px"
       />
-    </>
+    </div>
   );
 };
 

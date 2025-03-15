@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent, SymbolPaletteComponent,ConnetorModel } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, SymbolPaletteComponent,ConnectorModel } from "@syncfusion/ej2-react-diagrams";
 
 // Define connector symbols
-let connectorSymbols:ConnetorModel[] = [
+let connectorSymbols:ConnectorModel[] = [
   {
     id: 'Link1',
     type: 'Orthogonal',
@@ -35,7 +35,7 @@ let connectorSymbols:ConnetorModel[] = [
 // App component
 let App = () => {
   return (
-    <>
+    <div>
       <SymbolPaletteComponent
         id="symbolpalette"
         expandMode="Multiple"
@@ -53,7 +53,7 @@ let App = () => {
         width="100%"
         height="700px"
       />
-    </>
+    </div>
   );
 };
 
