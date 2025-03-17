@@ -736,4 +736,4 @@ In the following code sample, printing can be done using an external button name
 ## See Also
 
 * [How to render a multi-series chart in Pivot Table?](https://support.syncfusion.com/kb/article/14503/how-to-render-a-multi-series-chart-in-pivot-table)
-* [Salient Features of Pivot Chart View in Essential JS 2 Pivot Table](https://www.syncfusion.com/blogs/post/salient-features-of-pivot-chart-view-in-essential-js-2-pivot-table)
+* [Salient Features of Pivot Chart View in Essential<sup style="font-size:70%">&reg;</sup> JS 2 Pivot Table](https://www.syncfusion.com/blogs/post/salient-features-of-pivot-chart-view-in-essential-js-2-pivot-table)

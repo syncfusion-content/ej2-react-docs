@@ -41,9 +41,9 @@ npm install
 
 ```
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 To install Pager component, use the following command
 
 ```
@@ -98,13 +98,13 @@ ReactDOM.render(<App />, document.getElementById('pager'));
 
 ## Page sizes
 
-The [pageSizes](https://ej2.syncfusion.com/react/documentation/api/pager/#pagesizes) property in the Syncfusion Pager component allows you to control the number of records displayed per page through a `DropDownList` integrated into the pager. This feature enhances the experience by providing flexibility in data viewing.
+The [pageSizes](https://ej2.syncfusion.com/react/documentation/api/pager/#pagesizes) property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Pager component allows you to control the number of records displayed per page through a `DropDownList` integrated into the pager. This feature enhances the experience by providing flexibility in data viewing.
 
 **Enabling Page Sizes**
 
 To enable the `pageSizes` property, follow these steps:
 
-1. Import the `PagerDropDown` and `Pager` modules from the Syncfusion Grid package.
+1. Import the `PagerDropDown` and `Pager` modules from the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package.
 
 2. Inject the `PagerDropDown` into the `Pager` module to enable the `DropDownList` in the pager.
 

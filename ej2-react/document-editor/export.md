@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in React Document Editor Component
 
-Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
 
 We are providing two types of save APIs  as mentioned below.
 
@@ -21,7 +21,7 @@ We are providing two types of save APIs  as mentioned below.
 
 ## SFDT export
 
-The following example shows how to export documents in document editor as Syncfusion document text (.sfdt).
+The following example shows how to export documents in document editor as Syncfusion<sup style="font-size:70%">&reg;</sup> document text (.sfdt).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,7 +59,7 @@ The following example shows how to export documents in document editor as Syncfu
 
 The following example shows how to export the document as Word document (.docx).  
 
->Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -97,7 +97,7 @@ The following example shows how to export the document as Word document (.docx).
 
 The following example shows how to export the document as Word Template (.dotx).
 
->Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

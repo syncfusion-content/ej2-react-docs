@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Enable or disable grid and its actions in React Grid component
 
-Enabling or disabling the Syncfusion React Grid and its associated actions is essential for controlling access and interaction with the grid based on specific scenarios. This can help to improve the user experience and application functionality.
+Enabling or disabling the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid and its associated actions is Essential<sup style="font-size:70%">&reg;</sup> for controlling access and interaction with the grid based on specific scenarios. This can help to improve the user experience and application functionality.
 
 You can enable or disable the grid by applying or removing corresponding CSS styles. In this example, ngClass directive is used to conditionally apply the CSS class `is-disabled` to the <div> containing the grid based on the value of **isDisabled**. You can define your custom CSS styles for the `is-disabled` class to visually enable or disable the grid and its actions as needed.
 

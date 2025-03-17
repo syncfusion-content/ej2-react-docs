@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The following steps illustrate how to configure clear button in Calendar UI.
 
-* On [`created`](https://ej2.syncfusion.com/react/documentation/api/calendar#created) event of Calendar add the required elements to have clear button. Here we have used div with Essential JS 2 Button component.
+* On [`created`](https://ej2.syncfusion.com/react/documentation/api/calendar#created) event of Calendar add the required elements to have clear button. Here we have used div with Essential<sup style="font-size:70%">&reg;</sup> JS 2 Button component.
 
 * Use the `e-footer` class to the div tag to act as the footer.
 

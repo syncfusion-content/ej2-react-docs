@@ -35,7 +35,7 @@ It is possible to enable both row and column virtualization. This feature allows
 
 ## Optimizing react component rendering by mitigating unnecessary re-renders during state updates
 
-In React, when employing `useState` to update the state of a component while executing actions in a Grid, the default behavior is to trigger a re-render of the component. This behavior, while standard in React, can pose challenges, particularly when essential Grid actions such as selection are affected by the re-render.
+In React, when employing `useState` to update the state of a component while executing actions in a Grid, the default behavior is to trigger a re-render of the component. This behavior, while standard in React, can pose challenges, particularly when Essential<sup style="font-size:70%">&reg;</sup> Grid actions such as selection are affected by the re-render.
 
 To tackle this and maintain the integrity of Grid actions despite state updates, it is advisable to leverage the `useMemo` hook provided by React. This strategic use of `useMemo` prevents unnecessary re-renders of the component, ensuring that crucial aspects like grid selection remain unaffected.
 
@@ -46,7 +46,7 @@ When integrating image or template elements into a column, it's recommended to u
 
 ## How to improve loading performance by referring individual script and CSS
 
-To improve the performance of Syncfusion Grid component during the initial render as well as certain actions, suggested you to download the specific component scripts using CRG (Custom Resource Generator) to speed up the project. By default, the ej2.min.js script file contains all the Syncfusion component scripts. So, it will take some time to load the scripts to the project. Using [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator), you can select the components which you want to use, and the modules for those components, then you can download the scripts and CSS for the selected components and use them as per your need.
+To improve the performance of Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component during the initial render as well as certain actions, suggested you to download the specific component scripts using CRG (Custom Resource Generator) to speed up the project. By default, the ej2.min.js script file contains all the Syncfusion<sup style="font-size:70%">&reg;</sup> component scripts. So, it will take some time to load the scripts to the project. Using [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator), you can select the components which you want to use, and the modules for those components, then you can download the scripts and CSS for the selected components and use them as per your need.
 
 [CRG website link](https://crg.syncfusion.com/) 
 

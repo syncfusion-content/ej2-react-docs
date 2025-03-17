@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Data binding is a fundamental technique that empowers the Grid component to integrate data into its interface, enabling the creation of dynamic and interactive grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
 
-The Syncfusion Grid utilizes the **DataManager**, which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid utilizes the **DataManager**, which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
 
 It supports two kinds of data binding methods:
 
@@ -25,7 +25,7 @@ To learn about how to bind local or remote data to React Grid, you can check on 
 
 ## Loading indicator
 
-The Syncfusion React Grid offers a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid offers a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
 
 To achieve this, you can utilize the [loadingIndicator.indicatorType](https://ej2.syncfusion.com/react/documentation/api/grid/loadingIndicatorModel/) property of the grid, which supports two types of indicators:
 
@@ -134,7 +134,7 @@ export default App;
 
 ## Refresh the datasource using property
 
-Refreshing the data source in a Syncfusion Grid involves updating the data that the grid displays dynamically. This operation is essential when you need to reflect changes in the underlying data without reloading the entire page or component.
+Refreshing the data source in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid involves updating the data that the grid displays dynamically. This operation is Essential<sup style="font-size:70%">&reg;</sup> when you need to reflect changes in the underlying data without reloading the entire page or component.
 
 To achieve this, you can make use of the [datasource](https://ej2.syncfusion.com/react/documentation/api/grid/#datasource) property in conjunction with the [setProperties](https://ej2.syncfusion.com/react/documentation/api/grid/#refresh) method. This ensures that the grid reflects the changes in the data source without requiring a complete page or component reload.
 
@@ -174,7 +174,7 @@ The following example demonstrates adding a new record to the data source throug
 
 ## Dynamically change the datasource or columns or both
 
-The Grid component in Syncfusion allows dynamic modification of the data source, columns, or both . This feature is particularly valuable when you need to refresh the grid's content and structure without requiring a complete page reload.
+The Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> allows dynamic modification of the data source, columns, or both . This feature is particularly valuable when you need to refresh the grid's content and structure without requiring a complete page reload.
 
 To achieve dynamic changes, you can utilize the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/#changedatasource) method. This method enables you to update the data source, columns, or both, based on your application's requirements. However, it is important to note that during the changing process for the data source and columns, the grid's existing actions such as sorting, filtering, grouping, aggregation, and searching will be reset.The `changeDataSource` method has two optional arguments: the first argument represents the data source, and the second argument represents the columns. The various uses of the `changeDataSource` method are explained in the following topic.
 

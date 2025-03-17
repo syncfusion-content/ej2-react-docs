@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Column chooser in React Grid component
 
-The column chooser feature in the Syncfusion React Grid component allows you to dynamically show or hide columns. This feature can be enabled by defining the [showColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/#showcolumnchooser) property as **true**.
+The column chooser feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows you to dynamically show or hide columns. This feature can be enabled by defining the [showColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/#showcolumnchooser) property as **true**.
 
 To use the column chooser, you need to inject the **ColumnChooser** module.
 
@@ -60,7 +60,7 @@ In this example, the `showInColumnChooser` property is set to false for the **Or
 
 ## Open column chooser by externally
 
-The Syncfusion React Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid component, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific **X** and **Y** axis positions by using the [openColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooser/#opencolumnchooser) method.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid component, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific **X** and **Y** axis positions by using the [openColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooser/#opencolumnchooser) method.
 
 Here's an example of how to open the column chooser in the Grid using an external button:
 
@@ -83,7 +83,7 @@ Here's an example of how to open the column chooser in the Grid using an externa
 
 ## Customize column chooser dialog size
 	
-The column chooser dialog in Syncfusion React Grid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
+The column chooser dialog in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
 To customize the column chooser dialog size, you can use the following CSS styles:
 
 ```css
@@ -116,9 +116,9 @@ To customize the column chooser dialog size, you can use the following CSS style
 
 ## Change default search operator of the column chooser 
 
-The column chooser dialog in the Syncfusion React Grid provides a search box that allows you to search for column names. By default, the search functionality uses the "startsWith" operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
+The column chooser dialog in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a search box that allows you to search for column names. By default, the search functionality uses the "startsWith" operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
 
-To change the default search operator of the column chooser in Syncfusion Grid, you need to use the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooserSettings/#operator) property of the columnChooserSettings.
+To change the default search operator of the column chooser in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you need to use the [operator](https://ej2.syncfusion.com/react/documentation/api/grid/columnChooserSettings/#operator) property of the columnChooserSettings.
 
 Here's an example of how to change the default search operator of the column chooser to **contains** in the React Grid:
 

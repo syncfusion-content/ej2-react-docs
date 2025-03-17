@@ -10,20 +10,20 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Maps component
 
-This article describes the API migration process of Maps component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Maps component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Size Customization
 
 {% raw %}
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Height| Not Applicable |**Property:** *height*<br/>`<MapsComponent id='maps' height="150"></MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 |Width| Not Applicable |**Property:** *width*<br/>`<MapsComponent id='maps' width="150"></MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 
 ## Title and Subtitle Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | ---|
 |Title Text| Not Applicable |**Property:** *title.text*<br/><br/>`<MapsComponent id='maps' ref={m => this.mapInstance = m} titleSettings = {{text:'Members of the UN Security Council'}}></MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 |Subtitle Text| Not Applicable |**Property:** *title.subtitle.text*<br/><br/> `<MapsComponent id='maps' ref={m => this.mapInstance = m} titleSettings = {{ subtitleSettings:{ text:'In 2017'} }}></MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -35,7 +35,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Zooming Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Enable| **Property:** *zoomSettings.enableZoom*<br/><br/> `var zoomSettings = { enableZoom:true};`<br/>`<EJ.Map id="maps" zoomSettings = {zoomSettings} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *zoomSettings.enable*<br/><br/> `<MapsComponent id='maps' ref={m => this.mapInstance = m} zoomSettings={{ enable: true }}>` <br/> `<Inject services={[Zoom]} />` <br/> `</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 |Minimum Zoom| **Property:** *zoomSettings.minValue*<br/><br/> `var zoomSettings = { minValue:2};`<br/>`<EJ.Map id="maps" zoomSettings = {zoomSettings} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *zoomSettings.minZoom*<br/><br/> `<MapsComponent id='maps' ref={m => this.mapInstance = m} zoomSettings={{ minZoom: 2 }}>` <br/> `<Inject services={[Zoom]} />`<br/> `</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -55,7 +55,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Layer Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Type | Not Applicable | **Property:** *layers.type*<br/><br/> `<MapsComponent id='maps'>`<br/>`<LayersDirective> <LayerDirective type="Layer"> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 | Layer Type | **Property:** *layers.layerType*<br/><br/> `var layers = [{ layerType:'Geometry'}];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | To render shape maps, there is no need to mention the layer type. You can use the `shapeData` property alone.<br/>**Property:** *layers.shapeData*<br/><br/> `<MapsComponent id='maps'>`<br/>`<LayersDirective> <LayerDirective shapeData={world_map}> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`<br/><br/>To render online maps, there is no need to mention the layer type. You can use the `urlTemplate` property alone.<br/>**Property:** *layers.urlTemplate*<br/><br/> `<MapsComponent id='maps'>`<br/>`<LayersDirective> <LayerDirective urlTemplate='https://tile.openstreetmap.org/level/tileX/tileY.png'> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -72,7 +72,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Shape Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Shape Fill | **Property:** *layers.shapeSettings.fill*<br/><br/>`var layers = [{ shapeSettings:{fill:"#626171"}];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *layers.shapeSettings.fill*<br/><br/> `<MapsComponent id='maps'>`<br/>`<LayersDirective> <LayerDirective shapeSettings={{ fill:'#626171' }}> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 | Shape Palette | **Property:** *layers.shapeSettings.colorPalette*<br/><br/> `var layers = [{ shapeSettings:{colorPalette:"customPalette", customPalette: ["#E51400", "#A4C400"] }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *layers.shapeSettings.palette*<br/><br/> `<MapsComponent id='maps'>`<br/>`<LayersDirective> <LayerDirective palette=''> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -86,7 +86,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Marker Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Marker Data Source | **Property:** *layers.markers*<br/><br/> `var markers = [{ latitude:37.0000, longitude: -120.000, city:"california"}]`<br/>`var layers = [{ markers:markers }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');`  | **Property:** *layers.markerSettings.dataSource*<br/><br/> `<MapsComponent id='maps'>`<br/> `<Inject services={[Marker]} /> <LayersDirective> <LayerDirective> <MarkersDirective> <MarkerDirective dataSource={ topPopulation }> </MarkerDirective> </MarkersDirective> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 | Marker Template | **Property:** *layers.markerTemplate*<br/><br/> `<div> //... </div>` <br/> `var layers = [{ markerTemplate:'template' }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');`  | **Property:** *layers.markerSettings.template*<br/><br/> `<MapsComponent id='maps'>`<br/>`<Inject services={[Marker]} /> <LayersDirective> <LayerDirective> </LayerDirective> <MarkersDirective> <MarkerDirective template='<div id="marker1"><img style="height:30px;width:30px;display:block;  margin: auto;" src="path"/></div>'> </MarkerDirective> </MarkersDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -108,7 +108,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Bubble Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Visible | **Property:** *layers.bubbleSettings.visible*<br/><br/> `var layers = [{ bubbleSettings:{ showBubble: true} }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');`| **Property:** *layers.bubbleSettings.visible*<br/><br/> `<MapsComponent id='maps'>`<br/>` <Inject services={[Bubble]} /> <LayersDirective> <LayerDirective> <BubblesDirective> <BubbleDirective visible={ true }> </BubbleDirective> </BubblesDirective> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 | ValuePath | **Property:** *layers.bubbleSettings.valuePath*<br/><br/> `var layers = [{ bubbleSettings:{ valuePath: "population"} }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *layers.bubbleSettings.valuePath*<br/><br/> `<MapsComponent id='maps'>`<br/>` <Inject services={[Bubble]} /> <LayersDirective> <LayerDirective> <BubblesDirective> <BubbleDirective valuePath='value'> </BubbleDirective> </BubblesDirective> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -127,7 +127,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## DataLabel Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Visible | **Property:** *layers.labelSettings.showLabels*<br/><br/> `var layers = [{ labelSettings:{ showLabels: true} }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *layers.dataLabelSettings.visible*<br/><br/> `<MapsComponent id='maps'>`<br/>` <Inject services={[DataLabel]} /> <LayersDirective> <LayerDirective dataLabelSettings={ visible: true }> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 | Label Path | **Property:** *layers.labelSettings.labelPath*<br/><br/> `var layers = [{ labelSettings:{ labelPath: "name"} }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *layers.dataLabelSettings.labelPath*<br/><br/> `<MapsComponent id='maps'>`<br/>` <Inject services={[DataLabel]} /> <LayersDirective> <LayerDirective dataLabelSettings={ labelPath: 'name' }> </LayerDirective> </LayersDirective>`<br/>`</MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -141,7 +141,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Legend Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Visible | **Property:** *layers.legendSettings.showLegend*<br/><br/> `var layers = [{ legendSettings:{ showLegend: true} }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *legendSettings.visible*<br/><br/> `<MapsComponent id='maps' ref={m => this.mapInstance = m} legendSettings = { visible:true}> <Inject services={[Legend]} /> </MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 | Toggle Visibility | **Property:** *layers.legendSettings.toggleVisibility*<br/><br/> `var layers = [{ legendSettings:{ toggleVisibility: true} }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *legendSettings.toggleVisibility*<br/><br/> `<MapsComponent id='maps' ref={m => this.mapInstance = m} legendSettings = { toggleVisibility:true}> <Inject services={[Legend]} /> </MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -176,7 +176,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Highlight And Selection Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Highlight Fill | **Property:** *layers.shapeSettings.highlightColor*<br/><br/> `var layers = [{ shapeSettings:{ highlightColor: "green"} }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *fill*<br/><br/> `<MapsComponent id='maps'> <LayersDirective> <LayerDirective highlightSettings={ fill:'green'}> <LayerDirective> </LayersDirective> <Inject services={[Highlight]} /> </MapsComponent>,`<br><br/>`document.getElementById('maps');`|
 | Enable Highlight | **Property:** *layers.enableMouseHover*<br/><br/> `var layers = [{ shapeSettings:{ enableMouseHover: true} }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *enable*<br/><br/> `<MapsComponent id='maps'> <LayersDirective> <LayerDirective highlightSettings={ enable:'true'}> <LayerDirective> </LayersDirective> <Inject services={[Highlight]} /> </MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -191,7 +191,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Navigation Line Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Visible | Not Applicable | **Property:** *layers.navigationLineSettings.visible*<br/><br/> `<MapsComponent id='maps'> <LayersDirective> <LayerDirective> <NavigationLinesDirective> <NavigationLineDirective visible= {true}> </NavigationLineDirective> </NavigationLinesDirective> <LayerDirective> </LayersDirective> <Inject services={[NavigationLine]} /> </MapsComponent>,`<br><br/>`document.getElementById('maps');` |
 | Width | Not Applicable | **Property:** *layers.navigationLineSettings.width*<br/><br/> `<MapsComponent id='maps'> <LayersDirective> <LayerDirective> <NavigationLineDirective width= {2}> </NavigationLineDirective> </NavigationLinesDirective> <LayerDirective> </LayersDirective> <Inject services={[NavigationLine]} /> </MapsComponent>,`<br><br/>`document.getElementById('maps');` |
@@ -208,7 +208,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Tooltip Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Tooltip Enable | **Property:** *layers.showTooltip*<br/><br/> `var layers = [{ shapeSettings:{ showTooltip:true } }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *layers.tooltipSettings.visible*<br/><br/>`<MapsComponent id='maps'> <LayersDirective tooltipSettings={ visible:true}> <LayerDirective>  </LayerDirective> </LayersDirective> <Inject services={[MapsTooltip]} /> </MapsComponent>,`<br><br/>`document.getElementById('maps');` |
 | Tooltip Template | **Property:** *layers.tooltipTemplate*<br/><br/> `<div id=template> ` <br/> `\\..` <br/>`</div>`<br/>`var layers = [{ shapeSettings:{ tooltipTemplate:"template" } }];`<br/>`<EJ.Map id="maps" layers = {layers} > </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *layers.tooltipSettings.template*<br/><br/> `<MapsComponent id='maps'> <LayersDirective> <LayerDirective tooltipSettings={ template:'<div> //... </div>'}>  </LayerDirective> </LayersDirective> <Inject services={[MapsTooltip]} /> </MapsComponent>,`<br><br/>`document.getElementById('maps');`|
@@ -219,7 +219,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Annotation Cutomization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Content | Not Applicable | **Property:** *legendSettings.annotations.content*<br/><br/> `<div id="template"> //... </div>`<br/>`<MapsComponent id='maps' ref={m => this.mapInstance = m} annotation = {[content:'#template']}></MapsComponent>,`<br><br/>`document.getElementById('maps');` |
 | Location X | Not Applicable | **Property:** *legendSettings.annotations.x*<br/><br/> `<MapsComponent id='maps' ref={m => this.mapInstance = m} annotation = {[y:'250px']}></MapsComponent>,`<br><br/>`document.getElementById('maps');` |
@@ -230,7 +230,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Maps Other Properties Customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Projection Type | Not Applicable | **Property:** *projectionType*<br/><br/> `<MapsComponent id='maps' projectionType='Mercator'></MapsComponent>,`<br><br/>`document.getElementById('maps');` |
 | Background | **Property:** *background*<br/><br/> `<EJ.Map id="maps" background="red"> </EJ.Map>`<br/>`document.getElementById('maps');` | **Property:** *background*<br/><br/> `<MapsComponent id='maps' background='red'></MapsComponent>,`<br><br/>`document.getElementById('maps');` |
@@ -251,7 +251,7 @@ This article describes the API migration process of Maps component from Essentia
 
 ## Events
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Shape Selected | **Property:** *shapeSelected*<br/><br/>`<EJ.Map id="maps" shapeSelected={shapeSelected}></EJ.Map>,`<br/>`document.getElementById('maps')`<br/>`function shapeSelected(args) {}`  | **Property:** *shapeSelected*<br/><br/> `<MapsComponent id='maps'  shapeSelected={this.shapeSelected.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  shapeSelected(args: IShapeSelectedEventArgs): void {}` || Marker Selected | **Property:** *markerSelected*<br/><br/> `<EJ.Map id="maps" markerSelected={markerSelected}></EJ.Map>,`<br/>`document.getElementById('maps')`<br/>`function markerSelected(args) {}`   | **Property:** *markerClick*<br/><br/>`<MapsComponent id='maps'  markerClick={this.markerClick.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  markerClick(args: IMarkerClickEventArgs): void {}` || Marker Move | **Property:** *markerEnter*<br/><br/> `<EJ.Map id="maps" markerEnter={markerEnter}></EJ.Map>,`<br/>`document.getElementById('maps')`<br/>`function markerEnter(args) {}`   | **Property:** *markerMouseMove*<br/><br/> `<MapsComponent id='maps'  markerMouseMove={this.markerMouseMove.bind(this)}></MapsComponent>,`<br/>`document.getElementById('maps');`<br/>` public  markerMouseMove(args: IMarkerMouseMoveEventArgs): void {}` || Marker Leave | **Property:** *markerLeave*<br/><br/> `<EJ.Map id="maps" markerLeave={markerLeave}></EJ.Map>,`<br/>`document.getElementById('maps')`<br/>`function markerLeave(args) {}`  | Not Applicable |
 | Legend Item Rendering | **Property:** *legendItemRendering*<br/><br/> `<EJ.Map id="maps" legendItemRendering={legendItemRendering}></EJ.Map>,`<br/>`document.getElementById('maps')`<br/>`function legendItemRendering(args) {}`  | Not Applicable |

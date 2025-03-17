@@ -18,7 +18,7 @@ To get started quickly with DocumentEditor component, you can check the video be
 
 ## Prerequisites
 
-[System requirements for Syncfusion Document Editor](../system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](../system-requirement)
 
 ## Dependencies
 
@@ -91,9 +91,9 @@ cd my-app
 npm start
 ```
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install.
 
 To install Document Editor component, use the following command

@@ -56,9 +56,9 @@ cd my-app
 npm start
 ```
 
-## Adding syncfusion packages
+## Adding syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.
 
 To install Dropdown Tree component, use the following command
 

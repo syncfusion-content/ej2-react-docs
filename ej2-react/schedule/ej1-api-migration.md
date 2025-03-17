@@ -18,7 +18,7 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | To change the display of days count in agenda view | **Property:** *daysInAgenda* <br/> <br/> `<EJ.Schedule id="Schedule" currentView={ej.Schedule.CurrentView.Agenda} agendaViewSettings-daysInAgenda={5}>`<br>`</EJ.Schedule>`| **Property:** *agendaDaysCount* <br/><br/> `<ScheduleComponent currentView='Agenda' agendaDaysCount={7}>`<br>`</ScheduleComponent>`|
 | Preventing deletion of appointment | **Property:** *allowDelete* <br/> <br/>`<EJ.Schedule id="Schedule" allowDelete= {false}>`<br>`</EJ.Schedule>` | Not applicable |
@@ -71,7 +71,7 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 ### Resources
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | To define resource datasource |  **Property:** *resources* <br/><br/>`var roomData = {`<br>`dataSource: [`<br>`{ ResourceText: "ROOM1", id: 1, ResourceColor: "orange" }],`<br>`text: "ResourceText", id: "id", color: "ResourceColor"};`<br>`var Scheduler = React.createClass({`<br>`render: function () {`<br>`return (`<br>`<EJ.Schedule id="Schedule" appointmentSettings-resourceFields="RoomId">`<br>`<resources>`<br>`<resource allowMultiple={false} field="RoomId" title="Room" name="Rooms" resourceSettings={roomData}>`<br>`</resource>`<br>`</resources>`<br>`</EJ.Schedule>`<br>`);`<br>`}`<br>`});` | **Property:** *resources* <br/> <br/> `private  projectData: Object[] = [`<br>`{ text: 'PROJECT 1', id: 1, color: '#cb6bb2' }];`<br>`<ScheduleComponent>`<br>`<ResourcesDirective>`<br>`<ResourceDirective field='ProjectId' title='Choose Project' name='Projects' dataSource={this.projectData} textField='text' idField='id' colorField='color'>`<br>`</ResourceDirective>`<br>`</ResourcesDirective>`<br>`</ScheduleComponent>` |
 | Allowing multiple selection of resources in event window | **Property:** *allowMultiple* <br/> <br/> `var groupData = { resources: ["Rooms, Owners"] };`<br>`var roomData = {`<br>`dataSource: [`<br>`{ text: "ROOM 1", id: 1, groupId: 1, color: "#cb6bb2" },`<br>`{ text: "ROOM 2", id: 2, groupId: 1, color: "#56ca85" }],`<br>`text: "text", id: "id", groupId: "groupId", color: "color"};`<br>`var ownerData = {`<br>`dataSource: [`<br>`{ text: "Nancy", id: 1, groupId: 1, color: "#ffaa00" },`<br>`{ text: "Steven", id: 3, groupId: 2, color: "#f8a398"}],`<br>`text: "text", id: "id", groupId: "groupId", color: "color"};`<br>`var Scheduler = React.createClass({`<br>`render: function () {`<br>`return (`<br>`<EJ.Schedule id="Schedule" group={groupData} appointmentSettings-resourceFields= "RoomId,OwnerId">`<br>`<resources>`<br>`<resource allowMultiple={false} field="RoomId" title="Room" name="Rooms" resourceSettings={roomData}>`<br>`</resource>`<br>`<resource allowMultiple={true} field="OwnerId" title="Owner" name="Owners" resourceSettings={ownerData}>`<br>`</resource>`<br>`</resources>`<br>`</EJ.Schedule>`<br>`);`<br>`}`<br>`});` | **Property:** *allowMultiple* <br/><br/> `private  projectData: Object[] = [`<br>`{ text: 'PROJECT 1', id: 1, color: '#cb6bb2'},`<br>`{ text: 'PROJECT 2', id: 2, color: '#df5286'}];`<br>`private  categoryData: Object[] = [`<br>`{ text: 'Category 1', id: 1, color: '#cb6bb2' }`<br>`{ text: 'Category 2', id: 2, color: '#df5286'}];`<br>`<ScheduleComponent group={ { resources: ['Projects', 'Categories'] } }>`<br>`<ResourcesDirective>`<br>`<ResourceDirective field='ProjectId' title='Choose Project' name='Projects' allowMultiple={true} dataSource={this.projectData} textField='text' idField='id' colorField='color'>`<br>`</ResourceDirective>`<br>`<ResourceDirective field='CategoryId' title='Choose Category' name='Categories' allowMultiple={true} dataSource={this.categoryData} textField='text' idField='id' colorField='color'>`<br>`</ResourceDirective>`<br>`</ResourcesDirective>`<br>`</ScheduleComponent>` |
@@ -79,7 +79,7 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 ### Group
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | To group the resources in scheduler layout | **Property:** *group* <br/> <br/> `var groupData = {`<br>`resources: ["Rooms"] };`<br>`var roomData = {`<br>`dataSource: [`<br>`{ ResourceText: "ROOM1", id: 1, ResourceColor: "orange" }],`<br>`text: "ResourceText", id: "id", color: "ResourceColor"};`<br>`var Scheduler = React.createClass({`<br>`render: function () {`<br>`return (`<br>`<EJ.Schedule id="Schedule" group={groupData} appointmentSettings-resourceFields="RoomId">`<br>`<resources>`<br>`<resource allowMultiple={false} field="RoomId" title="Room" name="Rooms" resourceSettings={roomData}>`<br>`</resource>`<br>`</resources>`<br>`</EJ.Schedule>`<br>`);`<br>`}`<br>`});` | **Property:** *group* <br/> <br/> `private  projectData: Object[] = [`<br>`{ text: 'PROJECT 1', id: 1, color: '#cb6bb2' }];`<br>`<ScheduleComponent group={ { resources: ['Projects'] } }>`<br>`<ResourcesDirective>`<br>`<ResourceDirective field='ProjectId' title='Choose Project' name='Projects' dataSource={this.projectData} textField='text' idField='id' colorField='color'>`<br>`</ResourceDirective>`<br>`</ResourcesDirective>`<br>`</ScheduleComponent>` |
 | Allow group editing | **Property:** *allowGroupEditing* <br/> <br/>  `var groupData = {`<br>`resources: ["Rooms"],`<br> `allowGroupEdit: true };`<br>`var roomData = {`<br>`dataSource: [`<br>`{ ResourceText: "ROOM1", id: 1, ResourceColor: "orange" }],`<br>`text: "ResourceText", id: "id", color: "ResourceColor"};`<br>`var Scheduler = React.createClass({`<br>`render: function () {`<br>`return (`<br>`<EJ.Schedule id="Schedule" group={groupData} appointmentSettings-resourceFields="RoomId">`<br>`<resources>`<br>`<resource allowMultiple={false} field="RoomId" title="Room" name="Rooms" resourceSettings={roomData}>`<br>`</resource>`<br>`</resources>`<br>`</EJ.Schedule>`<br>`);`<br>`}`<br>`});` | **Property:** *allowGroupEdit* <br/><br/> `private  projectData: Object[] = [`<br>`{ text: 'PROJECT 1', id: 1, color: '#cb6bb2' }];`<br>`<ScheduleComponent group={ { allowGroupEdit: true, resources: ['Projects'] } }>`<br>`<ResourcesDirective>`<br>`<ResourceDirective field='ProjectId' title='Choose Project' name='Projects' dataSource={this.projectData} textField='text' idField='id' colorField='color'>`<br>`</ResourceDirective>`<br>`</ResourcesDirective>`<br>`</ScheduleComponent>` |
@@ -90,13 +90,13 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 ### Header Rows
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Adding custom rows in the header in timeline views | Not applicable | **Property:** *HeaderRows* <br/><br/> `<ScheduleComponent>`<br> `<HeaderRowsDirective>`<br>`<HeaderRowDirective option='Month' template={this.monthTemplate.bind(this)} />`<br>`<HeaderRowDirective option='Week' template={this.weekTemplate.bind(this)} />`<br>`<HeaderRowDirective option='Date' />`<br>`</HeaderRowsDirective>`<br>`< ViewsDirective >`<br>`<ViewDirective option='TimelineMonth' interval={12} />`<br>`</ViewsDirective>`<br>`</ScheduleComponent>` |
 
 ### TimeScale
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Enabling time scale | **Property:** *enable* <br/> <br/> `var timeScaleData = {`<br>`enable: true };`<br>`var Scheduler = React.createClass({`<br>`render: function () {`<br>`return (`<br>`<EJ.Schedule id="Schedule" timeScale={timeScaleData} >`<br>`</EJ.Schedule>`<br>`);`<br>`}`<br>`});` |  **Property:** *enable* <br/><br/>  `<ScheduleComponent timeScale={ { enable: true } }>`<br>`</ScheduleComponent>` |
 | Setting major interval on time scale | **Property:** *majorSlot* <br/> <br/> `var timeScaleData = {`<br>`enable: true, majorSlot: 60 };`<br>`var Scheduler = React.createClass({`<br>`render: function () {`<br>`return (`<br>`<EJ.Schedule id="Schedule" timeScale={timeScaleData} >`<br>`</EJ.Schedule>`<br>`);`<br>`}`<br>`});` | **Property:** *interval* <br/><br/>  `<ScheduleComponent timeScale={ { enable: true, interval: 60 } }>`<br>`</ScheduleComponent>` |
@@ -106,13 +106,13 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 ### Quick info templates
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Template for quick popup | Not applicable | **Property:** *quickInfoTemplates* <br/><br/>  `<ScheduleComponent quickInfoTemplates: { {`<br>`header:this.headerTemplate.bind(this),`<br>`content:this.contentTemplate.bind(this),`<br>`footer:this.footerTemplate.bind(this)`<br>`} }></ScheduleComponent>` |
 
 ### Event settings
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Datasource for events | **Property:** *dataSource* <br/> <br/> `var dataManager = [{`<br>`Id: 1,`<br>`Subject: "Development",`<br>`StartTime: new Date(2018, 1, 15, 10, 0),`<br>`EndTime: new Date(2018, 1, 15, 12, 30)`<br>`}];`<br>`var Scheduler = React.createClass({`<br>`render: function () {`<br>`return (`<br>`<EJ.Schedule id="Schedule" currentDate={new Date(2017, 5, 5)} appointmentSettings-dataSource={dataManager}>`<br>`</EJ.Schedule>`<br>`);`<br>`}`<br>`});` |  **Property:** *dataSource* <br/><br/> `private data: object [] = [{`<br>`Id: 1,`<br>`Subject: 'Paris',`<br>`StartTime: new Date(2018, 1, 15, 10, 0),`<br>`EndTime: new Date(2018, 1, 15, 12, 30),`<br>`IsAllDay: false,`<br>`RecurrenceID: 10`<br>`}];`<br>`<ScheduleComponent eventSettings={ { dataSource: this.data} }>`<br>`</ScheduleComponent>` |
 | Appointment fields | `<EJ.Schedule id="Schedule" currentDate={new Date(2017, 5, 5)} appointmentSettings-dataSource={`<br>`id: "Id",`<br>`subject: "Subject",`<br>`startTime: "StartTime",`<br>`endTime: "EndTime",`<br>`description: "Description",`<br>`allDay: "AllDay",`<br>`recurrence: "Recurrence",`<br>`recurrenceRule: "RecurrenceRule">`<br>`</EJ.Schedule>` |  **Property:** *eventsSettings* <br/><br/> `private data: object [] = [{`<br>`Id: 1,`<br>`Subject: 'Paris',`<br>`StartTime: new Date(2018, 1, 15, 10, 0),`<br>`EndTime: new Date(2018, 1, 15, 12, 30),`<br>`IsAllDay: false,`<br>`RecurrenceID: 10`<br>`}];`<br>`<ScheduleComponent eventSettings={ { dataSource: this.data,`<br>`fields: {`<br>`id: 'Id',`<br>`subject: { name: 'Subject' },`<br>`isAllDay: { name: 'IsAllDay' },`<br>`location: { name: 'Location' },`<br>`description: { name: 'Description' },`<br>`startTime: { name: 'StartTime' },`<br>`endTime: { name: 'EndTime' },`<br>`recurrenceID : { name: 'RecurrenceID' }`<br>`}`<br>`} }>`<br>`</ScheduleComponent>` |
@@ -124,7 +124,7 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 ## Methods
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | To add appointments manually | **Method:** *saveAppointment()* <br/> <br/> `<EJ.Schedule dataSource={window.scheduleData}>`<br>`</EJ.Schedule>`<br> `var data = {`<br> `Id: 1,`<br>`Subject: "Testing",`<br>`StartTime: new Date(2014, 4, 5, 10, 00),`<br>`EndTime: new Date(2014, 4, 5, 12, 00)};`<br> `var scheduleobj = $("#Schedule").data("ejSchedule");`<br>`scheduleobj.saveAppointment(data);` | **Method:** *addEvent()* <br/><br/> `<ScheduleComponent ref={schedule => this.scheduleObj = schedule}>`<br>`</ScheduleComponent>`<br>`public data: Object[]= {`<br>`Id: 1,`<br>`Subject: 'Testing',`<br>`StartTime: new Date(2018, 1, 11, 10, 0),`<br>`EndTime: new Date(2018, 1, 11, 11, 0),`<br>`IsAllDay: false};`<br>`this.scheduleObj.addEvent(data);`<br>`}`|
 | To add resources dynamically | **Method:** *addResource()* <br/><br/> `<EJ.Schedule dataSource={window.scheduleData}>`<br>`</EJ.Schedule>`<br> `var data = { text: "Paul", id: 1, groupId: 3, color: "#cc99ff" };` <br> `var index = 0;` <br> `var scheduleobj = $("#Schedule").data("ejSchedule");` <br> `scheduleobj.addResource(data, "Owners", index);` | **Method:** *addResource()* <br/><br/> `<ScheduleComponent ref={schedule => this.scheduleObj = schedule}>`<br>`</ScheduleComponent>`<br>`public data: Object[]={ text: "Paul", id: 1, groupId: 3, color: "#cc99ff" };` <br> `public index = 0;` <br>`this.scheduleobj.addResource(data, "Owners", index);` |
@@ -158,7 +158,7 @@ This topic shows the API equivalent of JS2 Scheduler component to be used, while
 
 ## Events
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Fires on the beginning of each scheduler action | **Event:** *actionBegin* <br/><br/> `<EJ.Schedule actionBegin={onActionBegin}>`<br> `</EJ.Schedule>` <br> `function onActionBegin (args){}` | **Event:** *actionBegin* <br><br> `<ScheduleComponent actionBegin ={onActionBegin}>` <br>`</ScheduleComponent>`<br>`function onActionBegin(args){}` |
 | Fires on the completion of each scheduler action | **Event:** *actionComplete* <br/><br/>`<EJ.Schedule actionComplete={onActionComplete}>`<br> `</EJ.Schedule>` <br> `function onActionComplete (args){}` | **Event:** *actionComplete* <br/><br/> `<ScheduleComponent actionComplete ={onActionComplete}>` <br>`</ScheduleComponent>`<br>`function onActionComplete(args){}` |

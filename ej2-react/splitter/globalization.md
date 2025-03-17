@@ -44,4 +44,4 @@ The following code shows how to enable RTL behavior.
 
 ## See Also
 
-* [Migration from Essential JS 1](./ej1-api-migration)
+* [Migration from Essential<sup style="font-size:70%">&reg;</sup> JS 1](./ej1-api-migration)

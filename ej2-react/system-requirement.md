@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # System Requirements for React Components
 
-This section explains the basic system requirements to work with Syncfusion React UI components.
+This section explains the basic system requirements to work with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 
 * React supported version >= `15.5.4+`.
 
@@ -24,13 +24,13 @@ node --version
 
 ## Browser support
 
-The Syncfusion React UI components are supported only in modern browsers. Refer to the [browser compatibility](./browser/) section for more information.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are supported only in modern browsers. Refer to the [browser compatibility](./browser/) section for more information.
 
 ## React supported versions
 
-The following table represents the supported React versions by different Syncfusion React UI components releases.
+The following table represents the supported React versions by different Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components releases.
 
-| Version | Syncfusion React components version |
+| Version | Syncfusion<sup style="font-size:70%">&reg;</sup> React components version |
 | ------------- | ------------- |
 | [React v19.0](https://react.dev/blog/2024/12/05/react-19) | 28.1.33 and above |
 | [React v18.0](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |

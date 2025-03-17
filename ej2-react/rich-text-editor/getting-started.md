@@ -49,9 +49,9 @@ npm init react-app my-app
 cd my-app
 npm start
 ```
-## Adding Syncfusion Rich Text Editor packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Rich Text Editor packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 To install Rich Text Editor component, use the following command
 
 ```

@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion React UI Component.
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component.
 
-This article provides a step-by-step introduction to get started with Syncfusion React UI components.
+This article provides a step-by-step introduction to get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 
 ## Prerequisites
 
-[System requirements for Syncfusion React UI components](../system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
 
 ## Create the React application
 
@@ -50,9 +50,9 @@ cd my-app
 npm start
 ```
 
-## Add Syncfusion React packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Once you have created the React application, install the required Syncfusion React component package in the application. All Syncfusion React (Essential JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. So, choose the component that you want to install.
+Once you have created the React application, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component package in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. So, choose the component that you want to install.
 
 In this quick start article, the Grid component used as an example. To install the Grid component package, use the following command.
 
@@ -68,11 +68,11 @@ yarn add @syncfusion/ej2-react-grids
 
 You can also checkout the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package) to know the different ways of installing the packages.
 
-## Import the Syncfusion CSS styles
+## Import the Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-After installing the Syncfusion component packages in your application, import the required themes based on the components used.
+After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component packages in your application, import the required themes based on the components used.
 
-Syncfusion React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion React components based on the application style by referring to any of the built-in themes. Let's import the `Material` theme for the Grid component.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components based on the application style by referring to any of the built-in themes. Let's import the `Material` theme for the Grid component.
 
 Import the CSS styles for the Grid component and it's dependencies in the `src/App.css.` file.
 
@@ -90,7 +90,7 @@ Import the CSS styles for the Grid component and it's dependencies in the `src/A
 
 You can checkout the [Themes topic](../appearance/theme) to know more about built-in themes and different ways to refer themes in React application.
 
-## Add Syncfusion component to the application
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> component to the application
 
 Start adding the required components to the application. Let's add the Grid component in the `src/App.js` file using the following code.
 

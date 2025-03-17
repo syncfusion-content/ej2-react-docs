@@ -16,14 +16,6 @@ function App() {
           getImageUrl: hostUrl + "api/FileManager/GetImage",
           uploadUrl: hostUrl + 'api/FileManager/Upload',
           url: hostUrl + "api/FileManager/FileOperations"
-        }} 
-        uploadSettings={{ 
-          allowedExtensions: '.jpg,.png', 
-          autoClose: false, 
-          autoUpload: false, 
-          chunkSize: 5242880, 
-          minFileSize: 120, 
-          maxFileSize: 73728000 
         }}
         created={onCreated.bind(this)}>
         <Inject services={[NavigationPane, DetailsView, Toolbar]} />

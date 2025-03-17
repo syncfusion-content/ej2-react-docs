@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to disable auto focus in document editor in React Document editor component | Syncfusion
-description: Learn here all about How to disable and enable auto focus in document editor in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: How to disable auto focus in React DocumentEditor control | Syncfusion
+description: Learn here all about How to disable and enable auto focus in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-react
 control: How to disable auto focus in document editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to disable auto focus in Syncfusion React Document Editor component
+# How to disable auto focus in Syncfusion<sup style="font-size:70%">&reg;</sup> React Document Editor component
 
 Document Editor gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
 

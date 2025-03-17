@@ -104,6 +104,6 @@ The accessibility compliance of the Tree Grid component is shown in the followin
 {% previewsample "https://ej2.syncfusion.com/accessibility/tree-grid.html" %}
 
 ## See also
-* [Accessibility in Syncfusion React components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)
 
 > You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

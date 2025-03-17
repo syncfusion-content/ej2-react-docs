@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started in React Gantt control
 
-This section explains you the steps required to create a simple Essential JS 2 Gantt in a React application and demonstrates its basic features.
+This section explains you the steps required to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Gantt in a React application and demonstrates its basic features.
 
 To get started quickly with React Gantt Chart the following video explains the project configuration and basic Gantt chart features behaviours:
 
@@ -60,9 +60,9 @@ To install create-react-app run the following command.
 
     </div>
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.To install Gantt component, use the following command
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.To install Gantt component, use the following command
 
     ```
     npm install @syncfusion/ej2-react-gantt --save

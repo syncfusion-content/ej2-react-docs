@@ -32,7 +32,7 @@ By default, the header bar holds the date and view navigation options, through w
 
 ## Customizing header bar using template
 
-Apart from the default date navigation and view options available on the header bar, you can add custom items into the Scheduler header bar by making use of the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/schedule/#toolbaritems) property. To display the default items, it's essential to assign a [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/toolbarItem/#name) field to each item. The names of the default items are `Previous`, `Next`, `Today`, `DateRangeText`, `NewEvent`, and `Views`. For custom items you can give the name as `Custom` to the `name` field. Here, the default items such as previous, next, date range text, and today have been used along with dropdownlist as custom items.
+Apart from the default date navigation and view options available on the header bar, you can add custom items into the Scheduler header bar by making use of the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/schedule/#toolbaritems) property. To display the default items, it's Essential<sup style="font-size:70%">&reg;</sup> to assign a [`name`](https://ej2.syncfusion.com/react/documentation/api/schedule/toolbarItem/#name) field to each item. The names of the default items are `Previous`, `Next`, `Today`, `DateRangeText`, `NewEvent`, and `Views`. For custom items you can give the name as `Custom` to the `name` field. Here, the default items such as previous, next, date range text, and today have been used along with dropdownlist as custom items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

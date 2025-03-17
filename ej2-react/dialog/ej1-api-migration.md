@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Dialog component
 
-This article describes the API migration process of Dialog component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Dialog component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Accessibility and Localization
 
 {% raw %}
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Keyboard Navigation | **Property** : allowKeyboardNavigation<br/> <br/>`<EJ.Dialog allowKeyboardNavigation={true}></EJ.Dialog>`  | No separate Property for enable/disable keyboard navigation.  Its enabled by default. |
 | Localization | **Property** : locale<br/> <br/>`<EJ.Dialog locale="es-ES"></EJ.Dialog>` | **Property** : locale<br/> <br/>`<DialogComponent locale="es-ES" />`  |
@@ -26,7 +26,7 @@ This article describes the API migration process of Dialog component from Essent
 ## Header
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Header Content | **Property** : title<br/> <br/>`<EJ.Dialog title="EJ1 Dialog header"></EJ.Dialog>`<br/>   **Method** : setTitle<br/> $('#dialog').ejDialog('setTitle', 'EJ1 Dialog Header');   | **Property** : header<br/> <br/>`<DialogComponent header='EJ2 Dialog' />`  |
 | close button | **Property** : actionButtons<br/> <br/>`<EJ.Dialog actionButtons={this.actionbuttons}></EJ.Dialog>`<br/><br/>`actionbuttons: any; constructor() { this.actionbuttons = ['close'];}`<br/> | **Property** : showCloseIcon<br/> <br/>`<DialogComponent showCloseIcon={true} />` |
@@ -43,7 +43,7 @@ This article describes the API migration process of Dialog component from Essent
 ## Footer
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Footer Content | **Property** :footerTemplateId<br/> <br/>`<EJ.Dialog footerTemplateId='sample'></EJ.Dialog>`| **Property:** footerTemplate<br/> <br/>`<DialogComponent footerTemplate= {this.footerTemplate} />`<br/><br/>`footerTemplate { <button>Submit</button> }` |
 | Footer action buttons | Not applicable | **Property** : buttons<br/> <br/>`<DialogComponent buttons={this.dialogbuttons} />`<br/><br/>`constructor(props: {}) { this.dialogbuttons = [{ click: this.dlgButtonClick, buttonModel: {content: 'OK',  isPrimary: true} }]`<br/> |
@@ -52,7 +52,7 @@ This article describes the API migration process of Dialog component from Essent
 ## Content
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Dialog content | **Method** : setContent<br/> <br/>`<EJ.Dialog id="basicDialog"></EJ.Dialog>`<br/> $('#basicDialog').ejDialog('setContent', 'Dialog Content') | **Property** : content<br/> <br/>`<DialogComponent content= 'Dialog content' />` |
 | Loading content using AJAX request   | **Property** : contentType, contentUrl<br/> <br/>`<EJ.Dialog contentType="ajax" contentType=''></EJ.Dialog>` | Not Applicable |
@@ -63,7 +63,7 @@ This article describes the API migration process of Dialog component from Essent
 ## Animation
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Enabling Animation | **Property** : enableAnimation<br/> <br/>`<EJ.Dialog enableAnimation={true}></EJ.Dialog>`| Not Applicable |
 | Animation effects | **Property** : animation.show.effect<br/> <br/>`<EJ.Dialog animation={this.animation}></EJ.Dialog>`<br/><br/>`animation: object = { show: { effect: 'slide'} };`<br/> | **Property** : animationSettings.effect<br/><br/> `<DialogComponent animation={this.animationSettings} />`<br/><br/>`private animationSettings: Object; constructor(props: {}) { this.animationSettings = { effect: 'Zoom' } }`<br/> |
@@ -73,7 +73,7 @@ This article describes the API migration process of Dialog component from Essent
 ## Draggable and resizing
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Draggable dialog | **Property** : allowDraggable<br/> <br/>`<EJ.Dialog allowDraggable={true}></EJ.Dialog>` | **Property** : allowDragging<br/> <br/>`<DialogComponent allowDragging= {true} />` |
 | Event triggers when the user drags the dialog | **Event:** drag<br/> <br/>`<EJ.Dialog drag={this.onDrag }></EJ.Dialog>`<br/><br/>`onDrag(event) {}`<br/> | **Event:** drag<br/> <br/>`<DialogComponent drag= {this.onDrag} />`<br/><br/>`private onDrag() {}`<br/> |
@@ -87,7 +87,7 @@ This article describes the API migration process of Dialog component from Essent
 ## Target
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Target element to append dialog in document | **Property** : target <br/> <br/>`<EJ.Dialog target='#dialogTarget'></EJ.Dialog>` | **Property**: target<br/> <br/>`<DialogComponent target='#dialogTarget' />` |
 | Element for draggable area | **Property** : containment<br/> <br/>`<EJ.Dialog containment='#dragArea'></EJ.Dialog>` | Not applicable |
@@ -95,7 +95,7 @@ This article describes the API migration process of Dialog component from Essent
 ## Position
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Customizing dialog position using X, Y coordinate values | **Property** : position<br/> <br/>`<EJ.Dialog position={this.dialogPosition}></EJ.Dialog>`<br/><br/>`dialogPosition: any = { position: { X: 300, Y: 100 } }`<br/>| **Property** : position<br/><br/> `<DialogComponent position={this.dialogPosition} />`<br/><br/>`private dialogPosition: object { position: {X:300, Y:100} }`<br/> |
 | positioning dialog using position values | Not Applicable | **Property**: position<br/> <br/> `<DialogComponent position={this.dialogPosition} />`<br/><br/>`private dialogPosition: object { position: {X: 'center', Y: 'center'} }`<br/> |
@@ -103,28 +103,28 @@ This article describes the API migration process of Dialog component from Essent
 ## Visibility
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Render dialog in visible/hidden state | **Property:** showOnInit<br/> <br/>`<EJ.Dialog showOnInit={true}></EJ.Dialog>` | **Property:** visible<br/> <br/>`<DialogComponent visible= {this.state.hideDialog} />`<br/><br/>`constructor(props: {}) { this.setState({ hideDialog: false }) };` |
 
 ## Dialog Mode
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Render modal dialog |**Property** : enableModal<br/> <br/>`<EJ.Dialog enableModal={true}></EJ.Dialog>` | **Property** : isModal<br/> <br/> `<DialogComponent isModal= {true} />` |
 
 ## Tooltip
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Sets the Tooltip for dialog buttons | **Property** : tooltip<br/><br/> `<EJ.Dialog tooltip={this.tooltip}></EJ.Dialog>`<br/><br/>`tooltip: object { close: 'Exit' }`<br/> | No Separate Property for tooltip. It renders based on locale text. |
 
 ## Control State
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Enable/Disable the control | **Property** : enabled <br/><br/> `<EJ.Dialog enabled={false}></EJ.Dialog>` | Not Applicable |
 | Enable/ Disable page scrolling | **Property:** backgroundScroll<br/> <br/>`<EJ.Dialog backgroundScroll={false}></EJ.Dialog>` | No separate Property for disabling page scroll. By default, scrolling prevented for modal dialog  |
@@ -132,14 +132,14 @@ This article describes the API migration process of Dialog component from Essent
 ## State Maintenance
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Save the model values in local storage or cookies |**Property** : enablePersistence <br/> <br/>`<EJ.Dialog enablePersistence={true}></EJ.Dialog>` |**Property** : enablePersistence <br/><br/>`<DialogComponent enablePersistence= {true} />` |
 
 ## Common
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 | Adjusting Height | **Property** : height <br/><br/>`<EJ.Dialog height={400}></EJ.Dialog>` | **Property** : height <br/><br/> `<DialogComponent height= '50%' />` |
 | Adjusting width | **Property:** width <br/><br/>`<EJ.Dialog width={400}></EJ.Dialog>` |**Property** : width <br/><br/> `<DialogComponent width= '50%' />` |

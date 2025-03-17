@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Redux service in React Grid Component
 
-The Syncfusion Grid component provides support for integrating data from a Redux service using the [observable binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding#custom-binding) feature. This allows you to connect the grid component to your [Redux](https://react-redux.js.org/introduction/getting-started) `store` and perform various data operations such as sorting, filtering, paging, and CRUD actions. In this section, we will guide you through the process of enabling and integrating the Redux service with the Syncfusion Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides support for integrating data from a Redux service using the [observable binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding#custom-binding) feature. This allows you to connect the grid component to your [Redux](https://react-redux.js.org/introduction/getting-started) `store` and perform various data operations such as sorting, filtering, paging, and CRUD actions. In this section, we will guide you through the process of enabling and integrating the Redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid.
 
 ## The steps below to create a Redux service.
 
@@ -304,7 +304,7 @@ export default reducer;
 
 ## Performing CRUD operations
 
-To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion Grid component, you can utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing you to capture the changes and update the Redux `store` or perform any other necessary operations.
+To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, you can utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing you to capture the changes and update the Redux `store` or perform any other necessary operations.
 
 Here's an example code of Redux `action`, `reducer` for handling the CRUD operations. You can add the following code in the App.tsx file.
 
@@ -458,5 +458,5 @@ root.render(
 );
 ```
 
-> You can find the sample of the Syncfusion DataGrid with Redux [here](https://github.com/SyncfusionExamples/DataGrid-React-Redux/).
+> You can find the sample of the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid with Redux [here](https://github.com/SyncfusionExamples/DataGrid-React-Redux/).
 

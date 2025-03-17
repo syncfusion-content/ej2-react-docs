@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Grid Component in the SharePoint Framework
 
-The Syncfusion React Grid component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component can be integrated into a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) Framework (SPFx) project using the techniques outlined in this article. These steps will walk you through the process of adding a robust data grid to your SharePoint solutions.
 
 `SharePoint` Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
 ## Prerequisites 
 
-Before you start using Syncfusion React UI components, ensure that your system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Node.js versions, and other dependencies required for using Syncfusion React UI components and `SharePoint` Framework effectively. 
+Before you start using Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components, ensure that your system meets the following prerequisites by referring to the system requirements documentation. This documentation provides information about supported browsers, Node.js versions, and other dependencies required for using Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components and `SharePoint` Framework effectively. 
 
-* [System requirements for Syncfusion React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 * [System requirements for the SharePoint Framework Development Environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
 
@@ -100,21 +100,21 @@ gulp trust-dev-cert
 gulp serve
 ```
 
-## Add Syncfusion React Packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React Packages
 
-To utilize Syncfusion React Grid component in your project, you need to install the necessary npm package. 
+To utilize Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component in your project, you need to install the necessary npm package. 
 
 ```bash
 npm install @syncfusion/ej2-react-grids
 ```
 
-## Import Syncfusion CSS styles
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a React project.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides various themes for React components. You can import CSS styles for the desired theme into your project.  Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a React project.
 
 In this article, the `Fluent` theme is applied using CSS styles, which are available in installed packages. The necessary `Fluent` CSS styles for the Grid component were imported into the `~src/webparts/reactGridComponent/components/ReactGridComponent.tsx` file. 
 
-To add Syncfusion Essential JS 2 style reference from npm packages:
+To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from npm packages:
 
 ```bash
 require ('@syncfusion/ej2-react-grids/styles/fluent.css');
@@ -122,7 +122,7 @@ require ('@syncfusion/ej2-react-grids/styles/fluent.css');
 
 or
 
-To add Syncfusion Essential JS 2 style reference from CDN:
+To add Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 style reference from CDN:
 
 ```bash
 <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/25.2.3/fluent.css" /> // use the latest version to refer the css through CDN//
@@ -214,13 +214,13 @@ The output will appear as follows:
 
 ## Adding Grid component with custom binding 
 
-The Syncfusion Grid component provides support for integrating data from a Redux service using the observable binding feature. This allows you to connect the grid component to your Redux store and perform various data operations such as sorting, filtering, paging, and CRUD actions. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides support for integrating data from a Redux service using the observable binding feature. This allows you to connect the grid component to your Redux store and perform various data operations such as sorting, filtering, paging, and CRUD actions. 
 
 When using custom binding, the Grid expects the result of the custom logic to be an object with properties `result` and `count`. The result property should contain the data to be displayed in the Grid, while the `count` property indicates the total number of records in the dataset for your application. To utilize custom binding, you can handle the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). The DataManager integrates seamlessly with the React Grid to manage custom data processing and binding.
 
 The Grid component offers various powerful features for managing grid actions such as **paging**, **grouping**, **sorting**, and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/#datastatechange) event. For CRUD operations, including **Create**, **Read**, **Update**, and **Delete**, the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event is triggered. This event allows you to handle and manipulate data based on user interactions.
 
-### Integrating the redux service with the Syncfusion Grid
+### Integrating the redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid
 
 Follow these steps to integrate the Redux service into the grid component with SharePoint Framework for your project:
 
@@ -926,11 +926,11 @@ const gridReducer = (state = initialState, action: any) => {
 
 ### Handling CRUD operations
 
-To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion Grid component, you can utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing you to capture the changes and update the Redux `store` or perform any other necessary operations.
+To perform CRUD (Create, Read, Update, Delete) operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, you can utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing you to capture the changes and update the Redux `store` or perform any other necessary operations.
 
 **Integrating CRUD Operations**
 
-To implement CRUD operations using Syncfusion Grid, follow these steps:
+To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, follow these steps:
 
 1. **Configure grid settings:** Set up the necessary grid settings, such as allowing editing, adding, and deleting records. Define the toolbar options to facilitate your interactions.
 
@@ -1468,4 +1468,4 @@ export const GridInitialState: GridModel  = {
 The following screenshot represents the grid action with custom binding
 ![Grid with Custom Binding](./images/sharepoint-grid-action.gif)
 
-You can find the sample of the Syncfusion DataGrid Component in SharePoint Framework [here](https://github.com/SyncfusionExamples/react-data-grid-integration-with-sharepoint).
+You can find the sample of the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid Component in SharePoint Framework [here](https://github.com/SyncfusionExamples/react-data-grid-integration-with-sharepoint).
