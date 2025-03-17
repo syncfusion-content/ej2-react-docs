@@ -53,7 +53,7 @@ To install `create-react-app` run the following command.
     npm start
    ```
 
-* Install Syncfusion packages using below command.
+* Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
 
    ```
     npm install @syncfusion/ej2-react-charts --save

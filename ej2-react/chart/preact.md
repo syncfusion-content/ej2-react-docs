@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Preact Framework and React Chart Component | Syncfusion
+title: Getting Started with React Chart Component | Syncfusion
 description: Check out and learn about getting started with the Preact Framework and React Chart Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with the React Chart Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion React Chart component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Chart component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
 ## Prerequisites
 
-[System requirements for Syncfusion React UI components](../system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
 
 ## Set up the Preact project
 
@@ -79,11 +79,11 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 cd my-project
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add the Syncfusion React packages
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Syncfusion React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion React components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
 This article uses the [React Chart component](https://www.syncfusion.com/react-components/react-charts) as an example. To use the React Chart component in the project, the `@syncfusion/ej2-react-charts` package needs to be installed using the following command:
 
@@ -97,7 +97,7 @@ or
 yarn add @syncfusion/ej2-react-charts
 ```
 
-## Add the Syncfusion React component
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the below steps to add the React Chart component to the Vite project:
 
@@ -167,4 +167,4 @@ The output will appear as follows:
 
 ## See also
 
-[Getting Started with the Syncfusion React UI Component](../getting-started/quick-start)
+[Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)

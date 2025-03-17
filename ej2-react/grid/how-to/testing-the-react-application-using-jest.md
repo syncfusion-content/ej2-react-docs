@@ -18,9 +18,9 @@ React [Jest](https://jestjs.io/docs/tutorial-react) testing is a popular approac
 
 You need to verify if the installed version of Node is 14 or higher. If it is below version 14, you must install a version of Node above 14. You can refer the following link to install the [node version](https://nodejs.org/en/download). You can select the any node version is 14 or above and installed.
 
-**II. Create an React application and install the Syncfusion Grid package:**
+**II. Create an React application and install the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package:**
 
-To create an React application and install the Syncfusion Grid package, you can refer to the [Getting started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) documentation.
+To create an React application and install the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package, you can refer to the [Getting started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) documentation.
 
 **III. Install the Jest:**
 

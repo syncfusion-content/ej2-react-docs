@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Show different types of toast in React Toast component
 
-The Essential JS 2 Toast has the following predefined styles that can be defined using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/toast/#cssclass) property for achieving different types of Toast.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Toast has the following predefined styles that can be defined using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/toast/#cssclass) property for achieving different types of Toast.
 
 | Class | Description |
 | -------- | -------- |

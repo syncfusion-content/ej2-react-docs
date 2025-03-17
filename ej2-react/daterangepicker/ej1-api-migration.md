@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Daterangepicker component
 
-This article describes the API migration process of DateRangePicker component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of DateRangePicker component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Date Selection
 
@@ -21,8 +21,8 @@ This article describes the API migration process of DateRangePicker component fr
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -57,8 +57,8 @@ this.value = [new Date('1/15/2017'), new Date("1/15/2017")];
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -91,8 +91,8 @@ Display the date format
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -312,8 +312,8 @@ function onCreate() {
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -347,8 +347,8 @@ disableDaterange(args) {
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -604,8 +604,8 @@ onCreate(args) {
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -633,8 +633,8 @@ Enable/Disable the RTL
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -667,8 +667,8 @@ Enable/Disable the persistence
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -932,8 +932,8 @@ Separator
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -982,8 +982,8 @@ First day of week
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>
@@ -1011,8 +1011,8 @@ Strict mode
 <thead>
 <tr>
 <th>Behavior</th>
-<th>API in Essential JS 1</th>
-<th>API in Essential JS 2</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 1</th>
+<th>API in Essential<sup style="font-size:70%">&reg;</sup> JS 2</th>
 </tr>
 <tr>
 <td>

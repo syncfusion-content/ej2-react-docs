@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Steps to create a routing sample in React Grid component
 
-**1. Creating a React project and integrating the Syncfusion Grid component:**
+**1. Creating a React project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component:**
 
 A simple React project can be created by following the steps under [getting started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) section of this documentation. Run the following command in the terminal to install React Router.
 
@@ -88,4 +88,4 @@ const Header = () => {
 
 export default Header;
 ```
-[Here](https://github.com/SyncfusionExamples/DataGrid-routing-react), you can find the React Routing sample with Syncfusion DataGrid.
+[Here](https://github.com/SyncfusionExamples/DataGrid-routing-react), you can find the React Routing sample with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid.

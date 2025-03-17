@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Heatmap chart component
 
-This article describes the API migration process of heat map component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of heat map component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Members
 
 {% raw %}
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Specifies the width of the heat map | **Property:**  *width*<br/><br/><code>`<EJ.HeatMap id="HeatMap" width="810px">`<br/>`</EJ.HeatMap>`</code>| **Property:**  *width*<br/><br/><code>`<HeatMapComponent id='heatmap-container' width={'300px'}>`</HeatMapComponent>`</code>|
 | Specifies the height of the heat map| **Property:**  *height*<br/><br/><code>`<EJ.HeatMap id="HeatMap" height="810px">`<br/>`</EJ.HeatMap>`</code>| **Property:**  *height*<br/><br/><code>`<HeatMapComponent id='heatmap-container' height={'300px'}>`<br/>`</HeatMapComponent>`</code>|
@@ -37,7 +37,7 @@ This article describes the API migration process of heat map component from Esse
 
 ## Events
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Triggered when the cell get clicked.| **Property:**  *cellSelected*<br/><br/><code>`<EJ.HeatMap actionComplete="actionComplete">`<br>`</EJ.HeatMap>`<br> <br><code>actionComplete = function(args) {}</code>|**Property:**  *cellClick*<br/><br/><code>`<HeatMapComponent id='heatmap-container' cellClick={this.cellClick.bind(this)}>`<br>`</HeatMapComponent>`<br><br><code>public cellClick(args: ICellClickEventArgs): void {} </code>|
 

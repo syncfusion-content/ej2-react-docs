@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integration of Material UI components in Syncfusion React Component | Syncfusion
+title: Material UI components in Syncfusion React Component | Syncfusion
 description: Learn here all about integration of Material-UI components in Syncfusion EJ2 React UI components and more.
 control: MaterialUI
 platform: ej2-react
@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 [Material-UI](https://mui.com/) is a popular library for building user interfaces in React applications. Material-UI provides a set of pre-designed and customizable UI components following Material Design principles. These components include buttons, forms, navigation bars, modals, cards, and many others, that can be easily integrated into your application. `Material-UI` components come with built-in styles and responsive behavior, making it convenient to create visually appealing and consistent user interfaces.
 
-The Syncfusion Material theme is designed to follow the Material-UI guidelines, ensuring a consistent appearance with Material-UI components. This makes it seamless to integrate Syncfusion React components with existing Material-UI components, allowing you to create a unified and visually appealing application.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Material theme is designed to follow the Material-UI guidelines, ensuring a consistent appearance with Material-UI components. This makes it seamless to integrate Syncfusion<sup style="font-size:70%">&reg;</sup> React components with existing Material-UI components, allowing you to create a unified and visually appealing application.
 
-This guide will provide you with a step-by-step process for integrating Material-UI component into the Syncfusion Grid component.
+This guide will provide you with a step-by-step process for integrating Material-UI component into the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
 
 ## Set up the React project
 
-1\. Set up a new `React` project by referring to the Syncfusion Grid component's [Getting Started](../grid/getting-started) documentation.
+1\. Set up a new `React` project by referring to the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component's [Getting Started](../grid/getting-started) documentation.
 
 2\. Install the necessary `Material-UI` dependencies using the command:
 

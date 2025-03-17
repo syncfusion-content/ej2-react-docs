@@ -11,14 +11,14 @@ domainurl: ##DomainURL##
 
 # Installation 
 
-The Syncfusion React npm packages can be installed in the application through any of the following steps:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React npm packages can be installed in the application through any of the following steps:
 
 * Installation using npm CLI.
 * Installation through package reference in `Package.json` file.
 
 ## Install by using npm CLI
 
-Syncfusion React (Essential JS 2) packages are published in [npm](https://www.npmjs.com/search?q=scope:syncfusion). You can install the necessary packages from npm’s install command. For example, React Grid package can be installed using following command.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published in [npm](https://www.npmjs.com/search?q=scope:syncfusion). You can install the necessary packages from npm’s install command. For example, React Grid package can be installed using following command.
 
 ```
 npm install @syncfusion/ej2-react-grids --save
@@ -28,7 +28,7 @@ The above command will install the Grid component package and all its dependency
 
 ## Install by using package.json
 
-1. Add the Syncfusion React (Essential JS 2) package references in the `dependencies` of `~/package.json` file.
+1. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) package references in the `dependencies` of `~/package.json` file.
 
     ```
     {

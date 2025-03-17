@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Auto complete component
 
-This article describes the API migration process of  AutoComplete component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of  AutoComplete component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 > MultiSelect concept is not present in EJ2-AutoComplete.  If you want to use multiselection support in autocomplete, we suggest you to use MultiSelect component.
 
 ## DataBinding
 
 {% raw %}
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Default** | **Property:** *datasource* <br/>`<EJ.Autocomplete id="default" dataSource = {carList} ></EJ.Autocomplete>`| **Property:** *dataSource*<br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} dataSource={this.cityData} />`|
 | **Fields for mapping** | **Property:** *fields*<br/>`<EJ.Autocomplete id="default" fields = {fields} ></EJ.Autocomplete>`| **Property:** *fields*<br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} fields={this.fields} />` |
@@ -29,7 +29,7 @@ This article describes the API migration process of  AutoComplete component from
 
 ## Filtering
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Case sensitivity** | **Property**: *caseSensitiveSearch*<br/>`<EJ.Autocomplete id="default" caseSensitiveSearch = {true} ></EJ.Autocomplete>`|**Property:** *ignoreCase*<br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} ignoreCase={true} />`|
 | **Accent effective search** | **Not applicable** | **Property** : *ignoreAccent* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} ignoreAccent={true} />`|
@@ -42,14 +42,14 @@ This article describes the API migration process of  AutoComplete component from
 
 ## Placeholder
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Watermark text** | **Property:** *watermarkText* <br/>`<EJ.Autocomplete id="default" watermarkText = {watermarkText} ></EJ.Autocomplete>`| **Property:** *placeholder* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} placeholder={this.placeholder} />`|
 | **Floating  of watermark text** | **Not applicable**   | **Property:** *floatLabelType* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} floatLabelType={this.floatLabelType} />`|
 
 ## Popup
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **No records text** | **Property:** *emptyResultText* <br/> `<EJ.Autocomplete id="default" emptyResultText = {emptyResultText} ></EJ.Autocomplete>`| **Property:** *noRecordsTemplate*<br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} noRecordsTemplate={this.noRecordsTemplate} />`|
 | **No records showing** | **Property:** *showEmptyResultText*<br/> `<EJ.Autocomplete id="default" showEmptyResultText = {true} ></EJ.Autocomplete>` | **Not applicable** |
@@ -68,7 +68,7 @@ This article describes the API migration process of  AutoComplete component from
 
 ## CSS
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Default** | **Property:** *cssClass* <br/> `<EJ.Autocomplete id="autocomplete" cssClass="cssClass"></EJ.Autocomplete>` | **Property:** *cssClass* <br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} cssClass={this.cssClass} />`|
 | **Height** | **Property:** *height* <br/> `<EJ.Autocomplete id="autocomplete" height="400px"></EJ.Autocomplete>`| **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#cssclass) property.** |
@@ -78,19 +78,19 @@ This article describes the API migration process of  AutoComplete component from
 
 ## Grouping
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Default** | **Property:** *fields*<br/> `<EJ.Autocomplete id="default" fields = {fields} ></EJ.Autocomplete>`|**Property:** *fields* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} fields={this.fields} />`|
 
 ## Localization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Default** | **Property:** *Locale* <br/>`<EJ.Autocomplete id="default" locale = {"fr-FE"} ></EJ.Autocomplete>`| **Property:** *Locale* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} locale={this.locale} />`|
 
 ## Template
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Default** | **Property:** *template* `<EJ.Autocomplete id="default" template = {template} ></EJ.Autocomplete>`|**Property:** *itemTemplate*<br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} itemTemplate={this.itemTemplate} />` |
 | **Group Template** | **Not Applicable**  | **Property:** *groupTemplate* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} groupTemplate={this.groupTemplate} />`|
@@ -102,20 +102,20 @@ This article describes the API migration process of  AutoComplete component from
 
 ## Sorting
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Default** | **Property:** *allowSorting* <br/> `<EJ.Autocomplete id="default" allowSorting = {true} ></EJ.Autocomplete>` | **Acheivable through [sortOrder](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#sortorder) property** |
 | **Order of sorting** | **Property:** *sortOrder* <br/>`<EJ.Autocomplete id="default" sortOrder = {sortOrder} ></EJ.Autocomplete>`|**Property:** *sortOrder*<br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} sortOrder={this.sortOrder} />` |
 
 ## Accessibility
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **RTL support** | **Property:** *enableRtl* <br/>`<EJ.Autocomplete id="default" enableRtl = {true} ></EJ.Autocomplete>` | **Property:** *enableRtl* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} enableRtl={this.enableRtl} />`|
 
 ## Selection
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------ | ----------- |
 |**Selecting particular value**| **Property**: *selectValueByKey* <br/>`<EJ.Autocomplete id="default" selectValueByKey = {selectValueByKey} ></EJ.Autocomplete>`|**Achievable through [value](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#value) property.** |
 | **Selecting particular value** | **Property**: *value*<br/>`<EJ.Autocomplete id="default" value = {value} ></EJ.Autocomplete>` | **Property:** *value*<br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} value={this.value} />`|
@@ -126,7 +126,7 @@ This article describes the API migration process of  AutoComplete component from
 
 ## Miscellaneous
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Enable/disable** | **Property:** *enabled*<br/>`<EJ.Autocomplete id="default" enabled = {true} ></EJ.Autocomplete>` | **Property:** *enabled* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} enabled={true} />`|
 | **Enable persistence** | **Property:** *enablePersistence*<br/> `<EJ.Autocomplete id="default" enablePersistence = {true} ></EJ.Autocomplete>` | **Property:** *enablePersistence* <br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} enablePersistence={true} />`|
@@ -136,7 +136,7 @@ This article describes the API migration process of  AutoComplete component from
 
 ## Common
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Addition of new option watermark text** | **Property:** *addNewText*<br/> `<EJ.Autocomplete id="default" addNewText = {addNewText} ></EJ.Autocomplete>`|**Not applicable** |
 | **Addition of new item** | **Property:**  *allowAddNew* <br/>`<EJ.Autocomplete id="default" allowAddNew = {true} ></EJ.Autocomplete>`|**Property:** *allowCustom*<br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} allowCustom={true} />`|

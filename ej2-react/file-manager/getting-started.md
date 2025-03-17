@@ -53,9 +53,9 @@ npx create-react-app my-app
 cd my-app
 ```
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install. For this application, we are going to use `File Manager` component.
 
 To install File Manager component, use the following command
@@ -87,7 +87,7 @@ To render the File Manager component, need to import File Manager and its depend
 
 ## Adding File Manager component to the Application
 
-File Manager can be initialized using the `<FileManagerComponent>` tag. Now, you can start adding Essential JS 2 File Manager component to the application.
+File Manager can be initialized using the `<FileManagerComponent>` tag. Now, you can start adding Essential<sup style="font-size:70%">&reg;</sup> JS 2 File Manager component to the application.
 
 * To include the File Manager component in application import the `FileManagerComponent` from `ej2-react-filemanager` package in **App.tsx**.
 

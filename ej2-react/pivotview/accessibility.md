@@ -246,4 +246,4 @@ The accessibility compliance of the pivot table component is shown in the follow
 
 ## See Also
 
-* [Accessibility in Syncfusion React components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)

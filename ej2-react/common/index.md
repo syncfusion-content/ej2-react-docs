@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview
 
-The Base (`ej2-base`) is the most common package which has common class definitions, libraries and methods for the Syncfusion React UI components.
+The Base (`ej2-base`) is the most common package which has common class definitions, libraries and methods for the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 
 ## Key Features
 

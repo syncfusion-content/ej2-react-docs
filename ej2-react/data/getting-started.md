@@ -56,7 +56,7 @@ cd my-app
 npm start
 ```
 
-Install Syncfusion packages using below command.
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
 
 ```
 npm install @syncfusion/ej2-data --save
@@ -274,13 +274,13 @@ The [page](https://ej2.syncfusion.com/documentation/api/data/query/#page) method
 
 ## Component binding
 
-DataManager component can be used with Syncfusion components which supports data binding.
+DataManager component can be used with Syncfusion<sup style="font-size:70%">&reg;</sup> components which supports data binding.
 
 In the following samples, the grid component is bound. To render the grid with the necessary configurations, please refer to the [React Grid getting started](https://ej2.syncfusion.com/react/documentation/grid/getting-started) documentation.
 
 ### Local data binding
 
-A data source can be created in-line with other Syncfusion component configuration settings.
+A data source can be created in-line with other Syncfusion<sup style="font-size:70%">&reg;</sup> component configuration settings.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -301,7 +301,7 @@ A data source can be created in-line with other Syncfusion component configurati
 
 ### Remote data binding
 
-To bind remote data to Syncfusion component, you can assign a service data as an instance of [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) to the **dataSource** property.
+To bind remote data to Syncfusion<sup style="font-size:70%">&reg;</sup> component, you can assign a service data as an instance of [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) to the **dataSource** property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

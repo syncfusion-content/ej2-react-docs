@@ -16,7 +16,7 @@ This section explains how to create a simple Smart Paste Button, and configure i
 
 ## Prerequisites
 
-* [System requirements for Syncfusion React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+* [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 * [OpenAI](https://github.com/syncfusion/smart-ai-samples/blob/master/react/README.md#openai) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
 
 ## Dependencies
@@ -68,9 +68,9 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 You can choose the component that you want to install. For this application, we are going to use Smart Paste Button component.
 
 To install Smart Paste Button component, use the following command

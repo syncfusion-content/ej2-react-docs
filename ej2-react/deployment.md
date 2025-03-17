@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## CDN
 
-The CDN links are provided individually for all the scripts and style sheets of Syncfusion React UI components.
+The CDN links are provided individually for all the scripts and style sheets of Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 
 The CDN link is provided to following files in the package
 
@@ -43,12 +43,12 @@ For example
 
 ## Packages
 
-Syncfusion React packages is published and available in public
+Syncfusion<sup style="font-size:70%">&reg;</sup> React packages is published and available in public
 [npm](https://www.npmjs.com/search?q=ej2-react&page=1&ranking=optimal) registry.
 
 ### Anatomy of NPM Packages
 
-Syncfusion React UI components are shipped as npm packages. Following table explains the purpose of each file available in the package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are shipped as npm packages. Following table explains the purpose of each file available in the package.
 
 |    Files                                                                  |    Purpose                                                                                                                                                                                                                                                                                   |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

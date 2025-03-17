@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Schedule Component
 
-This section briefly explains how to create [**React Scheduler**](https://www.syncfusion.com/react-components/react-scheduler) component and configure its available functionalities in React environment, using Essential JS 2 [quickstart](https://github.com/syncfusion/ej2-quickstart.git) seed repository.
+This section briefly explains how to create [**React Scheduler**](https://www.syncfusion.com/react-components/react-scheduler) component and configure its available functionalities in React environment, using Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/syncfusion/ej2-quickstart.git) seed repository.
 
 To get start quickly with React Scheduler using the Create React App, you can check on this video:
 
@@ -75,9 +75,9 @@ npm start
 ```
 
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 To install Scheduler component, use the following command
 
 ```
@@ -102,7 +102,7 @@ Add scheduler component's styles as given below in `src/App.css`.
 ```
 >To refer `App.css` in the application then import it in the `src/App.tsx` file.
 
-In case, if you want to make use of the combined CSS files of entire components, then you can avail it from the root folder of Essential JS 2 package and reference it with the code shown below.
+In case, if you want to make use of the combined CSS files of entire components, then you can avail it from the root folder of Essential<sup style="font-size:70%">&reg;</sup> JS 2 package and reference it with the code shown below.
 
 ```css
 @import '../../node_modules/@syncfusion/ej2/material.css';

@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the font-family of Syncfusion EJ2 React UI Components
+# Change the font-family of Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 React UI Components
 
-The `font-family` of Syncfusion EJ2 React UI component can be changed using `e-control` class. This `e-control` class presents in all Syncfusion components which enables us to change the `font-family` of all Syncfusion EJ2 React UI components in an application.
+The `font-family` of Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 React UI component can be changed using `e-control` class. This `e-control` class presents in all Syncfusion<sup style="font-size:70%">&reg;</sup> components which enables us to change the `font-family` of all Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 React UI components in an application.
 
 ```css
 
@@ -20,4 +20,4 @@ The `font-family` of Syncfusion EJ2 React UI component can be changed using `e-c
 
 ```
 
-By including the above `CSS` code block in the style sheet of the application, we can change the `font-family` of all Syncfusion components.
+By including the above `CSS` code block in the style sheet of the application, we can change the `font-family` of all Syncfusion<sup style="font-size:70%">&reg;</sup> components.

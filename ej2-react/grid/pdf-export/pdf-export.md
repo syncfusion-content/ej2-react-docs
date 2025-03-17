@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # PDF export in React Grid component
 
-The PDF export feature in the Syncfusion React Grid allows you to export grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
+The PDF export feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to export grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
 
 To enable PDF export in the grid, you need to set the [allowPdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#allowpdfexport) property to **true** and use the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfexport) method for exporting. 
 
@@ -37,7 +37,7 @@ The following example demonstrates how to perform a PDF export action in the gri
 
 ## Show spinner while exporting
 
-Showing a spinner while exporting in the Syncfusion React Grid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
+Showing a spinner while exporting in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
 
 To show or hide a spinner while exporting the grid, you can utilize the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/#showspinner) and [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/#hidespinner) methods provided by the Grid within the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event.
 
@@ -66,7 +66,7 @@ The following example demonstrates how to show and hide the spinner during PDF e
 
 ## Binding custom data source while exporting
 
-The Syncfusion React Grid component provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the grid, which can be generated or retrieved based on your application logic.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the grid, which can be generated or retrieved based on your application logic.
 
 To export data, you need to define the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#datasource) property within the [pdfExportProperties](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) object. This property represents the data source that will be used for the PDF export.
 
@@ -93,7 +93,7 @@ The following example demonstrates how to render custom data source during PDF e
 
 ## Exporting with custom aggregate
 
-Custom aggregates in the Syncfusion React Grid involves exporting grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
+Custom aggregates in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid involves exporting grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
 
 In order to utilize custom aggregation, you need to specify the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#type) property as **Custom** and provide the custom aggregate function in the [customAggregate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn/#customaggregate) property. 
 
@@ -120,7 +120,7 @@ The following example shows how to export the grid with a custom aggregate that 
 
 ## Exporting with cell and row spanning
 
-Exporting data from the Syncfusion React Grid with cell and row spanning enables you to maintain cell and row layout in the exported data. This feature is useful when you have merged cells or rows in the Grid and you want to maintain the same structure in the exported file.
+Exporting data from the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid with cell and row spanning enables you to maintain cell and row layout in the exported data. This feature is useful when you have merged cells or rows in the Grid and you want to maintain the same structure in the exported file.
 
 To achieve this, you can utilize the [rowSpan](https://ej2.syncfusion.com/react/documentation/api/grid/querycellinfoeventargs/#rowspan) and [colSpan](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs/#colspan) properties in the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event of the Grid. This event allows you to define the span values for specific cells. Additionally, you can customize the appearance of the grid cells during the export using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfquerycellinfo) event of the Grid.
 
@@ -145,7 +145,7 @@ The following example demonstrates how to perform export with cell and row spann
 
 ## Merge duplicate cells in specific column and export in Grid
 
-You can merge duplicate cells (based on their values) in a specific column of the Syncfusion Grid. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event. Additionally, you can merge duplicate cells in the specified column during export by using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfquerycellinfo) event for PDF format. This functionality is useful for improving the readability of your data and providing a clearer visual representation.
+You can merge duplicate cells (based on their values) in a specific column of the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This can be achieved by utilizing the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#databound) event. Additionally, you can merge duplicate cells in the specified column during export by using the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfquerycellinfo) event for PDF format. This functionality is useful for improving the readability of your data and providing a clearer visual representation.
 
 Here’s an example demonstrating how to merge duplicate cells in the **OrderID** column in both Grid view and export: 
 
@@ -168,7 +168,7 @@ Here’s an example demonstrating how to merge duplicate cells in the **OrderID*
 
 ## Exporting with custom date format
 
-The exporting functionality in the Syncfusion React Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values. 
+The exporting functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values. 
 
 To apply a custom date format to grid columns during the export, you can utilize the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format) property. This property allows you to define a custom format using format options.
 
@@ -193,7 +193,7 @@ The following example demonstrates how to export the grid data with custom date 
 
 ## Exporting multiple grids
 
-Exporting multiple grids in the Syncfusion React Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a PDF file.  Each grid is identified by its unique ID. You can specify which grid to export by listing their **IDs** in the [exportGrids](https://ej2.syncfusion.com/react/documentation/api/grid/#exportgrids) property.
+Exporting multiple grids in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a PDF file.  Each grid is identified by its unique ID. You can specify which grid to export by listing their **IDs** in the [exportGrids](https://ej2.syncfusion.com/react/documentation/api/grid/#exportgrids) property.
 
 ### Same page
 
@@ -255,7 +255,7 @@ The following example demonstrates how to export multiple grids to a PDF file wh
 
 ## Exporting hierarchy grid
 
-Exporting a hierarchy grid in the Syncfusion React Grid component allows you to generate a PDF document that includes the master grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
+Exporting a hierarchy grid in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component allows you to generate a PDF document that includes the master grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
 
 To achieve this, you can customize the exporting behavior by using the `pdfExportProperties.hierarchyExportMode` property of the Grid.
 
@@ -394,7 +394,7 @@ export default App;
 
 ## Remove header row while exporting
 
-When exporting data from the Syncfusion React Grid, you have an option to remove the header row from the exported file. This can be useful when you want to export grid data without including the header values in the exported document.
+When exporting data from the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you have an option to remove the header row from the exported file. This can be useful when you want to export grid data without including the header values in the exported document.
 
 To achieve this, you can utilize the [pdfHeaderQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/#pdfheaderquerycellinfo) event of the Grid. This event allows you to customize the header cells during the PDF export process. By handling this event, you can remove the header row from the exported file by not providing any content and height for the header cells. This ensures that the exported file contains only the data rows without including the header information.
 

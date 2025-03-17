@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resolve Syncfusion React UI Components' Template issues
+# Resolve Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components' Template issues
 
 The React property of `delayUpdate` is used to solve the react template related issues.
 

@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Sparkline component
 
-This article describes the API migration process of Accordion component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Accordion component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Sparkline Types
 
 {% raw %}
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Type| **Property:** *type*<br/><br/>  `<EJ.Sparkline id="sparkline" type="line"> </EJ.Sparkline>, document.getElementById('sparkline')`| **Property:** *type*<br/><br/> `<SparklineComponent  id='sparkline' type='Line'></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');` |
 
 ## Databinding
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Datasource| **Property:** *dataSource*<br/><br/> `<EJ.Sparkline id="sparkline" dataSource={dataSource1}> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *dataSource*<br/><br/> `<SparklineComponent  id='sparkline' dataSource={[ {x:0,yval:50},{x:1,yval:30}]}></SparklineComponent >,`<br><br/>`document.getElementById('sparkline')`|
 |Binding X values with datasource| **Property:** *xName*<br/><br/> `<EJ.Sparkline id="sparkline" xName="x"> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *xName*<br/><br/> `<SparklineComponent  id='sparkline' xName='xValue'></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
@@ -32,7 +32,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Markers
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Enable markers| **Property:** *markerSettings.visible*<br/><br/> `var markerSettings = { visible:true }` <br/> `<EJ.Sparkline id="sparkline" markerSettings={markerSettings}> </EJ.Sparkline>, document.getElementById('sparkline')`| **Property:** *markerSettings.visible*<br/><br/> `<SparklineComponent  id='sparkline' markerSettings=} visible: ['All']}></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
 |Color| **Property:** *markerSettings.fill*<br/><br/> `var markerSettings = { fill:"green" }` <br/> `<EJ.Sparkline id="sparkline" markerSettings={markerSettings}> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *markerSettings.fill*<br/><br/> `<SparklineComponent  id='sparkline' markerSettings=} fill:'green'}></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
@@ -44,7 +44,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Data labels
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Enable data labels| Not applicable |**Property:** *dataLabelSettings.visible*<br/><br/> `<SparklineComponent  id='sparkline' dataLabelSettings=} visible:['All'] }></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
 |Color| Not applicable |**Property:** *dataLabelSettings.fill*<br/><br/> `<SparklineComponent  id='sparkline' dataLabelSettings=} color:'green'}></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
@@ -63,7 +63,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Range band
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Color| **Property:** *rangeBandSettings.color*<br/><br/>`var rangeBandSettings = { color:"green" }` <br/> `<EJ.Sparkline id="sparkline" rangeBandSettings={rangeBandSettings}> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *rangeBandSettings.color*<br/><br/> `<SparklineComponent  id='sparkline' rangeBandSettings=} color:'green'}></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
 |Opacity| **Property:** *rangeBandSettings.opacity*<br/><br/> `var rangeBandSettings = { opacity:0.5 }` <br/> `<EJ.Sparkline id="sparkline" rangeBandSettings={rangeBandSettings}> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *rangeBandSettings.opacity*<br/><br/> `<SparklineComponent  id='sparkline' rangeBandSettings=} opacity:0.5}></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
@@ -72,7 +72,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Special points customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |High point color| **Property:** *highPointColor*<br/><br/> `<EJ.Sparkline id="sparkline" highPointColor="green"> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *highPointColor*<br/><br/> `<SparklineComponent  id='sparkline' highPointColor='green'></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
 |Low point color| **Property:** *lowPointColor*<br/><br/> `<EJ.Sparkline id="sparkline" lowPointColor="green"> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *lowPointColor*<br/><br/> `<SparklineComponent  id='sparkline' lowPointColor='green'></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
@@ -83,7 +83,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Axis customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Show axis line| **Property:** *axisSettings.visible*<br/><br/> `var axisLineSettings = { visible : true};`<br/>`<EJ.Sparkline id="sparkline"  axisLineSttings={axisLineSettings}> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *axisSettings.lineSettings.visible*<br/><br/> `<SparklineComponent  id='sparkline' axisSettings=} lineSettings:{ visible: true } }></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
 |Line color| **Property:** *axisSettings.color*<br/><br/> `var axisLineSettings = { color : "red"};`<br/>`<EJ.Sparkline id="sparkline"  axisLineSttings={axisLineSettings}> </EJ.Sparkline>, document.getElementById('sparkline')`|**Property:** *axisSettings.lineSettings.color*<br/><br/> `<SparklineComponent  id='sparkline' axisSettings=} lineSettings:{ color: 'green' } }></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
@@ -97,7 +97,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Appearance customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Background color| **Property:** *background*<br/><br/> `<EJ.Sparkline id="sparkline"  background="grey"> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *containerArea.background*<br/><br/> `<SparklineComponent  id='sparkline' background='grey'></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
 |Border color | Not applicable |**Property:** *containerArea.border.color*<br/><br/> `<SparklineComponent  id='sparkline' containerArea=} border: {color:'green'} }></SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
@@ -114,7 +114,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Tooltip
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Show tooltip| **Property:** *tooltip.visible*<br/><br/> `var tooltip = { visible:true};`<br/>`<EJ.Sparkline id="sparkline"  tooltip={tooltip}> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *tooltipSettings.visible*<br/><br/> `<SparklineComponent  id='sparkline' tooltipSettings=} visible:true }>  <Inject services={[SparklineTooltip]} /> </SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
 |Background| **Property:** *tooltip.fill*<br/><br/> `var tooltip = { fill:"green"};`<br/>`<EJ.Sparkline id="sparkline"  tooltip={tooltip}> </EJ.Sparkline>, document.getElementById('sparkline')` |**Property:** *tooltipSettings.fill*<br/><br/> `<SparklineComponent  id='sparkline' tooltipSettings=} fill:'green' }> <Inject services={[SparklineTooltip]} /> </SparklineComponent >,`<br><br/>`document.getElementById('sparkline');`|
@@ -131,25 +131,25 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Rendering
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Enable canvas rendering| **Property:** *enableCanvasRendering*<br/><br/> `<EJ.Sparkline id="sparkline"  enableCanvasRendering={true}> </EJ.Sparkline>, document.getElementById('sparkline')` | Not applicable |
 
 ## Localization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Localization| **Property:** *locale*<br/><br/> `<EJ.Sparkline id="sparkline"  locale="en-US"> </EJ.Sparkline>, document.getElementById('sparkline')` | **Property:** *type*<br/><br/> `<SparklineComponent  id='sparkline' locale='en-US'> </SparklineComponent >,`<br><br/>`document.getElementById('sparkline');` |
 
 ## Methods
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Dynamically updating sparkline| **Method:** *redraw*<br/><br/> `<EJ.Sparkline id="sparkline"> </EJ.Sparkline>, document.getElementById('sparkline')` <br/> `function sparkMethod() { var sparObj = $("#sparkline").data("ejSparkline"); sparkObj.redraw(); } `  | **Method:** *refresh*<br/><br/> `export class Spark extends SampleBase<{}, {}> { `<br/>`private sparkInstance: SparklineComponent; `<br/>` private change(): void{`<br/>`this.sparkInstance.refresh();`<br/>`}` |
 
 ## Events
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Load| **Event:** *load*<br/><br/> `<EJ.Sparkline id="sparkline" load={load}></EJ.Sparkline>,`<br/>`document.getElementById('maps')`<br/>`function load(args) {}`  | **Event:** *load*<br/><br/> `<SparklineComponent id='sparkline'  load={this.load.bind(this)}></SparklineComponent>,`<br/>`document.getElementById('sparkline');`<br/>` public  load(args: ILoadEventArgs): void {}` |
 |Load completed| **Event:** *loaded*<br/><br/> `<EJ.Sparkline id="sparkline" loaded={loaded}></EJ.Sparkline>,`<br/>`document.getElementById('maps')`<br/>`function loaded(args) {}` | **Event:** *loaded*<br/><br/> `<SparklineComponent id='sparkline'  loaded={this.loaded.bind(this)}></SparklineComponent>,`<br/>`document.getElementById('sparkline');`<br/>` public  loaded(args: ILoadedEventArgs): void {}` |

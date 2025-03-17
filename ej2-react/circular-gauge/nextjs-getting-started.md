@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Circular gauge getting started with Next.js | Syncfusion
-description: Check out and learn about how to use Syncfusion React UI components in the Next.js project.
+description: Check out and learn here all about about how to use the Syncfusion React UI components in the Next.js project.
 control: Next.js
 platform: ej2-react
 documentation: ug
@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 
 
-# Creating a Next.js Application Using Syncfusion React Components
+# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion React Circular Gauge component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Circular Gauge component.
 
 ## What is Next.js?
 
@@ -81,11 +81,11 @@ cd ej2-nextjs-circular-gauge
 {% endhighlight %}
 {% endtabs %}
 
-The application is ready to run with default settings. Now, let's add Syncfusion components to the project.
+The application is ready to run with default settings. Now, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Install Syncfusion React packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Syncfusion React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion React components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
 Here, the [React Circular Gauge component](https://www.syncfusion.com/react-components/react-circular-gauge) is used as an example. To install the React Circular Gauge component in the project, use the following command:
 
@@ -102,7 +102,7 @@ yarn add @syncfusion/ej2-react-circulargauge
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion React component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the below steps to add the React Circular gauge components to the Next.js project:
 
@@ -149,4 +149,4 @@ yarn run dev
 
 To learn more about the functionality of the Circular Gauge component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/circular-gauge/getting-started#module-injection).
 
-> [View the NEXT.js Circular Gauge sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-circular-gauge).
+> [View the NEXT.js Circular Gauge sample in the GitHub repository](https://github.com/SyncfusionExamples/Syncfusion-react-circular-gauge-component-in-nextjs).

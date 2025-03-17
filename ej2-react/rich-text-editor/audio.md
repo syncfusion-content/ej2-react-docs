@@ -591,7 +591,7 @@ function App() {
 
 ## Customizing the Audio Quick Toolbar
 
-The Rich Text Editor enables customization of the audio quick toolbar, allowing you to tailor its functionality with essential tools such as AudioReplace, Remove, and AudioLayoutOption.
+The Rich Text Editor enables customization of the audio quick toolbar, allowing you to tailor its functionality with Essential<sup style="font-size:70%">&reg;</sup> tools such as AudioReplace, Remove, and AudioLayoutOption.
 
 By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you enhance the editor's capabilities, facilitating seamless management and editing of audio directly within your content. This customization ensures a user-friendly experience for manipulating audio elements efficiently.
 
