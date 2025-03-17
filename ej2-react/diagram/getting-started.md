@@ -14,7 +14,7 @@ This section explains the steps required to create a simple diagram and demonstr
 
 ## Prerequisites
 
-[System requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Dependencies
 
@@ -68,9 +68,9 @@ To set-up a React application in `TypeScript` environment, run the following com
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Syncfusion® packages
+### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential® JS 2 packages are published in [`Node Package Manager`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install. For this application, we are going to use `Diagram` component.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`Node Package Manager`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install. For this application, we are going to use `Diagram` component.
 
 To install Diagram component, use the following command
 
@@ -252,7 +252,7 @@ Create and add a `node` (JSON data) with specific position, size, label, and sha
 
 ### Apply shape and style to node
 
-Syncfusion® diagram control provides support to render many built-in shapes in diagram.
+Syncfusion<sup style="font-size:70%">&reg;</sup> diagram control provides support to render many built-in shapes in diagram.
 Please refer to [`Shapes`](shapes) to know about built-in Shapes.
 
 The appearance of a node can be customized by changing its [`fill`](../api/diagram/shapeStyleModel/#fill-string) color, [`strokeColor`](../api/diagram/shapeStyleModel/#strokecolor-string), [`strokeWidth`](../api/diagram/shapeStyleModel/#strokewidth-number), [`borderColor`](../api/diagram/node/#borderColor-string), [`borderWidth`](../api/diagram/node/#borderWidth-number), [`strokeDashArray`](../api/diagram/shapeStyleModel/#strokeDashArray-number),  [`opacity`](../api/diagram/shapeStyleModel/#opacity-number), and [`shadow`](../api/diagram/shapeStyleModel/#shadow-number).

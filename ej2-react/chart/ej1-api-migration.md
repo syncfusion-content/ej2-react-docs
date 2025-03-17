@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Chart component
 
-This article describes the API migration process of Chart component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Chart component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Annotations
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Annotations| **Property:** *annotations.content* <br/><br/>annotations: [{ content: "watermark" }],<br/>`<EJ.Chart`<br/>`annotations={annotations}>` <br/>`</EJ.Chart>`|**Property:** *annotations.content* <br/><br/>`<ChartComponent id='charts'>`<br/>`<AnnotationDirective content='<div>Highest Medal Count</div>'>`<br/>`</AnnotationsDirective>`<br/>`</ChartComponent>`|
 |rotation of annotation| **Property:** *annotations* <br/><br/>annotations: [{ }],<br/>`<EJ.Chart`<br/>`annotations={annotations}>` <br/>`</EJ.Chart>`| Not applicable.|
@@ -35,7 +35,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Columns
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Columns in chart| **Property:** *columntype* <br/><br/>var series= [{ type: 'column' }];<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|**Property:** *columntype* <br/><br/>`<ChartComponent id='charts'>`<br/>`<SeriesDirective  type='Column'>`<br/>`</SeriesDirective>`<br/>`</ChartComponent>`|
 |width of columns in chart| **Property:** *columnWidth* <br/><br/>var series= [{ columnWidth : 0.8 }];<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|**Property:** *width* <br/><br/>`<ChartComponent id='charts' width='80%'>`<br/>`<SeriesDirective  type='Column'>`<br/>`</SeriesDirective>`<br/>`</ChartComponent>`|
@@ -44,14 +44,14 @@ This article describes the API migration process of Chart component from Essenti
 ## CommonSeriesOptions
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |commonSeriesOptions| **Property:** *commonSeriesOptions* <br/><br/>var commonSeriesOptions= { cornerRadius :20 };<br/>`<EJ.Chart`<br/>`commonSeriesOptions={commonSeriesOptions}>` <br/>`</EJ.Chart>`|Not Applicable|
 
 ## Crosshair
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |crosshair| **Property:** *crosshair Label visible* <br/><br/>var crosshair={ visible: true };<br/>`<EJ.Chart`<br/>`crosshair={crosshair}>` <br/>`</EJ.Chart>`|**Property:** *crosshair enable* <br/><br/>`<ChartComponent id='charts' crosshair = {enable:true}>`<br/>`</ChartComponent>`|
 |trackballTooltipSettings| **Property:** *trackballTooltipSettings* <br/><br/>var crosshair={ type: 'trackball' };<br/>`<EJ.Chart`<br/>`crosshair={crosshair}>` <br/>`</EJ.Chart>`|Not applicable
@@ -62,14 +62,14 @@ This article describes the API migration process of Chart component from Essenti
 ## 3D chart
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |type| **Property:** *type* <br/><br/>var enable3D= true;<br/>`<EJ.Chart`<br/>`enable3D={enable3D}>` <br/>`</EJ.Chart>`|Not applicable|
 
 ## Indicators
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Type of Indicator| **Property:** *type* <br/><br/>var indicators= [{ type: "accumulationdistribution" }];<br/>`<EJ.Chart`<br/>`indicators={indicators}>` <br/>`</EJ.Chart>`|**Property:** *marker* <br/><br/>`<ChartComponent id='charts'>`<br/>`<IndicatorDirective type='AccumulationDistribution'>`<br/>`</IndicatorDirective>`<br/>`</ChartComponent>`|
 |Period for indicator| **Property:** *period* <br/><br/>var indicators= [{ period: 3 }];<br/>`<EJ.Chart`<br/>`indicators={indicators}>` <br/>`</EJ.Chart>`|**Property:** *marker* <br/><br/>`<ChartComponent id='charts'>`<br/>`<IndicatorDirective period={3}'>`<br/>`</IndicatorDirective>`<br/>`</ChartComponent>`|
@@ -101,7 +101,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Legend
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Default legend| **Property:** *visible* <br/><br/>var legend= { visible: true };<br/>`<EJ.Chart`<br/>`legend={legend}>` <br/>`</EJ.Chart>`|**Property:** *yAxisName* <br/><br/>`<ChartComponent id='charts' legendSettings = { visible: true, position: 'Top' }>`<br/>`</ChartComponent>`|
 |Legend height| **Property:** *height* <br/><br/>var legend= { size : { height: 50 } };<br/>`<EJ.Chart`<br/>`legend={legend}>` <br/>`</EJ.Chart>`|**Property:** *yAxisName* <br/><br/>`<ChartComponent id='charts' legendSettings = { height: '30' }>`<br/>`</ChartComponent>`|
@@ -129,7 +129,7 @@ This article describes the API migration process of Chart component from Essenti
 ## primaryXAxis
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Axis line cross value| **Property:** *crossesAt* <br/><br/>var primaryXAxis = { crossesAt : 0 };<br/>`<EJ.Chart`<br/>`primaryXAxis ={primaryXAxis}>` <br/>`</EJ.Chart>`|**Property:** *crossesAt* <br/><br/>`<ChartComponent id='charts'  primaryXAxis ={ crossesAt : 15 }>`<br/>`</ChartComponent>`|
 |axis name with which the axis line has to be crossed| **Property:** *crossesInAxis* <br/><br/>var primaryXAxis = { crossesInAxis : '' };<br/>`<EJ.Chart`<br/>`primaryXAxis ={primaryXAxis}>` <br/>`</EJ.Chart>`|**Property:** *crossesInAxis* <br/><br/>`<ChartComponent id='charts'  primaryXAxis ={ crossesInAxis : '' }>`<br/>`</ChartComponent>`|
@@ -206,7 +206,7 @@ This article describes the API migration process of Chart component from Essenti
 ## primaryYAxis
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Alternate grid band| **Property:** *alternateGridBand* <br/><br/>var primaryYAxis = {alternateGridBand: { even: { fill: 'red } } };<br/>`<EJ.Chart`<br/>`primaryYAxis ={primaryYAxis}>` <br/>`</EJ.Chart>`|Not applicable|
 |Axis line cross value| **Property:** *crossesAt* <br/><br/>var primaryYAxis = { crossesAt : 0 };<br/>`<EJ.Chart`<br/>`primaryYAxis ={primaryYAxis}>` <br/>`</EJ.Chart>`|**Property:** *crossesAt* <br/><br/>`<ChartComponent id='charts'  primaryYAxis ={ crossesAt : 15 }>`<br/>`</ChartComponent>`|
@@ -284,7 +284,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Axes
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Alternate grid band| **Property:** *alternateGridBand* <br/><br/>var axes= {alternateGridBand: { even: { fill: 'red } } };<br/>`<EJ.Chart`<br/>`axes={axes}>` <br/>`</EJ.Chart>`|Not applicable|
 |Axis line cross value| **Property:** *crossesAt* <br/><br/>var axes= { crossesAt : 0 };<br/>`<EJ.Chart`<br/>`axes={axes}>` <br/>`</EJ.Chart>`|**Property:** *crossesAt* <br/><br/>`<ChartComponent id='charts'>`<br/>`<AxisDirective crossesAt='4'>`<br/>`</AxisDirective>`<br/>`</ChartComponent>`|
@@ -362,7 +362,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Rows
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |rows in chart| **Property:** *rowDefinitions* <br/><br/>var rowDefinitions=[{ }];<br/>`<EJ.Chart`<br/>`rowDefinitions={rowDefinitions}>` <br/>`</EJ.Chart>`|**Property:** *rowDirective* <br/><br/>`<ChartComponent id='charts'>`<br/>`<rowDirective>`<br/>`</rowDirective>`<br/>`</ChartComponent>`|
 |Unit| **Property:** *unit* <br/><br/>var rowDefinitions=[{ unit : 'percentage' }];<br/>`<EJ.Chart`<br/>`rowDefinitions={rowDefinitions}>` <br/>`</EJ.Chart>`|Not Applicable|
@@ -372,7 +372,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Series
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |bearFillColor| **Property:** *bearFillColor* <br/><br/>var series =[{ bearFillColor: 'red'}]<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|**Property:** *bearFillColor* <br/><br/>`<ChartComponent id='charts'>`<br/>`<SeriesDirective bearFillColor='red'>`<br/>`</SeriesDirective>`<br/>`</ChartComponent>`|
 |Border| **Property:** *border* <br/><br/>var series =[{ border: {color: 'red', width: 2}}]<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|**Property:** *border* <br/><br/>`<ChartComponent id='charts'>`<br/>`<SeriesDirective border={ color: 'red', width: 2}>`<br/>`</SeriesDirective>`<br/>`</ChartComponent>`|
@@ -427,7 +427,7 @@ This article describes the API migration process of Chart component from Essenti
 ## marker
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |visibility of marker| **Property:** *marker.visible* <br/><br/>var series =[{marker: { visible: true  }}]<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|**Property:** *marker.visible* <br/><br/>`<ChartComponent id='charts'>`<br/>`<SeriesDirective marker={ visible: false }>`<br/>`</SeriesDirective>`<br/>`</ChartComponent>`|
 |visibility of marker| **Property:** *marker.visible* <br/><br/>var series =[{marker: { visible: true  }}]<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|**Property:** *marker.visible* <br/><br/>`<ChartComponent id='charts'>`<br/>`<SeriesDirective marker={ visible: false }>`<br/>`</SeriesDirective>`<br/>`</ChartComponent>`|
@@ -460,7 +460,7 @@ This article describes the API migration process of Chart component from Essenti
 ## TrendLines
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Trendlines settings| **Property:** *series.trendLines* <br/><br/>var series =[{trendlines: [{ visibility: "visible", type: "linear" }] }]<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|**Property:** *series.trendLines* <br/><br/>`<ChartComponent id='charts'>`<br/>`<TrendlineDirective>`<br/>`</TrendlineDirective>`<br/>`</ChartComponent>`|
 |Visibility of trendline| **Property:** *trendLines.visibility* <br/><br/>var series =[{trendlines: [{ visibility: "visible"}] }]<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|Not applicable|
@@ -483,7 +483,7 @@ This article describes the API migration process of Chart component from Essenti
 ## StripLines
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Default behaviour for striplines| **Property:** *primaryXAxis.stripLines* <br/><br/>var primaryYAxis = { stripLine: [{ visible: true, start: 30, end: 40,}]};<br/>`<EJ.Chart`<br/>`primaryXAxis ={primaryXAxis}>` <br/>`</EJ.Chart>`|**Property:** *primaryXAxis.stripLines* <br/><br/>`<ChartComponent id='charts' primaryXAxis ={  stripLines:[{ visible: true }] }>`<br/>`</ChartComponent>`|
 |border for stripline| **Property:** *stripLines.borderColor* <br/><br/>var primaryYAxis = { stripLine: [{ borderColor: 'pink'}]};<br/>`<EJ.Chart`<br/>`primaryXAxis ={primaryXAxis}>` <br/>`</EJ.Chart>`|**Property:** *stripLines.border* <br/><br/>`<ChartComponent id='charts' primaryXAxis ={  stripLines:[{border: { color: 'red'} }] }>`<br/>`</ChartComponent>`|
@@ -501,7 +501,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Multilevel Labels
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Default behaviour for multilevelLabels| **Property:** *stripLines.fontStyle* <br/><br/>var primaryYAxis = { multiLevelLabels: [{  }] };<br/>`<EJ.Chart`<br/>`primaryXAxis ={primaryXAxis}>` <br/>`</EJ.Chart>`|**Property:** *primaryXAxis.multilevelLabels* <br/><br/>`<ChartComponent id='charts' primaryXAxis ={ multiLevelLabels: [{ }] }>`<br/>`</ChartComponent>`|
 |Text alignment for multilevelLabels| **Property:** *multiLevelLabels.textAlignment* <br/><br/>var primaryYAxis = { multiLevelLabels: [{ textAlignment: 'Near' }] };<br/>`<EJ.Chart`<br/>`primaryXAxis ={primaryXAxis}>` <br/>`</EJ.Chart>`|**Property:** *primaryXAxis.multilevelLabels* <br/><br/>`<ChartComponent id='charts' primaryXAxis ={ multiLevelLabels: [{ }] }}>`<br/>`</ChartComponent>`|
@@ -517,7 +517,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Methods
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |animation for series| **Property:** *animate()* <br/><br/>var chartobj= document.getElementById('chart');<br/>`<EJ.Chart`<br/>`id= chart>` <br/>`</EJ.Chart>`<br/>chartobj.animate();|Not applicable|
 |Redraw for chart| **Property:** *redraw()* <br/><br/>var chartobj= document.getElementById('chart');<br/>`<EJ.Chart`<br/>`id= chart>` <br/>`</EJ.Chart>`<br/>chartobj.redraw();|**Property:** *refresh()* <br/><br/>public loaded(args: ILoadedEventArgs): void {<br/>function () => {<br/>args.chart.refresh();<br/>`<ChartComponent id='charts'>`<br/>`</ChartComponent>`|
@@ -529,7 +529,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Events
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Fires on annotation click| **Property:** *annotationClick* <br/><br/>`<EJ.Chart`<br/>`id= chartcontainer annotationClick = {annotationClick}>`<br/>`</EJ.Chart>`<br/>function annotationClick(){};|Not applicable|
 |Fires after animation| **Property:** *animationComplete()* <br/><br/>`<EJ.Chart`<br/>`id= chartcontainer animationComplete = {animationComplete}>`<br/>`</EJ.Chart>`<br/>function animationComplete(){ };|**Property:** *animationComplete()* <br/><br/>`<ChartComponent`<br/>`id='charts animationComplete={this.animationComplete.bind(this)}'>`<br/>`</ChartComponent>`<br/>public animationComplete(args:IAnimationCompleteEventArgs): void {};|
@@ -583,7 +583,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Chart properties
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |selected data index| **Property:** *selectedDataPointIndexes* <br/><br/>var selectedDataPointIndexes = [ { seriesIndex: 0, pointIndex: 1}];<br/>`<EJ.Chart`<br/>`id= 'chartcontainer' selectedDataPointIndexes= {selectedDataPointIndexes}>`<br/>`</EJ.Chart>`|**Property:** *selectedDataIndexes* <br/><br/>public selectedDataIndexes: [ { series: 0, point: 1}];<br/>`<ChartComponent`<br/>`id='charts' selectedDataIndexes={this.selectedDataIndexes}>`<br/>`</ChartComponent>`|
 |sideBySideSeriesPlacement for column based series| **Property:** *sideBySideSeriesPlacement* <br/><br/>var sideBySideSeriesPlacement = [ { seriesIndex: 0, pointIndex: 1}];<br/>`<EJ.Chart`<br/>`id= 'chartcontainer' sideBySideSeriesPlacement= {sideBySideSeriesPlacement}>`<br/>`</EJ.Chart>`|**Property:** *sideBySidePlacement* <br/><br/>public sideBySidePlacement: [{true}];<br/>`<ChartComponent`<br/>`id='charts' sideBySidePlacement={this.sideBySidePlacement}>`<br/>`</ChartComponent>`<br/>|

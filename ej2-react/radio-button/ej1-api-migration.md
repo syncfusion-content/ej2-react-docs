@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Radio button component
 
-This article describes the API migration process of RadioButton component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of RadioButton component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Properties
 
 {% raw %}
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Label | **Property:** *text* <br/><br/> `<EJ.RadioButton  id="radio" text="RadioButton"></EJ.RadioButton>` | **Property:** *label* <br/><br/> `<RadioButtonComponent id="radio" label="RadioButton"></RadioButtonComponent>` |
 | Checked state | **Property:** *checked* <br/><br/> `<EJ.RadioButton id="radio" text="RadioButton" checked={true}></EJ.RadioButton>` | **Property:** *checked* <br/><br/> `<RadioButtonComponent id="radio" label="RadioButton" checked={true}></RadioButtonComponent>` |
@@ -35,7 +35,7 @@ This article describes the API migration process of RadioButton component from E
 
 ## Methods
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Destroy | **Method:** *destroy* <br/><br/> `<EJ.RadioButton  id="radio" text="RadioButton"></EJ.RadioButton>` <br/> var radioButton = $('#radio').ejRadioButton('instance');<br/>radioButton.destroy(); | **Method:** *destroy* <br/><br/> `<RadioButtonComponent id="radio" label="RadioButton" ref={(scope) => {this.radioButton = scope}></RadioButtonComponent>` <br/> constructor(props: {}) { <br/> &nbsp; this.radioButton.destroy(); <br/> } |
 | Disable the RadioButton | **Method:** *disable* <br/><br/> `<EJ.RadioButton  id="radio" text="RadioButton"></EJ.RadioButton>` <br/> var radioButton = $('#radio').ejRadioButton('instance');<br/>radioButton.disable(); | Not applicable |
@@ -43,7 +43,7 @@ This article describes the API migration process of RadioButton component from E
 
 ## Events
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | BeforeChange Event | **Event:** *beforeChange* <br/><br/> `<EJ.RadioButton  id="radio" text="RadioButton" beforeChange={beforeChange}></EJ.RadioButton>` <br/>function beforeChange(args) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;/** code block */ <br/>} | Not applicable |
 | Change Event | **Event:** *change* <br/><br/> `<EJ.RadioButton  id="radio" text="RadioButton" change={change}></EJ.RadioButton>` <br/>function change(args) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;/** code block */ <br/>} | **Event:** *change* <br/><br/> `<RadioButtonComponent id="radio" label="RadioButton" change={this.change.bind(this)}></RadioButtonComponent>` <br/> change(args) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;/** code block */ <br/>} |

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Linear gauge component
 
-This article describes the API migration process of Accordion component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Accordion component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Linear gauge dimensions
 
 {% raw %}
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Height| **Property:** *height*<br/><br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" height= '100px'> </EJ.LinearGauge>, document.getElementById('gauge'));`|**Property:** *height*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge' height= '100px'> </LinearGaugeComponent>, document.getElementById('gauge'));`|
 |Width| **Property:** *width*<br/><br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" width= '200px'> </EJ.LinearGauge>, document.getElementById('gauge'));`|**Property:** *width*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge' width= '200px'> </LinearGaugeComponent>, document.getElementById('gauge'));`|
@@ -25,7 +25,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Line customization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Height| **Property:** *scales.length*<br/><br/> `var scale = [{ length: 300 }]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`|**Property:** *axes.line.height*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <AxisDirective line= {height= '150'}/> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
 |Width| **Property:** *scales.width*<br/><br/> `var scale = [{ width: 300 }]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`|**Property:** *axes.line.width*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <AxisDirective line= {width= 2}/> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
@@ -36,7 +36,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Ticks
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Type of Ticks| **Property:** *scales.ticks.type*<br/><br/> `var scale = [{` <br/> &nbsp; `ticks: [{ type: "majorinterval" }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.majorTicks.height*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <AxisDirective majorTicks= { }/> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
 |Height of Major Ticks| **Property:** *scales.ticks.height*<br/><br/> `var scale = [{` <br/> &nbsp; `ticks: [{ type: "majorinterval", height:8 }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`|**Property:** *axes.majorTicks.height*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <AxisDirective majorTicks= { height: 10 }/> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
@@ -56,7 +56,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Labels
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Angle| **Property:** *scales.labels.angle*<br/><br/> `var scale = [{` <br/> &nbsp; `labels: [{ angle: 15 }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| Not Applicable|
 |Offset| **Property:** *scales.labels.distanceFromScale*<br/><br/> `var scale = [{` <br/> &nbsp; `labels: [{distanceFromScale:{x: -5, y: 10} }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`|**Property:** *axes.labelStyle.offset*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <AxisDirective labelStyle= { offset: 3 }/> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
@@ -72,7 +72,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Axis
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Minimum Value| **Property:** *scales.minimum*<br/><br/> `var scale = [{ minimum: 20 }]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.minimum*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <AxisDirective minimum= 20 /> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
 |Maximum Value| **Property:** *scales.maximum*<br/><br/> `var scale = [{ maximum: 120 }]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.maximum*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <AxisDirective maximum= 120 /> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
@@ -81,7 +81,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Ranges
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Start Value| **Property:** *scales.ranges.startValue*<br/><br/> `var scale = [{` <br/> &nbsp; `ranges: [{ startValue: 20 }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.ranges.start*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <RangesDirective>` <br/> `<RangeDirective start={20} /> </RangesDirective> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
 |End Value| **Property:** *scales.ranges.endValue*<br/><br/> `var scale = [{` <br/> &nbsp; `ranges: [{ endValue: 20 }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.ranges.end*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <RangesDirective>` <br/> `<RangeDirective end={20} /> </RangesDirective> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
@@ -95,7 +95,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Bar Pointer
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Bar Pointer| **Property:** *scales.barPointers.value*<br/><br/> `var scale = [{` <br/> &nbsp; `barPointers: [{ value: 20 }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.pointers.value*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <PointersDirective>` <br/> `<PointerDirective type= 'Bar', value= {20} /> </PointersDirective> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
 |Color of Bar Pointer| **Property:** *scales.barPointers.backgroundColor*<br/><br/>`var scale = [{` <br/> &nbsp; `barPointers: [{ value: 20,` <br/> &nbsp; &nbsp; `backgroundColor: "red" }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.pointers.color*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <PointersDirective>` <br/> `<PointerDirective type= 'Bar',value= {20},color= 'red' /> </PointersDirective> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
@@ -109,7 +109,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Marker Pointer
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Marker Pointer| **Property:** *scales.markerPointers.value*<br/><br/>  `var scale = [{` <br/> &nbsp; `markerPointers: [{ value: 20 }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.pointers.value*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <PointersDirective>` <br/> `<PointerDirective type= 'Marker', value= {20} /> </PointersDirective> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
 |Color of Marker Pointer| **Property:** *scales.markerPointers.backgroundColor*<br/><br/> `var scale = [{` <br/> &nbsp; `markerPointers: [{` <br/> &nbsp; `value: 20, backgroundColor: "blue" }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge" scales={scale}> </EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *axes.pointers.color*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AxesDirective> <PointersDirective>` <br/> `<PointerDirective type= 'Marker', value= {20}, color= 'red' /> </PointersDirective> </AxesDirective>` `</LinearGaugeComponent>, document.getElementById('gauge'));`|
@@ -126,7 +126,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Annotation
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Content| **Property:** *scales.customLabels.value*<br/><br/> `var scale = [{` <br/> &nbsp; `customLabels: [{ showCustomLabels: true,` <br/> &nbsp; `value: 'LinearGauge' }]` <br/> `}]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge"` <br/> &nbsp; `scales={scale}> </EJ.LinearGauge>,` <br/> `document.getElementById('gauge'));`| **Property:** *annotations.content*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AnnotationsDirective> <AnnotationDirective` <br/> &nbsp; `content= "Annotation"/>` <br/> `</AnnotationsDirective> </LinearGaugeComponent>,` <br/> `document.getElementById('gauge'));`|
 |Horizontal Alignment| Not Applicable| **Property:** *annotations.horizontalAlignment*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'>` <br/> `<AnnotationsDirective> <AnnotationDirective` <br/> &nbsp; `horizontalAlignment='Center'/>` <br/> `</AnnotationsDirective> </LinearGaugeComponent>,` <br/> `document.getElementById('gauge'));`|
@@ -144,7 +144,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Tooltip
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Tooltip for Pointer| Not Applicable| **Property:** *tooltip.enable*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'` <br/> &nbsp; `tooltip= { enable: true} />`  <br/> `document.getElementById('gauge'));`|
 |Tooltip for Label|  **Property:** *tooltip.showLabelTooltip*<br/><br/> `var tooltip = [{` <br/> &nbsp; `showLabelTooltip: true }]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge"` <br/> &nbsp; `tooltip={tooltip}> </EJ.LinearGauge>,` <br/> `document.getElementById('gauge'));`| Not Applicable|
@@ -157,7 +157,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Appearence of Linear Gauge
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Background Color| **Property:** *backgroundColor*<br/><br/>`ReactDOM.render( <EJ.LinearGauge`<br/> &nbsp; `id= "gauge" backgroundColor= 'red'>`<br/>`</EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *background*<br/><br/>`ReactDOM.render( <LinearGaugeComponent id='gauge'`<br/> &nbsp;`background= 'blue'/>`<br/>`document.getElementById('gauge'));`|
 |Border Color| **Property:** *borderColor*<br/><br/> `ReactDOM.render( <EJ.LinearGauge`<br/> &nbsp; `id= "gauge" borderColor= 'Black'>`<br/>`</EJ.LinearGauge>, document.getElementById('gauge'));`| **Property:** *border.color*<br/><br/>`ReactDOM.render( <LinearGaugeComponent id='gauge'`<br/> &nbsp; `border= { color: 'red' } />`<br/>`document.getElementById('gauge'));`|
@@ -169,7 +169,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Gauge Container type
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Container Type| **Property:** *scales.type*<br/><br/> `var scale = [{` <br/> &nbsp; `type: 'therometer' }]` <br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge"` <br/> &nbsp; `scales={scale}> </EJ.LinearGauge>,` <br/> `document.getElementById('gauge'));`| **Property:** *container.type*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'`  <br/> &nbsp; `container= { type: 'Thermometer' }/>` <br/> `document.getElementById('gauge'));`|
 |Container Height| Not Applicable| **Property:** *container.height*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'`  <br/> &nbsp; `container= { height: 20 }/>` <br/> `document.getElementById('gauge'));`|
@@ -178,7 +178,7 @@ This article describes the API migration process of Accordion component from Ess
 
 ## Events
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Animation Complete Event| Not Applicable| **Event:** *animationComplete*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'`  <br/> &nbsp; `animationComplete={this.animationComplete}/>` <br/> `document.getElementById('gauge'));` <br/> `public animationComplete(args): void { }`|
 |Annotation Render Event| **Event:** *drawCustomLabel*<br/><br/> `ReactDOM.render( <EJ.LinearGauge id= "gauge"` <br/> &nbsp; `drawCustomLabel={this.drawCustomLabel}> </EJ.LinearGauge>,` <br/> `document.getElementById('gauge'));`<br/> `public drawCustomLabel(args): void { }`| **Event:** *annotationRender*<br/><br/> `ReactDOM.render( <LinearGaugeComponent id='gauge'`  <br/> &nbsp; `annotationRender={this.annotationRender}/>` <br/> `document.getElementById('gauge'));` <br/> `public annotationRender(args): void { }`|

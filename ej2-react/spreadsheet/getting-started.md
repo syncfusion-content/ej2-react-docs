@@ -57,9 +57,9 @@ npm start
 
 ```
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install Spreadsheet component use the following command.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install Spreadsheet component use the following command.
 
 ```
 npm install @syncfusion/ej2-react-spreadsheet --save

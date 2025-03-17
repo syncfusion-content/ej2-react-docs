@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Splitter component
 
-This article describes the API migration process of Splitter component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Splitter component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Common
 
 {% raw %}
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Adding custom class | **Property:** *cssClass* <br /><br /> `<EJ.Splitter id=”splitter” cssClass=”customClass”><EJ.Splitter>` | **Property:** *cssClass* <br />`<SplitterComponent cssClass=”customClass”></SplitterComponent>` <br /> |
 | Adjusting Height | **Property:** *height* <br /><br /> `<EJ.Splitter id=”splitter” height=”100%”><EJ.Splitter>` | **Property:** *height* <br /> `<SplitterComponent height=”100%”></SplitterComponent>` |
@@ -33,26 +33,26 @@ This article describes the API migration process of Splitter component from Esse
 
 ## Accessibility and Localization
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Keyboard Navigation | **Property:** *allowKeyboardNavigation* <br /><br /> `<EJ.Splitter id=”splitter” allowKeyboardNavigation ={true}><EJ.Splitter>` | No separate property for enable/disable keyboard navigation.  Its enabled by default. |
 | Right to Left | **Property:** *enableRTL* <br /><br /> `<EJ.Splitter id=”splitter” enableRTL ={false}><EJ.Splitter>` | **Property:** *enableRtl*<br /><br /> `<SplitterComponent enableRtl={true}></SplitterComponent>` |
 
 ## Control State
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Enable/Disable the control | Not Available | **Property:** *enabled* <br /><br /> `<SplitterComponent enabled={true}></SplitterComponent>` |
 
 ## State Maintenance
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Save the model value in local storage or cookies | Not Available | **Property:** *enablePersistence* <br /><br /> `<SplitterComponent enablePersistence={true}></SplitterComponent>` |
 
 ## Pane Properties
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property:** *properties* <br /><br /> `<EJ.Splitter id=”splitter” properties={property}><EJ.Splitter>`<br/>var property = []; <br/> | **Property:** *paneSettings* <br /> `<SplitterComponent> <PanesDirective> <PaneDirective/> </PanesDirective></SplitterComponent>`<br/>  |
 | Pane Content | Not Available | **Property:** *content* <br /> `<SplitterComponent> <PanesDirective> <PaneDirective content=”<div>First Pane Content</div>”/> </PanesDirective> </SplitterComponent>`<br/> |
@@ -76,7 +76,7 @@ This article describes the API migration process of Splitter component from Esse
 
 ## Animation
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | EnableAnimation | **Property:** *enableAnimation* <br /><br />`<EJ.Splitter id=”splitter” enableAnimation ={true}><EJ.Splitter>`<br /> &nbsp; | Not Available |
 | AnimationSpeed | **Property:** *animationSpeed* <br /><br /> `<EJ.Splitter id=”splitter” animationSpeed ={150}><EJ.Splitter>` <br />&nbsp; | Not Available |

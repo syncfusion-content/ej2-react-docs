@@ -48,9 +48,9 @@ You can use [`create-react-app`](https://github.com/facebook/create-react-app) t
       cd quickstart
     ```
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install. For this application, we are going to use `DateTimePicker` component.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install. For this application, we are going to use `DateTimePicker` component.
 
 To install DateTimePicker component, use the following command
 

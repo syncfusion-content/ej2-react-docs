@@ -14,7 +14,7 @@ This section explains the different styles and types of Buttons.
 
 ## Button styles
 
-The Essential JS 2 Button has the following predefined styles that can be defined using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button/#cssclass) property.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Button has the following predefined styles that can be defined using [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button/#cssclass) property.
 
 | Class | Description |
 | -------- | -------- |
@@ -41,7 +41,7 @@ The Essential JS 2 Button has the following predefined styles that can be define
 
 ## Button types
 
-The types of Essential JS 2 Button are as follows:
+The types of Essential<sup style="font-size:70%">&reg;</sup> JS 2 Button are as follows:
 
 * Basic types
 * Flat Button
@@ -158,7 +158,7 @@ In the following example, SVG image is added using the iconCss class `e-search-i
 
  {% previewsample "page.domainurl/code-snippet/button/svg-cs1" %}
 
-> The Essential JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the Button using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button/#iconcss) property.
+> The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the Button using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button/#iconcss) property.
 
 ## Button size
 

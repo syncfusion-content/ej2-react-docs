@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Accumulation chart component
 
-This article describes the API migration process of Chart component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Chart component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Accumulation Chart
 
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD038 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Annotations| **Property:** *annotations.content* <br/><br/>annotations: [{ content: "watermark" }],<br/>`<EJ.Chart `<br/>` annotations={annotations}>` <br/>`</EJ.Chart>`|**Property:** *annotations.content* <br/><br/>`<AccumulationChartComponent id='charts'>`<br/>`<AccumulationAnnotationDirective content='<div>Highest Medal Count</div>'>`<br/>`</AccumulationAnnotationDirective>`<br/>`</AccumulationChartComponent>`|
 |background| **Property:** *background* <br/><br/>`<EJ.Chart `<br/>` background='#DDCCEE'>` <br/>`</EJ.Chart>`|**Property:** *annotations.content* <br/><br/>`<AccumulationChartComponent id='charts' background='DDCCEE'>`<br/>`</AccumulationChartComponent>`|
@@ -43,7 +43,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Annotation
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Annotations| **Property:** *annotations.content* <br/><br/>annotations: [{ content: "watermark" }],<br/>`<EJ.Chart `<br/>` annotations={annotations}>` <br/>`</EJ.Chart>`|**Property:** *annotations.content* <br/><br/>`<AccumulationChartComponent id='charts'>`<br/>`<AccumulationAnnotationDirective content='<div>Highest Medal Count</div>'>`<br/>`</AccumulationAnnotationDirective>`<br/>`</AccumulationChartComponent>`|
 |coordinate unit for annotation| **Property:** *annotations.coordinateUnit* <br/><br/>annotations: [{ coordinateUnit : "pixels" }],<br/>`<EJ.Chart `<br/>` annotations={annotations}>` <br/>`</EJ.Chart>`|**Property:** *annotations.coordinateUnits* <br/><br/>`<AccumulationChartComponent id='charts'>` <br/>`<AccumulationAnnotationDirective coordinateUnits='Pixels'>` <br/>`</AccumulationAnnotationsDirective>`<br/>`</AccumulationChartComponent>`|
@@ -62,7 +62,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Series
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |series| **Property:** *series* <br/><br/>var series =[{ bearFillColor: 'red'}]<br/>`<EJ.Chart `<br/>` series={series}>` <br/>`</EJ.Chart>`|**Property:** *series* <br/><br/>`<AccumulationChartComponent id='charts'>`<br/>`<AccumulationSeriesDirective bearFillColor='red'>`<br/>`</AccumulationSeriesDirective>`<br/>`</AccumulationChartComponent>`|
 |Enable animation for series| **Property:** *enableAnimation* <br/><br/>var series =[{enableAnimation : true}]<br/>`<EJ.Chart `<br/>` series={series}>` <br/>`</EJ.Chart>`|**Property:** *animation.enable* <br/><br/>`<AccumulationChartComponent id='charts'>`<br/>`<AccumulationSeriesDirective animation={ enable={false}}>`<br/>`</AccumulationSeriesDirective>`<br/>`</AccumulationChartComponent>`|
@@ -105,7 +105,7 @@ This article describes the API migration process of Chart component from Essenti
 ## DataLabel
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |DataLabelSettings of marker| **Property:** *marker.dataLabel* <br/><br/>var series =[{marker:{ dataLabel: { }} }]<br/>`<EJ.Chart `<br/>` series={series}>` <br/>`</EJ.Chart>`|**Property:** *marker.dataLabel* <br/><br/>`<AccumulationChartComponent id='charts'>`<br/>`<AccumulationSeriesDirective marker={ dataLabel: { }}>`<br/>`</AccumulationSeriesDirective>`<br/>`</AccumulationChartComponent>`|
 |border of dataLabel| **Property:** *marker.dataLabel.border* <br/><br/>var series =[{marker:{ dataLabel: { border: {} } } }]<br/>`<EJ.Chart `<br/>` series={series}>` <br/>`</EJ.Chart>`|**Property:** *dataLabel.border* <br/><br/>`<AccumulationChartComponent id='charts'>`<br/>`<AccumulationSeriesDirective marker={ dataLabel: {border: {} }}>`<br/>`</AccumulationSeriesDirective>`<br/>`</AccumulationChartComponent>`|
@@ -120,7 +120,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Legend
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Default legend|**Property:** *visible* <br/><br/>`<EJ.Chart `<br/>` legend: { visible: true }>`<br/>`</EJ.Chart>`|**Property:** *visible*<br/><br/>public legendSettings: LegendSettingsModel = { visible: true };<br/>`<AccumulationChartComponent id='charts' legendSettings={this.legendSettings};>`<br/>`</AccumulationChartComponent>`|
 |Legend height|**Property:** *size.height* <br/><br/>`<EJ.Chart `<br/>` legend: { size : { height: 50 } }>`<br/>`</EJ.Chart>`|**Property:** *height*<br/><br/>public legendSettings: LegendSettingsModel = { height: '30' };<br/>`<AccumulationChartComponent id='charts' legendSettings={this.legendSettings};>`<br/>`</AccumulationChartComponent>`|
@@ -148,7 +148,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Methods
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |animation for series| **Property:** *animate()* <br/><br/>var chartobj= document.getElementById('chart');<br/>`<EJ.Chart `<br/>` id= chart>` <br/>`</EJ.Chart>`<br/>chartobj.animate();|Not applicable|
 |Redraw for chart| **Property:** *redraw()* <br/><br/>var chartobj= document.getElementById('chart');<br/>`<EJ.Chart `<br/>` id= chart>` <br/>`</EJ.Chart>`<br/>chartobj.redraw();|**Property:** *refresh()* <br/><br/>public loaded(args: ILoadedEventArgs): void {<br/>function () => {<br/>args.chart.refresh();<br/>`<AccumulationChartComponent id='charts'>`<br/>`</AccumulationChartComponent>`|
@@ -160,7 +160,7 @@ This article describes the API migration process of Chart component from Essenti
 ## Events
 
 <!-- markdownlint-disable MD033 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 |Fires on annotation click| **Property:** *annotationClick* <br/><br/>`<EJ.Chart `<br/>` id= chartcontainer annotationClick = {annotationClick}>`<br/>`</EJ.Chart>`<br/>function annotationClick(){};|Not applicable|
 |Fires after animation| **Property:** *animationComplete()* <br/><br/>`<EJ.Chart `<br/>` id= chartcontainer animationComplete = {animationComplete}>`<br/>`</EJ.Chart>`<br/>function animationComplete(){ };|**Property:** *animationComplete()* <br/><br/>`<AccumulationChartComponent `<br/>` id='charts animationComplete={this.animationComplete.bind(this)}'>`<br/>`</AccumulationChartComponent>`<br/>public animationComplete(args:IAnimationCompleteEventArgs): void {};|

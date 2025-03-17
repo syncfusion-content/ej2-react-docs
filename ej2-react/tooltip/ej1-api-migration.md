@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Tooltip component
 
-This article describes the API migration process of Tooltip component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Tooltip component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 {% raw %}
 
-| Behavior |API in Essential JS 1  | API in Essential JS 2 |
+| Behavior |API in Essential<sup style="font-size:70%">&reg;</sup> JS 1  | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 |--|--|--|
 | Position | **Property:**  _position_ <br/><br/> `public  position  = { target: { horizontal:  "center", vertical:  "top" },` <br/> `stem: { horizontal:  "center", vertical:  "bottom" } };` <br/><br/>  `<EJ.Tooltip id='tooltip' position={this.position}>` <br/> `</EJ.Tooltip>` <br/>  | **Property:**  _position_ <br/><br/> `<TooltipComponent position='TopCenter'>`<br/>`</TooltipComponent>`|
 | Animation | **Property:**  _animation_ <br/><br/> `public  animation  = { animation :{ effect :  "slide", speed :  1000} };`  <br/><br/> `<EJ.Tooltip id='tooltip' animation={this.animation}>` <br/> `</EJ.Tooltip>` <br/> | **Property:**  _animation_  <br/> <br/> `public animation = { open: { effect: ‘FadeIn’,` <br/> `duration: 150, delay: 0 },` <br/> `close: { effect: ‘FadeOut’,` <br/> `duration: 150, delay: 0 } };` <br/><br/> `<TooltipComponent position='TopCenter'` <br/> `animation={this.animation}>` <br/> `</TooltipComponent>` <br/>|

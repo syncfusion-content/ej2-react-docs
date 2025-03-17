@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Data binding in React Inplace editor component
 
-The Essential JS2 React In-place Editor component can load the data either from local data sources or remote data services using the `dataSource` property and it supports the data type of an array or `DataManager`. Also supports different kind of data services such as OData, OData V4, Web API and data formats such as XML, JSON, JSONP with the help of `DataManager` adaptors.
+The Essential<sup style="font-size:70%">&reg;</sup> JS2 React In-place Editor component can load the data either from local data sources or remote data services using the `dataSource` property and it supports the data type of an array or `DataManager`. Also supports different kind of data services such as OData, OData V4, Web API and data formats such as XML, JSON, JSONP with the help of `DataManager` adaptors.
 
 ## Local
 
-To bind local data to the Essential JS2 React In-place Editor component, you have to assign a JavaScript array of object or string to the `dataSource` property. The local data source can also be provided as an instance of the `DataManager`.
+To bind local data to the Essential<sup style="font-size:70%">&reg;</sup> JS2 React In-place Editor component, you have to assign a JavaScript array of object or string to the `dataSource` property. The local data source can also be provided as an instance of the `DataManager`.
 
 `[Class-component]`
 
@@ -44,7 +44,7 @@ To bind local data to the Essential JS2 React In-place Editor component, you hav
 
 ## Remote
 
-To bind remote data to the Essential JS2 React In-place Editor component, assign service data as an instance of `DataManager` to the `dataSource` property. To interact with remote data source, provide the endpoint URL.
+To bind remote data to the Essential<sup style="font-size:70%">&reg;</sup> JS2 React In-place Editor component, assign service data as an instance of `DataManager` to the `dataSource` property. To interact with remote data source, provide the endpoint URL.
 
 ### OData V4
 

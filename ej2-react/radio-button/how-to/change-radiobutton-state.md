@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Change radiobutton state in React Radio button component
 
-The Essential JS 2 RadioButton contains 2 different states visually, they are as follows:
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 RadioButton contains 2 different states visually, they are as follows:
 * Checked
 * Unchecked
 

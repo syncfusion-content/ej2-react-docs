@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Use custom helper inside the loop with templates in React Grid component
 
-The Syncfusion React Grid allows you to use custom helpers inside the loop with `template` directive of a column. This feature enables you to create complex templates that can incorporate additional helper functions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to use custom helpers inside the loop with `template` directive of a column. This feature enables you to create complex templates that can incorporate additional helper functions.
 
 The **Customer Rating** column includes a custom template defined using `template`. Inside this template, iterates through the **item** array and generates `<span>` tag, displayed as stars using the CSS below:
 

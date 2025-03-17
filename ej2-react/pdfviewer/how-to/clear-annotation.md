@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clear annotation in React Pdfviewer component
 
-To clear all the annotations in a PDF document using the Syncfusion PDF Viewer, you can use the **deleteAnnotations()** method. This method is used to clear all the annotations present in the currently loaded document.
+To clear all the annotations in a PDF document using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can use the **deleteAnnotations()** method. This method is used to clear all the annotations present in the currently loaded document.
 
 Here is an example of how you can clear all the annotations present in the currently loaded document:
 

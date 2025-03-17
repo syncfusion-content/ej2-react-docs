@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Combo box component
 
-This article describes the API migration process of ComboBox component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of ComboBox component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## DataBinding
 
 {% raw %}
 
 <!-- markdownlint-disable MD010 -->
-| Behavior	| API in Essential JS 1 | API in Essential JS 2 |
+| Behavior	| API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | **Default** |	**Property**: *datasource*<br/>`<EJ.ComboBox dataSource={groups} ></EJ.ComboBox>`|**Property**: *dataSource*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} dataSource={this.cityData} />`|
 | **Fields for mapping** | **Property**: *fields*<br/>`<EJ.ComboBox dataSource={groups} fields-value="parentId" fields-text="text"> </EJ.ComboBox>`|**Property**: *fields*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} fields={this.field} />` |
@@ -29,7 +29,7 @@ This article describes the API migration process of ComboBox component from Esse
 ## Filtering
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | **Default**| **Property**: *allowFiltering*<br/>`<EJ.ComboBox allowFiltering={true}></EJ.ComboBox>`| **Property**: *allowFiltering*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} allowFiltering={true} />`|
 | **No records template** | **Property**: *noRecordsTemplate*<br/>`<EJ.ComboBox noRecordsTemplate={template}></EJ.ComboBox>` |**Property**: *noRecordsTemplate*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} noRecordsTemplate={this.noRecordsTemplate} />` |
@@ -40,7 +40,7 @@ This article describes the API migration process of ComboBox component from Esse
 ## Template
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | **Default** | **Property**: *itemTemplate*<br/>`<EJ.ComboBox itemTemplate={itemTemplate}></EJ.ComboBox>` | **Property**: *itemTemplate*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} itemTemplate={this.itemTemplate} />`|
 | **Group Template** | **Property**: *groupTemplate*<br/>`<EJ.ComboBox groupTemplate={groupTemplate}></EJ.ComboBox>` | **Property**: *groupTemplate*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} groupTemplate={this.groupTemplate} />`|
@@ -54,7 +54,7 @@ This article describes the API migration process of ComboBox component from Esse
 ## Applying CSS
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | ---|
 | **Default** | **Property**: *cssClass* <br/>`<EJ.ComboBox cssClass="cssClass"></EJ.ComboBox>`| **Property**: *cssClass*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} cssClass={this.cssClass} />` |
 | **width** | **Property**: *width* <br/>`<EJ.ComboBox width="300px"></EJ.ComboBox>` | **Property**: *width*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} width={this.width} />` |
@@ -62,14 +62,14 @@ This article describes the API migration process of ComboBox component from Esse
 ## Grouping
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2|
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2|
 | --- | --- | --- |
 | **Default** | **Property**: *fields-groupBy*<br/>`<EJ.ComboBox dataSource={groups} fields-value="parentId" fields-groupBy="text"> </EJ.ComboBox>`| **Property**: *fields*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} fields={this.field} />` |
 
 ## Accessibility
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2|
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2|
 | --- | --- | --- |
 | **Globalization** | **Property**: *locale*<br/>`<EJ.ComboBox locale="fr-FE"></EJ.ComboBox>`| **Property**: *locale*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} locale={this.locale} />` |
 | **Rtl support**| **Property**: *enableRtl*<br/>`<EJ.ComboBox enableRtl={true}></EJ.ComboBox>`|**Property**: *enableRtl*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} enableRtl={true} />`|
@@ -77,7 +77,7 @@ This article describes the API migration process of ComboBox component from Esse
 ## Placeholder
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2|
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2|
 | --- | --- | --- |
 | **Watermark text** | **Property**: *placeholder*<br/>`<EJ.ComboBox placeholder="select"></EJ.ComboBox>`|<br/>**Property**: *placeholder*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} placeholder={this.placeholder} />` |
 | **Floating  of watermark text**| **Not applicable** |**Property**: *floatLabelType*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} floatLabelType={this.floatLabelType} />` |
@@ -85,7 +85,7 @@ This article describes the API migration process of ComboBox component from Esse
 ## Miscellaneous
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2|
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2|
 | --- | --- | --- |
 | **Enable/disable** | **Property**: *enabled*<br/>`<EJ.ComboBox enabled={true}></EJ.ComboBox>`|**Property**: *enabled*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} enabled={true} />` |
 | **Read only** | **Property**: *readOnly*<br/>`<EJ.ComboBox readOnly={true}></EJ.ComboBox>` |**Property**: *readOnly*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} readOnly={true} />`|
@@ -94,14 +94,14 @@ This article describes the API migration process of ComboBox component from Esse
 ## Sorting
 
 <!-- markdownlint-disable MD010 -->
-|Behavior | API in Essential JS 1 | API in Essential JS 2 |
+|Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | **Order of sorting** | **Property**: *sortOrder*<br/>`<EJ.ComboBox sortOrder={sortOrder}></EJ.ComboBox>` | **Property**: *sortOrder*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} sortOrder={this.sortOrder} />`|
 
 ## Selection
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | **Selecting particular index** | **Property**: *index*<br/>`<EJ.ComboBox index="1"></EJ.ComboBox>` | **Property**: *index*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} index={this.index} />` |
 | **Selecting particular value** | **Property**: *value*<br/>`<EJ.ComboBox value="data"></EJ.ComboBox>`| **Property**: *value*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} value={this.value} />` |
@@ -112,7 +112,7 @@ This article describes the API migration process of ComboBox component from Esse
 ## Popup
 
 <!-- markdownlint-disable MD010 -->
-| Behavior| API in Essential JS 1 | API in Essential JS 2 |
+| Behavior| API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | **Popup height** | **Property**: *popupHeight*<br/>`<EJ.ComboBox popupHeight="300px"></EJ.ComboBox>`|**Property**:*popupheight*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} popupHeight={this.popupHeight} />`|
 | **Popup width** | **Property**: *popupWidth*<br/>`<EJ.ComboBox popupWidth="300px"></EJ.ComboBox>`|**Property**:*popupWidth*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} popupWidth={this.popupWidth} />` |
@@ -124,7 +124,7 @@ This article describes the API migration process of ComboBox component from Esse
 ## Common
 
 <!-- markdownlint-disable MD010 -->
-| Behavior | API in Essential JS 1 |API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 |API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | **Adding new item** | **Method** : *addItem*<br/>`<EJ.ComboBox ></EJ.ComboBox>` <br/> <br/>$('#dropdown').ejComboBox("addItem", { text :"India"});| **Method**: *addItem*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }}  />`<br/><br/> this.ddlObj.addItem({Id: 'id', Game: 'Golf'},2);|
 | **Focus out event** | **Not applicable** | **Event**: *blur*<br/>`<ComboBoxComponent id="ddl" ref={(scope) => { this.ddlObj = scope; }} blur={this.blur.bind(this)} />` |

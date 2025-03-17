@@ -14,7 +14,7 @@ This section explains the steps required to create a simple Standalone React PDF
 
 ## Prerequisites
 
-To get started with Syncfusion React UI components, ensure the compatible version of React.
+To get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components, ensure the compatible version of React.
 * React supported version >= `15.5.4+`.
 * Required node version >= `14.0.0+`(NPM Package Manager).
 
@@ -45,9 +45,9 @@ npm install
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Syncfusion packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
 * To install PDF Viewer component, use the following command
 

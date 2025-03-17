@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This article provides a step-by-step introduction to get started with the Syncfusion React Message component.
+This article provides a step-by-step introduction to get started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Message component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion React UI components](../system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
 
 ## Dependencies
 
@@ -63,9 +63,9 @@ cd my-app
 npm start
 ```
 
-## Add Syncfusion React packages
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Once you have created the React application, install the required Syncfusion React component package in the application. All Syncfusion React (Essential JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
+Once you have created the React application, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component package in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 
 To install the Message component package, use the following command.
 
@@ -81,11 +81,11 @@ yarn add @syncfusion/ej2-react-notifications
 
 Also, check out the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package) to know the different ways of installing the packages.
 
-## Import the Syncfusion CSS styles
+## Import the Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-After installing the Syncfusion component packages in the application, import the required themes based on the components used.
+After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component packages in the application, import the required themes based on the components used.
 
-The Syncfusion React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion React components based on the application style by referring to any of the built-in themes. Import the `Material` theme for the Message component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components based on the application style by referring to any of the built-in themes. Import the `Material` theme for the Message component.
 
 Import the CSS styles for the Message component and its dependencies in the `src/App.css` file.
 

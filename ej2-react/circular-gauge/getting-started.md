@@ -45,7 +45,7 @@ Now, the application is created in the **quickstart** folder. Run the following 
 cd quickstart
 ```
 
-> In the **quickstart** application, the Syncfusion component is added in the JavaScript file.
+> In the **quickstart** application, the Syncfusion<sup style="font-size:70%">&reg;</sup> component is added in the JavaScript file.
 
 ### Creating a React application with TypeScript
 
@@ -61,9 +61,9 @@ Now, the application is created in the **quickstart** folder. Run the following 
 cd quickstart
 ```
 
-### Adding Syncfusion packages
+### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-All the available Essential JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install Circular Gauge package, use the following command.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install Circular Gauge package, use the following command.
 
 ```
 npm install @syncfusion/ej2-react-circulargauge --save

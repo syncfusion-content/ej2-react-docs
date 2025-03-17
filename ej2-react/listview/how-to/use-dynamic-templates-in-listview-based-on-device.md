@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Use dynamic templates in ListView based on device
 
-The Syncfusion Essential JS2 components are designed to be both desktop and mobile-friendly. Therefore, Syncfusion components can be used effectively in both desktop and mobile modes. However, component templates may need to be dynamic to accommodate different devices. Applications may need to load various templates depending upon the device.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS2 components are designed to be both desktop and mobile-friendly. Therefore, Syncfusion<sup style="font-size:70%">&reg;</sup> components can be used effectively in both desktop and mobile modes. However, component templates may need to be dynamic to accommodate different devices. Applications may need to load various templates depending upon the device.
 
 ## Integration
 

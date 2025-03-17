@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # States in React Check box component
 
-The Essential JS 2 CheckBox contains 3 different states visually, they are:
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 CheckBox contains 3 different states visually, they are:
 * Checked
 * Unchecked
 * Indeterminate

@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React ListView component
 
-This article describes the API migration process for the ListView component from Essential JS 1 to Essential JS 2. It provides a comparison of APIs and their usage between the two versions.
+This article describes the API migration process for the ListView component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2. It provides a comparison of APIs and their usage between the two versions.
 
 {% raw %}
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Virtualization | **Property:** *allowVirtualScrolling*  <br /><br /> `<EJ.ListView id="default" allowVirtualScrolling={true}` <br /> `virtualScrollMode="normal" dataSource={dataSourceItem}>`<br /> `</EJ.ListView>`  <br /> | **Property:** *enableVirtualization* <br /><br /> `<ListViewComponent id='ui-list' dataSource={this.dataSource} enableVirtualization={true} >`<br />`<Inject services={[Virtualization]} />`<br />`</ListViewComponent>` |
 | Fields | **Property:** *fieldSettings* <br /> <br /> `<EJ.ListView id="default"` <br /> `enableGroupList={true} dataSource={dataSourceItem}>` <br /> `</EJ.ListView>` <br /> | **Property:** *fields*  <br /><br /> **Inner properties:** *child, enabled, groupBy htmlAttributes, iconsCss, id, isChecked, isVisible, sortBy, tableName, text, tooltip.* <br /><br /> `public fields = { enabled: enable_items,` <br /> `groupBy: groupByProp };` <br /><br /> `<ListViewComponent id='list'` <br /> `dataSource={this.dataSource}` <br /> `fields={this.fields}>` <br /> `</ListViewComponent>`|

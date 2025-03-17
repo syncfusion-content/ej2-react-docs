@@ -376,7 +376,7 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 
 ## setFormFieldMode programmatically
 
-The `setFormFieldMode` method is a function in the Syncfusion React PDF Viewer library that allows you to add a form field dynamically by passing the type of the form field. You can pass the form fields as a parameter like below.
+The `setFormFieldMode` method is a function in the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer library that allows you to add a form field dynamically by passing the type of the form field. You can pass the form fields as a parameter like below.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -832,7 +832,7 @@ function importData(){
 ```
 ## Form field properties
 
-Form field properties in Syncfusion PDF Viewer allow you to customize and interact with form fields embedded within PDF documents. This documentation provides an overview of the form field properties supported by the Syncfusion PDF Viewer and explains how to use them effectively.
+Form field properties in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer allow you to customize and interact with form fields embedded within PDF documents. This documentation provides an overview of the form field properties supported by the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and explains how to use them effectively.
 
     * Textbox
     * Password
