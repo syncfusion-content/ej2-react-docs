@@ -27,7 +27,7 @@ class App extends React.Component {
         type: 'Multirow'
     };
     render() {
-        return (<RichTextEditorComponent editorMode={'Markdown'} value={this.rteValue} toolbarSettings={this.toolbarSettings}>
+        return (<RichTextEditorComponent width="500px" editorMode={'Markdown'} value={this.rteValue} toolbarSettings={this.toolbarSettings}>
         <Inject services={[Toolbar, MarkdownEditor, Link, Image, Table]} />
       </RichTextEditorComponent>);
     }

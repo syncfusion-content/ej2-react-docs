@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting started with React SpeechToText component | Syncfusion
-description:  Checkout and learn about Getting started with React SpeechToText component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description: Checkout and learn about Getting started with React SpeechToText component of Syncfusion Essential JS 2 and more details.
+control: SpeechToText
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

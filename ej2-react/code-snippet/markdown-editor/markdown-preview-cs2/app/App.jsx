@@ -82,7 +82,7 @@ function App() {
     return (
       <div className="content">
         <RichTextEditorComponent
-          id="defaultRTE"
+          id="markdown-editor"
           ref={(richtexteditor) => {
             rteObj = richtexteditor;
           }}

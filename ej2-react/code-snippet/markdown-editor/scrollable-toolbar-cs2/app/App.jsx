@@ -26,7 +26,7 @@ function App() {
         'Redo',
       ],
     };
-    return (<RichTextEditorComponent value={rteValue}  editorMode={'Markdown'} toolbarSettings={toolbarSettings}>
+    return (<RichTextEditorComponent width="500px" value={rteValue}  editorMode={'Markdown'} toolbarSettings={toolbarSettings}>
       <Inject services={[Toolbar, MarkdownEditor, Link, Image, Table ]}/>
     </RichTextEditorComponent>);
 }

@@ -94,8 +94,8 @@ class App extends React.Component<{},{}> {
       <div className='control-pane'>
         <div className='control-section e-rte-custom-tbar-section' id="rteCustomTool">
           <div className='rte-control-section' id='rteSection'>
-            <RichTextEditorComponent id="defaultRTE" ref={(scope) => { this.rteObj = scope! }}
-              value={this.template} toolbarSettings={this.toolbarSettings}>
+            <RichTextEditorComponent id="markdown-editor" ref={(scope) => { this.rteObj = scope! }}
+              value={this.template} editorMode={'Markdown'}  toolbarSettings={this.toolbarSettings}>
               <Inject services={[MarkdownEditor, Toolbar, Link, Image, Table]} />
             </RichTextEditorComponent>
             <DialogComponent id='customTbarDlg' ref={(scope) => { this.dialogObj = scope! }}

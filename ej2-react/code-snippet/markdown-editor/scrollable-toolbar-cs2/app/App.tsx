@@ -28,7 +28,7 @@ function App() {
   }
 
 return (
-    <RichTextEditorComponent value={rteValue} editorMode={'Markdown'} toolbarSettings={toolbarSettings}>
+    <RichTextEditorComponent width="500px" value={rteValue} editorMode={'Markdown'} toolbarSettings={toolbarSettings}>
       <Inject services={[Toolbar, MarkdownEditor, Link, Image, Table]} />
     </RichTextEditorComponent>
   );

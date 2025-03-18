@@ -115,7 +115,7 @@ These modules should be injected into the **providers** section of root **NgModu
 
 ## Configure the Toolbar
 
-Configure the toolbar with the tools using items field of the `toolbarSettings` property as your application requires.
+Configure the toolbar with the tools using items field of the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarsettings) property as your application.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -157,23 +157,29 @@ The output will appear as follows.
 
 ## Retrieve the formatted content
 
-To retrieve the editor contents, use the `value` property of Rich Text Editor.
+To retrieve the editor contents, use the [value](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#value) property of Rich Text Editor.
 
-  ```ts
-    const rteValue: string = this.rteObj.value;
-   ```
+```ts
 
-Or you can use the public method `getContent` to retrieve the RTE content.
+  const rteValue: string = this.rteObj.value;
 
-  ```ts
-    const rteValue: string = this.rteObj.getContent();
-  ```
+```
 
-To fetch the RichTextEditor's text content, use the `textContent` property of RTE `EditPanel`.
+Or, you can use the [getHtml](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#gethtml) public method to retrieve the Markdown Editor content.
 
-   ```ts
-     const rteValue: string = this.rteObj.contentModule.getEditPanel().textContent;
-   ```
+```typescript
+
+  const rteValue: string = this.rteObj.getHtml();
+
+```
+
+To fetch the Markdown Editor's text content, use [getText](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#gettext) method.
+
+```typescript
+
+const rteValue: string = this.rteObj.contentModule.getText();
+
+```
 
 ## See Also
 

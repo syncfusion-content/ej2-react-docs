@@ -64,7 +64,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
   }
   function content1() {
       return (<div className="content">
-          <RichTextEditorComponent id='defaultRTE' ref={(richtexteditor) => { rteObj = richtexteditor; }} editorMode='Markdown'  toolbarSettings={toolbarSettings} height='447px' saveInterval={1} created={onCreate.bind(this)} change={onChange.bind(this)} actionComplete={updateValue.bind(this)} value={value}>
+          <RichTextEditorComponent id='markdown-editor' ref={(richtexteditor) => { rteObj = richtexteditor; }} editorMode='Markdown'  toolbarSettings={toolbarSettings} height='447px' saveInterval={1} created={onCreate.bind(this)} change={onChange.bind(this)} actionComplete={updateValue.bind(this)} value={value}>
               <Inject services={[MarkdownEditor, Toolbar, Image, Link, Table]} />
           </RichTextEditorComponent>
       </div>);

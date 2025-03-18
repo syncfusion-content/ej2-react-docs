@@ -29,7 +29,7 @@ class App extends React.Component<{},{}> {
 
   public render() {
     return (
-      <RichTextEditorComponent editorMode={'Markdown'} value={this.rteValue} toolbarSettings={this.toolbarSettings}>
+      <RichTextEditorComponent editorMode={'Markdown'}  width="500px" value={this.rteValue} toolbarSettings={this.toolbarSettings}>
         <Inject services={[Toolbar, MarkdownEditor, Link, Image, Table]} />
       </RichTextEditorComponent>
     );
