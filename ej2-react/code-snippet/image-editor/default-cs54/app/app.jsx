@@ -15,7 +15,7 @@ export default class App extends React.Component {
         }
     }
     shapeChanging(args) {
-        if (this.changeColor && args.action == "insert" && args.currentShapeSettings?.type === 'FreehandDraw') {
+        if (this.changeColor && args.action == "insert" && args.currentShapeSettings?.type === 'Rectangle') {
             args.currentShapeSettings.strokeColor = 'red';
             this.changeColor = false;
         }

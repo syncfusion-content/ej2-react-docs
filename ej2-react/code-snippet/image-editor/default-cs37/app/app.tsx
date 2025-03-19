@@ -9,14 +9,14 @@ function App() {
     let toolbar = [];
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('flower.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         } else {
-            imgObj.open('bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
     function addImage(): void {
         let dimension: any = imgObj.getImageDimension();
-        imgObj.drawImage('flower.png', dimension.x, dimension.y, 100, 80, true, 0);
+        imgObj.drawImage('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png', dimension.x, dimension.y, 100, 80, true, 0);
     }
 
     return (

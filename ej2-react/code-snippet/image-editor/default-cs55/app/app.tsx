@@ -49,14 +49,14 @@ function App() {
         const file = args.fileDetails;
         if (file.isFile && file.imageUrl) {
             args.cancel = true;
-            imgObj?.open(file.imageUrl);
+            imgObj.open(file.imageUrl);
         }
     };
 
     return (
         <div className="e-img-editor-sample">
-            <FileManagerComponent id="overview_file" fileSystemData={resultData} fileOpen={fileOpen} />
-            <ImageEditorComponent ref={(img) => { imgObj = img }} toolbar={[]} />
+            <FileManagerComponent id="overview_file" fileSystemData={resultData} fileOpen={fileOpen} height="200px"/>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} />
         </div>
     );
 }

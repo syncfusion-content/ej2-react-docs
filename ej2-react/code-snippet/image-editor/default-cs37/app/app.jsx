@@ -17,7 +17,7 @@ export default class App extends React.Component {
     }
     addImage() {
         let dimension = this.imgObj.getImageDimension();
-        this.imgObj.drawImage('flower.png', dimension.x, dimension.y, 100, 80, true, 0);
+        this.imgObj.drawImage('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png', dimension.x, dimension.y, 100, 80, true, 0);
     }
     render() {
         return (<div className='e-img-editor-sample'>

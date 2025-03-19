@@ -9,7 +9,7 @@ export default class App extends React.Component {
     shapeChanging(args) {
         if (args.currentShapeSettings.type === 'Text') {
             args.currentShapeSettings.color = 'red';
-            args.currentShapeSettings.fontFamily = 'italic';
+            args.currentShapeSettings.fontFamily = 'Times New Roman';
         }
     }
     customizeText() {

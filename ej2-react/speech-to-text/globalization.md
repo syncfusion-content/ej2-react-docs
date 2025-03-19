@@ -29,6 +29,34 @@ The SpeechToText can be localized to any culture by defining the text in the cor
 |startTooltipText|Start listening|
 |stopTooltipText|Stop listening|
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/speech-to-text/globalization/localization/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/speech-to-text/globalization/localization/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/speech-to-text/globalization/localization/styles.css %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/globalization/localization" %}
+
 ## RTL
 
 RTL provides an option to switch the text direction and layout of the SpeechToText component from right to left by setting the `enableRtl` property to true.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/speech-to-text/globalization/rtl/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/speech-to-text/globalization/rtl/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/speech-to-text/globalization/rtl/styles.css %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/globalization/rtl" %}

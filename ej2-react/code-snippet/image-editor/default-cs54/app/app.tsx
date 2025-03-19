@@ -15,7 +15,7 @@ function App() {
     }
 
     function shapeChanging(args: any) {
-        if (changeColor && args.action == "insert" && args.currentShapeSettings?.type === 'FreehandDraw') {
+        if (changeColor && args.action == "insert" && args.currentShapeSettings.type === 'Rectangle') {
             args.currentShapeSettings.strokeColor = 'red';
             changeColor = false;
         }

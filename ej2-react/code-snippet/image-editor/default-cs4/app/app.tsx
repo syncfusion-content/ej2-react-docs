@@ -9,7 +9,7 @@ function App() {
     function shapeChanging(args: shapeChanging): void {
         if (args.currentShapeSettings.type === 'Text') {
             args.currentShapeSettings.color = 'red';
-            args.currentShapeSettings.fontFamily = 'italic';
+            args.currentShapeSettings.fontFamily = 'Times New Roman';
         }
     }
     function customizeText(): void {
@@ -19,9 +19,9 @@ function App() {
 
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('flower.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         } else {
-            imgObj.open('bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
 

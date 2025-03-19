@@ -38,7 +38,7 @@ class App extends React.Component<{},{}> {
         if (this.mdsource.classList.contains('e-active')) {
             const id: string = this.rteObj.getID() + 'html-view';
             const htmlPreview: HTMLElement = this.rteObj.element.querySelector('#' + id) as any;
-            htmlPreview.innerHTML = Marked.marked(((this.rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
+            htmlPreview.innerHTML = Marked(((this.rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
         }
     }
     public fullPreview(): void {
@@ -58,7 +58,7 @@ class App extends React.Component<{},{}> {
             }
             this.textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = Marked.marked(((this.rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
+            htmlPreview.innerHTML = Marked(((this.rteObj as any).contentModule.getEditPanel() as HTMLTextAreaElement).value);
             this.mdsource.parentElement.title = 'Code View';
         }
     }

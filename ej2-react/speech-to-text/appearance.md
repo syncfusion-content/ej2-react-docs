@@ -38,6 +38,22 @@ You can display the icon on the top, bottom, left, or right side of the button t
 
 You can use the `isPrimary` property to configure the button as a primary action button.
 
+Below code sample demonstrates how to configure the button with above mentioned properties.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/speech-to-text/appearance/button-settings/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/speech-to-text/appearance/button-settings/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/speech-to-text/appearance/button-settings/styles.css %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/button-settings" %}
+
 ## Customizing the tooltips
 
 You can use the `tooltipSettings` property to customize the content and positions of the tooltip.
@@ -53,6 +69,22 @@ You can use the `stopContent` property to customize the stop button tooltip text
 ### Setting tooltip position
 
 You can use the `position` property to determine the placement of tooltips relative to the button.
+
+Below code sample demonstrates how to configure the tooltip with above mentioned properties.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/speech-to-text/appearance/tooltip-settings/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/speech-to-text/appearance/tooltip-settings/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/speech-to-text/appearance/tooltip-settings/styles.css %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/tooltip-settings" %}
 
 ## Setting button styles
 
@@ -70,3 +102,17 @@ The SpeechToText component supports the following predefined styles that can be 
 ## Setting cssclass
 
 You can use the `cssClass` property to customize the appearance of the SpeechToText component.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/speech-to-text/appearance/cssClass/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/speech-to-text/appearance/cssClass/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/speech-to-text/appearance/cssClass/styles.css %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/cssClass" %}

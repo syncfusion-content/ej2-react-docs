@@ -56,7 +56,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="e-img-editor-sample">
-                <FileManagerComponent id="overview_file" fileSystemData={this.resultData} fileOpen={this.fileOpen.bind(this)} />
+                <FileManagerComponent id="overview_file" fileSystemData={this.resultData} fileOpen={this.fileOpen.bind(this)} height="200px"/>
                 <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" />
             </div>
         );

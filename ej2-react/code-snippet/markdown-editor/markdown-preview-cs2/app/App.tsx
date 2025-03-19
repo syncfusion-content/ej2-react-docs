@@ -31,11 +31,11 @@ We can add our own custom formation syntax for the Markdown formation, [sample l
     
 The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`;
   // Rich Text Editor items list
-  const items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'Blockquote', 'OrderedList',
-  'UnorderedList', '|', 'CreateLink', 'Image', 'CreateTable', '|', 'Undo', 'Redo'];
+  const items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'StrikeThrough', '|',
+                            'Formats', 'OrderedList', 'UnorderedList', '|',
+                            'CreateLink', 'Image', 'Undo', 'Redo', 'CreateTable'];
   let textArea: HTMLElement;
   let srcArea: Element;
-  let placeholder: string = 'Enter your text here...';
   //Rich Text Editor ToolbarSettings
   const toolbarSettings: ToolbarSettingsModel = {
       items: items,
@@ -54,7 +54,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
       rteObj.refreshUI();
   }
   function updateValue() {
-      srcArea.innerHTML =  Marked.marked((rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
+      srcArea.innerHTML =  Marked((rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
   }
   function updateOrientation() { 
       if (Browser.isDevice) {

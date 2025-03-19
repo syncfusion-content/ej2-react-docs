@@ -9,21 +9,9 @@ function App() {
     const value =
       'Hello [@Maria](mailto:maria@gmail.com)\n\nWelcome to the mention integration with markdown editor demo. Type @ character and tag user from the suggestion list.';
     const items = [
-      'Bold',
-      'Italic',
-      'StrikeThrough',
-      '|',
-      'Formats',
-      'Blockquote',
-      'OrderedList',
-      'UnorderedList',
-      'SuperScript',
-      'SubScript',
-      '|',
-      'CreateLink',
-      'Image',
-      'CreateTable',
-      '|',
+      'Bold', 'Italic', 'StrikeThrough', '|',
+      'Formats', 'OrderedList', 'UnorderedList', '|',
+      'CreateLink', 'Image', 'CreateTable',
       {
         tooltipText: 'Preview',
         template:
@@ -184,37 +172,15 @@ function App() {
         fullPreview();
         if (e.currentTarget.classList.contains('e-active')) {
           rteObj.disableToolbarItem([
-            'Bold',
-            'Italic',
-            'StrikeThrough',
-            'OrderedList',
-            'UnorderedList',
-            'SuperScript',
-            'SubScript',
-            'CreateLink',
-            'Image',
-            'CreateTable',
-            'Formats',
-            'Blockquote',
-            'Undo',
-            'Redo',
+            'Bold', 'Italic', 'StrikeThrough', '|',
+                    'Formats', 'OrderedList', 'UnorderedList', '|',
+                    'CreateLink', 'Image', 'CreateTable', 'Undo', 'Redo'
           ]);
         } else {
           rteObj.enableToolbarItem([
-            'Bold',
-            'Italic',
-            'StrikeThrough',
-            'OrderedList',
-            'UnorderedList',
-            'SuperScript',
-            'SubScript',
-            'CreateLink',
-            'Image',
-            'CreateTable',
-            'Formats',
-            'Blockquote',
-            'Undo',
-            'Redo',
+            'Bold', 'Italic', 'StrikeThrough', '|',
+                    'Formats', 'OrderedList', 'UnorderedList', '|',
+                    'CreateLink', 'Image', 'CreateTable', 'Undo', 'Redo'
           ]);
         }
       });

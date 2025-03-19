@@ -20,9 +20,7 @@ This section describes the SpeechToText events that will be triggered when appro
 |onError|ErrorEventArgs|Triggers when an error occurs during speech recognition or while listening. For list of possible errors, refer to the [Error handling](./speech-recognition#error-handling) section.|
 |transcriptChanged|TranscriptChangedEventArgs|Triggers when an transcription change occurs during the speech recognition.|
 
-## How to configure SpeechToText events
-
-The following example demonstrates how to configure above mentioned events in the React SpeechToText component.
+The following example demonstrates how to configure the SpeechToText events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,6 +28,9 @@ The following example demonstrates how to configure above mentioned events in th
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/speech-to-text/events/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/speech-to-text/events/styles.css %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -11,7 +11,7 @@ function App() {
         maxFileSize: 90 * 1024  // Maximum file size in bytes (90 KB)
     };
     function loadInvalidImage(): void {
-        imgObj.open('flower.jpeg');
+        imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
     }
 
     return (

@@ -8,9 +8,9 @@ function App() {
     let toolbar = ['Annotate', "Line", "Rectangle", "Text", 'ZoomIn', 'ZoomOut', {text: 'Custom'}];
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('flower.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         } else {
-            imgObj.open('bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
 

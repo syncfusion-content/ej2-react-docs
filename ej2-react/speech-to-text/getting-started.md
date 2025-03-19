@@ -136,6 +136,9 @@ The following example shows a basic SpeechToText component.
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/speech-to-text/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/speech-to-text/getting-started-cs1/styles.css %}
+{% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1" %}
@@ -150,6 +153,9 @@ The following example shows a basic SpeechToText component.
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/speech-to-text/getting-started-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="styles.css" %}
+{% include code-snippet/speech-to-text/getting-started-cs2/styles.css %}
 {% endhighlight %}
 {% endtabs %}
 
