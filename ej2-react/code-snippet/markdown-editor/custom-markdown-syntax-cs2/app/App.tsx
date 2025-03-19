@@ -15,8 +15,8 @@ We can add our own custom formation syntax for the Markdown formation, [sample l
 The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`;
 
   const items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'StrikeThrough', '|',
-      'Formats', 'Blockquote', 'OrderedList', 'UnorderedList', 'SuperScript', 'SubScript', '|',
-      'CreateLink', 'Image', 'CreateTable', '|',
+        'Formats', 'OrderedList', 'UnorderedList', '|',
+        'CreateLink', 'Image', 'CreateTable',
       {
           tooltipText: 'Preview',
           template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn" aria-label="Preview Code" >' +
@@ -42,7 +42,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
       if (mdsource.classList.contains('e-active')) {
           let id: string = rteObj.getID() + 'html-view';
           let htmlPreview: HTMLElement = rteObj.element.querySelector('#' + id);
-          htmlPreview.innerHTML = Marked.marked((rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
+          htmlPreview.innerHTML = Marked((rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
       }
   }
   function fullPreview(): void {
@@ -62,7 +62,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
           }
           textArea.style.display = 'none';
           htmlPreview.style.display = 'block';
-          htmlPreview.innerHTML = Marked.marked((rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
+          htmlPreview.innerHTML = Marked((rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
           mdsource.parentElement.title = 'Code View';
       }
   }
@@ -75,11 +75,13 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
       mdsource.addEventListener('click', (e: MouseEvent) => {
           fullPreview();
           if ((e.currentTarget as HTMLElement).classList.contains('e-active')) {
-              rteObj.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
-                  'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Blockquote', 'Undo', 'Redo']);
+              rteObj.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', '|',
+                    'Formats', 'OrderedList', 'UnorderedList', '|',
+                    'CreateLink', 'Image', 'CreateTable', 'Undo', 'Redo']);
           } else {
-              rteObj.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
-                  'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Blockquote', 'Undo', 'Redo']);
+              rteObj.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', '|',
+                    'Formats', 'OrderedList', 'UnorderedList', '|',
+                    'CreateLink', 'Image', 'CreateTable', 'Undo', 'Redo']);
           }
       });
   }

@@ -33,7 +33,7 @@ function App() {
         if (mdsource.classList.contains('e-active')) {
             const id = rteObj.getID() + 'html-view';
             const htmlPreview = rteObj.element.querySelector('#' + id);
-            htmlPreview.innerHTML = Marked.marked(rteObj.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = Marked(rteObj.contentModule.getEditPanel().value);
         }
     }
     function fullPreview() {
@@ -54,7 +54,7 @@ function App() {
             }
             textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = Marked.marked(rteObj.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = Marked(rteObj.contentModule.getEditPanel().value);
             mdsource.parentElement.title = 'Code View';
         }
     }

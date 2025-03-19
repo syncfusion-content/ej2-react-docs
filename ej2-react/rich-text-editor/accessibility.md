@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Angular Rich Text Editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Angular Rich Text Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-angular
+title: Accessibility in React Rich Text Editor component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in the Angular Rich Text Editor Component
+# Accessibility in the React Rich Text Editor Component
 
 The Rich Text Editor component is designed with accessibility in mind, adhering to WAI-ARIA specifications and implementing ARIA roles, states, and properties. This ensures full accessibility support, making it user-friendly for people who rely on assistive technologies (AT) or keyboard navigation.
 
@@ -33,11 +33,13 @@ The accessibility compliance for the Rich Text Editor component is outlined belo
     }
 </style>
 
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
+
 
 ## ARIA Attributes
 
@@ -60,17 +62,32 @@ For more details on Toolbar ARIA attributes, refer to the [`Accessibility of Too
 | role="application" | This attribute added to the Rich Text Editor element describes the actual role of the element. |
 | aria-disabled       | Indicates the disabled state of the ToolBar. |
 
-{% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/rich-text-editor/getting-started-cs1/src/app.component.ts %}
-{% endhighlight %}
 
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/rich-text-editor/getting-started-cs1/src/main.ts %}
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs1/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-  
-{% previewsample "page.domainurl/samples/rich-text-editor/getting-started-cs1" %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs2" %}
 
 ## Keyboard Navigation
 
@@ -80,19 +97,33 @@ For more details on keyboard navigation, refer to the [Keyboard support](https:/
 
 ### Customizing Shortcut Keys
 
-You can customize shortcut keys using the [`formatter`](https://ej2.syncfusion.com/angular/documentation/api/rich-text-editor/#formatter) property.This allows you to configure custom key combinations for various actions in the Rich Text Editor. For example, you can set `ctrl+q` to open the `Insert Hyperlink` dialog.
+You can customize shortcut keys using the [formatter](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#formatter) property.This allows you to configure custom key combinations for various actions in the Rich Text Editor. For example, you can set `ctrl+q` to open the `Insert Hyperlink` dialog.
+
+`[Class-component]`
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/rich-text-editor/how-to/cut-copy-cs1/src/app.component.ts %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs20/app/App.jsx %}
 {% endhighlight %}
-
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/rich-text-editor/how-to/cut-copy-cs1/src/main.ts %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs20/app/App.tsx %}
 {% endhighlight %}
 {% endtabs %}
-  
-{% previewsample "page.domainurl/samples/rich-text-editor/how-to/cut-copy-cs1" %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs20" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs21/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs21/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs21" %}
 
 ## Implementing Accessibility Best Practices
 

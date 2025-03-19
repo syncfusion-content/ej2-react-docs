@@ -32,21 +32,8 @@ function App() {
    The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`;
   // Rich Text Editor items list
   const items = [
-    'Bold',
-    'Italic',
-    'StrikeThrough',
-    '|',
-    'Formats',
-    'Blockquote',
-    'OrderedList',
-    'UnorderedList',
-    '|',
-    'CreateLink',
-    'Image',
-    'CreateTable',
-    '|',
-    'Undo',
-    'Redo',
+    'Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'OrderedList', 'UnorderedList', '|',
+    'CreateLink', 'Image', 'Undo', 'Redo', 'CreateTable'
   ];
   let textArea;
   let srcArea;
@@ -68,7 +55,7 @@ function App() {
     rteObj.refreshUI();
   }
   function updateValue() {
-    srcArea.innerHTML = Marked.marked(
+    srcArea.innerHTML = Marked(
       rteObj.contentModule.getEditPanel().value
     );
   }

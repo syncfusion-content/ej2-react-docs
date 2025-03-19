@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { RichTextEditorComponent, Inject, Toolbar, HtmlEditor, Image, QuickToolbar, Link } from '@syncfusion/ej2-react-richtexteditor';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.editorRef = React.createRef();
+    this.editorRef = createRef();
     this.state = {
       editorValue: '',
     };

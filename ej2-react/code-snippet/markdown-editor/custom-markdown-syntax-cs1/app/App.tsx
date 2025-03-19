@@ -16,8 +16,8 @@ We can add our own custom formation syntax for the Markdown formation, [sample l
 The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`;
   // Rich Text Editor items list
   private items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'StrikeThrough', '|',
-      'Formats', 'Blockquote', 'OrderedList', 'UnorderedList', 'SuperScript', 'SubScript', '|',
-      'CreateLink', 'Image', 'CreateTable', '|',
+        'Formats', 'OrderedList', 'UnorderedList', '|',
+        'CreateLink', 'Image', 'CreateTable',
       {
           tooltipText: 'Preview',
           template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn" aria-label="Preview Code">' +
@@ -43,7 +43,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
       if (this.mdsource.classList.contains('e-active')) {
           let id: string = this.rteObj.getID() + 'html-view';
           let htmlPreview: HTMLElement = this.rteObj.element.querySelector('#' + id);
-          htmlPreview.innerHTML = Marked.marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
+          htmlPreview.innerHTML = Marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
       }
   }
   public fullPreview(): void {
@@ -63,7 +63,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
           }
           this.textArea.style.display = 'none';
           htmlPreview.style.display = 'block';
-          htmlPreview.innerHTML = Marked.marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
+          htmlPreview.innerHTML = Marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
           this.mdsource.parentElement.title = 'Code View';
       }
   }
@@ -76,11 +76,13 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
       this.mdsource.addEventListener('click', (e: MouseEvent) => {
           this.fullPreview();
           if ((e.currentTarget as HTMLElement).classList.contains('e-active')) {
-              this.rteObj.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
-                  'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Blockquote', 'Undo', 'Redo']);
+              this.rteObj.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', '|',
+        'Formats', 'OrderedList', 'UnorderedList', '|',
+        'CreateLink', 'Image', 'CreateTable', 'Undo', 'Redo']);
           } else {
-              this.rteObj.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
-                  'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Blockquote', 'Undo', 'Redo']);
+              this.rteObj.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', '|',
+        'Formats', 'OrderedList', 'UnorderedList', '|',
+        'CreateLink', 'Image', 'CreateTable', 'Undo', 'Redo']);
           }
       });
   }
@@ -88,9 +90,8 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
       return (
         <div className='control-section' id="rteMarkdown">
         <div className="content-wrapper">
-            <RichTextEditorComponent id="markdownRTE"
-                ref={(richtexteditor) => { this.rteObj = richtexteditor }} editorMode='Markdown'
-                height='250px' valueTemplate={this.template} formatter={this.formatter} toolbarSettings={this.toolbarSettings} >
+            <RichTextEditorComponent id="markdownRTE" ref={(richtexteditor) => { this.rteObj = richtexteditor; }} editorMode='Markdown'
+                height='250px' valueTemplate={this.template} formatter={this.formatter} created={this.rendereComplete} toolbarSettings={this.toolbarSettings} >
                 <Inject services={[MarkdownEditor, Toolbar, Image, Link, Table]} />
             </RichTextEditorComponent>
         </div>

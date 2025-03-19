@@ -32,8 +32,9 @@ We can add our own custom formation syntax for the Markdown formation, [sample l
 The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`;
 
   // Rich Text Editor items list
-  public items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'Blockquote', 'OrderedList',
-      'UnorderedList', '|', 'CreateLink', 'Image', 'CreateTable', '|', 'Undo', 'Redo'];
+  public items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'StrikeThrough', '|',
+                            'Formats', 'OrderedList', 'UnorderedList', '|',
+                            'CreateLink', 'Image', 'Undo', 'Redo', 'CreateTable'];
   public textArea: HTMLElement;
   public srcArea: HTMLElement;
   public placeholder: string = 'Enter your text here...';
@@ -55,7 +56,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
       this.rteObj.refreshUI();
   }
   public updateValue() {
-      this.srcArea.innerHTML = Marked.marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
+      this.srcArea.innerHTML = Marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
   }
   public updateOrientation() { 
       if (Browser.isDevice) {
@@ -65,8 +66,12 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
   }
   public content1() {
       return (<div className="content">
-          <RichTextEditorComponent id='markdown-editor' ref={(richtexteditor) => { this.rteObj = richtexteditor; }} editorMode='Markdown' toolbarSettings={this.toolbarSettings} height='447px' saveInterval={1} created={this.onCreate.bind(this)} change={this.onChange.bind(this)} actionComplete={this.updateValue.bind(this)} value={this.value}>
-              <Inject services={[MarkdownEditor, Toolbar, Image, Link, Table]} />
+          <RichTextEditorComponent id="markdown-editor" editorMode='Markdown' ref={richtexteditor => (this.rteObj = richtexteditor)} toolbarSettings={this.toolbarSettings} height='447px' saveInterval={1} 
+                      created={this.onCreate.bind(this)} 
+                      change={this.onChange.bind(this)} 
+                      actionComplete={this.updateValue.bind(this)} 
+                      value={this.value}>
+               <Inject services={[Toolbar, MarkdownEditor, Link, Image, Table]} />
           </RichTextEditorComponent>
       </div>);
   };

@@ -1,6 +1,3 @@
-
-
-
 /**
  * Rich Text Editor - Markdown to HTML Sample
  */

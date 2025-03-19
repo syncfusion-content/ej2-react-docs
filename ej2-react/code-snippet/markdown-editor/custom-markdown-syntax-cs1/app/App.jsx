@@ -14,8 +14,8 @@ We can add our own custom formation syntax for the Markdown formation, [sample l
     
 The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`;
     items = ['Bold', 'Italic', 'StrikeThrough', '|',
-        'Formats', 'Blockquote', 'OrderedList', 'UnorderedList', 'SuperScript', 'SubScript', '|',
-        'CreateLink', 'Image', 'CreateTable', '|',
+        'Formats', 'OrderedList', 'UnorderedList', '|',
+        'CreateLink', 'Image', 'CreateTable',
         {
             tooltipText: 'Preview',
             template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn" aria-label="Preview Code">' +
@@ -38,7 +38,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
         if (this.mdsource.classList.contains('e-active')) {
             let id = this.rteObj.getID() + 'html-view';
             let htmlPreview = this.rteObj.element.querySelector('#' + id);
-            htmlPreview.innerHTML = Marked.marked(this.rteObj.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = Marked(this.rteObj.contentModule.getEditPanel().value);
         }
     }
     fullPreview() {
@@ -59,7 +59,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
             }
             this.textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = Marked.marked(this.rteObj.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = Marked(this.rteObj.contentModule.getEditPanel().value);
             this.mdsource.parentElement.title = 'Code View';
         }
     }
@@ -84,8 +84,10 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
     render() {
         return (<div className='control-section' id="rteMarkdown">
             <div className="content-wrapper">
-                <RichTextEditorComponent id="markdownRTE" ref={(richtexteditor) => { this.rteObj = richtexteditor; }} editorMode='Markdown' height='250px' valueTemplate={this.template} formatter={this.formatter} toolbarSettings={this.toolbarSettings}>
-                    <Inject services={[MarkdownEditor, Toolbar, Image, Link, Table]}/>
+                <RichTextEditorComponent id="markdownRTE"
+                    ref={(richtexteditor) => { this.rteObj = richtexteditor }} editorMode='Markdown'
+                    height='250px' valueTemplate={this.template} formatter={this.formatter} created={this.rendereComplete} toolbarSettings={this.toolbarSettings} >
+                    <Inject services={[MarkdownEditor, Toolbar, Image, Link, Table]} />
                 </RichTextEditorComponent>
             </div>
         </div>);
