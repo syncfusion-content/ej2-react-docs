@@ -17,7 +17,7 @@ function App() {
   }
 
 return (
-    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings}>
+    <RichTextEditorComponent height={450} value={rteValue} toolbarSettings={toolbarSettings}>
       <Inject services={[Toolbar, HtmlEditor]} />
     </RichTextEditorComponent>
   );

@@ -1,5 +1,6 @@
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import React, { useRef } from 'react';
+import { createElement } from '@syncfusion/ej2-base';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import {
   HtmlEditor,

@@ -3,7 +3,7 @@ import React, {createRef } from 'react';
 import { RichTextEditorComponent,Inject,Toolbar,Link, Image,HtmlEditor,QuickToolbar,Table,PasteCleanup} from '@syncfusion/ej2-react-richtexteditor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
-class App extends React.Component<{},{}> {
+class App extends React.Component {
     
     private dialogRef = createRef<DialogComponent>();
     private editorRef = createRef<RichTextEditorComponent>();

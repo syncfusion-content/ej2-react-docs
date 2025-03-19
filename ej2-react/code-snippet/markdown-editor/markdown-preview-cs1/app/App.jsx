@@ -31,8 +31,8 @@ We can add our own custom formation syntax for the Markdown formation, [sample l
     
 The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`;
     // Rich Text Editor items list
-    items = ['Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'Blockquote', 'OrderedList',
-        'UnorderedList', '|', 'CreateLink', 'Image', 'CreateTable', '|', 'Undo', 'Redo'];
+    items = ['Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'OrderedList', 'UnorderedList', '|',
+            'CreateLink', 'Image', 'Undo', 'Redo', 'CreateTable'];
     textArea;
     srcArea;
     placeholder = 'Enter your text here...';
@@ -54,7 +54,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
         this.rteObj.refreshUI();
     }
     updateValue() {
-        this.srcArea.innerHTML = Marked.marked(this.rteObj.contentModule.getEditPanel().value);
+        this.srcArea.innerHTML = Marked(this.rteObj.contentModule.getEditPanel().value);
     }
     updateOrientation() {
         if (Browser.isDevice) {
@@ -65,7 +65,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
     content1() {
         return (<div className="content">
             <RichTextEditorComponent id='defaultRTE' ref={(richtexteditor) => { this.rteObj = richtexteditor; }} editorMode='Markdown' toolbarSettings={this.toolbarSettings} height='447px' saveInterval={1} created={this.onCreate.bind(this)} change={this.onChange.bind(this)} actionComplete={this.updateValue.bind(this)} value={this.value}>
-                <Inject services={[MarkdownEditor, Toolbar, Image, Link, HtmlEditor, Table]}/>
+                 <Inject services={[MarkdownEditor, Toolbar, Image, Link, Table]} />
             </RichTextEditorComponent>
         </div>);
     }

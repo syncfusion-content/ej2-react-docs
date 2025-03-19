@@ -44,8 +44,9 @@ System.config({
         "@syncfusion/ej2-react-popups": "syncfusion:ej2-react-popups/dist/ej2-react-popups.umd.min.js",
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "@syncfusion/ej2-react-richtexteditor": "syncfusion:ej2-react-richtexteditor/dist/ej2-react-richtexteditor.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
 "react":"https://unpkg.com/react@16.3.1/umd/react.development.js",
+        "react-dom":"https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js",
+
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },
