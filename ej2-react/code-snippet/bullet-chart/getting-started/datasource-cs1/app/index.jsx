@@ -10,7 +10,7 @@ function App() {
         { value: 400, target: 380 },
         { value: 500, target: 480 },
     ];
-    return (<BulletChartComponent id='Revenue' style={{ textAlign: "center" }} animation={{ enable: false }} valueField='value' targetField='target' minimum={0} maximum={300} interval={50} dataSource={data}>
+    return (<BulletChartComponent id='Revenue' style={{ textAlign: "center" }} animation={{ enable: false }} valueField='value' targetField='target' minimum={0} maximum={500} interval={50} dataSource={data}>
             </BulletChartComponent>);
 }
 ;

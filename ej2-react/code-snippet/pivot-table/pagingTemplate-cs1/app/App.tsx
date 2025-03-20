@@ -61,12 +61,10 @@ function App() {
 
     function rowPageClick(args: any) {
         pivotObj.pageSettings.currentRowPage = args.currentPage;
-        pivotObj.refreshData();
     }
 
     function columnPageClick(args: any) {
         pivotObj.pageSettings.currentColumnPage = args.currentPage;
-        pivotObj.refreshData();
     }
 
     return (

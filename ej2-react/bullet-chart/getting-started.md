@@ -120,7 +120,7 @@ These modules should be injected to the `services` section as follows,
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 
-import { BulletChartComponent, BulletTooltip } from "@syncfusion/ej2-react-charts";
+import { BulletChartComponent, BulletTooltip, Inject } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
