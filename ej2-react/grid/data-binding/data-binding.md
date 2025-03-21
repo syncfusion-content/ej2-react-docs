@@ -292,12 +292,15 @@ The following example demonstrates how to set custom headers using the custom ad
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/custom-headers-cs1/app/App.jsx %}
 {% endhighlight %}
+
 {% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/grid/custom-headers-cs1/app/App.tsx %}
 {% endhighlight %}
+
 {% highlight js tabtitle="CustomAdaptor.jsx" %}
 {% include code-snippet/grid/custom-headers-cs1/app/CustomAdaptor.jsx %}
 {% endhighlight %}
+
 {% highlight ts tabtitle="CustomAdaptor.tsx" %}
 {% include code-snippet/grid/custom-headers-cs1/app/CustomAdaptor.tsx %}
 {% endhighlight %}

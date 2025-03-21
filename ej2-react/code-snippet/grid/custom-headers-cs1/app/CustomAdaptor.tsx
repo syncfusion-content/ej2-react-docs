@@ -1,7 +1,8 @@
-import { WebApiAdaptor,DataManager,Fetch } from '@syncfusion/ej2-data';
+import { WebApiAdaptor } from '@syncfusion/ej2-data';
 export class CustomAdaptor extends WebApiAdaptor {
-  beforeSend(dm: DataManager, request: Request, settings: Fetch) {
-    request.headers.set('Syncfusion', 'true'); // Assign custom headers here.
-    super.beforeSend(dm, request, settings);
+  beforeSend(args:any, xhr:any, settings:any) {
+    xhr.withCredentials = true;
+    super.beforeSend(args, xhr, settings);
+    xhr.headers.set('Syncfusion', true); // Assign custom headers here.
   }
 }
