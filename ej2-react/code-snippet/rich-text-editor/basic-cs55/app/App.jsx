@@ -24,4 +24,3 @@ function App() {
       </div>);
 }
 export default App;
-{% endraw %}

@@ -1,4 +1,3 @@
-{% raw %}
 /**
  * Rich Text Editor - HTMLEditor KeyConfig sample
  */
@@ -64,4 +63,3 @@ function App() {
     </RichTextEditorComponent>);
 }
 export default App;
-{% endraw %}

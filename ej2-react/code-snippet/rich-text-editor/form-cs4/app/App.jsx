@@ -1,4 +1,3 @@
-{% raw %}
 /**
  * Rich Text Editor - Form Validation Sample
  */
@@ -46,4 +45,3 @@ function App() {
     </form>);
 }
 export default App;
-{% endraw %}

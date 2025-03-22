@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 /**
  * Rich Text Editor - Form Validation Sample
  */
@@ -55,7 +51,3 @@ class App extends React.Component<{},{}> {
 }
 
 export default App;
-
-
-
-{% endraw %}

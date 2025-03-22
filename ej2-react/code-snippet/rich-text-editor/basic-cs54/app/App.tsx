@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, BeforeSanitizeHtmlArgs } from '@syncfusion/ej2-react-richtexteditor';
 import { detach } from '@syncfusion/ej2-base';
 import * as React from 'react';
@@ -31,7 +27,3 @@ class App extends React.Component<{},{}> {
 }
 
 export default App;
-
-
-
-{% endraw %}

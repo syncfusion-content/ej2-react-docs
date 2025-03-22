@@ -1,7 +1,3 @@
-{% raw %}
-/**
- * Rich Text Editor - CodeView sample
- */
 import { createElement } from '@syncfusion/ej2-base';
 import { Count, HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import CodeMirror from 'codemirror';
@@ -146,4 +142,3 @@ class App extends React.Component {
     }
 }
 export default App;
-{% endraw %}

@@ -165,14 +165,6 @@ To retrieve the editor contents, use the [value](https://ej2.syncfusion.com/reac
 
 ```
 
-Or, you can use the [getHtml](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#gethtml) public method to retrieve the Markdown Editor content.
-
-```typescript
-
-  const rteValue: string = this.rteObj.getHtml();
-
-```
-
 To fetch the Markdown Editor's text content, use [getText](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#gettext) method.
 
 ```typescript
@@ -183,8 +175,7 @@ const rteValue: string = this.rteObj.contentModule.getText();
 
 ## See Also
 
-* [Accessibility in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/accessibility)
-* [Keyboard support in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/keyboard-support)
-* [Globalization in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/globalization)
+* [Accessibility in Markdown editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/accessibility)
+* [Keyboard support in Markdown editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/keyboard-support)
 
-> You can refer to our [React Rich Text Editor](https://www.syncfusion.com/react-components/react-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Rich Text Editor example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/rich-text-editor/rich-text-editor) that shows how to render the Rich Text Editor tools.
+> You can refer to our [React Rich Text Editor](https://www.syncfusion.com/react-components/react-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Markdown example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/markdown-editor/overview) that shows how to render the Markdown tools.
