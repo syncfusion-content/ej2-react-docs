@@ -1,4 +1,3 @@
-{% raw %}
 /**
  * Rich Text Editor - CodeView sample
  */
@@ -149,4 +148,3 @@ function App() {
     </RichTextEditorComponent>);
 }
 export default App;
-{% endraw %}

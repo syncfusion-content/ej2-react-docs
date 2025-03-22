@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 /**
  * Rich Text Editor - HTMLEditor KeyConfig sample
  */
@@ -74,7 +70,3 @@ function App() {
 }
 
 export default App;
-
-
-
-{% endraw %}

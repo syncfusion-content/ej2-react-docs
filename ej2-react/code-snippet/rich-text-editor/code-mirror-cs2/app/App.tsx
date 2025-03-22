@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 /**
  * Rich Text Editor - CodeView sample
  */
@@ -157,7 +153,3 @@ function App() {
 }
 
 export default App;
-
-
-
-{% endraw %}
