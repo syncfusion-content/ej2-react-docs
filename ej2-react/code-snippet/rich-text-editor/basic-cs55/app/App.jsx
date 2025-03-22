@@ -1,4 +1,3 @@
-{% raw %}
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import { detach } from '@syncfusion/ej2-base';
 import * as React from 'react';
@@ -24,4 +23,3 @@ function App() {
       </div>);
 }
 export default App;
-{% endraw %}

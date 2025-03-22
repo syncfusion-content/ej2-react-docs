@@ -1,4 +1,3 @@
-{% raw %}
 /**
  * Rich Text Editor - Custom Placement of Validation Message Sample
  */
@@ -56,4 +55,3 @@ function App() {
     </form>);
 }
 export default App;
-{% endraw %}

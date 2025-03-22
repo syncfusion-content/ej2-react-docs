@@ -6,12 +6,15 @@ import { MentionComponent } from '@syncfusion/ej2-react-dropdowns';
 
 class App extends React.Component<{},{}> {
     private rteObj: RichTextEditorComponent;
+    private mention: MentionComponent;
 
+    // set the value to Rich Text Editor
     private value: string = 'Hello [@Maria](mailto:maria@gmail.com)\n\nWelcome to the mention integration with markdown editor demo. Type @ character and tag user from the suggestion list.';
-
+    private placeholder: string = 'Enter your text here...';
+    // Rich Text Editor items list
     private items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'StrikeThrough', '|',
-        'Formats', 'OrderedList', 'UnorderedList', '|',
-        'CreateLink', 'Image', 'CreateTable',
+        'Formats', 'OrderedList', 'UnorderedList', 'SuperScript', 'SubScript', '|',
+        'CreateLink', 'Image', 'CreateTable', '|',
         {
             tooltipText: 'Preview',
             template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn" aria-label="Preview Code">' +
@@ -21,6 +24,7 @@ class App extends React.Component<{},{}> {
 
     private textArea: HTMLTextAreaElement;
     private mdsource: HTMLElement;
+    private mdPreview: HTMLElement;
     private emailData: { [key: string]: string; }[] = [
         { name: "Selma Rose", initial: 'SR', email: "selma@gmail.com", color: '#FAFDFF', bgColor: '#01579B' },
         { name: "Maria", initial: 'MA', email: "maria@gmail.com", color: '#004378', bgColor: '#ADDBFF' },
@@ -38,20 +42,21 @@ class App extends React.Component<{},{}> {
         { name: "William", initial: 'WA', email: "william@gmail.com", color: '#FFFFFF', bgColor: '#163E02' }
       ];
 
+    //Rich Text Editor ToolbarSettings
     private toolbarSettings: ToolbarSettingsModel = {
         items: this.items
     };
 
     private formatter: MarkdownFormatter = new MarkdownFormatter({ listTags: { 'OL': '1., 2., 3.' } });
 
-    public markdownConversion(): void {
+    public markdownConversion() {
         if (this.mdsource.classList.contains('e-active')) {
             let id: string = this.rteObj.getID() + 'html-view';
             let htmlPreview: HTMLElement = this.rteObj.element.querySelector('#' + id);
-            htmlPreview.innerHTML = Marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
+            htmlPreview.innerHTML = Marked.marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
         }
     }
-    public fullPreview(): void {
+    public fullPreview() {
         let id: string = this.rteObj.getID() + 'html-preview';
         let htmlPreview: HTMLElement = this.rteObj.element.querySelector('#' + id);
         if (this.mdsource.classList.contains('e-active')) {
@@ -68,11 +73,11 @@ class App extends React.Component<{},{}> {
             }
             this.textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = Marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
+            htmlPreview.innerHTML = Marked.marked((this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement).value);
             this.mdsource.parentElement.title = 'Code View';
         }
     }
-    public rendereComplete(): void {
+    public rendereComplete() {
         this.textArea = this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement;
         this.textArea.addEventListener('keyup', (e: KeyboardEventArgs) => {
             this.markdownConversion();
@@ -81,18 +86,16 @@ class App extends React.Component<{},{}> {
         this.mdsource.addEventListener('click', (e: MouseEvent) => {
             this.fullPreview();
             if ((e.currentTarget as HTMLElement).classList.contains('e-active')) {
-                this.rteObj.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', '|',
-            'Formats', 'OrderedList', 'UnorderedList', '|',
-            'CreateLink', 'Image', 'Undo', 'Redo', 'CreateTable', 'Undo', 'Redo']);
+                this.rteObj.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
+                    'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Undo', 'Redo']);
             } else {
-                this.rteObj.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', '|',
-            'Formats', 'OrderedList', 'UnorderedList', '|',
-            'CreateLink', 'Image', 'Undo', 'Redo', 'CreateTable', 'Undo', 'Redo']);
+                this.rteObj.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
+                    'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Undo', 'Redo']);
             }
         });
     }
 
-    private itemTemplate(data: any): React.JSX.Element {
+    private itemTemplate(data: any) {
         return (
           <div className="editor-mention-item-template">
             <div className="em-header">
@@ -106,9 +109,9 @@ class App extends React.Component<{},{}> {
             </div>
           </div>
         );
-      }
+    }
     
-    private displayTemplate(data: any): React.JSX.Element {
+    private displayTemplate(data: any){
         return (
             <React.Fragment>
             [@{data.name}](mailto:${data.email})
@@ -121,7 +124,7 @@ class App extends React.Component<{},{}> {
             <div className="content-wrapper">
                 <RichTextEditorComponent id="markdownRTE"
                     ref={(richtexteditor) => { this.rteObj = richtexteditor }} editorMode='Markdown'
-                    height='250px' value={this.value} formatter={this.formatter} created={this.rendereComplete} toolbarSettings={this.toolbarSettings} >
+                    height='250px' value={this.value} formatter={this.formatter} toolbarSettings={this.toolbarSettings} created={this.rendereComplete} >
                     <Inject services={[MarkdownEditor, Toolbar, Image, Link, Table]} />
                 </RichTextEditorComponent>
                 <MentionComponent id='editorMention' ref={(mention: MentionComponent) => { this.mention = mention }} dataSource={this.emailData} displayTemplate={this.displayTemplate} itemTemplate={this.itemTemplate} target="#markdownRTE_editable-content" fields={{ text: 'name' }} popupWidth='250px' popupHeight='200px' sortOrder='Ascending' allowSpaces={true}></MentionComponent>

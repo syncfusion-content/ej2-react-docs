@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 /**
  * Rich Text Editor - CodeView sample
  */
@@ -154,7 +150,3 @@ class App extends React.Component<{},{}> {
 }
 
 export default App;
-
-
-
-{% endraw %}

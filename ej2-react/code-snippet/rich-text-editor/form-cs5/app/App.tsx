@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 /**
  * Rich Text Editor - Custom Placement of Validation Message Sample
  */
@@ -67,7 +63,3 @@ class App extends React.Component<{},{}> {
 }
 
 export default App;
-
-
-
-{% endraw %}
