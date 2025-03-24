@@ -143,9 +143,11 @@ The following example shows a basic SpeechToText component.
 
  {% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1" %}
 
+> The [SpeechToText](../api/speech-to-text/) component requires an internet connection and using a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API.
+
  ## Adding button content
 
- You can use the `content` property to display the start listening text and `stopContent` to display the stop listening text by using the `buttonSettings` property.
+You can use the [content](../api/speech-to-text/buttonSettingsModel/#content) property to display the start listening text and [stopContent](../api/speech-to-text/buttonSettingsModel/#stopContent) to display the stop listening text by using the [buttonSettings](../api/speech-to-text#buttonSettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

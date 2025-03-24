@@ -24,7 +24,7 @@ let connectors = [{
         targetPoint: { x: 200,y: 200 }
     }];
 ```
-N> Note: There should not be any white-spaces in the ID string while setting the ID.
+N> When setting a Connector's ID, ensure that it does not contain white spaces, does not start with numbers or special characters, and does not include special characters like underscores (_) or spaces.
 
 ## Add connectors through connectors collection
 

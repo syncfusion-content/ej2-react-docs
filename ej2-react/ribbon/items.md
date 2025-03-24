@@ -48,8 +48,6 @@ The [isToggle](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonB
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/ribbon/Toggle" %}
-
 ### Checkbox items
 
 You can render the built-in checkBox Ribbon item by setting the [type](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#type) property to `CheckBox`. You can also customize the checkBox item using the [RibbonCheckBoxSettings](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings/), which provides options such as `LabelPosition`, `Label`, `Checked` and more.
@@ -70,8 +68,6 @@ You can use the [checked](https://ej2.syncfusion.com/react/documentation/api/rib
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/ribbon/Checked" %}
-
 #### Defining label
 
 You can use the [label](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettingsModel/#label) property to add a caption for the CheckBox. The label position can be set `Before` or `After`, by using the [labelPosition](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettingsModel/#labelposition) property. By default, the labelPosition is `After`.
@@ -87,8 +83,6 @@ You can use the [label](https://ej2.syncfusion.com/react/documentation/api/ribbo
 {% include code-snippet/ribbon/CheckBoxLabelPosition/index.css %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/ribbon/CheckBoxLabelPosition" %}
 
 ### DropDown button items
 
@@ -582,5 +576,3 @@ You can use the [disabled](https://ej2.syncfusion.com/react/documentation/api/ri
 {% include code-snippet/ribbon/DisabledItem/index.css %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/ribbon/DisabledItem" %}
