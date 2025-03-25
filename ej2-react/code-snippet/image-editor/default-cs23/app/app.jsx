@@ -1,4 +1,3 @@
-{% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
@@ -15,23 +14,21 @@ export default class App extends React.Component {
             this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
-    btnClick() {
+    addText() {
         let dimension = this.imgObj.getImageDimension();
-        this.imgObj.drawText(dimension.x, dimension.y,'Enter\nText');
+        this.imgObj.drawText(dimension.x, dimension.y);
     }
-    btnClick() {
-        imgObj.deleteShape('shape_1');
+    deleteText() {
+        this.imgObj.deleteShape('shape_1');
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} toolbar = {[]}>
-            </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} toolbar = {[]}></ImageEditorComponent>
                 <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick={this.btnClick.bind(this)}/>
-                    <ButtonComponent cssClass='e-primary' content='Delete Text' onClick = {this.delClick.bind(this)}/>
+                    <ButtonComponent cssClass='e-primary' content='Add Text' onClick={this.addText.bind(this)}/>
+                    <ButtonComponent cssClass='e-primary' content='Delete Text' onClick = {this.deleteText.bind(this)}/>
                 </div>
             </div>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

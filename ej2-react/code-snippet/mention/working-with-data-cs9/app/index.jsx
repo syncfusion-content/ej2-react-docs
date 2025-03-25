@@ -9,7 +9,7 @@ export default class App extends React.Component {
         adaptor: new WebApiAdaptor(),
         crossDomain: true
     });
-    query = new Query().select(['FirstName', 'EmployeeID']).take(7);
+    query = new Query().select(['FirstName', 'EmployeeID']).take(7).requiresCount();
     fields = { text: 'FirstName', value: 'EmployeeID' };
     render() {
         return (<div id='mention_default'>

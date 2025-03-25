@@ -1,4 +1,3 @@
-{% raw %}
 import { ImageEditorComponent, RedactType } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
@@ -12,7 +11,7 @@ export default class App extends React.Component {
         maxFileSize: 90 * 1024  // Maximum file size in bytes (100 KB)
     };
     loadInvalidImage() {
-        this.imgObj.open('flower.jpeg');
+        this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
     }
     render() {
         return (<div className='e-img-editor-sample'>
@@ -25,4 +24,3 @@ export default class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

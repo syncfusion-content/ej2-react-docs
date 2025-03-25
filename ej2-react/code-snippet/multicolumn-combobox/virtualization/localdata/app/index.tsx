@@ -28,7 +28,7 @@ function App() {
 
   return (
     // specifies the tag for render the MultiColumn ComboBox component
-    <MultiColumnComboBoxComponent id="multicolumn" dataSource={data(150)} fields={fields} placeholder={waterMark} popupHeight={230} gridSettings={{ rowHeight: 40 }}>
+    <MultiColumnComboBoxComponent id="multicolumn" dataSource={data(150)} fields={fields} placeholder={waterMark} popupHeight={230} gridSettings={{ rowHeight: 40 }} enableVirtualization={true}>
         <ColumnsDirective>
             <ColumnDirective field='TaskID' header='Employee ID' width={100}></ColumnDirective>
             <ColumnDirective field='Engineer' header='Name' width={140}></ColumnDirective>

@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser, getComponent } from '@syncfusion/ej2-base';
@@ -26,13 +23,9 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} selectionChanging={selectionChanging}>
-            </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} selectionChanging={selectionChanging}></ImageEditorComponent>
         </div>
     );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-
-
-{% endraw %}

@@ -6,15 +6,27 @@ import { StepperComponent, StepsDirective, StepDirective } from '@syncfusion/ej2
 
 function App() {
     return (
-        <div className="stepper-text">
-            <StepperComponent>
-                <StepsDirective>
-                    <StepDirective text= {'Cart'}/>
-                    <StepDirective text= {'Delivery Address'}/>
-                    <StepDirective text= {'Payment'}/>
-                    <StepDirective text= {'Confirmation'}/>
-                </StepsDirective>
-            </StepperComponent>
+        <div className="container">
+            <div className="stepper-text">
+                <StepperComponent stepType="indicator">
+                    <StepsDirective>
+                        <StepDirective text= {'A'}/>
+                        <StepDirective text= {'B'}/>
+                        <StepDirective text= {'C'}/>
+                        <StepDirective text= {'D'}/>
+                    </StepsDirective>
+                </StepperComponent>
+            </div>
+            <div className="stepper-label">
+                <StepperComponent>
+                    <StepsDirective>
+                        <StepDirective label= {'Cart'}/>
+                        <StepDirective label= {'Delivery Address'}/>
+                        <StepDirective label= {'Payment'}/>
+                        <StepDirective label= {'Confirmation'}/>
+                    </StepsDirective>
+                </StepperComponent>
+            </div>
         </div>
     );
 }

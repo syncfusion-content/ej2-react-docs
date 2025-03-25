@@ -28,6 +28,8 @@ An annotation can be added to a node/connector by defining the annotation object
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Annotation-cs1" %}
+ 
+N> When setting a Annotation's ID, ensure that it does not contain white spaces, does not start with numbers or special characters, and does not include special characters like underscores (_) or spaces.
 
 ## Add annotations at runtime
 

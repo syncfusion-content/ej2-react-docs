@@ -159,8 +159,6 @@ These miscellaneous shortcuts help with actions like toggling fullscreen, cleari
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs37" %}
 
-
-
 ## Custom key config
 
 Customize the key config for the keyboard interaction of Rich Text Editor, using the [`keyConfig`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#keyconfig) property.

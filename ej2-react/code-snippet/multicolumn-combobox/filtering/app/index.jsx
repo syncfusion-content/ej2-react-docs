@@ -35,7 +35,7 @@ function App() {
 
   return (
     // specifies the tag for render the MultiColumn ComboBox component
-    <MultiColumnComboBoxComponent id="multicolumn" dataSource={empData} fields={fields} placeholder={waterMark}>
+    <MultiColumnComboBoxComponent id="multicolumn" dataSource={empData} fields={fields} placeholder={waterMark} filterType='EndsWith'>
         <ColumnsDirective>
             <ColumnDirective field='EmpID' header='Employee ID' width={120}></ColumnDirective>
             <ColumnDirective field='Name' header='Name' width={120}></ColumnDirective>

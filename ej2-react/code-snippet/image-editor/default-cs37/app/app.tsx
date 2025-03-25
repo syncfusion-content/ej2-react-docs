@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
@@ -12,27 +9,24 @@ function App() {
     let toolbar = [];
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('flower.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         } else {
-            imgObj.open('bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
-    function btnClick(): void {
+    function addImage(): void {
         let dimension: any = imgObj.getImageDimension();
-        imgObj.drawImage('flower.png', dimension.x, dimension.y, 100, 80, true, 0);
+        imgObj.drawImage('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png', dimension.x, dimension.y, 100, 80, true, 0);
     }
 
     return (
         <div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {toolbar}></ImageEditorComponent> 
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={toolbar}></ImageEditorComponent>
             <div>
-            <ButtonComponent cssClass='e-primary' content='Add Image' onClick = {btnClick}/>
+                <ButtonComponent cssClass='e-primary' content='Add Image' onClick={addImage} />
             </div>
         </div>
     );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-
-
-{% endraw %}
