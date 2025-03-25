@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar in React Rich Text Editor component
 
-The Syncfusion React Rich Text Editor component provides a versatile and powerful toolbar to enhance your text editing experience. The toolbar contains a variety of formatting, styling, and editing tools, allowing users to create and modify content efficiently.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Rich Text Editor component provides a versatile and powerful toolbar to enhance your text editing experience. The toolbar contains a variety of formatting, styling, and editing tools, allowing users to create and modify content efficiently.
 
 ## Tools
 
@@ -20,7 +20,7 @@ By default, the Angular Rich Text Editor displays the following toolbar items:
 
 > `Bold` , `Italic` , `Underline` , `|` , `Formats` , `Alignments` , `Blockquote`, `OrderedList` , `UnorderedList` , `|` , `CreateLink` , `Image` , `|` , `SourceCode` , `Undo` , `Redo`
 
-These default items cover essential text editing features, such as text formatting, lists, alignment, and linking.
+These default items cover Essential<sup style="font-size:70%">&reg;</sup> text editing features, such as text formatting, lists, alignment, and linking.
 
 ### Available Toolbar Items
 
@@ -171,6 +171,140 @@ This section contains miscellaneous tools such as full-screen mode, print, previ
 | ClearAll | ![ClearAll icon](./images/clear-all.png) | Removes all styles that have been applied to the selected text.| toolbarSettings: { items: ['ClearAll']} |
 | SourceCode | ![SourceCode icon](./images/code-view.png)  | Rich Text Editor includes the ability for users to directly edit HTML code via “Source View”. If you made any modification in Source view directly, synchronize with Design view.|toolbarSettings: { items: ['SourceCode']}|
 
+## Toolbar in React Rich text editor Component
+
+The Rich Text Editor toolbar contains a collection of tools such as bold, italic and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.
+
+> To create Rich Text Editor with Toolbar feature, inject the toolbar module to the Rich Text Editor using the `RichTextEditor.Inject(Toolbar)` method.
+
+The Rich Text Editor allows you to configure different types of toolbar using [toolbarSettings.type](https://ej2.syncfusion.com/areactngular/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
+
+* Expand
+* MultiRow
+* Scrollable
+
+### Expanding the Toolbar
+
+Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs70/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs70/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs70" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs71/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs71/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs71" %}
+
+### Configuring a Multi-row Toolbar
+
+Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs72/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs72/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs72" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs73/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs73/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs73" %}
+
+### Implementing a Scrollable Toolbar
+
+Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will display the toolbar items in a single line, enabling horizontal scrolling in the toolbar.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/scrollable-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/scrollable-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs1" %}
+
+`[functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/scrollable-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/scrollable-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs2" %}
+
+### Creating a Sticky Toolbar
+
+By default, the toolbar remains fixed at the top of the Rich Text Editor when scrolling. You can customize the position of this sticky toolbar by setting the [floatingToolbarOffset](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#floatingtoolbaroffset) to adjust its offset from the top of the document.
+
+Additionally, you can enable or disable the floating toolbar using the [enableFloating](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#enablefloating) property.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs74/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs74/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs74" %}
+
+`[functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/basic-cs75/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/basic-cs75/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs75" %}
+
 ### Custom Toolbar Items
 
 The Rich Text Editor allows you to configure your own commands to its toolbar using the  [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarSettings) property. The command can be plain text, icon, or HTML template. The order and the group can also be defined where the command should be included. Bind action to the command by getting its instance.
@@ -220,146 +354,6 @@ This sample demonstrates how to add a custom "Ω" icon to the toolbar. Clicking 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs2" %}
 
 > When rendering any component for the custom toolbar, like a dropdown, the focus may be lost, causing it to render outside the Rich Text Editor and triggering a blur event. This can interfere with proper functionalities like cursor focus. To prevent this issue, it is recommended to assign the `e-rte-element`s class to the component rendered in the custom toolbar.
-
-### Enabling and Disabling Toolbar Items
-
-You can use the [enableToolbarItem](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#enabletoolbaritem) and [1disableToolbarItem](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#disabletoolbaritem) methods to control the state of toolbar items. This methods takes a single item or an array of [items](#available-toolbar-items) as parameter.
-
->You can add the command name `Custom` to disable the custom toolbar items on source code view and other quicktoolbar operations.
-
-## How to Enable the Toolbar
-
-The Rich Text Editor toolbar contains a collection of tools such as bold, italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.
-
-> To create Rich Text Editor with Toolbar feature, inject the toolbar module to the Rich Text Editor using the `RichTextEditor.Inject(Toolbar)` method.
-
-The Rich Text Editor allows you to configure different types of toolbar using [toolbarSettings.type](https://ej2.syncfusion.com/areactngular/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
-
-* Expand
-* MultiRow
-* Scrollable
-
-## Expanding the Toolbar
-
-Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs70/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs70/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs70" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs71/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs71/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs71" %}
-
-## Configuring a Multi-row Toolbar
-
-Setting the `type` as `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will arrange the toolbar items across multiple rows, displaying all configured toolbar items.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs72/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs72/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs72" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs73/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs73/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs73" %}
-
-## Implementing a Scrollable Toolbar
-
-Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will display the toolbar items in a single line, enabling horizontal scrolling in the toolbar.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/scrollable-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/scrollable-cs1/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs1" %}
-
-`[functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/scrollable-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/scrollable-cs2/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs2" %}
-
-## Creating a Sticky Toolbar
-
-By default, the toolbar remains fixed at the top of the Rich Text Editor when scrolling. You can customize the position of this sticky toolbar by setting the [floatingToolbarOffset](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#floatingtoolbaroffset) to adjust its offset from the top of the document.
-
-Additionally, you can enable or disable the floating toolbar using the [enableFloating](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#enablefloating) property.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs74/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs74/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs74" %}
-
-`[functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/basic-cs75/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/basic-cs75/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs75" %}
 
 ## Quick inline toolbar
 

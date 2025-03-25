@@ -3,6 +3,7 @@
  */
 import { Image, Inject, Link, MarkdownEditor, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
+import { useEffect, useRef } from 'react';
 
 function App() {
     let rteObj;
@@ -17,14 +18,16 @@ function App() {
     
     function componentDidMount() {
         document.addEventListener('keyup', docKeyUp.bind(this));
-    }
+    }  
+    
     function docKeyUp(e) {
-        if (e.altKey && e.keyCode === 84) { 
+        if (e.altKey && e.keyCode === 84) { /* t */
             // press alt+t to focus the component.
-            rteObj.focusIn();
+            rteObj.current.focusIn();
         }
     }
-    return (<RichTextEditorComponent ref={(richtexteditor) => { rteObj = richtexteditor; }} height={450} toolbarSettings={toolbarSettings} value={value} editorMode={'Markdown'}>
+
+    return (<RichTextEditorComponent ref={rteObj} created={ componentDidMount } height={450} toolbarSettings={toolbarSettings} value={value} editorMode={'Markdown'}>
         <Inject services={[Toolbar, Image, Link, MarkdownEditor]}/>
       </RichTextEditorComponent>);
 }

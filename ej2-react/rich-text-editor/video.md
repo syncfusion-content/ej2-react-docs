@@ -607,7 +607,7 @@ You can disable the resize action by configuring `false` for the [insertVideoSet
 
 ## Customizing the Video Quick Toolbar
 
-The Rich Text Editor enables customization of the video quick toolbar, allowing you to tailor its functionality with essential tools such as VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, and VideoDimension.
+The Rich Text Editor enables customization of the video quick toolbar, allowing you to tailor its functionality with Essential<sup style="font-size:70%">&reg;</sup> tools such as VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, and VideoDimension.
 
 By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you enhance the editor's capabilities, facilitating seamless management and editing of embedded videos directly within your content. This customization ensures a user-friendly experience for manipulating video elements efficiently.
 

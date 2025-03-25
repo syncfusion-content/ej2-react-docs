@@ -208,3 +208,21 @@ A baseline tooltip can be customized using the [`tooltipSettings.baseline`](http
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs7" %}
+
+### Timeline tooltip
+
+A timeline tooltip can be customized using the [`tooltipSettings.timeline`](https://ej2.syncfusion.com/react/documentation/api/gantt/tooltipSettings/#timeline) property. This allows modifying the appearance and content of the tooltip displayed over the timeline. The following code example shows how to customize the timeline tooltip in Gantt.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/timeline-tooltip-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/timeline-tooltip-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/timeline-tooltip-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/timeline-tooltip-cs1" %}

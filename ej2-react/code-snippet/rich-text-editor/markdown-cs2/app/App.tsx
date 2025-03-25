@@ -1,5 +1,5 @@
 import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-base';
-import { Image, Inject, Link, MarkdownEditor, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import { Image, Inject, Link, MarkdownEditor, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 import * as Marked from 'marked';
 
@@ -23,15 +23,9 @@ function App() {
   let toolbarSettings: object = {
       items: items
   };
+
   // set the value to Rich Text Editor
-  function template(): JSX.Element {
-    return(
-      <div>
-        The sample is added to showcase **markdown editing**. Type or edit the content and apply formatting to view markdown formatted content. We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/).
-        The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.
-      </div>
-    );
-  };
+  let value: string = " The sample is added to showcase **markdown editing**. Type or edit the content and apply formatting to view markdown formatted content. We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
 
   function markDownConversion(): void {
       if (mdsource.classList.contains('e-active')) {
@@ -82,8 +76,8 @@ function App() {
 
   return (
     <RichTextEditorComponent id="markdownRTE" ref={(richtexteditor) => {rteObj = richtexteditor! }} editorMode='Markdown'
-        height='250px' valueTemplate={template} created={rendereComplete} toolbarSettings={toolbarSettings} >
-        <Inject services={[MarkdownEditor, Toolbar, Image, Link, QuickToolbar]} />
+        height='250px' value={value} created={rendereComplete} toolbarSettings={toolbarSettings} >
+        <Inject services={[MarkdownEditor, Toolbar, Image, Link]} />
         </RichTextEditorComponent>
   );
 }

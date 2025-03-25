@@ -129,9 +129,8 @@ Maps component using `Inject` tag with required services.
 
 ```ts
 
-import { Maps, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-maps';
 import * as React from 'react';
-import { MapsComponent } from '@syncfusion/ej2-react-maps';
+import { MapsComponent, Inject, DataLabel, Legend, MapsTooltip } from '@syncfusion/ej2-react-maps';
 
 export function App() {
    return (<MapsComponent>
