@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { ImageEditorComponent, ZoomSettingsModel } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
@@ -9,19 +6,19 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     let imgObj: ImageEditorComponent;
-    let zoomSettings: ZoomSettingsModel = {maxZoomFactor: 30, minZoomFactor: 0.1};
+    let zoomSettings: ZoomSettingsModel = { maxZoomFactor: 30, minZoomFactor: 0.1 };
     let zoomLevel: number = 1;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('flower.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
         } else {
-            imgObj.open('bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
     function zoomInClick(): void {
-        if(zoomLevel < 1) {
+        if (zoomLevel < 1) {
             zoomLevel += 0.1;
-        }else {
+        } else {
             zoomLevel += 1;
         }
         const value: any = zoomSettings.maxZoomFactor;
@@ -31,9 +28,9 @@ function App() {
         imgObj.zoom(zoomLevel); // Zoom in
     }
     function zoomOutClick(): void {
-        if(zoomLevel <= 1) {
+        if (zoomLevel <= 1) {
             zoomLevel -= 0.1;
-        }else {
+        } else {
             zoomLevel -= 1;
         }
         const value: any = zoomSettings.minZoomFactor;
@@ -42,25 +39,16 @@ function App() {
         }
         imgObj.zoom(zoomLevel); // Zoom out
     }
-    function panClick(): void {
-        imgObj.zoom(2); // Zoom in
-        imgObj.pan(true);
-    }
 
     return (
         <div className='e-img-editor-sample'>
-        <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar = {[]}>
-        </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} toolbar={[]}></ImageEditorComponent>
             <div>
-                <ButtonComponent cssClass='e-primary' content='Zoom In' onClick = {zoomInClick}/>
-                <ButtonComponent cssClass='e-primary' content='Zoom Out' onClick = {zoomOutClick}/>
-                <ButtonComponent cssClass='e-primary' content='PAn' onClick = {panClick}/>
+                <ButtonComponent cssClass='e-primary' content='Zoom In' onClick={zoomInClick} />
+                <ButtonComponent cssClass='e-primary' content='Zoom Out' onClick={zoomOutClick} />
             </div>
         </div>
     );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-
-
-{% endraw %}

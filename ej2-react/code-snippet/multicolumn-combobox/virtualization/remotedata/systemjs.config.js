@@ -41,6 +41,7 @@ System.config({
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-multicolumn-combobox": "syncfusion:ej2-react-multicolumn-combobox/dist/ej2-react-multicolumn-combobox.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
+        "@syncfusion/ej2-react-notifications":"syncfusion:ej2-react-notifications/dist/ej2-react-notifications.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
     },

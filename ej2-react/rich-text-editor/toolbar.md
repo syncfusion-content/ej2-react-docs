@@ -233,7 +233,7 @@ The Rich Text Editor toolbar contains a collection of tools such as bold, italic
 
 > To create Rich Text Editor with Toolbar feature, inject the toolbar module to the Rich Text Editor using the `RichTextEditor.Inject(Toolbar)` method.
 
-The Rich Text Editor allows you to configure different types of toolbar using [toolbarSettings.type](https://ej2.syncfusion.com/areactngular/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
+The Rich Text Editor allows you to configure different types of toolbar using [toolbarSettings.type](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
 
 * Expand
 * MultiRow

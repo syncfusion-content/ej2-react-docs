@@ -22,7 +22,7 @@ function App() {
                         valueField='value'
                         targetField='target'
                         minimum={0}
-                        maximum={300}
+                        maximum={500}
                         interval={50}
                         dataSource={data}>
             </BulletChartComponent>);

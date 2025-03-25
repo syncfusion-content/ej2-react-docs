@@ -462,3 +462,28 @@ The following example demonstrates how to add template column using external but
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/template-cs9" %}
+
+## Enhancing Grid performance by enabling or disabling Aria Labels
+
+By default, the Syncfusion React Grid adds custom **aria-label** attributes to template cells by combining the cell value, the "**is template cell**" identifier, and the column header name. These attributes help screen readers provide meaningful context.
+
+If your application doesn’t require screen reader support and includes multiple template columns, Aria labels may impact performance. To improve rendering, you can disable them for all template columns by setting the `enableAriaLabel` property to **false** in the `templateOptions` of those columns. If accessibility is needed, set it to **true** to retain Aria labels.
+
+The example below enables Aria labels for the **Employee Image** column and disables them for the **First Name** column in the Syncfusion React Grid.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-aria-label/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-aria-label/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-aria-label/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-aria-label/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/template-aria-label" %}

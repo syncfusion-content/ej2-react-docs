@@ -16,23 +16,23 @@ The [`dataLoaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/id
 
 The following code example explains the data loaded event in the diagram.
 
-```typescript
-
-<ejs-diagram #diagram id="diagram" width="100%" height="600px" [nodes]="nodes" [connectors]="connectors"
-  [layout]="layout" (dataLoaded)="dataLoaded($event)" > </ejs-diagram>
-
-export class AppComponent {
-  @ViewChild("diagram")
-  public diagram!: DiagramComponent;
-
-  // Handle animation state changes
-  public dataLoaded(args: IDataLoadedEventArgs) {
-      //we can get diagram instance in args.
-      console.log(args);
-
-      //customize
+```javascript
+  function dataLoaded(args) {
+    //we can get diagram instance in args.
+    console.log(args);
   }
-
+  <DiagramComponent id="diagram" width={'100%'} height={'600px'}
+      nodes={nodes} connectors={connectors}
+      // Event Triggers when the state of the layout rendering changes
+      dataLoaded={dataLoaded}
+      //Uses layout to auto-arrange nodes on the diagram page
+      layout={{
+          //Sets layout type
+          type: 'HierarchicalTree',
+      }}>
+      {/* Inject necessary services for the diagram */}
+      <Inject services={[HierarchicalTree]} />
+  </DiagramComponent>
 ```
 
 ## ExpandStateChange event
@@ -71,3 +71,26 @@ The [`animationComplete`](https://ej2.syncfusion.com/react/documentation/api/dia
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layoutEvent-cs2" %}
+
+## Layout updated event
+
+The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram/#layoutupdated) event is triggered when the layout rendering process in the diagram either starts or completes. This event allows users to track the state of the layout rendering process.
+
+The following code example explains the layout updated event in the diagram.
+
+```javascript
+function handleLayoutUpdated(args){
+        if (args.state === 'Started') {
+            console.log('Layout started rendering');
+        }
+}
+
+<DiagramComponent id="diagram" width={'100%'} height={'550px'}
+    nodes={nodes} connectors={connectors}
+    layout={{ type: 'HierarchicalTree'}}
+    // Event Triggers when the state of the layout rendering changes
+    layoutUpdated={handleLayoutUpdated}>
+    {/* Inject necessary services for the diagram */}
+    <Inject services={[HierarchicalTree]} />
+</DiagramComponent>
+```

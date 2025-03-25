@@ -1,4 +1,3 @@
-{% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
@@ -31,8 +30,8 @@ export default class App extends React.Component {
             {
                 "nodeId": "03-01", "nodeText": "Camera Roll", "icon": "folder", "expanded": true,
                 "nodeChild": [
-                    { "nodeId": "03-01-01", "nodeText": "WIN_20160726_094117.JPG", "image": "https://cdn.syncfusion.com/content/images/Contact-us/primary_logo.svg" },
-                    { "nodeId": "03-01-02", "nodeText": "WIN_20160726_094118.JPG", "image": "https://cdn.syncfusion.com/content/images/home-v1/what-we-need/1800-components-onhover.svg" }
+                    { "nodeId": "03-01-01", "nodeText": "Flower", "image": "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png" },
+                    { "nodeId": "03-01-02", "nodeText": "Bridge", "image": "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png" }
                 ]
             },
         ]}
@@ -48,10 +47,9 @@ export default class App extends React.Component {
     render() {
         return (<div className='e-img-editor-sample'>
             <TreeViewComponent ref={(tree) => { this.treeView = tree }} fields={this.fields} nodeClicked={this.clicked.bind(this)} />
-            <ImageEditorComponent ref={(img) => { this.imgObj = img }} height="350px" toolbar = {[]}>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img }} height="350px">
             </ImageEditorComponent>
                 </div>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

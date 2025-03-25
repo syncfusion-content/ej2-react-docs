@@ -17,7 +17,7 @@ export let data: any[] = [
 
 
 function App() {
-  return <Chart3DComponent id='charts' style={{ textAlign: "center" }} primaryXAxis={{
+  return (<Chart3DComponent id='charts' style={{ textAlign: "center" }} primaryXAxis={{
     valueType: 'Category',
     labelRotation: -45,
     labelPlacement: 'BetweenTicks'
@@ -31,7 +31,7 @@ function App() {
         <Chart3DSeriesDirective dataLabel={{ visible: true }} dataSource={data} xName='x' name='Sales' yName='y' type='Column'>
         </Chart3DSeriesDirective>
     </Chart3DSeriesCollectionDirective>
-</Chart3DComponent>
+</Chart3DComponent>)
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));

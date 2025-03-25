@@ -9,7 +9,7 @@ function App() {
         adaptor: new WebApiAdaptor(),
         crossDomain: true
     });
-    let query = new Query().select(['FirstName', 'EmployeeID']).take(7);
+    let query = new Query().select(['FirstName', 'EmployeeID']).take(7).requiresCount();
     let fields = { text: 'FirstName', value: 'EmployeeID' };
     return (<div id='mention_default'>
         <table>

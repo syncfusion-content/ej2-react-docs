@@ -1,4 +1,3 @@
-{% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
@@ -21,10 +20,8 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} selectionChanging={this.selectionChanging.bind(this)}>
-            </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)} selectionChanging={this.selectionChanging.bind(this)}></ImageEditorComponent>
         </div>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

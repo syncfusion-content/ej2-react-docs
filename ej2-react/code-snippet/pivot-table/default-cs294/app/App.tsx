@@ -60,7 +60,7 @@ function App() {
             }
         });
         if (args.report) {
-            pivotObj.dataSource = JSON.parse(args.report).dataSource;
+            pivotObj.dataSourceSettings = JSON.parse(args.report).dataSourceSettings;
         }
     }
     function removeReport(args: RemoveReportArgs): void {
@@ -88,7 +88,7 @@ function App() {
         }
     }
     function newReport(): void {
-        pivotObj.setProperties({ dataSource: { columns: [], rows: [], values: [], filters: [] } }, false);
+        pivotObj.setProperties({ dataSourceSettings: { columns: [], rows: [], values: [], filters: [] } }, false);
     }
   
     return (<PivotViewComponent id='PivotView' ref={ (d: PivotViewComponent) => pivotObj = d } dataSourceSettings={dataSourceSettings} width={'100%'} height={350} showFieldList={true} gridSettings={{ columnWidth: 140 }} allowExcelExport={true} allowConditionalFormatting={true} allowNumberFormatting={true} allowPdfExport={true} showToolbar={true} allowCalculatedField={true} displayOption={{ view: 'Both' }} toolbar={toolbarOptions} newReport={newReport.bind(this)} renameReport={renameReport.bind(this)} removeReport={removeReport.bind(this)} loadReport={loadReport.bind(this)} fetchReport={fetchReport.bind(this)} saveReport={saveReport.bind(this)}><Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]} /></PivotViewComponent>);

@@ -59,7 +59,7 @@ function App() {
             }
         });
         if (args.report) {
-            pivotObj.dataSource = JSON.parse(args.report).dataSource;
+            pivotObj.dataSourceSettings = JSON.parse(args.report).dataSourceSettings;
         }
     }
     function removeReport(args: RemoveReportArgs): void {
@@ -87,7 +87,7 @@ function App() {
         }
     }
     function newReport(): void {
-        pivotObj.setProperties({ dataSource: { columns: [], rows: [], values: [], filters: [] } }, false);
+        pivotObj.setProperties({ dataSourceSettings: { columns: [], rows: [], values: [], filters: [] } }, false);
     }
     function beforeExport(args: BeforeExportEventArgs): void {
             args.excelExportProperties = {

@@ -14,7 +14,7 @@ export let data = [
 ];
 
 function App() {
-    return <Chart3DComponent id='charts' style={{ textAlign: "center" }} primaryXAxis={{
+    return (<Chart3DComponent id='charts' style={{ textAlign: "center" }} primaryXAxis={{
         valueType: 'Category',
         labelRotation: -45,
         labelPlacement: 'BetweenTicks'
@@ -28,7 +28,7 @@ function App() {
             <Chart3DSeriesDirective dataSource={data} dataLabel={{ visible: true}} xName='x' name='Sales' yName='y' type='Column'>
             </Chart3DSeriesDirective>
         </Chart3DSeriesCollectionDirective>
-    </Chart3DComponent>;
+    </Chart3DComponent>);
 }
 ;
 export default App;
