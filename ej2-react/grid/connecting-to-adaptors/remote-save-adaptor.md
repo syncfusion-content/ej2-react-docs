@@ -21,7 +21,7 @@ To configure a server with Syncfusion React Grid, you need to follow the below s
 
 **1. Project Creation:**
 
-Open Visual Studio and create an React and ASP.NET Core project named **RemoteSaveAdaptor**. To create an React and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022) for detailed steps.
+Open Visual Studio to create a React and ASP.NET Core project named **RemoteSaveAdaptor**. To create a React and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022) for detailed steps.
 
 **2. Model Class Creation:**
 
