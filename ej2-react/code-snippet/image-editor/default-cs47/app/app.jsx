@@ -1,5 +1,3 @@
-
-{% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
@@ -11,24 +9,16 @@ export default class App extends React.Component {
     imgObj;
     dialogInstance;
     animationSettings = { effect: "None" };
-    imageEditorCreated() {
-        if (Browser.isDevice) {
-            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
-        }
-        else {
-            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
-        }
-    }
     contentTemplate = () => {
-        return (<ImageEditorComponent ref={(img) => { this.imgObj = img; }}></ImageEditorComponent>);
+        return (<ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px"></ImageEditorComponent>);
     };
     btnClick() {
         this.dialogInstance.show();
-        this.imgObj.open("https://ej2.syncfusion.com/react/demos/src/image-editor/images/default.png");
+        this.imgObj.open("https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png");
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <DialogComponent id="profile-dialog" isModal= {true} showCloseIcon={true} animationSettings={this.animationSettings} closeOnEscape={true} visible={false} width={"340px"} height={"420px"} ref={(dialogInstance) => { this.dialogInstance = dialogInstance; }} header="Edit Profile Image" content={this.contentTemplate.bind(this)} position={{ X: "center", Y: 100 }}></DialogComponent>
+            <DialogComponent id="profile-dialog" isModal= {true} showCloseIcon={true} animationSettings={this.animationSettings} closeOnEscape={true} visible={false} width={"340px"} height={"420px"} ref={(dialogInstance) => { this.dialogInstance = dialogInstance; }} content={this.contentTemplate.bind(this)} position={{ X: "center", Y: 100 }}></DialogComponent>
             <div>
                 <ButtonComponent cssClass='e-primary' content='Click' onClick={this.btnClick.bind(this)}/>
             </div>
@@ -36,4 +26,3 @@ export default class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

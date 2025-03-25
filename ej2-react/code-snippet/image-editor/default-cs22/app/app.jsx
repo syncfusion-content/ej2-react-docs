@@ -1,4 +1,3 @@
-{% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
@@ -15,7 +14,7 @@ export default class App extends React.Component {
             this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
-    btnClick() {
+    multilineText() {
         let dimension = this.imgObj.getImageDimension();
         this.imgObj.drawText(dimension.x, dimension.y,'Enter\nText');
     }
@@ -24,10 +23,9 @@ export default class App extends React.Component {
             <ImageEditorComponent ref={(img) => { this.imgObj = img; }} created={this.imageEditorCreated.bind(this)} toolbar = {[]}>
             </ImageEditorComponent>
                 <div>
-                    <ButtonComponent cssClass='e-primary' content='Click' onClick={this.btnClick.bind(this)}/>
+                    <ButtonComponent cssClass='e-primary' content='Multiline Text' onClick={this.multilineText.bind(this)}/>
                 </div>
             </div>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

@@ -167,6 +167,33 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
+### Steps to Load PDF Viewer with Local Resources
+
+To configure the PDF Viewer to use local files for `documentPath` and `resourceUrl` instead of files hosted on a CDN, follow these steps:
+
+**Step 1:** Ensure that your application includes the `ej2-pdfviewer-lib` folder. This folder must contain the `pdfium.js`, `pdfium.wasm` files, and the PDF file that you intend to display. These should be located in the `assets` directory within your project's `public` folder.
+
+**Step 2:** Assign local file paths to the `documentPath` and `resourceUrl` properties within the PDF Viewer setup. The `documentPath` should refer to your PDF file, while the `resourceUrl` should point to the directory containing the supporting resources.
+
+By following these steps, you will configure your PDF Viewer to load the required resources locally. See the code snippet below for reference.
+
+{% tabs %}
+{% highlight js tabtitle="JSX" %}
+{% raw %} 
+
+<PdfViewerComponent 
+    id="container" 
+    documentPath= {window.location.origin + "/assets/pdfsuccinctly.pdf"} 
+    resourceUrl = {window.location.origin + "/assets/ej2-pdfviewer-lib"} 
+    style={{ 'height': '640px' }}>
+</PdfViewerComponent>
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+View the sample in GitHub to [load PDF Viewer with local resources](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
+
 ## Run the application
 
 Use the following command to run the application in browser with the port number `localhost:8080`.

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Events
+# Events
 
 Diagram provides some events support for connectors that triggers when interacting with the connector.
 
@@ -30,7 +30,7 @@ Triggers when the connector is clicked. The following code example explains how 
 ## Selection change event
 
 When selecting/unselecting the connector, the selection change event will be triggered.
-The following code example explains how to get the [`selection change`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSelectionChangeEventArgs/) event in the diagram.
+The following code example explains how to get the [`selection change`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selectionchange) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -43,7 +43,7 @@ The following code example explains how to get the [`selection change`](https://
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5SelectionChangeEvent-cs1" %}
 
- You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSelectionChangeEventArgs/) to true, as shown in the code snippet below.
+ You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iselectionchangeeventargs/) to true, as shown in the code snippet below.
 
 ```js
   selectionChange= {  (args) => {

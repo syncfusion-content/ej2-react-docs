@@ -24,7 +24,7 @@ function App() {
                           <RibbonCollectionsDirective>
                               <RibbonCollectionDirective>
                                   <RibbonItemsDirective>
-                                      <RibbonItemDirective type="GroupButton" allowedSizes={RibbonItemSize.Medium} groupButtonSettings={ groupButtonItem }>
+                                      <RibbonItemDirective type="GroupButton" allowedSizes={RibbonItemSize.Small} groupButtonSettings={ groupButtonItem }>
                                       </RibbonItemDirective>
                                   </RibbonItemsDirective>
                               </RibbonCollectionDirective>

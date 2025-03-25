@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
@@ -16,23 +13,18 @@ function App() {
             imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
-
-    function btnClick(): void {
+    function clearImage(): void {
         imgObj.clearImage();
     }
 
     return (
         <div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} >
-            </ImageEditorComponent>
+            <ImageEditorComponent ref={(img) => { imgObj = img }} created={imageEditorCreated} ></ImageEditorComponent>
             <div>
-                <ButtonComponent cssClass='e-primary' content='Clear Image' onClick={btnClick} />
+                <ButtonComponent cssClass='e-primary' content='Clear Image' onClick={clearImage} />
             </div>
         </div>
     );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-
-
-{% endraw %}

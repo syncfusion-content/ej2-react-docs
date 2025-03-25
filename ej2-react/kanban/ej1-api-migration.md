@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Kanban component
 
-This article describes the API migration process of Kanban component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Kanban component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Columns
 
 {% raw %}
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property** : *columns*</br></br> `<EJ.Kanban><columns>`</br>`</columns></EJ.Kanban>` | **Property** : *columns*</br></br>`<KanbanComponent><ColumnsDirective>`</br>`</ColumnsDirective></KanbanComponent>`</br> |
 | Header Text | **Property** : *headerText* </br> </br> `<EJ.Kanban><columns>` </br>`<column headerText="Backlog">`</br>`</column>`</br>`</columns></EJ.Kanban>` | **Property** : *headerText* </br></br>`<KanbanComponent>`</br>`<ColumnsDirective>`</br>`<ColumnDirective`</br>`headerText="Backlog"/>`</br>`</ColumnsDirective>`</br>`</KanbanComponent>`</br> |
@@ -40,7 +40,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Cards
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Card unique field | **Property** : </br>*fields.primaryKey*</br></br>`<EJ.Kanban`</br>`fields-primaryKey="Id">`</br>`</EJ.Kanban>` | **Property** : </br>*cardSettings.headerField*</br>`<KanbanComponent`</br>`cardSettings={{`</br>`headerField: "Id"}}>`</br>`</KanbanComponent>`</br> |
 | Content | **Property:** </br>*fields.content* </br></br>`<EJ.Kanban`</br>`fields-content`</br>`="Summary">`</br>`</EJ.Kanban>` | **Property** : </br>*cardSettings.contentField*</br>`<KanbanComponent`</br>`cardSettings={{`</br>`contentField: 'Summary'>`</br>`</KanbanComponent>`</br> |
@@ -64,7 +64,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## DataSource
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Card unique field | **Property** : </br>*fields.primaryKey*</br></br>`<EJ.Kanban`</br>`fields-primaryKey="Id">`</br>`</EJ.Kanban>` | **Property** : </br>*cardSettings.headerField*</br>`<KanbanComponent`</br>`cardSettings={{`</br>`headerField: "Id"}}>`</br>`</KanbanComponent>`</br> |
 | DataSource | **Property**: *dataSource* </br></br>`<EJ.Kanban`</br>`dataSource={window.kanbanData}>`</br>`</EJ.Kanban>`</br> **Method**: </br>*dataSource(datasource)*</br>`<EJ.Kanban>`</br>`</EJ.Kanban>`</br>var kanbanObj =</br> $(".e-kanban").</br>ejKanban("instance");</br>kanbanObj.</br>dataSource</br>(newDataSource);</br></br> | **Property**: *dataSource* </br></br>`<KanbanComponent`</br>`dataSource={this.data}>`</br>`</KanbanComponent>`</br>**Method**: </br>*dataSource(datasource)*</br></br>`<KanbanComponent`</br>`ref={ kanban =>`</br>`this.kanbanInstance`</br>`= kanban}>`</br>`</KanbanComponent>`</br>this.kanbanInstance</br>.dataSource(newDataSource);</br> |
@@ -73,7 +73,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Common
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Drag And Drop | **Property**: *allowDragAndDrop*</br></br>`<EJ.Kanban`</br>`allowDragAndDrop={true}>`</br>`</EJ.Kanban>` | **Property**: *allowDragAndDrop*</br></br>`<KanbanComponent`</br>`allowDragAndDrop={true}>`</br>`</KanbanComponent>`</br> |
 | Key Field | **Property**: *keyField*</br></br>`<EJ.Kanban`</br>`keyField="Status">`</br>`</EJ.Kanban>` | **Property** : *keyField*</br></br>`<KanbanComponent`</br>`keyField="Status">`</br>`</KanbanComponent>`</br> |
@@ -98,7 +98,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Swimlane
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: *swimlaneKey*</br></br>`<EJ.Kanban`</br>`fields-swimlaneKey="Assignee">`</br>`</EJ.Kanban>` | **Property**: *keyField*</br></br>`<KanbanComponent`</br>`swimlaneSettings={{`</br>`keyField: "Assignee" }} >`</br>`</KanbanComponent>`</br> |
 | Header | **Property**: *headers*</br></br>`<EJ.Kanban`</br>`headers={headers}>`</br>`</EJ.Kanban>`</br>`var headers =` </br>`[{ </br>text: "Andrew",`</br>`key: "Andrew Fuller"}];`</br> } </br>} | **Property**: *textField*</br></br>`<KanbanComponent`</br>`swimlaneSettings={{`</br>`textField: "AssigneeName" }} >`</br>`</KanbanComponent>`</br> |
@@ -114,14 +114,14 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Stacked Headers
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Multiple stacked headers | **Property**: *stackedHeaderColumns*</br></br>`<EJ.Kanban`</br>`stackedHeaderRows={stackedHeaderRow}>`</br>`</EJ.Kanban>`</br>var stackedHeaderRow = </br>[{ stackedHeaderColumns: [{ </br> headerText: "Status",</br>column: "Backlog,</br>In Progress, Testing, </br>Done"}] },</br> { stackedHeaderColumns: [{</br> headerText: "Unresolved",</br>column: "Backlog,</br>In Progress"}]}]}}; | **Not Applicable** |
 | Single Stacked Header | **Property**: *stackedHeaderColumns*</br></br>`<EJ.Kanban`</br>`stackedHeaderRows={stackedHeaderRow}>`</br>`</EJ.Kanban>`</br>var stackedHeaderRow = </br>[{ stackedHeaderColumns: [{ </br> headerText: "Status",</br>column: "Backlog,</br>In Progress, Testing, </br>Done"}] },</br> { stackedHeaderColumns: [{</br>headerText: "Unresolved",</br>column: "Backlog,</br>In Progress"}]}]}}; | **Property**: </br>*stackedHeaders*</br>`<KanbanComponent>`</br>`<StackedHeadersDirective>`</br>`<StackedHeaderDirective`</br>`text='To Do'`</br>`keyFields='Open,`</br>`InProgress'>`</br>`</StackedHeaderDirective>`</br>`</KanbanComponent>`</br> |
 
 ## WIP Validation
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Constraints Type | **Property:** </br>*constraints.type*</br></br>`<EJ.Kanban>`</br>`<columns>`</br>`<column`</br>`headerText="Backlog"`</br>`key="Open"`</br>`constraints-type`</br>`="swimlane" />`</br>`</EJ.Kanban>` | **Property**: </br>*constraintType*</br></br>`<KanbanComponent`</br>`constraintType="swimlane">`</br>`</KanbanComponent>`</br> |
 | Maximum card Count</br>at particular</br>column/swimlane | **Property**: </br>*constraints.max*</br></br>`<EJ.Kanban>`</br>`<columns>`</br>`<column`</br>`headerText="Backlog"`</br>`key="Open"`</br>`constraints-type`</br>`="swimlane"`</br> `constraints-max`</br>`="5" />`</br>`</columns></EJ.Kanban>` | **Property**: </br>*maxCount*</br></br>`<KanbanComponent>`</br>`<ColumnsDirective>`</br>`<ColumnDirective`</br>`headerText='Backlog`</br>`keyField='Open'`</br>`maxCount='5'/>`</br>`</ColumnsDirective>`</br>`</KanbanComponent>`</br> |
@@ -129,21 +129,21 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Keyboard
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | KeyBoard | **Property**: </br>*allowKeyboardNavigation*</br></br>`<EJ.Kanban`</br>`allowKeyboardNavigation={true}>`</br>`</EJ.Kanban>` | **Property**: *allowDragAndDrop*</br></br>`<KanbanComponent`</br>`allowKeyboard={true}>`</br>`</KanbanComponent>`</br> |
 | Settings | **Property**: </br>*keySettings*</br></br>`<EJ.Kanban`</br>`keySettings={keySettings}>`</br>`</EJ.Kanban>`</br>var keySettings = {</br> focus: "e",</br> insertCard: "45"</br>} | **Not Applicable** |
 
 ## Toggle Columns
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: </br>*allowToggleColumn*</br></br>`<EJ.Kanban`</br>`allowToggleColumn={true}>`</br>`</EJ.Kanban>` | **Property**: </br>*allowToggle*</br></br>`<KanbanComponent>`</br>`<ColumnsDirective>`</br>`<ColumnDirective`</br>`allowToggle={true}`</br>`/>`</br>`</ColumnsDirective>`</br>`</KanbanComponent>`</br> |
 | Toggle | **Method**: *toggleColumn</br>(headerText or $div)*</br></br>`<EJ.Kanban>`</br>`</EJ.Kanban>`</br>var kanbanObj =</br> $(".e-kanban").</br>ejKanban("instance");</br>kanbanObj.</br>toggleColumn</br>("Backlog"); |**Not Applicable** |
 
 ## Dialog Editing
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Fields | **Property**: *editItems*</br></br>`<EJ.Kanban`</br>`editSettings-editItems`</br>`={editItems}>`</br>`</EJ.Kanban>`</br>var editItems = []</br> | **Property**: *fields*</br></br>`<KanbanComponent`</br>`dialogSettings={{`</br>`fields: this.fields`</br>`}}>`</br>`</KanbanComponent>`</br>private fields:</br>DialogFieldsModel[] = [] |
 | Dialog Model | **Not Available** | **Property**: *model*</br></br>`<KanbanComponent`</br>`dialogSettings={{`</br>`model: {model}`</br>`}}>`</br>`</KanbanComponent>`</br>private model:</br>DialogModel[] = { width: 250 } |
@@ -169,7 +169,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Dialog Editing Fields
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Fields | **Property**: </br>*editItems*</br></br>`<EJ.Kanban`</br>`editSettings-editItems`</br>`={editItems}>`</br>`</EJ.Kanban>`</br>var editItems = []</br> | **Property**: *fields*</br></br>`<KanbanComponent`</br>`dialogSettings={{`</br>`fields: this.fields`</br>`}}>`</br>`</KanbanComponent>`</br>private fields:</br>DialogFieldsModel[] = [] |
 | Mapping key | **Property**: *field*</br></br>`<EJ.Kanban`</br>`editSettings-editItems`</br>`={editItems}>`</br>`</EJ.Kanban>`</br>var editItems = [{ </br>field: "Id"}]</br> | **Property**: *key*</br></br>`<KanbanComponent`</br>`dialogSettings={{`</br>`fields: this.fields`</br>`}}>`</br>`</KanbanComponent>`</br>private fields:</br>DialogFieldsModel[] = [{ </br>key: "Id"}] |
@@ -181,14 +181,14 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Tooltip
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: </br>*tooltipSettings.enable*</br></br>`<EJ.Kanban`</br>`tooltipSettings-enable={true}`</br>`>`</br>`</EJ.Kanban>` | **Property**:</br>*enableTooltip*</br></br>`<KanbanComponent`</br>`enableTooltip=`</br>`{true}>`</br>`</KanbanComponent>` |
 | Template | **Property:** </br>*tooltipSettings.template*</br></br>`<EJ.Kanban`</br>`tooltipSettings-template=#tooltipTemplate`</br>`>`</br>`</EJ.Kanban>` | **Property**: *tooltipTemplate*</br></br>`<KanbanComponent`</br>`tooltipTemplate=`</br>`{this.template.bind(this)}>`</br>`</KanbanComponent>` |
 
 ## Context Menu
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: *enable*</br></br>`<EJ.Kanban`</br>`contextMenuSettings-enable={true}`</br>`>`</br>`</EJ.Kanban>` | **Not Applicable** |
 | Menu Items | **Property**: *menuItems*</br></br>`<EJ.Kanban`</br>`contextMenuSettings-enable={true}`</br>`contextMenuSettings-menuItems`</br>`={menuItem}>`</br>`</EJ.Kanban>`</br>var menuItem = ["Move Right"]; | **Not Applicable** |
@@ -199,7 +199,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## WorkFlows
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: *workFlows*</br></br>`<EJ.Kanban`</br>`workflows={workflow}/>`</br>`</EJ.Kanban>`</br>var workflow =[] | **Not Applicable** |
 | Key | **Property**: *key*</br></br>`<EJ.Kanban`</br>`workflows={workflow}/>`</br>`</EJ.Kanban>`</br>var workflow =[{</br>key: "Order"}] | **Not Applicable** |
@@ -207,7 +207,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Filtering
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: *filterSettings*</br></br>`<EJ.Kanban`</br>`filterSettings={filter}/>`</br>`</EJ.Kanban>`</br>var filter = [] | **Not Applicable** |
 | Enable | **Property**: *allowFiltering*</br></br>`<EJ.Kanban`</br>`allowFiltering={true}/>`</br>`</EJ.Kanban>`</br> | **Not Applicable** |
@@ -219,7 +219,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Searching
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: </br>*searchSettings*</br></br>`<EJ.Kanban`</br>`searchSettings={searchSettings}/>`</br>`</EJ.Kanban>`</br>var searchSettings = [] | **Not Applicable** |
 | Enable | **Property**: </br>*allowSearching*</br></br>`<EJ.Kanban`</br>`allowSearching={true}/>`</br>`</EJ.Kanban>`</br> | **Not Applicable** |
@@ -232,14 +232,14 @@ This article describes the API migration process of Kanban component from Essent
 
 ## External Drag And Drop
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: </br>*allowExternalDragAndDrop*</br></br>`<EJ.Kanban`</br>`allowExternalDragAndDrop={true}/>`</br>`</EJ.Kanban>`</br> | **Not Applicable** |
 | Target | **Property**: </br>*externalDropTarget*</br></br>`<EJ.Kanban`</br> `cardSettings-externalDropTarget`</br>`="#DroppedKanban">`</br>`</EJ.Kanban>`</br> | **Not Applicable** |
 
 ## Scrolling
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: *allowScrolling*</br></br>`<EJ.Kanban`</br>`allowScrolling={true}/>`</br>`</EJ.Kanban>`</br> | **Not Applicable** |
 | height | **Property**: *height*</br></br>`<EJ.Kanban`</br>`allowScrolling={true}`</br>`scrollSettings={scrollSetting}/>`</br>`</EJ.Kanban>`</br>var scrollSetting={ </br>height: 400 } </br> | **Property**: *height*</br></br>`<KanbanComponent`</br>`height="400">`</br>`</KanbanComponent>`</br> |
@@ -249,7 +249,7 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Card Selection and Hover
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Enable | **Property**: *allowSelection*</br></br>`<EJ.Kanban`</br>`allowSelection={true}/>`</br>`</EJ.Kanban>`</br> | **Property**: *cardSettings.</br>selectionType*</br></br>`<KanbanComponent`</br>`cardSettings={{`</br>`selectionType: "Single"`</br>`</KanbanComponent>`</br> |
 | Type | **Property**: *selectionType*</br></br>`<EJ.Kanban`</br>`selectionType="single"/>`</br>`</EJ.Kanban>`</br> | It is covered under </br>**selectionType** property. |
@@ -260,27 +260,27 @@ This article describes the API migration process of Kanban component from Essent
 
 ## Toolbar
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Custom Toolbar | **Property**: </br>*customToolbarItems.template*</br></br>`<EJ.Kanban`</br>`customToolbarItems-template="#Delete"/>`</br>`</EJ.Kanban>`</br> | **Not Applicable** |
 | Triggers toolbar</br>item click | **Event**: *toolbarClick*</br></br>`<EJ.Kanban`</br>`toolbarClick={toolbarClick}>`</br>`</EJ.Kanban>`</br>function toolbarClick(args){}</br> | **Not Applicable** |
 
 ## Responsive
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Default | **Property**: *isResponsive*</br></br>`<EJ.Kanban`</br>`isResponsive={true}/>`</br>`</EJ.Kanban>`</br> | **Not Applicable** |
 | Minimum width | **Property**: *minWidth*</br></br>`<EJ.Kanban`</br>`isResponsive={true}`</br>`minWidth='400'/>`</br>`</EJ.Kanban>`</br> | **Not Applicable** |
 
 ## State Persistence
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Persistence | **Not Applicable** | **Property**:</br>*enablePersistence*</br></br>`<KanbanComponent`</br>`enablePersistence={true}`</br>`</KanbanComponent>`</br> |
 
 ## Right to Left - RTL
 
-| **Behavior** | **API in Essential JS 1** | **API in Essential JS 2** |
+| **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | default | **Property**: *enableRTL*</br></br>`<EJ.Kanban`</br>`enableRTL={true}/>`</br>`</EJ.Kanban>`</br> |**Property**: *enableRtl*</br></br>`<KanbanComponent`</br>`enableRtl={true}`</br>`</KanbanComponent>`</br> |
 

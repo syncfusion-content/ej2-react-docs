@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser, getComponent } from '@syncfusion/ej2-base';
@@ -18,8 +15,7 @@ function App() {
         }
     }
     function getBlob(): void {
-        const imageEditor: any = getComponent(document.getElementById('image-editor'), 'image-editor');
-        let imageData = imageEditor.getImageData();
+        let imageData = imgObj.getImageData();
         let canvas = document.createElement('canvas');
         let ctx: any = canvas.getContext('2d');
         canvas.width = imageData.width;
@@ -47,6 +43,3 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-
-
-{% endraw %}

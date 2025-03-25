@@ -90,11 +90,6 @@ canvas#img-canvas {
     font-size: 18px !important;
 }
 
-#profile-dialog .e-dlg-content div {
-    height: 100%;
-    width: 100%;
-}
-
 .control-section.e-img-editor-profile {
     min-height: 350px !important;
 }

@@ -28,7 +28,7 @@ In the following example, the `allowMultiSelection` property is enabled.
 {% include code-snippet/tree-view/basic-cs10/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="index.html" %}
-{% include code-snippet/tree-view/basic-cs10/index.hmtl %}
+{% include code-snippet/tree-view/basic-cs10/index.html %}
 {% endhighlight %}
 {% highlight ts tabtitle="style.css" %}
 {% include code-snippet/tree-view/basic-cs10/style.css %}

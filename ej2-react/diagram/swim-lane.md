@@ -30,6 +30,8 @@ The following code example illustrates how to define a swimlane object.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Swimlaneheader-cs1" %}
+ 
+N> When setting a Swimlane's ID, ensure that it does not contain white spaces, does not start with numbers or special characters, and does not include special characters like underscores (_) or spaces.
 
 ## Headers
 

@@ -34,6 +34,7 @@ System.config({
         "@syncfusion/ej2-image-editor": "syncfusion:ej2-image-editor/dist/ej2-image-editor.umd.min.js",
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-image-editor": "syncfusion:ej2-react-image-editor/dist/ej2-react-image-editor.umd.min.js",
+        "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@15.5.4/dist/react-dom.min.js",
         "react": "https://unpkg.com/react@15.5.4/dist/react.min.js",
 

@@ -13,7 +13,7 @@ function App(){
           adaptor: new WebApiAdaptor(),
           crossDomain: true
       });
-  let query:Query = new Query().select(['FirstName', 'EmployeeID']).take(7);
+  let query:Query = new Query().select(['FirstName', 'EmployeeID']).take(7).requiresCount();
   let fields:Object = { text: 'FirstName', value: 'EmployeeID' };
 
     return (

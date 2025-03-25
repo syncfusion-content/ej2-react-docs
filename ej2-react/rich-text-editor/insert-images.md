@@ -326,7 +326,7 @@ You can prevent drag-and-drop action by setting the actionBegin argument cancel 
 
 ## Customizing the Image Quick Toolbar
 
-The Rich Text Editor allows you to customize the image quick toolbar, providing Essential<sup style="font-size:70%">&reg;</sup> tools such as 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText', and 'Dimension'.
+The Rich Text Editor allows you to customize the image quick toolbar, providing essential tools such as 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText', and 'Dimension'.
 
 By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you can enhance the editor's functionality, enabling seamless image management and editing directly within your content. This customization ensures a user-friendly experience for efficiently manipulating image elements.
 

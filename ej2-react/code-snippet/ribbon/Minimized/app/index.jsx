@@ -8,9 +8,9 @@ function App() {
     const pasteOptions = [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }];
     const tableOptions = [{ text: "Insert Table" }, { text: "This device" }, { text: "Convert Table" }, { text: "Excel SpreadSheet" }];
     return (
-        <RibbonComponent id="ribbon">
+        <RibbonComponent id="ribbon" isMinimized='true'>
             <RibbonTabsDirective>
-                <RibbonTabDirective header="Home" isMinimized='true'>
+                <RibbonTabDirective header="Home">
                     <RibbonGroupsDirective>
                         <RibbonGroupDirective header="Clipboard">
                             <RibbonCollectionsDirective>

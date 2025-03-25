@@ -1,0 +1,31 @@
+/* Represents the styles for loader */
+#loader {
+    color: #008cff;
+    font-family: 'Helvetica Neue', 'calibiri';
+    font-size: 14px;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+/* Represents the styles for the custom class added */
+.speechText-container {
+    margin: 50px auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speechText-container .e-speech-to-text.customClass {
+    background-color: #ff6347;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.speechText-container .e-speech-to-text.customClass:hover,
+.speechText-container .e-speech-to-text.customClass:focus {
+    background-color: #ff4500;
+}

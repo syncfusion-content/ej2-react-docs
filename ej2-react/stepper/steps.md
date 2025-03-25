@@ -90,6 +90,24 @@ You can use the `disabled` property to disable a step, preventing user interacti
 
 {% previewsample "page.domainurl/code-snippet/stepper/steps/disabled" %}
 
+## Setting readonly
+
+You can use [readOnly](https://ej2.syncfusion.com/react/documentation/api/stepper#readonly) property to disable the user interactions in the stepper.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/stepper/steps/readonly/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/stepper/steps/readonly/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/stepper/steps/readonly/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/stepper/steps/readonly" %}
+
 ## Setting active step
 
 You can set the active step by specifying its index using the [activeStep](https://ej2.syncfusion.com/react/documentation/api/stepper#activestep) property. The default value is `0`.

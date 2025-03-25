@@ -1,4 +1,3 @@
-{% raw %}
 import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser, isNullOrUndefined } from '@syncfusion/ej2-base';
@@ -16,7 +15,7 @@ export default class App extends React.Component {
             this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
         }
     }
-    saveImage(args) {
+    saveImage() {
         let imageData = this.imgObj.getImageData();
         const canvas = document.createElement('canvas');
         canvas.width = imageData.width;
@@ -27,13 +26,11 @@ export default class App extends React.Component {
     }
     render() {
         return (<div className='e-img-editor-sample'>
-            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)}>
-            </ImageEditorComponent>
-                    <div>
-                        <ButtonComponent cssClass='e-primary' content='Save Image' onClick={this.saveImage.bind(this)}/>
-                    </div>
-                </div>);
+            <ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" created={this.imageEditorCreated.bind(this)}></ImageEditorComponent>
+            <div>
+                <ButtonComponent cssClass='e-primary' content='Save as Base64' onClick={this.saveImage.bind(this)} />
+            </div>
+        </div>);
     }
 }
 ReactDOM.render(<App />, document.getElementById('image-editor'));
-{% endraw %}

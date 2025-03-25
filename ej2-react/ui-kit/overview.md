@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview: Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React
+# Overview: Essential UI Kit for React
 
-The Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React comprises over 160 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML, CSS, TypeScript, and Syncfusion<sup style="font-size:70%">&reg;</sup> React components, delivering robust functionality and ease of use. They are compatible with both Tailwind and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
+The Essential UI Kit for React comprises over 160 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML, CSS, TypeScript, and Syncfusion React components, delivering robust functionality and ease of use. They are compatible with both Tailwind and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
 
 <table>
   <tr>
@@ -78,7 +78,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React comprises o
 > These provide pre-designed blocks for the quick implementation of web applications. However, customization and the integration of business logic must be handled on your end to meet your specific requirements.
 
 ## Supported React Versions
-The blocks designed and showcased are built using React 18, but you can use other versions of React as well, since they are primarily developed with HTML, CSS, and TypeScript to facilitate building your web applications. Additionally, for using Syncfusion<sup style="font-size:70%">&reg;</sup> React components, the compatible React and Syncfusion<sup style="font-size:70%">&reg;</sup> versions are outlined in this [link](https://ej2.syncfusion.com/react/documentation/system-requirement#react-supported-versions) for your reference.
+The blocks designed and showcased are built using React 18, but you can use other versions of React as well, since they are primarily developed with HTML, CSS, and TypeScript to facilitate building your web applications. Additionally, for using Syncfusion React components, the compatible React and Syncfusion versions are outlined in this [link](https://ej2.syncfusion.com/react/documentation/system-requirement#react-supported-versions) for your reference.
 
 ## Supported Browsers
 

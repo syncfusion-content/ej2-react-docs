@@ -14,7 +14,7 @@ export default class App extends React.Component<{}, {}> {
           adaptor: new WebApiAdaptor(),
           crossDomain: true
       });
-  private query:Query = new Query().select(['FirstName', 'EmployeeID']).take(7);
+  private query:Query = new Query().select(['FirstName', 'EmployeeID']).take(7).requiresCount();
   private fields:Object = { text: 'FirstName', value: 'EmployeeID' };
   
   public render() {

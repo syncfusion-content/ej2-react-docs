@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This article provides a step-by-step introduction to get started with the Syncfusion React Kanban component.
+This article provides a step-by-step introduction to get started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Kanban component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Dependencies
 
@@ -68,9 +68,9 @@ cd my-app
 npm start
 ```
 
-### Adding Syncfusion packages
+### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
-Once you have created the React application, install the required Syncfusion React component package in the application. All Syncfusion React (Essential JS 2) packages are published on the [npmjs](https://www.npmjs.com/~syncfusionorg) public registry.
+Once you have created the React application, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component package in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) packages are published on the [npmjs](https://www.npmjs.com/~syncfusionorg) public registry.
 
 To install the Kanban component package, use the following command.
 
@@ -84,11 +84,11 @@ or
 yarn add @syncfusion/ej2-react-kanban
 ```
 
-## Import the Syncfusion CSS styles
+## Import the Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-After installing the Syncfusion component packages in the application, import the required themes based on the components used.
+After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component packages in the application, import the required themes based on the components used.
 
-The Syncfusion React component comes with built-in [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion React components based on the application style by referring to any of the built-in themes. Import the `Material` theme for the Kanban component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React component comes with built-in [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components based on the application style by referring to any of the built-in themes. Import the `Material` theme for the Kanban component.
 
 Import the CSS styles for the Kanban component and its dependencies in the `src/App.css` file.
 
