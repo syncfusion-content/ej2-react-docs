@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Create React Remix App with Syncfusion<sup style="font-size:70%">&reg;</sup> Components
+# Getting Started with Create React Remix App with Syncfusion Components
 
-This document helps you to create a simple Remix application with React Framework and Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+This document helps you to create a simple Remix application with React Framework and Syncfusion React components.
 
 ## Prerequisites
 
-Before getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components with Remix project, check whether the following are installed in the developer machine.
+Before getting started with Syncfusion React Components with Remix project, check whether the following are installed in the developer machine.
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
+[System requirements for Syncfusion React UI components](../system-requirement)
 
 ## Benefits to using Remix
 
@@ -64,9 +64,9 @@ Then run the following command to jump into the project directory:
 cd quick-start
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Grid packages
+## Adding Syncfusion Grid packages
 
-All the available Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install React Grid component, use the following command
+All the available Syncfusion React packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install React Grid component, use the following command
 
 ```
 npm install @syncfusion/ej2-react-grids --save
@@ -76,7 +76,7 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Adding CSS reference
 
-Reference themes for Syncfusion<sup style="font-size:70%">&reg;</sup> components in the `~/app/routes/_index.tsx` as CSS reference.
+Reference themes for Syncfusion components in the `~/app/routes/_index.tsx` as CSS reference.
 
 ```ts
 import '@syncfusion/ej2-base/styles/material3.css';
@@ -93,7 +93,7 @@ import '@syncfusion/ej2-react-grids/styles/material3.css';
 
 ## Adding SSR configuration
 
-To use Syncfusion<sup style="font-size:70%">&reg;</sup> packages in Server-Side Rendering (SSR) with Vite, you'll need to update the `vite.config.ts` file. This ensures that the Syncfusion<sup style="font-size:70%">&reg;</sup> packages are properly transpiled to be compatible with the server environment.
+To use Syncfusion packages in Server-Side Rendering (SSR) with Vite, you'll need to update the `vite.config.ts` file. This ensures that the Syncfusion packages are properly transpiled to be compatible with the server environment.
 
 ```ts
 import { defineConfig } from "vite";
@@ -109,7 +109,7 @@ export default defineConfig({
 
 ## Adding React Grid component
 
-Now, you can add Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the Remix application. For getting started, add the React Grid component in `~/app/routes/_index.tsx` file using following code.
+Now, you can add Syncfusion React components in the Remix application. For getting started, add the React Grid component in `~/app/routes/_index.tsx` file using following code.
 
 {% tabs %}
 {% highlight ts tabtitle="~/app/routes/_index.tsx" %}

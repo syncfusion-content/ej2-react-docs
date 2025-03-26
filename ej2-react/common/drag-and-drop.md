@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Drag and drop is a feature of a user interface that allows users to select an item or items and then move them to a different location or onto another interface element by "dragging" the selected item(s) with a pointing device (such as a mouse) and then "dropping" them at the desired location.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components support drag and drop feature through two libraries. These are [Draggable](https://ej2.syncfusion.com/documentation/api/base/draggable) and [`Droppable`](https://ej2.syncfusion.com/documentation/api/base/droppable).
+Syncfusion React components support drag and drop feature through two libraries. These are [Draggable](https://ej2.syncfusion.com/documentation/api/base/draggable) and [`Droppable`](https://ej2.syncfusion.com/documentation/api/base/droppable).
 
 ## Draggable
 
@@ -34,7 +34,7 @@ The Syncfusion's [`Draggable`](https://ej2.syncfusion.com/documentation/api/base
 
 ### Clone draggable element
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to create a clone of a draggable element while the user is dragging it. It can be achieved by setting the [clone](https://ej2.syncfusion.com/documentation/api/base/draggable/#clone) property to `true`. Here's an example of how to create a clone of a draggable element.
+Syncfusion provides the option to create a clone of a draggable element while the user is dragging it. It can be achieved by setting the [clone](https://ej2.syncfusion.com/documentation/api/base/draggable/#clone) property to `true`. Here's an example of how to create a clone of a draggable element.
 
  {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

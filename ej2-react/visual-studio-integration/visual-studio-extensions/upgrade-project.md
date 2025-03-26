@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Upgrade Project
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React migration add-in for Visual Studio allows you to migrate an existing Syncfusion<sup style="font-size:70%">&reg;</sup> React application from one version of Essential Studio<sup style="font-size:70%">&reg;</sup> version to another version. This reduces the amount of manual work required when migrating the Syncfusion<sup style="font-size:70%">&reg;</sup> version.
+The Syncfusion React migration add-in for Visual Studio allows you to migrate an existing Syncfusion React application from one version of Essential Studio version to another version. This reduces the amount of manual work required when migrating the Syncfusion version.
 
-> The Syncfusion<sup style="font-size:70%">&reg;</sup> React Project migration are available from v17.3.0.9.
+> The Syncfusion React Project migration are available from v17.3.0.9.
 
-The steps below help you to upgrade the Syncfusion<sup style="font-size:70%">&reg;</sup> version in **Syncfusion React Application** through the **Visual Studio**:
+The steps below help you to upgrade the Syncfusion version in **Syncfusion React Application** through the **Visual Studio**:
 
-1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> React application which uses the Syncfusion<sup style="font-size:70%">&reg;</sup> component.
+1. Open the Syncfusion React application which uses the Syncfusion component.
 
 2. To open Migration Wizard, follow either one of the options below:
 
@@ -34,15 +34,15 @@ The steps below help you to upgrade the Syncfusion<sup style="font-size:70%">&re
 
     ![Context menu](images/migrate-context-menu.png)
 
-3. The Syncfusion<sup style="font-size:70%">&reg;</sup> Project Migration window will appear. You can choose the required version of Syncfusion<sup style="font-size:70%">&reg;</sup> React to migrate.
+3. The Syncfusion Project Migration window will appear. You can choose the required version of Syncfusion React to migrate.
 
-    > The Syncfusion<sup style="font-size:70%">&reg;</sup> React versions are loaded from published Syncfusion<sup style="font-size:70%">&reg;</sup> React NPM packages and it requires the internet connectivity.
+    > The Syncfusion React versions are loaded from published Syncfusion React NPM packages and it requires the internet connectivity.
 
     ![Migration Window](images/migration-window.PNG)
 
-    **Assets From:** Load the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 assets to React Project, from either NPM, CDN, or Installed Location.
+    **Assets From:** Load the Syncfusion Essential JS 2 assets to React Project, from either NPM, CDN, or Installed Location.
 
-    > Installed location option will be available only when the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 setup has been installed.
+    > Installed location option will be available only when the Syncfusion Essential JavaScript 2 setup has been installed.
 
 4. Check the **“Enable a backup before migrating** checkbox if you want to take the project backup and choose the location.
 
@@ -54,4 +54,4 @@ The steps below help you to upgrade the Syncfusion<sup style="font-size:70%">&re
 
     ![BackupLocation](images/BackupLocation.png)
 
-6. The Syncfusion<sup style="font-size:70%">&reg;</sup> React NPM packages, and CSS are updated to the selected version in the project.
+6. The Syncfusion React NPM packages, and CSS are updated to the selected version in the project.

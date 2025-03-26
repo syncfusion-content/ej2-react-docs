@@ -1,4 +1,5 @@
-import React, { Component, RefObject, createRef } from 'react';
+import { Component, RefObject, createRef } from 'react';
+import * as React from 'react';
 import { RichTextEditorComponent, Inject, Toolbar, HtmlEditor, Image, QuickToolbar, Link } from '@syncfusion/ej2-react-richtexteditor';
 
 interface AppState {

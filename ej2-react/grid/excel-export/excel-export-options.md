@@ -315,39 +315,6 @@ In the following example, the **CustomerID** is initially a hidden column in the
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-export-cs6" %}
 
-## Show or hide columns while exporting with stacked header
-
-The Syncfusion React Grid allows you to control the visibility of columns during export operations. This feature is particularly useful when customizing the data presented in exported files while using stacked headers.
-
-To implement the show or hide columns feature during Excel export in the Grid, follow these steps:
-
-1. Handle the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event of the Grid.
-
-2. Update the visibility of the desired columns by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/grid/column/#visible) property of the column to **true** or **false**.
-
-3. Export the Grid to Excel document using the [excelExport](https://ej2.syncfusion.com/react/documentation/api/grid/#excelexport) or [csvExport](https://ej2.syncfusion.com/react/documentation/api/grid/#csvexport)  method.
-
-4. Handle the [excelExportComplete](https://ej2.syncfusion.com/react/documentation/api/grid/#excelexportcomplete) event to restore the column visibility to its original state.
-
-In the following example, the **ShipName** is initially a hidden column in the Grid. However, during the Excel export process, the **ShipName** column is made visible, while the **OrderDate** column is hidden:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/excel-export-show-hide/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/excel-export-show-hide/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/excel-export-show-hide/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/excel-export-show-hide/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/excel-export-show-hide" %}
-
 ## Enable filtering in the exported excel file
 
 The Grid allows you to export data to Excel or CSV with filter options and also export only filtered records. This feature is especially beneficial when you need to share data with others while preserving the ability for them to filter and analyze the data in Excel or CSV.

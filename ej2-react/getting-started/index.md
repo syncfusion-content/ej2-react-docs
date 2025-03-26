@@ -10,8 +10,8 @@ domainurl: ##DomainURL##
 
 # Overview
 
-This document illustrates how to build and run a simple Syncfusion<sup style="font-size:70%">&reg;</sup> React UI control in web applications.
+This document illustrates how to build and run a simple Syncfusion React UI control in web applications.
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI component in Create React App CLI](./quick-start)
+* [Getting Started with Syncfusion React UI component in Create React App CLI](./quick-start)
 
 * [Getting Started with Webpack Externals in Create React App CLI](./webpack-externals)

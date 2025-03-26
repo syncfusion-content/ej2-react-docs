@@ -12,14 +12,14 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for React extensions for Visual Studio that allow you to use the Syncfusion<sup style="font-size:70%">&reg;</sup> component easier by creating Syncfusion<sup style="font-size:70%">&reg;</sup> React application in Visual Studio and option upgrading the Syncfusion<sup style="font-size:70%">&reg;</sup> version from the application.
+The Syncfusion Essential Studio for React extensions for Visual Studio that allow you to use the Syncfusion component easier by creating Syncfusion React application in Visual Studio and option upgrading the Syncfusion version from the application.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React provides the following supports in Visual Studio:
+The Syncfusion React provides the following supports in Visual Studio:
 
-1. [Project template](create-project): Creates the Syncfusion<sup style="font-size:70%">&reg;</sup> React application by adding the required Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+1. [Project template](create-project): Creates the Syncfusion React application by adding the required Syncfusion React components.
 
-2. [Convert project](convert-project): Converts an existing React application into a Syncfusion<sup style="font-size:70%">&reg;</sup> React application by adding the required Syncfusion<sup style="font-size:70%">&reg;</sup> NPM and resource files.
+2. [Convert project](convert-project): Converts an existing React application into a Syncfusion React application by adding the required Syncfusion NPM and resource files.
 
-3. [Migrate project](upgrade-project): Upgrades the existing Syncfusion<sup style="font-size:70%">&reg;</sup> React application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another version.
+3. [Migrate project](upgrade-project): Upgrades the existing Syncfusion React application from one Essential Studio version to another version.
 
-> In Visual Studio 2017, you can see the Syncfusion<sup style="font-size:70%">&reg;</sup> menu directly in the Visual Studio menu.
+> In Visual Studio 2017, you can see the Syncfusion menu directly in the Visual Studio menu.

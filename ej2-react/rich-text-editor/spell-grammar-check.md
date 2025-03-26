@@ -44,7 +44,7 @@ After installing the package, you can integrate WProofreader with the React Rich
 4. Set the `lang` property to specify the language of the text to be checked.
 5. Configure the activation key in the `serviceId` property.
 
-Below is an example code snippet to integrate WProofreader with the Syncfusion React Rich Text Editor:
+Below is an example code snippet to integrate WProofreader with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Rich Text Editor:
 
 `[Class-component]`
 
@@ -68,6 +68,6 @@ Below is an example code snippet to integrate WProofreader with the Syncfusion R
 {% endhighlight %}
 {% endtabs %}
 
-Below is a GIF demonstrating how to integrate WProofreader with the Syncfusion React Rich Text Editor
+Below is a GIF demonstrating how to integrate WProofreader with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Rich Text Editor
 
 ![WebSpellChecker](images/spell-grammar-check.gif)

@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State Persistence in Syncfusion<sup style="font-size:70%">&reg;</sup> React components
+# State Persistence in Syncfusion React components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components support persisting their state across page refreshes or navigation. To enable this feature, set the `enablePersistence` property to `true` for the desired component. This stores the component's state in the browser's `localStorage` object on the `unload` event of the page. For example, the `enablePersistence` property can be set for the Grid component, as shown in the following code snippet.
+Syncfusion React UI components support persisting their state across page refreshes or navigation. To enable this feature, set the `enablePersistence` property to `true` for the desired component. This stores the component's state in the browser's `localStorage` object on the `unload` event of the page. For example, the `enablePersistence` property can be set for the Grid component, as shown in the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="datasource.jsx" %}
@@ -31,7 +31,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components support per
 
 ## State Persistence supported components and properties
 
-The following table illustrates the list of Syncfusion<sup style="font-size:70%">&reg;</sup> React components that are supported with state persistence and the properties that are stored in the `localStorage`.
+The following table illustrates the list of Syncfusion React components that are supported with state persistence and the properties that are stored in the `localStorage`.
 
 <!-- markdownlint-disable MD033 -->
 

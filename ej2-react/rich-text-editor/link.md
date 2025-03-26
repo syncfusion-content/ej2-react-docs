@@ -111,7 +111,7 @@ The following example demonstrates how to customize the link quick toolbar using
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs45" %}
 
- ## Inserting a Related Link
+## Inserting a Related Link
 
 By default, the URL entered in the Web Address field is automatically converted into an absolute URL by prefixing it with https:// for hyperlinks. This ensures that the URL is properly formatted and accessible when used as a hyperlink.
 

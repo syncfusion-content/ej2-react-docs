@@ -1,5 +1,5 @@
 import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-base';
-import { Image, Inject, Link, MarkdownEditor, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import { Image, Inject, Link, MarkdownEditor, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
 import * as Marked from 'marked';
 
@@ -24,15 +24,8 @@ class App extends React.Component<{},{}> {
   public toolbarSettings: object = {
       items: this.items
   };
-  // set the value to Rich Text Editor
-  public template(): JSX.Element {
-    return(<div>
-    The sample is added to showcase **markdown editing**.
-  Type or edit the content and apply formatting to view markdown formatted content.
-  We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/).
-  The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.
-      </div>);
-  };
+    // set the value to Rich Text Editor
+    public value: string = " The sample is added to showcase **markdown editing**. Type or edit the content and apply formatting to view markdown formatted content. We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
 
     public markDownConversion(): void {
         if (this.mdsource.classList.contains('e-active')) {
@@ -82,8 +75,8 @@ class App extends React.Component<{},{}> {
     public render() {
         return (
           <RichTextEditorComponent id="markdownRTE" ref={(richtexteditor) => { this.rteObj = richtexteditor! }} editorMode='Markdown'
-              height='250px' valueTemplate={this.template} toolbarSettings={this.toolbarSettings} created={this.rendereComplete.bind(this)}>
-              <Inject services={[MarkdownEditor, Toolbar, Image, Link, QuickToolbar]} />
+              height='250px' value={this.value} toolbarSettings={this.toolbarSettings} created={this.rendereComplete.bind(this)}>
+              <Inject services={[MarkdownEditor, Toolbar, Image, Link]} />
               </RichTextEditorComponent>
         );
     }

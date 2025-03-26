@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Templates in Syncfusion React Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components are rendered with a pre-defined layout or structure that is used to define how the component should be rendered on the user interface. The user wants to customise the appearance of the component and add functionality that is specific to the needs of the application. Syncfusion<sup style="font-size:70%">&reg;</sup> React components have the option to achieve this using template support.
+Syncfusion React components are rendered with a pre-defined layout or structure that is used to define how the component should be rendered on the user interface. The user wants to customise the appearance of the component and add functionality that is specific to the needs of the application. Syncfusion React components have the option to achieve this using template support.
 
-The user can use the JavaScript function to add custom template content to the Syncfusion<sup style="font-size:70%">&reg;</sup> React components. The JavaScript function is the simplest way to define the React components. This function accepts a "props" object argument with data and returns a React element. Refer to the below code snippet to create the template content using JavaScript function.
+The user can use the JavaScript function to add custom template content to the Syncfusion React components. The JavaScript function is the simplest way to define the React components. This function accepts a "props" object argument with data and returns a React element. Refer to the below code snippet to create the template content using JavaScript function.
 
 ```
 function gridTemplate(props) {

@@ -62,9 +62,9 @@ npm start
 
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
 To install Image Editor component, use the following command.
 
