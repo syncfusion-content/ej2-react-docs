@@ -31,6 +31,8 @@ An annotation can be added to a node/connector by defining the annotation object
  
 N> When setting a Annotation's ID, ensure that it does not contain white spaces, does not start with numbers or special characters, and does not include special characters like underscores (_) or spaces.
 
+N> When setting a Annotation's ID, ensure that it does not contain white spaces, does not start with numbers or special characters, and does not include special characters like underscores (_) or spaces.
+
 ## Add annotations at runtime
 
 Annotations can be added at runtime by using the diagram method [`addLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addlabels). The following code illustrates how to add a annotation to a node.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Browser support
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 components are supported only in modern browsers. This includes the following versions.
+The Syncfusion Essential JS 2 components are supported only in modern browsers. This includes the following versions.
 
 |    Chrome    |    Firefox    |    Opera     |    Edge    |    IE      |    Safari    |    IOS    |    Android    |    Windows   Mobile    |
 |--------------|---------------|--------------|------------|------------|--------------|-----------|---------------|------------------------|
@@ -18,14 +18,14 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-s
 
 ## Required polyfills
 
-The following polyfills are required to run Essential<sup style="font-size:70%">&reg;</sup> JS 2 components in each browser.
+The following polyfills are required to run Essential JS 2 components in each browser.
 
 |    Browser                                             |    Polyfills      |
 |:--------------------------------------------------------:|:-------------------:|
 |    Chrome(latest), Firefox(latest), Opera(latest), Edge, Safari 9+    |    NONE           |
 |    IE 11                                               |    ES6 Promise    |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS 2 components are supported in IE 11 browser with ES6 Promise polyfill.
+The Syncfusion Essential JS 2 components are supported in IE 11 browser with ES6 Promise polyfill.
 
 ## Using CDN
 

@@ -204,39 +204,6 @@ Consider the following sample where the `ignoreAccent` property is set to true i
 
  {% previewsample "page.domainurl/code-snippet/grid/filter-diacritics-cs1" %}
 
-## Perform ENUM column filtering
-
-The Syncfusion React Grid allows you to filter enum-type data using the [filterTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/column/#filtertemplate) feature. This is particularly useful for filtering predefined values, such as categories or statuses.
-
-To achieve this functionality:
-
-1. Render [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) in the `filterTemplate` for the enum-type column.
-
-2. Bind the enumerated list data to the column.
-
-3. Use the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property in the **Type** column to display enum values in a readable format.
-
-4. In the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the **DropDownList**, dynamically filter the column using the [filterByColumn](https://ej2.syncfusion.com/react/documentation/api/grid#filterbycolumn) method of the Grid.
-
-Below is an example demonstrating how to filter enum-type data in a Grid:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/filtering-enum/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/filtering-enum/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/filtering-enum/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/filtering-enum/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/filtering-enum" %}
-
 ## Filtering with case sensitivity
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides the flexibility to enable or disable case sensitivity during filtering. This feature is useful when you want to control whether filtering operations should consider the case of characters. It can be achieved by using the  [enableCaseSensitivity](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings/#enablecasesensitivity) property within the [filterSettings](https://ej2.syncfusion.com/react/documentation/api/grid/filterSettings) of the grid.

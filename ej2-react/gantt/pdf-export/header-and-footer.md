@@ -158,3 +158,21 @@ The below code illustrates the pdf export customization.
         
 {% previewsample "page.domainurl/code-snippet/gantt/pdf-export-customization-cs1" %}
 
+## Disable footer 
+
+By default, the exported PDF file includes a footer. The footer can be disabled by setting the [enableFooter](https://helpej2.syncfusion.com/react/documentation/api/gantt/pdfExportProperties/#enableFooter) property to `false`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/pdf-export-cs5/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/pdf-export-cs5/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/pdf-export-cs5/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs5" %}
+

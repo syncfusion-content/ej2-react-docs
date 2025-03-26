@@ -10,7 +10,7 @@ class App extends React.Component<{},{}> {
 
     // set the value to Rich Text Editor
     private value: string = 'Hello [@Maria](mailto:maria@gmail.com)\n\nWelcome to the mention integration with markdown editor demo. Type @ character and tag user from the suggestion list.';
-    private placeholder: string = 'Enter your text here...';
+
     // Rich Text Editor items list
     private items: (string | IToolbarItems)[] = ['Bold', 'Italic', 'StrikeThrough', '|',
         'Formats', 'OrderedList', 'UnorderedList', 'SuperScript', 'SubScript', '|',
@@ -123,7 +123,7 @@ class App extends React.Component<{},{}> {
         <div className='control-section' id="rteMarkdown">
             <div className="content-wrapper">
                 <RichTextEditorComponent id="markdownRTE"
-                    ref={(richtexteditor) => { this.rteObj = richtexteditor }} editorMode='Markdown'
+                     ref={(richtexteditor) => { this.rteObj = richtexteditor }} editorMode='Markdown'
                     height='250px' value={this.value} formatter={this.formatter} toolbarSettings={this.toolbarSettings} created={this.rendereComplete} >
                     <Inject services={[MarkdownEditor, Toolbar, Image, Link, Table]} />
                 </RichTextEditorComponent>

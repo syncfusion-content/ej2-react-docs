@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Installing Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are published on [npm](https://www.npmjs.com/search?q=ej2-react&page=1&ranking=optimal).
+Syncfusion React packages are published on [npm](https://www.npmjs.com/search?q=ej2-react&page=1&ranking=optimal).
 You can install the necessary packages from npm’s install command. For example, grid package can be installed using the following command.
 
 ```
@@ -25,7 +25,7 @@ These packages offer JavaScript files in ES6, UMD module systems. Which can be u
 
 ## Using SystemJS
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> npm package provides the UMD bundle file for loading scripts via script loaders such as Require JS, System JS, etc. To find UMD files in package read topic [Anatomy of Package](deployment#anatomy-of-npm-packages).
+The Syncfusion npm package provides the UMD bundle file for loading scripts via script loaders such as Require JS, System JS, etc. To find UMD files in package read topic [Anatomy of Package](deployment#anatomy-of-npm-packages).
 
 ### Configuration Steps
 
@@ -33,7 +33,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> npm package provides the UM
 
 **Step 2:** Install your required npm packages.
 
-**Step 3:** Map the Syncfusion<sup style="font-size:70%">&reg;</sup> React packages in the `system.config.js` configuration
+**Step 3:** Map the Syncfusion React packages in the `system.config.js` configuration
 file as follows.
 
 ```js
@@ -79,7 +79,7 @@ System.import('app');
 
 **Step 4:** Adding component to the Application
 
-Now, you can start adding Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components in the application.
+Now, you can start adding Syncfusion React UI components in the application.
 For getting started, we have added a Button Module in `app.tsx` and `index.html` file
 using following code.
 
@@ -135,7 +135,7 @@ Now, add the Button in the `index.html` using following code
 
 **Step 5:** Adding CSS reference
 
-Individual component CSS files are available in the Syncfusion<sup style="font-size:70%">&reg;</sup> React package `styles` folder.
+Individual component CSS files are available in the Syncfusion React package `styles` folder.
 This can be referenced in your `material.css` using the following code.
 
 ```css

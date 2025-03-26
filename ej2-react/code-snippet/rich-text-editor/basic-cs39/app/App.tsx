@@ -1,11 +1,10 @@
-/**
- * Rich Text Editor - MarkdownEditor KeyConfig sample
- */
+
 import { Image, Inject, Link, MarkdownEditor, RichTextEditorComponent, Toolbar  } from '@syncfusion/ej2-react-richtexteditor';
-import React, { useEffect, useRef } from 'react';
+import * as React from 'react';
+import { useEffect, useRef } from 'react';
 
 function App() {
-  let rteObj: RichTextEditorComponent;
+  const rteObj = useRef<RichTextEditorComponent>(null);
 
   let toolbarSettings: object = {
     items: ['Bold', 'Italic', 'StrikeThrough', '|',
@@ -18,16 +17,17 @@ function App() {
   function componentDidMount() {
     document.addEventListener('keyup', docKeyUp.bind(this));
   }
+  
 
   function docKeyUp(e: any) {
     if (e.altKey && e.keyCode === 84) { /* t */
       // press alt+t to focus the component.
-      rteObj.focusIn();
+      rteObj.current.focusIn();
     }
   }
 
     return (
-      <RichTextEditorComponent ref={(richtexteditor) => { rteObj = richtexteditor }} height={450} toolbarSettings={toolbarSettings} value={value} editorMode={'Markdown'}>
+      <RichTextEditorComponent created={ componentDidMount }  ref={rteObj} toolbarSettings={toolbarSettings} value={value} editorMode={'Markdown'}>
         <Inject services={[Toolbar, Image, Link, MarkdownEditor]} />
       </RichTextEditorComponent>
     );

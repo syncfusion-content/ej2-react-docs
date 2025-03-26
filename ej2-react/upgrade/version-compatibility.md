@@ -8,21 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> React supported versions
+# Syncfusion React supported versions
 
 ## React version compatibility
 
-The following table represents the supported React versions by different Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components releases.
+The following table represents the supported React versions by different Syncfusion React UI components releases.
 
-| Version | Syncfusion<sup style="font-size:70%">&reg;</sup> React components version |
+| Version | Syncfusion React components version |
 | ------------- | ------------- |
 | [React v18.0](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |
 | [React v17.0](https://reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
 | [React v16.0](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above |
 
-## Syncfusion<sup style="font-size:70%">&reg;</sup> version information
+## Syncfusion version information
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion<sup style="font-size:70%">&reg;</sup> React components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
+Syncfusion follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion React components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
 
 For example, if the release package version is `22.1.34`, the version number can be interpreted as follows:
 
@@ -34,6 +34,6 @@ For example, if the release package version is `22.1.34`, the version number can
 
 ## See also
 
-* [Syncfusion<sup style="font-size:70%">&reg;</sup> product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
+* [Syncfusion product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 
 * [Upgrade guide](https://help.syncfusion.com/upgrade-guide/react-ui-components)

@@ -115,7 +115,7 @@ These modules should be injected into the `services` section as follows,
  ```ts
  import * as React from "react";
  import * as ReactDOM from "react-dom";
- import { LinearGaugeComponent, Annotations, GaugeTooltip} from '@syncfusion/ ej2-react-lineargauge';
+ import { LinearGaugeComponent, Annotations, GaugeTooltip, Inject } from '@syncfusion/ej2-react-lineargauge';
 
  export function App(){
     return(<LinearGaugeComponent>

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Basic Text Styling in React Rich Text Editor component
 
-The Rich Text Editor's basic styles feature provides essential formatting options, including bold, italic, underline, strikethrough, subscript, superscript, and case changes. These fundamental tools enable users to enhance and customize their text effortlessly. By leveraging these options, users can ensure their content is both visually appealing and well-structured.
+The Rich Text Editor's basic styles feature provides Essential<sup style="font-size:70%">&reg;</sup> formatting options, including bold, italic, underline, strikethrough, subscript, superscript, and case changes. These fundamental tools enable users to enhance and customize their text effortlessly. By leveraging these options, users can ensure their content is both visually appealing and well-structured.
 
 ## Available Text Styles
 

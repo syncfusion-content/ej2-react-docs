@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components (Essential<sup style="font-size:70%">&reg;</sup> JS 2)
+# Syncfusion React UI Components (Essential JS 2)
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential<sup style="font-size:70%">&reg;</sup> JS 2) library is a modern UI components library that has been built from the ground up to be lightweight, responsive, modular and touch friendly.
+Syncfusion React (Essential JS 2) library is a modern UI components library that has been built from the ground up to be lightweight, responsive, modular and touch friendly.
 
 ## Components list
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are listed below.
+The Syncfusion React UI components are listed below.
 
 <style>
 
@@ -206,11 +206,11 @@ ticket in our support site or ask your query in StackOverflow with tag `syncfusi
 
 * Don’t see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/react).
 
->Note: Syncfusion<sup style="font-size:70%">&reg;</sup> does not collect any kind of information when our components are used in customer applications.
+>Note: Syncfusion does not collect any kind of information when our components are used in customer applications.
 
 ## See also
 
 * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/)
+* [Getting Started with Syncfusion React UI Components](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/)
 * [Project Setup with Visual Studio Code](https://ej2.syncfusion.com/react/documentation/visual-studio-code-integration/create-project/)
 * [Project Setup with Visual Studio](https://ej2.syncfusion.com/react/documentation/visual-studio-integration/overview/)

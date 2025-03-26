@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Update Syncfusion<sup style="font-size:70%">&reg;</sup> npm Package
+# Update Syncfusion npm Package
 
-It is easy to upgrade your Syncfusion<sup style="font-size:70%">&reg;</sup> npm package to the latest version without uninstalling the packages. The Syncfusion<sup style="font-size:70%">&reg;</sup> packages can be updated with the help of [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) package.
+It is easy to upgrade your Syncfusion npm package to the latest version without uninstalling the packages. The Syncfusion packages can be updated with the help of [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) package.
 
-## Update all Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages
+## Update all Syncfusion npm packages
 
-Refer the below steps to upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages.
+Refer the below steps to upgrade Syncfusion npm packages.
 
 1. Install the `npm-check-update package` globally to use this as CLI.
 
@@ -22,7 +22,7 @@ Refer the below steps to upgrade Syncfusion<sup style="font-size:70%">&reg;</sup
     npm install -g npm-check-updates
     ```
 
-2. Run the below command to update npm packages. The below command will filters only Syncfusion<sup style="font-size:70%">&reg;</sup> packages and update it with latest version. This will update the package.json file with latest version of all `@syncfusion` packages.
+2. Run the below command to update npm packages. The below command will filters only Syncfusion packages and update it with latest version. This will update the package.json file with latest version of all `@syncfusion` packages.
 
     ```bash
     ncu -u -f /^@syncfusion/
@@ -37,7 +37,7 @@ Refer the below steps to upgrade Syncfusion<sup style="font-size:70%">&reg;</sup
 
 ## Updating a specific npm package
 
-If you want to upgrade only a specific Syncfusion<sup style="font-size:70%">&reg;</sup> npm package, run the following command.
+If you want to upgrade only a specific Syncfusion npm package, run the following command.
 
     ```bash
     npm update @syncfusion/ej2-grids

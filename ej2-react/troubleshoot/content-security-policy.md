@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It limits the sources from which content can be loaded on a web page.
 
-To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default. In order to use Syncfusion<sup style="font-size:70%">&reg;</sup> React components with strict CSP mode, it is Essential<sup style="font-size:70%">&reg;</sup> to include following directives in the CSP meta tag.
+To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default. In order to use Syncfusion React components with strict CSP mode, it is essential to include following directives in the CSP meta tag.
 
-* Syncfusion<sup style="font-size:70%">&reg;</sup> components are rendered with calculated **inline styles** and **base64** font icons, which are blocked on a strict CSP-enabled site. To allow them, add the [`style-src 'self' 'unsafe-inline';`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag as follows.
+* Syncfusion components are rendered with calculated **inline styles** and **base64** font icons, which are blocked on a strict CSP-enabled site. To allow them, add the [`style-src 'self' 'unsafe-inline';`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag as follows.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -26,9 +26,9 @@ To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs
 {% endhighlight %}
 {% endtabs %}
 
-* Syncfusion<sup style="font-size:70%">&reg;</sup> **material** and **tailwind** built-in themes contain a reference to the [`Roboto’s external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which is also blocked. To allow them, add the [`external font`](https://fonts.googleapis.com/css?family=Roboto:400,500) reference to the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the above meta tag.
+* Syncfusion **material** and **tailwind** built-in themes contain a reference to the [`Roboto’s external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which is also blocked. To allow them, add the [`external font`](https://fonts.googleapis.com/css?family=Roboto:400,500) reference to the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the above meta tag.
 
-The resultant meta tag is included within the `<head>` tag and resolves the CSP violation on the application's side when utilizing Syncfusion<sup style="font-size:70%">&reg;</sup> React components with material and tailwind themes.
+The resultant meta tag is included within the `<head>` tag and resolves the CSP violation on the application's side when utilizing Syncfusion React components with material and tailwind themes.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -43,7 +43,7 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-N> From the 2023 Vol2 - 22.1 release onwards, the Content Security Policy for Syncfusion<sup style="font-size:70%">&reg;</sup> React components has been enhanced. The usage of the `unsafe-eval` directive has been eliminated from the CSP meta tag.
+N> From the 2023 Vol2 - 22.1 release onwards, the Content Security Policy for Syncfusion React components has been enhanced. The usage of the `unsafe-eval` directive has been eliminated from the CSP meta tag.
 
 > [View the React sample enabled with strict CSP in Github](https://github.com/SyncfusionExamples/ej2-react-csp-example)
 

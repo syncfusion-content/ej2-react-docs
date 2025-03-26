@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with Localization
 
-Localization library allows you to localize the text content of the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components. This is useful if you want to display the UI in a language other than English.
+Localization library allows you to localize the text content of the Syncfusion React UI Components. This is useful if you want to display the UI in a language other than English.
 
 ## Loading translations
 
@@ -29,7 +29,7 @@ To load a translation object in your application, you can use the load function 
 
 ## Changing current locale
 
-The current locale can be changed for all the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components in your application by invoking `setCulture` function with your desired culture name.
+The current locale can be changed for all the Syncfusion React UI Components in your application by invoking `setCulture` function with your desired culture name.
 
 
 ```ts

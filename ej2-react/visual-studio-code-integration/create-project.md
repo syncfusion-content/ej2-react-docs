@@ -12,17 +12,17 @@ domainurl: ##DomainURL##
 
 ## Create project
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides **project templates** for **Visual Studio Code** to create Syncfusion<sup style="font-size:70%">&reg;</sup> Web applications. The Syncfusion<sup style="font-size:70%">&reg;</sup> Web Project template creates applications with the selected Framework (React, Angular, and Vue), required Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages, component render code for the Grid, Chart, and Scheduler components, and a style to make development with Syncfusion<sup style="font-size:70%">&reg;</sup> components easier.
+Syncfusion provides **project templates** for **Visual Studio Code** to create Syncfusion Web applications. The Syncfusion Web Project template creates applications with the selected Framework (React, Angular, and Vue), required Syncfusion NPM packages, component render code for the Grid, Chart, and Scheduler components, and a style to make development with Syncfusion components easier.
 
-   > The Syncfusion<sup style="font-size:70%">&reg;</sup> Visual Studio Code project template provides support for Web project templates from v18.3.0.47.
+   > The Syncfusion Visual Studio Code project template provides support for Web project templates from v18.3.0.47.
 
-The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;</sup> Web Applications** through the **Visual Studio Code:**
+The steps below help you to create **Syncfusion Web Applications** through the **Visual Studio Code:**
 
 1. In Visual Studio Code, open the command palette by pressing **Ctrl+Shift+P**. The Visual Studio Code palette opens, search the word **Syncfusion**, so you can get the templates provided.
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 
-2. Select **Syncfusion<sup style="font-size:70%">&reg;</sup> Web Template Studio: Launch** and then press enter, Template Studio wizard for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> Web app will appear. Provide the require Project Name and Path to create the new Syncfusion<sup style="font-size:70%">&reg;</sup> Web application along with any one of the Framework (React, Angular, and Vue).
+2. Select **Syncfusion Web Template Studio: Launch** and then press enter, Template Studio wizard for configuring the Syncfusion Web app will appear. Provide the require Project Name and Path to create the new Syncfusion Web application along with any one of the Framework (React, Angular, and Vue).
 
     ![ProjectLocation](images/ProjectLocationName.png)
 
@@ -40,7 +40,7 @@ The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;<
 4. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. Choose the preferred theme and then click **Create**. The project will be created.
     ![Themes](images/Themes.png)
 
-5. The created Syncfusion<sup style="font-size:70%">&reg;</sup> Web App is configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages, styles, and the component render code for the Syncfusion<sup style="font-size:70%">&reg;</sup> component added.
+5. The created Syncfusion Web App is configured with the Syncfusion NPM packages, styles, and the component render code for the Syncfusion component added.
 
     ![NPM Packages](images/react-npm-install.png)
 
@@ -58,10 +58,10 @@ The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;<
 
     ![Output](images/react-compilation.png)
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> component to the application
+## Add Syncfusion component to the application
 
-We have showcased the Chart, Grid and Schedule component in Syncfusion<sup style="font-size:70%">&reg;</sup> web application. If you want to create your application with other Syncfusion<sup style="font-size:70%">&reg;</sup> components, you need to install the required component package and then you can add it in your application. To know about npm package installation, refer to the [installation](https://ej2.syncfusion.com/react/documentation/installation/npm-package) section.
+We have showcased the Chart, Grid and Schedule component in Syncfusion web application. If you want to create your application with other Syncfusion components, you need to install the required component package and then you can add it in your application. To know about npm package installation, refer to the [installation](https://ej2.syncfusion.com/react/documentation/installation/npm-package) section.
 
 ## Upgrading the npm packages
 
-While creating the new Syncfusion<sup style="font-size:70%">&reg;</sup> web app, it install the npm packages with latest version. If you want to use your existing project in future, you can update the npm packages without uninstalling it. Refer to the [update npm packages](https://ej2.syncfusion.com/react/documentation/common/how-to/update-npm-package/) section for upgrading the package.
+While creating the new Syncfusion web app, it install the npm packages with latest version. If you want to use your existing project in future, you can update the npm packages without uninstalling it. Refer to the [update npm packages](https://ej2.syncfusion.com/react/documentation/common/how-to/update-npm-package/) section for upgrading the package.

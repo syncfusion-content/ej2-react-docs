@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right-To-Left support in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Right-To-Left support in Syncfusion React Components
 
 Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components support for right-to-left (RTL) by setting the `enableRtl` property to `true`. This adds the class name `e-rtl` to the component element and renders all Syncfusion<sup style="font-size:70%">&reg;</sup> React components in a right-to-left direction.
+Syncfusion React UI components support for right-to-left (RTL) by setting the `enableRtl` property to `true`. This adds the class name `e-rtl` to the component element and renders all Syncfusion React components in a right-to-left direction.
 
 ## Enable RTL for all components
 

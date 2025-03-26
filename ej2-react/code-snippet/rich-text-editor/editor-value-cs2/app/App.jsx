@@ -1,9 +1,10 @@
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as React from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 function App() {
-    const [editorValue, setEditorValue] = React.useState('');
-    const editorRef = React.useRef(null);
+    const [editorValue, setEditorValue] = useState('');
+    const editorRef = useRef(null);
     const toolbarSettings = {
       items: [
         'Bold',
@@ -25,7 +26,7 @@ function App() {
       ],
     };
   
-    React.useEffect(() => {
+    useEffect(() => {
       if (editorRef.current) {
         editorRef.current.value = 'Welcome to Syncfusion RichTextEditor!';
       }

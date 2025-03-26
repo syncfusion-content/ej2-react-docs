@@ -26,7 +26,7 @@ class App extends React.Component<{},{}> {
         <br />
         <br />
         <br />
-        <RichTextEditorComponent ref={(scope) => { this.rteObj = scope! }} value={this.rteValue} height={450} toolbarSettings={this.toolbarSettings}>
+        <RichTextEditorComponent ref={(scope) => { this.rteObj = scope! }} value={this.rteValue} height={750} toolbarSettings={this.toolbarSettings}>
             <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
         </RichTextEditorComponent>
       </div>

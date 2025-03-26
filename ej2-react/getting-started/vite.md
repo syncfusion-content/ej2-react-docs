@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with React UI Components with Vite
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion React components.
 
 `Vite` is a build tool and development server for modern web projects. Vite is designed to be fast and lightweight, supporting modern web technologies such as ES modules, TypeScript, JSX, and CSS modules. Vite's development server uses native ES modules in modern browsers, providing faster startup times and quicker feedback loops during development.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
+[System requirements for Syncfusion React UI components](../system-requirement)
 
 ## Set up the Vite project
 
@@ -77,11 +77,11 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Add Syncfusion React packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+Syncfusion React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion React components in the project, install the corresponding npm package.
 
 This article uses the [React Grid component](https://www.syncfusion.com/react-components/react-grid) as an example. To use the React Grid component in the project, the `@syncfusion/ej2-react-grids` package needs to be installed using the following command:
 
@@ -95,9 +95,9 @@ or
 yarn add @syncfusion/ej2-react-grids
 ```
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
+You can import themes for the Syncfusion React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the **src/App.css** file.
 
@@ -119,7 +119,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 > The order of importing CSS styles should be in line with its dependency graph.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Add Syncfusion React component
 
 Follow the below steps to add the React Grid component to the Vite project:
 
@@ -191,4 +191,4 @@ The output will appear as follows:
 
 ## See also
 
-[Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)
+[Getting Started with the Syncfusion React UI Component](../getting-started/quick-start)

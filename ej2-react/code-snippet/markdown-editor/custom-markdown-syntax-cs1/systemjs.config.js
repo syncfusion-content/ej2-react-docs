@@ -18,7 +18,7 @@ System.config({
     },
     map: {
         app: 'app',
-        ts: "https://unpkg.com/plugin-typescript@4.0.10/lib/plugin.js",
+        ts: "https://unpkg.com/plugin-typescript@8.0.0/lib/plugin.js",
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
         "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",

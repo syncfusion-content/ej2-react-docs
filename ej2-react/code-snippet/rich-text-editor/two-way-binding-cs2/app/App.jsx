@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { HtmlEditor, Inject, Link,Image, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
 
 function App() {
   const [editorContent, setEditorContent] = useState('Initial content');

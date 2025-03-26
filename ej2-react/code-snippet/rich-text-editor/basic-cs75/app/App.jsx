@@ -17,7 +17,7 @@ function App() {
         <br />
         <br />
         <br />
-        <RichTextEditorComponent ref={(scope) => { rteObj = scope; }} value={rteValue} height={450} toolbarSettings={toolbarSettings}>
+        <RichTextEditorComponent ref={(scope) => { rteObj = scope; }} value={rteValue} height={750} toolbarSettings={toolbarSettings}>
             <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
         </RichTextEditorComponent>
       </div>);

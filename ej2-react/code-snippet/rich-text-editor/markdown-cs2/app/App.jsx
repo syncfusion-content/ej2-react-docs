@@ -1,5 +1,5 @@
 import { createElement } from '@syncfusion/ej2-base';
-import { Image, Inject, Link, MarkdownEditor, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+import { Image, Inject, Link, MarkdownEditor, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import * as Marked from 'marked';
 import * as React from 'react';
 

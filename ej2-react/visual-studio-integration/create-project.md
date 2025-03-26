@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 ## Create project
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides the **Visual Studio Project Templates** for creating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Application. The Syncfusion<sup style="font-size:70%">&reg;</sup> React application creates the application with the required Syncfusion<sup style="font-size:70%">&reg;</sup> references, namespaces and CDN links for making the development earlier with the Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+Syncfusion provides the **Visual Studio Project Templates** for creating the Syncfusion React Application. The Syncfusion React application creates the application with the required Syncfusion references, namespaces and CDN links for making the development earlier with the Syncfusion components.
 
-> The Syncfusion<sup style="font-size:70%">&reg;</sup> React project templates are available from v17.1.0.47.
+> The Syncfusion React project templates are available from v17.1.0.47.
 
-The following steps help you to create the Syncfusion<sup style="font-size:70%">&reg;</sup> React Application through the Visual Studio:
+The following steps help you to create the Syncfusion React Application through the Visual Studio:
 1. Open the Visual Studio 2022.
-2. To create a Syncfusion<sup style="font-size:70%">&reg;</sup> React project, follow either one of the options below:
+2. To create a Syncfusion React project, follow either one of the options below:
 
     **Option 1:**
 
@@ -30,7 +30,7 @@ The following steps help you to create the Syncfusion<sup style="font-size:70%">
 
     **Option 2:**
 
-     Choose **File -> New -> Project**. Opens a new dialog to create a new project. By filtering the project type with Syncfusion<sup style="font-size:70%">&reg;</sup> or using the **Syncfusion** keyword in the search option, you can get the templates offered by Syncfusion<sup style="font-size:70%">&reg;</sup> for ASP.NET Core.
+     Choose **File -> New -> Project**. Opens a new dialog to create a new project. By filtering the project type with Syncfusion or using the **Syncfusion** keyword in the search option, you can get the templates offered by Syncfusion for ASP.NET Core.
 
     ![syncfusion template](images/create-new-project.png)   
 
@@ -46,10 +46,10 @@ The following steps help you to create the Syncfusion<sup style="font-size:70%">
 
     Choose the **Syncfusion React.js** template and choose required theme, authentication type and asset.
 
-    > Syncfusion<sup style="font-size:70%">&reg;</sup> React project template available from .NET 6.0 and .NET 7.0
+    > Syncfusion React project template available from .NET 6.0 and .NET 7.0
 
-5. Click the Create button, the Syncfusion<sup style="font-size:70%">&reg;</sup> React application has been created.
+5. Click the Create button, the Syncfusion React application has been created.
 
-6. The created Syncfusion<sup style="font-size:70%">&reg;</sup> React application configured with Syncfusion.
+6. The created Syncfusion React application configured with Syncfusion.
 
-7. The required Syncfusion<sup style="font-size:70%">&reg;</sup> React NPM packages, scripts and selected style configured with the application.
+7. The required Syncfusion React NPM packages, scripts and selected style configured with the application.
