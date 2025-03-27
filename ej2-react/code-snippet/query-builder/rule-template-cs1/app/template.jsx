@@ -4,7 +4,7 @@ import { SliderComponent } from '@syncfusion/ej2-react-inputs';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { getComponent, compile } from '@syncfusion/ej2-base';
 import { DataManager, Query } from '@syncfusion/ej2-data';
-import { employeeData } from '../datasource.ts';
+import { employeeData } from './datasource';
 export function AgeTemplate(props) {
     let qryBldrObj;
     let sliderObj;

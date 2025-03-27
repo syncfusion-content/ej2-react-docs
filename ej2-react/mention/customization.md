@@ -107,3 +107,37 @@ By default, the popup list width value is set as `auto`. Depending on the mentio
 You can customize the trigger character by using the [mentionChar](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DropDowns.Mention.html#Syncfusion_EJ2_DropDowns_Mention_MentionChar) property in the Mention component. The trigger character triggers the suggestion list to display in the target area.
 
 By default, the [mentionChar](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DropDowns.Mention.html#Syncfusion_EJ2_DropDowns_Mention_MentionChar) is `@`.
+
+## Leading Space Requirement
+
+The [requireLeadingSpace](https://ej2.syncfusion.com/react/documentation/api/mention/#requireleadingspace) property in Mention controls whether a space is needed before triggering the Mention suggestion popup. 
+
+When set to `false`, the mention can be activated without a preceding space. When set to `true`, a space is required before the mention character to activate suggestions.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/mention/customization-cs7/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/mention/customization-cs7/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/mention/customization-cs7" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/mention/customization-cs8/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/mention/customization-cs8/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/mention/customization-cs8" %}
+
+![Leading Space Requirement](./images/required_leading_space.gif)

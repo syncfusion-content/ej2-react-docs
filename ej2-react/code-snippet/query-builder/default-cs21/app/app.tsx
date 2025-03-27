@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { getComponent } from '@syncfusion/ej2-base';
 import { ChangeEventArgs, DropDownList, MultiSelect, MultiSelectChangeEventArgs } from '@syncfusion/ej2-react-dropdowns';
 import { ColumnsModel, QueryBuilderComponent, RuleModel } from '@syncfusion/ej2-react-querybuilder';
@@ -86,6 +82,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />,document.getElementById('querybuilder'));
-
-
-{% endraw %}

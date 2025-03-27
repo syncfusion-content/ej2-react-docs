@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { AnimationSettingsModel, DialogComponent } from '@syncfusion/ej2-react-popups';
 import { ColumnsModel, QueryBuilderComponent, RuleModel } from '@syncfusion/ej2-react-querybuilder';
@@ -56,6 +53,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />,document.getElementById('querybuilder'));
-
-
-{% endraw %}

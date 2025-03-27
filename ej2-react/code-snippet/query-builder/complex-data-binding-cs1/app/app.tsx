@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { QueryBuilderComponent, ColumnsDirective, ColumnDirective, RuleChangeEventArgs  } from '@syncfusion/ej2-react-querybuilder';
 import { RuleModel,  ColumnsModel } from '@syncfusion/ej2-querybuilder';
 import { RadioButtonComponent, ButtonComponent, ChangeEventArgs } from '@syncfusion/ej2-react-buttons';
@@ -97,6 +93,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />,document.getElementById('querybuilder-component'));
-
-
-{% endraw %}

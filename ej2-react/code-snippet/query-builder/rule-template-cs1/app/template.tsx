@@ -6,7 +6,7 @@ import { getComponent, compile } from '@syncfusion/ej2-base';
 import { DataManager, Predicate, Query } from '@syncfusion/ej2-data';
 import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuider';
 import { QueryBuilder, ActionEventArgs, RuleModel } from '@syncfusion/ej2-querybuider';
-import { employeeData } from '../datasource.ts';
+import { employeeData } from './datasource';
 
 export function AgeTemplate(props) {
   let qryBldrObj: QueryBuilderComponent;
