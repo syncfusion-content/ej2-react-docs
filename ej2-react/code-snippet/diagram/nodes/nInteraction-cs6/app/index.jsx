@@ -135,5 +135,6 @@ function App() {
     />
   );
 }
+export default App;
 const root = createRoot(document.getElementById('diagram'));
 root.render(<App />);

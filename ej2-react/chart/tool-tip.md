@@ -189,6 +189,27 @@ The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSet
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs6" %}
 
+## Closest Tooltip
+
+The [`showNearestTooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettings/#shownearesttooltip) property in the chart tooltip displays tooltips based on the data points closest to the cursor.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs13/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs13/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs13/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs13" %}
+
 ## See also
 
 * [Format the tooltip value](./how-to/tool-tip-format)

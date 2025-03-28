@@ -275,7 +275,6 @@ import {
     ConnectorModel,
 } from "@syncfusion/ej2-react-diagrams";
 let nodes: NodeModel[] = [{
-
         id: 'Start',
         width: 140,
         height: 50,
@@ -346,3 +345,4 @@ function App() {
     )}
 const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
+```
