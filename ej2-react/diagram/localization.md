@@ -77,7 +77,7 @@ The following code example summarizes the locale settings for the context menu.
 
 You can enable the search option in the symbol palette to search for symbols by using the [`enableSearch`](../api/diagram/symbolPaletteModel/#enablesearch) option. This search box can also be localized.
 
-To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel/#enablesearch) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
+To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel/#locale) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
 
 The following code shows how to localize symbol palette.
 

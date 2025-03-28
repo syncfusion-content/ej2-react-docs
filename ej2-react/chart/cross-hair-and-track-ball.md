@@ -118,3 +118,24 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/re
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/trackball-cs1" %}
+
+## Crosshair Highlight Category
+
+The [`highlightCategory`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings/#highlightcategory) property in the crosshair highlights the background of the entire category when hovered over. The crosshair color can be customized using the [`color`](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/#color) property within the [`line`](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel/) configuration.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs7/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs7/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs7/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs7/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs7" %}

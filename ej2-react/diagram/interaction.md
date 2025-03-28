@@ -92,7 +92,7 @@ root.render(<App />);
 ```
 ### Get selected items
 
-You can get the current selected items from the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selecteditems) property of the diagram model.
+You can get the current selected items from the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel/#nodes) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/selectorModel#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram/#selecteditems) property of the diagram model.
 
 ```ts
 let diagramInstance: DiagramComponent;
