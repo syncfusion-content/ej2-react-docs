@@ -191,6 +191,31 @@ In the provided example, the `customAggregateFn` function is used to filter the 
 
  {% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs4" %}
 
+## Render foreign key value in column template
+
+The Syncfusion React Grid allows for rendering foreign key values within a column template, enhancing the display of related data in a clear format. This feature is particularly useful when you want to show a more meaningful representation of a foreign key instead of its underlying value.
+
+To render foreign key values in a column template, you need to define a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) for the column using the template property. The `template` property can accept either an HTML element or a function that returns the desired HTML element.
+
+The following example demonstrates how to render foreign key values in a column template within the Grid: 
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/foreignkey-column-template/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/foreignkey-column-template/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/foreignkey-column-template/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/foreignkey-column-template/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/foreignkey-column-template" %}
+
 ## Enable multiple foreign key columns
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid component.

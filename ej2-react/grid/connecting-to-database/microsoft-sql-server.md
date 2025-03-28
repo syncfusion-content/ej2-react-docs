@@ -177,7 +177,7 @@ function App() {
     <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
     </ColumnsDirective>
@@ -342,7 +342,7 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -412,7 +412,7 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -476,7 +476,7 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -545,7 +545,7 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -594,7 +594,7 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' isIdentity={true} isPrimaryKey={true} width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -879,7 +879,7 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -1028,19 +1028,20 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {% highlight ts tabtitle="app.ts" %}
 
 import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, Toolbar, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
 
 function App() {
     const data = new DataManager({ 
         url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new UrlAdaptor()
+        adaptor: new CustomAdaptor()
     });
     const toolbar: ToolbarItems[] = ['Search'];
     return <GridComponent dataSource={data} toolbar={toolbar}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -1116,18 +1117,19 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {% highlight ts tabtitle="app.ts" %}
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Filter, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
 
 function App() {
     const data = new DataManager({ 
         url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new UrlAdaptor()
+        adaptor: new CustomAdaptor()
     });
     return <GridComponent dataSource={data} allowFiltering={true} height={320}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -1197,18 +1199,19 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {% highlight ts tabtitle="app.ts" %}
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Sort, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
 
 function App() {
     const data = new DataManager({ 
         url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new UrlAdaptor()
+        adaptor: new CustomAdaptor()
     });
     return <GridComponent dataSource={data} allowSorting={true} height={320}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -1283,18 +1286,19 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {% highlight ts tabtitle="app.ts" %}
 
 import { ColumnDirective, ColumnsDirective, GridComponent, Page, Inject } from '@syncfusion/ej2-react-grids';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import { DataManager } from '@syncfusion/ej2-data';
+import { CustomAdaptor } from './CustomAdaptor';
 
 function App() {
     const data = new DataManager({ 
         url: 'https://localhost:xxxx/api/grid', // Replace your hosted link.
-        adaptor: new UrlAdaptor()
+        adaptor: new CustomAdaptor()
     });
     return <GridComponent dataSource={data} allowPaging={true} height={320}>
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>
@@ -1332,7 +1336,7 @@ In this scenario, the inline edit `mode` and [toolbar](https://ej2.syncfusion.co
 
 import { ColumnDirective, ColumnsDirective, GridComponent, ToolbarItems, EditSettingsModel, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
 import { DataManager } from '@syncfusion/ej2-data';
-import {CustomAdaptor} from './CustomAdaptor';
+import { CustomAdaptor } from './CustomAdaptor';
 
 function App() {
     const data = new DataManager({ 
@@ -1350,7 +1354,7 @@ function App() {
         <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' isIdentity={true} isPrimaryKey={true} width='150' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'></ColumnDirective>
-            <ColumnDirective field='EmployeeID' headerText='EmployeeID' width='160'></ColumnDirective>
+            <ColumnDirective field='EmployeeID' headerText='EmployeeID' textAlign='Right' width='160'></ColumnDirective>
             <ColumnDirective field='Freight' headerText='Freight' format='C2' width='160' textAlign='Right'></ColumnDirective>
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
         </ColumnsDirective>

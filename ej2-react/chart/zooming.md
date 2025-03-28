@@ -135,6 +135,30 @@ Using the [`enableScrollbar`](https://ej2.syncfusion.com/react/documentation/api
 
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs7" %}
 
+### Position
+The [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/scrollbarSettings/#position) property allows users to specify their preferred scrollbar location. By default, both vertical and horizontal scrollbars are rendered near their respective axes. Using the customization options below, you can position the scrollbar as desired:
+
+* Default: `placeNextToAxisLine`.
+* Horizontal scrollbar: Available positions are `Top` and `Bottom`.
+* Vertical scrollbar: Available positions are `Left` and `Right`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs12/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs12/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/user-interaction/zoom-cs12/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs12" %}
+
 ## Enable animation
 
 Use the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/chart/zoomSettingsModel/#enableanimation) property to create smooth transitions when zooming in on the chart.

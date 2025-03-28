@@ -1041,6 +1041,26 @@ After enabling the default tooltip, it is possible to customize the display of n
 
 > All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings/) can be accessed within the template.
 
+### How to prevent the tooltip for specific events
+
+By using the [`tooltipOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#tooltipOpen) event, you can selectively control when tooltips appear, based on appointment data or other custom conditions.
+
+To prevent a tooltip from appearing for certain events, you can set the `cancel` property to `true` within the [`tooltipOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#tooltipOpen) event. This ensures that tooltips are only displayed for the relevant appointments, improving user experience by minimizing unnecessary distractions.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/schedule/tooltip-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/schedule/tooltip-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/tooltip-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/tooltip-cs2" %}
+
 ## Appointment selection
 
 Appointment selection can be done either through mouse or keyboard actions. The selected events in UI will have a box shadow effect around to differentiate it from other appointments.
