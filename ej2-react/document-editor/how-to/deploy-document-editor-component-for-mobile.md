@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy document editor component for mobile in React Document editor component | Syncfusion
+title: Deploy mobile document editor in React | Syncfusion
 description: Learn here all about Deploy document editor component for mobile in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Deploy document editor component for mobile 
 platform: ej2-react
@@ -21,40 +21,55 @@ The following example code illustrates how to deploy Document Editor component f
 {% raw %}
 
 ```ts
-
-//Initialize Document Editor Container component.
-import { DocumentEditorContainer, Toolbar, DocumentEditorContainerComponent } from '@syncfusion/ej2-react-documenteditor';
+import {
+  DocumentEditorContainer,
+  Toolbar,
+  DocumentEditorContainerComponent,
+} from '@syncfusion/ej2-react-documenteditor';
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-    let container: DocumentEditorContainerComponent;
-    let hosturl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+  let container;
+  let hosturl =
+    'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 
-    function onDocumentChange() {
-        let proxy = container;
-        //To detect the device
-        let isMobileDevice = /Android|Windows Phone|webOS/i.test(navigator.userAgent);
-
-        if (isMobileDevice) {
-            proxy.restrictEditing = true;
-            setTimeout(() => {
-                proxy.documentEditor.fitPage("FitPageWidth");
-            }, 50);
-        }
-        else {
-            proxy.restrictEditing = false;
-        }
-    }
-    return (
-        <div className="App">
-            <DocumentEditorContainerComponent id="container" ref={(scope) => { container = scope; }} style={{ 'height': '590px' }} enableToolbar={true} documentChange={onDocumentChange} serviceUrl={hosturl} height={'590px'} />
-        </div>
+  function onDocumentChange() {
+    let proxy = (container = DocumentEditorContainerComponent);
+    //To detect the device
+    let isMobileDevice = /Android|Windows Phone|webOS/i.test(
+      navigator.userAgent
     );
+
+    if (isMobileDevice) {
+      proxy.restrictEditing = true;
+      setTimeout(() => {
+        proxy.documentEditor.fitPage('FitPageWidth');
+      }, 50);
+    } else {
+      proxy.restrictEditing = false;
+    }
+  }
+  return (
+    <div className="App">
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        style={{ height: '590px' }}
+        enableToolbar={true}
+        documentChange={onDocumentChange}
+        serviceUrl={hosturl}
+        height={'590px'}
+      />
+    </div>
+  );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
+
 
 ```
 {% endraw %}

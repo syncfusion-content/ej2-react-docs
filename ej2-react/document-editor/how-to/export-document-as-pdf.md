@@ -33,7 +33,6 @@ import {
   PdfSection,
   SizeF,
 } from '@syncfusion/ej2-pdf-export';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container: DocumentEditorContainerComponent;
@@ -95,8 +94,7 @@ function App() {
   }
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Export document as pdf in server-side using Syncfusion<sup style="font-size:70%">&reg;</sup> DocIO

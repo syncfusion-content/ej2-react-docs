@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insert text in current position in React Document editor component | Syncfusion
+title: Insert text in current position in React Document editor | Syncfusion
 description: Learn here all about Insert text in current position in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Insert text in current position 
 platform: ej2-react
@@ -19,9 +19,6 @@ You can use [`insertText`](https://ej2.syncfusion.com/react/documentation/api/do
 The following example code illustrates how to add the text in current selection.
 
 ```ts
-// It will insert the provided text in current selection
-this.container.documentEditor.editor.insertText('Syncfusion');
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
@@ -31,22 +28,26 @@ import {
 
 DocumentEditorContainerComponent.Inject(Toolbar);
 export class Default extends React.Component {
-  inserText(){
-        // It will insert the provided text in current selection
-        this.container.documentEditor.editor.insertText('Syncfusion');
-  ;
+  inserText() {
+    // It will insert the provided text in current selection
+    this.container.documentEditor.editor.insertText('Syncfusion');
+  }
   render() {
     return (
-      <button id='insert' onClick={this.inserText.bind(this)}>Insert Text</button>
-      <DocumentEditorContainerComponent
-        id="container"
-        ref={(scope) => {
-          this.container = scope;
-        }}
-        height={'590px'}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-        enableToolbar={true}
-      />
+      <div>
+        <button id="insert" onClick={this.inserText.bind(this)}>
+          Insert Text
+        </button>
+        <DocumentEditorContainerComponent
+          id="container"
+          ref={(scope) => {
+            this.container = scope;
+          }}
+          height={'590px'}
+          serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+          enableToolbar={true}
+        />
+      </div>
     );
   }
 }
@@ -82,48 +83,52 @@ The following example illustrates how to insert the HTML content at current curs
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-    DocumentEditorContainerComponent,
-    Toolbar,
+  DocumentEditorContainerComponent,
+  Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-    let container: DocumentEditorContainerComponent;
-    function onCreated() {
-        let htmltags: string =
-            "<?xml version='1.0' encoding='utf - 8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
-            document.getElementById('export').addEventListener('click', () => {
-            let http: XMLHttpRequest = new XMLHttpRequest();
-            http.open('POST', 'http://localhost:5000/api/documenteditor/LoadString');
-            http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-            http.responseType = 'json';
-            http.onreadystatechange = function () {
-                if (http.readyState === 4) {
-                    if (http.status === 200 || http.status === 304) {
-                        // Insert the sfdt content in cursor position using paste API
-                        container.documentEditor.editor.paste(http.response);
-                    } else {
-                        alert('failed;');
-                    }
-                }
-            };
+  let container;
 
-            let htmlContent: any = { content: htmltags };
-            http.send(JSON.stringify(htmlContent));
-        });
-    }
-    return (
-        <DocumentEditorContainerComponent
-            id="container"
-            ref={(scope) => {
-                container = scope;
-            }}
-            height={'590px'}
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-            enableToolbar={true}
-            created={onCreated}
-        />
-    );
+  function inserText() {
+    let htmltags =
+      "<?xml version='1.0' encoding='utf - 8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
+    let http = new XMLHttpRequest();
+    http.open('POST', 'http://localhost:62869/api/documenteditor/LoadString');
+    http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    http.responseType = 'json';
+    http.onreadystatechange = function () {
+      if (http.readyState === 4) {
+        if (http.status === 200 || http.status === 304) {
+          // Insert the sfdt content in cursor position using paste API
+          container.documentEditor.editor.paste(http.response);
+        } else {
+          alert('failed;');
+        }
+      }
+    };
+
+    let htmlContent = { content: htmltags };
+    http.send(JSON.stringify(htmlContent));
+  }
+
+  return (
+    <div>
+      <button id="export" onClick={inserText.bind(this)}>
+        Export HTML
+      </button>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="http://localhost:62869/api/documenteditor/"
+        enableToolbar={true}
+      />
+    </div>
+  );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

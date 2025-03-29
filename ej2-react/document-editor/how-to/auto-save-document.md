@@ -16,22 +16,17 @@ The following example illustrates how to auto save the document in server.
 
 * In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#saveasblob) method.
 
-   ```
-       import * as ReactDOM from 'react-dom';
-       import * as React from 'react';
-       import {
-      DocumentEditorContainerComponent,
-     Toolbar,
-    }  from '@syncfusion/ej2-react-documenteditor';
-
-  DocumentEditorContainerComponent.Inject(Toolbar);
-  function App() {
-  let container: DocumentEditorContainerComponent;
-  let contentChanged: boolean = false;
-  React.useEffect(() => {
-    onCreate()
-    onContentChange()
-  }, []);
+```
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+} from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorContainerComponent.Inject(Toolbar);
+function App() {
+  let container;
+  let contentChanged = false;
   function onCreate() {
     setInterval(() => {
       if (contentChanged) {
@@ -78,10 +73,10 @@ The following example illustrates how to auto save the document in server.
       serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
       enableToolbar={true} created={onCreate} contentChange={onContentChange}
     />
-   );
-  }
-  export default App;
-  ReactDOM.render(<App />, document.getElementById('sample'));
+  );
+}
+export default App;
+ReactDOM.render(<App />, document.getElementById('sample'));
  ```
 
 * In server-side, Receives the stream content from client-side and process it to save the document in aws s3. Add Web API in controller file like below to save the document in aws s3.

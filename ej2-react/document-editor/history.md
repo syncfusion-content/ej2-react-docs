@@ -44,7 +44,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 You can enable or disable history preservation for a document editor instance any time using the ‘enableEditorHistory’ property. Refer to the following sample code.
 
 ```ts
-editor.enableEditorHistory = false;
+documenteditor.enableEditorHistory = false;
 ```
 
 ## Undo and redo
@@ -53,13 +53,13 @@ You can perform undo and redo by ‘CTRL+Z’ and ‘CTRL+Y’ keyboard shortcut
 To undo the last editing operation in document editor, refer to the following sample code.
 
 ```ts
-editor.editorHistory.undo();
+documenteditor.editorHistory.undo();
 ```
 
 To redo the last undone action, refer to the following code example.
 
 ```ts
-editor.editorHistory.redo();
+documenteditor.editorHistory.redo();
 ```
 
 ## Stack size
@@ -67,8 +67,8 @@ editor.editorHistory.redo();
 History of editing actions will be maintained in stack, so that the last item will be reverted first. By default, document editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 
 ```ts
-editor.editorHistory.undoLimit = 400;
-editor.editorHistory.redoLimit = 400;
+documenteditor.editorHistory.undoLimit = 400;
+documenteditor.editorHistory.redoLimit = 400;
 ```
 
 ## See Also

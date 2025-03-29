@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Override the keyboard shortcuts in React Document editor component | Syncfusion
+title: Override keyboard shortcuts in React Document editor | Syncfusion
 description: Learn here all about Override the keyboard shortcuts in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Override the keyboard shortcuts 
 platform: ej2-react
@@ -67,47 +67,63 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorComponent, DocumentEditor, SfdtExport, Selection, Editor, DocumentEditorKeyDownEventArgs } from '@syncfusion/ej2-react-documenteditor';
+import {
+  DocumentEditorComponent,
+  DocumentEditor,
+  SfdtExport,
+  Selection,
+  Editor,
+  DocumentEditorKeyDownEventArgs,
+} from '@syncfusion/ej2-react-documenteditor';
 
 DocumentEditorComponent.Inject(SfdtExport, Selection, Editor);
 function App() {
-    let documentEditor: DocumentEditorComponent;
-    React.useEffect(() => {
-        componentDidMount()
-    }, []);
-    function componentDidMount() {
-        documentEditor.keyDown = (args: DocumentEditorKeyDownEventArgs) => {
-            let keyCode: number = args.event.which || args.event.keyCode;
-            let isCtrlKey: boolean = (args.event.ctrlKey || args.event.metaKey) ? true : ((keyCode === 17) ? true : false);
-            let isAltKey: boolean = args.event.altKey ? args.event.altKey : ((keyCode === 18) ? true : false);
-            // 83 is the character code for 'S'
-            if (isCtrlKey && !isAltKey && keyCode === 83) {
-                //To prevent default save operation, set the isHandled property to true
-                args.isHandled = true;
-                //Download the document in docx format.
-                documentEditor.save('sample', 'Docx');
-                args.event.preventDefault();
-            } else if (isCtrlKey && isAltKey && keyCode === 83) {
-                //Download the document in sfdt format.
-                documentEditor.save('sample', 'Sfdt');
-            }
-        }
-    }
-    return (
-        <DocumentEditorComponent
-            id="container"
-            ref={scope => {
-                documentEditor = scope;
-            }}
-            isReadOnly={false}
-            enableSelection={true}
-            enableEditor={true}
-            height={'330px'}
-        />
-    );
+  let documentEditor;
+  React.useEffect(() => {
+    componentDidMount();
+  }, []);
+  function componentDidMount() {
+    documentEditor.keyDown = (args) => {
+      let keyCode = args.event.which || args.event.keyCode;
+      let isCtrlKey =
+        args.event.ctrlKey || args.event.metaKey
+          ? true
+          : keyCode === 17
+          ? true
+          : false;
+      let isAltKey = args.event.altKey
+        ? args.event.altKey
+        : keyCode === 18
+        ? true
+        : false;
+      // 83 is the character code for 'S'
+      if (isCtrlKey && !isAltKey && keyCode === 83) {
+        //To prevent default save operation, set the isHandled property to true
+        args.isHandled = true;
+        //Download the document in docx format.
+        documentEditor.save('sample', 'Docx');
+        args.event.preventDefault();
+      } else if (isCtrlKey && isAltKey && keyCode === 83) {
+        //Download the document in sfdt format.
+        documentEditor.save('sample', 'Sfdt');
+      }
+    };
+  }
+  return (
+    <DocumentEditorComponent
+      id="container"
+      ref={(scope) => {
+        documentEditor = scope;
+      }}
+      isReadOnly={false}
+      enableSelection={true}
+      enableEditor={true}
+      enableSfdtExport={true}
+      height={'330px'}
+    />
+  );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
-
 
 ```

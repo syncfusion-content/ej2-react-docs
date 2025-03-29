@@ -45,22 +45,38 @@ Refer to the following sample code.
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorComponent, SfdtExport, Selection, Editor } from '@syncfusion/ej2-react-documenteditor';
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor);
+import {
+  DocumentEditorComponent,
+  SfdtExport,
+  Selection,
+  Editor,
+} from '@syncfusion/ej2-react-documenteditor';
+//Inject require module.
+DocumentEditorComponent.Inject(Selection, Editor);
 function App() {
-  let documenteditor: DocumentEditorComponent = new DocumentEditorComponent(undefined);
-    React.useEffect(() => {
+  let documenteditor;
+  React.useEffect(() => {
     componentDidMount();
-}, []);
+  }, []);
   function componentDidMount() {
     //Enable document editor local paste option.
     documenteditor.enableLocalPaste = true;
   }
   return (
-    <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} />
+    <div>
+      <DocumentEditorComponent
+        id="container"
+        ref={(scope) => {
+          documenteditor = scope;
+        }}
+        isReadOnly={false}
+        enableSelection={true}
+        enableEditor={true}
+      />
+    </div>
   );
 }
-export default App
+export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
