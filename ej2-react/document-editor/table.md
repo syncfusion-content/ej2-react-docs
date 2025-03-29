@@ -179,7 +179,7 @@ function App() {
                 break;
             case 'insert_right':
                 //Insert the specified number of columns to the table right to the column at cursor position
-                documenteditor.editor.insertColumn();
+                zeditor.insertColumn();
                 break;
             case 'delete_table':
                 //Delete the entire table

@@ -54,19 +54,22 @@ Document editor provides an option to improve the print quality using [`printDev
 The following example code illustrates how to improve the print quality in Document editor container.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import * as React from 'react';
 import {
-    DocumentEditorContainerComponent, Toolbar
+  DocumentEditorContainerComponent,
+  Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let settings={printDevicePixelRatio :2};
-return (
-            <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" enableToolbar={true} documentEditorSettings= {settings}/>);
+  return (
+              <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" enableToolbar={true} documentEditorSettings= {settings}/>);
 }
-export default App
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
+createRoot(document.getElementById('sample')).render(<App />);
+
 
 ```
 
@@ -116,23 +119,45 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorComponent, DocumentEditor, Print, } from '@syncfusion/ej2-react-documenteditor';
-DocumentEditor.Inject(Print);
+import {
+  DocumentEditorComponent,
+  SfdtExport,
+  Selection,
+  Editor,
+  Print,
+} from '@syncfusion/ej2-react-documenteditor';
+
+//Inject require module.
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, Print);
 function App() {
-    let documenteditor;
-    React.useEffect(() => {
-        componentDidMount();
-    }, []);
-    function componentDidMount() {
-        //Print the document content.
-        documenteditor.print(window);
-    }
-    return (<DocumentEditorComponent id="container" height={'330px'} ref={scope => {
-            documenteditor = scope;
-        }} enablePrint={true}/>);
+  let documenteditor;
+  React.useEffect(() => {
+    ComponentDidMount();
+  }, []);
+  function ComponentDidMount() {
+    //Print the document content.
+    documenteditor.print(window);
+  }
+
+  return (
+    <div>
+      <DocumentEditorComponent
+        id="container"
+        height={'330px'}
+        ref={(scope) => {
+          documenteditor = scope;
+        }}
+        isReadOnly={false}
+        enableSelection={true}
+        enableEditor={true}
+        enablePrint={true}
+      />
+    </div>
+  );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
+
 ```
 
 ## Page setup
@@ -148,62 +173,45 @@ However, you can customize margins, paper, and layout options by modifying the s
 
 ```ts
 import * as ReactDOM from 'react-dom';
-import { DocumentEditorComponent, DocumentEditor, Print, Editor, Selection, EditorHistory, PageSetupDialog, SfdtExport } from '@syncfusion/ej2-react-documenteditor';
-
-//Inject require modules.
-DocumentEditor.Inject(Print, Editor, Selection, EditorHistory, SfdtExport, PageSetupDialog);
+import * as React from 'react';
+import {
+  DocumentEditorComponent,
+  SfdtExport,
+  Selection,
+  Editor,
+  PageSetupDialog,
+} from '@syncfusion/ej2-react-documenteditor';
+//Inject require module.
+DocumentEditorComponent.Inject(Selection, Editor, PageSetupDialog);
 function App() {
-  let documenteditor: DocumentEditorComponent = new DocumentEditorComponent(undefined);
-     React.useEffect(() => {
-    componentDidMount()
-    }, []);
-  return (
-    <DocumentEditorComponent
-      id="container"
-      height={'330px'}
-      ref={scope => {
-        documenteditor = scope;
-      }}
-      enablePrint={true}
-      isReadOnly={false}
-      enableSelection={true}
-      enableSfdtExport={true}
-      enableEditor={true}
-      enableEditorHistory={true}
-      enablePageSetupDialog={true}
-    />
-  );
-  function ComponentDidMount() {
+  let documenteditor;
+  React.useEffect(() => {
+    componentDidMount();
+  }, []);
+  function componentDidMount() {
     //Open page setup dialog.
     documenteditor.showPageSetupDialog();
   }
-
-}
-export default App
-ReactDOM.render(<App />, document.getElementById('sample'));
-
-```
-
-```ts
-import * as ReactDOM from 'react-dom';
-import { DocumentEditorComponent, DocumentEditor, Print, Editor, Selection, EditorHistory, PageSetupDialog, SfdtExport } from '@syncfusion/ej2-react-documenteditor';
-//Inject require modules.
-DocumentEditor.Inject(Print, Editor, Selection, EditorHistory, SfdtExport, PageSetupDialog);
-function App() {
-    let documenteditor = new DocumentEditorComponent(undefined);
-    React.useEffect(() => {
-        componentDidMount();
-    }, []);
-    return (<DocumentEditorComponent id="container" height={'330px'} ref={scope => {
-            documenteditor = scope;
-        }} enablePrint={true} isReadOnly={false} enableSelection={true} enableSfdtExport={true} enableEditor={true} enableEditorHistory={true} enablePageSetupDialog={true}/>);
-    function ComponentDidMount() {
-        //Open page setup dialog.
-        documenteditor.showPageSetupDialog();
-    }
+  return (
+    <div>
+      <DocumentEditorComponent
+        id="container"
+        ref={(scope) => {
+          documenteditor = scope;
+        }}
+        isReadOnly={false}
+        enableSelection={true}
+        enableEditor={true}
+        enableEditorHistory={true}
+        enablePageSetupDialog={true}
+      />
+    </div>
+  );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
+
+
 ```
 
 By customizing margins, papers, and layouts, the layout of the document will be changed in document editor. To modify these options during print operation, serialize the document as SFDT using the  [`serialize`](https://ej2.syncfusion.com/react/documentation/api/document-editor#serialize) method in document editor instance and open the SFDT data in another instance of document editor in separate window.

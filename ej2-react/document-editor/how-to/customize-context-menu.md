@@ -19,23 +19,21 @@ Document Editor allows you to add custom option in context menu. It can be achie
 The following code shows how to add custom option in context menu.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import * as React from 'react';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 import {
   DocumentEditorContainerComponent,
+  CustomToolbarItemModel,
   Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-import { MenuItemModel } from '@syncfusion/ej2-navigations';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
+let container = DocumentEditorContainerComponent;
 function App() {
-  let container: DocumentEditorContainerComponent;
-  React.useEffect(() => {
-    onCreate();
-  }, []);
   function onCreate() {
     // creating Custom Options
-    let menuItems: MenuItemModel[] = [
+    let menuItems = [
       {
         text: 'Search In Google',
         id: 'search_in_google',
@@ -45,16 +43,13 @@ function App() {
     // adding Custom Options
     container.documentEditor.contextMenu.addCustomMenu(menuItems, false);
     // custom Options Select Event
-    container.documentEditor.customContextMenuSelect = (
-      args: any
-    ): void => {
+    container.documentEditor.customContextMenuSelect = (args) => {
       // custom Options Functionality
-      let id: string = container.documentEditor.element.id;
+      let id = container.documentEditor.element.id;
       switch (args.id) {
         case id + 'search_in_google':
           // To get the selected content as plain text
-          let searchContent: string =
-            container.documentEditor.selection.text;
+          let searchContent = container.documentEditor.selection.text;
           if (
             !container.documentEditor.selection.isEmpty &&
             /\S/.test(searchContent)
@@ -66,20 +61,23 @@ function App() {
     };
   }
   return (
-    <DocumentEditorContainerComponent
-      id="container"
-      ref={(scope) => {
-        container = scope;
-      }}
-      height={'590px'}
-      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-      enableToolbar={true}
-      created={onCreate}
-    />
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        enableToolbar={true}
+        created={onCreate}
+      />
+    </div>
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('sample')).render(<App />);
+
 ```
 
 ### Customize custom option in context menu
@@ -93,46 +91,50 @@ Using [`addCustomMenu()`](../../api/document-editor/contextMenu/#addcustommenu) 
 The following code shows how to hide default context menu and add custom option in context menu.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import * as React from 'react';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 import {
   DocumentEditorContainerComponent,
+  CustomToolbarItemModel,
   Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-import { MenuItemModel } from '@syncfusion/ej2-navigations';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
+let container = DocumentEditorContainerComponent;
 function App() {
-  let container: DocumentEditorContainerComponent;
-  React.useEffect(() => {
-    onCreate();
-  }, []);
-  function onCreate(): void {
-    // creating Custom Options
-    let menuItems: MenuItemModel[] = [
-      {
-        text: 'Search In Google',
-        id: 'search_in_google',
-        iconCss: 'e-icons e-de-ctnr-find',
-      },
-    ];
-    // adding Custom Options
-    container.documentEditor.contextMenu.addCustomMenu(menuItems, true);
+  function onCreate() {
+  
+      // creating Custom Options
+      let menuItems = [
+        {
+          text: 'Search In Google',
+          id: 'search_in_google',
+          iconCss: 'e-icons e-de-ctnr-find',
+        },
+      ];
+      // adding Custom Options
+      container.documentEditor.contextMenu.addCustomMenu(menuItems, true);
+  
   }
   return (
-    <DocumentEditorContainerComponent
-      id="container"
-      ref={(scope) => {
-        container = scope;
-      }}
-      height={'590px'}
-      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-      enableToolbar={true}
-      created={onCreate}
-    />
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        enableToolbar={true}
+        created={onCreate}
+      />
+    </div>
   );
-} export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+}
+export default App;
+createRoot(document.getElementById('sample')).render(<App />);
+
 
 ```
 
@@ -141,23 +143,22 @@ ReactDOM.render(<App />, document.getElementById('root'));
 The following code shows how to hide/show added custom option in context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/react/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs/).
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import * as React from 'react';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 import {
   DocumentEditorContainerComponent,
+  CustomToolbarItemModel,
   Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-import { MenuItemModel } from '@syncfusion/ej2-navigations';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
+let container = DocumentEditorContainerComponent;
 function App() {
-  let container: DocumentEditorContainerComponent;
-  React.useEffect(() => {
-    onCreate()
-  }, []);
   function onCreate() {
-    // creating Custom Options
-    let menuItems: MenuItemModel[] = [
+  
+     // creating Custom Options
+    let menuItems = [
       {
         text: 'Search In Google',
         id: 'search_in_google',
@@ -167,12 +168,12 @@ function App() {
     // adding Custom Options
     container.documentEditor.contextMenu.addCustomMenu(menuItems, false);
     // custom Options Select Event
-    container.documentEditor.customContextMenuSelect = (args: any): void => {
+    container.documentEditor.customContextMenuSelect = (args) => {
       // custom Options Functionality
-      let id: string = container.documentEditor.element.id;
+      let id = container.documentEditor.element.id;
       switch (args.id) {
         case id + 'search_in_google':
-          let searchContent: string = container.documentEditor.selection.text;
+          let searchContent = container.documentEditor.selection.text;
           if (!container.documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
             window.open('http://google.com/search?q=' + searchContent);
           }
@@ -180,30 +181,34 @@ function App() {
       }
     };
     //  custom options hide/show functionality
-    container.documentEditor.customContextMenuBeforeOpen = (args: any): void => {
-      let search: any = document.getElementById(args.ids[0]);
+    container.documentEditor.customContextMenuBeforeOpen = (args) => {
+      let search = document.getElementById(args.ids[0]);
       search.style.display = 'none';
-      let searchContent: string = container.documentEditor.selection.text;
+      let searchContent = container.documentEditor.selection.text;
       if (!container.documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
         search.style.display = 'block';
       }
     };
+  
   }
   return (
-    <DocumentEditorContainerComponent
-      id="container"
-      ref={(scope) => {
-        container = scope;
-      }}
-      height={'590px'}
-      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-      enableToolbar={true}
-      created={onCreate}
-    />
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        enableToolbar={true}
+        created={onCreate}
+      />
+    </div>
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('sample')).render(<App />);
+
 
 ```
 

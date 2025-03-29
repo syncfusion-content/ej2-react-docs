@@ -32,7 +32,7 @@ let tocSettings: TableOfContentsSettings =
 {
     startLevel: 1, endLevel: 3, includeHyperlink: true, includePageNumber: true, rightAlign: true
 };
-this.documenteditor.editor.insertTableOfContents(tocSettings);
+documenteditor.editor.insertTableOfContents(tocSettings);
 ```
 
 ```ts
@@ -107,7 +107,7 @@ function App() {
             rightAlign: true,
         };
         //Insert table of content with specified settings.
-        documenteditor.editorModule.insertTableOfContents(tocSettings);
+        documenteditor.editor.insertTableOfContents(tocSettings);
     }
     return (
         <DocumentEditorComponent

@@ -22,87 +22,109 @@ Document Editor Container allows you to customize(add, show, hide, enable, and d
 
 {% raw %}
 ```ts
-  import "./App.css";
-  import * as React from "react";
-  import { DocumentEditorContainerComponent, Toolbar, CustomToolbarItemModel } from "@syncfusion/ej2-react-documenteditor";
-  DocumentEditorContainerComponent.Inject(Toolbar);
-  export default class App extends React.Component {
-      public container: DocumentEditorContainerComponent;
-      render() {
-          //Custom toolbar item.
-          let toolItem: CustomToolbarItemModel = {
-              prefixIcon: "e-de-ctnr-lock",
-              tooltipText: "Disable Image",
-              text: onWrapText("Disable Image"),
-              id: "Custom"
-          };
-          let items = [
-              toolItem,
-              "Undo",
-              "Redo",
-              "Separator",
-              "Image",
-              "Table",
-              "Hyperlink",
-              "Bookmark",
-              "TableOfContents",
-              "Separator",
-              "Header",
-              "Footer",
-              "PageSetup",
-              "PageNumber",
-              "Break",
-              "InsertFootnote",
-              "InsertEndnote",
-              "Separator",
-              "Find",
-              "Separator",
-              "Comments",
-              "TrackChanges",
-              "Separator",
-              "LocalClipboard",
-              "RestrictEditing",
-              "Separator",
-              "FormFields",
-              "UpdateFields",
-              "ContentControl"
-          ];
-          return (
-              <DocumentEditorContainerComponent
-                  ref={scope => {
-                      this.container = scope;
-                  }}
-                  id="container"
-                  style={{ height: "590px" }}
-                  toolbarItems={items}
-                  toolbarClick={this.onToolbarClick.bind(this)}
-                  enableToolbar={true}
-              />
-          );
-      }
-      onToolbarClick = (args: ClickEventArgs): void => {
-          switch (args.item.id) {
-              case "Custom":
-                  //Disable image toolbar item.
-                  this.container.toolbar.enableItems(4, false);
-                  break;
-              default:
-                  break;
-          }
-      };
-      onWrapText = (text: string): string=> {
-        let content: string = '';
-          const index : number = text.lastIndexOf(' ');
-      
-          if (index !== -1) {
-              content = text.slice(0, index) + "<div class='e-de-text-wrap'>" + text.slice(index + 1) + "</div>";
-          } else {
-              content = text;
-          }
-      
-          return content;
-      }
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import * as React from 'react';
+import {
+  DocumentEditorContainerComponent,
+  CustomToolbarItemModel,
+  Toolbar,
+} from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorContainerComponent.Inject(Toolbar);
+let container = DocumentEditorContainerComponent;
+function App() {
+  //Custom toolbar item.
+  let toolItem = {
+    prefixIcon: 'e-de-ctnr-lock',
+    tooltipText: 'Disable Image',
+    text: onWrapText('Disable Image'),
+    id: 'Custom',
+  };
+  let items = [
+    toolItem,
+    'Undo',
+    'Redo',
+    'Separator',
+    'Image',
+    'Table',
+    'Hyperlink',
+    'Bookmark',
+    'TableOfContents',
+    'Separator',
+    'Header',
+    'Footer',
+    'PageSetup',
+    'PageNumber',
+    'Break',
+    'InsertFootnote',
+    'InsertEndnote',
+    'Separator',
+    'Find',
+    'Separator',
+    'Comments',
+    'TrackChanges',
+    'Separator',
+    'LocalClipboard',
+    'RestrictEditing',
+    'Separator',
+    'FormFields',
+    'UpdateFields',
+    'ContentControl',
+  ];
+  function onToolbarClick(args) {
+    switch (args.item.id) {
+      case 'save':
+        //Save the document(Download the document)
+        container.documentEditor.save('sample', 'Docx');
+        break;
+      default:
+        break;
+    }
   }
+
+  function onToolbarClick(args) {
+    switch (args.item.id) {
+      case 'Custom':
+        //Disable image toolbar item.
+        container.toolbar.enableItems(4, false);
+        break;
+      default:
+        break;
+    }
+  }
+  function onWrapText(text) {
+    let content = '';
+    const index = text.lastIndexOf(' ');
+    if (index !== -1) {
+      content =
+        text.slice(0, index) +
+        "<div class='e-de-text-wrap'>" +
+        text.slice(index + 1) +
+        '</div>';
+    } else {
+      content = text;
+    }
+    return content;
+  }
+  return (
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        toolbarItems={items}
+        toolbarClick={onToolbarClick.bind(this)}
+        enableToolbar={true}
+      />
+    </div>
+  );
+}
+export default App;
+createRoot(document.getElementById('sample')).render(<App />);
+
 ```
 {% endraw %}
 

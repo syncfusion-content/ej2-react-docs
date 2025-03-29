@@ -16,78 +16,86 @@ DocumentEditorContainer allows you to add a new button to the existing items in 
 
 {% raw %}
 ```ts
-  import "./App.css";
-  import * as React from "react";
-  import { DocumentEditorContainerComponent, Toolbar, CustomToolbarItemModel } from "@syncfusion/ej2-react-documenteditor";
-  DocumentEditorContainerComponent.Inject(Toolbar);
-  export default class App extends React.Component {
-      public container: DocumentEditorContainerComponent;
-      render() {
-          //Custom toolbar item.
-          let toolItem: CustomToolbarItemModel = {
-            prefixIcon: "e-save icon",
-            tooltipText: "Save the Document",
-            text: "Save",
-            id: "save"
-          };
-          let items = [
-              "New",
-              "Open",
-              toolItem,
-              "Separator",
-              "Undo",
-              "Redo",
-              "Separator",
-              "Image",
-              "Table",
-              "Hyperlink",
-              "Bookmark",
-              "TableOfContents",
-              "Separator",
-              "Header",
-              "Footer",
-              "PageSetup",
-              "PageNumber",
-              "Break",
-              "InsertFootnote",
-              "InsertEndnote",
-              "Separator",
-              "Find",
-              "Separator",
-              "Comments",
-              "TrackChanges",
-              "Separator",
-              "LocalClipboard",
-              "RestrictEditing",
-              "Separator",
-              "FormFields",
-              "UpdateFields",
-              "ContentControl"
-          ];
-          return (
-              <DocumentEditorContainerComponent
-                  ref={scope => {
-                      this.container = scope;
-                  }}
-                  id="container"
-                  style={{ height: "590px" }}
-                  toolbarItems={items}
-                  toolbarClick={this.onToolbarClick.bind(this)}
-                  enableToolbar={true}
-              />
-          );
-      }
-      onToolbarClick = (args: ClickEventArgs): void => {
-          switch (args.item.id) {
-              case 'save':
-                //Save the document(Download the document)
-                this.container.documentEditor.save('sample', 'Docx');
-                break;
-              default:
-                  break;
-          }
-      };
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import * as React from 'react';
+import {
+  DocumentEditorContainerComponent,
+  CustomToolbarItemModel,
+  Toolbar,
+} from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorContainerComponent.Inject(Toolbar);
+let container = DocumentEditorContainerComponent;
+function App() {
+  let toolItem = {
+    prefixIcon: 'e-save icon',
+    tooltipText: 'Save the Document',
+    text: 'Save',
+    id: 'save',
+  };
+  let items = [
+    'New',
+    'Open',
+    toolItem,
+    'Separator',
+    'Undo',
+    'Redo',
+    'Separator',
+    'Image',
+    'Table',
+    'Hyperlink',
+    'Bookmark',
+    'TableOfContents',
+    'Separator',
+    'Header',
+    'Footer',
+    'PageSetup',
+    'PageNumber',
+    'Break',
+    'InsertFootnote',
+    'InsertEndnote',
+    'Separator',
+    'Find',
+    'Separator',
+    'Comments',
+    'TrackChanges',
+    'Separator',
+    'LocalClipboard',
+    'RestrictEditing',
+    'Separator',
+    'FormFields',
+    'UpdateFields',
+    'ContentControl',
+  ];
+  function onToolbarClick(args) {
+    switch (args.item.id) {
+      case 'save':
+        //Save the document(Download the document)
+        container.documentEditor.save('sample', 'Docx');
+        break;
+      default:
+        break;
     }
+  }
+  return (
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        toolbarItems={items}
+        toolbarClick={onToolbarClick.bind(this)}
+        enableToolbar={true}
+      />
+    </div>
+  );
+}
+export default App;
+createRoot(document.getElementById('sample')).render(<App />);
+
 ```
 {% endraw %}
 

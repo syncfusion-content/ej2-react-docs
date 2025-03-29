@@ -257,7 +257,7 @@ When there is no selection, styles of **Linked** type will change the values of 
 For example, the following line will apply the "New Linked" to the current paragraph.
 
 ```ts
-this.documenteditor.editorModule.applyStyle('New Linked');
+documenteditor.editor.applyStyle('New Linked');
 //Clear direct formatting and apply the specified style
-this.documenteditor.editorModule.applyStyle('New Linked', true);
+documenteditor.editor.applyStyle('New Linked', true);
 ```

@@ -94,27 +94,40 @@ The following example shows how to open bookmark dialog in document editor.
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorComponent, SfdtExport, Selection, Editor, BookmarkDialog } from '@syncfusion/ej2-react-documenteditor';
-
+import {
+  DocumentEditorComponent,
+  SfdtExport,
+  Selection,
+  Editor,
+  BookmarkDialog,
+} from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, BookmarkDialog);
-
-function Default() {
-let documenteditor: DocumentEditorComponent = new DocumentEditorComponent(undefined);
-function showBookmarkDialog() {
-    //Open bookmark dialog.
+let documenteditor;
+function App() {
+  return (
+    <div>
+      <button onClick={showBookmarkDialog}>Dialog</button>
+      <DocumentEditorComponent
+        id="container"
+        height={'330px'}
+        ref={(scope) => {
+          documenteditor = scope;
+        }}
+        isReadOnly={false}
+        enableSelection={true}
+        enableEditor={true}
+        enableSfdtExport={true}
+        enableBookmarkDialog={true}
+      />
+    </div>
+  );
+  function showBookmarkDialog() {
+    //Open Bookmark dialog.
     documenteditor.showDialog('Bookmark');
+  }
 }
-
-    return (
-        <div>
-             <button onClick={showBookmarkDialog}>Dialog</button>
-            <DocumentEditorComponent id="container" height={'330px'} isReadOnly={false} enableSelection={true} enableEditor={true} enableSfdtExport={true} enableBookmarkDialog={true} />
-        </div>
-    );
-}
-export default Default
-ReactDOM.render(<Default />, document.getElementById('sample'));
-
+export default App;
+ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 

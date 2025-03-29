@@ -129,32 +129,27 @@ Document editor provides an option to protect and unprotect document using [`enf
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
-  Toolbar
+  Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-  let container: DocumentEditorContainerComponent;
-  React.useEffect(() => {
-    EnforceProtection();
-    StopProtection();
-}, []);
-function EnforceProtection(){
-  //enforce protection
-  container.documentEditor.editor.enforceProtection('123','CommentsOnly');
-}
-function StopProtection(){
-  //stop the document protection
-  container.documentEditor.editor.stopProtection('123');
-}
-    return (
-      <div>
-      <button onClick={EnforceProtection}>enforceProtection</button>
-      <button onClick={StopProtection}>stopProtection</button>
+  let container = DocumentEditorContainerComponent;
+  function enforceProtection() {
+    //enforce protection
+    container.documentEditor.editor.enforceProtection('123', 'CommentsOnly');
+  }
+  function stopProtection() {
+    //stop the document protection
+    container.documentEditor.editor.stopProtection('123');
+  }
+  return (
+    <div>
+      <button onClick={enforceProtection}>Enforce Protection</button>
+      <button onClick={stopProtection}>Stop Protection</button>
       <DocumentEditorContainerComponent
         id="container"
         ref={(scope) => {
@@ -164,13 +159,11 @@ function StopProtection(){
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
         enableToolbar={true}
       />
-      </div>
-
-    );
-  
+    </div>
+  );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
@@ -188,31 +181,40 @@ The following example illustrates how to enable mention support in the Document 
 
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
   Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-  let mentionData: any = [
-    { "Name": "Mary Kate", "EmailId": "marry@company.com" },
-    { "Name": "Andrew James", "EmailId": "james@company.com" },
-    { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
+  let container = DocumentEditorContainerComponent;
+  let mentionData = [
+    { Name: 'Mary Kate', EmailId: 'marry@company.com' },
+    { Name: 'Andrew James', EmailId: 'james@company.com' },
+    { Name: 'Andrew Fuller', EmailId: 'andrew@company.com' },
   ];
-  let settings =  {showRuler: true, mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }}};
+  let settings = {
+    showRuler: true,
+    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' } },
+  };
   return (
-    <DocumentEditorContainerComponent
-      id="container"
-      height={'590px'}
-      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-      enableToolbar={true}
-      documentEditorSettings={settings}
-    />
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        enableToolbar={true}
+        documentEditorSettings={settings}
+      />
+    </div>
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('sample')).render(<App />);
+
 ```
