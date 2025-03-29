@@ -16,26 +16,49 @@ Document Editor supports performing spell checking for any input text. You can p
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-    DocumentEditorComponent, DocumentEditor, SpellChecker
+  DocumentEditorComponent,
+  SfdtExport,
+  Selection,
+  Editor,
+  SpellChecker,
 } from '@syncfusion/ej2-react-documenteditor';
-DocumentEditorComponent.Inject(SpellChecker);
-function App() {
-    let documentEditor: DocumentEditorComponent;
-    React.useEffect(() => {
-        componentDidMount()
-    }, []);
-    function componentDidMount(): void {
-        documentEditor.spellChecker.languageID = 1033 //LCID of "en-us";
-        documentEditor.spellChecker.removeUnderline = false;
-        documentEditor.spellChecker.allowSpellCheckAndSuggestion = true;
-    }
 
-    return (
-        <DocumentEditorComponent id="container" ref={(scope) => { documentEditor = scope; }} />
-    );
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, SpellChecker);
+function App() {
+  let documenteditor;
+  React.useEffect(() => {
+    componentDidMount();
+  }, []);
+  function componentDidMount() {
+   //Accessing spell checker.
+let spellChecker = documenteditor.spellChecker;
+//Set language id to map dictionary in server side.;
+spellChecker.languageID = 1033;
+spellChecker.removeUnderline = false;
+//Allow suggetion for miss spelled word/
+spellChecker.allowSpellCheckAndSuggestion = true;
+  }
+
+  return (
+    <div>
+      <DocumentEditorComponent
+        id="container"
+        height={'330px'}
+        ref={(scope) => {
+          documenteditor = scope;
+        }}
+        isReadOnly={false}
+        enableSelection={true}
+        enableEditor={true}
+        enableSfdtExport={true}
+        enableSpellCheck={true}
+      />
+    </div>
+  );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
+
 
 ```
 

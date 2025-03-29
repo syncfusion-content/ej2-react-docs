@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Disable optimized text measuring in React Document editor component | Syncfusion
+title: Disable optimized text measuring in React Document Editor | Syncfusion
 description: Learn here all about Disable optimized text measuring in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Disable optimized text measuring 
 platform: ej2-react
@@ -20,30 +20,38 @@ The following example code illustrates how to disable optimized text measuring i
 
 {% raw %}
 ```ts
+import { DocumentEditorContainer, Toolbar, DocumentEditorContainerComponent} from '@syncfusion/ej2-react-documenteditor';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
-
 function App() {
+  let container;
+  let hosturl =
+    'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 
-  // Disable optimized text measuring improvement  
+  // Disable optimized text measuring improvement
   let settings = { enableOptimizedTextMeasuring: false };
 
-
   return (
-    <DocumentEditorContainerComponent
-      id="container"
-      style={{ height: '590px' }}
-      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-      enableToolbar={true}
-      documentEditorSettings={settings}
-    />
+    <div className="App">
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        style={{ height: '590px' }}
+        enableToolbar={true}
+        serviceUrl={hosturl}
+        height={'590px'}
+        documentEditorSettings={settings}
+      />
+    </div>
   );
-
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
+
 
 ```
 {% endraw %}

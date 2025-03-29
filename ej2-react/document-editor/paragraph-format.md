@@ -153,7 +153,7 @@ import * as React from 'react';
 import {
     DocumentEditorComponent, Selection, Editor, EditorHistory, ContextMenu
 } from '@syncfusion/ej2-react-documenteditor';
-import { ToolbarComponent, ItemDirective } from '@syncfusion/ej2-react-navigations';
+import { ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
 import { DropDownButtonComponent, ItemModel } from '@syncfusion/ej2-react-splitbuttons';
 
 //Inject require modules.
@@ -273,18 +273,20 @@ function App() {
     return (
         <div>
             <ToolbarComponent id='toolbar' clicked={toolbarButtonClick}>
-                <ItemDirective id="AlignLeft" prefixIcon="e-de-ctnr-alignleft e-icons" tooltipText="Align Left" />
-                <ItemDirective id="AlignCenter" prefixIcon="e-de-ctnr-aligncenter e-icons" tooltipText="Align Center" />
-                <ItemDirective id="AlignRight" prefixIcon="e-de-ctnr-alignright e-icons" tooltipText="Align Right" />
-                <ItemDirective id="Justify" prefixIcon="e-de-ctnr-justify e-icons" tooltipText="Justify" />
-                <ItemDirective type="Separator" />
-                <ItemDirective id="IncreaseIndent" prefixIcon="e-de-ctnr-increaseindent e-icons" tooltipText="Increase Indent" />
-                <ItemDirective id="DecreaseIndent" prefixIcon="e-de-ctnr-decreaseindent e-icons" tooltipText="Decrease Indent" />
-                <ItemDirective type="Separator" />
-                <ItemDirective template={contentTemplate1} />
-                <ItemDirective id="ClearFormat" prefixIcon="e-de-ctnr-clearall e-icons" tooltipText="Clear Formatting" />
-                <ItemDirective type="Separator" />
-                <ItemDirective id="ShowParagraphMark" prefixIcon="e-de-e-paragraph-mark e-icons" tooltipText="Show the hidden characters like spaces, tab, paragraph marks, and breaks.(Ctrl + *)" />
+                <ItemsDirective>
+                    <ItemDirective id="AlignLeft" prefixIcon="e-de-ctnr-alignleft e-icons" tooltipText="Align Left" />
+                    <ItemDirective id="AlignCenter" prefixIcon="e-de-ctnr-aligncenter e-icons" tooltipText="Align Center" />
+                    <ItemDirective id="AlignRight" prefixIcon="e-de-ctnr-alignright e-icons" tooltipText="Align Right" />
+                    <ItemDirective id="Justify" prefixIcon="e-de-ctnr-justify e-icons" tooltipText="Justify" />
+                    <ItemDirective type="Separator" />
+                    <ItemDirective id="IncreaseIndent" prefixIcon="e-de-ctnr-increaseindent e-icons" tooltipText="Increase Indent" />
+                    <ItemDirective id="DecreaseIndent" prefixIcon="e-de-ctnr-decreaseindent e-icons" tooltipText="Decrease Indent" />
+                    <ItemDirective type="Separator" />
+                    <ItemDirective template={contentTemplate1} />
+                    <ItemDirective id="ClearFormat" prefixIcon="e-de-ctnr-clearall e-icons" tooltipText="Clear Formatting" />
+                    <ItemDirective type="Separator" />
+                    <ItemDirective id="ShowParagraphMark" prefixIcon="e-de-e-paragraph-mark e-icons" tooltipText="Show the hidden characters like spaces, tab, paragraph marks, and breaks.(Ctrl + *)" />
+                </ItemsDirective>
             </ToolbarComponent>
 
             <DocumentEditorComponent

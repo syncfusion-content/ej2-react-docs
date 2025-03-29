@@ -19,17 +19,23 @@ This provides the options to search for a portion of text in the document. After
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorComponent, SfdtExport, Selection, Editor, BordersAndShadingDialog } from '@syncfusion/ej2-react-documenteditor';
+import {
+  DocumentEditorComponent,
+  SfdtExport,
+  Selection,
+  Editor,
+  OptionsPane,
+} from '@syncfusion/ej2-react-documenteditor';
 
 //Inject require module.
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, BordersAndShadingDialog);
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, OptionsPane);
 function App() {
-  let documenteditor: DocumentEditorComponent;
+  let documenteditor;
   React.useEffect(() => {
-    ComponentDidMount()
+    ComponentDidMount();
   }, []);
   function ComponentDidMount() {
-    let sfdt: string = `{
+    let sfdt = `{
             "sections": [
                 {
                     "blocks": [
@@ -59,7 +65,18 @@ function App() {
   return (
     <div>
       <button onClick={ShowHideOptionsPane}>OptionsPane</button>
-      <DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSearch={true} enableOptionsPane={true} />
+      <DocumentEditorComponent
+        id="container"
+        height={'330px'}
+        ref={(scope) => {
+          documenteditor = scope;
+        }}
+        isReadOnly={false}
+        enableSelection={true}
+        enableEditor={true}
+        enableSearch={true}
+        enableOptionsPane={true}
+      />
     </div>
   );
 }
@@ -87,7 +104,7 @@ Using [`find()`](../api/document-editor/search/#find) method, you can find the i
 The following example code illustrates how to use find in Document editor.
 
 ```ts
-this.documenteditor.search.find('Some text', 'None');
+documenteditor.search.find('Some text', 'None');
 ```
 
 >Note: Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
@@ -99,7 +116,7 @@ Using [`findAll()`](../api/document-editor/search/#findall) method, you can find
 The following example code illustrates how to find All the text in the document.
 
 ```ts
-this.documenteditor.search.findAll('Some text', 'None');
+documenteditor.search.findAll('Some text', 'None');
 ```
 
 >Note: Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
@@ -122,9 +139,9 @@ Using [`replaceAll`](https://ej2.syncfusion.com/react/documentation/api/document
 The following example code illustrates how to use replace All in Document editor.
 
 ```ts
-this.documentEditor.search.findAll ('Some text');
+documentEditor.search.findAll ('Some text');
 // Replace all the searched text with word 'Mike'
-this.documentEditor.search.searchResults.replaceAll("Mike");  
+documentEditor.search.searchResults.replaceAll("Mike");  
 ```
 
 ### Replace
@@ -139,15 +156,15 @@ Using [`insertText`](https://ej2.syncfusion.com/react/documentation/api/document
 The following example code illustrates how to find a text in the document and replace each occurrence of the text one by one programmatically.
 
 ```ts
-this.container.documentEditor.search.findAll('works');
+documentEditor.search.findAll('works');
 
-let searchLength: number = container.documentEditor.search.searchResults.length;
+let searchLength: number = documentEditor.search.searchResults.length;
 
 for (let i = searchLength - 1; i >= 0; i--) {
   // It will move selection to specific searched index,move to each occurrence one by one
-  this.container.documentEditor.search.searchResults.index = i;
+  documentEditor.search.searchResults.index = i;
   // Replace it with some text
-  this.container.documentEditor.editor.insertText('Hello');
+  documentEditor.editor.insertText('Hello');
 }
 
 container.documentEditor.search.searchResults.clear();
@@ -161,17 +178,23 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 ```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { DocumentEditorComponent, SfdtExport, Selection, Editor, Search } from '@syncfusion/ej2-react-documenteditor';
+import {
+  DocumentEditorComponent,
+  SfdtExport,
+  Selection,
+  Editor,
+  Search,
+} from '@syncfusion/ej2-react-documenteditor';
 
 //Inject require module.
 DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, Search);
 function App() {
-  let documenteditor: DocumentEditorComponent;
+  let documenteditor;
   React.useEffect(() => {
-    ComponentDidMount()
+    ComponentDidMount();
   }, []);
   function ComponentDidMount() {
-    let sfdt: string = `{
+    let sfdt = `{
             "sections": [
                 {
                     "blocks": [
@@ -195,8 +218,8 @@ function App() {
   }
 
   function replaceAll() {
-    let textToFind: string = (document.getElementById('find_text') as HTMLInputElement).value;
-    let textToReplace: string = (document.getElementById('replace_text') as HTMLInputElement).value;
+    let textToFind = document.getElementById('find_text').value;
+    let textToReplace = document.getElementById('replace_text').value;
     if (textToFind !== '') {
       // Find all the occurences of given text
       documenteditor.searchModule.findAll(textToFind);
@@ -209,14 +232,49 @@ function App() {
 
   return (
     <div>
-      <button onClick={replaceAll}>Replace All</button>
-      <DocumentEditorComponent id="container" height={'590px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableSelection={true} enableEditor={true} enableSearch={true} />
+      <div>
+        <table>
+          <tr>
+            <td>
+              <label>Text to find:</label>
+            </td>
+            <td>
+              <input type="text" id="find_text" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Text to replace:</label>
+            </td>
+            <td>
+              <input type="text" id="replace_text" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button onClick={replaceAll}>Replace All</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <DocumentEditorComponent
+        id="container"
+        height={'590px'}
+        ref={(scope) => {
+          documenteditor = scope;
+        }}
+        isReadOnly={false}
+        enableSelection={true}
+        enableEditor={true}
+        enableSearch={true}
+      />
     </div>
   );
-
 }
-export default App
+export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
+
 
 ```
 

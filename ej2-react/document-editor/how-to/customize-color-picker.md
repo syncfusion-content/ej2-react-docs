@@ -25,20 +25,32 @@ import {
 
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-  // Add required color picker settings to the document editor settings
-  let settings =  {colorPickerSettings: { mode: 'Palette', modeSwitcher: true, showButtons: true }};
+  let container;
+// Add required color picker settings to the document editor settings
+let settings =  {colorPickerSettings: { mode: 'Palette', modeSwitcher: true, showButtons: true }};
+return (
+  <DocumentEditorContainerComponent
+    id="container"
+    height={'590px'}
+    serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+    enableToolbar={true}
+    documentEditorSettings={settings}
+  />
+);
   return (
     <DocumentEditorContainerComponent
       id="container"
+      ref={(scope) => {
+        container = scope;
+      }}
       height={'590px'}
       serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
       enableToolbar={true}
-      documentEditorSettings={settings}
     />
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 The following table illustrates all the possible properties for the color picker.

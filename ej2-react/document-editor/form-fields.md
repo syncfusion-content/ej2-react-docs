@@ -24,7 +24,7 @@ documentEditor.editor.insertFormField('Text');
 //Insert Checkbox form field
 documentEditor.editor.insertFormField('CheckBox');
 //Insert Drop down form field
-documentEditor.editor.insertFormField('Dropdown');
+documentEditor.editor.insertFormField('DropDown');
 ```
 
 ## Get form field names
@@ -69,7 +69,7 @@ documentEditor.setFormFieldInfo('Check1',checkboxfieldInfo);
 
 // Set checkbox form field properties
 let dropdownfieldInfo: DropDownFormFieldInfo = documentEditor.getFormFieldInfo('Drop1') as DropDownFormFieldInfo;
-dropdownfieldInfo.dropDownItems = ['One','Two', 'Three'];
+dropdownfieldInfo.dropdownItems = ['One','Two', 'Three'];
 dropdownfieldInfo.name = "Drop2";
 documentEditor.setFormFieldInfo('Drop1',dropdownfieldInfo);
 ```
@@ -113,32 +113,27 @@ Document editor provides an option to protect and unprotect document using [`enf
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
-  Toolbar
+  Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-  let container: DocumentEditorContainerComponent;
-  React.useEffect(() => {
-    EnforceProtection();
-    StopProtection();
-}, []);
-function EnforceProtection(){
-  //enforce protection
-  container.documentEditor.editor.enforceProtection('123','CommentsOnly');
-}
-function StopProtection(){
-  //stop the document protection
-  container.documentEditor.editor.stopProtection('123');
-}
-    return (
-      <div>
-      <button onClick={EnforceProtection}>enforceProtection</button>
-      <button onClick={StopProtection}>stopProtection</button>
+  let container = DocumentEditorContainerComponent;
+  function EnforceProtection() {
+    //enforce protection
+    container.documentEditor.editor.enforceProtection('123', 'FormFieldsOnly');
+  }
+  function StopProtection() {
+    //stop the document protection
+    container.documentEditor.editor.stopProtection('123');
+  }
+  return (
+    <div>
+      <button onClick={enforceProtection}>EnforceProtection</button>
+      <button onClick={stopProtection}>StopProtection</button>
       <DocumentEditorContainerComponent
         id="container"
         ref={(scope) => {
@@ -148,13 +143,12 @@ function StopProtection(){
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
         enableToolbar={true}
       />
-      </div>
-
-    );
-  
+    </div>
+  );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('sample')).render(<App />);
+
 
 ```
 

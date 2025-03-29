@@ -21,31 +21,37 @@ To know more about the track changes in DocumentEditor component, you can check 
 The following example demonstrates how to enable track changes.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import * as React from 'react';
 import {
-  DocumentEditorComponent, DocumentEditor
+  DocumentEditorComponent,
+  SfdtExport,
+  Selection,
+  Editor,
 } from '@syncfusion/ej2-react-documenteditor';
-
+DocumentEditorComponent.Inject(SfdtExport, Selection, Editor);
+let documenteditor;
 function App() {
-  let documentEditor: DocumentEditorComponent = new DocumentEditorComponent(undefined);
-  React.useEffect(() => {
-    ComponentDidMount()
-  }, []);
-  function ComponentDidMount() {
-    documentEditor.spellChecker.languageID = 1033;
-    //LCID of "en-us";
-    documentEditor.spellChecker.removeUnderline = false;
-    documentEditor.spellChecker.allowSpellCheckAndSuggestion = true;
-  }
-
   return (
-    <DocumentEditorComponent id="container" ref={(scope) => { documentEditor = scope; }} enableTrackChanges={true} enableSpellCheck={true} />
+    <div>
+      <DocumentEditorComponent
+        id="container"
+        height={'330px'}
+        ref={(scope) => {
+          documenteditor = scope;
+        }}
+        isReadOnly={false}
+        enableSelection={true}
+        enableEditor={true}
+        enableSfdtExport={true}
+        enableTrackChanges={true}
+      />
+    </div>
   );
-
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
@@ -57,34 +63,49 @@ The following example code illustrates how to show/hide the revisions pane.
 
 ```ts
 
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
   Toolbar,
+  Selection,
+  Editor,
 } from '@syncfusion/ej2-react-documenteditor';
 
-DocumentEditorContainerComponent.Inject(Toolbar);
+// Inject the required modules
+DocumentEditorContainerComponent.Inject(Toolbar, Selection, Editor);
+
 function App() {
-  let containerRef: React.RefObject<DocumentEditorContainerComponent> = React.createRef();
-  containerRef.current.documentEditor.showRevisions = true; // To show revisions pane
-  containerRef.current.documentEditor.showRevisions = false; // To hide revisions pane
+  let container = null;
+
+  React.useEffect(() => {
+    container.documentEditor.showRevisions = true; // To show revisions pane
+    container.documentEditor.showRevisions = false; // To hide revisions pane
+  }, [container]); // Re-run the effect when the container is initialized
+
   return (
     <div>
       <DocumentEditorContainerComponent
         id="container"
-        ref={containerRef}
+        ref={(scope) => {
+          container = scope; // Assign the container ref
+        }}
         height={'590px'}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
         enableToolbar={true}
+        enableSelection={true}
+        enableEditor={true}
         enableTrackChanges={true}
       />
     </div>
-
   );
 }
+
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+
+// Render the App component into the sample div
+createRoot(document.getElementById('sample')).render(<App />);
+
 
 ```
 
@@ -93,11 +114,11 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 The following example demonstrate how to get all tracked revision from current document.
 
 ```ts
-<DocumentEditorComponent id="container" ref={(scope) => { this.documenteditor = scope; }} enableTrackChanges={true}/>
+<DocumentEditorComponent id="container" ref={(scope) => { documenteditor = scope; }} enableTrackChanges={true}/>
 /**
  * Get revisions from the current document
  */
-let revisions : RevisionCollection = this.container.documentEditor.revisions;
+let revisions : RevisionCollection = documentEditor.revisions;
 ```
 
 ## Accept or Reject all changes programmatically
@@ -105,11 +126,11 @@ let revisions : RevisionCollection = this.container.documentEditor.revisions;
 The following example demonstrates how to accept/reject all changes.
 
 ```ts
-<DocumentEditorComponent id="container" ref={(scope) => { this.documenteditor = scope; }} enableTrackChanges={true}/>
+<DocumentEditorComponent id="container" ref={(scope) => { documenteditor = scope; }} enableTrackChanges={true}/>
 /**
  * Get revisions from the current document
  */
-let revisions : RevisionCollection = this.container.documentEditor.revisions;
+let revisions : RevisionCollection = documentEditor.revisions;
 /**
  * Accept all tracked changes
  */
@@ -128,7 +149,7 @@ The following example demonstrates how to accept/reject specific revision in the
 /**
  * Get revisions from the current document
  */
-let revisions : RevisionCollection = this.container.documentEditor.revisions;
+let revisions : RevisionCollection = documentEditor.revisions;
 /**
  * Accept specific changes
  */
@@ -185,7 +206,7 @@ function App() {
   }, []);
   function EnforceProtection() {
     //enforce protection
-    container.documentEditor.editor.enforceProtection('123', 'CommentsOnly');
+    container.documentEditor.editor.enforceProtection('123', 'RevisionsOnly');
   }
   function StopProtection() {
     //stop the document protection
@@ -203,6 +224,7 @@ function App() {
         height={'590px'}
         serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
         enableToolbar={true}
+        enableTrackChanges={true}
       />
     </div>
 
@@ -224,13 +246,15 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 You can restrict the accept and reject changes based on the author name. The following example demonstrates how to restrict an author from accept/reject changes.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
   Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-const App = () => {
+DocumentEditorContainerComponent.Inject(Toolbar);
+function App() {
+  let container = DocumentEditorContainerComponent;
   // Event gets triggered before accepting/rejecting changes
   const beforeAcceptRejectChanges = (args) => {
     // Check the author of the revision
@@ -239,23 +263,22 @@ const App = () => {
       args.cancel = true;
     }
   };
-
   return (
     <div>
-      <div>
-        <div>
-          <DocumentEditorContainerComponent
-            ref={(scope) => { container = scope; }}
-            style={{ display: 'block' }}
-            height={'590px'}
-            beforeAcceptRejectChanges={beforeAcceptRejectChanges}
-            enableToolbar={true}
-          />
-        </div>
-      </div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        enableToolbar={true}
+        enableTrackChanges={true}
+        beforeAcceptRejectChanges={beforeAcceptRejectChanges}
+      />
     </div>
   );
-};
-
+}
 export default App;
+createRoot(document.getElementById('sample')).render(<App />);
 ```

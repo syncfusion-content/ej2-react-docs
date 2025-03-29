@@ -357,6 +357,35 @@ In the following code, the `Progress Bar` component render in the Grid **Freight
 
  {% previewsample "page.domainurl/code-snippet/grid/template-cs8" %}
 
+### Render RadioButton in a column 
+
+The Syncfusion React Grid supports rendering the [RadioButton](https://ej2.syncfusion.com/react/documentation/radio-button/getting-started) within a column using the [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) property. This feature is particularly useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the Grid.
+
+In the following example, a `RadioButton` is rendered in the **Order Status** column of the Grid by defining the `template` property.
+
+```js  
+  <RadioButtonComponent label="Pending" name={`radio-${OrderID}`} cssClass="e-success" checked={OrderStatus === "Pending"} />
+  <RadioButtonComponent label="Confirmed" name={`radio-${OrderID}`} cssClass="e-success" checked={OrderStatus === "Confirmed"} />
+  <RadioButtonComponent label="Shipped" name={`radio-${OrderID}`} cssClass="e-success" checked={OrderStatus === "Shipped"} />
+```
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/template-radiobutton/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/template-radiobutton/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/template-radiobutton/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/template-radiobutton/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/template-radiobutton" %}
+
 ## Using condition template
 
 The conditional column [template](https://ej2.syncfusion.com/react/documentation/api/grid/column/#template) allows you to display template elements based on specific conditions.

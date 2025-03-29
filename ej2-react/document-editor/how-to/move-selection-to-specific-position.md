@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Move selection to specific position in React Document editor component | Syncfusion
+title: Move selection to position in React Document editor | Syncfusion
 description: Learn here all about Move selection to specific position in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Move selection to specific position 
 platform: ej2-react
@@ -22,9 +22,9 @@ The following code snippet illustrate how to select using hierarchical index.
 
 ```ts
 // Selection will occur between provided start and end offset
-this.documentEdContainerIns.documentEditor.editor.insertText("Welcome");
+container.documentEditor.editor.insertText("Welcome");
 // The below code will select the letters “We” from inserted text “Welcome”
-this.documentEdContainerIns.documentEditor.selection.select("0;0;0", "0;0;2");
+container.documentEditor.selection.select("0;0;0", "0;0;2");
 ```
 
 The following table illustrates about Hierarchical index in detail.
@@ -90,5 +90,5 @@ x denotes the left position and y denotes the top position and extend denotes wh
 Please check below code sample for reference.
 
 ```ts
-this.container.documentEditor.selection.select({ x: 188.4814208984375 , y: 662.00005, extend: true });
+container.documentEditor.selection.select({ x: 188.4814208984375 , y: 662.00005, extend: true });
 ```

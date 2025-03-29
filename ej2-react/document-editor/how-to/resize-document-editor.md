@@ -61,46 +61,49 @@ Using [`resize`](https://ej2.syncfusion.com/react/documentation/api/document-edi
 The following example code illustrates how to fit Document Editor to browser window size.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import * as React from 'react';
 import {
-    DocumentEditorContainerComponent,
-    Toolbar,
+  DocumentEditorContainerComponent,
+  Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-    let container: DocumentEditorContainerComponent;
-    function onCreate() {
-        setInterval(() => {
-            updateDocumentEditorSize();
-        }, 100);
-        //Adds event listener for browser window resize event.
-        window.addEventListener('resize', onWindowResize);
-    }
-    function onWindowResize() {
-        //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
-        updateDocumentEditorSize();
-    }
-    function updateDocumentEditorSize() {
-        //Resizes the document editor component to fit full browser window.
-        var windowWidth = window.innerWidth;
-        var windowHeight = window.innerHeight;
-        container.resize(windowWidth, windowHeight);
-    }
-    return (
-        <DocumentEditorContainerComponent
-            id="container"
-            ref={(scope) => {
-                container = scope;
-            }}
-            height={'590px'}
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-            enableToolbar={true}
-            created={onCreate}
-        />
-    );
+  let container = DocumentEditorContainerComponent;
+  function onCreate() {
+    setInterval(() => {
+      updateDocumentEditorSize();
+    }, 100);
+    //Adds event listener for browser window resize event.
+    window.addEventListener('resize', onWindowResize);
+  }
+  function onWindowResize() {
+    //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
+    updateDocumentEditorSize();
+  }
+  function updateDocumentEditorSize() {
+    //Resizes the document editor component to fit full browser window.
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+    container.resize(windowWidth, windowHeight);
+  }
+  return (
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        enableToolbar={true}
+        created={onCreate}
+      />
+    </div>
+  );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('sample')).render(<App />);
+
 ```

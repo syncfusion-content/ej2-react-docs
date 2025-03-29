@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize font family drop down in React Document editor component | Syncfusion
+title: Customize font dropdown in React Document Editor | Syncfusion
 description: Learn here all about Customize font family drop down in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Customize font family drop down 
 platform: ej2-react
@@ -23,7 +23,6 @@ import {
   DocumentEditorContainerComponent,
   Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
-
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   // Add required font families to list it in font drop down
@@ -41,7 +40,7 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 Output will be like below:
