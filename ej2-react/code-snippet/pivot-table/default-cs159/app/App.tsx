@@ -1,4 +1,5 @@
-import { IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 import { renewableEnergy } from './datasource';
 
@@ -8,7 +9,7 @@ function App() {
     return (<span className="tempwrap e-pivot-trend-neutral pv-icons"></span>);
   }
 
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: renewableEnergy as IDataSet[],
     expandAll: true,
     enableSorting: true,

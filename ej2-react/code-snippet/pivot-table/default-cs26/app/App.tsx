@@ -1,11 +1,12 @@
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { csvdata } from './datasource';
 
 function App() {
 
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: getCSVData(),
     type: 'CSV',
     expandAll: false,

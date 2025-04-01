@@ -59,9 +59,11 @@ The [`maxRowsInDrillThrough`](https://ej2.syncfusion.com/react/documentation/api
 ```ts
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { CalculatedField, FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent, DrillThrough } from '@syncfusion/ej2-react-pivotview';
+import { CalculatedField, FieldList, IDataSet, Inject, PivotViewComponent, DrillThrough } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
+
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     catalog: 'Adventure Works DW 2008 SE',
             cube: 'Adventure Works',
             providerType: 'SSAS',

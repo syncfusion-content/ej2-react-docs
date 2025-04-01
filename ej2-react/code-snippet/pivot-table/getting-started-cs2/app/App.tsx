@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { pivotData } from './datasource';
 function App() {
-  const dataSourceSettings: IDataOptions = {
+  const dataSourceSettings: DataSourceSettingsModel = {
     columns: [{ name: 'Date', caption: 'Date' }, { name: 'Product' }],
     dataSource: pivotData as IDataSet[],
     expandAll: false,

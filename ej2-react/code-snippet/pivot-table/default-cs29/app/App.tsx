@@ -1,4 +1,5 @@
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { DataManager, ODataV4Adaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
 
@@ -9,7 +10,7 @@ function App() {
     url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/?$top=7',
     crossDomain: true
   });
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: dataSource,
     expandAll: true,
     filters: [],

@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { IDataOptions, IDataSet, PivotViewComponent, Inject, VirtualScroll } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent, Inject, VirtualScroll } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
             catalog: 'Adventure Works DW 2008 SE',
             cube: 'Adventure Works',
             providerType: 'SSAS',

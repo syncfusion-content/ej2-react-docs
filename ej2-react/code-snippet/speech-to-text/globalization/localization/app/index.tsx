@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import { L10n } from '@syncfusion/ej2-base';
 // To render SpeechToText.
 function App() {
-    const textareaObj = useRef<TextAreaComponent>(null);
+    let textareaObj: TextAreaComponent;
     L10n.load({
         'de': {
             "speech-to-text": {
@@ -25,15 +25,15 @@ function App() {
             }
         }
     });
-    const onTranscriptChanged = (args: TranscriptChangedEventArgs) => {
-        textareaObj.current.value = args.transcript;
-    };
+    function onTranscriptChanged(args: TranscriptChangedEventArgs) {
+        textareaObj.value = args.transcript;
+    }
     return (
         <div id='container'>
             <SpeechToTextComponent transcriptChanged={onTranscriptChanged} locale="de"></SpeechToTextComponent>
             <TextAreaComponent
                 id="textareaInst"
-                ref={textareaObj}
+                ref={(textarea) => {textareaObj = textarea} }
                 resizeMode="None"
                 rows={5}
                 cols={50}

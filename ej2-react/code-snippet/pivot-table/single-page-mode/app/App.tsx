@@ -1,4 +1,5 @@
-import { PivotViewComponent, IDataOptions, Inject, VirtualScroll, VirtualScrollSettingsModel } from '@syncfusion/ej2-react-pivotview';
+import { PivotViewComponent, Inject, VirtualScroll, VirtualScrollSettingsModel } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 
 function data(count: number) {
@@ -38,7 +39,7 @@ let virtualScrollSettings: VirtualScrollSettingsModel = {
 } as VirtualScrollSettingsModel;
 function App() {
     let pivotObj: PivotViewComponent;
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
         dataSource: data(1000),
         enableSorting: false,
         expandAll: true,

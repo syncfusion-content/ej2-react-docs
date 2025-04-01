@@ -1,8 +1,9 @@
 import { PivotViewComponent, GroupingBar, Inject } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 import { pivotData } from './datasource';
 function App() {
-  let dataSourceSettings = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: pivotData,
     expandAll: false,
     drilledMembers: [{ name: 'Country', items: ['France'] }],

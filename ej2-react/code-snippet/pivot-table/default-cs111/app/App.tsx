@@ -1,4 +1,5 @@
-import { FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent, GroupingBar, CalculatedField } from '@syncfusion/ej2-react-pivotview';
+import { FieldList, IDataSet, Inject, PivotViewComponent, GroupingBar, CalculatedField } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { L10n } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import { pivotData } from './datasource';
@@ -44,7 +45,7 @@ L10n.load({
     }
 });
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
     dataSource: pivotData as IDataSet[],
     expandAll: false,

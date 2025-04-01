@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 
 function App() {
-    const [listeningState, setListeningState] = useState<string>('Inactive');
+    let [listeningState, setListeningState] = useState<string>('Inactive');
 
-    const updateListeningState = (state: string) => {
+    function updateListeningState(state: string) {
         setListeningState(state);
     };
 

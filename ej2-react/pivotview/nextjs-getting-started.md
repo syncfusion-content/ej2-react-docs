@@ -160,11 +160,12 @@ export let pivotData: object[] = [
 {% highlight ts tabtitle="page.tsx" %}
 
 'use client'
-import { CalculatedField, FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { CalculatedField, FieldList, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { pivotData } from './datasource';
 
 export default function Home() {
-  const dataSourceSettings: IDataOptions = {
+  const dataSourceSettings: DataSourceSettingsModel = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
     dataSource: pivotData as IDataSet[],
     expandAll: false,

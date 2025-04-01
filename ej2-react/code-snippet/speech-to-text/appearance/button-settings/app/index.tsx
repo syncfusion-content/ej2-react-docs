@@ -6,10 +6,10 @@ import { useRef } from 'react';
 
 // To render SpeechToText.
 function App() {
-    const textareaObj = useRef<TextAreaComponent>(null);
-    const onTranscriptChanged = (args: TranscriptChangedEventArgs) => {
-        textareaObj.current.value = args.transcript;
-    };
+    let textareaObj: TextAreaComponent;
+    function onTranscriptChanged(args: TranscriptChangedEventArgs) {
+        textareaObj.value = args.transcript;
+    }
     const buttonSettings: ButtonSettingsModel = {
         content: 'Start',
         stopContent: 'Stop',
@@ -23,7 +23,7 @@ function App() {
             <SpeechToTextComponent transcriptChanged={onTranscriptChanged} buttonSettings={buttonSettings}></SpeechToTextComponent>
             <TextAreaComponent
                 id="textareaInst"
-                ref={textareaObj}
+                ref={textarea => textareaObj = textarea }
                 resizeMode="None"
                 rows={5}
                 cols={50}
