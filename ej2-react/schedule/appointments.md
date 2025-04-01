@@ -412,13 +412,13 @@ The following code example demonstrates how to enable the [`allowOverlap`](https
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/schedule/overlap-cs1" %}
+{% previewsample "page.domainurl/code-snippet/schedule/events-cs51" %}
 
 **Limitations**
 
 The [`allowOverlap`](https://ej2.syncfusion.com/react/documentation/api/schedule/#allowoverlap) property checks for event overlaps only within the currently visible date range. Events scheduled outside the rendered date range are not included in the overlap check by default.
 
-If you need to check for overlaps with events outside the visible date range, you can leverage the [`promise`](https://ej2.syncfusion.com/react/documentation/api/schedule/actionBeginEventArgs/#promise) field within the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule/#actionbegin) event to validate all events before proceeding. By implementing a custom validation method inside the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule/#actionbegin) event, you can assign the result (a boolean) to the [`promise`](https://ej2.syncfusion.com/react/documentation/api/schedule/actionBeginEventArgs/#promise) field. If the result is `true`, the action (e.g., adding or saving the event) will proceed; if `false`, the action will be blocked.
+If you need to check for overlaps with events outside the visible date range, you can leverage the [`promise`](https://ej2.syncfusion.com/react/documentation/api/schedule/actionEventArgs/#promise) field within the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule/#actionbegin) event to validate all events before proceeding. By implementing a custom validation method inside the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule/#actionbegin) event, you can assign the result (a boolean) to the [`promise`](https://ej2.syncfusion.com/react/documentation/api/schedule/actionEventArgs/#promise) field. If the result is `true`, the action (e.g., adding or saving the event) will proceed; if `false`, the action will be blocked.
 
 Additionally, you can use the public method [`openOverlapAlert`](https://ej2.syncfusion.com/react/documentation/api/schedule/#openoverlapalert) to show an alert popup whenever an overlap occurs and the result is `false`.
 
@@ -436,7 +436,7 @@ The following code example demonstrates how to check for overlaps when an event 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/schedule/overlap-cs2" %}
+{% previewsample "page.domainurl/code-snippet/schedule/events-cs52" %}
 
 ## Drag and drop appointments
 
