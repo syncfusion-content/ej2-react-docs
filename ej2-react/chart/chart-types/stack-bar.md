@@ -294,7 +294,8 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/series/stackedbar-cs9" %}
 
-## Stack Labels
+## Stack labels
+
 
 The stack labels feature in stacked charts displays cumulative total values for stack segments directly through data labels. It enhances data visualization by clearly showing the total contribution of all stack segments. This feature includes customization options for positioning, styling, and formatting total values, ensuring flexibility.
 
@@ -315,7 +316,8 @@ The stack labels feature in stacked charts displays cumulative total values for 
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs81" %}
 
-## Stack Labels
+## Stack labels
+
 
 The stack labels in stacked charts display cumulative total values for stack segments directly using data labels. If a stacked point has negative values, the stack labels are displayed below the point.
 
@@ -336,7 +338,7 @@ The stack labels in stacked charts display cumulative total values for stack seg
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs81" %}
 
-### Stack Labels Customization
+### Stack labels customization
 Stack labels have various properties for customization to enhance the visual based on your requirements:
 
 * [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/stackLabelSettings/#visible) - Specifies whether stack labels are visible. Setting to true will display the labels. Default is false.
@@ -366,7 +368,7 @@ Stack labels have various properties for customization to enhance the visual bas
 
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs81A" %}
 
-## Corner Radius
+## Corner radius
 
 The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/series/#cornerradius) property in the chart series is used to customize the corner radius for bar series. This allows you to create bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the bars using the topLeft, topRight, bottomLeft, and bottomRight properties.
 
@@ -387,7 +389,7 @@ The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/se
 
 {% previewsample "page.domainurl/code-snippet/chart/series/stackedbar-cs9A" %}
 
-### Point Corner Radius
+### Point corner radius
 
 We can customize the corner radius for individual points in the chart series using the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs/) event by setting the [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs/#cornerradius) property in its event argument.
 
