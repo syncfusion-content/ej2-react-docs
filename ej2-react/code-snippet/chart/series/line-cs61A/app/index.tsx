@@ -11,8 +11,7 @@ import { EmitType } from '@syncfusion/ej2-base';
 function App() {
 
   const primaryxAxis: AxisModel = { minimum: 2005, maximum: 2012, interval: 1, title: 'Year' };
-  const primaryyAxis: AxisModel = {
-    minimum: 3, maximum: 12, interval: 1, title: 'Percentage',
+  const primaryyAxis: AxisModel = { maximum: 12, interval: 1, title: 'Percentage',
     labelFormat: '{value}%'
   };
   const pointRender: EmitType<IPointRenderEventArgs> = (args: IPointRenderEventArgs): void => {

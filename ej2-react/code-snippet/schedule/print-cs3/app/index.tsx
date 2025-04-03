@@ -1,22 +1,9 @@
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 import { useRef } from 'react';
-import {
-  ScheduleComponent,
-  Day,
-  Week,
-  WorkWeek,
-  Month,
-  Agenda,
-  Print,
-  Inject,
-  ActionEventArgs,
-  ToolbarActionArgs,
-  BeforePrintEventArgs,
-} from '@syncfusion/ej2-react-schedule';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Print, Inject, ActionEventArgs, ToolbarActionArgs, BeforePrintEventArgs} from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
 import { ItemModel } from '@syncfusion/ej2-react-navigations';
-
 const getCurrentUserInfo = () => ({ department: 'Sales', userRole: 'Manager' });
 const getDepartmentColor = (dept: string): string => {
   const colors: Record<string, string> = {
@@ -34,20 +21,16 @@ const App: React.FC = () => {
 
   const onActionBegin = (args: ActionEventArgs & ToolbarActionArgs) => {
     if (args.requestType === 'toolbarItemRendering') {
-      const printItem: ItemModel = {
-        align: 'Right',
-        showTextOn: 'Both',
-        prefixIcon: 'e-icon-schedule-print',
-        text: 'Print',
-        cssClass: 'e-schedule-print',
-        click: onPrintIconClick,
+      let printItem = {
+        align: 'Right', showTextOn: 'Both', prefixIcon: 'e-icon-schedule-print',
+        text: 'Print', cssClass: 'e-schedule-print', click: onPrintIconClick
       };
       args.items.push(printItem);
     }
   };
 
   const onPrintIconClick = () => {
-    scheduleObj.current?.print();
+    scheduleObj.current.print();
   };
 
   const onBeforePrint = (args: BeforePrintEventArgs) => {
