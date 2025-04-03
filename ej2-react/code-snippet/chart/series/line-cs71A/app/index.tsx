@@ -11,7 +11,7 @@ import { columnData } from './datasource';
 function App() {
 
   const primaryxAxis: AxisModel = { valueType: 'Category', title: 'Countries' };
-  const primaryyAxis: AxisModel = { minimum: 0, maximum: 80, interval: 20, title: 'Medals' };
+  const primaryyAxis: AxisModel = { maximum: 80, interval: 20, title: 'Medals' };
   const pointRender: EmitType<IPointRenderEventArgs> = (args: IPointRenderEventArgs): void => {
     if (args.point.maximum < 38) {
       args.fill = '#ff6347';

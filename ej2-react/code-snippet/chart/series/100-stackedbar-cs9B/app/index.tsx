@@ -9,7 +9,7 @@ import { stackBarData } from './datasource';
 
 function App() {
 
-  const primaryxAxis: AxisModel = { valueType: 'Category', title: 'Months' };
+  const primaryxAxis: AxisModel = { valueType: 'Category', title: 'Years' };
   const primaryyAxis: AxisModel = {
     title: 'Percentage (%)', minimum: -20, maximum: 100,
     edgeLabelPlacement: 'Shift', labelFormat: '{value}%'

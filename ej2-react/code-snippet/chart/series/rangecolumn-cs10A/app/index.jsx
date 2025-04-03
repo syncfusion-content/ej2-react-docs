@@ -19,9 +19,9 @@ function App() {
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Maximum and minimum Temperature' pointRender={pointRender}>
                   <Inject services={[RangeColumnSeries, Legend, Tooltip, DataLabel, Category]}/>
                   <SeriesCollectionDirective>
-                      <SeriesDirective dataSource={data1} xName='x' low='low' high='high' type='RangeColumn'>
+                <SeriesDirective dataSource={data1} xName='x' low='low' high='high' type='RangeColumn' cornerRadius={{ topRight: 10 , topLeft: 10, bottomLeft: 10, bottomRight: 10 }} >
                       </SeriesDirective>
-                      <SeriesDirective dataSource={data2} xName='x' low='low' high='high' type='RangeColumn'>
+                      <SeriesDirective dataSource ={data2}  xName='x' low='low' high='high' type='RangeColumn' cornerRadius={{ topRight: 10 , topLeft: 10, bottomLeft: 10, bottomRight: 10 }}>
                       </SeriesDirective>
                    </SeriesCollectionDirective>
               </ChartComponent>;

@@ -7,7 +7,7 @@ import { stackColumndata } from './datasource';
 function App() {
     const primaryxAxis = { title: 'Years', interval: 1, valueType: 'Category' };
     const primaryyAxis = {
-        title: 'Sales in Billions', minimum: 0, maximum: 700, interval: 100,
+        title: 'Sales in Billions', maximum: 700, interval: 100,
         labelFormat: '{value}B'
     };
     const pointRender = (args) => {

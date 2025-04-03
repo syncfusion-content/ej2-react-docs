@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, StackingStepAreaSeries } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, StackingStepAreaSeries, DataLabel } from '@syncfusion/ej2-react-charts';
 import { stepAreaData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Double', title: 'Overs' };
@@ -11,7 +11,7 @@ function App() {
     title='Annual Temperature Comparison'
     stackLabels={{ visible: true }}
     >
-    <Inject services={[StackingStepAreaSeries, Legend]} />
+    <Inject services={[StackingStepAreaSeries, Legend, DataLabel]} />
     <SeriesCollectionDirective>
       <SeriesDirective dataSource={stepAreaData} xName='x' yName='y' name='England' type='StackingStepArea' marker={{ dataLabel: { visible: true } }}>
       </SeriesDirective>

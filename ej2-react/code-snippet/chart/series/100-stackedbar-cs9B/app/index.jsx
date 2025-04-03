@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, StackingBarSeries } from '@syncfusion/ej2-react-charts';
 import { stackBarData } from './datasource';
 function App() {
-    const primaryxAxis = { valueType: 'Category', title: 'Months' };
+    const primaryxAxis = { valueType: 'Category', title: 'Years' };
     const primaryyAxis = {
         title: 'Percentage (%)', minimum: -20, maximum: 100,
         edgeLabelPlacement: 'Shift', labelFormat: '{value}%'
