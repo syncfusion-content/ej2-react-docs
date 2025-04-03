@@ -11,7 +11,7 @@ function App() {
 
   const primaryxAxis: AxisModel = { title: 'Years', interval: 1, valueType: 'Category' };
   const primaryyAxis: AxisModel = {
-    title: 'Sales in Billions', minimum: 0, maximum: 700, interval: 100,
+    title: 'Sales in Billions', maximum: 700, interval: 100,
     labelFormat: '{value}B'
   };
   const pointRender = (args: IPointRenderEventArgs) => {

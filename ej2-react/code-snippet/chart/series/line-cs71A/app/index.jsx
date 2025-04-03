@@ -4,7 +4,7 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Leg
 import { columnData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Category', title: 'Countries' };
-    const primaryyAxis = { minimum: 0, maximum: 80, interval: 20, title: 'Medals' };
+    const primaryyAxis = { maximum: 80, interval: 20, title: 'Medals' };
     const pointRender = (args) => {
       if (args.point.maximum < 38) {
         args.fill = '#ff6347';
