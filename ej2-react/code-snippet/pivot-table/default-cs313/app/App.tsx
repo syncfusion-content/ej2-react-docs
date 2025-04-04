@@ -1,6 +1,7 @@
 import {
-  FieldList, IAxisSet, IDataOptions, IDataSet, Inject, PivotViewComponent
+  FieldList, IAxisSet, IDataSet, Inject, PivotViewComponent
 } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { Tooltip } from '@syncfusion/ej2-popups';
 import * as React from 'react';
 import { pivotData } from './datasource';
@@ -8,7 +9,7 @@ import { pivotData } from './datasource';
 function App() {
   let headerTooltip: Tooltip;
 
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: pivotData as IDataSet[],
     expandAll: false,
     enableSorting: true,

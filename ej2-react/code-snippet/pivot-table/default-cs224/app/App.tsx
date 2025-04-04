@@ -1,5 +1,6 @@
 
-import { IDataOptions, IDataSet, PivotViewComponent, Inject, DisplayOption, PivotChart } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent, Inject, DisplayOption, PivotChart } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import { pivotData } from './datasource';
@@ -15,7 +16,7 @@ function App() {
         chartSeries: { type: 'Pie' }
     } as ChartSettings;
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
         dataSource: pivotData as IDataSet[],
         expandAll: false,

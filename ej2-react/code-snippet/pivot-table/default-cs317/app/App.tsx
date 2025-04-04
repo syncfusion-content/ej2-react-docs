@@ -1,4 +1,5 @@
-import { FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent, AggregateEventArgs, AggregateTypes, SummaryTypes } from '@syncfusion/ej2-react-pivotview';
+import { FieldList, IDataSet, Inject, PivotViewComponent, AggregateEventArgs, AggregateTypes, SummaryTypes } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { L10n } from '@syncfusion/ej2-base';
 import * as React from 'react';
 import { pivotData } from './datasource';
@@ -24,7 +25,7 @@ const SummaryType: string[] = [
 ];
 function App() {
 
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: pivotData as IDataSet[],
     expandAll: false,
     columns: [{ name: 'Year' }, { name: 'Quarter' }],

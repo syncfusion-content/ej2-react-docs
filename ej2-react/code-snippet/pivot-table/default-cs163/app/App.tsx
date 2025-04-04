@@ -1,9 +1,10 @@
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { DataManager, WebApiAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
 
 function App() {
-  let dataSourceSettings: IDataOptions;
+  let dataSourceSettings: DataSourceSettingsModel;
   let pivotObj: PivotViewComponent;
   let dataSource: Promise<void> = new DataManager({
     url: 'https://bi.syncfusion.com/northwindservice/api/orders',

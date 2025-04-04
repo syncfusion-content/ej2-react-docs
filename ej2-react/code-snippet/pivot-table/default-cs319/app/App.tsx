@@ -1,8 +1,9 @@
 import {
-  FieldList, IDataOptions, Inject, PivotViewComponent, CalculatedField, Toolbar, RemoveReportArgs, ToolbarArgs,
+  FieldList, Inject, PivotViewComponent, CalculatedField, Toolbar, RemoveReportArgs, ToolbarArgs,
   ConditionalFormatting, IDataSet, RenameReportArgs, SaveReportArgs, FetchReportArgs,
   LoadReportArgs, NumberFormatting, PDFExport, ExcelExport
 } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 import{ getInstance, select} from '@syncfusion/ej2-base';
 import {DropDownList} from '@syncfusion/ej2-dropdowns';
@@ -11,7 +12,7 @@ import { pivotData } from './datasource';
 function App() {
   let isInitial: boolean = true;
 
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: pivotData as IDataSet[],
     columns: [{ name: 'Year' }, { name: 'Quarter' }],
     values: [{ name: 'Sold' }, { name: 'Amount' }],

@@ -1,11 +1,12 @@
-import { FieldList, IDataOptions, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { enableRipple } from '@syncfusion/ej2-base';
 import * as React from 'react';
 enableRipple(false);
 
 function App() {
 
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     expandAll: true,
     enableSorting: true,
     dataSource: data() as any,
