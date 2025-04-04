@@ -1,8 +1,9 @@
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     url: 'https://cdn.syncfusion.com/data/sales-analysis.json',
     expandAll: false,
     rows: [

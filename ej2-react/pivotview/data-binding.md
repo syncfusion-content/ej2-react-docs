@@ -62,10 +62,11 @@ In the meantime, the JSON data from the local *.json file type can also be conne
 
 ```javascript
 
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Uploader } from '@syncfusion/ej2-inputs';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 
 function App() {
   
@@ -82,7 +83,7 @@ function App() {
     reader.onload = function () {
       // Step 4: Getting the string output which is to be parsed as JSON.
       let result: string[][] = JSON.parse(reader.result as string);
-      let dataSourceSettings: IDataOptions = {
+      let dataSourceSettings: DataSourceSettingsModel = {
         // Step 5: The JSON result to be bound as data source.
         dataSource: result
         // Step 6: The appropriate report needs to be provided here.

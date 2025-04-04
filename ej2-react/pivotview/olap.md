@@ -128,7 +128,8 @@ You can initialize pivot table component in the application using following step
 * Then you can initialize pivot table component (`<PivotViewComponent/>`) using following code.
 
     ```ts
-    import { IDataOptions, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+    import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+    import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
     import * as React from 'react';
     import './App.css';
 
@@ -145,13 +146,14 @@ After initialization, add the the following code in **src/App.tsx** file to popu
 
 
     ```ts
-    import { IDataOptions, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+    import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+    import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
     import * as React from 'react';
     import './App.css';
 
     function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
                 catalog: 'Adventure Works DW 2008 SE',
                 cube: 'Adventure Works',
                 enableSorting: true,
@@ -544,9 +546,11 @@ Users can configure basic authentication information to access the OLAP cube usi
 ```ts
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { FieldList, IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { FieldList, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
+
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
             catalog: 'Adventure Works DW 2008 SE',
             cube: 'Adventure Works',
             providerType: 'SSAS',
@@ -597,9 +601,10 @@ SQL Server Analysis Services uses [`roles`](https://learn.microsoft.com/en-us/an
 ```ts
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { IDataOptions, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
         catalog: 'Adventure Works DW 2008 SE',
         cube: 'Adventure Works',
         providerType: 'SSAS',

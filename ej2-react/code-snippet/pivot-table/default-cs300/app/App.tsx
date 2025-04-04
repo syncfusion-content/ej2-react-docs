@@ -1,11 +1,12 @@
 
 import * as React from 'react';
 import {
-    PivotViewComponent, IDataOptions, Inject, Toolbar, ToolbarArgs, SaveReportArgs, FieldList
+    PivotViewComponent, Inject, Toolbar, ToolbarArgs, SaveReportArgs, FieldList
 } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { pivotData } from './datasource';
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
     dataSource: pivotData as IDataSet[],
     filters: [],

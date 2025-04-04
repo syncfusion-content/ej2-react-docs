@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Configure minimum width in React Pivotview component | Syncfusion
-description: Learn how to configure the minimum width in the Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: Configure minimum width in React Pivot Table component | Syncfusion
+description: Learn how to configure the minimum width in the Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
 control: Configuring the minimum width in the Pivot Table component
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configuring the minimum width in the React Pivotview component
+# Configuring the minimum width in the React Pivot Table component
 
 The pivot table component allows you to configure its minimum width using the `minWidth` property. This property is useful for ensuring the component maintains a consistent layout and responsiveness across different screen sizes.
 

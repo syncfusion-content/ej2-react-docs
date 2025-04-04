@@ -38,13 +38,14 @@ This section briefs the Syncfusion<sup style="font-size:70%">&reg;</sup> assembl
 
   ```javascript
 
-  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
 
   function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
       url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
     }
@@ -62,13 +63,14 @@ This section briefs the Syncfusion<sup style="font-size:70%">&reg;</sup> assembl
 
   ```javascript
 
-  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
 
   function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
       url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
@@ -179,13 +181,14 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
 
   ```javascript
 
-  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
 
   function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
       url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
@@ -269,13 +272,14 @@ Then call the data source in **GetData** method of **PivotController.cs** file.
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
   ```javascript
-  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
 
   function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
       url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       type: 'JSON',
@@ -398,13 +402,14 @@ Then call the data source in **GetData** method of **PivotController.cs** file.
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
   ```javascript
-  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
 
   function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
       url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       type: 'CSV',
@@ -512,13 +517,14 @@ To bind the data source, set its model type **PivotViewData** to **TValue** of t
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
   ```javascript
-  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
 
   function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
       url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
@@ -606,13 +612,14 @@ To bind the data source, set its model type as **ExpandoObject** to **TValue** o
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
   ```javascript
-  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
 
   function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
       url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{
@@ -711,13 +718,14 @@ Then call the data source in **GetData** method of **PivotController.cs** file.
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
   ```javascript
-  import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+  import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
 
   function App() {
 
-    let dataSourceSettings: IDataOptions = {
+    let dataSourceSettings: DataSourceSettingsModel = {
       url: 'https://localhost:44350/api/pivot/post',
       mode: 'Server',
       rows: [{

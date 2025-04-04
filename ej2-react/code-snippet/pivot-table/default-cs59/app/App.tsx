@@ -1,4 +1,5 @@
-import { IDataOptions, CellEditSettings, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { CellEditSettings, IDataSet, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 import { pivot_flatdata } from './datasource';
 
@@ -8,7 +9,7 @@ function App() {
      allowEditing: true, allowInlineEditing: true
   } as CellEditSettings
 
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: pivot_flatdata as IDataSet[],
      expandAll: true,
      rows: [{ name: 'Country'}],

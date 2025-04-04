@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React Tab component
 
-This article describes the API migration process of Tab component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of Tab component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Accessibility and Localization
 
 
 
 <!-- markdownlint-disable MD033 -->
-|**Behavior**  |**Property in Essential JS 1**  |**Property in Essential JS 2**  |
+|**Behavior**  |**Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1**  |**Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2**  |
 | ------------ | ------------------------- | ------------------------- |
 |Keyboard Navigation | **Property** : allowKeyboardNavigation<br/> `<EJ.Tab id="Tab" allowKeyboardNavigation={false} ></EJ.Tab>`  | <b>Not Applicable</b> |
 |Localization | <b>Not Applicable</b>  | **Property** : locale<br/> `<TabComponent  id="Tab" locale="fr-BE"></TabComponent >`  |
@@ -26,7 +26,7 @@ This article describes the API migration process of Tab component from Essential
 ## AjaxSettings
 
 <!-- markdownlint-disable MD033 -->
-|  **Behavior**  |  **Property in Essential JS 1**  |  **Property in Essential JS 2**  |
+|  **Behavior**  |  **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1**  |  **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2**  |
 | ------------ | ------------------------- | ------------------------- |
 |Default | **Property** : ajaxSettings<br/> `<EJ.Tab id="tab" ajaxSettings.type="GET"></EJ.Tab>` | <b>Not Applicable</b>  |
 |Asynchronous | **Property** : ajaxSettings.async <br/> `<EJ.Tab id="tab" ajaxSettings.async={true}></EJ.Tab>`| <b>Not Applicable</b>  |
@@ -43,7 +43,7 @@ This article describes the API migration process of Tab component from Essential
 ## Animation
 
 <!-- markdownlint-disable MD033 -->
-| **Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+| **Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 |Default |<b>Not Applicable</b> | **Property** :animation<br/> `<TabComponent  id="tab" animation={this.animation}></TabComponent >`<br/> <br/>constructor(props: {}) {<br/> this.animation = { prev: { }, next: { } };}  |
 |EnableAnimation |**Property** :animation<br/> `<EJ.Tab id="tab" enableAnimation={false}></EJ.Tab>`<br/> | <b>Not Applicable</b>|
@@ -56,7 +56,7 @@ This article describes the API migration process of Tab component from Essential
 ## Header
 
 <!-- markdownlint-disable MD033 -->
-|**Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+|**Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 |Header position | **Property** : headerPosition<br/> `<EJ.Tab id="Tab" headerPosition="Bottom" ></EJ.Tab>`  | **Property** : headerPlacement<br/> `<TabComponent  id="Tab" headerPlacement="Bottom" ></TabComponent >`  |
 |Header size | **Property** : headerSize<br/> `<EJ.Tab id="Tab" headerSize="100px" ></EJ.Tab>`  | <b>Not Applicable</b> |
@@ -66,7 +66,7 @@ This article describes the API migration process of Tab component from Essential
 ## Items
 
 <!-- markdownlint-disable MD033 -->
-|**Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+|**Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 |Default | <b>Not Applicable</b> | **Property** : items<br/> `<TabComponent  id="tab" items={this.items}> </TabComponent >` |
 |Content | <b>Not Applicable</b> | **Property** : items[0].content <br/> `<TabComponent  id="tab" items={this.items}> </TabComponent >`<br/> <br/> constructor(props: {}) {<br/> this.items = {content: 'Contents'};}|
@@ -96,7 +96,7 @@ This article describes the API migration process of Tab component from Essential
 ## Common
 
 <!-- markdownlint-disable MD033 -->
-|**Behavior** | **Property in Essential JS 1** | **Property in Essential JS 2** |
+|**Behavior** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **Property in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------------------- | ------------------------- |
 |Collapse active item | **Property** : collapsible <br/> `<EJ.Tab id="tab" collapsible={true}> </EJ.Tab>`| <b>Not Applicable</b> |
 |Custom class | **Property** : cssClass <br/> `<EJ.Tab id="tab" cssClass="customClass" > </EJ.Tab>`| **Property** : cssClass <br/> `<TabComponent  id="tab" cssClass="customClass" > </TabComponent >` |

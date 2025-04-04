@@ -1,4 +1,5 @@
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { DataManager, ODataV4Adaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
 
@@ -10,7 +11,7 @@ function App() {
     crossDomain: true
   });
   dataSource.defaultQuery = new Query().take(10);
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: dataSource,
     expandAll: false,
     columns: [{ name: 'CustomerID', caption: 'Customer ID' }],

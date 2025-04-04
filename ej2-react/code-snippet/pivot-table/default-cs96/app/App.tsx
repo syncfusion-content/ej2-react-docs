@@ -1,4 +1,5 @@
-import { IDataOptions, IDataSet, PivotViewComponent, VirtualScroll, Inject, FieldList } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent, VirtualScroll, Inject, FieldList } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 let date1: number;
 let date2: number;
@@ -35,7 +36,7 @@ function data(count: number) {
     return result;
 };
 function App() {
-      let dataSourceSettings: IDataOptions = {
+      let dataSourceSettings: DataSourceSettingsModel = {
         dataSource: data(1000),
         enableSorting: false,
         expandAll: true,

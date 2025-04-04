@@ -1,4 +1,5 @@
-import { CalculatedField, PivotFieldListComponent, IDataOptions, Inject, PivotViewComponent, VirtualScroll } from '@syncfusion/ej2-react-pivotview';
+import { CalculatedField, PivotFieldListComponent, Inject, PivotViewComponent, VirtualScroll } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 
 const SAMPLE_CSS = `
@@ -49,7 +50,7 @@ function data(count: number) {
     return result;
 };
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: data(1000),
     enableSorting: false,
     expandAll: true,

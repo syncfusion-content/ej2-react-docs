@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { IDataOptions, IDataSet, Inject, PivotViewComponent, FieldList } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, Inject, PivotViewComponent, FieldList } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
 import { Chart, Category, Legend, Tooltip, ColumnSeries, LineSeries, SeriesModel } from '@syncfusion/ej2-charts';
 import { pivotData } from './datasource';
 function App() {
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
     dataSource: pivotData as IDataSet[],
     expandAll: false,

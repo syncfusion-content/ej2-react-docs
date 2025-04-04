@@ -1,5 +1,6 @@
 
-import { IDataOptions, IDataSet, Inject, PivotViewComponent, Toolbar } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, Inject, PivotViewComponent, Toolbar } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 import { pivotData } from './datasource';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
@@ -12,7 +13,7 @@ function App() {
       tooltip:{ template:'<span class="wrap">${aggregateType} of ${valueField}: ${value}</span>' }
   } as ChartSettings;
 
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
     dataSource: pivotData as IDataSet[],
     values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],

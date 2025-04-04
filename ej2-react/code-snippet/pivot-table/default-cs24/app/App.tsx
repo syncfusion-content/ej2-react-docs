@@ -1,4 +1,5 @@
-import { IDataOptions, IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { DataManager, JsonAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 import * as React from 'react';
 import { pivotData } from './datasource';
@@ -9,7 +10,7 @@ function App() {
     json: pivotData,
     adaptor: new JsonAdaptor
   });
-  let dataSourceSettings: IDataOptions = {
+  let dataSourceSettings: DataSourceSettingsModel = {
     dataSource: dataSource,
     columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
     expandAll: false,

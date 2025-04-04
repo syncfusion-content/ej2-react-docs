@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data source binding and custom menu items in React Menu component | Syncfusion
+title: Data binding and custom menu items in React Menu component| Syncfusion
 description: Learn here all about Data source binding and custom menu items in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
 control: Data source binding and custom menu items 
 platform: ej2-react
@@ -69,7 +69,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 ## Custom menu items
 
-The Menu can be customized using Essential JS2 `Template engine` to render the elements.
+The Menu can be customized using Essential<sup style="font-size:70%">&reg;</sup> JS2 `Template engine` to render the elements.
 
 To customize menu items in your application, set your customized template string to the [`template`](https://ej2.syncfusion.com/react/documentation/api/menu/#template) property. In the following example, the menu has been rendered with customized menu items.
 
