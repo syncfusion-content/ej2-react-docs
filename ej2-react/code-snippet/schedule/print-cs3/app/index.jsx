@@ -1,18 +1,8 @@
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 import { useRef } from 'react';
-import {
-  ScheduleComponent,
-  Day,
-  Week,
-  WorkWeek,
-  Month,
-  Agenda,
-  Print,
-  Inject
-} from '@syncfusion/ej2-react-schedule';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Print, Inject} from '@syncfusion/ej2-react-schedule';
 import { scheduleData } from './datasource';
-
 const getCurrentUserInfo = () => ({ department: 'Sales', userRole: 'Manager' });
 const getDepartmentColor = (dept) => {
   const colors = {
@@ -23,29 +13,23 @@ const getDepartmentColor = (dept) => {
   };
   return colors[dept] || '#607D8B';
 };
-
 const App = () => {
-  const scheduleObj = useRef<ScheduleComponent>(null);
+  const scheduleObj = useRef(null);
   const { department, userRole } = getCurrentUserInfo();
 
   const onActionBegin = (args) => {
     if (args.requestType === 'toolbarItemRendering') {
-      const printItem = {
-        align: 'Right',
-        showTextOn: 'Both',
-        prefixIcon: 'e-icon-schedule-print',
-        text: 'Print',
-        cssClass: 'e-schedule-print',
-        click: onPrintIconClick,
+      let printItem = {
+        align: 'Right', showTextOn: 'Both', prefixIcon: 'e-icon-schedule-print',
+        text: 'Print', cssClass: 'e-schedule-print', click: onPrintIconClick
       };
       args.items.push(printItem);
     }
-  };
+  }
 
   const onPrintIconClick = () => {
-    scheduleObj.current?.print();
-  };
-
+    scheduleObj.current.print();
+  }
   const onBeforePrint = (args) => {
     const headerElement = document.createElement('div');
     headerElement.innerHTML = `
@@ -80,20 +64,11 @@ const App = () => {
   };
 
   return (
-    <ScheduleComponent
-      ref={scheduleObj}
-      width="100%"
-      height="550px"
-      selectedDate={new Date()}
-      eventSettings={{ dataSource: scheduleData }}
-      views={['Day', 'Week', 'WorkWeek', 'Month']}
-      actionBegin={onActionBegin}
-      beforePrint={onBeforePrint}
-    >
-      <Inject services={[Day, Week, WorkWeek, Month, Agenda, Print]} />
-    </ScheduleComponent>
+    <div>
+      <ScheduleComponent ref={scheduleObj} width='100%' height='520px' views={['Day', 'Week', 'WorkWeek', 'Month']}  dataSource={scheduleData} selectedDate={new Date(2025, 1, 15)} eventSettings={eventSettings} actionBegin={onActionBegin} beforePrint={onBeforePrint}>
+        <Inject services={[Day, Week, WorkWeek, Month, Agenda, Print]} />
+      </ScheduleComponent></div>
   );
 };
-
 const root = ReactDOM.createRoot(document.getElementById('schedule'));
 root.render(<App />);
