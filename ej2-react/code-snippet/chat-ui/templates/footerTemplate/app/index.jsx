@@ -18,7 +18,7 @@ function App() {
 
     const sendIconClicked = () => {
         const textArea = document.getElementById('chatTextArea');
-        if (textArea && textArea?.value.length > 0) {
+        if (textArea && textArea.value.length > 0) {
             let value = textArea.value;
             textArea.value = '';
             chatInstance.current.addMessage(
@@ -49,5 +49,4 @@ function App() {
         </ChatUIComponent>
     );
 }
-
 ReactDOM.render(<App />, document.getElementById('container'));
