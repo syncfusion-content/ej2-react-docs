@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ej1 api migration in React TreeView component
 
-This article describes the API migration process of TreeView component from Essential JS 1 to Essential JS 2.
+This article describes the API migration process of TreeView component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Add nodes
 
 {% raw %}
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Add node | **Method:** *addNode*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields});`<br/>`var treeObj = $(“#tree”).data(“ejTreeView”);`<br />`treeObj.addNode("Node", "#book");` | **Method:** *addNodes*<br/><br/>`<TreeViewComponent fields={this.field} />`<br /><br />`public tree: TreeViewComponent;`<br/>`var object = [{ id: "temp", name: "New node" }, { id: "new", name: "New node 1" }];`<br/>`tree.addNodes(object, "book");` |
 | Triggers before adding node | **Event:** *beforeAdd*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, beforeAdd: this.beforeAdd});`<br />`beforeAdd: function(){}` | Not Applicable |
@@ -26,7 +26,7 @@ This article describes the API migration process of TreeView component from Esse
 
 ## Common
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Keyboard Navigation | **Property:** *allowKeyboardNavigation*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, allowKeyboardNavigation: false});` | **Can be achieved using,**<br/><br/>`<TreeViewComponent fields={this.field} keyPress={this.keyPress.bind(this)}/>`<br /><br />**Script**<br />`keyPress(args): void {`<br/>`args.cancel = true;`<br/>`}` |
 | Triggers before node is cut | **Event:** *beforeCut*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, beforeCut: this.beforeCut});`<br />`beforeCut: function(){}` | Not Applicable |
@@ -85,7 +85,7 @@ This article describes the API migration process of TreeView component from Esse
 
 ## CheckBox
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Prevent auto-check of child and parent | **Property:** *autoCheck*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, showCheckbox: true, autoCheck: false});` | **Property:** *autoCheck*<br/><br/>`<TreeViewComponent fields={this.field} autoCheck={false} showCheckBox={true}/>` |
 | Prevent indeterminate state in parent node | **Property:** *autoCheckParentNode*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, showCheckbox: true, autoCheckParentNode: false});` | **Can be achieved using,**<br/><br/>`<TreeViewComponent fields={this.field} autoCheck={false} nodeChecked={this.nodeChecked.bind(this) showCheckBox={true}/>`<br /><br />`public tree: TreeViewComponent;`<br />`nodeChecked(args): void {`<br/>`var child = tree.element.querySelector('[data-uid="' + args.data[0]['id'] + '"]');`<br/>`var checkNodes = [];`<br/>`var element = child.parentNode;`<br/>`while ((element !== null || element !== undefined) && !element.parentNode.classList.contains('e-treeview')) {`<br/>`element = element.parentNode;`<br/>`var id = element.getAttribute('data-uid');`<br/>`if (id !== null) checkNodes.push(element.getAttribute('data-uid'))`<br/>`}`<br/>`if (child.querySelector('.e-list-item') !== null && args.isInteracted === true && args.action === 'check') {`<br/>`tree.autoCheck = true;`<br/>`tree.checkAll(child.getAttribute('data-uid'));`<br/>`} else if (child.querySelector('.e-list-item') !== null && args.isInteracted === true && args.action === 'uncheck') {`<br/>`tree.autoCheck = true;`<br/>`tree.uncheckAll(child.getAttribute('data-uid'));`<br/>`}`<br/>`tree.autoCheck = false;`<br/>`if (args.action === 'check') {`<br/>`tree.checkAll(checkNodes)`<br/>`}`<br/>`else if (args.action === 'uncheck' && child.parentNode.querySelector('.e-check') === null) {`<br/>`tree.uncheckAll(checkNodes)`<br/>`}`<br />`}` |
@@ -104,7 +104,7 @@ This article describes the API migration process of TreeView component from Esse
 
 ## Drag and Drop
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Drag and drop | **Property:** *allowDragAndDrop*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, allowDragAndDrop: true});` | **Property:** *allowDragAndDrop*<br/><br/>`<TreeViewComponent fields={this.field} allowDragAndDrop={true} />` |
 | Prevent Drag and drop to another TreeView | **Property:** *allowDragAndDropAcrossControl*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, allowDragAndDrop: true, allowDragAndDropAcrossControl:true});` | **Can be achieved using,** <br/><br/>`<TreeViewComponent fields={this.field} allowDragAndDrop={true} nodeDragStop={this.nodeDragStop.bind(this)}/>`<br /><br />`nodeDragStop(args): void {`<br/>`if (args.draggedParentNode.closest('.e-treeview') !== args.dropTarget.closest('.e-treeview')) {`<br/>`args.cancel = true;`<br/>`}}` |
@@ -117,7 +117,7 @@ This article describes the API migration process of TreeView component from Esse
 
 ## Expand/Collapse nodes
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Triggers before node is collapsed | **Event:** *beforeCollapse*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, beforeCollapse: this.beforeCollapse});`<br />`beforeCollapse: function(){}` | **Event:** *nodeCollapsing*<br/><br/>`<TreeViewComponent fields={this.field} nodeCollapsing={this.nodeCollapsing.bind(this)}/>`<br /><br />`nodeCollapsing(): void {}` |
 | Triggers before node is expanded | **Event:** *beforeExpand*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, beforeExpand: this.beforeExpand});`<br />`beforeExpand: function(){}` | **Event:** *nodeExpanding*<br/><br/>`<TreeViewComponent fields={this.field} nodeExpanding={this.nodeExpanding.bind(this)}/>`<br /><br />`nodeExpanding(): void {}` |
@@ -136,7 +136,7 @@ This article describes the API migration process of TreeView component from Esse
 
 ## Node Editing
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Editing | **Property:** *allowEditing*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, allowEditing: true});` | **Property:** *allowEditing*<br/><br/>`<TreeViewComponent fields={this.field} allowEditing={true}/>` |
 | Triggers before node is edited | **Event:** *beforeEdit*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, beforeEdit: this.beforeEdit, allowEditing: true});`<br />`beforeEdit: function(){}` | **Event:** *nodeEditing*<br/><br/>`<TreeViewComponent fields={this.field} allowEditing={true} nodeEditing={this.nodeEditing.bind(this)}/>`<br /><br />`nodeEditing(): void {}` |
@@ -146,7 +146,7 @@ This article describes the API migration process of TreeView component from Esse
 
 ## Node Selection
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Multi-selection | **Property:** *allowMultiSelection*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, allowMultiSelection: true});` | **Property:** *allowMultiSelection*<br/><br/>`<TreeViewComponent fields={this.field} allowMultiSelection={true}/>` |
 | Triggers before node is selected | **Event:** *beforeSelect*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, beforeSelect: this.beforeSelect});`<br />`beforeSelect: function(){}` | **Event:** *nodeSelecting*<br/><br/>`<TreeViewComponent fields={this.field} nodeSelecting={this.nodeSelecting.bind(this)}/>`<br /><br />`nodeSelecting(): void {}` |
@@ -167,7 +167,7 @@ This article describes the API migration process of TreeView component from Esse
 
 ## Template
 
-| Behavior | API in Essential JS 1 | API in Essential JS 2 |
+| Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
 | Custom template | **Property:** *template*<br/><br/>`React.createElement(EJ.TreeView, {id: "tree", fields: fields, template: templateData});` | **Property:** *nodeTemplate*<br/><br/>`<TreeViewComponent fields={this.field} nodeTemplate={this.templateData}/>` |
 
