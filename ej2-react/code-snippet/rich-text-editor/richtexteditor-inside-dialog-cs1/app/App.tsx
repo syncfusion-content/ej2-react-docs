@@ -1,5 +1,6 @@
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
-import React, {createRef } from 'react';
+import { createRef } from 'react';
+import * as React from 'react';
 import { RichTextEditorComponent,Inject,Toolbar,Link, Image,HtmlEditor,QuickToolbar,Table,PasteCleanup} from '@syncfusion/ej2-react-richtexteditor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 
