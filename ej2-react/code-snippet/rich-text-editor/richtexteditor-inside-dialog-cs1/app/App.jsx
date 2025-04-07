@@ -12,12 +12,14 @@ import {
   PasteCleanup,
 } from '@syncfusion/ej2-react-richtexteditor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { createRef } from 'react';
+import * as React from 'react';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.editorRef = React.createRef();
-    this.dialogRef = React.createRef();
+    this.editorRef = createRef();
+    this.dialogRef = createRef();
     this.tools = {
       items: [
         'Bold',
