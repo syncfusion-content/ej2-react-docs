@@ -817,3 +817,22 @@ function App() {
 };
 export default App;
 ```
+
+## Fetch result from the DataManager query using external button 
+
+By default, Syncfusion React Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). However, in some scenarios, you may need to fetch data dynamically from the server using a query triggered by an external button. This approach allows greater control over when and how data is loaded into the Grid.
+
+To achieve this, you can use the `executeQuery` method of `DataManager` with a **Query** object. This method allows you to run a custom query and retrieve results dynamically.
+
+The following example demonstrates how to fetch data from the server when an external button is clicked and display a status message indicating the data fetch status:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/adaptor-result/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/adaptor-result/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/adaptor-result" %}
