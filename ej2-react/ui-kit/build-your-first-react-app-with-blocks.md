@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Build your first React app with our blocks
 
+To quickly get started with building your first React app, you can check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=_a4lJNUcDng" %}
+
 ## Create a new React app
 A **Next.js** app is used for this example. To create a new app, refer to the official setup guide [here](https://nextjs.org/docs/app/getting-started/installation). This tutorial then walks through the step-by-step process of adding a simple sign-in block to the newly created app, named **my-app**.
 

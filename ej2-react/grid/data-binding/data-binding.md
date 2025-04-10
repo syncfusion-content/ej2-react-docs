@@ -277,3 +277,22 @@ The following code demonstrates, how to use the `changeDataSource` method to bin
 
 >* The Grid state persistence feature does not support the  `changeDataSource` method.
 >* In this document, the above sample uses the local data for `changeDataSource` method. For those using a remote data source, refer to the [FlexibleData](https://ej2.syncfusion.com/react/demos/#/bootstrap5/grid/flexible-data) resource.
+
+## Prevent to convert local time zone format for date column
+
+By default, Syncfusion React Grid automatically converts date values to the local time zone of the client system. However, in some scenarios, you may need to display the original date as received from the server without any timezone conversion.
+
+To prevent timezone conversion for a date column, use the `serverTimezoneOffset` property from `DataUtil`. Setting this property to **0** ensures that dates remain in the original format received from the server without conversion to the local timezone.
+
+The following example demonstrates how to prevent local time zone conversion for date columns in Grid by using the `DataUtil.serverTimezoneOffset` property:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/databinding-timezone/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/databinding-timezone/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/databinding-timezone" %}
