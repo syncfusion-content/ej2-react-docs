@@ -32,4 +32,4 @@ Below sample demonstrates the SpeechToText component configured with above metho
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speech-to-text/methods" %}
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/methods/index" %}

@@ -141,7 +141,7 @@ The following example shows a basic SpeechToText component.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1/index" %}
 
 > The [SpeechToText](../api/speech-to-text/) component requires an internet connection and using a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API.
 
@@ -161,4 +161,4 @@ You can use the [content](../api/speech-to-text/buttonSettingsModel/#content) pr
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs2/index" %}
