@@ -326,6 +326,29 @@ Here's a code example that demonstrates how to show a hidden column (CustomerID)
 
  {% previewsample "page.domainurl/code-snippet/grid/print-cs5" %}
 
+## Print the expanded state from other pages
+
+By default, when printing, the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid only includes the expanded child Grids visible on the current page. However, you can enhance the printing functionality to include expanded child Grids from other pages. This can be achieved using the [load](https://ej2.syncfusion.com/react/documentation/api/grid/#load) and [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid/#actionbegin) events, which help manage the expanded state of rows across different pages.
+
+The following example demonstrates how to print the expanded child Grids from other pages:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/print-expanded-state/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/print-expanded-state/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/print-expanded-state/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/print-expanded-state/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/print-expanded-state" %}
+
 ## Add a title when using Grid print function
 
 You can add a title to the header when printing the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid by utilizing the [beforePrint](https://ej2.syncfusion.com/react/documentation/api/grid/#beforeprint) event. This event allows you to customize the print layout, including the addition of a title element, ensuring that the printed document is informative and visually appealing.

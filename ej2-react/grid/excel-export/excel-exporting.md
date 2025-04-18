@@ -398,6 +398,32 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/excel-export-cs14" %}
 
+### Format the child Grid columns before exporting
+
+The Syncfusion React Grid allows customization of the child Grid's Excel export options, enabling precise control over data formatting before export. This functionality is achieved using the [exportDetailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#exportdetaildatabound) event, which is triggered for each child Grid during the export process. This event provides access to the child Grid instance, allowing modifications to its column formatting before generating the Excel document.
+
+In the following example, the `exportDetailDataBound` event is used to modify the **OrderDate** column of the child Grid. By setting the column's [format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format) property, the date values are formatted as `dd/MM/yyyy` when exported to Excel document. 
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/excel-export-cs20/app/App.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/excel-export-cs20/app/App.tsx %}
+{% endhighlight %}
+
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/excel-export-cs20/app/datasource.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/excel-export-cs20/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/excel-export-cs20" %}
+
 ### Limitations
 
 * Microsoft Excel permits up to seven nested levels in outlines. So that in the grid we can able to provide only up to seven nested levels and if it exceeds more than seven levels then the document will be exported without outline option. Please refer the [Microsoft Limitation](https://learn.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations).

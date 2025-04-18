@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Global local in React Grid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
+The Syncfusion React Grid component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
 
 ## Localization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a built-in [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library, enabling you to customize the text used in the grid to suit different languages or cultural preferences. With this library, you can change static text on various elements, such as **group drop area text** and **pager information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more.
+The Syncfusion React Grid provides a built-in [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library, enabling you to customize the text used in the grid to suit different languages or cultural preferences. With this library, you can change static text on various elements, such as **group drop area text** and **pager information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more.
 
 This can be achieved by defining the [locale](https://ej2.syncfusion.com/react/documentation/api/grid/#locale) property and translation object.
 
@@ -228,7 +228,7 @@ Pages |  Pages |
 
 ### Loading translations for de culture
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid component provides a built-in Localization library that allows you to load translation objects for different cultures. By using the **load** function of the **L10n** class, you can customize the text content of the Grid to be displayed in different languages. 
+The Syncfusion React Grid component provides a built-in Localization library that allows you to load translation objects for different cultures. By using the **load** function of the **L10n** class, you can customize the text content of the Grid to be displayed in different languages. 
 
 This feature allows you to specify translation objects for specific cultures, such as **Deutsch** (German), and display the Grid's content in the desired language.
 
@@ -304,7 +304,7 @@ The following example demonstrates how to load a translation object for **French
 
 ### Switch the different localization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. 
+The Syncfusion React Grid allows you to switch the localization from one culture to another culture. This will be useful when you want to change the localization based on your requirements. 
 
 To switch to a different localization, follow these steps:
 
@@ -450,9 +450,41 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/locale-cs4" %}
 
+### Set different Locale text for two Grids in same page
+
+The Syncfusion React Grid allows configuring different [Locale](https://ej2.syncfusion.com/react/documentation/api/grid/#locale) settings for multiple Grids displayed on the same page. By using the **load** function of the **L10n** class, you can customize the text content of the Grid to be displayed in different languages.
+
+In this setup, each Grid can display text in a different language based on its assigned `Locale`. The `load` function is used to define translations for specific languages, ensuring that each Grid correctly applies the localized text for headers, toolbar items, and action buttons.
+
+For example, when the first Grid is set to use the **fr-FR** Locale, it applies the French translations loaded via **L10n.load**. The second Grid, set to **en-US**, retains the default English text. This demonstrates how localization can be customized per Grid without affecting other components on the page.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/locale-cs5/app/App.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/locale-cs5/app/App.tsx %}
+{% endhighlight %}
+
+{% highlight js tabtitle="locale.json" %}
+{% include code-snippet/grid/locale-cs5/app/locale.json %}
+{% endhighlight %}
+
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/locale-cs5/app/datasource.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/locale-cs5/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/locale-cs5" %}
+
 ## Internationalization
 
-The Internationalization library in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a localized display of number, date, and time values in the Grid component based on the preferred language and region.
+The Internationalization library in the Syncfusion React Grid provides a localized display of number, date, and time values in the Grid component based on the preferred language and region.
 
 [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library allows you to globalize number, date, and time values using format strings defined in the [format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format) property.
 
@@ -492,7 +524,7 @@ This ensures that the Grid component uses the correct format strings for number,
 
 ## Right to Left - RTL
 
-The Right to Left (RTL) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
+The Right to Left (RTL) feature in the Syncfusion React Grid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
 
 To enable RTL in the Grid, you need to set the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/grid/#enablertl) property to **true**. By setting `enableRtl`, the grid component's text direction and layout will be adjusted to support right-to-left languages.
 
