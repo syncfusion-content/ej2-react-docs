@@ -392,6 +392,32 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs6" %}
 
+### Format the child Grid columns before exporting
+
+The Syncfusion React Grid allows customization of the child Grid's PDF export options, enabling precise control over data formatting before export. This functionality is achieved using the [exportDetailDataBound](https://ej2.syncfusion.com/react/documentation/api/grid/#exportdetaildatabound) event, which is triggered for each child Grid during the export process. This event provides access to the child Grid instance, allowing modifications to its column formatting before generating the PDF document.
+
+In the following example, the `exportDetailDataBound` event is used to modify the **OrderDate** column of the child Grid. By setting the column's [format](https://ej2.syncfusion.com/react/documentation/api/grid/column/#format) property, the date values are formatted as `dd/MM/yyyy` when exported to PDF document.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/pdf-export-cs27/app/App.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/pdf-export-cs27/app/App.tsx %}
+{% endhighlight %}
+
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/pdf-export-cs27/app/datasource.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/pdf-export-cs27/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/pdf-export-cs27" %}
+
 ## Remove header row while exporting
 
 When exporting data from the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, you have an option to remove the header row from the exported file. This can be useful when you want to export grid data without including the header values in the exported document.
