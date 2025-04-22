@@ -16,7 +16,7 @@ To get start quickly with React Rich Text Editor, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=5mLO6_nwzww" %}
 
-## Setup for Local Development
+## Setup for local development
 
 To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
 
@@ -93,7 +93,7 @@ import * as React from 'react';
 import './App.css';
 
 function App() {
-    let value: string = `<p>The Syncfudion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul>
+    let value: string = `<p>The Syncfusion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul>
     <li>
         <p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes.</p>
     </li>
@@ -117,7 +117,7 @@ function App() {
 export default App;
 ```
 
-## Module Injection
+## Module injection
 
 To create Rich Text Editor with additional features, inject the required modules. The following modules are used to extend Rich Text Editor's basic functionality.
 
@@ -131,7 +131,7 @@ These modules should be injected into the **providers** section of root **NgModu
 
 > Additional feature modules are available [here](./module.md).
 
-## Configure the Toolbar
+## Configure the toolbar
 
 Configure the toolbar with the tools using items field of the toolbarSettings property as your application requires.
 
@@ -214,7 +214,7 @@ Specifies the items to be rendered in the quick toolbar based on the target elem
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs6" %}
 
-## See Also
+## See also
 
 * [Accessibility in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/accessibility)
 * [Keyboard support in Rich text editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/keyboard-support)

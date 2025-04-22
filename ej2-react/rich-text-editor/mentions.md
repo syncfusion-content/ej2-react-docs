@@ -53,6 +53,6 @@ In the following sample, we configured the following properties with popup dimen
 
 > [View Sample](https://ej2.syncfusion.com/react/demos/#/bootstrap5/rich-text-editor/mention-integration)
 
-## See Also
+## See also
 
 * [Mention](https://ej2.syncfusion.com/react/documentation/mention/getting-started/)
