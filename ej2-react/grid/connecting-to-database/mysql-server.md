@@ -913,6 +913,8 @@ When you run the application, the resultant Syncfusion React Grid will look like
 
 ![Grid bound with MySQL Server data](../images/connecting-micro-curd.gif)
 
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20MySQL%20database%20using%20UrlAdaptor).
+
 ## Binding data from MySQL Server using CustomAdaptor
 
 This section describes step by step process how to retrieve data from a MySQL Server using [CustomAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor) and bind it to the Grid.
@@ -1844,3 +1846,5 @@ public class CRUDModel<T> where T : class
 {% endtabs %}
 
 ![Syncfusion React Grid bound with MySQL Server data](../images/connecting-micro-curd.gif)
+
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20MySQL%20database%20using%20CustomAdaptor).
