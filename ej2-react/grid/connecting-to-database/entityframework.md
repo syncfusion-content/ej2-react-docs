@@ -957,6 +957,7 @@ When you run the application, the resultant Syncfusion React Grid will look like
 
 ![Syncfusion React Grid bound with Microsoft SQL Server data](../images/connecting-micro-curd.gif)
 
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20PostgreSQL%20database%20using%20UrlAdaptor).
 
 ## Binding data from Microsoft SQL Server using Entity Framework with CustomAdaptor
 
@@ -1914,3 +1915,5 @@ public class CRUDModel<T> where T : class
 {% endtabs %}
 
 ![Syncfusion React Grid bound with Microsoft SQL Server data](../images/connecting-micro-curd.gif)
+
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20SQL%20database%20using%20EF%20and%20CustomAdaptor).

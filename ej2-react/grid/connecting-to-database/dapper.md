@@ -834,6 +834,8 @@ When you run the application, the resultant Grid will look like this
 
 ![Syncfusion React Grid bound with Microsoft SQL Server using Dapper data](../images/connecting-micro-curd.gif)
 
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20Dapper%20using%20UrlAdaptor).
+
 ## Binding data from Microsoft SQL Server using Dapper with CustomAdaptor
 
 This section describes step by step process how to retrieve data from a Microsoft SQL Server using [CustomAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/custom-adaptor) and bind it to the Syncfusion React Grid.
@@ -1699,3 +1701,5 @@ public class CRUDModel<T> where T : class
 {% endtabs %}
 
 ![Syncfusion React Grid bound with Microsoft SQL Server data](../images/connecting-micro-curd.gif)
+
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20Dapper%20using%20CustomAdaptor).
