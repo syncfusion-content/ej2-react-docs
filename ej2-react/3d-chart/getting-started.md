@@ -36,26 +36,29 @@ Below is the list of minimum dependencies required to use the 3D Chart component
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```
-    npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-* To set-up a React application in TypeScript environment, run the following command.
+To create a new React application, run the following command.
 
-    ```
-     create-react-app quickstart --template typescript
-     cd quickstart
-     npm start
-   ```
-* To set-up a React application in JavaScript environment, run the following command.
-   ```
-    create-react-app quickstart
-    cd quickstart
-    npm start
-   ```
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
 * Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
 
@@ -68,7 +71,7 @@ To install `create-react-app` run the following command.
 Now, you can start adding 3D Chart component in the application. For getting started, add the 3D Chart component in `src/App` file using following code.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 import { Chart3DComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -79,7 +82,7 @@ function App() {
 export default App;
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import { Chart3DComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -91,19 +94,19 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-Now run the `npm start` command in the console, it will run your application and open the browser window.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 The below example shows a basic 3D Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +126,7 @@ The below example shows a basic 3D Chart.
 These modules should be injected to the `services` section as follows,
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 import { Category3D, Chart3DComponent, DataLabel3D, ColumnSeries3D, Legend3D, Tooltip3D, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
@@ -138,7 +141,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import { Category3D, Chart3DComponent, DataLabel3D, ColumnSeries3D, Legend3D, Tooltip3D, Inject } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
@@ -159,7 +162,7 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 This section explains how to plot below JSON data to the 3D Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 export let data = [
     { x: 'Tesla', y: 137429 },
@@ -173,7 +176,7 @@ export let data = [
 ];
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 export let data: any[] = [
     { x: 'Tesla', y: 137429 },
@@ -194,10 +197,10 @@ Add a series object to the chart by using [`series`](https://ej2.syncfusion.com/
 Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart3d/axis3DModel/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -209,10 +212,10 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#title) property to the 3D Chart to provide quick information to the user about the data plotted in the 3D Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -224,10 +227,10 @@ You can add a title using [`title`](https://ej2.syncfusion.com/react/documentati
 You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalLegendSettingsModel/#visible) property to true in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#legendsettings) object and by injecting the `Legend3D` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -239,10 +242,10 @@ You can use legend for the 3D Chart by setting the [`visible`](https://ej2.syncf
 You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel/#visible) property to true in the [`dataLabel`](https://ej2.syncfusion.com/react/documentation/api/chart3d/series3DModel/#datalabel) object and by injecting `DataLabel3D` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -254,10 +257,10 @@ You can add data labels to improve the readability of the 3D Chart. This can be 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart3d/threeDimensionalTooltipSettingsModel/#enable) property as true in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel/#tooltip) object and by injecting `Tooltip3D` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/3d-chart/getting-started/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

@@ -72,13 +72,13 @@ You can insert a video from either a hosted link or your local machine by clicki
 
 The insert video dialog opens with the `Embedded code` option selected by default. This allows you to insert a video using embedded code.
 
-![React Rich Text Editor Embed URL Video insert](./images/react-richtexteditor-video-embed.png)
+![React Rich Text Editor Embed URL Video insert](../images/react-richtexteditor-video-embed.png)
 
 ### Inserting video from web URL
 
 You can switch to the `Web URL` option by selecting the Web URL checkbox. Inserting a video using the Web URL option will add the video URL as the `src` attribute of the `<source>` tag.
 
-![React Rich Text Editor Video insert](./images/react-richtexteditor-video-web.png)
+![React Rich Text Editor Video insert](../images/react-richtexteditor-video-web.png)
 
 ## Uploading video from local machine
 
@@ -526,9 +526,9 @@ public void SaveFiles(IList<IFormFile> UploadFiles)
 
 Once a video file has been inserted, you can replace it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `videoReplace` option. You can replace the video file either by using the embedded code or the web URL and the browse option in the video dialog.
 
-![React Rich Text Editor Embed Video Replace](./images/react-richtexteditor-video-replace-embed.png)
+![React Rich Text Editor Embed Video Replace](../images/react-richtexteditor-video-replace-embed.png)
 
-![React Rich Text Editor Web Video Replace](./images/react-richtexteditor-video-replace-web.png)
+![React Rich Text Editor Web Video Replace](../images/react-richtexteditor-video-replace-web.png)
 
 ## Deleting video
 
@@ -536,7 +536,7 @@ To remove a video from the Rich Text Editor content, select the video and click 
 
 Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the cross icon.
 
-![React Rich Text Editor Video delete](./images/react-richtexteditor-video-del.png)
+![React Rich Text Editor Video delete](../images/react-richtexteditor-video-del.png)
 
 ## Adjusting video dimensions
 
@@ -544,7 +544,7 @@ Set the default width, minWidth, height, and minHeight of the video element when
 
 Through the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings), you can also change the width and height using the `Change Size` button. Once you click on the button, the video size dialog will open as below. In that, specify the width and height of the video in pixels.
 
-![React Rich Text Editor Video dimension](./images/react-richtexteditor-video-size.png)
+![React Rich Text Editor Video dimension](../images/react-richtexteditor-video-size.png)
 
 ## Configuring video display position
 
@@ -603,10 +603,10 @@ You can disable the resize action by configuring `false` for the [insertVideoSet
 
 > If the [minWidth](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minwidth) and [minHeight](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#minheight) properties are configured, the video resizing does not shrink below the specified values.
 
-![React Rich Text Editor video resize](./images/react-richtexteditor-video-resize.png)
+![React Rich Text Editor video resize](../images/react-richtexteditor-video-resize.png)
 
 ## See also
 
-* [Video Quick Toolbar](./toolbar/quick-toolbar#video-quick-toolbar)
+* [Video Quick Toolbar](../toolbar/quick-toolbar)
 * [How to Use the Audio Editing Option in Toolbar Items](./audio)
 * [How to Use the Image Editing Option in Toolbar Items](./insert-images)

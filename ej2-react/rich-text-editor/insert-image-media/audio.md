@@ -72,7 +72,7 @@ You can insert audio from either the hosted link or the local machine, by clicki
 
 By default, the audio tool opens the audio dialog, allowing you to insert audio from an online source. Inserting the URL will be added to the `src` attribute of the `<source>` tag.
 
-![React Rich Text Editor Audio insert](./images/react-richtexteditor-audio-web.png)
+![React Rich Text Editor Audio insert](../images/react-richtexteditor-audio-web.png)
 
 ## Uploading audio from local machine
 
@@ -529,7 +529,7 @@ public void SaveFiles(IList<IFormFile> UploadFiles)
 
 Once an audio file has been inserted, you can change it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `audioReplace` option. You can replace the audio file using the web URL or the browse option in the audio dialog.
 
-![React Rich Text Editor Audio replace](./images/react-richtexteditor-audio-replace.png)
+![React Rich Text Editor Audio replace](../images/react-richtexteditor-audio-replace.png)
 
 ## Deleting audios
 
@@ -537,7 +537,7 @@ To remove audio from the Rich Text Editor content, select the audio and click th
 
 Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
 
-![React Rich Text Editor Audio delete](./images/react-richtexteditor-audio-del.png)
+![React Rich Text Editor Audio delete](../images/react-richtexteditor-audio-del.png)
 
 ## Configuring audio display position
 
@@ -590,6 +590,6 @@ function App() {
 
 ## See also
 
-* [Audio Quick Toolbar](./toolbar/quick-toolbar#audio-quick-toolbar)
+* [Audio Quick Toolbar](../toolbar/quick-toolbar)
 * [How to Use the Video Editing Option in Toolbar Items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/video)
 * [How to Use the Image Editing Option in Toolbar Items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/insert-images)

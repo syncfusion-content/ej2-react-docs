@@ -1,11 +1,4 @@
-export interface IOrderModel {
-  OrderID?: number;
-  CustomerID?: string;
-  Freight?: number;
-  OrderDate?: Date;
-  ShipCity?: string;
-  ShipCountry?: string;
-  ShipAddress?: string;
-  isAdd?: boolean;
-  Verified?: boolean;
-}
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import App  from './App';
+ReactDOM.render(<App />, document.getElementById('root'));

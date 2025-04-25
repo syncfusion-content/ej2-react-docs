@@ -92,7 +92,7 @@ The third-party library such as `Marked` or any other library is used to convert
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs2" %}
 
-For further details on Markdown editing, refer to the [`Markdown`](../markdown-editor/getting-started) section.
+For further details on Markdown editing, refer to the [`Markdown`](../../markdown-editor/getting-started) section.
 
 ## See also
 
