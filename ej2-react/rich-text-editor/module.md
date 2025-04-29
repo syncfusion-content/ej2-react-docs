@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 The React Rich Text Editor component follows a modular architecture, enabling users to include or exclude features as needed to ensure optimal performance and customization.
 
-## What is a Module in React Rich Text Editor?
+## What is a module in React Rich Text Editor?
 
 In the React Rich Text Editor, a module refers to a self-contained feature or functionality that can be selectively enabled or disabled. These modules are provided as part of the @syncfusion/ej2-react-richtexteditor package and can be injected to extend the editor's capabilities.
 
 For example, modules such as `Toolbar`, `Link`, `Image`, `HtmlEditor`, and `QuickToolbar` enable specific tools and behavior in the Rich Text Editor interface.
 
-## How to Import and Inject Modules
+## How to import and inject modules
 
 To use a module in the React Rich Text Editor, you must:
 
@@ -54,7 +54,7 @@ The following example demonstrates how to import and inject modules.
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs2" %}
 
-## Available Modules in Rich Text Editor
+## Available modules in Rich Text Editor
 
 | Module | Description |
 |------|-------------|
