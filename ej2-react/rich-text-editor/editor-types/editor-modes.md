@@ -86,4 +86,4 @@ The third-party library such as `Marked` or any other library is used to convert
 
 > To create Rich Text Editor with Markdown editing feature, inject the `MarkdownEditor` module to the RTE using the `RichTextEditor.Inject(MarkdownEditor)` method.
 
-For further details on Markdown editing, refer to the [`Markdown`](../rich-text-editor/markdown) section.
+For further details on Markdown editing, refer to the [`Markdown`](../../markdown-editor/getting-started) section.

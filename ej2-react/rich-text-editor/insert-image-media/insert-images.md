@@ -114,6 +114,89 @@ Configure [insertImageSettings.removeUrl](https://ej2.syncfusion.com/react/docum
 
 Set the [insertImageSettings.saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#saveformat) property to determine whether the image should be saved as Blob or Base64, aligning with your application's requirements.
 
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/image-server-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/image-server-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/image-server-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/image-server-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+```csharp
+
+public class HomeController : Controller
+    {
+        private IHostingEnvironment hostingEnv;
+
+        public HomeController(IHostingEnvironment env)
+        {
+            hostingEnv = env;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [AcceptVerbs("Post")]
+        public void SaveImage(IList<IFormFile> UploadFiles)
+        {
+            try
+            {
+                foreach (IFormFile file in UploadFiles)
+                {
+                    if (UploadFiles != null)
+                    {
+                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                        filename = hostingEnv.WebRootPath + "\\Uploads" + $@"\{filename}";
+
+                        // Create a new directory, if it does not exists
+                        if (!Directory.Exists(hostingEnv.WebRootPath + "\\Uploads"))
+                        {
+                            Directory.CreateDirectory(hostingEnv.WebRootPath + "\\Uploads");
+                        }
+
+                        if (!System.IO.File.Exists(filename))
+                        {
+                            using (FileStream fs = System.IO.File.Create(filename))
+                            {
+                                file.CopyTo(fs);
+                                fs.Flush();
+                            }
+                            Response.StatusCode = 200;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 204;
+            }
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+
+```
+
 ### Image Renaming Feature
 
 You can use the [insertImageSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertimagesettings) property, to specify the server handler to upload the selected image. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
@@ -213,7 +296,7 @@ Sets the default width and height of the image when it is inserted in the Rich T
 
 Through the quick toolbar, change the width and height using `Change Size` option. Once you click, the Image Size dialog box will open as follows. In that you can specify the width and height of the image in pixel.
 
-![Rich Text Editor Image dimension](images/image-size.png)
+![Rich Text Editor Image dimension](../images/image-size.png)
 
 ## Adding Captions and Alt Text to Images
 
@@ -259,13 +342,13 @@ Sets the default display for an image when it is inserted in the Rich Text Edito
 
 The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, remove, edit and open link will be added to the quick toolbar of image. For further details about link, see the [`link documentation`](./link) documentation.
 
-![Rich Text Editor image with link](images/image-link.png)
+![Rich Text Editor image with link](../images/image-link.png)
 
 ## Image Resizing Tools
 
 Rich Text Editor has a built-in image inserting support.  The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio.
 
-![Rich Text Editor image resize](images/image-resize.png)
+![Rich Text Editor image resize](../images/image-resize.png)
 
 ## Configuring Allowed Image Types
 
