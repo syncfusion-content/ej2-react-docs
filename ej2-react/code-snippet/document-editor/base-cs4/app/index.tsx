@@ -31,7 +31,7 @@ function App() {
         });
     }
     return (
-        <DocumentEditorComponent id="container" ref={(scope) => { documentEditor = scope; }} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" isReadOnly={false} enablePrint={true}
+        <DocumentEditorComponent id="container" ref={(scope) => { documentEditor = scope; }} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" isReadOnly={false} enablePrint={true}
             enableSelection={true} enableEditor={true} enableEditorHistory={true}
             enableContextMenu={true} enableSearch={true} enableOptionsPane={true}
             enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true}

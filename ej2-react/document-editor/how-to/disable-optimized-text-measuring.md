@@ -28,7 +28,7 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container;
   let hosturl =
-    'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+    'https://services.syncfusion.com/react/production/api/documenteditor/';
 
   // Disable optimized text measuring improvement
   let settings = { enableOptimizedTextMeasuring: false };
@@ -56,6 +56,8 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 {% endraw %}
 
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
 ## Disable optimized text measuring in `DocumentEditor` instance
 
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditor` instance.
@@ -78,7 +80,7 @@ function App() {
   // Disable optimized text measuring improvement
   let settings = { enableOptimizedTextMeasuring: false };
   return (
-    <DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" isReadOnly={false} enablePrint={true}
+    <DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" isReadOnly={false} enablePrint={true}
       enableSelection={true} enableEditor={true} enableEditorHistory={true}
       enableContextMenu={true} enableSearch={true} enableOptionsPane={true}
       enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true}
@@ -92,3 +94,5 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

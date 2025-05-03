@@ -68,7 +68,7 @@ function App() {
           container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
         enableToolbar={true}
         created={onCreate}
       />
@@ -79,6 +79,8 @@ export default App;
 createRoot(document.getElementById('sample')).render(<App />);
 
 ```
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ### Customize custom option in context menu
 
@@ -125,7 +127,7 @@ function App() {
           container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
         enableToolbar={true}
         created={onCreate}
       />
@@ -137,6 +139,8 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 
 ```
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 #### Customize added context menu items
 
@@ -199,7 +203,7 @@ function App() {
           container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
         enableToolbar={true}
         created={onCreate}
       />
@@ -211,6 +215,8 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 
 ```
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 The following is the output of custom context menu with customization.
 
@@ -227,3 +233,70 @@ The following is the output of custom context menu with customization.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/document-editor/customize-context-menu-cs1" %}
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+#### Customize Context Menu with sub-menu items
+ 
+Document Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](../../api/document-editor/contextMenu/#addcustommenu) method.
+ 
+The following code shows how to add a sub items in the custom option in context menu in Document Editor Container.
+ 
+```ts
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+} from '@syncfusion/ej2-react-documenteditor';
+ 
+DocumentEditorContainerComponent.Inject(Toolbar);
+function App() {
+  let container;
+  let menuItems = [
+    {
+      text: 'Form field',
+      id: 'form field',
+      iconCss: 'e-de-formfield e-icons',
+      items: [
+        {
+          text: 'Text form',
+          id: 'Text form',
+          iconCss: 'e-icons e-de-textform',
+        },
+        {
+          text: 'Check box',
+          id: 'Check box',
+          iconCss: 'e-icons e-de-checkbox-form',
+        },
+        {
+          text: 'Drop down',
+          id: 'Drop down',
+          iconCss: 'e-icons e-de-dropdownform',
+        },
+      ],
+    },
+  ];
+  function onCreated() {
+    // adding Custom Options
+    container.documentEditor.contextMenu.addCustomMenu(menuItems, false, true);
+  }
+  return (
+    <DocumentEditorContainerComponent
+      id="container"
+      ref={(scope) => {
+        container = scope;
+      }}
+      height={'590px'}
+      serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
+      enableToolbar={true}
+      created={onCreated}
+    />
+  );
+}
+export default App;
+ReactDOM.render(<App />, document.getElementById('sample'));
+ 
+```
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

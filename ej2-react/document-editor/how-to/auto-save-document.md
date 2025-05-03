@@ -70,7 +70,7 @@ function App() {
         container = scope;
       }}
       height={'590px'}
-      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+      serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
       enableToolbar={true} created={onCreate} contentChange={onContentChange}
     />
   );
@@ -78,6 +78,8 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
  ```
+ 
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * In server-side, Receives the stream content from client-side and process it to save the document in aws s3. Add Web API in controller file like below to save the document in aws s3.
 

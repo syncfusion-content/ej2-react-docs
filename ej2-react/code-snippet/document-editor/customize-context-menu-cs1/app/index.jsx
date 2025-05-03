@@ -44,7 +44,7 @@ function App() {
     }
     return (<DocumentEditorContainerComponent id="container" ref={(scope) => {
             container = scope;
-        }} height={'590px'} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" enableToolbar={true} created={onCreate}/>);
+        }} height={'590px'} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" enableToolbar={true} created={onCreate}/>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
