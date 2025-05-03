@@ -16,7 +16,7 @@ export class Default extends React.Component<{}, {}> {
             //Open the document in Document Editor.
             this.container.documentEditor.open(sfdt);
         });
-        this.container.serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+        this.container.serviceUrl = 'https://services.syncfusion.com/react/production/api/documenteditor/';
     }
 
     render() {

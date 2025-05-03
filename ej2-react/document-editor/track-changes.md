@@ -55,6 +55,16 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
+>Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges={true} in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
+
+```ts
+container.current.documentChange = () => {
+      if (container.current !== null) {
+        container.current.documentEditor.enableTrackChanges = true;
+      }
+    };
+```
+
 ## Show/Hide Revisions Pane
  
 The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
@@ -91,7 +101,7 @@ function App() {
           container = scope; // Assign the container ref
         }}
         height={'590px'}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
         enableToolbar={true}
         enableSelection={true}
         enableEditor={true}
@@ -108,6 +118,8 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 
 ```
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Get all tracked revisions
 
@@ -222,7 +234,7 @@ function App() {
           container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+        serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
         enableToolbar={true}
         enableTrackChanges={true}
       />
@@ -234,6 +246,8 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](../document-editor/document-management#restrict-editing-pane)
 

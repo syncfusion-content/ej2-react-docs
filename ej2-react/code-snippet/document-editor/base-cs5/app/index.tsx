@@ -24,7 +24,7 @@ function App() {
         });
     }
     return (<DocumentEditorContainerComponent id="container" ref={(scope) => { documenteditorcontainer = scope; onLoadDefault(); }}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" height={'590px'} enableToolbar={true} />);
+        serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" height={'590px'} enableToolbar={true} />);
 
 }
 export default App;

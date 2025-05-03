@@ -25,7 +25,7 @@ function App() {
             container = scope;
             created();
         }} enableEditor={true} enableSelection={true}
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+            serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
         />
     </div>
         

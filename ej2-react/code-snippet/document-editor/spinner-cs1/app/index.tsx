@@ -45,7 +45,7 @@ function App() {
                     container = scope;
                 }}
                 height={'590px'}
-                serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+                serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
                 enableToolbar={true}
             />
         </div>
