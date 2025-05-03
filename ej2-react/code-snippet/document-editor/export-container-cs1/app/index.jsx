@@ -14,7 +14,7 @@ function App() {
     }
     return (<div>
                 <button onClick={save}>Save</button>
-                <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" enableToolbar={true} ref={container} />
+                <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" enableToolbar={true} ref={container} />
             </div>);
 }
 export default App;

@@ -18,7 +18,7 @@ ComponentDidMount();
             //Open the document in Document Editor.
             container.documentEditor.open(sfdt);
         });
-        container.serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+        container.serviceUrl = 'https://services.syncfusion.com/react/production/api/documenteditor/';
     }
 
         return (

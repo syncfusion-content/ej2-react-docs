@@ -26,7 +26,7 @@ function App() {
     <DocumentEditorContainerComponent height={'590px'} id="container" ref={(scope) => {
             documenteditorcontainer = scope;
             created();
-        }} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" enableToolbar={true}/></div>
+        }} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" enableToolbar={true}/></div>
     );
 }
 export default App;

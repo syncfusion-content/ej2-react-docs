@@ -15,7 +15,7 @@ import {
 DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog);
 function Default() {
     return (
-        <DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" isReadOnly={false} enablePrint={true}
+        <DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" isReadOnly={false} enablePrint={true}
             enableSelection={true} enableEditor={true} enableEditorHistory={true}
             enableContextMenu={true} enableSearch={true} enableOptionsPane={true}
             enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true}

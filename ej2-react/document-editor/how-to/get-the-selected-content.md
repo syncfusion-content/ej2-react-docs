@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get the selected content in React Document editor component | Syncfusion
+title: Get selected content in React Document editor component | Syncfusion
 description: Learn here all about Get the selected content in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Get the selected content 
 platform: ej2-react
@@ -70,7 +70,7 @@ function App() {
         container = scope;
       }}
       height={'590px'}
-      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+      serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
       enableToolbar={true}
       created={onCreate}
     />
@@ -81,6 +81,8 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
 You can add the following custom options using this API,
 
 * Save or export the selected text as text file.
@@ -89,7 +91,7 @@ You can add the following custom options using this API,
 
 ## Get the selected content as SFDT (rich text)
 
-You can use [`sfdt`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#sfdt-code-classlanguage-textstringcode) API to get the selected content as plain text from React Document Editor component.
+You can use [`sfdt`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#sfdt-code-classlanguage-textstringcode) API to get the selected content as rich text from React Document Editor component.
 
 The following example code illustrates how to get the content of a bookmark and export it as SFDT.
 
@@ -125,7 +127,7 @@ function App() {
         container = scope;
       }}
       height={'590px'}
-      serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
+      serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"
       enableToolbar={true}
       created={onCreate}
     />
@@ -135,6 +137,8 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 You can add the following custom options using this API,
 

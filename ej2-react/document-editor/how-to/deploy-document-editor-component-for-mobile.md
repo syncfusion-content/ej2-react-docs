@@ -33,7 +33,7 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container;
   let hosturl =
-    'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+    'https://services.syncfusion.com/react/production/api/documenteditor/';
 
   function onDocumentChange() {
     let proxy = (container = DocumentEditorContainerComponent);
@@ -73,6 +73,8 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 {% endraw %}
+
+> The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 You can download the complete working example from this [GitHub location](https://github.com/SyncfusionExamples/Deploy-Document-Editor-in-Mobile-Friendly-Web-page/)
 
