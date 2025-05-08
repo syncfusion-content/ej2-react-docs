@@ -35,42 +35,35 @@ The following is the list of dependencies required to use the In-place Editor co
 
 ## Set up your development environment
 
-Before starting, need to install [`Create-react-app`](https://github.com/facebook/create-react-app) command line interface into your machine globally by using following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-    ```bash
-    npm install -g create-react-app
-    ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-Create a new project using create-react-app command as follows
+To create a new React application, run the following command.
 
-    <div class='tsx'>
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
 
-    ```bash
-    create-react-app quickstart --scripts-version=react-scripts-ts
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
 
-    cd quickstart
-
-    ```
-
-    </div>
-
-    <div class='jsx'>
-
-    ```
-
-    create-react-app quickstart
-
-    cd quickstart
-
-    ```
-
-    </div>
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
 Install the below required dependency package in order to use the `In-place Editor` component in your application.
 
-    ```bash
-    npm install @syncfusion/ej2-react-inplace-editor –save
-    ```
+```bash
+npm install @syncfusion/ej2-react-inplace-editor –save
+```
 
 The above package installs [In-place Editor dependencies](#dependencies) which are required to render the In-place Editor component in React environment.
 
@@ -175,11 +168,7 @@ export default App;
 
 ```
 
-
-
 `[Functional-component]`
-
-
 
 ```ts
 
@@ -199,8 +188,6 @@ function App () {
 export default App;
 
 ```
-
-
 
 ## Integrate DatePicker
 
@@ -232,11 +219,7 @@ export default App;
 
 ```
 
-
-
 `[Functional-component]`
-
-
 
 ```ts
 
@@ -257,15 +240,13 @@ export default App;
 
 ```
 
-
-
 ## Run the application
 
-* Run the application in the browser using the following command.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-    ```
-    npm start
-    ```
+```
+npm run dev
+```
 
 Output will be as follows:
 

@@ -50,37 +50,30 @@ The following list of dependencies are required to use the pivot table component
 
 ## Setup for Local Development
 
-To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npx create-react-app my-app
-cd my-app
-npm start
+npm create vite@latest my-app
 ```
-
-or
+To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
-yarn create react-app my-app
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-yarn start
+npm run dev
 ```
-
-To set-up a React application in `TypeScript` environment, run the following command.
+To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app --template typescript
+npm create vite@latest my-app -- --template react
 cd my-app
-npm start
+npm run dev
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
-
-```bash
-npm init react-app my-app
-cd my-app
-npm start
-```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -141,7 +134,7 @@ function App() {
 export default App;
 ```
 
-After initialization, add the the following code in **src/App.js** file to populate pivot table with a sample relational data source. Refer [here](./data-binding) to know the more details about relational data binding.
+After initialization, add the the following code in **src/App.jsx** file to populate pivot table with a sample relational data source. Refer [here](./data-binding) to know the more details about relational data binding.
 
 ```js
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
@@ -344,10 +337,10 @@ property, as shown in the code below. Additionally, calculated fields can only b
 
 ## Run the application
 
-The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 {% tabs %}
@@ -374,3 +367,4 @@ For more information and to access the quick start project, visit: [GitHub Repos
 ## See Also
 
 * [Tips and Tricks to Quickly Render the Pivot Table for Web](https://www.syncfusion.com/blogs/post/tips-and-tricks-to-quickly-render-the-pivot-table)
+

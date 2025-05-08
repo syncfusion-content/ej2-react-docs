@@ -33,29 +33,30 @@ The following list of dependencies are required to use the Spreadsheet component
 
 ## Setup for Local Development
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications and run the following command to install create-react-app.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-Run the following command to setup the basic `React` samples.
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
+To create a new React application, run the following command.
+
+```bash
+npm create vite@latest my-app
 ```
-npx create-react-app quickstart
+To set-up a React application in TypeScript environment, run the following command.
 
-cd quickstart
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
 
-npm start
-
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
-To set-up a React application in `TypeScript` environment, run the following command.
-
-```
-npx create-react-app quickstart --template typescript
-
-cd quickstart
-
-npm start
-
-```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -99,12 +100,10 @@ export default function App() {
 
 ## Run the application
 
-The [create-react-app](https://github.com/facebook/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-
-npm start
-
+npm run dev
 ```
 
 The following example shows a basic spreadsheet component.

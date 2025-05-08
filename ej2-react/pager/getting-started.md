@@ -22,23 +22,27 @@ Below is the list of minimum dependencies required to use the Pager.
 ```
 
 ## Setup for Local Development
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+To create a new React application, run the following command.
 
+```bash
+npm create vite@latest my-app
 ```
-npm install -g create-react-app
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
 ```
+To set-up a React application in JavaScript environment, run the following command.
 
-* To setup basic `React` sample use following commands.
-
-```
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
-npm install
-
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -86,10 +90,10 @@ ReactDOM.render(<App />, document.getElementById('pager'));
 `pageSize` value defines the number of records to be displayed per page. The default value for the `pageSize` is 12.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/pager/pager-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/pager/pager-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,10 +117,10 @@ To enable the `pageSizes` property, follow these steps:
 The following example demonstrates how to include the `pageSizes` property in the pager component.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/pager/pager-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/pager/pager-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -143,10 +147,9 @@ The default value for `pageCount` is 10 and value will be updated based on [`tot
 
 ## Run the application
 
-The [`create-react-app`](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
-
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 ```
-npm start
+npm run dev
 ```
 
 Output will be appears as follows.

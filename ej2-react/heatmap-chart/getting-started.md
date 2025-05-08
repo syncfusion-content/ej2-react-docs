@@ -31,39 +31,30 @@ For using heat map, the following minimum requirements are needed.
 
 ## Installation and configuration
 
-To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app**, run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
+
+```bash
+npm create vite@latest my-app
 ```
-npm install -g create-react-app
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
 ```
+To set-up a React application in JavaScript environment, run the following command.
 
-To create basic React application, run the following command.
-
-```
-create-react-app quickstart
-```
-
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-```
-cd quickstart
-```
-
-> In the **quickstart** application, the Syncfusion<sup style="font-size:70%">&reg;</sup> component is added in the JavaScript file.
-
-### Creating a React application with TypeScript
-
-To create React application with TypeScript, use the following command.
-
-```
-create-react-app quickstart --template typescript
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-```
-cd quickstart
-```
 
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -91,19 +82,19 @@ Now, you can start adding HeatMap component in the application. For getting star
 
  ```
 
-Use the `npm start` command to run the application in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
   ``` 
-  npm start
+  npm run dev
   ```
 
 The below example shows a basic HeatMap.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/heatmap/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -171,10 +162,10 @@ You can add axis labels to the heat map and format those labels using the [xAxis
 Add a title using the [titleSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#titlesettings) property to the heat map to provide quick information to the user about the data populated in the heat map.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/heatmap/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -186,10 +177,10 @@ Add a title using the [titleSettings](https://ej2.syncfusion.com/react/documenta
 Use a legend for the heat map in the [legendSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#legendsettings) object by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/heatmap/legendSettings/#visible) property to **true** and injecting the `Legend` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/heatmap/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -201,10 +192,10 @@ Use a legend for the heat map in the [legendSettings](https://ej2.syncfusion.com
 Add data labels to improve the readability of the heat map. This can be achieved by setting the [showLabel](https://ej2.syncfusion.com/react/documentation/api/heatmap/cellSettings/#showlabel) property to **true** in the [cellSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#cellsettings) object.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/heatmap/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -216,10 +207,10 @@ Add data labels to improve the readability of the heat map. This can be achieved
 The default palette settings of the heat map cells can be customized by using the [paletteSettings](https://ej2.syncfusion.com/react/documentation/api/heatmap/#palettesettings) property. Using the [palette](https://ej2.syncfusion.com/react/documentation/api/heatmap/paletteSettings/#palette) property in `paletteSettings` object, you can change the color set for the cells. You can change the color mode of the cells to fixed or gradient mode using the [type](https://ej2.syncfusion.com/react/documentation/api/heatmap/paletteSettings/#type) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs7/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/heatmap/getting-started-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -231,12 +222,13 @@ The default palette settings of the heat map cells can be customized by using th
 The tooltip is used when you cannot display information by using the data labels due to space constraints. You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/heatmap/#showtooltip) property to **true** and injecting the `Tooltip` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/heatmap/getting-started-cs8/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/heatmap/getting-started-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/heatmap/getting-started-cs8" %}
+ 

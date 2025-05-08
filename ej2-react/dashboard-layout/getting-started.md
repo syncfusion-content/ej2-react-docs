@@ -25,31 +25,28 @@ The following list of dependencies is required to use the Dashboard Layout compo
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-```
-npm install -g create-react-app
-```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
+To create a new React application, run the following command.
+
+```bash
+npm create vite@latest my-app
+```
 To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app --template typescript
-
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-
-npm start
+npm run dev
 ```
-
 To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app
-
+npm create vite@latest my-app -- --template react
 cd my-app
-
-npm start
+npm run dev
 ```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -86,7 +83,7 @@ You can render the Dashboard Layout component by adding the panels property as t
 
 `[src/App.tsx]`
 
-```ts
+```tsx
 // import the DashboardLayout component
 import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 import * as React from 'react';
@@ -154,7 +151,7 @@ export default App;
 
 ```
 
-```ts
+```tsx
 // import the DashboardLayout component
 import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 import * as React from 'react';
@@ -220,10 +217,10 @@ export default App;
 
 ## Run the application
 
-Now, use the `npm start` command to run the application in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```bash
-npm start
+npm run dev
 ```
 
 The following example shows a basic Dashboard Layout by adding the panels property directly into the HTML element.
@@ -336,3 +333,4 @@ The following example shows a basic Dashboard Layout by using the `panels` prope
  {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-panel-cs1" %}
 
 > You can refer to our [React Dashboard Layout](https://www.syncfusion.com/react-components/react-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [React Dashboard Layout example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/dashboard-layout/default) to knows how to present and manipulate data.
+

@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: Getting started with Standalone React PDF Viewer component| Syncfusion
@@ -20,30 +21,30 @@ To get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI co
 
 ## Setup for Local Development
 
-1. Create a new React app [`create-react-app`](https://github.com/facebook/create-react-app) and install it using the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npm install -g create-react-app
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
-2. To setup basic `React` sample use following commands.
-
-{% tabs %}
-{% highlight js tabtitle="JSX" %}
-
-create-react-app quickstart
-cd quickstart
-npm install
-
-{% endhighlight %}
-{% highlight js tabtitle="TSX" %}
-
-npx create-react-app quickstart --template cra-template-typescript
-cd quickstart 
-npm install
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -102,7 +103,7 @@ N> The following changes apply to React version 18 and above.
    @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
 ```
 
-* Add the React PDF Viewer as below in `src/index.js` file to render the PDF Viewer component.
+* Add the React PDF Viewer as below in `src/index.jsx` file to render the PDF Viewer component.
 
 
 {% tabs %}
@@ -196,10 +197,10 @@ View the sample in GitHub to [load PDF Viewer with local resources](https://gith
 
 ## Run the application
 
-Use the following command to run the application in browser with the port number `localhost:8080`.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 N> When running the sample, if you encounter the **ERR_OSSL_EVP_UNSUPPORTED error** error, you need to run the following command in your terminal to resolve this issue. This error is related to OpenSSL, which is a cryptographic library used by Node.js for secure communication and encryption tasks. This specific error typically occurs when Node.js is trying to use cryptographic algorithms or routines that are not supported by the current version of OpenSSL being used.
@@ -212,7 +213,7 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 Output will be appears as follows.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -237,7 +238,7 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 {% endraw %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% raw %} 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';

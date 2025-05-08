@@ -30,42 +30,30 @@ The following list of dependencies are required to use the Breadcrumb component 
 
 ## Setup your development environment
 
-You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup
-the applications.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-To install `create-react-app` run the following command.
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-```bash
-npm install -g create-react-app
-```
-
-Start a new project using create-react-app command as follows
-
-<div class='tsx'>
+To create a new React application, run the following command.
 
 ```bash
-
-create-react-app quickstart --scripts-version=react-scripts-ts
-
-cd quickstart
-
+npm create vite@latest my-app
 ```
-
-</div>
-
-<div class='jsx'>
+To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
 
-create-react-app quickstart
-
-cd quickstart
-
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
-</div>
-
-> 'react-scripts-ts' is used for creating React app with typescript.
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -95,7 +83,7 @@ Now, you can create `Breadcrumb` component in the application. Add `Breadcrumb` 
 
 
 
-```ts
+```tsx
 
 import { BreadcrumbComponent, BreadcrumbItemDirective, BreadcrumbItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
@@ -107,7 +95,7 @@ function App() {
 export default App;
 ```
 
-```ts
+```tsx
 import { BreadcrumbComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 function App() {
@@ -118,19 +106,19 @@ export default App;
 
 ## Run the application
 
-Run the application in the browser using the following command:
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-```
-npm start
+```bash
+npm run dev
 ```
 
 The following example shows a basic Breadcrumb component.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/breadcrumb/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/breadcrumb/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -142,10 +130,10 @@ The following example shows a basic Breadcrumb component.
 Use `items` property to bind items for Breadcrumb component. The below example demonstrates the basic rendering of Breadcrumb with items support.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/breadcrumb/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/breadcrumb/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -157,10 +145,10 @@ Use `items` property to bind items for Breadcrumb component. The below example d
 This feature enables or disables the item navigation. By default, the navigation will be enabled when setting `Url` property. To prevent breadcrumb item navigation, set `enableNavigation` property as false in Breadcrumb. The below example shows enabling and disabling the navigation of Breadcrumb items.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/breadcrumb/enable-navigation-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/breadcrumb/enable-navigation-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

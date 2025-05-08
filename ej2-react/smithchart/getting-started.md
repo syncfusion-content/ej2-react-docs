@@ -34,26 +34,30 @@ Below is the list of minimum dependencies required to use the Smith Chart.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
+
+```bash
+npm create vite@latest my-app
 ```
-npm install -g create-react-app
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
-* To set-up a React application in TypeScript environment, run the following command.
-
-    ```
-     create-react-app quickstart --template typescript
-     cd quickstart
-     npm start
-   ```
-* To set-up a React application in JavaScript environment, run the following command.
-   ```
-    create-react-app quickstart
-    cd quickstart
-    npm start
-   ```
 
 * Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
 
@@ -80,10 +84,10 @@ export default App;
 
 ```
 
-Now use the `npm start` command to run the application in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 The below example shows basic Smithchart.
@@ -142,10 +146,10 @@ Below sample demonstrate adding two series to smithchart both ways.
 * Second series Transmission2 shows points bound series.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/smithchart/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/smithchart/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -158,10 +162,10 @@ smithchart `title` API used to add title for smithchart. In that `text` API used
 API `visible` used to toggle the title.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/smithchart/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/smithchart/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -173,10 +177,10 @@ API `visible` used to toggle the title.
 To use series marker and it's customization in smithchart, use series `marker`. To display marker for particular series, need to specify  `marker visible` as true. Below sample marker enabled for first series only.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/smithchart/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/smithchart/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -188,10 +192,10 @@ To use series marker and it's customization in smithchart, use series `marker`. 
 To use marker dataLabel and it's customization in smithchart, use marker `dataLabel`. To display dataLabel for particular series marker, need to specify  `dataLabel visible` as true in that series `marker`. Below sample dataLabel enabled for first series.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/smithchart/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/smithchart/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -203,10 +207,10 @@ To use marker dataLabel and it's customization in smithchart, use marker `dataLa
 Smithchart had a legend feature, which is used to denote the correspond series. To enable the legend, need to inject `SmithchartLegend` module using `Smithchart.Inject(SmithchartLegend)` method and smithchart `legendSettings` `visible` as true. Following example sample shows enabling legend for smithchart. Series name can customize using series `name`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/smithchart/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/smithchart/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -218,12 +222,13 @@ Smithchart had a legend feature, which is used to denote the correspond series. 
 Smithchart had a tooltip feature, which is used to show the current point's values. To enable the tooltip, need to inject `TooltipRender` module using `Smithchart.Inject(TooltipRender)` method and smithchart series `tooltip` `visible` as true. Following example sample shows enabling tooltip for smithchart series collection.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/smithchart/getting-started-cs7/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/smithchart/getting-started-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/smithchart/getting-started-cs7" %}
+ 

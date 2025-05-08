@@ -31,32 +31,28 @@ The following list of dependencies are required to use the `ListBox` component i
 
 ## Installation and configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```bash
-     npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
+To create a new React application, run the following command.
+
+```bash
+npm create vite@latest my-app
+```
 To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app --template typescript
-
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-
-npm start
-
+npm run dev
 ```
-
 To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app
-
+npm create vite@latest my-app -- --template react
 cd my-app
-
-npm start
-
+npm run dev
 ```
 
 ## Adding syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -142,19 +138,19 @@ export default App;
 
 ## Run the application
 
-After completing the configuration required to render a basic ListBox, run the following command to display the output in your default browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 The following example shows a basic Listbox component.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/listbox/basic-cs7/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/listbox/basic-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

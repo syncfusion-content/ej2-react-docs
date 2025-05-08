@@ -31,42 +31,37 @@ Following is the list of minimum dependencies required to use the Gantt.
 
 ## Setup for Local Development
 
-You can use [create-react-app](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install create-react-app run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-    ```
-    npm install -g create-react-app
-    ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-* To setup basic React sample use following commands.
+To create a new React application, run the following command.
 
-    <div class='tsx'>
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
 
-    ```
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
 
-    create-react-app quickstart --scripts-version=react-scripts-ts
-
-    ```
-
-    </div>
-
-    <div class='jsx'>
-
-    ```
-
-    cd quickstart
-
-    ```
-
-    </div>
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.To install Gantt component, use the following command
 
-    ```
-    npm install @syncfusion/ej2-react-gantt --save
-    ```
+```bash
+npm install @syncfusion/ej2-react-gantt --save
+```
 
 ## Adding CSS reference
 
@@ -880,10 +875,10 @@ Modify the task details through cell editing by setting the edit mode to `Auto`.
 Modify the task details through dialog by setting the edit mode to `Dialog`. Inject the [`Edit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editmodule) module as follows. If the [`Edit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editmodule) module is not injected, you cannot edit the task details through the edit dialog.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/dialogedit-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/dialogedit-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -900,10 +895,10 @@ Modify the task details through dialog by setting the edit mode to `Dialog`. Inj
 Modify the task details through user interaction such as resizing and dragging the taskbar by enabling the [`allowTaskbarEditing`](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/#allowtaskbarediting) property. Inject the [`Edit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editmodule) module as follows. If the [`Edit`](https://ej2.syncfusion.com/react/documentation/api/gantt/#editmodule) module is not injected, you cannot edit the task details while dragging the taskbar.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/taskbaredit-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/taskbaredit-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -918,10 +913,10 @@ Modify the task details through user interaction such as resizing and dragging t
 Modify the task dependencies using mouse interactions by enabling the [`allowTaskbarEditing`](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettings/#allowtaskbarediting)  property along with mapping the task dependency data source field to the [`dependency`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#dependency) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/dependencyedit-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/dependencyedit-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -942,10 +937,10 @@ Predecessor or task dependency in the Gantt component is used to depict the rela
 You can show the relationship in tasks by using the [`dependency`](https://ej2.syncfusion.com/react/documentation/api/gantt/taskFields/#dependency) property as shown in the following code example.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/dependency-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/dependency-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -960,10 +955,10 @@ You can show the relationship in tasks by using the [`dependency`](https://ej2.s
 You can display and assign the resource for each task in the Gantt control. Create a collection of JSON object, which contains id, name, unit and group of the resources and assign it to the [`resources`](https://ej2.syncfusion.com/react/documentation/api/gantt/#resources) property. Map these fields to the Gantt control using the [`resourceFields`](https://ej2.syncfusion.com/react/documentation/api/gantt/#resourceFields) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/resource-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/resource-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -978,10 +973,10 @@ You can display and assign the resource for each task in the Gantt control. Crea
 The filtering feature enables you to view the reduced amount of records based on filter criteria. Gantt provides the menu filtering support for each column. It can be enabled by setting the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowfiltering) property to true along with injecting the [`Filter`](https://ej2.syncfusion.com/react/documentation/api/gantt/#filtermodule) module as shown in the following code example. Filtering feature can also be customized using the [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/filterSettings/) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/filtering-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/filtering-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -996,13 +991,13 @@ The filtering feature enables you to view the reduced amount of records based on
 The sorting feature enables you to order the records. It can be enabled by setting the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/gantt/#allowsorting) property to `true`. Inject the [`Sort`](https://ej2.syncfusion.com/react/documentation/api/gantt/#sortmodule) module as follows. If the [`Sort`](https://ej2.syncfusion.com/react/documentation/api/gantt/#sortmodule) module is not injected, you cannot sort the records when a header is clicked. The sorting feature can be customized using the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/gantt/sortSettings/) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/sorting-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/sorting-cs1/app/index.tsx %}
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
+{% highlight html tabtitle="app.html" %}
 {% include code-snippet/gantt/sorting-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
@@ -1011,21 +1006,19 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 ## Run the application
 
-The [create-react-app](https://github.com/facebookincubator/create-react-app) will pre-configure the project to compile and run the application in browser. Use the following command to run the application.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-    ```
-
-    npm start
-
-    ```
+```bash
+npm run dev
+```
 
 Output will be appears as follows.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/run-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/run-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -1055,10 +1048,10 @@ Error handling is used to identify errors, display them and develop recovery str
 The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionfailure) event in the Gantt control to display an exception when `isPrimaryKey` is not configured properly in the Gantt Chart column.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/gantt/exception-handling-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/gantt/exception-handling-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
