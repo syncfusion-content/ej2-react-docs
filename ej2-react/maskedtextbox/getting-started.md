@@ -25,19 +25,29 @@ The following list of dependencies are required to use the MaskedTextBox compone
 
 ## Installation and configuration
 
-You can use [Create-react-app](https://github.com/facebook/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```bash 
-     npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-Start a new project using create-react-app command as follows
+To create a new React application, run the following command.
 
-    ```bash
-     create-react-app quickstart --scripts-version=react-scripts-ts
-     cd quickstart
-    ```
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -126,10 +136,10 @@ Import the MaskedTextBox component's required CSS references as follows in `src/
 
 ## Run the application
 
-Use the `npm run start` command to run the application in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm run start
+npm run dev
 ```
 
 The following example shows the MaskedTextBox.
@@ -137,10 +147,10 @@ The following example shows the MaskedTextBox.
 `[Class-component]`
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/masked-textbox/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/masked-textbox/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -150,10 +160,10 @@ The following example shows the MaskedTextBox.
 `[Functional-component]`
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/masked-textbox/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/masked-textbox/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

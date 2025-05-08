@@ -73,4 +73,4 @@ The AI AssistView component's accessibility levels are ensured through an [acces
 
 ## See also
 
-* [Accessibility in Syncfusion React components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)

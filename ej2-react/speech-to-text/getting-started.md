@@ -26,37 +26,30 @@ The following list of dependencies is required to use the SpeechToText component
 
 ## Setup for Local Development
 
-To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npx create-react-app my-app
-cd my-app
-npm start
+npm create vite@latest my-app
 ```
-
-or
+To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
-yarn create react-app my-app
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-yarn start
+npm run dev
 ```
-
-To set-up a React application in `TypeScript` environment, run the following command.
+To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app --template typescript
+npm create vite@latest my-app -- --template react
 cd my-app
-npm start
+npm run dev
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
-
-```bash
-npm init react-app my-app
-cd my-app
-npm start
-```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -121,19 +114,19 @@ Import the SpeechToText component required CSS references as follows in `src/App
 ```
 ## Run the application
 
-After completing the configuration required to render a basic SpeechToText, run the following command to display the output in your default browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 The following example shows a basic SpeechToText component.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/speech-to-text/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speech-to-text/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="styles.css" %}
@@ -150,10 +143,10 @@ The following example shows a basic SpeechToText component.
 You can use the [content](../api/speech-to-text/buttonSettingsModel/#content) property to display the start listening text and [stopContent](../api/speech-to-text/buttonSettingsModel/#stopContent) to display the stop listening text by using the [buttonSettings](../api/speech-to-text#buttonSettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/speech-to-text/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/speech-to-text/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="styles.css" %}

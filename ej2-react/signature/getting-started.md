@@ -26,34 +26,28 @@ The following list of dependencies are required to use the Signature component i
 
 ## Setup your development environment
 
-You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-To install `create-react-app` run the following command.
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-   ```bash
-    npm install -g create-react-app
-   ```
+To create a new React application, run the following command.
 
+```bash
+npm create vite@latest my-app
+```
 To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app --template typescript
-
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-
-npm start
-
+npm run dev
 ```
-
 To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app
-
+npm create vite@latest my-app -- --template react
 cd my-app
-
-npm start
-
+npm run dev
 ```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -63,9 +57,9 @@ You can choose the component that you want to install. For this application, we 
 
 To install Signature component, use the following command
 
-   ```bash
-     npm install @syncfusion/ej2-react-inputs –save
-   ```
+```bash
+npm install @syncfusion/ej2-react-inputs –save
+```
 
 The above command installs [Signature dependencies](./getting-started#dependencies) which are required to render the component in the `React` environment.
 
@@ -96,19 +90,19 @@ export default App;
 
 ## Run the application
 
-Use the `npm run start` command to run the application in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
    ```
-   npm run start
+   npm run dev
    ```
 
 The following example shows the default Signature.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/signature/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/signature/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

@@ -22,30 +22,28 @@ Install the following required dependent package to render the `Badge` component
 
 ## Installation and configuration
 
-You can use [`Create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npm install -g create-react-app
+npm create vite@latest my-app
 ```
-
 To set-up a React application in TypeScript environment, run the following command.
 
-```
-npx create-react-app my-app --template typescript
-
+```bash
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-
-npm start
+npm run dev
 ```
-
 To set-up a React application in JavaScript environment, run the following command.
 
-```
-npx create-react-app my-app
-
+```bash
+npm create vite@latest my-app -- --template react
 cd my-app
-
-npm start
+npm run dev
 ```
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -72,7 +70,7 @@ Badge CSS files are available in the `ej2-notifications` package folder. Import 
 
 Add an HTML span element with `e-badge` class inside any wrapper element (h1) into your return method.
 
-```ts
+```tsx
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import './App.css';
@@ -88,25 +86,25 @@ ReactDOM.render(<App />, document.getElementById("element"));
 
 ## Run the application
 
-Run the application in the browser using the following command:
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 Output will be as follows:
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/badge/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/badge/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/getting-started-cs1/index.html %}
 {% endhighlight %}
-{% highlight html tabtitle="index.css" %}
+{% highlight html tabtitle="app.css" %}
 {% include code-snippet/badge/getting-started-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}

@@ -28,38 +28,28 @@ The following list of minimum dependencies are required to use the TreeMap contr
 
 ## Installation and configuration
 
-To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
+
+```bash
+npm create vite@latest my-app
 ```
-npm install -g create-react-app
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
 ```
+To set-up a React application in JavaScript environment, run the following command.
 
-To create basic React application, run the following command.
-
-```
-create-react-app quickstart
-```
-
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm**  packages.
-
-```
-cd quickstart
-```
-
-> In the **quickstart** application, the Syncfusion<sup style="font-size:70%">&reg;</sup> component is added in the JavaScript file.
-
-### Creating a React application with TypeScript
-
-To create React application with TypeScript, use the following command.
-
-```
-create-react-app quickstart --template typescript
-```
-
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-```
-cd quickstart
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -75,7 +65,7 @@ npm install @syncfusion/ej2-react-treemap --save
 Now, the TreeMap component can be added in the application. To initialize the TreeMap control in the React application, import the TreeMap control in the **src/App.js**
 or **src/App.tsx** as per the application. Please use the below code to include the TreeMap component in the application.
 
-```ts
+```tsx
 
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -104,10 +94,10 @@ export default App;
 
 ### Run the application
 
-The TreeMap control is now included in the **quickstart** application. Use the following command to run the application.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 ## Module injection
@@ -141,10 +131,10 @@ Here, the TreeMap is created with data source and the `weightValuePath` property
 The color mapping feature supports customization of item colors based on the underlying value of item received from bound data source. Specify the field name from the values that have to be compared for the item in the equalColorValuePath or rangeColorValuePath property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/treemap/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/treemap/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -156,10 +146,10 @@ The color mapping feature supports customization of item colors based on the und
 You can show legend for the TreeMap by setting the visible property to true in legendSettings object and injecting the `TreeMapLegend` module using the `<Inject services={[TreeMapLegend]} />`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/treemap/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/treemap/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -171,10 +161,10 @@ You can show legend for the TreeMap by setting the visible property to true in l
 The labels are added to show additional information of the items in TreeMap. By default, the visibility of the label is true. This can be customized using the showLabels property in leafItemSettings.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/treemap/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/treemap/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -186,12 +176,13 @@ The labels are added to show additional information of the items in TreeMap. By 
 The tooltips are used when labels cannot display information due to space constraints. Tooltips can be enabled by setting the visible property to true in tooltipSettings object and injecting the `TreeMapTooltip` module using the `<Inject services={[TreeMapTooltip]} />`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/treemap/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/treemap/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/treemap/getting-started-cs5" %}
+ 

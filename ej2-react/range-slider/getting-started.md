@@ -33,34 +33,30 @@ Install the below required dependent packages to render the Slider component.
 
 ## Installation and Configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the
-applications.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-To install `create-react-app` run the following command.
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npm install -g create-react-app
+npm create vite@latest my-app
 ```
-
 To set-up a React application in TypeScript environment, run the following command.
 
-```
-npx create-react-app my-app --template typescript
-
+```bash
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-
-npm start
+npm run dev
 ```
-
 To set-up a React application in JavaScript environment, run the following command.
 
-```
-npx create-react-app my-app
-
+```bash
+npm create vite@latest my-app -- --template react
 cd my-app
-
-npm start
+npm run dev
 ```
+
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -112,17 +108,17 @@ export default App;
 
 ## Run the Application
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 quickstart application project is configured to compile and run the application in browser. Use the following command to run the application.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/slider/getting-started-cs5/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/slider/getting-started-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
@@ -150,10 +146,10 @@ In Min-Range Slider, a shadow is considered from the start value to current hand
 contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/slider/getting-started-cs6/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/slider/getting-started-cs6/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
@@ -173,10 +169,10 @@ contains two handles that is used to select a range of values and a shadow is co
 The Slider can be displayed, either in horizontal or vertical orientation using [`orientation`](https://helpej2.syncfusion.com/react/documentation/api/slider#orientation) property. By default, the Slider renders in horizontal orientation.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/slider/orientation-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/slider/orientation-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}
@@ -195,10 +191,10 @@ The Slider displays the tooltip to indicate the current value by clicking the Sl
 Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or clicking on the Slider handle and it always remains/displays on the page.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/slider/getting-started-cs7/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/slider/getting-started-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -214,10 +210,10 @@ The Slider value can be changed by using the [`showButtons`](https://helpej2.syn
 and not to the button.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/slider/getting-started-cs8/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/slider/getting-started-cs8/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}

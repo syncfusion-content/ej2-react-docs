@@ -35,18 +35,29 @@ The following list of dependencies are required to use the `MultiSelect` compone
 
 ## Installation and configuration
 
-You can use [`Create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-    ```bash
-      npm install -g create-react-app
-    ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-Start a new project using create-react-app command as follows
+To create a new React application, run the following command.
 
-    ```
-    create-react-app quickstart --scripts-version=react-scripts-ts
-    cd quickstart
-  ```
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
 ## Adding syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -55,9 +66,7 @@ All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages 
 To install MultiSelect component, use the following command
 
 ```bash
-
 npm install @syncfusion/ej2-react-dropdowns --save
-
 ```
 
 ## Adding MultiSelect component
@@ -161,10 +170,10 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Run the application
 
-After completing the configuration required to render a basic  MultiSelect, run the following command to display the output in your default browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 `[Class-component]`
