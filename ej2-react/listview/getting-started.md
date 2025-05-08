@@ -26,31 +26,30 @@ Install the below required dependent packages to render the ListView component.
 
 ## Installation and Configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications. To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npm install -g create-react-app
+npm create vite@latest my-app
 ```
-
 To set-up a React application in TypeScript environment, run the following command.
 
-```
-npx create-react-app my-app --template typescript
-
+```bash
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-
-npm start
+npm run dev
 ```
-
 To set-up a React application in JavaScript environment, run the following command.
 
-```
-npx create-react-app my-app
-
+```bash
+npm create vite@latest my-app -- --template react
 cd my-app
-
-npm start
+npm run dev
 ```
+
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -165,17 +164,17 @@ export default App;
 
 ## Running the application
 
-Now use the `npm start` command to run the application in the browser.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/listview/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/listview/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.css" %}

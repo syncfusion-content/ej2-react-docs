@@ -28,39 +28,29 @@ The following list of dependencies are required to use the React Accordion compo
 
 ## Setup for Local Development
 
-To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npx create-react-app my-app
-cd my-app
-npm start
+npm create vite@latest my-app
 ```
-
-or
+To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
-yarn create react-app my-app
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-yarn start
+npm run dev
 ```
-
-To set-up a React application in `TypeScript` environment, run the following command.
+To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app --template typescript
+npm create vite@latest my-app -- --template react
 cd my-app
-npm start
+npm run dev
 ```
-
-Besides using the [npm](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6+`.
-
-```bash
-npm init react-app my-app
-cd my-app
-npm start
-```
-
-
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -83,17 +73,17 @@ npm install @syncfusion/ej2-react-navigations --save
 
 ```
 
-> To refer `App.css` in the application then import it in the `src/App.ts` file.
+> To refer `App.css` in the application then import it in the `src/App.tsx` file.
 
 ## Initialize the Accordion using Items
 
 The React Accordion can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/accordion/#items).
 
-* Import the Accordion component to your `src/App.ts` file using following code.
+* Import the Accordion component to your `src/App.tsx` file using following code.
 
 
 
-```ts
+```tsx
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 
@@ -132,10 +122,10 @@ export default ReactApp;
 
 
 
-* Run the application in the browser using the following command.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
         
 {% previewsample "page.domainurl/code-snippet/accordion/accordion-cs4" %}
@@ -161,10 +151,10 @@ You need to follow the below structure of HTML elements to render the Accordion.
 ```
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/accordion/accordion-cs5/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/accordion/accordion-cs5/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}

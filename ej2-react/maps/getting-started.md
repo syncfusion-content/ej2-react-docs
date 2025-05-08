@@ -32,39 +32,30 @@ Below is the list of minimum dependencies required to use the Maps.
 
 ## Installation and Configuration
 
-To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```
-     npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create basic React application, run the following command.
+To create a new React application, run the following command.
 
-   ```
-     create-react-app quickstart
-   ```
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
 
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
 
-   ```
-    cd quickstart
-   ```
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
-> In the **quickstart** application, the Syncfusion<sup style="font-size:70%">&reg;</sup> component is added in the JavaScript file.
-
-### Creating a React application with TypeScript
-
-To create React application with TypeScript, use the following command.
-
-   ```
-     create-react-app quickstart --template typescript
-   ```
-
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-   ```
-    cd quickstart
-   ```
 
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -101,10 +92,10 @@ Now, the Maps component can be added in the application. To initialize the Maps 
 
 ### Run the application
 
-The Maps component is now included in the **quickstart** application. Use the following command to run the application.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 ## Module Injection
@@ -165,10 +156,10 @@ Elements in the maps will get rendered in the layers. So add a layer collection 
 Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel/#shapedata) property.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/maps/default-map-cs33/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/maps/default-map-cs33/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -190,10 +181,10 @@ The `shapeDataPath` property used to refer the data ID in dataSource. Where as, 
 The JSON object "electionData" is used as data source below.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/maps/default-map-cs34/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/maps/default-map-cs34/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -210,10 +201,10 @@ Specify the field name from which the values have to be compared for the shapes 
 Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/react/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property. Here '#D84444' is specified for 'Trump' and '#316DB5' is specified for 'Clinton'.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/maps/default-map-cs35/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/maps/default-map-cs35/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -228,10 +219,10 @@ You can add a title using [`titleSettings`](https://ej2.syncfusion.com/react/doc
 information to the user about the shapes rendered in the map.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/maps/default-map-cs36/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/maps/default-map-cs36/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -246,10 +237,10 @@ You can show legend for the maps by setting true to the [`visible`](https://ej2.
 service using `Inject` tag.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/maps/default-map-cs37/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/maps/default-map-cs37/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -264,10 +255,10 @@ You can add data labels to show additional information of the shapes in map. Thi
 setting [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/#visible) property to true in the [`dataLabelSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel/) object and by injecting `DataLabel` service using `Inject` tag.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/maps/default-map-cs38/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/maps/default-map-cs38/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -280,10 +271,10 @@ The tooltip is useful when you cannot display information by using the data labe
 You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/#visible) property as true in [`tooltipSettings`](https://ej2.syncfusion.com/react/documentation/api/maps/tooltipSettingsModel/) object and by injecting `MapsTooltip` service using `Inject` tag.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/maps/default-map-cs39/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/maps/default-map-cs39/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
