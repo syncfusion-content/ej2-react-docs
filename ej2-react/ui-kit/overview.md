@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview: Essential UI Kit for React
 
-The Essential UI Kit for React comprises over 160 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML, CSS, TypeScript, and Syncfusion React components, delivering robust functionality and ease of use. They are compatible with both Tailwind CSS and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
+The Essential UI Kit for React comprises over 175 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML, CSS, TypeScript, and Syncfusion React components, delivering robust functionality and ease of use. They are compatible with both Tailwind CSS and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
 
 <table>
   <tr>
@@ -50,6 +50,7 @@ The Essential UI Kit for React comprises over 160 responsive, ready-to-use, easy
         <li>Calendar</li>
         <li>Pagination</li>
         <li>Footer</li>
+        <li>Notification</li>
       </ul>
     </td>
   </tr>
