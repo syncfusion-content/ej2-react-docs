@@ -96,7 +96,7 @@ The following example demonstrate how to customize the toolbar by disabling and 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
-{% endraw %}
+
 import { ColumnDirective, ColumnsDirective, Edit, GridComponent, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 import React, { useState } from 'react';
 import { data } from './datasource';
@@ -137,6 +137,7 @@ function App() {
 }
 export default App;
 
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
 {% raw %}
