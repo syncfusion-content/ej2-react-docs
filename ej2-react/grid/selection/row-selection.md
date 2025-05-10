@@ -798,7 +798,9 @@ To achieve passing selected records to the server using AJAX requests in the Gri
 
 **Step 3:** In your React component file (e.g., **App.js**), add a button to trigger the AJAX call and include the Grid with necessary configurations. Handle the button [click](https://ej2.syncfusion.com/react/documentation/api/button#click) event to retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid/#getselectedrecords) method from the Grid and send them to the server using AJAX.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="App.js" %}
+{% raw %}
 
 import './App.css';
 import { ColumnDirective, ColumnsDirective, GridComponent, Selection, Inject } from '@syncfusion/ej2-react-grids';
@@ -851,7 +853,9 @@ function App() {
 };
 export default App;
 
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 **Step 4:** On the server side, create a controller named **GridController.cs** under the **Controllers** folder to handle incoming requests and process selected records. Add the following code:
 
@@ -1018,7 +1022,9 @@ To achieve passing selected records to the server using Fetch requests in the Gr
 
 **Step 3:** In your React component file (e.g., **App.js**), add a button to trigger the AJAX call and include the Grid with necessary configurations. Handle the button [click](https://ej2.syncfusion.com/react/documentation/api/button#click) event to retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/grid/#getselectedrecords) method from the Grid and send them to the server using AJAX.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="App.js" %}
+{% raw %}
 
 import './App.css';
 import { ColumnDirective, ColumnsDirective, GridComponent, Selection, Inject } from '@syncfusion/ej2-react-grids';
@@ -1071,7 +1077,9 @@ function App() {
 };
 export default App;
 
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 **Step 4:** On the server side, create a controller named **GridController.cs** under the **Controllers** folder to handle incoming requests and process selected records. Add the following code:
 

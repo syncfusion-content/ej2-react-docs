@@ -652,7 +652,7 @@ To export all records, including those from multiple pages, configure the [pdfEx
 To export the complete Grid data to Excel document, utilize the `excelExportProperties.dataSource` when initiating the Excel export. Use the following code snippet to export all records within the Grid:
 
 {% tabs %}
-{% highlight tsx tabtitle="App.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% raw %}
  const toolbarClick = async (args: ClickEventArgs) => {
     const exportState = { skip: 0, take: gridInstance.current.pageSettings.totalRecordsCount};
