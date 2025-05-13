@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Stacked Step Area Chart in React Chart component | Syncfusion
-description: Learn here all about Stacked Step Area Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Stacked Step Area Chart in React Charts | Syncfusion
+description: Learn here all about Stacked Step Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Stacked Step Area Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Stacked step area Chart in React Chart component
+# Stacked Step Area Chart in React Charts
 
-## Stacked step area
+## Stacked Step Area
 
 To render a stacked step area series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

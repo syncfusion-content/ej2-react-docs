@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Range Step Area Chart in React Chart component | Syncfusion
-description: Learn here all about Range Step Area Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Range Step Area Chart in React Charts | Syncfusion
+description: Learn here all about Range Step Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Range Step Area Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Range step area Chart in React Chart component
+# Range Step Area Chart in React Charts
 
-## Range step area
+## Range Step Area
 
 To render a range step area series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

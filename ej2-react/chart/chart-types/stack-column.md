@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Stacked Column Chart in React Chart component | Syncfusion
-description: Learn here all about Stacked Column Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Stacked column chart 
+title: Stacked Column Chart in React Charts | Syncfusion
+description: Learn here all about Stacked Column Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
+control: Stacked Column Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Stacked Column Chart in React Chart component
+# Stacked Column Chart in React Charts
 
-## Stacked column
+## Stacked Column
 
 To render a [stacked column](https://www.syncfusion.com/react-components/react-charts/chart-types/stacked-column-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

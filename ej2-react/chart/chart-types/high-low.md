@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Hilo Chart in React Chart component | Syncfusion
-description: Learn here all about Hilo Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Hilo Chart 
+title: High Low Chart in React Charts | Syncfusion
+description: Learn here all about High Low Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
+control: High Low Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hilo Charts in React Chart component
+# High Low Chart in React Charts
 
-## Hilo
+## High Low
 
 To render a `hilo` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

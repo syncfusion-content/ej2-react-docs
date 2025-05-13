@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bubble in React Chart component | Syncfusion
-description: Learn here all about Bubble Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Bubble Chart 
+title: Scatter Chart in React Charts | Syncfusion
+description: Learn here all about Scatter Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
+control: Scatter Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bubble in React Chart component
+# Scatter Chart in React Charts
 
 ## Scatter
 

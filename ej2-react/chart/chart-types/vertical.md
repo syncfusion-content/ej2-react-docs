@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vertical Chart in React Chart component | Syncfusion
-description: Learn here all about vertical Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Vertical Chart in React Charts | Syncfusion
+description: Learn here all about vertical Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Vertical
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Vertical Chart in React Chart component
+# Vertical Chart in React Charts
 
 ## Vertical
 
