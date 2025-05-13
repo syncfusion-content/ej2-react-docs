@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Box and Whisker Chart in React Chart component | Syncfusion
-description: Learn here all about Box and Whisker in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Box and Whisker Chart in React Charts | Syncfusion
+description: Learn here all about Box and Whisker in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Box and Whisker
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Box and Whisker in React Chart component
+# Box and Whisker Chart in React Charts
 
 ## Box and Whisker
 

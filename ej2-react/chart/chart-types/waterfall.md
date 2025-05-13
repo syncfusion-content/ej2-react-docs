@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Waterfall Chart in React Chart component | Syncfusion
-description: Learn here all about Waterfall in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Waterfall Chart in React Charts | Syncfusion
+description: Learn here all about Waterfall in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Waterfall
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Waterfall in React Chart component
+# Waterfall Chart in React Charts
 
-## Waterfall chart
+## Waterfall Chart
 
 To render a `waterfall` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

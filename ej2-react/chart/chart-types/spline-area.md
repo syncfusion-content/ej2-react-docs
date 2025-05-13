@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Area Chart in React Chart component | Syncfusion
-description: Learn here all about Spline Area Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Spline Area Chart in React Charts | Syncfusion
+description: Learn here all about Spline Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Spline Area Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Step Area in React Chart component
+# Spline Area Chart in React Charts
 
 ## Spline Area
 

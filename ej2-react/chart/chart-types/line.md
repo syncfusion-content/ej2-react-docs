@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Line Chart in React Chart component | Syncfusion
-description: Learn here all about Line Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Line Chart in React Charts | Syncfusion
+description: Learn here all about Line Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Line Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Line Chart in React Chart component
+# Line Chart in React Charts
 
 <!-- markdownlint-disable MD036 -->
 

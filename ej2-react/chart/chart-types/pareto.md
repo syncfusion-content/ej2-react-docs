@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pareto Chart in React Chart component | Syncfusion
-description: Learn here all about Pareto in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Pareto Chart in React Charts | Syncfusion
+description: Learn here all about Pareto in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Pareto
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pareto in React Chart component
+# Pareto Chart in React Charts
 
 ## Pareto
 

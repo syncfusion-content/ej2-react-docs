@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Step Area Chart in React Chart component | Syncfusion
-description: Learn here all about Step Area Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Step Area Chart in React Charts | Syncfusion
+description: Learn here all about Step Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Step Area Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Step area in React Chart component
+# Step Area Chart in React Charts
 
-## Step area
+## Step Area
 
 To render a [step area](https://www.syncfusion.com/react-components/react-charts/chart-types/step-area-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

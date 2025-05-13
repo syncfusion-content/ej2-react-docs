@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Area Chart in React Chart component | Syncfusion
-description: Learn here all about 100% Stacked Area Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: 100% Stacked Area Chart in React Charts | Syncfusion
+description: Learn here all about 100% Stacked Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: 100% Stacked Area Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# 100% Stacked Area in React Chart component
+# 100% Stacked Area Chart in React Charts
 
 ## 100% Stacked Area
 

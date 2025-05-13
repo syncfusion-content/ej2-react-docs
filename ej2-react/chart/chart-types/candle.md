@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Candle Chart in React Chart component | Syncfusion
-description: Learn here all about Candle in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Candle Chart in React Charts | Syncfusion
+description: Learn here all about Candle in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Candle
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Candle in React Chart component
+# Candle Chart in React Charts
 
 ## Candle
 
