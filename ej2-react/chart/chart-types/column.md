@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column Chart in React Chart component | Syncfusion
-description: Learn here all about Column Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Column Chart in React Charts | Syncfusion
+description: Learn here all about Column Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Column Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Chart in React Chart component
+# Column Chart in React Charts
 
 ## Column
 

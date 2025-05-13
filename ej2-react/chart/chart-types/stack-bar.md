@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Stacked Bar Chart in React Chart component | Syncfusion
-description: Learn here all about Stacked Bar Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Stacked bar chart 
+title: Stacked Bar Chart in React Charts | Syncfusion
+description: Learn here all about Stacked Bar Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
+control: Stacked Bar Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Stacked Bar Charts in React Chart component
+# Stacked Bar Chart in React Charts
 
-## Stacked bar
+## Stacked Bar
 
 To render a [stacked bar](https://www.syncfusion.com/react-components/react-charts/chart-types/stacked-bar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

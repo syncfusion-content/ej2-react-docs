@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Step Line Chart in React Chart component | Syncfusion
-description: Learn here all about Step Line Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Step Line Chart in React Charts | Syncfusion
+description: Learn here all about Step Line Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Step Line Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Step line in React Chart component
+# Step Line Chart in React Charts
 
-## Step line
+## Step Line
 
 To render a [step line](https://www.syncfusion.com/react-components/react-charts/chart-types/stepline-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 

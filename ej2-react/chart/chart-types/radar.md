@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Radar Chart in React Chart component | Syncfusion
-description: Learn here all about Radar Chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Radar Chart in React Charts | Syncfusion
+description: Learn here all about Radar Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Radar Chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radar Charts in React Chart component
+# Radar Chart in React Charts
 
 ## Radar
 

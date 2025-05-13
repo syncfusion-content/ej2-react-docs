@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Error Bar Chart in React Chart component | Syncfusion
-description: Learn here all about Error Bar in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Error Bar Chart in React Charts | Syncfusion
+description: Learn here all about Error Bar in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Error Bar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Error Bar in React Chart component
+# Error Bar Chart in React Charts
 
 ## Error Bar
 

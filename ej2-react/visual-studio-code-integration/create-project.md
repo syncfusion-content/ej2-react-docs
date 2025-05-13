@@ -31,11 +31,11 @@ The steps below help you to create **Syncfusion Web Applications** through the *
    * Angular
    * Vue
 
-     ![Framework](images/frameworktype.png)
+    ![Framework](images/frameworktype.png)
 
-    If you choose the Vue framework, the **Select Vue Version** option will appear in the **Project Details** section. You can create the Vue application using either the Vue 3 or Vue 2 versions.
+    If you choose the React framework, it will appear in the **Project Details section**, and you can then create the React application.
 
-    ![VueVersions](images/vue-versions.png)
+     ![React](images/reactframework.png)
 
 4. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. Choose the preferred theme and then click **Create**. The project will be created.
     ![Themes](images/Themes.png)

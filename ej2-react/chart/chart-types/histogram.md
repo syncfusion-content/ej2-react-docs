@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Histogram Chart in React Chart component | Syncfusion
-description: Learn here all about Histogram in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Histogram Chart in React Charts | Syncfusion
+description: Learn here all about Histogram in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Histogram
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Histogram in React Chart component
+# Histogram Chart in React Charts
 
 ## Histogram Series
 
