@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editor modes in React Rich text editor component
+# Editor Modes in React Rich Text Editor Component
 
 The Rich Text Editor component used to create and edit the content and return valid HTML markup or markdown (MD) of the content. It supports the following two editing formation.
 
@@ -34,7 +34,7 @@ The HTML editing mode is the default mode in Rich Text Editor to format the cont
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs3" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs3" %}
 
 `[Functional-component]`
 
@@ -47,7 +47,13 @@ The HTML editing mode is the default mode in Rich Text Editor to format the cont
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs4" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs4" %}
+
+## IFrame editor
+
+The IFrame editor mode enables content editing within an iframe, isolating styles from the main page.
+
+For more details, refer to the [Iframe Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/iframe) documentation.
 
 ## Markdown editor
 
@@ -57,6 +63,8 @@ The third-party library such as `Marked` or any other library is used to convert
 
 * Supported tags are `h6`, `h5`, `h4`, `h3`, `h2`, `h1`, `blockquote`, `pre`, `p`, `OL`, and `UL`.
 * Supported selection tags are `Bold`, `Italic`, `StrikeThrough`, `InlineCode`, `SubScript`, `SuperScript`, `UpperCase`, and `LowerCase`.
+
+> To create Rich Text Editor with Markdown editing feature, inject the `MarkdownEditor` module to the Rich Text Editor using the `RichTextEditor.Inject(MarkdownEditor)` method.
 
 `[Class-component]`
 
@@ -69,7 +77,7 @@ The third-party library such as `Marked` or any other library is used to convert
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs1" %}
 
 `[Functional-component]`
 
@@ -82,8 +90,10 @@ The third-party library such as `Marked` or any other library is used to convert
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs2" %}
-
-> To create Rich Text Editor with Markdown editing feature, inject the `MarkdownEditor` module to the RTE using the `RichTextEditor.Inject(MarkdownEditor)` method.
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs2" %}
 
 For further details on Markdown editing, refer to the [`Markdown`](../../markdown-editor/getting-started) section.
+## See also
+
+* [Markdown Editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/getting-started)
+>>>>>>> 254cf0c7df3b045080748c4bc063b2ca00d89b31

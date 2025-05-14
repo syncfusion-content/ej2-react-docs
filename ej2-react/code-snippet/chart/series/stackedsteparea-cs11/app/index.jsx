@@ -1,5 +1,8 @@
 {% raw %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 254cf0c7df3b045080748c4bc063b2ca00d89b31
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, StackingStepAreaSeries, DataLabel } from '@syncfusion/ej2-react-charts';

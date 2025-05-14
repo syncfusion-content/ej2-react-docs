@@ -436,3 +436,5 @@ For server-side validation to prevent adding duplicate rows, you can refer to th
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs37" %}
+
+![custom error message](../images/custom-error-message.png)

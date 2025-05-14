@@ -21,4 +21,9 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
+<<<<<<< HEAD
 {% endraw %}
+=======
+
+{% endraw %}
+>>>>>>> 254cf0c7df3b045080748c4bc063b2ca00d89b31
