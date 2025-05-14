@@ -1832,3 +1832,4 @@ public class CRUDModel<T> where T : class
 ![Syncfusion React Grid bound with PostgreSQL Server data](../images/connecting-micro-curd.gif)
 
 > Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-react-grid/tree/master/Binding%20PostgreSQL%20database%20using%20CustomAdaptor).
+

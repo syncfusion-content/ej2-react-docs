@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 A hyperlink can be insert into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
 
-## Inserting a Link
+## Insert link
 
 To insert a hyperlink:
 
@@ -55,7 +55,7 @@ To insert a hyperlink:
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs43" %}
 
-## Removing a Link
+## Edit and remove link
 
 To remove a hyperlink:
 
@@ -64,7 +64,7 @@ To remove a hyperlink:
 
 This action will remove the hyperlink while keeping the original text or image intact.
 
-## Auto Link Generation
+## Auto link generation
 
 The Rich Text Editor supports automatic link generation. When you type a URL and press Space or Enter, the editor automatically converts the typed URL into a clickable hyperlink.
 
@@ -143,8 +143,8 @@ However, if you want to accept the given URL without validating it for hyperlink
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/relative-url-cs1" %}
 
-## See Also
+## See also
 
-* [Quick Toolbars in Toolbar](https://ej2.syncfusion.com/react/documentation/rich-text-editor/toolbar#quick-inline-toolbar)
-* [Image with links](https://ej2.syncfusion.com/react/documentation/rich-text-editor/images#hyperlinking-images)
+* [Link Quick Toolbar](./toolbar/quick-toolbar#link-quick-toolbar)
+* [Image with links](https://ej2.syncfusion.com/react/documentation/rich-text-editor/insert-images#hyperlinking-images)
 * [Insert File Attachments](./how-to/file-attachments)

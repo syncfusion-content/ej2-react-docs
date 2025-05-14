@@ -7,7 +7,6 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
 # Getting Started with Syncfusion React UI Component.
 
 This article provides a step-by-step introduction to get started with Syncfusion React UI components.

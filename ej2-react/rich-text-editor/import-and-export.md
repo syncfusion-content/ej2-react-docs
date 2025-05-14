@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Content Import/Export in React Rich Text Editor component
 
-## Importing Content from Microsoft Word
+## Importing content from Microsoft Word
 
 The Rich Text Editor provides functionality to import content directly from Microsoft Word documents, preserving the original formatting and structure. This feature ensures a smooth transition of content from Word to the editor, maintaining elements such as headings, lists, tables, and text styles.
 
@@ -45,6 +45,70 @@ The following example illustrates how to set up the `ImportWord` in the Rich Tex
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/import-cs2" %}
 
 Here’s how to handle the server-side action for importing content from Word.
+```csharp
+
+public class RichTextEditorController : Controller
+
+    {       
+        public IWebHostEnvironment _webHostEnvironment;
+
+        [AcceptVerbs("Post")]
+        [EnableCors("AllowAllOrigins")]
+        [Route("ImportFromWord")]
+        public IActionResult ImportFromWord(IList<IFormFile> UploadFiles)
+        {
+            string HtmlString = string.Empty;
+            if (UploadFiles != null)
+            {
+                foreach (var file in UploadFiles)
+                {
+                    string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                    filename = _webHostEnvironment.WebRootPath + $@"\{filename}";
+                    using (FileStream fs = System.IO.File.Create(filename))
+                    {
+                        file.CopyTo(fs);
+                        fs.Flush();
+                    }
+                    using (var mStream = new MemoryStream())
+                    {
+                        WordDocument document = new WordDocument(file.OpenReadStream(), FormatType.Rtf);
+                        document.SaveOptions.HTMLExportWithWordCompatibility = false;
+                        document.Save(mStream, FormatType.Html);
+                        mStream.Position = 0;
+                        HtmlString = new StreamReader(mStream).ReadToEnd();
+                    };
+                    HtmlString = ExtractBodyContent(HtmlString);
+                    HtmlString = SanitizeHtml(HtmlString);
+                    System.IO.File.Delete(filename);
+                }
+                return Ok(HtmlString);
+            }
+            else
+            {
+                Response.Clear();
+                // Return an appropriate status code or message
+                return BadRequest("No files were uploaded.");
+            }
+        }
+
+        private string ExtractBodyContent(string html)
+        {
+            if (html.Contains("<html") && html.Contains("<body"))
+            {
+                return html.Remove(0, html.IndexOf("<body>") + 6).Replace("</body></html>", "");
+            }
+            return html;
+        }
+
+        private string SanitizeHtml(string html)
+        {
+            // Regex pattern to match non-ASCII or control characters: [^\x20-\x7E]
+            return Regex.Replace(html, @"[^\x20-\x7E]", " ");
+        }
+    }    
+
+```
+
 
 ```csharp
 
@@ -110,7 +174,7 @@ public class RichTextEditorController : Controller
 
 ```
 
-## Exporting Content to PDF and Microsoft Word
+## Exporting content to PDF and Microsoft Word
 
 The Rich Text Editor's export functionality allows users to convert their edited content into PDF or Word documents with a single click, preserving all text styles, images, tables, and other formatting elements.
 
@@ -145,6 +209,9 @@ The following example demonstrates how to configure the `ExportWord` and `Export
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/export-cs2" %}
 
  Here’s how to handle the server-side action for exporting content to PDF and Microsoft Word
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/export-cs2" %}
+
+Here’s how to handle the server-side action for exporting content to PDF and Microsoft Word
 
  ```csharp
 
