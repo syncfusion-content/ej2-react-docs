@@ -162,4 +162,3 @@ The following sample demonstrates how to filter the `iframe` tag.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/preventing-xss-cs4" %}
->>>>>>> 254cf0c7df3b045080748c4bc063b2ca00d89b31

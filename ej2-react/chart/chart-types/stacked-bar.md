@@ -2,11 +2,7 @@
 layout: post
 title: 100% Stacked Bar Chart in React Charts | Syncfusion
 description: Learn here all about 100% Stacked Bar Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-<<<<<<< HEAD
-control: 100% Stacked Bar Chart 
-=======
 control: 100% Stacked Bar chart 
->>>>>>> 254cf0c7df3b045080748c4bc063b2ca00d89b31
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

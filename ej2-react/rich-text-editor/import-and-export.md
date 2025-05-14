@@ -212,7 +212,6 @@ The following example demonstrates how to configure the `ExportWord` and `Export
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/export-cs2" %}
 
 Here’s how to handle the server-side action for exporting content to PDF and Microsoft Word
->>>>>>> 254cf0c7df3b045080748c4bc063b2ca00d89b31
 
  ```csharp
 
