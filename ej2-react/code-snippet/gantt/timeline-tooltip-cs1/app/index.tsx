@@ -3,11 +3,12 @@ import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function  App(){
-   const ganttInstance = React.useRef(null);
+    let ganttInstance;
     const taskFields: any = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
     parentID: 'ParentID'
@@ -17,7 +18,7 @@ function  App(){
     const tier = props.tier;
     const date = props.date;
     const endDate = new Date(date);
-    if (tier === 'topTier' && ganttInstance.current.timelineSettings.topTier.unit) {
+    if (tier === 'topTier' && ganttInstance.timelineSettings.topTier.unit) {
       endDate.setDate(endDate.getDate() + 6);
     }
     const data = getTooltipData(new Date(date), endDate, tier);
@@ -46,7 +47,7 @@ function  App(){
   };
   
   const getTooltipData = (startDate: Date, endDate: Date, tier: string) => {
-    const gantt = ganttInstance.current;
+    const gantt = ganttInstance;
     let activeTasks: any = [];
    
     if (tier === 'topTier') {
@@ -81,8 +82,8 @@ function  App(){
   const tooltipSettings: any = {
     timeline:template
   };
-        return <GanttComponent ref={ganttInstance} dataSource={data} taskFields={taskFields}
-           tooltipSettings={tooltipSettings} height = '450px'>
+        return <GanttComponent ref={gantt => ganttInstance = gantt} dataSource={data} taskFields={taskFields}
+           tooltipSettings={tooltipSettings} height = '450px' >
         </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));

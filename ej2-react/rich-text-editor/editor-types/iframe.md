@@ -106,6 +106,40 @@ Likewise, add the external script file to the `< iframe >` element using the [`s
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/iframe-resources-cs2" %}
 
+## Integrating Mention with Iframe
+
+Rich Text Editor supports advanced features such as Mention component, even when it is rendered inside an iframe. To enable mention functionality within the iframe-mode Rich Text Editor, you need to correctly set the [target](https://helpej2.syncfusion.com/react/documentation/api/mention#target) of the Mention component.
+
+Specifically, assign the `inputElement` of the Rich Text Editor to the target property of the Mention component. This ensures that the Mention popup is triggered correctly when the user types a designated character (such as @) inside the Rich Text Editor's editable area.
+
+Here's an example of how to integrate Mention with Iframe editor,
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/mention-iframe-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/mention-iframe-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/mention-iframe-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/mention-iframe-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/mention-iframe-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/mention-iframe-cs2" %}
+
 > You can also explore our [iframe in React Rich Text Editor example](https://ej2.syncfusion.com/react/demos/#/material/rich-text-editor/iframe) that shows how to render the iframe in React Rich Text Editor.
 
 ## See also
