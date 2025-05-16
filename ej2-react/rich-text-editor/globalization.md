@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Rich text editor component
+# Globalization in the React Rich Text Editor Component
 
 ## Localization
 
@@ -517,7 +517,7 @@ The sample below demonstrates the Rich Text Editor component rendered in German 
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs17" %}
 
-## Enable Right-to-Left (RTL) Mode
+## Enable Right-to-Left (RTL) mode
 
 The [enableRtl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#enablertl) property specifies the direction of the Rich Text Editor component. This property can be enabled for writing systems that require right-to-left direction, such as Arabic and Hebrew.
 

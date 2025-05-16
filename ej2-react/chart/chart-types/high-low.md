@@ -1,7 +1,7 @@
 ---
 layout: post
 title: High Low Chart in React Charts | Syncfusion
-description: Learn here all about High Low Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Hilo Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: High Low Chart 
 platform: ej2-react
 documentation: ug

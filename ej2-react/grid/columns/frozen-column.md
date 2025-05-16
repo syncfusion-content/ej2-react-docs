@@ -105,7 +105,6 @@ export default App;
 > * Frozen Grid support column virtualization feature, which helps to improve the Grid performance while loading a large dataset.
 > * The frozen feature is supported only for the columns that are visible in the current view.
 > * You can use both `frozenColumns` property and [frozenRows](https://ej2.syncfusion.com/react/documentation/api/grid/#frozenrows) property in the same application.
-> * When both frozen columns and column virtualization are enabled, horizontal scrolling using touchpad gestures (e.g., two-finger swipe) is not supported. Users must use the horizontal scrollbar to scroll the Grid content.
 
 ## Freeze particular columns
 
@@ -438,7 +437,7 @@ The following example demonstrates how to change the default frozen line color u
 
  {% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs4" %}
 
-## Render DatePicker in frozen columns in Grid
+## Render DatePicker in frozen columns in React Grid
 
 The Syncfusion React Grid allows rendering a [DatePicker](https://ej2.syncfusion.com/react/demos/#/bootstrap5/datepicker/default) inside frozen columns during editing. This is achieved using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property, where a custom editor (DatePicker) is assigned to the specific column. 
 

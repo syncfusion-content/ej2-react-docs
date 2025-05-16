@@ -32,32 +32,35 @@ The list of minimum dependencies required to use an range navigator are follows:
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```
-    npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-* To set-up a React application in TypeScript environment, run the following command.
+To create a new React application, run the following command.
 
-    ```
-     create-react-app quickstart --template typescript
-     cd quickstart
-     npm start
-   ```
-* To set-up a React application in JavaScript environment, run the following command.
-   ```
-    create-react-app quickstart
-    cd quickstart
-    npm start
-   ```
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
 * Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
 
-  ```
+```bash
    npm install @syncfusion/ej2-react-charts --save
-  ```
+```
 
 ## Add Range Navigator to the Project
 
@@ -78,19 +81,19 @@ export default App;
 
 ```
 
-Now run the `npm start` command in the console, it will run your application and open the browser window.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-  ```
-   npm start
+  ```bash
+   npm run dev
   ```
 
 The below example shows a basic Range Navigator.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/rangenavigator/getting-started-cs17/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/rangenavigator/getting-started-cs17/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -130,10 +133,10 @@ Now, we are going to provide data to the range navigator. Add a [`series`](https
 Since the JSON contains Datetime data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorModel/#valuetype) range Navigator to `Category`. By default, the axis `valueType` is `Numeric`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/rangenavigator/getting-started-cs18/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rangenavigator/getting-started-cs18/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -145,10 +148,10 @@ Since the JSON contains Datetime data, set the [`valueType`](https://ej2.syncfus
 The tooltip is useful to show the selected data. You can enable the tooltip by setting the `enable` property as true in tooltip object and by injecting `RangeTooltip` module into the `services`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/rangenavigator/getting-started-cs19/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/rangenavigator/getting-started-cs19/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

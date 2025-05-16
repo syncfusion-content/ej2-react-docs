@@ -12,7 +12,20 @@ domainurl: ##DomainURL##
 
 The content below outlines the CSS structure you can use to customize the appearance of the control according to your preferences.
 
-## Customizing Rich Text Editor Content
+## Customizing placeholder text
+
+Use the following CSS to customize the default color in the Rich Text Editor's placeholder.
+
+```CSS
+
+.e-richtexteditor .e-rte-placeholder {
+    color: blue;
+    font-family: monospace;
+}
+
+```
+
+## Customizing editor content
 
 Use the following CSS to modify the default style of the Rich Text Editor's content area, including font properties, background, and text color.
 
@@ -32,7 +45,7 @@ Use the following CSS to modify the default style of the Rich Text Editor's cont
 }
 ```
 
-## Customizing Rich Text Editor Toolbar
+## Customizing editor toolbar
 
 Use the following CSS to customize the default color in the Rich Text Editor's toolbar icon.
 
@@ -62,7 +75,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's t
 }
 ```
 
-## Customizing Character Count Display
+## Customizing character count display
 
 Use the following CSS to customize the default color in the Rich Text Editor's character count.
 
@@ -78,20 +91,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's c
 }
 ```
 
-## Customizing Placeholder Text
-
-Use the following CSS to customize the default color in the Rich Text Editor's placeholder.
-
-```CSS
-
-.e-richtexteditor .e-rte-placeholder {
-    color: blue;
-    font-family: monospace;
-}
-
-```
-
-## Customizing Border Color
+## Customizing border color
 
 Use the following CSS to customize the border color in the Rich Text Editor's container.
 
@@ -104,6 +104,37 @@ Use the following CSS to customize the border color in the Rich Text Editor's co
 
 ```
 
-## See Also
+## Highlight the specific lines
 
-* [Text Styling and Formatting](./font-styling)
+Programmatically highlight a portion of the text in the editor by setting the background color. This can be achieved by applying a background style to the selected text using the Rich Text Editor's `executeCommand` method.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/highlight-specific-lines-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/highlight-specific-lines-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/highlight-specific-lines-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/highlight-specific-lines-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/highlight-specific-lines-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/highlight-specific-lines-cs2" %}
+
+
+## See also
+
+* [Text Styling and Formatting](./tools/styling-tools)

@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { ColumnsModel, QueryBuilderComponent, RuleModel } from '@syncfusion/ej2-react-querybuilder';
@@ -8,7 +5,7 @@ import * as React from 'react';
 import { useState } from "react";
 import * as ReactDom from 'react-dom';
 // @ts-ignore
-import { hardwareData } from './datasource.ts';
+import { hardwareData } from './datasource';
 
 function App() {
     let qryBldrObj: QueryBuilderComponent;
@@ -67,6 +64,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />,document.getElementById('querybuilder'));
-
-
-{% endraw %}

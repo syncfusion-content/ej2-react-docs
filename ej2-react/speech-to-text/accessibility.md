@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in React SpeechToText Component | Syncfusion
-description: Checkout and learn about accessibility in Syncfusion Essential React SpeechToText component, its elements, and more details.
+title: Accessibility in React SpeechToText component | Syncfusion
+description: Checkout and learn about Accessibility with React SpeechToText component of Syncfusion Essential JS 2 and more details.
 control: SpeechToText
 platform: ej2-react
 documentation: ug

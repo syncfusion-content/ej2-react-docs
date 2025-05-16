@@ -44,31 +44,28 @@ Below is the list of minimum dependencies required to use the chart component.
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
+
+```bash
+npm create vite@latest my-app
 ```
-npm install -g create-react-app
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
 ```
+To set-up a React application in JavaScript environment, run the following command.
 
-* To set-up a React application in TypeScript environment, run the following command.
-
-    ```
-     create-react-app quickstart --template typescript
-     cd quickstart
-     npm start
-   ```
-* To set-up a React application in JavaScript environment, run the following command.
-   ```
-    create-react-app quickstart
-    cd quickstart
-    npm start
-   ```
-
-* Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
-
-```
-npm install @syncfusion/ej2-react-charts --save
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
 ## Add Stock Chart to the Project
@@ -78,7 +75,7 @@ For getting started, add the Chart component in `src/App.tsx` file using followi
 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 import {StockChartComponent} from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -91,7 +88,7 @@ function App()  {
 export  default  App;
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import { StockChartComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -103,19 +100,19 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-Now run the `npm start` command in the console, it will run your application and open the browser window.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 he below example shows a basic Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/stock-chart/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +134,7 @@ These modules should be injected to the `services` section as follows,
 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 import { DateTime, StockChartComponent, DataLabel, CandleSeries, Tooltip } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
@@ -154,7 +151,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import { StockChartComponent, DataLabel, CandleSeries, Tooltip } from '@syncfusion/ej2-react-charts';
 import * as React from "react";
@@ -176,7 +173,7 @@ This section explains how to plot below JSON data to the  Stock Chart.Please fin
 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 export let data = [{
         "x": new Date('2012-04-02T00:00:00.000Z'),
@@ -209,7 +206,7 @@ export let data = [{
     }];
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 export let data: any[] = [{
             "x": new Date('2012-04-02T00:00:00.000Z'),
@@ -250,10 +247,10 @@ export let data: any[] = [{
 Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartAxis/#valuetype)for horizontal axis to `DateTime`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/stock-chart/getting-started/datasource-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/stock-chart/getting-started/datasource-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -265,10 +262,10 @@ Since the JSON contains DateTime data, set the [`valueType`](https://ej2.syncfus
 You can add a title using [`title`](https://ej2.syncfusion.com/react/documentation/api/stock-chart/stockChartModel/#title) property to the Stock Chart to provide quick information to the user about the data plotted in the chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/stock-chart/getting-started/datasource-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/stock-chart/getting-started/datasource-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -282,10 +279,10 @@ Crosshair has a vertical and horizontal line to view the value of the axis at mo
 Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings/#enable) property in the `crosshair`. Likewise tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltipModel/#enable) property of `crosshairTooltip` in the corresponding axis.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/stock-chart/getting-started/crosshair-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/stock-chart/getting-started/crosshair-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -299,10 +296,10 @@ Trackball is used to track a data point closest to the mouse or touch position. 
 Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings/#enable) property of the crosshair to true and [`shared`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel/#shared) property in `tooltip` to true in chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/stock-chart/getting-started/trackball-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/stock-chart/getting-started/trackball-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

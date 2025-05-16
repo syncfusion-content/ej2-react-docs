@@ -197,7 +197,7 @@ public class HomeController : Controller
 
 ```
 
-### Image Renaming Feature
+### Rename images before inserting
 
 You can use the [insertImageSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertimagesettings) property, to specify the server handler to upload the selected image. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
 
@@ -356,7 +356,7 @@ You can allow the specific images alone to be uploaded using the the allowedType
 
 ```ts
     insertImageSettings: {
-      allowedTypes: ['.jpg']
+      allowedTypes: ['.jpg', '.png', '.jpeg']
     }
 
 ```
@@ -408,38 +408,5 @@ You can prevent drag-and-drop action by setting the actionBegin argument cancel 
 
 ## See also
 
-The Rich Text Editor allows you to customize the image quick toolbar, providing Essential<sup style="font-size:70%">&reg;</sup> tools such as 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText', and 'Dimension'.
-
-By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you can enhance the editor's functionality, enabling seamless image management and editing directly within your content. This customization ensures a user-friendly experience for efficiently manipulating image elements.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/customize-image-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/customize-image-cs1/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/customize-image-cs1" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/customize-image-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/customize-image-cs2/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/customize-image-cs2" %}
-
-
-## See Also
-
-* [Image Quick toolbar](https://ej2.syncfusion.com/react/documentation/rich-text-editor/toolbar#quick-inline-toolbar)
+* [Image Quick Toolbar](../toolbar/quick-toolbar)
 * [Hyperlink Management](https://ej2.syncfusion.com/react/documentation/rich-text-editor/link)

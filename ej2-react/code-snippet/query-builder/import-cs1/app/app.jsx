@@ -1,4 +1,4 @@
-import { QueryBuilderComponent } from '@syncfusion/ej2-react-querybuilder';
+import { QueryBuilderComponent, QueryLibrary } from '@syncfusion/ej2-react-querybuilder';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';

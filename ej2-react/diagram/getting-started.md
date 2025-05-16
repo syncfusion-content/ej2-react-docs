@@ -36,37 +36,29 @@ The following list of dependencies are required to use the `Diagram` component i
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications. Run the following command to install `create-react-app` in `JavaScript` environment.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-{% tabs %}
-{% highlight js tabtitle="npx" %}
-   npx create-react-app my-diagram-app
-   cd my-diagram-app
-   npm start
-{% endhighlight %}
-{% highlight js tabtitle="yarn" %}
-   yarn create react-app my-diagram-app
-   cd my-diagram-app
-   yarn start
-{% endhighlight %}
-{% endtabs %}
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
+To create a new React application, run the following command.
 
-To set-up a React application in `TypeScript` environment, run the following command.
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
 
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
 
-{% tabs %}
-{% highlight js tabtitle="npx" %}
-   npx create-react-app my-diagram-app --template typescript
-   cd my-diagram-app
-   npm start
-{% endhighlight %}
-{% highlight js tabtitle="yarn" %}
-   yarn create react-app my-diagram-app --template typescript
-   cd my-diagram-app
-   yarn start
-{% endhighlight %}
-{% endtabs %}
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
 
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -172,9 +164,9 @@ root.render(<App />);
 
 * Then add the Diagram component as shown in below code example.
 
-`[src/App.js]`
+`[src/App.jsx]`
 
-```ts
+```tsx
 import './App.css';
 import { DiagramComponent } from '@syncfusion/ej2-react-diagrams';
 function App() {
@@ -196,10 +188,10 @@ export default App;
 The below examples shows the basic diagram component which renders an empty diagram.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/diagram/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/diagram/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -209,10 +201,10 @@ The below examples shows the basic diagram component which renders an empty diag
 
  {% previewsample "page.domainurl/code-snippet/diagram/getting-started/initialize-cs1" %}
 
- Now run the `npm start` command in the console, it will run your application and open the browser window.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 ## Basic Diagram elements
@@ -237,10 +229,10 @@ npm start
 Create and add a `node` (JSON data) with specific position, size, label, and shape.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/diagram/getting-started/addnode-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/diagram/getting-started/addnode-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -259,10 +251,10 @@ The appearance of a node can be customized by changing its [`fill`](../api/diagr
 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/diagram/getting-started/apply-style/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/diagram/getting-started/apply-style/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -324,10 +316,10 @@ Connect these nodes by adding a connector using the [`connectors`](../api/diagra
 The required nodes and connectors can be added to form a complete flow diagram.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/diagram/getting-started/flowdiagram-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/diagram/getting-started/flowdiagram-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -455,10 +447,10 @@ root.render(<App />);
 To create an organizational chart, the [`type`](../api/diagram/layoutType/) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/diagram/getting-started/orgchart-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/diagram/getting-started/orgchart-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -474,10 +466,10 @@ To create an organizational chart, the [`type`](../api/diagram/layoutType/) of l
 The following code examples indicate how to define the default appearance of nodes and connectors. The [`setNodeTemplate`](../api/diagram/#setnodetemplate) is used to update each node based on employee data.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/diagram/getting-started/orgchart-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/diagram/getting-started/orgchart-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}

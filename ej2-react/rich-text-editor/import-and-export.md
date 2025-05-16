@@ -45,70 +45,6 @@ The following example illustrates how to set up the `ImportWord` in the Rich Tex
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/import-cs2" %}
 
 Here’s how to handle the server-side action for importing content from Word.
-```csharp
-
-public class RichTextEditorController : Controller
-
-    {       
-        public IWebHostEnvironment _webHostEnvironment;
-
-        [AcceptVerbs("Post")]
-        [EnableCors("AllowAllOrigins")]
-        [Route("ImportFromWord")]
-        public IActionResult ImportFromWord(IList<IFormFile> UploadFiles)
-        {
-            string HtmlString = string.Empty;
-            if (UploadFiles != null)
-            {
-                foreach (var file in UploadFiles)
-                {
-                    string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                    filename = _webHostEnvironment.WebRootPath + $@"\{filename}";
-                    using (FileStream fs = System.IO.File.Create(filename))
-                    {
-                        file.CopyTo(fs);
-                        fs.Flush();
-                    }
-                    using (var mStream = new MemoryStream())
-                    {
-                        WordDocument document = new WordDocument(file.OpenReadStream(), FormatType.Rtf);
-                        document.SaveOptions.HTMLExportWithWordCompatibility = false;
-                        document.Save(mStream, FormatType.Html);
-                        mStream.Position = 0;
-                        HtmlString = new StreamReader(mStream).ReadToEnd();
-                    };
-                    HtmlString = ExtractBodyContent(HtmlString);
-                    HtmlString = SanitizeHtml(HtmlString);
-                    System.IO.File.Delete(filename);
-                }
-                return Ok(HtmlString);
-            }
-            else
-            {
-                Response.Clear();
-                // Return an appropriate status code or message
-                return BadRequest("No files were uploaded.");
-            }
-        }
-
-        private string ExtractBodyContent(string html)
-        {
-            if (html.Contains("<html") && html.Contains("<body"))
-            {
-                return html.Remove(0, html.IndexOf("<body>") + 6).Replace("</body></html>", "");
-            }
-            return html;
-        }
-
-        private string SanitizeHtml(string html)
-        {
-            // Regex pattern to match non-ASCII or control characters: [^\x20-\x7E]
-            return Regex.Replace(html, @"[^\x20-\x7E]", " ");
-        }
-    }    
-
-```
-
 
 ```csharp
 
@@ -206,9 +142,6 @@ The following example demonstrates how to configure the `ExportWord` and `Export
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/export-cs2" %}
-
- Here’s how to handle the server-side action for exporting content to PDF and Microsoft Word
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/export-cs2" %}
 
 Here’s how to handle the server-side action for exporting content to PDF and Microsoft Word

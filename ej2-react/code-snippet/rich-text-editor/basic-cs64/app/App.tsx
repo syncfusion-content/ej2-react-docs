@@ -3,17 +3,52 @@ import * as React from 'react';
 
 class App extends React.Component<{},{}> {
 
-  private rteValue: string = "<p>The Syncfudion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul><li><p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes.</p></li><li><p>Bulleted and numbered lists.</p></li><li><p>Handles images, hyperlinks, videos, hyperlinks, uploads, etc.</p></li><li><p>Contains undo/redo manager. </p></li></ul><div style='display: inline-block; width: 60%; vertical-align: top; cursor: auto;'><img alt='Sky with sun' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png' width='309' style='min-width: 10px; min-height: 10px; width: 309px; height: 174px;' class='e-rte-image e-imginline e-rte-drag-image' height='174' /></div>";
+  private rteValue: string = "<p>The Syncfusion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul><li><p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes.</p></li><li><p>Bulleted and numbered lists.</p></li><li><p>Handles images, hyperlinks, videos, hyperlinks, uploads, etc.</p></li><li><p>Contains undo/redo manager. </p></li></ul><div style='display: inline-block; width: 60%; vertical-align: top; cursor: auto;'><img alt='Sky with sun' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png' width='309' style='min-width: 10px; min-height: 10px; width: 309px; height: 174px;' class='e-rte-image e-imginline e-rte-drag-image' height='174' /></div>";
   
   private toolbarSettings: object = {
     items: ['FontColor', 'BackgroundColor']
   }
 
   private fontColor: object = {
+    default: '#c0c0c0',
+    columns: 2,
+    colorCode: {
+      Custom: [
+        '#ffff00',
+        '#008000',
+        '#800080',
+        '#800000',
+        '#808000',
+        '#c0c0c0',
+        '#000000',
+        '',
+      ],
+    },
     modeSwitcher : true
   }
 
   private backgroundColor: object = {
+    default: '#00ffff',
+    columns: 5,
+    colorCode: {
+    Custom: [
+        '#ffff00',
+        '#00ff00',
+        '#00ffff',
+        '#ff00ff',
+        '#0000ff',
+        '#ff0000',
+        '#000080',
+        '#008080',
+        '#008000',
+        '#800080',
+        '#800000',
+        '#808000',
+        '#c0c0c0',
+        '#000000',
+        '',
+        ],
+    },
     modeSwitcher : true
   }
 

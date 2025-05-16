@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Polar Chart in React Charts | Syncfusion
+title: Polar Chart in React Chart | Syncfusion
 description: Learn here all about Polar Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: Polar Chart 
 platform: ej2-react

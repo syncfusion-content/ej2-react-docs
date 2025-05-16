@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Third party integration in React Rich text editor component
+# Third Party Integration in React Rich Text Editor component
 
 The Rich Text Editor can be integrated with third-party to suite the application scenario.
 
-## CodeMirror Integration
+## CodeMirror integration
 
 Rich Text Editor comes with a basic HTML source editor through the view-source property. CodeMirror plugin can be used to highlight the syntax of HTML. CodeMirror plugin for Rich Text Editor makes editing of HTML source code with a pleasant experience.
 
@@ -57,7 +57,7 @@ Add a custom icon for HTML source editor in the toolbar of Rich Text Editor usin
 {% endhighlight %}
 {% endtabs %}
 
-## Embedly Integration
+## Embedly integration
 
 This can be achieved by binding the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#actioncomplete) event to the toolbar items in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarsettings) property. In the event handler, create an element and add the appropriate class. The below script is have to add in the sample to embed the content,
 

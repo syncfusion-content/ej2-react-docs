@@ -25,7 +25,7 @@ The following list of additional dependencies are required to use the file brows
 
 ```
 
-## Additional CSS Reference
+## Additional CSS reference
 
 Additionally add the below styles in the `[src/App.css]` file.
 

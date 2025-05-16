@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Read-only Mode in React Rich Text Editor component | Syncfusion
-description: Learn here all about Read-only Mode in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
-control: Read-only Mode
+title: Controlling Editor Access in React Rich Text Editor component | Syncfusion
+description: Learn here all about Controlling Editor Access in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: Controlling Editor Access
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read-only Mode in the React Rich Text Editor component
+# Controlling Editor Access in the React Rich Text Editor component
 
 ## Read-only mode
 
@@ -45,10 +45,6 @@ Please refer to the sample and code snippets below to demonstrate how to enable 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/read-only-cs2" %}
-
-## See Also
-
-[How to Disable and Enable the Rich Text Editor](../disable-editor)
 
 ## Disabled mode
 

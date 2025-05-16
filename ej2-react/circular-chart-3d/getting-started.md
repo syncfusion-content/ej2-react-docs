@@ -32,32 +32,36 @@ Below is the list of minimum dependencies required to use the 3D Circular Chart 
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```
-    npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-* To set-up a React application in TypeScript environment, run the following command.
+To create a new React application, run the following command.
 
-    ```
-     create-react-app quickstart --template typescript
-     cd quickstart
-     npm start
-   ```
-* To set-up a React application in JavaScript environment, run the following command.
-   ```
-    create-react-app quickstart
-    cd quickstart
-    npm start
-   ```
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
+
 
 * Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
 
-   ```
-    npm install @syncfusion/ej2-react-charts --save
-   ```
+```bash
+   npm install @syncfusion/ej2-react-charts --save
+```
 
 ## Add 3D Circular Chart to the project
 
@@ -65,7 +69,7 @@ Now, you can start adding 3D Circular Chart component in the application.
 For getting started, add the 3D Circular Chart component in `src/App.tsx` file using following code.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 
 import { CircularChart3DComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -76,7 +80,7 @@ function App() {
 export default App;
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 
 import { CircularChart3DComponent } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -93,18 +97,18 @@ export default App;
 By default, the pie series will be rendered when assigning the JSON data to the series using the `dataSource` property. Map the field names in the JSON data to the `xName` and `yName` properties of the series.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/circular-chart/getting-started/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/circular-chart/getting-started/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/circular-chart/getting-started" %}
 
-Now run the `npm start` command in the console, it will run your application and open the browser window.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```

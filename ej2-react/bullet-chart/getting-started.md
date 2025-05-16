@@ -33,26 +33,30 @@ Below is the list of minimum dependencies required to use the Bullet Chart compo
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```
-    npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-* To set-up a React application in TypeScript environment, run the following command.
+To create a new React application, run the following command.
 
-    ```
-     create-react-app quickstart --template typescript
-     cd quickstart
-     npm start
-   ```
-* To set-up a React application in JavaScript environment, run the following command.
-   ```
-    create-react-app quickstart
-    cd quickstart
-    npm start
-   ```
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
+
 
 Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
 
@@ -66,7 +70,7 @@ Now, you can start adding Bullet Chart component in the application.
 For getting started, add the Bullet Chart component in `src/App.tsx` file using following code.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 import { BulletChartComponent } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
@@ -77,7 +81,7 @@ function App() {
 export default App;
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import { BulletChartComponent } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
@@ -89,19 +93,19 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-Now run the `npm start` command in the console, it will run your application and open the browser window.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
    ``` 
-    npm start
+    npm run dev
    ```
 
 The below example shows a basic Bullet Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/bullet-chart/getting-started/initialize-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/bullet-chart/getting-started/initialize-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +122,7 @@ These modules should be injected to the `services` section as follows,
 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 import { BulletChartComponent, BulletTooltip, Inject } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
@@ -135,7 +139,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 import { BulletChartComponent, BulletTooltip } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
@@ -159,7 +163,7 @@ This section explains how to plot local data to the Bullet Chart.
 
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 
 const data = [
     { value: 100, target: 80 },
@@ -170,7 +174,7 @@ const data = [
 ];
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 
 const data: any[] = [
   { value: 100, target: 80 },
@@ -186,10 +190,10 @@ const data: any[] = [
 Now assign the local data to `dataSource` property. **value** and **target** values should be mapped with `valueField` and `targetField` respectively.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/bullet-chart/getting-started/datasource-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/bullet-chart/getting-started/datasource-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -201,10 +205,10 @@ Now assign the local data to `dataSource` property. **value** and **target** val
 You can add a title using `title` property to the Bullet Chart to provide quick information to the user about the data plotted in the Bullet Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/bullet-chart/getting-started/title-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/bullet-chart/getting-started/title-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -216,10 +220,10 @@ You can add a title using `title` property to the Bullet Chart to provide quick 
 You can add a range using `BulletRangeCollectionDirective` and `BulletRangeDirective` directives of the Bullet Chart.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/bullet-chart/getting-started/ranges-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/bullet-chart/getting-started/ranges-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -231,10 +235,10 @@ You can add a range using `BulletRangeCollectionDirective` and `BulletRangeDirec
 You can use tooltip for the Bullet Chart by setting the `enable` property to true in `tooltip` object and by injecting the `BulletTooltip` module into the services.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/bullet-chart/getting-started/tooltip-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/bullet-chart/getting-started/tooltip-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

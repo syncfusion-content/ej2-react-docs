@@ -6,17 +6,17 @@ import { useRef } from 'react';
 
 // To render SpeechToText.
 function App() {
-    const textareaObj = useRef<TextAreaComponent>(null);
-    const language: string = 'fr-FR';
-    const onTranscriptChanged = (args: TranscriptChangedEventArgs) => {
-        textareaObj.current.value = args.transcript;
-    };
+    let language: string = 'fr-FR';
+    let textareaObj: TextAreaComponent;
+    function onTranscriptChanged(args: TranscriptChangedEventArgs) {
+        textareaObj.value = args.transcript;
+    }
     return (
         <div id='container'>
             <SpeechToTextComponent transcriptChanged={onTranscriptChanged} lang={language}></SpeechToTextComponent>
             <TextAreaComponent
                 id="textareaInst"
-                ref={textareaObj}
+                ref={(textarea) => {textareaObj = textarea} }
                 resizeMode="None"
                 rows={5}
                 cols={50}

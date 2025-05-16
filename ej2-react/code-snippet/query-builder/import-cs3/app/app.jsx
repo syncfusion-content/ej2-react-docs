@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 QueryBuilderComponent.Inject(QueryLibrary);
 // @ts-ignore
-import { employeeData } from '../datasource.ts';
+
 function App() {
     let qryBldrObj;
     let columnData = [

@@ -6,6 +6,7 @@ import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar'
 import {  PdfColor, PdfDashStyle, PdfFontFamily, PdfFontStyle, PdfPen, PdfStringFormat, PdfTextAlignment, PdfVerticalAlignment} from '@syncfusion/ej2-pdf-export';
 import { data } from './datasource';
 function App() {
+    let ganttChart;
     const taskFields = {
         id: 'TaskID',
         name: 'TaskName',
@@ -36,9 +37,8 @@ function App() {
 
     }];
     const toolbarOptions = ['PdfExport'];
-    let ganttChart: any;
     function toolbarClick(args) {
-        if (args.item.text === 'Pdf export') {
+        if (args.item.text === 'PDF export') {
             const stringFormat = new PdfStringFormat();
             stringFormat.alignment = PdfTextAlignment.Center; 
     
