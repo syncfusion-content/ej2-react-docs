@@ -122,7 +122,6 @@ To get the content from the Rich Text Editor, use the following approaches:
 
 ## Two-way binding value
 
->>>>>>> 254cf0c7df3b045080748c4bc063b2ca00d89b31
 Two-way binding allows the Syncfusion<sup style="font-size:70%">&reg;</sup> React Rich Text Editor to stay synchronized with the component’s state. When the state is updated, all instances of the editor using the same state will reflect the changes automatically.
 
 In the below example, the React `useState` hook is used to manage the content of the editor. Initially, the editor displays "Initial content". After one second, a `useEffect` hook updates the state to "Updated content after 1 second".

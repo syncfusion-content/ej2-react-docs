@@ -5,19 +5,19 @@ import * as ReactDom from 'react-dom';
 
 // To render SpeechToText.
 function App() {
-    const onTranscriptChanged = (args: TranscriptChangedEventArgs) => {
+    function onTranscriptChanged(args: TranscriptChangedEventArgs) {
         //your required action here
     };
-    const onErrorHandler = (args: ErrorEventArgs) => {
+    function onErrorHandler(args: ErrorEventArgs) {
         //your required action here
     };
-    const onListeningStart = (args: StartListeningEventArgs) => {
+    function onListeningStart(args: StartListeningEventArgs) {
         //your required action here
     };
-    const onListeningStop = (args: StopListeningEventArgs) => {
+    function onListeningStop(args: StopListeningEventArgs) {
         //your required action here
     };
-    const onCreated = () => {
+    function onCreated() {
         //your required action here
     };
     return (

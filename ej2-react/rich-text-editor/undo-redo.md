@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Undo redo in the Angular Rich Text Editor component
+# Undo redo in the React Rich Text Editor component
 
 The Undo and Redo features in the Rich Text Editor allowing you to reverse or restore recent changes, providing a safety net for text edits and enhancing the overall editing experience.
 
@@ -19,11 +19,11 @@ There are two ways to perform Undo and Redo operations:
    - For Undo: `Ctrl + Z` (Windows) or `Cmd + Z` (Mac)
    - For Redo: `Ctrl + Y` (Windows) or `Cmd + Shift + Z` (Mac)
 
-## Customizing Undo/Redo Timer
+## Configuring Undo/Redo timer
 
 By default, the time interval for storing Undo/Redo actions is 300 milliseconds. You can adjust this interval using the [undoRedoTimer](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#undoredotimer) property.
 
-## Configuring Undo/Redo Steps
+## Configuring Undo/Redo steps
 
 The editor allows up to 30 Undo/Redo actions by default. You can modify the number of undo/redo steps using the [undoRedoSteps](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#undoredosteps) property.
 

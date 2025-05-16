@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This section explains you the steps required to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Gantt in a React application and demonstrates its basic features.
 
-To get started quickly with React Gantt Chart the following video explains the project configuration and basic Gantt chart features behaviours:
+To get started quickly with React Gantt Chart the following video explains the project configuration and basic Gantt chart features behaviors:
 
 {% youtube "https://www.youtube.com/watch?v=pCg5hUSKRh8" %}
 
@@ -78,6 +78,7 @@ npm install @syncfusion/ej2-react-gantt --save
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';

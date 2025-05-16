@@ -25,26 +25,35 @@ Below is the list of minimum dependencies required to use the progress bar compo
 
 ## Installation and configuration
 
-You can use [`create-react-app`](https://github.com/facebook/create-react-app) to setup the applications.
-To install `create-react-app` run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```
-    npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-* To setup basic `React` sample use following commands.
+To create a new React application, run the following command.
 
-     ```
-       create-react-app quickstart --template typescript
-       cd quickstart
-       npm start
-     ```
+```bash
+npm create vite@latest my-app
+```
+To set-up a React application in TypeScript environment, run the following command.
 
-* Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
+```
+To set-up a React application in JavaScript environment, run the following command.
 
-     ```
-     npm install @syncfusion/ej2-react-progressbar --save
-     ```
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
+```
+
+Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages using below command.
+
+```bash
+  npm install @syncfusion/ej2-react-progressbar --save
+```
 
 ## Add Progressbar to the Project
 
@@ -78,8 +87,8 @@ Now, we might create a simple progress bar sample as shown below.
 
  {% previewsample "page.domainurl/code-snippet/progress-bar/default-cs9" %}
 
-Now run the `npm start` command in the console, it will run your application and open the browser window.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```

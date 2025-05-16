@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { getComponent, setValue } from '@syncfusion/ej2-base';
 import { ChangeEventArgs, DropDownList } from '@syncfusion/ej2-react-dropdowns';
 import { QueryBuilderComponent, ColumnsDirective, ColumnDirective, RuleModel, ActionEventArgs } from '@syncfusion/ej2-react-querybuilder';
@@ -55,6 +51,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />,document.getElementById('querybuilder-component'));
-
-
-{% endraw %}

@@ -3,10 +3,12 @@ import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
 import { data } from './datasource';
 function  App(){
+    let ganttInstance;
     const taskFields = {
     id: 'TaskID',
     name: 'TaskName',
     startDate: 'StartDate',
+    endDate: 'EndDate',
     duration: 'Duration',
     progress: 'Progress',
     parentID: 'ParentID'
@@ -15,7 +17,7 @@ function  App(){
     const tier = props.tier;
     const date = props.date;
     const endDate = new Date(date);
-    if (tier === 'topTier' && ganttInstance.current.timelineSettings.topTier.unit) {
+    if (tier === 'topTier' && ganttInstance.timelineSettings.topTier.unit) {
       endDate.setDate(endDate.getDate() + 6);
     }
     const data = getTooltipData(new Date(date), endDate, tier);
@@ -44,7 +46,7 @@ function  App(){
   };
   
   const getTooltipData = (startDate, endDate, tier) => {
-    const gantt = ganttInstance.current;
+    const gantt = ganttInstance;
     let activeTasks = [];
    
     if (tier === 'topTier') {
@@ -80,7 +82,7 @@ function  App(){
     timeline:template
   };
         return <GanttComponent dataSource={data} taskFields={taskFields}
-           tooltipSettings={tooltipSettings} height = '450px'>
+           tooltipSettings={tooltipSettings} height = '450px' ref={gantt => ganttInstance = gantt}>
         </GanttComponent>
 };
 ReactDOM.render(<App />, document.getElementById('root'));

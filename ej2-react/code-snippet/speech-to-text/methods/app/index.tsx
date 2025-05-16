@@ -6,15 +6,15 @@ import { useRef } from 'react';
 
 // To render SpeechToText.
 function App() {
-    const speechToText = useRef<SpeechToTextComponent>(null);
-    const textareaObj = useRef<TextAreaComponent>(null);
-    const onTranscriptChanged = (args: TranscriptChangedEventArgs) => {
-        textareaObj.current.value = args.transcript;
-    };
-    const startListening = () => {
+    let speechToText: SpeechToTextComponent;
+    let textareaObj : TextAreaComponent;
+    function onTranscriptChanged(args: TranscriptChangedEventArgs) {
+        textareaObj.value = args.transcript;
+    }
+    function startListening() : void {
         speechToText.current.startListening();
     }
-    const stopListening = () => {
+    function stopListening() : void{
         speechToText.current.stopListening();
     }
     return (
@@ -23,10 +23,10 @@ function App() {
                 <button id="startListening" className="e-btn" onClick={startListening}>Start Listening</button>
                 <button id="stopListening" className="e-btn" onClick={stopListening}>Stop Listening</button>
             </div>
-            <SpeechToTextComponent ref={speechToText} transcriptChanged={onTranscriptChanged}></SpeechToTextComponent>
+            <SpeechToTextComponent ref={(speech) => {speechToText = speech} } transcriptChanged={onTranscriptChanged}></SpeechToTextComponent>
             <TextAreaComponent
                 id="textareaInst"
-                ref={textareaObj}
+                ref={(textarea) => {textareaObj = textarea} }
                 resizeMode="None"
                 rows={5}
                 cols={50}

@@ -5,29 +5,30 @@ import * as ReactDom from 'react-dom';
 import { useRef } from 'react';
 
 // To render SpeechToText.
-function App() {
-    const textareaObj = useRef(null);
-    const onTranscriptChanged = (args) => {
-        textareaObj.current.value = args.transcript;
+export default class App extends React.Component {
+    textareaObj;
+    onTranscriptChanged = (args) => {
+        this.textareaObj.current.value = args.transcript;
     };
-    const buttonSettings = {
+    buttonSettings = {
         content: 'Start Listening',
         stopContent: 'Stop Listening'
     }
-    return (
-        <div id='container'>
-            <SpeechToTextComponent transcriptChanged={onTranscriptChanged} enableRtl={true} buttonSettings={buttonSettings}></SpeechToTextComponent>
-            <TextAreaComponent
-                id="textareaInst"
-                ref={textareaObj}
-                resizeMode="None"
-                rows={5}
-                cols={50}
-                value=""
-                placeholder="Transcribed text will be shown here..."
-            />
-        </div>
-    );
+    render() {
+        return (
+            <div id='container'>
+                <SpeechToTextComponent transcriptChanged={this.onTranscriptChanged.bind(this)} enableRtl={true} buttonSettings={this.buttonSettings.bind(this)}></SpeechToTextComponent>
+                <TextAreaComponent
+                    id="textareaInst"
+                    ref={(textarea) => {this.textareaObj = textarea} }
+                    resizeMode="None"
+                    rows={5}
+                    cols={50}
+                    value=""
+                    placeholder="Transcribed text will be shown here..."
+                />
+            </div>
+        );
+    }
 }
-export default App;
 ReactDom.render(<App />,document.getElementById('element'));

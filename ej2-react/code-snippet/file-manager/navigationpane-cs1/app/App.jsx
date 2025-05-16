@@ -9,7 +9,7 @@ function App() {
             getImageUrl: hostUrl + "api/FileManager/GetImage",
             uploadUrl: hostUrl + 'api/FileManager/Upload',
             url: hostUrl + "api/FileManager/FileOperations"
-        }} navigationPaneSettings={{ maxWidth: '850px', minWidth: '140px', visible: true }}>
+        }} navigationPaneSettings={{ maxWidth: '850px', minWidth: '140px', visible: true, sortOrder: 'Ascending'}}>
             <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
         </FileManagerComponent>
     </div>);

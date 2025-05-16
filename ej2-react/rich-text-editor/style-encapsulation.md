@@ -59,3 +59,7 @@ Below is a sample implementation of both **encapsulated** and **non-encapsulated
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/style-encapsulation-cs2" %}
+
+## See also
+
+* [Iframe Editor](./iframe)

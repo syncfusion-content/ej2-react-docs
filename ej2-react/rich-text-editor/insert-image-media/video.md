@@ -607,38 +607,6 @@ You can disable the resize action by configuring `false` for the [insertVideoSet
 
 ## See also
 
-The Rich Text Editor enables customization of the video quick toolbar, allowing you to tailor its functionality with Essential<sup style="font-size:70%">&reg;</sup> tools such as VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, and VideoDimension.
-
-By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you enhance the editor's capabilities, facilitating seamless management and editing of embedded videos directly within your content. This customization ensures a user-friendly experience for manipulating video elements efficiently.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/customize-video-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/customize-video-cs1/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/customize-video-cs1" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/rich-text-editor/customize-video-cs2/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/rich-text-editor/customize-video-cs2/app/App.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/rich-text-editor/customize-video-cs2" %}
-
-## See Also
-
-* [Quick Toolbars in the Toolbar](../toolbar/quick-toolbar)
+* [Video Quick Toolbar](../toolbar/quick-toolbar)
 * [How to Use the Audio Editing Option in Toolbar Items](./audio)
 * [How to Use the Image Editing Option in Toolbar Items](./insert-images)

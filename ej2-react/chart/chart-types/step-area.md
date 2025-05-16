@@ -7,8 +7,8 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
+# Step Area in React Charts
 
-# Step Area Chart in React Charts
 ## Step Area
 
 To render a [step area](https://www.syncfusion.com/react-components/react-charts/chart-types/step-area-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:

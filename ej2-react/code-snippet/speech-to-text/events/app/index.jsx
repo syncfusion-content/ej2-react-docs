@@ -4,27 +4,28 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
 // To render SpeechToText.
-function App() {
-    const onTranscriptChanged = (args) => {
+export default class App extends React.Component {
+    onTranscriptChanged = (args) => {
         //your required action here
     };
-    const onErrorHandler = (args) => {
+    onErrorHandler = (args) => {
         //your required action here
     };
-    const onListeningStart = (args) => {
+    onListeningStart = (args) => {
         //your required action here
     };
-    const onListeningStop = (args) => {
+    onListeningStop = (args) => {
         //your required action here
     };
-    const onCreated = () => {
+    onCreated = () => {
         //your required action here
     };
-    return (
-        <div id='container'>
-            <SpeechToTextComponent created={onCreated} transcriptChanged={onTranscriptChanged} onStart={onListeningStart} onStop={onListeningStop} onError={onErrorHandler}></SpeechToTextComponent>
-        </div>
-    );
+    render() {
+        return (
+            <div id='container'>
+                <SpeechToTextComponent created={this.onCreated.bind(this)} transcriptChanged={this.onTranscriptChanged.bind(this)} onStart={this.onListeningStart.bind(this)} onStop={this.onListeningStop.bind(this)} onError={this.onErrorHandler.bind(this)}></SpeechToTextComponent>
+            </div>
+        );
+    }
 }
-export default App;
 ReactDom.render(<App />,document.getElementById('element'));

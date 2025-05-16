@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked Column Chart in React Charts | Syncfusion
-description: Learn here all about 100% Stacked Column Chart in Syncfusion React Charts of Syncfusion Essential JS 2 and more.
+description: Learn here all about 100% Stacked Column Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
 control: 100% Stacked Column Chart 
 platform: ej2-react
 documentation: ug

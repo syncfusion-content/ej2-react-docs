@@ -66,7 +66,7 @@ The details view settings like, column width, header text, template for each fie
 
 ## Navigation pane customization
 
-The navigation pane settings like, minimum and maximum width and visibility can be customized using [navigationPaneSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#navigationpanesettings) property.
+The navigation pane settings like, minimum and maximum width, visibility and sort order can be customized using [navigationPaneSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/#navigationpanesettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

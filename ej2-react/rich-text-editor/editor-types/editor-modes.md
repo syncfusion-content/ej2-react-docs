@@ -93,7 +93,7 @@ The third-party library such as `Marked` or any other library is used to convert
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/markdown-cs2" %}
 
 For further details on Markdown editing, refer to the [`Markdown`](../../markdown-editor/getting-started) section.
+
 ## See also
 
 * [Markdown Editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/getting-started)
->>>>>>> 254cf0c7df3b045080748c4bc063b2ca00d89b31

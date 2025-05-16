@@ -36,37 +36,30 @@ The following list of dependencies are required to use the `Kanban` component in
 
 ## Create the React application
 
-To set-up, a React application, choose any of the following ways. The best and easiest way is to use the [Create-react-app](https://github.com/facebookincubator/create-react-app). It sets up the development environment in JavaScript and improvises the application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of the `Create-react-app`
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+
+To create a new React application, run the following command.
 
 ```bash
-npx create-react-app my-app
-cd my-app
-npm start
+npm create vite@latest my-app
 ```
-
-or
+To set-up a React application in TypeScript environment, run the following command.
 
 ```bash
-yarn create react-app my-app
+npm create vite@latest my-app -- --template react-ts
 cd my-app
-yarn start
+npm run dev
 ```
-
-To set-up a React application in the `TypeScript` environment, run the following command.
+To set-up a React application in JavaScript environment, run the following command.
 
 ```bash
-npx create-react-app my-app --template typescript
+npm create vite@latest my-app -- --template react
 cd my-app
-npm start
+npm run dev
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) runner tool, also create an application from the `npm init`. To begin with `npm init`, upgrade the `npm` version to `npm 6+`.
-
-```bash
-npm init react-app my-app
-cd my-app
-npm start
-```
 
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
@@ -133,16 +126,16 @@ import { KanbanComponent } from '@syncfusion/ej2-react-kanban';
 
 ## Run the application
 
-All are set. Now, run the application using the following command.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```bash
-npm start
+npm run dev
 ```
 
 or
 
 ```bash
-yarn start
+yarn dev
 ```
 
 The output will display the kanban header.
@@ -152,10 +145,10 @@ The output will display the kanban header.
 To populate the empty Kanban with cards, define the local JSON data or remote data using the `dataSource` property. To define `dataSource`, the mandatory fields in JSON object should be relevant to `keyField`. In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/kanban/getting-started-key-field-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/kanban/getting-started-key-field-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -170,10 +163,10 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 `Swimlane` can be enabled by mapping the fields `swimlaneSettings.keyField` to appropriate column name in dataSource. This enables the grouping of the cards based on the mapped column values.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/kanban/getting-started-swimlane-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/kanban/getting-started-swimlane-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}

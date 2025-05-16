@@ -590,67 +590,6 @@ function App() {
 
 ## See also
 
-The Rich Text Editor enables customization of the audio quick toolbar, allowing you to tailor its functionality with Essential<sup style="font-size:70%">&reg;</sup> tools such as AudioReplace, Remove, and AudioLayoutOption.
-
-By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you enhance the editor's capabilities, facilitating seamless management and editing of audio directly within your content. This customization ensures a user-friendly experience for manipulating audio elements efficiently.
-
-`[Class-component]`
-
-```ts
-
-import * as React from 'react';
-import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-
-class App extends React.Component<{},{}> {
-  private toolbarSettings: object = {
-    items: ['Audio'],
-  };
-  private quickToolbarSettings: object = {
-     audio: ['AudioReplace', 'Remove', 'AudioLayoutOption']
-  }
-  private rteValue:string = `<p><b>Get started with Quick Toolbar to click on an audio</b></p>
-                        <p>Using the quick toolbar, users can replace, display, and delete the selected audio.</p>
-                        <p><audio controls><source src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Audio.wav" type="audio/mp3" /></audio></p>`;
-  public render() {
-    return (
-      <RichTextEditorComponent height={450} value={this.rtevalue} toolbarSettings={this.toolbarSettings} quickToolbarSettings={this.quickToolbarSettings}>
-         <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-  }
-}
-
-```
-
-`[Functional-component]`
-
-```ts
-
-import * as React from 'react';
-import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-
-function App() {
-  let toolbarSettings: object = {
-    items: ['Audio'],
-  }
-  let quickToolbarSettings: object = {
-    audio: ['AudioReplace', 'Remove', 'AudioLayoutOption']
-  }
-  let rteValue = `<p><b>Get started with Quick Toolbar to click on an audio</b></p>
-                        <p>Using the quick toolbar, users can replace, display, and delete the selected audio.</p>
-                        <p><audio controls><source src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Audio.wav" type="audio/mp3" /></audio></p>`;
-
-  return (
-    <RichTextEditorComponent height={450} value={rtevalue} toolbarSettings={toolbarSettings} quickToolbarSettings={quickToolbarSettings}>
-        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
-    </RichTextEditorComponent>
-  );
-}
-
-```
-
-## See Also
-
-* [Quick Toolbars in the Toolbar](https://ej2.syncfusion.com/react/documentation/rich-text-editor/toolbar#quick-inline-toolbar)
+* [Audio Quick Toolbar](../toolbar/quick-toolbar)
 * [How to Use the Video Editing Option in Toolbar Items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/video)
 * [How to Use the Image Editing Option in Toolbar Items](https://ej2.syncfusion.com/react/documentation/rich-text-editor/insert-images)

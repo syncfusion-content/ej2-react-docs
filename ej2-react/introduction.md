@@ -140,7 +140,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/signature/getting-started/">Signature</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/rating/getting-started/">Rating</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/otp-input/getting-started">OTP Input</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/speech-to-text/getting-started">Speech To Text</a></div>
+         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/speech-to-text/getting-started">Speech To Text</a></div>
         <div><p class="controlcategory">FORMS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules/">Form Validator</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/query-builder/getting-started/">Query Builder</a></div>

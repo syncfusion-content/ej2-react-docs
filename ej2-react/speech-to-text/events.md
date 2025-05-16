@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in React SpeechToText Component | Syncfusion
-description: Checkout and learn about events in Syncfusion Essential React SpeechToText component, its elements, and more details.
+title: Events in React SpeechToText component | Syncfusion
+description: Checkout and learn about Events with React SpeechToText component of Syncfusion Essential JS 2 and more details.
 control: SpeechToText
 platform: ej2-react
 documentation: ug
@@ -34,4 +34,4 @@ The following example demonstrates how to configure the SpeechToText events.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speech-to-text/events" %}
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/events/index" %}

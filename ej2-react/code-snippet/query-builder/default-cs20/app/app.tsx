@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { QueryBuilderComponent, ColumnsModel } from '@syncfusion/ej2-react-querybuilder';
 import * as React from 'react';
@@ -35,6 +32,3 @@ function App() {
 }
 export default App;
 ReactDom.render(<App />,document.getElementById('querybuilder'));
-
-
-{% endraw %}

@@ -33,38 +33,28 @@ Following is the list of minimum dependencies required to use the Linear Gauge.
 
 ## Installation and configuration
 
-To get started with the React application, [create-react-app](https://github.com/facebook/create-react-app) can be used to setup the application. To install **create-react-app** run the following command.
+To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
 
-   ```
-     npm install -g create-react-app
-   ```
+> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create basic React application, run the following command.
+To create a new React application, run the following command.
 
+```bash
+npm create vite@latest my-app
 ```
-create-react-app quickstart
+To set-up a React application in TypeScript environment, run the following command.
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm run dev
 ```
+To set-up a React application in JavaScript environment, run the following command.
 
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm** packages.
-
-```
-cd quickstart
-```
-
-> In the **quickstart** application, the Syncfusion<sup style="font-size:70%">&reg;</sup> component is added in the JavaScript file.
-
-### Creating a React application with TypeScript
-
-To create React application with TypeScript, use the following command.
-
-```
-create-react-app quickstart --template typescript
-```
-
-Now, the application is created in the **quickstart** folder. Run the following command to navigate to the **quickstart** folder, and install the required **npm**  packages.
-
-```
-cd quickstart
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm run dev
 ```
 
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -94,10 +84,10 @@ export default App;
 
 ### Run the application
 
-The Linear Gauge control is now included in the **quickstart** application. Use the following command to run the application.
+Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
 ```
-npm start
+npm run dev
 ```
 
 ## Module Injection
@@ -133,10 +123,10 @@ These modules should be injected into the `services` section as follows,
 The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/linearGaugeModel/#title-string) property in the Linear Gauge.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/linear-gauge/getting-started-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/linear-gauge/getting-started-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -148,10 +138,10 @@ The title can be added to the Linear Gauge component using the [`title`](https:/
 The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#minimum-number) and [`maximum`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axis/#maximum-number) properties in the Linear Gauge.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/linear-gauge/getting-started-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/linear-gauge/getting-started-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -163,10 +153,10 @@ To denote the axis values with temperature units, add the °C as suffix to each 
 To change the pointer value from the default value of the gauge, set the [`value`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointerModel/) object of the axis.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/linear-gauge/getting-started-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/linear-gauge/getting-started-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -178,12 +168,13 @@ To change the pointer value from the default value of the gauge, set the [`value
 The pointer value is changed in the below sample using the [`value`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/pointer) object of the axis.
 
 {% tabs %}
-{% highlight js tabtitle="index.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/linear-gauge/getting-started-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/linear-gauge/getting-started-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs4" %}
+ 

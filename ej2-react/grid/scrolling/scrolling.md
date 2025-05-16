@@ -319,7 +319,8 @@ The following example that demonstrates how to use the `hideScroll` method insid
 
  {% previewsample "page.domainurl/code-snippet/grid/scrolling-cs8" %}
 
-## Render scrollbar in both top and bottom
+ ## Render scrollbar in both top and bottom
+
 The Syncfusion React Grid allows rendering scrollbars at both the top and bottom, enhancing horizontal navigation for large datasets. This feature ensures users can scroll the Grid from either direction, enhancing usability and accessibility.
 
 Steps to render scrollbars at the top in the Grid:

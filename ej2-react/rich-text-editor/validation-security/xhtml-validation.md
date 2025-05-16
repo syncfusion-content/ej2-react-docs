@@ -14,14 +14,15 @@ The editor includes an [`enableXhtml`](https://ej2.syncfusion.com/react/document
 
 The editor checks the following settings on validation:
 
-## Validating Attributes
+## Validating attributes
 
 * **Case Sensitivity**: All attributes must be in lowercase.
 * **Quotation Marks**: Proper use of quotation marks around attribute values is enforced.
 * **Validity**: Only valid attributes for corresponding HTML elements are allowed.
 * **Required Attributes**: All required attributes for HTML elements must be included.
 
-## Validating HTML Elements
+## Validating HTML elements
+
 * **Case Sensitivity**: All HTML tags must be in lowercase.
 * **Proper Closing**: All opening tags must have corresponding closing tags.
 * **Element Validity**: Only valid HTML elements are permitted.

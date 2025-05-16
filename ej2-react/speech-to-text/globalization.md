@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in React SpeechToText Component | Syncfusion
-description: Checkout and learn about globalization in Syncfusion Essential React SpeechToText component, its elements, and more details.
+title: Globalization in React SpeechToText component | Syncfusion
+description: Checkout and learn about Globalization with React SpeechToText component of Syncfusion Essential JS 2 and more details.
 control: SpeechToText
 platform: ej2-react
 documentation: ug
@@ -41,11 +41,11 @@ The SpeechToText can be localized to any culture by defining the text in the cor
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speech-to-text/globalization/localization" %}
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/globalization/localization/index" %}
 
 ## RTL
 
-RTL provides an option to switch the text direction and layout of the SpeechToText component from right to left by setting the [enableRtl](../api/speech-to-text/#enableRtl) property to true.
+RTL provides an option to switch the text direction and layout of the SpeechToText component from right to left by setting the [enableRtl](../api/speech-to-text#enableRtl) property to true.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,4 +59,4 @@ RTL provides an option to switch the text direction and layout of the SpeechToTe
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speech-to-text/globalization/rtl" %}
+ {% previewsample "page.domainurl/code-snippet/speech-to-text/globalization/rtl/index" %}
