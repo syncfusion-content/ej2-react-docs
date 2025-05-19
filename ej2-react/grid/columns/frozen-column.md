@@ -437,7 +437,7 @@ The following example demonstrates how to change the default frozen line color u
 
  {% previewsample "page.domainurl/code-snippet/grid/frozen-column-cs4" %}
 
-## Render DatePicker in frozen columns in React Grid
+## Render DatePicker in frozen columns in Grid
 
 The Syncfusion React Grid allows rendering a [DatePicker](https://ej2.syncfusion.com/react/demos/#/bootstrap5/datepicker/default) inside frozen columns during editing. This is achieved using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property, where a custom editor (DatePicker) is assigned to the specific column. 
 

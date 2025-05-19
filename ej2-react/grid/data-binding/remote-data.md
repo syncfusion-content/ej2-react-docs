@@ -668,7 +668,7 @@ To export the complete Grid data to Excel document, utilize the `excelExportProp
   };
 {% endraw %}
 {% endhighlight %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% raw %}
  const toolbarClick = async (args) => {
     const exportState = { skip: 0, take: gridInstance.current.pageSettings.totalRecordsCount};
