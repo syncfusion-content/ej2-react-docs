@@ -14,7 +14,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/24.1.41/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/29.2.4/"
     },
     map: {
         app: 'app',
@@ -34,18 +34,18 @@ System.config({
         "@syncfusion/ej2-excel-export": "syncfusion:ej2-excel-export/dist/ej2-excel-export.umd.min.js",
         "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
         "@syncfusion/ej2-dropdowns": "syncfusion:ej2-dropdowns/dist/ej2-dropdowns.umd.min.js",
-        "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
-        
+
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-grids": "syncfusion:ej2-react-grids/dist/ej2-react-grids.umd.min.js",
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "@syncfusion/ej2-react-calendars": "syncfusion:ej2-react-calendars/dist/ej2-react-calendars.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
         "@syncfusion/ej2-react-inputs": "syncfusion:ej2-react-inputs/dist/ej2-react-inputs.umd.min.js",
-"react-dom":"https://unpkg.com/react-dom@16.8/umd/react-dom.development.js",
-"react":"https://unpkg.com/react@16.8/umd/react.development.js",
-        
+        "react-dom": "https://unpkg.com/react-dom@16.8/umd/react-dom.development.js",
+        "react": "https://unpkg.com/react@16.8/umd/react.development.js",
+
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },

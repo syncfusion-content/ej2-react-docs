@@ -17,39 +17,42 @@ function App() {
   const freightrules = { min: 1, max: 1000 };
   const shipCountryrules = { required: true };
   const orderDaterules = { required: true };
+
   const created = (() => {
     grid.getContentTable().addEventListener('click', (args) => {
       if (args.target.classList.contains('e-rowcell')) {
-        grid.editModule.editCell(parseInt(args.target.getAttribute('index')),
-          grid.getColumnByIndex(parseInt(args.target.getAttribute('data-colindex'))).field);
+        grid.editModule.editCell(parseInt(args.target.getAttribute('index')), grid.getColumnByIndex(parseInt(args.target.getAttribute('aria-colindex')) - 1).field);
       }
     });
+
     grid.element.addEventListener('keydown', (e) => {
       var closesttd = e.target.closest('td');
       if (e.keyCode === 39 && !isNullOrUndefined(closesttd.nextSibling)) {
         editACell(closesttd.nextSibling);
       }
       if (e.keyCode === 37 && !isNullOrUndefined(closesttd.previousSibling) &&
-        !grid.getColumnByIndex(
-          parseInt(closesttd.previousSibling.getAttribute('data-colindex'))).isPrimaryKey) {
+        !grid.getColumnByIndex(parseInt(closesttd.previousSibling.getAttribute('aria-colindex')) - 1).isPrimaryKey) {
         editACell(closesttd.previousSibling);
       }
       if (e.keyCode === 40 && !isNullOrUndefined(closesttd.closest('tr').nextSibling)) {
         editACell(
           closesttd.closest('tr').nextSibling.querySelectorAll('td')[
-          parseInt(closesttd.getAttribute('data-colindex'))]);
+          parseInt(closesttd.getAttribute('aria-colindex')) - 1]
+        );
       }
       if (e.keyCode === 38 && !isNullOrUndefined(closesttd.closest('tr').previousSibling)) {
         editACell(
           closesttd.closest('tr').previousSibling.querySelectorAll('td')[
-          parseInt(closesttd.getAttribute('data-colindex'))]);
+          parseInt(closesttd.getAttribute('aria-colindex')) - 1]
+        );
       }
     });
   });
+
   const editACell = (args) => {
-    grid.editModule.editCell(parseInt(args.getAttribute('index')), grid.getColumnByIndex(parseInt(args.getAttribute('data-colindex'))).field);
-  }
-  return (<div>
+    grid.editModule.editCell(parseInt(args.getAttribute('index')), grid.getColumnByIndex(parseInt(args.getAttribute('aria-colindex')) - 1).field);
+  };
+return (<div>
     <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} enableHover={false} toolbar={toolbarOptions} height={265} created={created} >
       <ColumnsDirective>
         <ColumnDirective field='OrderID' headerText='Order ID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderidrules} />
