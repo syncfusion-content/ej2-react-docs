@@ -134,7 +134,7 @@ Add the below code in the `src/App.tsx` to initialize the DocumentEditor.
 
 {% raw %}
 
-```tsx
+```ts
 import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
