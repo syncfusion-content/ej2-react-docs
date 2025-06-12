@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with the React Checkbox component
 
 This section explains how to create a simple CheckBox, and configure its available functionalities in React, using React quickstart application.
 
