@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting started with the React Button Group component
 
 This section explains how to create a simple ButtonGroup, and configure its available functionalities in React by using the React quickstart application.
 

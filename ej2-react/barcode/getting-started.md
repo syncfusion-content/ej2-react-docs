@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started
+# Getting started with the React Barcode Generator component
 
 This section explains you the steps required to create a simple barcode and demonstrate the basic usage of the barcode control.
 

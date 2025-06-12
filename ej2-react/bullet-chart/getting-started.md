@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started
+# Getting started with the React Bullet Chart component
 
 This section explains you the steps required to create a simple Bullet Chart and demonstrate the basic usage of the Bullet Chart control.
 
