@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview: Essential UI Kit for React
 
-The Essential UI Kit for React comprises over 160 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML, CSS, TypeScript, and Syncfusion React components, delivering robust functionality and ease of use. They are compatible with both Tailwind and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
+The Essential UI Kit for React comprises over 230 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML, CSS, TypeScript, and Syncfusion React components, delivering robust functionality and ease of use. They are compatible with both Tailwind CSS and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
 
 <table>
   <tr>
@@ -23,8 +23,8 @@ The Essential UI Kit for React comprises over 160 responsive, ready-to-use, easy
       <ul>
         <li>Sign In</li>
         <li>Sign Up</li>
-        <li>Mobile - Sign In</li>
-        <li>OTP - Sign In</li>
+        <li>Sign In - Mobile</li>
+        <li>Sign In - OTP</li>
         <li>Forgot Password</li>
         <li>Sign Out</li>
         <li>Unlock Session</li>
@@ -47,9 +47,41 @@ The Essential UI Kit for React comprises over 160 responsive, ready-to-use, easy
         <li>Tile View</li>
         <li>Modals</li>
         <li>Floating Menu</li>
+        <li>Notification</li>
         <li>Calendar</li>
+        <li>Rating</li>
         <li>Pagination</li>
         <li>Footer</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Data Visualization</td>
+    <td>
+      <ul>
+        <li>Line Chart</li>
+        <li>Bar Chart</li>
+        <li>Accumulation Chart</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>AI</td>
+    <td>
+      <ul>
+        <li>Al Login</li>
+        <li>Al Sidebar</li>
+        <li>Al Setting</li>
+        <li>Al Search</li>
+        <li>Al Input</li>
+        <li>Al Card</li>
+        <li>Al Prompt Card</li>
+        <li>Al Chat</li>
+        <li>Al Dialog</li>
+        <li>Al Floating Menu</li>
+        <li>Al Notification</li>
+        <li>Al FAQ</li>
+        <li>Al Pricing Table</li>
       </ul>
     </td>
   </tr>

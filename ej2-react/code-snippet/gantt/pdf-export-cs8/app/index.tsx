@@ -1,34 +1,33 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import { GanttComponent, Inject, Toolbar, PdfExport, Selection,Column, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-gantt';
-import { data } from './datasource';
+import { taskData } from './datasource';
 function App() {
-        const taskFields = {
-            id: 'TaskID',
-            name: 'TaskName',
-            startDate: 'StartDate',
-            duration: 'Duration',
-            progress: 'Progress',
-            child: 'subtasks'
-        };
-        const toolbarOptions = ['PdfExport'];
+    const taskFields = {
+        id: 'TaskId',
+        name: 'TaskName',
+        startDate: 'StartDate',
+        duration: 'Duration',
+        progress: 'Progress',
+        parentID: 'ParentId',
+    };
+    const toolbarOptions = ['PdfExport'];
 
-        let ganttChart:any;
-        function toolbarClick(args) {
-        ganttChart.pdfExport();
+    let ganttObj:any;
+    function toolbarClick(args) {
+        ganttObj.pdfExport();
     }
 
     function beforePdfExport(): void {
-        if (ganttChart) {
-            const cols = ganttChart.treeGrid.columns;
+        if (ganttObj) {
+            const cols = ganttObj.treeGrid.columns;
             cols[3].visible = true;
             cols[2].visible = false;
         }
     };
-    return <GanttComponent id='root' dataSource={data} beforePdfExport={beforePdfExport} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttChart = gantt}>
+    return <GanttComponent id='root' dataSource={taskData} beforePdfExport={beforePdfExport} taskFields={taskFields} toolbar={toolbarOptions} toolbarClick={toolbarClick} allowPdfExport={true} height='400px' ref={gantt => ganttObj = gantt}>
         <ColumnsDirective>
-                    <ColumnDirective field='TaskID' width='50'/>
+                    <ColumnDirective field='TaskId' width='100'/>
                     <ColumnDirective field='TaskName' headerText='Task Name'/>
                     <ColumnDirective field='StartDate'/>
                     <ColumnDirective field='Duration' visible={false}/>
