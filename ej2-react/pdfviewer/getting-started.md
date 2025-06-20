@@ -203,6 +203,22 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
+## Adding Next.js Configuration
+
+When deploying the Syncfusion PDF Viewer component in a Next.js application, you may need to add the following configuration to ensure smooth deployment:
+
+Create a next.config.js file in the root of your project, and add the following code to the file:
+
+```
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: false,  // Disable React Strict Mode for compatibility
+  swcMinify: false,        // Disable SWC minification for better compatibility
+};
+
+module.exports = nextConfig;
+```
+
 N> When running the sample, if you encounter the **ERR_OSSL_EVP_UNSUPPORTED error** error, you need to run the following command in your terminal to resolve this issue. This error is related to OpenSSL, which is a cryptographic library used by Node.js for secure communication and encryption tasks. This specific error typically occurs when Node.js is trying to use cryptographic algorithms or routines that are not supported by the current version of OpenSSL being used.
 
 ```

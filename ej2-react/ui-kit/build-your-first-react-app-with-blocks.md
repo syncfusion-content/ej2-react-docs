@@ -10,6 +10,8 @@ domainurl: ##DomainURL##
 
 # Build your first React app with our blocks
 
+This tutorial guides you through building a React application using Syncfusion's UI Kit blocks. It demonstrates how to set up a new React app with Next.js, choose between Tailwind CSS or Bootstrap 5.3 themes, and add a sign-in block in your application. The goal is to help developers quickly build responsive, modern web apps using a variety of pre built blocks with minimal effort.
+
 To quickly get started with building your first React app, you can check out this video:
 
 {% youtube "https://www.youtube.com/watch?v=_a4lJNUcDng" %}
@@ -22,17 +24,17 @@ A **Next.js** app is used for this example. To create a new app, refer to the of
 
 ![New React App](images/new-react-app.png)
 
-## Setting up Tailwind or Bootstrap 5.3 theme in the app
+## Setting up Tailwind CSS or Bootstrap 5.3 theme in the app
 
 After creating the new app named **my-app**, open it in Visual Studio Code (which will be used throughout this walkthrough). Once the app is open, navigate to the **src -> app -> page.tsx** file and remove only the template HTML code. Then, navigate to **src -> app -> globals.css** and **src -> app -> page.module.css** files, and remove all default CSS code.
 
-The next step is to choose a theme, either **Tailwind** or **Bootstrap 5.3**, in either light or dark mode, and configure **my-app** accordingly.
+The next step is to choose a theme, either **Tailwind CSS** or **Bootstrap 5.3**, in either light or dark mode, and configure **my-app** accordingly.
 
-### Tailwind configuration
+### Tailwind CSS configuration
 
-If you choose **Tailwind** theme, follow these steps to configure it.
+If you choose **Tailwind CSS** theme, follow these steps to configure it.
 
-1. In the Visual Studio Code terminal, run the following commands to install the **Tailwind** packages and create the **tailwind.config.js** file.
+1. In the Visual Studio Code terminal, run the following commands to install the **Tailwind CSS** packages and create the **tailwind.config.js** file.
 
     ```bash
     npm install -D tailwindcss@3 postcss autoprefixer
@@ -70,10 +72,10 @@ If you choose **Tailwind** theme, follow these steps to configure it.
       plugins: [],
     }
     ```
-    > The Syncfusion React components uses **Indigo** for light mode and **Cyan** for dark mode. So, please change the primary color accordingly to maintain a uniform appearance.
+    > The Syncfusion React components uses **Indigo** for light mode and **Cyan** for dark mode. To maintain a uniform appearance, change the primary color accordingly.
 
 
-3. In the **src -> app -> globals.css** file, add the following code. This will ensure that the **Tailwind** styles are generated and consolidated for the entire application.
+3. In the **src -> app -> globals.css** file, add the following code. This will ensure that the **Tailwind CSS** styles are generated and consolidated for the entire application.
 
     ```css
     @tailwind base;
@@ -109,15 +111,15 @@ If you choose **Tailwind** theme, follow these steps to configure it.
     @import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind-dark.css');
     ```
 
-    ![Syncfusion Components - Tailwind Theme](images/syncfusion-components-tailwind-theme.PNG)
+    ![Syncfusion Components - Tailwind CSS Theme](images/syncfusion-components-tailwind-theme.PNG)
     
-6. **OPTIONAL**: If you wish to use our font icons prepared for **Tailwind**, you can include the following CDN link:
+6. **OPTIONAL**: If you wish to use our font icons prepared for **Tailwind CSS**, you can include the following CDN link:
 
     ```css
     @import url('https://cdn.syncfusion.com/ej2/react/ui-kit/font-icons/tailwind-icons.css');
     ```
   
-Now that the **Tailwind** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
+Now that the **Tailwind CSS** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
 
 ### Bootstrap 5.3 configuration
 
@@ -181,7 +183,7 @@ Now that **my-app** is set up with the desired theme configuration, the next ste
 
 2. On the demo page, go to the first demo, which showcases a simple sign-in block. Choose the desired theme, then switch from the **Preview** tab to the **Code** tab.
 
-    ![Choose Tailwind or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.png)
+    ![Choose Tailwind CSS or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.png)
 
 3. In the **Code** tab, copy the TSX (HTML and TS) code using the **Copy to Clipboard** option and paste it into the **src -> app -> page.tsx** file. Once done, modify `export default function Signin1` to `export default function Home`. Additionally, it is mandatory to include the `'use client';` statement in the **src -> app -> page.tsx** file.
 
@@ -204,7 +206,7 @@ Now that **my-app** is set up with the desired theme configuration, the next ste
 > **Note:**
 > 
 > 1. It is mandatory to include the `'use client';` statement in the TSX file.
-> 2. In the TSX, the **Tailwind** and **Bootstrap 5.3** design code is placed in their respective switch case statements. You can copy and paste as per your requirement.
+> 2. In the TSX, the **Tailwind CSS** and **Bootstrap 5.3** design code is placed in their respective switch case statements. You can copy and paste as per your requirement.
 > 3. Ignore the code within the **"SB Code - Start"** and **"SB Code - End"** comments, as it is intended solely for sample browser purposes.
 
 ## Steps to install and configure Syncfusion React components
