@@ -151,4 +151,5 @@ Non-working days/weekend are used to represent the non-productive days in a proj
 {% previewsample "page.domainurl/code-snippet/gantt/how-to-changeworkweek-cs1" %}
 
 > By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
+> To show or hide weekend in timeline, use [timelineSettings.showWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#showweekend/) property in `timelineSettings`. To know more about `showWeekend`, refer [here](https://ej2.syncfusion.com/react/documentation/gantt/time-line/time-line#showhide-weekends).
 > In the Gantt component, you can make weekend as working day by setting the [`includeWeekend`](https://ej2.syncfusion.com/react/documentation/api/gantt/#includeweekend) property to `true`.

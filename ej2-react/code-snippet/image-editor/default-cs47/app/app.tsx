@@ -16,7 +16,7 @@ function App() {
             dialogInstance.current.show();
         }
         if (imgObj) {
-            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/bridge.jpeg');
         }
     };
 

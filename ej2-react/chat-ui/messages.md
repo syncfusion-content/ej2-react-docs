@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Messages in React Chat UI component
 
-The Chat UI allows to add messages using the `MessagesDirective` tag. The message collection stores all the messages being sent and received.
+The Chat UI allows to add messages using the [messages](../api/chat-ui/#messages) property. The message collection stores all the messages being sent and received.
 
 ## Configure messages
 
@@ -88,6 +88,30 @@ You can use the [cssClass](../api/chat-ui/userModel/#cssclass) property to custo
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/messages/cssClass" %}
+
+#### Setting status icon css
+
+You can use the [statusIconCss](../api/chat-ui/messages/#statusIconCss) property to identify the user's presence, including `online`, `offline`, `busy`, and `away` status in the Chat UI.
+
+The following are the predefined status styles that can be defined using the `statusIconCss` property.
+
+| Status | Icon class |
+| ------------ | -------------- |
+| `Available` | `e-user-online` |
+| `Away` | `e-user-away` |
+| `Busy` | `e-user-busy` |
+| `Offline` | `e-user-offline` |
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/statusIcon/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/statusIcon/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/statusicon" %}
 
 ## Define timestamp
 
@@ -170,7 +194,7 @@ You can use the [tooltip](../api/chat-ui/messageStatusModel/#tooltip) property t
 
 ## Setting auto scroll
 
-You can use the [autoScrollToBottom](../api/chat-ui#autoscrolltobottom) property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view.
+You can use the [autoScrollToBottom](../api/chat-ui/#autoscrolltobottom) property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view.
 
 - By default, it scrolls to bottom for each message being sent or when the scroll is maintained at the bottom in the chat, in order to prevent the automatic scroll for different user messages you can use the `autoScrollToBottom` property.
 
@@ -187,7 +211,7 @@ You can use the [autoScrollToBottom](../api/chat-ui#autoscrolltobottom) property
 
 ## Setting suggestions
 
-You can use the [suggestions](../api/chat-ui#suggestions) property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field.
+You can use the [suggestions](../api/chat-ui/#suggestions) property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -199,3 +223,112 @@ You can use the [suggestions](../api/chat-ui#suggestions) property, to add the s
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/messages/suggestions" %}
+
+### Setting pinned
+
+You can use the [isPinned](../api/chat-ui/messages/#ispinned) property to highlight the important message in the chat.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/pinned/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/pinned/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/pinned" %}
+
+### Setting reply to
+
+You can use the [replyTo](../api/chat-ui/messages/#replyTo) property to respond to the original message preserving context and creating a threaded conversation.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/replyTo/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/replyTo/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/replyTo" %}
+
+### Setting forward
+
+You can use the [isForwarded](../api/chat-ui/messages/#isForwarded) property to specify the user when the message is forwarded.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/forwarded/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/forwarded/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/forwarded" %}
+
+### Setting compact mode
+
+You can use the `enableCompactMode` property to align all messages to the left in the chat for creating a streamlined layout ideal for group conversations or space-constrained interfaces.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/compactMode/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/compactMode/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/compactMode" %}
+
+## Configure message options
+
+The `messageToolbarSettings` property allows customization of the message toolbar for richer chat experience in the Chat UI. It provides options to define the toolbar `width`, configure a set of toolbar `items`, and handle `itemClick` events for enhanced interactivity.
+
+### Setting width
+
+You can use the `width` property to set width of the message toolbar in the chat.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/width/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/width/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/width" %}
+
+### Setting items
+
+You can use the `items` property to specify the toolbar item in the message toolbar of the chat.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/items/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/items/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/items" %}
+
+### Setting itemClick
+
+You can use the `itemClicked` event when the toolbar item is clicked in the message toolbar of the chat.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/itemClicked/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/itemClicked/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/itemclicked" %}

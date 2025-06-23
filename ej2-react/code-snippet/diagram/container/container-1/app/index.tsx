@@ -47,7 +47,7 @@ function App() {
     <DiagramComponent id="divcontainer" ref={(diagram) => (diagramInstance = diagram)}
       width={'100%'} height={'500px'}
       nodes={nodes} created={() => {
-        diagramInstance.select([diagram.getObject('container')]);
+        diagramInstance.select([diagramInstance.getObject('container')]);
       }}
     />
   );

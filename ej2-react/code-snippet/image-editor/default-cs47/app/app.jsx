@@ -14,7 +14,7 @@ export default class App extends React.Component {
     };
     btnClick() {
         this.dialogInstance.show();
-        this.imgObj.open("https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png");
+        this.imgObj.open("https://ej2.syncfusion.com/react/documentation/image-editor/images/flower.jpeg");
     }
     render() {
         return (<div className='e-img-editor-sample'>
