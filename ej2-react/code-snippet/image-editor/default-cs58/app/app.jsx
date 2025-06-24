@@ -11,7 +11,7 @@ export default class App extends React.Component {
         maxFileSize: 90 * 1024  // Maximum file size in bytes (100 KB)
     };
     loadInvalidImage() {
-        this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+        this.imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/bridge.jpeg');
     }
     render() {
         return (<div className='e-img-editor-sample'>

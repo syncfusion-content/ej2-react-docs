@@ -8,9 +8,9 @@ function App() {
     let imgObj: ImageEditorComponent;
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
-            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
+            imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/flower.jpeg');
         } else {
-            imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+            imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/bridge.jpeg');
         }
     }
     function panImage(): void {
