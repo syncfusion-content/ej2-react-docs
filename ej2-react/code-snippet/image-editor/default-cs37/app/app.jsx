@@ -9,15 +9,15 @@ export default class App extends React.Component {
     imgObj;
     imageEditorCreated() {
         if (Browser.isDevice) {
-            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png');
+            this.imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/flower.jpeg');
         }
         else {
-            this.imgObj.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+            this.imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/bridge.jpeg');
         }
     }
     addImage() {
         let dimension = this.imgObj.getImageDimension();
-        this.imgObj.drawImage('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png', dimension.x, dimension.y, 100, 80, true, 0);
+        this.imgObj.drawImage('https://ej2.syncfusion.com/react/documentation/image-editor/images/flower.jpeg', dimension.x, dimension.y, 100, 80, true, 0);
     }
     render() {
         return (<div className='e-img-editor-sample'>
