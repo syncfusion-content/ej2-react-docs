@@ -186,7 +186,7 @@ In the Gantt component, you can enable or disable the mouse hover tooltip of tim
         
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs2" %}
 
-## Show and hide weekends
+## Show/hide weekends
 
 The [timelineSettings.showWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#showweekend) property is used to customize the timeline in the Gantt component by controlling the visibility of weekends. To exclude weekends from the timeline, set the `showWeekend` property to `false` in the `timelineSettings` configuration. This feature is particularly useful for focusing the timeline on working days, enhancing project management efficiency by hiding weekends from the view.
 

@@ -20,6 +20,12 @@ The following list of dependencies is required to use the BlockEditor component 
 |-- @syncfusion/ej2-react-blockeditor
     |-- @syncfusion/ej2-react-base
     |-- @syncfusion/ej2-base
+    |-- @syncfusion/ej2-popups
+    |-- @syncfusion/ej2-buttons
+    |-- @syncfusion/ej2-splitbuttons
+    |-- @syncfusion/ej2-navigations
+    |-- @syncfusion/ej2-dropdowns
+    |-- @syncfusion/ej2-inputs
 ```
 
 ## Setup for Local Development
@@ -74,7 +80,7 @@ import * as ReactDOM from "react-dom";
 export default class App extends React.Component<{}, {}> {
   public render() {
     return (
-        // specifies the tag for render the Speech to text component
+        // specifies the tag for render the blockeditor component
         <BlockEditorComponent id='blockeditor'></BlockEditorComponent>
     );
   }
@@ -92,7 +98,7 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     return (
-        // specifies the tag for render the Speech to text component
+        // specifies the tag for render the blockeditor component
         <BlockEditorComponent id="blockeditor"></BlockEditorComponent>
     );
 }
@@ -106,6 +112,12 @@ Import the BlockEditor component required CSS references as follows in `src/App.
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-react-blockeditor/styles/material.css";
 ```
 ## Run the application
@@ -117,17 +129,26 @@ npm run dev
 ```
 
 The following example shows a basic BlockEditor component.
-
+[Class-component]
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/block-editor/getting-started/app/index.jsx %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/getting-started-class/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/block-editor/getting-started/app/index.tsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="styles.css" %}
-{% include code-snippet/block-editor/getting-started/styles.css %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/getting-started-class/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/block-editor/getting-started/index" %}
+ {% previewsample "page.domainurl/code-snippet/block-editor/getting-started-class" %}
+
+ [Functional-component]
+ {% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/getting-started/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/getting-started/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/block-editor/getting-started" %}

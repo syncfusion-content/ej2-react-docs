@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resolve delay rendering of Syncfusion React UI Components
+# Resolve delay rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components
 
-The React property of `immediateRender` is used to solve the rendering delay of Syncfusion React UI Components.
+The React property of `immediateRender` is used to solve the rendering delay of Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components.
 
 ## immediateRender
 

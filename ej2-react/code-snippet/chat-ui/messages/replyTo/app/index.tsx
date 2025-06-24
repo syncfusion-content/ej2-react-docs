@@ -1,4 +1,4 @@
-import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel, MessageModel } from '@syncfusion/ej2-react-interactive-chat';
+import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel, MessageReplyModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { enableRipple } from '@syncfusion/ej2-base';
@@ -6,16 +6,16 @@ enableRipple(true);
 
 function App() {
     const currentUserModel: UserModel = {
-        id: "user1",
+        id: "chat-message-1",
         user: "Albert"
     };
 
     const michaleUserModel: UserModel = {
-        id: "user2",
+        id: "chat-message-2",
         user: "Michale Suyama"
     };
 
-    const replyTo: MessageModel = { user: michaleUserModel, text: 'Yes, the design phase is complete.', messageID: 'user2' }
+    const replyTo: MessageReplyModel = { user: michaleUserModel, text: 'Yes, the design phase is complete.', messageID: 'chat-message-2' }
 
     return (
         // specifies the tag for render the Chat UI component

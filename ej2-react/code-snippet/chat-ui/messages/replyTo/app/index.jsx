@@ -7,15 +7,15 @@ enableRipple(true);
 
 function App() {
     const currentUserModel = {
-        id: "user1",
+        id: "chat-message-1",
         user: "Albert"
     };
 
     const michaleUserModel = {
-        id: "user2",
+        id: "chat-message-2",
         user: "Michale Suyama"
     };
-    const replyTo = { user: michaleUserModel, text: 'Yes, the design phase is complete.', messageID: 'user2' }
+    const replyTo = { user: michaleUserModel, text: 'Yes, the design phase is complete.', messageID: 'chat-message-2' }
 
     return (
         // specifies the tag for render the Chat UI component

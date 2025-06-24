@@ -7,10 +7,8 @@ import * as ReactDom from 'react-dom';
 function App() {
     
     return (
-        <div id='container'>
-            <BlockEditorComponent ></BlockEditorComponent>
-        </div>
+            <BlockEditorComponent id="block-editor"></BlockEditorComponent>
     );
 }
 export default App;
-ReactDom.render(<App />,document.getElementById('element'));
+ReactDom.render(<App />,document.getElementById('container'));

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Messages in React Chat UI component
 
-The Chat UI allows to add messages using the [messages](../api/chat-ui/#messages) property. The message collection stores all the messages being sent and received.
+The Chat UI allows to add messages using the `MessagesDirective` tag. The message collection stores all the messages being sent and received.
 
 ## Configure messages
 
@@ -26,6 +26,66 @@ You can use the [text](../api/chat-ui/messageModel/#text) property to add messag
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/defaultMessage" %}
+
+### Setting pinned
+
+You can use the [isPinned](../api/chat-ui/message/#ispinned) property to highlight the important message in the chat. Once a message is pinned, you can access the options menu to continue the chat or unpin it.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/pinned/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/pinned/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/pinned" %}
+
+### Setting reply to
+
+You can use the [replyTo](../api/chat-ui/message/#replyto) property to respond to the original message preserving context and creating a threaded conversation.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/replyTo/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/replyTo/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/replyTo" %}
+
+### Setting forward
+
+You can use the [isForwarded](../api/chat-ui/message/#isforwarded) property to specify the user when the message is forwarded.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/forwarded/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/forwarded/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/forwarded" %}
+
+### Setting compact mode
+
+You can use the `enableCompactMode` property to align all messages to the left in the chat for creating a streamlined layout ideal for group conversations or space-constrained interfaces. By default, the value is `false`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chat-ui/messages/compactMode/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chat-ui/messages/compactMode/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chat-ui/messages/compactMode" %}
 
 ### Define current user
 
@@ -91,7 +151,7 @@ You can use the [cssClass](../api/chat-ui/userModel/#cssclass) property to custo
 
 #### Setting status icon css
 
-You can use the [statusIconCss](../api/chat-ui/messages/#statusIconCss) property to identify the user's presence, including `online`, `offline`, `busy`, and `away` status in the Chat UI.
+You can use the [statusIconCss](../api/chat-ui/message/#statusiconcss) property to identify the user's presence, including `online`, `offline`, `busy`, and `away` status in the Chat UI.
 
 The following are the predefined status styles that can be defined using the `statusIconCss` property.
 
@@ -224,73 +284,21 @@ You can use the [suggestions](../api/chat-ui/#suggestions) property, to add the 
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/messages/suggestions" %}
 
-### Setting pinned
-
-You can use the [isPinned](../api/chat-ui/messages/#ispinned) property to highlight the important message in the chat.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chat-ui/messages/pinned/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chat-ui/messages/pinned/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chat-ui/messages/pinned" %}
-
-### Setting reply to
-
-You can use the [replyTo](../api/chat-ui/messages/#replyTo) property to respond to the original message preserving context and creating a threaded conversation.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chat-ui/messages/replyTo/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chat-ui/messages/replyTo/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chat-ui/messages/replyTo" %}
-
-### Setting forward
-
-You can use the [isForwarded](../api/chat-ui/messages/#isForwarded) property to specify the user when the message is forwarded.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chat-ui/messages/forwarded/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chat-ui/messages/forwarded/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chat-ui/messages/forwarded" %}
-
-### Setting compact mode
-
-You can use the `enableCompactMode` property to align all messages to the left in the chat for creating a streamlined layout ideal for group conversations or space-constrained interfaces.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chat-ui/messages/compactMode/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chat-ui/messages/compactMode/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chat-ui/messages/compactMode" %}
-
 ## Configure message options
 
-The `messageToolbarSettings` property allows customization of the message toolbar for richer chat experience in the Chat UI. It provides options to define the toolbar `width`, configure a set of toolbar `items`, and handle `itemClick` events for enhanced interactivity.
+The `messageToolbarSettings` property allows customization of the message toolbar for richer chat experience in the Chat UI. It provides options to define the toolbar `width`, configure a set of toolbar `items`, and handle `itemClick` events for enhanced interactivity. By default, the message options available are `Copy`, `Reply`, `Pin`, and `Delete`.
+
+### Copying a message
+
+You can copy the message item to quickly duplicate the message, by using the toolbar copy icon in the message options.
+
+### Deleting a message
+
+You can delete a message item to remove it from the chat conversation, by using the toolbar trash icon in the message options.
 
 ### Setting width
 
-You can use the `width` property to set width of the message toolbar in the chat.
+You can use the `width` property to set width of the message toolbar in the chat. By default, the value is `100%`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

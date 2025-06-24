@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right-To-Left
 
-Right To Left (RTL) can be enabled to the Syncfusion React UI components by adding a `enableRtl` property as `true`. This will render all Syncfusion React components in right to left direction.
+Right To Left (RTL) can be enabled to the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components by adding a `enableRtl` property as `true`. This will render all Syncfusion<sup style="font-size:70%">&reg;</sup> React components in right to left direction.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
