@@ -72,7 +72,7 @@ If you choose **Tailwind CSS** theme, follow these steps to configure it.
       plugins: [],
     }
     ```
-    > The Syncfusion React components uses **Indigo** for light mode and **Cyan** for dark mode. To maintain a uniform appearance, change the primary color accordingly.
+    > The Syncfusion<sup style="font-size:70%">&reg;</sup> React components uses **Indigo** for light mode and **Cyan** for dark mode. To maintain a uniform appearance, change the primary color accordingly.
 
 
 3. In the **src -> app -> globals.css** file, add the following code. This will ensure that the **Tailwind CSS** styles are generated and consolidated for the entire application.
@@ -97,7 +97,7 @@ If you choose **Tailwind CSS** theme, follow these steps to configure it.
     <html lang="en" className="dark">
     ```
 
-5. In the **src -> app -> globals.css** file, add the style-oriented CDN link for Syncfusion React components using `@import` in the CSS. Ensure that the Syncfusion React components CSS is placed above the Tailwind CSS to avoid any potential style conflicts.
+5. In the **src -> app -> globals.css** file, add the style-oriented CDN link for Syncfusion<sup style="font-size:70%">&reg;</sup> React components using `@import` in the CSS. Ensure that the Syncfusion<sup style="font-size:70%">&reg;</sup> React components CSS is placed above the Tailwind CSS to avoid any potential style conflicts.
 
     - For **light mode**:
 
@@ -145,7 +145,7 @@ If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
      ```
 
-3. In the **src -> app -> layout.tsx** file, add the style oriented CDN link for Syncfusion React components in the `<head>` tag.
+3. In the **src -> app -> layout.tsx** file, add the style oriented CDN link for Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the `<head>` tag.
 
     - For **light mode**:
 
@@ -209,17 +209,17 @@ Now that **my-app** is set up with the desired theme configuration, the next ste
 > 2. In the TSX, the **Tailwind CSS** and **Bootstrap 5.3** design code is placed in their respective switch case statements. You can copy and paste as per your requirement.
 > 3. Ignore the code within the **"SB Code - Start"** and **"SB Code - End"** comments, as it is intended solely for sample browser purposes.
 
-## Steps to install and configure Syncfusion React components
+## Steps to install and configure Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-While copying and pasting the TSX (HTML and TS) code, you'll notice that Syncfusion React components are used. To incorporate them into **my-app**, install the necessary packages and import the corresponding modules to the **src -> app -> page.tsx** file for the app to run.
+While copying and pasting the TSX (HTML and TS) code, you'll notice that Syncfusion<sup style="font-size:70%">&reg;</sup> React components are used. To incorporate them into **my-app**, install the necessary packages and import the corresponding modules to the **src -> app -> page.tsx** file for the app to run.
 
-In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting HTML and TS code into the TSX file, open the **package.json** file and add the required packages: `@syncfusion/ej2-react-buttons` and `@syncfusion/ej2-react-inputs`. For more details about other Syncfusion React component packages, refer to this [link](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react).
+In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting HTML and TS code into the TSX file, open the **package.json** file and add the required packages: `@syncfusion/ej2-react-buttons` and `@syncfusion/ej2-react-inputs`. For more details about other Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages, refer to this [link](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react).
 
-![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.png)
+![Adding required packages for Syncfusion<sup style="font-size:70%">&reg;</sup> components](images/adding-required-packages-for-syncfusion-components.png)
 
 Once the necessary packages are added, run the `npm install` command via the terminal to install those packages in the **node_modules** folder.
 
-![Install Syncfusion component packages](images/install-syncfusion-component-packages.png)
+![Install Syncfusion<sup style="font-size:70%">&reg;</sup> component packages](images/install-syncfusion-component-packages.png)
 
 Finally, again check the [online demo](https://ej2.syncfusion.com/react/essential-ui-kit/blocks) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-react) and copy the required HTML, TS, and CSS code for the simple sign-in block into your app as outlined in the previous topic.
 
