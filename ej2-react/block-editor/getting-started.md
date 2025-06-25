@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting started with React BlockEditor component | Syncfusion
-description: Checkout and learn about Getting started with React BlockEditor component of Syncfusion Essential JS 2 and more details.
-control: BlockEditor
+title: Getting started with React Block Editor component | Syncfusion
+description: Checkout and learn about Getting started with React Block Editor component of Syncfusion Essential JS 2 and more details.
+control: Block Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React BlockEditor Component
+# Getting Started with React Block Editor Component
 
-This section explains how to create a simple BlockEditor and configure its available functionalities in the React environment.
+This section explains how to create a simple Block Editor and configure its available functionalities in the React environment.
 
 ## Dependencies
 
-The following list of dependencies is required to use the BlockEditor component in your application.
+The following list of dependencies is required to use the Block Editor component in your application.
 
 ```js
 |-- @syncfusion/ej2-react-blockeditor
@@ -59,15 +59,15 @@ npm run dev
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
-To install BlockEditor component, use the following command
+To install Block Editor component, use the following command
 
 ```bash
 npm install @syncfusion/ej2-react-blockeditor --save
 ```
 
-## Adding BlockEditor component
+## Adding Block Editor component
 
-Now, you can start adding BlockEditor component in the application. For getting started, add the BlockEditor component by using `<BlockEditorComponent>` tag directive in `src/App.tsx` file using following code. Now place the below BlockEditor code in the `src/App.tsx`.
+Now, you can start adding Block Editor component in the application. For getting started, add the Block Editor component by using `<BlockEditorComponent>` tag directive in `src/App.tsx` file using following code. Now place the below Block Editor code in the `src/App.tsx`.
 
 `[Class-component]`
 
@@ -108,7 +108,7 @@ ReactDOM.render(<App />, document.getElementById('blockeditor'));
 
 ## Adding CSS Reference
 
-Import the BlockEditor component required CSS references as follows in `src/App.css`.
+Import the Block Editor component required CSS references as follows in `src/App.css`.
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -128,7 +128,7 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-The following example shows a basic BlockEditor component.
+The following example shows a basic Block Editor component.
 [Class-component]
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
