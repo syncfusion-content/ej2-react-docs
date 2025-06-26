@@ -25,11 +25,7 @@ By default, following styles are allowed:
 In the below example, only `font-weight` and `font-style` styles will be retained from the pasted content. All other inline styles will be removed.
 
 ```typescript
-const editor = new BlockEditor({
-    pasteSettings: {
-        allowedStyles: ['font-weight', 'font-style']
-    }
-});
+<BlockEditorComponent pasteSettings={{ allowedStyles: ['font-weight', 'font-style'] }}></BlockEditorComponent>
 ```
 
 ## Setting denied tags
@@ -39,23 +35,27 @@ The [deniedTags](../api/blockeditor/pasteSettingsModel/#deniedtags) property in 
 In the below example, any `<script>` or `<iframe>` tags found in the pasted content will be removed, preventing unwanted behavior or styling issues.
 
 ```typescript
-const editor = new BlockEditor({
-    pasteSettings: {
-        deniedTags: ['script', 'iframe']
-    }
-});
+<BlockEditorComponent pasteSettings={{ deniedTags: ['script', 'iframe'] }}></BlockEditorComponent>
 ```
+Below example demonstrates the usage of paste settings that allows only specific styles and also removes the specific tags from the pasted content.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/paste-cleanup/allowedstyle/app/index.jsx %}
+{% endhighlight %}
+{% highlight tsx tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/paste-cleanup/allowedstyle/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/paste-cleanup/allowedstyle" %}
 
 ## Disable Keep format
 
 By default, the editor attempts to keep the formatting of the pasted content (e.g., bold, italics, links). You can disable this behavior by setting the [keepFormat](../api/blockeditor/pasteSettingsModel/#keepformat) property to `false` in [pasteSettings](../api/blockeditor/#pastesettings). When disabled, the editor will primarily paste the content as plain text regardless of `allowedStyles`.
 
 ```typescript
-const editor = new BlockEditor({
-    pasteSettings: {
-        keepFormat: false
-    }
-});
+<BlockEditorComponent pasteSettings={{ keepFormat: false }}></BlockEditorComponent>
 ```
 
 ## Allowing plain text
@@ -63,12 +63,20 @@ const editor = new BlockEditor({
 To paste content purely as plain text, stripping all HTML tags and inline styles, you can set the [plainText](../api/blockeditor/pasteSettingsModel/#plaintext) property to `true` in [pasteSettings](../api/blockeditor/#pastesettings). This ensures that only the raw textual content is inserted into the editor, making it ideal for maintaining strict content consistency. By default, the `plainText` property is set to `false`.
 
 ```typescript
-const editor = new BlockEditor({
-    pasteSettings: {
-        plainText: true
-    }
-});
+<BlockEditorComponent pasteSettings={{ plainText: true }}></BlockEditorComponent>
 ```
+Below example demonstrates the usage of paste settings that disables the keep format and allows plain text.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/paste-cleanup/plaintext/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/paste-cleanup/plaintext/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/paste-cleanup/plaintext" %}
 
 ### Events
 

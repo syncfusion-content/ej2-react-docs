@@ -1,0 +1,35 @@
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
+import { BlockModel, ContentType } from '@syncfusion/ej2-blockeditor';
+
+function App() {
+    const blocksData: BlockModel[] = [
+    {
+      type: 'Paragraph',
+      content: [
+        {
+          type: ContentType.Text,
+          content: 'This section discusses the features of the Block Editor.'
+        }
+      ]
+    },
+    {
+      type: 'Divider'
+    },
+    {
+      type: 'Paragraph',
+      content: [
+        {
+          type: ContentType.Text,
+          content: 'This section covers implementation details and usage examples.'
+        }
+      ]
+    }
+  ];
+
+  return <BlockEditorComponent id="block-editor" blocks={blocksData}></BlockEditorComponent>;
+}
+
+export default App;
+ReactDOM.render(<App />, document.getElementById('container'));

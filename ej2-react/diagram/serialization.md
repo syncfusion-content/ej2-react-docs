@@ -131,7 +131,7 @@ When a JSON file is uploaded, it undergoes parsing to extract its JSON data. Thi
 
  {% previewsample "page.domainurl/code-snippet/diagram/serialization/serialization-cs1" %}
 
- ## Importing and Exporting Diagrams using Mermaid Syntax
+## Importing and Exporting Diagrams using Mermaid Syntax
 
 The [`Diagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/) supports saving diagrams in Mermaid syntax format. Mermaid is a Markdown-inspired syntax that automatically generates diagrams. With this functionality, you can easily create mind maps, flowcharts, and UML sequence diagrams from Mermaid syntax data, simplifying the visualization of complex ideas and processes without manual drawing. Additionally, you can export your mind maps, flowcharts, and UML sequence diagrams to Mermaid syntax, allowing for easy sharing, editing, and use across different platforms.
 
@@ -181,9 +181,9 @@ The following example shows how to load mind map diagram from mermaid syntax.
 
  {% previewsample "page.domainurl/code-snippet/diagram/serialization/serialization-cs3" %}
  
-#### Load Uml Sequence diagram
+#### Load UML Sequence diagram
 
-The following example shows how to load Uml Sequence diagram from mermaid syntax.
+The following example shows how to load UML Sequence diagram from mermaid syntax.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

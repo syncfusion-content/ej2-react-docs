@@ -13,7 +13,7 @@ class App extends React.Component {
           'FontColor',
           'BackgroundColor',
           'Alignments',
-          '-',
+          '|',
           'FontSize',
           'FontName',
           'Formats',

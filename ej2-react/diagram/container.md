@@ -16,7 +16,7 @@ A Container is a group of logically related shapes surrounded by a visible bound
 
 ### Add a Container
 
-The following code illustrates how to create a container node.
+The following code illustrates how to create a container node:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

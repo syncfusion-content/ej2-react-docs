@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # UML Sequence Diagram in React Diagram component
 
-A UML sequence diagram is an interaction diagram that demonstrates how objects interact with each other and the order of these interactions. The Syncfusion® diagram control provides comprehensive support for creating and visualizing UML sequence diagrams through the [UmlSequenceDiagramModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel). To enable this functionality, assign the `UmlSequenceDiagramModel` to the [model](https://ej2.syncfusion.com/react/documentation/api/diagram/#model) property of the diagram control.
+A UML sequence diagram is an interaction diagram that demonstrates how objects interact with each other and the order of these interactions. The Syncfusion® diagram control provides comprehensive support for creating and visualizing UML sequence diagrams through the [UmlSequenceDiagramModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel/). To enable this functionality, assign the `UmlSequenceDiagramModel` to the [model](https://ej2.syncfusion.com/react/documentation/api/diagram/#model) property of the diagram control.
 
 ## UML Sequence Diagram Elements
 
@@ -30,7 +30,7 @@ A sequence diagram includes several key elements such as participants, messages,
 | showDestructionMarker | boolean | Indicates whether a destruction marker (X) is shown at the end of the lifeline |
 | activationBoxes | UmlSequenceActivationBoxModel[] | A collection of activation boxes associated with the participant |
 
-The following code example illustrates how to create participants.
+The following code example illustrates how to create participants:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -81,9 +81,9 @@ The following code example illustrates how to create messages:
 
  {% previewsample "page.domainurl/code-snippet/diagram/umlsequencediagram/umlsequencediagram-2" %}
  
- ### Activation Boxes
+### Activation Boxes
 
-[UmlSequenceActivationBoxModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceActivationBoxModel) represents periods when a participant is active and processing a message. They appear as thin rectangles on participant lifelines.
+[UmlSequenceActivationBoxModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceActivationBoxModel/) represents periods when a participant is active and processing a message. They appear as thin rectangles on participant lifelines.
 
 #### UmlSequenceActivationBoxModel Properties
 
@@ -93,7 +93,7 @@ The following code example illustrates how to create messages:
 | startMessageID | string \| number | ID of the message that initiates the activation |
 | endMessageID | string \| number | ID of the message that terminates the activation |
 
-The following code example illustrates how to create activation boxes.
+The following code example illustrates how to create activation boxes:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -108,11 +108,11 @@ The following code example illustrates how to create activation boxes.
 
 ### Fragments
 
-[UmlSequenceFragmentModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentModel) groups a set of messages based on specific conditions in a sequence diagram. They are displayed as rectangular enclosures that visually separate conditional or looping interactions.
+[UmlSequenceFragmentModel](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentModel/) groups a set of messages based on specific conditions in a sequence diagram. They are displayed as rectangular enclosures that visually separate conditional or looping interactions.
 
 #### Types of Fragments
 
-The [UmlSequenceFragmentType](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentType) enum defines the following fragment types:
+The [UmlSequenceFragmentType](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceFragmentType/) enum defines the following fragment types:
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
@@ -136,7 +136,7 @@ The [UmlSequenceFragmentType](https://ej2.syncfusion.com/react/documentation/api
 | messageIds | (string \| number)[] | Collection of message IDs included in this condition section |
 | fragmentIds | string[] | Collection of nested fragments ids (for complex structures) |
 
-The following code example illustrates how to create fragments.
+The following code example illustrates how to create fragments:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

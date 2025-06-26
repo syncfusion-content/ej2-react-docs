@@ -32,8 +32,6 @@ The Slash Command menu comes with a set of pre-defined commands for all block ty
 
 You can utilize the [commandMenu](../api/blockeditor/#commandmenu) property on the Block Editor component to customize the Slash Command menu to include your own custom commands and other modifications.
 
-Below example demonstrates how to customize the Slash Command menu.
-
 #### Show or hide tooltip
 
 By default, the tooltip is displayed when the user hovers over the command item. You can show or hide the tooltip using the [enableTooltip](../api/blockeditor/commandMenuSettingsModel/#enabletooltip) property on the command menu settings.
@@ -49,7 +47,18 @@ The following events are available in the Slash Command menu.
 |[queryFiltering](../api/blockeditor/commandMenuSettingsModel/#queryfiltering)|CommandQueryFilteringEventArgs|Triggers when the user types to filter the command menu items.|
 |[itemClicked](../api/blockeditor/commandMenuSettingsModel/#itemclicked)|CommandItemClickedEventArgs|Triggers when the user clicks on a command menu item.|
 
-Below example demonstrates how to configure the events in the Slash Command menu.
+Below example demonstrates the customization of the Slash Command menu.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/editor-menus/slash-command/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/editor-menus/slash-command/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/slash-command" %}
 
 ## Context menu
 
@@ -68,8 +77,6 @@ The Context menu offers different built-in options:
 
 You can utilize the [contextMenu](../api/blockeditor/#contextmenu) property on the blockeditor to customize the Context menu to add specific actions or modify existing ones based on the application needs.
 
-Below example demonstrates how to customize the Context menu.
-
 ### Events
 
 The following events are available in the Context menu.
@@ -82,7 +89,18 @@ The following events are available in the Context menu.
 |[close](../api/blockeditor/contextMenuSettingsModel/#close)|ContextMenuCloseEventArgs|Triggers when the context menu is closed.|
 |[itemClick](../api/blockeditor/contextMenuSettingsModel/#itemclick)|ContextMenuItemClickEventArgs|Triggers when a context menu item is clicked.|
 
-Below example demonstrates how to configure the events in the Context menu.
+Below example demonstrates the customization of the Context menu.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/editor-menus/context-menu/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/editor-menus/context-menu/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/context-menu" %}
 
 ## Block action menu
 
@@ -117,7 +135,18 @@ The following events are available in the Block action menu.
 |[close](../api/blockeditor/blockActionMenuSettingsModel/#close)|BlockActionMenuCloseEventArgs|Triggers when the block action menu is closed.|
 |[itemClick](../api/blockeditor/blockActionMenuSettingsModel/#itemClick)|BlockActionMenuItemClickEventArgs|Triggers when a block action menu item is clicked.|
 
-Below example demonstrates how to configure the events in the Blockaction menu.
+Below example demonstrates the customization of the Blockaction menu.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/editor-menus/block-action/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/editor-menus/block-action/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/block-action" %}
 
 ## Inline Toolbar
 
@@ -153,4 +182,15 @@ The following events are available in the Inline Toolbar.
 |[close](../api/blockeditor/inlineToolbarSettingsModel/#close)|ToolbarCloseEventArgs|Triggers when the inline toolbar is closed.|
 |[itemClicked](../api/blockeditor/inlineToolbarSettingsModel/#itemclicked)|ToolbarItemClickedEventArgs|Triggers when the user clicks on an inline toolbar item.|
 
-Below example demonstrates how to configure the events in the Inline Toolbar.
+Below example demonstrates the customization of the Inline Toolbar.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/editor-menus/inline-toolbar/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/editor-menus/inline-toolbar" %}

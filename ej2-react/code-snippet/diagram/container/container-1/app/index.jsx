@@ -4,7 +4,6 @@ import { DiagramComponent } from '@syncfusion/ej2-react-diagrams';
 
 let diagramInstance;
 // Define a collection of nodes used in the diagram
-// Define a collection of nodes used in the diagram
 let nodes = [
   // First rectangle node
   {

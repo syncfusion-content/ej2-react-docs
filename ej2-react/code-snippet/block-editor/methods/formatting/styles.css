@@ -1,0 +1,47 @@
+#controls {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-group {
+    margin-bottom: 15px;
+}
+
+.button-group button {
+    margin: 5px;
+    padding: 8px 16px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background-color: #005a9e;
+}
+
+#output {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    min-height: 50px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.instruction {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e7f3ff;
+    border-left: 4px solid #007acc;
+    border-radius: 4px;
+}
+
+.instruction p {
+    margin: 0;
+    color: #0056b3;
+}
