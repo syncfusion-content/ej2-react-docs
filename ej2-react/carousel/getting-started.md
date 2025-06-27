@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the React Carousel component
+# Getting Started
 
 This section explains how to create a simple [React Carousel](https://www.syncfusion.com/react-components/react-carousel), and configure its available functionalities in React.
 

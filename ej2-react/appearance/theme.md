@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Themes in Syncfusion Components
+# React Themes in Syncfusion<sup style="font-size:70%">&reg;</sup> Components
 
-The Syncfusion React UI can allow you to apply styles for the components. The following list of themes are included in the Syncfusion React components library.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React UI can allow you to apply styles for the components. The following list of themes are included in the Syncfusion<sup style="font-size:70%">&reg;</sup> React components library.
 
 |Theme  |Style Sheet Name|
 |--------|--------|
@@ -38,11 +38,11 @@ The Syncfusion React UI can allow you to apply styles for the components. The fo
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
 
-> The Syncfusion React Bootstrap theme is designed based on the `Bootstrap v3`, whereas the Bootstrap 4 theme is designed based on `Bootstrap v4`. In addition to these built-in themes, the [ThemeStudio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/) provides support for the Fusion Theme that can only be downloaded from the [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
+> The Syncfusion<sup style="font-size:70%">&reg;</sup> React Bootstrap theme is designed based on the `Bootstrap v3`, whereas the Bootstrap 4 theme is designed based on `Bootstrap v4`. In addition to these built-in themes, the [ThemeStudio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) provides support for the Fusion Theme that can only be downloaded from the [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
 
 ## Optimized CSS files
 
-Syncfusion components provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI components.
 
 The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of components.
 
@@ -50,7 +50,7 @@ Below is a comparison of the Button component in normal and bigger size modes:
 
 ![bigger-sized-button](./images/bigger-theme-button.png)
 
-Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion<sup style="font-size:70%">&reg;</sup> offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
 
 Refer to the comparison below for the default and optimized theme file sizes:
 
@@ -66,9 +66,9 @@ Using the following approaches, the themes can be referenced in the React applic
 
 * [CDN](#refer-themes-through-cdn-reference) - Used to refer complete css via static web assest.
 
-* [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) - Used to generate resources only for the selected (used) components.
+* [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components.
 
-* [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/) - Used to customize and generate themes only for the selected (used) components.
+* [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components.
 
 Instead of using the `CDN reference`, use the `npm packages` reference in your projects to customize the theme or bundle it with the other style sheets.
 
@@ -112,7 +112,7 @@ Referring to individual component from the `individual package`
 @import "ej2-react-buttons/styles/button/material.scss";
 ```
 
-> The `ej2-base` is a common dependent package for all Syncfusion React component styles. So, it needs to be added first in the import statement.
+> The `ej2-base` is a common dependent package for all Syncfusion<sup style="font-size:70%">&reg;</sup> React component styles. So, it needs to be added first in the import statement.
 
 Referring to individual component from the `ej2 package`
 
@@ -174,7 +174,7 @@ To refer to individual component's optimized CSS files from an individual packag
 
 Instead of using a local resource on your server, use a cloud CDN to reference the theme style sheets.
 
-Syncfusion React Themes are available in the CDN. Make sure that the version in the URLs matches the version of the Syncfusion React package you are using.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React Themes are available in the CDN. Make sure that the version in the URLs matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> React package you are using.
 
 ```
 <head>
@@ -218,11 +218,11 @@ To refer to optimized CSS files, use the following syntax:
 
 ## Common variables
 
-The following list of common variables are used in the Syncfusion JavaScript library themes for all UI controls. You can change these variables to customize the corresponding theme.
+The following list of common variables are used in the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript library themes for all UI controls. You can change these variables to customize the corresponding theme.
 
 <!-- markdownlint-disable MD033 -->
 
-### Syncfusion Tailwind 3.4 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Tailwind 3.4 theme
 
 <table>
     <style>
@@ -431,7 +431,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Bootstrap 5.3 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Bootstrap 5.3 theme
 
 <table>
     <style>
@@ -676,7 +676,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Fluent 2 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Fluent 2 theme
 
 <table>
     <style>
@@ -957,7 +957,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Material 3 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Material 3 theme
 
 <table>
     <style>
@@ -1382,7 +1382,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Bootstrap 5 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Bootstrap 5 theme
 
 <table>
     <style>
@@ -1600,7 +1600,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Fluent theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Fluent theme
 
 <table>
     <style>
@@ -1890,7 +1890,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Bootstrap 4 theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Bootstrap 4 theme
 
 <table>
     <style>
@@ -2044,7 +2044,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Bootstrap theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Bootstrap theme
 
 <table>
     <style>
@@ -2513,7 +2513,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Material theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Material theme
 
 <table>
     <style>
@@ -2859,7 +2859,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Microsoft Office Fabric theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Microsoft Office Fabric theme
 
 <table>
     <style>
@@ -3226,7 +3226,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion High Contrast theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> High Contrast theme
 
 <table>
     <style>
@@ -3452,7 +3452,7 @@ The following list of common variables are used in the Syncfusion JavaScript lib
     </tbody>
 </table>
 
-### Syncfusion Tailwind CSS theme
+### Syncfusion<sup style="font-size:70%">&reg;</sup> Tailwind CSS theme
 
 <table>
     <style>
@@ -3897,5 +3897,5 @@ The following list of common variables are used in the Syncfusion JavaScript lib
 
 ## See also
 
-* [Syncfusion icons and customization](../appearance/icons/)
-* [Theme Studio for Syncfusion components](../appearance/theme-studio/)
+* [Syncfusion<sup style="font-size:70%">&reg;</sup> icons and customization](../appearance/icons)
+* [Theme Studio for Syncfusion<sup style="font-size:70%">&reg;</sup> components](../appearance/theme-studio)

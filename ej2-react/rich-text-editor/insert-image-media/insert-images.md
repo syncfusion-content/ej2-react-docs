@@ -106,6 +106,69 @@ To integrate the file manager into the Rich Text Editor, follow these steps:
 
 > To use File Manager feature, inject file manager module using the `<Inject services={[FileManager]} />`.
 
+## Maximum file size restriction
+
+You can restrict the image uploaded from the local machine when the uploaded image file size is greater than the allowed size by using the [maxFileSize](https://helpej2.syncfusion.com/documentation/api/rich-text-editor/imageSettingsModel/#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+
+In the following illustration, the image size has been validated before uploading, and it is determined whether the image has been uploaded or not.
+
+`[Class-component]`
+
+```ts
+
+import {HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, Table, PasteCleanup } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+
+class App extends React.Component<{},{}> {
+  private toolbarSettings: object = {
+    items: ['Image', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', '|', 'SourceCode', '|', 'Undo', 'Redo']
+  }
+  private insertImageSettings: object = {
+    maxFileSize: 30000000
+  }
+  public render() {
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertImageSettings={
+        this.insertImageSettings}>
+
+        <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar, Table, PasteCleanup]} />
+      </RichTextEditorComponent>
+    );
+  }
+}
+
+export default App;
+
+```
+
+`[Functional-component]`
+
+```ts
+
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, Table, PasteCleanup } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+
+function App() {
+    let toolbarSettings: object = {
+      items: ['Image', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', '|', 'SourceCode', '|', 'Undo', 'Redo']
+    }
+    let insertImageSettings: object = {
+      maxFileSize: 30000000
+    }
+
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertImageSettings={insertImageSettings}>
+
+        <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar, Table, Video, PasteCleanups]} />
+      </RichTextEditorComponent>
+    );
+
+}
+
+export default App;
+
+```
+
 ## Saving images to server
 
 Upload the selected image to a specified destination using the controller action specified in [insertImageSettings.saveUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#saveurl). Ensure to map this method name appropriately and provide the required destination path through the [insertImageSettings.path](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#path) properties.
@@ -200,12 +263,6 @@ public class HomeController : Controller
 ### Rename images before inserting
 
 You can use the [insertImageSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertimagesettings) property, to specify the server handler to upload the selected image. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
-
-### Size-based image restrictions
-
-You can restrict the image uploaded from the local machine when the uploaded image file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event.
-
-> The file size in the argument will be returned in `bytes`.
 
 ### Secure image upload with authentication
 

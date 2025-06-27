@@ -111,14 +111,14 @@ ReactDOM.render(<App />, document.getElementById('blockeditor'));
 Import the Block Editor component required CSS references as follows in `src/App.css`.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-react-blockeditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/fluent2.css";
+@import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';
+@import "../node_modules/@syncfusion/ej2-react-blockeditor/styles/fluent2.css";
 ```
 ## Run the application
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the React ComboBox component
+# Getting Started
 
 This section explains how to create a simple **ComboBox** component and configure its available functionalities in React.
 

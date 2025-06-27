@@ -38,19 +38,6 @@ You can remove a block from the editor using the [removeBlock](../api/blockedito
 editor.removeBlock('block-to-remove-id');
 ```
 
-### Getting a block
-
-You can retrieve a block model by its unique identifier using the [getBlock](../api/blockeditor/#getblock) method. Returns `null` if the block is not found.
-
-```typescript
-// Get a specific block
-const block: BlockModel = editor.getBlock('block-id');
-if (block) {
-    console.log('Block type:', block.type);
-    console.log('Block content:', block.content);
-}
-```
-
 ### Moving a block
 
 You can move a block from one position to another within the editor using the [moveBlock](../api/blockeditor/#moveblock) method.
@@ -66,15 +53,43 @@ You can update the properties of an existing block using the [updateBlock](../ap
 
 ```typescript
 // Update block properties
-const success: boolean = editor.updateBlock('block-id', {
-    content: 'Updated content',
-    type: 'Heading1'
+editor.updateBlock('block-id', {
+    isChecked: true
 });
+```
+### Getting a block
 
-if (success) {
-    console.log('Block updated successfully');
+You can retrieve a block model by its unique identifier using the [getBlock](../api/blockeditor/#getblock) method. Returns `null` if the block is not found.
+
+```typescript
+// Get a specific block
+const block: BlockModel = editor.getBlock('block-id');
+if (block) {
+    console.log('Block type:', block.type);
+    console.log('Block content:', block.content);
 }
 ```
+### Getting block count
+
+You can utilize the [getBlockCount](../api/blockeditor/#getblockcount) method to retrieve the total number of blocks in the editor.
+
+```typescript
+// Get total block count
+editor.getBlockCount();
+```
+
+Below example demonstrates the usage of the above methods.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/methods/block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/methods/block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/methods/block" %}
 
 ## Selection and Cursor Methods
 
@@ -142,6 +157,8 @@ You can select a specific block in the editor using the [selectBlock](../api/blo
 editor.selectBlock('block-id');
 ```
 
+
+
 ### Selecting all blocks
 
 You can select all blocks in the editor using the [selectAllBlocks](../api/blockeditor/#selectallblocks) method.
@@ -150,6 +167,16 @@ You can select all blocks in the editor using the [selectAllBlocks](../api/block
 // Select all content in the editor
 editor.selectAllBlocks();
 ```
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/methods/selection/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/methods/selection/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/methods/selection" %}
 
 ## Focus Management Methods
 
@@ -209,6 +236,17 @@ editor.disableToolbarItems('bold');
 editor.disableToolbarItems(['bold', 'italic', 'underline']);
 ```
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/methods/formatting/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/methods/formatting/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/methods/formatting" %}
+
 ## Data Export Methods
 
 ### Getting data as JSON
@@ -235,18 +273,6 @@ const allBlocksHtml: string = editor.getDataAsHtml();
 const specificBlockHtml: string = editor.getDataAsHtml('block-id');
 ```
 
-## Utility Methods
-
-### Getting block count
-
-You can utilize the [getBlockCount](../api/blockeditor/#getblockcount) method to retrieve the total number of blocks in the editor.
-
-```typescript
-// Get total block count
-const totalBlocks: number = editor.getBlockCount();
-console.log('Total blocks:', totalBlocks);
-```
-
 ### Printing editor content
 
 You can print the editor content using the [print](../api/blockeditor/#print) method. This method opens a print dialog with the current editor content formatted for printing.
@@ -255,3 +281,14 @@ You can print the editor content using the [print](../api/blockeditor/#print) me
 // Print the editor content
 editor.print();
 ```
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/methods/data/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/methods/data/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/methods/data" %}

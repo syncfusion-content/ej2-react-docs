@@ -46,17 +46,61 @@ You can configure the type of each block using the [type](../api/blockeditor/blo
 
 You can render Paragraph blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Paragraph`. Paragraph blocks are the most common type, used for regular text content. They provide standard text formatting options and serve as the default block type.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/paragraph-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/paragraph-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/paragraph-block" %}
+
 ### Configure heading block
 
 You can render Heading blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Heading1`, `Heading2`, `Heading3`, or `Heading4`. Heading blocks (Heading1 to Heading4) are used to create document titles and section headers of varying importance. These blocks help structure your content hierarchically, making it easier to read and navigate.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/heading-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/heading-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/heading-block" %}
 
 ### Configure toggle blocks
 
 You can render Toggle blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `ToggleParagraph` or `ToggleHeading1` to `ToggleHeading4`. Toggle blocks allow users to expand or collapse sections, providing a way to hide or show content as needed.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/toggle-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/toggle-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/toggle-block" %}
+
 ### Configure list blocks
 
 You can render List blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `BulletList`, `NumberedList`, or `Checklist`. Bullet lists and numbered lists are ideal for unordered and ordered items, respectively, while checklist blocks enable interactive to-do lists with checkable items.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/list-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/list-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/list-block" %}
 
 ### Configure code block
 
@@ -64,17 +108,61 @@ You can render Code blocks by setting the [type](../api/blockeditor/blockModel/#
 
 > Refer to the [CodeSettings](#configure-code-settings) section for more details about the code settings.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/code-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/code-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/code-types/paragraph-block" %}
+
 ### Configure quote block
 
 You can render Quote blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Quote`. Quote blocks are specially styled for quotations or excerpts.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/quote-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/quote-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/quote-block" %}
 
 ### Configure callout block
 
 You can render Callout blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Callout`. They're useful for notes, warnings, or tips that require special attention.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/callout-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/callout-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/callout-block" %}
+
 ### Configure divider block
 
 Divider blocks insert horizontal lines that separate different sections of content. You can render Divider blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Divider`.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/divider-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/divider-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/divider-block" %}
 
 ### Configure image block
 
@@ -82,9 +170,36 @@ You can render Image blocks by setting the [type](../api/blockeditor/blockModel/
 
 > Refer to the [ImageSettings](#configure-image-settings) section for more details about the image settings.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/image-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/image-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/image-block" %}
+
 ### Adding template
 
 You can render Template blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Template`. Template blocks enable you to use predefined content structures or custom templates.
+
+> Refer to [Template](#configure-template) section for more details about the template type block.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/template-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/template-block/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="styles.css" %}
+{% include code-snippet/block-editor/blocks/block-types/template-block/styles.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/template-block" %}
 
 ## Configure content
 
@@ -136,7 +251,18 @@ By default, labels are triggered by the `$` character. You can customize the lab
 
 > Refer to the [LabelSettings](#Configuring-label-settings) section for more details about the label settings.
 
-### Customize content
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/content-types/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/content-types/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/content-types" %}
+
+### Setting content styles
 
 The Block Editor allows you to customize the appearance of content using the [styles](../api/blockeditor/contentModel/#styles) property. This property provides rich formatting options to style your text and content elements.
 
@@ -158,6 +284,17 @@ The [styles](../api/blockeditor/contentModel/#styles) property supports the foll
 
 You can apply one or more of these styles to any content element for rich text formatting:
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/content-styles/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/content-styles/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/content-styles" %}
+
 ### Configure link settings
 Link settings control the behavior and properties of hyperlinks in your content. You can configure link settings using the [linkSettings](../api/blockeditor/contentModel/#linksettings) property.
 
@@ -174,21 +311,68 @@ You can specify the indentation level of a block using the [indent](../api/block
 
 By default, the [indent](../api/blockeditor/blockModel/#indent) property is set to `0`.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/indent/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/indent/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/indent" %}
+
 ## Configure checked state
 
 For blocks that support selection states such as `CheckList`, you can configure the checked state using the [isChecked](../api/blockeditor/blockModel/#ischecked) property.
 
 By default, the [isChecked](../api/blockeditor/blockModel/#ischecked) property is set to `false`.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/isChecked/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/isChecked/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/isChecked" %}
+
 ## Configure expanded state
 
 You can control whether a block is expanded or collapsed using the [isExpanded](../api/blockeditor/blockModel/#isexpanded) property. By default, this property is set to `false`, meaning the block will be collapsed initially. This setting is only applicable to Toggle blocks.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/toggle-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/toggle-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/toggle-block" %}
 
 ## Configure CSS class
 
 You can apply custom styling to individual blocks using the [cssClass](../api/blockeditor/blockModel/#cssclass) property. This property accepts a string containing one or more CSS class names.
 
 Custom CSS classes allow you to define specialized styling for specific blocks in your editor.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/cssClass/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/cssClass/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="styles.css" %}
+{% include code-snippet/block-editor/blocks/cssClass/styles.css %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/cssClass" %}
 
 ## Configure image settings
 
@@ -212,7 +396,16 @@ The [imageSettings](../api/blockeditor/blockModel/#imagesettings) property suppo
 | [readOnly](../api/blockeditor/imageSettingsModel/#readonly) | Prevents modification of the image | false |
 
 These settings give you fine-grained control over how images appear and behave within your Block Editor.
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/image-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/image-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/image-block" %}
 ## Configure code settings
 
 For Code blocks, you can configure syntax highlighting and language options using the [codeSettings](../api/blockeditor/blockModel/#codesettings) property.
@@ -227,15 +420,36 @@ The [codeSettings](../api/blockeditor/blockModel/#codesettings) property support
 Each language object in the `languages` array should have:
 - [language](../api/blockeditor/codeLanguageModel/#language): The language value used for syntax highlighting
 - [label](../api/blockeditor/codeLanguageModel/#label): The display name shown in the language selector
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/code-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/code-block/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/codee-block" %}
 
 ## Configuring label settings
 The [labelSettings](../api/blockeditor/#labelsettings) property of the Block Editor provides options for configuring how labels work in your editor. It allows you to define the trigger character and available label items.
+
+### Built-in items
+
+The Block Editor comes with offers different built-in options. These include:
+
+-   **Progress**: In-progress, On-hold, Done
+-   **Priority**: High, Medium, Low
+
+### Customize label
+
+You can customize the labels by using the [labelSettings](../api/blockeditor/#labelsettings) property.
 
 ### Trigger Character configuration
 
 You can use the [triggerChar](../api/blockeditor/labelSettingsModel/#triggerchar) property to specify the character that will trigger the label suggestions popup while typing. The default trigger character is `$`.
 
-### Label items configuration
+#### Label items configuration
 
 The [labelItems](../api/blockeditor/labelSettingsModel/#labelitems) array allows you to define the available labels in your editor. Each label item can have the following properties:
 
@@ -254,13 +468,53 @@ When users type the trigger character followed by text, a popup will appear show
 
 Labels with the same [groupHeader](../api/blockeditor/labelItemModel/#groupheader) value will be grouped together in the label selection popup:
 
+The below sample demonstrates the customization of labels in the Block Editor.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/label-settings/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/label-settings/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/label-settings" %}
+
 ## Configure template
 
 The Block Editor allows you to use custom templates for specialized content using the [template](../api/blockeditor/blockModel/#template) property. Templates can be defined as strings, functions, or HTML elements.
 
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/block-types/template-block/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/block-types/template-block/app/index.tsx %}
+{% endhighlight %}
+{% highlight css tabtitle="styles.css" %}
+{% include code-snippet/block-editor/blocks/block-types/template-block/styles.css %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/block-types/template-block" %}
+
 ## Configure placeholder
 
-	You can configure placeholder text for block using the [placeholder](../api/blockeditor/blockModel/#placeholder) property. This text appears when the block is empty. The default placeholder for the paragraph block is `Write something or ‘/’ for commands.`.
+You can configure placeholder text for block using the [placeholder](../api/blockeditor/blockModel/#placeholder) property. This text appears when the block is empty. The default placeholder for the paragraph block is `Write something or ‘/’ for commands.`.
+
+The below sample demonstrates the configuration of placeholder in the Block Editor for the paragraph block.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/placeholder/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/placeholder/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/placeholder" %}
 
 ## Configure children
 
@@ -271,3 +525,16 @@ Child blocks can be configured with all the same properties as top-level blocks.
 ### Configure parent id
 
 For proper hierarchy, you should ensure that the [parentId](../api/blockeditor/blockModel/#parentid) of each child block matches the [id](../api/blockeditor/blockModel/#id) of its parent block. This structure helps maintain the nested relationships within the editor.
+
+The below sample demonstrates the configuration of children in the Block Editor using parentId.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/blocks/children/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/blocks/children/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/block-editor/blocks/children" %}

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the React Color Picker component
+# Getting Started
 
 The following section explains the required steps to build the ColorPicker component with its basic usage in step-by-step procedure.
 

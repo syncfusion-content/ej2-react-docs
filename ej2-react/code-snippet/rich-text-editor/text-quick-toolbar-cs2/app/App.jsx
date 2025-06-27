@@ -12,7 +12,7 @@ function App() {
         'FontColor',
         'BackgroundColor',
         'Alignments',
-        '-',
+        '|',
         'FontSize',
         'FontName',
         'Formats',

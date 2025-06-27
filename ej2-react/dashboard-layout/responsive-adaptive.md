@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Responsive adaptive in React Dashboard Layout component
+# Responsive adaptive in React Dashboard Layout  component
 
 The component is provided with built-in responsive support, where panels within the layout adjust based on their parent element's dimensions. This accommodates any resolution, relieving the burden of building responsive dashboards manually.
 

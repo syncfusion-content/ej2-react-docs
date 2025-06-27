@@ -131,10 +131,9 @@ When a JSON file is uploaded, it undergoes parsing to extract its JSON data. Thi
 
  {% previewsample "page.domainurl/code-snippet/diagram/serialization/serialization-cs1" %}
 
+## Importing and Exporting Diagrams using Mermaid Syntax
 
-## Importing and Exporting Mind Map and Flowchart Diagrams using Mermaid Syntax
-
-The [`Diagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/) supports saving diagrams in Mermaid syntax format. Mermaid is a Markdown-inspired syntax that automatically generates diagrams. With this functionality, you can easily create mind maps and flowcharts from Mermaid syntax data, simplifying the visualization of complex ideas and processes without manual drawing. Additionally, you can export your mind maps and flowcharts to Mermaid syntax, allowing for easy sharing, editing, and use across different platforms.
+The [`Diagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/) supports saving diagrams in Mermaid syntax format. Mermaid is a Markdown-inspired syntax that automatically generates diagrams. With this functionality, you can easily create mind maps, flowcharts, and UML sequence diagrams from Mermaid syntax data, simplifying the visualization of complex ideas and processes without manual drawing. Additionally, you can export your mind maps, flowcharts, and UML sequence diagrams to Mermaid syntax, allowing for easy sharing, editing, and use across different platforms.
 
 ### Save diagram as Mermaid syntax
 
@@ -148,7 +147,7 @@ let data = diagramInstance.saveDiagramAsMermaid();
 
 ### Load diagram from Mermaid syntax
 
-You can load a [`diagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/) from the serialized Mermaid syntax data using the `loadDiagramFromMermaid` method. The following code illustrates how to load a diagram from a Mermaid string data.
+You can load a [diagram](https://ej2.syncfusion.com/react/documentation/api/diagram/) from the serialized Mermaid syntax data using the `loadDiagramFromMermaid` method. The following code illustrates how to load a diagram from a Mermaid string data.
 
 #### Load flowchart layout
 
@@ -181,6 +180,21 @@ The following example shows how to load mind map diagram from mermaid syntax.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/serialization/serialization-cs3" %}
+ 
+#### Load UML Sequence diagram
 
+The following example shows how to load UML Sequence diagram from mermaid syntax.
 
->Note: Mermaid syntax data serialization and deserialization are only supported for Flowchart and Mind map layouts. Please ensure that your diagram uses one of these layouts to successfully load the data.
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/serialization/serialization-cs4/app/index.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/serialization/serialization-cs4/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/serialization/serialization-cs4" %}
+
+N> Mermaid syntax-based serialization and deserialization is supported only for Flowchart layout, Mind map layout, and UML Sequence Diagram. Ensure that your Mermaid data aligns with one of these supported layouts to enable successful diagram loading.

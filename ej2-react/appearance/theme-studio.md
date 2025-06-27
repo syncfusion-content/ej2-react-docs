@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Theme Studio Overview
 
-Theme Studio for Essential JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
+Theme Studio for <sup style="font-size:70%">&reg;</sup>  JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
 
 ## Customizing theme color from theme studio
 
-The Essential JS 2 themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion React components.
+The <sup style="font-size:70%">&reg;</sup>  JS 2 themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
-All Syncfusion React component styles are derived from these [theme-based common variables](theme#common-variables). This common variable list is handled inside the theme studio application for customizing theme-based colors.
+All Syncfusion<sup style="font-size:70%">&reg;</sup> React component styles are derived from these [theme-based common variables](theme#common-variables). This common variable list is handled inside the theme studio application for customizing theme-based colors.
 
-1. Navigate to the theme studio application at [https://ej2.syncfusion.com/themestudio/](https://ej2.syncfusion.com/themestudio/).
+1. Navigate to the theme studio application at [https://ej2.syncfusion.com/themestudio/?theme=tailwind3](https://ej2.syncfusion.com/themestudio/?theme=tailwind3).
 
 2. The theme studio application page can be divided into two sections: the components preview section on the left, and the theme customization section on the right.
 
@@ -28,13 +28,13 @@ All Syncfusion React component styles are derived from these [theme-based common
 
     ![color-picker](images/colorpicker.png)
 
-4. The Syncfusion React components will render with the newly selected color in the preview section, after selecting the custom color pickers.
+4. The Syncfusion<sup style="font-size:70%">&reg;</sup> React components will render with the newly selected color in the preview section, after selecting the custom color pickers.
 
     ![customized](images/customized.png)
 
 ### Filtering a specific list of components
 
-Using the theme studio, you can apply custom themes to a list of specific components. This option is useful when you have integrated a selective list of Syncfusion React components in your application. The theme studio will filter the selected components and customize the final output for those components’ styles alone, reducing the final output file size.
+Using the theme studio, you can apply custom themes to a list of specific components. This option is useful when you have integrated a selective list of Syncfusion<sup style="font-size:70%">&reg;</sup> React components in your application. The theme studio will filter the selected components and customize the final output for those components’ styles alone, reducing the final output file size.
 
 1. Click the Filter icon in the top right corner and select the components whose theme you want to customize.
 
@@ -58,11 +58,11 @@ You can download the custom styles after customizing the theme colors.
 
 2. Change the file name as you desire and then click download option.
 
-* **Include compatibility CSS** - If your application uses both Essential JS 1 and Essential JS 2 React components, then select the Include compatibility CSS check box before downloading the theme. This option will generate the custom theme for Essential JS 2 compatibility styles, which are compatible as Essential JS 1 styles.
+* **Include compatibility CSS** - If your application uses both <sup style="font-size:70%">&reg;</sup>  JS 1 and <sup style="font-size:70%">&reg;</sup>  JS 2 React components, then select the Include compatibility CSS check box before downloading the theme. This option will generate the custom theme for <sup style="font-size:70%">&reg;</sup>  JS 2 compatibility styles, which are compatible as <sup style="font-size:70%">&reg;</sup>  JS 1 styles.
 
     ![download-dialog](images/download-dialog.png)
 
-**Step 3:** The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion React components. The current settings are stored in the `settings.json` file.
+**Step 3:** The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion<sup style="font-size:70%">&reg;</sup> React components. The current settings are stored in the `settings.json` file.
 
     ![output-files](images/output-files.png)
 
@@ -80,11 +80,11 @@ You can directly use the customized CSS file in the web application.
     </head>
 ```
 
-> If you are using Essential JS 1 and Essential JS 2 React components in a same web application, then you have to copy/paste the customized CSS file from the `compatibility` folder in the download location.
+> If you are using <sup style="font-size:70%">&reg;</sup>  JS 1 and <sup style="font-size:70%">&reg;</sup>  JS 2 React components in a same web application, then you have to copy/paste the customized CSS file from the `compatibility` folder in the download location.
 
 ## Import previously changed settings into the theme studio
 
-When you want to change your application theme and UI design in the future, you won’t need to customize the Syncfusion React components from scratch in the theme studio. Just import the old `settings.json` or `<theme-name>-tokens.json` file, which is downloaded from Figma using the `Syncfusion Design Tokens` plugin, to review and update your stored settings in the theme studio application.
+When you want to change your application theme and UI design in the future, you won’t need to customize the Syncfusion<sup style="font-size:70%">&reg;</sup> React components from scratch in the theme studio. Just import the old `settings.json` or `<theme-name>-tokens.json` file, which is downloaded from Figma using the `Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens` plugin, to review and update your stored settings in the theme studio application.
 
 1. Click the Import icon in the top right corner.
 
@@ -106,7 +106,7 @@ When you want to change your application theme and UI design in the future, you 
 
 ## Common variables
 
-The following list of common variables is used in the Syncfusion React library themes for all UI components. You can change these variables to customize the corresponding theme.
+The following list of common variables is used in the Syncfusion<sup style="font-size:70%">&reg;</sup> React library themes for all UI components. You can change these variables to customize the corresponding theme.
 
 ### Bootstrap 5 theme
 

@@ -83,7 +83,7 @@ You can customize the appearance of the selected row using CSS. This is useful w
 To change the background color of the selected row, you can add the following CSS code to your application:
 
 ```css
-.e-grid .e-row .e-selectionbackground {
+.e-grid .e-selectionbackground {
     background-color: #f9920b;
 }
 ```

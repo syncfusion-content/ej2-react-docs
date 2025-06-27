@@ -17,16 +17,10 @@ The Block Editor component provides various appearance customization options to 
 You can specify the width and height for the Block Editor control using the [width](../api/blockeditor/#width) and [height](../api/blockeditor/#height) properties.
 
 ```typescript
-const editor = new BlockEditor({
-    width: '100%',
-    height: '80vh'
-});
+<BlockEditorComponent width="100%" height="80vh"></BlockEditorComponent>
 
 // Or with specific pixel values
-const editor = new BlockEditor({
-    width: '800px',
-    height: '500px'
-});
+<BlockEditorComponent width="800px" height="500px"></BlockEditorComponent>
 ```
 
 ## Setting readonly mode
@@ -34,9 +28,7 @@ const editor = new BlockEditor({
 You can utilize the [readonly](../api/blockeditor/#readonly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it.
 
 ```typescript
-const editor = new BlockEditor({
-    readonly: true
-});
+<BlockEditorComponent readonly={true}></BlockEditorComponent>
 ```
 
 ## Customization using CSS Class
@@ -44,32 +36,18 @@ const editor = new BlockEditor({
 You can use the [cssClass](../api/blockeditor/#cssclass) property to customize the appearance of the Block Editor control.
 
 ```typescript
-const editor = new BlockEditor({
-    width: '600px',
-    height: '400px',
-    cssClass: 'custom-editor-theme'
-});
+<BlockEditorComponent width="600px" height="400px" cssClass="custom-editor-theme"></BlockEditorComponent>
 ```
 
-```css
-/* Custom CSS for custom theme */
-.custom-editor-theme {
-    border: 2px solid #007acc;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 122, 204, 0.15);
-}
+Below example demonstrates the usage of readonly and cssClass properties.
 
-.custom-editor-theme .e-block {
-    margin-bottom: 8px;
-}
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/block-editor/appearance/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/block-editor/appearance/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-.custom-editor-theme .e-block:hover {
-    background-color: #b5b5b5;
-    transition: ease-in-out 0.5s;
-}
-
-.custom-editor-theme .e-block [contenteditable=true]:empty::before {
-    color: #6c757d;
-    font-style: italic;
-}
-```
+{% previewsample "page.domainurl/code-snippet/block-editor/appearance" %}

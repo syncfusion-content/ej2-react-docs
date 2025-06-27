@@ -86,6 +86,66 @@ You can use the `browse` option on the video dialog to select the video from the
 
 If the path field is not specified in the [insertVideoSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertvideosettings), the video will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
 
+## Maximum file size restrictions
+
+You can restrict the video uploaded from the local machine when the uploaded video file size is greater than the allowed size by using the [maxFileSize](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettings/#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+
+In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
+
+`[Class-component]`
+
+```ts
+
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, Table, Video, PasteCleanup } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+
+class App extends React.Component<{},{}> {
+  private toolbarSettings: object = {
+    items: ['Video', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', 'Image', '|', 'SourceCode', '|', 'Undo', 'Redo']
+  }
+  private insertVideoSettings: object = {
+    maxFileSize: 300000000
+  }
+  public render() {
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertVideoSettings={
+        this.insertVideoSettings}>
+
+        <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar, Table, Video, PasteCleanup]} />
+      </RichTextEditorComponent>
+    );
+  }
+}
+
+export default App;
+
+```
+
+`[Functional-component]`
+
+```ts
+
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, Table, Video, PasteCleanup } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+
+function App() {
+  let toolbarSettings: object = {
+    items: ['Video', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', 'Image', '|', 'SourceCode', '|', 'Undo', 'Redo']
+  }
+  let insertVideoSettings: object = {
+    maxFileSize: 300000000
+  }
+  return (
+    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertVideoSettings={insertVideoSettings}>
+      <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar, Table, Video, PasteCleanup]} />
+    </RichTextEditorComponent>
+  );
+}
+
+export default App;
+
+```
+
 ## Saving video to the server
 
 Upload the selected video to a specified destination using the controller action specified in [insertVideoSettings.saveUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#saveurl). Ensure to map this method name appropriately and provide the required destination path through the [insertVideoSettings.path](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/videoSettingsModel/#path) properties.
@@ -356,88 +416,6 @@ public void Rename()
         Response.End();
     }
 }
-
-```
-
-### Restricting video by size
-
-You can restrict the video uploaded from the local machine when the uploaded video file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event.
-
-> The file size in the argument will be returned in `bytes`.
-
-In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
-
-`[Class-component]`
-
-```ts
-
-import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
-import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
-
-class App extends React.Component<{},{}> {
-  private toolbarSettings: object = {
-    items: ['Video']
-  }
-  private insertVideoSettings: object = {
-    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
-    path: "../Files/"
-  }
-  private onFileUpload (args: UploadingEventArgs): void {
-    alert("RTE")
-    let sizeInBytes: number = args.fileData.size;
-    let fileSize: number = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-  }
-  public render() {
-    return (
-      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertVideoSettings={
-        this.insertVideoSettings} fileUploading={this.onFileUpload}>
-
-        <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-  }
-}
-
-export default App;
-
-```
-
-`[Functional-component]`
-
-```ts
-
-import { HtmlEditor, Video, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
-import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
-
-function App() {
-  let toolbarSettings: object = {
-    items: ['Video']
-  }
-  let insertVideoSettings: object = {
-    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
-    path: "../Files/"
-  }
-  function onFileUpload (args: UploadingEventArgs): void {
-    alert("RTE")
-    let sizeInBytes: number = args.fileData.size;
-    let fileSize: number = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-  }
-  return (
-    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertVideoSettings={insertVideoSettings} fileUploading={onFileUpload}>
-      <Inject services={[Toolbar, Video, Link, HtmlEditor, QuickToolbar]} />
-    </RichTextEditorComponent>
-  );
-}
-
-export default App;
 
 ```
 

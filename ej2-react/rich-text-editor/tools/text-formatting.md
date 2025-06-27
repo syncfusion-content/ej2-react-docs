@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text formatting and Structure in React Rich text editor component | Syncfusion
+title: Text formatting and Structure in React Rich text editor | Syncfusion
 description: Learn here all about Text formatting and Structure in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
 control: Text formatting and Structure
 platform: ej2-react
@@ -406,6 +406,40 @@ Use the `Blockquote` tool in the editor below to see the feature in action.
 
 > In a markdown editor, blockquotes are represented using the `>` symbol.
 
+## Horizontal line
+
+The Rich Text Editor enables users to insert horizontal dividers using the `HorizontalLine` tool available in the toolbar. Horizontal lines (<hr>) help visually separate sections of content, enhancing readability and structural clarity.
+
+To insert a horizontal line, place the cursor at the desired location and click the `HorizontalLine` icon in the toolbar. A full-width line will be added, creating a clear visual break between sections of text or other elements.
+
+Use the `HorizontalLine` tool in the editor below to see the feature in action.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/horizontal-line/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/horizontal-line/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/horizontal-line" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/horizontal-line/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/horizontal-line/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/horizontal-line" %}
+
 ## Insert code
 
 The React Rich Text Editor component offers a powerful feature to format text as preformatted code blocks, making it ideal for displaying programming snippets or structured contents.
@@ -566,7 +600,7 @@ For more details on keyboard navigation, refer to the [Keyboard support](https:/
 
 > The format painter retains the formatting after application making it possible to apply the same formatting multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
 
-Additionally, You can perform the format painter actions programmatically using the [executeCommand](../exec-command/) public method.
+Additionally, You can perform the format painter actions programmatically using the [executeCommand](../exec-command) public method.
 
 ## Clear formatting
 
