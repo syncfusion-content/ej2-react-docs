@@ -186,6 +186,32 @@ In the Gantt component, you can enable or disable the mouse hover tooltip of tim
         
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs2" %}
 
+## Show/hide weekends
+
+The [timelineSettings.showWeekend](https://ej2.syncfusion.com/react/documentation/api/gantt/timelineSettings/#showweekend) property is used to customize the timeline in the Gantt component by controlling the visibility of weekends. To exclude weekends from the timeline, set the `showWeekend` property to `false` in the `timelineSettings` configuration. This feature is particularly useful for focusing the timeline on working days, enhancing project management efficiency by hiding weekends from the view.
+
+>Note: To customize non-working or weekend days in the Gantt chart, refer to the [workWeek](https://ej2.syncfusion.com/react/documentation/gantt/task-scheduling#weekendnon-working-days) documentation for detailed information.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/showweekend-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/showweekend-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/showweekend-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/showweekend-cs1" %}
+
+> Limitations
+>* The `showWeekend` feature does not support baselines.
+>* The `showWeekend` is not compatible with the manual task mode.
+>* Non-working hours cannot be excluded when `showWeekend` is set to false.
+>* Holidays are not excluded from the timeline if `showWeekend` is set to false.
+
 ## Timeline template
 
 In the Gantt component, you can customize timeline cells using the [timelineTemplate](https://ej2.syncfusion.com/react/documentation/api/gantt/#timelineTemplate) property, allowing for the customization of HTML content within timeline cells. This feature enhances the visual appeal and enables personalized functionality.

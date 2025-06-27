@@ -10,7 +10,7 @@ class App extends React.Component {
 
     quickToolbarSettings = {
         image: [
-            'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '-',
+            'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '|',
             'EditImageLink', 'RemoveImageLink', 'Display', 'AltText', 'Dimension'
         ]
     };

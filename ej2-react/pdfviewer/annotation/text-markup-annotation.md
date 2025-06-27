@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text markup annotation in React Pdfviewer component
 
-The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, and strikethrough annotations in the PDF document.
+The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline,  strikethrough and squiggly annotations in the PDF document.
 
 ![Alt text](../../pdfviewer/images/text_markup_annotation.png)
 
@@ -662,7 +662,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-Refer to the following code snippet to switch back to normal mode from underline mode.
+Refer to the following code snippet to switch back to normal mode from strikethrough mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -841,6 +841,284 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
+## Squiggly a text
+
+There are two ways to add squiggly to a text in the PDF document:
+
+1.Using the context menu
+    * Select a text in the PDF document and right-click it.
+    * Select **Squiggly** option in the context menu that appears.
+
+   ![Alt text](../../pdfviewer/images/squiggly_context.png)
+
+2.Using the annotation toolbar
+    * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+    * Select the **Squiggly** button in the annotation toolbar. It enables the squiggly mode.
+    * Select the text and the squiggly annotation will be added.
+    * You can also select the text and apply the squiggly annotation using the **Squiggly** button.
+
+   ![Alt text](../../pdfviewer/images/squiggly_button.png)
+
+In the pan mode, if the squiggly mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for adding squiggly to the text.
+
+Refer to the following code snippet to switch to squiggly mode.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function squigglyMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Squiggly');
+  }
+  return ( <div>
+    <button onClick={squigglyMode}>Squiggly</button>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function squigglyMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Squiggly');
+  }
+  return ( <div>
+    <button onClick={squigglyMode}>Squiggly</button>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+Refer to the following code snippet to switch back to normal mode from squiggly mode.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function squigglyMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Squiggly');
+  }
+  function normalMode () {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('None');
+  }
+  return (
+  <div>
+    <button onClick={squigglyMode}>Squiggly</button>
+    <button onClick={normalMode}>Normal Mode</button>
+      <div className='control-section'>
+        {/* Render the PDF Viewer */}
+        <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          resourceUrl="https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib"
+          style={{ 'height': '640px' }}>
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+        </PdfViewerComponent>
+      </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, 
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  function squigglyMode() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Squiggly');
+  }
+  function normalMode () {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('None');
+  }
+  return (
+  <div>
+    <button onClick={squigglyMode}>Squiggly</button>
+    <button onClick={normalMode}>Normal Mode</button>
+      <div className='control-section'>
+        {/* Render the PDF Viewer */}
+        <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+        </PdfViewerComponent>
+      </div>
+  </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Squiggly a text programmatically
+
+The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+
+Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function addAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Squiggly", {
+      bounds: [{ x: 250, y: 144, width: 345, height: 14 }],
+      pageNumber: 2
+    });
+  }
+  return (<div>
+    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %} 
+
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+let pdfviewer;
+
+function App() {
+  
+  function addAnnotation() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotation.addAnnotation("Squiggly", {
+      bounds: [{ x: 250, y: 144, width: 345, height: 14 }],
+      pageNumber: 2
+    });
+  }
+  return (<div>
+    <button onClick={addAnnotation}>Add Annotation programatically</button>
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={(scope) => { pdfviewer = scope; }}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+              <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                  Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Deleting a text markup annotation
 
 The selected annotation can be deleted by the following ways:
@@ -873,7 +1151,7 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 ## Setting default properties during control initialization
 
-The properties of the text markup annotation can be set before creating the control using highlightSettings, underlineSettings, and strikethroughSettings.
+The properties of the text markup annotation can be set before creating the control using highlightSettings, underlineSettings, strikethroughSettings and squigglySettings.
 
 >After editing the default color and opacity using the Edit Color tool and Edit Opacity tool, they will be changed to the selected values.
 
@@ -898,11 +1176,12 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+          resourceUrl="https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib"
           style={{ 'height': '640px' }}
           highlightSettings = {{author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''}}
           underlineSettings = {{author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9,modifiedDate: ''}}
-          strikethroughSettings = {{author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''}}>
+          strikethroughSettings = {{author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''}}
+          squigglySettings - {{author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9, modifiedDate: ''}}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                                   Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
         </PdfViewerComponent>
@@ -937,7 +1216,8 @@ function App() {
           style={{ 'height': '640px' }}
           highlightSettings = {{author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''}}
           underlineSettings = {{author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9,modifiedDate: ''}}
-          strikethroughSettings = {{author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''}}>
+          strikethroughSettings = {{author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''}}
+          squigglySettings = {{author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9, modifiedDate: ''}}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                                   Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />

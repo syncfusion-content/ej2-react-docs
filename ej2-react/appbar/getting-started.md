@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the React AppBar component
+# Getting Started
 
 This section explains how to create a simple AppBar, and configure its available functionalities in React.
 

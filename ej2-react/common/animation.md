@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The **Animation** is used to perform animation effects on HTML elements by running a sequence of frames. It can be used to enhance the user experience.
 
-Syncfusion [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports animating the HTML elements using the [animate](https://ej2.syncfusion.com/documentation/api/base/animation/#animate) method. This method adds the `e-animate`, `e-animation-id` attributes, and CSS style to the HTML element and removes them after the animation effect is completed.
+Syncfusion<sup style="font-size:70%">&reg;</sup> [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports animating the HTML elements using the [animate](https://ej2.syncfusion.com/documentation/api/base/animation/#animate) method. This method adds the `e-animate`, `e-animation-id` attributes, and CSS style to the HTML element and removes them after the animation effect is completed.
 
 ## Animation effects
 

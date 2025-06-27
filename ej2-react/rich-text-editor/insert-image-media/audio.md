@@ -80,6 +80,69 @@ You can use the `browse` option on the audio dialog, to select the audio from th
 
 If the path field is not specified in the [insertAudioSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertaudiosettings), the audio will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
 
+## Maximum file size restriction
+
+You can restrict the audio uploaded from the local machine when the uploaded audio file size is greater than the allowed size by using the [maxFileSize](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettingsModel/#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+
+In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
+
+`[Class-component]`
+
+```ts
+
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, Table, Audio, PasteCleanup } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+
+class App extends React.Component<{},{}> {
+  private toolbarSettings: object = {
+    items: ['Audio', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', 'Image', '|', 'SourceCode', '|', 'Undo', 'Redo']
+  }
+  private insertAudioSettings: object = {
+    maxFileSize: 30000000
+  }
+  public render() {
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertAudioSettings={
+        this.insertAudioSettings}>
+
+        <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar, Table, Audio, PasteCleanup]} />
+      </RichTextEditorComponent>
+    );
+  }
+}
+
+export default App;
+
+```
+
+`[Functional-component]`
+
+```ts
+
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar, Table, Audio, PasteCleanup } from '@syncfusion/ej2-react-richtexteditor';
+import * as React from 'react';
+
+function App() {
+    let toolbarSettings: object = {
+      items: ['Audio', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'CreateTable', 'Image', '|', 'SourceCode', '|', 'Undo', 'Redo']
+    }
+    let insertAudioSettings: object = {
+      maxFileSize: 30000000
+    }
+
+    return (
+      <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertAudioSettings={insertAudioSettings}>
+
+        <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar, Table, Audio, PasteCleanup]} />
+      </RichTextEditorComponent>
+    );
+
+}
+
+export default App;
+
+```
+
 ## Saving audio to the server
 
 [saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/audioSettings/#saveformat) Sets the default save format of the audio element when inserted. Possible options are: `Blob` and `Base64`.
@@ -355,91 +418,6 @@ public void Rename()
         Response.End();
     }
 }
-
-```
-
-### Restricting audio by size
-
-You can restrict the audio uploaded from the local machine when the uploaded audio file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#fileuploading) event.
-
-> The file size in the argument will be returned in `bytes`.
-
-In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
-
-`[Class-component]`
-
-```ts
-
-import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
-import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
-
-class App extends React.Component<{},{}> {
-  private toolbarSettings: object = {
-    items: ['Audio']
-  }
-  private insertAudioSettings: object = {
-    saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
-    path: "../Files/"
-  }
-  private onFileUpload (args: UploadingEventArgs): void {
-    alert("RTE")
-    let sizeInBytes: number = args.fileData.size;
-    let fileSize: number = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-}
-  public render() {
-    return (
-      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} insertAudioSettings={
-        this.insertAudioSettings} fileUploading={this.onFileUpload}>
-
-        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-  }
-}
-
-export default App;
-
-```
-
-`[Functional-component]`
-
-```ts
-
-import { HtmlEditor, Audio, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-import * as React from 'react';
-import { UploadingEventArgs } from '@syncfusion/ej2-inputs';
-
-function App() {
-    let toolbarSettings: object = {
-      items: ['Audio']
-    }
-    let insertAudioSettings: object = {
-      saveUrl: "https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save",
-      path: "../Files/"
-    }
-    function onFileUpload (args: UploadingEventArgs): void {
-      alert("RTE")
-      let sizeInBytes: number = args.fileData.size;
-      let fileSize: number = 500000;
-      if (fileSize < sizeInBytes) {
-          args.cancel = true;
-      }
-    }
-
-    return (
-      <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} insertAudioSettings={insertAudioSettings} fileUploading={onFileUpload}>
-
-        <Inject services={[Toolbar, Audio, Link, HtmlEditor, QuickToolbar]} />
-      </RichTextEditorComponent>
-    );
-
-}
-
-export default App;
 
 ```
 

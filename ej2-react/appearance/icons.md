@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Predefined Icons Library in Syncfusion React Component
+# Predefined Icons Library in Syncfusion<sup style="font-size:70%">&reg;</sup> React Component
 
 Syncfusion's icon library is a collection of pre-designed icons that can be used to enhance the user interface of an application. This pre-designed icons are set of `base64` formatted font icons. Utilizing this icon library can make it simpler to create a cohesive, visually pleasing design for an application.
 
@@ -22,7 +22,7 @@ Using the below approaches, the icons can be referenced in the React application
 
 ### The npm package
 
-All Syncfusion theme icons are shipped in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package, which is published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. This package contains both CSS and SCSS theme files for all themes.
+All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are shipped in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package, which is published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. This package contains both CSS and SCSS theme files for all themes.
 
 Icons can be used from the npm package `ej2-icons`. To use the icons, install the npm package using the following command:
 
@@ -48,9 +48,9 @@ Refer to the following syntax to use icons in a React application:
 
 ### CDN reference
 
-All Syncfusion theme icons are available on the CDN. Instead of using a local resource on the server, use a cloud CDN to refer to the icons.
+All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are available on the CDN. Instead of using a local resource on the server, use a cloud CDN to refer to the icons.
 
-Make sure that the version of the icons in the URL matches the version of the Syncfusion React package. This will prevent compatibility issues and ensure that the correct version of the icons is loaded.
+Make sure that the version of the icons in the URL matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> React package. This will prevent compatibility issues and ensure that the correct version of the icons is loaded.
 
 To use the icons from the CDN, refer to the icons by URLs in the application. This can be done by linking the icons in the HTML file by adding a link tag to the head section.
 
@@ -75,13 +75,13 @@ cd my-app
 npm start
 ```
 
-For an introduction and configuration of the common specifications, see [getting started with the Syncfusion React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start/).
+For an introduction and configuration of the common specifications, see [getting started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start).
 
 ### Using icons directly in HTML element
 
-The built-in Syncfusion icons can be rendered directly in the HTML element by defining the `e-icons` class, which contains the font-family and common properties of font icons, and defining the available icon's class with the `e-` prefix.
+The built-in Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be rendered directly in the HTML element by defining the `e-icons` class, which contains the font-family and common properties of font icons, and defining the available icon's class with the `e-` prefix.
 
-The following steps explain the direct rendering of the Syncfusion icon in the HTML element.
+The following steps explain the direct rendering of the Syncfusion<sup style="font-size:70%">&reg;</sup> icon in the HTML element.
 
 1. Add the class name `e-icons` to the HTML element that needs to render the icon.
 
@@ -154,7 +154,7 @@ The pre-defined icon size is present in the available classes listed below.
 
 ### Icon appearance customization
 
-The Syncfusion React icons can be customized with custom color and size by overriding the `e-icons` class. Customizing the icons in the library can be useful for making the icons more visually appealing and fitting to the design of the application. For example, a user can change the color of an icon to match the color scheme of their application, or increase the size of an icon to make it more visible on smaller screens. It may also be useful for creating a consistent look and feel across different parts of the application. Overall, customizing the icons in the library can improve the overall user experience of the application.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React icons can be customized with custom color and size by overriding the `e-icons` class. Customizing the icons in the library can be useful for making the icons more visually appealing and fitting to the design of the application. For example, a user can change the color of an icon to match the color scheme of their application, or increase the size of an icon to make it more visible on smaller screens. It may also be useful for creating a consistent look and feel across different parts of the application. Overall, customizing the icons in the library can improve the overall user experience of the application.
 
 In the example below, the icon color is customized with custom color.
 
@@ -174,7 +174,7 @@ In the example below, the icon color is customized with custom color.
 
 ## Available icons
 
-The complete package of Essential JS 2 icons is listed below. The corresponding icon content can be referred in the content section.
+The complete package of Essential<sup style="font-size:70%">&reg;</sup> JS 2 icons is listed below. The corresponding icon content can be referred in the content section.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -224,4 +224,4 @@ The complete package of Essential JS 2 icons is listed below. The corresponding 
 
 ## See also
 
-* [Using icons in Syncfusion React Button](https://ej2.syncfusion.com/react/documentation/button/types-and-styles/#icons)
+* [Using icons in Syncfusion<sup style="font-size:70%">&reg;</sup> React Button](https://ej2.syncfusion.com/react/documentation/button/types-and-styles#icons)

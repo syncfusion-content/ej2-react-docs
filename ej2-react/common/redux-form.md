@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Integration of React components in Redux Form | Syncfusion
-description: Learn here all about integration of Syncfusion EJ2 React UI components in Redux Form and more.
+description: Learn here all about integration in Syncfusion React component of Syncfusion Essential JS 2 and more.
 control: Redux 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integration of Syncfusion React Components in Redux Form
+# Integration of Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in Redux Form
 
 [Redux Form](https://redux-form.com/) is a popular library used in React project for managing and handling form state. It integrates with the Redux state management library ([Redux Store](https://redux.js.org/api/store)) and provides a simple and efficient way to handle form inputs, validation, submission, and data synchronization with Redux.
 
-This guide will provide you with a step-by-step process for creating a `Redux Form`, integrating Syncfusion components, and implementing form validation.
+This guide will provide you with a step-by-step process for creating a `Redux Form`, integrating Syncfusion<sup style="font-size:70%">&reg;</sup> components, and implementing form validation.
 
 ## Create a Redux Form
 
@@ -105,9 +105,9 @@ export default LoginForm = reduxForm({
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion React components
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-To incorporate Syncfusion React components (DatePicker, TextBox, Button) into the login form, follow these steps:
+To incorporate Syncfusion<sup style="font-size:70%">&reg;</sup> React components (DatePicker, TextBox, Button) into the login form, follow these steps:
 
 1\. Install the necessary dependencies for React components.
 

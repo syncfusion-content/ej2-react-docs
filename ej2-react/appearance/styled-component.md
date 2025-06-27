@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styled component in React Appearance component | Syncfusion
-description: Learn here all about Styled component in Syncfusion React Appearance component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Styled component in Syncfusion<sup style="font-size:70%">&reg;</sup> React Appearance component of Syncfusion Essential JS 2 and more.
 control: Styled component 
 platform: ej2-react
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Styled-Component support
 
-Syncfusion React components allow you to enhance the styling using [styled-component library](https://styled-components.com/).
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components allow you to enhance the styling using [styled-component library](https://styled-components.com/).
 
 ## Add styled component to the application
 
-Import styled-components in the `src/App.tsx` file. To style our Syncfusion React component, pass the component in [styled](https://styled-components.com/docs/api#styled) factory and override the EJ2 component styles. Here, StyledButton is the styled component.
+Import styled-components in the `src/App.tsx` file. To style our Syncfusion<sup style="font-size:70%">&reg;</sup> React component, pass the component in [styled](https://styled-components.com/docs/api#styled) factory and override the EJ2 component styles. Here, StyledButton is the styled component.
 
 
 ```ts
@@ -56,7 +56,7 @@ ReactDom.render(<App />,document.getElementById('sample'));
 
 ## Dynamically computed props styling
 
-We can style the Syncfusion React components dynamically based on props.
+We can style the Syncfusion<sup style="font-size:70%">&reg;</sup> React components dynamically based on props.
 
 
 ```ts

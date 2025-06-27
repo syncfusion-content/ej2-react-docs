@@ -171,6 +171,36 @@ In the following sample,data with diacritics are bound as dataSource for MultiSe
 
  {% previewsample "page.domainurl/code-snippet/multiselect/basic-cs20" %}
 
+## Debounce delay
+
+You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/multi-select/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/multiselect/basic-cs38/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/multiselect/basic-cs38/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/multiselect/basic-cs38" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/multiselect/basic-cs39/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/multiselect/basic-cs39/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/multiselect/basic-cs39" %}
+
 ## See Also
 
 * [How to bind the data](./data-binding)

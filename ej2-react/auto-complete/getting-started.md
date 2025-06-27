@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the React AutoComplete component
+# Getting Started
 
 This section explains how to create a simple **AutoComplete** component and configure its available functionalities in React.
 

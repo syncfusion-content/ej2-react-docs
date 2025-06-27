@@ -172,6 +172,36 @@ In the following sample,data with diacritics are bound as dataSource for DropDow
 
 > You can also explore our [React DropDownList Filtering example]( https://ej2.syncfusion.com/react/demos/#/material/drop-down-list/filtering) that shows how to render the DropDownList Filter in React.
 
+## Debounce delay
+
+You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/dropdownlist/basic-cs48/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/dropdownlist/basic-cs48/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs48" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/dropdownlist/basic-cs49/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/dropdownlist/basic-cs49/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs49" %}
+
 ## See Also
 
 * [How to limit the search result while filtering](./how-to/search-on-filtering)

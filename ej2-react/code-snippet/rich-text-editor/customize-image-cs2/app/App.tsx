@@ -10,7 +10,7 @@ function App(){
 
   let quickToolbarSettings: QuickToolbarSettingsModel = {
       image: [
-          'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '-',
+          'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '|',
           'EditImageLink', 'RemoveImageLink', 'Display', 'AltText', 'Dimension'
       ]
   };
