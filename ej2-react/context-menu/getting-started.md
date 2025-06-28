@@ -97,7 +97,7 @@ Now, you can add `ContextMenu` component in the application. For getting started
 
 
 
-```tsx
+```ts
 
 import { ContextMenuComponent, MenuItemModel } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
@@ -126,7 +126,7 @@ function App() {
 export default App;  
 ```
 
-```tsx
+```ts
 import { ContextMenuComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 import './App.css';

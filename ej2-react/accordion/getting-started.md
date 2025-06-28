@@ -83,7 +83,7 @@ The React Accordion can be rendered by defining an array of [`items`](https://ej
 
 
 
-```tsx
+```ts
 import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 

@@ -166,7 +166,7 @@ root.render(<App />);
 
 `[src/App.jsx]`
 
-```tsx
+```ts
 import './App.css';
 import { DiagramComponent } from '@syncfusion/ej2-react-diagrams';
 function App() {

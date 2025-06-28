@@ -65,7 +65,7 @@ npm install @syncfusion/ej2-react-treemap --save
 Now, the TreeMap component can be added in the application. To initialize the TreeMap control in the React application, import the TreeMap control in the **src/App.js**
 or **src/App.tsx** as per the application. Please use the below code to include the TreeMap component in the application.
 
-```tsx
+```ts
 
 import * as React from 'react';
 import * as ReactDOM from "react-dom";

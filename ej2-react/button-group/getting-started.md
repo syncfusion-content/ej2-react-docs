@@ -80,7 +80,7 @@ Add the ButtonGroup component in application as shown in below code example.
 
 
 
-```tsx
+```ts
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
 import './App.css';

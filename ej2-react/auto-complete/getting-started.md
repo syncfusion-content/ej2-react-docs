@@ -77,7 +77,7 @@ Add the below code in the `src/App.tsx` to initialize the AutoComplete.
 
 `[Class-component]`
 
-```tsx
+```ts
 
 import { AutoCompleteComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -96,7 +96,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 `[Functional-component]`
 
-```tsx
+```ts
 import { AutoCompleteComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -130,7 +130,7 @@ After initialization, populate the data using [`dataSource`](https://ej2.syncfus
 
 `[Class-component]`
 
-```tsx
+```ts
 
 import { AutoCompleteComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -151,7 +151,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 `[Functional-component]`
 
-```tsx
+```ts
 
 import { AutoCompleteComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
