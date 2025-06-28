@@ -158,7 +158,7 @@ Start adding the required components to the application. Let's add the Grid comp
 
 
 
-```tsx
+```ts
 
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
 import './App.css';
@@ -227,7 +227,7 @@ The output will appears as follows.
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs9" %}
 
-To know more functionality about the Grid component, refer to the [Grid component](https://ej2.syncfusion.com/react/documentation/grid/getting-started/) section.
+To know more functionality about the Grid component, refer to the [Grid component](https://ej2.syncfusion.com/react/documentation/grid/getting-started) section.
 
 ## See also
 

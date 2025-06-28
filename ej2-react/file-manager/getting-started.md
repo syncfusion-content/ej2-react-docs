@@ -173,7 +173,7 @@ To perform the download operation, initialize the `downloadUrl` property in a [a
 
 {% raw %}
 
-```tsx
+```ts
 
 import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';
@@ -201,7 +201,7 @@ To perform the upload operation, initialize the `uploadUrl` property in a [ajaxS
 
 {% raw %}
 
-```tsx
+```ts
 
 import {  FileManagerComponent } from '@syncfusion/ej2-react-filemanager';
 import * as React from 'react';

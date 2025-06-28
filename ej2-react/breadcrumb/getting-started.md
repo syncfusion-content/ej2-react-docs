@@ -83,7 +83,7 @@ Now, you can create `Breadcrumb` component in the application. Add `Breadcrumb` 
 
 
 
-```tsx
+```ts
 
 import { BreadcrumbComponent, BreadcrumbItemDirective, BreadcrumbItemsDirective } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
@@ -95,7 +95,7 @@ function App() {
 export default App;
 ```
 
-```tsx
+```ts
 import { BreadcrumbComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 function App() {

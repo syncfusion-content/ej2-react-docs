@@ -82,7 +82,7 @@ Now, you can add `Menu` component in the application. For getting started, add `
 
 
 
-```tsx
+```ts
 
 import { MenuComponent, MenuItemModel } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
@@ -132,7 +132,7 @@ function App() {
 export default App;
 ```
 
-```tsx
+```ts
 import { MenuComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 function App() {

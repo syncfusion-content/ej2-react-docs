@@ -83,7 +83,7 @@ Now, you can create `Carousel` component in the application. Add `Carousel` comp
 
 
 
-```tsx
+```ts
 import { CarouselComponent, CarouselItemsDirective, CarouselItemDirective } from "@syncfusion/ej2-react-navigations";
 import * as React from "react";
 

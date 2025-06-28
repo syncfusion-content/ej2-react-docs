@@ -69,7 +69,7 @@ npm install @syncfusion/ej2-react-dropdowns --save
 
 Now, you can start adding Dropdown Tree component in the application. For getting started, add the Dropdown Tree component in `src/App.tsx` file using following code. Add the below code in the `src/App.tsx` to initialize the Dropdown Tree.
 
-```tsx
+```ts
 
 import { DropDownTreeComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -86,7 +86,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-```tsx
+```ts
 import { DropDownTreeComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -117,11 +117,11 @@ Import the Dropdown Tree component required CSS references as follows in `src/Ap
 
 ## Binding data source
 
-The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsModel/#datasource) property that is a member of the [`fields`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree#fields) property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
+The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsModel/#datasource) property that is a member of the [`fields`](https://helpej2.syncfusion.com/react/documentation/api/drop-down-tree/#fields) property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
 
 
 
-```tsx
+```ts
 
 import { DropDownTreeComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -165,7 +165,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-```tsx
+```ts
 import { DropDownTreeComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

@@ -91,7 +91,7 @@ To render the Calendar component, need to import Calendar and its dependent comp
 
 `[Class-component]`
 
-```tsx
+```ts
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import * as React from "react";
 import './App.css';
@@ -105,7 +105,7 @@ export default class App extends React.Component<{}, {}> {
 
 `[Functional-component]`
 
-```tsx
+```ts
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

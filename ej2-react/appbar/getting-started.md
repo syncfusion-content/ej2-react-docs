@@ -79,7 +79,7 @@ Now, you can create `AppBar` component in the application. Add `AppBar` componen
 
 
 
-```tsx
+```ts
 import { AppBarComponent } from "@syncfusion/ej2-react-navigations";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from "react";

@@ -127,7 +127,7 @@ After initializing, populate the MultiColumn ComboBox with data by using the `da
 
 `[Class-component]`
 
-```tsx
+```ts
 
 import { MultiColumnComboBoxComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-multicolumn-combobox';
 import * as React from 'react';

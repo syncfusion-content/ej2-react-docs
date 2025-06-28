@@ -94,7 +94,7 @@ To render the DatePicker component, need to import DatePicker and its dependent 
 
 `[Class-component]`
 
-```tsx
+```ts
 
 // import the datepickerComponent
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
@@ -110,7 +110,7 @@ export default class App extends React.Component<{}, {}> {
 
 `[Functional-component]`
 
-```tsx
+```ts
 // import the datepickerComponent
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import * as React from 'react';
