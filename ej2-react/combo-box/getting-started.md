@@ -75,7 +75,7 @@ Now, you can start adding ComboBox component in the application. For getting sta
 
 `[Class-component]`
 
-```tsx
+```ts
 
 import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -95,7 +95,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 `[Functional-component]`
 
-```tsx
+```ts
 import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
@@ -130,7 +130,7 @@ After initialization, populate the ComboBox with data using the `dataSource` pro
 
 `[Class-component]`
 
-```tsx
+```ts
 
 import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -151,7 +151,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 `[Functional-component]`
 
-```tsx
+```ts
 
 import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -268,4 +268,4 @@ In the following sample, popup list's width and height have configured.
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
+* [How to bind the data](./data-binding)

@@ -83,7 +83,7 @@ You can render the Dashboard Layout component by adding the panels property as t
 
 `[src/App.tsx]`
 
-```tsx
+```ts
 // import the DashboardLayout component
 import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 import * as React from 'react';
@@ -151,7 +151,7 @@ export default App;
 
 ```
 
-```tsx
+```ts
 // import the DashboardLayout component
 import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 import * as React from 'react';

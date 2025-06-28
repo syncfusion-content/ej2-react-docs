@@ -95,7 +95,7 @@ To render the DateTimePicker component, need to import DateTimePicker and its de
 
 `[Class-component]`
 
-```tsx
+```ts
 // import the DateTimePickerComponent
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import * as React from 'react';
@@ -110,7 +110,7 @@ export default class App extends React.Component<{}, {}> {
 
 `[Functional-component]`
 
-```tsx
+```ts
 // import the DateTimePickerComponent
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';
 import * as React from 'react';

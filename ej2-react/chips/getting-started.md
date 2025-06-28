@@ -78,7 +78,7 @@ To include the Chip component in your application import the `ChipListComponent
 Add the Chip component in application as shown in below code example.
 
 
-```tsx
+```ts
 import * as React from 'react';
 import './App.css';
 // Import the Button.
