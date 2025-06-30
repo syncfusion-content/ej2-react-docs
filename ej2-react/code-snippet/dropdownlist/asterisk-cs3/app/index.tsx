@@ -11,7 +11,7 @@ export default class App extends React.Component<{}, {}> {
   public render() {
     return (
         // specifies the tag for render the DropDownList component
-      <DropDownListComponent id="ddlelement" dataSource={this.sportsData}  placeholder="Select a game" floatLabelType= "auto" />
+      <DropDownListComponent id="ddlelement" dataSource={this.sportsData}  placeholder="Select a game" floatLabelType= "Auto" />
     );
   }
 }

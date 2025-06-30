@@ -10,7 +10,7 @@ function App() {
 
     return (
         // specifies the tag for render the DropDownList component
-      <DropDownListComponent id="ddlelement" dataSource={sportsData}  placeholder="Select a game" floatLabelType= "auto" />
+      <DropDownListComponent id="ddlelement" dataSource={sportsData}  placeholder="Select a game" floatLabelType= "Auto" />
     );
 
 }
