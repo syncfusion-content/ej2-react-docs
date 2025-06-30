@@ -19,6 +19,7 @@ The Rich Text Editor allows you to configure different types of toolbar using [t
 1. Expand 
 2. MultiRow
 3. Scrollable
+4. Popup
 
 ## Expanding the toolbar
 
@@ -109,6 +110,36 @@ Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.c
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs2" %}
+
+ ## Configuring a popup toolbar
+
+Setting the `type` to `Popup` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will display overflowing toolbar items into a popup container, optimizing the toolbar layout for limited space and smaller screens.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/toolbar-popup/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/toolbar-popup/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-popup" %}
+
+`[functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/toolbar-popup/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/toolbar-popup/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-popup" %}
 
 ## Creating a sticky toolbar
 

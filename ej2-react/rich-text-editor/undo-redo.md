@@ -54,3 +54,37 @@ Here's an example of how to customize both the Undo/Redo timer and steps:
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs51" %}
+
+ ## Clear Undo/Redo stack
+
+The Rich Text Editor automatically maintains an undo/redo stack, allowing users to revert or redo changes made during editing.
+
+To clear the entire undo and redo stack, use the public [clearUndoRedo](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#clearUndoRedo) method. This is helpful when loading new content dynamically or resetting the editor to its initial state.
+
+Here's an example of how to clear the Undo/Redo stack:
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/clear-undo-redo/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/clear-undo-redo/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/clear-undo-redo" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/clear-undo-redo/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/clear-undo-redo/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/clear-undo-redo" %}

@@ -259,7 +259,7 @@ The [default](https://helpej2.syncfusion.com/react/documentation/api/rich-text-e
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs65" %}
 
- ### Show recent color
+### Show recent color
 
 The [showRecentColors](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/fontColor/#showrecentcolor) feature in the Rich Text Editor provides quick access to a row of recently used colors displayed below the main palette. This streamlines editing by keeping frequently used colors easily accessible, improving styling efficiency and consistency.
 
