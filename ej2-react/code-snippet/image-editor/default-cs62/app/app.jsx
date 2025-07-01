@@ -7,9 +7,7 @@ import './index.css';
 
 export default class App extends React.Component {
     imgObj;
-    state = {
-        isTextInserted: false
-    };
+    isTextInserted = false;
     imageEditorCreated() {
         if (Browser.isDevice) {
             this.imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/flower.jpeg');
@@ -20,8 +18,8 @@ export default class App extends React.Component {
     }
 
     addText() {
-        if (!this.state.isTextInserted) {
-            this.setState({ isTextInserted: true });
+        if (!this.isTextInserted) {
+            this.isTextInserted = true;
             let dimension = this.imgObj.getImageDimension();
             this.imgObj.drawText(dimension.x, dimension.y, 'Syncfusion');
         }
@@ -30,7 +28,7 @@ export default class App extends React.Component {
     bold() {
         const shapes = this.imgObj.getShapeSettings();
         if (shapes && shapes[0]) {
-            if (shapes[0].fontStyle?.includes('bold')) {
+            if (shapes[0].fontStyle.includes('bold')) {
                 shapes[0].fontStyle = shapes[0].fontStyle.filter(item => item !== 'bold');
             } else {
                 shapes[0].fontStyle.push('bold');
@@ -42,7 +40,7 @@ export default class App extends React.Component {
     italic() {
         const shapes = this.imgObj.getShapeSettings();
         if (shapes && shapes[0]) {
-            if (shapes[0].fontStyle?.includes('italic')) {
+            if (shapes[0].fontStyle.includes('italic')) {
                 shapes[0].fontStyle = shapes[0].fontStyle.filter(item => item !== 'italic');
             } else {
                 shapes[0].fontStyle.push('italic');
@@ -54,7 +52,7 @@ export default class App extends React.Component {
     underline() {
         const shapes = this.imgObj.getShapeSettings();
         if (shapes && shapes[0]) {
-            if (shapes[0].fontStyle?.includes('underline')) {
+            if (shapes[0].fontStyle.includes('underline')) {
                 shapes[0].fontStyle = shapes[0].fontStyle.filter(item => item !== 'underline');
             } else {
                 shapes[0].fontStyle.push('underline');
@@ -66,7 +64,7 @@ export default class App extends React.Component {
     strikethrough() {
         const shapes = this.imgObj.getShapeSettings();
         if (shapes && shapes[0]) {
-            if (shapes[0].fontStyle?.includes('strikethrough')) {
+            if (shapes[0].fontStyle.includes('strikethrough')) {
                 shapes[0].fontStyle = shapes[0].fontStyle.filter(item => item !== 'strikethrough');
             } else {
                 shapes[0].fontStyle.push('strikethrough');
@@ -78,24 +76,24 @@ export default class App extends React.Component {
     render() {
         return (
             <div className='e-img-editor-sample'><ImageEditorComponent ref={(img) => { this.imgObj = img; }} height="350px" width="550px" showQuickAccessToolbar={false} created={this.imageEditorCreated.bind(this)} toolbar={[]} />
-                <div class="button-group" >
-                    <button id="text" disabled={this.state.isTextInserted} class="e-btn e-primary" onClick={this.addText.bind(this)} >Add Text</button>
-                    <div class="e-btn-group">
+                <div className="button-group" >
+                    <button id="text" disabled={this.isTextInserted} className="e-btn e-primary" onClick={this.addText.bind(this)} >Add Text</button>
+                    <div className="e-btn-group">
                         <input type="checkbox" id="bold" value="bold" onClick={this.bold.bind(this)} />
-                        <label class="e-btn" for="bold">
-                            <span class="e-icons e-bold"></span>Bold
+                        <label className="e-btn" for="bold">
+                            <span className="e-icons e-bold"></span>Bold
                         </label>
                         <input type="checkbox" id="italic" value="italic" onClick={this.italic.bind(this)} />
-                        <label class="e-btn" for="italic">
-                            <span class="e-icons e-italic"></span>Italic
+                        <label className="e-btn" for="italic">
+                            <span className="e-icons e-italic"></span>Italic
                         </label>
                         <input type="checkbox" id="underline" value="underline" onClick={this.underline.bind(this)} />
-                        <label class="e-btn" for="underline">
-                            <span class="e-icons e-underline"></span>Underline
+                        <label className="e-btn" for="underline">
+                            <span className="e-icons e-underline"></span>Underline
                         </label>
                         <input type="checkbox" id="strikethrough" value="strikethrough" onClick={this.strikethrough.bind(this)} />
-                        <label class="e-btn" for="strikethrough">
-                            <span class="e-icons e-strikethrough"></span>Strikethrough
+                        <label className="e-btn" for="strikethrough">
+                            <span className="e-icons e-strikethrough"></span>Strikethrough
                         </label>
                     </div>
                 </div>

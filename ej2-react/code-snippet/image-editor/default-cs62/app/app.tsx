@@ -7,9 +7,8 @@ import './index.css';
 
 function App() {
     let imgObj: ImageEditorComponent;
-    let state: any = {
-        isTextInserted: false
-    };
+    let isTextInserted: boolean = false;
+
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
             imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/flower.jpeg');
@@ -19,8 +18,8 @@ function App() {
     }
 
     function addText(): void {
-        if (!state.isTextInserted) {
-            this.setState({ isTextInserted: true });
+        if (!isTextInserted) {
+            isTextInserted = true;
             let dimension: any = imgObj.getImageDimension();
             imgObj.drawText(dimension.x, dimension.y, 'Syncfusion');
         }
@@ -29,8 +28,8 @@ function App() {
     function bold(): void {
         const shapes: any = imgObj.getShapeSettings();
         if (shapes && shapes[0]) {
-            if (shapes[0].fontStyle?.includes('bold')) {
-                shapes[0].fontStyle = shapes[0].fontStyle.filter(item => item !== 'bold');
+            if (shapes[0].fontStyle.includes('bold')) {
+                shapes[0].fontStyle = shapes[0].fontStyle.filter((item: string) => item !== 'bold');
             } else {
                 shapes[0].fontStyle.push('bold');
             }
@@ -41,8 +40,8 @@ function App() {
     function italic(): void {
         const shapes: any = imgObj.getShapeSettings();
         if (shapes && shapes[0]) {
-            if (shapes[0].fontStyle?.includes('italic')) {
-                shapes[0].fontStyle = shapes[0].fontStyle.filter(item => item !== 'italic');
+            if (shapes[0].fontStyle.includes('italic')) {
+                shapes[0].fontStyle = shapes[0].fontStyle.filter((item: string) => item !== 'italic');
             } else {
                 shapes[0].fontStyle.push('italic');
             }
@@ -53,8 +52,8 @@ function App() {
     function underline(): void {
         const shapes: any = imgObj.getShapeSettings();
         if (shapes && shapes[0]) {
-            if (shapes[0].fontStyle?.includes('underline')) {
-                shapes[0].fontStyle = shapes[0].fontStyle.filter(item => item !== 'underline');
+            if (shapes[0].fontStyle.includes('underline')) {
+                shapes[0].fontStyle = shapes[0].fontStyle.filter((item: string) => item !== 'underline');
             } else {
                 shapes[0].fontStyle.push('underline');
             }
@@ -65,8 +64,8 @@ function App() {
     function strikethrough(): void {
         const shapes: any = imgObj.getShapeSettings();
         if (shapes && shapes[0]) {
-            if (shapes[0].fontStyle?.includes('strikethrough')) {
-                shapes[0].fontStyle = shapes[0].fontStyle.filter(item => item !== 'strikethrough');
+            if (shapes[0].fontStyle.includes('strikethrough')) {
+                shapes[0].fontStyle = shapes[0].fontStyle.filter((item: string) => item !== 'strikethrough');
             } else {
                 shapes[0].fontStyle.push('strikethrough');
             }
@@ -76,24 +75,24 @@ function App() {
 
     return (
         <div className='e-img-editor-sample'><ImageEditorComponent ref={(img) => { imgObj = img; }} height="350px" width="550px" showQuickAccessToolbar={false} created={imageEditorCreated} toolbar={[]} />
-                <div class="button-group" >
-                    <button id="text" disabled={state.isTextInserted} class="e-btn e-primary" onClick={addText} >Add Text</button>
-                    <div class="e-btn-group">
+                <div className="button-group" >
+                    <button id="text" disabled={isTextInserted} className="e-btn e-primary" onClick={addText} >Add Text</button>
+                    <div className="e-btn-group">
                         <input type="checkbox" id="bold" value="bold" onClick={bold} />
-                        <label class="e-btn" for="bold">
-                            <span class="e-icons e-bold"></span>Bold
+                        <label className="e-btn" for="bold">
+                            <span className="e-icons e-bold"></span>Bold
                         </label>
                         <input type="checkbox" id="italic" value="italic" onClick={italic} />
-                        <label class="e-btn" for="italic">
-                            <span class="e-icons e-italic"></span>Italic
+                        <label className="e-btn" for="italic">
+                            <span className="e-icons e-italic"></span>Italic
                         </label>
                         <input type="checkbox" id="underline" value="underline" onClick={underline} />
-                        <label class="e-btn" for="underline">
-                            <span class="e-icons e-underline"></span>Underline
+                        <label className="e-btn" for="underline">
+                            <span className="e-icons e-underline"></span>Underline
                         </label>
                         <input type="checkbox" id="strikethrough" value="strikethrough" onClick={strikethrough} />
-                        <label class="e-btn" for="strikethrough">
-                            <span class="e-icons e-strikethrough"></span>Strikethrough
+                        <label className="e-btn" for="strikethrough">
+                            <span className="e-icons e-strikethrough"></span>Strikethrough
                         </label>
                     </div>
                 </div>
