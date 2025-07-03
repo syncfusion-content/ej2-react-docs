@@ -1,26 +1,21 @@
-import React, { useRef } from 'react';
-import ReactDOM from 'react-dom';
 import { AIAssistViewComponent } from '@syncfusion/ej2-react-interactive-chat';
-import { enableRipple } from '@syncfusion/ej2-base';
-
-enableRipple(true);
+import * as React from 'react';
+import * as ReactDOM from "react-dom";
 
 function App() {
-    const assistInstance = useRef(null);
-
+    const assistInstance = React.useRef(null);
+    
     const onPromptRequest = (args) => {
         setTimeout(() => {
-            const defaultResponse = 'For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
-            
-            if (assistInstance.current) {
-                assistInstance.current.addPromptResponse(defaultResponse);
-            }
-        }, 1000);
+            let defaultResponse = 'For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
+            assistInstance.current.addPromptResponse(defaultResponse);
+          }, 1000);
     };
-
+  
     return (
-    <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest} enableAttachments={true} ></AIAssistViewComponent>
+        // specifies the tag for render the AI AssistView component
+        <AIAssistViewComponent id="aiAssistView" ref={assistInstance} promptRequest={onPromptRequest} enableAttachments={true}></AIAssistViewComponent>
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('enableAttachment'));
+ReactDOM.render(<App />, document.getElementById('container'));

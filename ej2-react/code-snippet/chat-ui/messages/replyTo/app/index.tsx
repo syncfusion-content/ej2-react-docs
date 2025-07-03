@@ -1,17 +1,15 @@
-import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel, MessageReplyModel } from '@syncfusion/ej2-react-interactive-chat';
+import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
 
 function App() {
     const currentUserModel: UserModel = {
-        id: "chat-message-1",
+        id: "user1",
         user: "Albert"
     };
 
     const michaleUserModel: UserModel = {
-        id: "chat-message-2",
+        id: "user2",
         user: "Michale Suyama"
     };
 
@@ -19,7 +17,7 @@ function App() {
 
     return (
         // specifies the tag for render the Chat UI component
-        <ChatUIComponent user={currentUserModel} autoScrollToBottom={true} enableCompactMode={true}>
+        <ChatUIComponent user={currentUserModel} >
             <MessagesDirective>
                 <MessageDirective text="Hi Michale, are we on track for the deadline?" author={currentUserModel} ></MessageDirective>
                 <MessageDirective text="Yes, the design phase is complete." author={michaleUserModel} ></MessageDirective>
@@ -29,4 +27,4 @@ function App() {
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('replyTo'));
+ReactDOM.render(<App />, document.getElementById('container'));

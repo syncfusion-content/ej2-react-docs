@@ -20,7 +20,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div id='container'>
-                <div class="actions" >
+                <div className="actions" >
                     <button id="startListening" className="e-btn" onClick={this.startListening.bind(this)}>Start Listening</button>
                     <button id="stopListening" className="e-btn" onClick={this.stopListening.bind(this)}>Stop Listening</button>
                 </div>
