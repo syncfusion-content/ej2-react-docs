@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change the text content and styles of the progressbutton during progress in React Progress button component | Syncfusion
-description: Learn here all about Change the text content and styles of the progressbutton during progress in Syncfusion React Progress button component of Syncfusion Essential JS 2 and more.
+description: Learn here all about changing the text content and styles of the progressbutton during progress in Syncfusion React Progress button component and more.
 control: Change the text content and styles of the progressbutton during progress 
 platform: ej2-react
 documentation: ug
