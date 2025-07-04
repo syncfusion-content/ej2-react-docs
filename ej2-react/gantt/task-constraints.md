@@ -49,14 +49,14 @@ To enable and manage task constraints in the Gantt component, you need to config
 
 In your Gantt component configuration, map the following fields:
 
-```jsx
+```ts
 taskFields={{
     id: 'taskId',
     name: 'taskName',
     startDate: 'startDate',
     endDate: 'endDate',
-    constraintType: 'constraintType', // Specifies the type of constraint (e.g., 2 for MustStartOn)
-    constraintDate: 'constraintDate' // Specifies the relevant date for the constraint
+    constraintType: 'constraintType',
+    constraintDate: 'constraintDate'
 }}
 ```
 
@@ -118,7 +118,7 @@ You can intercept constraint violations using the `actionBegin` event. When the 
 **Defaults**: All flags default to `false`, meaning violations show a popup. Setting a flag to `true` enables silent enforcement (i.e., the user’s update is canceled without interruption).
 
 **Example setup**
-```jsx
+```ts
 actionBegin={(args) => {
     if (args.requestType === 'validateTaskViolation') {
         args.validateMode = {
