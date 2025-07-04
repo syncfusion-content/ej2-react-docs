@@ -1,9 +1,12 @@
+{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useRef, useEffect } from 'react';
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
  
-const blockData = [
+function App() {
+    const blockData = [
     {
         id: 'heading-block',
         type: 'Heading1',
@@ -47,7 +50,6 @@ const blockData = [
     }
 ];
  
-function App() {
     const editorRef = useRef(null);
     const outputRef = useRef(null);
  
@@ -102,7 +104,7 @@ function App() {
                             ? range.startContainer.parentElement
                             : range.startContainer;
                         outputRef.current.textContent = `Current selection range:
-                            blockId: ${parent.closest('.e-block')?.id || 'unknown'}
+                            blockId: ${parent.closest('.e-block').id || 'unknown'}
                             Start Container: ${range.startContainer.nodeName}
                             Start Offset: ${range.startOffset}
                             End Container: ${range.endContainer.nodeName}
@@ -119,7 +121,7 @@ function App() {
             const paragraphElement = document.getElementById('paragraph-2');
             if (paragraphElement) {
                 const range = document.createRange();
-                const textNode = paragraphElement.querySelector('.e-block-content')?.firstChild;
+                const textNode = paragraphElement.querySelector('.e-block-content').firstChild;
                 if (textNode && editorRef.current) {
                     range.setStart(textNode, 8);
                     range.setEnd(textNode, 20);
@@ -201,13 +203,29 @@ function App() {
     }, []);
  
     return (
+ <div>
+             <div id="controls">
+            <h3>Selection and Cursor Methods</h3>
+            <div class="button-group">
+                <button id="setSelectionBtn">Set Text Selection</button>
+                <button id="setCursorBtn">Set Cursor Position</button>
+                <button id="getSelectedBlocksBtn">Get Selected Blocks</button>
+                <button id="getRangeBtn">Get Selection Range</button>
+                <button id="selectRangeBtn">Set Selection Range</button>
+                <button id="selectBlockBtn">Select Block</button>
+                <button id="selectAllBtn">Select All Blocks</button>
+            </div>
+            <div id="output"></div>
+        </div>
 <BlockEditorComponent
             id="blockeditor"
             ref={editorRef}
             blocks={blockData}></BlockEditorComponent>
+        </div>
     );
 }
  
 export default App;
- 
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

@@ -24,9 +24,11 @@ By default, following styles are allowed:
 
 In the below example, only `font-weight` and `font-style` styles will be retained from the pasted content. All other inline styles will be removed.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent pasteSettings={{ allowedStyles: ['font-weight', 'font-style'] }}></BlockEditorComponent>
 ```
+{% endraw %}
 
 ## Setting denied tags
 
@@ -34,9 +36,12 @@ The [deniedTags](../api/blockeditor/pasteSettingsModel/#deniedtags) property in 
 
 In the below example, any `<script>` or `<iframe>` tags found in the pasted content will be removed, preventing unwanted behavior or styling issues.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent pasteSettings={{ deniedTags: ['script', 'iframe'] }}></BlockEditorComponent>
 ```
+{% endraw %}
+
 Below example demonstrates the usage of paste settings that allows only specific styles and also removes the specific tags from the pasted content.
 
 {% tabs %}
@@ -54,17 +59,22 @@ Below example demonstrates the usage of paste settings that allows only specific
 
 By default, the editor attempts to keep the formatting of the pasted content (e.g., bold, italics, links). You can disable this behavior by setting the [keepFormat](../api/blockeditor/pasteSettingsModel/#keepformat) property to `false` in [pasteSettings](../api/blockeditor/#pastesettings). When disabled, the editor will primarily paste the content as plain text regardless of `allowedStyles`.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent pasteSettings={{ keepFormat: false }}></BlockEditorComponent>
 ```
+{% endraw %}
 
 ## Allowing plain text
 
 To paste content purely as plain text, stripping all HTML tags and inline styles, you can set the [plainText](../api/blockeditor/pasteSettingsModel/#plaintext) property to `true` in [pasteSettings](../api/blockeditor/#pastesettings). This ensures that only the raw textual content is inserted into the editor, making it ideal for maintaining strict content consistency. By default, the `plainText` property is set to `false`.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent pasteSettings={{ plainText: true }}></BlockEditorComponent>
 ```
+{% endraw %}
+
 Below example demonstrates the usage of paste settings that disables the keep format and allows plain text.
 
 {% tabs %}

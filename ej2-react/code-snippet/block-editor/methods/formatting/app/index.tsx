@@ -1,9 +1,12 @@
+{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useRef, useState, useEffect } from 'react';
 import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
  
-const blocksData: BlockModel[] = [
+function App() {
+    const blocksData: BlockModel[] = [
     {
         id: 'sample-heading',
         type: 'Heading1',
@@ -35,8 +38,6 @@ const blocksData: BlockModel[] = [
         ]
     }
 ];
- 
-function App() {
     const blockEditorRef = useRef<BlockEditorComponent | null>(null);
     const [outputMessage, setOutputMessage] = useState<string>('');
  
@@ -112,13 +113,30 @@ function App() {
     }, [outputMessage]);
  
     return (
-<BlockEditorComponent
+        <div>
+            <div id="controls">
+            <h3>Formatting Methods</h3>
+            <div class="button-group">
+                <button id="applyBoldBtn">Apply Bold </button>
+                <button id="applyColorBtn">Apply Color</button>
+                <button id="enableToolbarBtn">Enable Toolbar Items</button>
+                <button id="disableToolbarBtn">Disable Toolbar Items</button>
+            </div>
+            <div class="instruction">
+                <p><strong>Instructions:</strong> Select some text in the editor first, then click the formatting buttons to see the effects.</p>
+            </div>
+            <div id="output"></div>
+        </div>
+        
+        <BlockEditorComponent
             id="blockeditor"
             ref={blockEditorRef}
             blocks={blocksData}></BlockEditorComponent>
+            </div>
     );
 }
  
-
 export default App;
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

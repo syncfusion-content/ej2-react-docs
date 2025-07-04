@@ -1,8 +1,11 @@
+{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent, BlockModel, ContentType, ContextMenuBeforeOpenEventArgs, ContextMenuOpenEventArgs, ContextMenuBeforeCloseEventArgs, ContextMenuCloseEventArgs, ContextMenuItemClickEventArgs, ContextMenuItemModel } from '@syncfusion/ej2-react-blockeditor';
 
-const customContextMenuItems: ContextMenuItemModel[] = [
+function App() {
+    const customContextMenuItems: ContextMenuItemModel[] = [
     {
         id: 'format-menu',
         text: 'Format',
@@ -77,8 +80,6 @@ const blocksData: BlockModel[] = [
         ]
     }
 ];
-
-function App() {
     const handleBeforeOpen = (args: ContextMenuBeforeOpenEventArgs) => {
         // Your actions here
     };
@@ -100,6 +101,18 @@ function App() {
     };
 
     return (
+        <div>
+            <div id="controls">
+        <h3>Context Menu Configuration Demo</h3>
+        <div class="instructions">
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Right-click anywhere in the editor to open the context menu</li>
+            <li>Notice the custom popup size, menu items and disabled tooltips</li>
+            <li>Try clicking on items with submenus (they appear on click, not hover)</li>
+          </ol>
+        </div>
+      </div>
         <BlockEditorComponent
             id="blockeditor"
             blocks={blocksData}
@@ -114,9 +127,12 @@ function App() {
                 itemClick: handleItemClick
             }}
         ></BlockEditorComponent>
+         </div>
     );
 }
 
 export default App;
 
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

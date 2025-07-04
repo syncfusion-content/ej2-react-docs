@@ -16,28 +16,34 @@ The Block Editor component provides various appearance customization options to 
 
 You can specify the width and height for the Block Editor control using the [width](../api/blockeditor/#width) and [height](../api/blockeditor/#height) properties.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent width="100%" height="80vh"></BlockEditorComponent>
 
 // Or with specific pixel values
 <BlockEditorComponent width="800px" height="500px"></BlockEditorComponent>
 ```
+{% endraw %}
 
 ## Setting readonly mode
 
 You can utilize the [readonly](../api/blockeditor/#readonly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent readonly={true}></BlockEditorComponent>
 ```
+{% endraw %}
 
 ## Customization using CSS Class
 
 You can use the [cssClass](../api/blockeditor/#cssclass) property to customize the appearance of the Block Editor control.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent width="600px" height="400px" cssClass="custom-editor-theme"></BlockEditorComponent>
 ```
+{% endraw %}
 
 Below example demonstrates the usage of readonly and cssClass properties.
 

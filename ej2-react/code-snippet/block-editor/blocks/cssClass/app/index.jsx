@@ -1,6 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BlockEditorComponent,  } from '@syncfusion/ej2-react-blockeditor';
+{% raw %}
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
 
 function App() {
   const blocksData = [
@@ -80,3 +82,5 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

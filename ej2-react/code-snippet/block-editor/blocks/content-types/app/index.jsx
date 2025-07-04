@@ -1,5 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+{% raw %}
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
 import { ContentType } from '@syncfusion/ej2-blockeditor';
 
@@ -47,8 +49,10 @@ function App() {
           { id: 'label1', text: 'Bug', labelColor: '#ff5252', groupHeader: 'Status' }
         ]
       }}
-    />
+    ></BlockEditorComponent>
   );
-}
-
+};
+export default App;
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

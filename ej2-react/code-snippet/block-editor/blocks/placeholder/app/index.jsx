@@ -1,8 +1,11 @@
+{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
-const blocksData = [
+function App() {
+    const blocksData = [
     {
         id: 'block-1',
         type: 'Paragraph',
@@ -19,8 +22,6 @@ const blocksData = [
         placeholder: 'Start typing your notes or press "/" for commands...'
     }
 ];
-
-function App() {
     return (
         <BlockEditorComponent
             id="blockeditor_sample"
@@ -30,5 +31,6 @@ function App() {
 }
 
 export default App;
-
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}
