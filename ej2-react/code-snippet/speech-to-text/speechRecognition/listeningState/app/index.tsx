@@ -1,13 +1,13 @@
 // Import the SpeechToText.
 import { SpeechToTextComponent, StartListeningEventArgs, StopListeningEventArgs } from '@syncfusion/ej2-react-inputs';
-import React, { useState } from 'react';
-import ReactDom from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from "react-dom";
 
 function App() {
-    let [listeningState, setListeningState] = useState<string>('Inactive');
+    let listeningState = 'Inactive';
 
     function updateListeningState(state: string) {
-        setListeningState(state);
+        listeningState=state;
     };
 
     return (
@@ -35,4 +35,4 @@ function App() {
 }
 
 export default App;
-ReactDom.render(<App />,document.getElementById('element'));
+ReactDOM.render(<App />,document.getElementById('element'));

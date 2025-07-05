@@ -1,13 +1,12 @@
-// Import the SpeechToText.
 import { SpeechToTextComponent, TextAreaComponent, TranscriptChangedEventArgs } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
-import * as ReactDom from 'react-dom';
-import { useRef } from 'react';
+import * as ReactDOM from "react-dom";
 
-// To render SpeechToText.
 function App() {
-    let speechToText: SpeechToTextComponent;
-    let textareaObj : TextAreaComponent;
+
+    const speechToText = React.useRef<SpeechToTextComponent>(null);
+    let textareaObj: TextAreaComponent;
+
     function onTranscriptChanged(args: TranscriptChangedEventArgs) {
         textareaObj.value = args.transcript;
     }
@@ -23,7 +22,7 @@ function App() {
                 <button id="startListening" className="e-btn" onClick={startListening}>Start Listening</button>
                 <button id="stopListening" className="e-btn" onClick={stopListening}>Stop Listening</button>
             </div>
-            <SpeechToTextComponent ref={(speech) => {speechToText = speech} } transcriptChanged={onTranscriptChanged}></SpeechToTextComponent>
+            <SpeechToTextComponent ref={speechToText} transcriptChanged={onTranscriptChanged}></SpeechToTextComponent>
             <TextAreaComponent
                 id="textareaInst"
                 ref={(textarea) => {textareaObj = textarea} }
@@ -36,5 +35,6 @@ function App() {
         </div>
     );
 }
+
 export default App;
-ReactDom.render(<App />,document.getElementById('element'));
+ReactDOM.render(<App />, document.getElementById('element'));

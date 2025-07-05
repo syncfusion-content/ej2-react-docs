@@ -1,12 +1,9 @@
-import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel, MessageToolbarSettingsModel, MessageToolbarItemClickedEventArgs } from '@syncfusion/ej2-react-interactive-chat';
+import { ChatUIComponent, MessagesDirective, MessageDirective, UserModel, MessageToolbarSettingsModel, MessageToolbarItemClickedEventArgs, MessageModel } from '@syncfusion/ej2-react-interactive-chat';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
-import { useRef } from "react";
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
+import { useRef } from 'react';
 
 function App() {
-    const chatUiInst = useRef(null);
     const currentUserModel: UserModel = {
         id: "user1",
         user: "Albert"
@@ -16,6 +13,8 @@ function App() {
         id: "user2",
         user: "Michale Suyama"
     };
+
+    const chatUiInst = useRef(null);
     const messageToolbarSettings: MessageToolbarSettingsModel = {
         items: [
             { type: 'Button', iconCss: 'e-icons e-chat-forward', tooltip: 'Forward' },
@@ -26,8 +25,8 @@ function App() {
         ],
         itemClicked: (args: MessageToolbarItemClickedEventArgs) => {
             if (args.item.prefixIcon === 'e-icons e-chat-forward') {
-                const newMessageObj = {
-                    id: 'chat-message-' + (chatUiInst.messages.length + 1).toString(),
+                const newMessageObj : MessageModel = {
+                    id: 'chat-message-' + (chatUiInst.current.messages.length + 1).toString(),
                     isForwarded: true,
                     isPinned: args.message.isPinned,
                     author: args.message.author,
@@ -44,7 +43,7 @@ function App() {
 
     return (
         // specifies the tag for render the Chat UI component
-        <ChatUIComponent user={currentUserModel} autoScrollToBottom={true} messageToolbarSettings={messageToolbarSettings} ref={chatUI => (this.chatUiInst = chatUI)}>
+        <ChatUIComponent user={currentUserModel} messageToolbarSettings={messageToolbarSettings} ref={chatUiInst} >
             <MessagesDirective>
                 <MessageDirective text="Hi Michale, are we on track for the deadline?" author={currentUserModel} ></MessageDirective>
                 <MessageDirective text="Yes, the design phase is complete." author={michaleUserModel} ></MessageDirective>
@@ -54,4 +53,4 @@ function App() {
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('itemClicked'));
+ReactDOM.render(<App />, document.getElementById('container'));
