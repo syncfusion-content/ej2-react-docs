@@ -1,9 +1,12 @@
-mport * as React from 'react';
+{% raw %}
+
+import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useRef, useEffect } from 'react';
 import { BlockEditorComponent, BlockModel, ContentType } from '@syncfusion/ej2-react-blockeditor';
  
-const blockData: BlockModel[] = [
+function App() {
+    const blockData: BlockModel[] = [
     {
         id: 'title-block',
         type: 'Heading1',
@@ -51,8 +54,6 @@ const blockData: BlockModel[] = [
         ]
     }
 ];
- 
-function App() {
     const editorRef = useRef<BlockEditorComponent | null>(null);
     const outputRef = useRef<HTMLDivElement | null>(null);
  
@@ -149,13 +150,27 @@ function App() {
     }, []);
  
     return (
+        <div>
+        <div id="controls">
+            <h3>Data Export Methods</h3>
+            <div class="button-group">
+                <button id="getJsonAllBtn">Get All Data as JSON</button>
+                <button id="getJsonBlockBtn">Get Block Data as JSON</button>
+                <button id="getHtmlAllBtn">Get All Data as HTML</button>
+                <button id="getHtmlBlockBtn">Get Block Data as HTML</button>
+                <button id="printContentBtn">Print Editor Content</button>
+            </div>
+            <div id="output"></div>
+        </div>
 <BlockEditorComponent
             id="blockeditor"
             ref={editorRef}
             blocks={blockData}></BlockEditorComponent>
+            </div>
     );
 }
  
 export default App;
- 
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% raw %}

@@ -1,8 +1,11 @@
+{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent, BlockModel, ContentType, LabelSettingsModel } from '@syncfusion/ej2-react-blockeditor';
 
-const labelSettings: LabelSettingsModel = {
+function App() {
+    const labelSettings: LabelSettingsModel = {
     triggerChar: '#',
     labelItems: [
         { id: 'bug', text: 'Bug', labelColor: '#ff5252', groupHeader: 'Status' },
@@ -104,8 +107,6 @@ const blocksData: BlockModel[] = [
         ]
     }
 ];
-
-function App() {
     return (
         <BlockEditorComponent
             id="blockeditor_labels"
@@ -116,5 +117,6 @@ function App() {
 }
 
 export default App;
-
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

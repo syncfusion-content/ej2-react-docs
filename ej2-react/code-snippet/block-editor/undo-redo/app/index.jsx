@@ -1,8 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// {% raw %}
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent, ContentType } from '@syncfusion/ej2-react-blockeditor';
 
-const blocksData = [
+function App() {
+  const blocksData = [
   {
     id: 'block-1',
     type: 'Heading1',
@@ -35,7 +38,6 @@ const blocksData = [
   }
 ];
 
-function App() {
   return (
 
       <BlockEditorComponent
@@ -50,3 +52,5 @@ function App() {
 export default App;
 
 ReactDOM.render(<App />, document.getElementById('container'));
+
+// {% endraw %}

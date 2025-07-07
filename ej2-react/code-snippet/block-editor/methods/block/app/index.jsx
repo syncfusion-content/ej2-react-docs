@@ -1,5 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
+{% raw %}
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { useEffect, useRef } from 'react';
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
 import { BlockEditor, ContentType } from '@syncfusion/ej2-blockeditor';
 
@@ -10,7 +13,7 @@ function App() {
     const editorInstance = editorRef.current;
 
     // Add Block
-    document.getElementById('addBlockBtn')?.addEventListener('click', () => {
+    document.getElementById('addBlockBtn').addEventListener('click', () => {
       const newBlock = {
         id: 'new-block',
         type: 'Paragraph',
@@ -26,13 +29,13 @@ function App() {
     });
 
     // Remove Block
-    document.getElementById('removeBlockBtn')?.addEventListener('click', () => {
+    document.getElementById('removeBlockBtn').addEventListener('click', () => {
       editorInstance.removeBlock('block-3');
       displayOutput('Block with ID "block-3" removed successfully');
     });
 
     // Get Block
-    document.getElementById('getBlockBtn')?.addEventListener('click', () => {
+    document.getElementById('getBlockBtn').addEventListener('click', () => {
       const block = editorInstance.getBlock('block-1');
       if (block && block.content) {
         displayOutput(`Block found:\nID: ${block.id}\nType: ${block.type}\nContent: ${block.content[0].content}`);
@@ -42,13 +45,13 @@ function App() {
     });
 
     // Move Block
-    document.getElementById('moveBlockBtn')?.addEventListener('click', () => {
+    document.getElementById('moveBlockBtn').addEventListener('click', () => {
       editorInstance.moveBlock('block-2', 'block-1');
       displayOutput('Block "block-2" moved successfully');
     });
 
     // Update Block
-    document.getElementById('updateBlockBtn')?.addEventListener('click', () => {
+    document.getElementById('updateBlockBtn').addEventListener('click', () => {
       const success = editorInstance.updateBlock('block-2', {
         indent: 1,
         content: [
@@ -67,7 +70,7 @@ function App() {
     });
 
     // Get Block Count
-    document.getElementById('getBlockCountBtn')?.addEventListener('click', () => {
+    document.getElementById('getBlockCountBtn').addEventListener('click', () => {
       const count = editorInstance.getBlockCount();
       displayOutput(`Total number of blocks: ${count}`);
     });
@@ -90,19 +93,33 @@ function App() {
       content: [{ type: ContentType.Text, content: 'This is another paragraph block.' }]
     }
   ];
-
-  return (
-    <div>
-      <BlockEditorComponent id="blockeditor" ref={editorRef} blocks={blocks} />
-    </div>
-  );
-}
-
-function displayOutput(message) {
+  function displayOutput(message) {
   const outputDiv = document.getElementById('output');
   if (outputDiv) {
     outputDiv.textContent = message;
   }
 }
+
+  return (
+     <div>
+      <div id="controls">
+            <h3>Block Management Methods</h3>
+            <div class="button-group">
+                <button id="addBlockBtn">Add Block</button>
+                <button id="removeBlockBtn">Remove Block</button>
+                <button id="getBlockBtn">Get Block</button>
+                <button id="moveBlockBtn">Move Block</button>
+                <button id="updateBlockBtn">Update Block</button>
+                <button id="getBlockCountBtn">Get Block Count</button>
+            </div>
+            <div id="output"></div>
+        </div>
+    <BlockEditorComponent id="blockeditor" ref={editorRef}  blocks={blocks}></BlockEditorComponent>
+    </div>
+  );
+}
+
 export default App;
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

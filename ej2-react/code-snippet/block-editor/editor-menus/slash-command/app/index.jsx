@@ -1,3 +1,5 @@
+{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
@@ -53,6 +55,20 @@ function App() {
     };
 
     return (
+        <div>
+            <div id="controls">
+        <h3>Slash Command Menu Configuration Demo</h3>
+        <div class="instructions">
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>
+              Click in the editor below and type "/" to open the slash command
+              menu
+            </li>
+            <li>Notice the custom popup size, commands and disabled tooltips</li>
+          </ol>
+        </div>
+      </div>
         <BlockEditorComponent
             id="blockeditor"
             blocks={blocksData}
@@ -67,9 +83,12 @@ function App() {
                 queryFiltering: handleQueryFiltering
             }}
         ></BlockEditorComponent>
+         </div>
     );
 }
 
 export default App;
 
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

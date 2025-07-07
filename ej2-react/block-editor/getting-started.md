@@ -71,6 +71,7 @@ Now, you can start adding Block Editor component in the application. For getting
 
 `[Class-component]`
 
+{% raw %}
 ```ts
 
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
@@ -88,9 +89,11 @@ export default class App extends React.Component<{}, {}> {
 
 ReactDOM.render(<App />, document.getElementById('blockeditor'));
 ```
+{% endraw %}
 
 `[Functional-component]`
 
+{% raw %}
 ```ts
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
 import * as React from 'react';
@@ -105,6 +108,7 @@ function App() {
 
 ReactDOM.render(<App />, document.getElementById('blockeditor'));
 ```
+{% endraw %}
 
 ## Adding CSS Reference
 

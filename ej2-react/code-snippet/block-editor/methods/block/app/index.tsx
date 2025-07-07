@@ -1,3 +1,5 @@
+{% raw %}
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent} from '@syncfusion/ej2-react-blockeditor';
@@ -51,7 +53,7 @@ function App() {
     const updateBlockBtn = document.getElementById('updateBlockBtn');
     const getBlockCountBtn = document.getElementById('getBlockCountBtn');
 
-    addBlockBtn?.addEventListener('click', () => {
+    addBlockBtn!.addEventListener('click', () => {
       const newBlock: BlockModel = {
         id: 'new-block',
         type: 'Paragraph',
@@ -66,12 +68,12 @@ function App() {
       displayOutput(`Block added successfully with ID: ${newBlock.id}`);
     });
 
-    removeBlockBtn?.addEventListener('click', () => {
+    removeBlockBtn!.addEventListener('click', () => {
       editorInstance.removeBlock('block-3');
       displayOutput('Block with ID "block-3" removed successfully');
     });
 
-    getBlockBtn?.addEventListener('click', () => {
+    getBlockBtn!.addEventListener('click', () => {
       const block = editorInstance.getBlock('block-1');
       if (block && block.content) {
         displayOutput(`Block found:\nID: ${block.id}\nType: ${block.type}\nContent: ${block.content[0].content}`);
@@ -80,12 +82,12 @@ function App() {
       }
     });
 
-    moveBlockBtn?.addEventListener('click', () => {
+    moveBlockBtn!.addEventListener('click', () => {
       editorInstance.moveBlock('block-2', 'block-1');
       displayOutput('Block "block-2" moved successfully');
     });
 
-    updateBlockBtn?.addEventListener('click', () => {
+    updateBlockBtn!.addEventListener('click', () => {
       const success = editorInstance.updateBlock('block-2', {
         indent: 1,
         content: [
@@ -97,14 +99,14 @@ function App() {
       });
 
       const updatedBlock = editorInstance.getBlock('block-2');
-      if (success && updatedBlock?.content) {
+      if (success && updatedBlock.content) {
         displayOutput(`Block ${updatedBlock.id} updated successfully\nNew content: "${updatedBlock.content[0].content}"\nNew indent: ${updatedBlock.indent}`);
       } else {
         displayOutput('Failed to update block');
       }
     });
 
-    getBlockCountBtn?.addEventListener('click', () => {
+    getBlockCountBtn!.addEventListener('click', () => {
       const count = editorInstance.getBlockCount();
       displayOutput(`Total number of blocks: ${count}`);
     });
@@ -118,9 +120,25 @@ function App() {
   };
 
   return (
+    <div>
+      <div id="controls">
+            <h3>Block Management Methods</h3>
+            <div class="button-group">
+                <button id="addBlockBtn">Add Block</button>
+                <button id="removeBlockBtn">Remove Block</button>
+                <button id="getBlockBtn">Get Block</button>
+                <button id="moveBlockBtn">Move Block</button>
+                <button id="updateBlockBtn">Update Block</button>
+                <button id="getBlockCountBtn">Get Block Count</button>
+            </div>
+            <div id="output"></div>
+        </div>
     <BlockEditorComponent id="blockeditor" ref={editorRef}  blocks={blockData}></BlockEditorComponent>
+    </div>
   );
 }
 
 export default App;
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}

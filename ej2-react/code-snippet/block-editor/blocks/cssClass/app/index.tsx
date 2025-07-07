@@ -1,5 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+{% raw %}
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
 import { BlockModel, ContentType } from '@syncfusion/ej2-blockeditor';
 
@@ -83,3 +85,5 @@ function App() {
 export default App;
 
 ReactDOM.render(<App />, document.getElementById('container'));
+
+{% endraw %}
