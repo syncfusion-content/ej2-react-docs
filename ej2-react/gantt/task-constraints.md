@@ -50,14 +50,16 @@ To enable and manage task constraints in the Gantt component, you need to config
 In your Gantt component configuration, map the following fields:
 
 ```ts
-taskFields={{
-    id: 'taskId',
-    name: 'taskName',
-    startDate: 'startDate',
-    endDate: 'endDate',
-    constraintType: 'constraintType',
-    constraintDate: 'constraintDate'
-}}
+<GanttComponent
+    taskFields={{
+        id: 'taskId',
+        name: 'taskName',
+        startDate: 'startDate',
+        endDate: 'endDate',
+        constraintType: 'constraintType',
+        constraintDate: 'constraintDate'
+    }}
+/>
 ```
 
 These mappings ensure that each task can interpret and apply its constraints correctly based on your data source.
