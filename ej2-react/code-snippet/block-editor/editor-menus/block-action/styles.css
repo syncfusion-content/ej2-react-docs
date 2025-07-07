@@ -1,3 +1,16 @@
+#container {
+  margin: 50px;
+}
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+} 
+
 #controls {
     margin-bottom: 20px;
     padding: 20px;

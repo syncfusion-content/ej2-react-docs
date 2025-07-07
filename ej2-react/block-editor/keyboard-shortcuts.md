@@ -79,6 +79,8 @@ For other operations, you can customize the keyboard shortcuts by configuring th
 
 In the below example, the shortcut for bold formatting is changed to <kbd>Alt</kbd> + <kbd>B</kbd> and for italic formatting to <kbd>Alt</kbd> + <kbd>I</kbd>.
 
+{% raw %}
 ```typescript
 <BlockEditorComponent keyConfig={{ bold: 'alt+b', italic: 'alt+i' }}></BlockEditorComponent>
 ```
+{% endraw %}
