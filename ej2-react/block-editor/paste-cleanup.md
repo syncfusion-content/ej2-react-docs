@@ -48,7 +48,7 @@ Below example demonstrates the usage of paste settings that allows only specific
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/block-editor/paste-cleanup/allowedstyle/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/block-editor/paste-cleanup/allowedstyle/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
