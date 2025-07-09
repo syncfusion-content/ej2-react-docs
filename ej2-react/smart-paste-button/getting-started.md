@@ -115,8 +115,9 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
+* The following example shows the Smart Paste Button component filling out a bug form, and users can integrate any text-generative AI of their choice. 
 
-* The following example shows the Smart Paste Button component filling out a bug form, and users can integrate any text-generative AI of their choice.
+* For demonstration purposes, the AI model is integrated directly into the front-end code. However, the recommended approach is to host the AI model on a server and call the server API from the front-end. To configure the backend AI service, refer [here](https://ej2.syncfusion.com/react/documentation/smart-paste-button/ai-service/).
 
 {% tabs %}
 {% highlight ts tabtitle="app.tsx" %}
