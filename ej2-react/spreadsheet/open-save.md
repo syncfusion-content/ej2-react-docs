@@ -130,7 +130,7 @@ By default, the Spreadsheet component provides an option to browse files from th
 ```js
 
     // Fetch call to server to load the Excel file.
-    fetch('https://localhost:{{Your port number}}/Home/Open', {
+    fetch('https://localhost:{{Your_port_number}}/Home/Open', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ You can find the server endpoint code to fetch and process the Excel file in thi
 
 ```js
 // To open an Excel file from the server.
-fetch('https://localhost:{port number}/Home/Open')
+fetch('https://localhost:{{port_number}}/Home/Open')
 ```
 
 ### Open an excel file using a hosted web service in AWS Lambda
@@ -369,7 +369,7 @@ const App = () => {
     retryAfterDelay: 500
   }
 
-  const openUrl = 'https://localhost:{port number}/Home/Open';
+  const openUrl = 'https://localhost:{{port_number}}/Home/Open';
 
   return (
     <div className='control-section spreadsheet-control'>
@@ -407,7 +407,7 @@ The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general
 
 ```js
     // Specifies the service URL for processing the Excel file, converting it into a format suitable for loading in the spreadsheet.
-    <SpreadsheetComponent ref={spreadsheetRef} openUrl="https://localhost:{port number}/Home/Open">
+    <SpreadsheetComponent ref={spreadsheetRef} openUrl="https://localhost:{{port_number}}/Home/Open">
     </SpreadsheetComponent>
 ```
 
@@ -531,7 +531,7 @@ By default, the Spreadsheet component saves the Excel file and downloads it to t
         formData.append('JSONData', JSON.stringify(json.jsonObject.Workbook));
         formData.append('PdfLayoutSettings', JSON.stringify({ FitSheetOnOnePage: false }));
         // Using fetch to invoke the save process.
-        fetch('https://localhost:{{Your port number}}/Home/Save', {
+        fetch('https://localhost:{{Your_port_number}}/Home/Save', {
             method: 'POST',
             body: formData
         }).then((response) => {
@@ -579,7 +579,7 @@ You can find the server endpoint code to save the spreadsheet data as an Excel f
 ```js
 
 //To save an Excel file to the server.
-fetch('https://localhost:{port number}/Home/Save')
+fetch('https://localhost:{{port_number}}/Home/Save')
 
 ```
 
