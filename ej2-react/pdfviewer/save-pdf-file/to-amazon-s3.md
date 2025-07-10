@@ -42,6 +42,7 @@ AWS.config.update({
 
 3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
 
+{% raw %}
 ```typescript
 var toolItem1 = {
   prefixIcon: 'e-icons e-pv-download-document-icon',
@@ -66,7 +67,7 @@ return (<div>
         created={loadDocument}
         id="container"
         resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
-        style={{ 'height': '640px' }}
+        style={{ height: '640px' }}
         toolbarSettings={{ showTooltip : true, toolbarItems: [ 'OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', toolItem1, 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']}}
             toolbarClick={toolbarClick}
         >
@@ -77,6 +78,7 @@ return (<div>
     </div>
   </div>);
 ```
+{% endraw %}
 
 4. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to AWS S3 using the putObject method of the S3 instance.
 

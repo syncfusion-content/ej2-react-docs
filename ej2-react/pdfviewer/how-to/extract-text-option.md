@@ -48,7 +48,7 @@ export function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib"
         extractTextOption='None'  // Options: 'None', 'TextOnly', 'BoundsOnly', 'TextAndBounds' 
-        style={{ 'height': '680px' }} 
+       style={{ height: '680px' }}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
           Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
