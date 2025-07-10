@@ -96,14 +96,10 @@ import * as React from 'react';
 import './App.css';
 
 function App() {
-
   return (
-      <div id="container" style={{ 
-        width:"550px",
-        height:"350px" 
-      }}>
-        <ImageEditorComponent />
-      </div>
+    <div id="container">
+      <ImageEditorComponent width="550px" height="350px" />
+    </div>
   );
 }
 export default App;

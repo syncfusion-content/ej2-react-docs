@@ -2,7 +2,7 @@
 layout: post
 title: Serialization in React Diagram component | Syncfusion®
 description: Learn here all about Serialization in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
-control: Serialization 
+control: Serialization
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -101,6 +101,7 @@ By enabling preventDefaults, only properties that you set in diagram are include
 
 The following code illustrates how to enable the preventDefaults property to simplify the JSON object:
 
+{% raw %}
 
 ```ts
   return (
@@ -112,6 +113,7 @@ The following code illustrates how to enable the preventDefaults property to sim
   )
 
 ```
+{% endraw %}
 
 ## Save and load diagram using uploader control
 
@@ -180,7 +182,7 @@ The following example shows how to load mind map diagram from mermaid syntax.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/serialization/serialization-cs3" %}
- 
+
 #### Load UML Sequence diagram
 
 The following example shows how to load UML Sequence diagram from mermaid syntax.
