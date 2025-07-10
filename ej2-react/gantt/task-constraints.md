@@ -49,6 +49,7 @@ To enable and manage task constraints in the Gantt component, you need to config
 
 In your Gantt component configuration, map the following fields:
 
+{% raw %}
 ```ts
 <GanttComponent
     taskFields={{
@@ -61,6 +62,7 @@ In your Gantt component configuration, map the following fields:
     }}
 />
 ```
+{% endraw %}
 
 These mappings ensure that each task can interpret and apply its constraints correctly based on your data source.
 

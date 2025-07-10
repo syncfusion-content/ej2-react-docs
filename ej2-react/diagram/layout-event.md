@@ -16,6 +16,8 @@ The [`dataLoaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/id
 
 The following code example explains the data loaded event in the diagram.
 
+{% raw %}
+
 ```javascript
   function dataLoaded(args) {
     //we can get diagram instance in args.
@@ -34,6 +36,7 @@ The following code example explains the data loaded event in the diagram.
       <Inject services={[HierarchicalTree]} />
   </DiagramComponent>
 ```
+{% endraw %}
 
 ## ExpandStateChange event
 
@@ -78,6 +81,8 @@ The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram
 
 The following code example explains the layout updated event in the diagram.
 
+{% raw %}
+
 ```javascript
 function handleLayoutUpdated(args){
         if (args.state === 'Started') {
@@ -93,4 +98,6 @@ function handleLayoutUpdated(args){
     {/* Inject necessary services for the diagram */}
     <Inject services={[HierarchicalTree]} />
 </DiagramComponent>
+
 ```
+{% endraw %}
