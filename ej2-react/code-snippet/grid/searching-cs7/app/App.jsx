@@ -48,18 +48,24 @@ function App() {
     };
     const actionComplete = (args) => {
         if (args.requestType === 'refresh' && valueAssign) {
-            document.getElementById(grid.element.id + '_searchbar').value =
-                values;
+            document.getElementById(grid.element.id + '_searchbar').value = values;
             valueAssign = false;
         }
-        else if (document.getElementById(grid.element.id + '_searchbar').value ===
-            '' &&
+        else if (document.getElementById(grid.element.id + '_searchbar').value === '' &&
             args.requestType === 'refresh' &&
-            removeQuery) {
+            removeQuery
+        ) {
             grid.query = new Query();
             removeQuery = false;
             grid.refresh();
         }
+        document.getElementById(grid.element.id + '_searchbar').addEventListener('keyup', (args) => {
+            if (args.target.value === '' && (args.key === 'Enter' || args.key === 'Backspace')) {
+                grid.query = new Query();
+                removeQuery = false;
+                grid.refresh();
+            }
+        });
     };
     return (<div>
     <GridComponent dataSource={data} height={280} toolbar={toolbarOptions} searchSettings={searchOptions} ref={g => grid = g} actionBegin={actionBegin} actionComplete={actionComplete}>
