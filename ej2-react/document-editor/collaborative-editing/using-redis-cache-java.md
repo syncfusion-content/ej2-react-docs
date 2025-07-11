@@ -25,7 +25,7 @@ The following are needed to enable collaborative editing in Document Editor.
 
 To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the Document Editor, like in the code snippet below.
 
-```typescript
+```ts
 import { DocumentEditorContainerComponent, Toolbar, CollaborativeEditingHandler, ContainerContentChangeEventArgs, Operation, Inject, ToolbarItem } from '@syncfusion/ej2-react-documenteditor';
 
 // Inject collaborative editing module.
@@ -46,9 +46,9 @@ public componentDidMount(): void {
 render() {
     return (<div className='control-pane'>
     <div id="toast_type"></div>
-        <div style={{ "height": "93vh" }}>
+        <div>
             <div id='documenteditor_titlebar' className="e-de-ctn-title"></div>
-            <DocumentEditorContainerComponent id="container" ref={(scope: DocumentEditorContainerComponent) => { this.container = scope; }} style={{ 'display': 'block' }}
+            <DocumentEditorContainerComponent id="container" ref={(scope: DocumentEditorContainerComponent) => { this.container = scope; }}
                 height={'100%'} currentUser={this.currentUser} toolbarItems={this.toolbarItems} serviceUrl={this.serviceUrl + 'api/wordeditor'} enableToolbar={true} locale='en-US' >
                 <Inject services={[Toolbar]} />
             </DocumentEditorContainerComponent>``
@@ -61,7 +61,7 @@ render() {
 
 To broadcast the changes made and receive changes from remote users, configure SockJS like below.
 
-```typescript
+```ts
 import * as SockJS from 'sockjs-client';
 import { Stomp, CompatClient } from '@stomp/stompjs';
 

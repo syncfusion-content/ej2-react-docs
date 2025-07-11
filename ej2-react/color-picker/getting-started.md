@@ -81,6 +81,7 @@ Import the ColorPicker component's required CSS references as follows in `src/Ap
 
 Now, you can start adding ColorPicker component to the application. We have added ColorPicker component in `src/App.tsx` file using following code.
 
+{% raw %}
 ```ts
 import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from "react";
@@ -100,6 +101,7 @@ function App() {
 };
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 
