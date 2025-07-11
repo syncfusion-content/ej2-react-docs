@@ -1,4 +1,4 @@
-import { ImageEditorComponent } from '@syncfusion/ej2-react-image-editor';
+import { ImageEditorComponent, Dimension, ShapeSettings} from '@syncfusion/ej2-react-image-editor';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { Browser } from '@syncfusion/ej2-base';
 import * as React from 'react';
@@ -6,8 +6,6 @@ import * as ReactDOM from "react-dom";
 
 function App() {
     let imgObj: ImageEditorComponent;
-    let isTextInserted: boolean = false;
-
     function imageEditorCreated(): void {
         if (Browser.isDevice) {
             imgObj.open('https://ej2.syncfusion.com/react/documentation/image-editor/images/flower.jpeg');
@@ -17,16 +15,17 @@ function App() {
     }
 
     function addText(): void {
-        if (!isTextInserted) {
-            isTextInserted = true;
-            let dimension: any = imgObj.getImageDimension();
-            imgObj.drawText(dimension.x, dimension.y, 'Syncfusion');
+        const dimension: Dimension = imgObj.getImageDimension();
+        imgObj.drawText(dimension.x, dimension.y, 'Syncfusion');
+        const textElement = document.getElementById('text');
+        if (textElement) {
+            textElement.setAttribute('disabled', 'true');
         }
     }
 
     function bold(): void {
-        const shapes: any = imgObj.getShapeSettings();
-        if (shapes && shapes[0]) {
+        const shapes: ShapeSettings[] = imgObj.getShapeSettings();
+        if (shapes && shapes[0].fontStyle) {
             if (shapes[0].fontStyle.includes('bold')) {
                 shapes[0].fontStyle = shapes[0].fontStyle.filter((item: string) => item !== 'bold');
             } else {
@@ -37,8 +36,8 @@ function App() {
     }
 
     function italic(): void {
-        const shapes: any = imgObj.getShapeSettings();
-        if (shapes && shapes[0]) {
+        const shapes: ShapeSettings[] = imgObj.getShapeSettings();
+        if (shapes && shapes[0].fontStyle) {
             if (shapes[0].fontStyle.includes('italic')) {
                 shapes[0].fontStyle = shapes[0].fontStyle.filter((item: string) => item !== 'italic');
             } else {
@@ -49,8 +48,8 @@ function App() {
     }
 
     function underline(): void {
-        const shapes: any = imgObj.getShapeSettings();
-        if (shapes && shapes[0]) {
+        const shapes: ShapeSettings[] = imgObj.getShapeSettings();
+        if (shapes && shapes[0].fontStyle) {
             if (shapes[0].fontStyle.includes('underline')) {
                 shapes[0].fontStyle = shapes[0].fontStyle.filter((item: string) => item !== 'underline');
             } else {
@@ -61,8 +60,8 @@ function App() {
     }
 
     function strikethrough(): void {
-        const shapes: any = imgObj.getShapeSettings();
-        if (shapes && shapes[0]) {
+        const shapes: ShapeSettings[] = imgObj.getShapeSettings();
+        if (shapes && shapes[0].fontStyle) {
             if (shapes[0].fontStyle.includes('strikethrough')) {
                 shapes[0].fontStyle = shapes[0].fontStyle.filter((item: string) => item !== 'strikethrough');
             } else {
@@ -73,29 +72,44 @@ function App() {
     }
 
     return (
-        <div className='e-img-editor-sample'><ImageEditorComponent ref={(img) => { imgObj = img; }} height="350px" width="550px" showQuickAccessToolbar={false} created={imageEditorCreated} toolbar={[]} />
-                <div className="button-group" >
-                    <button id="text" disabled={isTextInserted} className="e-btn e-primary" onClick={addText} >Add Text</button>
-                    <div className="e-btn-group">
-                        <input type="checkbox" id="bold" value="bold" onClick={bold} />
-                        <label className="e-btn" for="bold">
-                            <span className="e-icons e-bold"></span>Bold
-                        </label>
-                        <input type="checkbox" id="italic" value="italic" onClick={italic} />
-                        <label className="e-btn" for="italic">
-                            <span className="e-icons e-italic"></span>Italic
-                        </label>
-                        <input type="checkbox" id="underline" value="underline" onClick={underline} />
-                        <label className="e-btn" for="underline">
-                            <span className="e-icons e-underline"></span>Underline
-                        </label>
-                        <input type="checkbox" id="strikethrough" value="strikethrough" onClick={strikethrough} />
-                        <label className="e-btn" for="strikethrough">
-                            <span className="e-icons e-strikethrough"></span>Strikethrough
-                        </label>
-                    </div>
+        <div className='e-img-editor-sample'>
+            <ImageEditorComponent 
+                ref={(img: ImageEditorComponent) => { imgObj = img; }} 
+                height="350px" 
+                width="550px" 
+                showQuickAccessToolbar={false} 
+                created={imageEditorCreated} 
+                toolbar={[]} 
+            />
+            <div className="button-group" >
+                <button 
+                    id="text" 
+                    className="e-btn e-primary" 
+                    onClick={addText}
+                >
+                    Add Text
+                </button>
+                <div className="e-btn-group">
+                    <input type="checkbox" id="bold" value="bold" onChange={bold} />
+                    <label className="e-btn" htmlFor="bold">
+                        <span className="e-icons e-bold"></span>Bold
+                    </label>
+                    <input type="checkbox" id="italic" value="italic" onChange={italic} />
+                    <label className="e-btn" htmlFor="italic">
+                        <span className="e-icons e-italic"></span>Italic
+                    </label>
+                    <input type="checkbox" id="underline" value="underline" onChange={underline} />
+                    <label className="e-btn" htmlFor="underline">
+                        <span className="e-icons e-underline"></span>Underline
+                    </label>
+                    <input type="checkbox" id="strikethrough" value="strikethrough" onChange={strikethrough} />
+                    <label className="e-btn" htmlFor="strikethrough">
+                        <span className="e-icons e-strikethrough"></span>Strikethrough
+                    </label>
                 </div>
-            </div>);
+            </div>
+        </div>
+    );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('image-editor'));

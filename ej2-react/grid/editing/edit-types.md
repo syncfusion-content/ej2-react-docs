@@ -46,7 +46,7 @@ You can customize the default TextBox component in Grid edit form using its prop
 
 Component|Edit Type |Description|Example Customized edit params
 -----|---|-----|-----|
-[TextBox](../../textbox) |stringedit| The `stringedit` type renders a TextBox component for string data type columns. To customize the `TextBox` component, refer to the [TextBox API documentation](https://ej2.syncfusion.com/react/documentation/api/textbox) for detailed information on available properties | params: { showClearButton : true}
+[TextBox](../../textbox) |stringedit| The `stringedit` type renders a TextBox component for string data type columns. To customize the `TextBox` component, refer to the [TextBox API documentation](https://ej2.syncfusion.com/react/documentation/api/textbox/) for detailed information on available properties | params: { showClearButton : true}
 
 The following sample code demonstrates the customization applied to TextBox component of **CustomerID** Grid column:
 
@@ -127,7 +127,7 @@ You can customize the `DropDownList` component in Grid edit form using its prope
 
 Component|Edit Type |Description| Example Customized edit params
 -----|-----|-----|----|
-[DropDownList](../../drop-down-list)|DropDownEdit|  The `dropdownedit` type renders a DropDownList component for string data type columns. To customize the DropDownList component, refer to the [DropDownList API documentation](https://ej2.syncfusion.com/react/documentation/api/drop-down-list) for detailed information on available properties.  | params: { value: ‘Germany’ }
+[DropDownList](../../drop-down-list)|DropDownEdit|  The `dropdownedit` type renders a DropDownList component for string data type columns. To customize the DropDownList component, refer to the [DropDownList API documentation](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/) for detailed information on available properties.  | params: { value: ‘Germany’ }
 
 The following sample code demonstrates the customization applied to DropDownList component  of **ShipCity** Grid column:
 
@@ -154,7 +154,7 @@ In Syncfusion's Grid component, you have an option to provide a custom data sour
 
 To achieve this, you can utilize the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property. This property allows you to define the edit params for the column within the grid.
 
-When setting a new data source using the edit params, you need to specify a new [query](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#query)  property for the DropDownList. The `query` property allows you to define custom queries for data retrieval and filtering.
+When setting a new data source using the edit params, you need to specify a new [query](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#query) property for the DropDownList. The `query` property allows you to define custom queries for data retrieval and filtering.
 
 In the below demo, DropDownList is rendered with custom data source for the **ShipCountry** column :
 
@@ -179,7 +179,7 @@ In the below demo, DropDownList is rendered with custom data source for the **Sh
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides filtering for the DropDownList within the edit form. This feature allows to select options from a predefined list and easily search for specific items using the built-in filtering feature.  
 
-To enable filtering, set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#allowfiltering) property to **true** within the edit params. This will enable the filtering feature in the DropDownList.
+To enable filtering, set the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#allowfiltering) property to **true** within the edit params. This will enable the filtering feature in the DropDownList.
 
 In the following demo, filtering is enabled for the **ShipCountry** column:
 
@@ -310,7 +310,7 @@ You can customize the DateTimePicker component in Grid edit form using its prope
 
 Component|Edit Type |Description |Example Customized edit params
 -----|-----|-----|----|
-[DateTimePicker](../../datetimepicker)| datetimepickeredit | The `datetimepickeredit` type renders a **DateTimePicker** component for date time data type columns. You can customize the DateTimePicker component, refer to the [DateTimePicker API documentation](https://ej2.syncfusion.com/react/documentation/api/datetimepicker) for detailed information on available properties. | params: { value: new Date() }
+[DateTimePicker](../../datetimepicker)| datetimepickeredit | The `datetimepickeredit` type renders a **DateTimePicker** component for date time data type columns. You can customize the DateTimePicker component, refer to the [DateTimePicker API documentation](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/) for detailed information on available properties. | params: { value: new Date() }
  
 The following sample code demonstrates the customization applied to DatePicker component of **OrderDate** Grid column:
 
@@ -686,52 +686,66 @@ To utilize the custom cell editor template feature, you need to implement the fo
           
 * **destroy** - It is used to destroy the component.
 
-### Render AutoComplete component in edit form 
+### Render AutoComplete in edit form
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to render the AutoComplete component within the edit form by using the cell edit template feature.This feature enables you to select values from a predefined list during the editing of a specific column. It is especially valuable when you need to provide a dropdown-like auto-suggestion and input assistance for data entry in the Grid's columns.
+The Syncfusion React Grid allows you to render the AutoComplete within the edit form by using the cell edit template feature.This feature enables you to select values from a predefined list during the editing of a specific column. It is especially valuable when you need to provide a dropdown-like auto-suggestion and input assistance for data entry in the Grid's columns.
 
-To achieve this, you need to utilize the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property along with a defined object that specifies the necessary functions for creating, reading, and writing the auto complete component.
+To achieve this, you need to define the cell edit template for the column using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property. This property specifies the necessary functions for creating, reading, and writing the AutoComplete into the specific column.
 
-The following example demonstrates how to render a Autocomplete component in the **CustomerID** column:
+The following example demonstrates how to render a Autocomplete in the **CustomerID** column:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
+
 {% include code-snippet/grid/editing-cs11/app/App.jsx %}
 {% endhighlight %}
+
 {% highlight ts tabtitle="App.tsx" %}
+
 {% include code-snippet/grid/editing-cs11/app/App.tsx %}
 {% endhighlight %}
+
 {% highlight js tabtitle="datasource.jsx" %}
+
 {% include code-snippet/grid/editing-cs11/app/datasource.jsx %}
 {% endhighlight %}
+
 {% highlight ts tabtitle="datasource.tsx" %}
+
 {% include code-snippet/grid/editing-cs11/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs11" %}
 
-### Render cascading DropDownList component in edit form 
+### Render cascading DropDownList in edit form 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to render the cascading DropDownList within the edit form by using the cell edit template feature.This feature is especially useful when you need to establish a hierarchy of options, such as choosing a country and then selecting a state based on the chosen country.
+The Syncfusion React Grid allows you to render the cascading DropDownList within the edit form by using the cell edit template feature.This feature is especially useful when you need to establish a hierarchy of options, such as choosing a country and then selecting a state based on the chosen country.
 
-To achieve this, you need to utilize the [columns->edit->params](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property along with a defined object that specifies the necessary functions for creating, reading, and writing the auto complete component.
+To achieve this, you need to define the cell edit template for the column using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column/#edit) property. This property specifies the necessary functions for creating, reading, and writing the cascading DropDownList.
 
 In the below demo, cascading DropDownList rendered for **ShipCountry** and **ShipState** column.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
+
 {% include code-snippet/grid/cascade-drop-cs2/app/App.jsx %}
 {% endhighlight %}
+
 {% highlight ts tabtitle="App.tsx" %}
+
 {% include code-snippet/grid/cascade-drop-cs2/app/App.tsx %}
 {% endhighlight %}
+
 {% highlight js tabtitle="datasource.jsx" %}
+
 {% include code-snippet/grid/cascade-drop-cs2/app/datasource.jsx %}
 {% endhighlight %}
+
 {% highlight ts tabtitle="datasource.tsx" %}
+
 {% include code-snippet/grid/cascade-drop-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/cascade-drop-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/cascade-drop-cs2" %}

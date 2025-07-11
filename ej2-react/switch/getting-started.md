@@ -74,6 +74,7 @@ To include Switch component in your application import the `SwitchComponent` f
 
 Add Switch component in application as shown in below code example.
 
+{% raw %}
 ```ts
 // Import the Switch.
 import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
@@ -85,6 +86,7 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 

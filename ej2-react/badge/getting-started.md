@@ -70,7 +70,7 @@ Badge CSS files are available in the `ej2-notifications` package folder. Import 
 
 Add an HTML span element with `e-badge` class inside any wrapper element (h1) into your return method.
 
-```ts
+```
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import './App.css';

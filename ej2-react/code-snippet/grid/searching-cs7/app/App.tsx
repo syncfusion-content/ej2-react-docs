@@ -48,19 +48,20 @@ function App() {
   };
   const actionComplete = (args: SearchEventArgs): void => {
     if (args.requestType === 'refresh' && valueAssign) {
-      document.getElementById(grid.element.id + '_searchbar').value =
-        values;
+      document.getElementById(grid.element.id + '_searchbar').value = values;
       valueAssign = false;
-    } else if (
-      document.getElementById(grid.element.id + '_searchbar').value ===
-        '' &&
-      args.requestType === 'refresh' &&
-      removeQuery
-    ) {
+    } else if (document.getElementById(grid.element.id + '_searchbar').value === '' && args.requestType === 'refresh' && removeQuery) {
       grid.query = new Query();
       removeQuery = false;
       grid.refreshColumns();
     }
+    (document.getElementById(grid.element.id + '_searchbar') as HTMLElement).addEventListener('keyup', (args) => {
+      if ((args.target as HTMLInputElement).value === '' && (args.key === 'Enter' || args.key === 'Backspace')) {
+        grid.query = new Query();
+        removeQuery = false;
+        grid.refresh();
+      }
+    });
   };
     return (<div>
     <GridComponent dataSource={data} height={280} toolbar= {toolbarOptions}

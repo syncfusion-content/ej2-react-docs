@@ -80,6 +80,7 @@ To include the Button component in your application import the `ButtonComponent
 
 Add the Button component in application as shown in below code example.
 
+{% raw %}
 ```ts
 
 // Import the Button.
@@ -96,6 +97,7 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 
