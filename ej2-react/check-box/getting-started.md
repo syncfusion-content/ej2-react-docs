@@ -74,6 +74,7 @@ To include the CheckBox component in your application import the `CheckBoxCompo
 
 Add the CheckBox component in application as shown in below code example.
 
+{% raw %}
 ```ts
 import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
@@ -89,6 +90,7 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 

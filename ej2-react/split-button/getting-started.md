@@ -81,6 +81,7 @@ Now, you can start adding SplitButton component in the application. For getting 
 
 Add the below code in the `src/App.tsx` to initialize the SplitButton.
 
+{% raw %}
 ```ts
 import { enableRipple } from '@syncfusion/ej2-base';
 import { SplitButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
@@ -99,13 +100,14 @@ function App() {
   );
 }
 export default App;
-
 ```
+{% endraw %}
 
 ## Binding data source
 
-After initialization, populate the SplitButton with data using the [`items`](https://ej2.syncfusion.com/react/documentation/api/split-button#items) property. Here, an array of string values is passed to the SplitButton component.
+After initialization, populate the SplitButton with data using the [`items`](https://ej2.syncfusion.com/react/documentation/api/split-button/#items) property. Here, an array of string values is passed to the SplitButton component.
 
+{% raw %}
 ```ts
 import { enableRipple } from '@syncfusion/ej2-base';
 import { ItemModel, SplitButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
@@ -134,8 +136,8 @@ function App() {
   );
 }
 export default App;
-
 ```
+{% endraw %}
 
 ## Run the application
 

@@ -82,6 +82,7 @@ Now, you can start adding DropDownButton component in the application. For getti
 
 Add the below code in the `src/App.tsx` to initialize the DropDownButton.
 
+{% raw %}
 ```ts
 import { enableRipple } from '@syncfusion/ej2-base';
 import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
@@ -100,13 +101,13 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Binding data source
 
 After initialization, populate the DropDownButton with data using the [`items`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#items) property. Here, an array of string values is passed to the DropDownButton component.
 
-
-
+{% raw %}
 ```ts
 import { enableRipple } from '@syncfusion/ej2-base';
 import { DropDownButtonComponent, ItemModel } from '@syncfusion/ej2-react-splitbuttons';
@@ -135,6 +136,7 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 

@@ -74,6 +74,7 @@ To include the RadioButton component in your application import the `RadioButto
 
 Add the RadioButton component in application as shown in below code example.
 
+{% raw %}
 ```ts
 
 // Import the RadioButton.
@@ -89,6 +90,7 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 
