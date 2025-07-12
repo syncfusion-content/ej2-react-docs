@@ -84,6 +84,7 @@ ProgressButton component in `src/App.tsx` file using following code.
 
 Add the below code in the `src/App.tsx` to initialize the ProgressButton.
 
+{% raw %}
 ```ts
 import { ProgressButtonComponent } from '@syncfusion/ej2-react-splitbuttons';
 import * as React from 'react';
@@ -99,6 +100,7 @@ function App() {
 }
 export default App;
 ```
+{% endraw %}
 
 ## Run the application
 
@@ -121,7 +123,7 @@ The following example shows a basic Progress button component.
 
  {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs2" %}
 
-> ProgressButton supports different styles, types and sizes like [`Button`](https://ej2.syncfusion.com/react/documentation/button/). In addition, it also supports `top` and `bottom` icon positions.
+> ProgressButton supports different styles, types and sizes like [`Button`](https://ej2.syncfusion.com/react/documentation/button). In addition, it also supports `top` and `bottom` icon positions.
 
 ## See Also
 

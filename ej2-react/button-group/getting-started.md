@@ -78,8 +78,7 @@ elements that should be group inside the div in `App.tsx`.
 
 Add the ButtonGroup component in application as shown in below code example.
 
-
-
+{% raw %}
 ```ts
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import * as React from 'react';
@@ -97,8 +96,8 @@ function App() {
   );
 }
 export default App;
-
 ```
+{% endraw %}
 
 ## Run the application
 
