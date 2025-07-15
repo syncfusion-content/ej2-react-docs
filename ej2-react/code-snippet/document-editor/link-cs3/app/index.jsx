@@ -1,5 +1,5 @@
 {% raw %}
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import { DocumentEditorComponent, SfdtExport, Selection, Editor, HyperlinkDialog } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorComponent.Inject(Selection, SfdtExport, Editor, HyperlinkDialog);
@@ -16,5 +16,6 @@ function App() {
             </div>);
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endraw %}
