@@ -1,5 +1,5 @@
 {% raw %}
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 //Inject require modules.
@@ -18,5 +18,6 @@ export class Default extends React.Component {
         return (<DocumentEditorContainerComponent id="container" height={'590px'} enableToolbar={true} ref={(scope) => { this.container = scope; }}/>);
     }
 }
-ReactDOM.render(<Default />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<Default />);
 {% endraw %}
