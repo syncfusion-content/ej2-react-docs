@@ -64,7 +64,11 @@ Here is an example that demonstrates how to use the extractText method along wit
     }
  </script>
 ```
-```ts
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -87,7 +91,9 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 #### Explanation:
 **Single Page Extraction:** The first `extractText` call extracts text from page 1 (`startIndex = 1`), using the 'TextOnly' option for plain text extraction.

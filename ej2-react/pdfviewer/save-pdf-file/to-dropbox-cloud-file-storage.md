@@ -34,8 +34,10 @@ import { Dropbox } from 'dropbox';
 
 2. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
 
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
 {% raw %}
-```typescript
+
 var toolItem1 = {
   prefixIcon: 'e-icons e-pv-download-document-icon',
   id: 'download_pdf',
@@ -69,8 +71,10 @@ return (<div>
     </PdfViewerComponent>
   </div>
 </div>);
-```
+
 {% endraw %}
+{% endhighlight %}
+{% endtabs %} 
 
 3. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to Drop Box using the filesUpload method of the Drop Box instance.
 
@@ -206,9 +210,9 @@ N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token a
 
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Dropbox cloud file storage. Ensure that you correctly pass the document name from the files available in your dropbox folder to the documentPath property.
 
-{% raw %}
-
-```ts
+{% tabs %}
+{% highlight ts tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -235,8 +239,9 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
 {% endraw %}
+{% endhighlight %}
+{% endtabs %} 
 
 N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.
 

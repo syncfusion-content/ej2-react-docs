@@ -40,7 +40,11 @@ Here is an example of how you can use the **findTextAsync** method:
     }
  </script>
 ```
-```ts
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -65,7 +69,9 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Description:
 

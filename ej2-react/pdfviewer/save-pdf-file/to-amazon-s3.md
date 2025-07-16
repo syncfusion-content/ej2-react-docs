@@ -42,8 +42,10 @@ AWS.config.update({
 
 3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
 
-{% raw %}
-```typescript
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %} 
+
 var toolItem1 = {
   prefixIcon: 'e-icons e-pv-download-document-icon',
   id: 'download_pdf',
@@ -77,8 +79,10 @@ return (<div>
       </PdfViewerComponent>
     </div>
   </div>);
-```
+  
 {% endraw %}
+{% endhighlight %}
+{% endtabs %} 
 
 4. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to AWS S3 using the putObject method of the S3 instance.
 
@@ -217,9 +221,9 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your AWS S3 bucket to the documentPath property.
 
-{% raw %}
-
-```ts
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -246,8 +250,9 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
 {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
 

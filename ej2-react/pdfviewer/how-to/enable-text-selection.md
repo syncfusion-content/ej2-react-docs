@@ -16,7 +16,10 @@ The Syncfusion PDF Viewer provides the `enableTextSelection` property, which all
 
 You can set the initial text selection behavior when initializing the PDF Viewer control by configuring the `enableTextSelection` property.
 
-```tsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -43,13 +46,19 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Toggle Text Selection Dynamically
 
 You can change the text selection behavior at runtime using buttons, menu options, or other UI elements. The following example demonstrates how to toggle text selection with button clicks:
 
-```tsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -102,7 +111,10 @@ export class App extends React.Component {
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Use Cases and Considerations
 
