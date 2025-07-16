@@ -1,5 +1,5 @@
 {% raw %}
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-react-documenteditor';
 import { L10n } from '@syncfusion/ej2-base';
@@ -338,5 +338,6 @@ function App() {
     return (<DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enablePrint={true} enableSelection={true} enableEditor={true} enableEditorHistory={true} enableContextMenu={true} enableSearch={true} enableOptionsPane={true} enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true} enablePageSetupDialog={true} enableSfdtExport={true} enableStyleDialog={true} enableTableOfContentsDialog={true} enableTableOptionsDialog={true} enableTablePropertiesDialog={true} enableTextExport={true} enableWordExport={true} enableRtl={true} locale={'ar-AE'}/>);
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 {% endraw %}

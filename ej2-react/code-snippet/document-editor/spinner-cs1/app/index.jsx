@@ -1,5 +1,5 @@
 {% raw %}
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 import { showSpinner, hideSpinner, createSpinner } from '@syncfusion/ej2-popups';
@@ -35,5 +35,6 @@ function App() {
         </div>);
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 {% endraw %}

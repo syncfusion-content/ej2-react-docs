@@ -21,7 +21,7 @@ function App() {
     (grid as GridComponent).getContentTable().addEventListener('click', (args) => {
       if (args.target.classList.contains('e-rowcell')) {
         (grid as GridComponent).editModule.editCell(parseInt(args.target.getAttribute('index')),
-          (grid as GridComponent).getColumnByIndex(parseInt(args.target.getAttribute('data-colindex'))).field);
+          (grid as GridComponent).getColumnByIndex(parseInt(args.target.getAttribute('aria-colindex')) - 1).field);
       }
     });
     (grid as GridComponent).element.addEventListener('keydown', (e) => {
@@ -31,23 +31,23 @@ function App() {
       }
       if (e.keyCode === 37 && !isNullOrUndefined(closesttd.previousSibling) &&
         !(grid as GridComponent).getColumnByIndex(
-          parseInt(closesttd.previousSibling.getAttribute('data-colindex'))).isPrimaryKey) {
+          parseInt(closesttd.previousSibling.getAttribute('aria-colindex')) - 1).isPrimaryKey) {
         editACell(closesttd.previousSibling);
       }
       if (e.keyCode === 40 && !isNullOrUndefined(closesttd.closest('tr').nextSibling)) {
         editACell(
           closesttd.closest('tr').nextSibling.querySelectorAll('td')[
-          parseInt(closesttd.getAttribute('data-colindex'))]);
+          parseInt(closesttd.getAttribute('aria-colindex')) - 1]);
       }
       if (e.keyCode === 38 && !isNullOrUndefined(closesttd.closest('tr').previousSibling)) {
         editACell(
           closesttd.closest('tr').previousSibling.querySelectorAll('td')[
-          parseInt(closesttd.getAttribute('data-colindex'))]);
+          parseInt(closesttd.getAttribute('aria-colindex')) - 1]);
       }
     });
   });
   const editACell = (args) => {
-    (grid as GridComponent).editModule.editCell(parseInt(args.getAttribute('index')), (grid as GridComponent).getColumnByIndex(parseInt(args.getAttribute('data-colindex'))).field);
+    (grid as GridComponent).editModule.editCell(parseInt(args.getAttribute('index')), (grid as GridComponent).getColumnByIndex(parseInt(args.getAttribute('aria-colindex')) - 1).field);
   }
   return (<div>
     <GridComponent ref={g => grid = g} dataSource={data} editSettings={editOptions} enableHover={false} toolbar={toolbarOptions} height={265} created={created} >
