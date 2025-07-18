@@ -83,27 +83,29 @@ DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
     let hostUrl = "https://services.syncfusion.com/react/production/api/documenteditor/";
     let container;
-    return (<div className="control-pane">
-    <div className="control-section">
-      <div id="documenteditor_container_body">
-        <DocumentEditorContainerComponent
-          id="container"
-          ref={container}
-          style={{ display: 'block' }}
-          height={'590px'}
-          toolbarMode={'Ribbon'}
-          enableToolbar={true}
-          backstageMenu={{
-            text: 'File',
-            backButton: { text: 'Close' },
-            items: [
-              { id: 'new', text: 'New', iconCss: 'e-icons e-de-ctnr-new' }
-            ]
-          }}
-        />
-      </div>
-    </div>
-  </div>);
+    return (
+        <div className="control-pane">
+            <div className="control-section">
+                <div id="documenteditor_container_body">
+                    <DocumentEditorContainerComponent
+                        id="container"
+                        ref={container}
+                        style={{ display: 'block' }}
+                        height={'590px'}
+                        toolbarMode={'Ribbon'}
+                        enableToolbar={true}
+                        backstageMenu={{
+                            text: 'File',
+                            backButton: { text: 'Close' },
+                            items: [
+                                { id: 'new', text: 'New', iconCss: 'e-icons e-de-ctnr-new' }
+                            ]
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+    );
 };
 export default Default;
 

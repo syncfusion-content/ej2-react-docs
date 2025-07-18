@@ -35,22 +35,24 @@ const Default = () => {
     let hostUrl = "https://services.syncfusion.com/react/production/api/documenteditor/";
     let container;
     // Initialize the Document Editor Container with Ribbon mode enabled
-    return (<div className="control-pane">
-    <div className="control-section">
-      <div id="documenteditor_container_body">
-        <DocumentEditorContainerComponent
-          id="container"
-          ref={container}
-          style={{ display: 'block' }}
-          height={'590px'}
-          toolbarMode={'Ribbon'} // Options: 'Ribbon' or 'Toolbar'
-          serviceUrl={hostUrl}
-          enableToolbar={true}
-          locale="en-US"
-        />
-      </div>
-    </div>
-  </div>);
+    return (
+        <div className="control-pane">
+            <div className="control-section">
+                <div id="documenteditor_container_body">
+                    <DocumentEditorContainerComponent
+                        id="container"
+                        ref={container}
+                        style={{ display: 'block' }}
+                        height={'590px'}
+                        toolbarMode={'Ribbon'} // Options: 'Ribbon' or 'Toolbar'
+                        serviceUrl={hostUrl}
+                        enableToolbar={true}
+                        locale="en-US"
+                    />
+                </div>
+            </div>
+        </div>
+    );
 };
 export default Default;
 const root = createRoot(document.getElementById('sample'));
@@ -78,23 +80,25 @@ const Default = () => {
     let hostUrl = "https://services.syncfusion.com/react/production/api/documenteditor/";
     let container;
     // Initialize the Document Editor Container with Ribbon mode enabled
-    return (<div className="control-pane">
-    <div className="control-section">
-      <div id="documenteditor_container_body">
-        <DocumentEditorContainerComponent
-          id="container"
-          ref={container}
-          style={{ display: 'block' }}
-          height={'590px'}
-          toolbarMode={'Ribbon'} // Options: 'Ribbon' or 'Toolbar'
-          ribbonLayout= {'Classic'}
-          serviceUrl={hostUrl}
-          enableToolbar={true}
-          locale="en-US"
-        />
-      </div>
-    </div>
-  </div>);
+    return (
+        <div className="control-pane">
+            <div className="control-section">
+                <div id="documenteditor_container_body">
+                    <DocumentEditorContainerComponent
+                        id="container"
+                        ref={container}
+                        style={{ display: 'block' }}
+                        height={'590px'}
+                        toolbarMode="Ribbon" // Options: 'Ribbon' or 'Toolbar'
+                        ribbonLayout="Classic"
+                        serviceUrl={hostUrl}
+                        enableToolbar={true}
+                        locale="en-US"
+                    />
+                </div>
+            </div>
+        </div>
+    );
 };
 export default Default;
 const root = createRoot(document.getElementById('sample'));
