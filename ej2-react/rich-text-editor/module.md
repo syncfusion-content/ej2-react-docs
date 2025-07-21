@@ -71,5 +71,10 @@ The following example demonstrates how to import and inject modules.
 | `PasteCleanup` | Inject this module to keep or clean up the formatting of pasted content in Rich Text Editor. |
 | `FormatPainter` | Injecting this module allows users to copy formatting (like bold, italic, font size, color, etc.) from one section of text and apply it to another in the Rich Text Editor. |
 | `EmojiPicker` | Injecting this module allows users to search, and insert emojis into the Rich Text Editor. |
+| `SlashMenu` | Injecting this module allows users to apply formats, open dialogs by typing "/" in the Rich Text Editor. |
+| `ImportExport` | Injecting this module allows users to import content from Word documents into the Rich Text Editor and export the Rich Text Editor's content into Word and PDF files |
+| `CodeBlock` | Injecting this module allows users to format the selected text as inline code, highlighting code snippets within the text in the Rich Text Editor. |
+| `Audio` | Injecting this module allows users to insert and manage audios in the Rich Text Editor. |
+| `Video` | Injecting this module allows users to insert and manage videos in the Rich Text Editor. |
 
 These modules should be injected using the `<Inject>` component inside the Rich Text Editor component.
