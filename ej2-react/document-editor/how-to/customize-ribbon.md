@@ -74,6 +74,8 @@ The Document Editor provides an [`backStageMenu`](https://ej2.syncfusion.com/rea
 
 The following code example shows how to add the backstage menu items.
 
+{% raw %}
+
 ```ts
 
 import { createRoot } from 'react-dom/client';
@@ -82,7 +84,7 @@ import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/e
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
     let hostUrl = "https://services.syncfusion.com/react/production/api/documenteditor/";
-    let container;
+    let container = React.useRef(null);
     return (
         <div className="control-pane">
             <div className="control-section">
@@ -92,7 +94,7 @@ const Default = () => {
                         ref={container}
                         style={{ display: 'block' }}
                         height={'590px'}
-                        toolbarMode={'Ribbon'}
+                        toolbarMode="Ribbon"
                         enableToolbar={true}
                         backstageMenu={{
                             text: 'File',
@@ -112,6 +114,7 @@ export default Default;
 const root = createRoot(document.getElementById('sample'));
 root.render(<Default />);
 ```
+{% endraw %}
 
 Refer this documentation know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage)
 

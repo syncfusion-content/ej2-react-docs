@@ -25,6 +25,8 @@ By default, `toolbarMode` is `Toolbar`.
 
 The following code shows the how to enable the `Ribbon` in Document Editor.
 
+{% raw %}
+
 ```ts
 
 import { createRoot } from 'react-dom/client';
@@ -33,7 +35,7 @@ import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/e
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
     let hostUrl = "https://services.syncfusion.com/react/production/api/documenteditor/";
-    let container;
+    let container = React.useRef(null);
     // Initialize the Document Editor Container with Ribbon mode enabled
     return (
         <div className="control-pane">
@@ -44,7 +46,7 @@ const Default = () => {
                         ref={container}
                         style={{ display: 'block' }}
                         height={'590px'}
-                        toolbarMode={'Ribbon'} // Options: 'Ribbon' or 'Toolbar'
+                        toolbarMode="Ribbon" // Options: 'Ribbon' or 'Toolbar'
                         serviceUrl={hostUrl}
                         enableToolbar={true}
                         locale="en-US"
@@ -58,6 +60,7 @@ export default Default;
 const root = createRoot(document.getElementById('sample'));
 root.render(<Default />);
 ```
+{% endraw %}
 
 ## Ribbon Layouts
 
@@ -70,6 +73,8 @@ By default, `ribbonLayout` is set to `Simplified`.
 
 The following code shows the how to configure the ribbon layout in Document Editor:
 
+{% raw %}
+
 ```ts
 
 import { createRoot } from 'react-dom/client';
@@ -78,7 +83,7 @@ import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/e
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
     let hostUrl = "https://services.syncfusion.com/react/production/api/documenteditor/";
-    let container;
+    let container = React.useRef(null);;
     // Initialize the Document Editor Container with Ribbon mode enabled
     return (
         <div className="control-pane">
@@ -104,6 +109,7 @@ export default Default;
 const root = createRoot(document.getElementById('sample'));
 root.render(<Default />);
 ```
+{% endraw %}
 
 ## See Also
 
