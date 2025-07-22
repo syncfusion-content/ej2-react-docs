@@ -131,7 +131,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 In the client-side, to export the document into blob the document using [`saveAsBlob`](../api/document-editor/#saveAsBlob) and sent to server-side for saving in Box cloud file storage.
 
 ```typescript
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent, Toolbar
@@ -177,7 +177,8 @@ function App() {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 

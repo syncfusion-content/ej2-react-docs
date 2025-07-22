@@ -18,7 +18,7 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import { DocumentEditorComponent, DocumentEditorKeyDownEventArgs, SfdtExport, Selection, Editor } from '@syncfusion/ej2-react-documenteditor';
 
@@ -53,7 +53,8 @@ function App() {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 
@@ -65,7 +66,7 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorComponent,
@@ -124,6 +125,7 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve the bookmark content as text in React Document editor component | Syncfusion
+title: Retrieve the bookmark content as text in React | Syncfusion
 description: Learn here all about Retrieve the bookmark content as text in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Retrieve the bookmark content as text 
 platform: ej2-react
@@ -19,7 +19,7 @@ You can [`selectBookmark`](../../document-editor/bookmark#select-bookmark) API t
 The following example code illustrates how to get the bookmark content as plain text.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent,
@@ -57,13 +57,14 @@ function App() {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 
 > The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-To get the bookmark content as SFDT (rich text), please check this [`link`](../../document-editor/how-to/get-the-selected-content/#get-the-selected-content-as-sfdt-rich-text)
+To get the bookmark content as SFDT (rich text), please check this [`link`](../../document-editor/how-to/get-the-selected-content#get-the-selected-content-as-sfdt-rich-text)
 
 ## Get the whole document content as text
 
@@ -72,7 +73,7 @@ You can use [`text`](https://ej2.syncfusion.com/react/documentation/api/document
 The following example code illustrates how to get the whole document content as plain text.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent,
@@ -105,7 +106,8 @@ function App() {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 
@@ -118,7 +120,7 @@ You can use [`serialize`](https://ej2.syncfusion.com/react/documentation/api/doc
 The following example code illustrates how to get the whole document content as SFDT.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent,
@@ -150,7 +152,8 @@ function App() {
 
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 
@@ -163,7 +166,7 @@ You can use [`goToHeader`](https://ej2.syncfusion.com/react/documentation/api/do
 The following example code illustrates how to get the header content as plain text.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent,
@@ -198,7 +201,8 @@ function App() {
     );
 }
 export default App()
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 

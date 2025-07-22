@@ -126,7 +126,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 In the client-side, the document is returned from the web service is opening using [`open`](../api/document-editor/#open) method.
 
 ```typescript
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent, Toolbar
@@ -171,7 +171,8 @@ function load(): void {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 

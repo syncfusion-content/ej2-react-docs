@@ -92,7 +92,7 @@ this.container.documentEditorSettings.showBookmarks = true;
 The following example shows how to open bookmark dialog in document editor.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorComponent,
@@ -127,7 +127,8 @@ function App() {
   }
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 ```
 
 

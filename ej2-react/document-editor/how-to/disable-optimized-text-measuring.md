@@ -21,7 +21,7 @@ The following example code illustrates how to disable optimized text measuring i
 {% raw %}
 ```ts
 import { DocumentEditorContainer, Toolbar, DocumentEditorContainerComponent} from '@syncfusion/ej2-react-documenteditor';
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
@@ -50,7 +50,8 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 
 ```
@@ -63,7 +64,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditor` instance.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 
 import {
@@ -91,7 +92,8 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 
