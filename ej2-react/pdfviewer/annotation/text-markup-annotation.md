@@ -22,7 +22,7 @@ There are two ways to highlight a text in the PDF document:
     * Select a text in the PDF document and right-click it.
     * Select **Highlight** option in the context menu that appears.
 
-     ![Alt text](../../pdfviewer/images/highlight_context.png)
+  ![Alt text](../../pdfviewer/images/highlight_context.png)
 
 2.Using the annotation toolbar
     * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
@@ -30,7 +30,7 @@ There are two ways to highlight a text in the PDF document:
     * Select the text and the highlight annotation will be added.
     * You can also select the text and apply the highlight annotation using the **Highlight** button.
 
-    ![Alt text](../../pdfviewer/images/highlight_button.png)
+  ![Alt text](../../pdfviewer/images/highlight_button.png)
 
 In the pan mode, if the highlight mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for highlighting the text.
 
