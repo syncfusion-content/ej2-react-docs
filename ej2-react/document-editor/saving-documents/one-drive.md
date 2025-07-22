@@ -141,7 +141,7 @@ N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_T
 In the client-side, to export the document into blob the document using [`saveAsBlob`](../api/document-editor/#saveAsBlob) and sent to server-side for saving in One Drive.
 
 ```typescript
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent, Toolbar
@@ -187,7 +187,8 @@ function App() {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 

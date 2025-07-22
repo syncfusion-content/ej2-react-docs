@@ -93,7 +93,7 @@ documentEditor.selection.cellFormat.preferredWidth = 100;
 You can set the desired width of a table in ‘Point ‘or ‘Percent’ type. Refer to the following sample code.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import { DocumentEditorComponent, SfdtExport, Selection, Editor } from '@syncfusion/ej2-react-documenteditor';
 
@@ -124,7 +124,8 @@ function App() {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 

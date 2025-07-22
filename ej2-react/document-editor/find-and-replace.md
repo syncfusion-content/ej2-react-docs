@@ -17,7 +17,7 @@ The document editor component searches a portion of text in the document through
 This provides the options to search for a portion of text in the document. After search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`. You can also open it programmatically using the following sample code.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorComponent,
@@ -81,7 +81,8 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 
@@ -123,7 +124,7 @@ documenteditor.search.findAll('Some text', 'None');
 
 ## Search results
 
-The [`SearchResults`](https://ej2.syncfusion.com/react/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor#searchresultschange) event. This will expose the following APIs:
+The [`SearchResults`](https://ej2.syncfusion.com/react/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#searchresultschange/) event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -176,7 +177,7 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorComponent,
@@ -273,7 +274,8 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 
 ```
@@ -281,4 +283,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ## See Also
 
 * [Options pane](../document-editor/dialog#options-pane)
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)

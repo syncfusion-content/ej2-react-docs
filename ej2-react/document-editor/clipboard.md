@@ -43,7 +43,7 @@ Document Editor expose API to enable local paste within the control. On enabling
 Refer to the following sample code.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorComponent,
@@ -77,7 +77,8 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 

@@ -17,7 +17,7 @@ Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/rea
 The following example code illustrates how to change the default search highlight color.
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
@@ -38,7 +38,8 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 
 ```
 

@@ -18,7 +18,7 @@ Inject the ‘EditorHistory’ module in your application to provide history pre
 
 
 ```ts
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import { DocumentEditorComponent, SfdtExport, Selection, Editor, EditorHistory } from '@syncfusion/ej2-react-documenteditor';
 
@@ -38,7 +38,8 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 ```
 
 You can enable or disable history preservation for a document editor instance any time using the ‘enableEditorHistory’ property. Refer to the following sample code.
@@ -73,5 +74,5 @@ documenteditor.editorHistory.redoLimit = 400;
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
-* [Keyboard shortcuts](../document-editor/keyboard-shortcut/)
+* [Feature modules](../document-editor/feature-module)
+* [Keyboard shortcuts](../document-editor/keyboard-shortcut)
