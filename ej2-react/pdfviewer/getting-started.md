@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Getting started with Standalone React PDF Viewer component| Syncfusion
@@ -103,14 +102,14 @@ N> The following changes apply to React version 18 and above.
    @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
 ```
 
-* Add the React PDF Viewer as below in `src/index.jsx` file to render the PDF Viewer component.
+* Add the React PDF Viewer as shown below in `src/index.js` when using JavaScript (JSX). If you're using TypeScript (TSX), add it in `src/index.tsx` to render the PDF Viewer component.
 
 
 {% tabs %}
 {% highlight js tabtitle="JSX" %}
 {% raw %} 
 
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
