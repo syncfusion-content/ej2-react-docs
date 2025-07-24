@@ -20,12 +20,12 @@ The available default edit types are as follows:
 
 Component|Edit Type value |Description
 ----|-----|-----
-[TextBox](../../textbox)|stringedit	|  The  `stringedit` type renders a TextBox component for string data type columns. 
-[NumericTextBox](../../numerictextbox)|numericedit	| The `numericedit` type renders a NumericTextBox component for integers,double,float ,short ,byte ,long ,long double and decimal data types columns.
-[DropDownList](../../drop-down-list)|dropdownedit	| The `dropdownedit` type renders a DropdownList component for string data type columns.
-[Checkbox](../../check-box)|booleanedit	| The `booleanedit` type renders a CheckBox component for boolean data type columns.
-[DatePicker](../../datepicker)|datepickeredit	|The `datepickeredit` type renders a DatePicker component for date data type columns.
-[DateTimePicker](../../datetimepicker)|datetimepickeredit	| The `datetimepickeredit` type renders a DateTimePicker component for date time data type columns.
+[TextBox](../../textbox/getting-started)|stringedit	|  The  `stringedit` type renders a TextBox component for string data type columns. 
+[NumericTextBox](../../numerictextbox/getting-started)|numericedit	| The `numericedit` type renders a NumericTextBox component for integers,double,float ,short ,byte ,long ,long double and decimal data types columns.
+[DropDownList](../../drop-down-list/getting-started)|dropdownedit	| The `dropdownedit` type renders a DropdownList component for string data type columns.
+[Checkbox](../../check-box/getting-started)|booleanedit	| The `booleanedit` type renders a CheckBox component for boolean data type columns.
+[DatePicker](../../datepicker/getting-started)|datepickeredit	|The `datepickeredit` type renders a DatePicker component for date data type columns.
+[DateTimePicker](../../datetimepicker/getting-started)|datetimepickeredit	| The `datetimepickeredit` type renders a DateTimePicker component for date time data type columns.
 
 The following example demonstrates how to define the `editType` for grid columns:
 
@@ -46,7 +46,7 @@ You can customize the default TextBox component in Grid edit form using its prop
 
 Component|Edit Type |Description|Example Customized edit params
 -----|---|-----|-----|
-[TextBox](../../textbox) |stringedit| The `stringedit` type renders a TextBox component for string data type columns. To customize the `TextBox` component, refer to the [TextBox API documentation](https://ej2.syncfusion.com/react/documentation/api/textbox/) for detailed information on available properties | params: { showClearButton : true}
+[TextBox](../../textbox/getting-started) |stringedit| The `stringedit` type renders a TextBox component for string data type columns. To customize the `TextBox` component, refer to the [TextBox API documentation](https://ej2.syncfusion.com/react/documentation/api/textbox/) for detailed information on available properties | params: { showClearButton : true}
 
 The following sample code demonstrates the customization applied to TextBox component of **CustomerID** Grid column:
 
@@ -73,7 +73,7 @@ You can customize the `NumericTextBox` component in Grid edit form using its pro
 
 Component| Edit Type |Description |Example Customized edit params
 -----|-----|-----|----|
-[NumericTextBox](../../numerictextbox)|numericedit| TThe `numericedit` type renders a NumericTextBox component for integers, double, float, short, byte, long, long double and decimal data types columns. To customize the **NumericTextBox** component, refer to the [NumericTextBox API documentation](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/) for detailed information on available properties. | params: { decimals: 2, value: 5 }
+[NumericTextBox](../../numerictextbox/getting-started)|numericedit| TThe `numericedit` type renders a NumericTextBox component for integers, double, float, short, byte, long, long double and decimal data types columns. To customize the **NumericTextBox** component, refer to the [NumericTextBox API documentation](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/) for detailed information on available properties. | params: { decimals: 2, value: 5 }
 
 The following sample code demonstrates the customization applied to NumericTextBox component of **Frieght** Grid column:
 
@@ -127,7 +127,7 @@ You can customize the `DropDownList` component in Grid edit form using its prope
 
 Component|Edit Type |Description| Example Customized edit params
 -----|-----|-----|----|
-[DropDownList](../../drop-down-list)|DropDownEdit|  The `dropdownedit` type renders a DropDownList component for string data type columns. To customize the DropDownList component, refer to the [DropDownList API documentation](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/) for detailed information on available properties.  | params: { value: ‘Germany’ }
+[DropDownList](../../drop-down-list/getting-started)|DropDownEdit|  The `dropdownedit` type renders a DropDownList component for string data type columns. To customize the DropDownList component, refer to the [DropDownList API documentation](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/) for detailed information on available properties.  | params: { value: ‘Germany’ }
 
 The following sample code demonstrates the customization applied to DropDownList component  of **ShipCity** Grid column:
 
@@ -233,7 +233,7 @@ You can customize the CheckBox component in Grid edit form using its property. T
 
 Component| Edit Type |Description |Example Customized edit params
 -----|-----|-----|----|
-[CheckBox](../../check-box)| booleanedit | The `booleanedit` type renders a **CheckBox** component for boolean data type. To customize the CheckBox component, refer to the [CheckBox API documentation](https://ej2.syncfusion.com/react/documentation/api/check-box/) for detailed information on available properties. | params: { checked: true}
+[CheckBox](../../check-box/getting-started)| booleanedit | The `booleanedit` type renders a **CheckBox** component for boolean data type. To customize the CheckBox component, refer to the [CheckBox API documentation](https://ej2.syncfusion.com/react/documentation/api/check-box/) for detailed information on available properties. | params: { checked: true}
 
 The following sample code demonstrates the customization applied to CheckBox component of **Verified** Grid column:
 
@@ -260,7 +260,7 @@ You can customize the DatePicker component in Grid edit form using its property.
 
 Component| Edit Type |Description|Example Customized edit params
 -----|-----|-----|----|
-[DatePicker](../../datepicker)| datepickeredit | The `datepickeredit` type renders a **DatePicker** component for date data type columns. To customize the DatePicker component, refer to the [DatePicker API documentation](https://ej2.syncfusion.com/react/documentation/api/datepicker/) for detailed information on available properties. | params: { format:'dd.MM.yyyy' }
+[DatePicker](../../datepicker/getting-started)| datepickeredit | The `datepickeredit` type renders a **DatePicker** component for date data type columns. To customize the DatePicker component, refer to the [DatePicker API documentation](https://ej2.syncfusion.com/react/documentation/api/datepicker/) for detailed information on available properties. | params: { format:'dd.MM.yyyy' }
  
 The following sample code demonstrates the customization applied to DatePicker component of **OrderDate** Grid column:
 
@@ -283,7 +283,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 
 ### Disable the date value prior to the selected date value in DatePicker
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows configuring the [DatePicker](../../datepicker) to dynamically set a minimum selectable date. This ensures that users can only select dates that fall after a specified minimum date, based on the data in each row. This feature is particularly useful for maintaining data consistency and preventing users from selecting inappropriate or illogical dates.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid allows configuring the [DatePicker](../../datepicker/getting-started) to dynamically set a minimum selectable date. This ensures that users can only select dates that fall after a specified minimum date, based on the data in each row. This feature is particularly useful for maintaining data consistency and preventing users from selecting inappropriate or illogical dates.
 
 The following example demonstrates how to configure the `DatePicker` within the Grid using the **edit** parameters of a column. This setup dynamically restricts the selection of dates in the DatePicker’s calendar based on the data in the current row.
 
@@ -310,7 +310,7 @@ You can customize the DateTimePicker component in Grid edit form using its prope
 
 Component|Edit Type |Description |Example Customized edit params
 -----|-----|-----|----|
-[DateTimePicker](../../datetimepicker)| datetimepickeredit | The `datetimepickeredit` type renders a **DateTimePicker** component for date time data type columns. You can customize the DateTimePicker component, refer to the [DateTimePicker API documentation](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/) for detailed information on available properties. | params: { value: new Date() }
+[DateTimePicker](../../datetimepicker/getting-started)| datetimepickeredit | The `datetimepickeredit` type renders a **DateTimePicker** component for date time data type columns. You can customize the DateTimePicker component, refer to the [DateTimePicker API documentation](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/) for detailed information on available properties. | params: { value: new Date() }
  
 The following sample code demonstrates the customization applied to DatePicker component of **OrderDate** Grid column:
 
