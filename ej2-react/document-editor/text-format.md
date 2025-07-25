@@ -122,6 +122,14 @@ You can make a subscript or superscript text as normal using the following code.
      documenteditor.selection.characterFormat.baselineAlignment='Normal';
    ```
 
+## Change case
+
+You can apply different case formatting based on the selected text. Refer to the following sample code.
+
+```ts
+documenteditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleCase'|'CapitalizeEachWord');
+```
+
 ## Size
 
 The size of selected text can be get or set using the following code.
@@ -328,6 +336,6 @@ root.render(<App />);
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [Font dialog](../document-editor/dialog#font-dialog)
 * [Keyboard shortcuts](../document-editor/keyboard-shortcut#text-formatting)
