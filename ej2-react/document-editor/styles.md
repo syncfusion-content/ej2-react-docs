@@ -264,3 +264,14 @@ documenteditor.editor.applyStyle('New Linked');
 //Clear direct formatting and apply the specified style
 documenteditor.editor.applyStyle('New Linked', true);
 ```
+
+## Get Styles
+
+You can get the styles in the document using the below code snippet.
+
+```ts
+//Get paragraph styles
+let paragraphStyles = documentEditor.getStyles('Paragraph');
+//Get character styles
+let paragraphStyles = documentEditor.getStyles('Character');
+```
