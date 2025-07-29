@@ -15,7 +15,7 @@ class App extends React.Component {
         args.customFormData = [ { 'Authorization': accessToken}];
     };
     render() {
-        return (<RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} fileUploading={this.onImageUpload} insertImageSettings={insertImageSettings}>
+        return (<RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} imageUploading={this.onImageUpload} insertImageSettings={insertImageSettings}>
         <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
       </RichTextEditorComponent>);
     }

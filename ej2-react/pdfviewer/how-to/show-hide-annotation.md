@@ -20,14 +20,14 @@ This guide demonstrates how to toggle the visibility of annotations in the Syncf
 
 **Step 2:** Set Up Your React Component with Annotation Toggle Functionality
 
-Create a React component that includes the Syncfusion PDF Viewer and a button to toggle the visibility of annotations. Use the `exportAnnotationsAsObject` and `importAnnotations` methods to manage the annotations. Here is a sample implementation:
+Create a React component that includes the Syncfusion PDF Viewer and buttons to show and hide annotations. The sample uses the standalone version of the PDF Viewer with the `resourceUrl` property pointing to the CDN, eliminating the need for a backend service. The implementation leverages the `exportAnnotationsAsObject`, `deleteAnnotations`, and `importAnnotation` methods to manage the annotations. Here is a sample implementation:
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="Standalone" %}
 {% raw %} 
 
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 import './index.css';
 import { 
     PdfViewerComponent, 
@@ -43,55 +43,57 @@ import {
     TextSearch, 
     FormFields, 
     FormDesigner, 
+    PageOrganizer, 
     Inject 
 } from '@syncfusion/ej2-react-pdfviewer';
 
-export function App() {
-    const viewerRef = React.useRef(null);
-    const [annotationsVisible, setAnnotationsVisible] = React.useState(true);
-    const [exportObject, setExportObject] = React.useState(null);
+export class App extends React.Component {
+    constructor() {
+        super();
+        this.pdfViewer = React.createRef();
+        this.state = {
+            exportObject: null
+        };
+    }
     
-    const toggleAnnotations = () => {
-        if (!viewerRef.current) return;
-        
-        const viewer = viewerRef.current;
-        
-        if (annotationsVisible) {
-            // Hide annotations by exporting and deleting them
-            viewer.exportAnnotationsAsObject().then((value) => {
-                setExportObject(value);
-                const count = viewer.annotationCollection.length;
-                for (let i = 0; i < count; i++) {
-                    // Always delete the first item as the collection shrinks
-                    viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
-                }
-                setAnnotationsVisible(false);
+    hideAnnotations = () => {
+        if (this.pdfViewer.current) {
+            this.pdfViewer.current.exportAnnotationsAsObject().then((value) => {
+                this.setState({ exportObject: value });
+                this.pdfViewer.current.deleteAnnotations();
             });
-        } else {
-            // Restore annotations
-            if (exportObject) {
-                let exportAnnotObject = JSON.parse(exportObject);
-                viewer.importAnnotation(exportAnnotObject);
-            }
-            setAnnotationsVisible(true);
         }
-    };
-
-    return (
-        <div>
-            <div className='control-section'>
-                <button 
-                    id="toggleBtn" 
-                    onClick={toggleAnnotations}
-                    style={{ margin: '10px 0' }}
-                >
-                    {annotationsVisible ? 'Hide Annotations' : 'Show Annotations'}
-                </button>
+    }
+    
+    showAnnotations = () => {
+        if (this.pdfViewer.current && this.state.exportObject) {
+            this.pdfViewer.current.importAnnotation(JSON.parse(this.state.exportObject));
+        }
+    }
+    
+    render() {
+        return (
+            <div id="app">
+                <div style={{ marginBottom: '10px' }}>
+                    <button 
+                        id="hideBtn" 
+                        onClick={this.hideAnnotations}
+                        style={{ marginRight: '10px' }}
+                    >
+                        Hide Annotations
+                    </button>
+                    <button 
+                        id="unhideBtn" 
+                        onClick={this.showAnnotations}
+                    >
+                        Show Annotations
+                    </button>
+                </div>
                 <PdfViewerComponent 
-                    id="container" 
-                    ref={viewerRef}
-                    serviceUrl='https://localhost:44309/pdfviewer'
-                    documentPath='Annotations.pdf'
+                    id="pdfViewer" 
+                    ref={this.pdfViewer}
+                    resourceUrl="https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib"
+                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                     style={{ 'height': '680px' }}
                 >
                     <Inject services={[
@@ -106,12 +108,13 @@ export function App() {
                         TextSelection, 
                         TextSearch, 
                         FormFields, 
-                        FormDesigner
+                        FormDesigner,
+                        PageOrganizer
                     ]} />
                 </PdfViewerComponent>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
