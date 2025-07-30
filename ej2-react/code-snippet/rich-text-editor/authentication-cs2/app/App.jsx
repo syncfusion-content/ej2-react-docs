@@ -14,7 +14,7 @@ function App() {
         // adding custom form Data
         args.customFormData = [ { 'Authorization': accessToken}];
     };
-    return (<RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} fileUploading={onImageUpload} insertImageSettings={insertImageSettings}>
+    return (<RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} imageUploading={onImageUpload} insertImageSettings={insertImageSettings}>
       <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}/>
     </RichTextEditorComponent>);
 }

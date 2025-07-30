@@ -18,7 +18,7 @@ function App() {
   };
   
   return (
-    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} fileUploading={onImageUpload} insertImageSettings={insertImageSettings}>
+    <RichTextEditorComponent height={450} toolbarSettings={toolbarSettings} imageUploading={onImageUpload} insertImageSettings={insertImageSettings}>
       <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
     </RichTextEditorComponent>
   );
