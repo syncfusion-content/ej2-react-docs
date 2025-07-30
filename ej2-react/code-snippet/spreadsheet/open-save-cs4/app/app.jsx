@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { getRangeAddress, SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
@@ -30,4 +29,3 @@ export default App;
 
 const root = createRoot(document.getElementById('root'));
 root.render(<App />);
-{% endraw %}

@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { DropDownButtonComponent, ItemModel } from '@syncfusion/ej2-react-splitbuttons';
@@ -62,4 +61,3 @@ export default App;
 
 const root = createRoot(document.getElementById('root')!);
 root.render(<App />);
-{% endraw %}

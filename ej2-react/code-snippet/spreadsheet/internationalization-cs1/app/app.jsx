@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { L10n } from '@syncfusion/ej2-base';
@@ -70,4 +69,3 @@ export default App;
 
 const root = createRoot(document.getElementById('root'));
 root.render(<App />);
-{% endraw %}
