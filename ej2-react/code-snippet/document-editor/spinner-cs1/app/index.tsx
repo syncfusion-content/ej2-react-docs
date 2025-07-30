@@ -1,7 +1,7 @@
-{% raw %}
 
 
-import * as ReactDOM from 'react-dom/client';
+
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent,
@@ -52,8 +52,5 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById("root"));
 
-
-{% endraw %}

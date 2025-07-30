@@ -1,5 +1,5 @@
-{% raw %}
-import * as ReactDOM from 'react-dom/client';
+
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, Selection, Editor } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorComponent.Inject(Selection, Editor);
@@ -73,6 +73,4 @@ function App() {
     return (<DocumentEditorComponent id="DocumentEditor" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableEditor={true} />);
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-{% endraw %}
+ReactDOM.render(<App />, document.getElementById("sample"));

@@ -1,5 +1,5 @@
-{% raw %}
-import * as ReactDOM from 'react-dom/client';
+
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, Editor } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorComponent.Inject(Editor);
@@ -25,6 +25,4 @@ function App() {
         }} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/"/>);
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-{% endraw %}
+ReactDOM.render(<App />, document.getElementById("sample"));

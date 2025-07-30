@@ -1,4 +1,3 @@
-{% raw %}
 import * as React from 'react';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RowsDirective, RowDirective, CellDirective, CellsDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { RangeDirective, ColumnsDirective, ColumnDirective, getFormatFromType } from '@syncfusion/ej2-react-spreadsheet';
@@ -71,4 +70,3 @@ function App() {
   )
 };
 export default App;
-{% endraw %}

@@ -1,6 +1,6 @@
 
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import * as React from 'react';
 
 import {
@@ -26,7 +26,6 @@ function Default() {
     );
 }
 export default Default
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<Default />);
+ReactDOM.render(<Default />, document.getElementById("sample"));
 
 

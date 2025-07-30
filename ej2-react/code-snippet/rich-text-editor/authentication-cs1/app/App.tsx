@@ -19,7 +19,7 @@ class App extends React.Component<{},{}> {
 
   public render() {
     return (
-      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} fileUploading={this.onImageUpload} insertImageSettings={this.insertImageSettings}>
+      <RichTextEditorComponent height={450} toolbarSettings={this.toolbarSettings} imageUploading={this.onImageUpload} insertImageSettings={this.insertImageSettings}>
         <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
       </RichTextEditorComponent>
     );
