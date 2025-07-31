@@ -29,7 +29,7 @@ State persistence allows user to maintain the current state of the component alo
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs286" %}
 
-# Save and Load Pivot Layout
+## Save and Load Pivot Layout
 
 You can save the current layout of the pivot table by using [`getPersistData`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#getpersistdata) in string format. The saved layout can be loaded to pivot table any time by passing the saved data as a parameter to [`loadPersistData`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#loadpersistdata) method.
 
