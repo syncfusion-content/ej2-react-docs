@@ -273,5 +273,5 @@ You can get the styles in the document using the below code snippet.
 //Get paragraph styles
 let paragraphStyles = documentEditor.getStyles('Paragraph');
 //Get character styles
-let paragraphStyles = documentEditor.getStyles('Character');
+let characterStyles = documentEditor.getStyles('Character');
 ```
