@@ -1,4 +1,3 @@
-{% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
@@ -19,4 +18,3 @@ export class Default extends React.Component {
     }
 }
 ReactDOM.render(<Default />, document.getElementById('sample'));
-{% endraw %}

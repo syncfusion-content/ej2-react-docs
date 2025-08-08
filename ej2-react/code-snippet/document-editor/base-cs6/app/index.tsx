@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 import * as ReactDOM from 'react-dom';
@@ -27,5 +27,3 @@ export class Default extends React.Component<{}, {}> {
 }
 ReactDOM.render(<Default />, document.getElementById('sample'));
 
-
-{% endraw %}

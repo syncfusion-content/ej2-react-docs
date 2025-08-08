@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog, } from '@syncfusion/ej2-react-documenteditor';
@@ -92,4 +92,3 @@ function App() {
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
-{% endraw %}

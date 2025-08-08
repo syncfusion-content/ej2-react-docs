@@ -1,4 +1,4 @@
-{% raw %}
+
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -20,4 +20,3 @@ function App() {
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
-{% endraw %}

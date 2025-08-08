@@ -1,4 +1,4 @@
-{% raw %}
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {  DocumentEditorComponent, Print, Editor, Selection, EditorHistory, SfdtExport
@@ -21,4 +21,3 @@ function App() {
 }
 export default App
 ReactDOM.render(<App />, document.getElementById('sample'));
-{% endraw %}

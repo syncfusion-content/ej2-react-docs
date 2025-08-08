@@ -1,4 +1,4 @@
-{% raw %}
+
 
 
 
@@ -33,5 +33,3 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'))
 
 
-
-{% endraw %}
