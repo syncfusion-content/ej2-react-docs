@@ -17,4 +17,4 @@ export class Default extends React.Component {
         return (<DocumentEditorContainerComponent id="container" height={'590px'} enableToolbar={true} ref={(scope) => { this.container = scope; }}/>);
     }
 }
-ReactDOM.render(<Default />, document.getElementById("sample"));
+ReactDOM.render(<Default />, document.getElementById('sample'));

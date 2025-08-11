@@ -83,7 +83,7 @@ The configuration and store size of the Redis cache can be adjusted based on the
 
 To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the Document Editor, like in the code snippet below.
 
-```ts
+```typescript
 import { DocumentEditorContainerComponent, CollaborativeEditingHandler, DocumentEditorComponent } from '@syncfusion/ej2-react-documenteditor';
 
 public collaborativeEditingHandler?: CollaborativeEditingHandler;
@@ -107,7 +107,7 @@ render() {
         <div>
             <div id='documenteditor_titlebar' className="e-de-ctn-title"></div>
             <div id="documenteditor_container_body">
-                <DocumentEditorContainerComponent id="container" ref={(scope) => { this.container = scope; }} 
+                <DocumentEditorContainerComponent id="container" ref={(scope) => { this.container = scope; }} style={{ 'display': 'block' }}
                     height={'590px'} currentUser={this.currentUser} serviceUrl={this.serviceUrl + 'api/documenteditor'} enableToolbar={true} locale='en-US' >
                     <Inject services={[Toolbar]} />
                 </DocumentEditorContainerComponent>

@@ -60,7 +60,7 @@ The following example code illustrates how to customize the method name using se
 
 ```ts
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
@@ -88,8 +88,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
@@ -100,7 +99,7 @@ root.render(<App />);
 Document editor component provides an an option to add custom headers of XMLHttpRequest using the [`headers`](./api/document-editor-container/documentEditorContainerModel/#headers).
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
@@ -126,8 +125,7 @@ function App() {
   );
 }
 export default App
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
@@ -142,7 +140,7 @@ You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/rea
 The following example code illustrates how to modify the XMLHttpRequest using beforeXmlHttpRequestSend.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
@@ -185,8 +183,7 @@ function App() {
   );
 }
 export default App
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 

@@ -46,4 +46,4 @@ function App() {
         }} height={'590px'} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" enableToolbar={true} created={onCreate}/>);
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
+ReactDOM.render(<App />, document.getElementById('sample'));

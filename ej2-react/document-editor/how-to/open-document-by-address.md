@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document by address in React DocumentEditor | Syncfusion
+title: Open document by address in React Document editor component | Syncfusion
 description: Learn here all about Open document by address in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Open document by address 
 platform: ej2-react
@@ -17,7 +17,7 @@ In this article, we are going to see how to open a document from URL in Document
 please refer below example for client-side code
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent, Toolbar
@@ -56,8 +56,7 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

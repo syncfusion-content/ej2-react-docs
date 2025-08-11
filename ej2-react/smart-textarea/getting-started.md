@@ -89,7 +89,7 @@ Add Smart TextArea component's styles as given below in `App.css`.
 
 ## Adding Smart TextArea to the application
 
-To include the Smart TextArea component in your application import the `SmartTextAreaComponent` from `ej2-react-inputs` package in `App.tsx`. In **Smart TextArea**, the [aiSuggestionHandler](https://ej2.syncfusion.com/react/documentation/api/smart-textarea/#aisuggestionhandler/) property, which sends prompts to the `AI` model and receives context-aware suggestions. These suggestions appear inline for non-touch devices and as an overlay popup for touch devices by default, helping users type faster and more accurately.
+To include the Smart TextArea component in your application import the `SmartTextAreaComponent` from `ej2-react-inputs` package in `App.tsx`. In **Smart TextArea**, the [aiSuggestionHandler](https://ej2.syncfusion.com/react/documentation/api/smart-textarea#aisuggestionhandler) property, which sends prompts to the `AI` model and receives context-aware suggestions. These suggestions appear inline for non-touch devices and as an overlay popup for touch devices by default, helping users type faster and more accurately.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -323,7 +323,3 @@ export async function getAzureChatAIRequest(options: any) {
 ![Syncfusion Smart TextArea - Output](./images/smart-textarea-userphrases.gif)
 
 > [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples/tree/master/react/src/ai-components/smarttextarea).
-
-## See also
-
-* [How to configure backend AI Service for React Smart TextArea Component](./ai-service)

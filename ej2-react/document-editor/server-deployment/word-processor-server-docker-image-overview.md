@@ -143,7 +143,7 @@ You can copy the required template Word documents into docker container while de
 The following code example shows how to use LoadDocument() API in document editor.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent } from '@syncfusion/ej2-react-documenteditor';
 
@@ -174,8 +174,7 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

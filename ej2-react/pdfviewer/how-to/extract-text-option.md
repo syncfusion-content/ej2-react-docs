@@ -35,7 +35,11 @@ The following example demonstrates how to configure the `extractTextOption` prop
 <script>
  </script>
 ```
-```ts
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -48,7 +52,7 @@ export function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib"
         extractTextOption='None'  // Options: 'None', 'TextOnly', 'BoundsOnly', 'TextAndBounds' 
-        style={{ 'height': '680px' }} 
+       style={{ height: '680px' }}
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
           Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
@@ -58,7 +62,11 @@ export function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 
 ### Description of Each Option
 **extractTextOption.TextAndBounds (default):** This option returns both plain text and its positional data (bounds). Use this option when you need to access both the content of the PDF and its layout for further processing or analysis.

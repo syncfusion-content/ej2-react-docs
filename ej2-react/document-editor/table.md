@@ -186,7 +186,7 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
 ```ts
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, Selection, Editor, EditorHistory, ContextMenu, TableDialog, } from '@syncfusion/ej2-react-documenteditor';
 import { ToolbarComponent, ItemDirective, ItemsDirective, } from '@syncfusion/ej2-react-navigations';
@@ -221,7 +221,7 @@ function App() {
                 break;
             case 'insert_right':
                 //Insert the specified number of columns to the table right to the column at cursor position
-                documenteditor.insertColumn();
+                zeditor.insertColumn();
                 break;
             case 'delete_table':
                 //Delete the entire table
@@ -283,8 +283,7 @@ function App() {
         );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

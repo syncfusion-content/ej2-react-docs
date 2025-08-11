@@ -77,7 +77,7 @@ New Styles are defined and added to the style collection of the document. In thi
 The following example shows how to programmatically create a character style.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, SfdtExport, Selection, Editor } from '@syncfusion/ej2-react-documenteditor';
 
@@ -119,8 +119,7 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -130,7 +129,7 @@ The following example shows how to programmatically create a paragraph style.
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, SfdtExport, Selection, Editor } from '@syncfusion/ej2-react-documenteditor';
 //Inject require module.
@@ -182,8 +181,7 @@ function App() {
     );
 }
 export default App();
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -193,7 +191,7 @@ The following example shows how to programmatically create linked style.
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, DocumentEditor, SfdtExport, Selection, Editor } from '@syncfusion/ej2-react-documenteditor';
 //Inject require module.
@@ -244,8 +242,7 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

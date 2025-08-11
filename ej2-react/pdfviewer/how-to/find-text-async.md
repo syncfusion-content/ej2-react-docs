@@ -40,7 +40,11 @@ Here is an example of how you can use the **findTextAsync** method:
     }
  </script>
 ```
-```ts
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -52,7 +56,7 @@ export function App() {
         id="container" 
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib" 
-        style={{ 'height': '680px' }} 
+        style={{ height: '680px' }} 
         // Enable or disable pinch zoom.
         enableLocalStorage = "true"
       >
@@ -65,7 +69,9 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Description:
 

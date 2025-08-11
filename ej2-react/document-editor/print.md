@@ -84,7 +84,7 @@ You can print the document in document editor by passing the window instance. Th
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
     DocumentEditorComponent,
@@ -114,13 +114,12 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent,
@@ -159,8 +158,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -176,7 +174,7 @@ However, you can customize margins, paper, and layout options by modifying the s
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent,
@@ -213,8 +211,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 
 ```

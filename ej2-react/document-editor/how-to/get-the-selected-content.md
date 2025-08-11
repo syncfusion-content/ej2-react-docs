@@ -19,7 +19,7 @@ You can use [`text`](https://ej2.syncfusion.com/react/documentation/api/document
 The following example code illustrates how to add search in google option in context menu for the selected text.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
@@ -77,8 +77,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -97,7 +96,7 @@ You can use [`sfdt`](https://ej2.syncfusion.com/react/documentation/api/document
 The following example code illustrates how to get the content of a bookmark and export it as SFDT.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
@@ -135,8 +134,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

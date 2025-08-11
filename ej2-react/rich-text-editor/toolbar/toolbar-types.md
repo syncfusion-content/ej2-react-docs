@@ -111,7 +111,7 @@ Setting the `type` to `Scrollable` in [toolbarSettings](https://ej2.syncfusion.c
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/scrollable-cs2" %}
 
-## Configuring a popup toolbar
+ ## Configuring a popup toolbar
 
 Setting the `type` to `Popup` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) will display overflowing toolbar items into a popup container, optimizing the toolbar layout for limited space and smaller screens.
 
@@ -140,7 +140,6 @@ Setting the `type` to `Popup` in [toolbarSettings](https://ej2.syncfusion.com/re
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-popup" %}
-
 
 ## Creating a sticky toolbar
 

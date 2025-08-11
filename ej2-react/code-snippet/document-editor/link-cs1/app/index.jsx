@@ -20,4 +20,4 @@ function App() {
     return (<DocumentEditorComponent id="container" height={'330px'} ref={(scope) => { documenteditor = scope; }} enableSelection={true} enableSfdtExport={true} requestNavigate={requestNavigate} isReadOnly={false} enableEditor={true}/>);
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
+ReactDOM.render(<App />, document.getElementById('sample'));

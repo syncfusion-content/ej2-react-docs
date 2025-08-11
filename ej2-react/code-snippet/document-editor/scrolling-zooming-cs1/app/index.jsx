@@ -73,4 +73,4 @@ function App() {
     return (<DocumentEditorComponent id="DocumentEditor" height={'330px'} ref={(scope) => { documenteditor = scope; }} isReadOnly={false} enableEditor={true} />);
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
+ReactDOM.render(<App />, document.getElementById('sample'));

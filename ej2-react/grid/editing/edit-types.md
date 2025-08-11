@@ -686,7 +686,7 @@ To utilize the custom cell editor template feature, you need to implement the fo
           
 * **destroy** - It is used to destroy the component.
 
-### Render AutoComplete in edit form 
+### Render AutoComplete in edit form
 
 The Syncfusion React Grid allows you to render the AutoComplete within the edit form by using the cell edit template feature.This feature enables you to select values from a predefined list during the editing of a specific column. It is especially valuable when you need to provide a dropdown-like auto-suggestion and input assistance for data entry in the Grid's columns.
 

@@ -21,7 +21,7 @@ DocumentEditorComponent.Inject(SfdtExport, Selection, Editor);
       }
     }
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hide tool bar and properties pane in React | Syncfusion
+title: Hide tool bar and properties pane in React Document editor component | Syncfusion
 description: Learn here all about Hide tool bar and properties pane in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Hide tool bar and properties pane 
 platform: ej2-react
@@ -21,7 +21,7 @@ By default, Document editor container has built-in properties pane which contain
 The following example code illustrates how to hide the properties pane.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
@@ -40,8 +40,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -56,7 +55,7 @@ You can use [`enableToolbar`](https://ej2.syncfusion.com/react/documentation/api
 The following example code illustrates how to hide the existing toolbar.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent
@@ -72,8 +71,7 @@ function App() {
   );
 }
 export default App
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

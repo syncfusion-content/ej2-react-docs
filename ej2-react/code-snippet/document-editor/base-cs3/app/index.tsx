@@ -1,6 +1,6 @@
 
 
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent, Toolbar
@@ -12,7 +12,8 @@ function Default() {
     <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://services.syncfusion.com/react/production/api/documenteditor/" enableToolbar={true} />);
 }
 export default Default
-ReactDOM.render(<Default />, document.getElementById("sample"));
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<Default />);
 
 
 
