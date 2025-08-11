@@ -115,7 +115,7 @@ N> Replace **Your Connection string from Azure** with the actual connection stri
 In the client-side, to export the document into blob the document using [`saveAsBlob`](../api/document-editor/#saveAsBlob) and sent to server-side for saving in Azure Blob Storage container.
 
 ```typescript
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent, Toolbar
@@ -161,8 +161,7 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

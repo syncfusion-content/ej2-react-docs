@@ -104,7 +104,7 @@ yarn add @syncfusion/ej2-react-kanban
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
 
 Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
 
@@ -123,7 +123,7 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) section.
+> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
@@ -138,6 +138,7 @@ Follow the below steps to add the React Kanban component to the Next.js project:
 import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-react-kanban";
 function App(this: any) {
+    let cardsettings = { contentField: "Summary", headerField: "Id" }
     let data = new DataManager({
         url: 'https://ej2services.syncfusion.com/production/web-services/api/Kanban',
         adaptor: new ODataAdaptor
@@ -145,7 +146,7 @@ function App(this: any) {
     function DialogOpen(args: { cancel: boolean; }) {
         args.cancel = true;
     }
-    return (<KanbanComponent id="kanban" keyField="Status" dataSource={data} cardSettings={{ contentField: "Summary", headerField: "Id" }} allowDragAndDrop={false} dialogOpen={DialogOpen.bind(this)}>
+    return (<KanbanComponent id="kanban" keyField="Status" dataSource={data} cardSettings={cardsettings} allowDragAndDrop={false} dialogOpen={DialogOpen.bind(this)}>
         <ColumnsDirective>
               <ColumnDirective headerText="To Do" keyField="Open"/>
               <ColumnDirective headerText="In Progress" keyField="InProgress"/>

@@ -21,7 +21,7 @@ Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-e
 The following example code illustrates how to export the document as pdf in client-side.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,ImageFormat,Toolbar } from '@syncfusion/ej2-react-documenteditor';
@@ -94,8 +94,7 @@ function App() {
   }
 
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 > The Web API hosted link `https://services.syncfusion.com/react/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -110,7 +109,7 @@ The following way illustrates how to convert the document as Pdf:
 The following example code illustrates how to convert the document to sfdt and pass it to server-side.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent, Toolbar
@@ -144,8 +143,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

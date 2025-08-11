@@ -36,7 +36,7 @@ documenteditor.editor.insertTableOfContents(tocSettings);
 ```
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, SfdtExport, Selection, Editor, } from '@syncfusion/ej2-react-documenteditor';
 
@@ -67,8 +67,7 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -85,7 +84,7 @@ You can also do it programmatically by using the exposed API. Refer to the follo
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, SfdtExport, Selection, Editor, TableOfContentsSettings, } from '@syncfusion/ej2-react-documenteditor';
 
@@ -124,8 +123,7 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

@@ -38,7 +38,10 @@ var SASUrl = "*Your SAS Url in Azure*";
 
 3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
 
-```typescript
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %} 
+
 var toolItem1 = {
   prefixIcon: 'e-icons e-pv-download-document-icon',
   id: 'download_pdf',
@@ -62,7 +65,7 @@ return (<div>
         created={loadDocument}
         id="container"
         resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
-        style={{ 'height': '640px' }}
+        style={{ height: '640px' }}
         toolbarSettings={{ showTooltip : true, toolbarItems: [ 'OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', toolItem1, 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']}}
             toolbarClick={toolbarClick}
         >
@@ -72,7 +75,10 @@ return (<div>
       </PdfViewerComponent>
     </div>
   </div>);
-```
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %} 
 
 4. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob as an ArrayBuffer and upload the ArrayBuffer to Azure Blob Storage using 'BlockBlobClient'.
 
@@ -194,9 +200,9 @@ N> Replace **Your Connection string from Azure** with the actual connection stri
 
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
 
-{% raw %}
-
-```ts
+{% tabs %}
+{% highlight ts tabtitle="Server-Backed" %}
+{% raw %} 
 
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
@@ -223,8 +229,9 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
 {% endraw %}
+{% endhighlight %}
+{% endtabs %} 
 
 N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
 

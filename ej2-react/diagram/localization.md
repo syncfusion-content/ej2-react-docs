@@ -2,7 +2,7 @@
 layout: post
 title: Localization in React Diagram component | Syncfusion®
 description: Learn here all about Layers in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
-control: Localization
+control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -16,10 +16,8 @@ The EJ2 Diagram component supports `localization`. In the Diagram component, the
 
 To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
 
-{% raw %}
-
 ```javascript
-<DiagramComponent id="container" width={'100%'} height={'600px'}
+<DiagramComponent id="container" width={'100%'} height={'600px'} 
     //Set locale
     locale='de-DE'
      //Enables the context menu
@@ -28,7 +26,6 @@ To localize the diagram context menu, we need to define the [`locale`](https://e
     }}
     nodes={node}/>
 ```
-{% endraw %}
 
 Next, we need to call the `setCulture('de')` function, which sets the default culture for all EJ2 components. This method takes one parameter, cultureName, which specifies the culture name to be set as the default.
 
@@ -98,11 +95,11 @@ L10n.load({
     });
 
  // Initializes symbol palette.
-    <SymbolPaletteComponent id="container"
+    <SymbolPaletteComponent id="container" 
     //Set locale
     locale='de-DE'
     enableSearch={true}
-    expandMode={"Multiple"}
+    expandMode={"Multiple"} 
     palettes={[
             {
                 id: "basic",

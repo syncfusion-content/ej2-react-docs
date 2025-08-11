@@ -43,7 +43,7 @@ To open this dialog, refer to the following example.
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { DocumentEditorComponent, SfdtExport, Selection, Editor, ParagraphDialog } from '@syncfusion/ej2-react-documenteditor';
 
@@ -63,8 +63,7 @@ function App() {
       }
 }
 export default App
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -77,7 +76,7 @@ To open this dialog, refer to the following example.
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, TableDialog
@@ -99,8 +98,7 @@ function App() {
   );
 }
 export default App
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -117,7 +115,7 @@ To open this dialog, refer to the following example.
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, BookmarkDialog
@@ -139,8 +137,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -153,7 +150,7 @@ To open this dialog, refer to the following example.
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, HyperlinkDialog
@@ -175,8 +172,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -190,7 +186,7 @@ To open this dialog, refer to the following example.
 
 ```ts
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, TableOfContentsDialog, EditorHistory
@@ -210,8 +206,7 @@ function App() {
   );
 }
 export default App
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -222,7 +217,7 @@ This dialog allows managing the styles in a document. It will display all the st
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, StyleDialog, StylesDialog, EditorHistory
@@ -244,8 +239,7 @@ function App() {
   );
 }
 export default App
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -258,7 +252,7 @@ To open this dialog, refer to the following example.
 
 ```ts
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, StyleDialog, StylesDialog, EditorHistory
@@ -280,8 +274,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -293,7 +286,7 @@ To open this dialog, refer to the following example.
 
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, ListDialog
@@ -315,8 +308,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## Borders and shading dialog
@@ -328,7 +320,7 @@ To open this dialog, refer to the following example.
 
 ```ts
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, BordersAndShadingDialog, EditorHistory
@@ -358,8 +350,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -372,7 +363,7 @@ To open this dialog, refer to the following example.
 
 ```ts
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, TableOptionsDialog, TablePropertiesDialog, EditorHistory
@@ -402,8 +393,7 @@ function App() {
   );
 }
 export default App
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -416,7 +406,7 @@ To open this dialog, refer to the following example.
 
 ```ts
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, TableOptionsDialog, TablePropertiesDialog, BordersAndShadingDialog, EditorHistory
@@ -447,8 +437,7 @@ function App() {
 
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -461,7 +450,7 @@ To open this dialog, refer to the following example.
 
 ```ts
 
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorComponent, SfdtExport, Selection, Editor, PageSetupDialog
@@ -484,11 +473,10 @@ function App() {
 
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module)
+* [Feature modules](../document-editor/feature-module/)

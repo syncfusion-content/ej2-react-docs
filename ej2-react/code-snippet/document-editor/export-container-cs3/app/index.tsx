@@ -1,4 +1,5 @@
 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { useRef } from 'react';
@@ -22,5 +23,4 @@ function App() {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
-
+ReactDOM.render(<App />, document.getElementById('sample'));

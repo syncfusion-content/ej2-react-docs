@@ -15,7 +15,7 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 {% raw %}
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
     DocumentEditorComponent, SfdtExport, Selection, Editor, ImageResizer, EditorHistory
@@ -71,8 +71,7 @@ function App() {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 {% endraw %}
 

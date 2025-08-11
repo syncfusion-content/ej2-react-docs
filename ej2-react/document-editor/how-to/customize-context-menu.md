@@ -243,7 +243,7 @@ Document Editor allows you to customize the Context Menu with sub-menu items. It
 The following code shows how to add a sub items in the custom option in context menu in Document Editor Container.
  
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
@@ -295,8 +295,7 @@ function App() {
   );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
  
 ```
 

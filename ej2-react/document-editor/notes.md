@@ -21,7 +21,7 @@ The Footnotes and endnotes are both ways of adding extra bits of information to 
 Document Editor exposes an API to insert footnotes at cursor position programmatically or can be inserted to the end of selected text.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 
 import {
@@ -55,8 +55,7 @@ return (
 
 }
 export default App();
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
@@ -67,7 +66,7 @@ root.render(<App />);
 Document Editor exposes an API to insert endnotes at cursor position programmatically or can be inserted to the end of selected text.
 
 ```ts
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 
 import {
@@ -102,8 +101,7 @@ DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Select
       }
     }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

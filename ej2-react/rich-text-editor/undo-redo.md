@@ -55,7 +55,7 @@ Here's an example of how to customize both the Undo/Redo timer and steps:
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs51" %}
 
-## Clear Undo/Redo stack
+ ## Clear Undo/Redo stack
 
 The Rich Text Editor automatically maintains an undo/redo stack, allowing users to revert or redo changes made during editing.
 

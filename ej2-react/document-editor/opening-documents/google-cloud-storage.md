@@ -115,7 +115,7 @@ N> Replace **path/to/service-account-key.json** with the actual file path to you
 In the client-side, the document is returned from the web service is opening using [`open`](../api/document-editor/#open) method.
 
 ```typescript
-import * as ReactDOM from 'react-dom/client';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent, Toolbar
@@ -160,8 +160,7 @@ function load(): void {
     );
 }
 export default App;
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 

@@ -1,6 +1,7 @@
 
 
-import * as ReactDOM from "react-dom";
+
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
     DocumentEditorComponent, DocumentEditor
@@ -45,6 +46,5 @@ function App() {
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById("sample"));
-
+ReactDOM.render(<App />, document.getElementById('sample'));
 

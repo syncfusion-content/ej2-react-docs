@@ -64,7 +64,11 @@ Here is an example that demonstrates how to use the extractText method along wit
     }
  </script>
 ```
-```ts
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %} 
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -76,7 +80,7 @@ export function App() {
         id="container" 
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib" 
-        style={{ 'height': '680px' }} 
+        style={{ height: '680px' }} 
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
           Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
@@ -87,7 +91,9 @@ export function App() {
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 #### Explanation:
 **Single Page Extraction:** The first `extractText` call extracts text from page 1 (`startIndex = 1`), using the 'TextOnly' option for plain text extraction.
