@@ -75,26 +75,6 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 Now, you can start adding AI AssistView component in the application. For getting started, add the AI AssistView component by using `<AIAssistViewComponent>` tag directive in `src/App.tsx` file using following code. Now place the below AI AssistView code in the `src/App.tsx`.
 
-`[Class-component]`
-
-```ts
-
-import { AIAssistViewComponent } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-
-export default class App extends React.Component<{}, {}> {
-  public render() {
-    return (
-        // specifies the tag for render the AI AssistView omponent
-        <AIAssistViewComponent id="aiAssistView"></AIAssistViewComponent>
-    );
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('aiAssistView'));
-```
-
 `[Functional-component]`
 
 ```ts
@@ -136,19 +116,6 @@ After completing the configuration required to render a basic AI AssistView, run
 npm start
 ```
 
-`[Class-componnet]`
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/ai-assistview/getting-started-class/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/ai-assistview/getting-started-class/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/ai-assistview/getting-started-class" %}
-
 `[Functional-componnet]`
 
 {% tabs %}
@@ -164,7 +131,7 @@ npm start
 
 ## Configure suggestions and responses
 
-You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptsuggestions) property to add prompt suggestions and the [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptrequest) event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
+You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestions) property to add prompt suggestions and the [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptrequest) event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
