@@ -8,7 +8,8 @@ import { ContentType } from '@syncfusion/ej2-blockeditor';
 function App() {
   const blocksData = [
     {
-      type: 'Heading1',
+      type: 'Heading',
+      props: { level: 1},
       content: [
         {
           type: ContentType.Text,
@@ -17,7 +18,8 @@ function App() {
       ]
     },
     {
-      type: 'Heading2',
+      type: 'Heading',
+      props: { level: 2},
       content: [
         {
           type: ContentType.Text,
@@ -26,7 +28,8 @@ function App() {
       ]
     },
     {
-      type: 'Heading3',
+      type: 'Heading',
+      props: { level: 3},
       content: [
         {
           type: ContentType.Text,
@@ -35,7 +38,8 @@ function App() {
       ]
     },
     {
-      type: 'Heading4',
+      type: 'Heading',
+      props: { level: 4},
       content: [
         {
           type: ContentType.Text,

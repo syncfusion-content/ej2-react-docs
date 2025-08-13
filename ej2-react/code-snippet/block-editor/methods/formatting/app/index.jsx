@@ -9,7 +9,8 @@ function App() {
     const blocksData = [
     {
         id: 'sample-heading',
-        type: 'Heading1',
+        type: 'Heading',
+        props: { level: 1 },
         content: [
             {
                 type: 'Text',

@@ -9,7 +9,8 @@ function App() {
     const blockData: BlockModel[] = [
     {
         id: 'title-block',
-        type: 'Heading1',
+        type: 'Heading',
+        props: { level: 1 },
         content: [{ type: ContentType.Text, content: 'Document Export Demo' }]
     },
     {
@@ -25,7 +26,8 @@ function App() {
     },
     {
         id: 'features-heading',
-        type: 'Heading2',
+        type: 'Heading',
+        props: { level: 2},
         content: [{ type: ContentType.Text, content: 'Export Features' }]
     },
     {

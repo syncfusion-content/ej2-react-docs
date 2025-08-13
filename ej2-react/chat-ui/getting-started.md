@@ -74,26 +74,6 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 Now, you can start adding Chat UI component in the application. For getting started, add the Chat UI component by using `<ChatUIComponent>` tag directive in `src/App.tsx` file using following code. Now place the below Chat UI code in the `src/App.tsx`.
 
-`[Class-component]`
-
-```ts
-
-import { ChatUIComponent } from '@syncfusion/ej2-react-interactive-chat';
-import * as React from 'react';
-import * as ReactDOM from "react-dom";
-
-export default class App extends React.Component<{}, {}> {
-  public render() {
-    return (
-        // specifies the tag for render the Chat UI omponent
-        <ChatUIComponent id="chat-ui"></ChatUIComponent>
-    );
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('chat-ui'));
-```
-
 `[Functional-component]`
 
 ```ts
@@ -136,19 +116,6 @@ After completing the configuration required to render a basic Chat UI, run the f
 npm start
 ```
 
-`[Class-componnet]`
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chat-ui/getting-started-class/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chat-ui/getting-started-class/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/chat-ui/getting-started-class" %}
-
 `[Functional-componnet]`
 
 {% tabs %}
@@ -164,7 +131,7 @@ npm start
 
 ## Configure messages and user
 
-You can use the `MessagesDirective` tag to group all the messages and `MessageDirective` tag to define each message and the [user](../api/chat-ui#user) property to configure the current user for the chat.
+You can use the `MessagesDirective` tag to group all the messages and `MessageDirective` tag to define each message and the [user](../api/chat-ui/#user) property to configure the current user for the chat.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
