@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integration of Google Dialogflow With React Chat UI component
 
-The Syncfusion ChatUI component supports integration with Google Dialogflow, enabling advanced conversational AI features in your React applications.
+The Syncfusion Chat UI supports integration with Google Dialogflow, enabling advanced conversational AI features in your React applications.
 
 ## Getting Started With the ChatUI Component
 
@@ -19,28 +19,29 @@ Before integrating Dialogflow, ensure that the Syncfusion Chat UI component is c
 
 ## Prerequisites for Google Dialogflow Integration
 
-* `Google Account`
-  - You need a Google account to access Dialogflow and Google Cloud Console.
-* `Node.js Environment`
-  - The backend portion requires Node.js and npm.
-* `Syncfusion Chat UI for React`
-  - Install @syncfusion/ej2-react-interactive-chat in your React project.
+* `Google Account`: You need a Google account to access `Dialogflow` and `Google Cloud Console`.
+* `Node.js Environment`: The backend portion requires `Node.js` and `npm`.
+* `Syncfusion Chat UI for React`: Install @syncfusion/ej2-react-interactive-chat in your React project.
 
 ## Required npm Packages
 
-Install these dependencies in your backend folder:
+Install the dependency in your backend folder:
 
 ```bash
+
 npm install express body-parser dialogflow cors
+
 ```
 
-Frontend dependencies:
+Install the Chat UI dependency in your frontend:
 
 ```bash
-install @syncfusion/ej2-react-interactive-chat
+
+npm install @syncfusion/ej2-react-interactive-chat --save
+
 ```
 
-## Set Up Google Dialogflow Agent
+## Setup the Google Dialogflow Agent
 
 * Dialogflow Console → Create Agent
 * Add Intents with training phrases and responses (e.g. greetings, FAQ).
@@ -54,7 +55,29 @@ install @syncfusion/ej2-react-interactive-chat
 
 The service account key must NOT be exposed to the user’s browser, so all Dialogflow API calls are made via your own backend.
 
-`backend/index.js`
+### Store Service Account Credentials
+
+Store the credentials such as your project ID, service account email, and the private key (downloaded from the Google Cloud Console when creating a Service Account for your Dialogflow project). These credentials enable the backend to authenticate and securely access the Dialogflow service.
+
+`backend/service-acct.json`
+
+```json
+
+{
+  "type": "service_account",
+  "project_id": "your-dialogflow-project-id",
+  "private_key_id": "abc123xyz...",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEv...",
+  "client_email": "dialogflow-agent@your-dialogflow-project-id.iam.gserviceaccount.com",
+  ...
+}
+```
+
+> `Security Note`: Never expose the service account key in the frontend or version control. For production, use environment variables or a secret manager (e.g., Google Cloud Secret Manager).
+
+### Backend
+
+Create `backend/index.js` to set up an Express server that handles Dialogflow API requests:
 
 ```js
 
@@ -100,33 +123,21 @@ app.post('/api/message', async (req, res) => {
 app.listen(5000, () => console.log('Backend running on http://localhost:5000'));
 ```
 
-Store the credentials like your project ID, service account email, and a private key that is downloaded from Google Cloud console when you create a Service Account for your Dialogflow project which allows the backend to authenticate the user service.
-
-`backend/service-acct.json`
-
-```json
-
-{
-  "type": "service_account",
-  "project_id": "your-dialogflow-project-id",
-  "private_key_id": "abc123xyz...",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEv...",
-  "client_email": "dialogflow-agent@your-dialogflow-project-id.iam.gserviceaccount.com",
-  ...
-}
-```
+> `Session Management Note`: Dialogflow sessions maintain conversation context. Use unique `sessionId` values (e.g., via UUID) for each user to preserve context across messages.
 
 ## Integrate Syncfusion ChatUI in Your React App
 
 Use the Syncfusion Chat UI component to send and render message exchanges using the messageSend event. Each time a user sends a message, this event is invoked with details of the sent message.
 
-### Forward Message to Backend:
+### Forward Message to backend:
 
 Upon message submission, a POST request is sent to your backend API endpoint (`/api/message`). This backend service forwards the user’s message to Dialogflow and waits for a response.
 
-### Display Bot Response:
+### Display Bot response:
 
 Once the backend receives a reply from Dialogflow, it sends the response back to the frontend.
+
+Frontend code `src/App.js`
 
 ```js
 
@@ -192,7 +203,9 @@ export default App;
 Navigate to your backend project folder and run the following command to start the Node.js server:
 
 ```bash
+
 node index.js
+
 ```
 
 ### Start the React frontend:
@@ -200,8 +213,18 @@ node index.js
 In a separate terminal window, navigate to your React project folder and start the development server:
 
 ```bash
+
 npm start
+
 ```
 Open your app and chat with your Dialogflow-powered bot.
 
 ![ChatUI with Dialogflow](../images/dialogflow.png)
+
+## Troubleshooting:
+
+* `Permission Denied`: Verify service account has "Dialogflow API Client" role.
+* `CORS Error`: Ensure CORS origin matches your frontend URL.
+* `No Response`: Check intent training phrases and test in Dialogflow simulator.
+* `Quota Exceeded`: Review Dialogflow limits in Google Cloud Console.
+* `Network Issues`: Ensure backend is running and frontend points to correct URL.
