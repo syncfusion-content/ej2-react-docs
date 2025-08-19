@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Download and Installation
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio Code extension in [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Web-VSCode-Extensions). You can either install it from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
+Syncfusion<sup style="font-size:70%">&reg;</sup> publishes its Visual Studio Code extension in the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Web-VSCode-Extensions). You can install the extension directly within Visual Studio Code or download it from the marketplace and then install it.
 
 ## Prerequisites
 
-The following prerequisites software needs to be installed for the Syncfusion<sup style="font-size:70%">&reg;</sup> Web extension installation and for creating the Syncfusion<sup style="font-size:70%">&reg;</sup> Web applications along with any one of the Framework(React, Angular, and Vue).
+Before installing the Syncfusion<sup style="font-size:70%">&reg;</sup> Web extension, ensure you have the following software installed:
 
 * [Visual Studio Code](https://code.visualstudio.com/download)
 
@@ -24,7 +24,7 @@ The following prerequisites software needs to be installed for the Syncfusion<su
 
 * [Node.js](https://nodejs.org/en/download/)
 
-## Install through the Visual Studio Code extensions
+## Install through Visual Studio Code extensions
 
 The following steps explain how to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Web extensions from Visual Studio Code Extensions.
 

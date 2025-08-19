@@ -11,21 +11,17 @@ domainurl: ##DomainURL##
 
 # Syncfusion<sup style="font-size:70%">&reg;</sup> React components - Security
 
-Security is a critical aspect of web applications to protect them from various threats and vulnerabilities. Using HTTPS for data encryption, validating and sanitizing user inputs, and implementing strong authentication measures such as multi-factor authentication are indispensable practices in Web application development.
+Security is critical in web application development to safeguard against threats and vulnerabilities. Common best practices include using HTTPS for data encryption, validating and sanitizing user inputs, and enforcing strong authentication measures such as multi-factor authentication.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components are implemented with these security considerations.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components are developed with these security considerations in mind to promote the safe deployment of robust web applications.
 
 ## Security Vulnerabilities
 
-Security vulnerabilities in web applications refer to weaknesses or flaws in the design, implementation, or configuration of a web application that can be exploited by attackers to compromise the application's integrity, confidentiality, or availability. Here you can see some of the vulnerabilities.
+Web application security vulnerabilities are weaknesses in the design, implementation, or configuration that may be exploited to compromise data integrity, confidentiality, or availability. Syncfusion<sup style="font-size:70%">&reg;</sup> React components are designed to help mitigate common vulnerabilities, including:
 
-* [Cross-Site Scripting](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) - XSS is a security vulnerability that can occur in web applications. These scripts can steal session cookies, redirect users to malicious websites, or deface the website. XSS vulnerabilities typically arise when the application fails to properly validate or encode user-supplied input before rendering it in the browser.
-
-* [Cross-Site Request Forgery](https://developer.mozilla.org/en-US/docs/Glossary/CSRF) - CSRF is a type of web security vulnerability that allows an attacker to force a logged-in user to perform actions on a web application without their consent or knowledge. CSRF attacks exploit the trust that a web application has in the user's browser by tricking it into sending unauthorized requests to the vulnerable application.
-
-* Injection Attacks - These occur when an attacker injects malicious code (such as SQL injection, XML injection, or command injection) into input fields or parameters of a web application. If the application does not properly sanitize or validate user inputs, it can execute unintended commands or gain unauthorized access to sensitive data.
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components provide support for implementing web applications with enhanced security features.
+* [Cross-Site Scripting (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) – XSS occurs when user-supplied input is rendered without proper validation or encoding. Malicious scripts can be executed in the user's browser, leading to the theft of session cookies, redirection to malicious sites, or website defacement.
+* [Cross-Site Request Forgery (CSRF)](https://developer.mozilla.org/en-US/docs/Glossary/CSRF) – CSRF enables attackers to trick authenticated users into performing unintended actions on a web application. This exploits trust in the user's browser by sending unauthorized requests without their consent.
+* Injection Attacks – These involve injecting malicious code (such as SQL injection, XML injection, or command injection) through input fields or parameters. If proper input validation is missing, an attacker could execute commands or gain unauthorized access to sensitive data.
 
 ## Security Considerations
 

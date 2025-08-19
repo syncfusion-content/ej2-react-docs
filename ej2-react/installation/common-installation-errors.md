@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 This article describes the most common installation errors, as well as the causes and solutions to those errors.
 
 * Unlocking the license installer using the trial key
-* License has expired
+* License expiration
 * Unable to find a valid license or trial
 * Unable to install because of another installation
 * Unable to install due to controlled folder access
@@ -28,7 +28,7 @@ This article describes the most common installation errors, as well as the cause
 
 **Suggested solution** <br /> Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](https://www.syncfusion.com/kb/2326/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) article.
 
-## License has expired
+## License Expiration
 
 **Error Message:** Your license for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for JavaScript – EJ2 has been expired since {date}. Please renew your subscription and try again.
 

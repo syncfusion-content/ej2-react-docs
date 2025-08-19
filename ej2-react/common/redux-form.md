@@ -188,7 +188,7 @@ let LoginForm = (props) => {
 
 ## Form Validation
 
-`Redux Form` provides built-in functionality for form validation. Implement the `validate` function to validate the form and display error messages when needed. The form inputs will be automatically validated upon submission.
+`Redux Form` provides integrated support for validation. Define a `validate` function to check input values and display error messages if validation fails. Inputs are automatically validated on submission.
 
 {% tabs %}
 {% highlight js tabtitle="App.js" %}

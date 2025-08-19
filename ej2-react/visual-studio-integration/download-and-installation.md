@@ -18,7 +18,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio ext
 
 ## Prerequisites
 
-The following software prerequisites must be installed to install the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core extension, as well as for creating, adding snippet, converting, and upgrading Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core applications.
+Ensure you have the following software installed before installing the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core extension for creating, adding snippets, converting, and upgrading Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core applications:
 
 * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads).
 

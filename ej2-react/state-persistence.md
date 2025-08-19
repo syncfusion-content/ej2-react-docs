@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # State Persistence
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React library has support for persisting component’s state across page refreshes or navigation. To enable this feature, set `enablePersistence` property as true to the required component.
-This will store the component’s state in browser’s `localStorage` object on page `unload` event. For example, we have enabled persistence to grid component in the following code.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React library supports maintaining a component’s state across page refreshes or navigation. By setting the `enablePersistence` property to `true` on a component, its state is stored in the browser’s `localStorage` during the page `unload` event. This ensures that user settings and configurations are retained when the page is revisited.
 
+Below is an example demonstrating how to enable state persistence on the Grid component:
 
 ```ts
 

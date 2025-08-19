@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Integration of Material-UI Components
 
-[Material-UI](https://mui.com/) is a popular library for building user interfaces in React applications. Material-UI provides a set of pre-designed and customizable UI components following Material Design principles. These components include buttons, forms, navigation bars, modals, cards, and many others, that can be easily integrated into your application. `Material-UI` components come with built-in styles and responsive behavior, making it convenient to create visually appealing and consistent user interfaces.
+[Material-UI](https://mui.com/) is a widely used library for building user interfaces in React applications. Material-UI offers a comprehensive suite of pre-designed, customizable components that follow Material Design principles, including buttons, forms, navigation bars, modals, and cards. These components include built-in styles and responsive behaviors, supporting efficient and coherent UI development.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Material theme is designed to follow the Material-UI guidelines, ensuring a consistent appearance with Material-UI components. This makes it seamless to integrate Syncfusion<sup style="font-size:70%">&reg;</sup> React components with existing Material-UI components, allowing you to create a unified and visually appealing application.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Material theme is designed to align with Material-UI guidelines, ensuring a consistent appearance for applications that use both Syncfusion<sup style="font-size:70%">&reg;</sup> and Material-UI components. This approach enables seamless integration of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with existing Material-UI components to create a unified, visually consistent application.
 
-This guide will provide you with a step-by-step process for integrating Material-UI component into the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component.
+This guide provides detailed steps for integrating Material-UI components within the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component using the template property.
 
 ## Set up the React project
 

@@ -14,9 +14,9 @@ Licensing error popup is displayed with various messages under different circums
 
 ## Licensing errors
 
-### License key not registered\trial expired
+### License key not registered/trial expired
 
-The following error message will be shown if a Syncfusion<sup style="font-size:70%">&reg;</sup> license key has not been registered in your application or if the trial key has expired after 30 days.
+The following error message is shown if a Syncfusion<sup style="font-size:70%">&reg;</sup> license key has not been registered in the application or if the trial key has expired after 30 days.
 
 **Error message :** <br /> This application was built using a trial version of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>. You should include the valid license key to remove the license validation message permanently.
 
@@ -24,7 +24,7 @@ The following error message will be shown if a Syncfusion<sup style="font-size:7
 
 **Solution:**
 
-* If you use ReactJS components through Syncfusion<sup style="font-size:70%">&reg;</sup> installer, you can choose from the options listed below
+* If you use ReactJS components through the Syncfusion<sup style="font-size:70%">&reg;</sup> installer, choose from the options below:
 
 1. If you **have a valid Syncfusion<sup style="font-size:70%">&reg;</sup> license**, you can **generate a license key for a specific version and product** from [this page](https://www.syncfusion.com/account/downloads).
 
@@ -42,7 +42,7 @@ The following error message will be shown if a Syncfusion<sup style="font-size:7
 
 ### Invalid key
 
-If the application is registered with an invalid key, another version of license key, or another platform's license key, the following error message will pop up when launching the application.
+If the application is registered with an invalid key, another version of the license key, or a license key from another platform, the following error message appears when launching the application.
 
 **Error Message:** <br /> The included Syncfusion<sup style="font-size:70%">&reg;</sup> license key is invalid.
 
@@ -174,7 +174,7 @@ If the application is registered with another version’s license key, the follo
 
 ### Invalid key
 
-If you are using `npx syncfusion-license activate` command with an invalid license key structure, the following console error message will appear in the CI or terminal.
+If you are using the `npx syncfusion-license activate` command with an invalid license key structure, the following console error message appears in the CI or terminal.
 
 **Error message:** <br /> (Error) License key is not valid.
 
@@ -197,7 +197,7 @@ If you are using `npx syncfusion-license activate` command with an invalid licen
 
 ### Version Mismatch
 
-If the application is activated with a license key from another version, the following error message will be shown in the terminal while using the npx command in the CI or terminal.
+If the application is activated with a license key from a different version, the following error message appears in the terminal when using the npx command.
 
 **Error message:** <br /> The key entered is for `23.*.*` version, please enter the key for `27.*.*` version.
 
@@ -217,7 +217,7 @@ If the application is activated with a license key from another version, the fol
 
 ### Platform Mismatch
 
-If the application is activated with another platform’s license key, the following error message will be shown in the terminal while using the npx command in the CI or terminal.
+If the application is activated with a license key for a different platform, the following error message appears in the terminal when using the npx command.
 
 **Error message:** <br /> (Error) License key is not valid.
 
@@ -237,7 +237,7 @@ If the application is activated with another platform’s license key, the follo
 
 ### Trial Expired
 
-If the trial key has expired after 30 days, the following error message will be shown in the terminal while using the npx command in the CI or terminal.
+If the trial key has expired after 30 days, the following error message appears in the terminal when using the npx command.
 
 **Error message:** <br /> The included Syncfusion<sup style="font-size:70%">&reg;</sup> license key has expired.
 

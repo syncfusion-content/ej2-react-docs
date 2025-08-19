@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Preact Framework with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in Preact
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+This article outlines the steps required to set up a [Preact](https://preactjs.com/) project and integrate Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
-`Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
+`Preact` is a fast, lightweight JavaScript library that provides a modern API similar to React. It is optimized for minimal file size and fast performance, making it well-suited for projects where load time and bundle size are important.
 
 ## Prerequisites
 
@@ -81,7 +81,7 @@ cd my-project
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
@@ -99,9 +99,9 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be added using CSS or SASS styles in the npm packages. Additional options are available via CDN or the [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). See the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/) for full details.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Grid component and its dependents were imported into the **src/style.css** file.
+This example uses the `Material 3` theme, imported in the **src/style.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -121,7 +121,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 > The order of importing CSS styles should be in line with its dependency graph.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
+## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
 Follow the below steps to add the React Grid component to the Vite project:
 
@@ -194,4 +194,4 @@ The output will appear as follows:
 
 ## See also
 
-[Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)
+[Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)

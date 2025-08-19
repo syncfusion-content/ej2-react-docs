@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # Getting Started with Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React
 
-Follow the steps below to get started with Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React. You can begin in one of two ways:
+Follow the steps below to start using the Essential<sup style="font-size:70%">&reg;</sup> UI Kit for React. You can begin in one of two ways:
 
-- **Download the App from GitHub**: Get the full free source code and run the app locally to explore the blocks.
-- **View the Online Demo**: Alternatively, you can try out the blocks directly through the online demo to see them in action without needing to download anything.
+- **Download the App from GitHub:** Get the full source code and run the app locally to explore the blocks.
+- **View the Online Demo:** Interact with the blocks directly through the online demo without downloading any files.
 
 ## Get Started by Downloading the App from GitHub
 
@@ -25,7 +25,7 @@ Download the app from the GitHub [link](https://github.com/syncfusion/essential-
 
 ### Step 2: Open a New Terminal
 
-In Visual Studio Code, go to the **Terminal** menu and select **New Terminal** to open the integrated terminal.
+In Visual Studio Code, open the integrated terminal by selecting **Terminal > New Terminal**.
 
 ![Opening a new terminal](images/opening-a-new-terminal.png)
 
@@ -58,9 +58,9 @@ The blocks include several Syncfusion<sup style="font-size:70%">&reg;</sup> Reac
 To obtain the license key, visit the following page: [Syncfusion<sup style="font-size:70%">&reg;</sup> License](https://ej2.syncfusion.com/react/documentation/licensing/license-key-generation).
 
 #### How to Register the License Key in the App
-Once you have your license key, register it in the app through any one of the following methods suggested in this [link](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command).
+Register your license key using one of the methods described on this [registration page](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command).
 
-By adding the license key, you ensure seamless browsing and usage of the blocks, making them fully functional and free from licensing issues.
+Registering the license key ensures that the components function seamlessly without any licensing issues.
 
 ## Get Started by Viewing the Online Demo
 

@@ -9,12 +9,12 @@ domainurl: ##DomainURL##
 ---
 
 
-# Installation 
+# Installation
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React npm packages can be installed in the application through any of the following steps:
 
 * Installation using npm CLI.
-* Installation through package reference in `Package.json` file.
+* Installation through a package reference in the `Package.json` file.
 
 ## Install by using npm CLI
 

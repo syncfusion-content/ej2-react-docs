@@ -29,7 +29,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 components a
 
 ## Using CDN
 
-To add ES6 Promise polyfill using a CDN, include this in your HTML file.
+To include the ES6 Promise polyfill in your HTML file via a CDN, add the following script tags:
 
 ```ts
 <!-- Automatically provides/replaces `Promise` if missing or broken. -->
@@ -43,7 +43,7 @@ To add ES6 Promise polyfill using a CDN, include this in your HTML file.
 
 ## Node.js
 
-ES6 Promise polyfill can also be installed on the node.js.
+ES6 Promise polyfill can also be installed on the Node.js.
 
 To install:
 

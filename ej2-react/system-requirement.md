@@ -10,11 +10,10 @@ domainurl: ##DomainURL##
 
 # System Requirements for React Components
 
-This section explains the basic system requirements to work with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
+This guide outlines the system requirements to use Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components effectively.
 
-* React supported version >= `15.5.4+`.
-
-* Required [node](https://nodejs.org/en/) version >= `14.0.0+`, and the supported [npm](https://www.npmjs.com/) version will be installed along with the node version. Use the below command to check the node version.
+- **React:** Ensure you are using React version 15.5.4 or higher.
+- **Node.js:** Use Node.js version 14.0.0 or above. The compatible npm version is installed along with Node.js. To verify your Node.js installation, run:
 
 ```bash
 node --version

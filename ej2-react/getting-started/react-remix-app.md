@@ -8,29 +8,29 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Create React Remix App with Syncfusion<sup style="font-size:70%">&reg;</sup> Components
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in a Remix Application
 
-This document helps you to create a simple Remix application with React Framework and Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+This guide provides a step-by-step workflow for integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React components into a new Remix application.
 
 ## Prerequisites
 
-Before getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components with Remix project, check whether the following are installed in the developer machine.
+Ensure the following requirements are met before starting:
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
 
-## Benefits to using Remix
+## Benefits of using Remix
 
 ### Nested pages
 
-The pages inside `./routes` folder is nested in the route where you can embed these components into the parent page. It reduces the loading time of the page.
+Pages within the `./routes` directory are structured as nested routes, allowing components to be embedded hierarchically in parent pages. This organization helps reduce page loading times.
 
 ### Error boundaries
 
-If you get an error in a nested route or a Remix component, the errors are limited and the component will fail to render, but it doesn't break the entire page.
+Errors within nested routes or individual Remix components are isolated. If a failure occurs, only the affected route/component fails to render, preserving the rest of the page.
 
 ### Transition
 
-Remix automatically handles all loading states, you have to do is tell Remix what to show when the app is loading.
+Remix automatically manages loading states during navigation or data fetching. Developers can configure what displays while the application loads, improving user experience.
 
 ## Create Remix application
 
@@ -58,15 +58,15 @@ deps :: Install dependencies with npm?
         Yes
 ```
 
-Then run the following command to jump into the project directory:
+Navigate into the project directory with:
 
 ```
 cd quick-start
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Grid packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Grid package
 
-All the available Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install React Grid component, use the following command
+Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are available on [Syncfusion’s npm registry](https://www.npmjs.com/~syncfusionorg). To include the React Grid component in your project, run:
 
 ```
 npm install @syncfusion/ej2-react-grids --save
@@ -91,9 +91,9 @@ import '@syncfusion/ej2-notifications/styles/material3.css';
 import '@syncfusion/ej2-react-grids/styles/material3.css';
 ```
 
-## Adding SSR configuration
+## Configure Server-Side Rendering (SSR)
 
-To use Syncfusion<sup style="font-size:70%">&reg;</sup> packages in Server-Side Rendering (SSR) with Vite, you'll need to update the `vite.config.ts` file. This ensures that the Syncfusion<sup style="font-size:70%">&reg;</sup> packages are properly transpiled to be compatible with the server environment.
+For Syncfusion<sup style="font-size:70%">&reg;</sup> React packages to function with Remix server-side rendering (via Vite), update your `vite.config.ts` file as shown:
 
 ```ts
 import { defineConfig } from "vite";
@@ -106,6 +106,8 @@ export default defineConfig({
   ...
 });
 ```
+
+This configuration ensures Syncfusion modules are properly transpiled for SSR compatibility.
 
 ## Adding React Grid component
 
@@ -228,7 +230,7 @@ export let data: Object[] = [
 
 ## Run the application
 
-Run your Remix application in development mode using the following command,
+Start your Remix application in development mode:
 
 ```
 npm run dev
