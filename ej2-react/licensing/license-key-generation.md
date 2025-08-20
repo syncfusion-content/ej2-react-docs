@@ -41,7 +41,7 @@ If you have a Syncfusion<sup style="font-size:70%">&reg;</sup> account with an e
 
 ![Expired License](images/expired-license.png)
 
-### No trial or no license or expired trial
+### No Trial, No License, or Expired Trial
 
 If the Syncfusion<sup style="font-size:70%">&reg;</sup> account is not associated with a trial, license, or expired trial, you can try to claim either a trial or a valid license from claim license page.
 

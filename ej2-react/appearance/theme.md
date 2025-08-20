@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # React Themes in Syncfusion<sup style="font-size:70%">&reg;</sup> Components
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React UI can allow you to apply styles for the components. The following list of themes are included in the Syncfusion<sup style="font-size:70%">&reg;</sup> React components library.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components support a wide range of built-in themes, ensuring a consistent and visually appealing look for your applications. Below is a list of all available themes in the Syncfusion<sup style="font-size:70%">&reg;</sup> React components library:
 
 |Theme  |Style Sheet Name|
 |--------|--------|

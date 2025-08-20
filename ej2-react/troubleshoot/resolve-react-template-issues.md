@@ -14,14 +14,14 @@ The React property of `delayUpdate` is used to solve the react template related 
 
 ## delayUpdate
 
-The `delayUpdate` property enables the delay when the component renders back after the state is changed.
+The `delayUpdate` property delays the re-rendering of the component until after the template has been compiled. This prevents issues related to multiple simultaneous mountings when the component state changes.
 
-Whenever the state changes, the component and the template renders back. Thus, the react will not allow multiple mounting at the same time. In this situation, React renders the template as an external component, and delays the component re-rendering to compile the template.
-
-By setting the `delayUpdate` property to `true`, the component renders back after the template compilation is done.
+By setting `delayUpdate` to `true`, the component waits for the template to finish compiling before re-rendering. This ensures that template-related issues are resolved and the component updates correctly.
 
 ```ts
+<ScheduleComponent width="100%" height="650px" delayUpdate={true}>
+  {/* Template content goes here */}
+</ScheduleComponent>
+```
 
- <ScheduleComponent width='100%' height='650px' delayUpdate='true'> </ScheduleComponent>
-
- ```
+> Note: Set `delayUpdate` to `true` only when the component utilizes templates that require additional compilation and when multiple mounting conflicts are observed.

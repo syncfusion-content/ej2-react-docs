@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right to left in React Right to left md component | Syncfusion
+title: Right-To-Left in React Right to left md component | Syncfusion
 description: Learn here all about Right to left in Syncfusion React Right to left md component of Syncfusion Essential JS 2 and more.
 control: Right to left 
 platform: ej2-react
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right-To-Left
 
-Right To Left (RTL) can be enabled to the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components by adding a `enableRtl` property as `true`. This will render all Syncfusion<sup style="font-size:70%">&reg;</sup> React components in right to left direction.
+Right To Left (RTL) support allows Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components to display text and layouts for languages such as Arabic, Hebrew, and Persian. To enable RTL across all components, set the `enableRtl` property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

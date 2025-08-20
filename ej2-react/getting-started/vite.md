@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React UI Components with Vite
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React Components in a Vite Project
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with JavaScript and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 
-`Vite` is a build tool and development server for modern web projects. Vite is designed to be fast and lightweight, supporting modern web technologies such as ES modules, TypeScript, JSX, and CSS modules. Vite's development server uses native ES modules in modern browsers, providing faster startup times and quicker feedback loops during development.
+`Vite` is a fast, modern build tool and development server optimized for projects using technologies such as ES modules, TypeScript, JSX, and CSS modules. Its development server leverages native ES modules in modern browsers, providing rapid project startup and efficient feedback during development.
 
 ## Prerequisites
 
@@ -97,9 +97,9 @@ yarn add @syncfusion/ej2-react-grids
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied with CSS files supplied by the npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/).
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the **src/App.css** file.
+In this example, the `Material` theme styles for the Grid component and its dependencies are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}

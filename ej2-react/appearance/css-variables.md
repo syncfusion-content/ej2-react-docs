@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Themes using CSS Variables in React component | Syncfusion
-description: Learn here all about themes using CSS varaibles in Syncfusion React Appearance component of Syncfusion Essential JS 2 and more.
+description: Learn here all about themes using CSS variables in Syncfusion React Appearance component of Syncfusion Essential JS 2 and more.
 control: Themes using CSS Variables
 platform: ej2-react
 documentation: ug
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # About CSS variables in themes
 
-[CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), also known as custom properties, are entities defined by CSS authors that contain specific values that can be reused throughout a CSS file. They are identified by their name, which must begin with two hyphens (--) followed by an identifier. These variables can be assigned any valid CSS value, such as colors, lengths, or fonts. To retrieve the value of a CSS variable, the var() function is used.
+[CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), also known as custom properties, enable authors to define reusable values in CSS files. CSS variable names begin with two hyphens (`--`) followed by an identifier and can hold values such as colors, lengths, or fonts. Use the `var()` function to reference a variable’s value throughout your stylesheets.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> currently offers two modern and highly customizable themes using CSS variables. These themes are designed to provide a consistent and visually appealing look and feel across all Syncfusion<sup style="font-size:70%">&reg;</sup> components. The themes available are:
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides modern, highly customizable themes that utilize CSS variables. These themes ensure a consistent and visually appealing appearance across all Syncfusion<sup style="font-size:70%">&reg;</sup> components. The currently available themes are:
 
 * Material 3 Theme
 * Fluent 2 Theme
@@ -21,15 +21,15 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> currently offers two modern and
 
 ## CSS themes - Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-[Material 3](https://m3.material.io/), [Fluent 2](https://fluent2.microsoft.design/get-started/whatisnew), [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and [Tailwind 3.4](https://tailwindcss.com/docs/installation/using-vite) themes have been introduced across all EJ2 Controls, featuring both `light` and `dark` variants. This themes utilizes `CSS variables` to allow easy customization of control colors in CSS format. With this implementation, users can seamlessly switch between light and dark color schemes, providing a flexible solution to meet their preferences and application needs.
+[Material 3](https://m3.material.io/), [Fluent 2](https://fluent2.microsoft.design/get-started/whatisnew), [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/), and [Tailwind 3.4](https://tailwindcss.com/docs/installation/using-vite) themes are supported across all EJ2 controls. Each of these themes includes both `light` and `dark` variants. They utilize CSS variables to simplify color customization directly in CSS. This approach enables easy switching between light and dark color schemes, enhancing flexibility for various user preferences and application requirements.
 
-> Kindly note that in the Material 3 theme, CSS variables with rgb() values are used for color variables. The use of hex values in this context may lead to improper functionality. For example, in previous versions of the Material theme or other themes, the primary color variable was defined as follows: $primary: #6200ee;. However, in the Material 3 theme, the primary color variable is defined as follows: --color-sf-primary: 98, 0, 238;.
+> Note: The Material 3 theme uses CSS variables with `rgb()` values for color. Using hex values here may cause unexpected results. In previous themes, the primary color variable was defined as `$primary: #6200ee;`. In Material 3, it is defined as `--color-sf-primary: 98, 0, 238;`.
 
-### Utilization of CSS variables in modern themes
+### Utilizing CSS variables in modern themes
 
-Modern themes make it easy to change the colors of controls using CSS variables. Each theme has its own way of setting these variables, so it's important to follow the specific instructions for each theme. Doing this helps keep the styling consistent and efficient across different parts of your application.
+Modern themes streamline color customization via CSS variables. Each theme specifies its own set of variables, so refer to the relevant theme's documentation when making adjustments. This maintains consistent styling and efficient theme management across your application.
 
-Below are examples of how CSS variables can be defined for these themes:
+Below are examples showing how CSS variables are defined in each theme:
 
 {% tabs %}
 {% highlight ts tabtitle="material3.css" %}
@@ -60,13 +60,13 @@ To access themes provided by Syncfusion, you have two primary options,
 |  | [Bootstrap 5.3 Light](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-theme) | [Bootstrap 5.3 Dark](https://www.npmjs.com/package/@syncfusion/ej2-bootstrap5.3-dark-theme) |
 |  | [Tailwind 3.4 Light](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) | [Tailwind 3.4 Dark](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-dark-theme) |
 | CDN  | [Material 3 Light](https://cdn.syncfusion.com/ej2/27.1.48/material3.css)  |  [Material 3 Dark](https://cdn.syncfusion.com/ej2/27.1.48/material3-dark.css)  |
-|  |  [Fluent 2 light](https://cdn.syncfusion.com/ej2/27.1.48/fluent2.css)  |  [Fluent 2 Dark](https://cdn.syncfusion.com/ej2/27.1.48/fluent2-dark.css)  |
-|  |  [Bootstrap5.3 light](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3.css)  |  [Bootstrap 5.3 Dark](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3-dark.css)  |
+|  |  [Fluent 2 Light](https://cdn.syncfusion.com/ej2/27.1.48/fluent2.css)  |  [Fluent 2 Dark](https://cdn.syncfusion.com/ej2/27.1.48/fluent2-dark.css)  |
+|  |  [Bootstrap 5.3 Light](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3.css)  |  [Bootstrap 5.3 Dark](https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3-dark.css)  |
 |  | [Tailwind 3.4 Light](https://cdn.syncfusion.com/ej2/28.1.33/tailwind3.css) | [Tailwind 3.4 Dark](https://cdn.syncfusion.com/ej2/28.1.33/tailwind3-dark.css) |
 
-### Color Customization in themes
+### Color customization in themes
 
-CSS variables allows you to dynamically change color values in real-time using JavaScript. This flexibility enables you to create interactive experiences where colors can adjust based on user interactions or other dynamic factors.
+CSS variables let you dynamically change color values, including at runtime via JavaScript. This allows for interactive or adaptive color adjustments based on user actions or application state.
 
 #### Customization using CSS
 
@@ -170,7 +170,7 @@ With this CSS variable support, you can effortlessly customize the color variabl
 
 ### Switching Light and Dark mode with CSS variables
 
-Switching between modes has become easier with the updated modern themes, which offer Light and Dark variants. In all themes, there are distinct class variables for light and dark modes in a `single file`, providing flexibility for seamless switching between the two modes within your application.
+Modern themes make it simple to toggle between light and dark modes by adjusting a single CSS class. Each theme's CSS file contains separate class selectors for light and dark modes, enabling seamless switching as needed within your application.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -185,7 +185,7 @@ Switching between modes has become easier with the updated modern themes, which 
 
 ### Mode switching in Fluent 2 theme
 
-Similar to `Material 3`, we offer both Light and Dark variants with `Fluent 2`. In the Fluent 2 theme, there are distinct class variables for light and dark modes, as shown in the preview below.
+Fluent 2 also supports both light and dark variants. The theme's CSS contains class selectors for switching between these modes, as demonstrated in the preview below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -200,7 +200,7 @@ Similar to `Material 3`, we offer both Light and Dark variants with `Fluent 2`. 
 
 ### Mode switching in Bootstrap 5.3 theme
 
-Similar to `Fluent 2`, we offer both Light and Dark variants with `Bootstrap 5.3`. In the Fluent 2 theme, there are distinct class variables for light and dark modes, as shown in the preview below.
+Bootstrap 5.3 themes also offer separate class selectors for its light and dark variants, which can be switched at runtime.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -215,7 +215,7 @@ Similar to `Fluent 2`, we offer both Light and Dark variants with `Bootstrap 5.3
 
 ### Mode switching in Tailwind 3.4 theme
 
-Similar to `Fluent 2`, we offer both Light and Dark variants with `Tailwind 3.4`. In the Fluent 2 theme, there are distinct class variables for light and dark modes, as shown in the preview below.
+Tailwind 3.4 provides class selectors for both light and dark modes. Switch between them as shown in the following preview.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 ## Create project
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides **project templates** for **Visual Studio Code** to create Syncfusion<sup style="font-size:70%">&reg;</sup> Web applications. The Syncfusion<sup style="font-size:70%">&reg;</sup> Web Project template creates applications with the selected Framework (React, Angular, and Vue), required Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages, component render code for the Grid, Chart, and Scheduler components, and a style to make development with Syncfusion<sup style="font-size:70%">&reg;</sup> components easier.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides **project templates** for **Visual Studio Code** to streamline the creation of Syncfusion<sup style="font-size:70%">&reg;</sup> React applications. These templates automatically configure your project with the required Syncfusion<sup style="font-size:70%">&reg;</sup> NPM packages, component render code for Grid, Chart, and Scheduler components, and appropriate styling to accelerate development with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
    > The Syncfusion<sup style="font-size:70%">&reg;</sup> Visual Studio Code project template provides support for Web project templates from v18.3.0.47.
 
 The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;</sup> Web Applications** through the **Visual Studio Code:**
 
-1. In Visual Studio Code, open the command palette by pressing **Ctrl+Shift+P**. The Visual Studio Code palette opens, search the word **Syncfusion<sup style="font-size:70%">&reg;</sup>**, so you can get the templates provided.
+1. In Visual Studio Code, open the command palette by pressing **Ctrl+Shift+P**. In the palette, search for **Syncfusion<sup style="font-size:70%">&reg;</sup>** to see the available templates.
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 
@@ -54,7 +54,7 @@ The steps below help you to create **Syncfusion<sup style="font-size:70%">&reg;<
 
     ![Run](images/run.png)
 
-2. After compilation process completed, open the local host link in browser to see the output.
+2. After the compilation process completed, open the localhost link in browser to view the output.
 
     ![Output](images/react-compilation.png)
 

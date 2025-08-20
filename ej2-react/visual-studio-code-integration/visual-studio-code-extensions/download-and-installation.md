@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Download and Installation 
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio Code extension in [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Angular-VSCode-Extensions). You can either install it from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
+Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio Code extension in [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Web-VSCode-Extensions). You can either install it from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 
 ## Prerequisites
 

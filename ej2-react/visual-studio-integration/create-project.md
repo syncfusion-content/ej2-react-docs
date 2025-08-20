@@ -12,12 +12,12 @@ domainurl: ##DomainURL##
 
 ## Create project
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides the **Visual Studio Project Templates** for creating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Application. The Syncfusion<sup style="font-size:70%">&reg;</sup> React application creates the application with the required Syncfusion<sup style="font-size:70%">&reg;</sup> references, namespaces and CDN links for making the development earlier with the Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides the **Visual Studio Project Templates** for creating a Syncfusion<sup style="font-size:70%">&reg;</sup> React application. The template generates a new project configured with the required Syncfusion<sup style="font-size:70%">&reg;</sup> references, namespaces, and CDN links to accelerate development with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 > The Syncfusion<sup style="font-size:70%">&reg;</sup> React project templates are available from v17.1.0.47.
 
 The following steps help you to create the Syncfusion<sup style="font-size:70%">&reg;</sup> React Application through the Visual Studio:
-1. Open the Visual Studio 2022.
+1. Open Visual Studio 2022.
 2. To create a Syncfusion<sup style="font-size:70%">&reg;</sup> React project, follow either one of the options below:
 
     **Option 1:**

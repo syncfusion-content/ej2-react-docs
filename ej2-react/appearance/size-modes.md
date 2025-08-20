@@ -8,11 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Size Mode for Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Size Modes for Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-An application that is designed to be accessed through a web browser on various devices, including desktop computers and mobile devices, may have a distinct layout or user interface on a mobile device compared to a desktop computer to better suit the smaller screen size.
+Modern web applications need to provide consistent user experiences across a variety of devices—from desktops to mobile screens. Syncfusion<sup style="font-size:70%">&reg;</sup> React components offer two size modes to address this: **normal** (default) and **touch** (bigger). These modes allow interfaces to adapt for both mouse and touch interactions, improving usability and accessibility on any device.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components support both touch (bigger) and normal size modes. Touch mode creates a responsive design for mobile devices by adding the `e-bigger` class, which enhances interactions, visibility, and the overall experience.
+## Overview of Size Modes
+
+Size modes control the dimensions, spacing, and tap/click target sizes of UI controls:
+
+- **Normal Mode:** The default; optimized for mouse and keyboard users, providing standard-sized controls.
+- **Touch (Bigger) Mode:** Enlarges controls and increases spacing for improved usability on touch-screen and mobile devices.
+
+Switching modes helps ensure comfortable and accessible interfaces on a wide range of devices.
 
 ## Size mode for application
 
@@ -39,7 +46,7 @@ The user can enable touch mode (bigger) for a component by adding the `e-bigger`
 {% include code-snippet/common/sizemode-runtime-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/common/sizemode-runtime-cs1" %}
 
 ## Change size mode for application at runtime
@@ -57,7 +64,7 @@ The user can change the size mode of the application between touch and normal (m
 {% include code-snippet/common/sizemode-runtime-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/common/sizemode-runtime-cs2" %}
 
 ## Change size mode for a component at runtime
@@ -75,12 +82,12 @@ The user can change the size mode of a component between touch and normal (mouse
 {% include code-snippet/common/sizemode-runtime-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/common/sizemode-runtime-cs3" %}
 
-## Change the font size for all components
+## Customizing font size for all components
 
-The user can change the font size for all the components by overriding the CSS for the `e-control` class as follows:
+To globally adjust text size in all Syncfusion<sup style="font-size:70%">&reg;</sup> React components, override the `.e-control` class:
 
   ```css
 

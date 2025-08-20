@@ -70,9 +70,9 @@ A drag area is a specific area within a user interface that is designated for dr
 
 ## Droppable
 
-Droppable component refers to an area of a user interface that can receive a draggable component that is being moved by a user. Syncfusion's [`Droppable`](https://ej2.syncfusion.com/documentation/api/base/droppable/) library converts any DOM element into a droppable zone, which accepts draggable elements.
+A droppable zone is a designated area within the interface that accepts draggable elements. The [`Droppable`](https://ej2.syncfusion.com/documentation/api/base/droppable/) library enables any DOM element to become a droppable target.
 
-When a draggable component is moved over a droppable component, the [drop](https://ej2.syncfusion.com/documentation/api/base/droppable/#events) event can be triggered. The user can get details about the dropped element through the event argument. Based on the event argument, the user can append the dragged element to the target element.
+When a draggable element is released over a droppable, the [drop](https://ej2.syncfusion.com/documentation/api/base/droppable/#events) event is triggered. Details about the dropped element are available through the event arguments, allowing dynamic updates such as appending, moving, or highlighting elements in the target area.
 
 Refer to the following code snippet to enable droppable zones.
 

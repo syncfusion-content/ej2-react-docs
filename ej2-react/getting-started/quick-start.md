@@ -144,7 +144,7 @@ Import the CSS styles for the Grid component and it's dependencies in the `src/A
 
 You can checkout the [Themes topic](../appearance/theme) to know more about built-in themes and different ways to refer themes in React application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> component to the application
+## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> component to the application
 
 Start adding the required components to the application. Let's add the Grid component in the `src/App.tsx` file using the following code.
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Accessibility overview
 
-Accessibility in components refers to the practice of designing and building user interface elements in a way that makes them accessible to users with disabilities. This can include a variety of things, such as making sure that text is high-contrast and easy to read, providing alternative text for images, and designing controls and interactions that can be used with a keyboard or assistive technology.
+Accessibility in components refers to designing and developing user interface elements so they are usable by individuals with disabilities. This includes ensuring high-contrast, easy-to-read text, providing alternative descriptions for images, and implementing controls that are accessible via keyboard and assistive technologies.
 
 ## Accessibility standards
 
@@ -40,7 +40,7 @@ There are several methodologies of accessibility validation that can be performe
 
 * The [WAI-ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) are followed by the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to enable appreciable accessibility.
 
-* Each React component is subjected to manual testing with a screen reader and also automated test cases to ensure the component's required attributes.
+* Each component undergoes manual testing with screen readers and automated test cases to verify required attributes.
 
 * Attributes are allocated and updated correctly during interaction as well. Each component has been assigned a distinct `Role` attribute and its own set of ARIA attributes defined by the [WCAG 2.2](https://www.w3.org/TR/WCAG22/) specification.
 

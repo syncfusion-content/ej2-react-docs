@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Upgrade Project
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React migration add-in for Visual Studio allows you to migrate an existing Syncfusion<sup style="font-size:70%">&reg;</sup> React application from one version of Essential Studio<sup style="font-size:70%">&reg;</sup> version to another version. This reduces the amount of manual work required when migrating the Syncfusion<sup style="font-size:70%">&reg;</sup> version.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> React migration add-in for Visual Studio allows you to migrate an existing Syncfusion<sup style="font-size:70%">&reg;</sup> React application from one version of Essential Studio<sup style="font-size:70%">&reg;</sup> to another. This tool significantly reduces the manual effort involved in upgrading your application.
 
 > The Syncfusion<sup style="font-size:70%">&reg;</sup> React Project migration are available from v17.3.0.9.
 
@@ -46,7 +46,7 @@ The steps below help you to upgrade the Syncfusion<sup style="font-size:70%">&re
 
 4. Check the **“Enable a backup before migrating** checkbox if you want to take the project backup and choose the location.
 
-5. Once the migration process completed, will get the success message window.
+5. Once the migration process is complete, a success message window appears.
 
     ![project Success](images/Confirmation-window.PNG)
 

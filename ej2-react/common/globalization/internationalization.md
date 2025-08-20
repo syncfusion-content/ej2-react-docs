@@ -60,7 +60,7 @@ import { loadCldr } from "@syncfusion/ej2-base";
 import enNumberData from "@syncfusion/ej2-cldr-data/main/en/numbers.json";
 import entimeZoneData from "@syncfusion/ej2-cldr-data/main/en/timeZoneNames.json";
 
-loadcldr(enNumberData, entimeZoneData);
+loadCldr(enNumberData, entimeZoneData);
 
 ```
 
@@ -195,7 +195,7 @@ The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/intern
 
 ### Supported format string
 
- Date formatting and parsing operations are performed based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/). You need to specify  some or all of the following properties mentioned in the table below.
+ Date formatting and parsing operations are performed based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions/). Specify any of the following properties:
 
 | Options | Descriptions |
 | --- | --- | --- |
