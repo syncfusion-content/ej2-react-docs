@@ -7,9 +7,9 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component.
+# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components
 
-This article provides a step-by-step introduction to get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
+This article provides a step-by-step guide for integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components into a new React application.
 
 ## Prerequisites
 
@@ -17,7 +17,9 @@ This article provides a step-by-step introduction to get started with Syncfusion
 
 ## Create the React application
 
-To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
+The recommended approach is to use the [Create React App](https://github.com/facebook/create-react-app) tool for initializing your project. This tool sets up a development environment and optimizes the build for production.
+
+To create a new application using JavaScript:
 
 ```bash
 npx create-react-app my-app
@@ -49,11 +51,11 @@ cd my-app
 npm start
 ```
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Once you have created the React application, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> React component package in the application. All Syncfusion<sup style="font-size:70%">&reg;</sup> React (Essential JS 2) packages are published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. So, choose the component that you want to install.
+After creating the React application, install the Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages as required. All packages are available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 
-In this quick start article, the Grid component used as an example. To install the Grid component package, use the following command.
+This guide uses the Grid component as an example. To install the Grid package, use:
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
@@ -65,35 +67,31 @@ or
 yarn add @syncfusion/ej2-react-grids
 ```
 
-You can also checkout the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package) to know the different ways of installing the packages.
+Additional information on package installation methods is available in the [installation section](https://ej2.syncfusion.com/react/documentation/installation/npm-package).
 
-## Import the Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-After installing the Syncfusion<sup style="font-size:70%">&reg;</sup> component packages in your application, import the required themes based on the components used.
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component comes with built-in [themes](../appearance/theme), which are available in installed packages. It is quite simple to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components based on the application style by referring to any of the built-in themes. Let's import the `Material` theme for the Grid component.
-
-Import the CSS styles for the Grid component and it's dependencies in the `src/App.css.` file.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-in [themes](../appearance/theme). Import the CSS styles for the required components and their dependencies in the `src/App.css` file. The example below demonstrates importing the `Material` theme for the Grid component and its dependencies:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
 ```
 
-You can checkout the [Themes topic](../appearance/theme) to know more about built-in themes and different ways to refer themes in React application.
+For more details on built-in themes and usage, see the [Themes topic](../appearance/theme).
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> component to the application
+## Add a Syncfusion<sup style="font-size:70%">&reg;</sup> component to the application
 
-Start adding the required components to the application. Let's add the Grid component in the `src/App.js` file using the following code.
+Begin adding required Syncfusion<sup style="font-size:70%">&reg;</sup> components to your application. The following example demonstrates how to add the Grid component in the `src/App.js` file.
 
-1.Before adding the Grid component to your markup, import the Grid component in the `src/App.js` file.
+1. Import the necessary components in the `src/App.js` file:
 
    ```bash
     import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
@@ -178,7 +176,7 @@ export default App;
 
 ## Run the application
 
-All are set. Now, run the application using the following command.
+Start the development server with the following command:
 
 ```bash
 npm start
@@ -206,4 +204,4 @@ The output will appears as follows.
         
 {% previewsample "page.domainurl/code-snippet/common/default-cs9" %}
 
-To know more functionality about the Grid component, refer to the [Grid component](https://ej2.syncfusion.com/react/documentation/grid/getting-started) section.
+For more options and features, see the [Grid component documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started).

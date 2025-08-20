@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Templates in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components are rendered with a pre-defined layout or structure that is used to define how the component should be rendered on the user interface. The user wants to customise the appearance of the component and add functionality that is specific to the needs of the application. Syncfusion<sup style="font-size:70%">&reg;</sup> React components have the option to achieve this using template support.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components provide support for templates, enabling developers to customize the layout and appearance of UI components to fit specific application requirements. Templates allow for flexible rendering of component content and facilitate the addition of tailored functionality and visual elements.
 
-The user can use the JavaScript function to add custom template content to the Syncfusion<sup style="font-size:70%">&reg;</sup> React components. The JavaScript function is the simplest way to define the React components. This function accepts a "props" object argument with data and returns a React element. Refer to the below code snippet to create the template content using JavaScript function.
+Templates are typically defined using a JavaScript (React) function that accepts a `props` object and returns a React element. This method enables full access to component data for custom rendering within Syncfusion<sup style="font-size:70%">&reg;</sup> React components. The following example demonstrates creating a custom template function:
 
 ```
 function gridTemplate(props) {
@@ -22,7 +22,7 @@ function gridTemplate(props) {
 }
 ```
 
-Here, the JavaScript function name (gridTemplate) is assigned to the `template` property of the Grid component. Refer to the following code snippet.
+In this example, the `gridTemplate` function is assigned to the `template` property of a Grid component. See the code snippet below for implementation:
 
 ```js
 import './App.css';
@@ -66,7 +66,7 @@ For specific needs of the application, users don't want to re-render components 
   <TreeViewComponent fields={fields} statelessTemplates={['nodeTemplate']} nodeTemplate={nodeTemplate} />
 ```
 
-If the templates are defined in nested directives of the component, then pass the statelessTemplates property array value as "directiveTemplates" instead of the template names. Refer to the following code snippet.
+If templates are defined within nested directives, use `statelessTemplates={['directiveTemplates']}` to prevent updates for those templates, as demonstrated here:
 
 ```
   <GridComponent  dataSource={siteCedarData} statelessTemplates={['directiveTemplates']}>

@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a [SharePoint](https:/
 
 `SharePoint` Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
-## Prerequisites 
+## Prerequisites
 
 * [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement)
 
@@ -47,7 +47,7 @@ Add new Web part to solution my-project.
 gulp trust-dev-cert
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+With these steps complete, your `my-project` SharePoint Framework solution is ready for Syncfusion<sup style="font-size:70%">&reg;</sup> component integration.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
@@ -61,9 +61,9 @@ npm install @syncfusion/ej2-react-grids --save
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a React project.
+Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme/) for more detail.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component were imported into the **~/src/webparts/app/components/App.tsx** file.
+This article demonstrates importing the `Material` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/App.tsx`:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}

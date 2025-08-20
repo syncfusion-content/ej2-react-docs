@@ -10,22 +10,21 @@ domainurl: ##DomainURL##
 
 # Installation
 
-## Installing Package
+## Installing the Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are published on [npm](https://www.npmjs.com/search?q=ej2-react&page=1&ranking=optimal).
-You can install the necessary packages from npm’s install command. For example, grid package can be installed using the following command.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are published on [npm](https://www.npmjs.com/search?q=ej2-react&page=1&ranking=optimal). You can add the required packages to your project using the npm install command. For example, to install the grid package, run:
 
 ```
 npm install @syncfusion/ej2-react-grids --save
 ```
 
-These packages offer JavaScript files in ES6, UMD module systems. Which can be used in the different dependency management and bundling libraries.
+These packages provide JavaScript files in both ES6 and UMD module formats, which can be used with various dependency management and bundling libraries.
 
-* System JS
+* SystemJS
 
 ## Using SystemJS
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> npm package provides the UMD bundle file for loading scripts via script loaders such as Require JS, System JS, etc. To find UMD files in package read topic [Anatomy of Package](deployment#anatomy-of-npm-packages).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> npm package includes UMD bundle files for loading scripts via module loaders such as RequireJS or SystemJS. For details on the UMD files in the package, refer to the topic [Anatomy of Package](deployment#anatomy-of-npm-packages).
 
 ### Configuration Steps
 
@@ -77,7 +76,7 @@ System.import('app');
 
 ```
 
-**Step 4:** Adding component to the Application
+**Step 4:** Adding a Component to the Application
 
 Now, you can start adding Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components in the application.
 For getting started, we have added a Button Module in `app.tsx` and `index.html` file
@@ -145,8 +144,7 @@ This can be referenced in your `material.css` using the following code.
 
 **Step 6:** Running the application
 
-The quick-start project is configured to compile and run the application in the browser.
-Use the following command to run the application.
+The quick-start project is configured to compile and run your application in the browser. To start the application, execute:
 
 ```
 npm start

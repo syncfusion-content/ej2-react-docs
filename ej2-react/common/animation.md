@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Animation in React
 
-The **Animation** is used to perform animation effects on HTML elements by running a sequence of frames. It can be used to enhance the user experience.
+The **Animation** utility is designed to produce animation effects on HTML elements by rendering sequences of frames, enhancing the overall user experience.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports animating the HTML elements using the [animate](https://ej2.syncfusion.com/documentation/api/base/animation/#animate) method. This method adds the `e-animate`, `e-animation-id` attributes, and CSS style to the HTML element and removes them after the animation effect is completed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports animating HTML elements through the [animate](https://ej2.syncfusion.com/documentation/api/base/animation/#animate) method. This method applies the `e-animate` and `e-animation-id` attributes, along with relevant CSS styles, to the HTML element during the animation and removes them upon completion of the effect.
 
 ## Animation effects
 
-An animation effect refers to the visual change that occurs over a period of time in HTML elements. The [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library supports different types of animation [effects](https://ej2.syncfusion.com/documentation/api/base/effect/#effect). The [name](https://ej2.syncfusion.com/documentation/api/base/animation/#name) property is used to specify the animation effect of an animation.
+Animation effects refer to the visual transitions applied to HTML elements over a set duration, contributing to dynamic and engaging interfaces. The [Animation](https://ej2.syncfusion.com/documentation/api/base/animation/) library offers a range of animation [effects](https://ej2.syncfusion.com/documentation/api/base/effect/#effect), which can be specified using the [name](https://ej2.syncfusion.com/documentation/api/base/animation/#name) property.
 
-Here is an example code snippet using the `FadeOut` and `ZoomOut` animation effects:
+The following code snippets demonstrate use of the `FadeOut` and `ZoomOut` animation effects:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +36,7 @@ Here is an example code snippet using the `FadeOut` and `ZoomOut` animation effe
 
 ## Animation duration
 
-Animation [duration](https://ej2.syncfusion.com/documentation/api/base/animation/#duration) is the animation property that specifies the length of time that an animation should take to complete. The animation duration is specified in milliseconds (ms) and determines the total amount of time that an animation should run.
+Animation [duration](https://ej2.syncfusion.com/documentation/api/base/animation/#duration) defines the total time, in milliseconds (ms), that an animation effect takes to complete. This property determines the pacing of visual transitions and allows for adjustment to achieve desired animation speeds.
 
 For example, if an animation has a duration of 2 seconds, it will take 2 seconds to complete from start to finish. The duration of an animation affects the overall pace of the animation and can be adjusted to match the desired speed and style of the animation.
 
@@ -60,7 +60,7 @@ Here is an example code snippet using the animation effects with a duration of `
 
 ## Animation delay
 
-The animation [delay](https://ej2.syncfusion.com/documentation/api/base/animation/#delay) is the animation property that specifies the amount of time to wait before starting an animation. The animation delay is specified in milliseconds (ms) and determines the amount of time that should elapse before an animation begins.
+The animation [delay](https://ej2.syncfusion.com/documentation/api/base/animation/#delay) property specifies the length of time, in milliseconds (ms), to wait before an animation begins. This setting enables designers to coordinate complex animation sequences or trigger animations after specific user interactions.
 
 For example, if an animation has a delay of 2 seconds, it will wait for 2 seconds before starting. This can be useful in creating more complex animations, where multiple elements are animated in sequence, or in creating animations that start only after a user interaction has taken place.
 
@@ -82,13 +82,13 @@ Here is an example code snippet using the animation effects with a delay of `200
 
 ## Enable or disable animation globally
 
-Enable or disable animation for all React components globally by using the `setGlobalAnimation` method with one of the below options:
+Animations can be enabled or disabled globally for all React components using the `setGlobalAnimation` method with any of the following modes:
 
-* `GlobalAnimationMode.Enable` - Enables the animation for all components, regardless of the individual component's animation settings.
-* `GlobalAnimationMode.Disable` - Disables the animation for all components, regardless of the individual component's animation settings.
-* `GlobalAnimationMode.Default` - Animation is enabled or disabled based on the component's animation settings.
+* `GlobalAnimationMode.Enable` — Enables animations for all components, regardless of individual settings.
+* `GlobalAnimationMode.Disable` — Disables animations for all components, regardless of individual settings.
+* `GlobalAnimationMode.Default` — Uses each component’s own animation configuration.
 
-In the below code snippet, animation is disabled.
+Below, animation is globally disabled:
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.js" %}

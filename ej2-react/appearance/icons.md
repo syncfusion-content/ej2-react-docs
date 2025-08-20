@@ -10,27 +10,26 @@ domainurl: ##DomainURL##
 
 # Predefined Icons Library in Syncfusion<sup style="font-size:70%">&reg;</sup> React Component
 
-Syncfusion's icon library is a collection of pre-designed icons that can be used to enhance the user interface of an application. This pre-designed icons are set of `base64` formatted font icons. Utilizing this icon library can make it simpler to create a cohesive, visually pleasing design for an application.
+Syncfusion's icon library provides an extensive collection of pre-designed icons for enhancing user interfaces in React applications. These icons are available as `base64` formatted font icons, enabling the creation of visually consistent designs with minimal effort.
 
 ## Referring icons in the React application
 
-Using the below approaches, the icons can be referenced in the React application.
+Icons can be referenced in a React application using the following methods:
 
-* [npm package](#the-npm-package) - Use the npm package to access icons.
-
-* [CDN reference](#cdn-reference) - Use the static web asset to access icons.
+* [npm package](#the-npm-package) – Access icons via the npm package.
+* [CDN reference](#cdn-reference) – Access icons via CDN-hosted resources.
 
 ### The npm package
 
-All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are shipped in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package, which is published on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. This package contains both CSS and SCSS theme files for all themes.
+All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are distributed in the [ej2-icons](https://www.npmjs.com/package/@syncfusion/ej2-icons) package, available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. This package includes both CSS and SCSS files supporting all themes.
 
-Icons can be used from the npm package `ej2-icons`. To use the icons, install the npm package using the following command:
+To use these icons, install the `ej2-icons` npm package:
 
 ```bash
- npm install @syncfusion/ej2-icons
+npm install @syncfusion/ej2-icons
 ```
 
-Refer to the following syntax to use icons in a React application:
+Then import the desired theme’s icon stylesheet in your application:
 
 `[src/App.css]`
 
@@ -38,7 +37,7 @@ Refer to the following syntax to use icons in a React application:
 @import "../node_modules/@syncfusion/ej2-icons/styles/<theme_name>.css";
 ```
 
->To refer `App.css` in the application then import it in the `src/App.tsx` file.
+> To apply these styles in your application, ensure you import `App.css` in the `src/App.tsx` file.
 
 **Example:**
 
@@ -46,28 +45,26 @@ Refer to the following syntax to use icons in a React application:
 @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
 ```
 
-### CDN reference
+### CDN Reference
 
-All Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are available on the CDN. Instead of using a local resource on the server, use a cloud CDN to refer to the icons.
+Syncfusion<sup style="font-size:70%">&reg;</sup> theme icons are also available via CDN. Reference the correct version to ensure compatibility with your Syncfusion<sup style="font-size:70%">&reg;</sup> React package.
 
-Make sure that the version of the icons in the URL matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> React package. This will prevent compatibility issues and ensure that the correct version of the icons is loaded.
+To use CDN-hosted icons, add a link tag in your HTML file’s head section:
 
-To use the icons from the CDN, refer to the icons by URLs in the application. This can be done by linking the icons in the HTML file by adding a link tag to the head section.
-
-```
-// Bootstrap5
+```html
+<!-- Bootstrap5 -->
 <head>
     <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet"/>
 </head>
-//Material
+<!-- Material -->
 <head>
     <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet"/>
 </head>
 ```
 
-## Steps to use icons library
+## Steps to use the icons library
 
-Let's create a React application using the following command:
+Create a React application as shown:
 
 ```bash
 npx create-react-app my-app
@@ -75,17 +72,16 @@ cd my-app
 npm start
 ```
 
-For an introduction and configuration of the common specifications, see [getting started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start).
+For details on common setup and configuration, see [getting started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React application](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start).
 
-### Using icons directly in HTML element
+### Using icons directly in HTML elements
 
-The built-in Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be rendered directly in the HTML element by defining the `e-icons` class, which contains the font-family and common properties of font icons, and defining the available icon's class with the `e-` prefix.
+Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be rendered by assigning the `e-icons` class (which provides font icon styling) and the specific icon class prefixed with `e-` to an HTML element.
 
-The following steps explain the direct rendering of the Syncfusion<sup style="font-size:70%">&reg;</sup> icon in the HTML element.
+Steps to render a Syncfusion<sup style="font-size:70%">&reg;</sup> icon directly:
 
-1. Add the class name `e-icons` to the HTML element that needs to render the icon.
-
-2. Add the icon class with corresponding icon content from the [available icons](#available-icons). For example, the below code snippet represents the paste icon class.
+1. Add the `e-icons` class to the desired HTML element.
+2. Add the desired icon class (e.g., `e-paste`) as listed in the [available icons](#available-icons) section. For example:
 
     ```css
     .e-paste:before {
@@ -93,21 +89,21 @@ The following steps explain the direct rendering of the Syncfusion<sup style="fo
     }
     ```
 
-3. Add `e-icons` and `e-paste` classes to the HTML element.
+3. Use both the `e-icons` and specific icon class on your element:
 
-    ```
+    ```html
     <span class="e-icons e-paste"></span>
     ```
 
-4. Add the CDN link reference of icons library in the `~index.html` file.
+4. Reference the icons library in your `index.html` file with a CDN link:
 
-    ```
+    ```html
     <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
     ```
 
-   The below code snippet represents a complete example of icon usage.
+A complete example is shown below.
 
-    {% tabs %}
+{% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/common/icons-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -118,27 +114,27 @@ The following steps explain the direct rendering of the Syncfusion<sup style="fo
 {% include code-snippet/common/icons-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/common/icons-cs1" %}
 
 ### Icon size
 
-The `ej2-icons` package offers options to display icons in different size modes. A user can use different icon sizes in their application based on touch or mouse mode. If the user is using touch mode, add `e-large` class to the element to make the icon easily interact, or add the `e-small` or `e-medium` class in mouse mode.
+The `ej2-icons` package provides class-based options for varying icon sizes. Choose the size mode suitable for your interface—`e-large` for touch-friendly elements, or `e-small` and `e-medium` for pointer-based interactions.
 
-The pre-defined icon size is present in the available classes listed below.
-* `e-small` - Sets the icon size as `8px`.
-* `e-medium` - Sets the icon size to `16px`.
-* `e-large` - Sets the icon size to `24px`.
+The available size classes are:
+* `e-small` – Sets icon size to `8px`.
+* `e-medium` – Sets icon size to `16px`.
+* `e-large` – Sets icon size to `24px`.
 
-  **Example:**
+**Example:**
 
-    ```
-    <span class="e-icons e-small e-search"></span>
-    <span class="e-icons e-medium e-search"></span>
-    <span class="e-icons e-large e-search"></span>
-    ```
+```html
+<span class="e-icons e-small e-search"></span>
+<span class="e-icons e-medium e-search"></span>
+<span class="e-icons e-large e-search"></span>
+```
 
-    {% tabs %}
+{% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/common/icons-size-cs1/app/index.jsx %}
 {% endhighlight %}
@@ -149,14 +145,14 @@ The pre-defined icon size is present in the available classes listed below.
 {% include code-snippet/common/icons-size-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/common/icons-size-cs1" %}
 
-### Icon appearance customization
+### Customizing Icon Appearance
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React icons can be customized with custom color and size by overriding the `e-icons` class. Customizing the icons in the library can be useful for making the icons more visually appealing and fitting to the design of the application. For example, a user can change the color of an icon to match the color scheme of their application, or increase the size of an icon to make it more visible on smaller screens. It may also be useful for creating a consistent look and feel across different parts of the application. Overall, customizing the icons in the library can improve the overall user experience of the application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> icons support further customization by modifying the `e-icons` class. Changing icon color or size enables alignment with your application’s visual guidelines and improves accessibility or emphasis where needed.
 
-In the example below, the icon color is customized with custom color.
+For example, to apply a custom color to an icon:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -169,12 +165,12 @@ In the example below, the icon color is customized with custom color.
 {% include code-snippet/common/icons-customization-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/common/icons-customization-cs1" %}
 
-## Available icons
+## Available Icons
 
-The complete package of Essential<sup style="font-size:70%">&reg;</sup> JS 2 icons is listed below. The corresponding icon content can be referred in the content section.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 icon package includes a complete library of icons. Refer to the content section for each icon’s specific CSS class and code.
 
 <!-- markdownlint-disable MD033 -->
 

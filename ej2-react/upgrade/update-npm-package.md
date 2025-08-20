@@ -16,7 +16,7 @@ It is easy to upgrade your Syncfusion<sup style="font-size:70%">&reg;</sup> npm 
 
 Refer the below steps to upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> npm packages.
 
-1. Install the `npm-check-update package` globally to use this as CLI.
+1.  **Install `npm-check-updates` globally.** This tool helps you interactively upgrade your `package.json` dependencies.
 
     ```bash
     npm install -g npm-check-updates

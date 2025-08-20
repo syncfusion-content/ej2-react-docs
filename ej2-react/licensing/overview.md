@@ -14,7 +14,7 @@ We have introduced license key validation for Essential<sup style="font-size:70%
 
 License key can be obtained from the [My Account >> License and downloads](https://www.syncfusion.com/account/downloads) section of the Syncfusion<sup style="font-size:70%">&reg;</sup> website. To obtain a license key, you will need to have an active trial or license or community license.
 
-Before using any JavaScript controls, you must register the obtained license key in the application code. Otherwise you will get license validation error message in application as shown in below
+Before using any JavaScript controls, the obtained license key must be registered in the application code. Otherwise, a license validation error message will be displayed as follows:
 
 > This application was built using a trial version of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this [help topic](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors/#trial-expired) for more information.
 

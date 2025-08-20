@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Theme Studio for <sup style="font-size:70%">&reg;</sup>  JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
 
-## Customizing theme color from theme studio
+## Customizing theme color in ThemeStudio
 
 The <sup style="font-size:70%">&reg;</sup>  JS 2 themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 

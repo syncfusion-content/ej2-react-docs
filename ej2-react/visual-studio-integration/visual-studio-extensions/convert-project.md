@@ -14,11 +14,11 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React conversion is a Visual St
 
 > The Syncfusion<sup style="font-size:70%">&reg;</sup> React Project conversion are available from v17.3.0.9.
 
-The steps below help you to convert the React application to Syncfusion<sup style="font-size:70%">&reg;</sup> React application through the Visual Studio:
+Follow these steps to convert a React application to a Syncfusion<sup style="font-size:70%">&reg;</sup> React application using Visual Studio:
 
 1. Open your existing React application or create a new React application
 
-2. To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Project Conversion Wizard, follow either one of the options below:
+2. Launch the Syncfusion<sup style="font-size:70%">&reg;</sup> Project Conversion Wizard using one of these methods:
 
     **Option 1:**
 
