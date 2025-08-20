@@ -34,7 +34,7 @@ function App() {
         { type: ContentType.Text, content: '\nUser mentions like' },
         { type: ContentType.Mention, id: 'user1' },
         { type: ContentType.Text, content: ', and labels such as' },
-        { type: ContentType.Label, id: 'label1' },
+        { type: ContentType.Label, props: { labelId: 'label1'} },
         { type: ContentType.Text, content: '.' }
       ]
     }

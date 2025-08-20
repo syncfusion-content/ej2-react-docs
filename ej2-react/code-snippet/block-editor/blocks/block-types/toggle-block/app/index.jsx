@@ -16,6 +16,7 @@ function App() {
         }
       ],
       props:{
+      level: 1,
       isExpanded: true,
       children: [
         {
