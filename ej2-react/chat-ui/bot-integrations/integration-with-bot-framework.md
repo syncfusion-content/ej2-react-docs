@@ -18,16 +18,20 @@ Before integrating Microsoft Bot Framework, ensure that the Syncfusion Chat UI c
 
 [React Getting Started Guide](../getting-started)
 
-## Prerequisites for Microsoft Bot Framework Integration
+## Prerequisites
 
 * `Microsoft Azure Account`: Required to create and host the bot.
 * `Node.js Environment`: The backend portion requires `Node.js` and `npm`.
 * `Syncfusion Chat UI for React`: Install @syncfusion/ej2-react-interactive-chat in your React project.
 * `Deployed Azure Bot`: A bot should be created and published using the Bot Framework, which is accessible via an Azure App Service. Refer to Microsoft's Bot Creation Guide.
 
-## Required npm Packages
+## Install Dependencies
 
-Install the `directline-js` package to handle communication with the Bot Framework and `axios` for HTTP requests and the Chat UI dependency in your frontend.
+* Install `frontend` dependencies for bot communication and the Syncfusion Chat UI:
+
+    * Install `directline-js` package to handle communication with the Bot Framework.
+
+    * Install `axios` for the HTTP requests.
 
 ```bash
 
@@ -36,7 +40,7 @@ npm install directline-js axios --save
 
 ```
 
-For the backend, install the following:
+* Install `backend` dependencies for the token server:
 
 ```bash
 
@@ -44,28 +48,21 @@ npm install express axios cors dotenv
 
 ```
 
-## Configure the Bot in the Azure Portal
+## Configure the Azure Bot
 
-Before writing any code, the Direct Line channel must be enabled for the bot in Azure to allow the custom Chat UI to connect to it.
+1. In the [Azure Portal](https://portal.azure.com/#home), navigate to your bot resource.
 
-* `Navigate to your Bot Resource`: Open the [Azure Portal](https://portal.azure.com/#home) and go to your deployed Azure Bot resource.
-* `Enable Direct Line Channel`:
-  - Go to `Channels` in the bot menu.
-  - Select `Direct Line` from the list of available channels.
-  - Click on the automatically created `Default-Site`.
-  - Copy one of the two `Secret keys` displayed. This key authorizes backend requests.
-* `Verify Messaging Endpoint`:
-  - In the bot's Configuration section, ensure the Messaging endpoint is correct (e.g., https://your-bot-service.azurewebsites.net/api/messages) and accessible.
+2. Enable the Direct Line channel:
+    * Go to `Channels` > `Direct Line` > `Default-Site`.
+    * Copy one of the displayed secret keys.
+
+3. Verify the Messaging endpoint in the Configuration section (e.g., https://your-bot-service.azurewebsites.net/api/messages).
 
 > `Security Note`: Never expose the Direct Line secret key in frontend code. Use a backend token server to handle it securely.
 
-##  Build a Secure Backend Token Server
+##  Set Up Token Server
 
-The backend server generates short-lived Direct Line tokens to secure communication between the frontend and the bot.
-
-### Backend setup
-
-Create a new folder `token-server` for your backend, and create an `index.js` file and a `.env` file.
+Create a `token-server` folder with an `index.js` and a `.env` files.
 
 `.env`
 
@@ -112,13 +109,9 @@ app.post('/directline/token', async (req, res) => {
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Token server running on http://localhost:${port}`));
 ```
-## Integrate Syncfusion ChatUI in Your React App
+## Integrate ChatUI in React
 
-Set up the Syncfusion Chat UI component to communicate with the token server and the Microsoft Bot via the Direct Line API.
-
-Frontend setup
-
-`src/App.js`
+Create `src/App.js` to connect the Syncfusion Chat UI to the bot via the Direct Line API:
 
 ```js
 
@@ -218,7 +211,7 @@ export default App;
 
 ## Run and Test
 
-### Start the Backend Token Server
+### Start the Token Server
 
 Navigate to the `token-server` folder and run the following command to start the server:
 
@@ -237,7 +230,7 @@ In a separate terminal window, navigate to your React project folder and start t
 npm start
 
 ```
-Open your hosted app and chat with your Microsoft bot.
+Open `http://localhost:3000` to interact with your Microsoft Bot Framework chatbot.
 
 ## Troubleshooting
 

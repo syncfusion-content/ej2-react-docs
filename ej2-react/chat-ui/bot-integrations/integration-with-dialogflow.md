@@ -10,30 +10,30 @@ domainurl: ##DomainURL##
 
 # Integration of Google Dialogflow With React Chat UI component
 
-The Syncfusion Chat UI supports integration with Google Dialogflow, enabling advanced conversational AI features in your React applications.
+The Syncfusion Chat UI supports integration with [Google Dialogflow](https://cloud.google.com/dialogflow/docs), enabling advanced conversational AI features in your React applications.
 
 ## Getting Started With the ChatUI Component
 
 Before integrating Dialogflow, ensure that the Syncfusion Chat UI component is correctly rendered in your React app:
 [React Getting Started Guide](../getting-started)
 
-## Prerequisites for Google Dialogflow Integration
+## Prerequisites
 
-* `Google Account`: You need a Google account to access `Dialogflow` and `Google Cloud Console`.
-* `Node.js Environment`: The backend portion requires `Node.js` and `npm`.
-* `Syncfusion Chat UI for React`: Install @syncfusion/ej2-react-interactive-chat in your React project.
+* Google account to access `Dialogflow` and `Google Cloud Console`.
+* Backend requires `Node.js` (v16 or higher) and `npm`.
+* Syncfusion Chat UI for React `@syncfusion/ej2-react-interactive-chat` installed in your React project.
+* Dialogflow Service Account with the `Dialogflow API Client` role and its JSON key file.
 
-## Required npm Packages
+## Install Dependencies
 
-Install the dependency in your backend folder:
+* Install `backend` dependencies for Dialogflow and server setup:
 
 ```bash
 
 npm install express body-parser dialogflow cors
 
 ```
-
-Install the Chat UI dependency in your frontend:
+* Install the Syncfusion Chat UI in your React project:
 
 ```bash
 
@@ -41,25 +41,19 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 ```
 
-## Setup the Google Dialogflow Agent
+## Set Up the Dialogflow Agent
 
-* Dialogflow Console → Create Agent
-* Add Intents with training phrases and responses (e.g. greetings, FAQ).
-* Enable API Access:
-  - Go to Agent settings → Google Project
-  - Google Cloud Console → Service Accounts
-  - Create a Service Account with the Dialogflow API Client role.
-  - Download the service account JSON key.
+1. In the Dialogflow console, create an [agent](https://cloud.google.com/agent-assist/docs), set a name (e.g., `MyChatBot`), and configure the default language (e.g., English - `en`).
 
-## Build a Secure Node.js Backend
+2. Add intents with training phrases and responses (e.g., greetings, FAQs). Test using the Dialogflow simulator.
 
-The service account key must NOT be exposed to the user’s browser, so all Dialogflow API calls are made via your own backend.
+3. In the Google Cloud Console, go to `APIs & Services` > `Credentials`, create a Service Account with the Dialogflow API Client role, and download the JSON key file.
 
-### Store Service Account Credentials
+> `Security Note`: Never commit the JSON key file to version control. Use environment variables or a secret manager (e.g., Google Cloud Secret Manager) for production.
 
-Store the credentials such as your project ID, service account email, and the private key (downloaded from the Google Cloud Console when creating a Service Account for your Dialogflow project). These credentials enable the backend to authenticate and securely access the Dialogflow service.
+## Configure Node.js Backend
 
-`backend/service-acct.json`
+Create `backend/service-acct.json` with your Dialogflow service account credentials:
 
 ```json
 
@@ -73,11 +67,7 @@ Store the credentials such as your project ID, service account email, and the pr
 }
 ```
 
-> `Security Note`: Never expose the service account key in the frontend or version control. For production, use environment variables or a secret manager (e.g., Google Cloud Secret Manager).
-
-### Backend
-
-Create `backend/index.js` to set up an Express server that handles Dialogflow API requests:
+Set up an Express server in `backend/index.js` to handle Dialogflow requests:
 
 ```js
 
@@ -123,21 +113,19 @@ app.post('/api/message', async (req, res) => {
 app.listen(5000, () => console.log('Backend running on http://localhost:5000'));
 ```
 
-> `Session Management Note`: Dialogflow sessions maintain conversation context. Use unique `sessionId` values (e.g., via UUID) for each user to preserve context across messages.
+> Use a unique `sessionId` (e.g., UUID) for each user to maintain conversation context.
 
-## Integrate Syncfusion ChatUI in Your React App
+## Integrate ChatUI in React
 
-Use the Syncfusion Chat UI component to send and render message exchanges using the messageSend event. Each time a user sends a message, this event is invoked with details of the sent message.
+Use the Chat UI `messageSend` event to exchanges  message. Each time a user sends a message, this event will be invoked with details of the sent message.
 
 ### Forward Message to backend:
 
 Upon message submission, a POST request is sent to your backend API endpoint (`/api/message`). This backend service forwards the user’s message to Dialogflow and waits for a response.
 
-### Display Bot response:
+### Displaying Bot response:
 
-Once the backend receives a reply from Dialogflow, it sends the response back to the frontend.
-
-Frontend code `src/App.js`
+Create `src/App.js` to integrate the Syncfusion Chat UI with the Dialogflow backend:
 
 ```js
 
@@ -198,7 +186,7 @@ export default App;
 
 ## Run and Test
 
-### Start the backend
+### Start the Backend server:
 
 Navigate to your backend project folder and run the following command to start the Node.js server:
 
@@ -223,8 +211,9 @@ Open your app and chat with your Dialogflow-powered bot.
 
 ## Troubleshooting:
 
-* `Permission Denied`: Verify service account has "Dialogflow API Client" role.
-* `CORS Error`: Ensure CORS origin matches your frontend URL.
-* `No Response`: Check intent training phrases and test in Dialogflow simulator.
-* `Quota Exceeded`: Review Dialogflow limits in Google Cloud Console.
-* `Network Issues`: Ensure backend is running and frontend points to correct URL.
+* `Permission Denied`: Ensure the service account has the `Dialogflow API Client` role in the Google Cloud Console.
+* `CORS Error`: Verify that the CORS origin in backend/index.js matches your frontend URL (e.g., http://localhost:3000).
+* `No Response`: Test intents in the Dialogflow Console simulator to ensure they are configured correctly.
+* `Quota Exceeded`: Check Dialogflow API quotas in the Google Cloud Console.
+* `Network Issues`: Confirm the backend server is running and the frontend is pointing to the correct URL (e.g., http://localhost:5000).
+* `Invalid Credentials`: Verify the service account JSON or environment variables are correctly configured.
