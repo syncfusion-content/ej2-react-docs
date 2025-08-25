@@ -114,6 +114,68 @@ To customize the column chooser dialog size, you can use the following CSS style
 
  {% previewsample "page.domainurl/code-snippet/grid/column-chooser-cs2" %}
 
+## Customizing the order of columns in the column chooser
+
+The Syncfusion React Grid makes it easy to customize the order of columns in the column chooser, without affecting their actual order in the Grid.
+
+By default, the column chooser displayed columns in the same order as they appeared in the Grid. With the introduction of customization options, the column list in the chooser can now be rearranged.
+
+### Sorting columns in the column chooser
+
+The Syncfusion Grid allows to sort the list of columns displayed in the column chooser dialog.
+
+You can control the sorting behavior by specifying the `sortDirection` in the event argument of the `beforeOpenColumnChooser` event. The available sorting options are:
+
+Option     | Description
+---------- | ---------------------------------------------------------------
+None       | No sorting is applied to the column list.
+Ascending  | Columns are sorted in ascending alphabetical order (A → Z).
+Descending | Columns are sorted in descending alphabetical order (Z → A).
+
+Here is an example of how to sort the column chooser list based on sort direction:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/columnchooser-sorting-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/columnchooser-sorting-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/columnchooser-sorting-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/columnchooser-sorting-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/columnchooser-sorting-cs1" %}
+
+### Displaying specific columns in the column chooser
+
+The Grid also supports displaying only selected columns in the column chooser. This is helpful when only specific columns need to be shown in the column chooser, making it easier to focus on the most important ones.
+
+To achieve this, you can specify which columns should appear in the column chooser by setting `selectedColumns` in the event argument of the `beforeOpenColumnChooser` event.
+
+Here is an example of how to show only specific columns in the column chooser:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/specified-columnchooser-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/specified-columnchooser-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/specified-columnchooser-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/specified-columnchooser-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/specified-columnchooser-cs1" %}
+
 ## Change default search operator of the column chooser 
 
 The column chooser dialog in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid provides a search box that allows you to search for column names. By default, the search functionality uses the "startsWith" operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.

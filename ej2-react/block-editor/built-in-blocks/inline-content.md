@@ -14,7 +14,7 @@ Content in the Block Editor is managed through the [content](../api/blockeditor/
 
 Each content can have properties like [id](../api/blockeditor/contentModel/#id), [type](../api/blockeditor/contentModel/#type), [content](../api/blockeditor/contentModel/#content), [styles](../api/blockeditor/contentModel/#styles), and more to customize the appearance and behavior of your text.
 
-### Setting content type
+## Setting content type
 
 You can specify the type of content using the [type](../api/blockeditor/contentModel/#type) property. The Block Editor supports several content types through the `ContentType` enum:
 
@@ -32,7 +32,7 @@ You can specify the type of content using the [type](../api/blockeditor/contentM
 
 You can configure Text content by setting the type property to `Text`. The default content type is `Text`.
 
-#### Type 
+### Type 
 
 ```typescript
 // Adding inline text
@@ -51,7 +51,7 @@ You can configure Text content by setting the type property to `Text`. The defau
 
 You can configure inline code content by setting the type property to `Code`. Code content is used for inline code snippets within regular text.
 
-#### Type
+### Type
 
 ```typescript
 // Adding inline code
@@ -82,7 +82,7 @@ The link [props](../api/blockeditor/blockModel/) property supports the following
 | [openInNewWindow](../api/blockeditor/linkSettingsModel/#openinnewwindow)    | Specifies whether the link should open in a new window/tab.           | false         |
 
 
-#### Type & Props
+### Type & Props
 
 ```typescript
 {
@@ -115,7 +115,7 @@ The Block Editor comes with offers different built-in options. These include:
 
 You can customize the labels by using the `props` property with type `Label`.
 
-#### Type & Props
+### Type & Props
 
 ```typescript
 // Adding inline label
@@ -130,11 +130,11 @@ You can customize the labels by using the `props` property with type `Label`.
 }
 ```
 
-#### Trigger Character configuration
+### Trigger Character configuration
 
 You can use the [triggerChar](../api/blockeditor/labelSettingsModel/#triggerchar) property to specify the character that will trigger the label suggestions popup while typing. The default trigger character is `$`.
 
-#### Label items configuration
+### Label items configuration
 
 The [labelItems](../api/blockeditor/labelSettingsModel/#labelitems) array allows you to define the available labels in your editor. Each label item can have the following properties:
 
@@ -149,7 +149,7 @@ The [labelItems](../api/blockeditor/labelSettingsModel/#labelitems) array allows
 
 When users type the trigger character followed by text, a popup will appear showing matching label items from which they can select. The selected label will be inserted into the content as a Label content item.
 
-#### Using labels with group headers
+### Using labels with group headers
 
 Labels with the same [groupHeader](../api/blockeditor/labelItemModel/#groupheader) value will be grouped together in the label selection popup:
 
@@ -172,7 +172,7 @@ Mentions are references to users or entities that can be inserted into your cont
 
 Mentions are typically triggered by the `@` character and are linked to the [users](../api/blockeditor/#users) collection defined in the Block Editor.
 
-#### Type
+### Type
 
 ```typescript
 // Adding inline code

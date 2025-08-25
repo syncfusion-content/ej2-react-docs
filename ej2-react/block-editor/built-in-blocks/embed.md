@@ -38,7 +38,7 @@ The image [props](../api/blockeditor/blockModel/) property supports the followin
 | readOnly | Specifies whether the image is in read-only mode | false
 
 
-#### Type & Props
+### Type & Props
 
 ```typescript
 // Adding image block

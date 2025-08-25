@@ -27,7 +27,7 @@ Each language object in the `languages` array should have:
 - [language](../api/blockeditor/codeLanguageModel/#language): The language value used for syntax highlighting
 - [label](../api/blockeditor/codeLanguageModel/#label): The display name shown in the language selector
 
-#### Type & Props
+### Type & Props
 ```typescript
 // Adding Code block
 {

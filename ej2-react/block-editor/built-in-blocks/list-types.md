@@ -16,7 +16,7 @@ List blocks in the BlockEditor component are used to organize content into struc
 
 You can render Bullet List block by setting the [type](../api/blockeditor/blockModel/#type) property as `BulletList`. This block type is used for unordered lists.
 
-#### Type
+### Type
 
 ```typescript
 // Adding bulletlist block
@@ -53,7 +53,7 @@ You can configure placeholder text for block using the [placeholder](../api/bloc
 
 You can render Numbered List block by setting the [type](../api/blockeditor/blockModel/#type) property as  `NumberedList`.This block type is used for ordered lists.
 
-#### Type
+### Type
 
 ```typescript
 // Adding numberedlist block
@@ -86,11 +86,11 @@ You can configure placeholder text for block using the [placeholder](../api/bloc
 }
 ```
 
-## Configure check list
+## Configure checklist
 
 You can render Check List block by setting the [type](../api/blockeditor/blockModel/#type) property as `Checklist`. This block type is used for creating interactive to-do lists.
 
-#### Type
+### Type
 
 ```typescript
 // Adding checklist block 
