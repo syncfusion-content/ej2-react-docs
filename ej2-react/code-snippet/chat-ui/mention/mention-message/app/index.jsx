@@ -21,7 +21,8 @@ function App() {
         },
         {
             author: michaleUserModel,
-            text: "Yes, the design phase is complete."
+            text: "Yes {0}, the design phase is complete.",
+            mentionUsers: [currentUserModel]
         },
         {
             author: currentUserModel,
@@ -31,7 +32,7 @@ function App() {
 
     return (
         // Specifies the tag for rendering the Chat UI component
-        <ChatUIComponent user={currentUserModel} messages={chatMessages} />
+        <ChatUIComponent   headerText= {"TeamSync Professionals"} user={currentUserModel} messages={chatMessages} />
     );
 }
 
