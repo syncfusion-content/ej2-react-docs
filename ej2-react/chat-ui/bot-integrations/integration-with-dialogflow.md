@@ -15,6 +15,7 @@ The Syncfusion Chat UI supports integration with [Google Dialogflow](https://clo
 ## Getting Started With the ChatUI Component
 
 Before integrating Dialogflow, ensure that the Syncfusion Chat UI component is correctly rendered in your React app:
+
 [React Getting Started Guide](../getting-started)
 
 ## Prerequisites
@@ -55,8 +56,8 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 Create `backend/service-acct.json` with your Dialogflow service account credentials:
 
-```json
-
+{% tabs %}
+{% highlight js tabtitle="service-acct.json" %}
 {
   "type": "service_account",
   "project_id": "your-dialogflow-project-id",
@@ -64,13 +65,14 @@ Create `backend/service-acct.json` with your Dialogflow service account credenti
   "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEv...",
   "client_email": "dialogflow-agent@your-dialogflow-project-id.iam.gserviceaccount.com",
   ...
-}
-```
+} 
+{% endhighlight %}
+{% endtabs %}
 
 Set up an Express server in `backend/index.js` to handle Dialogflow requests:
 
-```js
-
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
 const express = require('express');
 const { SessionsClient } = require('dialogflow');
 const bodyParser = require('body-parser');
@@ -111,7 +113,8 @@ app.post('/api/message', async (req, res) => {
 });
 
 app.listen(5000, () => console.log('Backend running on http://localhost:5000'));
-```
+{% endhighlight %}
+{% endtabs %}
 
 > Use a unique `sessionId` (e.g., UUID) for each user to maintain conversation context.
 
@@ -127,8 +130,8 @@ Upon message submission, a POST request is sent to your backend API endpoint (`/
 
 Create `src/App.js` to integrate the Syncfusion Chat UI with the Dialogflow backend:
 
-```js
-
+{% tabs %}
+{% highlight js tabtitle="App.js" %}
 import React, { useState } from "react";
 import { ChatUIComponent, MessagesDirective, MessageDirective } from '@syncfusion/ej2-react-interactive-chat';
 import './App.css';
@@ -182,7 +185,8 @@ function App() {
 }
 
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Run and Test
 
