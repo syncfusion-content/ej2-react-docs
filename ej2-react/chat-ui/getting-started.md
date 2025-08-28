@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in React Chat UI component
+# Getting started with React Chat UI component
 
-This section explains how to create a simple **Chat UI** component and configure its available functionalities in React.
+This section explains how to create a simple **Chat UI** component and configure its essential functionalities in React.
 
 ## Dependencies
 
-The list of dependencies required to use the `Chat UI` component in your application is given as follows:
+The `Chat UI` component requires the following dependencies in your application:
 
 ```javascript
 |-- @syncfusion/ej2-react-interactive-chat
@@ -28,7 +28,7 @@ The list of dependencies required to use the `Chat UI` component in your applica
 
 ## Setup for Local Development
 
-To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
+To set up a React application, choose any of the following approaches. The recommended method is using [create-react-app](https://github.com/facebook/create-react-app), which configures your development environment and optimizes your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) for detailed guidance.
 
 ```bash
 npx create-react-app my-app
@@ -110,13 +110,13 @@ Import the Chat UI component required CSS references as follows in `src/App.css`
 
 ## Run the application
 
-After completing the configuration required to render a basic Chat UI, run the following command to display the output in your default browser.
+After completing the basic configuration, run the following command to display the Chat UI component in your default browser:
 
 ```
 npm start
 ```
 
-`[Functional-componnet]`
+`[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -131,7 +131,7 @@ npm start
 
 ## Configure messages and user
 
-You can use the `MessagesDirective` tag to group all the messages and `MessageDirective` tag to define each message and the [user](../api/chat-ui/#user) property to configure the current user for the chat.
+Enhance your Chat UI by configuring messages and users. Use the `MessagesDirective` to group all messages and `MessageDirective` to define individual messages. The [user](../api/chat-ui/#user) property configures the current user for the chat interface.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

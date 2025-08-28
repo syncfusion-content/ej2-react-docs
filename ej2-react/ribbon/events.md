@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in React Ribbon component
 
-This section describes the ribbon events that will be triggered when appropriate actions are performed. The following events are available in the ribbon component.
+The React Ribbon component triggers a variety of events in response to user interactions, such as selecting a tab, clicking a button, or expanding the ribbon. This section provides detailed explanations and code examples for each available event.
 
 ## tabSelected
 
-The [tabSelected](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#tabselected) event is triggered after selecting the tab item.
+The [tabSelected](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#tabselected) event is triggered after a tab is successfully selected, allowing you to execute logic based on the newly active tab.
 
 {% raw %}
 ```ts
@@ -55,7 +55,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## tabSelecting
 
-The [tabSelecting](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#tabselecting) event is triggered before selecting the tab item.
+The [tabSelecting](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#tabselecting) event is triggered before a tab is selected. This event can be canceled to prevent the tab selection.
 
 {% raw %}
 ```ts
@@ -96,7 +96,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## ribbonCollapsing
 
-The [ribbonCollapsing](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#ribboncollapsing) event is triggered before collapsing the ribbon.
+The [ribbonCollapsing](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#ribboncollapsing) event is triggered before the ribbon is collapsed. This action can be canceled.
 
 {% raw %}
 ```ts
@@ -137,7 +137,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## ribbonExpanding
 
-The [ribbonExpanding](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#ribbonexpanding) event is triggered before expanding the ribbon.
+The [ribbonExpanding](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#ribbonexpanding) event is triggered before is expanded. This action can be canceled.
 
 {% raw %}
 ```ts
@@ -177,7 +177,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## launcherIconClick
 
-The [launcherIconClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#launchericonclick) event is triggered when the launcher icon of the group is clicked.
+The [launcherIconClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonModel/#launchericonclick) event is triggered when a launcher icon of the group is clicked. This is useful for opening dialogs or performing group-specific actions.
 
 {% raw %}
 ```ts
@@ -216,11 +216,11 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ## overflowPopupOpen
 
-The [overflowPopupOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/#overflowpopupopen) event is triggered while opening the overflow popup.
+The [overflowPopupOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/#overflowpopupopen) event is triggered while the overflow popup is opening.
 
 ## overflowPopupClose
 
-The [overflowPopupClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/#overflowpopupclose) event is triggered while closing the overflow popup.
+The [overflowPopupClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/#overflowpopupclose) event is triggered while the overflow popup is closing.
 
 The following code example demonstrates the ribbon rendered with `overflowPopupOpen` and `overflowPopupClose` events.
 
@@ -266,7 +266,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### clicked
 
-The [clicked](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings/#clicked) event is triggered when the button is clicked.
+The [clicked](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings/#clicked) event is triggered when a ribbon button is clicked.
 
 {% raw %}
 ```ts
@@ -304,7 +304,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings/#created) event is triggered when the button is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonButtonSettings/#created) event is triggered when a ribbon button is created.
 
 {% raw %}
 ```ts
@@ -344,7 +344,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### change
 
-The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings/#change) event is triggered when the Checkbox state is changed.
+The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonCheckBoxSettings/#change) event is triggered when the state of the Checkbox is changed.
 
 {% raw %}
 ```ts
@@ -422,7 +422,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### change
 
-The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#change) event is triggered while changing the colors.
+The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#change)  event is triggered when changing the color value.
 
 {% raw %}
 ```ts
@@ -502,7 +502,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#open) event is triggered while opening the ColorPicker popup.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#open) event is triggered while the ColorPicker popup is opening.
 
 {% raw %}
 ```ts
@@ -542,7 +542,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#select) event is triggered while selecting the color in picker/palette, when showButtons property is enabled.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#select) event is triggered when selecting a color from the picker or palette, particularly when the `showButtons` property is enabled.
 
 {% raw %}
 ```ts
@@ -582,7 +582,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforeclose) event is triggered before closing the ColorPicker popup.
+The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforeclose)  event is triggered before the ColorPicker popup closes.
 
 {% raw %}
 ```ts
@@ -622,7 +622,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforeopen) event is triggered before opening the ColorPicker popup.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforeopen) event is triggered before the ColorPicker popup opens.
 
 {% raw %}
 ```ts
@@ -661,7 +661,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 {% endraw %}
 ### beforeTileRender
 
-The [beforeTileRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforetilerender) event is triggered while rendering each palette tile.
+The [beforeTileRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonColorPickerSettings/#beforetilerender) event is triggered while rendering each palette tile, allowing for customization.
 
 {% raw %}
 ```ts
@@ -703,7 +703,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### change
 
-The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#change) event is triggered when an item in a popup is selected or when the model value is changed by the user.
+The [change](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#change) event is triggered when an item in a popup is selected or the model value is changed by the user.
 
 {% raw %}
 ```ts
@@ -820,7 +820,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#created) event is triggered once the Combobox is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#created) event is triggered when the ComboBox is created.
 
 {% raw %}
 ```ts
@@ -859,7 +859,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### filtering
 
-The [filtering](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#filtering) event triggers on typing a character in the Combobox.
+The [filtering](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#filtering) event triggers when typing a character in the ComboBox.
 
 {% raw %}
 ```ts
@@ -937,7 +937,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#beforeopen) event triggers before opening the popup.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonComboBoxSettings/#beforeopen) event triggers before the popup opens.
 
 {% raw %}
 ```ts
@@ -978,7 +978,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeclose) event is triggered before closing the DropdownButton popup.
+The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeclose) event is triggered before the DropdownButton popup closes.
 
 {% raw %}
 ```ts
@@ -1019,7 +1019,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeopen) event is triggered before opening the Dropdown button popup.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#beforeopen) event is triggered before the Dropdown button popup opens.
 
 {% raw %}
 ```ts
@@ -1101,7 +1101,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#open) event is triggered while opening the Dropdown button popup.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#open) event is triggered when the DropDownButton popup opens.
 
 {% raw %}
 ```ts
@@ -1142,7 +1142,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### close
 
-The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#close) event is triggered while closing the Dropdown button popup.
+The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#close) event is triggered when the DropDownButton popup closes.
 
 {% raw %}
 ```ts
@@ -1183,7 +1183,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### created
 
-The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#created) event is triggered when the DropDown is created.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#created) event is triggered when the DropDownButton is created.
 
 {% raw %}
 ```ts
@@ -1224,7 +1224,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#select) event is triggered while selecting an action item in the Dropdown button popup.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonDropDownSettings/#select) event is triggered when an action item is selected in the DropDownButton popup.
 
 {% raw %}
 ```ts
@@ -1267,7 +1267,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeclose) event is triggered before closing the SplitButton popup.
+The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeclose) event is triggered before the SplitButton popup closes.
 
 {% raw %}
 ```ts
@@ -1308,7 +1308,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeopen) event is triggered before opening the SplitButton popup.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeopen) event is triggered before the SplitButton popup opens.
 
 {% raw %}
 ```ts
@@ -1349,7 +1349,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeItemRender
 
-The [beforeItemRender](../api/ribbon/ribbonSplitButtonSettings/#beforeitemrender) event is triggered while rendering each popup item of SplitButton.
+The [beforeItemRender](../api/ribbon/ribbonSplitButtonSettings/#beforeitemrender) event is triggered while rendering each popup item of the SplitButton.
 
 {% raw %}
 ```ts
@@ -1390,7 +1390,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#open) event is triggered while opening the SplitButton popup.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#open) event is triggered when the SplitButton popup opens.
 
 {% raw %}
 ```ts
@@ -1431,7 +1431,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### close
 
-The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#close) event is triggered while closing the SplitButton popup.
+The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#close) event is triggered when the SplitButton popup closes.
 
 {% raw %}
 ```ts
@@ -1513,7 +1513,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#select) event is triggered while selecting an action item in the SplitButton popup.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#select) event is triggered when an action item is selected in the SplitButton popup.
 
 {% raw %}
 ```ts
@@ -1554,7 +1554,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### click
 
-The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#click) event is triggered while clicking the primary button in the SplitButton.
+The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonSplitButtonSettings/#click) event is triggered when clicking the primary button in the SplitButton.
 
 {% raw %}
 ```ts
@@ -1597,7 +1597,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClick
 
-The [beforeClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before selecting a button from the GroupButton items.
+The [beforeClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before a button is selected from the GroupButton items.
 
 {% raw %}
 ```ts
@@ -1658,7 +1658,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### click
 
-The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when selecting a button from the GroupButton items.
+The [click](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when a button is selected from the GroupButton items.
 
 {% raw %}
 ```ts
@@ -1718,7 +1718,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeClose
 
-The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeclose) event is triggered before closing the FileMenu popup.
+The [beforeClose](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeclose) event is triggered before the File Menu popup closes.
 
 {% raw %}
 ```ts
@@ -1770,7 +1770,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeOpen
 
-The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeopen) event is triggered before opening the FileMenu popup.
+The [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeopen) event is triggered before the File Menu popup opens.
 
 {% raw %}
 ```ts
@@ -1822,7 +1822,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeItemRender
 
-The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeitemrender) event is triggered while rendering each ribbon FileMenu item.
+The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#beforeitemrender) event is triggered while rendering each ribbon File Menu item.
 
 {% raw %}
 ```ts
@@ -1874,7 +1874,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### open
 
-The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#open) event is triggered when the FileMenu popup is opened.
+The [open](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#open) event is triggered when the File Menu popup opens.
 
 {% raw %}
 ```ts
@@ -1926,7 +1926,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### close
 
-The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#close) event is triggered when the FileMenu popup is closed.
+The [close](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#close) event is triggered when the File Menu popup closes.
 
 {% raw %}
 ```ts
@@ -1978,7 +1978,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#select) event is triggered while selecting an item in the ribbon FileMenu.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#select) event is triggered when an item is selected in the ribbon File Menu.
 
 {% raw %}
 ```ts
@@ -2032,7 +2032,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### backStageItemClick
 
-The [backStageItemClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemClickArgs/) event is triggered when backstage item is selected.
+The [backStageItemClick](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemClickArgs/) event is triggered when a backstage item is selected.
 
 {% raw %}
 ```ts 
@@ -2212,7 +2212,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### itemHover
 
-The [itemHover](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hover over the gallery item.
+The [itemHover](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hovering over a gallery item.
 
 {% raw %}
 ```ts
@@ -2274,7 +2274,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeItemRender
 
-The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#beforeitemrender) event is triggered while rendering each gallery item.
+The [beforeItemRender](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#beforeitemrender) event is triggered before each gallery item is rendered.
 
 {% raw %}
 ```ts
@@ -2336,7 +2336,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### beforeSelect
 
-The [beforeSelect](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#beforeselect) event is triggered before selecting an item in the Ribbon gallery.
+The [beforeSelect](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#beforeselect) event is triggered before an item is selected in the Ribbon gallery.
 
 {% raw %}
 ```ts
@@ -2398,7 +2398,7 @@ ReactDom.render(<App />, document.getElementById("element"));
 
 ### select
 
-The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#select) event is triggered while selecting an item in the Ribbon Gallery.
+The [select](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettings/#select) event is triggered when an item is selected in the Ribbon Gallery.
 
 {% raw %}
 ```ts

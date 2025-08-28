@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Templates in React AI AssistView component
 
-The AI AssistView provides several template options to customize the banner, prompt, response, suggestions and footer items.
+The AI AssistView component offers several template options to customize the banner, prompt items, response items, suggestions, and footer.
 
 ## Banner template
 
-You can use the [bannerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#bannertemplate) property to display additional information, such as a welcome note, and more in the AI AssistView. This banner is positioned at the top of the prompt and response conversation area within the AI AssistView.
+The [bannerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#bannertemplate) property allows for the display of custom content, such as a welcome note or introductory instructions, at the top of the AI AssistView's conversation area.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,7 +32,10 @@ You can use the [bannerTemplate](https://ej2.syncfusion.com/react/documentation/
 
 ## Prompt item template
 
-You can use the [promptItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptitemtemplate) property to customize the prompt items in the AI AssistView. The template context includes `prompt`, `toolbarItems` and `index` items.
+To customize the appearance of prompt items, use the [promptItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptitemtemplate). The template's context provides:
+- `prompt`: The text content of the user's message
+- `toolbarItems`: Available toolbar actions for this prompt
+- `index`: The numerical position of this prompt in the conversation sequence
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +53,12 @@ You can use the [promptItemTemplate](https://ej2.syncfusion.com/react/documentat
 
 ## Response item template
 
-You can use the [responseItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#responseitemtemplate) property to customize response items within the AI AssistView. The template context includes the `prompt`, `response`, `index`, `toolbarItems` and `output` items.
+The [responseItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#responseitemtemplate) can be utilized to modify the layout of response items. The available context includes :
+- `prompt`: The original user prompt that triggered this response
+- `response`: The text content of the AI's response
+- `index`: The numerical position in the conversation
+- `toolbarItems`: Available toolbar actions for this response
+- `output`: Additional output data associated with the response
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,7 +76,9 @@ You can use the [responseItemTemplate](https://ej2.syncfusion.com/react/document
 
 ## Prompt suggestion item template
 
-You can use the [promptSuggestionItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptsuggestionitemtemplate) property to customize the prompt suggestion items in the AI AssistView. The template context includes the `index` and `promptSuggestion`.
+For customizing the prompt suggestion items, the [promptSuggestionItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestionitemtemplate) property can be implemented. The context for this template includes :
+- `index`: The position of this suggestion in the suggestions list
+- `promptSuggestion`: The suggestion object containing text and other properties
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -86,7 +96,7 @@ You can use the [promptSuggestionItemTemplate](https://ej2.syncfusion.com/react/
 
 ## Footer template
 
-You can use the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#footertemplate) property to customize the default footer area and manage prompt request actions in the AI AssistView. This allows users to create unique footers that meet their specific needs.
+The [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#footertemplate) property offers a way to replace the default footer and manage prompt request actions. This enables the creation of unique footers that can include custom functionalities, such as a character counter or a button to clear the conversation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

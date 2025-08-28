@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in React AI AssistView component
 
-This section describes the AI AssistView events that will be triggered when appropriate actions are performed. The following events are available in the AI AssistView component.
+The React AI AssistView component provides a comprehensive set of events that enable developers to customize behavior and handle user interactions effectively. The following events are available in the AI AssistView component.
 
 ## created
 
-The AI AssistView component triggers the [created](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#created/) event when the component rendering is completed.
+The [created](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#created/) event is triggered when the AI AssistView component rendering is completed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The AI AssistView component triggers the [created](https://ej2.syncfusion.com/re
 
 ## promptRequest
 
-The [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptrequest/) event is triggered when the prompt request is made in the AI AssistView component.
+The [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptrequest/) event is triggered when a user sends a prompt request in the AI AssistView component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,7 +40,7 @@ The [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assist
 
 ## promptChanged
 
-The [promptChanged](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptchanged/) event is triggered when the prompt text is changed in the AI AssistView component.
+The [promptChanged](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptchanged/) event is triggered whenever the prompt text is modified in the AI AssistView component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -53,7 +53,7 @@ The [promptChanged](https://ej2.syncfusion.com/react/documentation/api/ai-assist
 
 ## beforeAttachmentUpload
 
-The [beforeAttachmentUpload](../api/ai-assistview/#beforeattachmentupload/) event is triggered before the attached files upload begins in the AI AssistView
+The [beforeAttachmentUpload](../api/ai-assistview/#beforeattachmentupload/) event is triggered before attached files begin uploading in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -66,7 +66,7 @@ The [beforeAttachmentUpload](../api/ai-assistview/#beforeattachmentupload/) even
 
 ## attachmentUploadSuccess
 
-The [attachmentUploadSuccess](../api/ai-assistview/#attachmentuploadsuccess/) event is triggered when the attached file is successfully uploaded in the AI AssistView.
+The [attachmentUploadSuccess](../api/ai-assistview/#attachmentuploadsuccess/) event is triggered when an attached file is successfully uploaded in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,7 @@ The [attachmentUploadSuccess](../api/ai-assistview/#attachmentuploadsuccess/) ev
 
 ## attachmentUploadFailure
 
-The [attachmentUploadFailure](../api/ai-assistview/#attachmentuploadfailure/) event is triggered when the attached file upload fails in the AI AssistView.
+The [attachmentUploadFailure](../api/ai-assistview/#attachmentuploadfailure/) event is triggered when an attached file upload fails in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -92,7 +92,7 @@ The [attachmentUploadFailure](../api/ai-assistview/#attachmentuploadfailure/) ev
 
 ## attachmentRemoved
 
-The [attachmentRemoved](../api/ai-assistview/#attachmentremoved/) event is triggered when an attached file is removed in the AI AssistView.
+The [attachmentRemoved](../api/ai-assistview/#attachmentremoved/) event is triggered when an attached file is removed from the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

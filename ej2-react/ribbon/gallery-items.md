@@ -10,15 +10,16 @@ domainurl: ##DomainURL##
 
 # Gallery Items in React Ribbon component
 
-The Ribbon supports Gallery view which allows users to perform specific actions by displaying a collection of related items, including icons, content, or images. You can render the gallery Ribbon items by using the `RibbonItemDirective` tag, by specifying the [type](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#type) property to `Gallery` and customize it by using the [RibbonGallerySettingsModel](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/), which provides options such as `groups`, `itemCount`, `popupHeight`, `popupWidth` and more.
+The Ribbon component supports a gallery feature that displays a collection of related items, such as icons, content, or images, to allow users to perform specific actions. To render a gallery in the Ribbon, use the `<e-ribbon-item>` tag directive with the [type](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#type) property set to `Gallery`.
+The gallery can be configured through the [RibbonGallerySettingsModel](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/), which provides options to manage `groups`, `itemCount`, `popupHeight`, `popupWidth`, and more.
 
 ## Groups
 
-You can render the groups inside the gallery items by using [groups](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#groups) property and customize the groups using [RibbonGalleryGroupModel](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/), which provides options such as `items`, `cssClass`, `header` and more.
+The gallery can be organized into logical groups using the [groups](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#groups) property. Each group can be customized using the [RibbonGalleryGroupModel](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/), which includes options for `items`, `cssClass`, `header`, and more.
 
-### Adding items
+### Adding Gallery Items
 
-You can render the gallery items by using [items](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#items) property and customize using the [RibbonGalleryItemModel](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/), which provides options such as `content`, `iconCss`, `disabled` and more.
+Gallery items are defined using the [items](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#items) property. Each item can be configured with the [RibbonGalleryItemModel](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/), which provides options like `content`, `iconCss`, and `disabled`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,9 +32,9 @@ You can render the gallery items by using [items](https://ej2.syncfusion.com/rea
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/galleryItems" %}
 
-#### Adding content
+#### Defining Item Content
 
-You can use the [content](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#content) property to define the text content for the gallery item.
+The [content](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#content) property specifies the text to be displayed for a gallery item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,9 +47,9 @@ You can use the [content](https://ej2.syncfusion.com/react/documentation/api/rib
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/itemContent" %}
 
-#### Adding icons
+#### Defining Item Icons
 
-You can use the [iconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#iconcss) property to define the icons for the gallery item.
+To associate an icon with a gallery item, use the [iconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#iconcss) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -61,11 +62,11 @@ You can use the [iconCss](https://ej2.syncfusion.com/react/documentation/api/rib
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/galleryIcon" %}
 
-#### Adding html attributes
+#### Adding HTML Attributes to Items
 
-You can use the [htmlAttributes](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#htmlattributes) property to add HTML attributes to the Ribbon gallery item.
+The [htmlAttributes](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#htmlattributes) property allows you to add custom HTML attributes to a gallery item's element.
 
-The following sample showcases how to add title attribute to the gallery item using `htmlAttributes` property.
+The following sample shows how to add a `title` attribute to a gallery item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -78,11 +79,11 @@ The following sample showcases how to add title attribute to the gallery item us
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/htmlAttributes" %}
 
-#### CSS class
+#### Customizing Item Appearance
 
-You can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#cssclass) property to customize the gallery item.
+To apply a custom style to a gallery item, use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#cssclass) property.
 
-The following sample showcases how to customize the appearance of each gallery item using the `cssClass` property .
+The following sample demonstrates how to customize the appearance of a gallery item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -98,9 +99,9 @@ The following sample showcases how to customize the appearance of each gallery i
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/classCustomization" %}
 
-#### Disabled
+#### Disabling a Gallery Item
 
-You can use the [disabled](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#disabled) property to disable the Ribbon gallery item. It prevents the user interaction when set to `true`. By default, the value is `false`.
+To disable a gallery item and prevent user interaction, set its [disabled](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryItemModel/#disabled) property to `true`. By default, this value is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -113,9 +114,9 @@ You can use the [disabled](https://ej2.syncfusion.com/react/documentation/api/ri
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/disabledItem" %}
 
-### Custom header
+### Defining a Group Header
 
-You can use the [header](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#header) property to set header for the group items in the Ribbon gallery popup.
+The [header](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#header) property sets a title for a group of items within the gallery popup.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -128,15 +129,11 @@ You can use the [header](https://ej2.syncfusion.com/react/documentation/api/ribb
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/galleryItems" %}
 
-### Setting item width
+### Setting Item Dimensions
 
-You can use the [itemWidth](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#itemwidth) property to specify the width of gallery items.
+The size of gallery items can be controlled using the [itemWidth](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#itemwidth) and [itemHeight](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#itemheight) properties. When an `itemHeight` is set, items are aligned in rows according to the specified [itemCount](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#itemcount).
 
-### Setting item height
-
-You can use the [itemHeight](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#itemheight) property to set the height of the gallery items. If the `itemHeight` of the gallery item is smaller the remaining gallery items are aligned based on the [itemCount](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#itemcount) specified.
-
-The provided example demonstrates how to customize gallery items using the `itemWidth` and `itemHeight` properties.
+The following sample demonstrates how to set custom dimensions for gallery items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -149,9 +146,9 @@ The provided example demonstrates how to customize gallery items using the `item
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/itemHeightAndWidth" %}
 
-### Group styling
+### Customizing Group Appearance
 
-You can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#cssclass) property to customize the appearance of gallery groups.
+To apply custom styles to a gallery group container, use the group's [cssClass](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGalleryGroupModel/#cssclass) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -167,11 +164,11 @@ You can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ri
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/groupCustomization" %}
 
-## Setting item count
+## Setting the Displayed Item Count
 
-You can customize the number if items to be displayed in Ribbon gallery by using the [itemCount](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#itemcount) property. By default the `itemCount` will be `3`.
+To control the number of items displayed inline in the Ribbon gallery, use the [itemCount](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#itemcount) property. By default, the `itemCount` is `3`.
 
-The following example showcases the utilization of the `itemCount` property, displaying a ribbon gallery with `4` items.
+The following example showcases a gallery with `4` items displayed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -184,9 +181,9 @@ The following example showcases the utilization of the `itemCount` property, dis
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/itemCount" %}
 
-## Setting selected item
+## Pre-selecting an Item
 
-You can use the [selectedItemIndex](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#selecteditemindex) property to define the currently selected item in the Ribbon gallery items.
+The [selectedItemIndex](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#selecteditemindex) property allows you to define the initially selected item in the gallery.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -199,15 +196,11 @@ You can use the [selectedItemIndex](https://ej2.syncfusion.com/react/documentati
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/selectedItemIndex" %}
 
-## Setting popup height
+## Setting Popup Dimensions
 
-You can specify the height of the gallery popup by using the [popupHeight](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#popupheight) property.
+The dimensions of the gallery popup can be explicitly set using the [popupHeight](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#popupheight) and [popupWidth](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#popupwidth) properties.
 
-## Setting popup width
-
-you can specify the width of the gallery popup by using the [popupWidth](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGallerySettingsModel/#popupwidth) property.
-
-The example demonstrates the customization of popup with `popupHeight` and `popupWidth` properties.
+This sample demonstrates how to configure a custom size for the gallery popup.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -222,13 +215,13 @@ The example demonstrates the customization of popup with `popupHeight` and `popu
 
 ## Template
 
-You can customize the default appearance and content of Ribbon gallery items by using the [template](../api/ribbon/ribbonGallerySettingsModel/#template) property.
+You can completely redefine the appearance and content of gallery items by using the [template](../api/ribbon/ribbonGallerySettingsModel/#template) property.
 
 ### Popup Template
 
-You can customize the appearance of Ribbon gallery popup by using the [popupTemplate](../api/ribbon/ribbonGallerySettingsModel/#popuptemplate) property.
+To customize the gallery's popup container, use the [popupTemplate](../api/ribbon/ribbonGallerySettingsModel/#popuptemplate) property.
 
-The below example demonstrates the customization of both the `template` and `popupTemplate` properties:
+The example below demonstrates how to implement both an `template` and a `popupTemplate`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -244,4 +237,4 @@ The below example demonstrates the customization of both the `template` and `pop
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Gallery/galleryTemplate" %}
 
-> To know more about the built-in Ribbon items, please refer to the [Ribbon Items](./items) section.
+> To learn more about other built-in Ribbon item types, refer to the [Ribbon Items](./items) documentation.

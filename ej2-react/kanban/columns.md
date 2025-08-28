@@ -204,6 +204,42 @@ In the following example, the backlog column is collapsed on initialization of K
         
 {% previewsample "page.domainurl/code-snippet/kanban/expanded-cs2" %}
 
+## Drag and Drop
+
+The Kanban component allows dynamic column reordering through drag-and-drop interactions. To enable this, set the [`allowColumnDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/kanban/#allowColumnDragAndDrop) property to true. Once enabled, users can rearrange columns by dragging a column header to a new position, with visual feedback highlighting potential drop locations.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/kanban/column-drag-and-drop-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/kanban/column-drag-and-drop-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/kanban/column-drag-and-drop-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/kanban/column-drag-and-drop-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/kanban/column-drag-and-drop-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/kanban/column-drag-and-drop-cs2/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/kanban/column-drag-and-drop-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/kanban/column-drag-and-drop-cs2" %}
+
 ## Stacked headers
 
 Stacked headers are the additional headers to column header that will group the similar columns.

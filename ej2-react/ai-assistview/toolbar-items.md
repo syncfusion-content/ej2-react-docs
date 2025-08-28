@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar items in React AI AssistView component
 
-You can render the AI AssistView toolbar items by using the `items` property in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#toolbarsettings), [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#responsetoolbarsettings) & [promptToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#prompttoolbarsettings) properties.
+You can render the AI AssistView toolbar items by using the `items` property in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#toolbarsettings), [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#responsetoolbarsettings) & [promptToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompttoolbarsettings) properties.
 
 ## Adding header toolbar items
 
@@ -20,7 +20,7 @@ The AI AssistView toolbar's can be rendered by defining an array of items. Items
 
 #### Adding iconCss
 
-You can customize the toolbar icons by using the [iconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#iconcss) property.
+You can customize toolbar icons by using the [iconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#iconcss) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +50,7 @@ You can change the toolbar item type by using the [`type`](https://ej2.syncfusio
 
 #### Setting text
 
-You can use the [text](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#text) property to set the text for toolbar item.
+You can use the [text](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#text) property to set the text for toolbar items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -65,7 +65,7 @@ You can use the [text](https://ej2.syncfusion.com/react/documentation/api/ai-ass
 
 #### Show or hide toolbar item
 
-You can use the [visible](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#visible) property to specify whether to show or hide the toolbar item. By default, its value is `true`.
+You can use the [visible](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#visible) property to specify whether to show or hide toolbar items. By default, the value is `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,7 +80,7 @@ You can use the [visible](https://ej2.syncfusion.com/react/documentation/api/ai-
 
 #### Setting disabled
 
-You can use the [disabled](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#disabled) property to disable the toolbar item. By default, its value is `false`.
+You can use the [disabled](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#disabled) property to disable toolbar items. By default, the value is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -95,7 +95,7 @@ You can use the [disabled](https://ej2.syncfusion.com/react/documentation/api/ai
 
 #### Setting tooltip text
 
-You can use the [tooltip](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#tooltip) property to specify the tooltip text to be displayed on hovering the toolbar item.
+You can use the [tooltip](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#tooltip) property to specify tooltip text displayed when hovering over toolbar items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -108,9 +108,9 @@ You can use the [tooltip](https://ej2.syncfusion.com/react/documentation/api/ai-
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/tooltip" %}
 
-#### Setting cssClass
+#### Setting custom CSS classes
 
-You can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#cssclass) property to customize the toolbar item.
+You can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#cssclass) property to apply custom styling to toolbar items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -128,7 +128,7 @@ You can use the [cssClass](https://ej2.syncfusion.com/react/documentation/api/ai
 
 #### Setting alignment
 
-You can change the alignment of toolbar item by using the [`align`](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#align) property. It supports three types of alignments such as `Left`, `Center` and `Right`. By default, the value is `Left`.
+You can change the alignment of toolbar items by using the [`align`](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#align) property. It supports three types of alignments such as `Left`, `Center` and `Right`. By default, the value is `Left`.
 
 In the following example, toolbar item type is set with `Right`.
 
@@ -158,7 +158,6 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
 function App() {
-
     const assistInstance = React.useRef<AIAssistViewComponent>(null);
     
     const toolbarSettings: ToolbarSettingsModel = {
@@ -185,9 +184,9 @@ ReactDOM.render(<App />, document.getElementById('container'));
 ```
 {% endraw %}
 
-With the above code, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the `tabIndex` values.
+With this configuration, users can switch between toolbar items using Tab and Shift+Tab keys in addition to arrow keys. Items will be navigated in the order specified by the `tabIndex` values.
 
-If you set the `tabIndex` value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the `tabIndex` values. For example:
+If you set the `tabIndex` value to 0 for all toolbar items, tab key navigation will be based on element order rather than `tabIndex` values. For example:
 
 {% raw %}
 ```ts
@@ -227,7 +226,7 @@ In this case, the user can switch between the two Toolbar items using the Tab an
 
 #### Setting template
 
-You can use the [template](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#template) property to add custom toolbar item in the AI AssistView.
+You can use the [template](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarItemModel/#template) property to add custom toolbar items with complex content in the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -245,7 +244,7 @@ You can use the [template](https://ej2.syncfusion.com/react/documentation/api/ai
 
 ### Item clicked
 
-The [itemClicked](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarSettings/#itemclicked) event is triggered when the header toolbar item is clicked.
+The [itemClicked](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/toolbarSettings/#itemclicked) event is triggered when header toolbar items are clicked.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -334,11 +333,11 @@ The [itemClicked](https://ej2.syncfusion.com/react/documentation/api/ai-assistvi
 
 ## Adding custom toolbar items
 
-You can also add custom toolbar items in the AI AssistView by using the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#toolbarsettings), [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#responsetoolbarsettings) & [promptToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#prompttoolbarsettings) properties.
+You can also add custom toolbar items in the AI AssistView by using the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#toolbarsettings), [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#responsetoolbarsettings) & [promptToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompttoolbarsettings) properties.
 
 ### Prompt
 
-You can use the [promptToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#prompttoolbarsettings) property to add custom items for the prompt toolbar in the AI AssistView.
+You can use the [promptToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompttoolbarsettings) property to add custom items for the prompt toolbar in the AI AssistView.
 
 > To know more about the items, please refer to the [Items](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/promptToolbarSettings/#items) section.
 
@@ -353,9 +352,9 @@ You can use the [promptToolbarSettings](https://ej2.syncfusion.com/react/documen
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/prompt-settings" %}
 
-### Response
+### Adding custom response toolbar items
 
-You can use the [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#responsetoolbarsettings) property to add custom response toolbar in the AI AssistView.
+You can use the [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#responsetoolbarsettings) property to add custom items alongside or replace the built-in response toolbar items.
 
 > To know more about the items, please refer to the [Items](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/responseToolbarSettings/#items) section.
 
@@ -372,4 +371,4 @@ You can use the [responseToolbarSettings](https://ej2.syncfusion.com/react/docum
 
 #### Item clicked
 
-The [itemClicked](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/promptToolbarSettings/#itemclicked) event is triggered when a custom toolbar item is clicked. This event applies to both prompt and response toolbar items.
+The [itemClicked](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/promptToolbarSettings/#itemclicked) event is triggered when custom toolbar items are clicked. This event applies to both prompt and response toolbar items.

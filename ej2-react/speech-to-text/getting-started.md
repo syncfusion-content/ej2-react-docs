@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started Started with React SpeechToText Component
 
-This section explains how to create a simple SpeechToText and configure its available functionalities in the React environment.
+The SpeechToText component enables users to convert spoken words into text using the Web Speech API. This section explains how to create and configure a SpeechToText component with its available functionalities in a React environment.
 
 ## Dependencies
 
-The following list of dependencies is required to use the SpeechToText component in your application.
+The SpeechToText component requires the following Syncfusion packages in your application:
 
 ```js
 |-- @syncfusion/ej2-react-inputs
@@ -51,19 +51,19 @@ npm run dev
 ```
 
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+All Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
 
-To install SpeechToText component, use the following command
+Install the SpeechToText component using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-inputs --save
 ```
 
-## Adding SpeechToText component
+## Adding SpeechToText Component
 
-Now, you can start adding SpeechToText component in the application. For getting started, add the SpeechToText component by using `<SpeechToTextComponent>` tag directive in `src/App.tsx` file using following code. Now place the below SpeechToText code in the `src/App.tsx`.
+Add the SpeechToText component to your application using the `<SpeechToTextComponent>` tag directive in the `src/App.tsx` file.
 
 `[Class-component]`
 
@@ -136,11 +136,11 @@ The following example shows a basic SpeechToText component.
 
  {% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1/index" %}
 
-> The [SpeechToText](../api/speech-to-text/) component requires an internet connection and using a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API.
+> **Important:** The [SpeechToText](../api/speech-to-text/) component requires an internet connection and a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API. Speech recognition may request microphone permissions from the user.
 
- ## Adding button content
+## Adding Button Content
 
-You can use the [content](../api/speech-to-text/buttonSettingsModel/#content) property to display the start listening text and [stopContent](../api/speech-to-text/buttonSettingsModel/#stopContent) to display the stop listening text by using the [buttonSettings](../api/speech-to-text#buttonSettings) property.
+Customize the button text using the [buttonSettings](../api/speech-to-text/#buttonSettings) property. Use the [content](../api/speech-to-text/buttonSettingsModel/#content) property to display the start listening text and [stopContent](../api/speech-to-text/buttonSettingsModel/#stopContent) for the stop listening text.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
