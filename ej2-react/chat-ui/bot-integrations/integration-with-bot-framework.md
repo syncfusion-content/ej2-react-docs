@@ -64,17 +64,14 @@ npm install express axios cors dotenv
 
 Create a `token-server` folder with an `index.js` and a `.env` files.
 
-`.env`
-
-```bash
-
+{% tabs %}
+{% highlight js tabtitle=".env" %}
 DIRECT_LINE_SECRET=PASTE_YOUR_DIRECT_LINE_SECRET_HERE
+{% endhighlight %}
+{% endtabs %}
 
-```
-
-`index.js`
-
-```js
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
@@ -108,13 +105,15 @@ app.post('/directline/token', async (req, res) => {
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Token server running on http://localhost:${port}`));
-```
+{% endhighlight %}
+{% endtabs %}
+
 ## Integrate ChatUI in React
 
 Create `src/App.js` to connect the Syncfusion Chat UI to the bot via the Direct Line API:
 
-```js
-
+{% tabs %}
+{% highlight js tabtitle="App.js" %}
 import React, { useState, useEffect, useRef } from "react";
 import { ChatUIComponent, MessagesDirective, MessageDirective } from '@syncfusion/ej2-react-interactive-chat';
 import { DirectLine } from 'directline-js';
@@ -207,7 +206,8 @@ function App() {
 }
 
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Run and Test
 
