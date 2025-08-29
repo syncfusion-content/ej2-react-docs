@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # File Menu in the React Ribbon
 
-The Syncfusion Angular Ribbon component includes a built-in file menu that allows you to add menu items for performing specific actions like creating, opening, or saving documents. The file menu is highly configurable and can be enabled by defining the [fileMenu](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonFileMenu/) property.
+The Syncfusion React Ribbon component includes a built-in file menu that allows you to add menu items for performing specific actions like creating, opening, or saving documents. The file menu is highly configurable and can be enabled by defining the [fileMenu](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonFileMenu/) property.
 
 ## Visibility
 

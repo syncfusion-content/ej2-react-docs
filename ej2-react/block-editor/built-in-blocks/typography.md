@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Typography Blocks in React Block Editor component
 
-Typography blocks are essential for organizing and presenting text-based content in your documents. The BlockEditor component supports various structural blocks—such as Paragraph, Heading, Collapsible Block, Divider, Quote, and Callout to help you format and structure content effectively.
+Typography blocks are essential for organizing and presenting text-based content. The Block Editor component supports various structural blocks—such as Paragraph, Heading, Collapsible (CollapsibleParagraph and CollapsibleHeading), Divider, Quote, and Callout—to help you format and structure content effectively.
 
 ## Configure paragraph block
 
-You can render Paragraph blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Paragraph`. Paragraph blocks are the most common type, used for regular text content. They provide standard text formatting options and serve as the default block type.
+Paragraph blocks are the most common type, used for standard text content. They serve as the default block type and provide basic text formatting options. To render a Paragraph block, set the [type](../api/blockeditor/blockModel/#type) property to `Paragraph`.
 
 ### Type 
 
 ```typescript
-// Adding paragraph block
+// Adding a paragraph block
 {
     type: 'Paragraph',
     content: [
@@ -31,7 +31,7 @@ You can render Paragraph blocks by setting the [type](../api/blockeditor/blockMo
 }
 ```
 
-The below sample demonstrates the configuration of paragraph block in the Block Editor.
+The following sample demonstrates the configuration of a paragraph block in the Block Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -73,12 +73,11 @@ The below sample demonstrates the configuration of placeholder in the Block Edit
 
 ## Configure heading block
 
-You can render Heading blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Heading`. Heading blocks are used to create document titles and section headers of varying importance. These blocks help structure your content hierarchically, making it easier to read and navigate.
+Heading blocks create document titles and section headers. These blocks help structure content hierarchically, making it easier to read and navigate. Render a Heading block by setting the [type](../api/blockeditor/blockModel/#type) property to `Heading`.
 
-### Configure levels
+### Configuring Levels
 
-You can configure the heading blocks using the property `level`.
-The heading level representing a title `level: 1`, heading `level: 2`, subheading `level: 3` and a subsection by `level: 4`.
+Set the heading level using the `level` property, with `1` being the highest level (title) and `4` being the lowest (subsection).
 
 ### Type & Props
 
@@ -97,7 +96,7 @@ The heading level representing a title `level: 1`, heading `level: 2`, subheadin
 }
 ```
 
-The below sample demonstrates the configuration of heading block in the Block Editor.
+The following sample demonstrates the configuration of a heading block in the Block Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -172,7 +171,7 @@ You can control whether a block is expanded or collapsed using the [isExpanded](
 }
 ```
 
-The below sample demonstrates the configuration of collapsibleHeading and collapsibleParagraph blocks in the Block Editor.
+This example shows how to configure `CollapsibleHeading` and `CollapsibleParagraph` blocks.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -207,7 +206,7 @@ You can configure placeholder text for block using the [placeholder](../api/bloc
 
 ## Configure divider block
 
-Divider blocks insert horizontal lines that separate different sections of content. You can render Divider blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Divider`.
+A Divider block inserts a horizontal line to separate content. Render it by setting the [type](../api/blockeditor/blockModel/#type) to `Divider`.
 
 ### Type & Props
 
@@ -234,7 +233,7 @@ Divider blocks insert horizontal lines that separate different sections of conte
 }
 ```
 
-The below sample demonstrates the configuration of divider block in the Block Editor.
+This sample shows how to place a divider between two blocks.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -249,7 +248,7 @@ The below sample demonstrates the configuration of divider block in the Block Ed
 
 ## Configure quote block
 
-You can render Quote blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Quote`. Quote blocks are specially styled for quotations or excerpts.
+Quote blocks are styled for displaying quotations or excerpts. Render a Quote block by setting the [type](../api/blockeditor/blockModel/#type) to `Quote`.
 
 ### Type & Props
 
@@ -264,7 +263,7 @@ You can render Quote blocks by setting the [type](../api/blockeditor/blockModel/
 }
 ```
 
-The below sample demonstrates the configuration of quote block in the Block Editor.
+The following sample shows how to configure a quote block.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -291,7 +290,7 @@ You can configure placeholder text for block using the [placeholder](../api/bloc
 
 ## Configure callout block
 
-You can render Callout blocks by setting the [type](../api/blockeditor/blockModel/#type) property as `Callout`. They're useful for notes, warnings, or tips that require special attention.
+Callout blocks highlight important information such as notes, warnings, or tips. Render one by setting the [type](../api/blockeditor/blockModel/#type) to `Callout`.
 
 ### Type & Props
 
@@ -311,7 +310,7 @@ You can render Callout blocks by setting the [type](../api/blockeditor/blockMode
  }
 ```
 
-The below sample demonstrates the configuration of callout block in the Block Editor.
+The following sample adds a callout block to the editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -332,9 +331,9 @@ Child blocks can be configured with all the same properties as top-level blocks.
 
 ### Configure parent id
 
-For proper hierarchy, you should ensure that the [parentId](../api/blockeditor/blockModel/#parentid) of each child block matches the [id](../api/blockeditor/blockModel/#id) of its parent block. This structure helps maintain the nested relationships within the editor.
+The Block Editor supports hierarchical content through the `children` property, which is available for `Callout` and `Collapsible` blocks. To establish a clear parent-child relationship, the [parentId](../api/blockeditor/blockModel/#parentid) of each child block must match the [id](../api/blockeditor/blockModel/#id) of its parent.
 
-The below sample demonstrates the configuration of children in the Block Editor using parentId.
+This structure is essential for maintaining nested relationships within the editor. The following sample demonstrates how to create a nested hierarchy.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prevent the focus on the first element in React Dialog component | Syncfusion
+title: Prevent the focus on first element in React Dialog | Syncfusion
 description: Learn here all about Prevent the focus on the first element in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
 control: Prevent the focus on the first element 
 platform: ej2-react
@@ -39,3 +39,7 @@ Bind the open event and enable the preventFocus argument within an event like th
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dialog/dlg-focus-cs2" %}
+
+ ## See Also
+
+* [Prevent the focus to the previous element](./how-to/prevent-the-focus-to-the-previous-element.md)

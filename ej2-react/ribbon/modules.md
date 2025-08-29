@@ -10,22 +10,22 @@ domainurl: ##DomainURL##
 
 # Modules in Ribbon component
 
-The following modules are available in Ribbon. If the module injection type is **selective**, manual injection is required to extend the Ribbon's functionality.
+The React Ribbon component contains several feature-based modules that must be injected to enable their respective functionalities.
 
 | Module | Description | Module Injection Type |
 |------|-------------|------|
-| `RibbonButton` | To use the built-in button as a ribbon item. | default |
-| `RibbonCheckBox` | To use the built-in checkbox as a ribbon item.| default |
-| `RibbonDropDown` | To use the built-in dropdown button as a ribbon item.| default |
-| `RibbonSplitButton` | To use the built-in split button as a ribbon item.| default |
-| `RibbonComboBox` | To use the built-in combobox as a ribbon item. | default |
-| `RibbonGroupButton` | To use the built-in groupbutton as a ribbon item. | default |
-| `RibbonColorPicker` | Inject this module to use the built-in colorpicker as a ribbon item.| selective |
-| `RibbonGallery` | Inject this module to use the gallery as a ribbon item.| selective |
-| `RibbonFileMenu` | Inject this module to use the file menu feature.| selective |
-| `RibbonBackstage` | Inject this module to use the backstage view feature.| selective |
-| `RibbonContextualTab` | Inject this module to use the contextual tab feature.| selective |
-| `RibbonKeyTip` | Inject this module to use the keytip feature.| selective |
+| `RibbonButton` | Enables Button functionality in the Ribbon. | default |
+| `RibbonCheckBox` | Enables CheckBox functionality in the Ribbon.| default |
+| `RibbonDropDown` | Enables DropDown Button functionality in the Ribbon.| default |
+| `RibbonSplitButton` | Enables Split Button functionality in the Ribbon.| default |
+| `RibbonComboBox` | Enables ComboBox functionality in the Ribbon. | default |
+| `RibbonGroupButton` | Enables Group Button functionality in the Ribbon. | default |
+| `RibbonColorPicker` | Provides support for the ColorPicker item.| selective |
+| `RibbonGallery` | Provides support for the Gallery item.| selective |
+| `RibbonFileMenu` | Enables the File Menu feature.| selective |
+| `RibbonBackstage` | Enables the Backstage view feature.| selective |
+| `RibbonContextualTab` | Enables the Contextual Tab feature.| selective |
+| `RibbonKeyTip` | Enables the KeyTip navigation feature.| selective |
 
 These modules should be injected into the Ribbon using the `Inject` directive.
 
