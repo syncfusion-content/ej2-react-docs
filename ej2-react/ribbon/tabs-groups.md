@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tabs and Groups
+# Tabs, Groups, and Items
 
-The Ribbon component consists of a series of tabs that are organized into groups to enable quick access to specific commands or tools. Each tab contains a set of groups, and each group contains collections of items that are logically related to each other.
+The Ribbon component's structure is a hierarchy of tabs, groups, and items that provides organized access to commands. Each tab contains one or more groups, and each group holds collections of related items.
 
 ## Adding Tabs
 
@@ -66,4 +66,4 @@ You can add collections of items to each group by using the [collections](https:
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Items" %}
 
-For more information on the built-in and how to add custom Ribbon items, you can visit the [`items`](./items) page.
+> For more information on configuring built-in items and creating custom items, refer to the [`Items`](./items) documentation.

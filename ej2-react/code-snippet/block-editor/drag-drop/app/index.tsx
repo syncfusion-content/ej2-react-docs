@@ -8,7 +8,8 @@ function App() {
   const blocksData: BlockModel[] = [
   {
     id: 'block-1',
-    type: 'Heading1',
+    type: 'Heading',
+    props: { level: 1 },
     content: [
       {
         type: ContentType.Text,

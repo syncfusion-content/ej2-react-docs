@@ -10,13 +10,15 @@ domainurl: ##DomainURL##
 
 # Custom views in React AI AssistView component
 
+The AI AssistView component supports multiple views that allow you to organize different types of content within the same component.
+
 ## Adding custom views
 
-By using the `ViewsDirective` tag you can define the collection of different assist view models in the AI AssistView. You can customize the default and the custom views added.
+The `ViewsDirective` tag enables you to define a collection of different view models within the AI AssistView component. Each view can be independently customized with different appearances and content.
 
-#### Setting view type
+### Setting view type
 
-You can set the type of view by using the [type](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/assistViewType/) property within the `ViewDirective` tag. It accepts two values such as `Assist` and `Custom`.
+You can specify the type of view using the [type](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/assistViewType/) property within the `ViewDirective` tag. It accepts two values such as `Assist`, and `Custom`.
 
 {% raw %}
 ```ts
@@ -74,7 +76,7 @@ ReactDOM.render(<App />, document.getElementById('container'));
 
 ### Setting iconCss
 
-You can customize the view icons by using the [iconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/assistViewModel/#iconcss) property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
+You can customize the view icons using the [iconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/assistViewModel/#iconcss) property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
 
 {% raw %}
 ```ts
@@ -119,7 +121,7 @@ The following example illustrates how types, name, and iconCss are used in a AI 
 
 ### Setting view template 
 
-You can use the [viewTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/assistViewModel/#viewtemplate) property to add the view content of the multiple views added in the AI AssistView.
+The [viewTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/assistViewModel/#viewtemplate) property allows to define custom content for multiple views within the AI AssistView.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -137,7 +139,7 @@ You can use the [viewTemplate](https://ej2.syncfusion.com/react/documentation/ap
 
 ## Setting active view
 
-You can use the [activeView](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#activeview) property to set the active view in the AI AssistView. By default, the value is `0`.
+You can use the [activeView](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#activeview) property to specify which view should be displayed when the AI AssistView component initializes. By default, the first view (index 0) is set as active.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

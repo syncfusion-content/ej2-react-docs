@@ -17,47 +17,47 @@ const blocksData: BlockModel[] = [
   },
   {
     id: 'block-2',
-    type: 'CheckList',
+    type: 'Checklist',
     content: [
       {
         type: ContentType.Text,
         content: 'Completed task (checked)'
       }
     ],
-    isChecked: true
+    props: { isChecked: true}
   },
   {
     id: 'block-3',
-    type: 'CheckList',
+    type: 'Checklist',
     content: [
       {
         type: ContentType.Text,
         content: 'Pending task (unchecked)'
       }
     ],
-    isChecked: false
+    props: { isChecked: false}
   },
   {
     id: 'block-4',
-    type: 'CheckList',
+    type: 'Checklist',
     content: [
       {
         type: ContentType.Text,
         content: 'High priority task'
       }
     ],
-    isChecked: true
+    props: { isChecked: true}
   },
   {
     id: 'block-5',
-    type: 'CheckList',
+    type: 'Checklist',
     content: [
       {
         type: ContentType.Text,
         content: 'Low priority task'
       }
     ],
-    isChecked: false
+    props: { isChecked: false}
   }
 ];
 

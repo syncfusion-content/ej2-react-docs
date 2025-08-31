@@ -9,7 +9,7 @@ function App() {
   const blocksData = [
     {
       type: 'Image',
-      imageSettings: {
+      props: {
         src: 'https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png',
         altText: 'Sample image'
       }

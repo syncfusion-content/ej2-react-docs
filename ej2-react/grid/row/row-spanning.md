@@ -56,3 +56,43 @@ In the following demo, **Davolio** cell is spanned to two rows in the **Employee
     6. Inline editing
     7. Batch editing
     8. CRUD
+
+## Row spanning using enableRowSpan property    
+
+The Syncfusion React Grid introduces a simplified approach to vertically merge cells using the `enableRowSpan` property. 
+
+When the `enableRowSpan` property is enabled, the Grid automatically merges cells with matching data across adjacent columns without requiring manual span configuration using the [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/grid/queryCellInfoEventArgs) event. These merged cells are visually combined into a single cell, improving readability.
+
+Here is an example of how to use the `enableRowSpan` property to merge cells vertically:    
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/row-spanning-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/row-spanning-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/row-spanning-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/row-spanning-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/row-spanning-cs1" %}
+
+> You can also control spanning at the column level. To prevent merging for specific columns, set `enableRowSpan` to **false** in the column definition.
+
+### Limitation
+
+* Virtualization
+* Infinite Scrolling
+* Lazy Load Grouping
+* Row Drag and Drop
+* Column Virtualization
+* Detail Template
+* Editing
+* Export
+* Foreign Key
+* Hierarchy Grid

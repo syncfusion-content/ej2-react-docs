@@ -16,12 +16,12 @@ function App() {
             "heading2": "Überschrift 2",
             "heading3": "Überschrift 3",
             "heading4": "Überschrift 4",
-            "toggleParagraph": "Umschaltbarer Absatz",
-            "toggleHeading1": "Umschaltbare Überschrift 1",
-            "toggleHeading2": "Umschaltbare Überschrift 2",
-            "toggleHeading3": "Umschaltbare Überschrift 3",
-            "toggleHeading4": "Umschaltbare Überschrift 4",
-            "bulletList": "Element hinzufügen",
+            "collapsibleParagraph": "Umschaltbarer Absatz",
+            "collapsibleHeading1": "Umschaltbare Überschrift 1",
+            "collapsibleHeading2": "Umschaltbare Überschrift 2",
+            "collapsibleHeading3": "Umschaltbare Überschrift 3",
+            "collapsibleHeading4": "Umschaltbare Überschrift 4",
+            "bulletlist": "Element hinzufügen",
             "numberedList": "Element hinzufügen",
             "checkList": "Zu erledigen",
             "callout": "Schreiben Sie einen Hinweis",
@@ -46,7 +46,8 @@ function App() {
   const blocksData = [
     {
       id: 'block-1',
-      type: 'Heading1',
+      type: 'Heading',
+      props: { level: 1 },
       content: [{ type: ContentType.Text, content: 'Sample Heading' }]
     },
     {

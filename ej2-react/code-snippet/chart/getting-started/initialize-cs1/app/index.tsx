@@ -8,6 +8,7 @@ function App() {
   return <ChartComponent id='charts' />
 };
 export default App;
+ReactDOM.render(<App />, document.getElementById("charts"));
 
 
 

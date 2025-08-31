@@ -10,6 +10,7 @@ function App() {
     const blocksData: BlockModel[] = [
     {
       type: 'Callout',
+      props:{
       children: [
         {
           id: 'callout-content',
@@ -24,6 +25,7 @@ function App() {
           ]
         }
       ]
+    }
     }
   ];
 

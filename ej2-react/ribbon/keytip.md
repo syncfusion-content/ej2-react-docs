@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon Keytips in React Ribbon component
+# Ribbon Keytips in React Ribbon Component
 
-The Ribbon supports keyboard navigations to interact the ribbon items using the keytips which can be enabled by setting the [enableKeyTips](https://ej2.syncfusion.com/react/documentation/api/ribbon/#enablekeytips) property.
+The Ribbon component supports KeyTips to provide keyboard navigation for its items. This feature can be enabled by setting the [enableKeyTips](https://ej2.syncfusion.com/react/documentation/api/ribbon/#enablekeytips) property to `true`.
 
-The keytips will be shown when the `Alt + Windows/Command` keys are pressed.
+The keytips will be shown when the `Alt + Windows/Command` keys are pressed. This allows users to access any Ribbon element by pressing the corresponding keys.
 
-## Ribbon items keytip
+## Ribbon Item KeyTip
 
-You can add keytips to all the ribbon items by using the [keyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#keytip) property.
+You can assign a KeyTip to any Ribbon item, including tabs, groups, and individual controls, using the [keyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItem/#keytip) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,9 +32,9 @@ You can add keytips to all the ribbon items by using the [keyTip](https://ej2.sy
 
 {% previewsample "page.domainurl/code-snippet/ribbon/keytip/itemKeytip" %}
 
-## File menu keytip
+## File Menu KeyTip
 
-You can add keytips to the file menu by using the [keyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#keytip) property.
+A KeyTip can be assigned to the File Menu button using the [keyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/fileMenuSettings/#keytip) property within the `fileMenuSettings`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,9 +50,9 @@ You can add keytips to the file menu by using the [keyTip](https://ej2.syncfusio
 
 {% previewsample "page.domainurl/code-snippet/ribbon/keytip/filemenu-keytip" %}
 
-## Backstage menu keytip
+## Backstage Menu KeyTip
 
-You can add keytips to backstage menu items by using the [keyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenu/#keytip) property.
+You can assign KeyTips to Backstage menu items by defining the [keyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenu/#keytip) property for each item in the Backstage configuration.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,9 +68,9 @@ You can add keytips to backstage menu items by using the [keyTip](https://ej2.sy
 
 {% previewsample "page.domainurl/code-snippet/ribbon/keytip/backStageMenu-keytip" %}
 
-## Ribbon layout switcher keytip
+## Ribbon Layout Switcher KeyTip
 
-You can add keytip to the layout switcher by using the [layoutSwitcherKeyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon#layoutswitcherkeytip) property.
+A KeyTip can be added to the layout switcher button using the [layoutSwitcherKeyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/#layoutswitcherkeytip) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -86,9 +86,9 @@ You can add keytip to the layout switcher by using the [layoutSwitcherKeyTip](ht
 
 {% previewsample "page.domainurl/code-snippet/ribbon/keytip/layoutSwitcher-keytip" %}
 
-## Ribbon launcher icon keytip
+## Ribbon Launcher Icon KeyTip
 
-You can add keytip to the launcher icon by using the [launcherIconKeyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#keytip) property.
+A KeyTip can be assigned to a group's launcher icon using the [launcherIconKeyTip](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonGroup/#keytip) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -108,13 +108,11 @@ You can add keytip to the launcher icon by using the [launcherIconKeyTip](https:
 
 ### Show keytips
 
-You can use the [showKeyTips](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonKeyTip/#showkeytips) method to shown the keytips dynamically.
+Use the [showKeyTips](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonKeyTip/#showkeytips) method to display the KeyTips dynamically. To navigate into a specific tab's or group's KeyTips, pass its KeyTip as an argument. For instance, `showKeyTips('H')` will show the KeyTips for all items under the element assigned the 'H' KeyTip.
 
-In order to show specific keytips, pass the key string as an argument in the `showKeyTips('H')` method.
+### Hide keyTips
 
-### Hide keytips
-
-You can use the [hideKeyTips](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonKeyTip/#hidekeytips) method in Ribbon to remove the keytips dynamically. This will remove all the visible keytips.
+Use the [hideKeyTips](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonKeyTip/#hidekeytips) method to hide all visible KeyTips on the Ribbon.
 
 ## Guidelines for adding keytips
 

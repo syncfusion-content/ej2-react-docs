@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon Backstage
+# Backstage in React Ribbon Component
 
-The Ribbon supports backstage view which is an addition to the traditional file menu. It displays information like application settings, user details, etc. The backstage view can be enabled by setting the [backStageMenu](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenu/) property.
+The React Ribbon component includes a Backstage view, which serves as a comprehensive replacement for the traditional file menu. It is designed to display application-level information and settings, such as user details, document properties, or options pages. The Backstage view is enabled by configuring the [backStageMenu](https://ej2.syncfusion.com/react/documentation/api/ribbon/#backstagemenu) property.
 
-The backstage view options are displayed on the left, while the content of each option is shown on the right.
+When active, backstage options are displayed in a list on the left, and the content for the selected option appears on the right.
 
 ## Adding backstage items
 
-The menu items can be added to the backstage view by using the [items](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItem/) property. You can show the backstage view by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageBackButtonModel/#visible) property to `true`. By default, the backstage view is hidden.
+Define and add items to the Backstage view by populating the [items](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#items) property. To display the Backstage, set the [visible](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#visible) property to `true`. By default, the Backstage view is hidden.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -34,7 +34,7 @@ The menu items can be added to the backstage view by using the [items](https://e
 
 ## Adding footer items
 
-You can use the [isFooter](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemModel/#isfooter) property in the `items` collection to add the backstage view footer items. By default, the value is false.
+To designate an item as a footer menu item, set its [isFooter](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemModel/#isfooter) property in the [items](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#items) collection to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,9 +50,9 @@ You can use the [isFooter](https://ej2.syncfusion.com/react/documentation/api/ri
 
 {% previewsample "page.domainurl/code-snippet/ribbon/BackStageFooterItem" %}
 
-## Adding separator
+## Adding a separator
 
-The separators are horizontal lines used to separate the backstage view items. You can use the [separator](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemModel/#separator) property to split the menu items.
+Separators are horizontal lines used to visually group related items within the Backstage view. To add a separator, set the [separator](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageItemModel/#separator) property of a Backstage item to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,9 +68,9 @@ The separators are horizontal lines used to separate the backstage view items. Y
 
 {% previewsample "page.domainurl/code-snippet/ribbon/BackStageSeperator" %}
 
-## Back button
+## Back button customization
 
-You can use the [backButton](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageBackButton/) property to customize the text and icon of the close button using the [text]((https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageBackButton/#text)) and [iconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageBackButton/#iconcss) property. You can show the back button by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageBackButtonModel/#visible) property to `true`.
+Customize the text and icon of the Backstage view's close button using the [backButton](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#backbutton) property. The button's text is set with the [text](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageBackButtonModel/#text) property and its icon with the [iconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageBackButtonModel/#iconcss) property. The back button is displayed by setting its [visible](https://ej2.syncfusion.com/react/documentation/api/ribbon/backstageBackButtonModel/#visible) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -86,9 +86,9 @@ You can use the [backButton](https://ej2.syncfusion.com/react/documentation/api/
 
 {% previewsample "page.domainurl/code-snippet/ribbon/BackstageBackButton" %}
 
-## Backstage target
+## Backstage target element
 
-The [target](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#target) property specifies the element selector in which backstage will be displayed. The target element should have the position as relative, else the backstage will be positioned nearest to the relative element. By default, the backstage is positioned to ribbon element.
+The [target](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#target) property specifies the selector for the element where the Backstage view will be displayed. The target element must have its CSS `position` set to `relative`. If it does not, the Backstage will be positioned relative to the nearest parent element that has this styling. By default, the Backstage is positioned relative to the Ribbon element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,9 +104,9 @@ The [target](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStage
 
 {% previewsample "page.domainurl/code-snippet/ribbon/BackstageTarget" %}
 
-## Template
+## Customizing with templates
 
-You can use the [template](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#template) property to modify the backstage view menu items and their contents.
+The [template](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#template) property allows for complete customization of the Backstage view's menu items and their corresponding content area.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -124,7 +124,7 @@ You can use the [template](https://ej2.syncfusion.com/react/documentation/api/ri
 
 ## Setting width and height
 
-You can customize the height and width of the backstage view using the [height](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#height) and [width](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#width) property. By default, dimensions are set based on the content added.
+The height and width of the Backstage view can be explicitly set using the [height](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#height) and [width](https://ej2.syncfusion.com/react/documentation/api/ribbon/backStageMenuModel/#width) properties. If not set, the dimensions are calculated automatically based on the content.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

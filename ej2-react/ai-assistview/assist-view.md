@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Setting prompt text
 
-You can use the [prompt](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompt) property to define the prompt text for the AI AssistView component.
+The [prompt](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompt) property allows you to define initial or default text that appears in the prompt input area. This property is useful for pre-filling the input with context or guidance for users.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ You can use the [prompt](https://ej2.syncfusion.com/react/documentation/api/ai-a
 
 ## Setting prompt placeholder
 
-You can use the [promptPlaceholder](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptplaceholder) property to set the placeholder text for the prompt textarea. The default value is `Type prompt for assistance...`.
+The [promptPlaceholder](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptplaceholder) property defines the placeholder text displayed in the prompt textarea when it's empty. The default placeholder text is `Type prompt for assistance...`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,9 +42,9 @@ You can use the [promptPlaceholder](https://ej2.syncfusion.com/react/documentati
 
 ## Prompt-response collection
 
-You can use the [prompts](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompts) property to initialize the component with the configured data as a collection of prompts and responses or individual entries.
+The [prompts](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompts) property enables you to initialize the component with pre-configured conversation data or retrieve the complete history of user interactions.
 
-> The `prompts` collection stores all the prompts and responses generated.
+> The [prompts](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompts) collection automatically stores all user inputs and corresponding AI responses generated during the session, providing a complete conversation history that can be accessed programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,9 +57,9 @@ You can use the [prompts](https://ej2.syncfusion.com/react/documentation/api/ai-
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/prompts" %}
 
-## Adding prompt suggestions
+## Configuring prompt suggestions
 
-You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestions) property, to add the suggestions in both initial and on-demand which help users to refine their prompts. Additionally, custom header can be set for suggestions further enhancing the user experience.
+The [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestions) property provides users with helpful suggestions that can appear initially or on-demand. These suggestions help users formulate better prompts and discover available functionality, enhancing the overall user experience.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,9 +72,9 @@ You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentati
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/suggestions" %}
 
-### Adding suggestion headers
+### Customizing suggestions header
 
-You can use the [promptSuggestionsHeader](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestionsheader) property to set the header text for the prompt suggestions in the AI AssistView.
+The [promptSuggestionsHeader](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestionsheader) property allows you to set a descriptive header text that appears above the prompt suggestions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -87,9 +87,9 @@ You can use the [promptSuggestionsHeader](https://ej2.syncfusion.com/react/docum
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/suggestion-header" %}
 
-## Adding prompt iconCss
+## Customizing user avatar appearance
 
-You can customize the appearance of the prompter avatar by using the [promptIconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompticoncss) property.
+The [promptIconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#prompticoncss) property enables customization of the user avatar icon that appears alongside user prompts.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,7 +104,7 @@ You can customize the appearance of the prompter avatar by using the [promptIcon
 
 ## Adding response iconCss
 
-You can use the [responseIconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#responseiconcss) property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
+The [responseIconCss](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#responseiconcss) property allows customization of the AI assistant avatar that appears alongside AI responses. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -119,7 +119,7 @@ You can use the [responseIconCss](https://ej2.syncfusion.com/react/documentation
 
 ## Show or hide clear button
 
-You can use the [showClearButton](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#showclearbutton) property to show or hide the clear button. By default, its value is `false`, when the clear button is clicked, the prompt text entered will be cleared.
+The [showClearButton](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#showclearbutton) property controls the visibility of the clear button in the prompt input area. By default, its value is `false`, When the clear button is clicked, only the current prompt text is cleared, while the conversation history remains intact.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -9,11 +9,13 @@ function App() {
     {
       id: 'security-callout',
       type: 'Callout',
+      props:{
       children: [
         {
           id: 'security-title',
           parentId: 'security-callout',
-          type: 'Heading3',
+          type: 'Heading',
+          props: { level: 3},
           content: [
             {
               type: 'Text',
@@ -70,6 +72,7 @@ function App() {
           indent: 1
         }
       ]
+    }
     }
   ];
 

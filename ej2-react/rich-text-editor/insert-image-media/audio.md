@@ -566,6 +566,51 @@ function App() {
 
 ```
 
+## Drag and drop audio insertion
+
+By default, the Rich Text Editor allows you to insert audios by drag-and-drop from the local file system such as Windows Explorer into the content editor area. And, you can upload the audios to the server before inserting into the editor by configuring the saveUrl property.
+
+In the following sample, you can see feature demo.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/drag-drop-cs5/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/drag-drop-cs5/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/drag-drop-cs5" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/rich-text-editor/drag-drop-cs6/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/rich-text-editor/drag-drop-cs6/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/rich-text-editor/drag-drop-cs6" %}
+
+### Disabling audio drag and drop
+
+You can prevent drag-and-drop action by setting the actionBegin argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+
+```ts
+    actionBegin: function (args: any): void {
+        if(args.type === 'drop' || args.type === 'dragstart') {
+            args.cancel =true;
+        }
+    }
+
+```
+
 ## See also
 
 * [Audio Quick Toolbar](../toolbar/quick-toolbar)

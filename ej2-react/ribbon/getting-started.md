@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the React Ribbon Component
 
-This section explains how to create a simple Ribbon, and configure its available functionalities in React.
+This section explains how to create a simple Ribbon and configure its functionalities in a React application.
 
 ## Dependencies
 
@@ -33,9 +33,9 @@ The following list of dependencies are required to use the Ribbon component in y
 
 ## Setup for Local Development
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To get started, create a new React application using Vite. Vite offers a faster development server and optimized builds. For more details, refer to the official Vite [installation guide](https://vitejs.dev/guide/).
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> **Note:** If you prefer to use `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for setup instructions.
 
 To create a new React application, run the following command.
 
@@ -57,11 +57,11 @@ cd my-app
 npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
+All Syncfusion Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry.
 
-To install `Ribbon` component, use the following command
+To install the Ribbon component package, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-ribbon --save
@@ -69,9 +69,9 @@ npm install @syncfusion/ej2-react-ribbon --save
 
 The above command installs [Ribbon dependencies](./getting-started#dependencies) which are required to render the component in the `React` environment.
 
-## Adding Style sheet to the Application
+## Adding Styles to the Application
 
-Add Ribbon component's styles as given below in `App.css`.
+To apply the necessary styling for the Ribbon, import the component's CSS files into your `src/App.css` file.
 
 ```css
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -85,9 +85,9 @@ Add Ribbon component's styles as given below in `App.css`.
 @import "../node_modules/@syncfusion/ej2-ribbon/styles/material.css";
 ```
 
-## Add Ribbon to the project
+## Adding the Ribbon Component
 
-Now, you can create `Ribbon` component in the application. Add `Ribbon` component in `src/App.tsx` file using the following code snippet.
+Now, you can add the Ribbon component to your application. Open the `src/App.tsx` file and use the following code snippet to render a basic Ribbon.
 
 {% raw %}
 
@@ -133,9 +133,9 @@ root.render(<App />);
 ```
 {% endraw %}
 
-## Adding Ribbon Tab
+## Defining Ribbon Tabs
 
-In Ribbon, the options are arranged in tabs for easy access. You can use the `RibbonTabDirective` to define the ribbon tab like below.
+In the Ribbon, commands are organized into tabs for easy access. Use the `RibbonTabDirective` to define each tab.
 
 {% raw %}
 
@@ -160,9 +160,9 @@ root.render(<App />);
 ```
 {% endraw %}
 
-## Adding Ribbon Group
+## Defining Ribbon Groups
 
-To define a ribbon group under each tab, you can use the `RibbonGroupDirective` like below. The `orientation` property of ribbon group defines whether the collection of items will be rendered column-wise or row-wise.
+Each tab can contain one or more groups, which are defined using the `RibbonGroupDirective`. The `orientation` property specifies whether the items within the group are arranged in a row or a column.
 
 {% raw %}
 
@@ -191,9 +191,9 @@ root.render(<App />);
 ```
 {% endraw %}
 
-## Adding Ribbon Item
+## Defining Ribbon Items
 
-You can use the `RibbonCollectionDirective` to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `RibbonItemDirective` and the `type` property to specify the type of component to be rendered, like a button, a drop-down button, a combo box, and more.
+Use the `RibbonItemDirective` to add commands like buttons, combo boxes, and other controls to a group. Items are placed within a `RibbonCollectionDirective`. The `type` property of an item specifies which component to render.
 
 {% raw %}
 

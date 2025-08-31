@@ -1,0 +1,19 @@
+.e-grid .custom {
+  background-color: #f48fb1 !important;/* csslint allow: important */
+  color: white;
+}
+
+.e-grid .custom {
+  background-color: #fce4ec;
+  color: white;
+}
+
+.doctor-name {
+  margin-bottom: 5px;
+}
+
+.doctor-designation {
+  font-size: 12px;
+  color: #7f8c8d;
+  font-weight: normal;
+}

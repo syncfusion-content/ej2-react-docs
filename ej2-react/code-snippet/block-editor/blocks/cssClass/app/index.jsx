@@ -7,7 +7,8 @@ import { BlockEditorComponent } from '@syncfusion/ej2-react-blockeditor';
 function App() {
   const blocksData = [
     {
-      type: 'Heading1',
+      type: 'Heading',
+      props: { level: 1},
       content: [
         {
           type: 'Text',

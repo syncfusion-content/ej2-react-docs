@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Header in React Chat UI component
 
-## Show or hide header
+## Header visibility
 
-You can use [showHeader](../api/chat-ui#showheader) property to enable or disable the chat header. It contains the following options `headerText` and `headerIconCss`. 
+The [showHeader](https://ej2.syncfusion.com/react/documentation/api/chat-ui/#showheader) property enables or disables the Chat header. When enabled, the header can display a title and an icon using the [headerText](../api/chat-ui/#headertext) and [headerIconCss](../api/chat-ui/#headericoncss) properties, respectively.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ You can use [showHeader](../api/chat-ui#showheader) property to enable or disabl
 
 ### Setting header text
 
-You can use the [headerText](../api/chat-ui#headertext) property to display the text that appears in the header, which indicates the current username or the group name providing the context for the conversation.
+The [headerText](https://ej2.syncfusion.com/react/documentation/api/chat-ui/#headertext) property sets the title displayed in the header, typically used for a username or group name to provide context for the conversation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ You can use the [headerText](../api/chat-ui#headertext) property to display the 
 
 ### Setting header icon CSS
 
-You can use the [headerIconCss](../api/chat-ui#headericoncss) property to customize the styling of the header icon.
+You can use the [headerIconCss](https://ej2.syncfusion.com/react/documentation/api/chat-ui/#headericoncss) property to customize the styling of the header icon.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,15 +57,15 @@ You can use the [headerIconCss](../api/chat-ui#headericoncss) property to custom
 
 ## Toolbar
 
-You can render the Chat UI toolbar items by using the items property in the [headerToolbar](../api/chat-ui#headertoolbar).
+The Chat toolbar can be configured by defining a collection of items in the [headerToolbar](https://ej2.syncfusion.com/react/documentation/api/chat-ui/#headertoolbar) property. Each item in the collection configures a specific toolbar element.
 
-### Setting items
+### Configuring toolbar items
 
-Items can be constructed with the following built-in command types or item template.
+Toolbar items can be configured with the following properties to control their appearance and behavior.
 
-#### Adding icon CSS
+#### Icon
 
-You can customize the header toolbar icons by using the `iconCss` property.
+The [iconCss](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarItemModel/#iconcss) property customizes a toolbar item by applying a specific icon class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -78,11 +78,9 @@ You can customize the header toolbar icons by using the `iconCss` property.
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/header/iconCss" %}
 
-#### Setting item type
+#### Item type
 
-You can change the header toolbar item type by using the `type` property. The `type` supports three types of items such as `Button`, `Separator` and `Input`. By default, the type is `Button`.
-
-In the following example, header toolbar item type is set as `Button`.
+The [type](../api/chat-ui/toolbarItemModel/#type) property defines the type of toolbar item. Supported values are `Button`, `Separator`, and `Input`, with `Button` being the default.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -95,9 +93,9 @@ In the following example, header toolbar item type is set as `Button`.
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/header/itemType" %}
 
-#### Setting text
+#### Text
 
-You can use the `text` property to set the text for the header toolbar item.
+The [text](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarItemModel/#text) property sets the display text for a toolbar item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -110,9 +108,9 @@ You can use the `text` property to set the text for the header toolbar item.
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/header/text" %}
 
-#### Show or hide toolbar item
+#### Visibility
 
-You can use the `visible` property to specify whether to show or hide the header toolbar item. By default, its value is `true`.
+The [visible](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarItemModel/#visible) property shows or hides a toolbar item. The default value is `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,9 +123,9 @@ You can use the `visible` property to specify whether to show or hide the header
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/header/visible" %}
 
-#### Setting disabled
+#### Disabled state
 
-You can use the `disabled` property to disable the header toolbar item. By default, its value is `false`.
+The [disabled](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarItemModel/#disabled) property disables a toolbar item. The default value is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -140,9 +138,9 @@ You can use the `disabled` property to disable the header toolbar item. By defau
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/header/disable" %}
 
-#### Setting tooltip text
+#### Tooltip
 
-You can use the `tooltip` property to specify the tooltip text to be displayed on hovering the header toolbar item.
+The [tooltip](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarItemModel/#tooltip) property sets the text that appears when a user hovers over a toolbar item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -157,7 +155,7 @@ You can use the `tooltip` property to specify the tooltip text to be displayed o
 
 #### Setting CSS Class
 
-You can use the `cssClass` property to customize the header toolbar item.
+The [cssClass](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarItemModel/#cssclass) property applies one or more custom CSS classes to a toolbar item for advanced styling.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -173,11 +171,11 @@ You can use the `cssClass` property to customize the header toolbar item.
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/header/cssClass" %}
 
-#### Setting alignment
+#### Alignment
 
-You can change the alignment of toolbar item by using the `align` property. It supports three types of alignments such as `Left`, `Center` and `Right`. By default, the value is `Left`.
+The [align](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarItemModel/#align) property positions a toolbar item. Supported values are `Left`, `Center`, and `Right`, with `Left` being the default.
 
-In the following example, toolbar item type is set with `Right`.
+In the following example, the `align` property for the toolbar item is set to `Right`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -256,7 +254,7 @@ In this case, the user can switch between the two Toolbar items using the Tab an
 
 #### Setting template
 
-You can use the `template` tag directive to add custom header toolbar item in the Chat UI component.
+You can use the [template](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarItemModel/#template) property to add custom toolbar item in the Chat UI component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -272,9 +270,9 @@ You can use the `template` tag directive to add custom header toolbar item in th
 
 {% previewsample "page.domainurl/code-snippet/chat-ui/header/template" %}
 
-### Item clicked
+### Click event
 
-You can define `itemClicked` event in the `headerToolbar` property which will be triggered when the header toolbar item is clicked.
+The [itemClicked](https://ej2.syncfusion.com/react/documentation/api/chat-ui/toolbarSettings/#itemclicked) event, defined within the `toolbarSettings` property, triggers when a user clicks a toolbar item. It returns the item that was clicked.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

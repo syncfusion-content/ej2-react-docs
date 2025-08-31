@@ -8,16 +8,16 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in React AI AssistView component
+# Getting Started with the React AI AssistView Component
 
 This section explains how to create a simple **AI AssistView** component and configure its available functionalities in React.
 
-To get started quickly with React AI AssistView component, you can check out this video:
+To get started quickly with the React AI AssistView component, you can check out this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=rwXanLEHdFU" %}
 
 ## Dependencies
 
-The list of dependencies required to use the `AI AssistView` component in your application is given as follows:
+The following list of dependencies is required to use the React `AI AssistView` component in your application. The component is distributed as part of the `@syncfusion/ej2-react-interactive-chat` package.
 
 ```javascript
 |-- @syncfusion/ej2-react-interactive-chat
@@ -29,7 +29,7 @@ The list of dependencies required to use the `AI AssistView` component in your a
 
 ## Setup for Local Development
 
-To set-up a React application, choose any of the following ways. The best and easiest way is to use the [create-react-app](https://github.com/facebook/create-react-app). It sets up your development environment in JavaScript and improvise your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
+The recommended way to create a new React application is by using [create-react-app](https://github.com/facebook/create-react-app).This tool sets up a development environment with everything you need to build, test, and optimize your application for production. Refer to the [installation instructions](https://github.com/facebook/create-react-app#creating-an-app) of `create-react-app`.
 
 ```bash
 npx create-react-app my-app
@@ -45,7 +45,7 @@ cd my-app
 yarn start
 ```
 
-To set-up a React application in `TypeScript` environment, run the following command.
+To create a React application with `TypeScript` environment, run the following command.
 
 ```bash
 npx create-react-app my-app --template typescript
@@ -61,17 +61,17 @@ cd my-app
 npm start
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.
+All Syncfusion Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are available on the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.
 
-To install AI AssistView component, use the following command
+To install the AI AssistView component package, run the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-interactive-chat --save
 ```
 
-## Adding AI AssistView component
+## Adding the AI AssistView Component
 
 Now, you can start adding AI AssistView component in the application. For getting started, add the AI AssistView component by using `<AIAssistViewComponent>` tag directive in `src/App.tsx` file using following code. Now place the below AI AssistView code in the `src/App.tsx`.
 
@@ -92,9 +92,9 @@ function App() {
 ReactDOM.render(<App />, document.getElementById('aiAssistView'));
 ```
 
-## Adding CSS reference
+## Adding CSS References
 
-Import the AI AssistView component required CSS references as follows in `src/App.css`.
+To apply styling to the AI AssistView component, import the required CSS theme files into your `src/App.css` file. The following example uses the Material theme, but other themes like Bootstrap 5, Tailwind CSS, or Fluent are also available.
 
 ```css
 
@@ -108,9 +108,9 @@ Import the AI AssistView component required CSS references as follows in `src/Ap
 
 ```
 
-## Run the application
+## Run the Application
 
-After completing the configuration required to render a basic AI AssistView, run the following command to display the output in your default browser.
+With the configuration complete, run the application to see the AI AssistView component rendered in your browser.
 
 ```
 npm start
@@ -129,9 +129,14 @@ npm start
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/getting-started" %}
 
-## Configure suggestions and responses
+## Configure Suggestions and Asynchronous Responses
 
-You can use the [promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestions) property to add prompt suggestions and the [promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptrequest) event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
+The AI AssistView component can be configured to guide user interactions and provide dynamic content from an AI backend.
+
+*   **[promptSuggestions](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptsuggestions)**: Use this property to display a list of predefined suggestion chips that users can click to submit a prompt.
+*   **[promptRequest](https://ej2.syncfusion.com/react/documentation/api/ai-assistview/#promptrequest)**: This event is triggered when a user sends a prompt. You can use its event handler to make an asynchronous API call to an AI service and stream the response back to the component.
+
+The following example demonstrates how to define prompt suggestions and handle the `promptRequest` event to simulate fetching a response from a backend.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

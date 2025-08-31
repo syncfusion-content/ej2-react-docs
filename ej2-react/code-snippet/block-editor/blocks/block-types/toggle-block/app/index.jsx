@@ -8,13 +8,15 @@ import { ContentType } from '@syncfusion/ej2-blockeditor';
 function App() {
   const blocksData = [
     {
-      type: 'ToggleHeading1',
+      type: 'CollapsibleHeading',
       content: [
         {
           type: ContentType.Text,
           content: 'Collapsible Section'
         }
       ],
+      props:{
+      level: 1,
       isExpanded: true,
       children: [
         {
@@ -27,15 +29,17 @@ function App() {
           ]
         }
       ]
+    }
     },
     {
-      type: 'ToggleParagraph',
+      type: 'CollapsibleParagraph',
       content: [
         {
           type: ContentType.Text,
           content: 'Toggle paragraph section'
         }
       ],
+      props:{
       isExpanded: false,
       children: [
         {
@@ -48,6 +52,7 @@ function App() {
           ]
         }
       ]
+    }
     }
   ];
 

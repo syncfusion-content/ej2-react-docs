@@ -10,7 +10,11 @@ domainurl: ##DomainURL##
 
 # Load on-demand in React Chat UI component
 
-You can use the [loadOnDemand](../api/chat-ui#loadondemand) property to load messages dynamically when the scroll reaches the top of the message list improving performance and reducing load times, particularly in long conversations. This ensures a smooth user experience by only fetching messages as needed rather than loading the entire conversation at once.
+Load on-demand functionality allows messages to be loaded dynamically when users scroll to the top of the message list. This feature significantly improves application performance and reduces initial load times, especially beneficial for conversations with extensive message history. Instead of loading the entire conversation at once, messages are fetched progressively as needed, ensuring optimal user experience and resource utilization.
+
+## Enabling load on-demand
+
+Use the [loadOnDemand](https://ej2.syncfusion.com/react/documentation/api/chat-ui/#loadondemand) property to enable dynamic message loading. When enabled, the component triggers a loading event when the user scrolls to the top of the message list, allowing implementation of custom data fetching logic.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
