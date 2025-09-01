@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf export in React Treegrid component
+# PDF export in React Treegrid component
 
 PDF export allows exporting TreeGrid data to PDF document. You need to use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexport) method for exporting. To enable PDF export in the treegrid, set the [`allowPdfExport`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowpdfexport) as **true**.
 
@@ -41,4 +41,20 @@ PDF export provides an option to define datasource dynamically before exporting.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/pdfexport-cs11" %}
 
+## Exporting Custom Aggregates in Tree Grid
+
+The Tree Grid enables exporting custom aggregates, which summarize column data, to an Excel document using the `PdfAggregateQueryCellInfo` event.
+
+In the provided example, the `customAggregateFn` function computes the item count for a selected category, while the `PdfAggregateQueryCellInfo` event customizes the exported cell values in the Excel document.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/pdfexport-cs12/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/pdfexport-cs12/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/pdfexport-cs12" %}
 > You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.
