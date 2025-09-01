@@ -1,0 +1,235 @@
+
+import * as React from 'react';
+import { createRoot } from 'react-dom/client';
+import { TreeGridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, ColumnChooser, ToolbarItems, Inject } from '@syncfusion/ej2-react-treegrid';
+import { stackedData } from './data';
+import { TreeView, TreeViewComponent } from '@syncfusion/ej2-react-navigations';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+
+function App() {
+    const toolbar = ['ColumnChooser'];
+  const columnChooserSettings = { template: Template, headerTemplate: HeaderTemplate, footerTemplate: FooterTemplate }
+  function HeaderTemplate() {
+    return (
+      <div>
+        <span id="column-chooser-text" style={{ position: 'relative', left: '5px' }}>Column Options</span>
+      </div>
+    );
+  }
+
+  // Render TreeView in the column chooser's Content
+  function Template(props) {
+    const parentNodes = [
+      { id: 1, name: 'Order Details', hasChild: true, expanded: true },
+      { id: 2, name: 'Shipment Details', hasChild: true, expanded: true },
+      { id: 3, name: 'Price Details', hasChild: true, expanded: true },
+    ];
+    let treeData = [];
+
+    if (props.columns && props.columns.length) {
+      treeData = props.columns.map((column) => {
+        let parentId;
+        switch (column.field) {
+          case 'orderID':
+          case 'orderName':
+          case 'orderDate':
+            parentId = 1;
+            break;
+          case 'shipMentCategory':
+          case 'shippedDate':
+          case 'units':
+            parentId = 2;
+            break;
+          case 'unitPrice':
+          case 'price':
+
+            parentId = 3;
+            break;
+          default:
+            break;
+        }
+        return {
+          id: column.uid,
+          name: column.headerText,
+          pid: parentId,
+          isChecked: column.visible
+        };
+      });
+      const uniquePids = [];
+      treeData.forEach((item) => {
+        if (!uniquePids.includes(item.pid)) {
+          uniquePids.push(item.pid);
+        }
+      });
+      const filteredParents = parentNodes.filter((parent) => uniquePids.includes(parent.id));
+      treeData.push(...filteredParents);
+    } else {
+      treeData = [];
+    }
+
+    const fields = { dataSource: treeData, id: 'id', parentID: 'pid', text: 'name', hasChildren: 'hasChild' };
+
+
+    return (
+      <div>
+
+        {props.columns && props.columns.length ? (<TreeViewComponent fields={fields} cssClass="no-border" showCheckBox={true} nodeClicked={nodeCheck} keyPress={nodeCheck} ref={(treeview ) => { treeObj = treeview; }} />) : (<div className="no-record-text">No Matches Found</div>)}
+      </div>
+    );
+  }
+
+  function FooterTemplate() {
+    return (
+      <div id="columnChooserFooter">
+        <ButtonComponent onClick={columnChooserSubmit}>Apply</ButtonComponent>
+        <ButtonComponent onClick={columnChooserClose}>Close</ButtonComponent>
+      </div>
+    );
+  }
+
+  // Handle checking/unchecking nodes in the TreeView (column chooser)
+  function nodeCheck(args) {
+    let checkedNode = [args.node];
+    if (args.event.target.classList.contains('e-fullrow') || args.event.key == "Enter") {
+      let getNodeDetails = treeObj.getNode(args.node);
+      if (getNodeDetails.isChecked == 'true') {
+        treeObj.uncheckAll(checkedNode);
+      } else {
+        treeObj.checkAll(checkedNode);
+      }
+    }
+  }
+  function columnChooserClose() {
+    (treegridInstance.grid.columnChooserModule).hideDialog();
+  }
+
+  // Apply the column chooser selection
+  function columnChooserSubmit() {
+    const checkedElements = [];
+    const uncheckedElements = [];
+    var showColumns = treegridInstance.getVisibleColumns().filter(function (column) { return (column.showInColumnChooser === true); });
+    showColumns = showColumns.map(function (col) { return col.headerText; });
+    const treeItems = document.querySelectorAll('.e-list-item');
+
+    treeItems.forEach(item => {
+      const itemDetails = treeObj.getNode(item);
+      if (!itemDetails.hasChildren) {
+        if (item.getAttribute('aria-checked') === 'true') {
+          checkedElements.push(itemDetails.text);
+        } else {
+          uncheckedElements.push(itemDetails.text);
+        }
+      }
+    });
+    showColumns = showColumns.filter((col) => !uncheckedElements.includes(col));
+    checkedElements.forEach((item) => {
+      if (!showColumns.includes(item)) {
+        showColumns.push(item);
+      }
+    });
+    var columnsToUpdate = { visibleColumns: showColumns, hiddenColumns: uncheckedElements };
+    treegridInstance.grid.columnChooserModule.changeColumnVisibility(columnsToUpdate);
+  }
+  let treeObj;
+  let treegridInstance;
+  return (
+    <div className="control-pane">
+      <div className="control-section">
+        <TreeGridComponent
+          dataSource={stackedData}
+          id="TreeGrid"
+          ref={(treegrid ) => { treegridInstance = treegrid }}
+          treeColumnIndex={1}
+          childMapping="subtasks"
+          height="350"
+          allowPaging={true}
+          pageSettings={{ pageCount: 5 }}
+          showColumnChooser={true}
+          columnChooserSettings={columnChooserSettings}
+          toolbar={toolbar}
+          clipMode='EllipsisWithTooltip'
+        >
+          <ColumnsDirective>
+            <ColumnDirective
+              columns={[
+                {
+                  field: "orderID",
+                  headerText: "Order ID",
+                  width: 90,
+                  textAlign: "Right",
+                  showInColumnChooser: false,
+                },
+                {
+                  field: "orderName",
+                  headerText: "Order Name",
+                  width: 190,
+                  textAlign: "Left",
+                },
+                {
+                  field: "orderDate",
+                  headerText: "Order Date",
+                  width: 110,
+                  textAlign: "Right",
+                  format: "yMd",
+                },
+              ]}
+              headerText="Order Details"
+              textAlign="Center"
+            ></ColumnDirective>
+            <ColumnDirective
+              columns={[
+                {
+                  field: "shipMentCategory",
+                  headerText: "Shipment Category",
+                  width: 150,
+                  textAlign: "Left",
+                },
+                {
+                  field: "shippedDate",
+                  headerText: "Shipped Date",
+                  width: 120,
+                  textAlign: "Right",
+                  format: "yMd",
+                },
+                {
+                  field: "units",
+                  headerText: "Units",
+                  width: 80,
+                  textAlign: "Right",
+                },
+              ]}
+              headerText="Shipment Details"
+              textAlign="Center"
+            ></ColumnDirective>
+            <ColumnDirective
+              columns={[
+                {
+                  field: "unitPrice",
+                  headerText: "Price per unit",
+                  format: "C2",
+                  type: "number",
+                  textAlign: "Right",
+                  width: 120,
+                },
+                {
+                  field: "price",
+                  headerText: "Total Price",
+                  width: 115,
+                  format: "C",
+                  textAlign: "Right",
+                  type: "number",
+                },
+              ]}
+              headerText="Price Details"
+              textAlign="Center"
+            ></ColumnDirective>
+          </ColumnsDirective>
+          <Inject services={[Page, Toolbar, ColumnChooser,]} />
+        </TreeGridComponent>
+      </div>
+    </div>
+  );
+};
+export default App;
+
+
