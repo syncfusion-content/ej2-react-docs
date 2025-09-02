@@ -240,6 +240,44 @@ html, body {
 
 ```
 
+## Buttons inside Dialog content not triggering events (React 17+)
+
+In React 17 and later versions, event delegation behavior changed to bind events only to the root DOM node. This affects click events on buttons placed inside the Dialog content when rendered outside the root element.
+
+For more details on React 17 event delegation changes, see the [React 17 Release Notes](https://reactjs.org/blog/2020/10/20/react-v17.html#react-dom).
+
+**Solution:** Bind the Dialog to the React root element using the `target` property:
+
+```jsx
+<DialogComponent
+  id="parent-dialog"
+  target={"#root"}  // Bind to React root element
+  // Other properties...
+>
+  <button onClick={handleClick}>Click me</button>
+</DialogComponent>
+```
+Ensure your application setup correctly references the root element:
+
+In main entry file (e.g., main.jsx):
+
+```jsx
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+
+In html file (e.g., index.html):
+
+```html
+<div id="root"></div>
+```
+
+>Why this works: Setting the target to #root ensures the Dialog renders within the React root element, maintaining proper event binding in React 17+.
+
+
 ## Modal Dialog
 
 A [modal](https://ej2.syncfusion.com/react/documentation/api/dialog/#ismodal) shows an overlay behind the Dialog. So, the user should interact the Dialog compulsory before interacting with the remaining content in an application.
