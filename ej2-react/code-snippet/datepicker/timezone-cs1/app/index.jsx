@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 export default class App extends React.Component {
     render() {
-        return <DatePickerComponent id="datepicker" placeholder="Enter date" serverTimezoneOffset={5.5}/>;
+        return <DatePickerComponent id="datepicker" placeholder="Enter date" value= {new Date()} serverTimezoneOffset={5.5}/>;
     }
 }
 ReactDOM.render(<App />, document.getElementById('element'));
