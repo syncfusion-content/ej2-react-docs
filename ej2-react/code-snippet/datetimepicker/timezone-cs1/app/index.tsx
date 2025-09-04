@@ -6,7 +6,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 function App() {
-    return <DateTimePickerComponent id="datetimepicker" placeholder="Select a date and time" serverTimezoneOffset={5.5}/>;
+    return <DateTimePickerComponent id="datetimepicker" placeholder="Select a date and time" value={new Date()} serverTimezoneOffset={5.5}/>;
 }
 ReactDOM.render(<App />, document.getElementById('element'));
 
