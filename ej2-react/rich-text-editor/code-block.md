@@ -64,7 +64,7 @@ In this example:
 
 ## Integrating syntax highlighters
 
-To enhance code block readability, integrate a third-party syntax highlighter like [Prism.js](https://prismjs.com/) or [Highlight.js](https://highlightjs.org/), which supports numerous languages and customizable themes. Although live code block highlighting (real-time syntax highlighting during editing) is not possible in the Rich Text Editor, The highlighter can apply color-coded formatting to code blocks when the content is displayed on the frontend, such as in blog posts, website content, or preview mode. This ensures a polished presentation for end users.
+To enhance code block readability, integrate third-party syntax highlighters like [Prism.js](https://prismjs.com/) or [Highlight.js](https://highlightjs.org/), which supports numerous languages and customizable themes. Although live code block highlighting (real-time syntax highlighting during editing) is not possible in the Rich Text Editor, The highlighter can apply color-coded formatting to code blocks when the content is displayed on the frontend, such as in blog posts, website content, or preview mode. This ensures a polished presentation for end users.
 
 ## Tips for editing around code blocks
 
@@ -76,7 +76,7 @@ Editing content around code blocks requires care to preserve code integrity and 
 * **Changing Languages**: When switching the language of a code block via the dropdown, verify that the code aligns with the new language for accurate syntax highlighting in the rendered output.
 * **Previewing Content**: Since live syntax highlighting is not available during editing, use the editor’s preview mode to verify how code blocks render with syntax highlighting before publishing.
 
-## Enabling tab-based line indentation in code blocks
+## Enabling tab-based indentation
 
 The Code Block feature supports tab-based indentation to align code properly, crucial for languages like Python where indentation is syntactically significant. The Rich Text Editor does not provide a specific property to configure the indentation character, but indentation can be enabled using the editor’s default behavior for the Tab key, toolbar commands, or custom event handling.
 

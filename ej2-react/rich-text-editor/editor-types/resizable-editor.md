@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resizable Editor in React Rich Text Editor component | Syncfusion
-description: Learn here all about Resizable Editor in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+description: Learn how to enable and customize the Resizable Editor in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Resizable Editor
 platform: ej2-react
 documentation: ug
@@ -14,7 +14,7 @@ The resizable editor feature allows dynamic resizing of the editor. Enable or di
 
 > To use the Resizable feature, inject resize module using the `RichTextEditor.Inject(Resize)`.
 
-The following sample demonstrates the resizable feature.
+The following sample demonstrates enabling the resizable feature:
 
 `[Class-component]`
 

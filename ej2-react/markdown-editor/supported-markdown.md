@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion React Markdown Editor supports various Markdown syntax commands for text formatting, lists, links, tables, and more. This guide provides an overview of all supported commands along with their syntax and usage.
 
-## Markdown Syntax Guide for React Markdown Editor
+## Markdown syntax guide for react markdown editor
 
 The following table lists the Markdown commands supported by the Syncfusion React Markdown Editor:
 

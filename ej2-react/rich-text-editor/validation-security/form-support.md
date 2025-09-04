@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form support in React Rich text editor component | Syncfusion
-description: Learn here all about Form support in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
-control: Form support 
+title: Form Support in React Rich Text Editor component | Syncfusion
+description: Learn how to Integrate and Validate the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: Form Support
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form support in React Rich text editor component
+# Form Support in React Rich Text Editor Component
 
 The following sample demonstrates how to get the Rich Text Editor value in button click.
 

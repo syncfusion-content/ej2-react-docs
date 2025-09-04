@@ -68,6 +68,9 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
       }
   }
   public rendereComplete(): void {
+      if (!this.rteObj || !this.rteObj.contentModule) {
+          return;
+      }
       this.textArea = this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement;
       this.textArea.addEventListener('keyup', (e: KeyboardEventArgs) => {
           this.markdownConversion();

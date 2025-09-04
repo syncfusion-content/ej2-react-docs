@@ -78,6 +78,9 @@ class App extends React.Component<{},{}> {
         }
     }
     public rendereComplete() {
+        if (!this.rteObj) {
+            return;
+        }
         this.textArea = this.rteObj.contentModule.getEditPanel() as HTMLTextAreaElement;
         this.textArea.addEventListener('keyup', (e: KeyboardEventArgs) => {
             this.markdownConversion();

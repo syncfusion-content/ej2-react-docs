@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Quick toolbars in React Rich text editor component | Syncfusion
-description: Learn here all about Quick toolbars in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Quick Toolbars in React Rich Text Editor component | Syncfusion
+description: Learn how to customize the Quick toolbars in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Quick toolbars
 platform: ej2-react
 documentation: ug
@@ -16,7 +16,7 @@ The Rich Text Editor has quick toolbars that act as context-menus, appearing whe
 
 ## Image quick toolbar
 
-You can customize the quick toolbar options for images using the `image` property within the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/). The Rich Text Editor provides essential tools such as 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText', and 'Dimension' allowing seamless image management and editing directly within the content.
+Customize the image quick toolbar using the `image` property in [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/). The Rich Text Editor provides essential tools such as 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText', and 'Dimension' allowing seamless image management and editing directly within the content.
 
 By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/) property, you can enhance the editor’s functionality, ensuring a user-friendly experience for efficiently handling image elements.
 
@@ -86,7 +86,7 @@ The table quick toolbar opens when you click anywhere within a table. Customize 
 
 The quick toolbar appears when clicking on a table, providing easy access to table-related commands. You can customize the quick toolbar by adding or removing tools using the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#quickToolbarSettings) property.
 
-The following sample demonstrates the customiztion of table quick toolbar.
+The following example demonstrates how to customize the table quick toolbar using the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings) property.
 
 `[Class-component]`
 
@@ -181,7 +181,7 @@ The video quick toolbar appears when you click on a video element. You can custo
 
 The Rich Text Editor allows you to tailor the video quick toolbar with essential tools such as "VideoReplace", "VideoAlign", "VideoRemove", "VideoLayoutOption", and "VideoDimension", enabling seamless management of embedded videos.
 
-By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettingsModel/#video) property, you enhance the editor’s capabilities, ensuring a user-friendly experience for editing and customizing video elements effortlessly.
+By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettingsModel/#video) property, you enhance the editor's capabilities, ensuring a user-friendly experience for editing and customizing video elements effortlessly.
 
 `[Class-component]`
 

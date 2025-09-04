@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Images in React Rich Text Editor component | Syncfusion
-description: Learn here all about Images in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+title:  Insert Images in React Rich Text Editor component | Syncfusion
+description: Learn how to insert, manage, and customize images in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Images 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Images in React Rich Text Editor Component
+#  Insert Images in the React Rich Text Editor Component
 
-Rich Text Editor allows to insert images in your content from online sources as well as local computer. For inserting an image to the Rich Text Editor, the following list of options have been provided in the [insertImageSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/)
+The Rich Text Editor allows to insert images in your content from online sources as well as local computer. For inserting an image to the Rich Text Editor, the following list of options have been provided in the [insertImageSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/)
 
-## Configuring image tool in the toolbar
+## Configuring the image toolbar item
 
-You can add an `Image` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+The image feature is enabled by adding the `Image` item to the toolbar using the [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
 > To use Image feature, inject image module using the `<Inject services={[Image]} />`.
 
-To configure the `Image` toolbar item, refer to the below code.
+The following example demonstrates configuring the `Image` toolbar item:
 
 `[Class-component]`
 
@@ -50,10 +50,10 @@ To configure the `Image` toolbar item, refer to the below code.
 
 The images can be saved as `Blob` or `Base64` URL by using the [insertImageSettings.saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#saveformat) property, which is of enum type, and the generated URL will be set to the `src` attribute of the `<source>` tag.
 
-```javascript
-    <img src="blob:http://http.example.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" >
+```html
+    <img src="blob:http://http.example.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879">
 
-    <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" >
+    <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA">
 ```
 
 The code snippet below illustrates the configuration of the [insertImageSettings.saveFormat](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#saveformat) property in the Rich Text Editor.
@@ -89,11 +89,11 @@ The code snippet below illustrates the configuration of the [insertImageSettings
 
 ## Inserting images from web URLs
 
-To insert an image from an online source, click the `Image` tool in the toolbar. By default, this tool opens a dialog box with an input field where you can provide the image URL from the web to insert the image.
+The `Image` toolbar item opens a dialog with an input field for inserting images from a web URL. The provided URL is set as the `src` attribute of the `<img>` tag.
 
 ## Uploading images from local machine
 
-To insert an image from your local machine, click the `Image` tool in the toolbar. By default, this tool opens a dialog box where you can browse and select an image to insert from your local machine.
+The image dialog includes a `browse` option to select images from a local machine, which are then inserted into the editor's content.
 
 ## File manager integration for image insertion
 
@@ -108,9 +108,9 @@ To integrate the file manager into the Rich Text Editor, follow these steps:
 
 ## Maximum file size restriction
 
-You can restrict the image uploaded from the local machine when the uploaded image file size is greater than the allowed size by using the [maxFileSize](https://helpej2.syncfusion.com/documentation/api/rich-text-editor/imageSettingsModel/#maxfilesize) property. By default, the maximum file size is 30000000 bytes. You can configure this size as follows.
+You can restrict the image uploaded from the local machine when the uploaded image file size is greater than the allowed size by using the [maxFileSize](https://helpej2.syncfusion.com/documentation/api/rich-text-editor/imageSettingsModel/#maxfilesize) property. By default, the maximum file size is 30000000 bytes.
 
-In the following illustration, the image size has been validated before uploading, and it is determined whether the image has been uploaded or not.
+In the following example, the image size has been validated before uploading and determined whether the image has been uploaded or not.
 
 `[Class-component]`
 
@@ -169,7 +169,7 @@ export default App;
 
 ```
 
-## Saving images to server
+## Saving images to the server
 
 Upload the selected image to a specified destination using the controller action specified in [insertImageSettings.saveUrl](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#saveurl). Ensure to map this method name appropriately and provide the required destination path through the [insertImageSettings.path](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#path) properties.
 
@@ -264,7 +264,7 @@ public class HomeController : Controller
 
 You can use the [insertImageSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#insertimagesettings) property, to specify the server handler to upload the selected image. Then by binding the [imageUploadSuccess](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#imageuploadsuccessss) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
 
-Refer the section [Rename images before inserting it in Rich Text Editor](../how-to/tailwind-preflight) for code snippets and examples.
+Refer the section [Rename images before inserting it in Rich Text Editor](../how-to/rename-images-in-server) for code snippets and examples.
 
 ### Secure image upload with authentication
 
@@ -306,13 +306,13 @@ public void SaveFiles(IList<IFormFile> UploadFiles)
 
 ## Image replacement functionality
 
-Once a image file has been inserted, you can replace it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `imageReplace` option. You can replace the image file either by using the web URL or the browse option in the image dialog.
+The [quickToolbarSettings.imageReplace](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) option allows replacing an inserted image using the quick toolbar, using a web URL or the browse option in the image dialog.
 
 ## Deleting image
 
-To remove an image from the Rich Text Editor content, select the image and click `Remove` tool from the quick toolbar. It will delete the image from the Rich Text Editor content as well as from the service location if the `removeUrl` is given.
+To delete an image, select it and click the `Remove` button in the quick toolbar. This removes the image from the editor and, if configured, from the server using [`insertImageSettings.removeUrl`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#removeurl).
 
-Once you select the image from the local machine, the URL for the image will be generate. From there, you can remove the image from the service location by clicking the cross icon.
+Once you select the image from the local machine, the URL for the image will be generated. You can remove the image from the service location by clicking the cross icon in the audio dialog.
 
 ![Rich Text Editor Image delete](../images/image-del.png)
 
@@ -344,15 +344,15 @@ The following sample explains, how to configure the `removeUrl` to remove a save
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs33" %}
 
-## Deleting Images from Server Using Keyboard and Quick Toolbar Actions
+## Deleting images from server using keyboard and quick toolbar actions
 
 In the Rich Text Editor, deleting images using the `Delete` or `Backspace` keys, or the Quick Toolbar's `Remove` button, removes the image from the editor content not from the server.
 
 This behavior is intentional, allowing undo/redo operations to function properly without breaking references to previously uploaded images.
 
-To explicitly remove images from the server, use the `afterImageDelete` event. This event is triggered after an image is removed from the content and provides the src URL of the image, which can be used to initiate a request to your server for deleting the corresponding file.
+To explicitly remove images from the server, use the [afterImageDelete](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#afterimagedelete) event. This event is triggered after an image is removed from the content and provides the src URL of the image, which can be used to initiate a request to your server for deleting the corresponding file.
 
-The following sample demonstrates how to use the afterImageDelete event in Rich Text Editor to delete images from the server after they are removed from the editor content:
+The following sample demonstrates how to use the `afterImageDelete` event in Rich Text Editor to delete images from the server after they are removed from the editor content:
 
 `[Class-component]`
 
@@ -466,18 +466,18 @@ function App() {
 
 ## Adjusting image dimensions
 
-Sets the default width and height of the image when it is inserted in the Rich Text Editor using [width](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#width) and [height](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#height) of the [insertImageSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/) property.
+The [insertImageSettings.width](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#width) and [insertImageSettings.height](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#height) of the [insertImageSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/) properties set default dimensions for inserted images.
 
-Through the quick toolbar, change the width and height using `Change Size` option. Once you click, the Image Size dialog box will open as follows. In that you can specify the width and height of the image in pixel.
+The quick toolbar's `Change Size` option opens a dialog to adjust width and height in pixels.
 
 ![Rich Text Editor Image dimension](../images/image-size.png)
 
 ## Adding captions and Alt text
 
-Image caption and alternative text can be specified for the inserted image in the Rich Text Editor through the [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#quickToolbarSettings) property. It has following two options,
+The [quickToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#quickToolbarSettings) property enables adding captions and alt text:
 
 * Image Caption
-* Alternative Text.
+* Alternative Text
 
 Through the Alternative Text option, set the alternative text for the image, when the image is not upload successfully into the Rich Text Editor.
 
@@ -514,19 +514,19 @@ Sets the default display for an image when it is inserted in the Rich Text Edito
 
 ## Hyperlinking images
 
-The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, remove, edit and open link will be added to the quick toolbar of image. For further details about link, see the [`link documentation`](./link) documentation.
+Images can serve as hyperlinks. The quick toolbar provides options to edit, remove, or open the link. For further details about link, see the [link documentation](../link) documentation.
 
 ![Rich Text Editor image with link](../images/image-link.png)
 
 ## Image resizing
 
-Rich Text Editor has a built-in image inserting support.  The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio.
+Rich Text Editor has a built-in image inserting support. The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio for consistent scaling.
 
 ![Rich Text Editor image resize](../images/image-resize.png)
 
 ## Configuring allowed image types
 
-You can allow the specific images alone to be uploaded using the the allowedTypes property. By default, the Rich Text Editor allows the JPG, JPEG, and PNG formats. You can configure this formats as follows.
+The [insertImageSettings.allowedTypes](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/imageSettingsModel/#allowedtypes) property restricts uploaded image formats. By default, the Rich Text Editor allows the JPG, JPEG, and PNG formats. You can configure this formats as follows.
 
 ```ts
     insertImageSettings: {

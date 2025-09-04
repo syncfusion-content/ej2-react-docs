@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Feature modules with React Rich text editor component | Syncfusion
-description:  Checkout and learn about feature module with React Rich text editor component of Syncfusion Essential JS 2 and more details.
+title: Feature Modules with React Rich Text Editor component | Syncfusion
+description:  Learn about feature modules in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more details.
 control: Modules
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Module in React Rich Text Editor Component
+# Module in React Rich Text Editor
 
-The React Rich Text Editor component follows a modular architecture, enabling users to include or exclude features as needed to ensure optimal performance and customization.
+The React Rich Text Editor employs a modular architecture, allowing selective inclusion of features to optimize performance and customize functionality. This approach reduces bundle size and enhances flexibility for developers adapting the editor to specific use cases.
 
-## What is a module in React Rich Text Editor?
+## What are modules in React Rich Text Editor?
 
-In the React Rich Text Editor, a module refers to a self-contained feature or functionality that can be selectively enabled or disabled. These modules are provided as part of the @syncfusion/ej2-react-richtexteditor package and can be injected to extend the editor's capabilities.
+Modules in the React Rich Text Editor are self-contained features that can be enabled or disabled based on application requirements. These modules,  @syncfusion/ej2-react-richtexteditor package, can be injected to extend and enhance the editor's functionality.
 
 For example, modules such as `Toolbar`, `Link`, `Image`, `HtmlEditor`, and `QuickToolbar` enable specific tools and behavior in the Rich Text Editor interface.
 
 ## How to import and inject modules
 
-To use a module in the React Rich Text Editor, you must:
+To utilize a module, in the React Rich Text Editor, you must:
 
 * Import the required module from the Syncfusion package.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Markdown to HTML preview in React Markdown Editor component | Syncfusion
-description: Learn here all about Markdown to HTML preview in Syncfusion React Markdown Editor component of Syncfusion Essential JS 2 and more.
-control: Markdown to HTML preview
+title: Markdown Preview in React Markdown Editor component | Syncfusion
+description: Learn how to enable real-time Markdown-to-HTML preview in the Syncfusion React Markdown Editor component of Syncfusion Essential JS 2 and more.
+control: Markdown Preview
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Markdown to HTML preview in React Markdown Editor Component
+# Markdown Preview in React Markdown Editor Component
 
 The Markdown Editor provides an instant preview of Markdown changes, allowing users to see the formatted output while typing or editing text. This enhances the editing experience by enabling real-time visualization of Markdown formatting.
 

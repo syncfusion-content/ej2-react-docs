@@ -54,10 +54,10 @@ function App() {
   function onResizing() {
     rteObj.refreshUI();
   }
-  function updateValue() {
-    srcArea.innerHTML = Marked(
-      rteObj.contentModule.getEditPanel().value
-    );
+  async function updateValue() {
+    if (rteObj?.contentModule) {
+      srcArea.innerHTML = await Marked.parse(rteObj.contentModule.getEditPanel().value);
+    }
   }
   function updateOrientation() {
     if (Browser.isDevice) {

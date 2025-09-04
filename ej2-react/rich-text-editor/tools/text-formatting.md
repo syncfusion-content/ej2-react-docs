@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text formatting and Structure in React Rich text editor | Syncfusion
+title: Text Formatting and Structure in React Rich text editor | Syncfusion
 description: Learn here all about Text formatting and Structure in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
 control: Text formatting and Structure
 platform: ej2-react
@@ -10,13 +10,15 @@ domainurl: ##DomainURL##
 
 # Text Formatting and Structure in the React Rich Text Editor Component
 
+The React Rich Text Editor provides a comprehensive set of tools to format and structure text, enabling users to create professional, well-organized content. This guide details the key styling features and their configuration options.
+
 ## Basic text styling
 
-The Rich Text Editor's basic styles feature provides Essential<sup style="font-size:70%">&reg;</sup> formatting options, including bold, italic, underline, strikethrough, subscript, superscript, and case changes. These fundamental tools enable users to enhance and customize their text effortlessly. By leveraging these options, users can ensure their content is both visually appealing and well-structured.
+The Rich Text Editor offers essential text formatting options, including bold, italic, underline, strikethrough, subscript, superscript, inline code, and case conversion. These tools allow users to enhance text appearance and structure effortlessly, ensuring visually appealing and readable content.
 
 ### Available Text Styles
 
-The table below lists the available text styles in the Rich Text Editor's toolbar.
+The table below lists the available text styles in the Rich Text Editor's toolbar, along with their initialization and HTML output.
 
 | Name | Icons | Summary | Initialization |
 |----------------|---------|---------|------------------------------------------|
@@ -30,7 +32,7 @@ The table below lists the available text styles in the Rich Text Editor's toolba
 | LowerCase | ![LowerCase icon](../images/lower-case.png) |  Converts text to lowercase |toolbarSettings: { items: ['LowerCase']}|
 | UpperCase | ![UpperCase icon](../images/upper-case.png) | Converts text to uppercase |toolbarSettings: { items: ['UpperCase’']}|
 
-Please refer to the sample below to add these basic text styling options in the Rich Text Editor.
+Refer to the sample below to configure these basic text styling options in the Rich Text Editor.
 
 `[Class-component]`
 
@@ -64,7 +66,7 @@ The Rich Text Editor offers various text alignment options, including left, cent
 
 > **Important Note:** Text alignment is applied to the entire block element containing the cursor or selected text, not just to the selected text itself. When you apply an alignment, it affects the whole paragraph or block, even if you've only selected a portion of the text.
 
-Here are the available alignment options:
+The available alignment options are:
 
 * Align Left:
 To left-align your text, place the cursor in the desired paragraph or select any text within it, then click the `Align Left` icon in the toolbar. This will align the entire paragraph with the left margin.
@@ -78,7 +80,7 @@ To right-align your text, place the cursor in the desired paragraph or select an
 * Align Justify:
 To fully justify your text, place the cursor in the desired paragraph or select any text within it, then click the `Align Justify` icon in the toolbar. This will distribute the entire paragraph evenly across the line, aligning it with both the left and right margins.
 
-Please refer to the sample and code snippets below to add these alignment options in the Rich Text Editor.
+Refer to the sample and code snippets below to configure these alignment options in the Rich Text Editor.
 
 `[Class-component]`
 
@@ -106,7 +108,7 @@ Please refer to the sample and code snippets below to add these alignment option
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/text-alignments-cs2" %}
 
-## Number and bullet format list
+## Lists and formatting
 
 List formatting in the Rich Text Editor allows users to organize content into structured lists, enhancing readability and visual presentation. The component supports two main types of lists:
 
@@ -115,7 +117,7 @@ List formatting in the Rich Text Editor allows users to organize content into st
 
 ### Ordered lists
 
-Ordered lists present items in a specific sequence, with each item preceded by a number or letter. The Rich Text Editor provides two ways to create and manage ordered lists:
+Ordered lists display items in a specific sequence, with each item preceded by a number or letter. The Rich Text Editor provides two ways to create and manage ordered lists:
 
 #### Using the ordered list tool
 
@@ -137,7 +139,7 @@ For more detailed control over the numbering style, use the `numberFormatList` d
 
 You can customize the available number formats using the [numberFormatList](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#numberformatlist) property of the Rich Text Editor.
 
-The following example demonstrates how to customize the number format lists in the Rich Text Editor:
+The following example demonstrates how to configure both ordered and unordered list formats in the Rich Text Editor.
 
 `[Class-component]`
 
@@ -261,7 +263,7 @@ Below is an example of how to configure the Checklist in the Rich Text Editor:
 
 The Rich Text Editor allows you to set indentation for text blocks such as paragraphs, headings, or lists. This feature helps you visually organize and structure your content, making it easier to read and understand.
 
-The Rich Text Editor allows you to configure two types of indentation tools, `Indent` and `Outdent` tool  in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+The Rich Text Editor allows you to configure two types of indentation tools, `Indent` and `Outdent` tool  in the Rich Text Editor toolbar using the [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
 | Options | Description |
 |----------------|---------|
@@ -270,8 +272,8 @@ The Rich Text Editor allows you to configure two types of indentation tools, `In
 
 To adjust the text indentation:
 
-1. Select the desired text or paragraph.
-2. Click the Indent or Outdent button in the toolbar.
+1. Select the text or paragraph.
+2. Click the `Indent` or `Outdent` button in the toolbar.
 3. The indentation of the selected text will be modified accordingly.
 
 To configure the `Indent` and `Outdent` toolbar item, refer to the below code.
@@ -486,11 +488,11 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 
 ## Format painter
 
-The format painter tool enables users to replicate formatting from one text segment and apply it to another. It can be accessed through the toolbar or keyboard shortcuts, allowing for the transfer of formatting styles from individual words to entire paragraphs. Customization options for the format painter are available through the [formatPainterSettings](../api/rich-text-editor/formatPainterSettings/) property.
+The Format Painter tool enables users to replicate formatting from one text segment and apply it to another. It can be accessed through the toolbar or keyboard shortcuts, allowing for the transfer of formatting styles from individual words to entire paragraphs. Customization options for the format painter are available through the [formatPainterSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#formatpaintersettings) property.
 
 ### Configuring format painter tool in the toolbar
 
-You can add the `FormatPainter` tool in the Rich Text Editor using the `toolbarSettings` [items](../api/rich-text-editor/toolbarSettings/#items) property.
+You can add the `FormatPainter` tool in the Rich Text Editor using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarsettings) property.
 
 > To use Format Painter feature, inject Format Painter module using the `<Inject services={[FormatPainter]} />`.
 
@@ -528,9 +530,9 @@ The following code example shows how to add the format painter tool in the Rich 
 
 You can customize the format painter tool in the Rich Text Editor using the [formatPainterSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/formatPainterSettings/) property.
 
-The [allowedFormats](../api/rich-text-editor/formatPainterSettings/#allowedformats) property helps you to specify tag names that allow the formats to be copied from the selected text. For instance, you can include formats from the selected text using tags like `p` `h1` `h2` `h3` `div` `ul` `ol` `li` `span` `strong` `em` `code`. The following example demonstrates how to customize this functionality.
+The [allowedFormats](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/formatPainterSettingsModel/#allowedformats) property helps you to specify tag names that allow the formats to be copied from the selected text. For instance, you can include formats from the selected text using tags like `p` `h1` `h2` `h3` `div` `ul` `ol` `li` `span` `strong` `em` `code`. The following example demonstrates how to customize this functionality.
 
-Similarly, with the [deniedFormats](../api/rich-text-editor/formatPainterSettings/#deniedformats) property, you can utilize the selectors to prevent specific formats from being pasted onto the selected text. The table below illustrates the selectors and their respective usage.
+Similarly, with the [deniedFormats](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/formatPainterSettingsModel/#deniedformats) property, you can utilize the selectors to prevent specific formats from being pasted onto the selected text. The table below illustrates the selectors and their respective usage.
 
 | Type | Description        | Selector                                                | Usage                                                                  |
 |------|--------------------|---------------------------------------------------------|------------------------------------------------------------------------|
@@ -540,7 +542,7 @@ Similarly, with the [deniedFormats](../api/rich-text-editor/formatPainterSetting
 
 Using the `deniedFormats` property following styles are denied copying from the selected text such as `h3(e-rte-block-blue-text){background-color,padding}[title]; li{color}; span(e-inline-text-highlight)[title]; strong{color}(e-rte-strong-bg)`.
 
-Below is an example illustrating how to define the `allowedFormats` and `deniedFormats` settings for the Format Painter in the Rich Text Editor.
+The following example illustrates how to configure `allowedFormats` and `deniedFormats`.
 
 `[Class-component]`
 
@@ -588,7 +590,7 @@ This feature is particularly useful when you need to:
 
 ### Configuring clear format
 
-To enable the Clear Format feature in your Rich Text Editor, you need to add it to the toolbar items. Follow these steps:
+To enable the `ClearFormat` feature in your Rich Text Editor, you need to add it to the toolbar items. Follow these steps:
 
 1. Open your component file where you've implemented the Rich Text Editor.
 2. Locate the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarsettings) property in your Rich Text Editor configuration.
