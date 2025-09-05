@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Built-in Tools in React Rich Text Editor Component
 
-By default, the Angular Rich Text Editor displays the following toolbar items:
+The React Rich Text Editor's toolbar provide tools for formatting, styling, and managing content, enhancing user productivity in a Rich Text Editor.
+
+By default, the React Rich Text Editor displays the following toolbar items:
 
 > `Bold` , `Italic` , `Underline` , `|` , `Formats` , `Alignments` , `Blockquote`, `OrderedList` , `UnorderedList` , `|` , `CreateLink` , `Image` , `|` , `SourceCode` , `Undo` , `Redo`
 
@@ -37,9 +39,9 @@ It provides tools for applying text styles such as bold, italic, underline, stri
 | SubScript | ![SubScript icon](../images/sub-script.png) | Makes the selected text as subscript (lower).|toolbarSettings: { items: ['SubScript']}|
 | SuperScript | ![SuperScript icon](../images/super-script.png) | Makes the selected text as superscript (higher).|toolbarSettings: { items: ['SuperScript']}|
 | LowerCase | ![LowerCase icon](../images/lower-case.png) | Change the case of selected text to lower in the content. |toolbarSettings: { items: ['LowerCase']}|
-| UpperCase | ![UpperCase icon](../images/upper-case.png) | Change the case of selected text to upper  in the content.|toolbarSettings: { items: ['UpperCase’']}|
+| UpperCase | ![UpperCase icon](../images/upper-case.png) | Change the case of selected text to upper  in the content.|toolbarSettings: { items: ['UpperCase']}|
 
-### Font & styling
+### Font and styling
 
 Tools in this section allow users to customize font properties such as font family, size, color, background color, and paragraph formatting.
 
@@ -63,7 +65,7 @@ This section provides alignment options for the text or content, allowing users 
 | JustifyRight | ![JustifyRight icon](../images/align-right.png) | Allows each line to end at the same distance from the editor’s right-hand side. | toolbarSettings: { items: ['JustifyRight']} |
 | JustifyFull | ![JustifyFull icon](../images/align-justify.png) | The text is aligned with both right and left margins. | toolbarSettings: { items: ['JustifyFull']} |
 
-### Lists & indentation
+### Lists and indentation
 
 Tools here allow users to create ordered and unordered lists, change the list style, and adjust indentation levels for improved document structure.
 
@@ -85,7 +87,7 @@ This section provides tools for inserting and managing hyperlinks within the con
 | Hyperlink | ![Hyperlink icon](../images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content.|toolbarSettings: { items: ['CreateLink']}|
 | InsertLink | ![InsertLink icon](../images/create-link.png) |Allows users to add a link to a particular item. | toolbarSettings: { items: ['InsertLink']} |
 
-#### Link quicktoolbar items
+#### Link quick toolbar items
 
 The link quicktoolbar provides tools to manage hyperlinks in the Rich Text Editor, allowing users to add, edit, or remove links from selected text or images directly within the editor.
 
@@ -103,7 +105,7 @@ This section contains the primary tool for inserting images into the editor.
 |----------------|---------|---------|------------------------------------------|
 | Insert Image | ![Images icon](../images/insert-image.png) | Inserts an image from an online source or local computer. |toolbarSettings: { items: ['Image']}|
 
-#### Image quicktoolbar items
+#### Image quick toolbar items
 
 The image quicktoolbar offers a set of tools to edit images inserted in the Rich Text Editor. It allows users to modify image properties, including alignment, size, alternate text, and links, enhancing image management in the content.
 
@@ -127,7 +129,7 @@ This section offers the main tool for creating tables within the content.
 |----------------|---------|---------|------------------------------------------|
 | CreateTable | ![CreateTable icon](../images/create-table.png) | Create a table with defined columns and rows. | toolbarSettings: { items: ['CreateTable']} |
 
-#### Table quicktoolbar items
+#### Table quick toolbar items
 
 The table quicktoolbar provides options for table editing within the Rich Text Editor. Users can insert or remove rows and columns, merge or split cells, and access table properties for easier table management and customization.
 
@@ -149,7 +151,7 @@ Horizontal lines visually separate sections of content in the editor, enhancing 
 |----------------|---------|---------|------------------------------------------|
 | Horizontal Line | ![HorizontalLine icon](../images/horizontal-icon.png) | Allows you to insert horizontal line.|toolbarSettings: { items: ['HorizontalLine']} |
 
-### Undo & redo
+### Undo and redo
 
 These tools allow users to easily undo or redo any changes made within the editor to restore or repeat previous actions.
 
@@ -173,9 +175,9 @@ This section contains miscellaneous tools such as full-screen mode, print, previ
 | ClearAll | ![ClearAll icon](../images/clear-all.png) | Removes all styles that have been applied to the selected text.| toolbarSettings: { items: ['ClearAll']} |
 | SourceCode | ![SourceCode icon](../images/code-view.png)  | Rich Text Editor includes the ability for users to directly edit HTML code via “Source View”. If you made any modification in Source view directly, synchronize with Design view.|toolbarSettings: { items: ['SourceCode']}|
 
-## Removing built-in tool from toolbar
+## Customizing toolbar items
 
-Remove the build-in tools from the toolbar by using the [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+Customize the toolbar by specifying desired items in [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items), removing unwanted tools. Below is an example of a tailored toolbar:
 
 `[Class-component]`
 

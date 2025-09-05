@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Link in React Rich text editor component | Syncfusion
-description: Learn here all about Link in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
-control: Link 
+title: Link in React Rich Text Editor component | Syncfusion
+description: Learn how to insert, edit, and manage links in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: Link
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in React Rich text editor component
+# Link in React Rich Text Editor
 
 A hyperlink can be insert into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
 
-## Insert link
+## Inserting link
 
 To insert a hyperlink:
 
-1. Position your cursor where you want to insert the link, or select the text or image you wish to convert into a hyperlink.
-2. Click the "Insert HyperLink" tool on the toolbar.
-3. In the Insert Link Dialog that appears, fill in the following options.
+1. Place the cursor where you want to insert the link, or select the text or image to convert into a hyperlink.
+2. Click the "Insert Link" tool in the toolbar to open the Insert Link dialog.
+3. Configure the dialog options as described below.
 
 > To use Link feature, inject link module using the `<Inject services={[Link]} />`.
 
 | Options | Description |
 |----------------|--------------------------------------|
-| Web Address | Enter or paste the destination URL for your link |
+| Web Address | Enter or paste the destination URL for your link (e.g., `https://example.com`)|
 | Display Text | Enter or edit the required text that you want to display text for the link|
 | Tooltip | To display additional helpful information when you place the pointer on the hyperlink, type the required text in the “Tooltip” field. |
-| Open Link in New Window | Specify whether, the given link will be open in new window or not |
+| Open Link in New Window | Specify whether, the given link will be open in new window or not (`target="_blank"`) or not. |
 
 `[Class-component]`
 
@@ -55,12 +55,13 @@ To insert a hyperlink:
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs43" %}
 
-## Edit and remove link
+## Editing and removing links
 
-To remove a hyperlink:
+To edit or remove a hyperlink:
 
 1. Select the linked text or image.
-2. Click the "Remove Hyperlink" tool in the toolbar.
+2. To edit, click the `EditLink` tool to reopen the Insert Link dialog and modify the settings.
+3. To remove, click the `RemoveLink` tool in the toolbar, which deletes the hyperlink while preserving the text or image.
 
 This action will remove the hyperlink while keeping the original text or image intact.
 
@@ -73,6 +74,8 @@ The Rich Text Editor supports automatic link generation. When you type a URL and
 By default, the URL entered in the Web Address field is automatically converted into an absolute URL by prefixing it with https:// for hyperlinks. This ensures that the URL is properly formatted and accessible when used as a hyperlink.
 
 However, if you want to accept the given URL without validating it for hyperlinks and without automatically adding a protocol (such as https://) or domain, you need to set the [enableAutoUrl](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/#enableautourl) property to true. By default, this property is set to false, meaning that automatic URL conversion is enabled unless explicitly disabled.
+
+The following example demonstrates disabling auto-link protocol prefixing:
 
 `[Class-component]`
 

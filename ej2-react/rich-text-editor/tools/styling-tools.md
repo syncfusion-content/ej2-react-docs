@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styling tools in React Rich text editor component | Syncfusion
-description: Learn here all about Styling tools in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Styling Tools in React Rich Text Editor component | Syncfusion
+description: Learn here all about Styling tools in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Styling tools
 platform: ej2-react
 documentation: ug
@@ -9,6 +9,8 @@ domainurl: ##DomainURL##
 ---
 
 # Styling Tools in React Rich Text Editor Component
+
+The React Rich Text Editor's styling tools enable customization of font family, size, and colors, enhancing content presentation in a WYSIWYG editor. Configure these tools using the [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property with `FontName`, `FontSize`, `FontColor`, and `BackgroundColor`. 
 
 ## Font family
 
@@ -23,7 +25,7 @@ These steps will apply the selected font style to the chosen text, allowing you 
 
 ### Built-in font family
 
-You can add the `FontName` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+You can add the `FontName` tool to the toolbar in the Rich Text Editor toolbar using [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
 `[Class-component]`
 
@@ -130,7 +132,7 @@ The Rich Text Editor initializes with a default font size, which inherits the fo
 
 ### Built-in font size
 
-You can add the `FontSize` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+You can add the `FontSize` tool to the toolbar in the Rich Text Editor toolbar using [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
 `[Class-component]`
 
@@ -192,7 +194,7 @@ The Rich Text Editor supports providing custom fonts along with the existing lis
 
 ## Font and background color
 
-You can add the `FontColor` and `BackgroundColor` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+You can add the `FontColor` and `BackgroundColor` tool s to the toolbar in the Rich Text Editor using [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
 `[Class-component]`
 
@@ -220,7 +222,7 @@ You can add the `FontColor` and `BackgroundColor` tool in the Rich Text Editor t
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/font-background-color-cs2" %}
 
-### Custom font and background colors
+### Custom font and background color
 
 To apply `font color` or `background color` to selected content in the Rich Text Editor, use the font color and background color tools.
 

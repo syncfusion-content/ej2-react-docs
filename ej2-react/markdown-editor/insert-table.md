@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Insert Table in React Markdown Editor component | Syncfusion
-description: Learn here all about Insert Table in Syncfusion React Markdown Editor component of Syncfusion Essential JS 2 and more.
-control: Insert Table
+description: Learn how to insert and customize tables in the Syncfusion React Markdown Editor component of Syncfusion Essential JS 2 and more.
+control: Table Insertion in Markdown Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

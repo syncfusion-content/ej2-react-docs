@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar Configuration in React Markdown Editor component | Syncfusion
-description: Learn here all about Toolbar Configuration in Syncfusion React Markdown Editor component of Syncfusion Essential JS 2 and more.
+description: Learn how to configure and customize the toolbar in the Syncfusion React Markdown Editor component of Syncfusion Essential JS 2 and more.
 control: Toolbar Configuration
 platform: ej2-react
 documentation: ug
@@ -20,15 +20,13 @@ These default items cover essential text editing features, such as text formatti
 
 ## Type of toolbar 
 
-The Syncfusion Markdown Editor allows you to configure different type of toolbars using the [type](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) field in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. 
+Configure the toolbar layout [type](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) property in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/). Available types: 
 
-The available toolbar types are:
+- **Expand**: Hides overflowing items, accessible via an expand arrow (recommended for compact layouts).
+- **MultiRow**: Displays items across multiple rows, keeping all visible (ideal for wide screens).
+- **Scrollable**: Scrolls items horizontally (suitable for limited space).
 
-1. Expand
-2. MultiRow
-3. Scrollable
-
-### Expanding the Toolbar
+### Expand Toolbar
 
 The default toolbar mode is `Expand`, which is configured using [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) with type: `Expand`.
 
@@ -60,7 +58,7 @@ In this mode, any overflowing toolbar items are hidden in the next row. Users ca
 
  {% previewsample "page.domainurl/code-snippet/markdown-editor/expand-toolbar-cs2" %}
 
-### Configuring a Multi-row Toolbar
+### Multi-row Toolbar
 
 By setting type: `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings), the toolbar items are arranged across multiple rows. This ensures that all configured toolbar items are always visible.
 
@@ -90,7 +88,7 @@ By setting type: `MultiRow` in [toolbarSettings](https://ej2.syncfusion.com/reac
 
  {% previewsample "page.domainurl/code-snippet/markdown-editor/multirow-toolbar-cs2" %}
 
-### Implementing a Scrollable Toolbar
+### Scrollable Toolbar
 
 Use `type: 'Scrollable'` in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) to create a single-line toolbar with horizontal scrolling capability for overflow items.
 

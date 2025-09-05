@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Getting started with React Rich Text Editor component | Syncfusion
-description:  Checkout and learn about Getting started with React Rich Text Editor component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with Syncfusion React Rich Text Editor Component | Syncfusion
+description: Learn how to set up and configure the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more details.
+control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Rich Text Editor component
+# Getting Started with React Rich Text Editor
 
-This section explains you the steps required to create a simple Rich Text Editor and demonstrate the basic usage of the Rich Text Editor component in React environment.
+The Syncfusion React Rich Text Editor is a WYSIWYG (What You See Is What You Get) editor that enables users to create, edit, and format rich text content with features like multimedia insertion, lists, and links. This section explains the steps to create a simple React Rich Text Editor component and configure its core functionalities.
 
-To get start quickly with React Rich Text Editor, you can check on this video:
+To get started quickly with the React Rich Text Editor, refer to this video tutorial:
 
 {% youtube "https://www.youtube.com/watch?v=5mLO6_nwzww" %}
 
@@ -22,7 +22,9 @@ To easily set up a React application, use `create-vite-app`, which provides a fa
 
 > **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-To create a new React application, run the following command.
+### Create a React Application
+
+Run the following commands to set up a React application:
 
 ```bash
 npm create vite@latest my-app
@@ -58,15 +60,15 @@ npm install @syncfusion/ej2-react-richtexteditor --save
 The following CSS files are available in **../node_modules/@syncfusion** package folder. This can be added as reference in **src/App.css**.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-icons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-icons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/tailwind3.css';
 ```
 
 > To refer **App.css** in the application then import it in the **src/App.tsx** file.
@@ -170,19 +172,21 @@ The output will appear as follows.
 
 ## Retrieve the formatted content
 
-To retrieve the editor contents, use the `value` property of Rich Text Editor.
+Fetch the editor's content using one of these methods:
+
+- **`value` Property**: Retrieves the raw HTML content for saving or processing.
 
   ```ts
     const rteValue: string = this.rteObj.value;
    ```
 
-Or you can use the public method `getContent` to retrieve the RTE content.
+- **`getContent()` Method**: Fetches the HTML content, useful for programmatic access.
 
   ```ts
     const rteValue: string = this.rteObj.getContent();
   ```
 
-To fetch the RichTextEditor's text content, use the `textContent` property of RTE `EditPanel`.
+- **`textContent` Property**: Gets plain text from the editor's content, ideal for text-only output.`.
 
    ```ts
      const rteValue: string = this.rteObj.contentModule.getEditPanel().textContent;
@@ -190,7 +194,7 @@ To fetch the RichTextEditor's text content, use the `textContent` property of RT
 
 ## Insert images and links
 
-The image module inserts an image into Rich Text Editor's content area, and the link module links external resources such as website URLs, to selected text in the Rich Text Editor’s content, respectively.
+The `ImageService` and `LinkService` modules enable users to insert images and hyperlinks into the Rich Text Editor's content area.
 
 The link inject module adds a link icon to the toolbar and the image inject module adds an image icon to the toolbar.
 

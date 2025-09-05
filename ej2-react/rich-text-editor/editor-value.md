@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editor value in React Rich Text Editor component | Syncfusion
-description: Learn here all about Editor value in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+title: Editor Value in React Rich Text Editor component | Syncfusion
+description: Learn how to manage editor content in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Editor value
 platform: ej2-react
 documentation: ug
@@ -9,6 +9,8 @@ domainurl: ##DomainURL##
 ---
 
 # Editor Value in React Rich Text Editor Component
+
+The React Rich Text Editor allows flexible management of content through properties and methods for setting placeholders, retrieving values, and enabling two-way binding. This section explains how to configure and access the editor's content effectively
 
 ## Set placeholder text 
 
@@ -54,11 +56,11 @@ You can customize the appearance of the placeholder text by targeting the `e-rte
 
 **Setting Values**
 
-You can set the initial content of the Rich Text Editor using the `value` property. There are two methods to accomplish this:
+Set initial content in the Rich Text Editor using one of these approaches:
 
-* Using the [value](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#value) property directly.
+* The [value](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#value) property directly sets the editor's content as a string.
 
-* Using the [valuetemplate](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#valuetemplate) property allows you to customize the content of the Rich Text Editor.
+* The [valuetemplate](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#valuetemplate) property allows you to customize the content of the Rich Text Editor.
 
 **Retrieving Values**
 
@@ -470,21 +472,19 @@ The Character Count feature in the Rich Text Editor allows you to track and disp
 
 ### How to enable character count
 
-To enable the character count feature, set the [showCharCount](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#showcharcount) property to `true`. By default, this property is set to `false`.
-
-When enabled, the character count is displayed at the bottom right corner of the editor.
+To enable the character count feature, set the [showCharCount](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#showcharcount) property to `true` (default: `false`) to display the character count in the bottom-right corner of the editor.
 
 > To use Count feature, inject Count module using the `<Inject services={[Count]} />`.
 
 ### Understanding character count color indicators
 
-The character count color will be modified based on the characters in the Rich Text Editor.
+The character count changes based on the content length relative to the [maxLength](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#maxlength) property:
 
 | Status | Description |
 |----------------|---------|
-| normal | The character count color remains black until 70% of the maxLength count is reached.|
-| warning | When the character count reaches 70% of the maxLength, the color changes to orange, indicating that the maximum limit is approaching.|
-| error |Once the character count hits 90% of the maxLength, the color turns red, signaling that the limit is nearly reached.|
+| Normal | Black until 70% of `maxLength` is reached. |
+| Warning | Orange when 70% of `maxLength` is reached, indicating the limit is approaching. |
+| Error | Red when 90% of `maxLength` is reached, signaling the limit is nearly reached. |
 
 `[Class-component]`
 
@@ -535,7 +535,7 @@ The source code is presented with enhanced formatting and consistent indentation
 
 ### Configuring source code tool in the toolbar
 
-You can add the `SourceCode` tool in the Rich Text Editor using the `toolbarSettings` [items](../api/rich-text-editor/toolbarSettings/#items) property.
+You can add the `SourceCode` tool in the Rich Text Editor using the [toolbarSettings.items](../api/rich-text-editor/toolbarSettings/#items) property.
 
 `[Class-component]`
 

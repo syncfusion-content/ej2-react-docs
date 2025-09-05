@@ -1,16 +1,16 @@
 ---
 layout: post
-title: File browser in React Rich Text Editor component | Syncfusion
-description: Learn here all about File browser in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
-control: File browser 
+title: File Browser in React Rich Text Editor component | Syncfusion
+description: Learn how to use the File Browser in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: File Browser 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File browser in React Rich text editor component
+# File Browser in React Rich Text Editor
 
-Rich Text Editor allows to browse and insert images in the edit panel using the file browser. File browser allows the users to browse and select a file or folder from the file system and it supports various cloud services.
+The File Browser in the Rich Text Editor enables browsing and inserting files, such as images, in the edit panel. File browser allows the users to browse and select a file or folder from the file system and it supports various cloud services.
 
 ## Required additional dependency
 
@@ -30,15 +30,15 @@ The following list of additional dependencies are required to use the file brows
 Additionally add the below styles in the `[src/App.css]` file.
 
 ```css
-  @import "../../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-grids/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-filemanager/styles/material.css";
+  @import "../../node_modules/@syncfusion/ej2-layouts/styles/tailwind3.css";
+  @import "../../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+  @import "../../node_modules/@syncfusion/ej2-filemanager/styles/tailwind3.css";
 ```
 
 The following example explains about how to configure the file browser within the Rich Text Editor component.
 
 * Configure the `FileManager` toolbar item in the `toolbarSettings` API `items` property.
-* Set [`enable`](/rich-text-editor/api-fileManagerSettings.html#enable) property as `true` on [`fileManagerSettings`](/rich-text-editor/api-fileManagerSettings.html) property to make the file browser in the Rich Text Editor to appear on the `FileManager` toolbar click action.
+* Set `enable` property as `true` on [fileManagerSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#filemanagersettings) property to make the file browser in the Rich Text Editor to appear on the `FileManager` toolbar click action.
 
 > Rich Text Editor features are segregated into individual feature-wise modules. To use the file browser tool, inject the `FileManager` module using services.
 

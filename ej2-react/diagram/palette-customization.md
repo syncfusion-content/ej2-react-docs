@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Symbol Palette customization in EJ2 React Diagram component | Syncfusion®
-description: Learn here all about Symbol palette customization in React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Palette customization in EJ2 React Diagram component | Syncfusion®
+description: Learn here how to customize symbol palette in React Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-react
 control: Symbol palette 
 documentation: ug
@@ -52,7 +52,7 @@ The expand and collapse operation of symbol palette can be animated by utilizing
 
 ## Description for symbols
 
-The [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/) property defines the descriptive text that appears beneath each symbol in the palette. This text provides additional information about the symbol's purpose or usage within the diagramming context. The description can be dynamically retrieved and defined using the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo) property, allowing information to assist users in understanding the function or meaning of each symbol.
+The [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/) property defines the descriptive text that appears beneath each symbol in the palette. This text provides additional information about the symbol's purpose or usage within the diagramming context. The description can be dynamically retrieved and defined using the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo/) property, allowing information to assist users in understanding the function or meaning of each symbol.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,9 +67,9 @@ The [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/s
 
 ### Text wrapping and text overflow
 
-The descriptive text that appears beneath each symbol can vary in length. In cases where the text might overlap neighboring symbols in the palette, text wrapping is employed. Text wrapping is controlled using the symbolInfo's [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#symboldescription) property [`wrap`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#wrap) , which supports three modes: `Wrap`, `NoWrap`, `WrapWithOverflow`. By default, text wrapping is set to '`Wrap`'.
+The descriptive text that appears beneath each symbol can vary in length. In cases where the text might overlap neighboring symbols in the palette, text wrapping is employed. Text wrapping is controlled using the symbolInfo's [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#symboldescription/) property [`wrap`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#wrap/) , which supports three modes: `Wrap`, `NoWrap`, `WrapWithOverflow`. By default, text wrapping is set to '`Wrap`'.
 
-Additionally, to handle overflowing text, the [`overflow`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#overflow) property can be used. By default, textOverflow is set to '`Ellipsis`', which truncates overflowing text with an ellipsis (...).
+Additionally, to handle overflowing text, the [`overflow`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#overflow/) property can be used. By default, textOverflow is set to '`Ellipsis`', which truncates overflowing text with an ellipsis (...).
 
 The following example demonstrates how text wrapping and text overflow are applied based on the symbol ID:
 
@@ -86,7 +86,7 @@ The following example demonstrates how text wrapping and text overflow are appli
 
 ### Appearance of symbol description
 
-The appearance of a symbol description in the palette can be customized by changing its [`color`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#color) , [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#fill), [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#fontsize) , [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#fontfamily), [`bold`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#bold) [`italic`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#italic), [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#textdecoration)  and [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#margin)
+The appearance of a symbol description in the palette can be customized by changing its [`color`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#color/) , [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#fill/), [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#fontsize/) , [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#fontfamily/), [`bold`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#bold/) [`italic`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#italic/), [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#textdecoration/)  and [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription/#margin/)
 
 The following code example shows how to customize the symbol description.
 
@@ -103,9 +103,9 @@ The following code example shows how to customize the symbol description.
 
 ## Symbol size and symbol margin
 
-The size of the individual symbol can be customized. The [`symbolWidth`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolwidth) and  [`symbolHeight`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolheight) properties enables you to define the size of the symbols.
+The size of the individual symbol can be customized. The [`symbolWidth`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolwidth/) and  [`symbolHeight`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#symbolheight/) properties enables you to define the size of the symbols.
 
-The [`symbolMargin`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel/#symbolmargin) property is used to create the space around elements, outside of any defined borders. By setting the symbol margin with specific values for left, right, top, and bottom, you can create consistent spacing on all sides around the shape.
+The [`symbolMargin`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel/#symbolmargin/) property is used to create the space around elements, outside of any defined borders. By setting the symbol margin with specific values for left, right, top, and bottom, you can create consistent spacing on all sides around the shape.
 
 The following code example illustrates how to set symbol size and symbol margin for the symbol palette.
 
@@ -123,7 +123,7 @@ The following code example illustrates how to set symbol size and symbol margin 
 ## Symbol preview
 
 The symbol preview size of the palette items can be customized using [`symbolPreview`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview) property of symbol palette. 
-The [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview#width-number) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview#height-number) properties allow you to define the preview size for all the symbol palette items. The [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview#offset-PointModel) property specifies the position of the dragging helper relative to the mouse cursor.
+The [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview#width-number/) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview#height-number/) properties allow you to define the preview size for all the symbol palette items. The [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPreview#offset-PointModel/) property specifies the position of the dragging helper relative to the mouse cursor.
 
 The following code example illustrates how to change the preview size of a palette item.
 
@@ -215,7 +215,26 @@ The code provided below demonstrates how to define tooltip content to symbols wi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/symbol-desc" %}
+{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/symbol-desc" %}
+
+### How to enable or disable the default tooltip for shapes in the symbol palette
+
+By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolInfo/#showTooltip/) property within the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo/) method. The `showTooltip` property is set to **true** by default, which enables the tooltip.
+
+The following example demonstrates how to configure selective tooltip display:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/symbol-palette/custompalette/tooltip-custom/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/symbol-palette/custompalette/tooltip-custom/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/tooltip-custom" %}
+
+N> This property is effective only when tooltip constraints are disabled for the symbol palette element.
 
 
 ### How to provide different tooltip for Symbol palette and diagram elements.
@@ -224,7 +243,7 @@ When a custom tooltip is defined for a symbol, it will be displayed for both the
 
 However, to provide distinct tooltips for symbols in the palette and dropped nodes, capture the dragEnter event and assign specific tooltips dynamically.  
 
-When a symbol is dragged from the symbol palette and enters the diagram canvas, the [`DragEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram#dragenter), event is fired, accompanied by an argument of type [`IDragEnterEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragEnterEventArgs). event is triggered. Within this event, you can define a new tooltip for the dropped node. By assigning custom tooltip content to the Tooltip property of the node, you can provide a distinct tooltip that is specific to the dropped node.
+When a symbol is dragged from the symbol palette and enters the diagram canvas, the [`DragEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram#dragenter/), event is fired, accompanied by an argument of type [`IDragEnterEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragEnterEventArgs/). event is triggered. Within this event, you can define a new tooltip for the dropped node. By assigning custom tooltip content to the Tooltip property of the node, you can provide a distinct tooltip that is specific to the dropped node.
 
 The following image illustrates the differentiation of tooltips displayed in the Symbol Palette and the Diagram.
 
@@ -245,7 +264,7 @@ The following code snippet will demonstrate how to define two different tooltip 
 
 ## Localization
 
-To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#locale) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
+To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#locale/) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
 
 The following code shows how to localize symbol palette.
 
@@ -262,7 +281,7 @@ The following code shows how to localize symbol palette.
 
 ## Restrict symbol dragging from palette
 
-You can restrict the symbols getting dragged from the symbol palette by setting the [`allowDrag`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#allowdrag) property of symbol palette as false. By default, the allowDrag is set as **true**.
+You can restrict the symbols getting dragged from the symbol palette by setting the [`allowDrag`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#allowdrag/) property of symbol palette as false. By default, the allowDrag is set as **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -277,7 +296,7 @@ You can restrict the symbols getting dragged from the symbol palette by setting 
 
 ## Search symbol
 
-The diagram provides support for enabling the search option in the palette. The [`enableSearch`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#enablesearch) property of the palette is used to show or hide the search textbox in the palette. You can search for symbols in the palette by entering the symbol ID (e.g., “rectangle”) and search keywords into the search text box. The symbols are retrieved by matching the value of the ID property with the string entered in the search textbox.
+The diagram provides support for enabling the search option in the palette. The [`enableSearch`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#enablesearch/) property of the palette is used to show or hide the search textbox in the palette. You can search for symbols in the palette by entering the symbol ID (e.g., “rectangle”) and search keywords into the search text box. The symbols are retrieved by matching the value of the ID property with the string entered in the search textbox.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -292,7 +311,7 @@ The diagram provides support for enabling the search option in the palette. The 
 
 ## Ignore symbols on search
 
-The [`ignoreSymbolsOnSearch`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#ignoresymbolsonsearch) property allows you to specify which symbols should be excluded from search results within the symbol palette. By setting this property, you can control the visibility of specific symbols during a search operation. This feature is useful for hiding certain symbols that you don't want to be shown via search.
+The [`ignoreSymbolsOnSearch`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#ignoresymbolsonsearch/) property allows you to specify which symbols should be excluded from search results within the symbol palette. By setting this property, you can control the visibility of specific symbols during a search operation. This feature is useful for hiding certain symbols that you don't want to be shown via search.
 
 In the following example, we ignored the symbol with the ID of 'plus', so it will not appear in the search results.
 
@@ -309,7 +328,7 @@ In the following example, we ignored the symbol with the ID of 'plus', so it wil
 
 ## Filter search
 
-You can filter the search results based on your specific requirements. To achieve this, customize the [`filterSymbols`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#filtersymbols) method of the symbol palette according to your needs. In the following example, we filter the results to display only flow shapes in the search palette.
+You can filter the search results based on your specific requirements. To achieve this, customize the [`filterSymbols`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#filtersymbols/) method of the symbol palette according to your needs. In the following example, we filter the results to display only flow shapes in the search palette.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

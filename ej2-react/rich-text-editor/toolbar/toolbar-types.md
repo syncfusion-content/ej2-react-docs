@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Toolbar types in React Rich text editor component | Syncfusion
-description: Learn here all about Toolbar types in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
-control: Toolbar types 
+title: Toolbar Types in React Rich Text Editor component | Syncfusion
+description: Learn how to configure Toolbar Types in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: Toolbar Types
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -13,6 +13,8 @@ domainurl: ##DomainURL##
 The Syncfusion React Rich Text Editor provides a powerful toolbar that enables users to format, style, and edit content efficiently. The toolbar includes essential editing tools such as bold, italic, underline, alignment, and lists, along with customization options to suit different use cases.
 
 > To create Rich Text Editor with Toolbar feature, inject the toolbar module to the Rich Text Editor using the `RichTextEditor.Inject(Toolbar)` method.
+
+## Toolbar types
 
 The Rich Text Editor allows you to configure different types of toolbar using [type](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#type) field in [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. The types of toolbar are:
 

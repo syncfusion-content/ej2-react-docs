@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar position in React Rich text editor component | Syncfusion
-description: Learn here all about Toolbar types in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Toolbar Position in React Rich Text Editor component | Syncfusion
+description: Learn how to configure the Toolbar Position in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Toolbar position 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar position in the React Rich Text Editor component
+# Toolbar Position in the React Rich Text Editor
 
 The Rich Text Editor allows you to configure the toolbar's position using the [position](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#position) field in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/) property. The available positions are:
 

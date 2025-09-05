@@ -53,8 +53,8 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
     onResizing() {
         this.rteObj.refreshUI();
     }
-    updateValue() {
-        this.srcArea.innerHTML = Marked(this.rteObj.contentModule.getEditPanel().value);
+    async updateValue() {
+        this.srcArea.innerHTML = await Marked.parse(this.rteObj.contentModule.getEditPanel().value);
     }
     updateOrientation() {
         if (Browser.isDevice) {

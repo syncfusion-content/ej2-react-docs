@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Slash Menu  in React Rich Text Editor component | Syncfusion
-description: Learn here all about Slash Menu in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+description: Explore the Slash Menu in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control: Slash Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Slash Commands in the React Rich Text Editor Component
+# Slash Menu in React Rich Text Editor Component
 
-The Slash Menu in the Rich Text Editor provides users with an efficient way to apply formatting, insert elements, and execute custom commands by simply typing the "/" character. This feature enhances the user experience by offering quick access to common editing actions within the editor.
+The Slash Menu in the Rich Text Editor enables users to apply formatting, insert elements, and execute custom commands by typing the `/` character. This feature enhances editing efficiency by providing quick access to common actions directly within the editor.
 
 ## Enabling the slash menu
 
@@ -28,14 +28,14 @@ This list can include various formatting options such as paragraph and heading l
 
 private slashMenuSettings: SlashMenuSettingsModel = {
     enable: true,
-    items: ['Paragraph', 'Heading 1', 'Heading 2', 'Heading 3'] 
+    items: ['Paragraph', 'Heading 1', 'Heading 2', 'Heading 3']
     }
 
 ```
 
-## Customizing the popup width and height
+## Customizing popup dimensions
 
-The size of the Slash Menu popup can be customized using the [popupWidth](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#popupwidth) and [popupHeight](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#popupheight) properties within slashMenuSettings. Adjusting these values allows for control over the dimensions of the menu. 
+The Slash Menu popup's size can be customized using the [popupWidth](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#popupwidth) and [popupHeight](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/slashMenuSettingsModel/#popupheight) properties within `slashMenuSettings`. Adjusting these values allows for control over the dimensions of the menu. 
 
 Below is an code snippet showing how to customize both the width and height of the popup:
 

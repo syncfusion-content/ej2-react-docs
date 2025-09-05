@@ -1,22 +1,22 @@
 ---
 layout: post
 title: Iframe in React Rich Text Editor component | Syncfusion
-description: Learn here all about Iframe in Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
-control: Iframe 
+description: Learn how to use Iframe mode in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
+control: IFrame Editing Mode
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# IFrame Editing Mode in React Rich Text Editor Component
+# IFrame Editing Mode in the React Rich Text Editor Component
 
-The iframe editor in the Rich Text Editor component provides an isolated environment for content editing. It uses an iframe element to create a separate document, ensuring better compatibility and separation from the parent page's styles and scripts. In this mode, the editor displays only the body tag of the iframe, offering a clean and isolated workspace for content creation.
+The iframe editor in the Rich Text Editor provides an isolated environment for content editing by using an iframe element as the content area. This ensures separation from the parent page's styles and scripts, preventing conflicts and enhancing compatibility.In this mode, the editor displays only the body tag of the iframe, offering a clean and isolated workspace for content creation.
 
-## Configuring the Iframe Editor
+## Configuring the Iframe editor
 
-To enable the iframe editor, you can use the [iframeSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) property. When this option is enabled, the Rich Text Editor creates an iframe element as the content area during initialization.
+Iframe editing mode is enabled using the [iframeSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) property. When this option is enabled, the Rich Text Editor creates an iframe element as the content area during initialization.
 
-Here's an example of how to enable the iframe editor:
+The following example demonstrates enabling iframe mode:
 
 `[Class-component]`
 
@@ -44,9 +44,9 @@ Here's an example of how to enable the iframe editor:
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs27" %}
 
-## Customizing IFrame Attributes
+## Customizing IFrame attributes
 
-You can add custom attributes to the body tag of the iframe using the attributes field of the [`iframeSettings`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) property. This property accepts name/value pairs in string format, enabling you to override the default appearance of the content area.
+Custom attributes can be applied to the iframe's body element using the `attributes` field of the [iframeSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) property. This property accepts name/value pairs in string format, enabling you to override the default appearance of the content area.
 
 `[Class-component]`
 
@@ -74,11 +74,11 @@ You can add custom attributes to the body tag of the iframe using the attributes
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/basic-cs29" %}
 
-## Integrating External CSS and Scripts
+## Integrating external css and scripts
 
-The Rich Text Editor allows you to apply an external CSS file to style the iframe element. This can be done using the [`styles`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) field in the iframeSettings property. By including an external CSS file, you can easily change the appearance of the editor’s content to meet your specific requirements.
+The Rich Text Editor allows you to apply an external CSS file to style the iframe element. This can be done using the [`styles`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) field in the iframeSettings property. By including an external CSS file, you can easily change the appearance of the editor's content to meet your specific requirements.
 
-Likewise, add the external script file to the `< iframe >` element using the [`scripts`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) field of iframeSettings to provide the additional functionalities to the RichTextEditor.
+Likewise, add the external script file to the `< iframe >` element using the [scripts](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#iframesettings) field of iframeSettings to provide the additional functionalities to the RichTextEditor.
 
 `[Class-component]`
 
@@ -140,7 +140,7 @@ Here's an example of how to integrate Mention with Iframe editor,
 
  {% previewsample "page.domainurl/code-snippet/rich-text-editor/mention-iframe-cs2" %}
 
-> You can also explore our [iframe in React Rich Text Editor example](https://ej2.syncfusion.com/react/demos/#/material/rich-text-editor/iframe) that shows how to render the iframe in React Rich Text Editor.
+> You can also explore our [iframe in React Rich Text Editor example](https://ej2.syncfusion.com/react/demos/#/tailwind3/rich-text-editor/iframe) that shows how to render the iframe in React Rich Text Editor.
 
 ## See also
 

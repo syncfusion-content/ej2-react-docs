@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Markdown Editor component | Syncfusion
+title: Getting Started with React Markdown Editor component | Syncfusion
 description:  Checkout and learn about Getting started with React Markdown Editor component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+control: Getting Started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Markdown Editor component
+# Getting Started with React Markdown Editor Component
 
 This section explains you the steps required to create a simple Markdown Editor and demonstrate the basic usage of the Markdown Editor component in React environment.
 
@@ -104,7 +104,7 @@ To create Markdown Editor with additional features, inject the required modules.
 
 These modules should be injected into the **providers** section of root **NgModule** or component class.
 
-> Additional feature modules are available [here](./module.md).
+> Additional feature modules are available [here](https://ej2.syncfusion.com/react/documentation/rich-text-editor/module).
 
 ## Configure the Toolbar
 
@@ -162,7 +162,7 @@ To fetch the Markdown Editor's text content, use [getText](https://ej2.syncfusio
 const rteValue: string = this.rteObj.contentModule.getText();
 ```
 
-## See Also
+## See also
 
 * [Accessibility in Markdown editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/accessibility)
 * [Keyboard support in Markdown editor](https://ej2.syncfusion.com/react/documentation/markdown-editor/keyboard-support)

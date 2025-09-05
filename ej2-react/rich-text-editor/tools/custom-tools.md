@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Toolbar in React Rich text editor component | Syncfusion
-description: Learn here all about Custom Toolbar in Syncfusion React Rich text editor component of Syncfusion Essential JS 2 and more.
+title: Custom Toolbar Items in React Rich Text Editor component | Syncfusion
+description: Learn how to create and manage custom toolbar items in the Syncfusion React Rich Text Editor component of Syncfusion Essential JS 2 and more.
 control:  Custom Toolbar
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Custom Toolbar Items in React Rich Text Editor Component
 
-The Syncfusion Rich Text Editor allows you to customize the toolbar using the [`toolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarSettings) property. You can add custom commands with text, icons, or HTML templates and define their position in the toolbar.
+The React Syncfusion Rich Text Editor allows you to customize the toolbar using the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarSettings) property. You can add custom commands with text, icons, or HTML templates and define their position in the toolbar.
 
 ## Adding a custom command  
 
@@ -18,7 +18,7 @@ This example demonstrates how to add a custom “Ω” command to the toolbar fo
 
 ### Custom toolbar configuration
 
-To add a custom tool with a tooltip, define it in the [`items`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) field of the `toolbarSettings` property.
+To add a custom tool with a tooltip, define it in the [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) field of the `toolbarSettings` property.
 
 ```javascript
 {
@@ -29,7 +29,6 @@ To add a custom tool with a tooltip, define it in the [`items`](https://ej2.sync
   command: 'Custom',
   tooltipText: 'Insert Symbol'
 }
-
 
 ```
 
