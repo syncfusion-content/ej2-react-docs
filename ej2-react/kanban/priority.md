@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Priority in React Kanban component | Syncfusion
+title: Priority in React Kanban Component | Syncfusion
 description: Learn here all about Priority in Syncfusion React Kanban component of Syncfusion Essential JS 2 and more.
-control: Priority 
+control: Priority
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Priority in React Kanban component
+# Priority in React Kanban Component
 
 By default, the Kanban cards are initially placed and drop the card inside the columns based on JSON data orders.
 

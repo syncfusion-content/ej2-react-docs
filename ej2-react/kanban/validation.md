@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation in React Kanban component | Syncfusion
+title: Validation in React Kanban Component | Syncfusion
 description: Learn here all about Validation in Syncfusion React Kanban component of Syncfusion Essential JS 2 and more.
-control: Validation 
+control: Validation
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in React Kanban component
+# Validation in React Kanban Component
 
 Validate particular column using the `minCount` or `maxCount` properties. The corresponding columns gets different appearance when validation fails. In default layout, `constraintType` property accept only `Column` type. In swimlane layout, accept both `Column` and `Swimlane` constraint type.
 
