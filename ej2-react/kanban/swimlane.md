@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Swimlane in React Kanban component | Syncfusion
+title: Swimlane in React Kanban Component | Syncfusion
 description: Learn here all about Swimlane in Syncfusion React Kanban component of Syncfusion Essential JS 2 and more.
-control: Swimlane 
+control: Swimlane
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Swimlane in React Kanban component
+# Swimlane in React Kanban Component
 
 Swimlanes are horizontal categorizations of cards on the Kanban board.  It is used for grouping of cards, which brings transparency to the workflow process.
 
 ## Render swimlane row
 
-Cards can be grouped based on `keyField` and displayed in rows, which are separated by columns. It is mandatory to define the `keyField` that is mapped from the datasource for rendering swimlane rows in the Kanban board.
+Cards can be grouped based on [keyField](https://ej2.syncfusion.com/react/documentation/api/kanban/#keyfield) and displayed in rows, which are separated by columns. It is mandatory to define the `keyField` that is mapped from the datasource for rendering swimlane rows in the Kanban board.
 
 `[Class-component]`
 
@@ -52,7 +52,7 @@ Cards can be grouped based on `keyField` and displayed in rows, which are separa
 
 Customize the swimlane row header text by using the `textField` property mapped from datasource.
 
-> It is not mandatory to define the `textField` to `swimlaneSettings`.  It will automatically consider the `keyField` to swimlane row header text.
+> It is not mandatory to define the `textField` to [swimlaneSettings](https://ej2.syncfusion.com/react/documentation/api/kanban/#swimlanesettings).It will automatically consider the `keyField` to swimlane row header text.
 > If the mapping `textField` key is not present in the datasource, it will consider the swimlane `keyField` as swimlane row header text.
 
 `[Class-component]`
@@ -125,7 +125,7 @@ You can customize the Kanban swimlane row by using the `template` property, whic
 
 ## Sorting
 
-Swimlane rows are rendered on descending order when using the `sortBy` property set to `Descending` order. By default, swimlane rows are rendered by **Ascending** order.
+Swimlane rows are rendered on descending order when using the [sortBy](https://ej2.syncfusion.com/react/documentation/api/kanban/sortSettingsModel/#sortby) property set to `Descending` order. By default, swimlane rows are rendered by **Ascending** order.
 
 `[Class-component]`
 
@@ -161,7 +161,7 @@ Swimlane rows are rendered on descending order when using the `sortBy` property 
 
 ## Drag-and-drop
 
-By default, The Kanban does not allow dragging the cards across the swimlane rows. Enabling the `dragAndDrop` property allows you to drag the cards across the swimlane rows, which is specified inside `swimlaneSettings` property.
+By default, The Kanban does not allow dragging the cards across the swimlane rows. Enabling the [draganddrop](https://ej2.syncfusion.com/react/documentation/api/kanban/#allowdraganddrop) property allows you to drag the cards across the swimlane rows, which is specified inside [swimlaneSettings](https://ej2.syncfusion.com/react/documentation/api/kanban/#swimlanesettings) property.
 
 `[Class-component]`
 
@@ -197,7 +197,7 @@ By default, The Kanban does not allow dragging the cards across the swimlane row
 
 ## Create empty row
 
-You can render the empty swimlane row by enabling the `showEmptyRow` property.  If mapping `keyField` does not have cards, empty swimlane row will be rendered.
+You can render the empty swimlane row by enabling the `showEmptyRow` property. If mapping [keyField](https://ej2.syncfusion.com/react/documentation/api/kanban/#keyfield) does not have cards, empty swimlane row will be rendered.
 
 `[Class-component]`
 

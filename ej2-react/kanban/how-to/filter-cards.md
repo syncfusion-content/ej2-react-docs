@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Filter cards in React Kanban component | Syncfusion
-description: Learn here all about Filter cards in Syncfusion React Kanban component of Syncfusion Essential JS 2 and more.
+title: Filter Cards in Syncfusion React Kanban component | Syncfusion
+description: Learn how to filter cards in the Syncfusion React Kanban component of Syncfusion Essential JS 2 and more.
 control: Filter cards 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter cards in React Kanban component
+# Filter Cards in React Kanban Component
 
-You can filter the collection of cards from the dataSource and display it on the Kanban board by using the [`query`](https://ej2.syncfusion.com/react/documentation/api/kanban/#query) property.
+You can filter the collection of cards from the dataSource and display it on the Kanban board by using the [query](https://ej2.syncfusion.com/react/documentation/api/kanban/#query) property.
 
 In the below sample, you can filter the cards based on the ‘where’ query and display the filtered data to the Kanban board.
 
