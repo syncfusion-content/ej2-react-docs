@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React Kanban component | Syncfusion
+title: Getting started with React Kanban Component | Syncfusion
 description:  Checkout and learn about Getting started with React Kanban component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-react
@@ -8,9 +8,16 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React Kanban Component
 
 This article provides a step-by-step introduction to get started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Kanban component.
+
+## Overview
+
+The Kanban component consists of:
+- **Cards**: Represent tasks, mapped to a `dataSource` via `cardSettings`.
+- **Columns**: Define workflow stages, mapped using `keyField`.
+- **Swimlanes**: Group cards by categories, configured with `swimlaneSettings`.
 
 ## Prerequisites
 
@@ -142,7 +149,7 @@ The output will display the kanban header.
 
 ## Populating cards
 
-To populate the empty Kanban with cards, define the local JSON data or remote data using the `dataSource` property. To define `dataSource`, the mandatory fields in JSON object should be relevant to `keyField`. In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
+To populate the empty Kanban with cards, define the local JSON data or remote data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/kanban/#datasource) property. To define `dataSource`, the mandatory fields in JSON object should be relevant to [keyField](https://ej2.syncfusion.com/react/documentation/api/kanban/#keyfield). In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -160,7 +167,7 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 
 ## Enable swimlane
 
-`Swimlane` can be enabled by mapping the fields `swimlaneSettings.keyField` to appropriate column name in dataSource. This enables the grouping of the cards based on the mapped column values.
+`Swimlane` can be enabled by mapping the fields [swimlaneSettings.keyField](https://ej2.syncfusion.com/react/documentation/api/kanban/#swimlanesettings) to appropriate column name in dataSource. This enables the grouping of the cards based on the mapped column values.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Search cards in React Kanban component | Syncfusion
-description: Learn here all about Search cards in Syncfusion React Kanban component of Syncfusion Essential JS 2 and more.
+title: Search Cards in React Kanban component | Syncfusion
+description: Learn how to search cards in the Syncfusion React Kanban component of Syncfusion Essential JS 2 and more.
 control: Search cards 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search cards in React Kanban component
+# Search Cards in React Kanban Component
 
-You can search the cards in Kanban by using the `query` property.
+The Kanban component enables searching cards in the `dataSource`. You can search the cards in Kanban by using the [query](https://ej2.syncfusion.com/react/documentation/api/kanban/#query) property.
 
 In the following sample, the searching operation starts as soon as you start typing characters in the external text box. It will search the cards based on the `Id` and `Summary` using the `search` query with `contains` operator.
 

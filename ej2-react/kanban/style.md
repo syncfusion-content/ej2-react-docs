@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Style in React Kanban component | Syncfusion
+title: Styles in React Kanban Component | Syncfusion
 description: Learn here all about Style in Syncfusion React Kanban component of Syncfusion Essential JS 2 and more.
-control: Style 
+control: Style
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Kanban component
+# Styles in React Kanban Component
 
-To modify the Kanban appearance, you need to override the default CSS of Kanban. Also, you have an option to create your own custom theme using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material). Please find the list of CSS classes in Kanban.
+To modify the Kanban appearance, you need to override the default CSS of Kanban. Also, you have an option to create your own custom theme using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=tailwind3). Please find the list of CSS classes in Kanban.
 
 | Css class | Purpose |
 |-------|---------|
