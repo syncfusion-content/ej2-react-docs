@@ -16,6 +16,7 @@ The following table represents the supported React versions by different Syncfus
 
 | Version | Syncfusion<sup style="font-size:70%">&reg;</sup> React components version |
 | ------------- | ------------- |
+| [React v19.0](https://react.dev/blog/2024/12/05/react-19) | 28.1.33 and above |
 | [React v18.0](https://reactjs.org/blog/2022/03/29/react-v18.html) | 20.2.36 and above |
 | [React v17.0](https://reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
 | [React v16.0](https://reactjs.org/blog/2017/09/26/react-v16.0.html) | 16.2.45 and above |

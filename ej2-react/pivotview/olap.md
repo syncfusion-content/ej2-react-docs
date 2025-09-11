@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Olap in React Pivot Table component | Syncfusion
-description: Learn here all about Olap in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
-control: Olap 
+title: OLAP in React Pivot Table component | Syncfusion
+description: Learn here all about OLAP in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+control: OLAP 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Olap in React Pivot Table component
+# OLAP in React Pivot Table component
 
 ## Getting started
 
@@ -706,3 +706,47 @@ The two types of calculated fields are as follows:
 | ![Attribute hierarchy in JavaScript pivot table control](images/AttributeHierarchy.png)| Attribute Hierarchy| Hierarchy| True|
 | ![First level icon in JavaScript pivot table control](images/FirstLevel.png)<br>![Second level icon in JavaScript pivot table control](images/SecondLevel.png)<br>![Third level icon in JavaScript pivot table control](images/ThirdLevel.png)| Levels (in order)| Level Element| True|
 | ![NamedSet icon in JavaScript pivot client control](images/NamedSet.png)| Named Set| Named Set| True|
+
+## Events
+
+### BeforeServiceInvoke
+
+The [`beforeServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#beforeserviceinvoke) event is triggered before initiating any service communication with the OLAP server in the Pivot Table and Field List components.
+
+* This event allows you to inject custom properties or additional parameters dynamically before a request is made to the OLAP server.
+
+* It is particularly useful for passing contextual data such as user tokens, custom filters, or localization information along with the original server request.
+
+When the [`beforeServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#beforeserviceinvoke) event is triggered, the event argument provides access to the request details and includes a [`customProperties`](https://ej2.syncfusion.com/react/documentation/api/pivotview/beforeServiceInvokeEventArgs/#customproperties) field.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/pivot-table/olap-beforeServiceInvoke/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/pivot-table/olap-beforeServiceInvoke/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/pivot-table/olap-beforeServiceInvoke" %}
+
+### AfterServiceInvoke
+
+The [`afterServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#afterserviceinvoke) event is triggered in the Pivot Table and Field List components during the onSuccess phase of every OLAP service request.
+
+* This event is useful for performing post-processing, logging actions, or updating the UI after receiving a successful response from the OLAP server.
+
+* You may use it to audit data, trigger notifications, or handle custom response-handling logic.
+
+When the [`afterServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#afterserviceinvoke) event is triggered, the event argument provides access to the server response details, including properties such as the action performed and the result data returned from the OLAP server.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/pivot-table/olap-afterServiceInvoke/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/pivot-table/olap-afterServiceInvoke/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/pivot-table/olap-afterServiceInvoke" %}

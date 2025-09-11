@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Symbol palette in React Diagram component
 
-The [`symbolPalette`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette)  is a gallery of reusable symbols and diagram elements that can be dragged and dropped on the diagram surface multiple times.
+The [`symbolPalette`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/)  is a gallery of reusable symbols and diagram elements that can be dragged and dropped on the diagram surface multiple times.
 
 ## Create symbol palette
 
-The [`width`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#height) properties of the symbol palette allows to define the size of the symbol palette.
+The [`width`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#height) properties of the symbol palette allows to define the size of the symbol palette.
 
 ```ts
 import {
@@ -87,6 +87,24 @@ The symbol palette supports adding group nodes. To add group nodes to the palett
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/palette-grp" %}
+
+## HTML node with node template
+
+The Symbol Palette [`nodeTemplate`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette/#nodetemplate) property allows you to define reusable HTML structure that can be applied to multiple symbols. This approach is efficient when several palette symbols share a similar visual structure but contain different data.
+
+Templates should be created within `<script>` tags using unique IDs, which are then assigned to the symbol palette `nodeTemplate` property. When symbols are dragged from the palette, the diagram automatically applies the corresponding template and binds the symbol's data to the template elements.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/symbol-palette/palettes/palette-nodeTemplate/app/index.jsx %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/symbol-palette/palettes/palette-nodeTemplate/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/palette-nodeTemplate" %}
 
 ## Drag and drop symbols from palette to diagram
 

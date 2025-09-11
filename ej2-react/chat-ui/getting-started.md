@@ -24,6 +24,7 @@ The `Chat UI` component requires the following dependencies in your application:
     |-- @syncfusion/ej2-popups
     |-- @syncfusion/ej2-navigations
     |-- @syncfusion/ej2-inputs
+    |-- @syncfusion/ej2-dropdowns
 ```
 
 ## Setup for Local Development
@@ -104,6 +105,7 @@ Import the Chat UI component required CSS references as follows in `src/App.css`
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-react-interactive-chat/styles/material.css";
 
 ```
