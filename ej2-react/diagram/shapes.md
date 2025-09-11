@@ -24,7 +24,7 @@ Diagram provides support to add different kind of nodes. They are as follows:
 
 ## Text
 
-Texts can be added to the diagram as [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#shape) node. The shape property of the node allows you to set the type of node and for text nodes, it should be set as **text**. In addition, define the content object that is used to define the text to be added and style is used to customize the appearance of that text. The following code illustrates how to create a text node.
+Texts can be added to the diagram as [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#shape) node. The shape property of the node allows you to set the type of node and for text nodes, it should be set as **text**. In addition, define the content object that is used to define the text to be added and style is used to customize the appearance of that text. The following code illustrates how to create a text node.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -179,6 +179,12 @@ Refer the code example below.
 
 Diagram provides support to embed SVG element into a node. The shape property of node allows you to set the type of node. To create a [`native`](https://helpej2.syncfusion.com/react/documentation/api/diagram/node/#shape) node, it should be set as **native**. The following code illustrates how a native node is created.
 
+N> Like HTML node, the native node also cannot be exported to image format. Fill color of native node can be overridden by the inline style or fill of the SVG element specified in the template.
+
+### Native Node with content template
+
+To render an Native node with a content template, we need to define the desired template string within the [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nativeModel/#content) property. The following code illustrates how to create an SVG node with a content template:
+
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/shapes/es5Native-cs1/app/index.jsx %}
@@ -190,7 +196,20 @@ Diagram provides support to embed SVG element into a node. The shape property of
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5Native-cs1" %}
 
-N> Like HTML node, the native node also cannot be exported to image format. Fill color of native node can be overridden by the inline style or fill of the SVG element specified in the template.
+### Native nodes with node template
+
+The [`nodeTemplate`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#nodetemplate) property allows defining reusable SVG templates at the diagram level. This approach is efficient when multiple nodes share similar vector graphics or when centralized template management is required.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/diagram/shapes/es5NodeTemplate-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/diagram/shapes/es5NodeTemplate-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5NodeTemplate-cs2" %}
 
 ### SVG content alignment
 
