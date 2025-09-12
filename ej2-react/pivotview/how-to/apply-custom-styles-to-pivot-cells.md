@@ -10,9 +10,22 @@ domainurl: ##DomainURL##
 
 # Apply custom style to pivot cells in React Pivotview component
 
-The [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event in [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings) can be used to apply custom style to row and value cells, and the [`headerCellInfo`](https://ej2.syncfusion.com/react/documentation/api/grid/#headercellinfo) event in [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings) can be used to apply custom styles to column cells.
+The React Pivot Table component allows you to alter the appearance of pivot cells using event handlers. This guide demonstrates how to apply custom styling to specific cells in your pivot table.
 
-In the following example, a custom style has been applied to the column header **"Sold Amount"** under **"FY 2016"** via the [`headerCellInfo`](https://ej2.syncfusion.com/react/documentation/api/grid/#headercellinfo) event and to the row header **"Germany"** and its aggregated value via the [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event by adding the **"e-custom"** class to the cell element.
+## Overview
+
+You can apply custom styles to different types of cells in the pivot table:
+- Use the [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event to style row headers and value cells.
+- Use the [`headerCellInfo`](https://ej2.syncfusion.com/react/documentation/api/grid/#headercellinfo) event to style column headers.
+
+Both events are available through the [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/) property of the Pivot Table component.
+
+## Implementation example
+
+The following example shows how to apply styles to:
+- The column header **"Sold Amount"** under **"FY 2016"** using the [`headerCellInfo`](https://ej2.syncfusion.com/react/documentation/api/grid/#headercellinfo) event.
+- The row header **"Germany"** and its aggregated values using the [`queryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/grid/#querycellinfo) event.
+- Styles are applied by adding the **"e-custom"** CSS class to the cell elements.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
