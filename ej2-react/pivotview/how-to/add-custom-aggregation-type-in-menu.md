@@ -12,9 +12,24 @@ domainurl: ##DomainURL##
 
 # Add custom aggregation type to the menu in React Pivotview component
 
-By using the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#databound) event, you can add your own custom aggregate type(s) to the pivot table's aggregate menu.
+The React Pivot Table component allows you to extend its functionality by adding custom aggregation types to the built-in aggregation menu. This enables you to implement specific calculation methods beyond the standard options like Sum, Average, Min, and Max.
 
-In the following example, we have added the aggregation types **CustomAggregateType 1** and **CustomAggregateType 2** to the aggregate menu. The calculation for those aggregated types can be done using the [`aggregateCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#aggregatecellinfo) event.
+## Adding custom aggregation types
+
+You can use the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#databound) event to add your own custom aggregate types to the pivot table's aggregate menu. This event fires after the pivot table has been fully rendered, making it the perfect spot to modify the component's UI elements.
+
+In the following example, we have added two custom aggregation types **CustomAggregateType 1** (which calculates a weighted average) and **CustomAggregateType 2** (which calculates the percentage of total) to the aggregate menu.
+
+The calculation logic for these custom aggregation types is implemented using the [`aggregateCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#aggregatecellinfo) event. This event provides parameters including:
+- [`fieldName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#fieldname) - Holds the current cell's field name.
+- [`row`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#row) - Holds the current cell's row value.
+- [`column`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#column) - Holds the current cell's column value.
+- [`value`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#value) - Holds the value of the current cell.
+- [`cellSets`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#cellsets) - Holds raw data for the aggregated value cell.
+- [`rowCellType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#rowcelltype) - Holds the row cell type value.
+- [`columnCellType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#columncelltype) - Holds the column cell type value.
+- [`aggregateType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#aggregatetype) - Holds the aggregate type of the cell.
+- [`skipFormatting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateEventArgs/#skipformatting) - Boolean property that allows skipping formatting if applied.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

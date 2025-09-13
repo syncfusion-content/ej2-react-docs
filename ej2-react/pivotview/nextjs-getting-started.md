@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components 
+# Creating a Next.js Application Using Syncfusion React Components 
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table component.
+This section explains how to set up a Next.js application and add the Syncfusion<sup style="font-size:70%">&reg;</sup> React [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) component. Follow these steps to create a user-friendly web application with the Pivot Table for data analysis.
 
 ## What is Next.js?
 
@@ -19,15 +19,14 @@ This section provides a step-by-step guide for setting up a Next.js application 
 
 ## Prerequisites
 
-Before getting started with the Next.js application, ensure the following prerequisites are met:
+To begin building a Next.js application with the Syncfusion<sup style="font-size:70%">&reg;</sup> React [Pivot Table](https://ej2.syncfusion.com/react/documentation/pivotview/getting-started), ensure the following requirements are met:
 
-* [Node.js 16.8](https://nodejs.org/en) or later.
-
-* The application is compatible with macOS, Windows, and Linux operating systems.
+- [Node.js 16.8](https://nodejs.org/en) or a later version installed on your system.
+- A compatible operating system, such as macOS, Windows, or Linux.
 
 ## Create a Next.js application
 
-To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
+To start a new Next.js application, run one of the following commands using either NPM or Yarn. These commands set up a new project with the necessary files and structure.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -42,9 +41,9 @@ yarn create next-app
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+After running the command, you will be prompted to configure your project with the following steps:
 
-1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-pivotview`.
+1. **Name your project**: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-pivotview`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -54,7 +53,7 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-2.Select the required packages.
+2. **Choose project settings**: Select options to customize your project setup. The prompts will ask about using TypeScript, ESLint, Tailwind CSS, a `src/` directory, App Router, and import alias customization.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -71,7 +70,7 @@ Creating a new Next.js app in D:\ej2-nextjs-pivotview.
 {% endhighlight %}
 {% endtabs %}
 
-3.Once complete the above mentioned steps to create `ej2-nextjs-pivotview`, navigate to the directory using the below command:
+3. **Navigate to the project folder**: Once the setup is complete, move to the project directory using the command below:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -81,18 +80,16 @@ cd ej2-nextjs-pivotview
 {% endhighlight %}
 {% endtabs %}
 
-The application is ready to run with default settings. Now, let's add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+Your Next.js application is now set up and ready to include Syncfusion<sup style="font-size:70%">&reg;</sup> React components, such as the Pivot Table.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
-
-Here, the [React Pivot Table component](https://www.syncfusion.com/react-components/react-pivot-table) is used in the project. To install the React Pivot Table component, use the following command:
+To use the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table component, you need to install its npm package. The package is available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react) and provides the necessary files to add the [Pivot Table component](https://www.syncfusion.com/react-components/react-pivot-table) to your Next.js application. Run one of the following commands to install the package:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
- npm install @syncfusion/ej2-react-pivotview --save
+npm install @syncfusion/ej2-react-pivotview --save
 
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
@@ -102,11 +99,11 @@ yarn add @syncfusion/ej2-react-pivotview
 {% endhighlight %}
 {% endtabs %}
 
+The provided code installs the Syncfusion React Pivot Table package. The `--save` flag in the npm command ensures the package is added to your project's dependencies. Using yarn achieves the same result with a different package manager.
+
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
-
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components include [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) that you can easily apply to style your Pivot Table. These themes are available in the installed Syncfusion packages and can be imported to match your application's look. To use the Material theme, import its CSS files into the **src/app/globals.css** file after removing any existing styles, as shown below:
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -119,20 +116,20 @@ Import the `Material` theme into the **src/app/globals.css** file and removed th
 @import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-react-pivotview/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) section.
+> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Pivot Table component to the Next.js project:
+This section guides you through adding the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table component to your Next.js project. Follow these steps to set up the data and display the component in your application.
 
-1.Before adding the Pivot Table component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Pivot Table component data.
+1. First, create a file named `datasource.tsx` in the **src/app/** folder. This file will hold the data for the Pivot Table component. Add the following sample data to populate the table:
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -154,7 +151,7 @@ export let pivotData: object[] = [
 {% endhighlight %}
 {% endtabs %}
 
-2.Then, import and define the Pivot Table component in the **src/app/page.tsx** file, as shown below: 
+2. Next, update the **src/app/page.tsx** file to import and set up the Pivot Table component. This step connects the data and configures the table’s report settings. Use the following code to define the component:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -190,7 +187,7 @@ export default function Home() {
 
 ## Run the application
 
-To run the application, use the following command:
+To start your Next.js application with the Syncfusion React Pivot Table, run the following command in your project directory:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}

@@ -4,8 +4,11 @@ import { SymbolPaletteComponent } from "@syncfusion/ej2-react-diagrams";
 import { CheckBoxComponent } from "@syncfusion/ej2-react-buttons";
 
 let palette;
+let checkBox;
+
+//Initialize the basic shapes for the symbol palette
 export function getBasicShapes() {
-    let basicShapes = [
+    const basicShapes = [
         { id: 'Rectangle', shape: { type: 'Basic', shape: 'Rectangle' } },
         { id: 'Ellipse', shape: { type: 'Basic', shape: 'Ellipse' } },
         { id: 'Triangle', shape: { type: 'Basic', shape: 'Triangle' } },
@@ -17,8 +20,10 @@ export function getBasicShapes() {
     ];
     return basicShapes;
 }
+
+//Initialize the flow shapes for the symbol palette
 export function getFlowShapes() {
-    let flowShapes = [
+    const flowShapes = [
         { id: 'Terminator', shape: { type: 'Flow', shape: 'Terminator' } },
         { id: 'Process', shape: { type: 'Flow', shape: 'Process' } },
         { id: 'Decision', shape: { type: 'Flow', shape: 'Decision' } },
@@ -30,10 +35,8 @@ export function getFlowShapes() {
     ];
     return flowShapes;
 }
-export function getSymbolInfo(symbol) {
-    return {
-        showTooltip: true,
-    };
+function getSymbolInfo(symbol) {
+    return { showTooltip: (checkBox && checkBox.checked) };
 }
 const symbolPreview = {
     height: 8,
@@ -58,10 +61,6 @@ const palettes = [{
     title: 'Basic Shapes',
 }];
 function tooltipChange(args) {
-    var checkBox = document.getElementById("showTooltip");
-    palette.getSymbolInfo = function (symbol) {
-        return { showTooltip: checkBox.checked };
-    }
     palette.refresh();
 }
 
@@ -78,16 +77,16 @@ function App() {
                 symbolMargin={symbolMargin}
                 symbolHeight={70}
                 symbolWidth={70}
+                //Enable/disable tooltip for the symbols
                 getSymbolInfo={getSymbolInfo}
-                getNodeDefaults={(node) => {
-                    node.style.fill = '#6495ED';
-                    node.style.strokeColor = '#6495ED';
-                    return node;
+                getNodeDefaults={(symbol) => {
+                    symbol.style.fill = '#6495ED';
+                    symbol.style.strokeColor = '#6495ED';
+                    return symbol;
                 }}/>
-            <CheckBoxComponent id="showTooltip" checked={true} change={tooltipChange} /> Show Tooltip
+            <CheckBoxComponent id="showTooltip" ref={checkbox => (checkBox = checkbox)} checked={true} change={tooltipChange} /> Show Tooltip
         </div>
     );
 }
 const root = ReactDOM.createRoot(document.getElementById("container"));
 root.render(<App />);
-

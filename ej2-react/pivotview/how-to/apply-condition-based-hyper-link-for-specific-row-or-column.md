@@ -10,12 +10,17 @@ domainurl: ##DomainURL##
 
 # Apply condition based hyper link for specific row or column in React
 
-You can apply conditions for specific row or column using `label` option to show hyperlink option in the pivot table. It can be configured using the `conditionalSettings` option through code behind, during initial rendering. The required settings are:
+In the Pivot Table, you can display hyperlinks in specific rows or columns by setting up certain conditions. This can be done using the [`conditionalSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettingsModel/#conditionalsettings) property, which is available within the [`hyperlinkSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettings/) object.
 
-* `label`: Specifies the header name to get visibility of hyperlink option for row or column.
-* `conditions`: Specifies the operator type such as equals, greater than, less than, etc.
-* `value1`: Specifies the start value.
-* `value2`: Specifies the end value.
+The following options are available under the [`conditionalSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettingsModel/#conditionalsettings) to configure the hyperlinks:
+
+*   [`label`](https://ej2.syncfusion.com/react/documentation/api/pivotview/conditionalSettingsModel/#label): Defines the specific row or column header where the hyperlink should appear.
+*   [`conditions`](https://ej2.syncfusion.com/react/documentation/api/pivotview/conditionalSettingsModel/#conditions): Sets the condition type, such as `Equals`, `GreaterThan`, or `LessThan`.
+*   [`value1`](https://ej2.syncfusion.com/react/documentation/api/pivotview/conditionalSettingsModel/#value1): Sets the starting value for the condition.
+*   [`value2`](https://ej2.syncfusion.com/react/documentation/api/pivotview/conditionalSettingsModel/#value2): Sets the ending value for the condition (used for `Between` and `NotBetween` conditions).
+*   [`measure`](https://ej2.syncfusion.com/react/documentation/api/pivotview/conditionalSettingsModel/#measure): Defines the measure, or value field, to which the hyperlink should be applied.
+
+In the following example, the [`hyperlinkSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettings/) property is configured to show a hyperlink for cells under the **Germany** header. The hyperlink will only appear if the cell's value is greater than 500. This is achieved by setting the [`label`](https://ej2.syncfusion.com/react/documentation/api/pivotview/conditionalSettingsModel/#label) to **Germany**, the [`conditions`](https://ej2.syncfusion.com/react/documentation/api/pivotview/conditionalSettingsModel/#conditions) to **GreaterThan**, and [`value1`](https://ej2.syncfusion.com/react/documentation/api/pivotview/conditionalSettingsModel/#value1) to **500**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -26,4 +31,4 @@ You can apply conditions for specific row or column using `label` option to show
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs153" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs153" %}
