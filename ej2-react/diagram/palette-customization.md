@@ -219,7 +219,7 @@ The code provided below demonstrates how to define tooltip content to symbols wi
 
 ### How to enable or disable the default tooltip for shapes in the symbol palette
 
-By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolInfo/#showTooltip/) property within the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo/) method. The `showTooltip` property is set to **true** by default, which enables the tooltip.
+By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the `showTooltip` property within the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo/) method. The `showTooltip` property is set to **true** by default, which enables the tooltip.
 
 The following example demonstrates how to configure selective tooltip display:
 

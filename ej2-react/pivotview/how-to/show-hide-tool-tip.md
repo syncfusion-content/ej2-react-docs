@@ -8,11 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show hide tool tip in React Pivotview component
+# Show or hide tooltip in React Pivotview component
 
-You can set the visibility of tooltip using `showTooltip` in the pivot table.
+The React Pivot Table component displays a tooltip by default, providing additional information when users hover over cells. Users can control the visibility of this tooltip using the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showtooltip) property. Setting this property to **false** hides the tooltip, while **true** enables it.
 
-> By Default, tooltip enabled in the pivot table.
+## Code example
+
+The following example demonstrates how to configure the Pivot Table to hide the tooltip by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showtooltip) property to **false**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -23,4 +25,4 @@ You can set the visibility of tooltip using `showTooltip` in the pivot table.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs169" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs169" %}

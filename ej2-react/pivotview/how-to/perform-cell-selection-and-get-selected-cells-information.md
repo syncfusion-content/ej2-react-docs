@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Perform cell selection and get selected cells information in React Pivotview component | Syncfusion
+title: Select cells and get selection info in React Pivotview | Syncfusion
 description: Learn here all about Perform cell selection and get selected cells information in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
 control: Perform cell selection and get selected cells information 
 platform: ej2-react
@@ -8,29 +8,33 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform cell selection and get selected cells information in React Pivotview component
+# Select cells and get selection info in React Pivotview component
 
-You can select any cell/row by setting the property `gridSettings.allowSelection` as `true` where the selected cells can be highlighted. It can be done through mouse down or arrow keys.
+The React Pivot Table component allows users to select cells or rows by enabling the [allowSelection](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/#allowselection) property in the [gridSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/) configuration. Once enabled, users can highlight selected cells using a mouse click or arrow keys. This guide explains how to configure selection modes, types, and handle the [cellSelected](https://ej2.syncfusion.com/react/documentation/api/pivotview/#cellselected) event to retrieve selected cell information.
 
-## Selection mode
+## Selection modes
 
-It supports four types of selection mode that can be set by the property `gridSettings.selectionSettings.mode`. They are,
+The Pivot Table supports four selection modes, which can be set using the [mode](https://ej2.syncfusion.com/react/documentation/api/pivotview/selectionSettings/#mode) property in [gridSettings.selectionSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/selectionSettings/). These modes determine what parts of the table can be selected:
 
-* **`Row`**: The `Row` value is set by default, and allows you to select only rows.
-* **`Column`**: Allows you to select only columns.
-* **`Cell`**: Allows you to select only cells.
-* **`Both`**: Allows you to select rows and columns at the same time.
+- **Row**: This is the default mode. It allows users to select entire rows only.
+- **Column**: This mode allows users to select entire columns only.
+- **Cell**: This mode allows users to select individual cells only.
+- **Both**: This mode allows users to select both rows and columns simultaneously.
 
-## Selection type
+## Selection types
 
-It supports two types of selection that can be set by the property `gridSettings.selectionSettings.type`. They are,
+The Pivot Table offers two selection types, configurable through the [type](https://ej2.syncfusion.com/react/documentation/api/pivotview/selectionSettings/#type) property in [gridSettings.selectionSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/selectionSettings/). These types define how many items can be selected:
 
-* **`Single`**: The `Single` value is set by default, and it only allows selection of a single row or a column or a cell.
-* **`Multiple`**: Allows you to select multiple rows or cells. To perform the multi-selection, press and hold CTRL key and click the desired rows or columns or cells. To select range of rows or cells, press and hold the SHIFT key and click the rows or columns or cells.
+- **Single**: This is the default type. It allows users to select only one row, column, or cell at a time.
+- **Multiple**: This type allows users to select multiple rows, columns, or cells. To select multiple items, hold the **Ctrl** key and click the desired rows, columns, or cells. To select a range, hold the **Shift** key and click the start and end rows, columns, or cells.
 
-## Event
+## Handling the cellSelected event
 
-The event `cellSelected` fires on every cell/row/column on selected/deselected operations and it provides the selected cells information with its corresponding column and row headers.
+The [`cellSelected`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#cellselected) event triggers whenever a cell, row, or column is selected or deselected. This event provides details about the selected cells, including their corresponding row and column headers, through the [`selectedCellsInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotCellSelectedEventArgs/#selectedcellsinfo) property. Additionally, the [`pivotValues`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#pivotvalues) property provides access to the Pivot Table's data structure.
+
+## Code example
+
+The following example demonstrates how to enable multiple cell selection in the Pivot Table and handle the [cellSelected](https://ej2.syncfusion.com/react/documentation/api/pivotview/#cellselected) event to retrieve selected cell information.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -41,4 +45,4 @@ The event `cellSelected` fires on every cell/row/column on selected/deselected o
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs166" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs166" %}

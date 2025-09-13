@@ -181,7 +181,7 @@ Diagram provides support to embed SVG element into a node. The shape property of
 
 N> Like HTML node, the native node also cannot be exported to image format. Fill color of native node can be overridden by the inline style or fill of the SVG element specified in the template.
 
-### Native Node with content template
+### Native node with content template
 
 To render an Native node with a content template, we need to define the desired template string within the [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nativeModel/#content) property. The following code illustrates how to create an SVG node with a content template:
 
@@ -196,7 +196,7 @@ To render an Native node with a content template, we need to define the desired 
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5Native-cs1" %}
 
-### Native nodes with node template
+### Native node with node template
 
 The [`nodeTemplate`](https://helpej2.syncfusion.com/react/documentation/api/diagram/#nodetemplate) property allows defining reusable SVG templates at the diagram level. This approach is efficient when multiple nodes share similar vector graphics or when centralized template management is required.
 
