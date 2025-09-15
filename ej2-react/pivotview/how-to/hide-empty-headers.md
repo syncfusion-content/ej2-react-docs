@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide empty headers in React Pivotview component
+# Hide empty headers in the React Pivot Table component
 
-If the raw data for a particular field is not defined, it will be shown as 'Undefined' in the pivot table headers. You can hide those headers by setting the [`showHeaderWhenEmpty`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showheaderwhenempty) property to **false** in the pivot table.
+When the raw data for a particular field is not defined, it will be shown as 'Undefined' in the pivot table headers. You can hide those headers by setting the [`showHeaderWhenEmpty`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showheaderwhenempty) property to **false** in the pivot table.
 
-For example, if the raw data for the field 'Country' is defined as **"United Kingdom"** and **"State"** is not defined means, it will be shown as **"United Kingdom >> Undefined"** in the header section. Here, you can hide those 'Undefined' header using the [`showHeaderWhenEmpty`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showheaderwhenempty) property.
+For example, when the raw data contains **"United Kingdom"** for the 'Country' field but the **"State"** field is undefined, the header displays as **"United Kingdom >> Undefined"**. Here, you can hide those 'Undefined' headers using the [`showHeaderWhenEmpty`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showheaderwhenempty) property.
 
-> By default, this property is set as **true**.
+> By default, this property is set to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -31,4 +31,4 @@ For example, if the raw data for the field 'Country' is defined as **"United Kin
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs165" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs165" %}

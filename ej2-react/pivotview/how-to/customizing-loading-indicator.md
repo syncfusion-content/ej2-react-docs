@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing loading indicator in React Pivotview component
+# Customizing the loading indicator in the React Pivot Table component
 
-You can customize the appearance of the loading indicator in the pivot table by using the [`spinnerTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#spinnertemplate) property. This property accepts an HTML string which can be used for appearance customization.
+The Pivot Table displays a loading indicator during data processing operations such as filtering, sorting, and aggregation calculations. The default loading spinner can be customized to match application design requirements using the [`spinnerTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#spinnertemplate) property.
 
-> You can also disable the loading indicator by setting [`spinnerTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#spinnertemplate) to empty string.
+The [`spinnerTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#spinnertemplate) property accepts an HTML string that defines the custom loading indicator appearance. This enables control over the visual presentation, including custom styling and animations.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -23,4 +23,15 @@ You can customize the appearance of the loading indicator in the pivot table by 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs163" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs163" %}
+
+## Disabling the loading indicator
+
+The loading indicator can be completely disabled by setting the [`spinnerTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#spinnertemplate) property to an empty string.
+
+```js
+function App() {
+    return (<PivotViewComponent id='PivotView' height={350} spinnerTemplate={''}></PivotViewComponent>);
+};
+export default App;
+```
