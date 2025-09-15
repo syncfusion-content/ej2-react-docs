@@ -18,87 +18,87 @@ The [actionBegin](https://ej2.syncfusion.com/react/documentation/api/gantt/#acti
 
 The event argument structure varies based on the operation type. The following tables describe the supported argument types and their properties.
 
-**[ActionBeginArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/actionBeginArgs/)**
+**1. [ActionBeginArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/actionBeginArgs/)**
 
-| **Property**             | **Type**       | **Description** |
-|--------------------------|----------------|-----------------|
-| `action`                | `string`       | Defines the type of action being performed. |
-| `fromItem`              | `IGanttData`   | Specifies the predecessor task in a dependency relationship. |
-| `isValidLink`           | `boolean`      | Indicates whether the dependency link is valid. |
-| `mergeSegmentIndexes`   | `Object[]`     | Contains indexes of segments to be merged during a context click action. |
-| `newPredecessorString`  | `string`       | Represents the updated predecessor string. |
-| `newTaskData`           | `object`       | Holds the newly added task data, excluding custom Gantt properties. |
-| `predecessor`           | `IPredecessor` | Defines the predecessor object involved in the action. |
-| `recordIndex`           | `number`       | Specifies the index of the record being acted upon. |
-| `splitDate`             | `Date`         | Indicates the date at which a task is split during a context click action. |
-| `target`                | `Element`      | Refers to the target HTML element involved in the action. |
-| `toItem`                | `IGanttData`   | Specifies the successor task in a dependency relationship. |
-| `type`                  | `string`       | Defines the type of event triggered. |
+| **Property**             | **Type**       | **Description**                                                                 |
+|--------------------------|----------------|---------------------------------------------------------------------------------|
+| `action`                 | string       | Defines the type of action being performed.                                     |
+| `fromItem`              | IGanttData   | Specifies the predecessor task in a dependency relationship.                    |
+| `isValidLink`           | boolean      | Indicates whether the dependency link is valid.                                 |
+| `mergeSegmentIndexes`   | Object[]     | Contains indexes of segments to be merged during a context click action.        |
+| `newPredecessorString`  | string       | Represents the updated predecessor string.                                      |
+| `newTaskData`           | object      | Holds the newly added task data, excluding custom Gantt properties.  |
+| `predecessor`           | IPredecessor | Defines the predecessor object involved in the action.                          |
+| `recordIndex`           | number      | Specifies the index of the record being acted upon.                             |
+| `splitDate`             | Date         | Indicates the date at which a task is split during a context click action.      |
+| `target`                | Element      | Refers to the target HTML element involved in the action.                       |
+| `toItem`                | IGanttData   | Specifies the successor task in a dependency relationship.                      |
+| `type`                  | string       | Defines the type of event triggered.                                            |
 
-**[ITimeSpanEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTimeSpanEventArgs/) (Taskbar editing)**
+**2. [ITimeSpanEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTimeSpanEventArgs/) (Taskbar editing)**
 
-| **Property**           | **Type**   | **Description** |
-|------------------------|------------|-----------------|
-| `cancel`              | `boolean`  | Set to **true** to cancel the current action before it is processed. |
-| `isTimelineRoundOff`  | `boolean`  | Indicates whether timeline rounding is applied during taskbar editing. |
-| `projectStartDate`    | `Date`     | Start date of the overall project. Useful for validating task boundaries. |
-| `projectEndDate`      | `Date`     | End date of the overall project. Useful for validating task boundaries. |
-| `requestType`         | `string`   | Describes the type of request. For taskbar editing, values include **taskbarEditing**. |
+| **Property**           | **Type**   | **Description**                                                                 |
+|------------------------|------------|---------------------------------------------------------------------------------|
+| `cancel`              | boolean  | Set to **true** to cancel the current action before it is processed.             |
+| `isTimelineRoundOff`  | boolean  | Indicates whether timeline rounding is applied during taskbar editing.         |
+| `projectStartDate`    | Date     | Start date of the overall project. Useful for validating task boundaries.      |
+| `projectEndDate`      | Date    | End date of the overall project. Useful for validating task boundaries.        |
+| `requestType`         | string   | Describes the type of request. For taskbar editing, values include **taskbarEditing**. |
 
-**[ITaskAddedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskAddedEventArgs/) (Adding/Editing/Deleting tasks)**
+**3. [ITaskAddedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskAddedEventArgs/) (Adding/Editing/Deleting tasks)**
 
-| **Property**        | **Type**     | **Description** |
-|---------------------|--------------|-----------------|
-| `action`            | `string`     | Specifies the type of action, such as **beforeAdd** or **beforeDelete**. |
-| `cancel`            | `boolean`    | Set to **true** to cancel the current action. |
-| `data`              | `object`     | Contains the original task data before modification. |
-| `modifiedRecords`   | `object[]`   | Array of records that were modified during the action. |
-| `modifiedTaskData`  | `object[]`   | Array of task data after modification. |
-| `newTaskData`       | `object`     | Data of the newly added task (if applicable). |
-| `recordIndex`       | `number`     | Index of the record being modified or added. |
-| `requestType`       | `string`     | Describes the type of request, such as **beforeSave**, **beforeDelete**. |
-| `rowPosition`       | `string`     | Indicates the position where the new row is added. Possible values: **Top**, **Bottom**, **Above**, **Below**. |
+| **Property**        | **Type**     | **Description**                                                                 |
+|---------------------|--------------|---------------------------------------------------------------------------------|
+| `action`            | string     | Specifies the type of action, such as **beforeAdd** or **beforeDelete**.           |
+| `cancel`            | boolean    | Set to **true** to cancel the current action.                                    |
+| `data`              | object     | Contains the original task data before modification.                           |
+| `modifiedRecords`   | object[]   | Array of records that were modified during the action.                         |
+| `modifiedTaskData`  | object[]   | Array of task data after modification.                                         |
+| `newTaskData`       | object     | Data of the newly added task, if applicable.                                   |
+| `recordIndex`       | number     | Index of the record being modified or added.                                   |
+| `requestType`       | string     | Describes the type of request, such as **beforeAdd** or **beforeDelete**.         |
+| `rowPosition`       | string     | Indicates the position where the new row is added. Possible values: **Top**, **Bottom**, **Above**, **Below**. |
 
-**[FilterEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs/) (Filtering)**
+**4. [FilterEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs/) (Filtering)**
 
-| **Property**             | **Type**     | **Description** |
-|--------------------------|--------------|-----------------|
-| `cancel`                 | `boolean`    | Set to **true** to cancel the filtering action. |
-| `columns`                | `object[]`   | Array of columns involved in filtering. |
-| `currentFilterObject`    | `object`     | Filter object representing the current filter condition. |
-| `currentFilteringColumn` | `string`     | Name of the column currently being filtered. |
-| `requestType`            | `string`     | Describes the type of request, typically **filtering**. |
-| `type`                   | `string`     | Event type identifier. |
+| **Property**             | **Type**     | **Description**                                                                 |
+|--------------------------|--------------|---------------------------------------------------------------------------------|
+| `cancel`                 | boolean    | Set to **true** to cancel the filtering action.                                |
+| `columns`                | object[]   | Array of columns involved in filtering.                                        |
+| `currentFilterObject`    | object     | Filter object representing the current filter condition.                       |
+| `currentFilteringColumn` | string     | Name of the column currently being filtered.                                   |
+| `requestType`            | string     | Describes the type of request, typically **filtering**.                        |
+| `type`                   | string     | Event type identifier.                                                         |
 
-**[SortEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/sortEventArgs/) (Sorting)**
+**5. [SortEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/sortEventArgs/) (Sorting)**
 
-| **Property**     | **Type**   | **Description** |
-|------------------|------------|-----------------|
-| `cancel`         | `boolean`  | Set to **true** to cancel the sorting action. |
-| `columnName`     | `string`   | Name of the column being sorted. |
-| `direction`      | `string`   | Sort direction: **Ascending** or **Descending**. |
-| `requestType`    | `string`   | Describes the type of request, typically **sorting**. |
-| `type`           | `string`   | Event type identifier. |
+| **Property**     | **Type**   | **Description**                                                                 |
+|------------------|------------|---------------------------------------------------------------------------------|
+| `cancel`         | boolean  | Set to **true** to cancel the sorting action.                                  |
+| `columnName`     | string   | Name of the column being sorted.                                               |
+| `direction`      | string   | Sort direction: **Ascending** or **Descending**.                               |
+| `requestType`    | string   | Describes the type of request, typically **sorting**.                          |
+| `type`           | string   | Event type identifier.                                                         |
 
-**[IDependencyEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iDependencyEventArgs/) (Dependency editing)**
+**6. [IDependencyEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iDependencyEventArgs/) (Dependency editing)**
 
-| **Property**              | **Type**   | **Description** |
-|---------------------------|------------|-----------------|
-| `fromItem`                | `object`   | Source task object in the dependency link. |
-| `isValidLink`             | `boolean`  | Indicates whether the new dependency link is valid. |
-| `newPredecessorString`    | `string`   | New predecessor string after editing. |
-| `predecessor`             | `string`   | Original predecessor string before editing. |
-| `requestType`             | `string`   | Describes the type of request, typically **validateDependency** or **updateDependency**. |
-| `toItem`                  | `object`   | Target task object in the dependency link. |
+| **Property**              | **Type**   | **Description**                                                                 |
+|---------------------------|------------|---------------------------------------------------------------------------------|
+| `fromItem`                | object   | Source task object in the dependency link.                                     |
+| `isValidLink`             | boolean  | Indicates whether the new dependency link is valid.                            |
+| `newPredecessorString`    | string   | New predecessor string after editing.                                          |
+| `predecessor`             | string   | Original predecessor string before editing.                                    |
+| `requestType`             | string  | Describes the type of request, typically **validateDependency** or **updateDependency**. |
+| `toItem`                  | object   | Target task object in the dependency link.                                     |
 
-**[ZoomEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/zoomEventArgs/) (Zooming)**
+**7. [ZoomEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/zoomEventArgs/) (Zooming)**
 
-| **Property**     | **Type**   | **Description** |
-|------------------|------------|-----------------|
-| `cancel`         | `boolean`  | Set to **true** to cancel the zoom action. |
-| `name`           | `string`   |  Describes the name for the event. |
-| `requestType`    | `string`   | Describes the type of request, typically **zooming**. |
-| `timeline`       | `object`   | Timeline settings after zoom is applied. |
+| **Property**     | **Type**   | **Description**                                                                 |
+|------------------|------------|---------------------------------------------------------------------------------|
+| `cancel`         | boolean  | Set to **true** to cancel the zoom action.                                     |
+| `name`           | string   | Name of the event.                                                             |
+| `requestType`    | string   | Describes the type of request, typically **zooming**.                          |
+| `timeline`       | object   | Timeline settings after zoom is applied.                                       |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -339,60 +339,60 @@ The [actionComplete](https://ej2.syncfusion.com/react/documentation/api/gantt/#a
 
 Below are detailed descriptions of each argument type's properties, and their purposes.
 
-**[ActionCompleteArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/)**
+**1. [ActionCompleteArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/actionCompleteArgs/)**
 
-| **Property**       | **Type**                | **Description**                                       |
-|--------------------|-------------------------|-------------------------------------------------------|
-| `action`           | `string`                | Defines the action performed during the event.        |
-| `keyEvent`         | `Event`                 | Defines the key event triggered.                      |
-| `newTaskData`      | `object`                | Specifies the newly added task data without custom Gantt properties. |
-| `recordIndex`      | `number`                | Defines the index of the record involved in the event. |
-| `timeline`         | `ZoomTimelineSettings`  | Defines the settings applied to the Zoom timeline.     |
-| `type`             | `string`                | Defines the type of the event.                         |
+| **Property**       | **Type**                | **Description**                                                                 |
+|--------------------|-------------------------|---------------------------------------------------------------------------------|
+| `action`           | string               | Defines the action performed during the event.                                 |
+| `keyEvent`         | Event                 | Defines the key event triggered.                                               |
+| `newTaskData`      | object                | Specifies the newly added task data without custom Gantt properties.           |
+| `recordIndex`      | number                | Defines the index of the record involved in the event.                         |
+| `timeline`         | ZoomTimelineSettings  | Defines the settings applied to the Zoom timeline.                             |
+| `type`             | string                | Defines the type of the event.                                                 |
 
-**[FilterEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs/)(Filtering)**
+**2. [FilterEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/filterEventArgs/) (Filtering)**
 
 | **Property**             | **Type**     | **Description** |
 |--------------------------|--------------|-----------------|
-| `cancel`                 | `boolean`    | Set to **true** to cancel the filtering action. |
-| `columns`                | `object[]`   | Array of columns involved in filtering. |
-| `currentFilterObject`    | `object`     | Filter object representing the current filter condition. |
-| `currentFilteringColumn` | `string`     | Name of the column currently being filtered. |
-| `requestType`            | `string`     | Describes the type of request like **filtering**, **filterAfterOpen**. |
-| `type`                   | `string`     | Event type identifier. |
+| `cancel`                 | boolean    | Set to **true** to cancel the filtering action. |
+| `columns`                | object[]   | Array of columns involved in filtering. |
+| `currentFilterObject`    | object     | Filter object representing the current filter condition. |
+| `currentFilteringColumn` | string     | Name of the column currently being filtered. |
+| `requestType`            | string     | Describes the type of request like **filtering**, **filterAfterOpen**. |
+| `type`                   | string     | Event type identifier. |
 
-**[SortEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/sortEventArgs/) (Sorting)**
+**3. [SortEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/sortEventArgs/) (Sorting)**
 
 | **Property**     | **Type**   | **Description** |
 |------------------|------------|-----------------|
-| `cancel`         | `boolean`  | Set to **true** to cancel the sorting action. |
-| `columnName`     | `string`   | Name of the column being sorted. |
-| `direction`      | `string`   | Sort direction: **Ascending** or **Descending**. |
-| `requestType`    | `string`   | Describes the type of request, typically **sorting**. |
-| `type`           | `string`   | Event type identifier. |
+| `cancel`         | boolean  | Set to **true** to cancel the sorting action. |
+| `columnName`     | string   | Name of the column being sorted. |
+| `direction`      | string   | Sort direction: **Ascending** or **Descending**. |
+| `requestType`    | string   | Describes the type of request, typically **sorting**. |
+| `type`           | string   | Event type identifier. |
 
-**[ITaskAddedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskAddedEventArgs/) (Adding/Editing/Deleting tasks)**
+**4. [ITaskAddedEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/iTaskAddedEventArgs/) (Adding/Editing/Deleting tasks)**
 
 | **Property**        | **Type**     | **Description** |
 |---------------------|--------------|-----------------|
-| `action`            | `string`     | Specifies the type of action, such as **add** or **delete**. |
-| `cancel`            | `boolean`    | Set to **true** to cancel the current action. |
-| `data`              | `object`     | Contains the original task data before modification. |
-| `modifiedRecords`   | `object[]`   | Array of records that were modified during the action. |
-| `modifiedTaskData`  | `object[]`   | Array of task data after modification. |
-| `newTaskData`       | `object`     | Data of the newly added task (if applicable). |
-| `recordIndex`       | `number`     | Index of the record being modified or added. |
-| `requestType`       | `string`     | Describes the type of request, such as **beforeSave**, **beforeDelete**. |
-| `rowPosition`       | `string`     | Indicates the position where the new row is added. Possible values: **Top**, **Bottom**, **Above**, **Below**. |
+| `action`            | string     | Specifies the type of action, such as **add** or **delete**. |
+| `cancel`            | boolean   | Set to **true** to cancel the current action. |
+| `data`              | object    | Contains the original task data before modification. |
+| `modifiedRecords`   | object[]   | Array of records that were modified during the action. |
+| `modifiedTaskData`  | object[]   | Array of task data after modification. |
+| `newTaskData`       | object     | Data of the newly added task (if applicable). |
+| `recordIndex`       | number    | Index of the record being modified or added. |
+| `requestType`       | string     | Describes the type of request, such as **beforeSave**, **beforeDelete**. |
+| `rowPosition`       | string     | Indicates the position where the new row is added. Possible values: **Top**, **Bottom**, **Above**, **Below**. |
 
-**[ZoomEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/zoomEventArgs/) (Zooming)**
+**5. [ZoomEventArgs](https://ej2.syncfusion.com/react/documentation/api/gantt/zoomEventArgs/) (Zooming)**
 
 | **Property**     | **Type**   | **Description** |
 |------------------|------------|-----------------|
-| `cancel`         | `boolean`  | Set to **true** to cancel the zoom action. |
-| `name`           | `string`   |  Describes the name for the event. |
-| `requestType`    | `string`   | Describes the type of request, typically **zooming**. |
-| `timeline`       | `object`   | Timeline settings after zoom is applied. |
+| `cancel`         | boolean  | Set to **true** to cancel the zoom action. |
+| `name`           | string   |  Name of the event |
+| `requestType`    | string   | Describes the type of request, typically **zooming**. |
+| `timeline`       | object  | Timeline settings after zoom is applied. |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -697,13 +697,11 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## actionFailure
 
-The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionfailure) event is triggered when an operation in the Gantt encounters an error due to configuration issues, invalid data, or missing modules. It returns a [FailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/failureEventArgs/#failureeventargs/) object containing detailed information about the failure.
-
-**[FailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/failureEventArgs/#failureeventargs/)**
+The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/gantt/#actionfailure) event is triggered when an operation in the Gantt encounters an error due to configuration issues, invalid data, or missing modules. It returns a [FailureEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/failureEventArgs/#failureeventargs/) object containing detailed information about the failure, including the following property:
 
 | **Property**     | **Type**   | **Description** |
 |------------------|------------|-----------------|
-| `error`         | `Error`   |Defines the error information. |
+| `error`         | Error   |Defines the error information. |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -897,9 +895,9 @@ The event argument is an `object` containing the following properties:
 
 | **Property** | **Type**   | **Description**                                                   |
 |--------------|------------|-------------------------------------------------------------------|
-| `cancel`     | `boolean`  | Set to **true** to cancel the export.                             | 
-| `isCsv`      | `boolean`  | Indicates if the export is CSV (**true**) or Excel (**false**).   | 
-| `name`       | `string`   | Event name, typically **beforeExcelExport**.                      | 
+| `cancel`     | boolean    | Set to **true** to cancel the export.                             | 
+| `isCsv`      | boolean    | Indicates if the export is CSV (**true**) or Excel (**false**).   | 
+| `name`       | string     | Event name, typically **beforeExcelExport**.                      | 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -1123,10 +1121,10 @@ The event provides an argument of type `object` with the following properties:
 
 | **Property**   | **Type**   | **Description**                                                  |
 |----------------|------------|------------------------------------------------------------------|
-| `cancel`       | `boolean`  | Set **true** to cancel PDF export.                               |
-| `ganttObject`  | `Object`   | Reference to the Gantt Chart instance.                           |
-| `name`         | `string`   | Event name, typically **beforePdfExport**.                       |
-| `requestType`  | `string`   | Type of request, typically **beforePdfExport**.                  |
+| `cancel`       | boolean    | Set **true** to cancel PDF export.                               |
+| `ganttObject`  | Object     | Reference to the Gantt Chart instance.                           |
+| `name`         | string     | Event name, typically **beforePdfExport**.                       |
+| `requestType`  | string     | Type of request, typically **beforePdfExport**.                  |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -1280,7 +1278,6 @@ function App() {
   const projectEndDate = new Date('05/30/2024');
 
   const toolbarClick = (args: ClickEventArgs) => {
-    debugger;
     if (args.item.id === 'gantt_pdfexport') {
       (ganttInstance as React.RefObject<GanttComponent>).current.pdfExport();
     }
@@ -1348,10 +1345,10 @@ The event provides an argument of type [BeforeTooltipRenderEventArgs](https://ej
 
 | **Property** | **Type**   | **Description**                                                   |
 |--------------|------------|-------------------------------------------------------------------|
-| `args`       | `Object`   | Context info like target element and interaction type.            |
-| `content`    | `string`   | Tooltip content before rendering.                                 |
-| `cancel`     | `boolean`  | Set **true** to prevent tooltip display.                          |
-| `data`       | `Object`   | Related Gantt data, such as task or header info.                  |
+| `args`       | Object     | Context info like target element and interaction type.            |
+| `content`    | string     | Tooltip content before rendering.                                 |
+| `cancel`     | boolean    | Set **true** to prevent tooltip display.                          |
+| `data`       | Object     | Related Gantt data, such as task or header info.                  |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -1570,16 +1567,16 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## cellDeselected
 
-The [cellDeselected](https://ej2.syncfusion.com/angular/documentation/api/gantt/#celldeselected) event is triggered when a selected cell in the Gantt component is deselected. This occurs when the selection is cleared by clicking outside the cell, selecting a different cell or row, or through programmatic control. This event is typically used to validate cell data after deselection, synchronize external state, or trigger updates based on cell-level interactions.
+The [cellDeselected](https://ej2.syncfusion.com/react/documentation/api/gantt/#celldeselected) event is triggered when a selected cell in the Gantt component is deselected. This occurs when the selection is cleared by clicking outside the cell, selecting a different cell or row, or through programmatic control. This event is typically used to validate cell data after deselection, synchronize external state, or trigger updates based on cell-level interactions.
 
 The event provides an argument of type [CellDeselectEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/cellDeselectEventArgs/) with the following properties:
 
-| **Property**      | **Type**         | **Description**                         |
+| **Property**      | **Type**     | **Description**                             |
 |-----------------|----------------|---------------------------------------------|
-| `cancel`        | `boolean`      | Set to **true** to cancel the deselection.  |
-| `cellIndexes`   | `object[]`     | Row and column indices of deselected cells. |                       
-| `cells`         | `NodeList`     | DOM elements of the deselected cells.        |
-| `data`          | `Object`       | Row data associated with the deselected cell.|
+| `cancel`        | boolean        | Set to **true** to cancel the deselection.  |
+| `cellIndexes`   | object[]       | Row and column indices of deselected cells. |                       
+| `cells`         | NodeList       | DOM elements of the deselected cells.        |
+| `data`          | Object         | Row data associated with the deselected cell.|
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -1789,16 +1786,16 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## cellDeselecting
 
-The [cellDeselecting](https://ej2.syncfusion.com/angular/documentation/api/gantt/#celldeselecting) event is triggered when a previously selected cell in the Gantt component is deselected. This occurs when the selection is cleared either through user interaction or programmatic control. This event is typically used to validate cell data after deselection, synchronize external state, or trigger updates based on cell-level interactions.
+The [cellDeselecting](https://ej2.syncfusion.com/react/documentation/api/gantt/#celldeselecting) event is triggered when a previously selected cell in the Gantt component is deselected. This occurs when the selection is cleared either through user interaction or programmatic control. This event is typically used to validate cell data after deselection, synchronize external state, or trigger updates based on cell-level interactions.
 
 The event provides an argument of type [CellDeselectEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/cellDeselectEventArgs/) with the following properties:
 
 | **Property**   | **Type**     | **Description**                                                   |
 |----------------|--------------|-------------------------------------------------------------------|
-| `cancel`       | `boolean`    | Set to **true** to cancel the deselection action.                 |
-| `cellIndexes`  | `object[]`   | Row and column indices of the cells being deselected.             |
-| `cells`        | `NodeList`   | DOM elements representing the deselecting cells.                  |
-| `data`         | `Object`     | Row data associated with the deselecting cell.                    |
+| `cancel`       | boolean    | Set to **true** to cancel the deselection action.                 |
+| `cellIndexes`  | object[]   | Row and column indices of the cells being deselected.             |
+| `cells`        | NodeList   | DOM elements representing the deselecting cells.                  |
+| `data`         | Object     | Row data associated with the deselecting cell.                    |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -2020,18 +2017,18 @@ The event provides an argument of type [CellEditArgs](https://ej2.syncfusion.com
 
 | **Property**       | **Type**         | **Description**                          |
 |--------------------|------------------|------------------------------------------|
-| `cancel`           | `boolean`        | Set to **true** to cancel the cell edit action.|
-| `cell`             | `Element`        | Cell element currently being edited.     |
-| `columnName`       | `string`         | Field name of the edited column.         |
-| `columnObject`     | `Object`         | Metadata of the edited column.           |
-| `foreignKeyData`   | `Object`         | Foreign key data, if applicable.         |
-| `isForeignKey`     | `boolean`        | Indicates if column is a foreign key.    |
-| `primaryKey`       | `string`         | Primary key field in the data source.    |
-| `row`              | `HTMLElement`    | Row element containing the edited cell.  |
-| `rowData`          | `Object`         | Data of the row associated with the edited cell.|
-| `type`             | `string`         | Type of edit action (e.g., **edit**).          |
-| `validationRules`  | `Object`         | Validation rules applied to the cell, if any.  |
-| `value`            | `any`            | The current value of the cell before editing starts.|
+| `cancel`           | boolean        | Set to **true** to cancel the cell edit action.|
+| `cell`             | Element        | Cell element currently being edited.     |
+| `columnName`       | string         | Field name of the edited column.         |
+| `columnObject`     | Object         | Metadata of the edited column.           |
+| `foreignKeyData`   | Object         | Foreign key data, if applicable.         |
+| `isForeignKey`     | boolean        | Indicates if column is a foreign key.    |
+| `primaryKey`       | string         | Primary key field in the data source.    |
+| `row`              | HTMLElement    | Row element containing the edited cell.  |
+| `rowData`          | Object         | Data of the row associated with the edited cell.|
+| `type`             | string         | Type of edit action (e.g., **edit**).          |
+| `validationRules`  | Object         | Validation rules applied to the cell, if any.  |
+| `value`            | any            | The current value of the cell before editing starts.|
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -2245,20 +2242,20 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## cellSelected
 
-The [cellSelected](https://ej2.syncfusion.com/angular/documentation/api/gantt/#cellselected) event is triggered after a cell in the Gantt component is selected. This event provides access to the selected cell’s context and enables interaction logic based on cell-level selection. This event is commonly used to apply conditional styling, display contextual information, or trigger logic based on the selected task or field.
+The [cellSelected](https://ej2.syncfusion.com/react/documentation/api/gantt/#cellselected) event is triggered after a cell in the Gantt component is selected. This event provides access to the selected cell’s context and enables interaction logic based on cell-level selection. This event is commonly used to apply conditional styling, display contextual information, or trigger logic based on the selected task or field.
 
 The event provides an argument of type [CellSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/cellSelectEventArgs/) with the following properties:
 
 | **Property**             | **Type**           | **Description**                              |
 |----------------------------|------------------|----------------------------------------------|
-| `cancel`                   | `boolean`        | Cancel selection if set to **true**.         |
-| `cellIndex`                | `object`         | Index of the selected cell.                  |
-| `cells`                    | `Element[]`      | DOM elements of selected/deselected cells.   |
-| `currentCell`              | `Element`        | Currently selected cell element.             |
-| `data`                     | `Object`         | Row data for the selected cell.              |
-| `previousRowCell`          | `Element`        | Previously selected cell element.            |
-| `previousRowCellIndex`     | `number`         | Index of previously selected cell.           |
-| `selectedRowCellIndex`     | `object[]`       | Indices of selected row and column.          |
+| `cancel`                   | boolean        | Cancel selection if set to **true**.         |
+| `cellIndex`                | object         | Index of the selected cell.                  |
+| `cells`                    | Element[]      | DOM elements of selected/deselected cells.   |
+| `currentCell`              | Element        | Currently selected cell element.             |
+| `data`                     | Object         | Row data for the selected cell.              |
+| `previousRowCell`          | Element        | Previously selected cell element.            |
+| `previousRowCellIndex`     | number         | Index of previously selected cell.           |
+| `selectedRowCellIndex`     | object[]       | Indices of selected row and column.          |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -2470,14 +2467,14 @@ The event provides an argument of type [CellSelectingEventArgs](https://ej2.sync
 
 | **Property**             | **Type**       | **Description**                              |
 |--------------------------|------------------|----------------------------------------------|
-| `cancel`                 | `boolean`        | Cancel selection if set to **true**.             |
-| `cellIndex`              | `object`         | Index of the cell being selected.            |
-| `cells`                  | `Element[]`      | DOM elements of selected/deselected cells.   |
-| `currentCell`            | `Element`        | Cell element currently being selected.       |
-| `data`                   | `Object`         | Row data for the selected cell.              |
-| `previousRowCell`        | `Element`        | Previously selected cell element.            |
-| `previousRowCellIndex`   | `number`         | Index of previously selected cell.           |
-| `selectedRowCellIndex`   | `object[]`       | Indices of selected row and column.          |
+| `cancel`                 | boolean        | Cancel selection if set to **true**.             |
+| `cellIndex`              | object         | Index of the cell being selected.            |
+| `cells`                  | Element[]      | DOM elements of selected/deselected cells.   |
+| `currentCell`            | Element        | Cell element currently being selected.       |
+| `data`                   | Object         | Row data for the selected cell.              |
+| `previousRowCell`        | Element        | Previously selected cell element.            |
+| `previousRowCellIndex`   | number         | Index of previously selected cell.           |
+| `selectedRowCellIndex`   | object[]       | Indices of selected row and column.          |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -2696,9 +2693,9 @@ The event provides an argument of type [ColumnDragEventArgs](https://ej2.syncfus
 
 | **Property**     | **Type**     | **Description**                              |
 |--------------------|----------------|----------------------------------------------|
-| `column`           | `Object`       | Column object currently being dragged.       |
-| `target`           | `Element`      | Element where column is dragged over.        |
-| `draggableType`    | `string`       | Type of draggable element (e.g., column).    |
+| `column`           | Object       | Column object currently being dragged.       |
+| `target`           | Element      | Element where column is dragged over.        |
+| `draggableType`    | string       | Type of draggable element (e.g., column).    |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -2906,9 +2903,9 @@ The event provides an argument of type [ColumnDragEventArgs](https://ej2.syncfus
 
 | **Property**       | **Type**         | **Description**                            |
 |--------------------|----------------|----------------------------------------------|
-| `column`           | `Object`       | Column object where drag started.            |
-| `target`           | `Element`      | Element where drag operation began.          |
-| `draggableType`    | `string`       | Type of draggable element (e.g., headercell).|
+| `column`           |  Object        | Column object where drag started.            |
+| `target`           |  Element       | Element where drag operation began.          |
+| `draggableType`    |  string        | Type of draggable element (e.g., headercell).|
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -3109,15 +3106,15 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## columnDrop
 
-The [columnDrop](https://ej2.syncfusion.com/angular/documentation/api/gantt/#columndrop) is triggered when a column header is dropped after a drag operation in the Gantt component.  It provides drop context and supports post-reorder logic such as validation or UI updates.
+The [columnDrop](https://ej2.syncfusion.com/react/documentation/api/gantt/#columndrop) is triggered when a column header is dropped after a drag operation in the Gantt component.  It provides drop context and supports post-reorder logic such as validation or UI updates.
 
 The event provides an argument of type [ColumnDragEventArgs](https://ej2.syncfusion.com/react/documentation/api/grid/columnDragEventArgs/) with the following properties:
 
 | **Property**       | **Type**         | **Description**                             |
 |--------------------|----------------|-----------------------------------------------|
-| `column`           | `Object`       | Column object being dropped.                  |
-| `target`           | `Element`      | Element where column is dropped.              |
-| `draggableType`    | `string`       | Type of draggable element (e.g., row, column).|
+| `column`           |  Object       | Column object being dropped.                  |
+| `target`           |  Element      | Element where column is dropped.              |
+| `draggableType`    |  string       | Type of draggable element (e.g., row, column).|
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -3330,10 +3327,10 @@ The event provides an argument of type [ColumnMenuClickEventArgs](https://ej2.sy
 
 | **Property** | **Type**   | **Description**                          |
 |--------------|------------|------------------------------------------|
-| `name`       | `string`   | Name of the clicked menu item.           |
-| `column`     | `Object`   | Column object linked to the menu item.   |
-| `element`    | `Element`  | DOM element of the clicked menu item.    |
-| `item`       | `Object`   | The menu item object that was clicked.   |
+| `name`       |  string   | Name of the clicked menu item.           |
+| `column`     |  Object   | Column object linked to the menu item.   |
+| `element`    |  Element  | DOM element of the clicked menu item.    |
+| `item`       |  Object   | The menu item object that was clicked.   |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -3544,15 +3541,15 @@ The event provides an argument of type [ColumnMenuOpenEventArgs](https://ej2.syn
 
 | **Property**       | **Type**           | **Description**                                 |
 |--------------------|--------------------|-------------------------------------------------|
-| `cancel`           | `boolean`          | Set **true** to cancel menu opening.            |
-| `name`             | `string`           | Event name: **columnMenuOpen**.                 |
-| `column`           | `Object`           | Column object linked to the opened menu.        |
-| `element`          | `Element`          | Header element where menu was opened.           |
-| `items`            | `Object[]`         | List of available column menu items.            |
-| `left`             | `number`           | Left position of menu in viewport.              |
-| `top`              | `number`           | Top position of menu in viewport.               |
-| `parentItem`       | `Object`           | Parent item in nested menu structure.           |
-| `showSubMenuOn`    | `MenuOpenType`     | Submenu trigger type: click or hover.           |
+| `cancel`           |  boolean          | Set **true** to cancel menu opening.            |
+| `name`             |  string           | Event name: **columnMenuOpen**.                 |
+| `column`           |  Object           | Column object linked to the opened menu.        |
+| `element`          |  Element          | Header element where menu was opened.           |
+| `items`            |  Object[]         | List of available column menu items.            |
+| `left`             |  number           | Left position of menu in viewport.              |
+| `top`              |  number           | Top position of menu in viewport.               |
+| `parentItem`       |  Object           | Parent item in nested menu structure.           |
+| `showSubMenuOn`    |  MenuOpenType     | Submenu trigger type: click or hover.           |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -3764,12 +3761,12 @@ The event provides an argument of type [ContextMenuClickEventArgs](https://ej2.s
 
 | **Property**   | **Type**         | **Description**                              |
 |----------------|------------------|----------------------------------------------|
-| `name`         | `string`         | Event name: **contextMenuClick**.            |
-| `element`      | `Element`        | DOM element that triggered the menu.         |
-| `event`        | `PointerEvent`   | Pointer event with interaction details.      |
-| `item`         | `Object`         | Clicked menu item with properties.           |
-| `type`         | `string`         | Type of menu item (e.g., **Content**).       |
-| `rowData`      | `Object`         | Data object of the related row.              |
+| `name`         |  string         | Event name: **contextMenuClick**.            |
+| `element`      |  Element        | DOM element that triggered the menu.         |
+| `event`        |  PointerEvent   | Pointer event with interaction details.      |
+| `item`         |  Object         | Clicked menu item with properties.           |
+| `type`         |  string         | Type of menu item (e.g., **Content**).       |
+| `rowData`      |  Object         | Data object of the related row.              |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -3936,17 +3933,17 @@ The event provides an argument of type [ContextMenuOpenEventArgs](https://ej2.sy
 
 | **Property**       | **Type**         | **Description**                              |
 |--------------------|------------------|----------------------------------------------|
-| `name`             | `string`         | Event name: **contextMenuOpen**.             |
-| `element`          | `Element`        | DOM element that triggered the menu.         |
-| `event`            | `PointerEvent`   | Pointer event with interaction details.      |
-| `item`             | `Object`         | Menu item object with properties.            |
-| `type`             | `string`         | Type of menu item (e.g., **Content**).       |
-| `rowData`          | `Object`         | Data object of the related row.              |
-| `items`            | `Object[]`       | List of available context menu items.        |
-| `left`             | `number`         | Left position of menu in viewport.           |
-| `top`              | `number`         | Top position of menu in viewport.            |
-| `parentItem`       | `Object`         | Parent item in nested menu structure.        |
-| `showSubMenuOn`    | `MenuOpenType`   | Submenu trigger type: click or hover.        |
+| `name`             |  string         | Event name: **contextMenuOpen**.             |
+| `element`          |  Element        | DOM element that triggered the menu.         |
+| `event`            |  PointerEvent   | Pointer event with interaction details.      |
+| `item`             |  Object         | Menu item object with properties.            |
+| `type`             |  string         | Type of menu item (e.g., **Content**).       |
+| `rowData`          |  Object         | Data object of the related row.              |
+| `items`            |  Object[]       | List of available context menu items.        |
+| `left`             |  number         | Left position of menu in viewport.           |
+| `top`              |  number         | Top position of menu in viewport.            |
+| `parentItem`       |  Object         | Parent item in nested menu structure.        |
+| `showSubMenuOn`    |  MenuOpenType   | Submenu trigger type: click or hover.        |
 
 
 {% tabs %}
@@ -4446,8 +4443,8 @@ The event provides an argument of type `object` with the following properties:
 
 | **Property**      | **Type**         | **Description**                           |
 |-------------------|-----------------|--------------------------------------------|
-| `name`            | `string`        | Identifies event as **destroyed**.         |
-| `cancel`          | `boolean`       | Prevents destruction when set to **true**. |
+| `name`            |  string        | Identifies event as **destroyed**.         |
+| `cancel`          |  boolean       | Prevents destruction when set to **true**. |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -4675,9 +4672,9 @@ The event provides an argument of type [ITaskbarEditedEventArgs](https://ej2.syn
 
 | **Property**         | **Type**       | **Description**                                      |
 |----------------------|----------------|------------------------------------------------------|
-| `action`             | `string`       | Specifies type of task edit action.                  |
-| `data`               | `IGanttData`   | Contains updated data for the task.                  |
-| `name`               | `string`       | Identifies event as **endEdit**                      |
+| `action`             |  string       | Specifies type of task edit action.                  |
+| `data`               |  IGanttData   | Contains updated data for the task.                  |
+| `name`               |  string       | Identifies event as **endEdit**                      |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -4895,7 +4892,7 @@ The event provides an argument of type [ExcelExportCompleteArgs](https://ej2.syn
 
 | **Property**         | **Type**       | **Description**                                      |
 |----------------------|----------------|------------------------------------------------------|  
-| `promise`               | `Promise`       | Represents blob data for exported file.          |
+| `promise`               |  Promise       | Represents blob data for exported file.          |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -5131,12 +5128,12 @@ The event provides an argument of type [ExcelHeaderQueryCellInfoEventArgs](https
 
 | **Property**   | **Type**         | **Description**                                        |
 |----------------|------------------|--------------------------------------------------------|
-| `name`         | `string`         | Identifies event as **excelExportHeaderQueryCellInfo**.|
-| `cell`         | `ExcelCell`      | Represents current Excel header cell.                  |
-| `gridCell`     | `Cell` \| `ExcelCell` | Refers to related Grid header cell.               |
-| `hyperLink`    | `Hyperlink`      | Contains hyperlink details for header cell.            |
-| `image`        | `Image`          | Contains image details for header cell.                |
-| `style`        | `ExcelStyle`     | Defines style settings for header cell.                |
+| `name`         |  string         | Identifies event as **excelExportHeaderQueryCellInfo**.|
+| `cell`         |  ExcelCell      | Represents current Excel header cell.                  |
+| `gridCell`     |  Cell \| ExcelCell | Refers to related Grid header cell.               |
+| `hyperLink`    |  Hyperlink      | Contains hyperlink details for header cell.            |
+| `image`        |  Image          | Contains image details for header cell.                |
+| `style`        |  ExcelStyle     | Defines style settings for header cell.                |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -5370,14 +5367,14 @@ The event provides an argument of type [ExcelQueryCellInfoEventArgs](https://ej2
 
 | **Property** | **Type**         | **Description**                                        |
 |----------------|------------------|------------------------------------------------------|
-| `cell`         | `object`         | Represents current Excel cell being customized.      |
-| `column`       | `object`         | Metadata of column linked to cell.                   |
-| `data`         | `object`         | Row data for the current cell.                       |
-| `value`        | `string`         | Original value before export.                        |
-| `style`        | `object`         | Style settings like font and alignment.              |
-| `colspan`      | `number`         | Specifies number of columns to span.                 |
-| `hyperLink`    | `Hyperlink`      | Hyperlink details if cell includes a link.           |
-| `image`        | `Image`          | Image details if cell includes an image.             |
+| `cell`         |  object         | Represents current Excel cell being customized.      |
+| `column`       |  object         | Metadata of column linked to cell.                   |
+| `data`         |  object         | Row data for the current cell.                       |
+| `value`        |  string         | Original value before export.                        |
+| `style`        |  object         | Style settings like font and alignment.              |
+| `colspan`      |  number         | Specifies number of columns to span.                 |
+| `hyperLink`    |  Hyperlink      | Hyperlink details if cell includes a link.           |
+| `image`        |  Image          | Image details if cell includes an image.             |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -5614,10 +5611,10 @@ The event provides an argument of type [ICollapsingEventArgs](https://ej2.syncfu
 
 | **Property** | **Type**         | **Description**                                      |
 |----------------|------------------|------------------------------------------------------|
-| `data`         | `object`         | Data object of the expanded row                     |
-| `row`          | `HTMLElement`    | DOM element of the expanded row                     |
-| `name`         | `string`         | Identifies event as **expanded**                    |
-| `cancel`       | `boolean`        | Prevents expansion when set to **true**             |
+| `data`         |  object         | Data object of the expanded row                     |
+| `row`          |  HTMLElement    | DOM element of the expanded row                     |
+| `name`         |  string         | Identifies event as **expanded**                    |
+| `cancel`       |  boolean        | Prevents expansion when set to **true**             |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -5817,11 +5814,11 @@ The event provides an argument of type [ICollapsingEventArgs](https://ej2.syncfu
 
 | **Property** | **Type**         | **Description**                                      |
 |----------------|------------------|----------------------------------------------------|
-| `data`         | `object`         | Data object of the row being expanded              |
-| `gridRow`      | `HTMLElement`    | DOM element of the Grid row                        |
-| `chartRow`     | `HTMLElement`    | DOM element of the Chart row                       |
-| `name`         | `string`         | Identifies event as **expanding**                  |
-| `cancel`       | `boolean`        | Prevents expansion when set to **true**            |
+| `data`         |  object         | Data object of the row being expanded              |
+| `gridRow`      |  HTMLElement    | DOM element of the Grid row                        |
+| `chartRow`     |  HTMLElement    | DOM element of the Chart row                       |
+| `name`         |  string         | Identifies event as **expanding**                  |
+| `cancel`       |  boolean        | Prevents expansion when set to **true**            |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -6030,9 +6027,9 @@ The event provides an object of type [HeaderCellInfoEventArgs](https://ej2.syncf
 
 | **Property**   | **Type**         | **Description**                                      |
 |----------------|------------------|------------------------------------------------------|
-| `cell`         | `HTMLElement`  | Represents the header cell element being rendered.     |
-| `node`         | `Element`      | Refers to the inner content element of the header cell, used to update text or insert icons. |
-| `name`         | `string`       | Identifies the event as **headerCellInfo**.             |
+| `cell`         |  HTMLElement  | Represents the header cell element being rendered.     |
+| `node`         |  Element      | Refers to the inner content element of the header cell, used to update text or insert icons. |
+| `name`         |  string       | Identifies the event as **headerCellInfo**.             |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -6493,13 +6490,13 @@ The event provides an argument of type [IMouseMoveEventArgs](https://ej2.syncfus
 
 | **Property**  | **Type**                 |**Description**                                       |
 |-----------------|-----------------------|---------------------------------------------------------|
-| `column`        | `Object`              | Column metadata at the cursor location.                 |
-| `data`          | `IGanttData`          | Task or row data under the cursor.                      |
-| `date`          | `Date`                | Timeline date corresponding to the cursor position.     |
-| `eventMarkers`  | `EventMarkerModel`    | Event markers present at the current position.          |
-| `indicator`     | `IIndicator`          | Indicator element such as milestone or status icon under the cursor. |
-| `originalEvent` | `Object`              | Native mouse event object (**MouseEvent**).              |
-| `predecessor`   | `PredecessorTooltip`  | Tooltip data for predecessor relationships, if available.|
+| `column`        |  Object              | Column metadata at the cursor location.                 |
+| `data`          |  IGanttData          | Task or row data under the cursor.                      |
+| `date`          |  Date                | Timeline date corresponding to the cursor position.     |
+| `eventMarkers`  |  EventMarkerModel    | Event markers present at the current position.          |
+| `indicator`     |  IIndicator          | Indicator element such as milestone or status icon under the cursor. |
+| `originalEvent` |  Object              | Native mouse event object (**MouseEvent**).              |
+| `predecessor`   |  PredecessorTooltip  | Tooltip data for predecessor relationships, if available.|
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -6720,11 +6717,11 @@ The event provides an argument of type [ITaskbarClickEventArgs](https://ej2.sync
 
 | **Property**     | **Type**      | **Description**                                 |
 |------------------|---------------|-------------------------------------------------|
-| `data`           | `IGanttData`  | Task data associated with the clicked taskbar.  |
-| `rowIndex`       | `number`      | Index of the row where the taskbar was clicked. |
-| `target`         | `Element`     | DOM element where the click occurred.           |
-| `taskbarElement` | `HTMLElement` | Taskbar element that was clicked.               |
-| `name`           | `string`      | Name of the event (**onTaskbarClick**).         |
+| `data`           |  IGanttData  | Task data associated with the clicked taskbar.  |
+| `rowIndex`       |  number      | Index of the row where the taskbar was clicked. |
+| `target`         |  Element     | DOM element where the click occurred.           |
+| `taskbarElement` |  HTMLElement | Taskbar element that was clicked.               |
+| `name`           |  string      | Name of the event (**onTaskbarClick**).         |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -6946,13 +6943,13 @@ The event provides an argument of type [PdfColumnHeaderQueryCellInfoEventArgs](h
 
 | **Property**   | **Type**               | **Description**                                 |
 |------------------|------------------------|------------------------------------------------ |
-| `cell`           | `PdfTreeGridCell`      | Represents the PDF cell being exported. Supports content and style updates. |
-| `column`         | `ColumnModel`          | Provides column configuration details such as field name and header text.  |
-| `headerTemplate` | `ITemplateDetails`     | Contains template content including text or image for the header cell. |
-| `image`          | `PdfImage`             | Specifies an image to be rendered in the header cell.     |
-| `style`          | `PdfGanttCellStyle`    | Defines visual styles such as font, background color, and borders. |
-| `value`          | `string \| Object`      | Value to be displayed in the header cell. Can be customized. |
-| `name`           | `string`               | Identifies the event as **pdfColumnHeaderQueryCellInfo**. |
+| `cell`           |  PdfTreeGridCell      | Represents the PDF cell being exported. Supports content and style updates. |
+| `column`         |  ColumnModel         | Provides column configuration details such as field name and header text.  |
+| `headerTemplate` |  ITemplateDetails     | Contains template content including text or image for the header cell. |
+| `image`          |  PdfImage             | Specifies an image to be rendered in the header cell.     |
+| `style`          |  PdfGanttCellStyle    | Defines visual styles such as font, background color, and borders. |
+| `value`          |  string \| Object      | Value to be displayed in the header cell. Can be customized. |
+| `name`           |  string               | Identifies the event as **pdfColumnHeaderQueryCellInfo**. |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -7197,7 +7194,7 @@ The event provides an `object` with the following property:
 
 | **Property** | **Type**    | **Description**                                  |
 |--------------|-------------|--------------------------------------------------|
-| `name`       | `string`    | Identifies the event as **pdfExportComplete**    |
+| `name`       |  string    | Identifies the event as **pdfExportComplete**    |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -7440,13 +7437,13 @@ The event provides an argument of type [PdfExportCompleteArgs](https://ej2.syncf
 
 |  **Property** | **Type**           | **Description**                                     |
 |---------------|--------------------|-----------------------------------------------------|
-| `data`        | `object`           | Task and Gantt data for the current row.            |
-| `value`       | `Date \| string \| number \| boolean \| PdfTextWebLink \| PdfImage`  | Value displayed in the cell during PDF export. |
-| `column`      | `Column`           | Column configuration for the current cell.          |
-| `style`       | `PdfGanttCellStyle`| Style settings like font, color, and padding.       |
-| `cell`        | `PdfTreeGridCell`  | PDF cell object being rendered and customized.      |
-| `hyperLink`   |`Hyperlink`         | Hyperlink details if the cell includes a link.      |
-| `image`       | `Image`            | Image details if the cell includes an image.        |
+| `data`        |  object          | Task and Gantt data for the current row.            |
+| `value`       |  Date \| string \| number \| boolean \| PdfTextWebLink \| PdfImage  | Value displayed in the cell during PDF export. |
+| `column`      |  Column           | Column configuration for the current cell.          |
+| `style`       |  PdfGanttCellStyle| Style settings like font, color, and padding.       |
+| `cell`        |  PdfTreeGridCell  | PDF cell object being rendered and customized.      |
+| `hyperLink`   |  Hyperlink         | Hyperlink details if the cell includes a link.      |
+| `image`       |  Image            | Image details if the cell includes an image.        |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -7692,11 +7689,11 @@ The event provides an argument of type [PdfQueryTaskbarInfoEventArgs](https://ej
 
 | **Property**     | **Type**             | **Description**                                            |
 |------------------  | ---------------------|----------------------------------------------------------|
-| `data `            | `IGanttData`         | Task data for the current taskbar being exported.        |
-| `indicators`       | `IIndicator[]`       | Indicators displayed on the taskbar during PDF export.   |
-| `labelSettings`    | `ILabel`             | Custom content or image for taskbar labels.              |
-| `taskbar`          | `ITaskbarStyle`      | Style settings like color, border, and progress bar.     |
-| `taskbarTemplate`  | `ITemplateDetails`   | Template for taskbar appearance including text or image. |
+| `data `            |  IGanttData        | Task data for the current taskbar being exported.        |
+| `indicators`       |  IIndicator[]       | Indicators displayed on the taskbar during PDF export.   |
+| `labelSettings`    |  ILabel             | Custom content or image for taskbar labels.              |
+| `taskbar`          |  ITaskbarStyle      | Style settings like color, border, and progress bar.     |
+| `taskbarTemplate`  |  ITemplateDetails   | Template for taskbar appearance including text or image. |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -7941,8 +7938,8 @@ The event provides an argument of type [pdfQueryTimelineCellInfoEventArgs](https
 
 | **Property**   | **Type**            | **Description**                                      |
 |----------------|---------------------|------------------------------------------------------|
-| `timelineCell` | `PdfGanttCellStyle` | Style settings for the timeline cell being rendered. |
-| `value`        | `string`            | Text content displayed in the timeline cell.         |
+| `timelineCell` |  PdfGanttCellStyle | Style settings for the timeline cell being rendered. |
+| `value`        |  string            | Text content displayed in the timeline cell.         |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -8182,13 +8179,13 @@ The event provides an argument of type  [QueryCellInfoEventArgs](https://ej2.syn
 
 | **Property**       | **Type**         | **Description**                                   |
 |--------------------|------------------|---------------------------------------------------|
-| `cell`             | `HTMLElement`    | Represents the cell element being rendered.       |
-| `column`           | `Column`         | Configuration object for the current column.      |
-| `data`             | `object`         | Data object for the row associated with the cell. |
-| `foreignKeyData`   | `object`         | Foreign key data for the cell, if applicable.     |
-| `rowIndex`         | `number`         | Index of the row containing the cell.             |
-| `colIndex`         | `number`         | Index of the column containing the cell.          |
-| `colspan`          | `number`         | Number of columns the cell spans across.          |
+| `cell`             |  HTMLElement    | Represents the cell element being rendered.       |
+| `column`           |  Column         | Configuration object for the current column.      |
+| `data`             |  object         | Data object for the row associated with the cell. |
+| `foreignKeyData`   |  object         | Foreign key data for the cell, if applicable.     |
+| `rowIndex`         |  number         | Index of the row containing the cell.             |
+| `colIndex`         |  number         | Index of the column containing the cell.          |
+| `colspan`          |  number         | Number of columns the cell spans across.          |
 
 
 {% tabs %}
@@ -8438,18 +8435,18 @@ The event provides an argument of type [IQueryTaskbarInfoEventArgs](https://ej2.
 
 | **Property**            | **Type**        | **Description**                                      |
 |-------------------------|-----------------|------------------------------------------------------|
-| `baselineColor`         | `string`        | Color applied to the baseline indicator.             |
-| `data`                  | `IGanttData`    | Task data associated with the taskbar.               |
-| `leftLabelColor`        | `string`        | Color of the left-side label.                        |
-| `milestoneColor`        | `string`        | Color used for milestone taskbars.                   |
-| `progressBarBgColor`    | `string`        | Background color of the progress bar.                |
-| `rightLabelColor`       | `string`        | Color of the right-side label.                       |
-| `rowElement`            | `Element`       | Row element containing the taskbar.                  |
-| `taskLabelColor`        | `string`        | Color of the task label text.                        |
-| `taskbarBgColor`        | `string`        | Background color of the taskbar.                     |
-| `taskbarBorderColor`    | `string`        | Border color of the taskbar.                         |
-| `taskbarElement`        | `Element`       | Defines the taskbar element.                         |
-| `taskbarType`           | `string`        | Defines the taskbar type.                            |
+| `baselineColor`         |  string        | Color applied to the baseline indicator.             |
+| `data`                  |  IGanttData    | Task data associated with the taskbar.               |
+| `leftLabelColor`        |  string        | Color of the left-side label.                        |
+| `milestoneColor`        |  string        | Color used for milestone taskbars.                   |
+| `progressBarBgColor`    |  string        | Background color of the progress bar.                |
+| `rightLabelColor`       |  string        | Color of the right-side label.                       |
+| `rowElement`            |  Element       | Row element containing the taskbar.                  |
+| `taskLabelColor`        |  string       | Color of the task label text.                        |
+| `taskbarBgColor`        |  string        | Background color of the taskbar.                     |
+| `taskbarBorderColor`    |  string        | Border color of the taskbar.                         |
+| `taskbarElement`        |  Element       | Defines the taskbar element.                         |
+| `taskbarType`           |  string        | Defines the taskbar type.                            |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -8700,15 +8697,15 @@ The event provides an argument of type [RecordDoubleClickEventArgs](https://ej2.
 
 | **Property**         | **Type**         | **Description**                                       |
 |----------------------|------------------|-------------------------------------------------------|
-| `cell`               | `Element`        | The cell element that was double-clicked.             |
-| `cellIndex`          | `number`         | Index of the clicked cell within the row.             |
-| `column`             | `Column`         | Column configuration for the clicked cell.            |
-| `foreignKeyData`     | `Object`         | Foreign key data linked to the column, if applicable. |
-| `name`               | `string`         | Name of the event (**recordDoubleClick**).            |
-| `row`                | `Element`        | The row element that was double-clicked.              |
-| `rowData`            | `IGanttData`     | Data object representing the selected task.           |
-| `rowIndex`           | `number`         | Index of the row in the data source.                  |
-| `target`             | `Element`        | DOM element that initiated the double-click.          |
+| `cell`               |  Element        | The cell element that was double-clicked.             |
+| `cellIndex`          |  number         | Index of the clicked cell within the row.             |
+| `column`             |  Column         | Column configuration for the clicked cell.            |
+| `foreignKeyData`     |  Object         | Foreign key data linked to the column, if applicable. |
+| `name`               |  string         | Name of the event (**recordDoubleClick**).            |
+| `row`                |  Element        | The row element that was double-clicked.              |
+| `rowData`            |  IGanttData     | Data object representing the selected task.           |
+| `rowIndex`           |  number         | Index of the row in the data source.                  |
+| `target`             |  Element        | DOM element that initiated the double-click.          |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -8953,8 +8950,8 @@ The event provides an argument of type [ResizeArgs](https://ej2.syncfusion.com/r
 
 | **Property** | **Type**    | **Description**                                  |
 |--------------|-------------|--------------------------------------------------|
-| `cancel`     | `boolean`   | Prevents column resizing when set to **true**.   |
-| `column`     | `Column`    | Details of the column being resized initially.   |
+| `cancel`     |  boolean   | Prevents column resizing when set to **true**.   |
+| `column`     |  Column    | Details of the column being resized initially.   |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -9187,8 +9184,8 @@ The event provides an argument of type [ResizeArgs](https://ej2.syncfusion.com/r
 
 | **Property** | **Type**    | **Description**                                  |
 |--------------|-------------|--------------------------------------------------|
-| `cancel`     | `boolean`   | Cancels the resize operation when set to **true**.  |
-| `column`     | `Column`    | Provides information about the resized column.   |
+| `cancel`     |  boolean   | Cancels the resize operation when set to **true**.  |
+| `column`     |  Column    | Provides information about the resized column.   |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -9413,8 +9410,8 @@ The event provides an argument of type [ResizeArgs](https://ej2.syncfusion.com/r
 
 | **Property** | **Type**    | **Description**                                  |
 |--------------|-------------|--------------------------------------------------|
-| `cancel`     | `boolean`   | Stops resizing dynamically during interaction.   |
-| `column`     | `Column`    | Current column details during resizing process.  |
+| `cancel`     |  boolean   | Stops resizing dynamically during interaction.   |
+| `column`     |  Column    | Current column details during resizing process.  |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -9639,10 +9636,10 @@ The event provides an argument of type [RowDataBoundEventArgs](https://ej2.syncf
 
 | **Property**     | **Type**         | **Description**                                               |
 |------------------|------------------|---------------------------------------------------------------|
-| `data`           | `IGanttData`     | Task data bound to the current row.                           |
-| `isSelectable`   | `boolean`        | Indicates if the row is selectable or not.                    |
-| `row`            | `Element`        | Row element rendered in the Gantt Chart.                      |
-| `rowHeight`      | `number`         | Height of the row being rendered.                             |
+| `data`           |  IGanttData     | Task data bound to the current row.                           |
+| `isSelectable`   |  boolean        | Indicates if the row is selectable or not.                    |
+| `row`            |  Element        | Row element rendered in the Gantt Chart.                      |
+| `rowHeight`      |  number         | Height of the row being rendered.                             |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -9869,14 +9866,14 @@ The event provides an argument of type [RowDeselectEventArgs](https://ej2.syncfu
 
 | **Property**              | **Type**                  | **Description**                              |
 |---------------------------|---------------------------|----------------------------------------------|
-| `data`                    | `IGanttData[]`            | Data for the row(s) that were deselected.    |
-| `foreignKeyData`          | `Object` \| `Object[]`    | Foreign key data linked to deselected row(s).|
-| `isHeaderCheckboxClicked`| `boolean`                 | **True** if header checkbox triggered deselection. |
-| `isInteracted`            | `boolean`                 | **True** if deselection was triggered by interaction. |
-| `row`                     | `Element`                 | Row element that was deselected.             |
-| `rowIndex`                | `number`                  | Index of the deselected row.                 |
-| `rowIndexes`              | `number[]`                | Indexes of all deselected rows.              |
-| `target`                  | `Element`                 | Target element that triggered the deselection.|
+| `data`                    |  IGanttData[]            | Data for the row(s) that were deselected.    |
+| `foreignKeyData`          |  Object \| Object[]    | Foreign key data linked to deselected row(s).|
+| `isHeaderCheckboxClicked` |  boolean                 | **True** if header checkbox triggered deselection. |
+| `isInteracted`            |  boolean                 | **True** if deselection was triggered by interaction. |
+| `row`                     |  Element                 | Row element that was deselected.             |
+| `rowIndex`                |  number                  | Index of the deselected row.                 |
+| `rowIndexes`              |  number[]                | Indexes of all deselected rows.              |
+| `target`                  |  Element                 | Target element that triggered the deselection.|
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -10098,14 +10095,14 @@ The event provides an argument of type [RowDeselectEventArgs](https://ej2.syncfu
 
 | **Property**               | **Type**                | **Description** |
 |----------------------------|-------------------------|------------------------------------------|
-| `data`                     | `IGanttData[]`          | Data for the row(s) being deselected. |
-| `foreignKeyData`           | `Object` \| `Object[]`  | Foreign key data linked to deselected row(s). |
-| `isHeaderCheckboxClicked`  | `boolean`               | **True** if header checkbox triggered deselection. |
-| `isInteracted`            | `boolean`                | **True** if deselection was triggered by interaction.|
-| `row`                     | `Element`                | Row element being deselected.         |
-| `rowIndex`                | `number`                 | Index of the row being deselected.    |
-| `rowIndexes`              | `number[]`               | Indexes of all rows being deselected. |
-| `target`                  | `Element`                | Target element that triggered the deselection.|
+| `data`                     |  IGanttData[]          | Data for the row(s) being deselected. |
+| `foreignKeyData`           |  Object \| Object[]  | Foreign key data linked to deselected row(s). |
+| `isHeaderCheckboxClicked`  |  boolean               | **True** if header checkbox triggered deselection. |
+| `isInteracted`             |  boolean                | **True** if deselection was triggered by interaction.|
+| `row`                      |  Element                | Row element being deselected.         |
+| `rowIndex`                 |  number                 | Index of the row being deselected.    |
+| `rowIndexes`               |  number[]               | Indexes of all rows being deselected. |
+| `target`                   |  Element                | Target element that triggered the deselection.|
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -10327,12 +10324,12 @@ The event provides an argument of type [RowDragEventArgs](https://ej2.syncfusion
 
 | **Property**     | **Type**        | **Description**                                      |
 |------------------|-----------------|------------------------------------------------------|
-| `data`           | `Object[]`      | Data for the selected rows being dragged.            |
-| `dropIndex`      | `number`        | Index of the target row where the drop is intended.  |
-| `fromIndex`      | `number`        | Original index of the dragged row.                   |
-| `originalEvent`  | `object`        | Mouse event associated with the drag action.         |
-| `rows`           | `Element[]`     | DOM elements of the selected rows.                   |
-| `target`         | `Element`       | Target element where the drag started.               |
+| `data`           |  Object[]      | Data for the selected rows being dragged.            |
+| `dropIndex`      |  number        | Index of the target row where the drop is intended.  |
+| `fromIndex`      |  number        | Original index of the dragged row.                   |
+| `originalEvent`  |  object        | Mouse event associated with the drag action.         |
+| `rows`           |  Element[]     | DOM elements of the selected rows.                   |
+| `target`         |  Element       | Target element where the drag started.               |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -10562,12 +10559,12 @@ The event provides an argument of type [RowDragEventArgs](https://ej2.syncfusion
 
 | **Property**     | **Type**        | **Description**                            |
 |------------------|-----------------|--------------------------------------------|
-| `data`           | `Object[]`      | Selected rows data .                       |
-| `dropIndex`      | `number`        | Target index for dropping the dragged row. |
-| `fromIndex`      | `number`        | Original index of the dragged row.         |
-| `originalEvent`  | `object`        | Native mouse event that started the drag.  |
-| `rows`           | `Element[]`     | DOM elements of the dragged rows.          |
-| `target`         | `Element`       |  Element where the drag was initiated.     |
+| `data`           |  Object[]      | Selected rows data .                       |
+| `dropIndex`      |  number        | Target index for dropping the dragged row. |
+| `fromIndex`      |  number        | Original index of the dragged row.         |
+| `originalEvent`  |  object        | Native mouse event that started the drag.  |
+| `rows`           |  Element[]     | DOM elements of the dragged rows.          |
+| `target`         |  Element       |  Element where the drag was initiated.     |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -10798,12 +10795,12 @@ The event provides an argument of type [RowDragEventArgs](https://ej2.syncfusion
 
 | **Property**       | **Type**    | **Description**                                  |
 |------------------|---------------|--------------------------------------------------|
-| `data`           | `Object[]`    | Selected rows data objects.                      |
-| `dropIndex`      | `number`      | Target index for potential drop.                 |
-| `fromIndex`      | `number`      | Original index of the row being dragged.         |
-| `originalEvent`  | `object`      | Native mouse event that initiated the drag.      |
-| `rows`           | `Element[]`   | DOM elements of the selected rows.               |
-| `target`         | `Element`     | Element where the drag was initiated.            |
+| `data`           |  Object[]    | Selected rows data objects.                      |
+| `dropIndex`      |  number      | Target index for potential drop.                 |
+| `fromIndex`      |  number      | Original index of the row being dragged.         |
+| `originalEvent`  |  object      | Native mouse event that initiated the drag.      |
+| `rows`           |  Element[]   | DOM elements of the selected rows.               |
+| `target`         |  Element     | Element where the drag was initiated.            |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -11031,16 +11028,16 @@ The event provides an argument of type [RowDragEventArgs](https://ej2.syncfusion
 
 | **Property**      | **Type**       | **Description**                                     |
 |-------------------|------------------|---------------------------------------------------|
-| `data`            | `Object[]`       | Selected rows data objects.                       |
-| `dropIndex`       | `number`         | Target index for the dropped row.                 |
-| `dropPosition`    | `string`         | Position relative to the target row.              |
-| `dropRecord`      | `IGanttData`     | Dropped record after reordering.                  |
-| `fromIndex`       | `number`         | Original index of the dragged row.                |
-| `modifiedRecords` | `IGanttData[]`   | Records updated after the drop.                   |
-| `originalEvent`   | `object`         | Native mouse event that completed the drag.       |
-| `requestType`     | `string`         | Type of request triggered by the drop.            |
-| `rows`            | `Element[]`      | DOM elements of the dragged rows.                 |
-| `target`          | `Element`        | Element where the drag was initiated.             |
+| `data`            |  Object[]       | Selected rows data objects.                       |
+| `dropIndex`       |  number         | Target index for the dropped row.                 |
+| `dropPosition`    |  string         | Position relative to the target row.              |
+| `dropRecord`      |  IGanttData     | Dropped record after reordering.                  |
+| `fromIndex`       |  number         | Original index of the dragged row.                |
+| `modifiedRecords` |  IGanttData[]   | Records updated after the drop.                   |
+| `originalEvent`   |  object         | Native mouse event that completed the drag.       |
+| `requestType`     |  string         | Type of request triggered by the drop.            |
+| `rows`            |  Element[]      | DOM elements of the dragged rows.                 |
+| `target`          |  Element        | Element where the drag was initiated.             |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -11268,16 +11265,16 @@ The event provides an argument of type [RowSelectEventArgs](https://ej2.syncfusi
 
 | **Property**              | **Type**                  |  **Description**                            |
 |---------------------------|---------------------------|---------------------------------------------|
-| `data`                    | `IGanttData`              | Data for the selected row.                  |
-| `foreignKeyData`          | `Object` \| `Object[]`    | Foreign key data linked to selected row.    | 
-| `isHeaderCheckboxClicked`| `boolean`                  | **True** if header checkbox triggered selection.|
-| `isInteracted`            | `boolean`                 | **True** if selection was triggered by  interaction.|
-| `previousRow`             | `Element`                 | Previously selected row element.             |
-| `previousRowIndex`        | `number`                  | Index of the previously selected row.        |
-| `row`                     | `Element` \| `Element[]`  | Currently selected row element(s).           | 
-| `rowIndex`                | `number`                  | Index of the selected row.                   |
-| `rowIndexes`              | `number[]`                | Indexes of all selected rows.                |
-| `target`                  | `Element`                 | Target element that triggered the selection. |
+| `data`                    |  IGanttData              | Data for the selected row.                  |
+| `foreignKeyData`          |  Object \| Object[]    | Foreign key data linked to selected row.    | 
+| `isHeaderCheckboxClicked`|  boolean                 | **True** if header checkbox triggered selection.|
+| `isInteracted`            |  boolean                 | **True** if selection was triggered by  interaction.|
+| `previousRow`             |  Element                 | Previously selected row element.             |
+| `previousRowIndex`        |  number                  | Index of the previously selected row.        |
+| `row`                     |  Element \| Element[]  | Currently selected row element(s).           | 
+| `rowIndex`                |  number                  | Index of the selected row.                   |
+| `rowIndexes`              |  number[]                | Indexes of all selected rows.                |
+| `target`                  |  Element                 | Target element that triggered the selection. |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -11515,19 +11512,19 @@ The event provides an argument of type [RowSelectingEventArgs](https://ej2.syncf
 
 | **Property**              | **Type**                  | **Description**                              |
 |---------------------------|---------------------------|----------------------------------------------|
-| `cancel`                  | `boolean`                 | Prevents row selection when set to **true**. |
-| `data`                    | `IGanttData`              | Data for the row being selected.             |
-| `foreignKeyData`          | `Object` \| `Object[]`    | Foreign key data linked to selected row.     |
-| `isCtrlPressed`           | `boolean`                 | **True** if CTRL key was pressed during selection. |
-| `isHeaderCheckboxClicked` | `boolean`                 | **True** if header checkbox triggered selection. |
-| `isInteracted`            | `boolean`                 | **True** if selection was triggered by interaction.|
-| `isShiftPressed`          | `boolean`                 | **True** if SHIFT key was pressed during selection.|
-| `previousRow`             | `Element`                 | Previously selected row element.             |
-| `previousRowIndex`        | `number`                  | Index of the previously selected row.        |
-| `row`                     | `Element` \| `Element[]`  | Row element(s) being selected or deselected. |
-| `rowIndex`                | `number`                  | Index of the row being selected.             |
-| `rowIndexes`              | `number[]`                | Indexes of all rows being selected.          |
-| `target`                  | `Element`                 | Target element that triggered the selection. |
+| `cancel`                  |  boolean                 | Prevents row selection when set to **true**. |
+| `data`                    |  IGanttData              | Data for the row being selected.             |
+| `foreignKeyData`          |  Object \| Object[]    | Foreign key data linked to selected row.     |
+| `isCtrlPressed`           |  boolean                 | **True** if CTRL key was pressed during selection. |
+| `isHeaderCheckboxClicked` |  boolean                 | **True** if header checkbox triggered selection. |
+| `isInteracted`            |  boolean                 | **True** if selection was triggered by interaction.|
+| `isShiftPressed`          |  boolean                 | **True** if SHIFT key was pressed during selection.|
+| `previousRow`             |  Element                 | Previously selected row element.             |
+| `previousRowIndex`        |  number                  | Index of the previously selected row.        |
+| `row`                     |  Element \| Element[]  | Row element(s) being selected or deselected. |
+| `rowIndex`                |  number                  | Index of the row being selected.             |
+| `rowIndexes`              |  number[]                | Indexes of all rows being selected.          |
+| `target`                  |  Element                 | Target element that triggered the selection. |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -11763,8 +11760,8 @@ The event provides an argument of type [ResizeArgs](https://ej2.syncfusion.com/r
 
 | **Property**     | **Type**               | **Description**                          |
 |------------------|------------------------|------------------------------------------|
-| `cancel`         | `boolean`              | Defines whether the event is cancelable. |
-| `column`         | `Column`               | Defines the resizing column details.     |
+| `cancel`         |  boolean              | Defines whether the event is cancelable. |
+| `column`         |  Column               | Defines the resizing column details.     |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -11999,13 +11996,13 @@ The event provides an argument of type [ISplitterResizedEventArgs](https://ej2.s
 
 | **Property**   | **Type**               | **Description**                              |
 |----------------|------------------------|----------------------------------------------|
-| `cancel`       | `boolean`              | Indicates if the event is cancelable.        |
-| `element`      | `HTMLElement`          | Splitter container element.                  |
-| `event`        | `Event`                | Event that triggered the resize.             |
-| `index`        | `number[]`             | Indexes of resized panes.                    |
-| `pane`         | `HTMLElement[]`        | Pane elements involved in resizing.          |
-| `paneSize`     | `number[]`             | Final sizes of the resized panes.            |
-| `separator`    | `HTMLElement`          | Splitter bar element that was resized.       |
+| `cancel`       |  boolean              | Indicates if the event is cancelable.        |
+| `element`      |  HTMLElement          | Splitter container element.                  |
+| `event`        |  Event                | Event that triggered the resize.             |
+| `index`        |  number[]             | Indexes of resized panes.                    |
+| `pane`         |  HTMLElement[]        | Pane elements involved in resizing.          |
+| `paneSize`     |  number[]             | Final sizes of the resized panes.            |
+| `separator`    |  HTMLElement          | Splitter bar element that was resized.       |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -12236,13 +12233,13 @@ The event provides an argument of type `ResizingEventArgs` with the following pr
 
 | **Property**   | **Type**         | **Description**                              |
 |----------------|------------------|----------------------------------------------|
-| `name`         | `string`         | Event name: **splitterResizing**.            |
-| `element`      | `HTMLElement`    | Splitter container element.                  |
-| `event`        | `MouseEvent`     | Mouse event triggering the resize.           |
-| `index`        | `number[]`       | Indexes of panes being resized.              |
-| `pane`         | `HTMLElement[]`  | Pane elements involved in resizing.          |
-| `paneSize`     | `number[]`       | Current sizes of the panes.                  |
-| `separator`    | `HTMLElement`    | Splitter bar element being dragged.          |
+| `name`         |  string         | Event name: **splitterResizing**.            |
+| `element`      |  HTMLElement    | Splitter container element.                  |
+| `event`        |  MouseEvent     | Mouse event triggering the resize.           |
+| `index`        |  number[]       | Indexes of panes being resized.              |
+| `pane`         |  HTMLElement[]  | Pane elements involved in resizing.          |
+| `paneSize`     |  number[]       | Current sizes of the panes.                  |
+| `separator`    |  HTMLElement    | Splitter bar element being dragged.          |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -12467,16 +12464,16 @@ The event provides an argument of type [TaskbarEditedEventArgs](https://ej2.sync
 
 | **Property**          | **Type**         | **Description**                              |
 |-----------------------|------------------|----------------------------------------------|
-| `action`              | `string`         | Type of taskbar edit action.                 |
-| `cancel`              | `boolean`        | Indicates if the event is cancelable.        |
-| `data`                | `IGanttData`     | Data of the edited task.                     |
-| `editingFields`       | `ITaskData`      | Fields being edited in the task.             |
-| `previousData`        | `ITaskData`      | Task data before the edit.                   |
-| `recordIndex`         | `number`         | Index of the edited task.                    |
-| `roundOffDuration`    | `boolean`        | Indicates if duration is rounded off.        |
-| `segmentIndex`        | `number`         | Index of the edited segment.                 |
-| `target`              | `Element`        | Target element of the edit.                  |
-| `taskBarEditAction`   | `string`         | Type of taskbar edit performed.              |
+| `action`              |  string         | Type of taskbar edit action.                 |
+| `cancel`              |  boolean        | Indicates if the event is cancelable.        |
+| `data`                |  IGanttData     | Data of the edited task.                     |
+| `editingFields`       |  ITaskData      | Fields being edited in the task.             |
+| `previousData`        |  ITaskData      | Task data before the edit.                   |
+| `recordIndex`         |  number         | Index of the edited task.                    |
+| `roundOffDuration`    |  boolean        | Indicates if duration is rounded off.        |
+| `segmentIndex`        |  number         | Index of the edited segment.                 |
+| `target`              |  Element        | Target element of the edit.                  |
+| `taskBarEditAction`   |  string         | Type of taskbar edit performed.              |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -12720,16 +12717,16 @@ The event provides an argument of type [ITaskbarEditedEventArgs](https://ej2.syn
 
 | **Property**          | **Type**         | **Description**                              |
 |-----------------------|------------------|----------------------------------------------|
-| `action`              | `string`         | Type of taskbar edit in progress.            |
-| `cancel`              | `boolean`        | Set **true** to cancel the edit.             |
-| `data`                | `IGanttData`     | Data of the task being edited.               |
-| `editingFields`       | `ITaskData`      | Fields currently being modified.             |
-| `previousData`        | `ITaskData`      | Task data before the edit.                   |
-| `recordIndex`         | `number`         | Index of the task being edited.              |
-| `roundOffDuration`    | `boolean`        | Indicates if duration should be rounded.     |
-| `segmentIndex`        | `number`         | Index of the segment being edited.           |
-| `target`              | `Element`        | Target element involved in the edit.         |
-| `taskBarEditAction`   | `string`         | Specific type of taskbar edit action.        |
+| `action`              |  string         | Type of taskbar edit in progress.            |
+| `cancel`              |  boolean        | Set **true** to cancel the edit.             |
+| `data`                |  IGanttData     | Data of the task being edited.               |
+| `editingFields`       |  ITaskData      | Fields currently being modified.             |
+| `previousData`        |  ITaskData      | Task data before the edit.                   |
+| `recordIndex`         |  number         | Index of the task being edited.              |
+| `roundOffDuration`    |  boolean        | Indicates if duration should be rounded.     |
+| `segmentIndex`        |  number         | Index of the segment being edited.           |
+| `target`              |  Element        | Target element involved in the edit.         |
+| `taskBarEditAction`   |  string         | Specific type of taskbar edit action.        |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -12964,10 +12961,10 @@ The event provides an argument of type [ClickEventArgs](https://ej2.syncfusion.c
 
 | **Property**     | **Type**           | **Description**               |
 |--------------------|------------------|-------------------------------|
-| `name`             | `string`         | Specifies name of the event   |
-| `item`             | `object`         | Clicked toolbar item info     |
-| `originalEvent`    | `PointerEvent`   | Native DOM event              |
-| `cancel`           | `boolean`        | Cancel default action         |
+| `name`             |  string         | Specifies name of the event   |
+| `item`             |  object         | Clicked toolbar item info     |
+| `originalEvent`    |  PointerEvent   | Native DOM event              |
+| `cancel`           |  boolean        | Cancel default action         |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
