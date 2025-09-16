@@ -1,6 +1,5 @@
 
 
-
 import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -12,13 +11,13 @@ export default class App extends React.Component<{}, {}> {
     // set the value to footer template
     public footerTemplate(): JSX.Element {
       return (
-       <span className='foot'/>
+       <span className='foot'> Total list items: {this.sportsData.length}</span>
         );
     }
     public render() {
         return (
               // specifies the tag for render the MultiSelect component
-            <MultiSelectComponent id="mtselement" footerTemplate={this.footerTemplate} dataSource={this.sportsData} placeholder="Select a game" />
+            <MultiSelectComponent id="mtselement" footerTemplate={this.footerTemplate.bind(this)} dataSource={this.sportsData} placeholder="Select a game" />
         );
     }
 }
