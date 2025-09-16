@@ -6,7 +6,7 @@ function App() {
     const sportsData = ["BasketBall", "Cricket", "Football", "Golf"];
     // set the value to footer template
     function footerTemplate() {
-        return (<span className='foot'/>);
+        return (<span className='foot'> Total list items: {sportsData.length}</span>);
     }
     return (
     // specifies the tag for render the MultiSelect component

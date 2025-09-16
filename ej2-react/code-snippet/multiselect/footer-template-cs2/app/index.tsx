@@ -1,5 +1,4 @@
 
-
 import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -11,7 +10,7 @@ function App(){
     // set the value to footer template
     function footerTemplate(): JSX.Element {
       return (
-       <span className='foot'/>
+       <span className='foot'> Total list items: {sportsData.length}</span>
         );
     }
     return (
