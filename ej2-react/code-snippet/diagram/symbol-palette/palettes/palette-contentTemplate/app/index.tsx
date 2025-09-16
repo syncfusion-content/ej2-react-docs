@@ -49,6 +49,7 @@ const symbolPreview: SymbolPreviewModel = {
     }
 };
 
+// Initializes the symbol palette and Diagram component.
 function App() {
     return (
         <div>
