@@ -6,7 +6,7 @@ import { CheckBoxComponent } from "@syncfusion/ej2-react-buttons";
 let palette: SymbolPaletteComponent;
 let checkBox: CheckBoxComponent;
 
-//Initialize the basic shapes for the symbol palette
+// Initialize the basic shapes for the symbol palette.
 export function getBasicShapes(): NodeModel[] {
     let basicShapes: NodeModel[] = [
         { id: 'Rectangle', shape: { type: 'Basic', shape: 'Rectangle' } },
@@ -21,7 +21,7 @@ export function getBasicShapes(): NodeModel[] {
     return basicShapes;
 }
 
-//Initialize the flow shapes for the symbol palette
+// Initialize the flow shapes for the symbol palette.
 export function getFlowShapes(): NodeModel[] {
     let basicShapes: NodeModel[] = [
         { id: 'Terminator', shape: { type: 'Flow', shape: 'Terminator' } },
@@ -77,7 +77,7 @@ function App() {
                 symbolMargin={symbolMargin}
                 symbolHeight={70}
                 symbolWidth={70}
-                //Enable/disable tooltip for the symbols
+                // Enable/disable tooltip for the symbols.
                 getSymbolInfo={getSymbolInfo}
                 getNodeDefaults={(symbol: NodeModel) => {
                     symbol.style.fill = '#6495ED';
