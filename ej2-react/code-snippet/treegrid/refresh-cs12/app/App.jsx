@@ -1,27 +1,23 @@
 import * as React from 'react';
 import { projectData } from './datasource';
-import { Query } from '@syncfusion/ej2-data';
 import { ColumnsDirective, ColumnDirective, TreeGridComponent, Inject } from '@syncfusion/ej2-react-treegrid';
 import { Toolbar, Page, ExcelExport } from '@syncfusion/ej2-react-treegrid';
 /* tslint:disable */
 function App() {
     const toolbarOptions = ['ExcelExport'];
     let treegrid;
-    let queryClone;
     const pageOptions = { pageSize: 5, pageCount: 5 };
+    const selectionOptions = { type: 'Multiple' };
     const toolbarClick = (args) => {
-    if (treegrid && args.item.text === 'Excel Export') {
-            queryClone = treegrid.query;
-            treegrid.query = new Query().addParams("recordcount", "12");
-            treegrid.excelExport();
+        if (treegrid && args.item.text === 'Excel Export') {
+            const selectedRecords = treegrid.getSelectedRecords();
+            const exportProperties = {
+                dataSource: selectedRecords,
+            };
+        treegrid.excelExport(exportProperties);
         }
     };
-    const excelExportComplete = () => {
-        if (treegrid) {
-            treegrid.query = queryClone;
-        }
-    };
-    return (<TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' pageSettings={pageOptions} toolbarClick={toolbarClick} toolbar={toolbarOptions} allowPaging={true} ref={g => treegrid = g} allowExcelExport={true} excelExportComplete={excelExportComplete}>
+    return (<TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' pageSettings={pageOptions} toolbarClick={toolbarClick} toolbar={toolbarOptions} allowPaging={true} ref={g => treegrid = g} allowExcelExport={true} selectionSettings={selectionOptions}>
         <ColumnsDirective>
           <ColumnDirective field='TaskID' headerText='Task ID' width='70' textAlign='Right' isPrimaryKey={true}></ColumnDirective>
           <ColumnDirective field='TaskName' headerText='Task Name' width='100'></ColumnDirective>

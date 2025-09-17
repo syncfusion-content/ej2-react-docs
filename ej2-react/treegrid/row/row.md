@@ -53,4 +53,40 @@ Please refer the following example.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/alt-row-cs1" %}
 
+## Row height
+
+The Syncfusion TreeGrid allows you to customize the height of rows based on your needs. This feature can be useful when you need to display more content in a row or when you want to reduce the height of rows to fit its content. You can achieve this by using the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowheight) property of the TreeGrid. This property allows you to change the height of the entire grid row to your desired value.
+
+In the below example, the **rowHeight** is set as *60px*.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/rows-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/rows-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/rows-cs1" %}
+
+### Customize row height for particular row
+
+Customizing the row height for a particular row can be useful when you want to display more content in a particular row, reduce the height of a row to fit its content, or make a specific row stand out from the other rows in the TreeGrid. This can be achieved by using the `rowHeight` property of the TreeGrid along with the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdatabound) event.
+
+The `rowHeight` property of the TreeGrid allows you to set the height of all rows in the TreeGrid to a specific value. However, if you want to customize the row height for a specific row based on the row data, you can use the `rowDataBound` event. This event is triggered every time a request is made to access row information, element, or data, and before the row element is appended to the TreeGrid element.
+
+In the below example, the row height for the row with **TaskID** as **3** is set as **90px** using the **rowDataBound** event.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/rows-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/rows-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/rows-cs2" %}
+
 > Refer to our [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to know how to present and manipulate data.

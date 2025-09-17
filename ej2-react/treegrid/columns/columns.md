@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Columns in React Treegrid component
 
-The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#dataSource) schema in the TreeGrid. This plays a vital role in rendering column values in the required format. The treegrid operations such as sorting, filtering and searching etc. are performed based on column definitions. The [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#field) property of the [`columns`](https://ej2.syncfusion.com/react/documentation/api/treegrid#column) is necessary to map the data source values in TreeGrid columns.
+The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#dataSource) schema in the TreeGrid. This plays a vital role in rendering column values in the required format. The treegrid operations such as sorting, filtering and searching etc. are performed based on column definitions. The [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) property of the [`columns`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#column) is necessary to map the data source values in TreeGrid columns.
 
 > 1. If the column [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) is not specified in the dataSource, the column values will be empty.
 > 2. If the [`field`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field) name contains “dot” operator, it is considered as complex binding.
@@ -125,6 +125,25 @@ It is also possible to select the rows hierarchically using checkboxes in TreeGr
 
 > For hierarchy selection between the records, we need to enable the [`autoCheckHierarchy`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autocheckhierarchy) property.
 
+## Autofit columns 
+
+The [autoFitColumns](https://ej2.syncfusion.com/react/documentation/api/treegrid/#autofitcolumns) method resizes the column to fit the widest cell's content without wrapping. You can autofit a specific column at initial rendering by invoking the `autoFitColumns` method in [dataBound](https://ej2.syncfusion.com/react/documentation/api/treegrid/#databound) event.
+
+To use `autoFitColumns` method, you need to inject **Resize** module in the TreeGrid.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/column-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/column-cs1/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/column-cs1" %}
+
+> You can autofit all columns, by invoking `autoFitColumns` method without column name.
+
 ## Controlling TreeGrid actions
 
 You can enable or disable treegrid action for a particular column by setting the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowfiltering), and [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowsorting) properties.
@@ -214,5 +233,20 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs18" %}
+
+## Responsive columns
+
+The Syncfusion React TreeGrid provides a built-in feature to toggle the visibility of columns based on media queries using the [hideAtMedia](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#hideatmedia) property of the column object. The `hideAtMedia` accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html).
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/column-cs22/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/column-cs22/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/column-cs22" %}
 
 > You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/bootstrap5/treegrid/treegrid-overview) to knows how to present and manipulate data.
