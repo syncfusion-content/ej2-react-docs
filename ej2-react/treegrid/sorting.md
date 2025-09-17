@@ -84,6 +84,29 @@ In the following example, custom sort comparer function was defined in the *Cate
 
 > The sort comparer function will work only for the local data.
 
+### Display null values at bottom
+
+By default, null values in a Syncfusion TreeGrid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, there may be scenarios where you want to always display null values at the bottom of the TreeGrid regardless of the sort direction. This can be achieved by utilizing the [column.sortComparer](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#sortcomparer) method. This feature is particularly useful when working with data sets where null values might need to be clearly separated from actual data entries.
+
+The example below demonstrates how to display null date values at bottom of the TreeGrid row while sorting the **StartDate** column in both ways.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/null-date-value-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/null-date-value-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/treegrid/null-date-value-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/treegrid/null-date-value-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/null-date-value-cs1" %}
+
 ## Touch Interaction
 
 When you tap the treegrid header on touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.jpg), and then tap the desired treegrid headers.

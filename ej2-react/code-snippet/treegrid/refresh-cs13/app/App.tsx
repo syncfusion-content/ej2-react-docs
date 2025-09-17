@@ -1,34 +1,33 @@
-
-
-
 import * as React from 'react';
 import { projectData } from './datasource';
+import { Query } from '@syncfusion/ej2-data';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { PdfExportProperties } from '@syncfusion/ej2-react-grids';
-import { ColumnsDirective, ColumnDirective, TreeGridComponent, Inject, SelectionSettingsModel } from '@syncfusion/ej2-react-treegrid';
+import { ColumnsDirective, ColumnDirective, TreeGridComponent, Inject } from '@syncfusion/ej2-react-treegrid';
 import { Toolbar, ToolbarItems, Page, TreeGrid, PdfExport, PageSettingsModel } from '@syncfusion/ej2-react-treegrid';
-
 /* tslint:disable */
-
 function App() {
 
   const toolbarOptions: ToolbarItems[] = ['PdfExport'];
   let treegrid: TreeGridComponent | null;
+  let queryClone: Query;
   const pageOptions: PageSettingsModel = {pageSize:5, pageCount:5};
-  const selectionOptions: SelectionSettingsModel = {type: 'Multiple'};
   const toolbarClick = (args: ClickEventArgs) => {
     if (treegrid && args.item.text === 'PDF Export') {
-      const selectedRecords = treegrid.getSelectedRecords();
-      const exportProperties: PdfExportProperties = {
-        dataSource: selectedRecords,
-      };
-      (treegrid.current as any).pdfExport(exportProperties);
+      queryClone = treegrid.query;
+      treegrid.query = new Query().addParams("recordcount", "12");
+      treegrid.pdfExport();
     } 
   }
 
+  const pdfExportComplete = (): void => {
+    if (treegrid) {
+        treegrid.query = queryClone;
+    }
+  }
+
     return (
-      <TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping= 'TaskID' parentIdMapping='parentID' pageSettings={pageOptions}
-      toolbarClick={toolbarClick} toolbar={toolbarOptions} allowPaging={true} ref={g => treegrid = g} allowPdfExport={true} selectionSettings={selectionOptions}>
+      <TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping= 'TaskID' parentIdMapping='parentID' pageSettings={pageOptions} toolbarClick={toolbarClick} toolbar={toolbarOptions} allowPaging={true}
+       ref={g => treegrid = g} allowPdfExport={true} pdfExportComplete={pdfExportComplete} >
         <ColumnsDirective>
           <ColumnDirective field='TaskID' headerText='Task ID' width='70' textAlign='Right' isPrimaryKey={true}></ColumnDirective>
           <ColumnDirective field='TaskName' headerText='Task Name' width='100'></ColumnDirective>

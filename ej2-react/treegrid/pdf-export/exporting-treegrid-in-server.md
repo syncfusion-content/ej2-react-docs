@@ -143,3 +143,28 @@ private void PdfHeaderQueryCellInfo(object pdf)
 }
 
 ```
+
+## Passing additional parameters to the server while exporting
+
+Passing additional parameters to the server when exporting data in the Syncfusion React TreeGrid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+
+You can achieve this by utilizing the [query](https://ej2.syncfusion.com/react/documentation/api/treegrid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event. Within the `query` property, you can invoke the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method to add parameters to the request.
+
+The following example demonstrates how to pass additional parameters to the server when PDF exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically **recordcount** as **12**, are passed using the `addParams` method and displayed as a message.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/refresh-cs13/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/refresh-cs13/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/treegrid/refresh-cs13/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/treegrid/refresh-cs13/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs13" %}

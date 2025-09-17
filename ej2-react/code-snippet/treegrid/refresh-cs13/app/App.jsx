@@ -2,26 +2,27 @@ import * as React from 'react';
 import { projectData } from './datasource';
 import { Query } from '@syncfusion/ej2-data';
 import { ColumnsDirective, ColumnDirective, TreeGridComponent, Inject } from '@syncfusion/ej2-react-treegrid';
-import { Toolbar, Page, ExcelExport } from '@syncfusion/ej2-react-treegrid';
+import { Toolbar, Page, PdfExport} from '@syncfusion/ej2-react-treegrid';
 /* tslint:disable */
 function App() {
-    const toolbarOptions = ['ExcelExport'];
+    const toolbarOptions = ['PdfExport'];
     let treegrid;
     let queryClone;
     const pageOptions = { pageSize: 5, pageCount: 5 };
     const toolbarClick = (args) => {
-    if (treegrid && args.item.text === 'Excel Export') {
+        if (treegrid && args.item.text === 'PDF Export') {
             queryClone = treegrid.query;
             treegrid.query = new Query().addParams("recordcount", "12");
-            treegrid.excelExport();
+            treegrid.pdfExport();
         }
     };
-    const excelExportComplete = () => {
+    const pdfExportComplete = () => {
         if (treegrid) {
             treegrid.query = queryClone;
         }
     };
-    return (<TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' pageSettings={pageOptions} toolbarClick={toolbarClick} toolbar={toolbarOptions} allowPaging={true} ref={g => treegrid = g} allowExcelExport={true} excelExportComplete={excelExportComplete}>
+
+    return (<TreeGridComponent dataSource={projectData} treeColumnIndex={1} idMapping='TaskID' parentIdMapping='parentID' pageSettings={pageOptions} toolbarClick={toolbarClick} toolbar={toolbarOptions} allowPaging={true} ref={g => treegrid = g} allowPdfExport={true} pdfExportComplete={pdfExportComplete} >
         <ColumnsDirective>
           <ColumnDirective field='TaskID' headerText='Task ID' width='70' textAlign='Right' isPrimaryKey={true}></ColumnDirective>
           <ColumnDirective field='TaskName' headerText='Task Name' width='100'></ColumnDirective>
@@ -30,7 +31,7 @@ function App() {
           <ColumnDirective field='Duration' headerText='Duration' width='90' textAlign='Right'/>
           <ColumnDirective field='Priority' headerText='Priority' width='90' textAlign='Right'/>
         </ColumnsDirective>
-        <Inject services={[Toolbar, Page, ExcelExport]}/>
+        <Inject services={[Toolbar, Page, PdfExport]}/>
       </TreeGridComponent>);
 }
 ;

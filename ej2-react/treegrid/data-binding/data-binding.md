@@ -680,5 +680,55 @@ function App() {
 export default App;
 
 ```
+## Refresh the datasource
+
+Refreshing the datasource in a Syncfusion TreeGrid involves updating the data that the TreeGrid displays dynamically. This operation is essential when you need to reflect changes in the underlying data without reloading the entire page or component.
+
+You can add/delete the datasource records through an external button. To reflect these changes in the TreeGrid, you must assign the modified data to the dataSource property.
+
+**Steps to refresh the TreeGrid after datasource change:**
+
+**Step 1: Modify the datasource**
+
+You can add or delete records from the datasource using the following code:
+
+```ts
+
+    const dataSource: object = extendArray(treegridObj.dataSource as object[]);
+
+    // Added a new record.
+    (dataSource as object[]).unshift({ TaskID: 99, TaskName: "New Data", StartDate: new Date('02/03/2017'), Duration: 10 });
+
+    // Delete a record.
+    (dataSource as object[]).splice(selectedRow, 1);
+
+```
+
+**Step 2: Refresh the TreeGrid**
+
+Refresh the TreeGrid after the datasource change by assign the modified data to dataSource property.
+
+```ts
+    treegridObj.dataSource = dataSource; // Refresh the TreeGrid.
+```
+
+The following example demonstrates how to add and delete records from datasource using an external button:
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/refresh-cs8/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/refresh-cs8/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/treegrid/refresh-cs8/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/treegrid/refresh-cs8/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs8" %}
 
 > You can refer to our [`React Tree Grid`](https://www.syncfusion.com/react-components/react-tree-grid) feature tour page for its groundbreaking feature representations. You can also explore our [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to knows how to present and manipulate data.

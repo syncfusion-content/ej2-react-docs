@@ -10,6 +10,41 @@ domainurl: ##DomainURL##
 
 # Pdf export options in React Treegrid component
 
+## Export selected records
+
+Exporting only the selected records from the Syncfusion React TreeGrid allows generating PDF document that include only the desired data from the TreeGrid. This feature provides the flexibility to export specific records that are relevant to the needs, enabling more focused and targeted PDF exports.
+
+To export only the selected records by utilizing the [exportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) property in the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid/#toolbarclick) event. 
+
+To export the selected records from the TreeGrid to a PDF file, you can follow these steps:
+
+1. Handle the `toolbarClick` event of the TreeGrid.
+
+2. Retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/react/documentation/api/treegrid/#getselectedrecords) method.
+
+3. Assign the selected data to the `exportProperties.dataSource` property.
+
+4. Trigger the export operation using the [pdfExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfexport) method.
+
+The following example demonstrates how to export the selected records to a PDF document.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/refresh-cs5/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/refresh-cs5/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/treegrid/refresh-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/treegrid/refresh-cs5/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/refresh-cs5" %}
+
 ## Export hidden columns
 
 PDF export provides an option to export hidden columns of TreeGrid by defining the `includeHiddenColumn` as **true**.
@@ -176,3 +211,41 @@ In the following example, we have used Advent Pro font to export the treegrid wi
  {% previewsample "page.domainurl/code-snippet/treegrid/pdfexport-cs9" %}
 
 > **PdfTrueTypeFont** accepts base 64 format of the Custom Font.
+
+## Conditional cell formatting
+
+When exporting data from the Syncfusion React TreeGrid, you have an option to conditionally format the cells in the exported PDF document. This allows you to customize the appearance of specific cells based on their values or other criteria.
+
+To implement conditional cell formatting, you can utilize the [pdfQueryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#pdfQueryCellInfo) event of the TreeGrid. Within this event, you can access the cell object using the `args.cell` property and modify its properties, such as the background color, based on your desired conditions.
+
+The following example demonstrate how to customize the background color of the **Freight** column in the exported PDF document using the **args.cell** and **backgroundColor** properties of the `pdfQueryCellInfo` event.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/pdfexport-cs2/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/pdfexport-cs2/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/pdfexport-cs2" %}
+
+## Theme
+
+PDF export provides an option to include theme for exported PDF document.
+
+To apply theme in exported PDF, define the `theme` in `PdfExportProperties`.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/treegrid/pdfexport-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/treegrid/pdfexport-cs3/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/treegrid/pdfexport-cs3" %}
+
+> By default, material theme is applied to exported PDF document.
