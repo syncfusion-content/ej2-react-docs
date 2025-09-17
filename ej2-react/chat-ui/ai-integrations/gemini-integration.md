@@ -58,7 +58,7 @@ npm install @google/generative-ai
 
 Include the below snippet in `src/App.jsx` to integrate the Syncfusion Chat UI with the Gemini AI
 
-> Add your generated `API Key` at the line 
+* Add your generated `API Key` at the line 
 
 ```bash
 
