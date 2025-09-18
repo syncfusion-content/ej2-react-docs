@@ -195,7 +195,7 @@ If you encounter issues:
 
 Product support is available through the following mediums.
 
-* [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours \| Unlimited tickets \| Holiday support
+* [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support
 * [Community forum](https://www.syncfusion.com/forums/essential-js2)
 * [Request feature or report bug](https://www.syncfusion.com/feedback/javascript)
 * Live chat
