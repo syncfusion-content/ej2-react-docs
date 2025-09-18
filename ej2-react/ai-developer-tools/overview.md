@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Syncfusion<sup style="font-size:70%">&reg;</sup> AI Developer Tools Overview
 
-The **Syncfusion<sup style="font-size:70%">&reg;</sup> AI Developer Tools** is designed to streamline your development workflow when building React applications with Syncfusion<sup style="font-size:70%">&reg;</sup> controls. It uses contextual knowledge of the Syncfusion<sup style="font-size:70%">&reg;</sup> component library to generate accurate code snippets, configuration examples, and guided explanations—so you spend less time searching docs and more time coding.
+The **Syncfusion<sup style="font-size:70%">&reg;</sup> AI Developer Tools** is designed to streamline your development workflow when building React applications with Syncfusion<sup style="font-size:70%">&reg;</sup> controls. It uses contextual knowledge of the Syncfusion<sup style="font-size:70%">&reg;</sup> component library to generate accurate code snippets, configuration examples, and guided explanations—so you spend less time searching documents and more time coding.
 
 SyncfusionReact AI Developer Tools are:
 
