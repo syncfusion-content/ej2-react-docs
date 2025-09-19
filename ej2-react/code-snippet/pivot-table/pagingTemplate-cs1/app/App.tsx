@@ -4,7 +4,6 @@ import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { Pager as GridPager } from '@syncfusion/ej2-grids';
 import * as React from 'react';
-import './App.css';
 
 function App() {
     let pivotObj: PivotViewComponent;

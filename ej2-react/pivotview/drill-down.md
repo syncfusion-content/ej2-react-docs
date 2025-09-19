@@ -108,7 +108,7 @@ The Pivot Table component enables users to programmatically expand or collapse s
 * [`items`](https://ej2.syncfusion.com/react/documentation/api/pivotview/drillOptionsModel/#items): Defines the exact members to be expanded or collapsed within the specified field.
 * [`delimiter`](https://ej2.syncfusion.com/react/documentation/api/pivotview/drillOptionsModel/#delimiter): Sets the character used to separate a child member from its parent when specifying hierarchical members.
 
-The following code demonstrates how to configure the Pivot Table to expand specific members by using the [`drilledMembers`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#drilledmembers) property. In this example, only the **France** member in the **Country** field is expanded while other members remain collapsed.
+The following code demonstrates how to configure the Pivot Table to expand specific members using the [`drilledMembers`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#drilledmembers) property. In this example, only the **FY 2015** and **FY 2016** members in the **Year** field, and the **Q1** member under **FY 2015** in the **Quarter** field are expanded, while other members remain collapsed. The [`delimiter`](https://ej2.syncfusion.com/react/documentation/api/pivotview/drillOptionsModel/#delimiter) property is used for the **Quarter** field to specify the separator (`~~`) for hierarchical member items.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

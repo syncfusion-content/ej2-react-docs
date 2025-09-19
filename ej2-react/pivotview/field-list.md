@@ -24,7 +24,7 @@ The field list can be displayed in three different formats to interact with pivo
 
 ## In-built Field List (Popup)
 
-To enable the field list in pivot table UI, set the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showfieldlist) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true**. A small icon will appear on the top left corner of the pivot table and clicking on this icon, field list dialog will appear.
+To enable the field list in pivot table UI, set the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showfieldlist) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/) to **true**. A small icon will appear on the top left corner of the pivot table and clicking on this icon, field list dialog will appear.
 
 > The field list icon will be displayed at the top right corner of the pivot table, when grouping bar is enabled.
 
@@ -229,44 +229,50 @@ In-order to re-arrange, drag any field from the field list and drop it into the 
 
 Using the filter icon besides each field in row, column and filter axes, members can be either included or excluded at runtime. To know more about member filtering, [`refer`](./filtering) here.
 
-![output](images/fieldlist_filtericon.png "Filter icon besides each field")
+![Filter icon besides each field](images/fieldlist_filtericon.png)
 <br/>
-![output](images/fieldlist_editor.png "Filter dialog to either include or exclude members")
+
+![Filter dialog to either include or exclude members](images/fieldlist_editor.png)
 <br/>
-![output](images/fieldlist_filteringgrid.png "Resultant pivot table on filtering members")
+
+![Resultant pivot table on filtering members](images/fieldlist_filteringgrid.png)
 
 ## Sorting members
 
 Using the sort icon besides each field in row and column axes, members can be arranged either in ascending or descending order at runtime. To know more about member sorting, [`refer`](./sorting) here.
 
-![output](images/fieldlist_sorticon.png "Sort icon besides each field")
+![Sort icon besides each field](images/fieldlist_sorticon.png)
 <br/>
-![output](images/fieldlist_sortgrid.png "Resultant pivot table showing countries in descending order")
+
+![Resultant pivot table showing countries in descending order](images/fieldlist_sortgrid.png)
 
 ## Calculated fields
 
-The calculated field support allows end user to add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. To enable this support in Field List UI, set the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowcalculatedfield) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true** in pivot table. Now a button will be seen automatically inside the field list UI which will invoke the calculated field dialog on click. To know more about calculated field, [`refer`](./calculated-field) here.
+The calculated field support allows end user to add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. To enable this support in Field List UI, set the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowcalculatedfield) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/) to **true** in pivot table. Now a button will be seen automatically inside the field list UI which will invoke the calculated field dialog on click. To know more about calculated field, [`refer`](./calculated-field) here.
 
-![output](images/gs_calc_button.png "Enabling calculated field in field list UI")
+![Enabling calculated field in field list UI](images/gs_calc_button.png)
 <br/>
-![output](images/gs_calc_dialog.png "Creating new calculated field")
+
+![Creating new calculated field](images/gs_calc_dialog.png)
 <br/>
-![output](images/gs_calc_grid.png "New calculated field 'Total Amount' added in pivot table")
+
+![New calculated field named Total Amount has been added in the Pivot Table](images/gs_calc_grid.png)
 
 ## Changing aggregation type of value fields at runtime
 
 End user can perform calculations over a group of values using the aggregation option. The value fields bound to the field list, appears with a dropdown icon, helps to select an appropriate aggregation type at runtime. On selection, the values in the Pivot Table will be changed dynamically. To know more about aggregation, [`refer`](./aggregation) here.
 
-![output](images/aggregation_fl_icon.png "Icon to change aggregation type")
+![Icon to change aggregation type](images/aggregation_fl_icon.png)
 <br/>
+
+![List of pre-defined aggregation types](images/fieldlist_aggregation_avg.png)
 <br/>
-![output](images/fieldlist_aggregation_avg.png "List of pre-defined aggregation types")
-<br/>
-![output](images/fieldlist_aggregation_grid.png "Resultant pivot table showing average aggregation type applied in 'Unit Sold' value field")
+
+![Resultant Pivot Table shows that the average aggregation type has been applied to the Unit Sold value field](images/fieldlist_aggregation_grid.png)
 
 ## Defer layout update
 
-Defer layout update support to update the pivot table only on demand and not during every user action. To enable this support in Field List UI, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowdeferlayoutupdate) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true** in pivot table. Now a check box inside Field List UI will be seen in checked state, allowing pivot table to update only on demand. To know more about defer layout, [`refer`](./defer-update) here.
+Defer layout update support to update the pivot table only on demand and not during every user action. To enable this support in Field List UI, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#allowdeferlayoutupdate) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/) to **true** in pivot table. Now a check box inside Field List UI will be seen in checked state, allowing pivot table to update only on demand. To know more about defer layout, [`refer`](./defer-update) here.
 
 ![output](images/fieldlist_deferupdate.png)
 
@@ -295,7 +301,7 @@ The sample code below shows the built-in field list dialog using `document.body
 
 ## Show field list using toolbar
 
-It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showfieldlist) and [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showtoolbar) properties in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview) to **true**. Also, include the **FieldList** within the [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbar) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview). When toolbar is enabled, field list icon will be automatically added into the toolbar and the icon won't appear on top left corner in the pivot table component.
+It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showfieldlist) and [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showtoolbar) properties in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/) to **true**. Also, include the **FieldList** within the [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbar) property in [`PivotView`](https://ej2.syncfusion.com/react/documentation/api/pivotview/). When toolbar is enabled, field list icon will be automatically added into the toolbar and the icon won't appear on top left corner in the pivot table component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -343,6 +349,8 @@ During runtime, the **Values** button in the field list can be moved to a differ
 
 > This support is only available for relational data sources.
 
+> The Values button is displayed only when multiple fields are added to the Values axis. It is not shown when a single field is present.
+
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs88/app/App.jsx %}
@@ -370,7 +378,7 @@ The [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivot
 
 * Likewise, [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#enginepopulated) event is triggered in pivot table whenever the report gets modified. The updated report is passed to the field list via [`update`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#update) method written within this event to refresh the same.
 
-The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#enginepopulated) is triggered after engine is populated. It has following parameters - [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#datasourcesettings), [`PivotFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist) and `pivotValues`.
+The event [`enginePopulated`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#enginepopulated) is triggered after engine is populated. It has following parameters - [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/#datasourcesettings), [`PivotFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotfieldlist/) and `pivotValues`.
 
 >Note: This event is not required for Popup field list since it is a in built one.
 
@@ -445,13 +453,13 @@ The event [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/piv
 
 | Action | Action Name|
 |------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Sort field|
-| [`Filter icon`](./field-list/#Filtering-members)| Filter field|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
-| [`Edit icon`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
-| [`Calculated field button`](./field-list/#calculated-fields)| Open calculated field dialog|
-| [`Field list`](./field-list/#In-built-Field-List)| Open field list|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Sort field tree|
+| [`Sort icon`](./field-list#Sorting-members)| Sort field|
+| [`Filter icon`](./field-list#Filtering-members)| Filter field|
+| [`Aggregation`](./field-list#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
+| [`Edit icon`](./calculated-field#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
+| [`Calculated field button`](./field-list#calculated-fields)| Open calculated field dialog|
+| [`Field list`](./field-list#in-built-field-list-popup)| Open field list|
+| [`Field list tree – Sort icon`](./field-list#in-built-field-list-popup)| Sort field tree|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -488,13 +496,13 @@ The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/
 
 | Action | Action Name|
 |------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Field sorted|
-| [`Filter icon`](./field-list/#Filtering-members)| Field filtered|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime)(Value type drop down and menu)| Field aggregated|
-| [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula)| Calculated field edited|
-| [`Calculated field button`](./field-list/#calculated-fields)| Calculated field applied|
-| [`Field list`](./field-list/#In-built-Field-List)| Field list closed|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Field tree sorted|
+| [`Sort icon`](./field-list#Sorting-members)| Field sorted|
+| [`Filter icon`](./field-list#Filtering-members)| Field filtered|
+| [`Aggregation`](./field-list#Changing-aggregation-type-of-value-fields-at-runtime)(Value type drop down and menu)| Field aggregated|
+| [`Edit icon`](./calculated-field#Editing-the-existing-calculated-field-formula)| Calculated field edited|
+| [`Calculated field button`](./field-list#calculated-fields)| Calculated field applied|
+| [`Field list`](./field-list#in-built-field-list-popup)| Field list closed|
+| [`Field list tree – Sort icon`](./field-list#in-built-field-list-popup)| Field tree sorted|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -527,13 +535,13 @@ The event [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/p
 
 | Action | Action Name|
 |------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Sort field|
-| [`Filter icon`](./field-list/#Filtering-members)| Filter field|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
-| [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula)| Edit calculated field|
-| [`Calculated field button`](./field-list/#calculated-fields)| Open calculated field dialog|
-| [`Field list`](./field-list/#In-built-Field-List)| Open field list|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Sort field tree|
+| [`Sort icon`](./field-list#Sorting-members)| Sort field|
+| [`Filter icon`](./field-list#Filtering-members)| Filter field|
+| [`Aggregation`](./field-list#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
+| [`Edit icon`](./calculated-field#Editing-the-existing-calculated-field-formula)| Edit calculated field|
+| [`Calculated field button`](./field-list#calculated-fields)| Open calculated field dialog|
+| [`Field list`](./field-list#in-built-field-list-popup)| Open field list|
+| [`Field list tree – Sort icon`](./field-list#in-built-field-list-popup)| Sort field tree|
 
 * `errorInfo`: It holds the error information of the current UI action.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Globalization and localization in React Pivotview component
 
-Globalization is the combination of Internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number ([`Internationalization`](https://ej2.syncfusion.com/react/documentation/base/internationalization.html)) & adding culture specific customization and translation to the text ([`Localization`](https://ej2.syncfusion.com/react/documentation/base/localization.html)).
+Globalization is the combination of Internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number ([`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization)) & adding culture specific customization and translation to the text ([`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization)).
 
 ## Load CLDR-Data to the application
 
@@ -41,7 +41,7 @@ Globalization is the combination of Internationalization and localization. You c
     ```
 
 * Now, install the `CLDR-Data` package by using the following command (it installs the CLDR JSON data). To
-learn more about CLDR-Data, refer to [CLDR-Data](http://cldr.unicode.org/index/cldr-spec/json).
+learn more about CLDR-Data, refer to [CLDR-Data](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings).
 
     ```
     npm install cldr-data --save
@@ -59,7 +59,7 @@ The locale JSON file will look like:
 
 ## Internationalization
 
-The Internationalization library is used to globalize number, date, and time values in pivot table component using the `dataSourceSettings.formatSettings` option. In the below code sample, we set the culture and currency using the `load`, `setCulture` and `setCurrencyCode` methods. By default, pivot table component is displayed in english culture.
+The [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) library is used to globalize number, date, and time values in pivot table component using the `dataSourceSettings.formatSettings` option. In the below code sample, we set the culture and currency using the `load`, `setCulture` and `setCurrencyCode` methods. By default, pivot table component is displayed in English culture.
 
 * Set the culture by using the `locale` property.
 
@@ -74,15 +74,15 @@ The Internationalization library is used to globalize number, date, and time val
 
     {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs110" %}
 
-> * In the above sample, `Amount` field is formatted by [`NumberFormatOptions`](https://ej2.syncfusion.com/react/documentation/base/internationalization.html#number-formatter-and-parser). For date formats, the value strings are formatted by [`DateFormatOptions`](https://ej2.syncfusion.com/react/documentation/base/internationalization.html#date-formatter-and-parser).
+> * In the above sample, `Amount` field is formatted by [`NumberFormatOptions`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers). For date formats, the value strings are formatted by [`DateFormatOptions`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime).
 > * By default, `locale` value is `en-US`. If you want to change the `en-US` culture to a different culture, you have to change  the `locale` accordingly.
-> * Also, you will find more details about support format string for number formats and data formats [`here`](https://ej2.syncfusion.com/documentation/common/intl.html?lang=typescript#supported-format-string).
+> * Also, you will find more details about support format string for number formats and data formats [`here`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#supported-format-string).
 
 <!-- markdownlint-disable MD009 -->
 
 ### Decimal separators 
 
-The decimal separators of pivot table values varies based on the culture applied to the component. The culture can be set by calling the method [`setCulture`](https://ej2.syncfusion.com/react/documentation/common/localization/#changing-current-locale) with appropriate culture string as its parameter.
+The decimal separators of pivot table values varies based on the culture applied to the component. The culture can be set by calling the method [`setCulture`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization#changing-current-locale) with appropriate culture string as its parameter.
 
 The following example demonstrates the decimal separators in `Deutsch` culture.
 
@@ -105,7 +105,7 @@ The following example demonstrates the decimal separators in `Deutsch` culture.
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/documentation/common/api-l10n.html) library allows you to localize default text content of the pivot table. The pivot table component has static text on some features (like drop area text, pivot field list title, etc...) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the `locale` value and translation object.
+The [`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows you to localize default text content of the pivot table. The pivot table component has static text on some features (like drop area text, pivot field list title, etc...) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the `locale` value and translation object.
 
 The following list of properties and its values are used in the pivot table.
 
@@ -553,7 +553,7 @@ N> To find the latest localization keywords of pivotview and pivotfieldlist for 
 
 ### Loading Translations
 
-To load translation object in an application, use [`load`](https://ej2.syncfusion.com/documentation/common/api-l10n.html#load) function of the [`L10n`](https://ej2.syncfusion.com/documentation/common/api-l10n.html) class.
+To load translation object in an application, use [`load`](https://ej2.syncfusion.com/documentation/api/base/l10n/) function of the [`L10n`](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) class.
 
 The following example demonstrates the pivot table in `Deutsch` culture.
 
@@ -591,5 +591,5 @@ Right-to-left (RTL) provides an option to switch the text direction and layout o
 
 ## See Also
 
-* [Internationalization](https://ej2.syncfusion.com/react/documentation/base/internationalization.html)
-* [Localization](https://ej2.syncfusion.com/react/documentation/base/localization.html)
+* [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization)
+* [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization)

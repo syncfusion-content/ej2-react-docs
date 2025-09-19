@@ -251,7 +251,7 @@ In the below sample, the drag and drop of the fields "Year" and "Products" have 
 
 When a report is bound to the pivot table, fields will be automatically populated within the Grouping Bar. In this case, you can also prevent specific fields from being displayed. To do so, set the appropriate field name(s) in the [`excludeFields`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#excludefields) property of [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/).
 
-> The `excludeFields` property setting will be reflected in the field list UI as well, and for more information, see this [link](https://ej2.syncfusion.com/react/documentation/pivotview/field-list/#remove-specific-fields-from-displaying).
+> The `excludeFields` property setting will be reflected in the field list UI as well, and for more information, see this [link](https://ej2.syncfusion.com/react/documentation/pivotview/field-list#remove-specific-fields-from-displaying).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -321,6 +321,8 @@ In the below sample, the dropdown icon of field "Sold" is hidden.
 During runtime, the **Values** button in the grouping bar can be moved to a different position (i.e., different index) among other fields in the column or row axis. To enable the **Values** button, set the [`showValuesButton`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showvaluesbutton) property to **true**.
 
 > This support is only available for relational data sources.
+
+> The Values button is displayed only when multiple fields are added to the Values axis. It is not shown when a single field is present.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
