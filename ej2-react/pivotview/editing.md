@@ -125,6 +125,10 @@ The available built-in command buttons are:
 | Save | Update the edited row.|
 | Cancel | Cancel the edited state. |
 
+N>
+- When the command column option is enabled, the Edit, Delete, Update, and Cancel buttons are not shown in the Data Grid's toolbar. Instead, these action buttons appear in the last column of each row within the Data Grid.
+- To delete a record directly from the data grid using the **Delete** action button in the command column, you need to set the [`allowDeleting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/cellEditSettingsModel/#allowdeleting) property to **true**.
+
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs58/app/App.jsx %}

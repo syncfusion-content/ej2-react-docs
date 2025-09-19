@@ -6,14 +6,13 @@ import { pivotData } from './datasource';
 function App() {
 
   let dataSourceSettings: DataSourceSettingsModel = {
-    columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-    dataSource: pivotData as IDataSet[],
-    expandAll: false,
-    drilledMembers: [{ name: 'Country', items: ['France'] }],
-    filters: [],
-    formatSettings: [{ name: 'Amount', format: 'C0' }],
-    rows: [{ name: 'Country' }, { name: 'Products' }],
-    values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }]
+        dataSource: pivotData as IDataSet[],
+        expandAll: false,
+        drilledMembers: [{ name: 'Year', items: ['FY 2015','FY 2016'] }, { name: 'Quarter', delimiter:'~~',items: ['FY 2015~~Q1'] }],
+        rows: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }, { name: 'Products' }],
+        values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],
+        columns: [{ name: 'Country' }],
+        filters: [],
   }
   let pivotObj: PivotViewComponent;
     return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);

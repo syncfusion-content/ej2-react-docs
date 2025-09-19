@@ -14,6 +14,8 @@ domainurl: ##DomainURL##
 
 Virtual scrolling enables efficient handling of large datasets by rendering only the rows and columns visible in the current viewport. This approach prevents performance degradation when working with substantial amounts of data, as content refreshes dynamically during vertical or horizontal scrolling. This feature can be enabled by setting the [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablevirtualization) property to **true**.
 
+N> The Virtualization and [Paging](./paging.md) features in the Pivot Table should not be enabled simultaneously. You can use either feature at a time, but not both together, as they are designed to handle data rendering differently and may conflict when used together.
+
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the Pivot Table.
 
 {% tabs %}
