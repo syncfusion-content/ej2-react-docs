@@ -13,7 +13,7 @@ function App() {
     drilledMembers: [{ name: 'Country', items: ['France'] }],
     formatSettings: [{ name: 'Amount', format: 'C0' }],
     rows: [{ name: 'Country' }, { name: 'Products' }],
-    values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount', type: 'Sum' }]
+    values: [{ name: 'Sold', caption: 'Units Sold', type: 'DifferenceFrom', baseField: 'Year', baseItem: 'FY 2018' }, { name: 'Amount', caption: 'Sold Amount', type: 'Sum' }]
   }
   let pivotObj: PivotViewComponent;
     return (<PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>);
