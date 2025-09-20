@@ -194,7 +194,7 @@ In the field list UI, you can display fields by grouping them under the desired 
 
 ## Add or remove fields
 
-Using check box besides each field, end user can select or unselect to add or remove fields respectively from the report at runtime.
+Using check box besides each field, end user can select or unselect to add or remove fields respectively from the report at runtime. If the selected field is a numeric type, it will automatically be placed on the value axis; otherwise, it will be placed on the row axis.
 
 ![output](images/fieldlist_treeview.png)
 

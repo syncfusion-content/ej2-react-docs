@@ -355,10 +355,11 @@ The pivot table supports four types of selection mode that can be set using [`mo
 
 ### Cell Selection Mode
 
-The pivot table supports two types of cell selection mode that can be set using [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#cellselectionmode) in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#selectionsettings). The cell selection modes are:
+The pivot table allows users to select cells in different ways using the [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#cellselectionmode) property within the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#selectionsettings). There are three cell selection modes available:
 
-* **Flow**: It is set by default. The range of cells are selected between the start index and end index that includes in-between cells of rows.
-* **Box**: Range of cells are selected from the start and end column indexes that includes in-between cells of rows within the range.
+- **Flow** (default): Selects a continuous range of cells from the starting cell to the ending cell, including all rows in between.
+- **Box**: Selects a rectangular block of cells that spans from the starting cell to the ending cell, covering all intermediate rows and columns within the selected range.
+- **BoxWithBorder**: This mode works like Box mode but also highlights the selected cells with borders for better visibility.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -375,7 +376,7 @@ The pivot table supports two types of cell selection mode that can be set using 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs264" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs264" %}
 
 > Cell selection requires [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#mode) property in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#selectionsettings) to be **Cell** or **Both**, and [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotSelectionSettings/#type) property should be **Multiple**.
 
@@ -478,6 +479,8 @@ The clip mode provides options to display its overflow cell content in the pivot
 ## Cell Template
 
 User can customize the pivot table cell element by using the [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate) property. The [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate) property accepts either an HTML string or the element's ID, which can be used to append additional HTML elements to showcase each cell with custom format.
+
+N> The [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate) property is triggered whenever the pivot table report configuration is updated through code-behind or UI actions such as sorting, filtering, and more. Therefore, binding a large dataset to the pivot table while defining a template for this property, or assigning a complex template to it, may lead to flickering issues in the pivot table UI.
 
 In this demo, the revenue cost for each year is represented with trend icons.
 
