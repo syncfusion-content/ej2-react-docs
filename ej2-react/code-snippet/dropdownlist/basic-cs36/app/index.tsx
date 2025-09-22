@@ -1,7 +1,3 @@
-{% raw %}
-
-
-
 import { Tooltip } from '@syncfusion/ej2-popups';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import * as React from 'react';
@@ -62,7 +58,3 @@ export default class App extends React.Component<{}, {}> {
   }
 }
 ReactDOM.render(<App />, document.getElementById('sample'));
-
-
-
-{% endraw %}
