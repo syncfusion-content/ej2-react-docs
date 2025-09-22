@@ -1,8 +1,9 @@
 
-import { PivotViewComponent, Pager, Inject } from '@syncfusion/ej2-react-pivotview';
+import { PivotViewComponent, Pager, Inject, PagerSettings, PageSettings} from '@syncfusion/ej2-react-pivotview';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import * as React from 'react';
+import { GridSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings';
 
 function App() {
     let remoteData: DataManager = new DataManager({
@@ -10,6 +11,28 @@ function App() {
         adaptor: new WebApiAdaptor(),
         crossDomain: true
     });
+    let gridSettings: GridSettings = {
+        columnWidth: 120
+    } as GridSettings;
+
+    let pageSettings: PageSettings = {
+        rowPageSize: 10,
+        columnPageSize: 5,
+        currentColumnPage: 1,
+        currentRowPage: 1
+    }
+
+    let pagerSettings: PagerSettings = {
+        position: 'Bottom',
+        enableCompactView: false,
+        showColumnPager: true,
+        showRowPager: true,
+        columnPageSizes: [5, 10, 20, 50, 100],
+        rowPageSizes: [10, 50, 100, 200],
+        isInversed: false,
+        showColumnPageSize: true,
+        showRowPageSize: true
+    }
     let dataSourceSettings: DataSourceSettingsModel = {
         type: 'JSON',
         dataSource: remoteData,
@@ -21,22 +44,7 @@ function App() {
         filters: []
     };
 
-    return (<PivotViewComponent  id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={{ columnWidth: 120 }} pageSettings={{
-            rowPageSize: 10,
-            columnPageSize: 5,
-            currentColumnPage: 1,
-            currentRowPage: 1
-        }} pagerSettings={{
-            position: 'Bottom',
-            enableCompactView: false,
-            showColumnPager: true,
-            showRowPager: true,
-            columnPageSizes: [5, 10, 20, 50, 100],
-            rowPageSizes: [10, 50, 100, 200],
-            isInversed: false,
-            showColumnPageSize: true,
-            showRowPageSize: true
-        }} enablePaging={true}>
+    return (<PivotViewComponent  id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={gridSettings} pageSettings={pageSettings} pagerSettings={pagerSettings} enablePaging={true}>
             <Inject services={[Pager]} />
         </PivotViewComponent>);
 };

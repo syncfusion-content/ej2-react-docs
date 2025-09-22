@@ -18,7 +18,7 @@ To enable paging, set the [`enablePaging`](https://ej2.syncfusion.com/react/docu
 * [`rowPageSize`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pageSettings/#rowpagesize): Allows user to set the total number of records to be displayed on each page of the pivot table's row axis.
 * [`columnPageSize`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pageSettings/#columnpagesize): Allows user to set the total number of records to be displayed on each page of the pivot table's column axis.
 
-N> The [Virtualization](./virtual-scrolling.md) and Paging features in the Pivot Table should not be enabled simultaneously. You can use either feature at a time, but not both together, as they are designed to handle data rendering differently and may conflict when used together.
+N> The [Virtualization](./virtual-scrolling) and Paging features in the Pivot Table should not be enabled simultaneously. You can use either feature at a time, but not both together, as they are designed to handle data rendering differently and may conflict when used together.
 
 ## Pager UI
 

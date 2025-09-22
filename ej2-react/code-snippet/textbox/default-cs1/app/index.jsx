@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createRoot } from 'react-dom/client';
+import * as ReactDOM from "react-dom";
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 
 export default class Default extends React.Component {
@@ -21,4 +21,4 @@ export default class Default extends React.Component {
     }
 }
 
-createRoot(document.getElementById('default')).render(<Default />);
+ReactDOM.render(<Default />, document.getElementById('default'));

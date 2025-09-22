@@ -19,14 +19,23 @@ function App() {
         values: [{ name: 'Quantity' }, { name: 'UnitPrice', caption: 'Unit Price' }],
         filters: []
     };
-    return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={{ columnWidth: 120 }} pageSettings={{
-            rowPageSize: 10,
-            columnPageSize: 5,
-            currentColumnPage: 1,
-            currentRowPage: 1
-        }} pagerSettings={{
-            enableCompactView: true
-        }} enablePaging={true}>
+
+    let gridSettings = {
+        columnWidth: 120
+    };
+
+    let pageSettings = {
+        rowPageSize: 10,
+        columnPageSize: 5,
+        currentColumnPage: 1,
+        currentRowPage: 1
+    };
+
+    let pagerSettings = {
+        enableCompactView: true
+    };
+
+    return (<PivotViewComponent id='PivotView' height={350} dataSourceSettings={dataSourceSettings} gridSettings={gridSettings} pageSettings={pageSettings} pagerSettings={pagerSettings} enablePaging={true}>
             <Inject services={[Pager]}/>
         </PivotViewComponent>);
 };
