@@ -26,6 +26,21 @@ function App() {
     let rowPager;
     let columnPager;
 
+    let gridSettings = {
+        columnWidth: 120
+    };
+
+    let pageSettings = {
+        rowPageSize: 10,
+        columnPageSize: 5,
+        currentColumnPage: 1,
+        currentRowPage: 1
+    };
+
+    let pagerSettings = {
+        template: '#template'
+    };
+
     function dataBound() {
         updateTemplate();
     }
@@ -73,16 +88,9 @@ function App() {
                 id='PivotView'
                 height={350}
                 dataSourceSettings={dataSourceSettings}
-                gridSettings={{ columnWidth: 120 }}
-                pageSettings={{
-                    rowPageSize: 10,
-                    columnPageSize: 5,
-                    currentColumnPage: 1,
-                    currentRowPage: 1
-                }}
-                pagerSettings={{
-                    template: '#template'
-                }}
+                gridSettings={gridSettings}
+                pageSettings={pageSettings}
+                pagerSettings={pagerSettings}
                 enablePaging={true}
                 dataBound={dataBound.bind(this)}
             >
