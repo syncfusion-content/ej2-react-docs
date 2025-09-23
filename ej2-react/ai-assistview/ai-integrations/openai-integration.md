@@ -51,7 +51,7 @@ npm install @syncfusion/ej2-react-interactive-chat --save
 
 Create `src/App.js` to integrate the Open AI with AI AssistView component
 
-> Add your generated `API Key` at the line 
+* Add your generated `API Key` at the line 
 
 ```bash
 

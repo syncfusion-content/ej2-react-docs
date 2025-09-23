@@ -59,7 +59,7 @@ npm install @google/generative-ai
 
 Create `src/App.js` to integrate the Gemini AI with AI AssistView component
 
-> Add your generated `API Key` at the line 
+* Add your generated `API Key` at the line 
 
 ```bash
 
