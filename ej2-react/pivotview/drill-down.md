@@ -24,6 +24,23 @@ The drill-down and drill-up features allow you to expand or collapse data for a 
 
 ![output](images/drill_position.png)
 
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/pivot-table/default-cs330/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/pivot-table/default-cs330/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/pivot-table/default-cs330/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/pivot-table/default-cs330/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs330" %}
+
 ## Expand All
 
 > This property is applicable only for the relational data source.
