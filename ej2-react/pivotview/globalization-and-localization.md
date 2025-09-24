@@ -63,16 +63,16 @@ The [`Internationalization`](https://ej2.syncfusion.com/react/documentation/comm
 
 * Set the culture by using the `locale` property.
 
-    {% tabs %}
-    {% highlight js tabtitle="App.jsx" %}
-    {% include code-snippet/pivot-table/default-cs110/app/App.jsx %}
-    {% endhighlight %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% include code-snippet/pivot-table/default-cs110/app/App.tsx %}
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/pivot-table/default-cs110/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/pivot-table/default-cs110/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
 
-    {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs110" %}
+{% previewsample "page.domainurl/code-snippet/pivot-table/default-cs110" %}
 
 > * In the above sample, `Amount` field is formatted by [`NumberFormatOptions`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers). For date formats, the value strings are formatted by [`DateFormatOptions`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-datetime).
 > * By default, `locale` value is `en-US`. If you want to change the `en-US` culture to a different culture, you have to change  the `locale` accordingly.
