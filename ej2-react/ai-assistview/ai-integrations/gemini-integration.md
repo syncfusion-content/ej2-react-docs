@@ -76,7 +76,7 @@ const geminiApiKey = 'Place your API key here';
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/ai-integrations/ai-assistview/gemini-ai" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/ai-integrations/gemini-ai" %}
 
 ## Run and Test 
 

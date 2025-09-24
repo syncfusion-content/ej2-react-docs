@@ -1,15 +1,11 @@
 import { AIAssistViewComponent } from '@syncfusion/ej2-react-interactive-chat';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { marked } from 'marked';
 
-const geminiApiKey = ''; // Replace with your Gemini API key (WARNING: Do not expose API key in client-side code for production)
-const genAI = new GoogleGenerativeAI(geminiApiKey);
-let stopStreaming = false;
-
 function App() {
     const assistInstance = React.useRef(null);
+    let stopStreaming = false;
     const suggestions = [
         'How do I prioritize my tasks?',
         'How can I improve my time management skills?'
@@ -20,7 +16,7 @@ function App() {
         if (args.item.iconCss === 'e-icons e-refresh') {
             assistInstance.current.prompts = [];
             assistInstance.current.promptSuggestions = suggestions;
-            stopStreaming = true;// Stop streaming on refresh
+            stopStreaming = true;
         }
     };
 
@@ -42,27 +38,42 @@ function App() {
                 assistInstance.current.addPromptResponse(htmlResponse, i === responseLength);
                 assistInstance.current.scrollToBottom();
             }
-            await new Promise(resolve => setTimeout(resolve, 15)); // Delay before the next chunk
+            await new Promise(resolve => setTimeout(resolve, 15)); // Delay for streaming effect
         }
         assistInstance.current.promptSuggestions = suggestions;
     };
 
     const onPromptRequest = (args) => {
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-        model.generateContent(args.prompt)
-            .then(result => {
-                const responseText = result.response.text().trim() || 'No respons received.';
-                stopStreaming = false;
-                streamResponse(responseText);
-            })
-            .catch(error => {
-                assistInstance.current.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.');
-                stopStreaming = true;
-            });
+        const defaultResponse = '⚠️ Something went wrong while connecting to the AI service. Please check your Ollama application running background.';
+        fetch('http://localhost:11434/api/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model: 'deepseek-r1',
+                prompt: `### Instruction:\nRespond in up to 5 lines.\n\n### Input:\n${args.prompt || 'Hi'}`,
+                stream: false,
+            }),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(reply => {
+            const responseText = reply.response?.trim() || 'No response received.';
+            stopStreaming = false;
+            streamResponse(responseText);
+        })
+        .catch(error => {
+            assistInstance.current.addPromptResponse(defaultResponse, true);
+            assistInstance.current.promptSuggestions = suggestions;
+            stopStreaming = true;
+        });
     };
 
     const handleStopResponse = () => {
-        stopStreaming=true;
+        stopStreaming = true;
     };
 
     return (
@@ -77,5 +88,4 @@ function App() {
         />
     );
 }
-
 ReactDOM.render(<App />, document.getElementById('container'));
