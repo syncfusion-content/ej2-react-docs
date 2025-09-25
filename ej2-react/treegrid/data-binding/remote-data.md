@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Remote data in React Treegrid component | Syncfusion
-description: Learn here all about Remote data in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Remote data in React TreeGrid | Syncfusion
+description: Learn here all about Remote data in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
 control: Remote data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote data in React Treegrid component
+# Remote data in React TreeGrid 
 
-To bind remote data to TreeGrid component, assign service data as an instance of **DataManager** to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property. To interact with remote data source,  provide the endpoint **url** and define the [`hasChildMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid#hasChildMapping) property of treegrid.
+To bind remote data to the TreeGrid, assign a service endpoint through an instance of **DataManager** to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property. To interact with a remote datasource, provide the endpoint `url` and define the [hasChildMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#haschildmapping) property of the TreeGrid.
 
-The [`hasChildMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#haschildmapping) property maps the field name in data source, that denotes whether current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
+The `hasChildMapping` property maps to a field in the datasource that indicates whether the current record contains child records. This is used internally to display the expand icon and load child data on demand.
 
-The TreeGrid provides **Load on Demand** support for rendering remote data. The Load on demand is considered in TreeGrid for the following actions.
+The TreeGrid provides **Load on Demand** support for rendering remote data. Load on demand is applied in the following actions:
 
 * Expanding root nodes.
-* Navigating pages, with paging enabled in TreeGrid.
+* Navigating pages when paging is enabled in the TreeGrid.
 
-When load on demand is enabled, all the root nodes are rendered in collapsed state at initial load.
+When load on demand is enabled, all root nodes are rendered in a collapsed state initially.
 
-When load on demand support is enabled in TreeGrid with paging, the current or active page’s root node alone will be rendered in collapsed state. On expanding the root node, the child nodes will be loaded from the remote server.
+When load on demand is enabled with paging, only the root nodes of the active page are rendered (collapsed) on initial load. On expanding a root node, the corresponding child nodes are fetched from the remote server.
 
-When a root node is expanded, its child nodes are rendered and are cached locally, such that on consecutive expand/collapse actions on root node, the child nodes are loaded from the cache instead from the remote server.
+When a root node is expanded, its child nodes are rendered and cached locally. Subsequent expand/collapse operations on the same root node use the cached child nodes instead of requesting them again from the server.
 
-Similarly, if the user navigates to a new page, the root nodes of that specific page, will be rendered with request to the remote server.
+When navigating to a new page, the root nodes for that page are requested from the remote server and rendered accordingly.
 
->Remote Data Binding supports only Self-Referential Data and by default the `pageSizeMode` for Remote Data is `Root` mode. i.e only root node’s count will be shown in pager while using Remote Data
+> Remote data binding supports only self-referential data. By default, the `pageSizeMode` for remote data is `Root`. That is, only the root node count is shown in the pager when using remote data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -153,17 +153,17 @@ namespace Controllers
 
 ```
 
-> By default, **DataManager** uses [`ODataAdaptor`](https://ej2.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
-> Based on the RESTful web services, set the corresponding adaptor to DataManager. Refer [`here`](https://ej2.syncfusion.com/documentation/data/adaptors/?no-cache=1) for more details.
-> Filtering and searching server-side data operations are not supported in load on demand
+> By default, **DataManager** uses the [ODataAdaptor](https://ej2.syncfusion.com/documentation/data/adaptors/#odata-adaptor/) for remote data binding.
+> Based on the RESTful web services in use, set the corresponding adaptor on the DataManager. Refer to the [adaptor documentation](https://ej2.syncfusion.com/documentation/data/adaptors/?no-cache=1) for details.
+> Filtering and searching as server-side operations are not supported when using load on demand.
 
 ## LoadChildOnDemand
 
-While binding remote data to Tree Grid component, by default Tree Grid renders parent rows in collapsed state. Tree Grid provides option to load the child records also during the initial rendering itself for remote data binding by setting [`loadChildOnDemand`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#loadchildondemand) as false.
+When binding remote data to the TreeGrid, parent rows are rendered in a collapsed state by default. The TreeGrid provides an option to load child records during initial rendering for remote data binding by setting [loadChildOnDemand](https://ej2.syncfusion.com/react/documentation/api/treegrid/#loadchildondemand) to `false`.
 
-When [`loadChildOnDemand`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#loadchildondemand) is enabled parent records are rendered in collapsed state.
+When `loadChildOnDemand` is enabled (true), parent records are rendered in a collapsed state.
 
-The following code example describes the behavior of the loadChildOnDemand feature of Tree Grid.
+The following code example describes the behavior of the `loadChildOnDemand` feature of the TreeGrid.
 
 ```ts
 
@@ -197,9 +197,9 @@ export default App;
 
 ```
 
->Also while using **loadChildOnDemand** we need to handle the child records on server end and it is applicable to CRUD operations also.
+> Also, when using `loadChildOnDemand`, child records must be handled on the server. This applies to CRUD operations as well.
 
-The following code example describes handling of child records at server end.
+The following code example describes handling child records on the server.
 
 ```ts
 
@@ -269,7 +269,7 @@ public ActionResult UrlDatasource(DataManagerRequest dm)
 
 ## Offline mode
 
-On remote data binding, all treegrid actions such as paging, loading child on-demand, will be processed on server-side. To avoid postback, set the treegrid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the **offline** property of **DataManager**.
+With remote data binding, actions such as paging and loading child records on demand are processed on the server. To avoid postback, configure the TreeGrid to load all data during initialization and process actions on the client. Enable this behavior by using the `offline` property of **DataManager**.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -284,7 +284,7 @@ On remote data binding, all treegrid actions such as paging, loading child on-de
 
 ## Custom adaptor
 
-You can create your own adaptor by extending the built-in adaptors. The following demonstrates custom adaptor approach and how to add a serial number for the records by overriding the built-in response processing using the `processResponse` method of the `ODataAdaptor`.
+Create a custom adaptor by extending the built-in adaptors. The following demonstrates a custom adaptor approach that adds a serial number to records by overriding the built-in response processing through the `processResponse` method of the `ODataAdaptor`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -305,7 +305,7 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 
 ## Sending additional parameters to the server
 
-To add a custom parameter to the data request, use the [`addParams`](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method of [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#query) class. Assign the [`Query`](https://ej2.syncfusion.com/documentation/api/data/query/#query) object with additional parameters to the treegrid [`query`](https://ej2.syncfusion.com/react/documentation/api/treegrid#query) property.
+To add custom parameters to the data request, use the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method of the [Query](https://ej2.syncfusion.com/documentation/api/data/query/#query) class. Assign the configured `Query` object to the TreeGrid `Query` property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -320,9 +320,9 @@ To add a custom parameter to the data request, use the [`addParams`](https://ej2
 
 ## Handling HTTP error
 
-During server interaction from the treegrid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event.
+During server interaction, server-side exceptions may occur. Access error messages or exception details on the client by using the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionfailure) event.
 
-The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event contains the error details returned from the server.
+The argument passed to the `actionFailure` event contains the error details returned from the server.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -335,15 +335,15 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/react/do
 
  {% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs8" %}
 
-> The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the treegrid actions.
+> The `actionFailure` event is triggered not only for server errors, but also when exceptions occur during TreeGrid action processing.
 
 ## Load on demand with virtualization
 
-While binding remote data to Tree Grid component, by default Tree Grid renders parent rows in collapsed state. When expanding the root node, the child nodes will be loaded from the remote server.
+When binding remote data, parent rows are rendered in a collapsed state by default. On expanding a root node, the corresponding child nodes are loaded from the remote server.
 
-When using virtualization with remote data binding, it helps you to improve the tree grid performance while loading a large set of data by setting [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enablevirtualization) as true. The Tree Grid UI virtualization allows it to render only rows and columns visible within the view-port without buffering the entire datasource.
+Using virtualization with remote data binding improves performance when loading large datasets. Enable this by setting [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enablevirtualization) to `true`. TreeGrid UI virtualization renders only the rows and columns visible within the viewport without buffering the entire datasource.
 
-[`hasChildMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#haschildmapping) property maps the field name in data source, that denotes whether current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
+The [hasChildMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#haschildmapping) property maps to a field in the datasource that indicates whether the current record contains child records. This is used internally to display the expand icon when binding child data on demand.
 
 ```ts
 
@@ -386,7 +386,7 @@ export default App;
 
 ```
 
-The following code example describes handling of Load on demand at server end.
+The following code example describes handling load on demand on the server.
 
 ```ts
 
@@ -681,9 +681,9 @@ public class TreeData
 
 ### Load parent rows in expanded state with virtualization
 
-Tree Grid provides an option to load the child records in the initial rendering itself for remote data binding by setting the [`loadChildOnDemand`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#loadchildondemand) as true. When the `loadChildOnDemand` is enabled, parent records are rendered in expanded state.
+The TreeGrid provides an option to load child records during initial rendering for remote data binding by setting [loadChildOnDemand](https://ej2.syncfusion.com/react/documentation/api/treegrid/#loadchildondemand) to true. When `loadChildOnDemand` is enabled, parent records are rendered in an expanded state.
 
-When using virtualization with `loadChildOnDemand` , it helps you to improve the tree grid performance while loading the child records during the initial rendering for remote data binding by setting [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enablevirtualization) as true and `loadChildOnDemand` as true.
+When using virtualization together with `loadChildOnDemand`, performance is improved while loading child records during the initial render for remote data binding. Enable this by setting [enableVirtualization](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enablevirtualization) to true and `loadChildOnDemand` to true.
 
 ```ts
 
@@ -726,7 +726,7 @@ export default App;
 
 ```
 
-The following code example describes handling of child records at server end.
+The following code example describes handling child records on the server.
 
 ```ts
 
