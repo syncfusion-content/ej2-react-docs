@@ -56,7 +56,6 @@ function App() {
                 streamResponse(responseText);
             })
             .catch(error => {
-                console.error('Error fetching Gemini response:', error);
                 assistInstance.current.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.');
                 stopStreaming = true;
             });

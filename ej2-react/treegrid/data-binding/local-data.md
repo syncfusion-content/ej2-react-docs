@@ -1,31 +1,31 @@
 ---
 layout: post
-title: Local data in React Treegrid component | Syncfusion
-description: Learn here all about Local data in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: Local data in React TreeGrid component | Syncfusion
+description: Learn about local data binding in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
 control: Local data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Local data in React Treegrid component
+# Local data in React TreeGrid 
 
-In Local Data binding, data source for rendering the TreeGrid control is retrieved from the same application locally.
+In local data binding, the datasource used to render the TreeGrid is retrieved locally within the same application.
 
-Two types of Data binding are possible with the TreeGrid control.
+Two types of data binding are supported by the TreeGrid:
 
-* Hierarchical Datasource binding
-* Self-Referential Data binding (Flat Data)
+* Hierarchical datasource binding
+* Self-referential data binding (flat data)
 
-To bind local data to the treegrid, you can assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property. The local data source can also be provided as an instance of the **DataManager**.
+To bind local data to the TreeGrid, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property. The local datasource can also be provided as an instance of the **DataManager**.
 
-> By default, **DataManager** uses [`JsonAdaptor`](https://ej2.syncfusion.com/documentation/data/adaptors/#json-adaptor) for local data-binding.
+> By default, **DataManager** uses the [JsonAdaptor](https://ej2.syncfusion.com/documentation/data/adaptors/#json-adaptor/) for local data binding.
 
-## Hierarchy data source binding
+## Hierarchy datasource binding
 
-The [`childMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid#childMapping) property is used to map the child records in hierarchy data source.
+Use the [childMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#childmapping) property to map child records in a hierarchical datasource.
 
-The following code example shows you how to bind the hierarchical local data into the TreeGrid control.
+The following example demonstrates how to bind hierarchical local data to the TreeGrid.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -41,14 +41,14 @@ The following code example shows you how to bind the hierarchical local data int
 
  {% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs2" %}
 
-> * Remote data binding is not supported for Hierarchy Data.
+> Remote data binding is not supported for hierarchical data.
 
 ## Self-Referential data binding (Flat data)
 
-TreeGrid is rendered from Self-Referential data structures by providing two fields, ID field and parent ID field.
+The TreeGrid can be rendered from self-referential data structures by providing two fields: an ID field and a parent ID field.
 
-* **ID Field**: This field contains unique values used to identify nodes. Its name is assigned to the [`idMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid#idMapping) property.
-* **Parent ID Field**: This field contains values that indicate parent nodes. Its name is assigned to the [`parentIdMapping`](https://ej2.syncfusion.com/react/documentation/api/treegrid#parentIdMapping) property.
+* **ID Field**: Contains unique values that identify nodes. Assign its name to the [idMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#idmapping) property.
+* **Parent ID Field**: Contains values that indicate parent nodes. Assign its name to the [parentIdMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#parentidmapping) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -64,33 +64,33 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 
  {% previewsample "page.domainurl/code-snippet/treegrid/data-binding-cs3" %}
 
-> Herewith we have provided list of reserved properties and the purpose used in TreeGrid. We recommend to avoid these reserved properties for Internal purpose(To get rid of conflicts).
+> The following reserved properties are used internally by the TreeGrid. Avoid using these property names in application data to prevent conflicts.
 
 Reserved keywords | Purpose
 -----|-----
-childRecords | Specifies the childRecords of a parentData
-hasChildRecords | Specifies whether the record contains child records
-hasFilteredChildRecords | Specifies whether the record contains filtered child records
-expanded | Specifies whether the child records are expanded
-parentItem | Specifies the parentItem of childRecords
-index | Specifies the index of current record
-level | Specifies the hierarchy level of record
-filterLevel | Specifies the hierarchy level of filtered record
-parentIdMapping | Specifies the parentID
+childRecords | Specifies the child records of a parent record
+hasChildRecords | Indicates whether the record contains child records
+hasFilteredChildRecords | Indicates whether the record contains filtered child records
+expanded | Indicates whether child records are expanded
+parentItem | References the parent record of a child
+index | Specifies the index of the current record
+level | Specifies the hierarchy level of the record
+filterLevel | Specifies the hierarchy level of a filtered record
+parentIdMapping | Specifies the parent ID value
 uniqueID | Specifies the unique ID of a record
-parentUniqueID | Specifies the parent Unique ID of a record
+parentUniqueID | Specifies the unique ID of the parent record
 checkboxState | Specifies the checkbox state of a record
-isSummaryRow | Specifies the summary of a record
-taskData | Specifies the main data
-primaryParent | Specifies the Primary data
+isSummaryRow | Indicates that the record is a summary row
+taskData | References the original data object
+primaryParent | References the primary parent data
 
 ## Immutable mode 
 
-Immutable mode in the Syncfusion TreeGrid is designed to optimize re-rendering performance by utilizing the object reference and [deep compare](https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#4-deep-equality) concept. When performing the TreeGrid actions, it will only re-render the modified or newly added rows and prevent the re-rendering of the unchanged rows.
+Immutable mode in the Syncfusion TreeGrid optimizes re-rendering performance by leveraging object reference and [deep comparison](https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#4-deep-equality). During TreeGrid actions, only added or modified rows are re-rendered, and unchanged rows are preserved.
 
-To enable this feature, you need to set the [enableImmutableMode](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enableImmutableMode) property as **true**.
+Enable this feature by setting the [`enableImmutableMode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enableimmutablemode) property to `true`.
 
-The following example demonstrates how to enable immutable mode in an React component:
+The following example demonstrates how to enable immutable mode in a React component:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -109,15 +109,15 @@ The following example demonstrates how to enable immutable mode in an React comp
 
  {% previewsample "page.domainurl/code-snippet/treegrid/immutable-mode-cs1" %}
 
->* This feature uses the primary key value for data comparison. So, you need to provide the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) column.
+> This feature uses the primary key value for data comparison. Ensure a column has [`isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) set to `true`.
 
 ### Limitations
 
-The following features are not supported in the immutable mode:
+The following features are not supported in immutable mode:
 
 * Frozen rows and columns
-* Row Template
-* Detail Template
+* Row template
+* Detail template
 * Column reorder
 * Virtualization
 * Infinite scroll
