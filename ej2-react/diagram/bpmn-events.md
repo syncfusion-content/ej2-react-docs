@@ -1,28 +1,29 @@
 ---
 layout: post
-title: Bpmn Events in React Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN Events in React Diagram Component | Syncfusion®
+description: Learn about BPMN event shapes including start, intermediate, and end events with triggers in Syncfusion® React Diagram Component.
 control: Bpmn Events 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Event in React Diagram component
+# BPMN Event in React Diagram Component
 
-## Event
+## Overview
 
-An [`event`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent) is a common BPMN process model element that represents something that happens during a business process and is notated with a circle. The type of events are as follows:
+An [`event`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent) is a common BPMN process model element that is notated with a circle. Events can occur at the beginning, middle, or end of a process flow.
 
-    * Start
-    * Intermediate
-    * NonInterruptingStart
-    * NonInterruptingIntermediate
-    * ThrowingIntermediate
-    * End
+The types of events are as follows:
+
+* Start
+* Intermediate
+* NonInterruptingStart
+* NonInterruptingIntermediate
+* ThrowingIntermediate
+* End
         
-The [`event`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent#event-bpmnevents) property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example illustrates how to create a BPMN event.
-
+The `event`property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example illustrates how to create a BPMN event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +36,9 @@ The [`event`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnEve
 
  {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Event-cs1" %}
 
-Event triggers are notated as icons inside the circle and they represent the specific details of the process. The [`trigger`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent/#trigger) property of the node allows you to set the type of trigger and by default, it is set as **none**. The following table illustrates the type of event triggers.
+## BPMN Event Trigger
+
+Event triggers are notated as icons inside the circle and represent the specific circumstances that cause the event to occur. The [`trigger`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bpmnEvent/#trigger) property of the node allows you to set the type of trigger and by default, it is set as **none**. The following table illustrates the types of event triggers available for each event type.
 
 | Triggers | Start | Non-Interrupting Start | Intermediate | Non-Interrupting Intermediate | Throwing Intermediate | End |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |

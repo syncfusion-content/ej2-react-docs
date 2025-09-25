@@ -1,17 +1,22 @@
 ---
 layout: post
-title: Bpmn Group in React Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: BPMN Group in React Diagram Component | Syncfusion®
+description: Learn how to create and customize BPMN group shapes for organizing related elements in Syncfusion® React Diagram Component.
 control: Bpmn Group 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
+# BPMN Group in React Diagram Component
 
-## Group
+## Overview
 
-A group is used to frame a part of the diagram, shows that elements included in it are logically belong together and does not have any other semantics other than organizing elements. To create a group, the shape property of the node should be set as **group**. The following code example illustrates how to create a BPMN group.
+A BPMN group is a visual mechanism used to organize and frame related elements within a business process diagram. Groups indicate that the enclosed elements logically belong together while providing no additional semantic meaning beyond visual organization. Unlike other BPMN constructs, groups serve purely as organizational containers to improve diagram readability and structure.
+
+## Creating a BPMN Group
+
+To create a BPMN group, set the [`shape`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnShapes/) property of the node to **group**. The group appears as a rounded rectangle with dashed borders that encompasses the grouped elements.
 
 ![BPMN Group Shape](images/Group.png)
 

@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Customizing layout in React Diagram component | Syncfusion®
-description: Learn here all about Customizing layout in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Customizing layout in React Diagram Component | Syncfusion®
+description: Learn here all about Customizing layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
 control: Customizing layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing layout in React Diagram control
+# Customizing layout in React Diagram Component
 
-Orientation, spacings, and alignment of the layout can be customized with a set of properties.
+The React Diagram component provides extensive customization options for automatic layouts, allowing developers to control orientation, spacing, alignment, bounds, and visual behavior. These properties enable fine-tuned positioning and appearance of nodes within hierarchical, organizational, and tree-based diagrams.
 
-To explore layout properties, refer to [`Layout Properties`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#properties).
+To explore all available layout properties, refer to[`Layout Properties`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#properties).
 
-## Layout bounds
+## Layout Bounds
 
+The diagram supports aligning layouts within custom rectangular areas using layout bounds. This feature constrains the layout to a specific region of the canvas, providing precise control over where the layout appears.
 
-Diagram provides support to align the layout within any custom rectangular area. 
+Layout bounds define a rectangular area where the entire layout will be positioned. This is particularly useful when integrating diagrams into dashboards or when multiple layouts need to coexist on the same canvas.
 
-The following example shows how to align the layout within the given layout bounds.
-
+The following example shows how to align the layout within specified layout bounds:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -38,12 +38,13 @@ The following example shows how to align the layout within the given layout boun
 For more information about bounds, refer to [`bounds`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#bounds).
 
 
-## Layout alignment
+## Layout Alignment
 
-The layout can be aligned anywhere over the layout bounds/viewport using the [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#verticalalignment) properties of the layout.
+The layout can be positioned anywhere within the layout bounds using [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#verticalalignment) properties. These properties determine how the layout is positioned relative to its container.
 
-The following code illustrates how to align the layout and how to change layout horizontal and vertical alignment at runtime.
+Available alignment options include Left, Right, Center for horizontal alignment, and Top, Bottom, Center for vertical alignment. These settings work independently, allowing for precise positioning control.
 
+The following code illustrates how to configure layout alignment and modify alignment properties at runtime:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -58,12 +59,13 @@ The following code illustrates how to align the layout and how to change layout 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-alignment-cs1" %}
 
 
-## Layout spacing
+## Layout Spacing
 
-Layout provides support to add space horizontally and vertically between the nodes. The [`horizontalSpacing`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#horizontalspacing) and [`verticalSpacing`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#verticalspacing) properties of the layout allows you to set the space between the nodes in horizontally and vertically.
+Layout spacing controls the distance between nodes in the layout. The[`horizontalSpacing`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#horizontalspacing) and [`verticalSpacing`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#verticalspacing) properties define the gaps between nodes horizontally and vertically respectively.
 
-The following code illustrates how to set the initial horizontal and vertical spacing for the layout, as well as how to change these spacing values at runtime
+Proper spacing ensures visual clarity and prevents node overlap. Spacing values are measured in pixels and can be adjusted based on node sizes and content density requirements.
 
+The following code illustrates how to set initial horizontal and vertical spacing for the layout and modify these values at runtime:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,13 +79,13 @@ The following code illustrates how to set the initial horizontal and vertical sp
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-spacing-cs1" %}
 
+## Layout Margin
 
-## Layout margin
+Layout margin creates blank space between the layout bounds and the actual layout content. The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#margin) property adds padding around the entire layout, ensuring adequate separation from container edges.
 
-Layout provides support to add some blank space between the layout bounds/viewport and the layout. The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#margin) property of the layout allows you to set the blank space.
+Margins are particularly useful when layouts are displayed within panels, cards, or other UI containers where visual separation is important for clarity and aesthetics.
 
-The following code demonstrates how to set the initial layout margin and how to modify the layout margin dynamically at runtime.
-
+The following code demonstrates how to set initial layout margin and modify margin values dynamically at runtime:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -98,20 +100,20 @@ The following code demonstrates how to set the initial layout margin and how to 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-margin-cs1" %}
 
 
-## Layout orientation
+## Layout Orientation
 
-The layout orientation can used to arrange the layout based on the direction. there are different orientation types that are defined in the following table.
+The layout orientation determines the primary direction in which the layout flows. Different orientations are suitable for various organizational structures and display requirements.
 
 |Orientation|Description|
 | -------- | ----------- |
-|TopToBottom|Aligns the layout from top to bottom. All the roots are placed at top of diagram.|
-|LeftToRight|Aligns the layout from left to right. All the roots are placed at left of diagram.|
-|BottomToTop|Aligns the layout from bottom to top. All the roots are placed at bottom of the diagram.|
-|RightToLeft|Aligns the layout from right to left. All the roots are placed at right of the diagram.|
+|TopToBottom|Aligns the layout from top to bottom. All root nodes are placed at the top of the diagram.|
+|LeftToRight|Aligns the layout from left to right. All root nodes are placed at the left of the diagram.|
+|BottomToTop|Aligns the layout from bottom to top. All root nodes are placed at the bottom of the diagram.|
+|RightToLeft|Aligns the layout from right to left. All root nodes are placed at the right of the diagram.|
 
-Diagram provides support to customize the  [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#orientation) of layout. You can set the desired orientation using layout.orientation.
+Diagram provides support to customize the  [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout/#orientation) property can be customized to match specific design requirements or cultural reading patterns.
 
->Note: In the diagram the default orientation is `TopToBottom`.
+>Note: In the diagram the default orientation is **TopToBottom**.
 
 The following code demonstrates how to set the initial orientation for the layout and how to change it dynamically at runtime.
 
@@ -129,12 +131,13 @@ The following code demonstrates how to set the initial orientation for the layou
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-orientation-cs1" %}
 
 
-## Exclude from layout
+## Exclude From Layout
 
-In some cases, you may need one or two nodes not to be arranged based on the layout algorithm but instead positioned manually. You can exclude these nodes from the layout algorithm by setting the [`excludeFromLayout`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel/#excludefromlayout) property to true.
+In certain scenarios, specific nodes may need manual positioning rather than automatic arrangement by the layout algorithm. These nodes can be excluded from layout calculations by setting the[`excludeFromLayout`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel/#excludefromlayout) property to **true**.
+
+This feature is useful for annotation nodes, floating panels, or special elements that require fixed positioning regardless of the overall layout structure.
 
 The following code example demonstrates how to exclude a node from the layout and position it manually:
-
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -148,11 +151,11 @@ The following code example demonstrates how to exclude a node from the layout an
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-exclude-cs1" %}
 
+## Fixed Node
 
-## Fixed node
+Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [`fixedNode`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#fixednode) property. This ensures that the specified node maintains its position while other nodes are arranged around it.
 
-Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [`fixedNode`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#fixednode) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
-
+This feature is particularly beneficial during expand/collapse operations, where maintaining the position of the interacted node provides better user experience and visual stability.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -166,11 +169,13 @@ Layout provides support to arrange the nodes with reference to the position of a
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-fixed-cs1" %}
 
+## Expand and Collapse
 
-## Expand and collapse
+The diagram supports expanding and collapsing subtrees within layouts. The node's isExpanded property controls the visibility of child nodes, allowing users to focus on specific portions of large hierarchical structures.
 
-Diagram allows to expand/collapse the subtrees of a layout. The node’s isExpanded property allows you to expand/collapse its children. The following code example shows how to expand/collapse the children of a node.
+This functionality is essential for managing complex organizational charts, decision trees, and other hierarchical data where progressive disclosure improves usability.
 
+The following code example shows how to expand/collapse the children of a node:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -185,14 +190,15 @@ Diagram allows to expand/collapse the subtrees of a layout. The node’s isExpan
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-expandandcollapse-cs1" %}
 
 
-For more details about customizing the expand and collapse icon refer [`expand Collapse`](./nodes-expandAndCollapse)
+For more details about customizing the expand and collapse icon refer [`expand Collapse`](./nodes-expandAndCollapse).
 
-## Layout animation
+## Layout Animation
 
-While performing expand and collapse operations, the layout can be animated by applying a small delay. This can be achieved by setting the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#enableanimation) property of the layout. By default, `enableAnimation` is set to true.
+Expand and collapse operations can be animated by applying transitions during layout changes. The[`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutModel/#enableanimation)  property controls this behavior, enhancing the visual experience during structural changes.
 
-In the following example, the enableAnimation property ensures that the layout changes are animated, enhancing the visual experience during expand and collapse operations.
+Animation provides visual continuity and helps users track changes in the layout structure. By default, `enableAnimation` is set to **true**.
 
+The following example demonstrates how layout animation enhances the visual experience during expand and collapse operations:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -207,14 +213,15 @@ In the following example, the enableAnimation property ensures that the layout c
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-animation-cs1" %}
 
 
->Note: To enable layout animation, you need to inject LayoutAnimation module in diagram.
+>Note: To enable layout animation, inject the LayoutAnimation module in the diagram.
 
-## Parent - child relation with dropped nodes from symbol palette
+## Parent - Child Relation with Dropped Nodes from Symbol Palette
 
-You can create a layout with dropped nodes from symbol palette using the [`drop`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drop) event. In `drop` event, you have to create a connection between the source and target item.
+Layouts can be dynamically extended by creating parent-child relationships between existing nodes and items dropped from the symbol palette. The [`drop`](https://ej2.syncfusion.com/react/documentation/api/diagram/#drop) event provides the mechanism to establish these connections programmatically.
 
-Find the code example to create parent - child relation between source and target nodes in drop event.
+This functionality enables interactive diagram building, where users can expand existing structures by dragging and dropping new elements from a predefined set of symbols.
 
+The following code example creates parent-child relationships between source and target nodes in the drop event:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -254,14 +261,14 @@ The [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/s
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-setNodeTemplete-cs1" %}
 
 
-## Refresh layout
+## Refresh Layout
 
-Diagram allows refreshing the layout at runtime. To refresh the layout, you need to call the [`doLayout`](https://ej2.syncfusion.com/react/documentation/api/diagram/#dolayout) method.
+The diagram supports refreshing layouts at runtime to reflect structural or data changes. The [`doLayout`](https://ej2.syncfusion.com/react/documentation/api/diagram/#dolayout) method recalculates and redraws the entire layout based on current data and configuration.
+
+This functionality is essential when nodes are added, removed, or modified programmatically, ensuring the layout remains consistent with the updated structure.
 
 
 ```typescript
 //To refresh layout
 diagramInstance.doLayout();
-
 ```
-

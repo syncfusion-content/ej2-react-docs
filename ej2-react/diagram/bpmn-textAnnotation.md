@@ -1,32 +1,30 @@
 ---
 layout: post
-title: Bpmn Text annotation  in React Diagram component | Syncfusion®
-description: Learn here all about Bpmn shapes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
-control: Bpmn Text annotation  
+title: BPMN Text Annotation in React Diagram Component | Syncfusion®
+description: Learn how to create, configure, and manage BPMN text annotations in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+control: Bpmn Text annotation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN text annotation in React Diagram component
+# BPMN Text Annotation in React Diagram Component
 
-## Text annotation
+## Overview
 
-* A BPMN object can be associated with a text annotation which does not affect the flow but gives details about objects within a flow.
+A BPMN object can be associated with a text annotation that provides additional details about objects within a flow without affecting the actual process flow. Text annotations serve as documentation elements that help explain or clarify specific aspects of the BPMN diagram.
 
-* A TextAnnotation points to or references another BPMN shape, which we call the `textAnnotationTarget` of the textAnnotation. When a target shape is moved or deleted, any TextAnnotations attached to the shape will be moved or deleted too. Thus, the TextAnnotations remain with their target shapes though you can reposition the TextAnnotation to any offset from its target. The `textAnnotationTarget` property of the BpmnTextAnnotation is used to connect an annotation element to the BPMN Node.
+A TextAnnotation points to or references another BPMN shape through the [`textAnnotationTarget`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTextAnnotation/#textannotationtarget) property. When the target shape is moved or deleted, any TextAnnotations attached to the shape will automatically move or be deleted as well. This ensures that TextAnnotations remain associated with their target shapes, though the TextAnnotation can be repositioned to any offset from its target.
 
-* The annotation element can be switched from a BPMN node to another BPMN node simply by dragging the source end of the annotation connector into the other BPMN node.
+The annotation element can be switched from one BPMN node to another by simply dragging the source end of the annotation connector to the desired BPMN node. By default, the TextAnnotation shape includes a connection to its target.
 
 * By default, the TextAnnotation shape has a connection.
 
-* The `textAnnotationDirection` property is used to set the shape direction of the text annotation.
+The [`textAnnotationDirection`](https://helpej2.syncfusion.com/react/documentation/api/diagram/bpmnTextAnnotation/#textannotationdirection) property controls the shape direction of the text annotation. By default, this property is set to **Auto**, which automatically determines the optimal direction based on the target's position.
 
-* By default, the `textAnnotationDirection` is set to a Auto.
+To set the size for text annotation, use the [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/node/#height) properties of the node.
 
-* To set the size for text annotation, use the `width` and `height` properties of the node.
-
-* The `offsetX` and `offsetY` properties are used to set the distance between the BPMN node and the TextAnnotation.
+The [`offsetX`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTextAnnotation/#offsetx) and [`offsetY`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTextAnnotation/#offsety) properties determine the distance between the BPMN node and the TextAnnotation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -39,9 +37,9 @@ domainurl: ##DomainURL##
 
  {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Text-cs1" %}
 
-### Text annotation in palette.
+### Text Annotation in Palette.
 
-Text annotation node can be rendered in symbol palette like other bpmn shapes. The following example shows how to render Bpmn text annotation node in symbol palette.
+Text annotation nodes can be rendered in the symbol palette alongside other BPMN shapes. The following example demonstrates how to render BPMN text annotation nodes in the symbol palette.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -54,18 +52,17 @@ Text annotation node can be rendered in symbol palette like other bpmn shapes. T
 
  {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Text1-cs1" %}
 
-### Connect the TextAnnotation to BPMN node
+### Connect the TextAnnotation to BPMN Node
 
-Drag and drop any bpmn shapes from the palette to diagram and connect the BPMN Node and textAnnotation.
+Users can drag and drop any BPMN shapes from the palette to the diagram and establish connections between BPMN nodes and text annotations through interactive manipulation.
 
-The following image shows how to drag a symbol from the palette and connect the textAnnotation to the BPMNNode with interaction.
+The following image demonstrates how to drag a symbol from the palette and connect the text annotation to a BPMN node using interaction.
 
 ![Text annotation GIF](images/textAnnotationGif.gif)
 
-### Text annotation direction
+### Text Annotation Direction
 
-There are several types of Text annotation directions as follows:
-
+The text annotation supports several directional orientations to optimize the visual layout of the diagram:
 | Text annotation direction | Image |
 | -------- | -------- |
 | Auto | ![BPMN text annotation direction auto](images/bpmn-textannotation-auto.png) |
@@ -74,10 +71,10 @@ There are several types of Text annotation directions as follows:
 | Top | ![BPMN text annotation direction top](images/bpmn-textannotation-top.png) |
 | Bottom | ![BPMN text annotation direction bottom](images/bpmn-textannotation-bottom.png) |
 
-### Add text annotation at runtime
+### Add Text Annotation at Runtime
 
-Text annotations can be added dynamically using either the [`addTextAnnotation`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addtextannotation) method or the [`add`](https://ej2.syncfusion.com/react/documentation/api/diagram/#add) method of the diagram. The following example shows how to use these methods to add a text annotation node.
-
+Text annotations can be added dynamically using either the [`addTextAnnotation`](https://ej2.syncfusion.com/react/documentation/api/diagram/#addtextannotation) method or the [`add`](https://ej2.syncfusion.com/react/documentation/api/diagram/#add) method of the diagram. The following example shows how to use these methods to add a text annotation node programmatically.
+ 
  {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/bpmnShapes/es5Text2-cs1/app/index.jsx %}
