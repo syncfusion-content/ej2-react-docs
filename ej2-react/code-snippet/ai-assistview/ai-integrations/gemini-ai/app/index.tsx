@@ -42,8 +42,8 @@ function App() {
             i++;
             if (i % responseUpdateRate === 0 || i === responseLength) {
                 const htmlResponse: string = marked.parse(lastResponse) as string;
-                assistInstance.current?.addPromptResponse(htmlResponse, i === responseLength);
-                assistInstance.current?.scrollToBottom();
+                assistInstance.current.addPromptResponse(htmlResponse, i === responseLength);
+                assistInstance.current.scrollToBottom();
             }
             await new Promise(resolve => setTimeout(resolve, 15)); // Delay before the next chunk
         }
@@ -61,7 +61,7 @@ function App() {
                 streamResponse(responseText);
             })
             .catch((error: unknown) => {
-                assistInstance.current?.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.');
+                assistInstance.current.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.');
                 stopStreaming = true;
             });
     };

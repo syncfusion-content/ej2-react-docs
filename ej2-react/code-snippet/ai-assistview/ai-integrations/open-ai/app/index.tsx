@@ -3,7 +3,10 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom";
 import { marked } from 'marked';
 
-const openaiApiKey = ''; // Replace with your Open AI API key (WARNING: Do not expose API key in client-side code for production)
+const azureOpenAIApiKey = ''; // replace your key
+const azureOpenAIEndpoint = ''; // replace your endpoint
+const azureOpenAIApiVersion = ''; // replace to match your resource
+const azureDeploymentName = ''; // your Azure OpenAI deployment name
 let stopStreaming = false;
 
 function App() {
@@ -36,8 +39,8 @@ function App() {
             i++;
             if (i % responseUpdateRate === 0 || i === responseLength) {
                 const htmlResponse = marked.parse(lastResponse);
-                assistInstance.current?.addPromptResponse(htmlResponse, i === responseLength);
-                assistInstance.current?.scrollToBottom();
+                assistInstance.current.addPromptResponse(htmlResponse, i === responseLength);
+                assistInstance.current.scrollToBottom();
             }
             await new Promise(resolve => setTimeout(resolve, 15));
         }
@@ -47,29 +50,31 @@ function App() {
     };
 
     const onPromptRequest = (args: any) => {
-        fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${openaiApiKey}`,
-            },
-            body: JSON.stringify({
-                model: 'gpt-4o-mini',
-                messages: [{ role: 'user', content: args.prompt }],
-                max_tokens: 150,
-                stream: false
-            }),
-        })
+       const url =
+      azureOpenAIEndpoint.replace(/\/$/, '') +
+      `/openai/deployments/${encodeURIComponent(azureDeploymentName)}/chat/completions` +
+      `?api-version=${encodeURIComponent(azureOpenAIApiVersion)}`;
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': azureOpenAIApiKey,
+      },
+      body: JSON.stringify({
+        messages: [{ role: 'user', content: args.prompt }],
+        temperature: 0.7,
+         max_tokens: 150
+      }),
+    })
         .then(response => response.json())
         .then(reply => {
             const responseText = reply.choices[0].message.content.trim() || 'No response received.';
             stopStreaming = false;
             streamResponse(responseText);
         })
-        .catch(error => {
-            assistInstance.current?.addPromptResponse(
-                '⚠️ Something went wrong while connecting to the AI service. Please check your API key or try again later.'
-            );
+        .catch((error: unknown) => {
+            assistInstance.current.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.', true);
             stopStreaming = true;
         });
     };
