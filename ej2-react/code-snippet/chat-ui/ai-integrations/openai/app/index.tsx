@@ -3,9 +3,13 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { marked } from 'marked';
 
+const azureOpenAIApiKey = 'YOUR_AZURE_OPENAI_API_KEY'; // Replace with your Azure OpenAI API key
+const azureOpenAIEndpoint = 'YOUR_AZURE_OPENAI_ENDPOINT'; // Replace with your Azure OpenAI endpoint (e.g., https://your-resource-name.openai.azure.com)
+const azureOpenAIApiVersion = '2024-02-01'; // Replace with the API version for your resource
+const azureDeploymentName = 'YOUR_DEPLOYMENT_NAME'; // Replace with your Azure OpenAI deployment name
+
 function App() {
   const chatRef = React.useRef<ChatUIComponent>(null);
-  const openaiApiKey: string = '';
 
   const currentUser: UserModel = {
     id: 'user1',
@@ -14,52 +18,51 @@ function App() {
 
   const aiModel: UserModel = {
     id: 'ai',
-    user: 'Open AI',
+    user: 'Azure OpenAI',
   };
 
-  const handleMessageSend = (args: { message: { text: string } }) => {
-    setTimeout(async () => {
+  const handleMessageSend = async (args: { message: { text: string } }) => {
+    if (chatRef.current) {
+      chatRef.current.typingUsers = [aiModel];
+    }
+    try {
+      const url =
+        azureOpenAIEndpoint.replace(/\/$/, '') +
+        `/openai/deployments/${encodeURIComponent(azureDeploymentName)}/chat/completions` +
+        `?api-version=${encodeURIComponent(azureOpenAIApiVersion)}`;
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'api-key': azureOpenAIApiKey,
+        },
+        body: JSON.stringify({
+          messages: [{ role: 'user', content: args.message.text }],
+          temperature: 0.7,
+        }),
+      });
+
+      const data = await response.json();
+      const responseText: string = data.choices[0].message.content.trim() || 'No response received.';
+      
       if (chatRef.current) {
-        chatRef.current.typingUsers = [aiModel];
+        chatRef.current.addMessage({
+          text: marked.parse(responseText),
+          author: aiModel,
+        });
       }
-      try {
-        const response = await fetch(
-          'https://api.openai.com/v1/chat/completions',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${openaiApiKey}`,
-            },
-            body: JSON.stringify({
-              model: 'gpt-4o-mini',
-              messages: [{ role: 'user', content: args.message.text }],
-              max_tokens: 150,
-            }),
-          }
-        );
-        const data = await response.json();
-        let responseText = data.choices[0].message.content.trim() || 'No response received.';
-        if (chatRef.current) {
-          chatRef.current.addMessage({
-            text: marked.parse(responseText),
-            author: aiModel,
-          });
-        }
-      } catch (error) {
-        console.error('Error fetching OpenAI response:', error);
-        if (chatRef.current) {
-          chatRef.current.addMessage({
-            text: 'Error generating response. Please check your API key and try again.',
-            author: aiModel,
-          });
-        }
-      } finally {
-        if (chatRef.current) {
-          chatRef.current.typingUsers = [];
-        }
+    } catch (error) {
+      if (chatRef.current) {
+        chatRef.current.addMessage({
+          text: 'Error generating response. Please check your Azure OpenAI configuration (API Key, Endpoint, Deployment Name, and API Version) and try again.',
+          author: aiModel,
+        });
       }
-    }, 500);
+    } finally {
+      if (chatRef.current) {
+        chatRef.current.typingUsers = [];
+      }
+    }
   };
 
   const handleToolbarItemClicked = () => {
@@ -73,7 +76,7 @@ function App() {
       ref={chatRef}
       id="chat-ui"
       user={currentUser}
-      headerText="Chat with OpenAI"
+      headerText="Chat with Azure OpenAI"
       headerIconCss="e-icons e-ai-chat"
       headerToolbar={{
         items: [

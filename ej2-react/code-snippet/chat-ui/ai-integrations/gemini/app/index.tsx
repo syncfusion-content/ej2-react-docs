@@ -19,14 +19,13 @@ function App() {
       user: 'Gemini',
   };
 
-  const handleMessageSend = (args: { message: { text: string } }) => {
-      setTimeout(async () => {
+  const handleMessageSend = async (args: { message: { text: string } }) => {
           if (chatRef.current) {
               chatRef.current.typingUsers = [aiModel];
           }
 
           try {
-              const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+              const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); // Replace Your Model Name Here
               const result = await model.generateContent(args.message.text);
               const response = await result.response.text();
 
@@ -37,7 +36,6 @@ function App() {
                   });
               }
           } catch (error) {
-              console.error('Error fetching Gemini response:', error);
               if (chatRef.current) {
                   chatRef.current.addMessage({
                       text: 'Error generating response. Please try again.',
@@ -49,7 +47,6 @@ function App() {
                   chatRef.current.typingUsers = [];
               }
           }
-      }, 500);
   };
 
   const handleToolbarItemClicked = () => {
