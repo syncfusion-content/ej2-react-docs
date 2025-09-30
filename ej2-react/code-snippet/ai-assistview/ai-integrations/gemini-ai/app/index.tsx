@@ -53,7 +53,7 @@ function App() {
     };
 
     const onPromptRequest = (args: { prompt: string }): void => {
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }); //Replace Your Model Name Here
         model.generateContent(args.prompt)
             .then((result: GenerateContentResult) => {
                 const responseText: string = result.response.text().trim() || 'No response received.';
